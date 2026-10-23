@@ -1,9 +1,85 @@
 {
- "generated": "2026-10-23T23:07+02:00",
+ "generated": "2026-10-23T23:36+02:00",
  "agent": "LRC Live Wire",
  "sources_ok": 15,
  "sources_failed": [],
  "items": [
+  {
+   "title": "All-America Economic Survey",
+   "url": "https://www.cnbc.com/all-america-economic-survey/",
+   "source": "CNBC",
+   "region": "US",
+   "published": "2026-10-23T23:31+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Trump dropping some Canada tariffs but 'replacing' them with other products",
+   "url": "https://www.cnbc.com/2026/10/23/trump-tariffs-canada-susan-collins.html",
+   "source": "CNBC",
+   "region": "US",
+   "published": "2026-10-23T23:26+02:00",
+   "breaking": true,
+   "tickers": []
+  },
+  {
+   "title": "This hot AI-fueled stock has been in a rut. It just beat earnings expectations by 36%.",
+   "url": "https://www.marketwatch.com/story/this-hot-ai-fueled-stock-has-been-in-a-rut-it-just-beat-earnings-expectations-by-36-4a4188cb?mod=mw_rss_topstories",
+   "source": "MarketWatch",
+   "region": "US",
+   "published": "2026-10-23T23:13+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "The mobile ambitions of SpaceX are hitting telecom stocks again. Here’s what the latest developments mean.",
+   "url": "https://www.marketwatch.com/story/the-mobile-ambitions-of-spacex-see-telecom-stocks-get-hit-again-what-the-latest-developments-mean-9a4159b5?mod=mw_rss_topstories",
+   "source": "MarketWatch",
+   "region": "US",
+   "published": "2026-10-23T23:11+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Gold set for steepest weekly drop in over four months as prices fall below $4,000",
+   "url": "https://www.investing.com/news/commodities-news/gold-hits-3mth-low-as-oil-rally-fuels-rate-concerns-set-for-weekly-drop-4967928",
+   "source": "Investing.com Commodities",
+   "region": "FX",
+   "published": "2026-10-23T23:08+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "The real test for Moderna’s cancer vaccine isn’t about beating Keytruda. It’s keeping cancer from coming back in the long term.",
+   "url": "https://www.marketwatch.com/story/the-real-test-for-modernas-cancer-vaccine-isnt-about-beating-keytruda-its-keeping-cancer-from-coming-back-in-the-long-term-da9af99f?mod=mw_rss_topstories",
+   "source": "MarketWatch",
+   "region": "US",
+   "published": "2026-10-23T23:06+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Prediction: Nvidia Will Outperform Broadcom Over the Next 5 Years",
+   "url": "https://www.fool.com/investing/2026/10/23/prediction-nvidia-will-outperform-broadcom-over-the-next-5-years/?.tsrc=rss",
+   "source": "Yahoo Finance",
+   "region": "US",
+   "published": "2026-10-23T23:05+02:00",
+   "breaking": false,
+   "tickers": [
+    "NVDA"
+   ]
+  },
+  {
+   "title": "Should One Number Scare You About DraftKings Stock?",
+   "url": "https://www.trefis.com/stock/dkng/articles/620104/should-one-number-scare-you-about-draftkings-stock/2026-10-23?.tsrc=rss",
+   "source": "Yahoo Finance",
+   "region": "US",
+   "published": "2026-10-23T23:02+02:00",
+   "breaking": false,
+   "tickers": [
+    "DKNG"
+   ]
+  },
   {
    "title": "In hunt for Starlink alternative, Ukraine partners with Nokia and satellite maker ICEYE",
    "url": "https://www.cnbc.com/2026/10/23/ukraine-partners-with-nokia-and-iceye-for-starlink-alternative.html",
@@ -70,15 +146,6 @@
    "tickers": [
     "GOOGL"
    ]
-  },
-  {
-   "title": "Trump dropping some Canada tariffs but 'replacing' them with other products",
-   "url": "https://www.cnbc.com/2026/10/23/trump-tariffs-canada-susan-collins.html",
-   "source": "CNBC",
-   "region": "US",
-   "published": "2026-10-23T22:48+02:00",
-   "breaking": true,
-   "tickers": []
   },
   {
    "title": "Oil Price Jump Hurts Shares",
@@ -333,24 +400,6 @@
    "tickers": []
   },
   {
-   "title": "2 Growth Stocks to Hold for the Next Decade (Hint: These Aren’t AI Stocks)",
-   "url": "https://www.fool.com/investing/2026/10/23/2-growth-stocks-to-hold-for-the-next-decade-hint-these-aren-t-ai-stocks/?.tsrc=rss",
-   "source": "Yahoo Finance",
-   "region": "US",
-   "published": "2026-10-23T22:05+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Sector Update: Consumer Stocks Retreat Friday",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/sector-consumer-stocks-retreat-friday-200354006.html?.tsrc=rss",
-   "source": "Yahoo Finance",
-   "region": "US",
-   "published": "2026-10-23T22:03+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
    "title": "I want to pay off $4,500 in credit-card debt in 2 months. Is this possible?",
    "url": "https://www.marketwatch.com/story/i-want-to-pay-off-4-500-in-credit-card-debt-in-2-months-is-this-possible-059d9a21?mod=mw_rss_topstories",
    "source": "MarketWatch",
@@ -405,15 +454,6 @@
    "tickers": []
   },
   {
-   "title": "Not Starlink. Not Starship. Not Grok. $561 Million of SpaceX's $4.4 Billion Profit Came From an Unexpected Source.",
-   "url": "https://www.fool.com/investing/2026/10/23/not-starlink-not-starship-not-grok-561-million-of/?.tsrc=rss",
-   "source": "Yahoo Finance",
-   "region": "US",
-   "published": "2026-10-23T21:50+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
    "title": "Even the wealthy increasingly want all-inclusive resorts",
    "url": "https://www.marketwatch.com/story/even-the-wealthy-increasingly-want-all-inclusive-resorts-118caa9b?mod=mw_rss_topstories",
    "source": "MarketWatch",
@@ -441,6 +481,15 @@
    "tickers": []
   },
   {
+   "title": "RH Bophelo Ltd. Estimates – JSE:RHB",
+   "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE4xM0tubzR5MHBtbVVPSkJPVHFjdVkxRWdYVjJJQmxkSm5VLUtHNGtNZWc5ckFDZ2xHMDZNZXM2UGc2QU94MDBwcFVkY0tNek1CQWR2d3kxZ3FRSzRub3FHdW5ucUJKRElNbU1wQ3FvYU1wRTQ?oc=5",
+   "source": "TradingView",
+   "region": "SA",
+   "published": "2026-10-23T21:30+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
    "title": "Corruption is voters' top issue ahead of midterm election, CNBC survey shows",
    "url": "https://www.cnbc.com/2026/10/23/corruption-midterm-election-cnbc-poll-trump.html",
    "source": "CNBC",
@@ -459,15 +508,6 @@
    "tickers": [
     "META"
    ]
-  },
-  {
-   "title": "Stadio Holdings Pty Ltd. Estimates – JSE:SDO",
-   "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1rMXVWNS1TNXdEMkJhVVV1dmRYLUw3clFNOVBsdFpQanpWbEdxeUpQVHlYd1poUDM2bUE2dHF4ZkltSEFocnNyMHVaTUNGaHdqWTBKbzd5Yy02NVpSTnFOLWdabjlDTk9IX1dkRDlOZG5Qckk?oc=5",
-   "source": "TradingView",
-   "region": "SA",
-   "published": "2026-10-23T21:25+02:00",
-   "breaking": false,
-   "tickers": []
   },
   {
    "title": "India’s crude oil imports climb 16% in September",
@@ -551,15 +591,6 @@
    "tickers": []
   },
   {
-   "title": "Gold clings to support at $4,010 amid bull trap risk: Live",
-   "url": "https://www.investing.com/news/commodities-news/gold-stuck-below-4225-resistance-as-adx-signals-chop-live-levels-93CH-4956488",
-   "source": "Investing.com Commodities",
-   "region": "FX",
-   "published": "2026-10-23T21:17+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
    "title": "‘She’s living the dream’: My stepmother said I can buy my childhood home for $850,000. Is she taking advantage of me?",
    "url": "https://www.marketwatch.com/story/shes-living-the-dream-my-stepmother-said-i-can-buy-my-childhood-home-for-850-000-is-she-taking-advantage-of-me-1fdda7b5?mod=mw_rss_topstories",
    "source": "MarketWatch",
@@ -595,15 +626,6 @@
    "region": "US",
    "published": "2026-10-23T21:06+02:00",
    "breaking": true,
-   "tickers": []
-  },
-  {
-   "title": "The real test for Moderna’s cancer vaccine isn’t about beating Keytruda. It’s keeping cancer from coming back in the long term.",
-   "url": "https://www.marketwatch.com/story/the-real-test-for-modernas-cancer-vaccine-isnt-about-beating-keytruda-its-keeping-cancer-from-coming-back-in-the-long-term-da9af99f?mod=mw_rss_topstories",
-   "source": "MarketWatch",
-   "region": "US",
-   "published": "2026-10-23T20:58+02:00",
-   "breaking": false,
    "tickers": []
   },
   {
@@ -643,15 +665,6 @@
    "tickers": []
   },
   {
-   "title": "Think annuities are a rip-off? Now might be the perfect time to reconsider.",
-   "url": "https://www.marketwatch.com/story/think-annuities-are-a-rip-off-now-might-be-the-perfect-time-to-reconsider-6b3a2f88?mod=mw_rss_topstories",
-   "source": "MarketWatch",
-   "region": "US",
-   "published": "2026-10-23T20:43+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
    "title": "Oil markets are on edge as midterms near and fresh U.S. strikes on Iran loom",
    "url": "https://www.marketwatch.com/bulletins/redirect/go?g=80326527-9e86-42d1-b226-48ffb3bfbe86&mod=mw_rss_bulletins",
    "source": "MarketWatch Bulletins",
@@ -662,10 +675,10 @@
   },
   {
    "title": "Can Nvidia’s stock become a safe haven as Wall Street rethinks the AI trade?",
-   "url": "https://www.marketwatch.com/story/can-nvidias-stock-become-a-safe-haven-as-wall-street-rethinks-the-ai-trade-64862936?mod=mw_rss_topstories",
-   "source": "MarketWatch",
+   "url": "https://www.marketwatch.com/bulletins/redirect/go?g=8b20b956-5f95-45a3-8ef3-447e5438ad80&mod=mw_rss_bulletins",
+   "source": "MarketWatch Bulletins",
    "region": "US",
-   "published": "2026-10-23T20:19+02:00",
+   "published": "2026-10-23T20:21+02:00",
    "breaking": false,
    "tickers": [
     "NVDA"
@@ -924,15 +937,6 @@
    "tickers": []
   },
   {
-   "title": "Russia, Ukraine agree to Oleshky ceasefire brokered by Melania Trump, White House says",
-   "url": "https://www.cnbc.com/2026/10/23/russia-ukraine-agree-to-oleshky-ceasefire-melania-trump-white-house.html",
-   "source": "CNBC",
-   "region": "US",
-   "published": "2026-10-23T16:28+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
    "title": "MTBPS26: A commodity reprieve, but growth must do heavy lifting.",
    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOVkRkODY5T2lXWlU1eHBuT2IxSnQ3WkdjNjlUcXVNLVBNa1V5TTlLN3l6TGdSR2NSMm5EX0JUQjVEbWdmWC1yeHZHNFBIb29yUTQtN29EV0NkUkVWMjVyNDZhQmRiVWh6aDlud19reWV0X0hIM0VaSlFuZXFKeVJ0MlVESzJxalRONWdIR2F1NUpHUQ?oc=5",
    "source": "Fullview",
@@ -983,15 +987,6 @@
    "source": "FXEmpire",
    "region": "FX",
    "published": "2026-10-23T15:45+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Gold Price Forecast: XAU/USD recovers from the $4,000 area as bears retain control",
-   "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPSEJoVHU5RDhtMVRMX19mYTdLMXpuMHVRZVhIRW03MEhfcGJ2WTdlWTdrWmxLSTJhQTBGV3FqdFdIby1GSXpHdl9UenNJWnhybHpsdzl6RG83cGxzWjgxNXNEQjV2S3l2VEYzcDBSNkp2VGVHckpLVm4tRFhtdk9MUTN0RVdmYktoYmhiMnpLQ3FvZ2dYZnF1Z3FPeHI3U3lCQkxla0VYdzNILTFNV0dvbEgtbVcwRXZSbE9GbUMtUEo2QmVjcVlGTTZzVDh4aTh6NUNjbkZkcFF2bEhvWUJGcVBrQVJDNUE5?oc=5",
-   "source": "www.tmgm.com",
-   "region": "FX",
-   "published": "2026-10-23T15:43+02:00",
    "breaking": false,
    "tickers": []
   },
@@ -1100,6 +1095,15 @@
    "source": "OilPrice.com",
    "region": "FX",
    "published": "2026-10-23T14:30+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Banks Hike Oil Price Forecasts on Prolonged Gulf Disruptions",
+   "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPNkJCUnJ0UGhBRDNCcWRtN1QzR2h5eEl4TEoxWGVaaVowMXA5NWxtM19jYnA5OUtYanNlZTloLUM2VFZTenhiazU5M1VjWU1vM2JXVTM4bUd6NG9FMnlQMWlDRVpWalJIQTY0V2c0QS1KeWdtQVFHa184aW56NEdGMWdPNi1kLUM5eW1YU0xJLU83ZkFWd1E?oc=5",
+   "source": "EnergyNow.com",
+   "region": "FX",
+   "published": "2026-10-23T14:28+02:00",
    "breaking": false,
    "tickers": []
   }
