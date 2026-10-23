@@ -1,18 +1,42 @@
 {
- "generated": "2026-10-23T09:27+02:00",
+ "generated": "2026-10-23T10:02+02:00",
  "agent": "LRC Live Wire",
- "sources_ok": 13,
- "sources_failed": [
-  "Investing.com Forex: not well-formed (invalid token): line 78, column 0",
-  "Investing.com Commodities: not well-formed (invalid token): line 78, column 0"
- ],
+ "sources_ok": 15,
+ "sources_failed": [],
  "items": [
   {
-   "title": "Stock futures trade mixed after tech sector sell-off: Live updates",
-   "url": "https://www.cnbc.com/2026/10/22/stock-market-today-live-update.html",
+   "title": "South Africa Backtracks on Controversial Crypto Rules After Backlash",
+   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPMElWcTIwemtFQVduYTVpZ3V4d1BuUmJBU3RWRTJYZFRKZzBkd21TTDNjSlEyWnR3blh1cjdoUEc3bXpKampxQk5TYUFWM0NBSVQ4RlI0T052ZTlCdm84TWZOeTIxeFNwYWtMQ19RRnZ1WjR6LS1QSGYyU1FQbkxSZ056ODE1bDBoakE4M3ZuNVNDRWZHbGg3cE04ZTZyb3plMkdiM3oyYVM1TTlKM0xOTWVVUEJOUQ?oc=5",
+   "source": "Bitcoin News",
+   "region": "SA",
+   "published": "2026-10-23T09:56+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Volvo Cars shares plunge 31% amid China, U.S. slump and fresh job cuts",
+   "url": "https://www.cnbc.com/2026/10/23/volvo-cars-q3-earnings-job-cuts.html",
    "source": "CNBC",
    "region": "US",
-   "published": "2026-10-23T09:23+02:00",
+   "published": "2026-10-23T09:54+02:00",
+   "breaking": true,
+   "tickers": []
+  },
+  {
+   "title": "SA’s R13bn social grant cuts are arbitrary, cruel and economically short-sighted",
+   "url": "https://news.google.com/rss/articles/CBMiuAJBVV95cUxOUURSMUliMGppRk1sVnRJOE9HTjFveEphdmNRcUhReVdUcWs1QzM2UEFLR3VsRXN3bk5Pa3poSko0Vl9GMWlDZVotQVh0UWlzb245RVJEdUxGMnM2T1c5Sk1mUjR5Q3Q3YjdKdlpLckhqNWNzQnUtekRENW1WcGFicUE0dlZzb1hoNzRyYnk5VFJIc0xRQjFxRDQ0eVIyZ2NPeWNZUEl0LWtCdFNBT2lsam9xTVpSQUdHTjlLYzF6ZW5Hc2d5VmhqMWVVZEJwdHk5WWlUWk5IVUpwczd5cHJIaEJ3bjFvcTlFX1lpYkFDcDBWMmJTZFZFTUF4djlFUXZpTVZVV1JFcXNobHA3VkRjaW1tWk5XYjlKUFBDQ0w3SlFsOEh0dEpGYUJsTGZNNXk5bnBTRnZjTkk?oc=5",
+   "source": "Daily Maverick",
+   "region": "SA",
+   "published": "2026-10-23T09:40+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Apple is Wall Street’s favourite AI haven as spending fears hit",
+   "url": "https://www.moneyweb.co.za/news-fast-news/apple-is-wall-streets-favourite-ai-haven-as-spending-fears-hit/",
+   "source": "Moneyweb",
+   "region": "SA",
+   "published": "2026-10-23T09:39+02:00",
    "breaking": false,
    "tickers": []
   },
@@ -21,7 +45,43 @@
    "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPM0E3NFBvX2FkWGg3ZW5RUXdlYjBOMDJBUnNQUHFnclMyUzdTVFRmYVZQOF9EbDFhNkU3dDlLTkFDTVREcWlOWmJsOTdJZDEwRHlfRDNnWHRDU3pQbmdOeEwxXzNHUGhmSWR1NkVzOFVhbDBCaHhqS2o5WlJ5OER3eVBsT280dXI1clJ3NjFnWUJCeVU?oc=5",
    "source": "CNBC Africa",
    "region": "SA",
-   "published": "2026-10-23T09:22+02:00",
+   "published": "2026-10-23T09:39+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Not Bitcoin. Not Ethereum. This Once-Popular Cryptocurrency Could Be the Biggest Winner of 2027.",
+   "url": "https://www.fool.com/investing/2026/10/23/not-bitcoin-not-ethereum-this-once-popular-cryptoc/?.tsrc=rss",
+   "source": "Yahoo Finance",
+   "region": "US",
+   "published": "2026-10-23T09:35+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Asian stocks mixed ahead of weekend as tech recovers early losses",
+   "url": "https://finance.yahoo.com/markets/world-indices/articles/asian-stocks-head-weekend-low-024730943.html?.tsrc=rss",
+   "source": "Yahoo Finance",
+   "region": "US",
+   "published": "2026-10-23T09:34+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Stock futures trade mixed after tech sector sell-off: Live updates",
+   "url": "https://www.cnbc.com/2026/10/22/stock-market-today-live-update.html",
+   "source": "CNBC",
+   "region": "US",
+   "published": "2026-10-23T09:31+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Five companies linked to Shoprite director and former Telkom CEO paid R85,000 admission-of-guilt fine to SARS",
+   "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOTUpVTG9VM2RuX0wwNGF2NzBjWnktLTMwcV9nVF83aldFMVVUeW9mck1WeUd0NDBQckJURDdEQzF4SXJlYjRzekJEZkhFS2t2UGlLcG5GT0dwTkE5Z2JLSThzN0FYSjhyTDV3OTVXNGRTOVE1N0ZLZVZ3cHdrak53MTBSX3I5MVVYTnFNR2Z2RzdIZnZWRUMwVVJFaGlMN2tFLWVfLTN2V2U1Yl9nVVUwVWpKUjZZSkNnXzNxZ3VKYjlLektwYTZKWi1qUDN0ZEd1dWQtVXl3OFZ1b0pEMW5mYlhxbw?oc=5",
+   "source": "Daily Investor",
+   "region": "SA",
+   "published": "2026-10-23T09:29+02:00",
    "breaking": false,
    "tickers": []
   },
@@ -64,6 +124,78 @@
    "tickers": []
   },
   {
+   "title": "Dollar ticks up amid oil surge; yen holds gains on haven demand",
+   "url": "https://www.investing.com/news/forex-news/asia-fx-steadies-as-oil-surge-weighs-on-risk-appetite-yen-holds-gains-4967999",
+   "source": "Investing.com Forex",
+   "region": "FX",
+   "published": "2026-10-23T09:13+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Silver breaks $56 support at 5-month low: Live levels",
+   "url": "https://www.investing.com/news/commodities-news/silver-tests-bear-flag-at-5860-resistance-live-levels-93CH-4956490",
+   "source": "Investing.com Commodities",
+   "region": "FX",
+   "published": "2026-10-23T09:12+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Crude Oil WTI nears $101.90 resistance with fading momentum: Live",
+   "url": "https://www.investing.com/news/commodities-news/crude-oil-wti-clings-to-9650-support-amid-bearish-macd-live-93CH-4956493",
+   "source": "Investing.com Commodities",
+   "region": "FX",
+   "published": "2026-10-23T09:11+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Copper downtrend tests key support at $6.35-6.42: Live levels",
+   "url": "https://www.investing.com/news/commodities-news/copper-trapped-in-655665-range-breakout-pending-live-93CH-4956489",
+   "source": "Investing.com Commodities",
+   "region": "FX",
+   "published": "2026-10-23T09:11+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Natural Gas tests support at $2.616 with RSI at 23: Live levels",
+   "url": "https://www.investing.com/news/commodities-news/natural-gas-breaks-cloud-support-at-3104-live-levels-93CH-4956492",
+   "source": "Investing.com Commodities",
+   "region": "FX",
+   "published": "2026-10-23T09:11+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "London Gas Oil wedged below $1,500 resistance: Live levels",
+   "url": "https://www.investing.com/news/commodities-news/london-gas-oil-coils-in-14001450-range-breakout-watch-93CH-4956497",
+   "source": "Investing.com Commodities",
+   "region": "FX",
+   "published": "2026-10-23T09:11+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Brent Oil overbought at $114.32 after parabolic run: Live levels",
+   "url": "https://www.investing.com/news/commodities-news/brent-oil-stuck-near-107-between-double-top-and-support-live-93CH-4956491",
+   "source": "Investing.com Commodities",
+   "region": "FX",
+   "published": "2026-10-23T09:11+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Gold teeters 1% above macro low with RSI oversold: Live levels",
+   "url": "https://www.investing.com/news/commodities-news/gold-stuck-below-4225-resistance-as-adx-signals-chop-live-levels-93CH-4956488",
+   "source": "Investing.com Commodities",
+   "region": "FX",
+   "published": "2026-10-23T09:10+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
    "title": "Back to the drawing board for cross-border crypto rules",
    "url": "https://www.moneyweb.co.za/moneyweb-opinion/back-to-the-drawing-board-for-cross-border-crypto-rules/",
    "source": "Moneyweb",
@@ -78,6 +210,15 @@
    "source": "Yahoo Finance",
    "region": "US",
    "published": "2026-10-23T09:05+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Equites Property Fund Ltd (JSE:EQU) (H1 2027) Earnings Call Highlights: DPS Up 5. ...",
+   "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOOXh1UEFXRzVvTFlOZUU5c0dRTjNOd1YtM2QwNHFNY2hsSms4NDRsbW9NWWh4aExsTlM4RlA1T3Mwdk82cjdkSlpkTDRmeFAxUTJpRURKN1dSN1pIYnpRQ1N4NDhYYno4dFNwdW5QUkpFaVI2aDdDOTJCRDN0NDNFVVBDMXRuSUo1dkkzdU5BbmlCdmNwOHc?oc=5",
+   "source": "Yahoo Finance",
+   "region": "SA",
+   "published": "2026-10-23T09:04+02:00",
    "breaking": false,
    "tickers": []
   },
@@ -100,6 +241,17 @@
    "tickers": []
   },
   {
+   "title": "Meta’s Muse Is a Huge Hit. Its Success Could Hammer the Stock Market.",
+   "url": "https://finance.yahoo.com/m/7d95d07d-caf7-3ffa-be0a-5b9fb22391ec/meta%E2%80%99s-muse-is-a-huge-hit..html?.tsrc=rss",
+   "source": "Yahoo Finance",
+   "region": "US",
+   "published": "2026-10-23T09:00+02:00",
+   "breaking": false,
+   "tickers": [
+    "META"
+   ]
+  },
+  {
    "title": "Gold Price: $3,987 Three-Month Low, $4,120 or $3,900",
    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQZ0l4VExqTmpITW03eC1nWE42SEFWczRNaVhqZS1pand6bXY0dkVSNnFnWlBUMFMzN05wTHF3NnFrVzBNZWtaVnJBaXpuR2k1Y2pTcTdNcmZlQU9lRk5RcUFRS0ZPelo0YTV1Mjd4ZjVPUkF0Q2lLQ2Y3Z004SDdkNG83NDhLV3ZZWkw4R0JkOUp0TDNZTDlxQm1nNDhneU9SYy0zZUkxUFRKckE3WldKWA?oc=5",
    "source": "FinanceFeeds",
@@ -114,6 +266,33 @@
    "source": "Daily Maverick",
    "region": "SA",
    "published": "2026-10-23T08:56+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Oil price soars 72% above Nigeria’s 2026 budget benchmark",
+   "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9lNTBCa2d0OFhOZGMzZ0d1bVVsRGgwVW4zUjQ3UHRWbkppUjBfQzlxMVh3ZlYwSWVmWDVRTDJ6Smc2eWQ2YXhHS3QtaFhSREc4N2lPYzhMdzZQcDZ3aUVfb0h1dVhEWE9zZkJiMnYzZ0xHMmtQTVFSWERZZWlrSHc?oc=5",
+   "source": "The Sun Nigeria",
+   "region": "FX",
+   "published": "2026-10-23T08:54+02:00",
+   "breaking": true,
+   "tickers": []
+  },
+  {
+   "title": "Oil prices rise more than 1% as supply concerns linger",
+   "url": "https://www.investing.com/news/commodities-news/oil-little-changed-as-supply-concern-lingers-amid-houthi-attacks-on-saudi-arabia-4967907",
+   "source": "Investing.com Commodities",
+   "region": "FX",
+   "published": "2026-10-23T08:48+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Gold hits 3-mth low as oil rally fuels rate concerns; set for weekly drop",
+   "url": "https://www.investing.com/news/commodities-news/gold-hits-3mth-low-as-oil-rally-fuels-rate-concerns-set-for-weekly-drop-4967928",
+   "source": "Investing.com Commodities",
+   "region": "FX",
+   "published": "2026-10-23T08:44+02:00",
    "breaking": false,
    "tickers": []
   },
@@ -134,6 +313,17 @@
    "published": "2026-10-23T08:21+02:00",
    "breaking": false,
    "tickers": []
+  },
+  {
+   "title": "Zacks Investment Ideas feature highlights: Meta Platforms and Pepsi",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/zacks-investment-ideas-feature-highlights-062000268.html?.tsrc=rss",
+   "source": "Yahoo Finance",
+   "region": "US",
+   "published": "2026-10-23T08:20+02:00",
+   "breaking": false,
+   "tickers": [
+    "META"
+   ]
   },
   {
    "title": "This Top Investment Strategist Thinks a Bitcoin Supercycle Is Coming Soon. Here's Why He's Wrong.",
@@ -234,6 +424,15 @@
    ]
   },
   {
+   "title": "Pan African Resources Plc - Notice of Annual General Meeting, proposed adoption of new Articles of Association and change to the Audit and Risk Committee",
+   "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOb3NDVnotOHhtQnB5RTdHdFZuR3hkNlJSejZkTzZ6OXY3MXpMeUNpSWFzVnF6NkpiQ0h6d3hyazRuTDREOVlwU05zNWppblVzZVExNTBPQ1dfeE0yM3NtS3BxOUNjWU1GM2N3LUdnQTNOb3E1aXV5OEl2NllRcVA0cy1nZktIaTBp?oc=5",
+   "source": "Yahoo Finance UK",
+   "region": "SA",
+   "published": "2026-10-23T08:00+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
    "title": "South Africa’s best-performing clothing retailer still lost R240 million in value this year",
    "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOejhMVU16a3RsVTZpQ2cwcFdYNUh0WnB2c3Z3cVNMb3NaV0gwNU5pdDAybVdDRk9taTFvak5wZTFlN21ES2dDWGlENl9IVnVFQkhpSUlxbURCbFhCRXZHMngwNzNZQTExVDMydUhCdHduQnBZWGl5T1BYMGtINmFOTjRnMWlySVZfY0UzUkZsRGljS2dQSHo2RWNsS1RDSXU5T1hvOHFMeXI1VzlvYWhGSV9XN18xNTNZd1k1TkVhUVZLV2NERjM0RkRKSQ?oc=5",
    "source": "Daily Investor",
@@ -248,6 +447,15 @@
    "source": "Moneyweb",
    "region": "SA",
    "published": "2026-10-23T07:57+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "INTERVIEW: Godongwana says coveted investment-grade status is now ‘within reach’",
+   "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQWXVYU19ZeDR2cUFqaGJ1Z0FJVFZJLVFvZUVpYVhIRzdwMjhpeVdxVE9rQzhBdHR4emJfVXd1UC1ib3E2YTg0bGdzM2dUQ1J0Slk1bmxjdzVRWTQ2aTRpM05YTll0RmNvazJuWXl4UGdkTTZTN2lfQkEzZXE3YnViWWVhWHM4UUFQdUlrY1RTMm00OGh5Mms0SE9JeVpNb0l4WU5wMGx2T3pRXzZBWFhaUzhKcnlHakJ2WWNj?oc=5",
+   "source": "Daily Maverick",
+   "region": "SA",
+   "published": "2026-10-23T07:51+02:00",
    "breaking": false,
    "tickers": []
   },
@@ -267,15 +475,6 @@
    "region": "US",
    "published": "2026-10-23T07:50+02:00",
    "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Canal+ revenue surges following MultiChoice acquisition, but turnaround challenges remain",
-   "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNX19sdEVWNHFnZEZHY3pGc0o5ajV5TTJnTzhYd3kxMG0yZDNvLXhwYjU3QXNuS2dOZXhpQ0N1Z3BZOGtTMXBnYl9hQTY5ZW5BaHBKcjlObjRuV21QRm5CQkxCdXpwNjJ6UDhxRS1BdHFaU2FyelNzUTBiUGU4ZS1JQm9kRjd4NVNHUmxYMDNSRy1hQksydjZHUnI2d0ZrZ3JJZ21sMnpLTjlLamZKMnhwM0hqakdNSHpSWngw?oc=5",
-   "source": "Innovation Village",
-   "region": "SA",
-   "published": "2026-10-23T07:45+02:00",
-   "breaking": true,
    "tickers": []
   },
   {
@@ -407,6 +606,15 @@
    "tickers": []
   },
   {
+   "title": "Oracle Insurance revenue jumps to E202.6m",
+   "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNcU9jQ19qZFB1U2trbEFHTFVVTXA2c3pWa2I3MHhDWUtYNnUydTJzbmY0NHVlSEdIRHJhNTEwV1hwRHZWZF9EYnhNdVdPN2dwTUdxMzl0Z0VDUXlVRHZESjJHVnV6SldELW96X3I1U0V1Sjc3QlVKOXcwYms3d3gwaDNqbw?oc=5",
+   "source": "Times of Eswatini",
+   "region": "SA",
+   "published": "2026-10-23T06:15+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
    "title": "Bank of Korea Governor Says Oil Price Ceiling Not Sustainable Long-Term",
    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNa1NKZEhJak41VXdLU0V3eGhrbTZyakJQcUVaRVZvbWc5eHo4T1Z6eHRrb1ZFS0hTSEdnNW5HWGIwQWwzUnJseHJkWHhNX2tYSVJtbzQ5eEliVm5kbEZWX2M1Ry1yUlFWd1I5Q3BlNFdTVkJkRUpsOEZDR2pxWkhhdXpmbEtsdjgzeTVCckVB?oc=5",
    "source": "조선일보",
@@ -434,26 +642,6 @@
    "tickers": []
   },
   {
-   "title": "S&P 500 best performers: Zero mag 7 stocks past 13 weeks",
-   "url": "https://www.thestreet.com/investing/sp-500-best-performers-zero-mag-7-stocks-past-13-weeks?.tsrc=rss",
-   "source": "Yahoo Finance",
-   "region": "US",
-   "published": "2026-10-23T06:03+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Companies laying off staff this year include Meta, Amazon, and Visa — see the list",
-   "url": "https://www.businessinsider.com/recent-company-layoffs-laying-off-workers-2026?.tsrc=rss",
-   "source": "Yahoo Finance",
-   "region": "US",
-   "published": "2026-10-23T06:02+02:00",
-   "breaking": false,
-   "tickers": [
-    "META"
-   ]
-  },
-  {
    "title": "Government waves goodbye to 27,450 employees in two years",
    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOdEJBZHNmUE1EdEFfdEtmc3djcnVsaU1wb2tqWG93YW04bzg1NGI3bW4zNC1mc0Q0ZDJhRkRCOGc4S0lLZTlvRUZSamdxeHRjRk9tTVdaU1R0VEtOcnlDOV80ZDVHY3RJSmNZRGRmV042VkdZWjNvUTYzdm04Mndvenl5ZmpDV0E4MzFoSl9RUVdVMGt2SVpnNXNDTEpqbEU?oc=5",
    "source": "Daily Investor",
@@ -470,26 +658,6 @@
    "published": "2026-10-23T05:42+02:00",
    "breaking": false,
    "tickers": []
-  },
-  {
-   "title": "I've Covered Tesla for Over a Decade. Here's Whether It's a Stock to Buy More Than 21% Below Its Record.",
-   "url": "https://www.fool.com/investing/2026/10/22/i-ve-covered-tesla-for-over-a-decade-here-s-whether-it-s-a-stock-to-buy-more-than-21-below-its-record/?.tsrc=rss",
-   "source": "Yahoo Finance",
-   "region": "US",
-   "published": "2026-10-23T05:34+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Meta found a new way to pay for its AI boom",
-   "url": "https://www.thestreet.com/technology/meta-found-a-new-way-to-pay-for-its-ai-boom?.tsrc=rss",
-   "source": "Yahoo Finance",
-   "region": "US",
-   "published": "2026-10-23T05:32+02:00",
-   "breaking": false,
-   "tickers": [
-    "META"
-   ]
   },
   {
    "title": "Tone Deaf",
@@ -519,15 +687,6 @@
    "tickers": []
   },
   {
-   "title": "Nepal to get $20m from climate fund after deadly August flood",
-   "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNQmtQUWFRUU8zQXo0OFBGQmtDR004T2hPQzNoU1FCUVNiUXhRQWIxcmJmVF82RVJ1WVVXaE81RHdERVRUMW9SZlBXOVVrb0NUaHpxcm85RkJweUFjQXBCVkQ4aDMzRkN6MndnVFdGS2VJNnJ4emdCNkZFODlTWmRMOHR3YVB0UlZnbG9XeWJmNGlHZm9BMktpOV9FMGpOUWdqWDBIMkd0UFF0X2hlMjFOTTVEb2Y5MTljVnVZ?oc=5",
-   "source": "Daily Maverick",
-   "region": "SA",
-   "published": "2026-10-23T05:29+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
    "title": "Explainer: Petroleum (Exploration and Production) Amendment Bill",
    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNT25nWnNlMjNiVENhaWdxM2p6MFNYVTRNOUVRdmZwb19Sd3BYQmgyZ0wxNXZSSVhSdVNUOEIxYkZqaEgyLXI2bnJmemVyS3d2cGxITHBfcEl6a3lEdjVkb3JQS3FEYzFZc1FaSUE3RS1ubXhvdUVxUmFDblFkLWF0NmZPRmtISEUzWjJlY2w0QXhNUQ?oc=5",
    "source": "Windhoek Observer",
@@ -537,7 +696,16 @@
    "tickers": []
   },
   {
-   "title": "Crypto industry applauds government’s move to redraft asset regulations",
+   "title": "Title deeds may be key to unlocking South Africa agriculture’s full potential",
+   "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxObW8tTFhlZno1RTloTjFFTTFUZXF0bmpfLXE4Z0NYRUVneW5xUlFJSFNqSDVoWXRQUFR6ZndrOFFNTHd3QW9jWk9jQ25Rd3NaemNvUV9Rcm84dE1hb0Y3ZFUxU0U4ZURhQ1hTaFMycDM2OVhSUS14bHBsNHFTTldFU3lvbHprdkhtRjdHTGh2YVdHSVRsTDIxQTdZMjlNYmNUQzE2Um9fRExDVzdqellvRTV6dFpScnN5ZnFQZXZNSTlrTlRad1hKMEhYbUVnOEU?oc=5",
+   "source": "Wandile Sihlobo | Substack",
+   "region": "SA",
+   "published": "2026-10-23T05:04+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Six-million cheers for SA’s move to redraft crypto-holding rules",
    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOMVJCX0R0bU9rbnVNemFkaWFsUlBRUmZ6bk9PNHppaThkRVZKc09nbkRLR0pwcF9qU1RUMnVjLVdSNV9ady1xa0ZYQkdMVUN4NXp1NmRMaFkxTkZ6Sk93b1hwSExzZzN0S2h1aUxxWXVLQVNqSWgyQ0pSUDRpMjN0STdsWWE4dG4xWjE1Nkdva3RGaHRUMVBycnMxazkwRS1WQURTdVd6QVZtUEhPUWw1aElrV2t2aHktb3NWRw?oc=5",
    "source": "Business Day",
    "region": "SA",
@@ -546,18 +714,18 @@
    "tickers": []
   },
   {
-   "title": "Brent Crude Oil Price Breaks Above Our Target – Analysis –23-10-2026",
-   "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNTGd5X2FvTzE0ajhmNkF0M1pDNDlXNUVYeEtFZXdPUEI2WjdrVVFrZ1FjWnloVE1KS3RHNGEzTEx6UUJab29PczhZNG5sSHNycEFual9XY1ZHME9FMnotSmpiRmZMV2hiQ294a1N6a0xzWFZubW13cDRuWjU1UHA3d1VsSEFkTmlCSENZR0dDWmJlV2pPUzdlcE43X1N2akxrZ2MydWFZcUZQWWZxRkxyX2hYSHZLRV9TT2JNNmxTQVp2VnpNYnZfSFVBcDhicVhfUGFEbVJITXJrOG1hWnVuV2dR?oc=5",
-   "source": "Economies.com",
+   "title": "Bitcoin Retreats to $81,000 Range as AI Investment Burden and Oil Price Surge Collide",
+   "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9zQ0VIYmtZODBhVUdNREVsZlYzMnYxRGE3UFBjNjg5SUVVYjZpNkppcGdHN0RhQm55ZEY0S2lLejBXZDRpd2pzaHliWTg0VG11a2MwRTE3SHowY0d4UXVtVjF6cHVRYTNxbXFPakJUdWNjZExfanc?oc=5",
+   "source": "BigGo Finance",
    "region": "FX",
    "published": "2026-10-23T04:25+02:00",
    "breaking": false,
    "tickers": []
   },
   {
-   "title": "Bitcoin Retreats to $81,000 Range as AI Investment Burden and Oil Price Surge Collide",
-   "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9zQ0VIYmtZODBhVUdNREVsZlYzMnYxRGE3UFBjNjg5SUVVYjZpNkppcGdHN0RhQm55ZEY0S2lLejBXZDRpd2pzaHliWTg0VG11a2MwRTE3SHowY0d4UXVtVjF6cHVRYTNxbXFPakJUdWNjZExfanc?oc=5",
-   "source": "BigGo Finance",
+   "title": "Brent Crude Oil Price Breaks Above Our Target – Analysis –23-10-2026",
+   "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNTGd5X2FvTzE0ajhmNkF0M1pDNDlXNUVYeEtFZXdPUEI2WjdrVVFrZ1FjWnloVE1KS3RHNGEzTEx6UUJab29PczhZNG5sSHNycEFual9XY1ZHME9FMnotSmpiRmZMV2hiQ294a1N6a0xzWFZubW13cDRuWjU1UHA3d1VsSEFkTmlCSENZR0dDWmJlV2pPUzdlcE43X1N2akxrZ2MydWFZcUZQWWZxRkxyX2hYSHZLRV9TT2JNNmxTQVp2VnpNYnZfSFVBcDhicVhfUGFEbVJITXJrOG1hWnVuV2dR?oc=5",
+   "source": "Economies.com",
    "region": "FX",
    "published": "2026-10-23T04:25+02:00",
    "breaking": false,
@@ -620,15 +788,6 @@
   {
    "title": "What banking in Africa will look like in five years",
    "url": "https://www.moneyweb.co.za/moneyweb-crypto/crypto-podcasts/what-banking-in-africa-will-look-like-in-five-years/",
-   "source": "Moneyweb",
-   "region": "SA",
-   "published": "2026-10-23T04:02+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "SA’s plan to ‘rejuvenate’ public service and save billions",
-   "url": "https://www.moneyweb.co.za/in-depth/budget/sas-plan-to-rejuvenate-public-service-and-save-billions/",
    "source": "Moneyweb",
    "region": "SA",
    "published": "2026-10-23T04:02+02:00",
@@ -708,6 +867,15 @@
    "tickers": []
   },
   {
+   "title": "Mpact stock: Mpact reports ZAR 13.3 billion revenue for 2024. Mpact stock frames the result",
+   "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOZGEtMTR2MFhxcER0ME5mTFkxNFhkdmMwajhSdDhtVWJQcHFDaXg4a1ZrQk9hZ3Y3aTN0SWcwTHpaMkFyN3B1Z1R5Sk5IS0NRZkEta1VtcGVhNHhYUlQzRVl2d1VkOGJnTFBxeGlORjB0YzZSa1lFYWRYM2Z1QUFnMzZwWXZBeElLTUtRSWRuOGhsSXRrcmtzQVFlSTRKVDhVcHh6SHh5cmhmU2tsZklJTHNMaVR6X0JaNEFnSlpsSG9DM3FMcElKSzVR?oc=5",
+   "source": "AD HOC NEWS",
+   "region": "SA",
+   "published": "2026-10-23T02:49+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
    "title": "Oil (USCrude) Price Forecast for Today, Tomorrow, Next Week, and Next 30 Days",
    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQcm51RHFTMGNQcnB2aFl5bjNQQzFXUVVHckh1eW1IVktpM0lfaXlCQ2p6RF9nYWxkajlxb2R2V0lkRi1FNnljalUwMlhaU2FFT2dCUDBwem9tVG14Y1FXZGVKbWJvSm0xNlVVZ1BwdTItWnJkOTF3TnFTU2FQLWZibmhXRXlnX2RJY25leTB2ekVVUHZMZS1zbjBhWkNJLWs?oc=5",
    "source": "LiteFinance",
@@ -722,6 +890,15 @@
    "source": "CNBC",
    "region": "US",
    "published": "2026-10-23T02:46+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Oil prices heady at 5-month highs as M.East supply jitters persist",
+   "url": "https://www.investing.com/news/commodities-news/oil-prices-cool-from-5month-highs-as-trump-invokes-defense-production-act-4967880",
+   "source": "Investing.com Commodities",
+   "region": "FX",
+   "published": "2026-10-23T02:41+02:00",
    "breaking": false,
    "tickers": []
   },
@@ -785,15 +962,6 @@
    "source": "AD HOC NEWS",
    "region": "SA",
    "published": "2026-10-23T01:56+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "INTERVIEW: Godongwana says coveted investment-grade status is now ‘within reach’",
-   "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQWXVYU19ZeDR2cUFqaGJ1Z0FJVFZJLVFvZUVpYVhIRzdwMjhpeVdxVE9rQzhBdHR4emJfVXd1UC1ib3E2YTg0bGdzM2dUQ1J0Slk1bmxjdzVRWTQ2aTRpM05YTll0RmNvazJuWXl4UGdkTTZTN2lfQkEzZXE3YnViWWVhWHM4UUFQdUlrY1RTMm00OGh5Mms0SE9JeVpNb0l4WU5wMGx2T3pRXzZBWFhaUzhKcnlHakJ2WWNj?oc=5",
-   "source": "Daily Maverick",
-   "region": "SA",
-   "published": "2026-10-23T01:46+02:00",
    "breaking": false,
    "tickers": []
   },
@@ -935,177 +1103,6 @@
    "tickers": [
     "DECK"
    ]
-  },
-  {
-   "title": "The U.S. stock market is fracturing into two camps, and it’s leaving investors with a brutal case of whiplash",
-   "url": "https://www.marketwatch.com/story/the-u-s-stock-market-is-fracturing-into-two-camps-and-its-leaving-investors-with-a-brutal-case-of-whiplash-e8580a99?mod=mw_rss_topstories",
-   "source": "MarketWatch",
-   "region": "US",
-   "published": "2026-10-23T00:17+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Treasury yields log biggest drop since the 2023 banking crisis. Here’s what’s going on.",
-   "url": "https://www.marketwatch.com/story/treasury-yields-see-extreme-plunge-why-investors-are-ducking-for-cover-60044c66?mod=mw_rss_topstories",
-   "source": "MarketWatch",
-   "region": "US",
-   "published": "2026-10-23T00:07+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Daily Crossword Quickie - Fri, 23 Oct 2026",
-   "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNR2NrRkxGVktXdEZ3b2ZRRDlSV0cyWU5IcE1vaWFPYjY1VmhuLUNZV1NydHVsMllmVEpaM19aRUxBZXVYU0lqaVFZRmVoVlFyWEpicGRvLUVORF84eklXMDhFRF9mWGszc3JtQjJZX2FsNDBJQ2pmMGlhZm9HbHVNQ0xycjZVRldMdW1sSldBNWNuT2pLNjVEWDlCc0ZLVWJ4MUFXdzVKNWNSQkx6YjA4WlNKakQyOTVlQ1ZwMG9zNlg1cHNpbERDNVdUOHNERkFQXzhPZDZrTktXSEM5UTA2WWhiZ2VDT1U0UUxMeTlfWHA?oc=5",
-   "source": "Daily Maverick",
-   "region": "SA",
-   "published": "2026-10-23T00:01+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "EU’s Arctic Strategy Excludes Oil and Gas",
-   "url": "https://oilprice.com/Energy/Natural-Gas/EUs-Arctic-Strategy-Excludes-Oil-and-Gas.html",
-   "source": "OilPrice.com",
-   "region": "FX",
-   "published": "2026-10-23T00:00+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "SpaceX and Tesla have high election stakes as Elon Musk pours $366 million into campaigns",
-   "url": "https://www.cnbc.com/2026/10/22/elon-musk-midterm-election-spacex-tesla.html",
-   "source": "CNBC",
-   "region": "US",
-   "published": "2026-10-22T23:58+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Gold Price Short-term Outlook: XAU/USD Holds Critical Support as Breakout Nears",
-   "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQSXVHTFJfVEpSaGhVMFAtakNvaGxDVWNJUWx3enlfOE9hZ283MmMzWWJld3hVc01HWlozSWZEcjl6WUNHa20tOG1XdmZvbzB1eGNrckhCTUR2S3hOSUNRSk0zcE01RXA3U2RpZlZvM18yZVlUN3hidmd2bGhUay1faDJPaE51TUxldFRVanFsZFNoWWVieS1HYVUwSDZwYTcwQ3RQaVpVR1F4OWRKazdDX2pYOXlmZFptZUltUzAyaXJSelNN?oc=5",
-   "source": "StoneX",
-   "region": "FX",
-   "published": "2026-10-22T23:57+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Moderna shares plunge after cancer vaccine data leaks — despite positive results",
-   "url": "https://www.cnbc.com/2026/10/22/moderna-stock-cancer-vaccine-data-leak.html",
-   "source": "CNBC",
-   "region": "US",
-   "published": "2026-10-22T23:52+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "South African rand slips as oil hits highest since May, fuel levy cuts loom",
-   "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQNUYxWEV2WXhBM3ZaOE9jRm93OFY4alpZWWVuYXAySzhoT05iOGZJUWw5RVdYdXdwanFMR0ZMSVJRNU9VTTYwNlNubW9XTFNhV242bENEMFpWeVRWQlU0WG9lVVhlQXNWNG0xa0c3Q3R5cFJ4aEp3VVMwY1E1NlU1VlgyUTFteFkyTGl0SnFXbFJPdHh4X1NPeHZnenZLZGJaaXdDRWJZWkpUdw?oc=5",
-   "source": "CNBC Africa",
-   "region": "SA",
-   "published": "2026-10-22T23:51+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Treasury yields see extreme plunge. Why investors are ducking for cover.",
-   "url": "https://www.marketwatch.com/bulletins/redirect/go?g=2cf0de20-406b-4b6d-8559-640388e766fd&mod=mw_rss_bulletins",
-   "source": "MarketWatch Bulletins",
-   "region": "US",
-   "published": "2026-10-22T23:39+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Trump invokes Cold War era Defense Production Act for oil production, refining",
-   "url": "https://www.cnbc.com/2026/10/22/trump-defense-production-act.html",
-   "source": "CNBC",
-   "region": "US",
-   "published": "2026-10-22T23:37+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Americans are having fewer babies — and pampering them with luxury diapers",
-   "url": "https://www.marketwatch.com/story/americans-are-having-fewer-babies-and-pampering-them-with-luxury-diapers-a84222cd?mod=mw_rss_topstories",
-   "source": "MarketWatch",
-   "region": "US",
-   "published": "2026-10-22T23:28+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "3 big reasons Micron and other chip stocks fell hard on Thursday",
-   "url": "https://www.marketwatch.com/story/two-big-reasons-micron-and-other-chip-stocks-are-falling-on-thursday-312f1fb2?mod=mw_rss_topstories",
-   "source": "MarketWatch",
-   "region": "US",
-   "published": "2026-10-22T23:19+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Trump asked Musk to lift Starlink slowdown, WSJ reports",
-   "url": "https://www.cnbc.com/2026/10/22/trump-musk-starlink-ukraine.html",
-   "source": "CNBC",
-   "region": "US",
-   "published": "2026-10-22T23:02+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Oil prices near Iran-war highs as soaring tanker rates trigger an energy squeeze",
-   "url": "https://www.marketwatch.com/bulletins/redirect/go?g=6ac77ce5-6f5f-496f-a4d8-d341f1081522&mod=mw_rss_bulletins",
-   "source": "MarketWatch Bulletins",
-   "region": "US",
-   "published": "2026-10-22T23:02+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Electric Giants Say They Already Have the Tools to Fix the AI Power Crunch",
-   "url": "https://oilprice.com/Energy/Energy-General/Electric-Giants-Say-They-Already-Have-the-Tools-to-Fix-the-AI-Power-Crunch.html",
-   "source": "OilPrice.com",
-   "region": "FX",
-   "published": "2026-10-22T23:00+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Oil prices approach Iran-war highs as soaring tanker rates trigger a second energy squeeze",
-   "url": "https://www.marketwatch.com/story/oil-prices-approach-iran-war-highs-as-soaring-tanker-rates-trigger-a-second-energy-squeeze-2d726982?mod=mw_rss_topstories",
-   "source": "MarketWatch",
-   "region": "US",
-   "published": "2026-10-22T22:46+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Disney’s multiplatform Super Bowl plan frustrates ABC affiliates",
-   "url": "https://www.cnbc.com/2026/10/22/disneys-multiplatform-super-bowl-plan-frustrates-abc-affiliates.html",
-   "source": "CNBC",
-   "region": "US",
-   "published": "2026-10-22T22:44+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "OpenAI nears up to $30 billion funding round at $1.25 trillion valuation led by UAE investors",
-   "url": "https://www.cnbc.com/2026/10/22/openai-funding-round-uae-investors.html",
-   "source": "CNBC",
-   "region": "US",
-   "published": "2026-10-22T22:41+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Trump defends Ramaswamy ad with Acton's estranged mom after bipartisan criticism",
-   "url": "https://www.cnbc.com/2026/10/22/trump-ramaswamy-ad-acton-mother-ad.html",
-   "source": "CNBC",
-   "region": "US",
-   "published": "2026-10-22T22:26+02:00",
-   "breaking": false,
-   "tickers": []
   }
  ]
 }
