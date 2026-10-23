@@ -3,40 +3,48 @@
   "ticker": "PCTY",
   "approved_rating": "HOLD",
   "rating_at_today_price": "SELL",
-  "price": 169.33,
+  "price": 177.67,
   "target_6m": 157.05,
-  "upside": -0.0725
+  "upside": -0.1161
  },
  {
   "ticker": "HPE",
   "approved_rating": "SELL",
   "rating_at_today_price": "HOLD",
-  "price": 58.17,
+  "price": 55.47,
   "target_6m": 58.57,
-  "upside": 0.0069
+  "upside": 0.0559
+ },
+ {
+  "ticker": "KEYS",
+  "approved_rating": "SELL",
+  "rating_at_today_price": "HOLD",
+  "price": 311.52,
+  "target_6m": 319.77,
+  "upside": 0.0265
  },
  {
   "ticker": "APH",
   "approved_rating": "SELL",
   "rating_at_today_price": "HOLD",
-  "price": 79.2,
+  "price": 73.07,
   "target_6m": 75.63,
-  "upside": -0.0451
+  "upside": 0.035
  },
  {
   "ticker": "META",
   "approved_rating": "SELL",
   "rating_at_today_price": "HOLD",
-  "price": 697.52,
+  "price": 648.85,
   "target_6m": 677.14,
-  "upside": -0.0292
+  "upside": 0.0436
  },
  {
   "ticker": "GOOGL",
   "approved_rating": "SELL",
   "rating_at_today_price": "HOLD",
-  "price": 334.76,
+  "price": 324.22,
   "target_6m": 319.72,
-  "upside": -0.0449
+  "upside": -0.0139
  }
 ]
