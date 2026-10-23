@@ -41,7 +41,7 @@
   {
    "source": "Google News",
    "region": "SA",
-   "url": "https://news.google.com/rss/search?hl=en-ZA&gl=ZA&ceid=ZA:en&q=%22South+Africa%22+economy+OR+Eskom+OR+Treasury+OR+%22Stats+SA%22+when:1d",
+   "url": "https://news.google.com/rss/search?hl=en-ZA&gl=ZA&ceid=ZA:en&q=%22South+Africa%22+(economy+OR+GDP+OR+inflation+OR+Treasury+OR+budget+OR+Eskom)+(rand+OR+markets+OR+growth+OR+business)+when:1d",
    "aggregator": true
   },
   {
@@ -49,16 +49,6 @@
    "region": "FX",
    "url": "https://news.google.com/rss/search?hl=en-ZA&gl=ZA&ceid=ZA:en&q=%22gold+price%22+OR+%22platinum+price%22+OR+%22oil+price%22+when:1d",
    "aggregator": true
-  },
-  {
-   "source": "Daily Maverick",
-   "region": "SA",
-   "url": "https://www.dailymaverick.co.za/dmrss/"
-  },
-  {
-   "source": "FXStreet",
-   "region": "FX",
-   "url": "https://www.fxstreet.com/rss"
   },
   {
    "source": "MarketWatch Bulletins",
@@ -86,6 +76,12 @@
    "region": "US",
    "url": "https://feeds.finance.yahoo.com/rss/2.0/headline?s={COVERAGE}&region=US&lang=en-US",
    "coverage": true
+  },
+  {
+   "source": "Google News",
+   "region": "SA",
+   "url": "https://news.google.com/rss/search?hl=en-ZA&gl=ZA&ceid=ZA:en&q=site:dailymaverick.co.za+business+when:2d",
+   "aggregator": true
   }
  ],
  "breaking": {
