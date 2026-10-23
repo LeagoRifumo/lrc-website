@@ -1,11 +1,25 @@
 {
- "edition": "Morning brief · Friday 23 October 2026",
- "generated": "2026-10-23T00:20:00+02:00",
- "covers": "Thursday 22 October 2026 session",
- "agent": "LRC News Agent (first edition prepared manually during setup)",
- "headline": "Tech sell-off and $112 Brent: the AI trade cracks as oil revives inflation fears",
- "summary": "US tech fell hard on Thursday — the Nasdaq dropped 2.6% and the S&P 500 1.2% as chip stocks and Meta sold off on AI-spending worries — while the Dow ended flat. Brent crude jumped to about $112 a barrel, its highest since May, on Middle East escalation, which weakened the rand by about 1% and pulled the JSE Top 40 down 1.2%. Gold slipped for a fifth session to about $4,084/oz as traders priced a possible December Fed hike ahead of the 28 October FOMC.",
+ "edition": "Morning brief · Friday 23 October 2026 06:15",
+ "generated": "2026-10-23T06:15:00+02:00",
+ "covers": "Thursday 22 October 2026 US session, after-hours results and Asia trading on Friday 23 October",
+ "agent": "LRC News Agent",
+ "headline": "Breaking: Deckers (DECK, our BUY) falls about 7% after hours on a sales miss and cut revenue outlook; gold breaks below $4,000",
+ "summary": "Asia followed Thursday's US tech sell-off lower on Friday — the Kospi fell 2.2% and the Nikkei 1.4% — after the Nasdaq dropped 2.6% and the Philadelphia chip index 6.7%; the rand ended Thursday about 0.7% weaker near R16.48/$. Brent held near $113 a barrel, close to five-month highs, after President Trump invoked the Defense Production Act for oil and refining while Houthi–Saudi attacks continued. Gold fell below $4,000/oz for the first time since July as markets priced a 78% chance of a December Fed hike, which matters for SA miners and the rand at today's JSE open.",
  "sections": [
+  {
+   "name": "Breaking",
+   "items": [
+    {
+     "title": "Deckers (DECK) −7.3% after hours: EPS beat, sales miss, revenue outlook cut",
+     "summary": "Q2 FY27 revenue was $1.48bn (+3.5%) against about $1.51bn expected; adjusted EPS of $2.03 beat the $1.79 consensus, helped by tariff refunds. Full-year sales guidance was cut to $5.700–5.725bn from $5.86–5.91bn, with HOKA growth now high-single-digit (was low-double-digit), while EPS guidance rose to $7.80–7.95. Shares fell 7.25% after hours to $79.10 from an $85.28 close (22 Oct). DECK is a BUY on our list with a 6-month target of $103; $79.10 is below the watchlist pullback entry (88.10) and stop (82.94), so the rating needs an analyst re-run with the new guidance — the rating is unchanged.",
+     "source": "Investing.com; SGB Media",
+     "url": "https://za.investing.com/news/stock-market-news/earnings-call-transcript-deckers-q2-2027-beats-eps-but-shares-drop-73-93CH-4521005",
+     "tickers": [
+      "DECK"
+     ]
+    }
+   ]
+  },
   {
    "name": "US markets",
    "items": [
@@ -30,13 +44,24 @@
    ]
   },
   {
+   "name": "Asia overnight",
+   "items": [
+    {
+     "title": "Asia slides as the chip rout spreads: Kospi −2.2%, Nikkei −1.4%",
+     "summary": "On Friday 23 Oct the Kospi fell 2.2%, the Kosdaq 3.5%, the Nikkei 1.4% and Shanghai 1.3%, while the Hang Seng edged up 0.25%, after the Philadelphia semiconductor index dropped 6.7% on Thursday. Japan's September core CPI rose to 2.1% y/y (in line, up from 1.7%); the yen firmed to about 156.25 per dollar before easing to 157.",
+     "source": "investingLive",
+     "url": "https://investinglive.com/news/investinglive-asia-pacific-market-news-asian-stocks-slide-as-chip-rout-spreads/"
+    }
+   ]
+  },
+  {
    "name": "South Africa",
    "items": [
     {
-     "title": "Rand slips about 1% as oil hits highest since May",
-     "summary": "The rand traded near R16.53/$ on Thursday afternoon, about 1% weaker, and the JSE Top 40 fell about 1.2%. South Africa imports most of its fuel; the regulated petrol price already rose about 12% in October.",
-     "source": "CNBC Africa",
-     "url": "https://www.cnbcafrica.com/2026/south-african-rand-slips-as-oil-hits-highest-since-may-fuel-levy-cuts-loom"
+     "title": "Rand ends Thursday about 0.7% weaker near R16.48/$",
+     "summary": "USD/ZAR rose 0.72% to 16.48 on 22 Oct as higher oil and falling gold and platinum removed support for the rand, giving back part of its recent one-month high. September CPI (released earlier this week) came in at 4.5%, below the 4.7% expected.",
+     "source": "Trading Economics",
+     "url": "https://tradingeconomics.com/south-africa/currency"
     },
     {
      "title": "Mid-year budget: temporary fuel levy cuts return from November",
@@ -50,16 +75,16 @@
    "name": "Forex & commodities",
    "items": [
     {
-     "title": "Brent near $112–113, highest since May",
-     "summary": "Brent rose about 3.7% to around $112.9 and WTI to about $99 on reports of renewed strikes on Iran being prepared and attacks on Saudi oil infrastructure.",
-     "source": "Yahoo Finance",
-     "url": "https://finance.yahoo.com/markets/article/stock-market-today-thursday-october-22-dow-sp-500-nasdaq-tesla-meta-112217857.html"
+     "title": "Gold below $4,000 for the first time since July",
+     "summary": "Spot gold fell 0.3% to $4,013.91 by 03:26 SAST on 23 Oct after slipping 2.8% on Thursday, touching its lowest since 20 July, and is heading for a weekly loss of more than 3.5%; it briefly traded under $4,000. Platinum was flat at $1,567.10 after a 3.6% drop on Thursday. CME FedWatch shows a 78% chance of a December rate hike; the Fed is expected to hold on 27–28 Oct.",
+     "source": "Reuters via Yahoo Finance",
+     "url": "https://finance.yahoo.com/markets/commodities/articles/gold-hits-3-mth-low-022145269.html"
     },
     {
-     "title": "Gold down a fifth session to $4,084; silver −3.5%",
-     "summary": "Spot gold fell 1.4% to about $4,084/oz and silver 3.5% to $55.94 as higher oil revived rate-hike bets ahead of the 28 October FOMC meeting.",
-     "source": "USAGOLD",
-     "url": "https://www.usagold.com/daily-precious-metals-market-report-october-22-2026/"
+     "title": "Brent steady near $113 after Trump invokes the Defense Production Act",
+     "summary": "Brent December futures were at $113.07 and WTI at $99.27 at 02:07 SAST on 23 Oct, both up about 3% on the week and near their highest since early May. Trump declared oil production and refining essential to national defence; Saudi–Houthi attacks, including on an Aramco site at Yanbu, and Iranian attacks on ships in the Strait of Hormuz kept supply worries high.",
+     "source": "Investing.com",
+     "url": "https://uk.investing.com/news/commodities-news/oil-prices-cool-from-5month-highs-as-trump-invokes-defense-production-act-4927178"
     },
     {
      "title": "Bitcoin below $82,000",
@@ -70,7 +95,7 @@
    ]
   },
   {
-   "name": "Our watchlist",
+   "name": "Our coverage",
    "items": [
     {
      "title": "META −7% after results — on our list as a low-conviction SELL",
@@ -95,8 +120,9 @@
   }
  ],
  "watch_today": [
-  "US: Q3 earnings continue; FOMC on 28 Oct (hold expected, December hike debated)",
-  "SA: September CPI (released 21 Oct) and the fuel-price outlook after the levy cut",
-  "Oil: Middle East headlines — Brent above $110 feeds straight into SA inflation"
+  "DECK at the US open: confirm whether the after-hours drop to about $79 holds (BUY, target $103; analyst re-run needed)",
+  "JSE open: gold and PGM miners after gold's break below $4,000, and the rand near R16.48/$",
+  "Oil: Brent near $113 — Saudi–Houthi and Hormuz headlines feed straight into SA fuel and inflation",
+  "Fed: FOMC 27–28 Oct (hold expected); markets price a 78% chance of a December hike"
  ]
 }
