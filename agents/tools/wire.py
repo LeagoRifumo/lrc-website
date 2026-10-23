@@ -35,7 +35,10 @@ def items_from(xml_bytes):
         for n in ('pubDate', 'published', 'updated', 'date'):
             e = g(n)
             if e is not None and e.text: when = parse_date(e.text); break
-        if title and link: out.append((title, link, when))
+        src = g('source')
+        src = clean(src.text) if src is not None and src.text else ''
+        if src and title.endswith(' - ' + src): title = title[:-len(src) - 3].strip()
+        if title and link: out.append((title, link, when, src))
     return out
 
 def main():
@@ -55,7 +58,7 @@ def main():
             ok += 1
         except Exception as e:
             fail.append(f"{f['source']}: {str(e)[:80]}"); continue
-        for title, link, when in got[:40]:
+        for title, link, when, osrc in got[:40]:
             when = when or (parse_date(prev[link]['published']) if link in prev else now)
             if when < keep or when > now + dt.timedelta(hours=1): continue
             low = title.lower()
@@ -66,7 +69,7 @@ def main():
             if key in items:
                 if f.get('coverage'): items[key]['tickers'] = sorted(set(items[key]['tickers'] + tks))
                 continue
-            items[key] = {'title': title, 'url': link, 'source': f['source'].replace(' (our coverage)', ''), 'region': f['region'],
+            items[key] = {'title': title, 'url': link, 'source': (osrc if f.get('aggregator') and osrc else f['source'].replace(' (our coverage)', '')), 'region': f['region'],
                           'published': when.isoformat(timespec='minutes'), 'breaking': bool(brk), 'tickers': tks}
     rows = sorted(items.values(), key=lambda i: i['published'], reverse=True)[:cfg['max_items']]
     if not rows:

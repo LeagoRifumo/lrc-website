@@ -7,21 +7,6 @@
    "url": "https://www.moneyweb.co.za/feed/"
   },
   {
-   "source": "BusinessTech",
-   "region": "SA",
-   "url": "https://businesstech.co.za/news/feed/"
-  },
-  {
-   "source": "CNBC Africa",
-   "region": "SA",
-   "url": "https://www.cnbcafrica.com/feed/"
-  },
-  {
-   "source": "Daily Maverick",
-   "region": "SA",
-   "url": "https://www.dailymaverick.co.za/section/business-maverick/feed/"
-  },
-  {
    "source": "IOL Business",
    "region": "SA",
    "url": "https://iol.co.za/rss/iol/business-report/"
@@ -42,20 +27,44 @@
    "url": "https://feeds.content.dowjones.io/public/rss/mw_topstories"
   },
   {
-   "source": "MarketWatch Bulletins",
-   "region": "US",
-   "url": "https://feeds.content.dowjones.io/public/rss/mw_bulletins",
-   "breaking": true
+   "source": "Google News",
+   "region": "SA",
+   "url": "https://news.google.com/rss/search?hl=en-ZA&gl=ZA&ceid=ZA:en&q=JSE+OR+%22Johannesburg+Stock+Exchange%22+when:1d",
+   "aggregator": true
   },
   {
-   "source": "Yahoo Finance",
-   "region": "US",
-   "url": "https://finance.yahoo.com/news/rssindex"
+   "source": "Google News",
+   "region": "SA",
+   "url": "https://news.google.com/rss/search?hl=en-ZA&gl=ZA&ceid=ZA:en&q=rand+dollar+OR+SARB+OR+%22Reserve+Bank%22+South+Africa+when:1d",
+   "aggregator": true
+  },
+  {
+   "source": "Google News",
+   "region": "SA",
+   "url": "https://news.google.com/rss/search?hl=en-ZA&gl=ZA&ceid=ZA:en&q=%22South+Africa%22+economy+OR+Eskom+OR+Treasury+OR+%22Stats+SA%22+when:1d",
+   "aggregator": true
+  },
+  {
+   "source": "Google News",
+   "region": "FX",
+   "url": "https://news.google.com/rss/search?hl=en-ZA&gl=ZA&ceid=ZA:en&q=%22gold+price%22+OR+%22platinum+price%22+OR+%22oil+price%22+when:1d",
+   "aggregator": true
+  },
+  {
+   "source": "Daily Maverick",
+   "region": "SA",
+   "url": "https://www.dailymaverick.co.za/dmrss/"
   },
   {
    "source": "FXStreet",
    "region": "FX",
-   "url": "https://www.fxstreet.com/rss/news"
+   "url": "https://www.fxstreet.com/rss"
+  },
+  {
+   "source": "MarketWatch Bulletins",
+   "region": "US",
+   "url": "https://feeds.content.dowjones.io/public/rss/mw_bulletins",
+   "breaking": true
   },
   {
    "source": "Investing.com Forex",

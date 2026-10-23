@@ -53,7 +53,7 @@ jobs:
       - name: Saturday — write the week into the Excel workbook
         continue-on-error: true
         run: |
-          if [ "$(TZ=Africa/Johannesburg date +%u)" != "6" ] && [ "${{ github.event_name }}" != "workflow_dispatch" ]; then echo "Not Saturday"; exit 0; fi
+          if [ "$(TZ=Africa/Johannesburg date +%u)" != "6" ]; then echo "Not Saturday — the workbook is written on Saturdays only"; exit 0; fi
           sudo apt-get update -qq && sudo apt-get install -y -qq libreoffice-calc-nogui python3-uno >/dev/null
           mkdir -p reports
           /usr/bin/python3 agents/tools/update_watchlist_xlsx.py
