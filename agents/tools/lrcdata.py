@@ -49,6 +49,14 @@ def daily_bars(symbol, rng='2y'):
                 if c is None: continue
                 out.append({'date': dt.datetime.fromtimestamp(t, dt.timezone.utc).astimezone(dt.timezone(dt.timedelta(seconds=res['meta'].get('gmtoffset', 0)))).date().isoformat(),
                             'open': q['open'][i] or c, 'high': q['high'][i] or c, 'low': q['low'][i] or c, 'close': c, 'volume': q['volume'][i] or 0})
+            m = res.get('meta', {})
+            rp, rt = m.get('regularMarketPrice'), m.get('regularMarketTime')
+            if rp and rt and out:  # Yahoo often leaves the latest session's close empty in the arrays — take it from meta
+                rd = dt.datetime.fromtimestamp(rt, dt.timezone.utc).astimezone(dt.timezone(dt.timedelta(seconds=m.get('gmtoffset', 0)))).date().isoformat()
+                if rd > out[-1]['date']:
+                    out.append({'date': rd, 'open': rp, 'high': m.get('regularMarketDayHigh') or rp, 'low': m.get('regularMarketDayLow') or rp, 'close': rp, 'volume': m.get('regularMarketVolume') or 0})
+                elif rd == out[-1]['date']:
+                    out[-1]['close'] = rp
             if len(out) > 30: return out
         except Exception as e:
             last = e
