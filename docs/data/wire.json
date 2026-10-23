@@ -1,15 +1,24 @@
 {
- "generated": "2026-10-23T04:38+02:00",
+ "generated": "2026-10-23T05:10+02:00",
  "agent": "LRC Live Wire",
  "sources_ok": 15,
  "sources_failed": [],
  "items": [
   {
-   "title": "Stock futures are little changed after tech sector sell-off: Live updates",
-   "url": "https://www.cnbc.com/2026/10/22/stock-market-today-live-update.html",
+   "title": "SK Hynix shares reverse losses after chipmaker drops review of Solidigm IPO",
+   "url": "https://www.cnbc.com/2026/10/23/sk-hynix-solidigm-ipo-.html",
    "source": "CNBC",
    "region": "US",
-   "published": "2026-10-23T04:26+02:00",
+   "published": "2026-10-23T05:03+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Crypto industry applauds government’s move to redraft asset regulations",
+   "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOMVJCX0R0bU9rbnVNemFkaWFsUlBRUmZ6bk9PNHppaThkRVZKc09nbkRLR0pwcF9qU1RUMnVjLVdSNV9ady1xa0ZYQkdMVUN4NXp1NmRMaFkxTkZ6Sk93b1hwSExzZzN0S2h1aUxxWXVLQVNqSWgyQ0pSUDRpMjN0STdsWWE4dG4xWjE1Nkdva3RGaHRUMVBycnMxazkwRS1WQURTdVd6QVZtUEhPUWw1aElrV2t2aHktb3NWRw?oc=5",
+   "source": "Business Day",
+   "region": "SA",
+   "published": "2026-10-23T05:00+02:00",
    "breaking": false,
    "tickers": []
   },
@@ -18,11 +27,29 @@
    "url": "https://finance.yahoo.com/m/47e878bb-824d-3243-a8e9-b86b1c3f85d3/dow-jones-futures%3A-moderna.html?.tsrc=rss",
    "source": "Yahoo Finance",
    "region": "US",
-   "published": "2026-10-23T04:26+02:00",
+   "published": "2026-10-23T04:59+02:00",
    "breaking": true,
    "tickers": [
     "META"
    ]
+  },
+  {
+   "title": "Asian stocks head into weekend on a low as tech extends losses",
+   "url": "https://finance.yahoo.com/markets/world-indices/articles/asian-stocks-head-weekend-low-024730943.html?.tsrc=rss",
+   "source": "Yahoo Finance",
+   "region": "US",
+   "published": "2026-10-23T04:47+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Stock futures are little changed after tech sector sell-off: Live updates",
+   "url": "https://www.cnbc.com/2026/10/22/stock-market-today-live-update.html",
+   "source": "CNBC",
+   "region": "US",
+   "published": "2026-10-23T04:26+02:00",
+   "breaking": false,
+   "tickers": []
   },
   {
    "title": "Cathie Wood Just Bought Netflix Stock. Should You Follow Her?",
@@ -34,11 +61,31 @@
    "tickers": []
   },
   {
+   "title": "How Nvidia AI Security Tie Up At Zscaler (ZS) Has Changed Its Investment Story",
+   "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-ai-security-tie-zscaler-021948295.html?.tsrc=rss",
+   "source": "Yahoo Finance",
+   "region": "US",
+   "published": "2026-10-23T04:19+02:00",
+   "breaking": false,
+   "tickers": [
+    "NVDA"
+   ]
+  },
+  {
    "title": "MK Party appoints acting secretary-general less than two weeks before November elections",
    "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNN2h1czNTNUh6Q21HLUJaekZaSEdsaVNybzU0cEhRWnNWU0x5b3FPTGdtdEtIQzY3X013T19iTVdyWWtKNzRrSHpRTWdyZVJDb1U0QURQSDZ4OExFWm9rTjVsXzY0Qmg5WU1wU2tseHdhb0syWngxMEVhWms3LWRLc3hTOG5ZdVZURE5seU15T3VITjI4eUxLdTVjLXlUVEp3cF9PaFpIcXctMVA5Q2pBQUdTVUE2NTJQemVoc1lQZkY3aE91OVVCa3Zjcw?oc=5",
    "source": "thenational.co.za",
    "region": "SA",
    "published": "2026-10-23T04:18+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Oil price today: Brent crude dips below $100, stock markets mixed",
+   "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOUk9PTWlUd21fSXBIRktyMXFJMDJZSURkdHJ0VV95WW5PZ2w5aXZ4QVdONnFPeG1Rc2FkaE1hdFZ0WXpFdkw4WkxhUkxWb2ZQb0RYcW52MU91V2VhUHlfV0RweDJDbDVnMmpTZVRJZVhJVklha1JISGNaZW5fR0JDRWJxYkptSmg4TzNEdnJHMGt4aUNMa0Z5b2d6b1YzeGhwQVc3Rkh0blJhQ0VCY2c?oc=5",
+   "source": "IOL",
+   "region": "FX",
+   "published": "2026-10-23T04:13+02:00",
    "breaking": false,
    "tickers": []
   },
@@ -56,6 +103,15 @@
    "url": "https://www.moneyweb.co.za/news/companies-and-deals/cipla-wins-court-battle-over-multi-billion-rand-hiv-pill-tender/",
    "source": "Moneyweb",
    "region": "SA",
+   "published": "2026-10-23T04:05+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Tom Lee Says Yields Below 5% Mean the AI Selloff Is Nearly Over",
+   "url": "https://beincrypto.com/tom-lee-ai-selloff-near-end/?.tsrc=rss",
+   "source": "Yahoo Finance",
+   "region": "US",
    "published": "2026-10-23T04:05+02:00",
    "breaking": false,
    "tickers": []
@@ -281,15 +337,6 @@
    "tickers": []
   },
   {
-   "title": "SK Hynix shares slide after chipmaker scraps Solidigm IPO plans",
-   "url": "https://www.cnbc.com/2026/10/23/sk-hynix-solidigm-ipo-.html",
-   "source": "CNBC",
-   "region": "US",
-   "published": "2026-10-23T02:53+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
    "title": "U.S. stock futures steady after Nasdaq posts worst day since June",
    "url": "https://finance.yahoo.com/markets/stocks/articles/u-stock-futures-steady-nasdaq-005350041.html?.tsrc=rss",
    "source": "Yahoo Finance",
@@ -378,7 +425,7 @@
    "source": "Yahoo Finance",
    "region": "US",
    "published": "2026-10-23T02:04+02:00",
-   "breaking": true,
+   "breaking": false,
    "tickers": [
     "DECK"
    ]
@@ -389,7 +436,7 @@
    "source": "IOL",
    "region": "SA",
    "published": "2026-10-23T02:00+02:00",
-   "breaking": true,
+   "breaking": false,
    "tickers": []
   },
   {
@@ -436,17 +483,6 @@
    "source": "Yahoo Finance",
    "region": "US",
    "published": "2026-10-23T01:55+02:00",
-   "breaking": true,
-   "tickers": [
-    "META"
-   ]
-  },
-  {
-   "title": "Mark Zuckerberg’s creative plan to pay California’s proposed billionaire tax without losing control of Meta",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/mark-zuckerberg-creative-plan-pay-235041754.html?.tsrc=rss",
-   "source": "Yahoo Finance",
-   "region": "US",
-   "published": "2026-10-23T01:50+02:00",
    "breaking": false,
    "tickers": [
     "META"
@@ -458,15 +494,6 @@
    "source": "CNBC",
    "region": "US",
    "published": "2026-10-23T01:45+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Nasdaq 100 Clocks Worst Day In Four Months As Investors Grow Weary Of Capex, Elevated Debt — META, SPCX, BE, MRNA In Focus",
-   "url": "https://stocktwits.com/news-articles/markets/equity/nasdaq-100-clocks-worst-day-in-four-months/cZxwY21RBDl?.tsrc=rss",
-   "source": "Yahoo Finance",
-   "region": "US",
-   "published": "2026-10-23T01:44+02:00",
    "breaking": false,
    "tickers": []
   },
@@ -516,17 +543,6 @@
    "tickers": []
   },
   {
-   "title": "Stocks making big moves yesterday: Dell, Chipotle, Amkor, Super Micro, and United Airlines",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/stocks-making-big-moves-yesterday-230953193.html?.tsrc=rss",
-   "source": "Yahoo Finance",
-   "region": "US",
-   "published": "2026-10-23T01:09+02:00",
-   "breaking": false,
-   "tickers": [
-    "DELL"
-   ]
-  },
-  {
    "title": "‘I don’t feel sorry for myself’: I’m 64 and will be renting for the rest of my life. Is that so bad?",
    "url": "https://www.marketwatch.com/story/my-husband-suffered-a-massive-stroke-at-53-im-64-and-will-rent-for-the-rest-of-my-life-but-im-still-hopeful-46bd6ce9?mod=mw_rss_topstories",
    "source": "MarketWatch",
@@ -549,15 +565,6 @@
    "url": "https://www.marketwatch.com/story/coreweave-set-off-a-wave-of-anxiety-but-wall-streets-dire-prognosis-is-premature-edc3f5dd?mod=mw_rss_topstories",
    "source": "MarketWatch",
    "region": "US",
-   "published": "2026-10-23T00:54+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Philippines oil price uncertainty drives stronger BSP response than actual crude gains, study finds",
-   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOUWFEZEo1WXZvdjBYNDdERW03QUtWTGE1RC1IdHY3WkhZY2c0d1FkTGkyWTQ0Rjd4d09HYURhOU9aZWEzbng0OVNRMjVmbHZieDl5TV84bmdHaEMwczh4amx1dGdpcm5sUDV3QlBnbkhzLUEzZEJqLTItSWVXWHFfa2I1ZlBOZ0tXNEVyazg2bUViRFBmZkVfVjdXaXpmUEVjeW9GaGZ2dw?oc=5",
-   "source": "Traders Union",
-   "region": "FX",
    "published": "2026-10-23T00:54+02:00",
    "breaking": false,
    "tickers": []
@@ -1098,15 +1105,6 @@
    "source": "Daily Maverick",
    "region": "SA",
    "published": "2026-10-22T20:30+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Oil price rises 4% to $113 a barrel after Houthi attacks",
-   "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOLWVmSi1NdUxjSzFlX1J2YlZEc3REcVZoRUQ1YldJVWlvUkhOUHFGN1BVdmlhcnlnaENvcndoSmE0NERTVEN4aktLdXIwTGZWNWZ0ck84b2ZyMk83NXU3b1phYkFLdlplQUh0T3hQaGdROHUzX2ZxeWM4T3FhTzJIXzVMd09peVFoNUFYU1p4Y2djUWwtNTFtZXA2Ti10MkhNd25wR3d6UVA3emNqdTFIUWR4ZVkzMUNsdnZpa2JwUUMwUQ?oc=5",
-   "source": "The Times",
-   "region": "FX",
-   "published": "2026-10-22T20:15+02:00",
    "breaking": false,
    "tickers": []
   }
