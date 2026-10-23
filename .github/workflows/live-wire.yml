@@ -1,0 +1,23 @@
+# LRC Live Wire — breaking-news headlines every 15 minutes (free, runs on GitHub)
+name: Live news wire (every 15 min)
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: lrc-push
+  cancel-in-progress: false
+jobs:
+  wire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - name: Read the newsrooms
+        run: python agents/tools/wire.py
+      - name: Publish
+        run: bash agents/tools/publish.sh "Live wire update"

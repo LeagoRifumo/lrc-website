@@ -1,0 +1,340 @@
+{
+ "week_ending": "2026-10-09",
+ "title": "Weekly market dashboard \u2014 week to 9 Oct 2026",
+ "generated": "2026-10-14T18:00:00+02:00",
+ "agent": "LRC Dashboard Agent (first edition from the analyst workbook)",
+ "groups": [
+  {
+   "name": "South Africa",
+   "rows": [
+    {
+     "name": "JSE All Share (J203)",
+     "unit": "index",
+     "latest": 108524.77,
+     "week_ago": 108378.4,
+     "year_ago": 110243.26,
+     "as_of": "2026-10-09",
+     "source": "Latest: Investing.com / ShareData (9 Oct); wk-ago: Investing.com (2 Oct); yr-ago: ShareData close 9 Oct 2025",
+     "note": "Flat on the week (+0.1%) after September's fall; \u22121.6% y/y. Tue 13 Oct: 109,408 (Sharenet)."
+    },
+    {
+     "name": "JSE Top 40 (J200)",
+     "unit": "index",
+     "latest": 100764,
+     "week_ago": 100779.56,
+     "year_ago": 103074,
+     "as_of": "2026-10-09",
+     "source": "Latest: ShareData (9 Oct); wk-ago: Investing.com (2 Oct); yr-ago: ShareData 9 Oct 2025",
+     "note": "Large caps flat on the week; \u22122.2% y/y. Tue 13 Oct: 101,562."
+    },
+    {
+     "name": "USD / ZAR",
+     "unit": "rand per $",
+     "latest": 16.5077,
+     "week_ago": 16.6475,
+     "year_ago": 17.21,
+     "as_of": "2026-10-09",
+     "source": "Investing.com USD/ZAR (9 Oct / 2 Oct); yr-ago exchange-rates.org 9 Oct 2025 (exchange-rates.org 9 Oct: 16.513 \u2014 agrees)",
+     "note": "Rand 0.8% firmer on the week, ~4% stronger y/y. 13 Oct: R16.53."
+    },
+    {
+     "name": "EUR / ZAR",
+     "unit": "rand per \u20ac",
+     "latest": 18.502,
+     "week_ago": 18.749,
+     "year_ago": 19.899,
+     "as_of": "2026-10-09",
+     "source": "exchange-rates.org daily history (9 Oct / 2 Oct / 9 Oct 2025)",
+     "note": "Rand 1.3% firmer vs the euro on the week."
+    },
+    {
+     "name": "GBP / ZAR",
+     "unit": "rand per \u00a3",
+     "latest": 21.839,
+     "week_ago": 22.056,
+     "year_ago": 22.888,
+     "as_of": "2026-10-09",
+     "source": "exchange-rates.org daily history (9 Oct / 2 Oct / 9 Oct 2025)",
+     "note": "Rand ~1% firmer vs sterling on the week."
+    },
+    {
+     "name": "SA repo rate",
+     "unit": "%",
+     "latest": 7.25,
+     "week_ago": 7.25,
+     "year_ago": 7,
+     "as_of": "2026-09-23",
+     "source": "SARB via Trading Economics (hiked 25bp 23 Sep 2026); yr-ago 7.00% (held 18 Sep 2025, BusinessTech)",
+     "note": "Unchanged; next MPC 19 Nov 2026."
+    },
+    {
+     "name": "SA 10-year government bond",
+     "unit": "%",
+     "latest": 8.955,
+     "week_ago": 9.01,
+     "year_ago": 9.145,
+     "as_of": "2026-10-09",
+     "source": "Investing.com SA 10Y (9 Oct / 2 Oct); yr-ago derived from Trading Economics 12-mo change (approx.)",
+     "note": "Eased slightly but still near 9%. Tue 13 Oct: 8.905%."
+    },
+    {
+     "name": "SA CPI inflation (y/y)",
+     "unit": "%",
+     "latest": 4.4,
+     "week_ago": 4.4,
+     "year_ago": 3.3,
+     "as_of": "2026-08-31",
+     "source": "Stats SA via Trading Economics: Aug 2026 4.4% (no new release; wk-ago = same print); yr-ago Aug 2025 3.3% (Stats SA)",
+     "note": "Above the 3% target; September CPI due 21 Oct."
+    }
+   ]
+  },
+  {
+   "name": "United States & global",
+   "rows": [
+    {
+     "name": "S&P 500",
+     "unit": "index",
+     "latest": 7811.54,
+     "week_ago": 7722.72,
+     "year_ago": 6735.11,
+     "as_of": "2026-10-09",
+     "source": "Yahoo ^GSPC / Investing.com close (9 Oct / 2 Oct); yr-ago Yahoo close 9 Oct 2025",
+     "note": "+1.2% on the week, +16% y/y; YTD +14.1%. Tue 13 Oct: 7,805.45."
+    },
+    {
+     "name": "Nasdaq Composite",
+     "unit": "index",
+     "latest": 27366.17,
+     "week_ago": 27190.86,
+     "year_ago": 23024.63,
+     "as_of": "2026-10-09",
+     "source": "Yahoo ^IXIC / Investing.com close (9 Oct / 2 Oct); yr-ago Yahoo close 9 Oct 2025",
+     "note": "+0.6% on the week, +19% y/y; YTD +17.7%. Tue 13 Oct: 27,204."
+    },
+    {
+     "name": "MSCI Emerging Markets",
+     "unit": "index",
+     "latest": 1708.77,
+     "week_ago": 1708.91,
+     "year_ago": 1365.7,
+     "as_of": "2026-10-09",
+     "source": "Investing.com MSCI EM (9 Oct / 2 Oct); yr-ago derived from Investing.com 1-yr change (+25.1%, approx.)",
+     "note": "Flat on the week; EM +25% y/y. Tue 13 Oct: 1,661.8 (\u22122.7%)."
+    },
+    {
+     "name": "US Fed funds rate (upper)",
+     "unit": "%",
+     "latest": 4,
+     "week_ago": 4,
+     "year_ago": 4.25,
+     "as_of": "2026-10-09",
+     "source": "FRED DFEDTARU / Trading Economics (9 Oct / 2 Oct); yr-ago FRED 9 Oct 2025",
+     "note": "No change since the 16 Sep hike; next FOMC 28 Oct."
+    },
+    {
+     "name": "US 10-year Treasury",
+     "unit": "%",
+     "latest": 5.244,
+     "week_ago": 5.277,
+     "year_ago": 4.15,
+     "as_of": "2026-10-09",
+     "source": "Investing.com US10Y close (9 Oct / 2 Oct), FRED DGS10 check; yr-ago Yahoo ^TNX 9 Oct 2025",
+     "note": "Risk-free rate for USD valuations (DCF) \u2014 eased 3bp on the week; ~110bp above a year ago. 13 Oct: 5.217% (used in this week's Work-sheets)."
+    },
+    {
+     "name": "US CPI inflation (y/y)",
+     "unit": "%",
+     "latest": 3.4,
+     "week_ago": 3.4,
+     "year_ago": 2.9,
+     "as_of": "2026-08-31",
+     "source": "BLS CPI release (Aug 2026 print, 11 Sep); yr-ago Aug 2025 2.9% (BLS)",
+     "note": "Sticky ~3.4%; September CPI due 14 Oct (not out at collection)."
+    }
+   ]
+  },
+  {
+   "name": "Commodities",
+   "rows": [
+    {
+     "name": "Gold",
+     "unit": "$/oz",
+     "latest": 4216.3,
+     "week_ago": 4162.3,
+     "year_ago": 3972.6,
+     "as_of": "2026-10-09",
+     "source": "Investing.com COMEX gold futures (9 Oct / 2 Oct); yr-ago Yahoo GC=F 9 Oct 2025",
+     "note": "+1.3% on the week, +6% y/y."
+    },
+    {
+     "name": "Platinum",
+     "unit": "$/oz",
+     "latest": 1693.3,
+     "week_ago": 1700,
+     "year_ago": 1646.6,
+     "as_of": "2026-10-09",
+     "source": "Investing.com NYMEX platinum (9 Oct / 2 Oct; last week's sheet showed 1,706.8 for 2 Oct \u2014 Investing.com 1,700.0 used); yr-ago derived from Trading Economics (approx.)",
+     "note": "Little changed on the week and y/y \u2014 neutral for PGM miners."
+    },
+    {
+     "name": "Brent crude",
+     "unit": "$/bbl",
+     "latest": 104.72,
+     "week_ago": 102.25,
+     "year_ago": 65.22,
+     "as_of": "2026-10-09",
+     "source": "Investing.com ICE Brent futures (9 Oct / 2 Oct); yr-ago Yahoo BZ=F 9 Oct 2025",
+     "note": "+2.4% on the week, +61% y/y \u2014 fuel inflation pressure for SA. 13 Oct: $105.69."
+    },
+    {
+     "name": "Copper",
+     "unit": "$/t",
+     "latest": 14753,
+     "week_ago": 14438,
+     "year_ago": 11199,
+     "as_of": "2026-10-09",
+     "source": "Investing.com COMEX copper ($6.692/lb 9 Oct, $6.549 2 Oct; yr-ago Yahoo HG=F $5.08) \u00d7 2,204.62 = $/t",
+     "note": "+2.2% on the week, +32% y/y."
+    },
+    {
+     "name": "Iron ore",
+     "unit": "$/t",
+     "latest": 90.68,
+     "week_ago": 91.35,
+     "year_ago": 105.3,
+     "as_of": "2026-10-09",
+     "source": "Investing.com 62% Fe CFR futures (9 Oct / 2 Oct); yr-ago derived from Trading Economics (approx.)",
+     "note": "Soft: \u22120.7% on the week, \u221214% y/y \u2014 negative for Kumba."
+    }
+   ]
+  }
+ ],
+ "movers_period": "Last session: Tue 13 Oct 2026",
+ "movers_universe": "US = S&P 500 \u00b7 SA = JSE Top 100",
+ "movers": [
+  {
+   "market": "US",
+   "type": "Gainer",
+   "rank": 1,
+   "ticker": "CDW",
+   "name": "CDW Corp",
+   "price": 151.97,
+   "move": 0.0571,
+   "why": "\u2014"
+  },
+  {
+   "market": "US",
+   "type": "Gainer",
+   "rank": 2,
+   "ticker": "VLO",
+   "name": "Valero Energy",
+   "price": 456.46,
+   "move": 0.0469,
+   "why": "\u2014"
+  },
+  {
+   "market": "US",
+   "type": "Gainer",
+   "rank": 3,
+   "ticker": "CHTR",
+   "name": "Charter Communications",
+   "price": 106.95,
+   "move": 0.0436,
+   "why": "\u2014"
+  },
+  {
+   "market": "US",
+   "type": "Loser",
+   "rank": 1,
+   "ticker": "AMAT",
+   "name": "Applied Materials",
+   "price": 464.24,
+   "move": -0.0669,
+   "why": "Fell ~7% during its investor day (TheFly)"
+  },
+  {
+   "market": "US",
+   "type": "Loser",
+   "rank": 2,
+   "ticker": "JNJ",
+   "name": "Johnson & Johnson",
+   "price": 248.61,
+   "move": -0.0573,
+   "why": "Slid despite a stronger full-year forecast; MedTech missed (Fox Business)"
+  },
+  {
+   "market": "US",
+   "type": "Loser",
+   "rank": 3,
+   "ticker": "C",
+   "name": "Citigroup",
+   "price": 124.53,
+   "move": -0.056,
+   "why": "Fell after Q3 results (KBW via TheFly)"
+  },
+  {
+   "market": "SA",
+   "type": "Gainer",
+   "rank": 1,
+   "ticker": "VAL",
+   "name": "Valterra Platinum",
+   "price": 1274.42,
+   "move": 0.0423,
+   "why": "\u2014"
+  },
+  {
+   "market": "SA",
+   "type": "Gainer",
+   "rank": 2,
+   "ticker": "IMP",
+   "name": "Impala Platinum",
+   "price": 188,
+   "move": 0.0292,
+   "why": "\u2014"
+  },
+  {
+   "market": "SA",
+   "type": "Gainer",
+   "rank": 3,
+   "ticker": "REM",
+   "name": "Remgro",
+   "price": 209.39,
+   "move": 0.0212,
+   "why": "\u2014"
+  },
+  {
+   "market": "SA",
+   "type": "Loser",
+   "rank": 1,
+   "ticker": "S32",
+   "name": "South32",
+   "price": 55.45,
+   "move": -0.0301,
+   "why": "\u2014"
+  },
+  {
+   "market": "SA",
+   "type": "Loser",
+   "rank": 2,
+   "ticker": "BHG",
+   "name": "BHP Group",
+   "price": 698.8,
+   "move": -0.0212,
+   "why": "\u2014"
+  },
+  {
+   "market": "SA",
+   "type": "Loser",
+   "rank": 3,
+   "ticker": "APN",
+   "name": "Aspen Pharmacare",
+   "price": 156.21,
+   "move": -0.0172,
+   "why": "\u2014"
+  }
+ ],
+ "movers_sources": "US: StockAnalysis S&P 500 list and stock pages, 13 Oct 2026 session (Slickcharts already showed 14 Oct pre-market, not used); reasons from TheFly / Fox Business. SA: ShareData Stock Market Daily 13 Oct 2026 \u2014 JSE LARGE-CAP movers (not the full Top 100; Sharenet Top 100 page showed live 14 Oct data), prices in Rand. Reasons only where a source states one.",
+ "market_view": "SA steadied: the JSE All Share was flat on the week (+0.1% to 108,525) and the rand firmed 0.8% to R16.51/$, with the SA 10-year easing to 8.96% while the repo rate holds at 7.25% after September's hike. US shares rose (S&P 500 +1.2%, Nasdaq +0.6%) with the 10-year a little lower at 5.24%, while Brent climbed 2.4% to $104.7 and gold (+1.3%) and copper (+2.2%) firmed, platinum and iron ore flat to softer. Yields above 5% still weigh on long-duration tech, and US CPI (14 Oct) and the 28 Oct FOMC are the next tests.",
+ "updated_by": "Filled 14 Oct 2026 from Investing.com, Trading Economics, FRED, Yahoo Finance, exchange-rates.org, SARB, Stats SA, BLS, ShareData, Sharenet and StockAnalysis (see Source column). Prayer Nkuna, Analyst"
+}

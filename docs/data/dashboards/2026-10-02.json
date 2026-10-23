@@ -1,0 +1,340 @@
+{
+ "week_ending": "2026-10-02",
+ "title": "Weekly market dashboard \u2014 week to 2 Oct 2026",
+ "generated": "2026-10-04T18:00:00+02:00",
+ "agent": "LRC Dashboard Agent (from the analyst workbook)",
+ "groups": [
+  {
+   "name": "South Africa",
+   "rows": [
+    {
+     "name": "JSE All Share (J203)",
+     "unit": "index",
+     "latest": 108378.4,
+     "week_ago": 110826.04,
+     "year_ago": null,
+     "as_of": "2026-10-02",
+     "source": "Investing.com (FTSE/JSE All Share history)",
+     "note": "Broad SA market direction"
+    },
+    {
+     "name": "JSE Top 40 (J200)",
+     "unit": "index",
+     "latest": 100779.56,
+     "week_ago": 103152.21,
+     "year_ago": null,
+     "as_of": "2026-10-02",
+     "source": "Investing.com (FTSE/JSE Top 40 history)",
+     "note": "Large-cap SA shares"
+    },
+    {
+     "name": "USD / ZAR",
+     "unit": "rand per $",
+     "latest": 16.655,
+     "week_ago": 16.293,
+     "year_ago": 17.291,
+     "as_of": "2026-10-02",
+     "source": "exchange-rates.org daily history",
+     "note": "Weaker rand helps rand-hedge shares, hurts importers"
+    },
+    {
+     "name": "EUR / ZAR",
+     "unit": "rand per \u20ac",
+     "latest": 18.749,
+     "week_ago": 18.56,
+     "year_ago": 20.262,
+     "as_of": "2026-10-02",
+     "source": "exchange-rates.org daily history",
+     "note": null
+    },
+    {
+     "name": "GBP / ZAR",
+     "unit": "rand per \u00a3",
+     "latest": 22.056,
+     "week_ago": 21.593,
+     "year_ago": 23.243,
+     "as_of": "2026-10-02",
+     "source": "exchange-rates.org daily history",
+     "note": null
+    },
+    {
+     "name": "SA repo rate",
+     "unit": "%",
+     "latest": 7.25,
+     "week_ago": 7.25,
+     "year_ago": 7,
+     "as_of": "2026-09-25",
+     "source": "SARB MPC statement Sep 2026 (+25bp, effective 25 Sep)",
+     "note": "Cost of borrowing; drives bank margins and consumer spend"
+    },
+    {
+     "name": "SA 10-year government bond",
+     "unit": "%",
+     "latest": 9.01,
+     "week_ago": null,
+     "year_ago": 9.16,
+     "as_of": "2026-10-02",
+     "source": "Trading Economics (SA 10Y; year-ago = latest + 0.15pt 1-yr change)",
+     "note": "Risk-free rate for ZAR valuations (DCF)"
+    },
+    {
+     "name": "SA CPI inflation (y/y)",
+     "unit": "%",
+     "latest": 4.4,
+     "week_ago": 4.4,
+     "year_ago": 3.3,
+     "as_of": "2026-09-23",
+     "source": "Stats SA CPI release 23 Sep 2026 (Aug 2026 print)",
+     "note": "Target band 3\u20136%; drives rate decisions"
+    }
+   ]
+  },
+  {
+   "name": "United States & global",
+   "rows": [
+    {
+     "name": "S&P 500",
+     "unit": "index",
+     "latest": 7722.72,
+     "week_ago": 7743.41,
+     "year_ago": 6715.35,
+     "as_of": "2026-10-02",
+     "source": "FRED SP500 / Yahoo Finance ^GSPC",
+     "note": "US market direction"
+    },
+    {
+     "name": "Nasdaq Composite",
+     "unit": "index",
+     "latest": 27190.86,
+     "week_ago": 27068.72,
+     "year_ago": 22844.05,
+     "as_of": "2026-10-02",
+     "source": "FRED NASDAQCOM / Yahoo Finance ^IXIC",
+     "note": "Tech-heavy US market"
+    },
+    {
+     "name": "MSCI Emerging Markets",
+     "unit": "index",
+     "latest": 1708.91,
+     "week_ago": 1732.35,
+     "year_ago": null,
+     "as_of": "2026-10-02",
+     "source": "Investing.com (MSCI Emerging Markets history)",
+     "note": "EM risk appetite"
+    },
+    {
+     "name": "US Fed funds rate (upper)",
+     "unit": "%",
+     "latest": 4,
+     "week_ago": 4,
+     "year_ago": 4.25,
+     "as_of": "2026-10-02",
+     "source": "FRED DFEDTARU (Federal Reserve)",
+     "note": "Global cost of money"
+    },
+    {
+     "name": "US 10-year Treasury",
+     "unit": "%",
+     "latest": 5.28,
+     "week_ago": 5.18,
+     "year_ago": 4.09,
+     "as_of": "2026-10-02",
+     "source": "Investing.com US10Y (latest, week); Yahoo ^TNX (year ago); FRED H.15 5.24% on 1 Oct",
+     "note": "Risk-free rate for USD valuations (DCF)"
+    },
+    {
+     "name": "US CPI inflation (y/y)",
+     "unit": "%",
+     "latest": 3.4,
+     "week_ago": 3.4,
+     "year_ago": 2.9,
+     "as_of": "2026-09-11",
+     "source": "BLS CPI release 11 Sep 2026 (Aug 2026 print)",
+     "note": null
+    }
+   ]
+  },
+  {
+   "name": "Commodities",
+   "rows": [
+    {
+     "name": "Gold",
+     "unit": "$/oz",
+     "latest": 4162.3,
+     "week_ago": 4321.2,
+     "year_ago": 3868.1,
+     "as_of": "2026-10-02",
+     "source": "COMEX gold futures (Investing.com / Yahoo GC=F)",
+     "note": "Gold miners; safe-haven demand"
+    },
+    {
+     "name": "Platinum",
+     "unit": "$/oz",
+     "latest": 1706.8,
+     "week_ago": 1797.7,
+     "year_ago": 1563.8,
+     "as_of": "2026-10-02",
+     "source": "NYMEX platinum futures (Investing.com / Yahoo PL=F)",
+     "note": "PGM miners (Implats, Sibanye, Amplats)"
+    },
+    {
+     "name": "Brent crude",
+     "unit": "$/bbl",
+     "latest": 102.25,
+     "week_ago": 98.82,
+     "year_ago": 64.11,
+     "as_of": "2026-10-02",
+     "source": "ICE Brent futures (Investing.com / Yahoo BZ=F)",
+     "note": "Sasol, fuel price, inflation"
+    },
+    {
+     "name": "Copper",
+     "unit": "$/t",
+     "latest": 14438,
+     "week_ago": 14916,
+     "year_ago": 10798,
+     "as_of": "2026-10-02",
+     "source": "COMEX copper futures, $/lb x 2,204.62 = $/t (Investing.com / Yahoo HG=F)",
+     "note": "Global growth signal"
+    },
+    {
+     "name": "Iron ore",
+     "unit": "$/t",
+     "latest": 91.35,
+     "week_ago": 97.06,
+     "year_ago": null,
+     "as_of": "2026-10-02",
+     "source": "CME/SGX iron ore 62% Fe CFR futures (Investing.com)",
+     "note": "Kumba, Exxaro"
+    }
+   ]
+  }
+ ],
+ "movers_period": "Last session \u2014 Fri 2 Oct 2026",
+ "movers_universe": "US = S&P 500 \u00b7 SA = JSE Top 100",
+ "movers": [
+  {
+   "market": "US",
+   "type": "Gainer",
+   "rank": 1,
+   "ticker": "TER",
+   "name": "Teradyne",
+   "price": 449.04,
+   "move": 0.08,
+   "why": null
+  },
+  {
+   "market": "US",
+   "type": "Gainer",
+   "rank": 2,
+   "ticker": "HPE",
+   "name": "Hewlett Packard Enterprise",
+   "price": 69.33,
+   "move": 0.0736,
+   "why": null
+  },
+  {
+   "market": "US",
+   "type": "Gainer",
+   "rank": 3,
+   "ticker": "ECHO",
+   "name": "EchoStar",
+   "price": 94.25,
+   "move": 0.068,
+   "why": null
+  },
+  {
+   "market": "US",
+   "type": "Loser",
+   "rank": 1,
+   "ticker": "WDC",
+   "name": "Western Digital",
+   "price": 415.29,
+   "move": -0.1022,
+   "why": "Toshiba said it plans to double HDD capacity (TheStreet)"
+  },
+  {
+   "market": "US",
+   "type": "Loser",
+   "rank": 2,
+   "ticker": "STX",
+   "name": "Seagate Technology",
+   "price": 848.99,
+   "move": -0.1021,
+   "why": "Toshiba said it plans to double HDD capacity (TheStreet)"
+  },
+  {
+   "market": "US",
+   "type": "Loser",
+   "rank": 3,
+   "ticker": "ACN",
+   "name": "Accenture",
+   "price": 198.9,
+   "move": -0.0631,
+   "why": null
+  },
+  {
+   "market": "SA",
+   "type": "Gainer",
+   "rank": 1,
+   "ticker": "TGA",
+   "name": "Thungela Resources",
+   "price": 125.48,
+   "move": 0.0778,
+   "why": null
+  },
+  {
+   "market": "SA",
+   "type": "Gainer",
+   "rank": 2,
+   "ticker": "CPI",
+   "name": "Capitec Bank",
+   "price": 4372.69,
+   "move": 0.0441,
+   "why": "Rebound after Thursday's 3.6% drop (Rio Times)"
+  },
+  {
+   "market": "SA",
+   "type": "Gainer",
+   "rank": 3,
+   "ticker": "GLN",
+   "name": "Glencore",
+   "price": 124.4,
+   "move": 0.038,
+   "why": "Miners rallied as weak US jobs data weakened the dollar (Rio Times)"
+  },
+  {
+   "market": "SA",
+   "type": "Loser",
+   "rank": 1,
+   "ticker": null,
+   "name": "Canal+ SA",
+   "price": 45.2,
+   "move": -0.1779,
+   "why": null
+  },
+  {
+   "market": "SA",
+   "type": "Loser",
+   "rank": 2,
+   "ticker": "KRO",
+   "name": "Karooooo",
+   "price": 990.16,
+   "move": -0.0292,
+   "why": null
+  },
+  {
+   "market": "SA",
+   "type": "Loser",
+   "rank": 3,
+   "ticker": "SHC",
+   "name": "Shaftesbury Capital",
+   "price": 29.09,
+   "move": -0.0232,
+   "why": null
+  }
+ ],
+ "movers_sources": "US: Slickcharts S&P 500 gainers/losers, each checked on StockAnalysis daily history (2 Oct 2026); WDC/STX reason from TheStreet. SA: SA Shares winners & losers (large + mid cap = JSE Top 100), 2 Oct 2026 session, cross-checked with The Rio Times. Reasons only where a source states one.",
+ "market_view": "A weak US September payrolls print (+29k vs ~90k expected, unemployment 4.2%) cut Fed hike odds and lifted the S&P 500 0.7% and Nasdaq 1.2% on Friday, but the S&P still ended the week 0.3% lower with the US 10-year near 5.28%. The rand weakened 2.2% over the week to R16.66/$ and the JSE All Share fell 2.2% (Top 40 -2.3%) after the SARB raised the repo rate 25bp to 7.25% to lean against fuel-driven inflation (CPI 4.4% in August). Gold (-3.7%) and platinum (-5.1%) fell on the week while Brent held above $100/bbl; US yields above 5% remain the main valuation headwind for long-duration tech.",
+ "updated_by": "Filled 4 Oct 2026 from the sources in the Source column. Leago Rifumo Capital"
+}

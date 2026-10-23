@@ -1,0 +1,60 @@
+# LRC daily automation — after the US close (06:00 South African time, every day)
+#  * watchlist: re-prices every rated company and applies the house rules (2×ATR stop, 3R target, max 4 shorts, 14-day event rule)
+#  * earnings calendar (New York), weekly market dashboard (live + weekend edition)
+#  * Saturdays: also writes the week into the LRC Watchlist Excel workbook
+#  * opens a GitHub issue (you get an email) when a price move pushes a name across a rating line — the analyst decides
+name: Daily watchlist, earnings & dashboard
+on:
+  schedule:
+    - cron: '7 4 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+  issues: write
+concurrency:
+  group: lrc-push
+  cancel-in-progress: false
+jobs:
+  daily:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - name: Watchlist (house rules)
+        run: python agents/tools/market_refresh.py
+      - name: Earnings calendar — New York
+        continue-on-error: true
+        run: python agents/tools/earnings_us.py
+      - name: Weekly market dashboard
+        continue-on-error: true
+        run: python agents/tools/dashboard_auto.py
+      - name: Rating review alerts (email via GitHub issue)
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY'
+          import json, subprocess
+          new = json.load(open('agents/work/rating_alerts.json'))
+          try: old = json.loads(subprocess.run(['git', 'show', 'HEAD:agents/work/rating_alerts.json'], capture_output=True, text=True).stdout or '[]')
+          except Exception: old = []
+          seen = {(a['ticker'], a['rating_at_today_price']) for a in old}
+          fresh = [a for a in new if (a['ticker'], a['rating_at_today_price']) not in seen]
+          if fresh:
+              body = 'The daily re-pricing moved these names across a rating line. The website still shows the approved rating; only the analyst changes it (edit docs/data/ratings.json after a Work-sheet review).\n\n| Ticker | Approved | At today\'s price | Price | 6-m value | Upside |\n|---|---|---|---|---|---|\n'
+              body += ''.join(f"| {a['ticker']} | {a['approved_rating']} | {a['rating_at_today_price']} | {a['price']} | {a['target_6m']} | {a['upside']:+.1%} |\n" for a in fresh)
+              subprocess.run(['gh', 'issue', 'create', '--title', 'Rating review needed: ' + ', '.join(a['ticker'] for a in fresh), '--body', body], check=False)
+          print('new alerts:', [a['ticker'] for a in fresh])
+          PY
+      - name: Publish
+        run: bash agents/tools/publish.sh "Daily watchlist, earnings and dashboard"
+      - name: Saturday — write the week into the Excel workbook
+        continue-on-error: true
+        run: |
+          if [ "$(TZ=Africa/Johannesburg date +%u)" != "6" ] && [ "${{ github.event_name }}" != "workflow_dispatch" ]; then echo "Not Saturday"; exit 0; fi
+          sudo apt-get update -qq && sudo apt-get install -y -qq libreoffice-calc-nogui python3-uno >/dev/null
+          mkdir -p reports
+          /usr/bin/python3 agents/tools/update_watchlist_xlsx.py
+          bash agents/tools/publish.sh "Weekly watchlist workbook"

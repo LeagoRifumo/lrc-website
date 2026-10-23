@@ -1,0 +1,25 @@
+# LRC Articles — publishes every article you add to docs/articles/ (page, SEO tags, sitemap, Articles list)
+name: Publish articles
+on:
+  push:
+    branches: [main]
+    paths: ['docs/articles/**.md', 'docs/articles/img/**', 'agents/templates/article.html']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: lrc-push
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - run: pip install -q markdown
+      - name: Build article pages, list and sitemap
+        run: python agents/tools/build_articles.py
+      - name: Publish
+        run: bash agents/tools/publish.sh "Publish articles"

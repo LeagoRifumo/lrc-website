@@ -1,0 +1,235 @@
+{
+ "_note": "Live wire sources (RSS). Add or remove feeds here; a feed that fails is skipped and reported in the run log. region: SA, US, FX (forex & commodities), GL (global).",
+ "feeds": [
+  {
+   "source": "Moneyweb",
+   "region": "SA",
+   "url": "https://www.moneyweb.co.za/feed/"
+  },
+  {
+   "source": "BusinessTech",
+   "region": "SA",
+   "url": "https://businesstech.co.za/news/feed/"
+  },
+  {
+   "source": "CNBC Africa",
+   "region": "SA",
+   "url": "https://www.cnbcafrica.com/feed/"
+  },
+  {
+   "source": "Daily Maverick",
+   "region": "SA",
+   "url": "https://www.dailymaverick.co.za/section/business-maverick/feed/"
+  },
+  {
+   "source": "IOL Business",
+   "region": "SA",
+   "url": "https://iol.co.za/rss/iol/business-report/"
+  },
+  {
+   "source": "CNBC",
+   "region": "US",
+   "url": "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114"
+  },
+  {
+   "source": "CNBC Markets",
+   "region": "US",
+   "url": "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=20910258"
+  },
+  {
+   "source": "MarketWatch",
+   "region": "US",
+   "url": "https://feeds.content.dowjones.io/public/rss/mw_topstories"
+  },
+  {
+   "source": "MarketWatch Bulletins",
+   "region": "US",
+   "url": "https://feeds.content.dowjones.io/public/rss/mw_bulletins",
+   "breaking": true
+  },
+  {
+   "source": "Yahoo Finance",
+   "region": "US",
+   "url": "https://finance.yahoo.com/news/rssindex"
+  },
+  {
+   "source": "FXStreet",
+   "region": "FX",
+   "url": "https://www.fxstreet.com/rss/news"
+  },
+  {
+   "source": "Investing.com Forex",
+   "region": "FX",
+   "url": "https://www.investing.com/rss/news_1.rss"
+  },
+  {
+   "source": "Investing.com Commodities",
+   "region": "FX",
+   "url": "https://www.investing.com/rss/news_11.rss"
+  },
+  {
+   "source": "OilPrice.com",
+   "region": "FX",
+   "url": "https://oilprice.com/rss/main"
+  },
+  {
+   "source": "Yahoo Finance (our coverage)",
+   "region": "US",
+   "url": "https://feeds.finance.yahoo.com/rss/2.0/headline?s={COVERAGE}&region=US&lang=en-US",
+   "coverage": true
+  }
+ ],
+ "breaking": {
+  "_note": "A headline is flagged BREAKING when it is under 3 hours old and matches one of these words, comes from a breaking feed, or names a company we cover with a big-move word.",
+  "words": [
+   "breaking",
+   "just in",
+   "flash",
+   "urgent",
+   "rate decision",
+   "rate cut",
+   "rate hike",
+   "hikes rates",
+   "cuts rates",
+   "holds rates",
+   "repo rate",
+   "sarb",
+   "mpc",
+   "fomc",
+   "powell",
+   "fed decision",
+   "kganyago",
+   "budget",
+   "downgrade",
+   "upgrade",
+   "moody's",
+   "s&p global ratings",
+   "fitch",
+   "load shedding",
+   "loadshedding",
+   "plunge",
+   "plunges",
+   "plummets",
+   "soars",
+   "surges",
+   "crash",
+   "tumbles",
+   "slumps",
+   "record high",
+   "all-time high",
+   "halted",
+   "trading halt",
+   "suspends",
+   "bankruptcy",
+   "default",
+   "sanctions",
+   "tariff",
+   "ceasefire",
+   "attack",
+   "explosion",
+   "resigns",
+   "fired",
+   "acquire",
+   "takeover",
+   "merger",
+   "profit warning",
+   "trading statement",
+   "cpi",
+   "inflation",
+   "jobs report",
+   "nonfarm",
+   "payrolls",
+   "gdp"
+  ],
+  "move_words": [
+   "jumps",
+   "falls",
+   "drops",
+   "rises",
+   "beats",
+   "misses",
+   "guidance",
+   "results",
+   "earnings"
+  ],
+  "max_age_hours": 3
+ },
+ "keep_hours": 48,
+ "max_items": 120,
+ "coverage_aliases": {
+  "_note": "Words that tag a headline to a company we cover (case-sensitive). Add new names when the analyst rates a new company.",
+  "PCTY": [
+   "Paylocity",
+   "PCTY"
+  ],
+  "WAB": [
+   "Wabtec",
+   "Westinghouse Air Brake"
+  ],
+  "ANET": [
+   "Arista",
+   "ANET"
+  ],
+  "FAST": [
+   "Fastenal"
+  ],
+  "DELL": [
+   "Dell"
+  ],
+  "HPE": [
+   "Hewlett Packard Enterprise",
+   "HPE"
+  ],
+  "KEYS": [
+   "Keysight"
+  ],
+  "APH": [
+   "Amphenol"
+  ],
+  "AMD": [
+   "AMD",
+   "Advanced Micro Devices"
+  ],
+  "NKE": [
+   "Nike"
+  ],
+  "CMCSA": [
+   "Comcast",
+   "CMCSA"
+  ],
+  "CG": [
+   "Carlyle"
+  ],
+  "DKNG": [
+   "DraftKings"
+  ],
+  "TTD": [
+   "Trade Desk"
+  ],
+  "INTU": [
+   "Intuit",
+   "TurboTax",
+   "QuickBooks"
+  ],
+  "DECK": [
+   "Deckers",
+   "Hoka",
+   "UGG"
+  ],
+  "META": [
+   "Meta Platforms",
+   "Meta ",
+   "Facebook parent",
+   "Instagram"
+  ],
+  "NVDA": [
+   "Nvidia",
+   "NVIDIA",
+   "NVDA"
+  ],
+  "GOOGL": [
+   "Alphabet",
+   "Google"
+  ]
+ }
+}
