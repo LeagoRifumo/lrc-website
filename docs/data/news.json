@@ -1,10 +1,10 @@
 {
- "edition": "Midday update · Friday 23 October 2026 09:25",
- "generated": "2026-10-23T12:15:00+02:00",
- "covers": "Thursday 22 October US session and after-hours results, Asia on Friday 23 October, and the JSE/rand open on Friday",
+ "edition": "Midday update · Friday 23 October 2026 13:15",
+ "generated": "2026-10-23T13:15:00+02:00",
+ "covers": "JSE session and European morning to 13:15 SAST Fri 23 Oct; US pre-market",
  "agent": "LRC News Agent",
- "headline": "Breaking: Brent climbs to about $114 as Aramco clears its Dhahran HQ and Iran claims seven ships hit; DECK down about 7% after hours",
- "summary": "The rand was slightly weaker near R16.51/$ early on Friday 23 Oct (+0.2% for the dollar) as the JSE opened after Thursday's US tech sell-off, in which the Nasdaq fell 2.6%. Brent rose about 1.2% to $114.00 a barrel (WTI $100.40) by 07:33 SAST after Aramco told staff to leave its Dhahran headquarters and Iran's Revolutionary Guard claimed seven ships were hit near Hormuz — a claim not independently confirmed and rejected by President Trump. Gold held near $4,014/oz, close to three-month lows, so SA miners and the rand stay under pressure while higher oil feeds fuel-price and inflation worries.",
+ "headline": "Breaking: Brent near $115 as Iran tensions build; Europe and US futures lower after the AI sell-off; DECK down about 7% after hours",
+ "summary": "The rand was broadly unchanged near R16.51/$ on Friday morning (Reuters via CNBC Africa, 08:36 SAST) and the SA 2035 bond yield was flat at 8.615%, after Thursday's sharp fall in the currency. US stock futures pointed lower before the open (Dow −0.6%, S&P 500 −0.2% at 12:00 SAST, Stocktwits) after Thursday's 2.6% Nasdaq drop, while investors bought bonds: the US 10-year yield fell 16 basis points to 4.97% on Thursday (Euronews). Brent rose 0.9% to $114.73 a barrel and gold slipped 0.8% to about $4,027/oz by about 10:00 SAST (Euronews), so higher fuel costs and weak gold keep pressure on SA inflation expectations and the miners.",
  "sections": [
   {
    "name": "Breaking",
@@ -19,16 +19,28 @@
      ]
     },
     {
-     "title": "Brent ~$114 (+1.2%): Aramco evacuates Dhahran HQ; Iran claims seven ships hit near Hormuz",
-     "summary": "Brent was at $114.00 and WTI at $100.40 at 05:33 GMT (07:33 SAST) on 23 Oct, up 1.2% and 1.4%, after trading at $111.70 midday in New York on Thursday. Aramco told employees to leave its Dhahran headquarters and work remotely as a precaution (Reuters via CBS News). Iran's Revolutionary Guard said it hit four tankers doing oil transfers in the northern Gulf and that three vessels struck mines west of the Strait of Hormuz; AP could not verify this and UKMTO had issued no matching reports. Trump said Iran is \"making up fake hits\" to push up oil before the 3 November US midterms. The IEA says Gulf-to-Asia tanker freight is above $37 a barrel, more than five times pre-war levels — relevant to SA fuel prices and inflation.",
-     "source": "FinanceFeeds; gCaptain",
-     "url": "https://financefeeds.com/brent-crude-oil-price-114-friday-seven-tankers-aramco-evacuates-dhahran-bull-117-bear-108/"
+     "title": "Brent ~$114.73 (+0.9%): Aramco evacuates Dhahran HQ; Iran claims seven ships hit near Hormuz",
+     "summary": "Brent was up 0.9% at $114.73 a barrel and WTI up 1.3% at $100.75 around 10:00 SAST on Fri 23 Oct, after a 4% jump on Thursday (Euronews). Earlier, Aramco told staff to leave its Dhahran headquarters and Iran's Revolutionary Guard claimed seven ships were hit near Hormuz — a claim not independently confirmed and rejected by President Trump (FinanceFeeds, 07:33 SAST). European gas (Dutch TTF, November) was above €93/MWh.",
+     "source": "Euronews / FinanceFeeds",
+     "url": "https://www.euronews.com/2026/10/23/oil-prices-climb-above-113-as-ai-sell-off-rattles-stocks-and-investors-buy-bonds"
     }
    ]
   },
   {
    "name": "US markets",
    "items": [
+    {
+     "title": "US futures lower pre-market; Moderna down another 4%",
+     "summary": "At 06:00 ET (12:00 SAST) on Fri 23 Oct, Dow futures were −0.60%, S&P 500 −0.23% and Nasdaq 100 −0.04%. Moderna was down over 4% pre-market after an almost 18% fall on Thursday to $202.63. AMD (+~1%) and NVIDIA (+0.4%) edged up after Thursday's chip sell-off; Meta was −0.6%.",
+     "source": "Stocktwits",
+     "url": "https://stocktwits.com/news-articles/markets/equity/nasdaq-dow-s-and-p-500-futures-drop-premarket-nvda-amd-meta-crwv-mrna-wdc-be-in-focus/cZxyfNARBxI"
+    },
+    {
+     "title": "Investors buy bonds: US 10-year yield down 16bp to 4.97%",
+     "summary": "The US 10-year Treasury yield fell 16 basis points to 4.97% on Thursday 22 Oct, from 5.13%, having traded above 5.30% earlier in October, as investors moved into bonds during the AI-led stock sell-off. In Europe on Friday, France's 10-year yield was about 5.07% versus Germany's 3.33%, a spread above 170bp.",
+     "source": "Euronews",
+     "url": "https://www.euronews.com/2026/10/23/oil-prices-climb-above-113-as-ai-sell-off-rattles-stocks-and-investors-buy-bonds"
+    },
     {
      "title": "Nasdaq −2.6%, S&P 500 −1.2% as AI-trade worries hit tech",
      "summary": "The S&P 500 closed at 7,663.43 and the Nasdaq at 26,008.86; the Dow edged up 0.02% to 52,867.98. Lam Research fell about 9%, Applied Materials and KLA about 6%, AMD and Intel 4–5% and NVIDIA about 2%. Treasuries rallied: the 10-year yield fell about 11bp to near 5.0%.",
@@ -61,13 +73,24 @@
    ]
   },
   {
+   "name": "Europe",
+   "items": [
+    {
+     "title": "Europe lower: Stoxx 600 −0.4%, Kering −11% on Gucci sales",
+     "summary": "Early on Fri 23 Oct (about 09:45 SAST) the Stoxx 600 was −0.4%, FTSE 100 −0.3%, DAX −0.5% and CAC 40 −0.8%. Kering fell more than 11% after Gucci's third-quarter sales dropped 6% year on year on a comparable basis, slightly worse than expected.",
+     "source": "Euronews",
+     "url": "https://www.euronews.com/2026/10/23/oil-prices-climb-above-113-as-ai-sell-off-rattles-stocks-and-investors-buy-bonds"
+    }
+   ]
+  },
+  {
    "name": "South Africa",
    "items": [
     {
-     "title": "Rand slightly weaker near R16.51/$ at Friday's open",
-     "summary": "USD/ZAR was at about 16.51 on Friday 23 Oct, up 0.2% on the day, after the rand weakened about 0.7% on Thursday as higher oil and falling gold and platinum removed support. September CPI (released this week) was 4.5%, below the 4.7% expected.",
-     "source": "Trading Economics",
-     "url": "https://tradingeconomics.com/south-africa/currency"
+     "title": "Rand broadly steady near R16.51/$; 2035 bond flat at 8.615%",
+     "summary": "The rand traded at R16.5050/$ at 08:36 SAST on Fri 23 Oct, broadly unchanged from Thursday's close after a sharp fall that session. The 2035 government bond was flat, yielding 8.615%. Traders are waiting for month-end data; better-than-expected inflation and two months of temporary fuel-levy relief are in the background.",
+     "source": "CNBC Africa (Reuters)",
+     "url": "https://www.cnbcafrica.com/2026/south-african-rand-steady-as-traders-await-month-end-data"
     },
     {
      "title": "Mid-year budget: temporary fuel levy cuts return from November",
@@ -82,7 +105,7 @@
    "items": [
     {
      "title": "Gold below $4,000 for the first time since July",
-     "summary": "Spot gold fell 0.3% to $4,013.91 by 03:26 SAST on 23 Oct after slipping 2.8% on Thursday, touching its lowest since 20 July, and is heading for a weekly loss of more than 3.5%; it briefly traded under $4,000. Platinum was flat at $1,567.10 after a 3.6% drop on Thursday. CME FedWatch shows a 78% chance of a December rate hike; the Fed is expected to hold on 27–28 Oct. On Friday morning Trading Economics showed gold near $4,014/oz, down 0.3% on the day and about 6% lower over the past month.",
+     "summary": "Spot gold fell 0.3% to $4,013.91 by 03:26 SAST on 23 Oct after slipping 2.8% on Thursday, touching its lowest since 20 July, and is heading for a weekly loss of more than 3.5%; it briefly traded under $4,000. Platinum was flat at $1,567.10 after a 3.6% drop on Thursday. CME FedWatch shows a 78% chance of a December rate hike; the Fed is expected to hold on 27–28 Oct. On Friday morning Trading Economics showed gold near $4,014/oz, down 0.3% on the day and about 6% lower over the past month. Gold futures were −0.8% at $4,027.40/oz around 10:00 SAST on Fri 23 Oct (Euronews).",
      "source": "Reuters via Yahoo Finance",
      "url": "https://finance.yahoo.com/markets/commodities/articles/gold-hits-3-mth-low-022145269.html"
     },
@@ -108,9 +131,9 @@
     },
     {
      "title": "Chip sell-off: AMD and NVIDIA lower",
-     "summary": "AMD fell 4–5% and NVIDIA about 2% (22 Oct). AMD is a SELL on our list; this morning's watchlist (23 Oct, 06:30) has it as a cleared short setup at 501.59 (stop 558.05), with results within 14 days. NVIDIA is a BUY but is not technically cleared; its pullback entry is 222.63 (stop 210.13). Check both levels at the US open.",
-     "source": "Yahoo Finance",
-     "url": "https://finance.yahoo.com/markets/article/stock-market-today-thursday-october-22-dow-sp-500-nasdaq-tesla-meta-112217857.html",
+     "summary": "AMD fell more than 8% and NVIDIA 4.4% on Thu 22 Oct; both edged up pre-market on Friday (AMD +~1%, NVIDIA +0.4% at 12:00 SAST, Stocktwits). AMD is a SELL on our list; this morning's watchlist (23 Oct, 06:30) has it as a cleared short setup at 501.59 (stop 558.05), with results within 14 days. NVIDIA is a BUY but is not technically cleared; its pullback entry is 222.63 (stop 210.13). Check both levels at the US open.",
+     "source": "Stocktwits / Euronews",
+     "url": "https://stocktwits.com/news-articles/markets/equity/nasdaq-dow-s-and-p-500-futures-drop-premarket-nvda-amd-meta-crwv-mrna-wdc-be-in-focus/cZxyfNARBxI",
      "tickers": [
       "AMD",
       "NVDA"
@@ -120,7 +143,7 @@
   }
  ],
  "watch_today": [
-  "Oil: Brent near $114 — any confirmation (or denial) of the Iranian ship claims or further Aramco disruption moves SA fuel and inflation expectations",
+  "Oil: Brent near $115 — any confirmation (or denial) of the Iranian ship claims or further Aramco disruption moves SA fuel and inflation expectations",
   "DECK at the US open (15:30 SAST): whether the after-hours drop to about $79 holds (BUY, target $103; analyst re-run needed — rating unchanged)",
   "JSE: gold and PGM miners with gold near $4,000, and the rand near R16.51/$",
   "US flash PMIs later today and next week's Fed meeting (27–28 Oct)"
