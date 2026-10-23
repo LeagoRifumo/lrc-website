@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research Library | Leago Rifumo Capital</title>
+<meta name="description" content="Company reports, weekly market dashboards and education notes from Leago Rifumo Capital.">
+<meta property="og:title" content="Research Library | Leago Rifumo Capital">
+<meta property="og:description" content="Company reports, weekly market dashboards and education notes from Leago Rifumo Capital.">
+<meta property="og:image" content="assets/img/og-image.png">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="index.html" aria-label="Leago Rifumo Capital home"><img src="assets/img/monogram.png" alt=""><div><span>LEAGO RIFUMO</span><small>CAPITAL</small></div></a>
+    <ul class="menu" id="menu">
+      <li><a href="research.html" class="active">Research</a></li>
+      <li><a href="watchlist.html">Watchlist</a></li>
+      <li><a href="news.html">AI News</a></li>
+      <li><a href="tools.html">Tools</a></li>
+      <li><a href="markets.html">Markets</a></li>
+      <li><a href="academy.html">Academy</a></li>
+      <li><a href="show.html">Live Show</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a class="btn btn-red" href="https://www.youtube.com/@LeagoRifumoCapital" target="_blank" rel="noopener"><span class="dot" style="background:#fff"></span> Watch Live</a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+<div class="ticker-bar"><div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div><script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>{"symbols": [{"proName": "NASDAQ:AAPL", "title": "Apple"}, {"proName": "NASDAQ:MSFT", "title": "Microsoft"}, {"proName": "NASDAQ:NVDA", "title": "NVIDIA"}, {"proName": "NASDAQ:AMZN", "title": "Amazon"}, {"proName": "NASDAQ:TSLA", "title": "Tesla"}, {"proName": "NYSE:JPM", "title": "JPMorgan"}, {"proName": "FX_IDC:USDZAR", "title": "USD/ZAR"}, {"proName": "FX:EURUSD", "title": "EUR/USD"}, {"proName": "FX:GBPUSD", "title": "GBP/USD"}, {"proName": "OANDA:XAUUSD", "title": "Gold"}, {"proName": "OANDA:XPTUSD", "title": "Platinum"}, {"proName": "TVC:UKOIL", "title": "Brent oil"}], "showSymbolLogo": true, "isTransparent": true, "displayMode": "adaptive", "colorTheme": "dark", "locale": "en"}</script></div></div>
+<main>
+
+<section class="page-hero"><div class="wrap">
+  <span class="eyebrow">Research library</span>
+  <h1>Research you can <span class="gold">follow step by step</span></h1>
+  <p class="lead">Company reports, weekly market dashboards and education notes. Filter by type or sector, search, and request any report by email.</p>
+</div></section>
+<section style="padding-top:40px">
+  <div class="wrap">
+    <div class="filters" id="libFilters">
+      <button class="chip-btn on" data-f="all">All</button>
+      <button class="chip-btn" data-f="Company report">Company reports</button>
+      <button class="chip-btn" data-f="Market brief">Market briefs</button>
+      <button class="chip-btn" data-f="Education">Education</button>
+      <select id="libSector" style="width:auto;padding:9px 14px;border-radius:999px"><option value="all">All sectors</option><option>Technology</option><option>Industrials</option><option>Macro &amp; markets</option><option>Process</option></select>
+      <input class="search" id="libSearch" type="search" placeholder="Search research…" aria-label="Search research">
+    </div>
+    <div class="lib" id="lib"></div>
+    <p class="empty" id="libEmpty">No research matches that search yet.</p>
+  </div>
+</section>
+<section class="light">
+  <div class="wrap">
+    <span class="eyebrow">What a rating means</span>
+    <h2>BUY, HOLD or SELL — <em style="color:var(--gold-3)">over six months</em></h2>
+    <div class="ratings">
+      <div class="rating"><b class="b-buy">BUY</b><p>Expected gain of 7.5% or more over six months, a checklist score of at least 3.5 out of 5, and no critical red flag.</p></div>
+      <div class="rating"><b class="b-hold">HOLD</b><p>A business worth owning, but the expected gain is smaller — or there is a risk we want to see resolved first.</p></div>
+      <div class="rating"><b class="b-sell">SELL</b><p>Expected fall of 5% or more over six months, or a checklist score below 2.5. Great companies can be SELLs at the wrong price.</p></div>
+    </div>
+    <div style="margin-top:34px"><a class="btn btn-gold" href="tools.html#rating">Test the rules in the rating checker →</a></div>
+  </div>
+</section>
+
+</main>
+<div class="disclaimer-band"><div class="wrap"><b>DISCLAIMER</b>All content from Leago Rifumo Capital — including research, tools, market briefs and the Leago Rifumo Show — is for educational and entertainment purposes only and is general information, not financial advice. Trading and investing involve risk, including the loss of capital. <a href="disclaimer.html" style="color:var(--gold-2)">Full disclaimer →</a></div></div>
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div><a class="brand" href="index.html"><img src="assets/img/monogram.png" alt=""><div><span>LEAGO RIFUMO</span><small>CAPITAL</small></div></a>
+        <p style="margin-top:16px;max-width:320px">Independent equity research, live trading and market education. Built on Discipline.</p></div>
+      <div><h5>RESEARCH</h5><ul><li><a href="research.html">Research library</a></li><li><a href="tools.html">Analyst tools</a></li><li><a href="markets.html">Live markets</a></li><li><a href="academy.html">Academy</a></li></ul></div>
+      <div><h5>FOLLOW</h5><ul><li><a href="https://www.youtube.com/@LeagoRifumoCapital" target="_blank" rel="noopener">YouTube</a></li><li><a href="https://www.tiktok.com/@leagorifumocapital" target="_blank" rel="noopener">TikTok</a></li><li><a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a></li><li><a href="show.html">Live Show</a></li></ul></div>
+      <div><h5>CONTACT</h5><ul><li><a href="mailto:info@leagorifumocapital.co.za">info@leagorifumocapital.co.za</a></li><li>Johannesburg, South Africa</li><li><a href="contact.html">Bookings &amp; collabs</a></li></ul></div>
+    </div>
+    <div class="legal"><span>© <span id="yr">2026</span> Leago Rifumo Capital. All rights reserved.</span><span><a href="disclaimer.html">Disclaimer</a> · <a href="privacy.html">Privacy (POPIA)</a></span></div>
+  </div>
+</footer>
+<script>window.LRC_DATA = "data/";</script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
