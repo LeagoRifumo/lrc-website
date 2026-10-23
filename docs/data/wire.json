@@ -1,8 +1,1079 @@
 {
- "generated": "2026-10-23T03:00+02:00",
+ "generated": "2026-10-23T03:08+02:00",
  "agent": "LRC Live Wire",
- "sources_ok": 0,
- "sources_failed": [],
- "items": [],
- "note": "The live wire switches on with its first automatic run \u2014 within 15 minutes of the automation being turned on."
+ "sources_ok": 10,
+ "sources_failed": [
+  "BusinessTech: HTTP Error 403: Forbidden",
+  "CNBC Africa: HTTP Error 404: Not Found",
+  "Daily Maverick: HTTP Error 404: Not Found",
+  "Yahoo Finance: HTTP Error 404: Not Found",
+  "FXStreet: HTTP Error 403: Forbidden"
+ ],
+ "items": [
+  {
+   "title": "Japan core inflation in September surges to its highest this year at 2.1%",
+   "url": "https://www.cnbc.com/2026/10/23/japan-inflation-september-highest-in-2026.html",
+   "source": "CNBC",
+   "region": "US",
+   "published": "2026-10-23T02:55+02:00",
+   "breaking": true,
+   "tickers": []
+  },
+  {
+   "title": "SK Hynix shares slide after chipmaker scraps Solidigm IPO plans",
+   "url": "https://www.cnbc.com/2026/10/23/sk-hynix-solidigm-ipo-.html",
+   "source": "CNBC",
+   "region": "US",
+   "published": "2026-10-23T02:53+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "U.S. stock futures steady after Nasdaq posts worst day since June",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/u-stock-futures-steady-nasdaq-005350041.html?.tsrc=rss",
+   "source": "Yahoo Finance",
+   "region": "US",
+   "published": "2026-10-23T02:53+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Dow Jones Futures: Moderna Crashes, Meta Fuels AI Meltdown, But Warren Buffett Market Thriving",
+   "url": "https://finance.yahoo.com/m/47e878bb-824d-3243-a8e9-b86b1c3f85d3/dow-jones-futures%3A-moderna.html?.tsrc=rss",
+   "source": "Yahoo Finance",
+   "region": "US",
+   "published": "2026-10-23T02:50+02:00",
+   "breaking": true,
+   "tickers": [
+    "META"
+   ]
+  },
+  {
+   "title": "SpaceX records $561 million investment gain from stake in Elon Musk's Boring Co.",
+   "url": "https://www.cnbc.com/2026/10/22/spacex-records-561-million-investment-gain-from-stake-in-boring-co.html",
+   "source": "CNBC",
+   "region": "US",
+   "published": "2026-10-23T02:46+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Oil prices cool from 5-month highs as Trump invokes defense production act",
+   "url": "https://www.investing.com/news/commodities-news/oil-prices-cool-from-5month-highs-as-trump-invokes-defense-production-act-4967880",
+   "source": "Investing.com Commodities",
+   "region": "FX",
+   "published": "2026-10-23T02:41+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Does CoreWeave (CRWV) Change The Enterprise AI Case With New Security Tools?",
+   "url": "https://finance.yahoo.com/technology/ai/articles/does-coreweave-crwv-change-enterprise-002132717.html?.tsrc=rss",
+   "source": "Yahoo Finance",
+   "region": "US",
+   "published": "2026-10-23T02:21+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Why Lockheed Martin Stock Soared Today",
+   "url": "https://www.fool.com/investing/2026/10/22/why-lockheed-martin-stock-soared-today/?.tsrc=rss",
+   "source": "Yahoo Finance",
+   "region": "US",
+   "published": "2026-10-23T02:20+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "What Higher Interest Rates Mean for Dividend Stocks Like AbbVie and Pfizer",
+   "url": "https://www.fool.com/investing/2026/10/22/what-higher-interest-rates-mean-for-dividend-stock/?.tsrc=rss",
+   "source": "Yahoo Finance",
+   "region": "US",
+   "published": "2026-10-23T02:20+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Stock futures are little changed after tech sector sell-off: Live updates",
+   "url": "https://www.cnbc.com/2026/10/22/stock-market-today-live-update.html",
+   "source": "CNBC",
+   "region": "US",
+   "published": "2026-10-23T02:11+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "DraftKings CEO Says Prediction Markets Create a Win-Win Growth Path",
+   "url": "https://www.marketbeat.com/instant-alerts/event-draftkings-ceo-says-prediction-markets-create-a-win-win-growth-path-2026-10-22/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "source": "Yahoo Finance",
+   "region": "US",
+   "published": "2026-10-23T02:04+02:00",
+   "breaking": false,
+   "tickers": [
+    "DKNG"
+   ]
+  },
+  {
+   "title": "What Deckers Outdoor (DECK) Said on Its Q2 Earnings Call",
+   "url": "https://www.marketbeat.com/instant-alerts/transcript-what-deckers-outdoor-deck-said-on-its-q2-earnings-call-2026-10-22/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "source": "Yahoo Finance",
+   "region": "US",
+   "published": "2026-10-23T02:04+02:00",
+   "breaking": true,
+   "tickers": [
+    "DECK"
+   ]
+  },
+  {
+   "title": "LNG Canada Doubles Capacity as Asia Looks Beyond the Gulf",
+   "url": "https://oilprice.com/Energy/Natural-Gas/LNG-Canada-Doubles-Capacity-as-Asia-Looks-Beyond-the-Gulf.html",
+   "source": "OilPrice.com",
+   "region": "FX",
+   "published": "2026-10-23T02:00+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "These funds can juice your tax-free portfolio income. Just be sure to mind the risk",
+   "url": "https://www.cnbc.com/2026/10/22/municipal-bond-funds-tax-free-income.html",
+   "source": "CNBC",
+   "region": "US",
+   "published": "2026-10-23T01:59+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "AMD, Monolithic Power Systems, MACOM, Vishay Intertechnology, and Semtech shares plummet, what you need to know",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/amd-monolithic-power-systems-macom-235753675.html?.tsrc=rss",
+   "source": "Yahoo Finance",
+   "region": "US",
+   "published": "2026-10-23T01:57+02:00",
+   "breaking": false,
+   "tickers": [
+    "AMD"
+   ]
+  },
+  {
+   "title": "Review & Preview: The Problem With Meta’s Earnings",
+   "url": "https://finance.yahoo.com/m/73ef9abf-b625-33f0-9fef-d49031e38d5f/review-%26-preview%3A-the-problem.html?.tsrc=rss",
+   "source": "Yahoo Finance",
+   "region": "US",
+   "published": "2026-10-23T01:55+02:00",
+   "breaking": true,
+   "tickers": [
+    "META"
+   ]
+  },
+  {
+   "title": "Mark Zuckerberg’s creative plan to pay California’s proposed billionaire tax without losing control of Meta",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/mark-zuckerberg-creative-plan-pay-235041754.html?.tsrc=rss",
+   "source": "Yahoo Finance",
+   "region": "US",
+   "published": "2026-10-23T01:50+02:00",
+   "breaking": false,
+   "tickers": [
+    "META"
+   ]
+  },
+  {
+   "title": "Etsy bans AI-generated recipes and patterns from its online marketplace",
+   "url": "https://www.cnbc.com/2026/10/22/etsy-bans-ai-generated-recipes-patterns-from-its-online-marketplace.html",
+   "source": "CNBC",
+   "region": "US",
+   "published": "2026-10-23T01:45+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Nasdaq 100 Clocks Worst Day In Four Months As Investors Grow Weary Of Capex, Elevated Debt — META, SPCX, BE, MRNA In Focus",
+   "url": "https://stocktwits.com/news-articles/markets/equity/nasdaq-100-clocks-worst-day-in-four-months/cZxwY21RBDl?.tsrc=rss",
+   "source": "Yahoo Finance",
+   "region": "US",
+   "published": "2026-10-23T01:44+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Friday's big stock stories: What’s likely to move the market in the next trading session",
+   "url": "https://www.cnbc.com/2026/10/22/fridays-big-stock-stories-whats-likely-to-move-the-market.html",
+   "source": "CNBC",
+   "region": "US",
+   "published": "2026-10-23T01:26+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Young Americans are giving up their cars. It can be a path to financial freedom.",
+   "url": "https://www.marketwatch.com/bulletins/redirect/go?g=1767a25e-50c4-43ae-8096-315c9f49c862&mod=mw_rss_bulletins",
+   "source": "MarketWatch Bulletins",
+   "region": "US",
+   "published": "2026-10-23T01:25+02:00",
+   "breaking": true,
+   "tickers": []
+  },
+  {
+   "title": "My partner of 17 years left me his $1 million home. His children are crying foul. Am I obliged to split it with them?",
+   "url": "https://www.marketwatch.com/story/my-unmarried-partner-of-17-years-left-me-his-1-1-million-home-his-three-children-are-livid-should-i-share-my-inheritance-a11d593d?mod=mw_rss_topstories",
+   "source": "MarketWatch",
+   "region": "US",
+   "published": "2026-10-23T01:15+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Stocks making big moves yesterday: Dell, Chipotle, Amkor, Super Micro, and United Airlines",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/stocks-making-big-moves-yesterday-230953193.html?.tsrc=rss",
+   "source": "Yahoo Finance",
+   "region": "US",
+   "published": "2026-10-23T01:09+02:00",
+   "breaking": false,
+   "tickers": [
+    "DELL"
+   ]
+  },
+  {
+   "title": "‘I don’t feel sorry for myself’: I’m 64 and will be renting for the rest of my life. Is that so bad?",
+   "url": "https://www.marketwatch.com/story/my-husband-suffered-a-massive-stroke-at-53-im-64-and-will-rent-for-the-rest-of-my-life-but-im-still-hopeful-46bd6ce9?mod=mw_rss_topstories",
+   "source": "MarketWatch",
+   "region": "US",
+   "published": "2026-10-23T01:00+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Rising Crude Oil Imports Reduce China’s Need to Draw from Stocks",
+   "url": "https://oilprice.com/Energy/Energy-General/Rising-Crude-Oil-Imports-Reduce-Chinas-Need-to-Draw-from-Stocks.html",
+   "source": "OilPrice.com",
+   "region": "FX",
+   "published": "2026-10-23T01:00+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "CoreWeave set off a wave of anxiety — but Wall Street’s dire prognosis is premature",
+   "url": "https://www.marketwatch.com/story/coreweave-set-off-a-wave-of-anxiety-but-wall-streets-dire-prognosis-is-premature-edc3f5dd?mod=mw_rss_topstories",
+   "source": "MarketWatch",
+   "region": "US",
+   "published": "2026-10-23T00:54+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Why Micron Stock Dropped on Thursday",
+   "url": "https://www.fool.com/investing/2026/10/22/why-micron-stock-dropped-on-thursday/?.tsrc=rss",
+   "source": "Yahoo Finance",
+   "region": "US",
+   "published": "2026-10-23T00:49+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Deckers Outdoor Cuts Outlook on Shoe Revenue. Why Investors See a Bad Fit.",
+   "url": "https://finance.yahoo.com/m/44927822-fc58-32ab-b6b3-a84b9678349d/deckers-outdoor-cuts-outlook.html?.tsrc=rss",
+   "source": "Yahoo Finance",
+   "region": "US",
+   "published": "2026-10-23T00:44+02:00",
+   "breaking": false,
+   "tickers": [
+    "DECK"
+   ]
+  },
+  {
+   "title": "Nvidia CEO's new plan could dramatically reshape the AI race",
+   "url": "https://www.thestreet.com/technology/nvidia-ceo-huang-plan-could-dramatically-accelerate-ai-buildout?.tsrc=rss",
+   "source": "Yahoo Finance",
+   "region": "US",
+   "published": "2026-10-23T00:33+02:00",
+   "breaking": false,
+   "tickers": [
+    "NVDA"
+   ]
+  },
+  {
+   "title": "Stock market is fracturing into two camps, leaving investors with whiplash",
+   "url": "https://www.marketwatch.com/bulletins/redirect/go?g=48b6fd83-9fae-477b-8730-05d86dfa66cb&mod=mw_rss_bulletins",
+   "source": "MarketWatch Bulletins",
+   "region": "US",
+   "published": "2026-10-23T00:28+02:00",
+   "breaking": true,
+   "tickers": []
+  },
+  {
+   "title": "Is MP Materials Stock Still a Buy After Its Recent Pullback?",
+   "url": "https://www.fool.com/investing/2026/10/22/is-mp-materials-still-a-buy-after-its-recent/?.tsrc=rss",
+   "source": "Yahoo Finance",
+   "region": "US",
+   "published": "2026-10-23T00:25+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Meta’s deal to keep Zuckerberg in California adds fuel to wealth tax debate ahead of election",
+   "url": "https://www.cnbc.com/2026/10/22/meta-mark-zuckerberg-california-billionaire-tax.html",
+   "source": "CNBC",
+   "region": "US",
+   "published": "2026-10-23T00:21+02:00",
+   "breaking": false,
+   "tickers": [
+    "META"
+   ]
+  },
+  {
+   "title": "Stocks making the biggest moves in after hours: Western Digital, Bloom Energy, Deckers Outdoor & more",
+   "url": "https://www.cnbc.com/2026/10/22/stocks-making-the-biggest-moves-in-after-hours-wdc-be-deck.html",
+   "source": "CNBC",
+   "region": "US",
+   "published": "2026-10-23T00:17+02:00",
+   "breaking": false,
+   "tickers": [
+    "DECK"
+   ]
+  },
+  {
+   "title": "The U.S. stock market is fracturing into two camps, and it’s leaving investors with a brutal case of whiplash",
+   "url": "https://www.marketwatch.com/story/the-u-s-stock-market-is-fracturing-into-two-camps-and-its-leaving-investors-with-a-brutal-case-of-whiplash-e8580a99?mod=mw_rss_topstories",
+   "source": "MarketWatch",
+   "region": "US",
+   "published": "2026-10-23T00:17+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Is nVent Electric (NVT) Undervalued On Its AMD AI Data Center Cooling Deal?",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/nvent-electric-nvt-undervalued-amd-221535600.html?.tsrc=rss",
+   "source": "Yahoo Finance",
+   "region": "US",
+   "published": "2026-10-23T00:15+02:00",
+   "breaking": false,
+   "tickers": [
+    "AMD"
+   ]
+  },
+  {
+   "title": "5 Undervalued AI Stocks According to the Media",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/5-undervalued-ai-stocks-according-221408266.html?.tsrc=rss",
+   "source": "Yahoo Finance",
+   "region": "US",
+   "published": "2026-10-23T00:14+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Shopify (SHOP) Could Be 17% Undervalued Following Its AI Checkout Push",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/shopify-shop-could-17-undervalued-221345958.html?.tsrc=rss",
+   "source": "Yahoo Finance",
+   "region": "US",
+   "published": "2026-10-23T00:13+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Stock Market Today, Oct. 22: Netflix Rises as Investors Capitalize on Post-Earnings Sell-Off",
+   "url": "https://www.fool.com/coverage/stock-market-today/2026/10/22/stock-market-today-oct-22-netflix-rises-as-investors-capitalize-on-post-earnings-sell-off/?.tsrc=rss",
+   "source": "Yahoo Finance",
+   "region": "US",
+   "published": "2026-10-23T00:12+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Treasury yields log biggest drop since the 2023 banking crisis. Here’s what’s going on.",
+   "url": "https://www.marketwatch.com/story/treasury-yields-see-extreme-plunge-why-investors-are-ducking-for-cover-60044c66?mod=mw_rss_topstories",
+   "source": "MarketWatch",
+   "region": "US",
+   "published": "2026-10-23T00:07+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Infrastructure fund delivers a return of more than 10% over 12 months",
+   "url": "https://www.moneyweb.co.za/in-depth/ninety-one/infrastructure-fund-delivers-a-return-of-more-than-10-over-12-months/",
+   "source": "Moneyweb",
+   "region": "SA",
+   "published": "2026-10-23T00:03+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "If you’re moving funds to and from SA, here’s a way to save fees – and time",
+   "url": "https://www.moneyweb.co.za/in-depth/future-forex/if-youre-moving-funds-to-and-from-sa-heres-a-way-to-save-fees-and-time/",
+   "source": "Moneyweb",
+   "region": "SA",
+   "published": "2026-10-23T00:02+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Lawsuit accuses Trump of illegally profiting off foreign crypto deals",
+   "url": "https://www.cnbc.com/2026/10/22/trump-world-liberty-crypto-lawsuit-uae.html",
+   "source": "CNBC",
+   "region": "US",
+   "published": "2026-10-23T00:02+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "EU’s Arctic Strategy Excludes Oil and Gas",
+   "url": "https://oilprice.com/Energy/Natural-Gas/EUs-Arctic-Strategy-Excludes-Oil-and-Gas.html",
+   "source": "OilPrice.com",
+   "region": "FX",
+   "published": "2026-10-23T00:00+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "SpaceX and Tesla have high election stakes as Elon Musk pours $366 million into campaigns",
+   "url": "https://www.cnbc.com/2026/10/22/elon-musk-midterm-election-spacex-tesla.html",
+   "source": "CNBC",
+   "region": "US",
+   "published": "2026-10-22T23:58+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Moderna shares plunge after cancer vaccine data leaks — despite positive results",
+   "url": "https://www.cnbc.com/2026/10/22/moderna-stock-cancer-vaccine-data-leak.html",
+   "source": "CNBC",
+   "region": "US",
+   "published": "2026-10-22T23:52+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Treasury yields see extreme plunge. Why investors are ducking for cover.",
+   "url": "https://www.marketwatch.com/bulletins/redirect/go?g=2cf0de20-406b-4b6d-8559-640388e766fd&mod=mw_rss_bulletins",
+   "source": "MarketWatch Bulletins",
+   "region": "US",
+   "published": "2026-10-22T23:39+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Trump invokes Cold War era Defense Production Act for oil production, refining",
+   "url": "https://www.cnbc.com/2026/10/22/trump-defense-production-act.html",
+   "source": "CNBC",
+   "region": "US",
+   "published": "2026-10-22T23:37+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "U.S. Treasury yields crater, 10-yr closes at one-month low on safe-haven demand",
+   "url": "https://www.investing.com/news/forex-news/french-yields-breach-5-amid-paris-budget-paralysis-and-nationwide-unrest-4964673",
+   "source": "Investing.com Forex",
+   "region": "FX",
+   "published": "2026-10-22T23:35+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Americans are having fewer babies — and pampering them with luxury diapers",
+   "url": "https://www.marketwatch.com/story/americans-are-having-fewer-babies-and-pampering-them-with-luxury-diapers-a84222cd?mod=mw_rss_topstories",
+   "source": "MarketWatch",
+   "region": "US",
+   "published": "2026-10-22T23:28+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "3 big reasons Micron and other chip stocks fell hard on Thursday",
+   "url": "https://www.marketwatch.com/story/two-big-reasons-micron-and-other-chip-stocks-are-falling-on-thursday-312f1fb2?mod=mw_rss_topstories",
+   "source": "MarketWatch",
+   "region": "US",
+   "published": "2026-10-22T23:19+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Spot gold hits three-month low amid risk-off moves, climb in oil prices",
+   "url": "https://www.investing.com/news/commodities-news/gold-falls-near-4115-as-saudi-attacks-fuel-inflation-fed-outlook-in-focus-4964496",
+   "source": "Investing.com Commodities",
+   "region": "FX",
+   "published": "2026-10-22T23:17+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Trump asked Musk to lift Starlink slowdown, WSJ reports",
+   "url": "https://www.cnbc.com/2026/10/22/trump-musk-starlink-ukraine.html",
+   "source": "CNBC",
+   "region": "US",
+   "published": "2026-10-22T23:02+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Oil prices near Iran-war highs as soaring tanker rates trigger an energy squeeze",
+   "url": "https://www.marketwatch.com/bulletins/redirect/go?g=6ac77ce5-6f5f-496f-a4d8-d341f1081522&mod=mw_rss_bulletins",
+   "source": "MarketWatch Bulletins",
+   "region": "US",
+   "published": "2026-10-22T23:02+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "El Niño rains batter Latin America from Mexico to Chile",
+   "url": "https://www.investing.com/news/commodities-news/el-nino-rains-batter-latin-america-from-mexico-to-chile-4967563",
+   "source": "Investing.com Commodities",
+   "region": "FX",
+   "published": "2026-10-22T23:00+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Electric Giants Say They Already Have the Tools to Fix the AI Power Crunch",
+   "url": "https://oilprice.com/Energy/Energy-General/Electric-Giants-Say-They-Already-Have-the-Tools-to-Fix-the-AI-Power-Crunch.html",
+   "source": "OilPrice.com",
+   "region": "FX",
+   "published": "2026-10-22T23:00+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Dollar slips while yen jumps to five-week high as traders flock to safe havens",
+   "url": "https://www.investing.com/news/forex-news/asia-fx-mixed-dollar-slips-near-3wk-low-as-traders-eye-central-bank-meetings-4964617",
+   "source": "Investing.com Forex",
+   "region": "FX",
+   "published": "2026-10-22T22:53+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Oil prices approach Iran-war highs as soaring tanker rates trigger a second energy squeeze",
+   "url": "https://www.marketwatch.com/story/oil-prices-approach-iran-war-highs-as-soaring-tanker-rates-trigger-a-second-energy-squeeze-2d726982?mod=mw_rss_topstories",
+   "source": "MarketWatch",
+   "region": "US",
+   "published": "2026-10-22T22:46+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Disney’s multiplatform Super Bowl plan frustrates ABC affiliates",
+   "url": "https://www.cnbc.com/2026/10/22/disneys-multiplatform-super-bowl-plan-frustrates-abc-affiliates.html",
+   "source": "CNBC",
+   "region": "US",
+   "published": "2026-10-22T22:44+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "OpenAI nears up to $30 billion funding round at $1.25 trillion valuation led by UAE investors",
+   "url": "https://www.cnbc.com/2026/10/22/openai-funding-round-uae-investors.html",
+   "source": "CNBC",
+   "region": "US",
+   "published": "2026-10-22T22:41+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Trump defends Ramaswamy ad with Acton's estranged mom after bipartisan criticism",
+   "url": "https://www.cnbc.com/2026/10/22/trump-ramaswamy-ad-acton-mother-ad.html",
+   "source": "CNBC",
+   "region": "US",
+   "published": "2026-10-22T22:26+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "US nuclear power regulator allows applicants to include data from agency projects",
+   "url": "https://www.investing.com/news/commodities-news/us-nuclear-power-regulator-allows-applicants-to-include-data-from-agency-projects-4967357",
+   "source": "Investing.com Commodities",
+   "region": "FX",
+   "published": "2026-10-22T22:18+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Moderna’s cancer vaccine hits its targets, but a data leak rattled investors and the stock tumbled",
+   "url": "https://www.marketwatch.com/story/modernas-stock-tumbles-after-reported-leak-of-data-for-cancer-vaccine-dcc897c1?mod=mw_rss_topstories",
+   "source": "MarketWatch",
+   "region": "US",
+   "published": "2026-10-22T22:14+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "A lesson from poker tells us not to fold on Meta after its earnings sell-off. Here’s why",
+   "url": "https://www.cnbc.com/investingclub/2026/10/22/meta-stock-why-were-staying-bullish-after-the-post-earnings-sell-off.html",
+   "source": "CNBC",
+   "region": "US",
+   "published": "2026-10-22T22:11+02:00",
+   "breaking": false,
+   "tickers": [
+    "META"
+   ]
+  },
+  {
+   "title": "Trump directs trade negotiations on wind turbine imports in executive order",
+   "url": "https://www.investing.com/news/commodities-news/trump-directs-trade-negotiations-on-wind-turbine-imports-in-executive-order-4967292",
+   "source": "Investing.com Commodities",
+   "region": "FX",
+   "published": "2026-10-22T22:06+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "10-year Treasury yield tumbles below 5% to lowest level in nearly a month",
+   "url": "https://www.cnbc.com/2026/10/22/treasurys-bonds-ai-yields.html",
+   "source": "CNBC",
+   "region": "US",
+   "published": "2026-10-22T22:05+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Meta stock sinks nearly 7% as AI spend pushes free cash flow negative",
+   "url": "https://www.cnbc.com/2026/10/22/meta-stock-q3-earnings-free-cash-flow.html",
+   "source": "CNBC",
+   "region": "US",
+   "published": "2026-10-22T22:03+02:00",
+   "breaking": false,
+   "tickers": [
+    "META"
+   ]
+  },
+  {
+   "title": "Brent hits over 5-month high as Houthi attacks boost supply disruption fears",
+   "url": "https://www.investing.com/news/commodities-news/oil-prices-rise-as-meast-tensions-fuel-fears-of-supply-disruptions-4964479",
+   "source": "Investing.com Commodities",
+   "region": "FX",
+   "published": "2026-10-22T22:03+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Nasdaq and S&P 500 close sharply lower as AI angst returns; Dow ends flat",
+   "url": "https://www.marketwatch.com/bulletins/redirect/go?g=10db8c62-1d20-418e-b745-cbcd141ba252&mod=mw_rss_bulletins",
+   "source": "MarketWatch Bulletins",
+   "region": "US",
+   "published": "2026-10-22T22:01+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Why Fossil Fuel Demand Can Rise Even as Clean Energy Wins Terrain",
+   "url": "https://oilprice.com/Energy/Energy-General/Why-Fossil-Fuel-Demand-Can-Rise-Even-as-Clean-Energy-Wins-Terrain.html",
+   "source": "OilPrice.com",
+   "region": "FX",
+   "published": "2026-10-22T22:00+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Asia Needs $1 Trillion a Year to Secure Energy Supplies",
+   "url": "https://oilprice.com/Latest-Energy-News/World-News/Asia-Needs-1-Trillion-a-Year-to-Secure-Energy-Supplies.html",
+   "source": "OilPrice.com",
+   "region": "FX",
+   "published": "2026-10-22T22:00+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Moderna’s cancer vaccine hits its targets — but embargo breach rattles the stock",
+   "url": "https://www.marketwatch.com/bulletins/redirect/go?g=05e9fb3e-ab4b-47e0-aa45-c5bdad3685f6&mod=mw_rss_bulletins",
+   "source": "MarketWatch Bulletins",
+   "region": "US",
+   "published": "2026-10-22T21:42+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Reported fraud losses among older Americans hit $3 billion in 2025 as big losses surge: FTC report",
+   "url": "https://www.cnbc.com/2026/10/22/older-americans-fraud-losses-2025.html",
+   "source": "CNBC",
+   "region": "US",
+   "published": "2026-10-22T21:39+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Malls have something online shopping can’t provide",
+   "url": "https://www.moneyweb.co.za/investing/property/malls-have-something-online-shopping-cant-provide/",
+   "source": "Moneyweb",
+   "region": "SA",
+   "published": "2026-10-22T21:36+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Canadian dollar strengthens as oil prices, BoC rate hike bets support loonie",
+   "url": "https://www.investing.com/news/forex-news/canadian-dollar-strengthens-as-oil-prices-boc-rate-hike-bets-support-loonie-4967236",
+   "source": "Investing.com Forex",
+   "region": "FX",
+   "published": "2026-10-22T21:30+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Is getting a wedding band from Quince a bad idea? It’s a third of the price of a local jeweler.",
+   "url": "https://www.marketwatch.com/story/is-getting-a-wedding-band-from-quince-a-bad-idea-its-a-third-of-the-price-fa89c9b2?mod=mw_rss_topstories",
+   "source": "MarketWatch",
+   "region": "US",
+   "published": "2026-10-22T21:25+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "London Gas Oil churns at 61.8% Fib with ADX 11.8: Live levels",
+   "url": "https://www.investing.com/news/commodities-news/london-gas-oil-coils-in-14001450-range-breakout-watch-93CH-4956497",
+   "source": "Investing.com Commodities",
+   "region": "FX",
+   "published": "2026-10-22T21:17+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Natural Gas oversold at $2.779 with RSI 28.1: Live levels",
+   "url": "https://www.investing.com/news/commodities-news/natural-gas-breaks-cloud-support-at-3104-live-levels-93CH-4956492",
+   "source": "Investing.com Commodities",
+   "region": "FX",
+   "published": "2026-10-22T21:17+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Copper tests $6.35 support with RSI deeply oversold: Live levels",
+   "url": "https://www.investing.com/news/commodities-news/copper-trapped-in-655665-range-breakout-pending-live-93CH-4956489",
+   "source": "Investing.com Commodities",
+   "region": "FX",
+   "published": "2026-10-22T21:17+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Clicks achieves record R50bn turnover",
+   "url": "https://www.moneyweb.co.za/moneyweb-radio/safm-market-update/clicks-achieves-record-r50bn-turnover/",
+   "source": "Moneyweb",
+   "region": "SA",
+   "published": "2026-10-22T21:06+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Nasdaq and S&P 500 sliding in final hour as AI angst returns to the stock market",
+   "url": "https://www.marketwatch.com/bulletins/redirect/go?g=83f7d281-8eb6-4998-9a68-ed744bafcfdf&mod=mw_rss_bulletins",
+   "source": "MarketWatch Bulletins",
+   "region": "US",
+   "published": "2026-10-22T21:04+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Strathcona Pitches 250,000-Bpd Oil Export Route to Asia",
+   "url": "https://oilprice.com/Energy/Crude-Oil/Strathcona-Pitches-250000-Bpd-Oil-Export-Route-to-Asia.html",
+   "source": "OilPrice.com",
+   "region": "FX",
+   "published": "2026-10-22T21:00+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Musk's clash with Ukraine accelerates demand for Starlink alternatives. Few exist",
+   "url": "https://www.cnbc.com/2026/10/22/elon-musk-ukraine-starlink-alternatives.html",
+   "source": "CNBC",
+   "region": "US",
+   "published": "2026-10-22T20:55+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "AI debt and French bonds face a stress test — why it may not be over",
+   "url": "https://www.cnbc.com/2026/10/22/ai-debt-and-french-bonds-stress-test.html",
+   "source": "CNBC",
+   "region": "US",
+   "published": "2026-10-22T20:13+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Personal agents like Meta's Muse could fuel AI’s growth — and challenge Amazon and Apple",
+   "url": "https://www.cnbc.com/2026/10/22/meta-muse-personal-ai-agents.html",
+   "source": "CNBC",
+   "region": "US",
+   "published": "2026-10-22T20:07+02:00",
+   "breaking": false,
+   "tickers": [
+    "META"
+   ]
+  },
+  {
+   "title": "Moderna’s stock tumbles after reported leak of data for cancer vaccine",
+   "url": "https://www.marketwatch.com/bulletins/redirect/go?g=5d5d4892-0b69-4442-97c8-5a4508477dde&mod=mw_rss_bulletins",
+   "source": "MarketWatch Bulletins",
+   "region": "US",
+   "published": "2026-10-22T20:05+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "EU’s Proposed Shipping Subsidies Could Make BioLNG Cheaper Than Fuel Oil",
+   "url": "https://oilprice.com/Energy/Energy-General/EUs-Proposed-Shipping-Subsidies-Could-Make-BioLNG-Cheaper-Than-Fuel-Oil.html",
+   "source": "OilPrice.com",
+   "region": "FX",
+   "published": "2026-10-22T20:00+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Bill Ackman says 2027 will be an amazing year for stocks as wars, inflation ease",
+   "url": "https://www.cnbc.com/2026/10/22/bill-ackman-talks-meta-and-markets-with-cnbc.html",
+   "source": "CNBC",
+   "region": "US",
+   "published": "2026-10-22T19:53+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Couriers connecting goods from A to B",
+   "url": "https://www.moneyweb.co.za/moneyweb-radio/safm-market-update/couriers-connecting-goods-from-a-to-b/",
+   "source": "Moneyweb",
+   "region": "SA",
+   "published": "2026-10-22T19:40+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "African CEOs look to growth as AI adoption lags",
+   "url": "https://www.moneyweb.co.za/moneyweb-radio/safm-market-update/african-ceos-look-to-growth-as-ai-adoption-lags/",
+   "source": "Moneyweb",
+   "region": "SA",
+   "published": "2026-10-22T19:30+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Citi’s $60 Oil Call Meets $112 Brent",
+   "url": "https://oilprice.com/Latest-Energy-News/World-News/Citis-60-Oil-Call-Meets-112-Brent.html",
+   "source": "OilPrice.com",
+   "region": "FX",
+   "published": "2026-10-22T19:30+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Stocks making the biggest moves midday: Procter & Gamble, Lam Research, Blackstone, Southwest & more",
+   "url": "https://www.cnbc.com/2026/10/22/stocks-making-the-biggest-moves-midday-pg-lrcx-bx-luv-ttmi-.html",
+   "source": "CNBC",
+   "region": "US",
+   "published": "2026-10-22T19:23+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "JSE slips as miners fall",
+   "url": "https://www.moneyweb.co.za/moneyweb-radio/safm-market-update/jse-slips-as-miners-fall/",
+   "source": "Moneyweb",
+   "region": "SA",
+   "published": "2026-10-22T19:20+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Afrimat lifts operating cash flow by 21% despite tough conditions",
+   "url": "https://www.moneyweb.co.za/moneyweb-radio/safm-market-update/afrimat-lifts-operating-cash-flow-by-21-despite-tough-conditions/",
+   "source": "Moneyweb",
+   "region": "SA",
+   "published": "2026-10-22T19:20+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Afrimat results, African CEO outlook, and Clicks’ 1 000th store",
+   "url": "https://www.moneyweb.co.za/moneyweb-radio/safm-market-update/afrimat-results-african-ceo-outlook-and-clicks-1-000th-store/",
+   "source": "Moneyweb",
+   "region": "SA",
+   "published": "2026-10-22T19:15+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Tehran Turns to Central Asia for Trade as Conflict With U.S. Simmers",
+   "url": "https://oilprice.com/Geopolitics/International/Tehran-Turns-to-Central-Asia-for-Trade-as-Conflict-With-US-Simmers.html",
+   "source": "OilPrice.com",
+   "region": "FX",
+   "published": "2026-10-22T19:00+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Cruise lines chase luxury travelers with suites for up to $25,000 a night",
+   "url": "https://www.cnbc.com/2026/10/22/luxury-cruise-suites-regent-seven-seas.html",
+   "source": "CNBC",
+   "region": "US",
+   "published": "2026-10-22T18:46+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Jobless claims near the lowest since the 1960s as low-fire trend continues",
+   "url": "https://www.cnbc.com/2026/10/22/jobless-claims-record-low-weekly.html",
+   "source": "CNBC Markets",
+   "region": "US",
+   "published": "2026-10-22T18:40+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "‘AI is on trial’: Bond yields sink below 5% as investors look for safety",
+   "url": "https://www.marketwatch.com/bulletins/redirect/go?g=5576c39d-75df-482c-b023-fb5b621fbe2d&mod=mw_rss_bulletins",
+   "source": "MarketWatch Bulletins",
+   "region": "US",
+   "published": "2026-10-22T18:40+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Norway's $2.3 Trillion Oil Fund Loses $30 Billion in Third Quarter",
+   "url": "https://oilprice.com/Latest-Energy-News/World-News/Norways-23-Trillion-Oil-Fund-Loses-30-Billion-in-Third-Quarter.html",
+   "source": "OilPrice.com",
+   "region": "FX",
+   "published": "2026-10-22T18:30+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Britain Finally Creates an Oil Wealth Fund—50 Years Too Late",
+   "url": "https://oilprice.com/Energy/Energy-General/Britain-Finally-Creates-an-Oil-Wealth-Fund50-Years-Too-Late.html",
+   "source": "OilPrice.com",
+   "region": "FX",
+   "published": "2026-10-22T18:00+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Ofgem Approves Deal to Keep UK Gas Import Capacity From Europe",
+   "url": "https://oilprice.com/Latest-Energy-News/World-News/Ofgem-Approves-Deal-to-Keep-UK-Gas-Import-Capacity-From-Europe.html",
+   "source": "OilPrice.com",
+   "region": "FX",
+   "published": "2026-10-22T17:30+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Iran's Hardliners Push for Nuclear Weapons as U.S. War Drags On",
+   "url": "https://oilprice.com/Geopolitics/Middle-East/Irans-Hardliners-Push-for-Nuclear-Weapons-as-US-War-Drags-On.html",
+   "source": "OilPrice.com",
+   "region": "FX",
+   "published": "2026-10-22T17:00+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "European Natural Gas Prices Rise on Middle East Escalation",
+   "url": "https://oilprice.com/Latest-Energy-News/World-News/European-Natural-Gas-Prices-Rise-on-Middle-East-Escalation.html",
+   "source": "OilPrice.com",
+   "region": "FX",
+   "published": "2026-10-22T16:30+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Local bus manufacturing could add billions to SA’s economy",
+   "url": "https://www.moneyweb.co.za/moneyweb-podcasts/moneyweb-midday/local-bus-manufacturing-could-add-billions-to-sas-economy/",
+   "source": "Moneyweb",
+   "region": "SA",
+   "published": "2026-10-22T15:32+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Trump's approval rating on economy hits all-time low as midterm looms: CNBC survey",
+   "url": "https://www.cnbc.com/2026/10/22/trump-economic-approval-rating-midterms-poll.html",
+   "source": "CNBC",
+   "region": "US",
+   "published": "2026-10-22T15:18+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Now is your last chance to qualify for a Southwest Companion Pass with a credit card bonus",
+   "url": "https://www.cnbc.com/select/southwest-companion-pass-2027-changes/",
+   "source": "CNBC",
+   "region": "US",
+   "published": "2026-10-22T14:30+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "American Express brings Airbnb bookings and rewards to Amex Travel platform",
+   "url": "https://www.cnbc.com/2026/10/22/american-express-airbnb-travel-platform.html",
+   "source": "CNBC",
+   "region": "US",
+   "published": "2026-10-22T14:00+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Pound edges higher, outperforming as investor nerves rattle euro zone markets",
+   "url": "https://www.investing.com/news/forex-news/pound-edges-higher-outperforming-as-investor-nerves-rattle-euro-zone-markets-4965186",
+   "source": "Investing.com Forex",
+   "region": "FX",
+   "published": "2026-10-22T11:48+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Sterling today: Pound edges higher on U.S. tech drag",
+   "url": "https://www.investing.com/news/forex-news/sterling-today-pound-edges-higher-on-us-tech-drag-4965127",
+   "source": "Investing.com Forex",
+   "region": "FX",
+   "published": "2026-10-22T11:20+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Dollar up slightly, other currencies see small moves ahead of central bank deluge",
+   "url": "https://www.investing.com/news/forex-news/asia-fx-subdued-as-dollar-hovers-near-3week-low-rupee-extends-rally-4961573",
+   "source": "Investing.com Forex",
+   "region": "FX",
+   "published": "2026-10-21T23:14+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "U.S. Treasury yields drop on safe-haven flows; French yields hit 5% mark",
+   "url": "https://www.investing.com/news/forex-news/french-yields-hover-near-2002-highs-hotter-uk-inflation-sparks-gilt-pressure-4961706",
+   "source": "Investing.com Forex",
+   "region": "FX",
+   "published": "2026-10-21T14:12+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Housing is flashing warning signs just as the Fed weighs more interest rate hikes",
+   "url": "https://www.cnbc.com/2026/10/20/housing-mortgage-rates-real-estate-federal-reserve.html",
+   "source": "CNBC Markets",
+   "region": "US",
+   "published": "2026-10-21T13:20+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "India’s 10-year bond yield climbs above 7.45% to multi-year high",
+   "url": "https://www.investing.com/news/forex-news/indias-10year-bond-yield-climbs-above-745-to-multiyear-high-93CH-4962437",
+   "source": "Investing.com Forex",
+   "region": "FX",
+   "published": "2026-10-21T12:55+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Sterling today: Pound climbs on hot UK CPI as dollar weakens",
+   "url": "https://www.investing.com/news/forex-news/sterling-today-pound-climbs-on-hot-uk-cpi-as-dollar-weakens-4962057",
+   "source": "Investing.com Forex",
+   "region": "FX",
+   "published": "2026-10-21T11:09+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "UK inflation jumps to 3.5% — cementing rate hike expectations",
+   "url": "https://www.cnbc.com/2026/10/21/inflation-uk-cpi-interest-rates.html",
+   "source": "CNBC Markets",
+   "region": "US",
+   "published": "2026-10-21T09:50+02:00",
+   "breaking": false,
+   "tickers": []
+  }
+ ]
 }
