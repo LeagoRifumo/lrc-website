@@ -1,6 +1,6 @@
 {
  "week_ending": "2026-10-23",
- "generated": "2026-10-24T06:26+02:00",
+ "generated": "2026-10-24T08:58+02:00",
  "prices_as_of": "2026-10-23",
  "agent": "LRC Watchlist Agent",
  "rules": {
@@ -13,6 +13,23 @@
   "event_risk": "results within 14 days"
  },
  "swing": [
+  {
+   "ticker": "NVDA",
+   "name": "NVIDIA",
+   "direction": "Long",
+   "setup": "Trend continuation",
+   "entry": 219.32,
+   "stop": 207.2,
+   "target": 255.68,
+   "rr": 3.0,
+   "score": 11,
+   "grade": "B",
+   "status": "Watch",
+   "rating": "BUY",
+   "rating_target": 262.56,
+   "tech_clearance": "NOT CLEARED",
+   "note": ""
+  },
   {
    "ticker": "INTU",
    "name": "Intuit",
@@ -31,23 +48,6 @@
    "note": ""
   },
   {
-   "ticker": "NVDA",
-   "name": "NVIDIA",
-   "direction": "Long",
-   "setup": "Trend continuation",
-   "entry": 219.32,
-   "stop": 207.2,
-   "target": 255.68,
-   "rr": 3.0,
-   "score": 10,
-   "grade": "B",
-   "status": "Watch",
-   "rating": "BUY",
-   "rating_target": 262.56,
-   "tech_clearance": "NOT CLEARED",
-   "note": ""
-  },
-  {
    "ticker": "DECK",
    "name": "Deckers Outdoor",
    "direction": "Long",
@@ -56,7 +56,7 @@
    "stop": 82.28,
    "target": 105.56,
    "rr": 3.0,
-   "score": 7,
+   "score": 8,
    "grade": "C",
    "status": "Watch",
    "rating": "BUY",

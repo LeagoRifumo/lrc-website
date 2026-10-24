@@ -1,7 +1,129 @@
 {
- "generated": "2026-10-23T03:00+02:00",
+ "generated": "2026-10-24T11:30+02:00",
  "market": "JSE",
- "source": "Compiled weekly by the LRC Dashboard Agent from SENS announcements and company investor-relations calendars.",
- "items": [],
- "note": "The first JSE results calendar is published with the next weekly agent run."
+ "window": "2026-10-26 to 2026-11-28",
+ "source": "Compiled 24 Oct 2026 by the LRC Weekly Research Agent from company investor-relations financial calendars and SENS announcements (via ShareData/Listcorp); each item names its source. Only company-confirmed or company-published expected dates are listed; expected dates are marked in 'period'. Market caps in Rand bn where a dated source was opened, otherwise null.",
+ "items": [
+  {
+   "date": "2026-10-29",
+   "ticker": "GLN",
+   "name": "Glencore",
+   "when": "Not stated",
+   "period": "Q3 2026 production report (quarter to 30 Sep 2026)",
+   "eps_forecast": "",
+   "market_cap_bn": null,
+   "covered": false,
+   "lrc_rating": null,
+   "source": "Glencore 2026 Corporate Calendar - https://www.glencore.com/media-and-insights/news/2026-corporate-calendar"
+  },
+  {
+   "date": "2026-11-06",
+   "ticker": "SAP",
+   "name": "Sappi",
+   "when": "Before open",
+   "period": "Q4 and full year to Sep 2026 (FY26); release 08:00 SAST",
+   "eps_forecast": "",
+   "market_cap_bn": null,
+   "covered": false,
+   "lrc_rating": null,
+   "source": "Sappi investors - next event - https://www.sappi.com/en-gb/investors/next-event"
+  },
+  {
+   "date": "2026-11-10",
+   "ticker": "VOD",
+   "name": "Vodacom Group",
+   "when": "Not stated",
+   "period": "Interim to 30 Sep 2026 (presentation webcast 15:00 SAST)",
+   "eps_forecast": "",
+   "market_cap_bn": null,
+   "covered": false,
+   "lrc_rating": null,
+   "source": "Vodacom interim results page - https://vodacom.com/interim-results.php"
+  },
+  {
+   "date": "2026-11-13",
+   "ticker": "CFR",
+   "name": "Richemont",
+   "when": "Before open",
+   "period": "Interim to 30 Sep 2026 (FY27 H1); announcement 07:00 CET",
+   "eps_forecast": "",
+   "market_cap_bn": null,
+   "covered": false,
+   "lrc_rating": null,
+   "source": "Richemont corporate calendar - https://www.richemont.com/investors/corporate-calendar/"
+  },
+  {
+   "date": "2026-11-16",
+   "ticker": "NY1",
+   "name": "Ninety One",
+   "when": "Not stated",
+   "period": "Interim to 30 Sep 2026",
+   "eps_forecast": "",
+   "market_cap_bn": null,
+   "covered": false,
+   "lrc_rating": null,
+   "source": "Ninety One financial calendar - https://ninetyone.com/en/singapore/investor-relations/financial-calendar"
+  },
+  {
+   "date": "2026-11-18",
+   "ticker": "NRP",
+   "name": "NEPI Rockcastle",
+   "when": "Not stated",
+   "period": "Q3 2026 business update (expected; per 2026 financial reporting schedule, SENS 21 Nov 2025)",
+   "eps_forecast": "",
+   "market_cap_bn": null,
+   "covered": false,
+   "lrc_rating": null,
+   "source": "NEPI Rockcastle SENS 'Financial reporting schedule' (ShareData) - https://sharedata.co.za/sens.asp?id=532072"
+  },
+  {
+   "date": "2026-11-19",
+   "ticker": "INL",
+   "name": "Investec",
+   "when": "Not stated",
+   "period": "Interim to 30 Sep 2026",
+   "eps_forecast": "",
+   "market_cap_bn": 37.1,
+   "covered": false,
+   "lrc_rating": null,
+   "source": "Investec Group pre-close trading update, SENS 18 Sep 2026 (Listcorp) - https://www.listcorp.com/jse/inl/investec-limited/news/investec-group-pre-close-trading-update-3407894.html; market cap (Investec Ltd ordinary, 12 Oct 2026) ShareData - https://www.sharedata.co.za/Data/000499/main.htm"
+  },
+  {
+   "date": "2026-11-23",
+   "ticker": "NTC",
+   "name": "Netcare",
+   "when": "Not stated",
+   "period": "Final to 30 Sep 2026 (expected; 'on or about' per voluntary update SENS 30 Sep 2026)",
+   "eps_forecast": "",
+   "market_cap_bn": 24.3,
+   "covered": false,
+   "lrc_rating": null,
+   "source": "Netcare voluntary update SENS 30 Sep 2026 via ShareData - https://sharedata.co.za/Data/002750/news.htm; market cap (9 Oct 2026) https://www.sharedata.co.za/Data/002750/main.htm"
+  },
+  {
+   "date": "2026-11-25",
+   "ticker": "NPN",
+   "name": "Naspers",
+   "when": "Not stated",
+   "period": "Interim to 30 Sep 2026 (HY2027)",
+   "eps_forecast": "",
+   "market_cap_bn": 506.1,
+   "covered": false,
+   "lrc_rating": null,
+   "source": "Naspers financial calendar - https://www.naspers.com/investors/results-reports-events/financial-calender; market cap StockAnalysis - https://stockanalysis.com/quote/jse/NPN/"
+  },
+  {
+   "date": "2026-11-25",
+   "ticker": "PRX",
+   "name": "Prosus",
+   "when": "Not stated",
+   "period": "Interim to 30 Sep 2026 (HY2027)",
+   "eps_forecast": "",
+   "market_cap_bn": null,
+   "covered": false,
+   "lrc_rating": null,
+   "source": "Prosus financial calendar - https://www.prosus.com/investors/results-reports-events/financial-calendar"
+  }
+ ],
+ "note": "Partial list: a number of Top 100 companies (e.g. Telkom, MTN, Tiger Brands, Pepkor, Pick n Pay, Life Healthcare, Coronation, Mr Price) had no company-published date we could confirm this week; they will be added when dates are published."
 }

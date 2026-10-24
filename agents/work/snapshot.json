@@ -11,8 +11,8 @@
   "hi52": 178.24,
   "lo52": 92.99,
   "avg_volume": 689548,
-  "short_float": 0.0706,
-  "eps_growth": null,
+  "short_float": 0.0705,
+  "eps_growth": 0.0518,
   "atr14": 4.51,
   "high_2d": 178.24,
   "swing_low_15d": 144.49,
@@ -20,7 +20,12 @@
   "as_of": "2026-10-23",
   "perf_quarter": 0.3613,
   "rel_volume": 0.66,
-  "stale": false
+  "stale": false,
+  "sector": "Technology",
+  "mcap_bn": 9.4,
+  "next_earnings_status": "confirmed",
+  "fundamentals_as_of": "2026-10-23",
+  "fundamentals_source": "StockAnalysis overview/statistics/forecast pages (opened 2026-10-24); eps_growth = consensus current-fiscal-year EPS growth (StockAnalysis forecast 'EPS This Year' growth, current fiscal year consensus: FY2027 (Jun-27) non-GAAP EPS est 8.74)"
  },
  {
   "ticker": "WAB",
@@ -35,15 +40,21 @@
   "lo52": 193.86,
   "avg_volume": 906852,
   "short_float": 0.0212,
-  "eps_growth": null,
+  "eps_growth": 0.2118,
   "atr14": 7.53,
   "high_2d": 287.22,
   "swing_low_15d": 271.14,
-  "next_earnings": "2026-10-21",
+  "next_earnings": null,
   "as_of": "2026-10-23",
   "perf_quarter": -0.0949,
   "rel_volume": 1.71,
-  "stale": false
+  "stale": false,
+  "sector": "Industrials",
+  "mcap_bn": 45.7,
+  "next_earnings_status": null,
+  "last_reported": "2026-10-21",
+  "fundamentals_as_of": "2026-10-23",
+  "fundamentals_source": "StockAnalysis overview/statistics/forecast pages (opened 2026-10-24); eps_growth = consensus current-fiscal-year EPS growth (StockAnalysis forecast 'EPS This Year' growth, current fiscal year consensus: FY2026 non-GAAP EPS est 10.87)"
  },
  {
   "ticker": "ANET",
@@ -57,8 +68,8 @@
   "hi52": 217.41,
   "lo52": 114.52,
   "avg_volume": 6149214,
-  "short_float": 0.011399999999999999,
-  "eps_growth": null,
+  "short_float": 0.0114,
+  "eps_growth": 0.3815,
   "atr14": 8.58,
   "high_2d": 178.72,
   "swing_low_15d": 168.24,
@@ -66,7 +77,12 @@
   "as_of": "2026-10-23",
   "perf_quarter": 0.0094,
   "rel_volume": 0.81,
-  "stale": false
+  "stale": false,
+  "sector": "Technology",
+  "mcap_bn": 217.4,
+  "next_earnings_status": "confirmed",
+  "fundamentals_as_of": "2026-10-23",
+  "fundamentals_source": "StockAnalysis overview/statistics/forecast pages (opened 2026-10-24); eps_growth = consensus current-fiscal-year EPS growth (StockAnalysis forecast 'EPS This Year' growth, current fiscal year consensus: FY2026 non-GAAP EPS est 4.12)"
  },
  {
   "ticker": "FAST",
@@ -81,15 +97,21 @@
   "lo52": 38.97,
   "avg_volume": 7530214,
   "short_float": 0.0302,
-  "eps_growth": null,
+  "eps_growth": 0.1666,
   "atr14": 1.33,
   "high_2d": 52.91,
   "swing_low_15d": 47.3,
-  "next_earnings": "2026-10-14",
+  "next_earnings": null,
   "as_of": "2026-10-23",
   "perf_quarter": 0.0896,
   "rel_volume": 0.75,
-  "stale": false
+  "stale": false,
+  "sector": "Industrials",
+  "mcap_bn": 59.56,
+  "next_earnings_status": null,
+  "last_reported": "2026-10-14",
+  "fundamentals_as_of": "2026-10-23",
+  "fundamentals_source": "StockAnalysis overview/statistics/forecast pages (opened 2026-10-24); eps_growth = consensus current-fiscal-year EPS growth (StockAnalysis forecast 'EPS This Year' growth, current fiscal year consensus: FY2026 non-GAAP EPS est 1.27)"
  },
  {
   "ticker": "DELL",
@@ -103,8 +125,8 @@
   "hi52": 595.51,
   "lo52": 110.22,
   "avg_volume": 7702417,
-  "short_float": 0.046900000000000004,
-  "eps_growth": 1.514,
+  "short_float": 0.0421,
+  "eps_growth": 1.5142,
   "atr14": 30.97,
   "high_2d": 473.01,
   "swing_low_15d": 439.5,
@@ -112,7 +134,12 @@
   "as_of": "2026-10-23",
   "perf_quarter": 0.0692,
   "rel_volume": 0.56,
-  "stale": false
+  "stale": false,
+  "sector": "Technology",
+  "mcap_bn": 290.21,
+  "next_earnings_status": "confirmed",
+  "fundamentals_as_of": "2026-10-23",
+  "fundamentals_source": "StockAnalysis overview/statistics/forecast pages (opened 2026-10-24); eps_growth = consensus current-fiscal-year EPS growth (StockAnalysis forecast 'EPS This Year' growth, current fiscal year consensus: FY2027 (Jan-27) non-GAAP EPS est 25.90 vs 10.30)"
  },
  {
   "ticker": "HPE",
@@ -127,7 +154,7 @@
   "lo52": 19.84,
   "avg_volume": 21164638,
   "short_float": 0.038,
-  "eps_growth": 0.972,
+  "eps_growth": 0.9722,
   "atr14": 3.74,
   "high_2d": 58.01,
   "swing_low_15d": 53.91,
@@ -135,7 +162,12 @@
   "as_of": "2026-10-23",
   "perf_quarter": 0.1764,
   "rel_volume": 0.8,
-  "stale": false
+  "stale": false,
+  "sector": "Technology",
+  "mcap_bn": 75.25,
+  "next_earnings_status": "estimated",
+  "fundamentals_as_of": "2026-10-23",
+  "fundamentals_source": "StockAnalysis overview/statistics/forecast pages (opened 2026-10-24); eps_growth = consensus current-fiscal-year EPS growth (StockAnalysis forecast 'EPS This Year' growth, current fiscal year consensus: FY2026 (Oct-26) non-GAAP EPS est 3.83)"
  },
  {
   "ticker": "KEYS",
@@ -158,7 +190,12 @@
   "as_of": "2026-10-23",
   "perf_quarter": 0.0035,
   "rel_volume": 1.29,
-  "stale": false
+  "stale": false,
+  "sector": "Technology",
+  "mcap_bn": 53.59,
+  "next_earnings_status": "estimated",
+  "fundamentals_as_of": "2026-10-23",
+  "fundamentals_source": "StockAnalysis overview/statistics/forecast pages (opened 2026-10-24); eps_growth = consensus current-fiscal-year EPS growth (StockAnalysis forecast 'EPS This Year' growth, current fiscal year consensus: FY2026 (Oct-26) non-GAAP EPS est 11.47 vs 7.16)"
  },
  {
   "ticker": "APH",
@@ -181,7 +218,12 @@
   "as_of": "2026-10-23",
   "perf_quarter": -0.0074,
   "rel_volume": 1.06,
-  "stale": false
+  "stale": false,
+  "sector": "Technology",
+  "mcap_bn": 182.7,
+  "next_earnings_status": "confirmed",
+  "fundamentals_as_of": "2026-10-23",
+  "fundamentals_source": "StockAnalysis overview/statistics/forecast pages (opened 2026-10-24); eps_growth = consensus current-fiscal-year EPS growth (StockAnalysis forecast 'EPS This Year' growth, current fiscal year consensus: FY2026 non-GAAP EPS est 2.69 vs 1.67)"
  },
  {
   "ticker": "AMD",
@@ -196,7 +238,7 @@
   "lo52": 188.22,
   "avg_volume": 22028486,
   "short_float": 0.0242,
-  "eps_growth": 0.819,
+  "eps_growth": 0.8194,
   "atr14": 27.36,
   "high_2d": 529.98,
   "swing_low_15d": 502.6,
@@ -204,7 +246,12 @@
   "as_of": "2026-10-23",
   "perf_quarter": 0.0441,
   "rel_volume": 0.69,
-  "stale": false
+  "stale": false,
+  "sector": "Technology",
+  "mcap_bn": 843.65,
+  "next_earnings_status": "confirmed",
+  "fundamentals_as_of": "2026-10-23",
+  "fundamentals_source": "StockAnalysis overview/statistics/forecast pages (opened 2026-10-24); eps_growth = consensus current-fiscal-year EPS growth (StockAnalysis forecast 'EPS This Year' growth, current fiscal year consensus: FY2026 non-GAAP EPS est 7.59)"
  },
  {
   "ticker": "NKE",
@@ -219,7 +266,7 @@
   "lo52": 31.97,
   "avg_volume": 33320533,
   "short_float": 0.0842,
-  "eps_growth": -0.1642,
+  "eps_growth": -0.173,
   "atr14": 1.09,
   "high_2d": 38.44,
   "swing_low_15d": 32.76,
@@ -227,7 +274,13 @@
   "as_of": "2026-10-23",
   "perf_quarter": -0.1149,
   "rel_volume": 0.78,
-  "stale": false
+  "stale": false,
+  "sector": "Consumer Discretionary",
+  "mcap_bn": 55.4,
+  "next_earnings_status": null,
+  "last_reported": "2026-10-01",
+  "fundamentals_as_of": "2026-10-23",
+  "fundamentals_source": "StockAnalysis overview/statistics/forecast pages (opened 2026-10-24); eps_growth = consensus current-fiscal-year EPS growth (StockAnalysis forecast 'EPS This Year' growth, current fiscal year consensus: FY2027 (May-27) non-GAAP EPS est 1.31 vs 1.58)"
  },
  {
   "ticker": "CMCSA",
@@ -241,16 +294,22 @@
   "hi52": 32.86,
   "lo52": 20.48,
   "avg_volume": 28611978,
-  "short_float": 0.019799999999999998,
+  "short_float": 0.0198,
   "eps_growth": -0.1915,
   "atr14": 0.69,
   "high_2d": 23.29,
   "swing_low_15d": 20.48,
-  "next_earnings": "2026-10-22",
+  "next_earnings": null,
   "as_of": "2026-10-23",
   "perf_quarter": -0.0048,
   "rel_volume": 1.1,
-  "stale": false
+  "stale": false,
+  "sector": "Communication Services",
+  "mcap_bn": 80.52,
+  "next_earnings_status": null,
+  "last_reported": "2026-10-22",
+  "fundamentals_as_of": "2026-10-23",
+  "fundamentals_source": "StockAnalysis overview/statistics/forecast pages (opened 2026-10-24); eps_growth = consensus current-fiscal-year EPS growth (StockAnalysis forecast 'EPS This Year' growth, current fiscal year consensus: FY2026 EPS est 3.48 vs 4.31)"
  },
  {
   "ticker": "CG",
@@ -264,7 +323,7 @@
   "hi52": 67.3,
   "lo52": 35.41,
   "avg_volume": 3703092,
-  "short_float": 0.0745,
+  "short_float": 0.0851,
   "eps_growth": -0.0928,
   "atr14": 1.35,
   "high_2d": 39.3,
@@ -273,7 +332,12 @@
   "as_of": "2026-10-23",
   "perf_quarter": -0.1662,
   "rel_volume": 0.67,
-  "stale": false
+  "stale": false,
+  "sector": "Financials",
+  "mcap_bn": 13.97,
+  "next_earnings_status": "confirmed",
+  "fundamentals_as_of": "2026-10-23",
+  "fundamentals_source": "StockAnalysis overview/statistics/forecast pages (opened 2026-10-24); eps_growth = consensus current-fiscal-year EPS growth (StockAnalysis forecast 'EPS This Year' growth, current fiscal year consensus: FY2026 EPS est 3.65)"
  },
  {
   "ticker": "DKNG",
@@ -296,7 +360,12 @@
   "as_of": "2026-10-23",
   "perf_quarter": -0.1327,
   "rel_volume": 0.67,
-  "stale": false
+  "stale": false,
+  "sector": "Consumer Discretionary",
+  "mcap_bn": 10.38,
+  "next_earnings_status": "confirmed",
+  "fundamentals_as_of": "2026-10-23",
+  "fundamentals_source": "StockAnalysis overview/statistics/forecast pages (opened 2026-10-24); eps_growth = consensus current-fiscal-year EPS growth (StockAnalysis forecast 'EPS This Year' growth, current fiscal year consensus: FY2026 non-GAAP EPS est 0.90 vs 0.66)"
  },
  {
   "ticker": "TTD",
@@ -319,7 +388,12 @@
   "as_of": "2026-10-23",
   "perf_quarter": -0.2729,
   "rel_volume": 0.54,
-  "stale": false
+  "stale": false,
+  "sector": "Communication Services",
+  "mcap_bn": 6.15,
+  "next_earnings_status": "estimated",
+  "fundamentals_as_of": "2026-10-23",
+  "fundamentals_source": "StockAnalysis overview/statistics/forecast pages (opened 2026-10-24); eps_growth = consensus current-fiscal-year EPS growth (StockAnalysis forecast 'EPS This Year' growth, current fiscal year consensus: FY2026 non-GAAP EPS est 1.16)"
  },
  {
   "ticker": "INTU",
@@ -334,7 +408,7 @@
   "lo52": 252.84,
   "avg_volume": 3794424,
   "short_float": 0.0279,
-  "eps_growth": -0.0133,
+  "eps_growth": -0.0189,
   "atr14": 12.89,
   "high_2d": 358.03,
   "swing_low_15d": 280.84,
@@ -342,7 +416,12 @@
   "as_of": "2026-10-23",
   "perf_quarter": 0.1299,
   "rel_volume": 0.67,
-  "stale": false
+  "stale": false,
+  "sector": "Technology",
+  "mcap_bn": 91.77,
+  "next_earnings_status": "estimated",
+  "fundamentals_as_of": "2026-10-23",
+  "fundamentals_source": "StockAnalysis overview/statistics/forecast pages (opened 2026-10-24); eps_growth = consensus current-fiscal-year EPS growth (StockAnalysis forecast 'EPS This Year' growth, current fiscal year consensus: FY2027 (Jul-27) non-GAAP EPS est 23.81)"
  },
  {
   "ticker": "DECK",
@@ -357,15 +436,21 @@
   "lo52": 77.2,
   "avg_volume": 3058068,
   "short_float": 0.0877,
-  "eps_growth": null,
+  "eps_growth": 0.0733,
   "atr14": 2.91,
   "high_2d": 87.92,
   "swing_low_15d": 78.12,
-  "next_earnings": "2026-10-22",
+  "next_earnings": null,
   "as_of": "2026-10-23",
   "perf_quarter": -0.1703,
   "rel_volume": 3.04,
-  "stale": false
+  "stale": false,
+  "sector": "Consumer Discretionary",
+  "mcap_bn": 11.04,
+  "next_earnings_status": null,
+  "last_reported": "2026-10-22",
+  "fundamentals_as_of": "2026-10-23",
+  "fundamentals_source": "StockAnalysis overview/statistics/forecast pages (opened 2026-10-24); eps_growth = consensus current-fiscal-year EPS growth (StockAnalysis forecast 'EPS This Year' growth, current fiscal year consensus: FY2027 (Mar-27) non-GAAP EPS est 7.53)"
  },
  {
   "ticker": "META",
@@ -380,15 +465,21 @@
   "lo52": 520.26,
   "avg_volume": 19827156,
   "short_float": 0.0152,
-  "eps_growth": null,
+  "eps_growth": 0.0232,
   "atr14": 26.08,
   "high_2d": 681.07,
   "swing_low_15d": 633.27,
-  "next_earnings": "2026-10-21",
+  "next_earnings": null,
   "as_of": "2026-10-23",
   "perf_quarter": 0.0821,
   "rel_volume": 0.74,
-  "stale": false
+  "stale": false,
+  "sector": "Communication Services",
+  "mcap_bn": 1640.0,
+  "next_earnings_status": null,
+  "last_reported": "2026-10-21",
+  "fundamentals_as_of": "2026-10-23",
+  "fundamentals_source": "StockAnalysis overview/statistics/forecast pages (opened 2026-10-24); eps_growth = consensus current-fiscal-year EPS growth (StockAnalysis forecast 'EPS This Year' growth, current fiscal year consensus: FY2026 non-GAAP EPS est 30.37 vs 29.68)"
  },
  {
   "ticker": "NVDA",
@@ -403,7 +494,7 @@
   "lo52": 164.27,
   "avg_volume": 116520944,
   "short_float": 0.0134,
-  "eps_growth": null,
+  "eps_growth": 0.9523,
   "atr14": 6.06,
   "high_2d": 218.88,
   "swing_low_15d": 210.18,
@@ -411,7 +502,12 @@
   "as_of": "2026-10-23",
   "perf_quarter": 0.0735,
   "rel_volume": 0.69,
-  "stale": false
+  "stale": false,
+  "sector": "Technology",
+  "mcap_bn": 5090.0,
+  "next_earnings_status": "estimated",
+  "fundamentals_as_of": "2026-10-23",
+  "fundamentals_source": "StockAnalysis overview/statistics/forecast pages (opened 2026-10-24); eps_growth = consensus current-fiscal-year EPS growth (StockAnalysis forecast 'EPS This Year' growth, current fiscal year consensus: FY2027 (Jan-27) non-GAAP EPS est 9.31)"
  },
  {
   "ticker": "GOOGL",
@@ -426,7 +522,7 @@
   "lo52": 251.85,
   "avg_volume": 25526273,
   "short_float": 0.0074,
-  "eps_growth": null,
+  "eps_growth": 0.2155,
   "atr14": 8.6,
   "high_2d": 331.43,
   "swing_low_15d": 320.18,
@@ -434,6 +530,11 @@
   "as_of": "2026-10-23",
   "perf_quarter": -0.0194,
   "rel_volume": 0.69,
-  "stale": false
+  "stale": false,
+  "sector": "Communication Services",
+  "mcap_bn": 3920.0,
+  "next_earnings_status": "confirmed",
+  "fundamentals_as_of": "2026-10-23",
+  "fundamentals_source": "StockAnalysis overview/statistics/forecast pages (opened 2026-10-24); eps_growth = consensus current-fiscal-year EPS growth (StockAnalysis forecast 'EPS This Year' growth, current fiscal year consensus: FY2026 non-GAAP EPS est 13.14)"
  }
 ]
