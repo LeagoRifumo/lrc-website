@@ -32,8 +32,8 @@
     <a class="brand" href="index.html" aria-label="Leago Rifumo Capital home"><img src="assets/img/monogram.png" alt=""><div><span>LEAGO RIFUMO</span><small>CAPITAL</small></div></a>
     <ul class="menu" id="menu">
       <li><a href="articles.html">Articles</a></li>
-      <li class="dd"><a href="research.html">Research <span class="car">▾</span></a><ul class="sub"><li><a href="research.html">Research library</a></li><li><a href="scanner.html">LRC Scanner</a></li><li><a href="dashboard.html">Weekly market dashboard</a></li><li><a href="watchlist.html" class="active">Watchlist</a></li></ul></li>
-      <li><a href="scanner.html" class="nav-hot">Scanner</a></li>
+      <li class="dd"><a href="research.html">Research <span class="car">▾</span></a><ul class="sub"><li><a href="research.html">Research library</a></li><li><a href="scanner.html">LRC Stock Scanner</a></li><li><a href="dashboard.html">Weekly market dashboard</a></li><li><a href="watchlist.html" class="active">Watchlist</a></li></ul></li>
+      <li><a href="scanner.html" class="nav-hot">Stock Scanner</a></li>
       <li><a href="earnings.html">Earnings</a></li>
       <li><a href="news.html">AI News</a></li>
       <li class="dd"><a href="markets.html">Markets <span class="car">▾</span></a><ul class="sub"><li><a href="markets.html">Live markets</a></li><li><a href="dashboard.html">Weekly market dashboard</a></li><li><a href="earnings.html">Earnings calendar</a></li></ul></li>
@@ -54,15 +54,32 @@
 <section class="page-hero"><div class="wrap">
   <span class="eyebrow">LRC Watchlist</span>
   <h1>The LRC <span class="gold">watchlist</span></h1>
-  <p class="lead">Rebuilt automatically every day after the US close from our ratings and rules: only companies with an LRC BUY or SELL rating and technical clearance qualify. Entries, 2×ATR stops and 3R targets are calculated, not guessed.</p>
+  <p class="lead">JSE and New York, rebuilt automatically twice a day: every company we rate (BUY, HOLD and SELL), the strongest trading setups from the LRC Stock Scanner, our investment shortlist, and the latest news on each name. Use the JSE / New York switch at the top of the page.</p>
   <div class="agent-meta" id="wlMeta"></div>
   <div class="edu-note"><b>EDUCATIONAL ONLY</b> This watchlist shows how our process works. It is not a recommendation to buy or sell, and it does not consider your circumstances. Levels can be out of date by the time you read them.</div>
 </div></section>
 <section style="padding-top:40px"><div class="wrap">
+  <div class="kpis" id="wlKpis"></div>
+  <h2 style="margin-top:50px">LRC coverage <span class="gold">— analyst ratings</span></h2>
+  <p class="lead">Every company with a completed LRC Work-sheet, re-priced daily. Only the analyst changes a rating; "under review" means today's price has crossed a rating line.</p>
+  <div class="tbl-wrap"><table class="wl" id="wlCov"></table></div>
+  <h2 style="margin-top:70px">Trading watchlist <span class="gold">— longs</span></h2>
+  <p class="lead" id="wlLongNote"></p>
+  <div class="tbl-wrap"><table class="wl" id="wlLong"></table></div>
+  <h2 style="margin-top:60px">Trading watchlist <span class="gold">— shorts</span></h2>
+  <p class="lead" id="wlShortNote"></p>
+  <div class="tbl-wrap"><table class="wl" id="wlShort"></table></div>
+  <h2 style="margin-top:70px">Investment watchlist <span class="gold">— 5 to 10 years</span></h2>
+  <p class="lead" id="wlInvNote"></p>
+  <div class="tbl-wrap"><table class="wl" id="wlInv2"></table></div>
+  <h2 style="margin-top:70px">Watchlist <span class="gold">news</span></h2>
+  <div id="wlNews" class="wire" style="margin-top:20px"></div>
+  <h2 style="margin-top:70px">Analyst-rated setups <span class="gold">— house rules</span></h2>
+  <p class="lead">Only names with an LRC analyst BUY (long) or SELL (short) rating and technical clearance (New York coverage).</p>
   <div class="filters" id="wlFilters"><button class="chip-btn on" data-f="all">All</button><button class="chip-btn" data-f="Long">Longs</button><button class="chip-btn" data-f="Short">Shorts</button><button class="chip-btn" data-f="A">A-grades</button></div>
   <div class="tbl-wrap"><table class="wl" id="wlSwing"></table></div>
-  <h2 style="margin-top:70px">Investment <span class="gold">watchlist</span></h2>
-  <p class="lead">5–10 year candidates scored for quality, growth, balance sheet and valuation. LRC's investment track is long-only; SELL-rated names are listed as names to avoid.</p>
+  <h2 style="margin-top:70px">Analyst investment list <span class="gold">— from the LRC workbook</span></h2>
+  <p class="lead">The analyst's monthly investment review. The track is long-only; SELL-rated names are listed as names to avoid.</p>
   <div class="tbl-wrap"><table class="wl" id="wlInv"></table></div>
   <h2 style="margin-top:70px">The <span class="gold">rules</span></h2>
   <div class="pillars" id="wlRules"></div>
@@ -75,7 +92,7 @@
     <div class="cols">
       <div><a class="brand" href="index.html"><img src="assets/img/monogram.png" alt=""><div><span>LEAGO RIFUMO</span><small>CAPITAL</small></div></a>
         <p style="margin-top:16px;max-width:320px">Independent equity research, live trading and market education. Built on Discipline.</p></div>
-      <div><h5>RESEARCH</h5><ul><li><a href="scanner.html">LRC Scanner</a></li><li><a href="research.html">Research library</a></li><li><a href="tools.html">Analyst tools</a></li><li><a href="markets.html">Live markets</a></li><li><a href="academy.html">Academy</a></li></ul></div>
+      <div><h5>RESEARCH</h5><ul><li><a href="scanner.html">LRC Stock Scanner</a></li><li><a href="research.html">Research library</a></li><li><a href="tools.html">Analyst tools</a></li><li><a href="markets.html">Live markets</a></li><li><a href="academy.html">Academy</a></li></ul></div>
       <div><h5>FOLLOW</h5><ul><li><a href="https://www.youtube.com/@LeagoRifumoCapital" target="_blank" rel="noopener">YouTube</a></li><li><a href="https://www.tiktok.com/@leago_rifumo_capital1" target="_blank" rel="noopener">TikTok</a></li><li><a href="https://www.facebook.com/PnLventures" target="_blank" rel="noopener">Facebook</a></li><li><a href="show.html">Live Show</a></li></ul></div>
       <div><h5>CONTACT</h5><ul><li><a href="mailto:info@leagorifumocapital.co.za">info@leagorifumocapital.co.za</a></li><li>Ermelo, Mpumalanga, South Africa</li><li><a href="contact.html">Bookings &amp; collabs</a></li></ul></div>
     </div>
@@ -84,5 +101,6 @@
 </footer>
 <script>window.LRC_DATA = "data/";</script>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/scanner.js"></script>
 </body>
 </html>

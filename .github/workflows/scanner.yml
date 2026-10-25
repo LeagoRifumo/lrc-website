@@ -22,6 +22,9 @@ jobs:
         with: { python-version: '3.12' }
       - name: Scan JSE + New York (stocks, ETFs, sectors)
         run: python agents/tools/scanner.py
+      - name: Company news, SEC filings & financials for the watchlist companies
+        continue-on-error: true
+        run: python agents/tools/company_intel.py
       - name: Sitemap (one-page summaries)
         continue-on-error: true
         run: python agents/tools/build_articles.py
