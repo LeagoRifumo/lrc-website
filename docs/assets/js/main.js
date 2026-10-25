@@ -489,3 +489,26 @@ const artCard = (a, pre = '') => `<a class="art" href="${pre}${esc(a.url)}">${a.
   $('erSearch').addEventListener('input', draw);
   draw();
 })();
+
+/* ---------- v5: site-wide market switch (JSE / New York) ---------- */
+(() => {
+  const K = 'lrc_mkt';
+  const getM = () => { try { return JSON.parse(localStorage.getItem(K)) || 'JSE'; } catch (e) { return 'JSE'; } };
+  const setM = m => { try { localStorage.setItem(K, JSON.stringify(m)); } catch (e) { } window.dispatchEvent(new CustomEvent('lrcmarket', { detail: m })); };
+  const cta = document.querySelector('.nav-cta');
+  if (cta && !document.getElementById('hdrMkt')) {
+    const w = document.createElement('span'); w.className = 'mkt-switch';
+    w.innerHTML = '<select id="hdrMkt" aria-label="Market"><option value="JSE">JSE</option><option value="US">New York</option></select>';
+    cta.insertBefore(w, cta.firstChild);
+    const s = w.querySelector('select'); s.value = getM();
+    s.addEventListener('change', () => setM(s.value));
+    window.addEventListener('lrcmarket', e => { if (s.value !== e.detail) s.value = e.detail; });
+  }
+  const er = document.getElementById('erMkt'); // earnings calendar follows the switch
+  if (er) {
+    const sync = m => { const v = m === 'JSE' ? 'jse' : 'us'; if (er.value !== v) { er.value = v; er.dispatchEvent(new Event('change')); } };
+    if (!location.hash) sync(getM());
+    window.addEventListener('lrcmarket', e => sync(e.detail));
+    er.addEventListener('change', () => { const m = er.value === 'jse' ? 'JSE' : 'US'; if (getM() !== m) setM(m); });
+  }
+})();

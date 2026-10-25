@@ -21,7 +21,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 from lrcdata import P, now_sast
 
 SITE = 'https://www.leagorifumocapital.co.za/'
-STATIC = ['', 'articles.html', 'research.html', 'watchlist.html', 'news.html', 'dashboard.html', 'earnings.html', 'markets.html', 'tools.html', 'academy.html', 'show.html', 'contact.html', 'disclaimer.html', 'privacy.html']
+STATIC = ['', 'scanner.html', 'articles.html', 'research.html', 'watchlist.html', 'news.html', 'dashboard.html', 'earnings.html', 'markets.html', 'tools.html', 'academy.html', 'show.html', 'contact.html', 'disclaimer.html', 'privacy.html']
 BASE_KW = 'Leago Rifumo Capital, market analysis, South Africa, JSE, rand, US stocks, Prayer Nkuna'
 
 def front(txt):
@@ -102,8 +102,12 @@ def main():
     arts.sort(key=lambda a: (a['date'], a['slug']), reverse=True)
     json.dump({'generated': now_sast().isoformat(timespec='minutes'), 'articles': arts}, open(P('docs', 'data', 'articles.json'), 'w', encoding='utf-8'), indent=1, ensure_ascii=False)
     today = now_sast().date().isoformat()
-    urls = [(SITE + s, today, 'daily' if s in ('', 'news.html', 'watchlist.html', 'articles.html', 'dashboard.html', 'earnings.html') else 'monthly') for s in STATIC]
+    urls = [(SITE + s, today, 'daily' if s in ('', 'scanner.html', 'news.html', 'watchlist.html', 'articles.html', 'dashboard.html', 'earnings.html') else 'monthly') for s in STATIC]
     urls += [(f"{SITE}{a['url']}", a['date'], 'monthly') for a in arts]
+    try:  # one-page stock summaries from the scanner (stock.html?t=...)
+        sc = json.load(open(P('docs', 'data', 'scan', 'stocks.json'), encoding='utf-8'))
+        urls += [(f"{SITE}stock.html?t={r['t'].replace('&', '%26')}", today, 'daily') for r in sc.get('rows', [])]
+    except Exception: pass
     xml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(
         f'  <url><loc>{u}</loc><lastmod>{m}</lastmod><changefreq>{c}</changefreq></url>\n' for u, m, c in urls) + '</urlset>\n'
     open(P('docs', 'sitemap.xml'), 'w').write(xml)

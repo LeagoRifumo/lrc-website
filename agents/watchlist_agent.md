@@ -25,10 +25,20 @@ IR calendars. Item shape: `{"date","ticker","name","when":"Before open|After clo
 mark expected ones in `period` ("expected"). Update `generated` and `source`.
 
 ## 4. Screening — candidates for the analyst (agents/work/candidates.json)
+Start from the LRC Scanner output (`docs/data/scan/stocks.json`, rebuilt by GitHub Actions twice a day): it already scores every JSE and
+New York stock on technicals, sentiment and fundamentals vs sector, flags Breakout / Retest setups with entry plans, and grades the
+Investment track (A/B/C). Take the strongest names per screen and market (Swing Long = BUY/STRONG BUY with a Breakout or Retest;
+Swing Short = SELL/STRONG SELL with a Breakdown or Failed retest; Investment = grade A with a positive margin of safety), then confirm
+the qualifying numbers on the company's own pages before listing them. If `stocks.json` is more than 2 days old, say so in the issue.
 Run the LRC screens (Swing Long, Swing Short, Investment) on Finviz-style criteria and list up to 10 new names that pass, with the
 numbers that qualified them. These are **not** added to the watchlist: a name enters only after the analyst completes a Work-sheet
 and adds its rating to ratings.json. Open a GitHub issue "Screening candidates <date>" with the table so the analyst gets an email.
 
-## 5. Publish
+## 5. Analyst research layer (docs/data/research/<TICKER>.json)
+These files hold the analyst's own view (title, drivers, risks, bottom line, valuation) and appear on top of the one-page summary
+(`stock.html?t=TICKER`). Never invent an analyst opinion: only create or change a file when the analyst asked for it or supplied the
+text (e.g. from a finished report). You may update factual fields (guidance, next catalyst date) with a source.
+
+## 6. Publish
 Validate JSON (`python3 -m json.tool`), then `git add -A docs agents && git commit -m "Weekly research <date>" && git pull --rebase && git push`.
 Finish with five lines: rating alerts, dashboard filled, JSE calendar count, candidates, anything you could not verify.

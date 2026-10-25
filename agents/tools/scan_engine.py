@@ -102,32 +102,33 @@ def setup(bars, t, lv):
     res = {'setup': None, 'setup_level': None, 'setup_day': None}
     if not a: return res
     # --- BREAKOUT: close through the 55-day closing high, or through a major resistance, on volume, in the last 3 sessions
-    for j in range(n - 1, n - 4, -1):
+    def rng_pos(x): return (x['close'] - x['low']) / (x['high'] - x['low']) if x['high'] > x['low'] else 0.5
+    for j in range(n - 1, n - 3, -1):
         prior = c[j - 55:j]
         if len(prior) < 55: break
         av = sum(x['volume'] for x in bars[j - 20:j]) / 20 or 1
         rv = bars[j]['volume'] / av
         crossed = [l['price'] for l in lv if c[j - 1] <= l['price'] < c[j] and l['touches'] >= 3]
         lvl = max(crossed) if crossed else (max(prior) if c[j] > max(prior) else None)
-        if lvl and rv >= 1.3 and p > lvl - 0.25 * a and (s50 is None or p > s50):
+        if lvl and rv >= 1.5 and rng_pos(bars[j]) >= 0.6 and p > lvl - 0.25 * a and (s50 is None or p > s50):
             return {'setup': 'Breakout', 'setup_level': lvl, 'setup_day': bars[j]['date'], 'setup_bar': j - n}
     # --- BREAKDOWN: mirror image
     breakdown = None
-    for j in range(n - 1, n - 4, -1):
+    for j in range(n - 1, n - 3, -1):
         prior = c[j - 55:j]
         if len(prior) < 55: break
         av = sum(x['volume'] for x in bars[j - 20:j]) / 20 or 1
         rv = bars[j]['volume'] / av
         crossed = [l['price'] for l in lv if c[j - 1] >= l['price'] > c[j] and l['touches'] >= 3]
         lvl = min(crossed) if crossed else (min(prior) if c[j] < min(prior) else None)
-        if lvl and rv >= 1.4 and p < lvl + 0.25 * a and (s50 is None or p < s50):
+        if lvl and rv >= 1.5 and rng_pos(bars[j]) <= 0.4 and p < lvl + 0.25 * a and (s50 is None or p < s50):
             breakdown = {'setup': 'Breakdown', 'setup_level': lvl, 'setup_day': bars[j]['date'], 'setup_bar': j - n}
             break
     # --- RETEST of a major support that was broken upward in the last 40 sessions (old resistance = new support)
     lows3 = min(x['low'] for x in bars[-3:])
     best = None
-    for L in major:
-        if not (L < p and p - L <= 2.5 * a): continue
+    for L in [l['price'] for l in lv if l['touches'] >= 3]:
+        if not (L < p and p - L <= 2.0 * a): continue
         cross = [i for i in range(n - 40, n - 3) if c[i - 1] < L <= c[i]]
         if not cross: continue
         held = all(x >= L - 0.5 * a for x in c[cross[-1]:])
@@ -136,13 +137,14 @@ def setup(bars, t, lv):
     if best and not breakdown:
         return {'setup': 'Retest', 'setup_level': best, 'setup_day': bars[-1]['date'], 'setup_note': 'Retest of a broken resistance (now support)'}
     # retest of the rising 50-day average inside an uptrend
-    if s50 and s200 and p > s50 > s200 and t.get('sma200_rising') and lows3 <= s50 + 0.3 * a and p - s50 <= 1.5 * a:
+    r_ = t.get('rsi') or 50
+    if s50 and s200 and p > s50 > s200 and t.get('sma200_rising') and lows3 <= s50 + 0.2 * a and p - s50 <= 1.0 * a and c[-1] > c[-2] and 40 <= r_ <= 60:
         return {'setup': 'Retest', 'setup_level': s50, 'setup_day': bars[-1]['date'], 'setup_note': 'Retest of the rising 50-day average'}
     if breakdown: return breakdown
     # --- FAILED RETEST from below (broken support now resistance)
     highs3 = max(x['high'] for x in bars[-3:])
-    for L in sorted(major):
-        if not (L > p and L - p <= 2.5 * a): continue
+    for L in sorted(l['price'] for l in lv if l['touches'] >= 3):
+        if not (L > p and L - p <= 2.0 * a): continue
         cross = [i for i in range(n - 40, n - 3) if c[i - 1] > L >= c[i]]
         if cross and all(x <= L + 0.5 * a for x in c[cross[-1]:]) and highs3 >= L - 0.5 * a and (s200 is None or p < s200) \
                 and (s50 is None or p < s50) and (s50 is None or s200 is None or s50 < s200):
@@ -252,11 +254,14 @@ def fund_scores(f, med, sector):
 
 def verdict(total, maxabs):
     x = total / maxabs if maxabs else 0
-    return 'Strong bullish' if x >= 0.45 else 'Bullish' if x >= 0.18 else 'Strong bearish' if x <= -0.45 else 'Bearish' if x <= -0.18 else 'Neutral'
+    # LRC Scanner signal (automated) — separate from the analyst's BUY / HOLD / SELL rating in ratings.json
+    return 'STRONG BUY' if x >= 0.45 else 'BUY' if x >= 0.18 else 'STRONG SELL' if x <= -0.45 else 'SELL' if x <= -0.18 else 'HOLD'
 
 
 def sector_medians(rows):
-    keys = ['fpe', 'tpe', 'ps', 'pfcf', 'rev_growth', 'div_yield', 'roe', 'de']
+    keys = ['fpe', 'tpe', 'ps', 'pfcf', 'peg', 'pb', 'rev_growth', 'eps_growth', 'eps_growth_fwd', 'eps_growth_next', 'div_yield', 'roe', 'roa', 'de',
+            'gross_margin', 'op_margin', 'profit_margin', 'current_ratio']
+    signed = {'rev_growth', 'eps_growth', 'eps_growth_fwd', 'eps_growth_next', 'div_yield', 'roe', 'roa', 'de', 'gross_margin', 'op_margin', 'profit_margin', 'current_ratio'}
     out = {}
     for r in rows:
         out.setdefault((r['market'], r.get('sector') or 'Other'), []).append(r['f'])
@@ -264,7 +269,7 @@ def sector_medians(rows):
     for k, fs in out.items():
         med[k] = {}
         for m in keys:
-            vals = [f[m] for f in fs if f.get(m) is not None and (m in ('rev_growth', 'div_yield', 'roe', 'de') or f[m] > 0)]
+            vals = [f[m] for f in fs if f.get(m) is not None and (m in signed or f[m] > 0)]
             med[k][m] = median(vals) if len(vals) >= 3 else None
     return med
 
@@ -278,6 +283,44 @@ def model_targets(f, med, price):
     feps, g = f.get('forward_eps'), f.get('eps_growth_fwd') if f.get('eps_growth_fwd') is not None else f.get('eps_growth')
     if feps and feps > 0 and g is not None: out['peg'] = feps * clamp(g * 100, 8, 30)
     if feps and feps > 0 and med.get('fpe'): out['sector_pe'] = feps * med['fpe']
-    vals = [v for v in out.values() if v and v > 0 and 0.2 * price < v < 5 * price]
+    vals = [v for v in out.values() if v and v > 0 and 0.4 * price < v < 2.5 * price]
     if vals: out['blend'] = median(vals)
     return out
+
+
+def cagr(series):
+    """Compound annual growth from a list of {'date','value'} (oldest -> newest); needs >= 3 points and positive ends."""
+    pts = [x for x in (series or []) if x.get('value') is not None]
+    if len(pts) < 3: return None
+    a, b = pts[0]['value'], pts[-1]['value']
+    yrs = (int(pts[-1]['date'][:4]) - int(pts[0]['date'][:4])) or (len(pts) - 1)
+    if a <= 0 or b <= 0 or yrs <= 0: return None
+    return (b / a) ** (1 / yrs) - 1
+
+
+def investment(f, ts, market, price, fair):
+    """LRC Investment track (long-only, 5-10 years), from the workbook's Investment preset. Returns pass count, grade, checks."""
+    big = 20e9 if market == 'JSE' else 10e9
+    pe_cap = 20 if market == 'JSE' else 25
+    rev_c = cagr((ts or {}).get('annualTotalRevenue'))
+    eps_c = cagr((ts or {}).get('annualDilutedEPS')) or cagr((ts or {}).get('annualNetIncome'))
+    checks = [
+        ('Market cap', f.get('mcap'), lambda v: v >= big, ('> R20bn' if market == 'JSE' else '> $10bn')),
+        ('Return on equity', f.get('roe'), lambda v: v > 0.15, '> 15%'),
+        ('Return on assets', f.get('roa'), lambda v: v > 0.07, '> 7%'),
+        ('Operating margin', f.get('op_margin'), lambda v: v > 0.15, '> 15%'),
+        ('Debt / equity', f.get('de'), lambda v: v < 50, '< 0.5'),
+        ('Current ratio', f.get('current_ratio'), lambda v: v > 1, '> 1'),
+        ('Forward P/E', f.get('fpe'), lambda v: 0 < v < pe_cap, f'< {pe_cap}'),
+        ('Price / FCF', f.get('pfcf'), lambda v: 0 < v < 25, '< 25'),
+        ('EPS growth (multi-year)', eps_c, lambda v: v > 0.10, '> 10% a year'),
+        ('Revenue growth (multi-year)', rev_c, lambda v: v > 0.05, '> 5% a year'),
+    ]
+    out, passed, known = [], 0, 0
+    for name, v, test, rule in checks:
+        ok = None if v is None else bool(test(v))
+        if ok is not None: known += 1; passed += ok
+        out.append({'k': name, 'v': v, 'rule': rule, 'ok': ok})
+    grade = 'A' if passed >= 8 else 'B' if passed >= 6 else 'C'
+    mos = fair / price - 1 if fair and price else None
+    return {'passed': passed, 'known': known, 'grade': grade, 'checks': out, 'rev_cagr': rev_c, 'eps_cagr': eps_c, 'fair_value': fair, 'mos': mos}

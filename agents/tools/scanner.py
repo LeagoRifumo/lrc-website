@@ -213,7 +213,8 @@ def main():
         else:
             rep = (sm.get('financialData') or {}).get('financialCurrency')
             f, prof = norm_fund(sm, q, t['price'], minor, fx_for(rep, cur, rates) if rep else 1.0)
-            cache.setdefault(s, {}).update({'f': f, 'prof': prof, 'f_date': dt.date.today().isoformat()})
+            cache.setdefault(s, {}).update({'f': {k: v for k, v in f.items() if k not in ('analyst_actions',)}, 'prof': {k: v for k, v in prof.items() if k != 'summary'},
+                                            'f_date': dt.date.today().isoformat()})
             stale = False
         if m == 'JSE':
             n0, sec0 = jse_cfg.get(s, (None, None))
@@ -253,36 +254,53 @@ def main():
         tg = E.model_targets(f, md, t['price'])
         cov = ratings.get(r['t'])
         if cov: tg['lrc'] = cov['target_6m']
+        inv = E.investment(f, r['ts'], r['m'], t['price'], tg.get('lrc') or tg.get('blend'))
         row = {'t': r['t'], 'n': r['n'], 'm': r['m'], 'sec': r['sec'], 'ind': r['ind'], 'cur': r['cur'], 'px': t['price'], 'chg': t['chg_1d'],
                'p1w': t['perf_1w'], 'p1m': t['perf_1m'], 'p6m': t['perf_6m'], 'ytd': t['perf_ytd'], 'mcap': f.get('mcap'), 'rsi': t['rsi'],
                'sc': sc, 'tech': tech_total, 'sent': sent_total, 'fund': fund_total, 'total': total, 'max': maxabs, 'v': E.verdict(total, maxabs),
                'setup': t.get('setup'), 'lvl': t.get('setup_level'), 'plan': {k: pl[k] for k in ('side', 'entry', 'stop', 't1', 't2', 'risk_pct')} if pl else None,
                'ne': f.get('next_earnings'), 'cat': cats, 'tgt': tg.get('lrc') or tg.get('blend'),
                'cov': {'rating': cov['rating'], 'target': cov['target_6m'], 'rated': cov.get('rated')} if cov else None,
-               'res': r['t'] in research, 'stale': r['stale'] or None}
+               'res': r['t'] in research, 'stale': r['stale'] or None,
+               'inv': {'p': inv['passed'], 'k': inv['known'], 'g': inv['grade'], 'mos': inv['mos'], 'rc': inv['rev_cagr'], 'ec': inv['eps_cagr']},
+               'raw': {'rs': t.get('rs_6m'), 'uv': t.get('updown_vol'), 'ext': (t['price'] - t['sma20']) / t['atr'] if t['atr'] and t['sma20'] else None,
+                       'fpe': f.get('fpe'), 'tpe': f.get('tpe'), 'ps': f.get('ps'), 'pfcf': f.get('pfcf'), 'rev_growth': f.get('rev_growth'),
+                       'eps_growth': f.get('eps_growth'), 'de': f.get('de'), 'roe': f.get('roe'), 'div_yield': f.get('div_yield'),
+                       'rec': f.get('rec_mean'), 'na': f.get('n_analysts'), 'tgt_up': (f['target_median'] / t['price'] - 1) if f.get('target_median') else None,
+                       'short': f.get('short_float'), 'fpe_sec': md.get('fpe')}}
         out_rows.append(row)
         # detail page data
         bars = r['bars']; c = [x['close'] for x in bars]
-        hist = []
-        for i in range(max(0, len(bars) - 260), len(bars)):
-            hist.append([bars[i]['date'], c[i], E.sma(c[:i + 1], 50), E.sma(c[:i + 1], 200)])
+        # compact history: ~15 months of closes (the page computes the 50/200-day averages) + dates as day gaps
+        hb = bars[-460:]
+        d0 = dt.date.fromisoformat(hb[0]['date'])
+        gaps, prev = [], d0
+        for x in hb[1:]:
+            d = dt.date.fromisoformat(x['date']); gaps.append((d - prev).days); prev = d
+        hist = {'d0': hb[0]['date'], 'gap': ''.join(str(min(g, 9)) for g in gaps), 'c': [rnd(x['close'], 5) for x in hb]}
         val = []
         for k, label, lower in [('fpe', 'Forward P/E', True), ('tpe', 'TTM P/E', True), ('ps', 'Price / Sales', True), ('pfcf', 'Price / FCF', True),
                                 ('peg', 'PEG', True), ('pb', 'Price / Book', True), ('de', 'Debt / Equity (%)', True), ('rev_growth', 'Revenue growth', False),
-                                ('eps_growth', 'EPS growth (last qtr)', False), ('roe', 'Return on equity', False), ('op_margin', 'Operating margin', False),
-                                ('div_yield', 'Dividend yield', False)]:
+                                ('eps_growth', 'EPS growth (last qtr, y/y)', False), ('eps_growth_fwd', 'EPS growth (this year, est.)', False),
+                                ('eps_growth_next', 'EPS growth (next year, est.)', False), ('gross_margin', 'Gross margin', False),
+                                ('op_margin', 'Operating margin', False), ('profit_margin', 'Net margin', False), ('roe', 'Return on equity', False),
+                                ('roa', 'Return on assets', False), ('current_ratio', 'Current ratio', False), ('div_yield', 'Dividend yield', False)]:
             v, mv = f.get(k), md.get(k)
             if v is None: verdict = '—'
             elif k in ('fpe', 'tpe', 'ps', 'pfcf') and v <= 0: verdict = 'Loss-making' if k != 'pfcf' else 'Negative FCF'
-            elif mv:
-                ratio = v / mv if mv else 1
-                if lower: verdict = 'Undervalued' if ratio < 0.8 else 'Overvalued' if ratio > 1.25 else 'Fairly valued'
-                else: verdict = 'Strong' if ratio > 1.25 else 'Weak' if ratio < 0.8 else 'In line'
+            elif mv is not None and mv != 0:
+                ratio = v / mv
+                if k == 'de': verdict = 'Low debt' if ratio < 0.8 else 'High debt' if ratio > 1.25 else 'In line'
+                elif lower: verdict = 'Undervalued' if ratio < 0.8 else 'Overvalued' if ratio > 1.25 else 'Fairly valued'
+                elif k == 'current_ratio': verdict = 'Strong' if ratio > 1.25 else 'Weak' if ratio < 0.8 else 'In line'
+                else:
+                    band = max(abs(mv) * 0.25, 0.02)
+                    verdict = 'Strong' if v > mv + band else 'Weak' if v < mv - band else 'In line'
             else: verdict = '—'
             val.append({'k': k, 'label': label, 'v': v, 'sector': mv, 'score': sc.get(k), 'verdict': verdict})
         details[r['t']] = {'row': row, 'tech': {k: v for k, v in t.items() if k not in ('setup_bar',)}, 'f': f, 'profile': r['prof'], 'sector_medians': md,
                            'valuation': val, 'targets': tg, 'plan': pl, 'history': hist, 'financials': r['ts'], 'dividends': r['meta'].get('dividends', [])[-8:],
-                           'benchmark': cfg['benchmarks'][r['m']]['name'], 'research': r['t'] in research}
+                           'benchmark': cfg['benchmarks'][r['m']]['name'], 'research': r['t'] in research, 'investment': inv}
 
     # ---------- ETFs ----------
     etf_rows = []
@@ -314,8 +332,8 @@ def main():
         for sec, rs in groups.items():
             if len(rs) < 2: continue
             avg = sum(x['total'] / x['max'] for x in rs if x['max']) / len(rs)
-            bull = sum(x['v'] in ('Bullish', 'Strong bullish') for x in rs) / len(rs)
-            bear = sum(x['v'] in ('Bearish', 'Strong bearish') for x in rs) / len(rs)
+            bull = sum(x['v'] in ('BUY', 'STRONG BUY') for x in rs) / len(rs)
+            bear = sum(x['v'] in ('SELL', 'STRONG SELL') for x in rs) / len(rs)
             above50 = sum(details[x['t']]['tech']['price'] > (details[x['t']]['tech']['sma50'] or 0) for x in rs) / len(rs)
             setups = sum(x['setup'] in ('Breakout', 'Retest') for x in rs)
             et = cfg['sector_etf'][m].get(sec)

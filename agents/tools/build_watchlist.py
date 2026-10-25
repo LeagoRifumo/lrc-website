@@ -115,6 +115,28 @@ def main(week_end=None, sp500_half=0.1437):
     # keep the investment list from the previous file (monthly agent updates it)
     try: out['investment'] = json.load(open(P('docs', 'data', 'watchlist.json'))).get('investment', [])
     except Exception: out['investment'] = []
+    # re-price the margin of safety every day (6-month value vs today's price, not the price when screened)
+    for z in out['investment']:
+        x = snap.get(z['ticker'])
+        if x and x.get('price') and z.get('fair_value'):
+            z['price'] = x['price']; z['price_as_of'] = x.get('as_of', '')
+            z['margin_of_safety'] = round(z['fair_value'] / x['price'] - 1, 4)
+    # coverage list for the website: every analyst-rated company, re-priced (the rating itself only changes in ratings.json)
+    flagged = {a['ticker'] for a in alerts}
+    cov = []
+    for t, r in ratings.items():
+        x = snap.get(t) or {}
+        px = x.get('price')
+        cov.append({'ticker': t, 'name': r['name'], 'sector': x.get('sector'), 'rating': r['rating'], 'target_6m': r['target_6m'],
+                    'score': r['score'], 'rated': r.get('rated'), 'price_at_rating': r.get('price_at_rating'),
+                    'price': px, 'price_as_of': x.get('as_of'), 'upside': round(r['target_6m'] / px - 1, 4) if px else None,
+                    'since_rating': round(px / r['price_at_rating'] - 1, 4) if px and r.get('price_at_rating') else None,
+                    'mcap_bn': x.get('mcap_bn'), 'next_earnings': x.get('next_earnings'), 'under_review': t in flagged})
+    order = {'BUY': 0, 'HOLD': 1, 'SELL': 2}
+    cov.sort(key=lambda c: (order.get(c['rating'], 3), -(c['upside'] or 0) if c['rating'] != 'SELL' else (c['upside'] or 0)))
+    json.dump({'generated': out['generated'], 'prices_as_of': out['prices_as_of'], 'agent': 'LRC Watchlist Agent',
+               'note': 'Analyst-approved ratings re-priced daily. Upside = 6-month value vs the latest close. A rating only changes after the analyst completes a new Work-sheet.',
+               'companies': cov}, open(P('docs', 'data', 'coverage.json'), 'w'), indent=1)
     json.dump(out, open(P('docs', 'data', 'watchlist.json'), 'w'), indent=1)
     os.makedirs(P('agents', 'work'), exist_ok=True)
     json.dump(alerts, open(P('agents', 'work', 'rating_alerts.json'), 'w'), indent=1)

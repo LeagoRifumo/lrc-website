@@ -1,0 +1,29 @@
+# LRC Scanner — scores every JSE and New York stock, ETF and sector, finds breakouts / retests and writes the one-page summaries.
+#  * 06:37 SAST Tue–Sat: after the New York close (fresh US data, JSE from the previous session)
+#  * 17:47 SAST Mon–Fri: after the JSE close (fresh JSE data)
+name: LRC Scanner
+on:
+  schedule:
+    - cron: '37 4 * * 2-6'
+    - cron: '47 15 * * 1-5'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: lrc-push
+  cancel-in-progress: false
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - name: Scan JSE + New York (stocks, ETFs, sectors)
+        run: python agents/tools/scanner.py
+      - name: Sitemap (one-page summaries)
+        continue-on-error: true
+        run: python agents/tools/build_articles.py
+      - name: Publish
+        run: bash agents/tools/publish.sh "LRC Scanner"
