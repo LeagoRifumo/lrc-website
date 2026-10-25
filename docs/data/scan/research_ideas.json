@@ -7,26 +7,26 @@
  "groups": [
   {
    "key": "quality_value",
-   "title": "Quality at a model discount",
-   "rule": "Investment score 60+, quality grade A and valued below the model's fair value (model estimate)."
+   "title": "Value & quality",
+   "rule": "Quality grade A, an Investment score of 60 or more, and priced below the model's fair value (model estimate)."
   },
   {
    "key": "top_scores",
-   "title": "Strongest all-round scores",
-   "rule": "The highest average of the Trading and Investment scores."
+   "title": "Score leaders",
+   "rule": "The highest combined Trading and Investment scores in the market."
   },
   {
    "key": "momentum",
-   "title": "Chart setups worth a look",
-   "rule": "A breakout, retest or near-breakout setup with a Trading score of 60 or more."
+   "title": "Technical setups",
+   "rule": "A breakout, retest or near-breakout on the chart, with a Trading score of 60 or more."
   },
   {
    "key": "results_soon",
-   "title": "Results in the next 14 days",
-   "rule": "Companies scoring 60+ that report soon: the results will test the numbers."
+   "title": "Earnings watch",
+   "rule": "Companies scoring 60 or more that report in the next 14 days."
   }
  ],
- "note": "Picked automatically by the LRC Stock Scanner after every run. A starting point for your own research, not a recommendation to buy or sell.",
+ "note": "The LRC Focus List is selected automatically by the LRC Stock Scanner after every run. It is a starting point for your own research, not a recommendation to buy or sell.",
  "ideas": {
   "JSE": {
    "quality_value": [

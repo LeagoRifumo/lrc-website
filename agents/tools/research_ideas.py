@@ -18,10 +18,10 @@ N = 6
 GNAME = {'valuation': 'valuation', 'growth': 'growth', 'profitability': 'profitability', 'health': 'financial health',
          'income': 'income', 'sentiment': 'sentiment', 'technical': 'technical'}
 GROUPS = [
-    ('quality_value', 'Quality at a model discount', 'Investment score 60+, quality grade A and valued below the model\'s fair value (model estimate).'),
-    ('top_scores', 'Strongest all-round scores', 'The highest average of the Trading and Investment scores.'),
-    ('momentum', 'Chart setups worth a look', 'A breakout, retest or near-breakout setup with a Trading score of 60 or more.'),
-    ('results_soon', 'Results in the next 14 days', 'Companies scoring 60+ that report soon: the results will test the numbers.'),
+    ('quality_value', 'Value & quality', 'Quality grade A, an Investment score of 60 or more, and priced below the model\'s fair value (model estimate).'),
+    ('top_scores', 'Score leaders', 'The highest combined Trading and Investment scores in the market.'),
+    ('momentum', 'Technical setups', 'A breakout, retest or near-breakout on the chart, with a Trading score of 60 or more.'),
+    ('results_soon', 'Earnings watch', 'Companies scoring 60 or more that report in the next 14 days.'),
 ]
 
 
@@ -67,7 +67,7 @@ def build(rows, today=None):
 
 def payload(meta, rows):
     return {**{k: meta.get(k) for k in ('generated', 'as_of')}, 'groups': [{'key': k, 'title': t, 'rule': d} for k, t, d in GROUPS],
-            'note': 'Picked automatically by the LRC Stock Scanner after every run. A starting point for your own research, not a recommendation to buy or sell.',
+            'note': 'The LRC Focus List is selected automatically by the LRC Stock Scanner after every run. It is a starting point for your own research, not a recommendation to buy or sell.',
             'ideas': build(rows)}
 
 

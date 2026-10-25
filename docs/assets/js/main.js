@@ -24,10 +24,6 @@ const num = id => parseFloat(($(id) || {}).value);
 /* ---------- research library ---------- */
 /* To SELL a report: add  price: 'R199', buy: 'https://paystack.shop/pay/your-link'  to its entry below. */
 const LIBRARY = [
-  { t: 'Paylocity (PCTY) — initiation of coverage', tk: 'PCTY', type: 'Company report', sector: 'Technology', date: '6 Oct 2026', region: 'US',
-    s: 'Payroll and HR software for US mid-sized companies: how it makes money, how it grows, four years of financials and a three-way valuation.', tags: ['HCM software', 'Valuation', '10 pages'] },
-  { t: 'Wabtec (WAB) — initiation of coverage', tk: 'WAB', type: 'Company report', sector: 'Industrials', date: '6 Oct 2026', region: 'US',
-    s: 'Locomotives, braking systems and rail digital: the backlog, margins, cash flow and what the share price already assumes.', tags: ['Rail', 'Backlog', '10 pages'] },
   { t: 'Weekly market dashboard — week to 9 Oct 2026', type: 'Market brief', sector: 'Macro & markets', date: '9 Oct 2026', region: 'SA & US', link: 'dashboard.html#2026-10-09',
     s: 'JSE flat on the week, the rand firmer at about R16.51/$, US shares higher and Brent above $100 — what it means for portfolios.', tags: ['JSE', 'Rand', 'S&P 500', 'Commodities'] },
   { t: 'Weekly market dashboard — week to 2 Oct 2026', type: 'Market brief', sector: 'Macro & markets', date: '2 Oct 2026', region: 'SA & US', link: 'dashboard.html#2026-10-02',

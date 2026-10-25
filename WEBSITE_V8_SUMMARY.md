@@ -68,7 +68,7 @@ Give this file (and the zip) to Claude when you next update the website.
 - Not changed: the Live Show page (live trades with stops/targets on screen), the rating-rules article and the tools page calculators (education). Raw JSON under /data still contains ratings and plans.
 
 ## Research page (26 Oct 2026)
-- research.html top = "Companies worth researching", built every scanner run by agents/tools/research_ideas.py -> docs/data/scan/research_ideas.json: per market up to 6 each of Quality at a model discount, Strongest all-round scores, Chart setups worth a look, Results in the next 14 days (a company appears once).
+- research.html top = "The LRC Focus List" (Spotlight + four theme tabs: Value & quality, Score leaders, Technical setups, Earnings watch; ranked rows), built every scanner run by agents/tools/research_ideas.py -> docs/data/scan/research_ideas.json: per market up to 6 each of Quality at a model discount, Strongest all-round scores, Chart setups worth a look, Results in the next 14 days (a company appears once).
 - Each card links to: one-page summary, watchlist tag (if on a list), earnings calendar (results date), our articles on it (articles.json tickers), latest news (intel).
 - Fed back into the site: company_intel collects news for research ideas; research_agent.md researches them; earnings_sync tags them "Research idea" on the earnings calendar.
-- Research library = LIBRARY in main.js + every article (articles.json) + every weekly dashboard (dashboards/index.json), newest first, sectors built automatically.
+- Research library = LIBRARY in main.js (company reports removed 26 Oct) + every article (articles.json) + every weekly dashboard (dashboards/index.json), newest first, sectors built automatically.
