@@ -607,3 +607,31 @@ button.btn-ghost{background:transparent;border:1px solid var(--line);color:var(-
 
 @media (max-width:1440px){.menu{gap:15px}.menu a{font-size:13.5px}.brand span{font-size:18px}.nav-cta .btn-red{padding:11px 14px;font-size:13.5px}}
 @media (max-width:1240px){.nav-cta .btn-red{display:none}}
+/* v5.2: full-width scanner table, score key */
+.wrap.wide{max-width:none;padding:0 16px}
+table.heat{min-width:0!important;font-size:12px}
+table.heat th{white-space:normal;font-size:10px;letter-spacing:.04em;padding:7px 3px;line-height:1.2;vertical-align:bottom}
+table.heat th.grp{font-size:10.5px;padding:7px 4px}
+table.heat td{height:34px}
+table.heat .hc{padding:8px 3px;font-size:12px}
+table.heat td.nm{min-width:150px;max-width:190px;padding:5px 8px}
+table.heat td.nm small{max-width:170px}
+table.heat td.plain{padding:3px 5px;font-size:12px}
+table.heat .sig{font-size:9.5px;padding:3px 5px}
+table.heat .tag{font-size:9.5px;padding:1px 5px}
+#scTblWrap:fullscreen{max-height:none!important;height:100vh;background:#07080C;border-radius:0}
+#scTblWrap.fs{position:fixed;inset:0;z-index:100;max-height:none!important;background:#07080C;border-radius:0}
+.score-key{margin-top:18px;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:rgba(217,169,62,.05);font-size:13.5px;color:#C9CEDA;line-height:1.55}
+.score-key b{color:var(--gold-2)}
+.score-key .keys{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 4px}
+.score-key small{display:block;color:var(--muted);font-size:12.5px}
+.paper .fbars{margin-top:6px;display:grid;gap:3px}
+.paper .fbar{display:grid;grid-template-columns:86px 1fr 52px;gap:6px;align-items:center;font-size:11.5px}
+.paper .fbar i{display:block;height:8px;background:#EEF0F4;border-radius:4px;overflow:hidden}
+.paper .fbar i b{display:block;height:100%}
+.paper .fbar em{font-style:normal;font-weight:700;color:#16223D;text-align:right}
+@media print{.paper .fbar{font-size:8.5px;grid-template-columns:70px 1fr 40px}.paper .fbar i{height:6px}}
+table.heat td.nm{min-width:128px;max-width:160px}
+table.heat td.nm small{max-width:140px}
+table.heat th{padding:6px 2px}
+table.heat .hc{padding:8px 2px}

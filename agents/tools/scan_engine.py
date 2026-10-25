@@ -253,10 +253,27 @@ def fund_scores(f, med, sector):
     return o
 
 
+def lrc_score(total, maxabs):
+    """LRC score on a 0-100 scale: 50 = neutral, 100 = every reading at its most bullish, 0 = every reading at its most bearish."""
+    return round(50 + 50 * total / maxabs) if maxabs else 50
+
+
 def verdict(total, maxabs):
-    x = total / maxabs if maxabs else 0
-    # LRC Scanner signal (automated) — separate from the analyst's BUY / HOLD / SELL rating in ratings.json
-    return 'STRONG BUY' if x >= 0.45 else 'BUY' if x >= 0.22 else 'STRONG SELL' if x <= -0.35 else 'SELL' if x <= -0.15 else 'HOLD'
+    """LRC Stock Scanner rating from the 0-100 LRC score (separate from the analyst rating in ratings.json)."""
+    sc = lrc_score(total, maxabs)
+    return 'STRONG BUY' if sc >= 72 else 'BUY' if sc >= 61 else 'STRONG SELL' if sc <= 32 else 'SELL' if sc <= 42 else 'HOLD'
+
+
+def consistent(rating, upside):
+    """A BUY needs upside to the LRC Analyst Target and a SELL needs downside, so the rating and the target never contradict.
+    Returns (rating, reason or None)."""
+    if upside is None: return rating, None
+    if rating == 'STRONG BUY' and upside < 0.10: rating = 'BUY' if upside >= 0.05 else 'HOLD'
+    elif rating == 'BUY' and upside < 0.05: rating = 'HOLD'
+    elif rating == 'STRONG SELL' and upside > -0.05: rating = 'SELL' if upside <= 0 else 'HOLD'
+    elif rating == 'SELL' and upside > 0: rating = 'HOLD'
+    else: return rating, None
+    return rating, 'Capped by the LRC Analyst Target (%+.0f%% from the price)' % (upside * 100)
 
 
 def sector_medians(rows):
@@ -293,7 +310,7 @@ def model_targets(f, med, price):
     elif cons: t = cons
     elif mdl: t = clamp(mdl, 0.6 * price, 1.6 * price)
     else: t = None
-    if t: out['blend'] = t
+    if t: out['blend'] = clamp(t, 0.65 * price, 1.5 * price)  # a 6-month target stays within -35% / +50% of the price
     if mdl: out['models'] = mdl
     return out
 
@@ -334,3 +351,86 @@ def investment(f, ts, market, price, fair):
     grade = 'A' if passed >= 8 else 'B' if passed >= 6 else 'C'
     mos = fair / price - 1 if fair and price else None
     return {'passed': passed, 'known': known, 'grade': grade, 'checks': out, 'rev_cagr': rev_c, 'eps_cagr': eps_c, 'fair_value': fair, 'mos': mos}
+
+
+# ======================= LRC factor model (v6) =======================
+# Six factors, each scored 0-100 as a percentile rank against peers (same sector in the same market; whole market for
+# momentum and technicals). 50 = average, 80 = better than 80% of peers. The LRC score is the percentile rank of the
+# weighted factor composite within the market, so an LRC score of 85 means "ranks above 85% of the companies we scan".
+FACTORS = {
+    'value':         {'w': 0.20, 'peer': 'sector', 'metrics': [('fpe', -1), ('tpe', -1), ('ps', -1), ('pfcf', -1), ('peg', -1)]},
+    'growth':        {'w': 0.20, 'peer': 'sector', 'metrics': [('rev_growth', 1), ('eps_growth', 1), ('eps_growth_fwd', 1), ('eps_growth_next', 1)]},
+    'profitability': {'w': 0.20, 'peer': 'sector', 'metrics': [('roe', 1), ('roa', 1), ('op_margin', 1), ('profit_margin', 1), ('de', -1), ('current_ratio', 1)]},
+    'momentum':      {'w': 0.20, 'peer': 'market', 'metrics': [('perf_1m', 1), ('perf_3m', 1), ('perf_6m', 1), ('perf_1y', 1)]},
+    'sentiment':     {'w': 0.10, 'peer': 'sector', 'metrics': [('rec_mean', -1), ('tgt_up', 1), ('short_float', -1), ('net_upgrades', 1)]},
+    'technical':     {'w': 0.10, 'peer': 'market', 'metrics': [('tech_points', 1)]},
+}
+VALUATION_NEG_WORST = {'fpe', 'tpe', 'pfcf', 'peg'}   # negative earnings / cash flow = worst value score
+NO_BALANCE_SHEET = {'Financial Services', 'Real Estate'}  # debt/equity and current ratio are not meaningful for banks/insurers/REITs
+
+
+def pctile(values):
+    """values: list of (key, x). Returns {key: percentile 0-100} (average rank for ties)."""
+    v = sorted((x, k) for k, x in values)
+    n = len(v); out = {}
+    if n == 1: return {v[0][1]: 50.0}
+    i = 0
+    while i < n:
+        j = i
+        while j + 1 < n and v[j + 1][0] == v[i][0]: j += 1
+        r = (i + j) / 2
+        for q in range(i, j + 1): out[v[q][1]] = 100.0 * r / (n - 1)
+        i = j + 1
+    return out
+
+
+def grade(s):
+    return None if s is None else 'A' if s >= 80 else 'B' if s >= 60 else 'C' if s >= 40 else 'D' if s >= 20 else 'F'
+
+
+def rating_from_score(s):
+    return 'STRONG BUY' if s >= 80 else 'BUY' if s >= 60 else 'HOLD' if s >= 40 else 'SELL' if s >= 20 else 'STRONG SELL'
+
+
+def factor_model(items):
+    """items: list of dicts {key, market, sector, m: {metric: value}}. Adds item['pct'] (metric percentiles),
+    item['factors'] {name: score 0-100 or None}, item['composite'] and item['score'] (0-100 within market)."""
+    metrics = {m for f in FACTORS.values() for m, _ in f['metrics']}
+    for it in items: it['pct'] = {}; it['factors'] = {}
+    for metric in metrics:
+        direction = next(d for f in FACTORS.values() for m, d in f['metrics'] if m == metric)
+        peer = next(f['peer'] for f in FACTORS.values() if any(m == metric for m, _ in f['metrics']))
+        groups = {}
+        for it in items:
+            x = it['m'].get(metric)
+            if x is None: continue
+            if metric in ('de', 'current_ratio') and it['sector'] in NO_BALANCE_SHEET: continue
+            if metric in VALUATION_NEG_WORST and x <= 0: x = float('inf')   # loss-making: worst value
+            elif direction < 0: x = -x
+            else: pass
+            if direction < 0 and x == float('inf'): x = float('-inf')
+            g = (it['market'], it['sector']) if peer == 'sector' else (it['market'],)
+            groups.setdefault(g, []).append((it['key'], x))
+        # small sector groups fall back to the whole market
+        merged = {}
+        for g, vals in groups.items():
+            if len(vals) < 6 and len(g) == 2: merged.setdefault((g[0],), []).extend(vals)
+            else: merged.setdefault(g, []).extend(vals)
+        byk = {it['key']: it for it in items}
+        for g, vals in merged.items():
+            for k, p in pctile(vals).items(): byk[k]['pct'][metric] = round(p)
+    for it in items:
+        tot = wsum = 0
+        for name, f in FACTORS.items():
+            ps = [it['pct'][m] for m, _ in f['metrics'] if m in it['pct']]
+            need = 2 if name in ('value', 'profitability', 'growth') else 1
+            s = round(sum(ps) / len(ps)) if len(ps) >= need else None
+            it['factors'][name] = s
+            if s is not None: tot += f['w'] * s; wsum += f['w']
+        it['composite'] = tot / wsum if wsum >= 0.5 else None
+    for mk in {it['market'] for it in items}:
+        vals = [(it['key'], it['composite']) for it in items if it['market'] == mk and it['composite'] is not None]
+        for k, p in pctile(vals).items():
+            next(it for it in items if it['key'] == k)['score'] = round(p)
+    for it in items: it.setdefault('score', None)
+    return items

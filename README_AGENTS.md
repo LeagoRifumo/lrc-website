@@ -47,5 +47,6 @@ Edit `docs/data/ratings.json` after a Work-sheet run and commit. The next daily 
 - Universe: `agents/config/scanner.json` — the JSE list (Yahoo symbols end in `.JO`), the ETF groups and the sector → ETF map. New York = S&P 500 +
   Nasdaq-100, refreshed automatically each run, plus every covered name.
 - Rules: `agents/tools/scan_engine.py` (scores, major support/resistance, Breakout / Retest / Breakdown / Failed retest, entry plans, investment track).
-- The scanner signal (STRONG BUY … STRONG SELL) is automated and labelled as such; the analyst rating in ratings.json is always shown separately.
+- LRC score (0-100) = percentile rank of six sector-relative factors (Value, Growth, Profitability, Momentum 20% each; Sentiment, Technical 10%). Rating: 80+ STRONG BUY, 60+ BUY, 40+ HOLD, 20+ SELL, below 20 STRONG SELL; a BUY needs upside to the LRC Analyst Target and a SELL needs downside.
+- Track record: `agents/tools/track_record.py` saves every rating daily (docs/data/track/snap) and measures it (docs/data/track/performance.json → track.html).
 - Company research on the one-page summaries is written automatically by the research agent (`agents/research_agent.md`) into `docs/data/research/<TICKER>.json`.
