@@ -625,3 +625,9 @@ table.heat .tag{font-size:9.5px;padding:1px 5px}
 .score-key b{color:var(--gold-2)}
 .score-key .keys{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 4px}
 .score-key small{display:block;color:var(--muted);font-size:12.5px}
+.paper .fbars{margin-top:6px;display:grid;gap:3px}
+.paper .fbar{display:grid;grid-template-columns:86px 1fr 52px;gap:6px;align-items:center;font-size:11.5px}
+.paper .fbar i{display:block;height:8px;background:#EEF0F4;border-radius:4px;overflow:hidden}
+.paper .fbar i b{display:block;height:100%}
+.paper .fbar em{font-style:normal;font-weight:700;color:#16223D;text-align:right}
+@media print{.paper .fbar{font-size:8.5px;grid-template-columns:70px 1fr 40px}.paper .fbar i{height:6px}}

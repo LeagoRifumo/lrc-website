@@ -245,16 +245,29 @@ def main():
 
     med = E.sector_medians([{'market': r['m'], 'sector': r['sec'], 'f': r['f']} for r in rows])
     today = dt.date.today()
+    # ---- six-factor model: percentile ranks vs peers -> LRC score 0-100 ----
+    items = []
+    for r in rows:
+        t, f = r['tech'], r['f']
+        tp = E.tech_scores(t)
+        acts = f.get('analyst_actions', [])
+        mets = {k: f.get(k) for k in ('fpe', 'tpe', 'ps', 'pfcf', 'peg', 'rev_growth', 'eps_growth', 'eps_growth_fwd', 'eps_growth_next', 'roe', 'roa',
+                                       'op_margin', 'profit_margin', 'de', 'current_ratio', 'rec_mean', 'short_float')}
+        mets.update({'perf_1m': t['perf_1m'], 'perf_3m': t['perf_3m'], 'perf_6m': t['perf_6m'], 'perf_1y': t['perf_1y'],
+                     'tgt_up': (f['target_median'] / t['price'] - 1) if f.get('target_median') and f.get('n_analysts') else None,
+                     'net_upgrades': (sum(a.get('action') == 'up' for a in acts) - sum(a.get('action') == 'down' for a in acts)) if acts else None,
+                     'tech_points': tp['trend'] + tp['setup'] + tp['extension'] + tp['volume']})
+        if not f.get('n_analysts'): mets['rec_mean'] = None
+        r['tp'] = tp
+        items.append({'key': r['t'], 'market': r['m'], 'sector': r['sec'], 'm': mets})
+    E.factor_model(items)
+    fm = {it['key']: it for it in items}
     out_rows = []
     for r in rows:
         t, f = r['tech'], r['f']
         md = med.get((r['m'], r['sec']), {})
-        ts_ = E.tech_scores(t); ss = E.sentiment_scores(f, t['price']); fs = E.fund_scores(f, md, r['sec'])
-        sc = {**ts_, **ss, **fs}
-        vals = [v for v in sc.values() if v is not None]
-        maxabs = sum(2 if k in ('trend', 'momentum', 'setup', 'analysts') else 1 for k, v in sc.items() if v is not None)
-        total = sum(vals)
-        tech_total = sum(ts_.values()); fund_total = sum(v for v in fs.values() if v is not None); sent_total = sum(v for v in ss.values() if v is not None)
+        it = fm[r['t']]
+        score = it['score'] if it['score'] is not None else 50
         pl = E.plan(r['bars'], t, f.get('next_earnings'), today)
         cats = []
         if f.get('next_earnings'):
@@ -272,11 +285,12 @@ def main():
         if cov: tg['lrc'] = cov['target_6m']
         inv = E.investment(f, r['ts'], r['m'], t['price'], tg.get('lrc') or tg.get('blend'))
         tgt_final = tg.get('lrc') or tg.get('blend')
-        v_score = E.verdict(total, maxabs)
+        v_score = E.rating_from_score(score)
         v_final, v_note = E.consistent(v_score, (tgt_final / t['price'] - 1) if tgt_final and t['price'] else None)
         row = {'t': r['t'], 'n': r['n'], 'm': r['m'], 'sec': r['sec'], 'ind': r['ind'], 'cur': r['cur'], 'px': t['price'], 'chg': t['chg_1d'],
                'p1w': t['perf_1w'], 'p1m': t['perf_1m'], 'p6m': t['perf_6m'], 'ytd': t['perf_ytd'], 'mcap': f.get('mcap'), 'rsi': t['rsi'],
-               'sc': sc, 'tech': tech_total, 'sent': sent_total, 'fund': fund_total, 'total': total, 'max': maxabs, 'score': E.lrc_score(total, maxabs), 'v': v_final, 'v_score': v_score, 'v_note': v_note,
+               'score': score, 'fac': it['factors'], 'grades': {k: E.grade(v) for k, v in it['factors'].items()}, 'pct': it['pct'], 'tp': r['tp'],
+               'v': v_final, 'v_score': v_score, 'v_note': v_note,
                'setup': t.get('setup'), 'lvl': t.get('setup_level'), 'plan': {k: pl[k] for k in ('side', 'entry', 'stop', 't1', 't2', 'risk_pct')} if pl else None,
                'ne': f.get('next_earnings'), 'cat': cats, 'tgt': tg.get('lrc') or tg.get('blend'),
                'cov': {'rating': cov['rating'], 'target': cov['target_6m'], 'rated': cov.get('rated')} if cov else None,
@@ -286,7 +300,8 @@ def main():
                        'fpe': f.get('fpe'), 'tpe': f.get('tpe'), 'ps': f.get('ps'), 'pfcf': f.get('pfcf'), 'rev_growth': f.get('rev_growth'),
                        'eps_growth': f.get('eps_growth'), 'de': f.get('de'), 'roe': f.get('roe'), 'div_yield': f.get('div_yield'),
                        'rec': f.get('rec_mean'), 'na': f.get('n_analysts'), 'tgt_up': (f['target_median'] / t['price'] - 1) if f.get('target_median') else None,
-                       'short': f.get('short_float'), 'fpe_sec': md.get('fpe')}}
+                       'short': f.get('short_float'), 'fpe_sec': md.get('fpe'), 'peg': f.get('peg'), 'roa': f.get('roa'), 'op_margin': f.get('op_margin'),
+                       'profit_margin': f.get('profit_margin'), 'eps_growth_fwd': f.get('eps_growth_fwd'), 'perf_3m': t['perf_3m'], 'perf_1y': t['perf_1y']}}
         out_rows.append(row)
         # detail page data
         bars = r['bars']; c = [x['close'] for x in bars]
@@ -316,7 +331,7 @@ def main():
                     band = max(abs(mv) * 0.25, 0.02)
                     verdict = 'Strong' if v > mv + band else 'Weak' if v < mv - band else 'In line'
             else: verdict = '—'
-            val.append({'k': k, 'label': label, 'v': v, 'sector': mv, 'score': sc.get(k), 'verdict': verdict})
+            val.append({'k': k, 'label': label, 'v': v, 'sector': mv, 'pct': it['pct'].get(k), 'verdict': verdict})
         details[r['t']] = {'row': row, 'tech': {k: v for k, v in t.items() if k not in ('setup_bar',)}, 'f': f, 'profile': r['prof'], 'sector_medians': md,
                            'valuation': val, 'targets': tg, 'plan': pl, 'history': hist, 'financials': r['ts'], 'sec_q': (secq.get(r['t']) or {}).get('data'), 'dividends': r['meta'].get('dividends', [])[-8:],
                            'benchmark': cfg['benchmarks'][r['m']]['name'], 'research': r['t'] in research, 'investment': inv}
@@ -332,14 +347,25 @@ def main():
                 for k in ('open', 'high', 'low', 'close'): x[k] = x[k] / 100.0
         t = E.technicals(bars, bmk.get(m))
         if not t: continue
-        sc = E.tech_scores(t); tot = sum(sc.values()); pl = E.plan(bars, t)
+        sc = E.tech_scores(t); pl = E.plan(bars, t)
         etf_rows.append({'t': s, 'n': label, 'full': (quotes.get(s) or {}).get('longName') or meta.get('name'), 'm': m, 'g': grp, 'px': t['price'],
                          'cur': 'ZAR' if m == 'JSE' else 'USD', 'chg': t['chg_1d'], 'p1w': t['perf_1w'], 'p1m': t['perf_1m'], 'p3m': t['perf_3m'],
-                         'p6m': t['perf_6m'], 'ytd': t['perf_ytd'], 'rs': t['rs_6m'], 'rsi': t['rsi'], 'sc': sc, 'total': tot, 'max': 8, 'score': E.lrc_score(tot, 8), 'v': E.verdict(tot, 8),
+                         'p6m': t['perf_6m'], 'ytd': t['perf_ytd'], 'rs': t['rs_6m'], 'rsi': t['rsi'], 'tp': sc, 'p1y': t['perf_1y'],
                          'setup': t.get('setup'), 'lvl': t.get('setup_level'),
                          'plan': {k: pl[k] for k in ('side', 'entry', 'stop', 't1', 't2', 'risk_pct')} if pl else None,
                          'sma50': t['sma50'], 'sma200': t['sma200']})
-    etf_rows.sort(key=lambda e: (-e['total'], -(e['rs'] or -9)))
+    # ETF score: percentile rank within its market of momentum (1/3/6/12 months) + trend/setup points
+    for mk in ('US', 'JSE'):
+        es = [e for e in etf_rows if e['m'] == mk]
+        comp = {e['t']: [] for e in es}
+        for key in ('p1m', 'p3m', 'p6m', 'p1y', 'pts'):
+            vals = [(e['t'], (e['tp']['trend'] + e['tp']['setup'] + e['tp']['extension'] + e['tp']['volume']) if key == 'pts' else e[key]) for e in es]
+            vals = [(k, v) for k, v in vals if v is not None]
+            for k, p_ in E.pctile(vals).items(): comp[k].append(p_)
+        sc_ = E.pctile([(k, sum(v) / len(v)) for k, v in comp.items() if v])
+        for e in es:
+            e['score'] = round(sc_.get(e['t'], 50)); e['v'] = E.rating_from_score(e['score'])
+    etf_rows.sort(key=lambda e: -e['score'])
 
     # ---------- sectors ----------
     etf_by = {e['t']: e for e in etf_rows}
@@ -350,19 +376,18 @@ def main():
             if r['m'] == m: groups.setdefault(r['sec'], []).append(r)
         for sec, rs in groups.items():
             if len(rs) < 2: continue
-            avg = sum(x['total'] / x['max'] for x in rs if x['max']) / len(rs)
+            avg = sum(x['score'] for x in rs) / len(rs)
             bull = sum(x['v'] in ('BUY', 'STRONG BUY') for x in rs) / len(rs)
             bear = sum(x['v'] in ('SELL', 'STRONG SELL') for x in rs) / len(rs)
             above50 = sum(details[x['t']]['tech']['price'] > (details[x['t']]['tech']['sma50'] or 0) for x in rs) / len(rs)
             setups = sum(x['setup'] in ('Breakout', 'Retest') for x in rs)
             et = cfg['sector_etf'][m].get(sec)
             e = etf_by.get(et)
-            etf_part = e['total'] / 8 if e else 0
-            score = round(10 * (0.5 * avg / 0.6 + 0.3 * etf_part + 0.2 * (bull - bear)), 1)
-            score = max(-10, min(10, score))
-            top = sorted(rs, key=lambda x: -x['total'])
-            sectors.append({'m': m, 'sec': sec, 'n': len(rs), 'score': score, 'score100': E.lrc_score(score, 10), 'v': E.verdict(score, 10), 'avg': avg, 'bull': bull, 'bear': bear, 'above50': above50,
-                            'setups': setups, 'etf': et, 'etf_name': (e or {}).get('n'), 'etf_total': (e or {}).get('total'), 'etf_v': (e or {}).get('v'),
+            # sector score 0-100: average LRC score of its companies (70%) + its sector ETF score (30%)
+            score = round(0.7 * avg + 0.3 * e['score']) if e else round(avg)
+            top = sorted(rs, key=lambda x: -x['score'])
+            sectors.append({'m': m, 'sec': sec, 'n': len(rs), 'score': score, 'v': E.rating_from_score(score), 'avg': round(avg), 'bull': bull, 'bear': bear, 'above50': above50,
+                            'setups': setups, 'etf': et, 'etf_name': (e or {}).get('n'), 'etf_score': (e or {}).get('score'), 'etf_v': (e or {}).get('v'),
                             'etf_p1m': (e or {}).get('p1m'), 'top': [x['t'] for x in top[:3]], 'bottom': [x['t'] for x in top[-3:]]})
     sectors.sort(key=lambda x: (x['m'], -x['score']))
 
@@ -377,15 +402,15 @@ def main():
     def pick(r):
         p = r['plan'] or {}
         up = lambda x: (x / p['entry'] - 1) if p.get('entry') and x else None
-        return {'t': r['t'], 'n': r['n'], 'sec': r['sec'], 'cur': r['cur'], 'px': r['px'], 'chg': r['chg'], 'v': r['v'], 'total': r['total'], 'max': r['max'], 'score': r['score'],
+        return {'t': r['t'], 'n': r['n'], 'sec': r['sec'], 'cur': r['cur'], 'px': r['px'], 'chg': r['chg'], 'v': r['v'], 'score': r['score'], 'grades': r['grades'],
                 'setup': r['setup'], 'lvl': r['lvl'], 'ne': r['ne'], 'cov': r['cov'], 'tgt': r['tgt'], 'tgt_up': (r['tgt'] / r['px'] - 1) if r['tgt'] and r['px'] else None,
                 'entry': p.get('entry'), 'stop': p.get('stop'), 't1': p.get('t1'), 't2': p.get('t2'),
                 'stop_pct': up(p.get('stop')), 't1_pct': up(p.get('t1')), 't2_pct': up(p.get('t2')), 'inv': r['inv']}
     lists = {}
     for m in ('US', 'JSE'):
         rs = [r for r in out_rows if r['m'] == m]
-        longs = sorted([r for r in rs if r['plan'] and r['plan']['side'] == 'Long' and r['v'] in ('BUY', 'STRONG BUY')], key=lambda r: -r['total'] / r['max'])[:10]
-        shorts = sorted([r for r in rs if r['plan'] and r['plan']['side'] == 'Short' and r['v'] in ('SELL', 'STRONG SELL')], key=lambda r: r['total'] / r['max'])[:10]
+        longs = sorted([r for r in rs if r['plan'] and r['plan']['side'] == 'Long' and r['v'] in ('BUY', 'STRONG BUY')], key=lambda r: -r['score'])[:10]
+        shorts = sorted([r for r in rs if r['plan'] and r['plan']['side'] == 'Short' and r['v'] in ('SELL', 'STRONG SELL')], key=lambda r: r['score'])[:10]
         inv = sorted([r for r in rs if r['inv']['g'] in ('A', 'B') and (r['inv']['mos'] or 0) > 0], key=lambda r: (-r['inv']['p'], -(r['inv']['mos'] or 0)))[:10]
         lists[m] = {'long': [pick(r) for r in longs], 'short': [pick(r) for r in shorts], 'investment': [pick(r) for r in inv]}
     dump(os.path.join(OUT, 'lists.json'), rnd_all({**meta, 'rules': {
@@ -404,7 +429,7 @@ def main():
     dump(P('agents', 'work', 'sec_q_cache.json'), secq)
     for s_ in (os.environ.get('SCAN_DEBUG') or '').split(','):
         d = details.get(s_)
-        if d: print('DEBUG', s_, json.dumps(rnd_all({'px': d['tech']['price'], 'cur': d['row']['cur'], 'setup': d['row']['setup'], 'v': d['row']['v'], 'sc': d['row']['sc'],
+        if d: print('DEBUG', s_, json.dumps(rnd_all({'px': d['tech']['price'], 'cur': d['row']['cur'], 'setup': d['row']['setup'], 'v': d['row']['v'], 'fac': d['row']['fac'],
                      **{k: d['f'].get(k) for k in ('mcap', 'currency_reported', 'fx_used', 'tpe', 'yahoo_tpe', 'fpe', 'yahoo_fpe', 'ps', 'pfcf', 'trailing_eps', 'forward_eps', 'target_median', 'rev_growth', 'eps_growth', 'de', 'roe', 'div_yield', 'next_earnings')},
                      'targets': d['targets'], 'plan': d['plan'], 'sup': d['tech']['supports'][:2], 'res': d['tech']['resistances'][:2]})))
     print(f'done: {len(out_rows)} stocks, {len(etf_rows)} ETFs, {len(sectors)} sectors in {time.time() - t0:.0f}s')
