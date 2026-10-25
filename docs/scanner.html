@@ -60,26 +60,28 @@
 </div></section>
 <div class="scan-bar"><div class="wrap">
   <span class="mkt-switch mkt-big"><select id="scMkt" aria-label="Market"><option value="JSE">JSE — Johannesburg</option><option value="US">New York — NYSE &amp; Nasdaq</option></select></span>
-  <div class="tabs" id="scTabs"><button data-t="stocks" class="on">Stocks</button><button data-t="setups">Setups &amp; entries</button><button data-t="invest">Investment ideas</button><button data-t="etfs">ETFs</button><button data-t="sectors">Sectors</button><button data-t="how">How scoring works</button></div>
+  <div class="tabs" id="scTabs"><button data-t="stocks" class="on">Trading scanner · 3–12 months</button><button data-t="setups">Setups &amp; entries</button><button data-t="invest">Investment scanner · 5–10 years</button><button data-t="etfs">ETFs</button><button data-t="sectors">Sectors</button><button data-t="how">How scoring works</button></div>
 </div></div>
 <section style="padding-top:10px"><div class="wrap wide" id="scWrap">
   <div id="pane-stocks">
+    <div class="mode-note" id="scMode"></div>
     <div class="kpis" id="scKpis"></div>
     <div class="scan-filters">
       <input type="search" id="scQ" placeholder="Search ticker or company…">
       <select id="scSec"><option value="all">All sectors</option></select>
-      <select id="scSig"><option value="all">All scanner ratings</option><option>STRONG BUY</option><option>BUY</option><option>HOLD</option><option>SELL</option><option>STRONG SELL</option></select>
+      <select id="scSig"><option value="all">All ratings</option><option>STRONG BUY</option><option>BUY</option><option>HOLD</option><option>SELL</option><option>STRONG SELL</option></select>
       <select id="scSet"><option value="all">All setups</option><option>Breakout</option><option>Retest</option><option>Near breakout</option><option>Breakdown</option><option>Failed retest</option><option value="none">No setup</option></select>
-      <select id="scVal"><option value="all">Any valuation</option><option value="under">Undervalued vs sector (Fwd P/E)</option><option value="over">Overvalued vs sector (Fwd P/E)</option></select>
+      <select id="scVal"><option value="all">Any valuation verdict</option><option value="under">Undervalued</option><option value="fair">Fair value</option><option value="over">Overvalued</option></select>
       <label><input type="checkbox" id="scCov"> LRC covered</label>
       <label><input type="checkbox" id="scMine"> ★ My list</label>
-      <span class="filters" id="scView" style="margin:0"><button class="chip-btn on" data-v="factors">Factor grades</button><button class="chip-btn" data-v="detail">All readings</button></span>
+      <span class="filters" id="scView" style="margin:0"><button class="chip-btn on" data-v="overview">Overview</button><button class="chip-btn" data-v="valuation">Valuation</button><button class="chip-btn" data-v="growth">Growth</button><button class="chip-btn" data-v="profitability">Profitability</button><button class="chip-btn" data-v="health">Financial health</button><button class="chip-btn" data-v="income">Income</button><button class="chip-btn" data-v="sentiment">Sentiment</button><button class="chip-btn" data-v="technical">Technical</button></span>
       <button class="chip-btn" id="scCsv">Download CSV</button>
       <button class="chip-btn" id="scFull">⛶ Full screen</button>
     </div>
-    <div class="score-key"><b>How to read the LRC score (0–100)</b> Every company is compared with its peers — the same sector in the same market — on six factors: <b>Value</b>, <b>Growth</b>, <b>Profitability</b>, <b>Momentum</b>, <b>Sentiment</b> and <b>Technical</b>. Each factor is a score from 0 to 100 (grade A = 80+, B = 60+, C = 40+, D = 20+, F = below 20). The LRC score combines them (Value, Growth, Profitability and Momentum 20% each; Sentiment and Technical 10% each) and ranks the result across the market: <b>an LRC score of 85 means the company ranks above 85% of the companies we scan.</b>
-      <span class="keys"><span class="sig sig-strong-buy">80–100 STRONG BUY</span><span class="sig sig-buy">60–79 BUY</span><span class="sig sig-hold">40–59 HOLD</span><span class="sig sig-sell">20–39 SELL</span><span class="sig sig-strong-sell">0–19 STRONG SELL</span></span>
-      <small>A BUY also needs upside to the LRC Analyst Target and a SELL needs downside — otherwise the rating is held at HOLD, so the rating and the target never disagree. Green = better than most peers, red = worse.</small></div>
+    <div class="score-key"><b>How to read it</b> Every company is checked on <b>37 readings</b> in seven groups — Valuation, Growth, Profitability, Financial health, Income, Sentiment and Technical. Click a group button to see the <b>exact numbers</b>: the big number is the company, the small number is the <b>sector median</b> (hover for the market median). Each reading scores <b>+1 better / 0 neutral / −1 worse</b> than its sector or our safety lines (Trend, Momentum and Setup count ±2).
+      <span class="keys"><span class="sig" style="background:#14823F;color:#fff">Bright green · much better (best 10%)</span><span class="sig" style="background:#1F6B3E;color:#fff">Green · better (+1)</span><span class="sig" style="background:#1A1F2C;color:#C7CCD8">Grey · neutral (0)</span><span class="sig" style="background:#8C2F2F;color:#fff">Red · worse (−1)</span><span class="sig" style="background:#B3261E;color:#fff">Bright red · much worse (worst 10%)</span></span>
+      <span class="keys"><b style="margin-right:6px">Scores (0–100, 50 = neutral)</b> each group score = 50 + 50 × points earned ÷ points possible; the <b>&nbsp;Trading&nbsp;</b> and <b>&nbsp;Investment&nbsp;</b> scores weight the groups for the holding period (see the note above): <span class="sig sig-strong-buy">75–100 STRONG BUY</span><span class="sig sig-buy">60–74 BUY</span><span class="sig sig-hold">40–59 HOLD</span><span class="sig sig-sell">25–39 SELL</span><span class="sig sig-strong-sell">0–24 STRONG SELL</span></span>
+      <small>Example: Valuation readings +3 of a possible ±7 → valuation score 50 + 50 × 3/7 = <b>71</b>. Trading: a BUY needs upside to the 6-month LRC Analyst Target and a SELL needs downside, otherwise HOLD. Investment: a BUY cannot be OVERVALUED and a SELL cannot be UNDERVALUED. <b>Valuation verdict</b>: UNDERVALUED = valuation readings net +2 or better and 10%+ upside to the LRC Analyst Target; OVERVALUED = valuation net −2 or worse, or the target 5%+ below the price; otherwise FAIR VALUE.</small></div>
     <div class="tbl-wrap" id="scTblWrap" style="max-height:80vh;overflow:auto"><table class="heat" id="scTbl"></table></div>
     <button class="btn btn-ghost more-btn" id="scMore" hidden>Show more</button>
   </div>
@@ -105,15 +107,15 @@
   </div>
   <div id="pane-how" hidden>
     <div class="howto">
-      <div class="card"><h3>1 · Value (20%)</h3><p>Forward P/E, trailing P/E, price/sales, price/free cash flow and PEG — each ranked against the same sector in the same market. Cheaper than peers = higher score. Loss-making or negative free cash flow ranks lowest.</p></div>
-      <div class="card"><h3>2 · Growth (20%)</h3><p>Revenue growth and EPS growth (latest quarter, this year and next year estimates) against sector peers.</p></div>
-      <div class="card"><h3>3 · Profitability (20%)</h3><p>Return on equity and assets, operating and net margins, low debt and liquidity (debt and liquidity are skipped for banks, insurers and property funds, where they do not apply).</p></div>
-      <div class="card"><h3>4 · Momentum (20%)</h3><p>Share-price performance over 1, 3, 6 and 12 months, ranked across the whole market.</p></div>
-      <div class="card"><h3>5 · Sentiment (10%)</h3><p>Analyst consensus rating, upside to the analysts' median target, short interest and recent upgrades minus downgrades.</p></div>
-      <div class="card"><h3>6 · Technical (10%)</h3><p>Trend (price vs the 50- and 200-day averages), setup (<b>Breakout</b> through resistance on 1.5× volume, or a <b>Retest</b> of major support that holds; <b>Breakdown</b> or <b>Failed retest</b> count against), stretch and volume. Major support/resistance = price levels touched at least twice in 12 months.</p></div>
-      <div class="card"><h3>The LRC score &amp; rating</h3><p>The six factor scores are weighted and ranked across the market: 80–100 STRONG BUY, 60–79 BUY, 40–59 HOLD, 20–39 SELL, 0–19 STRONG SELL. A BUY needs at least 5% upside to the LRC Analyst Target (10% for STRONG BUY) and a SELL needs downside — otherwise HOLD.</p></div>
-      <div class="card"><h3>LRC Analyst Target</h3><p>A 6-month target: 60% analyst consensus and 40% LRC valuation models (P/FCF, PEG, sector P/E), kept within 20% of the consensus and between −35% and +50% of the price. Where we have completed a Work-sheet, the analyst's own target is used.</p></div>
-      <div class="card"><h3>Track record</h3><p>Every rating is saved daily and measured afterwards — see the <a href="track.html" style="color:var(--gold-2)">LRC track record</a> for how BUY, HOLD and SELL names performed against the market.</p></div>
+      <div class="card"><h3>Valuation (7)</h3><p>Forward P/E, trailing P/E, PEG, price/sales, price/book, price/free cash flow, EV/EBITDA. +1 when 20%+ cheaper than the sector median (PEG below 1); −1 when 25%+ dearer, loss-making or negative cash flow (PEG above 2).</p></div>
+      <div class="card"><h3>Growth (6)</h3><p>Revenue and EPS growth for the latest quarter, analyst EPS growth this year and next, and 3-year revenue and EPS growth a year. +1 for strong growth (15–20%+, 10%+ over 3 years); −1 when shrinking.</p></div>
+      <div class="card"><h3>Profitability (5)</h3><p>Gross, operating and net margin, return on equity (+1 above 20%, −1 below 8%) and return on assets (+1 above 8%, −1 below 2%). Margins are judged against the sector.</p></div>
+      <div class="card"><h3>Financial health (5)</h3><p>Debt/equity (+1 below 0.5, −1 above 1.5), current ratio, quick ratio, free-cash-flow margin and net cash vs market cap. Banks, insurers and property funds skip the balance-sheet ratios.</p></div>
+      <div class="card"><h3>Income (2)</h3><p>Dividend yield (+1 above 3% and above the sector; −1 after a dividend cut) and payout ratio (+1 between 20% and 70%; −1 above 100%).</p></div>
+      <div class="card"><h3>Sentiment (6)</h3><p>Analyst consensus, upside to the analysts' median target, upgrades minus downgrades, short interest, insider and institutional ownership.</p></div>
+      <div class="card"><h3>Technical (6)</h3><p>Trend vs the 50/200-day averages (±2), 6-month momentum vs the market (±2), setup (±2: <b>Breakout</b> or <b>Retest</b> of major support vs <b>Breakdown</b> or <b>Failed retest</b>), stretch/RSI, volume and beta.</p></div>
+      <div class="card"><h3>Trading vs Investment</h3><p><b>Trading scanner (3–12 months, 6-month target):</b> technical 35%, growth 20%, sentiment 20%, valuation 10%, profitability 10%, financial health 5%. <b>Investment scanner (5–10 years):</b> valuation 25%, profitability 25%, financial health 20%, growth 20%, income 10%. Bands: 75+ STRONG BUY, 60–74 BUY, 40–59 HOLD, 25–39 SELL, below 25 STRONG SELL. Missing data is left out, never counted against a company.</p></div>
+      <div class="card"><h3>LRC Analyst Target &amp; track record</h3><p>6-month target: the analyst's own where we have a Work-sheet; otherwise 60% analyst consensus + 40% LRC valuation models, within 20% of the consensus. Every rating is measured on the <a href="track.html" style="color:var(--gold-2)">track record</a> page.</p></div>
     </div>
     <p class="edu-note" style="margin-top:30px"><b>UPDATES</b> The scanner runs automatically every trading day after the New York close (about 06:30 South African time), using Yahoo Finance prices, fundamentals and analyst data. The JSE universe is our list of large and mid caps; New York covers the S&amp;P 500 and Nasdaq-100.</p>
   </div>

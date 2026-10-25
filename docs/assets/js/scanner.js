@@ -15,7 +15,13 @@ const chgPct = (to, from) => ok(to) && ok(from) && from ? pc(to / from - 1, 1) :
 const S100 = r => r.score ?? 50;
 const c100 = v => v === null || v === undefined ? null : v >= 80 ? 2 : v >= 60 ? 1 : v >= 40 ? 0 : v >= 20 ? -1 : -2;
 const GRADE = v => v === null || v === undefined ? '—' : v >= 80 ? 'A' : v >= 60 ? 'B' : v >= 40 ? 'C' : v >= 20 ? 'D' : 'F';
-const FAC = [['value', 'VALUE'], ['growth', 'GROWTH'], ['profitability', 'PROFITABILITY'], ['momentum', 'MOMENTUM'], ['sentiment', 'SENTIMENT'], ['technical', 'TECHNICAL']];
+const GRP = [['valuation', 'VALUATION'], ['growth', 'GROWTH'], ['profitability', 'PROFITABILITY'], ['health', 'FINANCIAL HEALTH'], ['income', 'INCOME'], ['sentiment', 'SENTIMENT'], ['technical', 'TECHNICAL']];
+const gInt = v => v === null || v === undefined ? null : v >= 75 ? 2 : v >= 60 ? 1 : v >= 40 ? 0 : v >= 25 ? -1 : -2;
+const TREND = { 2: 'Up ▲▲', 1: 'Up ▲', 0: 'Flat', '-1': 'Down ▼', '-2': 'Down ▼▼' };
+const fmtR = (f, v) => v === null || v === undefined ? '—' : f === 'x' ? (v <= 0 ? 'neg.' : v.toFixed(1) + 'x') : f === 'p' ? pc(v, Math.abs(v) < 0.1 ? 1 : 0) : f === 'de' ? (v / 100).toFixed(2)
+  : f === 'r' ? (+v).toFixed(2) : f === 'r1' ? (+v).toFixed(1) : f === 'r0' ? (+v).toFixed(0) : f === 'i' ? (v > 0 ? '+' : '') + v : f === 't' ? TREND[v] : f === 's' ? v : String(v);
+const fmtP = (k, f, v) => (['div_yield', 'payout', 'short_float', 'insiders', 'inst', 'gross_margin', 'op_margin', 'profit_margin', 'roe', 'roa', 'fcf_margin'].includes(k) && f === 'p') ? (v === null || v === undefined ? '—' : (v * 100).toFixed(Math.abs(v) < 0.1 ? 1 : 0) + '%') : fmtR(f, v);
+const valCls = v => v === 'UNDERVALUED' ? 'sig sig-buy' : v === 'OVERVALUED' ? 'sig sig-sell' : 'sig sig-hold';
 const scoreCell = r => `<span class="hc" title="Ranks above ${S100(r)}% of the companies scanned in this market">${S100(r)}</span>`;
 const mult = x => ok(x) ? (x <= 0 ? 'neg.' : x.toFixed(1) + 'x') : '—';
 const sigCls = v => 'sig sig-' + String(v || 'hold').toLowerCase().replace(/\s+/g, '-');
@@ -37,66 +43,72 @@ if ($('scTbl')) {
   window.addEventListener('lrcmarket', e => { if (e.detail !== mkt) { mkt = e.detail; sel.value = mkt; shown = 120; fillSectors(); drawAll(); } });
   const tabs = document.querySelectorAll('#scTabs button');
   const showTab = t => { tab = ['stocks', 'setups', 'invest', 'etfs', 'sectors', 'how'].includes(t) ? t : 'stocks'; tabs.forEach(b => b.classList.toggle('on', b.dataset.t === tab));
-    ['stocks', 'setups', 'invest', 'etfs', 'sectors', 'how'].forEach(p => $('pane-' + p).hidden = p !== tab); $('scWrap').classList.toggle('wide', tab === 'stocks' || tab === 'etfs'); history.replaceState(null, '', '#' + tab); drawAll(); };
+    mode = tab === 'invest' ? 'investment' : 'trading';
+    ['stocks', 'setups', 'invest', 'etfs', 'sectors', 'how'].forEach(p => $('pane-' + p).hidden = !(p === tab || (p === 'stocks' && tab === 'invest')) || (p === 'invest'));
+    $('scWrap').classList.toggle('wide', tab === 'stocks' || tab === 'invest' || tab === 'etfs'); history.replaceState(null, '', '#' + tab); drawAll(); };
   document.querySelectorAll('#scView .chip-btn').forEach(b => b.addEventListener('click', () => { document.querySelectorAll('#scView .chip-btn').forEach(x => x.classList.remove('on')); b.classList.add('on'); view = b.dataset.v; drawStocks(); }));
   $('scFull').addEventListener('click', () => { const w = $('scTblWrap'); if (document.fullscreenElement) document.exitFullscreen(); else if (w.requestFullscreen) w.requestFullscreen(); else w.classList.toggle('fs'); });
   tabs.forEach(b => b.addEventListener('click', () => showTab(b.dataset.t)));
 
-  let view = 'factors';
-  const DETAIL = [
-    { k: 'fpe', l: 'FWD P/E', g: 'v', d: r => mult(r.raw.fpe) }, { k: 'tpe', l: 'TTM P/E', g: 'v', d: r => mult(r.raw.tpe) }, { k: 'ps', l: 'P/SALES', g: 'v', d: r => mult(r.raw.ps) },
-    { k: 'pfcf', l: 'P/FCF', g: 'v', d: r => mult(r.raw.pfcf) }, { k: 'peg', l: 'PEG', g: 'v', d: r => ok(r.raw.peg) ? r.raw.peg.toFixed(2) : '—' },
-    { k: 'rev_growth', l: 'REVENUE GROWTH', g: 'g', d: r => pc(r.raw.rev_growth, 0) }, { k: 'eps_growth', l: 'EPS GROWTH (QTR)', g: 'g', d: r => pc(r.raw.eps_growth, 0) },
-    { k: 'eps_growth_fwd', l: 'EPS GROWTH (YEAR EST.)', g: 'g', d: r => pc(r.raw.eps_growth_fwd, 0) },
-    { k: 'roe', l: 'ROE', g: 'p', d: r => pp(r.raw.roe, 0) }, { k: 'op_margin', l: 'OPERATING MARGIN', g: 'p', d: r => pp(r.raw.op_margin, 0) },
-    { k: 'de', l: 'DEBT / EQUITY', g: 'p', d: r => ok(r.raw.de) ? (r.raw.de / 100).toFixed(2) : '—' },
-    { k: 'perf_1m', l: '1 MONTH', g: 'm', d: r => pc(r.p1m, 0) }, { k: 'perf_6m', l: '6 MONTHS', g: 'm', d: r => pc(r.p6m, 0) }, { k: 'perf_1y', l: '1 YEAR', g: 'm', d: r => pc(r.raw.perf_1y, 0) },
-    { k: 'rec_mean', l: 'ANALYSTS (1-5)', g: 's', d: r => ok(r.raw.rec) ? r.raw.rec.toFixed(1) + (r.raw.na ? ` (${r.raw.na})` : '') : '—' },
-    { k: 'tgt_up', l: 'ANALYST TARGET', g: 's', d: r => pc(r.raw.tgt_up, 0) }, { k: 'short_float', l: 'SHORT %', g: 's', d: r => pp(r.raw.short, 1) },
-  ];
+  let view = 'overview', mode = 'trading';
+  const SC = r => mode === 'investment' ? (r.iv_score ?? 50) : S100(r), RT = r => mode === 'investment' ? r.iv_v : r.v, NT = r => mode === 'investment' ? r.iv_note : r.v_note;
   const rowsFor = () => {
     if (!S) return [];
     const q = ($('scQ').value || '').toLowerCase(), sec = $('scSec').value, sg = $('scSig').value, st = $('scSet').value, vl = $('scVal').value, my = mine();
-    return S.rows.filter(r => r.m === mkt && (sec === 'all' || r.sec === sec) && (sg === 'all' || r.v === sg) &&
+    return S.rows.filter(r => r.m === mkt && (sec === 'all' || r.sec === sec) && (sg === 'all' || RT(r) === sg) &&
       (st === 'all' || (st === 'none' ? !r.setup : r.setup === st)) && (!$('scCov').checked || r.cov) && (!$('scMine').checked || my.has(r.t)) &&
-      (vl === 'all' || (vl === 'under' ? (r.fac.value ?? 0) >= 60 : (r.fac.value ?? 100) <= 40)) && (!q || (r.t + ' ' + r.n + ' ' + (r.ind || '')).toLowerCase().includes(q)));
+      (vl === 'all' || (vl === 'under' ? r.val === 'UNDERVALUED' : vl === 'over' ? r.val === 'OVERVALUED' : r.val === 'FAIR VALUE')) && (!q || (r.t + ' ' + r.n + ' ' + (r.ind || '')).toLowerCase().includes(q)));
   };
-  const sortVal = (r, k) => k === 'score' ? S100(r) : k === 't' ? r.t : k === 'chg' ? r.chg : k === 'ne' ? (r.ne || '9') : k === 'up' ? (r.tgt ? r.tgt / r.px - 1 : -9)
-    : k.startsWith('f:') ? (r.fac[k.slice(2)] ?? -1) : (r.pct[k] ?? -1);
+  const rdv = (r, k) => (r.rd && r.rd[k]) ? r.rd[k] : null;
+  const sortVal = (r, k) => k === 'score' ? SC(r) : k === 'chk' ? (r.inv ? r.inv.p : -1) : k === 't' ? r.t : k === 'chg' ? r.chg : k === 'ne' ? (r.ne || '9') : k === 'up' ? (r.tgt ? r.tgt / r.px - 1 : -9)
+    : k === 'val' ? ({ UNDERVALUED: 2, 'FAIR VALUE': 1, OVERVALUED: 0 })[r.val] ?? -1 : k.startsWith('g:') ? ((r.grp || {})[k.slice(2)] ?? -1)
+    : (() => { const x = rdv(r, k); return x ? (x[1] ?? -9) * 1e9 + (typeof x[0] === 'number' ? x[0] : 0) : -9e12; })();
   let sortK = 'score';
   function drawStocks() {
     const rows = rowsFor().sort((a, b) => { const x = sortVal(a, sortK), y = sortVal(b, sortK); return (x > y ? 1 : x < y ? -1 : 0) * sortD; });
-    const my = mine();
+    const my = mine(), MED = (S.medians || {})[mkt] || {};
     const th = (k, l, t = '') => `<th data-k="${k}" title="${esc(t)}" class="${sortK === k ? 'sorted' + (sortD > 0 ? ' asc' : '') : ''}">${l}</th>`;
     const left = r => {
       const cov = r.cov ? `<span class="pill p-${r.cov.rating.toLowerCase()}" title="LRC analyst rating ${esc(r.cov.rated || '')}">LRC ${esc(r.cov.rating)}</span> ` : '';
       return `<td class="nm"><button class="star ${my.has(r.t) ? 'on' : ''}" data-s="${esc(r.t)}" title="Add to my list">★</button><b>${esc(r.t.replace('.JO', ''))}</b> ${cov}<small>${esc(r.n)} · ${esc(r.sec)}</small></td>
-        <td class="${cc(c100(S100(r)))}">${scoreCell(r)}</td><td class="plain"><span class="${sigCls(r.v)}" title="${esc(r.v_note || 'LRC score ' + S100(r) + '/100')}">${esc(r.v)}</span>${r.v_note ? `<small style="display:block;color:#F2CE72;font-size:10px;margin-top:2px">held: target ${r.tgt ? pc(r.tgt / r.px - 1, 0) : ''}</small>` : ''}</td>
+        <td class="${cc(gInt(SC(r)))}"><span class="hc" title="${mode === 'investment' ? 'Investment score: valuation 25%, profitability 25%, financial health 20%, growth 20%, income 10%' : 'Trading score: technical 35%, growth 20%, sentiment 20%, valuation 10%, profitability 10%, financial health 5%'}">${SC(r)}</span></td>
+        <td class="plain"><span class="${sigCls(RT(r))}" title="${esc(NT(r) || '')}">${esc(RT(r))}</span>${NT(r) ? `<small style="display:block;color:#F2CE72;font-size:10px;margin-top:2px">${mode === 'investment' ? 'held: ' + esc((r.val || '').toLowerCase()) : 'held: target ' + (r.tgt ? pc(r.tgt / r.px - 1, 0) : '')}</small>` : ''}</td>
+        <td class="plain"><span class="${valCls(r.val)}" style="font-size:9px">${esc(r.val || '—')}</span></td>
         <td class="plain" style="text-align:right">${px(r.px, r.cur)}<small style="display:block;color:${r.chg >= 0 ? '#5ED39A' : '#F08A7E'}">${pc(r.chg)}</small></td>`;
     };
+    const head = `<th data-k="t" style="position:sticky;left:0;z-index:3;text-align:left">COMPANY</th>${th('score', mode === 'investment' ? 'INVESTMENT SCORE' : 'TRADING SCORE', '50 = neutral; 75+ STRONG BUY, 60+ BUY, 40+ HOLD, 25+ SELL, below 25 STRONG SELL')}<th>${mode === 'investment' ? 'INVESTMENT RATING' : 'TRADING RATING'}</th>${th('val', 'VALUATION VERDICT')}${th('chg', 'PRICE · 1D')}`;
     let h;
-    if (view === 'factors') {
-      h = `<thead><tr><th data-k="t" style="position:sticky;left:0;z-index:3;text-align:left">COMPANY</th>${th('score', 'LRC SCORE', 'Ranks above X% of the companies scanned in this market (0-100)')}<th>RATING</th>${th('chg', 'PRICE · 1D')}` +
-        FAC.map(([k, l]) => th('f:' + k, l, 'Factor score 0-100 vs sector peers; grade A 80+, B 60+, C 40+, D 20+, F below 20')).join('') +
-        `<th>SETUP</th>${th('up', 'UPSIDE TO LRC TARGET')}<th>EVENTS</th>${th('ne', 'RESULTS')}</tr></thead><tbody>` +
-        rows.slice(0, shown).map(r => `<tr data-t="${esc(r.t)}">${left(r)}` + FAC.map(([k]) => { const v = r.fac[k]; return `<td class="${cc(c100(v))}"><span class="hc">${v === null || v === undefined ? '—' : `<b>${GRADE(v)}</b> <span style="opacity:.75">${v}</span>`}</span></td>`; }).join('') +
-          `<td class="${cc(r.tp ? r.tp.setup : 0)}"><span class="hc">${esc(r.setup || '—')}</span></td><td class="plain" style="color:${r.tgt && r.tgt >= r.px ? '#5ED39A' : '#F08A7E'}">${r.tgt ? pc(r.tgt / r.px - 1, 0) : '—'}</td>
-          <td class="plain" style="text-align:left;white-space:normal;min-width:140px">${(r.cat || []).map(x => `<span class="tag ${/^Results/.test(x) ? 'ev' : ''}">${esc(x)}</span>`).join('')}</td><td class="plain">${esc(r.ne || '—')}</td></tr>`).join('') + '</tbody>';
+    if (view === 'overview') {
+      const ORD = mode === 'investment' ? ['valuation', 'profitability', 'health', 'growth', 'income', 'sentiment', 'technical'] : ['technical', 'growth', 'sentiment', 'valuation', 'profitability', 'health', 'income'];
+      const G2 = ORD.map(k => GRP.find(g => g[0] === k));
+      const WT = mode === 'investment' ? { valuation: 25, profitability: 25, health: 20, growth: 20, income: 10 } : { technical: 35, growth: 20, sentiment: 20, valuation: 10, profitability: 10, health: 5 };
+      h = `<thead><tr>${head}` + G2.map(([k, l]) => th('g:' + k, `${l}<small style="display:block;color:var(--muted);font-weight:500">${WT[k] ? WT[k] + '% weight' : 'shown, not weighted'}</small>`, 'Group score 0-100 from its readings (50 = neutral)')).join('') +
+        (mode === 'investment' ? `${th('chk', 'QUALITY CHECKS')}${th('up', 'UPSIDE TO LRC TARGET')}` : `<th>SETUP</th>${th('up', 'UPSIDE TO 6-MONTH LRC TARGET')}`) + `<th>EVENTS</th>${th('ne', 'RESULTS')}</tr></thead><tbody>` +
+        rows.slice(0, shown).map(r => `<tr data-t="${esc(r.t)}">${left(r)}` + G2.map(([k]) => { const v = (r.grp || {})[k]; return `<td class="${cc(gInt(v))}" style="${WT[k] ? '' : 'opacity:.55'}"><span class="hc">${v ?? '—'}</span></td>`; }).join('') +
+          (mode === 'investment' ? `<td class="plain">${r.inv ? `<span class="pill p-${r.inv.g.toLowerCase()}">${r.inv.g}</span> ${r.inv.p}/${r.inv.k}` : '—'}</td>` : `<td class="${cc(r.tp ? r.tp.setup : 0)}"><span class="hc">${esc(r.setup || '—')}</span></td>`) +
+          `<td class="plain" style="color:${r.tgt && r.tgt >= r.px ? '#5ED39A' : '#F08A7E'}">${r.tgt ? pc(r.tgt / r.px - 1, 0) : '—'}</td>
+          <td class="plain" style="text-align:left;white-space:normal;min-width:130px">${(r.cat || []).map(x => `<span class="tag ${/^Results/.test(x) ? 'ev' : ''}">${esc(x)}</span>`).join('')}</td><td class="plain">${esc(r.ne || '—')}</td></tr>`).join('') + '</tbody>';
     } else {
-      const G = { v: ['VALUE', 'g-fund'], g: ['GROWTH', 'g-fund'], p: ['PROFITABILITY', 'g-fund'], m: ['MOMENTUM', 'g-tech'], s: ['SENTIMENT', 'g-sent'] };
-      const span = Object.keys(G).map(g => `<th class="grp ${G[g][1]}" colspan="${DETAIL.filter(c => c.g === g).length}">${G[g][0]}</th>`).join('');
-      h = `<thead><tr><th class="grp" style="background:#0A0D15;position:sticky;left:0;z-index:3"></th><th class="grp" colspan="3" style="background:#0A0D15"></th>${span}<th class="grp" colspan="2" style="background:#0A0D15;color:var(--gold-2)">TECHNICAL</th></tr><tr>
-        <th data-k="t" style="position:sticky;left:0;z-index:3;text-align:left">COMPANY</th>${th('score', 'LRC SCORE')}<th>RATING</th>${th('chg', 'PRICE · 1D')}` +
-        DETAIL.map(c => th(c.k, c.l, 'Colour = rank vs sector peers: dark green top 20%, green top 40%, grey middle, red bottom 40%, dark red bottom 20%')).join('') + `<th>SETUP</th><th>RSI</th></tr></thead><tbody>` +
-        rows.slice(0, shown).map(r => `<tr data-t="${esc(r.t)}">${left(r)}` + DETAIL.map(c => `<td class="${cc(c100(r.pct[c.k]))}"><span class="hc">${esc(c.d(r) ?? '—')}</span></td>`).join('') +
-          `<td class="${cc(r.tp ? r.tp.setup : 0)}"><span class="hc">${esc(r.setup || '—')}</span></td><td class="${cc(r.tp ? r.tp.extension : 0)}"><span class="hc">${ok(r.rsi) ? r.rsi.toFixed(0) : '—'}</span></td></tr>`).join('') + '</tbody>';
+      const defs = (S.readings || []).filter(d => d.g === view);
+      h = `<thead><tr>${head}` + defs.map(d => th(d.k, d.l.toUpperCase() + (d.max === 2 ? ' (±2)' : ''), 'Big number = the company. Small = sector median. Colour: bright green / green = better, grey = neutral, red / bright red = worse.')).join('') + `</tr></thead><tbody>` +
+        rows.slice(0, shown).map(r => {
+          const sm = MED[r.sec] || {}, mm = MED._market || {};
+          return `<tr data-t="${esc(r.t)}">${left(r)}` + defs.map(d => {
+            const x = rdv(r, d.k); const v = x ? x[0] : null, p = x ? x[1] : null, it = x ? x[2] : null;
+            const sec = sm[d.k], mk = mm[d.k];
+            const showMed = !['trend', 'setup'].includes(d.k) && (sec !== undefined && sec !== null);
+            return `<td class="${x && p !== null ? cc(it) : 'cn'}" title="${esc(`${d.l}: ${fmtP(d.k, d.f, v)} · sector median ${fmtP(d.k, d.f, sec)} · market median ${fmtP(d.k, d.f, mk)} · points ${p === null || p === undefined ? 'not scored' : (p > 0 ? '+' : '') + p}`)}"><span class="hc">${esc(fmtP(d.k, d.f, v))}${showMed ? `<small style="display:block;font-size:9.5px;font-weight:500;opacity:.8">sector ${esc(fmtP(d.k, d.f, sec))}</small>` : ''}</span></td>`;
+          }).join('') + '</tr>';
+        }).join('') + '</tbody>';
     }
     $('scTbl').innerHTML = h;
     $('scMore').hidden = rows.length <= shown; $('scMore').textContent = `Show more (${rows.length - shown} more)`;
     const all = S.rows.filter(r => r.m === mkt);
-    const cnt = v => all.filter(r => v.includes(r.v)).length;
+    const cnt = v => all.filter(r => v.includes(RT(r))).length;
+    $('scMode').innerHTML = mode === 'investment' ? '<b>INVESTMENT SCANNER · 5–10 YEARS</b> Built for buy-and-hold: valuation 25%, profitability 25%, financial health 20%, long-term growth 20%, income 10%. Technicals and sentiment are shown but not weighted. A BUY cannot be OVERVALUED and a SELL cannot be UNDERVALUED.'
+      : '<b>TRADING SCANNER · 3–12 MONTHS</b> Built for trades with a 6-month LRC Analyst Target: technical 35%, growth 20%, sentiment 20%, valuation 10%, profitability 10%, financial health 5%. A BUY needs upside to the 6-month target and a SELL needs downside. Entry plans are on the Setups tab.';
     $('scKpis').innerHTML = [[all.length, 'companies scanned'], [cnt(['BUY', 'STRONG BUY']), 'rated BUY / STRONG BUY'], [cnt(['HOLD']), 'rated HOLD'], [cnt(['SELL', 'STRONG SELL']), 'rated SELL / STRONG SELL'],
-      [all.filter(r => r.setup === 'Breakout' || r.setup === 'Retest').length, 'breakouts & retests today']].map(([b, s]) => `<div><b>${b}</b><span>${s}</span></div>`).join('');
+      [all.filter(r => r.val === 'UNDERVALUED').length, 'undervalued']].map(([b, s]) => `<div><b>${b}</b><span>${s}</span></div>`).join('');
   }
   function fillSectors() {
     if (!S) return;
@@ -156,7 +168,7 @@ if ($('scTbl')) {
   }
   function drawAll() {
     if (!S) return;
-    if (tab === 'stocks') drawStocks(); else if (tab === 'setups') drawSetups(); else if (tab === 'invest') drawInvest(); else if (tab === 'etfs') drawEtfs(); else if (tab === 'sectors') drawSectors();
+    if (tab === 'stocks' || tab === 'invest') drawStocks(); else if (tab === 'setups') drawSetups(); else if (tab === 'etfs') drawEtfs(); else if (tab === 'sectors') drawSectors();
   }
   ['scQ', 'scSec', 'scSig', 'scSet', 'scVal', 'scCov', 'scMine'].forEach(id => $(id).addEventListener(id === 'scQ' ? 'input' : 'change', () => { shown = 120; drawStocks(); }));
   ['invG', 'invSec', 'invMos'].forEach(id => $(id).addEventListener('change', drawInvest));
@@ -167,8 +179,8 @@ if ($('scTbl')) {
     const tr = e.target.closest('tr[data-t]'); if (tr) location.href = 'stock.html?t=' + encodeURIComponent(tr.dataset.t);
   });
   $('scCsv').addEventListener('click', () => {
-    const rows = rowsFor(); const head = ['Ticker', 'Name', 'Market', 'Sector', 'Price', 'Currency', 'Change 1D', 'LRC score (0-100)', 'LRC Stock Scanner rating', 'Value', 'Growth', 'Profitability', 'Momentum', 'Sentiment', 'Technical', 'Setup', 'Entry', 'Stop', 'Target 1', 'Target 2', 'LRC Analyst Target', 'Fwd PE', 'TTM PE', 'P/S', 'P/FCF', 'Revenue growth', 'EPS growth', 'Debt/Equity %', 'ROE', 'Dividend yield', 'Analyst consensus', 'Target upside', 'Short float', 'Next results', 'LRC analyst rating'];
-    const csv = [head].concat(rows.map(r => [r.t, r.n, r.m, r.sec, r.px, r.cur, r.chg, S100(r), r.v, ...FAC.map(([k]) => r.fac[k] ?? ''), r.setup || '', r.plan?.entry ?? '', r.plan?.stop ?? '', r.plan?.t1 ?? '', r.plan?.t2 ?? '', r.tgt ?? '', r.raw.fpe ?? '', r.raw.tpe ?? '', r.raw.ps ?? '', r.raw.pfcf ?? '', r.raw.rev_growth ?? '', r.raw.eps_growth ?? '', r.raw.de ?? '', r.raw.roe ?? '', r.raw.div_yield ?? '', r.raw.rec ?? '', r.raw.tgt_up ?? '', r.raw.short ?? '', r.ne || '', r.cov?.rating || '']))
+    const rows = rowsFor(); const head = ['Ticker', 'Name', 'Market', 'Sector', 'Price', 'Currency', 'Change 1D', 'LRC score (0-100)', 'LRC Stock Scanner rating', 'Valuation verdict', 'Valuation', 'Growth', 'Profitability', 'Financial health', 'Income', 'Sentiment', 'Technical', 'Setup', 'Entry', 'Stop', 'Target 1', 'Target 2', 'LRC Analyst Target', 'Fwd PE', 'TTM PE', 'P/S', 'P/FCF', 'Revenue growth', 'EPS growth', 'Debt/Equity %', 'ROE', 'Dividend yield', 'Analyst consensus', 'Target upside', 'Short float', 'Next results', 'LRC analyst rating'];
+    const csv = [head].concat(rows.map(r => [r.t, r.n, r.m, r.sec, r.px, r.cur, r.chg, S100(r), r.v, r.val || '', ...GRP.map(([k]) => (r.grp || {})[k] ?? ''), r.setup || '', r.plan?.entry ?? '', r.plan?.stop ?? '', r.plan?.t1 ?? '', r.plan?.t2 ?? '', r.tgt ?? '', r.raw.fpe ?? '', r.raw.tpe ?? '', r.raw.ps ?? '', r.raw.pfcf ?? '', r.raw.rev_growth ?? '', r.raw.eps_growth ?? '', r.raw.de ?? '', r.raw.roe ?? '', r.raw.div_yield ?? '', r.raw.rec ?? '', r.raw.tgt_up ?? '', r.raw.short ?? '', r.ne || '', r.cov?.rating || '']))
       .map(a => a.map(x => `"${String(x).replace(/"/g, '""')}"`).join(',')).join('\n');
     const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([csv], { type: 'text/csv' })); a.download = `LRC_Scanner_${mkt}_${(S.as_of || {})[mkt] || ''}.csv`; a.click();
   });
@@ -194,15 +206,15 @@ if ($('wlCov')) {
         <td class="n">${px(c.price, cur)}</td><td class="n">${px(c.target_6m, cur)}</td><td class="n" style="color:${(c.upside ?? 0) >= 0 ? '#5ED39A' : '#F08A7E'}">${pc(c.upside)}</td><td class="n">${pc(c.since_rating)}</td><td>${esc(c.next_earnings || '—')}</td><td style="max-width:320px">${head1(c.ticker)}</td></tr>`).join('')
         : `<tr><td colspan="8" style="color:var(--muted)">No ${mkt === 'JSE' ? 'JSE' : 'New York'} companies carry an LRC analyst rating yet — the trading and investment watchlists below are built by the LRC Stock Scanner.</td></tr>`) + '</tbody>';
     const l = (L && L.lists && L.lists[mkt]) || { long: [], short: [], investment: [] };
-    const trade = (rows, side) => `<thead><tr><th>COMPANY</th><th>SETUP</th><th>LRC STOCK SCANNER</th><th>ENTRY</th><th>STOP · ${side === 'Long' ? 'DOWNSIDE' : 'UPSIDE'}</th><th>TARGET 1</th><th>TARGET 2</th><th>RESULTS</th><th>LATEST NEWS</th></tr></thead><tbody>` +
+    const trade = (rows, side) => `<thead><tr><th>COMPANY</th><th>SETUP</th><th>TRADING RATING</th><th>ENTRY</th><th>STOP · ${side === 'Long' ? 'DOWNSIDE' : 'UPSIDE'}</th><th>TARGET 1</th><th>TARGET 2</th><th>RESULTS</th><th>LATEST NEWS</th></tr></thead><tbody>` +
       (rows.length ? rows.map(r => `<tr><td>${nm(r.t, r.n)}${r.cov ? ` <span class="pill p-${r.cov.rating.toLowerCase()}">LRC ${esc(r.cov.rating)}</span>` : ''}</td><td>${esc(r.setup)}<small>level ${px(r.lvl, r.cur)}</small></td><td><span class="${sigCls(r.v)}">${esc(r.v)}</span><small>LRC score ${S100(r)}/100</small></td>
         <td class="n">${px(r.entry, r.cur)}</td><td class="n">${px(r.stop, r.cur)}<small style="color:#F08A7E">${pc(r.stop_pct)}</small></td><td class="n">${px(r.t1, r.cur)}<small style="color:#5ED39A">${pc(r.t1_pct)}</small></td><td class="n">${px(r.t2, r.cur)}<small style="color:#5ED39A">${pc(r.t2_pct)}</small></td>
         <td>${r.ne ? `<span class="tag ${Math.round((new Date(r.ne) - new Date()) / 864e5) <= 14 ? 'ev' : ''}">${esc(r.ne)}</span>` : '—'}</td><td style="max-width:300px">${head1(r.t)}</td></tr>`).join('')
         : `<tr><td colspan="9" style="color:var(--muted)">No ${side.toLowerCase()} setups pass the rules in this market today.</td></tr>`) + '</tbody>';
     $('wlLong').innerHTML = trade(l.long, 'Long'); $('wlShort').innerHTML = trade(l.short, 'Short');
-    $('wlInv2').innerHTML = `<thead><tr><th>COMPANY</th><th>GRADE</th><th>CHECKS</th><th>PRICE</th><th>LRC ANALYST TARGET</th><th>UPSIDE</th><th>LRC STOCK SCANNER</th><th>LATEST NEWS</th></tr></thead><tbody>` +
+    $('wlInv2').innerHTML = `<thead><tr><th>COMPANY</th><th>GRADE</th><th>CHECKS</th><th>PRICE</th><th>LRC ANALYST TARGET</th><th>UPSIDE</th><th>INVESTMENT RATING</th><th>LATEST NEWS</th></tr></thead><tbody>` +
       (l.investment.length ? l.investment.map(r => `<tr><td>${nm(r.t, r.n)}<small>${esc(r.sec)}</small></td><td><span class="pill p-${r.inv.g.toLowerCase()}">${r.inv.g}</span></td><td class="n">${r.inv.p}/${r.inv.k}</td><td class="n">${px(r.px, r.cur)}</td><td class="n">${px(r.tgt, r.cur)}</td>
-        <td class="n" style="color:#5ED39A">${pc(r.tgt_up)}</td><td><span class="${sigCls(r.v)}">${esc(r.v)}</span></td><td style="max-width:300px">${head1(r.t)}</td></tr>`).join('')
+        <td class="n" style="color:#5ED39A">${pc(r.tgt_up)}</td><td><span class="${sigCls(r.iv_v || r.v)}">${esc(r.iv_v || r.v)}</span><small>${r.iv_score ?? ''}/100</small></td><td style="max-width:300px">${head1(r.t)}</td></tr>`).join('')
         : '<tr><td colspan="8" style="color:var(--muted)">No companies pass the investment checks with upside today.</td></tr>') + '</tbody>';
     const R = (L && L.rules) || {};
     $('wlLongNote').textContent = R.long || ''; $('wlShortNote').textContent = R.short || ''; $('wlInvNote').textContent = R.investment || '';
@@ -222,7 +234,8 @@ if ($('wlCov')) {
 
 /* =================== TRACK RECORD PAGE =================== */
 if ($('trTbl')) {
-  let mkt = getMkt(), T = null;
+  let mkt = getMkt(), T = null, rkey = 'by_rating';
+  document.querySelectorAll('#trMode .chip-btn').forEach(b => b.addEventListener('click', () => { document.querySelectorAll('#trMode .chip-btn').forEach(x => x.classList.remove('on')); b.classList.add('on'); rkey = b.dataset.v; draw(); }));
   const col = { BUY: '#2FA36B', HOLD: '#9AA1B2', SELL: '#E3262B', ALL: '#F2CE72' };
   const chart = c => {
     if (!c || !c.dates || c.dates.length < 2) return '<p class="muted-load">The chart starts after the second daily snapshot.</p>';
@@ -250,7 +263,7 @@ if ($('trTbl')) {
     const H = ['1 week', '1 month', '3 months', '6 months'];
     $('trTbl').innerHTML = `<thead><tr><th>RATING</th>${H.map(h => `<th>${h.toUpperCase()}<small>return · vs market · hit rate</small></th>`).join('')}</tr></thead><tbody>` +
       ['STRONG BUY', 'BUY', 'HOLD', 'SELL', 'STRONG SELL', 'MARKET'].map(g => `<tr><td>${g === 'MARKET' ? '<b>Market average</b>' : `<span class="${sigCls(g)}">${g}</span>`}</td>` + H.map(h => {
-        const x = (m.by_rating[h] || {})[g];
+        const x = ((m[rkey] || {})[h] || {})[g];
         if (!x) return '<td style="color:var(--muted)">not enough history yet</td>';
         return `<td class="n"><b style="color:${x.avg_return >= 0 ? '#5ED39A' : '#F08A7E'}">${pc(x.avg_return)}</b>${x.vs_market !== undefined ? ` · <span style="color:${x.vs_market >= 0 ? '#5ED39A' : '#F08A7E'}">${pc(x.vs_market)}</span> · ${pp(x.hit_rate, 0)}<small>${x.avg_names} names · ${x.periods} periods</small>` : `<small>${x.periods} periods</small>`}</td>`;
       }).join('') + '</tr>').join('') + '</tbody>';
@@ -356,12 +369,25 @@ if ($('paper')) {
     if (ok(f.short_float)) own.push(`Short interest ${pp(f.short_float, 1)} of float.`);
     const mgmt = (pr.officers || []).map(o => `${esc(o.title || '')}: ${esc(o.name || '')}`);
     const bizText = pr.summary ? esc(pr.summary.split(/(?<=\.)\s+/).slice(0, 3).join(' ')) : '';
-    const facs = FAC.map(([k, l]) => [k, l[0] + l.slice(1).toLowerCase(), r.fac[k]]).filter(x => x[2] !== null && x[2] !== undefined);
-    const best = facs.slice().sort((a, b) => b[2] - a[2])[0], worst = facs.slice().sort((a, b) => a[2] - b[2])[0];
-    const autoBottom = `${esc(r.n)} has an LRC score of <b>${S100(r)}/100</b> — it ranks above ${S100(r)}% of the ${r.m === 'JSE' ? 'JSE' : 'New York'} companies we scan — and is rated <b>${esc(r.v)}</b>${r.v_note ? ` (${esc(r.v_note.toLowerCase())})` : ''}. ` + (best ? `Strongest factor: <b>${best[1]}</b> (${GRADE(best[2])}, ${best[2]}); weakest: <b>${worst[1]}</b> (${GRADE(worst[2])}, ${worst[2]}). ` : '') +
-      (t.setup ? `The chart shows a <b>${esc(t.setup.toLowerCase())}</b> at ${px(t.setup_level, c)}. ` : (t.sma200 && t.price > t.sma200 ? 'The long-term trend is up but there is no fresh setup today. ' : 'The trend is weak; patience until a base or retest forms. ')) +
-      (vv('fpe').verdict && vv('fpe').verdict !== '—' ? `On forward earnings it looks <b>${esc(vv('fpe').verdict.toLowerCase())}</b> against its sector. ` : '') +
-      (f.next_earnings ? `Next catalyst: results on ${esc(f.next_earnings)}.` : '');
+    // ---- mini thesis (why + what next) from the 37 readings ----
+    const DEF = d.readings_def || [], MS = (d.medians || {}).sector || {}, MM = (d.medians || {}).market || {};
+    const rdAll = DEF.map(x => ({ ...x, r: (r.rd || {})[x.k] })).filter(x => x.r && x.r[1] !== null && x.r[1] !== undefined);
+    const phrase = x => `${x.l} ${fmtP(x.k, x.f, x.r[0])}${MS[x.k] !== undefined && MS[x.k] !== null && !['trend', 'setup', 'momentum'].includes(x.k) ? ` vs sector ${fmtP(x.k, x.f, MS[x.k])}` : ''}`;
+    const pros = rdAll.filter(x => x.r[1] > 0).sort((a, b) => b.r[2] - a.r[2] || b.max - a.max).slice(0, 3);
+    const cons = rdAll.filter(x => x.r[1] < 0).sort((a, b) => a.r[2] - b.r[2] || b.max - a.max).slice(0, 2);
+    const gl = Object.entries(r.grp || {}).filter(([, v]) => v !== null).sort((a, b) => b[1] - a[1]);
+    const gname = k => (GRP.find(g => g[0] === k) || [k, k])[1].toLowerCase();
+    const upT = ok(lrcT) ? lrcT / t.price - 1 : null;
+    const nextBits = [];
+    if (f.next_earnings) nextBits.push(`results on ${esc(f.next_earnings)} (${days(f.next_earnings)} days) — the next test of the growth story`);
+    if (t.setup === 'Near breakout' || t.setup === 'Breakout') nextBits.push(`a close above ${px(t.setup_level, c)} would confirm the breakout`);
+    else if (t.setup === 'Retest') nextBits.push(`holding support at ${px(t.setup_level, c)} keeps the uptrend intact`);
+    else if (t.setup === 'Breakdown' || t.setup === 'Failed retest') nextBits.push(`staying below ${px(t.setup_level, c)} keeps the pressure on`);
+    else if ((t.supports || [])[0]) nextBits.push(`major support sits at ${px(t.supports[0].price, c)}${(t.resistances || [])[0] ? ` and resistance at ${px(t.resistances[0].price, c)}` : ''}`);
+    if (ok(upT)) nextBits.push(`the LRC Analyst Target of ${px(lrcT, c)} implies ${pc(upT, 0)} over 6 months`);
+    const autoBottom = `<b>Thesis:</b> ${esc(r.n)} is a trading <b>${esc(r.v)}</b> (${S100(r)}/100, 3–12 months) and an investment <b>${esc(r.iv_v || 'HOLD')}</b> (${r.iv_score ?? '—'}/100, 5–10 years), and the shares look <b>${esc((r.val || 'fair value').toLowerCase())}</b>${gl.length ? ` — ${gname(gl[0][0])} is its strongest area${gl.length > 1 ? ` and ${gname(gl[gl.length - 1][0])} its weakest` : ''}` : ''}.${r.v_note ? ' ' + esc(r.v_note) + '.' : ''}
+      <br><b>Why:</b> ${pros.length ? pros.map(phrase).map(esc).join('; ') : 'no standout strengths on the readings'}${cons.length ? `. <b>Watch:</b> ${cons.map(phrase).map(esc).join('; ')}` : ''}.
+      <br><b>What next:</b> ${nextBits.length ? nextBits.join('; ') : 'no dated catalyst on the feed'}.`;
     const ul = a => `<ul>${a.map(x => `<li>${x}</li>`).join('')}</ul>`;
     const S = (k, auto) => R && R[k] && R[k].length ? ul(R[k].map(esc)) : ul(auto);
 
@@ -373,7 +399,11 @@ if ($('paper')) {
     const fmtV = (k, v) => ['fpe', 'tpe', 'ps', 'pfcf', 'peg', 'pb'].includes(k) ? (v <= 0 ? 'neg.' : v.toFixed(2)) : k === 'de' ? (v / 100).toFixed(2) + 'x' : k === 'current_ratio' ? v.toFixed(2) : pp(v, 1);
     const tgRows = [['Latest share price', t.price, false], ['Analyst median target', tg.analyst_median], ['P/FCF-based value', tg.pfcf], ['PEG-based value', tg.peg], ['Sector P/E-based value', tg.sector_pe],
       ['LRC Analyst Target (6 months)', lrcT]].filter(x => ok(x[1]));
-    const heat = FAC.map(([k, l]) => { const v = r.fac[k]; const w = v ?? 0; return `<div class="fbar"><span>${l[0] + l.slice(1).toLowerCase()}</span><i><b style="width:${w}%;background:${v === null || v === undefined ? '#C9CED8' : v >= 60 ? '#0F9D58' : v >= 40 ? '#9AA0A6' : '#C5221F'}"></b></i><em>${v === null || v === undefined ? '—' : GRADE(v) + ' · ' + v}</em></div>`; }).join('');
+    const heat = GRP.map(([k, l]) => { const v = (r.grp || {})[k]; const w = v ?? 0; return `<div class="fbar"><span>${l[0] + l.slice(1).toLowerCase()}</span><i><b style="width:${w}%;background:${v === null || v === undefined ? '#C9CED8' : v >= 60 ? '#0F9D58' : v >= 40 ? '#9AA0A6' : '#C5221F'}"></b></i><em>${v ?? '—'}</em></div>`; }).join('');
+    const chip = (p, it) => p === null || p === undefined ? '<span style="color:#9AA0A6">—</span>' : `<span class="rchip r${it >= 2 ? 'p2' : it >= 1 ? 'p1' : it <= -2 ? 'm2' : it <= -1 ? 'm1' : '0'}">${p > 0 ? '+' + p : p} ${p > 0 ? 'Better' : p < 0 ? 'Worse' : 'Neutral'}</span>`;
+    const rtab = groups => `<table class="rtab"><thead><tr><th>Reading</th><th style="text-align:right">${esc(r.t.replace('.JO', ''))}</th><th style="text-align:right">Sector</th><th style="text-align:right">Market</th><th>Score</th></tr></thead><tbody>` +
+      groups.map(([gk, gl]) => `<tr class="rg"><td colspan="5">${esc(gl)} <span>${(r.grp || {})[gk] ?? '—'}/100</span></td></tr>` + DEF.filter(x => x.g === gk).map(x => { const q = (r.rd || {})[x.k]; const nomed = ['trend', 'setup'].includes(x.k);
+        return `<tr><td>${esc(x.l)}</td><td class="n"><b>${esc(fmtP(x.k, x.f, q ? q[0] : null))}</b></td><td class="n">${nomed ? '' : esc(fmtP(x.k, x.f, MS[x.k]))}</td><td class="n">${nomed ? '' : esc(fmtP(x.k, x.f, MM[x.k]))}</td><td>${chip(q ? q[1] : null, q ? q[2] : 0)}</td></tr>`; }).join('')).join('') + '</tbody></table>';
     const gauge = gaugeSvg(S100(r));
 
     P.innerHTML = `
@@ -383,7 +413,7 @@ if ($('paper')) {
       <div><b>Market cap / Price:</b> ${big(f.mcap, c)} / ${px(t.price, c)}<br><b>52-wk low / high:</b> ${px(t.lo52, c)} / ${px(t.hi52, c)}<br><b>Beta / Yield:</b> ${ok(f.beta) ? f.beta.toFixed(2) : '—'} / ${pp(f.div_yield, 2)}<br><b>Sector:</b> ${esc(r.sec)}${r.ind ? ' · ' + esc(r.ind) : ''}</div>
       <div>${R && R.guidance ? R.guidance.slice(0, 4).map(g => `<b>${esc(g.split(':')[0])}:</b>${esc(g.split(':').slice(1).join(':'))}`).join('<br>') :
         `<b>Next results:</b> ${esc(f.next_earnings || 'not announced')}<br><b>Analysts:</b> ${recLbl(f.rec_mean)}${f.n_analysts ? ` (${f.n_analysts})` : ''}${ok(f.target_median) ? ` · median target ${px(f.target_median, c)}` : ''}<br><b>EPS growth (this yr / next yr est.):</b> ${pc(f.eps_growth_fwd, 0)} / ${pc(f.eps_growth_next, 0)}<br><b>Fwd P/E vs sector:</b> ${mult(f.fpe)} vs ${mult(d.sector_medians?.fpe)}`}</div>
-      <div><b>Last updated:</b> ${esc(updated)}<br><b>Analyst name:</b> ${analyst}<br><b>LRC Stock Scanner:</b> <span class="${sigCls(r.v)}" style="font-size:10px">${esc(r.v)}</span> ${S100(r)}/100${r.v_note ? `<br><span style="font-size:11px;color:#7A8296">${esc(r.v_note)}</span>` : ''}${r.cov ? `<br><b>LRC analyst rating:</b> ${esc(r.cov.rating)} (${esc(r.cov.rated || '')})` : ''}${R && R.geo_mix ? `<br><b>Geo %:</b> ${esc(R.geo_mix)}` : ''}</div>
+      <div><b>Last updated:</b> ${esc(updated)}<br><b>Analyst name:</b> ${analyst}<br><b>Trading (3–12 m):</b> <span class="${sigCls(r.v)}" style="font-size:10px">${esc(r.v)}</span> ${S100(r)}/100<br><b>Investment (5–10 y):</b> <span class="${sigCls(r.iv_v)}" style="font-size:10px">${esc(r.iv_v || '—')}</span> ${r.iv_score ?? '—'}/100<br><b>Valuation:</b> <span class="${valCls(r.val)}" style="font-size:9.5px">${esc(r.val || '—')}</span>${r.v_note ? `<br><span style="font-size:11px;color:#7A8296">${esc(r.v_note)}</span>` : ''}${r.cov ? `<br><b>LRC analyst rating:</b> ${esc(r.cov.rating)} (${esc(r.cov.rated || '')})` : ''}${R && R.geo_mix ? `<br><b>Geo %:</b> ${esc(R.geo_mix)}` : ''}</div>
     </div>
     <div class="bar">Fundamentals <small>${R ? 'ANALYST VIEW + LIVE DATA' : 'AUTOMATED FROM LIVE DATA'}</small></div>
     <div class="cols"><div>
@@ -401,15 +431,16 @@ if ($('paper')) {
     <p class="bl"><b class="k">Bottom Line:</b> ${R && R.bottom_line ? esc(R.bottom_line) : autoBottom}</p>
     <div class="bar">Valuation <small>VS ${esc(r.sec.toUpperCase())} · ${r.m === 'JSE' ? 'JSE' : 'NEW YORK'} MEDIAN</small></div>
     <div class="cols"><div>
-      <table><thead><tr><th>Metric</th><th style="text-align:right">Value</th><th style="text-align:right">Sector</th><th>vs sector</th></tr></thead><tbody>
-      ${vals.map(v => `<tr><td>${esc(v.label)}</td><td class="n">${fmtV(v.k, v.v)}</td><td class="n">${ok(v.sector) ? fmtV(v.k, v.sector) : '—'}</td><td class="${vcls(v.verdict)}">${esc(v.verdict)}</td></tr>`).join('')}
-      </tbody></table>
+      <p style="margin-bottom:6px"><b style="color:#16223D">Valuation verdict:</b> <span class="${valCls(r.val)}" style="font-size:11px">${esc(r.val || '—')}</span></p>
+      ${rtab(GRP.slice(0, 3))}
     </div><div>
-      <div class="gauge">${gauge}<div><b style="color:#16223D">LRC score ${S100(r)}/100 · ${esc(r.v)}</b><br><span style="color:#5C6478;font-size:11.5px">Ranks above ${S100(r)}% of ${r.m === 'JSE' ? 'JSE' : 'New York'} companies scanned. Factor scores vs sector peers (0–100):</span><div class="fbars">${heat}</div></div></div>
+      <div class="gauge">${gauge}<div><b style="color:#16223D">Trading ${S100(r)}/100 · ${esc(r.v)} &nbsp;|&nbsp; Investment ${r.iv_score ?? '—'}/100 · ${esc(r.iv_v || '—')}</b><br><span style="color:#5C6478;font-size:11.5px">${r.pts > 0 ? '+' : ''}${r.pts} points of a possible ±${r.max}. Group scores (0–100, 50 = neutral):</span><div class="fbars">${heat}</div></div></div>
       <div class="tg" style="margin-top:10px">${tgRows.map(([l, v, g]) => `<span>${esc(l)}</span><span style="text-align:right;color:#5C6478">${g === false ? '' : pc(v / t.price - 1, 0)}</span><span class="${g === false ? '' : 'gv' + (v < t.price ? ' neg' : '')}" style="text-align:right;font-weight:800">${px(v, c)}</span>`).join('')}</div>
       ${R && R.valuation ? `<h4>Analyst valuation:</h4>${ul(R.valuation.map(esc))}` : ''}
       ${inv ? `<h4>Investment track (5–10 yrs): grade ${esc(inv.grade)} · ${inv.passed}/${inv.known} checks</h4><p style="font-size:11.5px;color:#5C6478">${inv.checks.filter(x => x.ok !== null).map(x => `<span style="color:${x.ok ? '#0F7B3F' : '#C5221F'}">${x.ok ? '✔' : '✘'} ${esc(x.k)}</span>`).join(' · ')}</p>` : ''}
     </div></div>
+    <div class="bar">All Fundamentals <small>37 READINGS · COMPANY vs SECTOR MEDIAN vs MARKET MEDIAN</small></div>
+    <div class="cols"><div>${rtab(GRP.slice(3, 5))}</div><div>${rtab(GRP.slice(5))}</div></div>
     <p class="bl"><b class="k">Bottom Line:</b> ${R && R.valuation_bottom_line ? esc(R.valuation_bottom_line) : `Against the median ${esc(r.sec)} company in ${r.m === 'JSE' ? 'the JSE' : 'New York'}, the shares look <b>${esc((vv('fpe').verdict || vv('tpe').verdict || 'n/a').toLowerCase())}</b> on earnings and <b>${esc((vv('pfcf').verdict || 'n/a').toLowerCase())}</b> on free cash flow. ${ok(lrcT) ? `The LRC Analyst Target is ${px(lrcT, c)} (${pc(lrcT / t.price - 1, 0)} from today).` : ''}`}
       ${R && R.catalysts_to_watch ? ` <b style="color:#C5221F">Catalysts to watch:</b> ${esc(R.catalysts_to_watch)}` : f.next_earnings ? ` <b style="color:#C5221F">Catalyst to watch:</b> results on ${esc(f.next_earnings)}.` : ''}</p>
     <div class="bar pg2">Technical Picture <small>TREND · SETUP · MAJOR SUPPORT &amp; RESISTANCE</small></div>
