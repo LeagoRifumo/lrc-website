@@ -75,6 +75,28 @@ def main():
         f = os.path.join(DIR, f'{friday.isoformat()}.json')
         ed = load(f) or {}
         g2, fails2 = build(friday, friday - dt.timedelta(days=7), prev)
+        # once the Weekly Research Agent (or the analyst) has filled this edition, keep their work:
+        # release rows they updated stay as filled, and every "What it tells us" note is kept
+        filled = {r['name']: r for g in ed.get('groups', []) for r in g['rows']}
+        for g in g2:
+            for i, r in enumerate(g['rows']):
+                old = filled.get(r['name'])
+                if not old: continue
+                if r['name'] not in AUTO and not old.get('carried', True):
+                    g['rows'][i] = old
+                elif old.get('note') and not r.get('note'):
+                    r['note'] = old['note']
+        # once the Weekly Research Agent (or the analyst) has filled this edition, keep their work:
+        # release rows they updated stay as filled, and every "What it tells us" note is kept
+        filled = {r['name']: r for g in ed.get('groups', []) for r in g['rows']}
+        for g in g2:
+            for i, r in enumerate(g['rows']):
+                old = filled.get(r['name'])
+                if not old: continue
+                if r['name'] not in AUTO and not old.get('carried', True):
+                    g['rows'][i] = old
+                elif old.get('note') and not r.get('note'):
+                    r['note'] = old['note']
         ed.update({'week_ending': friday.isoformat(), 'title': f"Weekly market dashboard — week to {friday.day} {friday.strftime('%b %Y')}", 'live': False,
                    'generated': now_sast().isoformat(timespec='minutes'), 'groups': g2, 'auto_view': auto_view(g2), 'missing': fails2})
         ed.setdefault('agent', 'LRC Dashboard automation'); ed.setdefault('movers', []); ed.setdefault('market_view', '')

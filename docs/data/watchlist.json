@@ -1,6 +1,6 @@
 {
  "week_ending": "2026-10-23",
- "generated": "2026-10-25T06:28+02:00",
+ "generated": "2026-10-25T15:09+02:00",
  "prices_as_of": "2026-10-23",
  "agent": "LRC Watchlist Agent",
  "rules": {
@@ -175,8 +175,10 @@
    "score": 24.0,
    "grade": "A",
    "fair_value": 426.0,
-   "margin_of_safety": 0.4132,
-   "rating": "BUY"
+   "margin_of_safety": 0.2406,
+   "rating": "BUY",
+   "price": 343.39,
+   "price_as_of": "2026-10-23"
   },
   {
    "ticker": "NVDA",
@@ -185,8 +187,10 @@
    "score": 21.0,
    "grade": "A",
    "fair_value": 262.56,
-   "margin_of_safety": 0.149,
-   "rating": "BUY"
+   "margin_of_safety": 0.2446,
+   "rating": "BUY",
+   "price": 210.96,
+   "price_as_of": "2026-10-23"
   },
   {
    "ticker": "DECK",
@@ -195,8 +199,10 @@
    "score": 21.0,
    "grade": "A",
    "fair_value": 103.0,
-   "margin_of_safety": 0.2259,
-   "rating": "BUY"
+   "margin_of_safety": 0.2702,
+   "rating": "BUY",
+   "price": 81.09,
+   "price_as_of": "2026-10-23"
   },
   {
    "ticker": "PCTY",
@@ -205,8 +211,10 @@
    "score": 20.0,
    "grade": "A",
    "fair_value": 157.05,
-   "margin_of_safety": -0.0067,
-   "rating": "HOLD"
+   "margin_of_safety": -0.1137,
+   "rating": "HOLD",
+   "price": 177.19,
+   "price_as_of": "2026-10-23"
   },
   {
    "ticker": "META",
@@ -215,8 +223,10 @@
    "score": 18.0,
    "grade": "A",
    "fair_value": 677.14,
-   "margin_of_safety": -0.1119,
-   "rating": "SELL"
+   "margin_of_safety": 0.0537,
+   "rating": "SELL",
+   "price": 642.62,
+   "price_as_of": "2026-10-23"
   },
   {
    "ticker": "AMD",
@@ -225,8 +235,10 @@
    "score": 14.0,
    "grade": "B",
    "fair_value": 402.73,
-   "margin_of_safety": -0.3349,
-   "rating": "SELL"
+   "margin_of_safety": -0.2207,
+   "rating": "SELL",
+   "price": 516.79,
+   "price_as_of": "2026-10-23"
   },
   {
    "ticker": "DELL",
@@ -235,8 +247,10 @@
    "score": 9.0,
    "grade": "C",
    "fair_value": 404.7,
-   "margin_of_safety": -0.2931,
-   "rating": "SELL"
+   "margin_of_safety": -0.1134,
+   "rating": "SELL",
+   "price": 456.44,
+   "price_as_of": "2026-10-23"
   },
   {
    "ticker": "ANET",
@@ -245,8 +259,10 @@
    "score": 16.0,
    "grade": "B",
    "fair_value": 144.61,
-   "margin_of_safety": -0.2929,
-   "rating": "SELL"
+   "margin_of_safety": -0.161,
+   "rating": "SELL",
+   "price": 172.37,
+   "price_as_of": "2026-10-23"
   },
   {
    "ticker": "FAST",
@@ -255,8 +271,10 @@
    "score": 15.0,
    "grade": "B",
    "fair_value": 38.37,
-   "margin_of_safety": -0.2539,
-   "rating": "SELL"
+   "margin_of_safety": -0.2608,
+   "rating": "SELL",
+   "price": 51.91,
+   "price_as_of": "2026-10-23"
   },
   {
    "ticker": "WAB",
@@ -265,8 +283,10 @@
    "score": 13.0,
    "grade": "B",
    "fair_value": 248.07,
-   "margin_of_safety": -0.1342,
-   "rating": "SELL"
+   "margin_of_safety": -0.0891,
+   "rating": "SELL",
+   "price": 272.35,
+   "price_as_of": "2026-10-23"
   }
  ]
 }

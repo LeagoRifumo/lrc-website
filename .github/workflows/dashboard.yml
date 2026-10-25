@@ -1,0 +1,21 @@
+# Market dashboard (live "this week so far") — every 4 hours on weekdays. The weekend edition is still built by daily.yml.
+name: Market dashboard (4-hourly)
+on:
+  schedule:
+    - cron: '17 2,6,10,14,18 * * 1-5'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: lrc-push
+  cancel-in-progress: false
+jobs:
+  dashboard:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - run: python agents/tools/dashboard_auto.py
+      - run: bash agents/tools/publish.sh "Market dashboard"
