@@ -1,0 +1,13 @@
+name: Scanner branch test (temporary)
+on:
+  push:
+    branches: [claude/scanner-v2]
+permissions:
+  contents: write
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 agents/tools/probe2.py
