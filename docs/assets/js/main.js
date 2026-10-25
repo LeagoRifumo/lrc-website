@@ -443,30 +443,45 @@ const artCard = (a, pre = '') => `<a class="art" href="${pre}${esc(a.url)}">${a.
   $('w-clear').onclick = () => { if (confirm('Start a new article? The current draft will be cleared.')) { F.forEach(k => $(k).value = ''); $('w-prem').checked = false; $('w-date').value = today; prev(); } };
 })();
 
-(() => { // weekly market dashboard
-  const T = $('dashTbl'); if (!T) return;
+(() => { // market dashboard (colour-coded, one screen)
+  const G = $('dashGrid'); if (!G) return;
   const sel = $('dashWeek');
-  const num = (v, u) => v === '' || v == null ? '—' : (u === 'index' ? Number(v).toLocaleString('en-ZA', { maximumFractionDigits: 0 }) : Number(v).toLocaleString('en-ZA', { minimumFractionDigits: 2, maximumFractionDigits: u === '%' ? 3 : 2 }));
-  const chg = (a, b, u) => { if (a === '' || a == null || b === '' || b == null) return '—'; if (u === '%') { const d = (a - b) * 100; return `<span class="${d > 0 ? 'up' : d < 0 ? 'dn' : ''}">${d > 0 ? '+' : ''}${d.toFixed(0)}bp</span>`; } const p = a / b - 1; return `<span class="${p > 0 ? 'up' : p < 0 ? 'dn' : ''}">${pct(p)}</span>`; };
+  const INV = /USD \/ ZAR|EUR \/ ZAR|GBP \/ ZAR|CPI|10-year|repo|Fed funds/i;   // up = bad for investors
+  const num = (v, u) => v === '' || v == null ? '—' : (u === 'index' ? Number(v).toLocaleString('en-ZA', { maximumFractionDigits: 0 }) : Number(v).toLocaleString('en-ZA', { minimumFractionDigits: 2, maximumFractionDigits: u === '%' ? 2 : 2 }));
+  const move = (a, b, u, name, big) => {
+    if (a === '' || a == null || b === '' || b == null) return { txt: '—', cls: 'g0' };
+    let v, txt, mag;
+    if (u === '%') { v = (a - b) * 100; txt = (v > 0 ? '+' : '') + v.toFixed(0) + 'bp'; mag = Math.abs(v) >= (big ? 75 : 25) ? 2 : Math.abs(v) >= (big ? 20 : 5) ? 1 : 0; }
+    else { v = a / b - 1; txt = pct(v); mag = Math.abs(v) >= (big ? 0.10 : 0.03) ? 2 : Math.abs(v) >= (big ? 0.02 : 0.005) ? 1 : 0; }
+    const good = INV.test(name) ? v < 0 : v > 0;
+    return { txt, cls: mag === 0 ? 'g0' : (good ? 'g' : 'r') + mag };
+  };
   const show = f => getJSON('dashboards/' + f + '.json').then(d => {
-    $('dashMeta').innerHTML = `<span class="ai">● ${esc(d.live ? 'Live — updates every day' : 'Weekly edition')}</span><span>${esc(d.title)}</span><span>Updated <b>${when(d.generated)}</b></span>`;
+    $('dashMeta').innerHTML = `<span class="ai">● ${esc(d.live ? 'Live — updates every 4 hours on weekdays' : 'Weekly edition')}</span><span>Updated <b>${when(d.generated)}</b></span>`;
+    const rows = d.groups.flatMap(g => g.rows);
+    const pick = ['JSE All Share (J203)', 'USD / ZAR', 'S&P 500', 'Gold', 'Brent crude', 'SA 10-year government bond'];
+    $('dashPulse').innerHTML = pick.map(n => rows.find(r => r.name === n)).filter(Boolean).map(r => { const w = move(r.latest, r.week_ago, r.unit, r.name), y = move(r.latest, r.year_ago, r.unit, r.name, true);
+      return `<div class="pt ${w.cls}" title="${esc(r.source)}"><span class="pn">${esc(r.name.replace(' (J203)', '').replace(' government bond', ''))}</span><b>${num(r.latest, r.unit)}${r.unit === '%' ? '%' : ''}</b><span class="pc"><em>${w.txt}</em> week · ${y.txt} year</span></div>`; }).join('');
     const view = d.market_view || d.auto_view;
-    $('dashView').innerHTML = view ? `<div class="lbl">${d.market_view ? "THE ANALYST'S VIEW" : 'AUTOMATIC SUMMARY (NUMBERS ONLY)'}</div><p>${esc(view)}</p>` : '';
-    T.innerHTML = '<thead><tr><th>INDICATOR</th><th>LATEST</th><th>A WEEK AGO</th><th>WEEK</th><th>A YEAR AGO</th><th>1 YEAR</th><th>AS OF</th><th>WHAT IT TELLS US</th></tr></thead><tbody>' +
-      d.groups.map(g => `<tr class="grp"><td colspan="8">${esc(g.name)}</td></tr>` + g.rows.map(r => `<tr><td><b>${esc(r.name)}</b><small>${esc(r.unit)}</small></td><td class="n">${num(r.latest, r.unit)}</td><td class="n">${num(r.week_ago, r.unit)}</td><td class="n">${chg(r.latest, r.week_ago, r.unit)}</td><td class="n">${num(r.year_ago, r.unit)}</td><td class="n">${chg(r.latest, r.year_ago, r.unit)}</td><td class="n">${esc(r.as_of)}</td><td><span class="note">${esc(r.note || '')}</span><small title="${esc(r.source)}">Source: ${esc(r.source)}</small></td></tr>`).join('')).join('') + '</tbody>';
+    $('dashView').innerHTML = view ? `<b>${d.market_view ? "THE ANALYST'S VIEW" : 'AUTOMATIC SUMMARY'}</b> ${esc(view)}` : '';
+    const card = (title, inner) => `<div class="d2-card"><h3>${esc(title)}</h3>${inner}</div>`;
+    const html = d.groups.map(g => card(g.name, `<div class="d2-rows"><div class="d2-th"><span></span><span>LATEST</span><span>WEEK</span><span>YEAR</span></div>` + g.rows.map(r => { const w = move(r.latest, r.week_ago, r.unit, r.name), y = move(r.latest, r.year_ago, r.unit, r.name, true);
+      return `<div class="d2-row" title="${esc((r.note ? r.note + '\n' : '') + 'Source: ' + r.source + ' · as of ' + r.as_of)}"><span class="nm"><b>${esc(r.name)}</b><small>${esc(r.note || r.unit)}</small></span><span class="lv">${num(r.latest, r.unit)}${r.unit === '%' ? '%' : ''}<small>${esc(r.unit === '%' ? (r.as_of && r.as_of.length >= 10 ? new Date(r.as_of + 'T00:00:00').toLocaleDateString('en-ZA', { day: 'numeric', month: 'short' }) : (r.as_of || '')) : r.unit)}</small></span><span class="ch ${w.cls}">${w.txt}</span><span class="ch ${y.cls}">${y.txt}</span></div>`; }).join('') + '</div>')).join('');
     const mv = d.movers || [];
-    $('movMeta').textContent = mv.length ? `${d.movers_period || ''} · ${d.movers_universe || ''}` : 'Top movers are added by the Dashboard Agent with the weekend edition.';
-    $('movers').innerHTML = ['US', 'SA'].map(m => { const r = mv.filter(x => x.market === m); if (!r.length) return '';
-      return `<div class="mcol"><h3>${m === 'US' ? 'New York · S&P 500' : 'Johannesburg · JSE'}</h3>` + r.map(x => `<div class="mrow"><span class="tic">${esc(x.ticker)}</span><span class="mn">${esc(x.name)}${x.why && x.why !== '—' ? `<small>${esc(x.why)}</small>` : ''}</span><span class="n ${x.move >= 0 ? 'up' : 'dn'}">${pct(+x.move)}</span></div>`).join('') + '</div>'; }).join('');
+    const mov = mv.length ? card('Top movers', ['US', 'SA'].map(m => { const r = mv.filter(x => x.market === m); if (!r.length) return '';
+      return `<div class="d2-mh">${m === 'US' ? 'New York · S&P 500' : 'Johannesburg · JSE'}</div>` + r.map(x => `<div class="d2-mv" title="${esc(x.why && x.why !== '—' ? x.why : '')}"><span class="tk">${esc(x.ticker)}</span><span class="mn">${esc(x.name)}</span><span class="ch ${+x.move >= 0 ? (Math.abs(x.move) >= 0.1 ? 'g2' : 'g1') : (Math.abs(x.move) >= 0.1 ? 'r2' : 'r1')}">${pct(+x.move)}</span></div>`).join(''); }).join('') + `<p class="d2-mp">${esc([d.movers_period, d.movers_universe].filter(Boolean).join(' · '))}</p>`)
+      : card('Top movers', '<p class="d2-mp">Top movers are added with the weekend edition.</p>');
+    G.classList.toggle('nomov', !mv.length);
+    G.innerHTML = html + (mv.length ? mov : '');
     $('dashSrc').textContent = (d.movers_sources ? 'Movers: ' + d.movers_sources + ' ' : '') + (d.updated_by || '');
-  }).catch(() => failMsg(T, 'dashboard'));
+  }).catch(() => failMsg(G, 'dashboard'));
   Promise.all([getJSON('dashboards/index.json'), getJSON('dashboards/live.json').catch(() => null)]).then(([idx, live]) => {
-    const opts = (live ? [`<option value="live">● This week so far (live)</option>`] : []).concat(idx.weeks.map(w => `<option value="${esc(w.week_ending)}">${esc(w.title.replace('Weekly market dashboard — ', ''))}</option>`));
+    const opts = (live ? [`<option value="live">● This week so far (live)</option>`] : []).concat(idx.weeks.map(w => `<option value="${esc(w.week_ending)}">${esc(w.title.replace('Weekly market dashboard — ', 'Edition: '))}</option>`));
     sel.innerHTML = opts.join('');
-    const want = location.hash.slice(1); sel.value = [...sel.options].some(o => o.value === want) ? want : (idx.latest || sel.options[0].value);
+    const want = location.hash.slice(1); sel.value = [...sel.options].some(o => o.value === want) ? want : (live ? 'live' : (idx.latest || sel.options[0].value));
     sel.onchange = () => { history.replaceState(null, '', '#' + sel.value); show(sel.value); };
     show(sel.value);
-  }).catch(() => failMsg(T, 'dashboard'));
+  }).catch(() => failMsg(G, 'dashboard'));
 })();
 
 (() => { // earnings calendar

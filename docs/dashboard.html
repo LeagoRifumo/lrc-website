@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=7.2">
+<link rel="stylesheet" href="assets/css/style.css?v=7.3">
 </head>
 <body>
 <header class="site-header">
@@ -50,24 +50,18 @@
 <div class="ticker-bar"><div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div><script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>{"symbols": [{"proName": "NASDAQ:AAPL", "title": "Apple"}, {"proName": "NASDAQ:MSFT", "title": "Microsoft"}, {"proName": "NASDAQ:NVDA", "title": "NVIDIA"}, {"proName": "NASDAQ:AMZN", "title": "Amazon"}, {"proName": "NASDAQ:TSLA", "title": "Tesla"}, {"proName": "NYSE:JPM", "title": "JPMorgan"}, {"proName": "FX_IDC:USDZAR", "title": "USD/ZAR"}, {"proName": "FX:EURUSD", "title": "EUR/USD"}, {"proName": "FX:GBPUSD", "title": "GBP/USD"}, {"proName": "OANDA:XAUUSD", "title": "Gold"}, {"proName": "OANDA:XPTUSD", "title": "Platinum"}, {"proName": "TVC:UKOIL", "title": "Brent oil"}], "showSymbolLogo": true, "isTransparent": true, "displayMode": "adaptive", "colorTheme": "dark", "locale": "en"}</script></div></div>
 <div class="breaking" id="breaking" hidden></div>
 <main>
-
-<section class="page-hero"><div class="wrap">
-  <span class="eyebrow">Weekly market dashboard</span>
-  <h1>The week in markets, <span class="gold">on one screen</span></h1>
-  <p class="lead">South Africa, the US and commodities — latest level, a week ago and a year ago, with the source for every number. Updated automatically every day; a new edition is published every weekend.</p>
-  <div class="dsel"><label for="dashWeek">Edition</label><select id="dashWeek"></select></div>
-  <div class="agent-meta" id="dashMeta"></div>
-</div></section>
-<section style="padding-top:30px"><div class="wrap">
-  <div class="dview" id="dashView"></div>
-  <div class="tbl-wrap"><table class="wl dash" id="dashTbl"><tbody><tr><td class="muted-load">Loading the dashboard…</td></tr></tbody></table></div>
-  <h2 style="margin-top:60px">Top <span class="gold">movers</span></h2>
-  <p class="lead" id="movMeta"></p>
-  <div class="movers" id="movers"></div>
+<section class="dash2"><div class="wrap wide">
+  <div class="d2-head">
+    <div><span class="eyebrow">Market dashboard</span><h1>The week in markets <span class="gold">on one screen</span></h1></div>
+    <div class="d2-ctl"><select id="dashWeek" aria-label="Edition"></select><div class="agent-meta" id="dashMeta" style="margin-top:8px"></div></div>
+  </div>
+  <div class="d2-pulse" id="dashPulse"></div>
+  <div class="d2-view" id="dashView"></div>
+  <div class="d2-grid" id="dashGrid"><p class="muted-load">Loading the dashboard…</p></div>
+  <div class="d2-legend"><span><i class="g2"></i>strongly good</span><span><i class="g1"></i>good</span><span><i class="g0"></i>little change</span><span><i class="r1"></i>bad</span><span><i class="r2"></i>strongly bad</span>
+    <em>Colours show what the move means for investors: rising markets, a firmer rand, and lower inflation and yields are green. Hover a row for its source.</em></div>
   <p class="src-note" id="dashSrc"></p>
-  <div class="edu-note" style="margin-top:30px"><b>EDUCATIONAL ONLY</b> Market data for information. Check the source before acting; prices can be delayed or revised.</div>
 </div></section>
-
 </main>
 <div class="disclaimer-band"><div class="wrap"><b>DISCLAIMER</b>All content from Leago Rifumo Capital — including research, tools, market briefs and the Leago Rifumo Show — is for educational and entertainment purposes only and is general information, not financial advice. Trading and investing involve risk, including the loss of capital. <a href="disclaimer.html" style="color:var(--gold-2)">Full disclaimer →</a></div></div>
 <footer>
@@ -83,6 +77,6 @@
   </div>
 </footer>
 <script>window.LRC_DATA = "data/";</script>
-<script src="assets/js/main.js?v=7.2"></script>
+<script src="assets/js/main.js?v=7.3"></script>
 </body>
 </html>

@@ -5,11 +5,12 @@ Give this file (and the zip) to Claude when you next update the website.
 
 ## Pages
 - index.html — home (LRC Stock Scanner featured)
-- scanner.html — LRC Stock Scanner: JSE / New York switch; tabs Stocks (Factor grades | All readings), Setups & entries, Investment ideas, ETFs, Sectors, How scoring works; Full screen; CSV
+- scanner.html — LRC Stock Scanner (Sort dropdown + tap the rating header to sort STRONG BUY↔STRONG SELL): JSE / New York switch; tabs Stocks (Factor grades | All readings), Setups & entries, Investment ideas, ETFs, Sectors, How scoring works; Full screen; CSV
 - stock.html?t=TICKER — free one-page summary (Download PDF) + "Buy the full report — R100"
 - watchlist.html — LRC coverage (analyst ratings), trading longs/shorts (up to 10 per market), investment (up to 10 per market), watchlist news, house-rule setups
 - track.html — track record of every scanner rating (from 25 Oct 2026)
-- dashboard.html, earnings.html, news.html, articles.html, research.html, tools.html, academy.html, markets.html, show.html, contact.html, write.html
+- dashboard.html — colour-coded one-screen market dashboard: 6 headline tiles, analyst/auto view, SA | US & global | Commodities | Top movers cards; green/red = good/bad for investors (rand, inflation, yields inverted); live edition every 4 h on weekdays
+- earnings.html, news.html, articles.html, research.html, tools.html, academy.html, markets.html, show.html, contact.html, write.html
 
 ## Scoring (agents/tools/scan_engine.py) — analyst-approved 37 readings (v7)
 - 37 readings in 7 groups: Valuation (Fwd P/E, Trailing P/E, PEG, P/S, P/B, P/FCF, EV/EBITDA), Growth (revenue & EPS qtr y/y, EPS this/next year est., 3-yr revenue & EPS CAGR),
