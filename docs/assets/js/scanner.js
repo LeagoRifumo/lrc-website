@@ -279,7 +279,7 @@ if ($('paper')) {
       <h4>Drivers / <span class="red">Catalysts</span>:</h4>${S('drivers', drivers.length ? drivers : ['No dated catalysts on the data feed.'])}
       <h4>Financial Health (Financials):</h4>${S('financial_health', health.length ? health : ['Financial data not available on the feed.'])}
       <h4>Stock Performance &amp; Trends Summary:</h4>${ul(perf.concat(R && R.performance ? R.performance.map(esc) : []))}
-      <h4>${R && R.competition ? 'Competition / Distribution / Production:' : 'Business:'}</h4>${R && R.competition ? ul(R.competition.map(esc)) : `<p>${bizText || '—'}</p>`}
+      <div class="${R && R.competition ? '' : 'biz'}"><h4>${R && R.competition ? 'Competition / Distribution / Production:' : 'Business:'}</h4>${R && R.competition ? ul(R.competition.map(esc)) : `<p>${bizText || '—'}</p>`}</div>
     </div><div>
       <h4>Management:</h4>${S('management', mgmt.length ? mgmt : ['—'])}
       <h4>Risks (to the long thesis):</h4>${S('risks', risks)}
