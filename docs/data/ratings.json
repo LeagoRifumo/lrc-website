@@ -1,24 +1,6 @@
 {
  "note": "Analyst-approved ratings from the LRC Work-sheets. Agents re-price these weekly and flag changes; only an analyst changes a rating.",
  "ratings": {
-  "PCTY": {
-   "name": "Paylocity",
-   "rating": "HOLD",
-   "target_6m": 157.05,
-   "score": 3.81,
-   "critical_flag": false,
-   "price_at_rating": 158.11,
-   "rated": "2026-10-14"
-  },
-  "WAB": {
-   "name": "Wabtec",
-   "rating": "SELL",
-   "target_6m": 248.07,
-   "score": 3.5,
-   "critical_flag": false,
-   "price_at_rating": 286.51,
-   "rated": "2026-10-14"
-  },
   "ANET": {
    "name": "Arista Networks",
    "rating": "SELL",

@@ -17840,23 +17840,6 @@
   },
   {
    "date": "2026-11-05",
-   "ticker": "PCTY",
-   "name": "Paylocity Holding Corporation",
-   "when": "After close",
-   "eps_forecast": "$1.46",
-   "eps_last_year": "$1.04",
-   "quarter": "Sep/2026",
-   "market_cap_bn": 9.4,
-   "covered": true,
-   "lrc_rating": "HOLD",
-   "t": "PCTY",
-   "lists": [],
-   "v": "HOLD",
-   "iv": "HOLD",
-   "idea": null
-  },
-  {
-   "date": "2026-11-05",
    "ticker": "TTD",
    "name": "The Trade Desk, Inc.",
    "when": "Not stated",
@@ -19196,6 +19179,23 @@
    "lists": [],
    "v": null,
    "iv": null,
+   "idea": null
+  },
+  {
+   "date": "2026-11-05",
+   "ticker": "PCTY",
+   "name": "Paylocity Holding Corporation",
+   "when": "After close",
+   "eps_forecast": "$1.46",
+   "eps_last_year": "$1.04",
+   "quarter": "Sep/2026",
+   "market_cap_bn": 9.4,
+   "covered": false,
+   "lrc_rating": null,
+   "t": "PCTY",
+   "lists": [],
+   "v": "HOLD",
+   "iv": "HOLD",
    "idea": null
   },
   {
@@ -26027,6 +26027,6 @@
    "covered": false
   }
  ],
- "synced": "2026-10-26T00:53+02:00",
+ "synced": "2026-10-26T00:55+02:00",
  "coverage_note": "Ticked = on the LRC watchlist or rated by an LRC analyst. Every company the LRC Stock Scanner tracks shows its trading and investment ratings. Updated after every scanner run."
 }
