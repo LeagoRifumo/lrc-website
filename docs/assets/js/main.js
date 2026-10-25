@@ -24,9 +24,9 @@ const num = id => parseFloat(($(id) || {}).value);
 /* ---------- research library ---------- */
 /* To SELL a report: add  price: 'R199', buy: 'https://paystack.shop/pay/your-link'  to its entry below. */
 const LIBRARY = [
-  { t: 'Paylocity (PCTY) — initiation of coverage', type: 'Company report', sector: 'Technology', date: '6 Oct 2026', region: 'US',
+  { t: 'Paylocity (PCTY) — initiation of coverage', tk: 'PCTY', type: 'Company report', sector: 'Technology', date: '6 Oct 2026', region: 'US',
     s: 'Payroll and HR software for US mid-sized companies: how it makes money, how it grows, four years of financials and a three-way valuation.', tags: ['HCM software', 'Valuation', '10 pages'] },
-  { t: 'Wabtec (WAB) — initiation of coverage', type: 'Company report', sector: 'Industrials', date: '6 Oct 2026', region: 'US',
+  { t: 'Wabtec (WAB) — initiation of coverage', tk: 'WAB', type: 'Company report', sector: 'Industrials', date: '6 Oct 2026', region: 'US',
     s: 'Locomotives, braking systems and rail digital: the backlog, margins, cash flow and what the share price already assumes.', tags: ['Rail', 'Backlog', '10 pages'] },
   { t: 'Weekly market dashboard — week to 9 Oct 2026', type: 'Market brief', sector: 'Macro & markets', date: '9 Oct 2026', region: 'SA & US', link: 'dashboard.html#2026-10-09',
     s: 'JSE flat on the week, the rand firmer at about R16.51/$, US shares higher and Brent above $100 — what it means for portfolios.', tags: ['JSE', 'Rand', 'S&P 500', 'Commodities'] },
@@ -37,8 +37,10 @@ const LIBRARY = [
   { t: 'Stock analysis roadmap: investing and trading', type: 'Education', sector: 'Process', date: '7 Oct 2026', region: 'Global',
     s: 'The 13-page roadmap for students, interns and junior analysts — what to look at, and what it tells you, from first screen to exit.', tags: ['Academy', 'Roadmap', 'Beginner'] },
 ];
+const STORE_LINK = d => (window.LRC_STORE && window.LRC_STORE.report_pay_link) || `mailto:${(window.LRC_STORE && window.LRC_STORE.order_email) || 'info@leagorifumocapital.co.za'}?subject=${encodeURIComponent('Order: ' + d.t + ' — ' + ((window.LRC_STORE && window.LRC_STORE.report_price) || 'R100'))}`;
 (() => {
   const lib = $('lib'); if (!lib) return;
+  fetch((window.LRC_DATA || 'data/') + 'store.json?v=' + Date.now()).then(r => r.json()).then(j => { window.LRC_STORE = j; if (typeof window.__libDraw === 'function') window.__libDraw(); }).catch(() => {});
   let type = 'all';
   const draw = () => {
     const q = ($('libSearch').value || '').toLowerCase(), sec = $('libSector').value;
@@ -46,12 +48,13 @@ const LIBRARY = [
       (!q || (d.t + ' ' + d.s + ' ' + d.tags.join(' ') + ' ' + d.sector).toLowerCase().includes(q)));
     lib.innerHTML = items.map(d => `<article class="doc"><div class="meta"><span>${d.type.toUpperCase()}</span><span>${d.date}</span></div>
       <h3>${d.t}</h3><p>${d.s}</p><div class="tags"><span>${d.sector}</span><span>${d.region}</span>${d.tags.map(x => `<span>${x}</span>`).join('')}</div>
-      ${d.link ? `<a class="btn btn-gold" href="${d.link}">Open the dashboard →</a>` : d.buy ? `<a class="btn btn-gold" href="${d.buy}" target="_blank" rel="noopener">Buy the full report${d.price ? ' · ' + d.price : ''} →</a>` : `<a class="btn btn-ghost" href="mailto:info@leagorifumocapital.co.za?subject=${encodeURIComponent('Research request: ' + d.t)}">Request this ${d.type === 'Market brief' ? 'brief' : 'report'} →</a>`}</article>`).join('');
+      ${d.type === 'Company report' ? `<div style="display:flex;flex-wrap:wrap;gap:8px">${d.tk ? `<a class="btn btn-ghost" href="stock.html?t=${d.tk}">Free 1-page summary</a>` : ''}<a class="btn btn-gold" href="${STORE_LINK(d)}"${window.LRC_STORE && window.LRC_STORE.report_pay_link ? ' target="_blank" rel="noopener"' : ''}>Buy full report · ${(window.LRC_STORE && window.LRC_STORE.report_price) || 'R100'}</a></div>` : d.link ? `<a class="btn btn-gold" href="${d.link}">Open the dashboard →</a>` : d.buy ? `<a class="btn btn-gold" href="${d.buy}" target="_blank" rel="noopener">Buy the full report${d.price ? ' · ' + d.price : ''} →</a>` : `<a class="btn btn-ghost" href="mailto:info@leagorifumocapital.co.za?subject=${encodeURIComponent('Research request: ' + d.t)}">Request this ${d.type === 'Market brief' ? 'brief' : 'report'} →</a>`}</article>`).join('');
     $('libEmpty').style.display = items.length ? 'none' : 'block';
   };
   document.querySelectorAll('#libFilters .chip-btn').forEach(b => b.addEventListener('click', () => {
     document.querySelectorAll('#libFilters .chip-btn').forEach(x => x.classList.remove('on')); b.classList.add('on'); type = b.dataset.f; draw();
   }));
+  window.__libDraw = draw;
   $('libSearch').addEventListener('input', draw); $('libSector').addEventListener('change', draw); draw();
 })();
 
@@ -313,9 +316,9 @@ const failMsg = (el, what) => { el.innerHTML = `<p class="muted-load">The ${what
     let f = 'all';
     const draw = () => {
       const rows = d.swing.filter(x => f === 'all' || x.direction === f || x.grade === f);
-      T.innerHTML = `<thead><tr><th>COMPANY</th><th>DIRECTION</th><th>SETUP</th><th>ENTRY</th><th>STOP</th><th>TARGET</th><th>R:R</th><th>SCORE</th><th>LRC RATING</th><th>STATUS</th></tr></thead><tbody>` +
+      T.innerHTML = `<thead><tr><th>COMPANY</th><th>DIRECTION</th><th>SETUP</th><th>ENTRY</th><th>STOP · DOWNSIDE</th><th>TARGET · UPSIDE</th><th>SCORE</th><th>LRC RATING</th><th>STATUS</th></tr></thead><tbody>` +
         rows.map(x => `<tr><td><span class="tic">${esc(x.ticker)}</span><small>${esc(x.name)}</small></td><td>${pillR(x.direction === 'Long' ? 'LONG' : 'SHORT')}</td><td>${esc(x.setup)}${x.note ? `<small>${esc(x.note)}</small>` : ''}</td>
-          <td class="n">${fmt(x.entry)}</td><td class="n">${fmt(x.stop)}</td><td class="n">${fmt(x.target)}</td><td class="n">${x.rr}R</td><td class="n">${x.score}/18 ${pillR(x.grade)}</td>
+          <td class="n">${fmt(x.entry)}</td><td class="n">${fmt(x.stop)}<small style="color:#F08A7E">${pct(x.stop / x.entry - 1)}</small></td><td class="n">${fmt(x.target)}<small style="color:#5ED39A">${pct(x.target / x.entry - 1)}</small></td><td class="n">${x.score}/18 ${pillR(x.grade)}</td>
           <td>${pillR(x.rating)}<small>6-m value ${fmt(x.rating_target)}</small></td><td>${esc(x.status)}<small>${esc(x.tech_clearance)}</small></td></tr>`).join('') + '</tbody>';
     };
     document.querySelectorAll('#wlFilters .chip-btn').forEach(b => b.addEventListener('click', () => { document.querySelectorAll('#wlFilters .chip-btn').forEach(x => x.classList.remove('on')); b.classList.add('on'); f = b.dataset.f; draw(); }));
@@ -323,7 +326,7 @@ const failMsg = (el, what) => { el.innerHTML = `<p class="muted-load">The ${what
     $('wlInv').innerHTML = `<thead><tr><th>COMPANY</th><th>STATUS</th><th>SCORE /24</th><th>LRC RATING</th><th>6-M VALUE</th><th>MARGIN OF SAFETY</th></tr></thead><tbody>` +
       d.investment.map(x => `<tr><td><span class="tic">${esc(x.ticker)}</span><small>${esc(x.name)}</small></td><td>${esc(x.status)}</td><td class="n">${x.score} ${pillR(x.grade)}</td><td>${pillR(x.rating)}</td><td class="n">${fmt(x.fair_value)}</td><td class="n" style="color:${x.margin_of_safety >= 0 ? '#5ED39A' : '#F08A7E'}">${pct(x.margin_of_safety)}</td></tr>`).join('') + '</tbody>';
     const r = d.rules;
-    $('wlRules').innerHTML = [['Qualify', r.qualify], ['Stop', r.stop], ['Target', r.target + ' (three times the risk)'], ['Risk', r.risk + '; max ' + r.max_shorts + ' shorts open; ' + r.event_risk + ' = event risk']]
+    $('wlRules').innerHTML = [['Qualify', r.qualify], ['Stop', 'Below support (longs) / above resistance (shorts), shown as % from the entry'], ['Target', 'Shown as % upside (longs) or downside (shorts) from the entry'], ['Risk', r.risk + '; max ' + r.max_shorts + ' shorts open; ' + r.event_risk + ' = event risk']]
       .map(([h, t]) => `<div class="card"><h3>${h}</h3><p>${esc(t)}</p></div>`).join('');
   }).catch(() => failMsg(T, 'watchlist'));
 })();

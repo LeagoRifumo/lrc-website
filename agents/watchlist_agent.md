@@ -34,10 +34,10 @@ Run the LRC screens (Swing Long, Swing Short, Investment) on Finviz-style criter
 numbers that qualified them. These are **not** added to the watchlist: a name enters only after the analyst completes a Work-sheet
 and adds its rating to ratings.json. Open a GitHub issue "Screening candidates <date>" with the table so the analyst gets an email.
 
-## 5. Analyst research layer (docs/data/research/<TICKER>.json)
-These files hold the analyst's own view (title, drivers, risks, bottom line, valuation) and appear on top of the one-page summary
-(`stock.html?t=TICKER`). Never invent an analyst opinion: only create or change a file when the analyst asked for it or supplied the
-text (e.g. from a finished report). You may update factual fields (guidance, next catalyst date) with a source.
+## 5. Research layer (docs/data/research/<TICKER>.json)
+The Company Research Agent (`agents/research_agent.md`, weekdays) keeps these files current for every watchlist company. On Saturdays,
+check that every company in `docs/data/scan/lists.json` and `ratings.json` has a file updated within 10 days and list any gaps in the
+screening issue. Files with `"analyst": "Prayer Nkuna"` are the analyst's own work: never rewrite their text.
 
 ## 6. Publish
 Validate JSON (`python3 -m json.tool`), then `git add -A docs agents && git commit -m "Weekly research <date>" && git pull --rebase && git push`.

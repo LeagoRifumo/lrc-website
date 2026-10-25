@@ -11,6 +11,7 @@ const px = (x, c) => ok(x) ? CUR(c) + n2(x, x >= 1000 ? 0 : 2) : '—';
 const pc = (x, d = 1) => ok(x) ? (x >= 0 ? '+' : '') + (x * 100).toFixed(d) + '%' : '—';
 const pp = (x, d = 1) => ok(x) ? (x * 100).toFixed(d) + '%' : '—';
 const big = (x, c) => { if (!ok(x)) return '—'; const a = Math.abs(x); const s = a >= 1e12 ? (x / 1e12).toFixed(2) + 'T' : a >= 1e9 ? (x / 1e9).toFixed(1) + 'B' : a >= 1e6 ? (x / 1e6).toFixed(0) + 'M' : n2(x, 0); return CUR(c) + s; };
+const chgPct = (to, from) => ok(to) && ok(from) && from ? pc(to / from - 1, 1) : '—';
 const mult = x => ok(x) ? (x <= 0 ? 'neg.' : x.toFixed(1) + 'x') : '—';
 const sigCls = v => 'sig sig-' + String(v || 'hold').toLowerCase().replace(/\s+/g, '-');
 const cc = v => v === null || v === undefined ? 'cn' : v >= 2 ? 'c2' : v >= 1 ? 'c1' : v <= -2 ? 'cm2' : v <= -1 ? 'cm1' : 'c0';
@@ -66,7 +67,7 @@ if ($('scTbl')) {
     const my = mine();
     const th = (k, l, t = '') => `<th data-k="${k}" title="${esc(t)}" class="${sortK === k ? 'sorted' + (sortD > 0 ? ' asc' : '') : ''}">${l}</th>`;
     let h = `<thead><tr><th class="grp" style="background:#0A0D15;position:sticky;left:0;z-index:3"></th><th class="grp" colspan="3" style="background:#0A0D15"></th><th class="grp g-tech" colspan="5">TECHNICAL READINGS</th><th class="grp g-sent" colspan="3">SENTIMENT</th><th class="grp g-fund" colspan="9">FINANCIAL READINGS (vs sector)</th><th class="grp" colspan="2" style="background:#0A0D15;color:var(--gold-2)">CATALYSTS</th></tr><tr>
-      <th data-k="t" style="position:sticky;left:0;z-index:3;text-align:left">COMPANY</th>${th('total', 'LRC SCORE')}<th>SIGNAL</th>${th('chg', 'PRICE · 1D')}` +
+      <th data-k="t" style="position:sticky;left:0;z-index:3;text-align:left">COMPANY</th>${th('total', 'LRC SCORE')}<th>LRC STOCK SCANNER</th>${th('chg', 'PRICE · 1D')}` +
       COLS.map(c => th(c.k, c.l, c.t)).join('') + `<th>EVENTS</th>${th('ne', 'RESULTS')}</tr></thead><tbody>`;
     h += rows.slice(0, shown).map(r => {
       const sc = r.total / (r.max || 1);
@@ -95,14 +96,14 @@ if ($('scTbl')) {
     const rs = (S ? S.rows : []).filter(r => r.m === mkt && r.plan);
     const tbl = (side, el) => {
       const list = rs.filter(r => r.plan.side === side).sort((a, b) => (side === 'Long' ? -1 : 1) * (a.total / a.max - b.total / b.max));
-      el.innerHTML = `<thead><tr><th>COMPANY</th><th>SETUP</th><th>LRC SIGNAL</th><th>ENTRY</th><th>STOP</th><th>TARGET 1 (2R)</th><th>TARGET 2 (3R)</th><th>RISK</th><th>SIZE</th><th>EVENT RISK</th></tr></thead><tbody>` +
+      el.innerHTML = `<thead><tr><th>COMPANY</th><th>SETUP</th><th>LRC STOCK SCANNER</th><th>ENTRY</th><th>STOP · DOWNSIDE</th><th>TARGET 1 · UPSIDE</th><th>TARGET 2 · UPSIDE</th><th>SIZE</th><th>EVENT RISK</th></tr></thead><tbody>` +
         (list.length ? list.map(r => { const p = r.plan, rps = Math.abs(p.entry - p.stop), sh = rps ? Math.floor(acct * risk / rps) : 0;
           const d = r.ne ? Math.round((new Date(r.ne) - new Date()) / 864e5) : null;
           return `<tr style="cursor:pointer" onclick="location.href='stock.html?t=${encodeURIComponent(r.t)}'"><td><span class="tic">${esc(r.t.replace('.JO', ''))}</span><small>${esc(r.n)}</small></td>
           <td>${esc(r.setup)}<small>level ${px(r.lvl, r.cur)}</small></td><td><span class="${sigCls(r.v)}">${esc(r.v)}</span><small>${r.total}/${r.max}</small></td>
-          <td class="n">${px(p.entry, r.cur)}</td><td class="n">${px(p.stop, r.cur)}</td><td class="n">${px(p.t1, r.cur)}</td><td class="n">${px(p.t2, r.cur)}</td><td class="n">${pp(p.risk_pct)}</td>
+          <td class="n">${px(p.entry, r.cur)}</td><td class="n">${px(p.stop, r.cur)}<small style="color:#F08A7E">${chgPct(p.stop, p.entry)}</small></td><td class="n">${px(p.t1, r.cur)}<small style="color:#5ED39A">${chgPct(p.t1, p.entry)}</small></td><td class="n">${px(p.t2, r.cur)}<small style="color:#5ED39A">${chgPct(p.t2, p.entry)}</small></td>
           <td class="n">${sh.toLocaleString('en-ZA')}<small>≈ ${px(sh * p.entry, r.cur)}</small></td><td>${d !== null && d >= 0 && d <= 14 ? `<span class="tag ev">Results in ${d}d</span>` : '—'}</td></tr>`; }).join('')
-          : `<tr><td colspan="10" style="color:var(--muted)">No ${side.toLowerCase()} setups in this market today.</td></tr>`) + '</tbody>';
+          : `<tr><td colspan="9" style="color:var(--muted)">No ${side.toLowerCase()} setups in this market today.</td></tr>`) + '</tbody>';
     };
     tbl('Long', $('stLong')); tbl('Short', $('stShort'));
   }
@@ -110,7 +111,7 @@ if ($('scTbl')) {
     const g = $('invG').value, sec = $('invSec').value;
     const list = (S ? S.rows : []).filter(r => r.m === mkt && r.inv && (g === 'all' || (g === 'A' ? r.inv.g === 'A' : r.inv.g !== 'C')) && (sec === 'all' || r.sec === sec) && (!$('invMos').checked || r.inv.mos > 0))
       .sort((a, b) => b.inv.p - a.inv.p || (b.inv.mos ?? -9) - (a.inv.mos ?? -9));
-    $('invTbl').innerHTML = `<thead><tr><th>COMPANY</th><th>GRADE</th><th>CHECKS PASSED</th><th>ROE</th><th>FWD P/E</th><th>P/FCF</th><th>DEBT/EQ</th><th>EPS GROWTH /YR</th><th>REVENUE GROWTH /YR</th><th>MARGIN OF SAFETY</th><th>LRC SIGNAL</th></tr></thead><tbody>` +
+    $('invTbl').innerHTML = `<thead><tr><th>COMPANY</th><th>GRADE</th><th>CHECKS PASSED</th><th>ROE</th><th>FWD P/E</th><th>P/FCF</th><th>DEBT/EQ</th><th>EPS GROWTH /YR</th><th>REVENUE GROWTH /YR</th><th>UPSIDE TO LRC TARGET</th><th>LRC STOCK SCANNER</th></tr></thead><tbody>` +
       (list.length ? list.slice(0, 200).map(r => `<tr style="cursor:pointer" onclick="location.href='stock.html?t=${encodeURIComponent(r.t)}'"><td><span class="tic">${esc(r.t.replace('.JO', ''))}</span><small>${esc(r.n)} · ${esc(r.sec)}</small></td>
         <td><span class="pill p-${r.inv.g.toLowerCase()}">${r.inv.g}</span></td><td class="n">${r.inv.p} / ${r.inv.k}</td><td class="n">${pp(r.raw.roe, 0)}</td><td class="n">${mult(r.raw.fpe)}</td><td class="n">${mult(r.raw.pfcf)}</td>
         <td class="n">${ok(r.raw.de) ? (r.raw.de / 100).toFixed(2) : '—'}</td><td class="n">${pc(r.inv.ec, 0)}</td><td class="n">${pc(r.inv.rc, 0)}</td>
@@ -122,13 +123,13 @@ if ($('scTbl')) {
   function drawEtfs() {
     if (!E) return fail($('etfOut'), 'ETF scan');
     const rs = E.rows.filter(r => r.m === mkt);
-    const tbl = list => `<div class="tbl-wrap"><table class="heat" style="min-width:1100px"><thead><tr><th style="text-align:left;position:sticky;left:0;z-index:3">ETF</th><th>SCORE</th><th>SIGNAL</th><th>PRICE</th><th class="g-tech">TREND</th><th class="g-tech">MOMENTUM</th><th class="g-tech">SETUP</th><th class="g-tech">RSI</th><th class="g-tech">VOLUME</th><th>1W</th><th>1M</th><th>3M</th><th>6M</th><th>YTD</th><th>ENTRY PLAN</th></tr></thead><tbody>` +
+    const tbl = list => `<div class="tbl-wrap"><table class="heat" style="min-width:1100px"><thead><tr><th style="text-align:left;position:sticky;left:0;z-index:3">ETF</th><th>SCORE</th><th>LRC STOCK SCANNER</th><th>PRICE</th><th class="g-tech">TREND</th><th class="g-tech">MOMENTUM</th><th class="g-tech">SETUP</th><th class="g-tech">RSI</th><th class="g-tech">VOLUME</th><th>1W</th><th>1M</th><th>3M</th><th>6M</th><th>YTD</th><th>ENTRY PLAN</th></tr></thead><tbody>` +
       list.map(r => `<tr><td class="nm"><b>${esc(r.t.replace('.JO', ''))}</b><small>${esc(r.n)}${r.full ? ' · ' + esc(r.full) : ''}</small></td><td class="${cc(r.total >= 4 ? 2 : r.total >= 2 ? 1 : r.total <= -4 ? -2 : r.total <= -2 ? -1 : 0)}"><span class="hc">${r.total}/${r.max}</span></td>
         <td class="plain"><span class="${sigCls(r.v)}">${esc(r.v)}</span></td><td class="plain">${px(r.px, r.cur)}</td>
         <td class="${cc(r.sc.trend)}"><span class="hc">${({ 2: 'Up ▲▲', 1: 'Up ▲', '-1': 'Down ▼', '-2': 'Down ▼▼' })[r.sc.trend] || 'Flat'}</span></td><td class="${cc(r.sc.momentum)}"><span class="hc">${pc(r.rs, 0)}</span></td>
         <td class="${cc(r.sc.setup)}"><span class="hc">${esc(r.setup || '—')}</span></td><td class="${cc(r.sc.extension)}"><span class="hc">${ok(r.rsi) ? r.rsi.toFixed(0) : '—'}</span></td><td class="${cc(r.sc.volume)}"><span class="hc">${r.sc.volume > 0 ? 'Accum.' : r.sc.volume < 0 ? 'Distrib.' : '—'}</span></td>
         ${['p1w', 'p1m', 'p3m', 'p6m', 'ytd'].map(k => `<td class="plain" style="color:${(r[k] ?? 0) >= 0 ? '#5ED39A' : '#F08A7E'}">${pc(r[k])}</td>`).join('')}
-        <td class="plain" style="text-align:left">${r.plan ? `${r.plan.side} ${px(r.plan.entry, r.cur)} · stop ${px(r.plan.stop, r.cur)} · T1 ${px(r.plan.t1, r.cur)}` : '—'}</td></tr>`).join('') + '</tbody></table></div>';
+        <td class="plain" style="text-align:left">${r.plan ? `${r.plan.side} above ${px(r.plan.entry, r.cur)} · stop ${chgPct(r.plan.stop, r.plan.entry)} · target ${chgPct(r.plan.t1, r.plan.entry)}` : '—'}</td></tr>`).join('') + '</tbody></table></div>';
     if (etfView === 'rank') { $('etfOut').innerHTML = tbl(rs); return; }
     const order = ['Broad market', 'Sectors', 'Themes', 'Commodities & bonds', 'International'];
     $('etfOut').innerHTML = order.filter(g => rs.some(r => r.g === g)).map(g => `<h3 style="font-size:28px;margin-top:34px;color:#fff">${esc(g)}</h3>` + tbl(rs.filter(r => r.g === g))).join('');
@@ -157,8 +158,8 @@ if ($('scTbl')) {
     const tr = e.target.closest('tr[data-t]'); if (tr) location.href = 'stock.html?t=' + encodeURIComponent(tr.dataset.t);
   });
   $('scCsv').addEventListener('click', () => {
-    const rows = rowsFor(); const head = ['Ticker', 'Name', 'Market', 'Sector', 'Price', 'Currency', 'Change 1D', 'LRC score', 'Max', 'Signal', 'Setup', 'Entry', 'Stop', 'Target 1', 'Target 2', 'Fwd PE', 'TTM PE', 'P/S', 'P/FCF', 'Revenue growth', 'EPS growth', 'Debt/Equity %', 'ROE', 'Dividend yield', 'Analyst consensus', 'Target upside', 'Short float', 'Next results', 'LRC analyst rating'];
-    const csv = [head].concat(rows.map(r => [r.t, r.n, r.m, r.sec, r.px, r.cur, r.chg, r.total, r.max, r.v, r.setup || '', r.plan?.entry ?? '', r.plan?.stop ?? '', r.plan?.t1 ?? '', r.plan?.t2 ?? '', r.raw.fpe ?? '', r.raw.tpe ?? '', r.raw.ps ?? '', r.raw.pfcf ?? '', r.raw.rev_growth ?? '', r.raw.eps_growth ?? '', r.raw.de ?? '', r.raw.roe ?? '', r.raw.div_yield ?? '', r.raw.rec ?? '', r.raw.tgt_up ?? '', r.raw.short ?? '', r.ne || '', r.cov?.rating || '']))
+    const rows = rowsFor(); const head = ['Ticker', 'Name', 'Market', 'Sector', 'Price', 'Currency', 'Change 1D', 'LRC score', 'Max', 'LRC Stock Scanner', 'Setup', 'Entry', 'Stop', 'Target 1', 'Target 2', 'LRC Analyst Target', 'Fwd PE', 'TTM PE', 'P/S', 'P/FCF', 'Revenue growth', 'EPS growth', 'Debt/Equity %', 'ROE', 'Dividend yield', 'Analyst consensus', 'Target upside', 'Short float', 'Next results', 'LRC analyst rating'];
+    const csv = [head].concat(rows.map(r => [r.t, r.n, r.m, r.sec, r.px, r.cur, r.chg, r.total, r.max, r.v, r.setup || '', r.plan?.entry ?? '', r.plan?.stop ?? '', r.plan?.t1 ?? '', r.plan?.t2 ?? '', r.tgt ?? '', r.raw.fpe ?? '', r.raw.tpe ?? '', r.raw.ps ?? '', r.raw.pfcf ?? '', r.raw.rev_growth ?? '', r.raw.eps_growth ?? '', r.raw.de ?? '', r.raw.roe ?? '', r.raw.div_yield ?? '', r.raw.rec ?? '', r.raw.tgt_up ?? '', r.raw.short ?? '', r.ne || '', r.cov?.rating || '']))
       .map(a => a.map(x => `"${String(x).replace(/"/g, '""')}"`).join(',')).join('\n');
     const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([csv], { type: 'text/csv' })); a.download = `LRC_Scanner_${mkt}_${(S.as_of || {})[mkt] || ''}.csv`; a.click();
   });
@@ -167,6 +168,46 @@ if ($('scTbl')) {
     S = a.value; E = b.status === 'fulfilled' ? b.value : null; SE = c.status === 'fulfilled' ? c.value : null;
     $('scMeta').innerHTML = `<span class="ai">● Built by <b>${esc(S.agent)}</b></span><span>Prices as of <b>JSE ${esc(S.as_of?.JSE || '—')} · NY ${esc(S.as_of?.US || '—')}</b></span><span>Updated <b>${when(S.generated)}</b></span><span><b>${S.rows.length}</b> companies · <b>${E ? E.rows.length : 0}</b> ETFs</span>`;
     fillSectors(); showTab(tab);
+  });
+}
+
+/* =================== WATCHLIST PAGE (coverage + trading + investment + news, both markets) =================== */
+if ($('wlCov')) {
+  let mkt = getMkt(), COV = null, L = null, NEWS = null;
+  const link = t => `stock.html?t=${encodeURIComponent(t)}`;
+  const nm = (t, n) => `<a href="${link(t)}"><span class="tic">${esc(t.replace('.JO', ''))}</span><small>${esc(n)}</small></a>`;
+  const head1 = t => { const x = NEWS && NEWS.companies && NEWS.companies[t]; const h = x && x.news && x.news[0]; return h ? `<a href="${esc(h.url)}" target="_blank" rel="noopener" style="font-size:12.5px;color:#C9CEDA">${esc(h.title.slice(0, 90))}${h.title.length > 90 ? '…' : ''}</a><small>${esc(h.source)}${h.published ? ' · ' + esc(h.published.slice(0, 10)) : ''}</small>` : '<small>—</small>'; };
+  const draw = () => {
+    const cov = (COV ? COV.companies : []).filter(c => (c.ticker.endsWith('.JO') ? 'JSE' : 'US') === mkt);
+    const cur = mkt === 'JSE' ? 'ZAR' : 'USD';
+    $('wlCov').innerHTML = `<thead><tr><th>COMPANY</th><th>LRC RATING</th><th>PRICE</th><th>LRC ANALYST TARGET</th><th>UPSIDE</th><th>SINCE RATING</th><th>NEXT RESULTS</th><th>LATEST NEWS</th></tr></thead><tbody>` +
+      (cov.length ? cov.map(c => `<tr><td>${nm(c.ticker, c.name)}</td><td><span class="pill p-${c.rating.toLowerCase()}">${esc(c.rating)}</span>${c.under_review ? '<small style="color:#F2CE72">under review</small>' : `<small>rated ${esc(c.rated || '')}</small>`}</td>
+        <td class="n">${px(c.price, cur)}</td><td class="n">${px(c.target_6m, cur)}</td><td class="n" style="color:${(c.upside ?? 0) >= 0 ? '#5ED39A' : '#F08A7E'}">${pc(c.upside)}</td><td class="n">${pc(c.since_rating)}</td><td>${esc(c.next_earnings || '—')}</td><td style="max-width:320px">${head1(c.ticker)}</td></tr>`).join('')
+        : `<tr><td colspan="8" style="color:var(--muted)">No ${mkt === 'JSE' ? 'JSE' : 'New York'} companies carry an LRC analyst rating yet — the trading and investment watchlists below are built by the LRC Stock Scanner.</td></tr>`) + '</tbody>';
+    const l = (L && L.lists && L.lists[mkt]) || { long: [], short: [], investment: [] };
+    const trade = (rows, side) => `<thead><tr><th>COMPANY</th><th>SETUP</th><th>LRC STOCK SCANNER</th><th>ENTRY</th><th>STOP · ${side === 'Long' ? 'DOWNSIDE' : 'UPSIDE'}</th><th>TARGET 1</th><th>TARGET 2</th><th>RESULTS</th><th>LATEST NEWS</th></tr></thead><tbody>` +
+      (rows.length ? rows.map(r => `<tr><td>${nm(r.t, r.n)}${r.cov ? ` <span class="pill p-${r.cov.rating.toLowerCase()}">LRC ${esc(r.cov.rating)}</span>` : ''}</td><td>${esc(r.setup)}<small>level ${px(r.lvl, r.cur)}</small></td><td><span class="${sigCls(r.v)}">${esc(r.v)}</span><small>${r.total}/${r.max}</small></td>
+        <td class="n">${px(r.entry, r.cur)}</td><td class="n">${px(r.stop, r.cur)}<small style="color:#F08A7E">${pc(r.stop_pct)}</small></td><td class="n">${px(r.t1, r.cur)}<small style="color:#5ED39A">${pc(r.t1_pct)}</small></td><td class="n">${px(r.t2, r.cur)}<small style="color:#5ED39A">${pc(r.t2_pct)}</small></td>
+        <td>${r.ne ? `<span class="tag ${Math.round((new Date(r.ne) - new Date()) / 864e5) <= 14 ? 'ev' : ''}">${esc(r.ne)}</span>` : '—'}</td><td style="max-width:300px">${head1(r.t)}</td></tr>`).join('')
+        : `<tr><td colspan="9" style="color:var(--muted)">No ${side.toLowerCase()} setups pass the rules in this market today.</td></tr>`) + '</tbody>';
+    $('wlLong').innerHTML = trade(l.long, 'Long'); $('wlShort').innerHTML = trade(l.short, 'Short');
+    $('wlInv2').innerHTML = `<thead><tr><th>COMPANY</th><th>GRADE</th><th>CHECKS</th><th>PRICE</th><th>LRC ANALYST TARGET</th><th>UPSIDE</th><th>LRC STOCK SCANNER</th><th>LATEST NEWS</th></tr></thead><tbody>` +
+      (l.investment.length ? l.investment.map(r => `<tr><td>${nm(r.t, r.n)}<small>${esc(r.sec)}</small></td><td><span class="pill p-${r.inv.g.toLowerCase()}">${r.inv.g}</span></td><td class="n">${r.inv.p}/${r.inv.k}</td><td class="n">${px(r.px, r.cur)}</td><td class="n">${px(r.tgt, r.cur)}</td>
+        <td class="n" style="color:#5ED39A">${pc(r.tgt_up)}</td><td><span class="${sigCls(r.v)}">${esc(r.v)}</span></td><td style="max-width:300px">${head1(r.t)}</td></tr>`).join('')
+        : '<tr><td colspan="8" style="color:var(--muted)">No companies pass the investment checks with upside today.</td></tr>') + '</tbody>';
+    const R = (L && L.rules) || {};
+    $('wlLongNote').textContent = R.long || ''; $('wlShortNote').textContent = R.short || ''; $('wlInvNote').textContent = R.investment || '';
+    const names = new Set([...cov.map(c => c.ticker), ...l.long.map(r => r.t), ...l.short.map(r => r.t), ...l.investment.map(r => r.t)]);
+    const items = [];
+    if (NEWS) for (const t of names) { const x = NEWS.companies[t]; if (x) (x.news || []).forEach(n => items.push({ ...n, t })); }
+    items.sort((a, b) => (b.published || '').localeCompare(a.published || ''));
+    $('wlNews').innerHTML = items.slice(0, 30).map(n => `<a class="wi" href="${esc(n.url)}" target="_blank" rel="noopener"><span class="wt"><span class="tk">${esc(n.t.replace('.JO', ''))}</span> ${esc(n.title)}</span><span class="wm"><b>${esc(n.source)}</b>${n.published ? ' · ' + esc(when(n.published)) : ''}</span></a>`).join('') || '<p class="muted-load">News for the watchlist companies is collected after each scanner run.</p>';
+    $('wlKpis').innerHTML = [[cov.length, 'analyst-rated (' + ['BUY', 'HOLD', 'SELL'].map(k => cov.filter(c => c.rating === k).length + ' ' + k).join(' · ') + ')'], [l.long.length, 'long setups'], [l.short.length, 'short setups'], [l.investment.length, 'investment ideas'], [items.length, 'recent news stories']]
+      .map(([b, s]) => `<div><b>${b}</b><span>${s}</span></div>`).join('');
+  };
+  window.addEventListener('lrcmarket', e => { mkt = e.detail; draw(); });
+  Promise.allSettled([get('coverage.json'), get('scan/lists.json'), get('intel/index.json')]).then(([a, b, c]) => {
+    COV = a.status === 'fulfilled' ? a.value : null; L = b.status === 'fulfilled' ? b.value : null; NEWS = c.status === 'fulfilled' ? c.value : null; draw();
   });
 }
 
@@ -179,9 +220,18 @@ if ($('paper')) {
   $('cpLink').addEventListener('click', () => { navigator.clipboard?.writeText(location.href); $('cpLink').textContent = 'Link copied ✓'; });
   const mb = $('addMine'); const setMb = () => mb.textContent = mine().has(T) ? '★ On my list' : '☆ Add to my list'; setMb();
   mb.addEventListener('click', () => { toggleMine(T); setMb(); });
-  Promise.allSettled([get('scan/t/' + T.replace('^', '_') + '.json'), get('research/' + T + '.json')]).then(([a, b]) => {
+  let STORE = { report_price: 'R100', report_pay_link: '', order_email: 'info@leagorifumocapital.co.za', brokers: [] }, INTEL = null;
+  const buyHref = (name) => STORE.report_pay_link || `mailto:${STORE.order_email}?subject=${encodeURIComponent(`Order: LRC full report — ${name} (${T}) — ${STORE.report_price}`)}&body=${encodeURIComponent(`Hi LRC team,\n\nI would like to buy the full LRC research report on ${name} (${T}) for ${STORE.report_price}. Please send payment details.\n\nName:\nPhone:\n`)}`;
+  Promise.allSettled([get('scan/t/' + T.replace('^', '_') + '.json'), get('research/' + T + '.json'), get('store.json'), get('intel/' + T.replace('^', '_') + '.json')]).then(([a, b, st, it]) => {
+    if (st.status === 'fulfilled') STORE = { ...STORE, ...st.value };
+    if (it.status === 'fulfilled') INTEL = it.value;
+    $('buyRep').textContent = `Buy the full report — ${STORE.report_price}`;
     if (a.status !== 'fulfilled') { P.innerHTML = `<h1>${esc(T)}</h1><p style="margin-top:12px">This company is not in the LRC Scanner universe yet (or today's scan has not run). <a href="scanner.html" style="color:#1F3BB3">Open the scanner</a> to pick another, or ask us to add it.</p>`; return; }
     render(a.value, b.status === 'fulfilled' ? b.value : null);
+    const nm = a.value.row.n;
+    $('buyRep').href = buyHref(nm); if (STORE.report_pay_link) $('buyRep').target = '_blank';
+    $('afterPaper').innerHTML = `<div class="edu-note" style="max-width:none;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between"><span><b>FULL REPORT</b> This one-page summary is free. The full LRC report on ${esc(nm)} — business, financial statements, three-way valuation, risks and ESG — costs <b style="color:var(--gold-2)">${esc(STORE.report_price)}</b>. ${esc(STORE.report_delivery || '')}</span><a class="btn btn-gold" href="${esc(buyHref(nm))}"${STORE.report_pay_link ? ' target="_blank" rel="noopener"' : ''}>Buy the full report — ${esc(STORE.report_price)}</a></div>` +
+      (STORE.brokers && STORE.brokers.length ? `<div class="edu-note" style="max-width:none;margin-top:14px"><b>TRADE ${esc(T.replace('.JO', ''))} WITH OUR PARTNERS</b> ${STORE.brokers.map(x => `<a class="btn btn-ghost" style="margin:6px 8px 0 0;padding:9px 14px" href="${esc(x.url)}" target="_blank" rel="noopener sponsored">${esc(x.name)}${x.markets ? ' · ' + esc(x.markets) : ''}</a>`).join('')}<br><small style="color:var(--muted)">Referral links: LRC may earn a fee if you open an account. It does not change our research.</small></div>` : '');
   });
 
   function render(d, R) {
@@ -193,13 +243,12 @@ if ($('paper')) {
     const tg = d.targets || {};
     // title
     let title, sub = '';
+    const lrcT = r.cov ? r.cov.target : (R && R.target) ? R.target : (tg.lrc ?? tg.blend);
+    const word = r.cov ? r.cov.rating : sigTxt;
+    const cap = w => w.split(' ').map(x => x[0] + x.slice(1).toLowerCase()).join(' ');
     if (R && R.title) title = R.title;
-    else if (r.cov) title = `LRC ${r.cov.rating}: 6-Month Target ${px(r.cov.target, c)}`;
-    else {
-      const lo = Math.min(...[tg.blend, tg.analyst_median].filter(ok)), hi = Math.max(...[tg.blend, tg.analyst_median].filter(ok));
-      title = `Scanner ${sigTxt.replace('STRONG ', 'Strong ').replace(/^(BUY|HOLD|SELL)$/, s => s[0] + s.slice(1).toLowerCase())}${isFinite(lo) ? `: Fair Value ${px(lo, c)}${hi > lo * 1.02 ? '–' + px(hi, c) : ''}` : ''}`;
-    }
-    const analyst = R ? `${esc(R.analyst)} <span class="badge-an">LRC ANALYST VIEW</span>` : 'LRC Scanner (automated)';
+    else title = `${cap(word)} Idea: LRC Analyst Target ${ok(lrcT) ? px(lrcT, c) + ` (${pc(lrcT / t.price - 1, 0)})` : 'n/a'}`;
+    const analyst = R ? `${esc(R.analyst || 'Prayer Nkuna')} <span class="badge-an">${esc(R.analyst && /agent/i.test(R.analyst) ? 'LRC RESEARCH AGENT' : 'LRC ANALYST VIEW')}</span>` : 'Prayer Nkuna, Analyst · LRC Stock Scanner';
     const updated = R ? R.updated : (d.generated || '').slice(0, 10);
     const ret = (x) => `<span style="color:${(x ?? 0) >= 0 ? '#0F7B3F' : '#C5221F'};font-weight:700">${pc(x)}</span>`;
 
@@ -218,6 +267,12 @@ if ($('paper')) {
     if (ok(f.eps_growth)) health.push(`EPS growth last quarter ${pc(f.eps_growth, 0)} y/y; trailing EPS ${px(f.trailing_eps, c)}${ok(f.forward_eps) ? `, forward EPS ${px(f.forward_eps, c)}` : ''}.`);
     if (ok(f.de)) health.push(`Debt-to-equity ${(f.de / 100).toFixed(2)}x${ok(f.cash) && ok(f.debt) ? `; cash ${big(f.cash, c)} vs debt ${big(f.debt, c)}` : ''}.`);
     if (ok(f.fcf)) health.push(`Free cash flow (TTM) ${big(f.fcf, c)}${ok(f.current_ratio) ? `; current ratio ${f.current_ratio.toFixed(2)}` : ''}.`);
+    const sec = INTEL && INTEL.sec;
+    if (sec && sec.annual) {
+      const last = arr => arr && arr.length ? arr[arr.length - 1] : null;
+      const ar = last(sec.annual.revenue), an = last(sec.annual.net_income), pr2 = sec.annual.revenue && sec.annual.revenue.length > 1 ? sec.annual.revenue[sec.annual.revenue.length - 2] : null;
+      if (ar) health.push(`Official (SEC 10-K, year to ${esc(ar.end)}): revenue ${big(ar.value, 'USD')}${pr2 ? ` (${pc(ar.value / pr2.value - 1, 0)} y/y)` : ''}${an ? `, net income ${big(an.value, 'USD')}` : ''}${sec.annual_fcf ? `, free cash flow ${big(sec.annual_fcf.value, 'USD')} (operating cash flow less capex)` : ''}.`);
+    }
     const perf = [`Current price: <b>${px(t.price, c)}</b> (${pc(t.chg_1d)} on the day).`,
       `Short term: ${ret(t.perf_1w)} on the week, ${ret(t.perf_1m)} on the month.`,
       `Mid term: ${ret(t.perf_ytd)} year to date; ${ret(t.perf_6m)} over 6 months${ok(t.rs_6m) ? ` (${pc(t.rs_6m)} vs ${esc(d.benchmark)})` : ''}.`,
@@ -240,6 +295,7 @@ if ($('paper')) {
     const sent = [];
     if (ok(f.rec_mean)) sent.push(`Analyst consensus: <b>${recLbl(f.rec_mean)}</b> (${f.rec_mean.toFixed(1)} on a 1–5 scale, ${f.n_analysts || '—'} analysts)${rt.buy !== undefined ? ` — ${(rt.strongBuy || 0) + (rt.buy || 0)} buy / ${rt.hold || 0} hold / ${(rt.sell || 0) + (rt.strongSell || 0)} sell` : ''}.`);
     if (ok(f.target_median)) sent.push(`Median target ${px(f.target_median, c)} (${pc(f.target_median / t.price - 1, 0)}); range ${px(f.target_low, c)}–${px(f.target_high, c)}.`);
+    if (INTEL && INTEL.news && INTEL.news.length) sent.push(`${INTEL.news.length} news stories in the last two weeks; latest: “${esc(INTEL.news[0].title)}” (${esc(INTEL.news[0].source)}).`);
     if (!sent.length) sent.push('Limited analyst coverage on the data feed.');
     const own = [];
     if (ok(f.inst)) own.push(`Institutional ownership ${pp(f.inst, 0)}.`);
@@ -247,7 +303,7 @@ if ($('paper')) {
     if (ok(f.short_float)) own.push(`Short interest ${pp(f.short_float, 1)} of float.`);
     const mgmt = (pr.officers || []).map(o => `${esc(o.title || '')}: ${esc(o.name || '')}`);
     const bizText = pr.summary ? esc(pr.summary.split(/(?<=\.)\s+/).slice(0, 3).join(' ')) : '';
-    const autoBottom = `${esc(r.n)} scores <b>${r.total}/${r.max}</b> on the LRC Scanner (<b>${esc(r.v)}</b>): technicals ${r.tech > 0 ? '+' : ''}${r.tech}, sentiment ${r.sent > 0 ? '+' : ''}${r.sent}, fundamentals ${r.fund > 0 ? '+' : ''}${r.fund}. ` +
+    const autoBottom = `${esc(r.n)} scores <b>${r.total}/${r.max}</b> on the LRC Stock Scanner (<b>${esc(r.v)}</b>): technicals ${r.tech > 0 ? '+' : ''}${r.tech}, sentiment ${r.sent > 0 ? '+' : ''}${r.sent}, fundamentals ${r.fund > 0 ? '+' : ''}${r.fund}. ` +
       (t.setup ? `The chart shows a <b>${esc(t.setup.toLowerCase())}</b> at ${px(t.setup_level, c)}. ` : (t.sma200 && t.price > t.sma200 ? 'The long-term trend is up but there is no fresh setup today. ' : 'The trend is weak; patience until a base or retest forms. ')) +
       (vv('fpe').verdict && vv('fpe').verdict !== '—' ? `On forward earnings it looks <b>${esc(vv('fpe').verdict.toLowerCase())}</b> against its sector. ` : '') +
       (f.next_earnings ? `Next catalyst: results on ${esc(f.next_earnings)}.` : '');
@@ -261,7 +317,7 @@ if ($('paper')) {
     const vcls = v => ({ Undervalued: 'v-under', Overvalued: 'v-over', 'Fairly valued': 'v-fair', Strong: 'v-strong', Weak: 'v-weak', 'In line': 'v-fair', 'Low debt': 'v-low', 'High debt': 'v-high', 'Loss-making': 'v-neg', 'Negative FCF': 'v-neg' })[v] || 'v-fair';
     const fmtV = (k, v) => ['fpe', 'tpe', 'ps', 'pfcf', 'peg', 'pb'].includes(k) ? (v <= 0 ? 'neg.' : v.toFixed(2)) : k === 'de' ? (v / 100).toFixed(2) + 'x' : k === 'current_ratio' ? v.toFixed(2) : pp(v, 1);
     const tgRows = [['Latest share price', t.price, false], ['Analyst median target', tg.analyst_median], ['P/FCF-based value', tg.pfcf], ['PEG-based value', tg.peg], ['Sector P/E-based value', tg.sector_pe],
-      [r.cov ? 'LRC 6-month target (analyst)' : R && R.target ? 'LRC analyst target' : 'LRC model fair value (blend)', r.cov ? r.cov.target : R && R.target ? R.target : tg.blend]].filter(x => ok(x[1]));
+      ['LRC Analyst Target (6 months)', lrcT]].filter(x => ok(x[1]));
     const heat = Object.entries(r.sc).filter(([k, v]) => v !== null).map(([k, v]) => `<span class="h${v >= 2 ? 2 : v >= 1 ? 1 : v <= -2 ? 'm2' : v <= -1 ? 'm1' : 0}">${esc(({ trend: 'Trend', momentum: 'Momentum', setup: 'Setup', extension: 'Extension', volume: 'Volume', analysts: 'Analysts', target: 'Target', short: 'Short int.', fpe: 'Fwd P/E', tpe: 'TTM P/E', ps: 'P/S', pfcf: 'P/FCF', rev_growth: 'Rev growth', eps_growth: 'EPS growth', de: 'Debt', roe: 'ROE', div_yield: 'Dividend' })[k] || k)} ${v > 0 ? '+' : ''}${v}</span>`).join('');
     const gauge = gaugeSvg(r.total, r.max, r.v);
 
@@ -272,7 +328,7 @@ if ($('paper')) {
       <div><b>Market cap / Price:</b> ${big(f.mcap, c)} / ${px(t.price, c)}<br><b>52-wk low / high:</b> ${px(t.lo52, c)} / ${px(t.hi52, c)}<br><b>Beta / Yield:</b> ${ok(f.beta) ? f.beta.toFixed(2) : '—'} / ${pp(f.div_yield, 2)}<br><b>Sector:</b> ${esc(r.sec)}${r.ind ? ' · ' + esc(r.ind) : ''}</div>
       <div>${R && R.guidance ? R.guidance.slice(0, 4).map(g => `<b>${esc(g.split(':')[0])}:</b>${esc(g.split(':').slice(1).join(':'))}`).join('<br>') :
         `<b>Next results:</b> ${esc(f.next_earnings || 'not announced')}<br><b>Analysts:</b> ${recLbl(f.rec_mean)}${f.n_analysts ? ` (${f.n_analysts})` : ''}${ok(f.target_median) ? ` · median target ${px(f.target_median, c)}` : ''}<br><b>EPS growth (this yr / next yr est.):</b> ${pc(f.eps_growth_fwd, 0)} / ${pc(f.eps_growth_next, 0)}<br><b>Fwd P/E vs sector:</b> ${mult(f.fpe)} vs ${mult(d.sector_medians?.fpe)}`}</div>
-      <div><b>Last updated:</b> ${esc(updated)}<br><b>Analyst name:</b> ${analyst}<br><b>LRC Scanner signal:</b> <span class="${sigCls(r.v)}" style="font-size:10px">${esc(r.v)}</span> ${r.total}/${r.max}${r.cov ? `<br><b>LRC analyst rating:</b> ${esc(r.cov.rating)} (${esc(r.cov.rated || '')})` : ''}${R && R.geo_mix ? `<br><b>Geo %:</b> ${esc(R.geo_mix)}` : ''}</div>
+      <div><b>Last updated:</b> ${esc(updated)}<br><b>Analyst name:</b> ${analyst}<br><b>LRC Stock Scanner:</b> <span class="${sigCls(r.v)}" style="font-size:10px">${esc(r.v)}</span> ${r.total}/${r.max}${r.cov ? `<br><b>LRC analyst rating:</b> ${esc(r.cov.rating)} (${esc(r.cov.rated || '')})` : ''}${R && R.geo_mix ? `<br><b>Geo %:</b> ${esc(R.geo_mix)}` : ''}</div>
     </div>
     <div class="bar">Fundamentals <small>${R ? 'ANALYST VIEW + LIVE DATA' : 'AUTOMATED FROM LIVE DATA'}</small></div>
     <div class="cols"><div>
@@ -299,15 +355,18 @@ if ($('paper')) {
       ${R && R.valuation ? `<h4>Analyst valuation:</h4>${ul(R.valuation.map(esc))}` : ''}
       ${inv ? `<h4>Investment track (5–10 yrs): grade ${esc(inv.grade)} · ${inv.passed}/${inv.known} checks</h4><p style="font-size:11.5px;color:#5C6478">${inv.checks.filter(x => x.ok !== null).map(x => `<span style="color:${x.ok ? '#0F7B3F' : '#C5221F'}">${x.ok ? '✔' : '✘'} ${esc(x.k)}</span>`).join(' · ')}</p>` : ''}
     </div></div>
-    <p class="bl"><b class="k">Bottom Line:</b> ${R && R.valuation_bottom_line ? esc(R.valuation_bottom_line) : `Against the median ${esc(r.sec)} company in ${r.m === 'JSE' ? 'the JSE' : 'New York'}, the shares look <b>${esc((vv('fpe').verdict || vv('tpe').verdict || 'n/a').toLowerCase())}</b> on earnings and <b>${esc((vv('pfcf').verdict || 'n/a').toLowerCase())}</b> on free cash flow. ${ok(tg.blend) ? `The model fair value blend is ${px(tg.blend, c)} (${pc(tg.blend / t.price - 1, 0)}).` : ''}`}
+    <p class="bl"><b class="k">Bottom Line:</b> ${R && R.valuation_bottom_line ? esc(R.valuation_bottom_line) : `Against the median ${esc(r.sec)} company in ${r.m === 'JSE' ? 'the JSE' : 'New York'}, the shares look <b>${esc((vv('fpe').verdict || vv('tpe').verdict || 'n/a').toLowerCase())}</b> on earnings and <b>${esc((vv('pfcf').verdict || 'n/a').toLowerCase())}</b> on free cash flow. ${ok(lrcT) ? `The LRC Analyst Target is ${px(lrcT, c)} (${pc(lrcT / t.price - 1, 0)} from today).` : ''}`}
       ${R && R.catalysts_to_watch ? ` <b style="color:#C5221F">Catalysts to watch:</b> ${esc(R.catalysts_to_watch)}` : f.next_earnings ? ` <b style="color:#C5221F">Catalyst to watch:</b> results on ${esc(f.next_earnings)}.` : ''}</p>
-    <div class="bar pg2">Technical Setup &amp; Entry Plan <small>LRC HOUSE RULES · RISK 1% · TARGETS 2R / 3R</small></div>
+    <div class="bar pg2">Technical Setup &amp; Entry Plan <small>LRC HOUSE RULES · RISK 1% OF THE ACCOUNT PER TRADE</small></div>
     ${pl ? `<p><b>${esc(pl.side)} — ${esc(t.setup)}.</b> ${esc(pl.how)}. ${pl.event_risk ? `<b style="color:#C5221F">${esc(pl.event_risk)}.</b>` : ''}</p>
-      <div class="plan"><div>Entry<b>${px(pl.entry, c)}</b></div><div>Stop<b>${px(pl.stop, c)}</b></div><div>Target 1 (2R)<b>${px(pl.t1, c)}</b></div><div>Target 2 (3R)<b>${px(pl.t2, c)}</b></div><div>Risk / share<b>${px(pl.risk_per_share, c)}</b></div><div>Risk %<b>${pp(pl.risk_pct)}</b></div></div>
-      <p style="font-size:11.5px;color:#5C6478;margin-top:6px">Size = account × 1% ÷ risk per share. Example: ${r.m === 'JSE' ? 'R100,000' : '$10,000'} account → ${Math.floor((r.m === 'JSE' ? 1000 : 100) / pl.risk_per_share).toLocaleString('en-ZA')} shares.${pl.next_level ? ` Next major level: ${px(pl.next_level, c)}.` : ''}</p>`
+      <div class="plan"><div>Entry<b>${px(pl.entry, c)}</b></div><div>Stop<b>${px(pl.stop, c)}</b>${chgPct(pl.stop, pl.entry)}</div><div>Target 1<b>${px(pl.t1, c)}</b>${chgPct(pl.t1, pl.entry)}</div><div>Target 2<b>${px(pl.t2, c)}</b>${chgPct(pl.t2, pl.entry)}</div><div>LRC Analyst Target<b>${ok(lrcT) ? px(lrcT, c) : '—'}</b>${chgPct(lrcT, t.price)} from today</div><div>Next major level<b>${pl.next_level ? px(pl.next_level, c) : '—'}</b>${pl.next_level ? chgPct(pl.next_level, pl.entry) : ''}</div></div>
+      <p style="font-size:11.5px;color:#5C6478;margin-top:6px">Position size risks 1% of the account if the stop is hit. Example: ${r.m === 'JSE' ? 'R100,000' : '$10,000'} account → ${Math.floor((r.m === 'JSE' ? 1000 : 100) / pl.risk_per_share).toLocaleString('en-ZA')} shares.${pl.next_level ? `` : ''}</p>`
       : `<p>No breakout or retest setup today. Major support: ${(t.supports || []).map(s => px(s.price, c) + ` (${s.touches} touches)`).join(', ') || '—'}. Major resistance: ${(t.resistances || []).map(s => px(s.price, c) + ` (${s.touches} touches)`).join(', ') || '—'}. The scanner flags a <b>breakout</b> when price closes through resistance on 1.5× volume, or a <b>retest</b> when it pulls back to support and holds.</p>`}
+    ${INTEL && ((INTEL.news || []).length || (INTEL.sec && INTEL.sec.filings || []).length) ? `<div class="bar">Latest News &amp; Filings <small>UPDATED ${esc(when(INTEL.generated))}</small></div>
+      <div class="cols"><div><h4>News</h4><ul>${(INTEL.news || []).slice(0, 6).map(n => `<li><a href="${esc(n.url)}" target="_blank" rel="noopener" style="color:#1F3BB3">${esc(n.title)}</a> <span style="color:#7A8296">— ${esc(n.source)}${n.published ? ', ' + esc(n.published.slice(0, 10)) : ''}</span></li>`).join('') || '<li>No recent stories.</li>'}</ul></div>
+      <div>${INTEL.sec ? `<h4>SEC filings</h4><ul>${(INTEL.sec.filings || []).slice(0, 5).map(f => `<li><a href="${esc(f.url)}" target="_blank" rel="noopener" style="color:#1F3BB3">${esc(f.form)}</a> ${esc(f.date)} — ${esc(f.desc)}</li>`).join('')}</ul><p style="font-size:11.5px;color:#5C6478">Insider (Form 4) filings in the last 90 days: ${INTEL.sec.insider_filings_90d}</p>` : `<h4>Company announcements</h4><p style="font-size:12px">JSE companies publish results and trading statements on SENS — the news list includes SENS stories carried by South African financial media.</p>`}</div></div>` : ''}
     ${fin ? `<div class="bar">Financials <small>QUARTERLY REVENUE · NET INCOME · NET MARGIN (${esc(fin.cur)})</small></div>${fin.svg}` : ''}
-    <p class="src">Sources: ${R ? `LRC analyst research (${esc(R.analyst)}, ${esc(R.updated)}); ` : ''}Yahoo Finance prices, fundamentals and analyst data, scored by the LRC Scanner (${esc(when(d.generated))}). Valuation verdicts compare each ratio with the median of the same sector in the same market. Model values are mechanical estimates, not price targets, unless marked as the LRC analyst target.
+    <p class="src">Sources: ${R ? `LRC analyst research (${esc(R.analyst)}, ${esc(R.updated)}); ` : ''}${esc((d.sources || ['Yahoo Finance prices, fundamentals and analyst data']).concat(INTEL ? INTEL.sources || [] : []).join('; '))}${R && R.sources ? '; ' + esc(R.sources.slice(0, 6).join('; ')) : ''}. Scored by the LRC Stock Scanner (${esc(when(d.generated))}). Valuation verdicts compare each ratio with the median of the same sector in the same market. LRC Analyst Target: set by the analyst for companies with a completed LRC Work-sheet; otherwise the LRC valuation method (median of the analyst consensus, P/FCF, PEG and sector P/E values), refreshed daily.
       <b>Educational only — not financial advice.</b> Leago Rifumo Capital · Ermelo, Mpumalanga · leagorifumocapital.co.za</p>`;
   }
 

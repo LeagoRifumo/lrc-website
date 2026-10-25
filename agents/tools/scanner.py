@@ -354,6 +354,25 @@ def main():
     dump(os.path.join(OUT, 'stocks.json'), rnd_all({**meta, 'rows': out_rows}))
     dump(os.path.join(OUT, 'etfs.json'), rnd_all({**meta, 'rows': etf_rows}))
     dump(os.path.join(OUT, 'sectors.json'), rnd_all({**meta, 'rows': sectors}))
+    # ---------- website watchlists (both markets, rebuilt every run) ----------
+    def pick(r):
+        p = r['plan'] or {}
+        up = lambda x: (x / p['entry'] - 1) if p.get('entry') and x else None
+        return {'t': r['t'], 'n': r['n'], 'sec': r['sec'], 'cur': r['cur'], 'px': r['px'], 'chg': r['chg'], 'v': r['v'], 'total': r['total'], 'max': r['max'],
+                'setup': r['setup'], 'lvl': r['lvl'], 'ne': r['ne'], 'cov': r['cov'], 'tgt': r['tgt'], 'tgt_up': (r['tgt'] / r['px'] - 1) if r['tgt'] and r['px'] else None,
+                'entry': p.get('entry'), 'stop': p.get('stop'), 't1': p.get('t1'), 't2': p.get('t2'),
+                'stop_pct': up(p.get('stop')), 't1_pct': up(p.get('t1')), 't2_pct': up(p.get('t2')), 'inv': r['inv']}
+    lists = {}
+    for m in ('US', 'JSE'):
+        rs = [r for r in out_rows if r['m'] == m]
+        longs = sorted([r for r in rs if r['plan'] and r['plan']['side'] == 'Long' and r['v'] in ('BUY', 'STRONG BUY')], key=lambda r: -r['total'] / r['max'])[:10]
+        shorts = sorted([r for r in rs if r['plan'] and r['plan']['side'] == 'Short' and r['v'] in ('SELL', 'STRONG SELL')], key=lambda r: r['total'] / r['max'])[:10]
+        inv = sorted([r for r in rs if r['inv']['g'] in ('A', 'B') and (r['inv']['mos'] or 0) > 0], key=lambda r: (-r['inv']['p'], -(r['inv']['mos'] or 0)))[:10]
+        lists[m] = {'long': [pick(r) for r in longs], 'short': [pick(r) for r in shorts], 'investment': [pick(r) for r in inv]}
+    dump(os.path.join(OUT, 'lists.json'), rnd_all({**meta, 'rules': {
+        'long': 'Up to 10 per market: LRC Stock Scanner BUY / STRONG BUY with a Breakout, Retest or Near-breakout entry plan, strongest score first',
+        'short': 'Up to 10 per market: SELL / STRONG SELL with a Breakdown or Failed-retest plan, weakest score first',
+        'investment': 'Up to 10 per market: Investment-track grade A or B with upside to the LRC Analyst Target, most checks passed first'}, 'lists': lists}))
     keep = set()
     for s, d in details.items():
         fn = s.replace('^', '_') + '.json'; keep.add(fn)

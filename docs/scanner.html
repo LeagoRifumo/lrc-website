@@ -32,8 +32,8 @@
     <a class="brand" href="index.html" aria-label="Leago Rifumo Capital home"><img src="assets/img/monogram.png" alt=""><div><span>LEAGO RIFUMO</span><small>CAPITAL</small></div></a>
     <ul class="menu" id="menu">
       <li><a href="articles.html">Articles</a></li>
-      <li class="dd"><a href="research.html">Research <span class="car">▾</span></a><ul class="sub"><li><a href="research.html">Research library</a></li><li><a href="scanner.html">LRC Scanner</a></li><li><a href="dashboard.html">Weekly market dashboard</a></li><li><a href="watchlist.html">Watchlist</a></li></ul></li>
-      <li><a href="scanner.html" class="nav-hot active">Scanner</a></li>
+      <li class="dd"><a href="research.html">Research <span class="car">▾</span></a><ul class="sub"><li><a href="research.html">Research library</a></li><li><a href="scanner.html">LRC Stock Scanner</a></li><li><a href="dashboard.html">Weekly market dashboard</a></li><li><a href="watchlist.html">Watchlist</a></li></ul></li>
+      <li><a href="scanner.html" class="nav-hot active">Stock Scanner</a></li>
       <li><a href="earnings.html">Earnings</a></li>
       <li><a href="news.html">AI News</a></li>
       <li class="dd"><a href="markets.html">Markets <span class="car">▾</span></a><ul class="sub"><li><a href="markets.html">Live markets</a></li><li><a href="dashboard.html">Weekly market dashboard</a></li><li><a href="earnings.html">Earnings calendar</a></li></ul></li>
@@ -52,11 +52,11 @@
 <main>
 
 <section class="page-hero"><div class="wrap">
-  <span class="eyebrow">LRC Scanner</span>
+  <span class="eyebrow">LRC Stock Scanner</span>
   <h1>Every stock scored. <span class="gold">Every setup planned.</span></h1>
-  <p class="lead">The JSE and New York in one scanner: technicals (breakouts and retests of major support), analyst sentiment and every key ratio judged against its own sector, rolled into one LRC score and a BUY / HOLD / SELL signal. Click any company for its one-page analyst summary.</p>
+  <p class="lead">The JSE and New York in one scanner: technicals (breakouts and retests of major support), analyst sentiment and every key ratio judged against its own sector, rolled into one LRC score and an LRC Stock Scanner rating: BUY, HOLD or SELL. Click any company for its one-page analyst summary.</p>
   <div class="agent-meta" id="scMeta"></div>
-  <div class="edu-note"><b>EDUCATIONAL ONLY</b> The LRC Scanner signal is produced automatically by our scoring rules. It is not a personal recommendation and not the LRC analyst rating (shown separately where we cover a company). Data can be delayed or wrong — always check the source.</div>
+  <div class="edu-note"><b>EDUCATIONAL ONLY</b> LRC Stock Scanner ratings are produced by our scoring rules and refreshed automatically. They are general research, not personal advice; where we have completed a Work-sheet, the LRC analyst rating is shown with it. Data can be delayed or wrong — always check the source.</div>
 </div></section>
 <div class="scan-bar"><div class="wrap">
   <span class="mkt-switch mkt-big"><select id="scMkt" aria-label="Market"><option value="JSE">JSE — Johannesburg</option><option value="US">New York — NYSE &amp; Nasdaq</option></select></span>
@@ -68,7 +68,7 @@
     <div class="scan-filters">
       <input type="search" id="scQ" placeholder="Search ticker or company…">
       <select id="scSec"><option value="all">All sectors</option></select>
-      <select id="scSig"><option value="all">All signals</option><option>STRONG BUY</option><option>BUY</option><option>HOLD</option><option>SELL</option><option>STRONG SELL</option></select>
+      <select id="scSig"><option value="all">All scanner ratings</option><option>STRONG BUY</option><option>BUY</option><option>HOLD</option><option>SELL</option><option>STRONG SELL</option></select>
       <select id="scSet"><option value="all">All setups</option><option>Breakout</option><option>Retest</option><option>Near breakout</option><option>Breakdown</option><option>Failed retest</option><option value="none">No setup</option></select>
       <select id="scVal"><option value="all">Any valuation</option><option value="under">Undervalued vs sector (Fwd P/E)</option><option value="over">Overvalued vs sector (Fwd P/E)</option></select>
       <label><input type="checkbox" id="scCov"> LRC covered</label>
@@ -79,7 +79,7 @@
     <button class="btn btn-ghost more-btn" id="scMore" hidden>Show more</button>
   </div>
   <div id="pane-setups" hidden>
-    <p class="lead" style="max-width:900px;margin-top:26px">Today's trade setups from the scanner with an entry plan under the LRC house rules: risk 1% of the account, stop below the support or breakout level (never more than 3 ATR), targets at 2R and 3R. Results inside 14 days are flagged as event risk.</p>
+    <p class="lead" style="max-width:900px;margin-top:26px">Today's trade setups from the LRC Stock Scanner with an entry plan under the LRC house rules: the stop sits below the support or breakout level, each plan shows the downside to the stop and the upside to two targets in %, and the size risks 1% of your account. Results inside 14 days are flagged as event risk.</p>
     <div class="calc">Account size <input type="number" id="acct" value="100000" min="0" step="1000"> <span id="acctCur">R</span> · Risk per trade <input type="number" id="riskPct" value="1" min="0.1" max="5" step="0.1">% · Position sizes update in the table.</div>
     <h2 style="font-size:36px;margin-top:40px">Long setups <span class="gold">— breakouts &amp; retests</span></h2>
     <div class="tbl-wrap"><table class="wl" id="stLong"></table></div>
@@ -104,9 +104,9 @@
       <div class="card"><h3>1 · Technicals</h3><p><b>Trend</b> (−2…+2): price vs the 50- and 200-day averages and the 200-day's slope. <b>Momentum</b> (−2…+2): 6-month relative strength vs the market and RSI(14). <b>Setup</b> (−2…+2): <b>Breakout</b> through the 55-day high or a major resistance on 1.5× volume, or a <b>Retest</b> of a major support (an old resistance broken in the last 40 sessions, or the rising 50-day) that holds = +2; <b>Near breakout</b> = +1; <b>Breakdown</b> or <b>Failed retest</b> = −2. <b>Extension</b> (−1…+1): more than 3 ATR above the 20-day = chasing. <b>Volume</b> (−1…+1): up-day vs down-day volume.</p></div>
       <div class="card"><h3>2 · Sentiment</h3><p><b>Analysts</b> (−2…+2): consensus rating from 1 (strong buy) to 5 (sell). <b>Target</b> (−1…+1): upside to the median analyst target above 15% = +1, below today's price = −1. <b>Short interest</b> (−1…+1): below 3% of float = +1, above 12% = −1.</p></div>
       <div class="card"><h3>3 · Fundamentals</h3><p>Each −1 / 0 / +1, judged against the <b>median of the same sector in the same market</b>: Forward P/E, TTM P/E, Price/Sales and Price/FCF (20% cheaper = +1, 25% dearer or loss-making = −1), revenue growth, EPS growth, debt/equity, ROE and dividend yield.</p></div>
-      <div class="card"><h3>4 · The LRC signal</h3><p>All readings are added up and compared with the maximum possible: ≥45% = <span class="sig sig-strong-buy">STRONG BUY</span>, ≥18% = <span class="sig sig-buy">BUY</span>, between = <span class="sig sig-hold">HOLD</span>, ≤−18% = <span class="sig sig-sell">SELL</span>, ≤−45% = <span class="sig sig-strong-sell">STRONG SELL</span>.</p></div>
+      <div class="card"><h3>4 · The LRC Stock Scanner rating</h3><p>All readings are added up and compared with the maximum possible: ≥45% = <span class="sig sig-strong-buy">STRONG BUY</span>, ≥18% = <span class="sig sig-buy">BUY</span>, between = <span class="sig sig-hold">HOLD</span>, ≤−18% = <span class="sig sig-sell">SELL</span>, ≤−45% = <span class="sig sig-strong-sell">STRONG SELL</span>.</p></div>
       <div class="card"><h3>5 · Major support</h3><p>Swing highs and lows (5-bar pivots) from the last 12 months are clustered; a level touched at least twice is a major support or resistance. The one-page summary draws them on the chart with the entry, stop and targets.</p></div>
-      <div class="card"><h3>6 · Entry plans</h3><p>Breakout: buy stop above the breakout-day high, stop below the breakout level. Retest: buy stop above yesterday's high once support holds, stop below support. Shorts mirror this. Size = account × 1% ÷ (entry − stop). Targets 2R and 3R; results within 14 days = event risk.</p></div>
+      <div class="card"><h3>6 · Entry plans</h3><p>Breakout: buy stop above the breakout-day high, stop below the breakout level. Retest: buy stop above yesterday's high once support holds, stop below support. Shorts mirror this. Every plan shows the downside to the stop and the upside to two targets in %, and the position size that risks 1% of your account. Results within 14 days = event risk.</p></div>
     </div>
     <p class="edu-note" style="margin-top:30px"><b>UPDATES</b> The scanner runs automatically every trading day after the New York close (about 06:30 South African time), using Yahoo Finance prices, fundamentals and analyst data. The JSE universe is our list of large and mid caps; New York covers the S&amp;P 500 and Nasdaq-100.</p>
   </div>
@@ -119,7 +119,7 @@
     <div class="cols">
       <div><a class="brand" href="index.html"><img src="assets/img/monogram.png" alt=""><div><span>LEAGO RIFUMO</span><small>CAPITAL</small></div></a>
         <p style="margin-top:16px;max-width:320px">Independent equity research, live trading and market education. Built on Discipline.</p></div>
-      <div><h5>RESEARCH</h5><ul><li><a href="scanner.html">LRC Scanner</a></li><li><a href="research.html">Research library</a></li><li><a href="tools.html">Analyst tools</a></li><li><a href="markets.html">Live markets</a></li><li><a href="academy.html">Academy</a></li></ul></div>
+      <div><h5>RESEARCH</h5><ul><li><a href="scanner.html">LRC Stock Scanner</a></li><li><a href="research.html">Research library</a></li><li><a href="tools.html">Analyst tools</a></li><li><a href="markets.html">Live markets</a></li><li><a href="academy.html">Academy</a></li></ul></div>
       <div><h5>FOLLOW</h5><ul><li><a href="https://www.youtube.com/@LeagoRifumoCapital" target="_blank" rel="noopener">YouTube</a></li><li><a href="https://www.tiktok.com/@leago_rifumo_capital1" target="_blank" rel="noopener">TikTok</a></li><li><a href="https://www.facebook.com/PnLventures" target="_blank" rel="noopener">Facebook</a></li><li><a href="show.html">Live Show</a></li></ul></div>
       <div><h5>CONTACT</h5><ul><li><a href="mailto:info@leagorifumocapital.co.za">info@leagorifumocapital.co.za</a></li><li>Ermelo, Mpumalanga, South Africa</li><li><a href="contact.html">Bookings &amp; collabs</a></li></ul></div>
     </div>
