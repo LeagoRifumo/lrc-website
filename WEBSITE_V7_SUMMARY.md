@@ -1,4 +1,4 @@
-# Leago Rifumo Capital website — v6 (25 Oct 2026)
+# Leago Rifumo Capital website — v7 (25 Oct 2026)
 
 Repository: github.com/LeagoRifumo/lrc-website (branch main, GitHub Pages serves /docs)
 Give this file (and the zip) to Claude when you next update the website.
@@ -11,17 +11,21 @@ Give this file (and the zip) to Claude when you next update the website.
 - track.html — track record of every scanner rating (from 25 Oct 2026)
 - dashboard.html, earnings.html, news.html, articles.html, research.html, tools.html, academy.html, markets.html, show.html, contact.html, write.html
 
-## Scoring (agents/tools/scan_engine.py)
-- Six factors, each 0-100 = percentile vs same sector & market (momentum/technical: whole market):
-  Value 20%, Growth 20%, Profitability 20%, Momentum 20%, Sentiment 10%, Technical 10%. Grades A 80+, B 60+, C 40+, D 20+, F <20.
-- LRC score 0-100 = percentile rank of the weighted composite within the market (85 = above 85% of companies).
-- Rating: 80+ STRONG BUY, 60-79 BUY, 40-59 HOLD, 20-39 SELL, <20 STRONG SELL.
-  BUY needs >= +5% to the LRC Analyst Target (STRONG BUY +10%); SELL needs downside — otherwise HOLD ("held: target x%").
-- LRC Analyst Target (6 months): analyst's Work-sheet target where covered (docs/data/ratings.json), else 60% consensus + 40% LRC models
-  (P/FCF, PEG, sector P/E), within ±20% of consensus and -35%/+50% of price.
-- Setups: Breakout (55-day high / major resistance on 1.5x volume), Retest of major support, Near breakout, Breakdown, Failed retest.
-  Entry plans show entry, stop (downside %), two targets (upside %). No position sizes anywhere. Summaries show no entry/trading targets.
-- Investment track: 10 quality checks, grade A (8+) / B (6+) / C.
+## Scoring (agents/tools/scan_engine.py) — analyst-approved 37 readings (v7)
+- 37 readings in 7 groups: Valuation (Fwd P/E, Trailing P/E, PEG, P/S, P/B, P/FCF, EV/EBITDA), Growth (revenue & EPS qtr y/y, EPS this/next year est., 3-yr revenue & EPS CAGR),
+  Profitability (gross, operating, net margin, ROE, ROA), Financial health (D/E, current, quick, FCF margin, net cash/market cap),
+  Income (dividend yield, payout), Sentiment (consensus, target upside, upgrades-downgrades, short interest, insider %, institutional %),
+  Technical (trend ±2, momentum ±2, setup ±2, stretch/RSI, volume, beta). Each +1/0/-1 vs sector median or fixed lines (thresholds in READINGS / reading_points).
+- Group score = 50 + 50 × points ÷ possible. Two scanners:
+  * Trading (3-12 months, 6-month target): technical 35, growth 20, sentiment 20, valuation 10, profitability 10, health 5. BUY needs ≥ +5% to LRC target (STRONG BUY +10%), SELL needs downside.
+  * Investment (5-10 years): valuation 25, profitability 25, health 20, growth 20, income 10. BUY cannot be OVERVALUED, SELL cannot be UNDERVALUED.
+  * Bands: 75+ STRONG BUY, 60-74 BUY, 40-59 HOLD, 25-39 SELL, <25 STRONG SELL.
+- Valuation verdict: UNDERVALUED (valuation net ≥ +2 and ≥ 10% upside to LRC target), OVERVALUED (net ≤ -2 or target 5%+ below price), else FAIR VALUE.
+- LRC Analyst Target (6 months): Work-sheet target where covered (ratings.json), else 60% consensus + 40% models (P/FCF, PEG, sector P/E), within ±20% of consensus, -35%/+50% of price.
+- Colours: bright green (+1, best 10% of sector) / green / grey / red / bright red (-1, worst 10%). Scanner group views show company value + sector median (hover: market median).
+- Setups: Breakout, Retest, Near breakout, Breakdown, Failed retest; entry plans show entry, stop (downside %), two targets (upside %). No position sizes. Summaries show no entry/trading targets.
+- One-page summary bottom line = mini thesis (Thesis / Why / What next); all 37 readings vs sector & market; both ratings + valuation verdict.
+- Track record (track.html): trading and investment ratings measured separately.
 
 ## Automation (all in .github/workflows unless noted)
 | Job | When (SAST) | What |
