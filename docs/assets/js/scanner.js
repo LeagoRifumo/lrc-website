@@ -57,7 +57,7 @@ if ($('scTbl')) {
     if (!S) return [];
     const q = ($('scQ').value || '').toLowerCase(), sec = $('scSec').value, sg = $('scSig').value, st = $('scSet').value, vl = $('scVal').value, my = mine();
     return S.rows.filter(r => r.m === mkt && (sec === 'all' || r.sec === sec) && (sg === 'all' || RT(r) === sg) &&
-      (st === 'all' || (st === 'none' ? !r.setup : r.setup === st)) && (!$('scCov').checked || r.cov) && (!$('scMine').checked || my.has(r.t)) &&
+      (st === 'all' || (st === 'none' ? !r.setup : r.setup === st)) && (!$('scMine').checked || my.has(r.t)) &&
       (vl === 'all' || (vl === 'under' ? r.val === 'UNDERVALUED' : vl === 'over' ? r.val === 'OVERVALUED' : r.val === 'FAIR VALUE')) && (!q || (r.t + ' ' + r.n + ' ' + (r.ind || '')).toLowerCase().includes(q)));
   };
   const rdv = (r, k) => (r.rd && r.rd[k]) ? r.rd[k] : null;
@@ -174,7 +174,7 @@ if ($('scTbl')) {
     if (tab === 'stocks' || tab === 'invest') drawStocks(); else if (tab === 'setups') drawSetups(); else if (tab === 'etfs') drawEtfs(); else if (tab === 'sectors') drawSectors();
   }
   $('scSort').addEventListener('change', () => { const [k, d] = $('scSort').value.split(':'); sortK = k; sortD = +d; shown = 120; drawStocks(); });
-  ['scQ', 'scSec', 'scSig', 'scSet', 'scVal', 'scCov', 'scMine'].forEach(id => $(id).addEventListener(id === 'scQ' ? 'input' : 'change', () => { shown = 120; drawStocks(); }));
+  ['scQ', 'scSec', 'scSig', 'scSet', 'scVal', 'scMine'].forEach(id => $(id).addEventListener(id === 'scQ' ? 'input' : 'change', () => { shown = 120; drawStocks(); }));
   ['invG', 'invSec', 'invMos'].forEach(id => $(id).addEventListener('change', drawInvest));
   $('scMore').addEventListener('click', () => { shown += 200; drawStocks(); });
   $('scTbl').addEventListener('click', e => {
@@ -235,12 +235,7 @@ if ($('wlTB')) {
     $('wlTsNote').textContent = note(l.trading_sell.length, c.trading_sell, 'SELL or STRONG SELL for trading');
     $('wlIbNote').textContent = note(l.invest_buy.length, c.invest_buy, 'BUY or STRONG BUY for investing');
     $('wlIsNote').textContent = note(l.invest_sell.length, c.invest_sell, 'SELL or STRONG SELL for investing');
-    const cov = (COV ? COV.companies : []).filter(x => (x.ticker.endsWith('.JO') ? 'JSE' : 'US') === mkt);
-    const cur = mkt === 'JSE' ? 'ZAR' : 'USD';
-    $('wlCov').innerHTML = `<thead><tr><th>COMPANY</th><th>LRC RATING</th><th>PRICE</th><th>LRC ANALYST TARGET</th><th>UPSIDE</th><th>SINCE RATING</th><th>NEXT RESULTS</th><th>LATEST NEWS</th></tr></thead><tbody>` +
-      (cov.length ? cov.map(x => `<tr><td>${nm(x.ticker, x.name)}</td><td><span class="pill p-${x.rating.toLowerCase()}">${esc(x.rating)}</span>${x.under_review ? '<small style="color:#F2CE72">under review</small>' : `<small>rated ${esc(x.rated || '')}</small>`}</td>
-        <td class="n">${px(x.price, cur)}</td><td class="n">${px(x.target_6m, cur)}</td>${upCell(x.upside)}<td class="n">${pc(x.since_rating)}</td><td>${esc(x.next_earnings || '—')}</td><td class="news">${head1(x.ticker)}</td></tr>`).join('')
-        : none(8, `No ${mkt === 'JSE' ? 'JSE' : 'New York'} companies carry an LRC analyst Work-sheet rating yet. The four lists above are built automatically by the scanner.`)) + '</tbody>';
+    const cov = [];   // fully automated: no hand-rated coverage
     const names = new Set([...l.trading_buy, ...l.trading_sell, ...l.invest_buy, ...l.invest_sell].map(r => r.t).concat(cov.map(x => x.ticker)));
     const items = [];
     if (NEWS) for (const t of names) { const x = NEWS.companies[t]; if (x) (x.news || []).forEach(n => items.push({ ...n, t })); }

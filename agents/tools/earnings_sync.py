@@ -76,7 +76,7 @@ def main(window_days=62):
         items.sort(key=lambda x: (x['date'], not x['covered'], -(x.get('market_cap_bn') or 0)))
         cal['items'] = items
         cal['synced'] = dt.datetime.now(SAST).isoformat(timespec='minutes')
-        cal['coverage_note'] = 'Ticked = on the LRC watchlist or rated by an LRC analyst. Every company the LRC Stock Scanner tracks shows its trading and investment ratings. Updated after every scanner run.'
+        cal['coverage_note'] = 'Ticked = on the LRC watchlist. Every company the LRC Stock Scanner tracks shows its trading and investment ratings. Updated after every scanner run.'
         if mk == 'JSE' and isinstance(cal.get('source'), str):
             cal['source'] = cal['source'].replace('by the LRC Research from', 'by LRC Research from')
             if 'market data feed' not in cal['source']:

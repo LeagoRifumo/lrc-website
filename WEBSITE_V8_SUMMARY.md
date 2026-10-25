@@ -72,3 +72,6 @@ Give this file (and the zip) to Claude when you next update the website.
 - Each card links to: one-page summary, watchlist tag (if on a list), earnings calendar (results date), our articles on it (articles.json tickers), latest news (intel).
 - Fed back into the site: company_intel collects news for research ideas; research_agent.md researches them; earnings_sync tags them "Research idea" on the earnings calendar.
 - Research library = LIBRARY in main.js (company reports removed 26 Oct) + every article (articles.json) + every weekly dashboard (dashboards/index.json), newest first, sectors built automatically.
+
+## Fully automated (26 Oct 2026)
+- Hand ratings retired: docs/data/ratings.json has "ratings": {} (old ratings in git history). No analyst coverage table, no "LRC covered" filter, no LRC analyst tags. Every rating and target comes from the LRC Stock Scanner. Earnings ticks = watchlist names.

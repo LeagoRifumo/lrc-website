@@ -578,7 +578,7 @@ const artCard = (a, pre = '') => `<a class="art" href="${pre}${esc(a.url)}">${a.
     const go = d => {
       const today = new Date(Date.now() + 2 * 3600e3).toISOString().slice(0, 10), end = new Date(Date.now() + (2 * 3600e3) + days * 864e5).toISOString().slice(0, 10);
       const rows = (d.items || []).filter(x => x.date >= today && x.date <= end && (cov === 'all' || (cov === 'cov' ? x.covered : !!x.v)) && (!q || (x.ticker + ' ' + x.name).toLowerCase().includes(q)));
-      $('erMeta').innerHTML = `<span class="ai">● ${esc(d.market)}</span><span>Updated <b>${when(d.synced || d.generated)}</b></span><span><b>${rows.length}</b> companies in range</span><span><b>${rows.filter(x => x.covered).length}</b> ✓ on the LRC watchlist / coverage</span>`;
+      $('erMeta').innerHTML = `<span class="ai">● ${esc(d.market)}</span><span>Updated <b>${when(d.synced || d.generated)}</b></span><span><b>${rows.length}</b> companies in range</span><span><b>${rows.filter(x => x.covered).length}</b> ✓ on the LRC watchlist</span>`;
       $('erSrc').textContent = (d.coverage_note ? d.coverage_note + ' ' : '') + 'Source: ' + d.source + ' Dates can move — confirm on the company announcement (SENS for JSE companies).';
       if (!rows.length) { L.innerHTML = `<p class="muted-load">${esc(d.note || 'No results dates in this range yet.')}</p>`; return; }
       const by = {}; rows.forEach(x => (by[x.date] = by[x.date] || []).push(x));
