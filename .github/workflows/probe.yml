@@ -1,12 +1,18 @@
-name: Probe data sources (temporary)
+name: Scanner test run (temporary)
 on:
   push:
     branches: [claude/scanner]
-    paths: [agents/tools/probe_sources.py, .github/workflows/probe.yml]
+    paths: [agents/tools/scanner.py, agents/tools/scan_engine.py, agents/tools/yahoo.py, .github/workflows/probe.yml]
 jobs:
-  probe:
+  test:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
-      - run: python3 agents/tools/probe_sources.py
+      - name: Scanner on a sample
+        env: { SCAN_DEBUG: "AAPL,NVDA,NPN.JO,PRX.JO,BHG.JO,GLN.JO,CFR.JO,AGL.JO,BTI.JO,SBK.JO,MTN.JO,SHP.JO" }
+        run: python3 agents/tools/scanner.py --limit 40
+      - name: Sizes and samples
+        run: |
+          du -sh docs/data/scan; ls docs/data/scan/t | wc -l; head -c 1500 docs/data/scan/sectors.json; echo; head -c 1200 docs/data/scan/etfs.json
+          python3 -c "import json; print(json.load(open('agents/work/us_universe.json'))[:20], len(json.load(open('agents/work/us_universe.json'))))"

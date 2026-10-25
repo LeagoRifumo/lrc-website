@@ -1,0 +1,865 @@
+{
+ "about": "LRC Scanner universe. US stocks = S&P 500 + Nasdaq-100 (list refreshed automatically) + every LRC-covered name. JSE stocks = the curated list below (large & mid caps; Yahoo symbols end in .JO, prices quoted in cents). Add or remove names here.",
+ "us_lists": [
+  "https://stockanalysis.com/list/sp-500-stocks/",
+  "https://stockanalysis.com/list/nasdaq-100-stocks/"
+ ],
+ "benchmarks": {
+  "US": {
+   "t": "SPY",
+   "name": "S&P 500 (SPY)"
+  },
+  "JSE": {
+   "t": "^J203.JO",
+   "name": "JSE All Share"
+  }
+ },
+ "jse": [
+  [
+   "NPN.JO",
+   "Naspers",
+   "Consumer Cyclical"
+  ],
+  [
+   "PRX.JO",
+   "Prosus",
+   "Consumer Cyclical"
+  ],
+  [
+   "BTI.JO",
+   "British American Tobacco",
+   "Consumer Defensive"
+  ],
+  [
+   "CFR.JO",
+   "Richemont",
+   "Consumer Cyclical"
+  ],
+  [
+   "AGL.JO",
+   "Anglo American",
+   "Basic Materials"
+  ],
+  [
+   "BHG.JO",
+   "BHP Group",
+   "Basic Materials"
+  ],
+  [
+   "GLN.JO",
+   "Glencore",
+   "Basic Materials"
+  ],
+  [
+   "FSR.JO",
+   "FirstRand",
+   "Financial Services"
+  ],
+  [
+   "SBK.JO",
+   "Standard Bank",
+   "Financial Services"
+  ],
+  [
+   "ABG.JO",
+   "Absa Group",
+   "Financial Services"
+  ],
+  [
+   "NED.JO",
+   "Nedbank",
+   "Financial Services"
+  ],
+  [
+   "CPI.JO",
+   "Capitec",
+   "Financial Services"
+  ],
+  [
+   "DSY.JO",
+   "Discovery",
+   "Financial Services"
+  ],
+  [
+   "SLM.JO",
+   "Sanlam",
+   "Financial Services"
+  ],
+  [
+   "OMU.JO",
+   "Old Mutual",
+   "Financial Services"
+  ],
+  [
+   "MTM.JO",
+   "Momentum Group",
+   "Financial Services"
+  ],
+  [
+   "INL.JO",
+   "Investec Ltd",
+   "Financial Services"
+  ],
+  [
+   "INP.JO",
+   "Investec plc",
+   "Financial Services"
+  ],
+  [
+   "NY1.JO",
+   "Ninety One",
+   "Financial Services"
+  ],
+  [
+   "RNI.JO",
+   "Reinet",
+   "Financial Services"
+  ],
+  [
+   "REM.JO",
+   "Remgro",
+   "Financial Services"
+  ],
+  [
+   "QLT.JO",
+   "Quilter",
+   "Financial Services"
+  ],
+  [
+   "SNT.JO",
+   "Santam",
+   "Financial Services"
+  ],
+  [
+   "PSG.JO",
+   "PSG Financial Services",
+   "Financial Services"
+  ],
+  [
+   "MTN.JO",
+   "MTN Group",
+   "Communication Services"
+  ],
+  [
+   "VOD.JO",
+   "Vodacom",
+   "Communication Services"
+  ],
+  [
+   "TKG.JO",
+   "Telkom",
+   "Communication Services"
+  ],
+  [
+   "SHP.JO",
+   "Shoprite",
+   "Consumer Defensive"
+  ],
+  [
+   "BID.JO",
+   "Bid Corporation",
+   "Consumer Defensive"
+  ],
+  [
+   "BVT.JO",
+   "Bidvest",
+   "Industrials"
+  ],
+  [
+   "SOL.JO",
+   "Sasol",
+   "Basic Materials"
+  ],
+  [
+   "GFI.JO",
+   "Gold Fields",
+   "Basic Materials"
+  ],
+  [
+   "ANG.JO",
+   "AngloGold Ashanti",
+   "Basic Materials"
+  ],
+  [
+   "HAR.JO",
+   "Harmony Gold",
+   "Basic Materials"
+  ],
+  [
+   "IMP.JO",
+   "Impala Platinum",
+   "Basic Materials"
+  ],
+  [
+   "SSW.JO",
+   "Sibanye-Stillwater",
+   "Basic Materials"
+  ],
+  [
+   "NPH.JO",
+   "Northam Platinum",
+   "Basic Materials"
+  ],
+  [
+   "AMS.JO",
+   "Anglo American Platinum (Valterra)",
+   "Basic Materials"
+  ],
+  [
+   "KIO.JO",
+   "Kumba Iron Ore",
+   "Basic Materials"
+  ],
+  [
+   "EXX.JO",
+   "Exxaro",
+   "Basic Materials"
+  ],
+  [
+   "S32.JO",
+   "South32",
+   "Basic Materials"
+  ],
+  [
+   "ARI.JO",
+   "African Rainbow Minerals",
+   "Basic Materials"
+  ],
+  [
+   "DRD.JO",
+   "DRDGold",
+   "Basic Materials"
+  ],
+  [
+   "PAN.JO",
+   "Pan African Resources",
+   "Basic Materials"
+  ],
+  [
+   "MNP.JO",
+   "Mondi",
+   "Basic Materials"
+  ],
+  [
+   "SAP.JO",
+   "Sappi",
+   "Basic Materials"
+  ],
+  [
+   "OMN.JO",
+   "Omnia",
+   "Basic Materials"
+  ],
+  [
+   "AFT.JO",
+   "Afrimat",
+   "Basic Materials"
+  ],
+  [
+   "MRP.JO",
+   "Mr Price",
+   "Consumer Cyclical"
+  ],
+  [
+   "CLS.JO",
+   "Clicks",
+   "Healthcare"
+  ],
+  [
+   "DCP.JO",
+   "Dis-Chem",
+   "Healthcare"
+  ],
+  [
+   "WHL.JO",
+   "Woolworths",
+   "Consumer Cyclical"
+  ],
+  [
+   "TFG.JO",
+   "The Foschini Group",
+   "Consumer Cyclical"
+  ],
+  [
+   "TRU.JO",
+   "Truworths",
+   "Consumer Cyclical"
+  ],
+  [
+   "PIK.JO",
+   "Pick n Pay",
+   "Consumer Defensive"
+  ],
+  [
+   "SPP.JO",
+   "Spar",
+   "Consumer Defensive"
+  ],
+  [
+   "PPH.JO",
+   "Pepkor",
+   "Consumer Cyclical"
+  ],
+  [
+   "TBS.JO",
+   "Tiger Brands",
+   "Consumer Defensive"
+  ],
+  [
+   "AVI.JO",
+   "AVI",
+   "Consumer Defensive"
+  ],
+  [
+   "APN.JO",
+   "Aspen",
+   "Healthcare"
+  ],
+  [
+   "NTC.JO",
+   "Netcare",
+   "Healthcare"
+  ],
+  [
+   "LHC.JO",
+   "Life Healthcare",
+   "Healthcare"
+  ],
+  [
+   "OUT.JO",
+   "OUTsurance",
+   "Financial Services"
+  ],
+  [
+   "NRP.JO",
+   "NEPI Rockcastle",
+   "Real Estate"
+  ],
+  [
+   "GRT.JO",
+   "Growthpoint",
+   "Real Estate"
+  ],
+  [
+   "RDF.JO",
+   "Redefine",
+   "Real Estate"
+  ],
+  [
+   "RES.JO",
+   "Resilient REIT",
+   "Real Estate"
+  ],
+  [
+   "VKE.JO",
+   "Vukile",
+   "Real Estate"
+  ],
+  [
+   "HYP.JO",
+   "Hyprop",
+   "Real Estate"
+  ],
+  [
+   "FFB.JO",
+   "Fortress REIT B",
+   "Real Estate"
+  ],
+  [
+   "MCG.JO",
+   "MultiChoice",
+   "Communication Services"
+  ],
+  [
+   "CCD.JO",
+   "Cashbuild",
+   "Consumer Cyclical"
+  ],
+  [
+   "BAW.JO",
+   "Barloworld",
+   "Industrials"
+  ],
+  [
+   "RLO.JO",
+   "Reunert",
+   "Industrials"
+  ],
+  [
+   "KAP.JO",
+   "KAP",
+   "Industrials"
+  ],
+  [
+   "SUI.JO",
+   "Sun International",
+   "Consumer Cyclical"
+  ],
+  [
+   "TSG.JO",
+   "Tsogo Sun",
+   "Consumer Cyclical"
+  ],
+  [
+   "FBR.JO",
+   "Famous Brands",
+   "Consumer Cyclical"
+  ],
+  [
+   "SPG.JO",
+   "Super Group",
+   "Industrials"
+  ],
+  [
+   "MTH.JO",
+   "Motus",
+   "Consumer Cyclical"
+  ],
+  [
+   "ADH.JO",
+   "ADvTECH",
+   "Consumer Defensive"
+  ],
+  [
+   "DTC.JO",
+   "Datatec",
+   "Technology"
+  ],
+  [
+   "KST.JO",
+   "PSG Konsult",
+   "Financial Services"
+  ],
+  [
+   "HCI.JO",
+   "Hosken Consolidated",
+   "Financial Services"
+  ],
+  [
+   "WBC.JO",
+   "WBHO",
+   "Industrials"
+  ],
+  [
+   "RBO.JO",
+   "Raubex",
+   "Industrials"
+  ],
+  [
+   "SSU.JO",
+   "Southern Sun",
+   "Consumer Cyclical"
+  ],
+  [
+   "ITE.JO",
+   "Italtile",
+   "Consumer Cyclical"
+  ],
+  [
+   "JSE.JO",
+   "JSE Ltd",
+   "Financial Services"
+  ],
+  [
+   "CML.JO",
+   "Coronation",
+   "Financial Services"
+  ]
+ ],
+ "etfs": [
+  [
+   "SPY",
+   "US",
+   "Broad market",
+   "S&P 500"
+  ],
+  [
+   "QQQ",
+   "US",
+   "Broad market",
+   "Nasdaq-100"
+  ],
+  [
+   "DIA",
+   "US",
+   "Broad market",
+   "Dow 30"
+  ],
+  [
+   "IWM",
+   "US",
+   "Broad market",
+   "Russell 2000"
+  ],
+  [
+   "RSP",
+   "US",
+   "Broad market",
+   "S&P 500 equal weight"
+  ],
+  [
+   "XLK",
+   "US",
+   "Sectors",
+   "Technology"
+  ],
+  [
+   "XLF",
+   "US",
+   "Sectors",
+   "Financials"
+  ],
+  [
+   "XLV",
+   "US",
+   "Sectors",
+   "Health care"
+  ],
+  [
+   "XLY",
+   "US",
+   "Sectors",
+   "Consumer discretionary"
+  ],
+  [
+   "XLP",
+   "US",
+   "Sectors",
+   "Consumer staples"
+  ],
+  [
+   "XLC",
+   "US",
+   "Sectors",
+   "Communication services"
+  ],
+  [
+   "XLI",
+   "US",
+   "Sectors",
+   "Industrials"
+  ],
+  [
+   "XLE",
+   "US",
+   "Sectors",
+   "Energy"
+  ],
+  [
+   "XLB",
+   "US",
+   "Sectors",
+   "Materials"
+  ],
+  [
+   "XLRE",
+   "US",
+   "Sectors",
+   "Real estate"
+  ],
+  [
+   "XLU",
+   "US",
+   "Sectors",
+   "Utilities"
+  ],
+  [
+   "SMH",
+   "US",
+   "Themes",
+   "Semiconductors"
+  ],
+  [
+   "IGV",
+   "US",
+   "Themes",
+   "Software"
+  ],
+  [
+   "XBI",
+   "US",
+   "Themes",
+   "Biotech"
+  ],
+  [
+   "KRE",
+   "US",
+   "Themes",
+   "Regional banks"
+  ],
+  [
+   "ITB",
+   "US",
+   "Themes",
+   "Homebuilders"
+  ],
+  [
+   "ITA",
+   "US",
+   "Themes",
+   "Aerospace & defence"
+  ],
+  [
+   "CIBR",
+   "US",
+   "Themes",
+   "Cybersecurity"
+  ],
+  [
+   "ARKK",
+   "US",
+   "Themes",
+   "Innovation (ARK)"
+  ],
+  [
+   "TAN",
+   "US",
+   "Themes",
+   "Solar"
+  ],
+  [
+   "URA",
+   "US",
+   "Themes",
+   "Uranium"
+  ],
+  [
+   "BOTZ",
+   "US",
+   "Themes",
+   "Robotics & AI"
+  ],
+  [
+   "JETS",
+   "US",
+   "Themes",
+   "Airlines"
+  ],
+  [
+   "GLD",
+   "US",
+   "Commodities & bonds",
+   "Gold"
+  ],
+  [
+   "SLV",
+   "US",
+   "Commodities & bonds",
+   "Silver"
+  ],
+  [
+   "GDX",
+   "US",
+   "Commodities & bonds",
+   "Gold miners"
+  ],
+  [
+   "USO",
+   "US",
+   "Commodities & bonds",
+   "Crude oil"
+  ],
+  [
+   "CPER",
+   "US",
+   "Commodities & bonds",
+   "Copper"
+  ],
+  [
+   "TLT",
+   "US",
+   "Commodities & bonds",
+   "20+ yr Treasuries"
+  ],
+  [
+   "IEF",
+   "US",
+   "Commodities & bonds",
+   "7-10 yr Treasuries"
+  ],
+  [
+   "HYG",
+   "US",
+   "Commodities & bonds",
+   "High-yield bonds"
+  ],
+  [
+   "EEM",
+   "US",
+   "International",
+   "Emerging markets"
+  ],
+  [
+   "EFA",
+   "US",
+   "International",
+   "Developed ex-US"
+  ],
+  [
+   "EZA",
+   "US",
+   "International",
+   "South Africa (iShares)"
+  ],
+  [
+   "FXI",
+   "US",
+   "International",
+   "China large caps"
+  ],
+  [
+   "INDA",
+   "US",
+   "International",
+   "India"
+  ],
+  [
+   "EWZ",
+   "US",
+   "International",
+   "Brazil"
+  ],
+  [
+   "EWJ",
+   "US",
+   "International",
+   "Japan"
+  ],
+  [
+   "STX40.JO",
+   "JSE",
+   "Broad market",
+   "Satrix 40"
+  ],
+  [
+   "STXSWX.JO",
+   "JSE",
+   "Broad market",
+   "Satrix SWIX Top 40"
+  ],
+  [
+   "STXCAP.JO",
+   "JSE",
+   "Broad market",
+   "Satrix Capped All Share"
+  ],
+  [
+   "STXRES.JO",
+   "JSE",
+   "Sectors",
+   "Satrix RESI (resources)"
+  ],
+  [
+   "STXFIN.JO",
+   "JSE",
+   "Sectors",
+   "Satrix FINI (financials)"
+  ],
+  [
+   "STXIND.JO",
+   "JSE",
+   "Sectors",
+   "Satrix INDI (industrials)"
+  ],
+  [
+   "STXPRO.JO",
+   "JSE",
+   "Sectors",
+   "Satrix Property"
+  ],
+  [
+   "STXDIV.JO",
+   "JSE",
+   "Themes",
+   "Satrix Dividend Plus"
+  ],
+  [
+   "STXQUA.JO",
+   "JSE",
+   "Themes",
+   "Satrix Quality"
+  ],
+  [
+   "STXMMT.JO",
+   "JSE",
+   "Themes",
+   "Satrix Momentum"
+  ],
+  [
+   "GLD.JO",
+   "JSE",
+   "Commodities & bonds",
+   "NewGold (gold)"
+  ],
+  [
+   "NGPLT.JO",
+   "JSE",
+   "Commodities & bonds",
+   "NewGold Platinum"
+  ],
+  [
+   "STXGOV.JO",
+   "JSE",
+   "Commodities & bonds",
+   "Satrix SA Government Bond"
+  ],
+  [
+   "STX500.JO",
+   "JSE",
+   "International",
+   "Satrix S&P 500"
+  ],
+  [
+   "STXNDQ.JO",
+   "JSE",
+   "International",
+   "Satrix Nasdaq-100"
+  ],
+  [
+   "STXWDM.JO",
+   "JSE",
+   "International",
+   "Satrix MSCI World"
+  ],
+  [
+   "STXEMG.JO",
+   "JSE",
+   "International",
+   "Satrix MSCI Emerging Markets"
+  ],
+  [
+   "STXCHN.JO",
+   "JSE",
+   "International",
+   "Satrix MSCI China"
+  ]
+ ],
+ "sector_etf": {
+  "US": {
+   "Technology": "XLK",
+   "Financial Services": "XLF",
+   "Healthcare": "XLV",
+   "Consumer Cyclical": "XLY",
+   "Consumer Defensive": "XLP",
+   "Communication Services": "XLC",
+   "Industrials": "XLI",
+   "Energy": "XLE",
+   "Basic Materials": "XLB",
+   "Real Estate": "XLRE",
+   "Utilities": "XLU"
+  },
+  "JSE": {
+   "Basic Materials": "STXRES.JO",
+   "Energy": "STXRES.JO",
+   "Financial Services": "STXFIN.JO",
+   "Real Estate": "STXPRO.JO",
+   "Technology": "STXIND.JO",
+   "Communication Services": "STXIND.JO",
+   "Consumer Cyclical": "STXIND.JO",
+   "Consumer Defensive": "STXIND.JO",
+   "Healthcare": "STXIND.JO",
+   "Industrials": "STXIND.JO",
+   "Utilities": "STXIND.JO"
+  }
+ }
+}
