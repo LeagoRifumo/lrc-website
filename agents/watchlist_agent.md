@@ -38,6 +38,8 @@ and adds its rating to ratings.json. Open a GitHub issue "Screening candidates <
 The Company Research Agent (`agents/research_agent.md`, weekdays) keeps these files current for every watchlist company. On Saturdays,
 check that every company in `docs/data/scan/lists.json` and `ratings.json` has a file updated within 10 days and list any gaps in the
 screening issue. Files with `"analyst": "Prayer Nkuna"` are the analyst's own work: never rewrite their text.
+Then follow `agents/research_agent.md` for the 5 companies whose research is missing or oldest (until a separate weekday
+Company Research Agent is scheduled, this Saturday run is what keeps the research layer moving).
 
 ## 6. Publish
 Validate JSON (`python3 -m json.tool`), then `git add -A docs agents && git commit -m "Weekly research <date>" && git pull --rebase && git push`.
