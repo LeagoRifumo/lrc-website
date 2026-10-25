@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=7.3">
+<link rel="stylesheet" href="assets/css/style.css?v=7.4">
 </head>
 <body>
 <header class="site-header">
@@ -50,17 +50,29 @@
 <div class="ticker-bar"><div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div><script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>{"symbols": [{"proName": "NASDAQ:AAPL", "title": "Apple"}, {"proName": "NASDAQ:MSFT", "title": "Microsoft"}, {"proName": "NASDAQ:NVDA", "title": "NVIDIA"}, {"proName": "NASDAQ:AMZN", "title": "Amazon"}, {"proName": "NASDAQ:TSLA", "title": "Tesla"}, {"proName": "NYSE:JPM", "title": "JPMorgan"}, {"proName": "FX_IDC:USDZAR", "title": "USD/ZAR"}, {"proName": "FX:EURUSD", "title": "EUR/USD"}, {"proName": "FX:GBPUSD", "title": "GBP/USD"}, {"proName": "OANDA:XAUUSD", "title": "Gold"}, {"proName": "OANDA:XPTUSD", "title": "Platinum"}, {"proName": "TVC:UKOIL", "title": "Brent oil"}], "showSymbolLogo": true, "isTransparent": true, "displayMode": "adaptive", "colorTheme": "dark", "locale": "en"}</script></div></div>
 <div class="breaking" id="breaking" hidden></div>
 <main>
-<section class="dash2"><div class="wrap wide">
-  <div class="d2-head">
-    <div><span class="eyebrow">Market dashboard</span><h1>The week in markets <span class="gold">on one screen</span></h1></div>
-    <div class="d2-ctl"><select id="dashWeek" aria-label="Edition"></select><div class="agent-meta" id="dashMeta" style="margin-top:8px"></div></div>
+<section class="page-hero dash-hero"><div class="wrap wide">
+  <span class="eyebrow">Market dashboard</span>
+  <h1>The week in markets, <span class="gold">on one screen</span></h1>
+  <div class="dsel"><label for="dashWeek">Edition</label><select id="dashWeek"></select></div>
+  <div class="agent-meta" id="dashMeta"></div>
+</div></section>
+<section style="padding-top:22px"><div class="wrap wide">
+  <div class="dview" id="dashView"></div>
+  <div class="tbl-wrap"><table class="wl dash dash3" id="dashTbl"><tbody><tr><td class="muted-load">Loading the dashboard…</td></tr></tbody></table></div>
+  <div class="d3-legend"><span><i class="g2"></i>strong good move</span><span><i class="g1"></i>good</span><span><i class="g0"></i>little change</span><span><i class="r1"></i>bad</span><span><i class="r2"></i>strong bad move</span>
+    <em>Green means good for investors: markets up, the rand stronger, inflation and interest rates lower. Hover a row to see the source.</em></div>
+
+  <div class="mv-head" id="movers-top">
+    <h2>Top <span class="gold">movers</span></h2>
+    <div class="mv-ctl">
+      <div class="seg" id="mvMkt"><button data-v="JSE">JSE</button><button data-v="US">New York</button></div>
+      <div class="seg" id="mvPer"><button data-v="chg">Today</button><button data-v="p1w">This week</button><button data-v="p1m">This month</button></div>
+    </div>
   </div>
-  <div class="d2-pulse" id="dashPulse"></div>
-  <div class="d2-view" id="dashView"></div>
-  <div class="d2-grid" id="dashGrid"><p class="muted-load">Loading the dashboard…</p></div>
-  <div class="d2-legend"><span><i class="g2"></i>strongly good</span><span><i class="g1"></i>good</span><span><i class="g0"></i>little change</span><span><i class="r1"></i>bad</span><span><i class="r2"></i>strongly bad</span>
-    <em>Colours show what the move means for investors: rising markets, a firmer rand, and lower inflation and yields are green. Hover a row for its source.</em></div>
+  <p class="mv-meta" id="movMeta"></p>
+  <div class="mv3" id="movers"><p class="muted-load">Loading top movers…</p></div>
   <p class="src-note" id="dashSrc"></p>
+  <div class="edu-note" style="margin-top:24px"><b>EDUCATIONAL ONLY</b> Market data for information. Check the source before acting; prices can be delayed or revised.</div>
 </div></section>
 </main>
 <div class="disclaimer-band"><div class="wrap"><b>DISCLAIMER</b>All content from Leago Rifumo Capital — including research, tools, market briefs and the Leago Rifumo Show — is for educational and entertainment purposes only and is general information, not financial advice. Trading and investing involve risk, including the loss of capital. <a href="disclaimer.html" style="color:var(--gold-2)">Full disclaimer →</a></div></div>
@@ -77,6 +89,6 @@
   </div>
 </footer>
 <script>window.LRC_DATA = "data/";</script>
-<script src="assets/js/main.js?v=7.3"></script>
+<script src="assets/js/main.js?v=7.4"></script>
 </body>
 </html>
