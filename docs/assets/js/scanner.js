@@ -259,6 +259,41 @@ if ($('wlTB')) {
   });
 }
 
+/* =================== RESEARCH PAGE: companies worth researching (linked to watchlist, earnings, articles, news) =================== */
+if ($('riOut')) {
+  let mkt = getMkt(), I = null, L = null, A = null, NEWS = null;
+  const LBL = { trading_buy: 'Trading BUY', trading_sell: 'Trading SELL', invest_buy: 'Investment BUY', invest_sell: 'Investment SELL' };
+  const box = $('riMkt');
+  box.addEventListener('click', e => { const b = e.target.closest('button[data-m]'); if (b && b.dataset.m !== mkt) setMkt(b.dataset.m); });
+  const draw = () => {
+    box.innerHTML = `<div class="seg" role="group" aria-label="Market">${[['JSE', 'JSE · Johannesburg'], ['US', 'New York']].map(([v, l]) => `<button data-m="${v}" class="${mkt === v ? 'on' : ''}">${l}</button>`).join('')}</div>`;
+    if (!I) return fail($('riOut'), 'research ideas list');
+    const onList = {};
+    Object.values((L && L.lists) || {}).forEach(l => Object.entries(LBL).forEach(([k, lbl]) => (l[k] || []).forEach(x => (onList[x.t] = onList[x.t] || []).push(lbl))));
+    const arts = {};
+    ((A && A.articles) || []).forEach(a => (a.tickers || []).forEach(t => { const k = /\.JO$/.test(t) ? t : (I.ideas.JSE && Object.values(I.ideas.JSE).flat().some(x => x.t === t + '.JO') ? t + '.JO' : t); (arts[k] = arts[k] || []).push(a); }));
+    const g = I.ideas[mkt] || {};
+    const card = x => {
+      const d = x.ne ? Math.round((new Date(x.ne) - new Date()) / 864e5) : null;
+      const h = NEWS && NEWS.companies && NEWS.companies[x.t] && (NEWS.companies[x.t].news || [])[0];
+      return `<div class="ri-card"><a class="ri-head" href="stock.html?t=${encodeURIComponent(x.t)}"><span class="tic">${esc(x.t.replace('.JO', ''))}</span><b>${esc(x.n)}</b><small>${esc(x.ind || x.sec)} · ${px(x.px, x.cur)} <span style="color:${(x.chg ?? 0) >= 0 ? '#5ED39A' : '#F08A7E'}">${pc(x.chg)}</span></small></a>
+        <div class="ri-scores"><span>Trading <b>${x.score ?? '—'}</b> <span class="${sigCls(x.v)}">${esc(x.v || '—')}</span></span><span>Investment <b>${x.iv_score ?? '—'}</b> <span class="${sigCls(x.iv_v)}">${esc(x.iv_v || '—')}</span></span><span><span class="${valCls(x.val)}">${esc(x.val || '—')}</span>${x.q ? ` <span class="pill p-${x.q.toLowerCase()}">Quality ${esc(x.q)}</span>` : ''}</span></div>
+        <p class="ri-why">${esc(x.why)}</p>
+        <div class="ri-links">${(onList[x.t] || []).map(l => `<a class="wtag ${/SELL/.test(l) ? 's' : 'b'}" href="watchlist.html">${esc(l)}</a>`).join('')}${x.ne ? `<a class="tag${d !== null && d <= 14 ? ' ev' : ''}" href="earnings.html#${mkt === 'JSE' ? 'jse' : 'us'}">Results ${esc(x.ne)}</a>` : ''}${(arts[x.t] || []).slice(0, 2).map(a => `<a class="tag" href="${esc(a.url)}">Article: ${esc(a.title.slice(0, 40))}${a.title.length > 40 ? '…' : ''}</a>`).join('')}</div>
+        ${h ? `<a class="ri-news" href="${esc(h.url)}" target="_blank" rel="noopener">${esc(h.title.slice(0, 95))}${h.title.length > 95 ? '…' : ''}<small>${esc(h.source)}${h.published ? ' · ' + esc(h.published.slice(0, 10)) : ''}</small></a>` : ''}
+        <a class="ri-open" href="stock.html?t=${encodeURIComponent(x.t)}">Open the one-page summary →</a></div>`;
+    };
+    $('riOut').innerHTML = I.groups.map(G => { const list = g[G.key] || []; return `<h3 class="ri-h">${esc(G.title)}</h3><p class="wl-note">${esc(G.rule)}</p>` +
+      (list.length ? `<div class="ri-grid">${list.map(card).join('')}</div>` : `<p class="muted-load" style="padding:10px 0 20px">No ${mkt === 'JSE' ? 'JSE' : 'New York'} company fits this group today.</p>`); }).join('') +
+      `<p class="src-note" style="margin-top:26px">${esc(I.note)} See also: <a href="scanner.html">LRC Stock Scanner</a> · <a href="watchlist.html">Watchlist</a> · <a href="earnings.html">Earnings calendar</a> · <a href="articles.html">Articles</a>.</p>`;
+    $('riMeta').innerHTML = `<span class="ai">● LRC Research · automatic</span><span>Prices as of <b>${esc((I.as_of || {})[mkt] || '—')}</b></span><span>Updated <b>${when(I.generated)}</b></span><span><b>${Object.values(g).reduce((a, v) => a + v.length, 0)}</b> companies this run</span>`;
+  };
+  window.addEventListener('lrcmarket', e => { mkt = e.detail; draw(); });
+  Promise.allSettled([get('scan/research_ideas.json'), get('scan/lists.json'), get('articles.json'), get('intel/index.json')]).then(([a, b, c, d]) => {
+    I = a.status === 'fulfilled' ? a.value : null; L = b.status === 'fulfilled' ? b.value : null; A = c.status === 'fulfilled' ? c.value : null; NEWS = d.status === 'fulfilled' ? d.value : null; draw();
+  });
+}
+
 /* =================== TRACK RECORD PAGE =================== */
 if ($('trTbl')) {
   let mkt = getMkt(), T = null, rkey = 'by_rating';

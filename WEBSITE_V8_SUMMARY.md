@@ -66,3 +66,9 @@ Give this file (and the zip) to Claude when you next update the website.
 - ON = other public pages show scores and grades only: STRONG BUY/BUY/HOLD/SELL/STRONG SELL shown as Top scoring / Strong / Average / Weak / Lowest scoring; watchlist lists "Trading: top scoring" etc.; entry prices, stop-losses, targets and the LRC Analyst Target hidden (columns, Setups tab, track-record setups and target hit rate, stock-page target table, analyst coverage section); stock bottom line = Thesis / Strengths / Weaknesses / Next; valuation badges say "· MODEL EST."; CSV download has grades, no plans or targets.
 - Nothing is deleted: the data and the scanner are unchanged, only what the website displays. Full backup of the pre-safe site: git tag `backup-before-safe-mode` (commit bc0ca0d).
 - Not changed: the Live Show page (live trades with stops/targets on screen), the rating-rules article and the tools page calculators (education). Raw JSON under /data still contains ratings and plans.
+
+## Research page (26 Oct 2026)
+- research.html top = "Companies worth researching", built every scanner run by agents/tools/research_ideas.py -> docs/data/scan/research_ideas.json: per market up to 6 each of Quality at a model discount, Strongest all-round scores, Chart setups worth a look, Results in the next 14 days (a company appears once).
+- Each card links to: one-page summary, watchlist tag (if on a list), earnings calendar (results date), our articles on it (articles.json tickers), latest news (intel).
+- Fed back into the site: company_intel collects news for research ideas; research_agent.md researches them; earnings_sync tags them "Research idea" on the earnings calendar.
+- Research library = LIBRARY in main.js + every article (articles.json) + every weekly dashboard (dashboards/index.json), newest first, sectors built automatically.

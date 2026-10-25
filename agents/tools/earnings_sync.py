@@ -38,6 +38,12 @@ def main(window_days=62):
             for x in l.get(k, []):
                 on_list.setdefault(x['t'], []).append(lbl)
     rated = load(D('ratings.json'), {}).get('ratings', {})
+    ideas = {}
+    ri = load(D('scan', 'research_ideas.json'), {})
+    titles = {g['key']: g['title'] for g in ri.get('groups', [])}
+    for m, g in ri.get('ideas', {}).items():
+        for k, v in g.items():
+            for x in v: ideas[x['t']] = titles.get(k, 'Research idea')
     for mk, fn, suffix in (('US', 'earnings_us.json', ''), ('JSE', 'earnings_jse.json', '.JO')):
         path = D(fn)
         cal = load(path, {'items': []})
@@ -62,6 +68,7 @@ def main(window_days=62):
             lr = (rated.get(full) or rated.get(x['ticker']) or {}).get('rating')
             x['t'] = full
             x['lists'] = on_list.get(full, [])
+            x['idea'] = ideas.get(full)
             x['v'] = s.get('v'); x['iv'] = s.get('iv_v')
             x['lrc_rating'] = lr
             x['covered'] = bool(x['lists'] or lr)

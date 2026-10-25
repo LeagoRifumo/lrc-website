@@ -15,6 +15,7 @@ import scan_engine as E
 import sec_quarters as SECQ
 import watchlist_lists as WL
 import peers as PEERS
+import research_ideas as IDEAS
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 P = lambda *a: os.path.join(ROOT, *a)
@@ -419,6 +420,7 @@ def main():
     dump(os.path.join(OUT, 'sectors.json'), rnd_all({**meta, 'rows': sectors}))
     # ---------- website watchlists (both markets, rebuilt every run): top 5 BUY / top 5 SELL, trading and investment ----------
     dump(os.path.join(OUT, 'lists.json'), rnd_all(WL.payload(meta, out_rows)))
+    dump(os.path.join(OUT, 'research_ideas.json'), rnd_all(IDEAS.payload(meta, out_rows)))   # research page: companies worth researching
     PEERS.enrich(details, out_rows, sectors)   # size rank, rivals and sector backdrop for the summary's thesis
     keep = set()
     for s, d in details.items():

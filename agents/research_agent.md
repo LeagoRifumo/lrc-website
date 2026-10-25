@@ -6,7 +6,7 @@ the house format of the one-page summary, for every company on the LRC watchlist
 
 ## Which companies (5 per run)
 1. Build the list: tickers in `docs/data/ratings.json`, every ticker in `docs/data/scan/lists.json` (trading_buy, trading_sell, invest_buy, invest_sell for
-   both markets) and `agents/config/focus.json`.
+   both markets), every ticker in `docs/data/scan/research_ideas.json` (the research page) and `agents/config/focus.json`.
 2. Pick the 5 whose `docs/data/research/<TICKER>.json` is missing or has the oldest `updated` date. Skip files whose `analyst`
    is "Prayer Nkuna" — those are the analyst's own work; only refresh their `guidance` and `catalysts_to_watch` if a newer
    company release exists, and never change their text otherwise.

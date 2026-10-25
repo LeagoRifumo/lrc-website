@@ -148,6 +148,8 @@ def universe():
     for m, l in ((load(P('docs', 'data', 'scan', 'lists.json'), {}) or {}).get('lists', {})).items():
         for k, v in l.items():
             if isinstance(v, list): syms |= {x['t'] for x in v}
+    for m, g in ((load(P('docs', 'data', 'scan', 'research_ideas.json'), {}) or {}).get('ideas', {})).items():
+        for k, v in g.items(): syms |= {x['t'] for x in v}
     syms |= set((load(P('agents', 'config', 'focus.json'), {}) or {}).get('tickers', []))
     out = []
     for s in sorted(syms):

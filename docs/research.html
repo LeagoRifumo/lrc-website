@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=8.2">
+<link rel="stylesheet" href="assets/css/style.css?v=8.4">
 </head>
 <body>
 <header class="site-header">
@@ -52,18 +52,29 @@
 <main>
 
 <section class="page-hero"><div class="wrap">
-  <span class="eyebrow">Research library</span>
-  <h1>Research you can <span class="gold">follow step by step</span></h1>
-  <p class="lead">Company reports, weekly market dashboards and education notes. Filter by type or sector, search, and request any report by email.</p>
+  <span class="eyebrow">LRC Research</span>
+  <h1>Companies <span class="gold">worth researching</span></h1>
+  <p class="lead">Picked automatically from the LRC Stock Scanner after every run, for the JSE and New York, and linked to the rest of the site: each company shows whether it is on the watchlist, when it reports, and our articles on it. Below that is the research library: company reports, weekly dashboards and articles, updated as they are published.</p>
+  <div class="agent-meta" id="riMeta"></div>
+  <div class="mkt-inline" id="riMkt"></div>
+  <div class="edu-note"><b>EDUCATIONAL ONLY</b> A starting point for your own research, not a recommendation to buy or sell. Scores and valuations are model estimates from market data.</div>
 </div></section>
-<section style="padding-top:40px">
+<section style="padding-top:40px"><div class="wrap">
+  <div id="riOut"><p class="muted-load">Loading this week's research ideas…</p></div>
+</div></section>
+<section style="padding-top:20px"><div class="wrap">
+  <h2 class="wl-h" style="margin-top:20px">Research <span class="gold">library</span></h2>
+  <p class="lead">Company reports, weekly market dashboards and articles. New articles and dashboards appear here automatically.</p>
+</div></section>
+<section style="padding-top:10px">
   <div class="wrap">
     <div class="filters" id="libFilters">
       <button class="chip-btn on" data-f="all">All</button>
       <button class="chip-btn" data-f="Company report">Company reports</button>
       <button class="chip-btn" data-f="Market brief">Market briefs</button>
+      <button class="chip-btn" data-f="Article">Articles</button>
       <button class="chip-btn" data-f="Education">Education</button>
-      <select id="libSector" style="width:auto;padding:9px 14px;border-radius:999px"><option value="all">All sectors</option><option>Technology</option><option>Industrials</option><option>Macro &amp; markets</option><option>Process</option></select>
+      <select id="libSector" style="width:auto;padding:9px 14px;border-radius:999px"><option value="all">All sectors</option></select>
       <input class="search" id="libSearch" type="search" placeholder="Search research…" aria-label="Search research">
     </div>
     <div class="lib" id="lib"></div>
@@ -110,6 +121,7 @@
   </div>
 </footer>
 <script>window.LRC_DATA = "data/";</script>
-<script src="assets/js/main.js?v=8.3"></script>
+<script src="assets/js/main.js?v=8.4"></script>
+<script src="assets/js/scanner.js?v=8.4"></script>
 </body>
 </html>

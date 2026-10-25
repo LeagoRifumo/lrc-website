@@ -17,6 +17,7 @@
    "lists": [
     "Investment SELL"
    ],
+   "idea": null,
    "v": "HOLD",
    "iv": "SELL",
    "lrc_rating": null,
@@ -33,6 +34,7 @@
    "auto": true,
    "t": "DCP.JO",
    "lists": [],
+   "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
    "lrc_rating": null,
@@ -52,7 +54,8 @@
    "t": "GLN.JO",
    "lists": [],
    "v": "HOLD",
-   "iv": "HOLD"
+   "iv": "HOLD",
+   "idea": null
   },
   {
    "date": "2026-11-02",
@@ -65,6 +68,7 @@
    "auto": true,
    "t": "RDF.JO",
    "lists": [],
+   "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
    "lrc_rating": null,
@@ -83,6 +87,7 @@
    "lists": [
     "Investment BUY"
    ],
+   "idea": "Strongest all-round scores",
    "v": "BUY",
    "iv": "STRONG BUY",
    "lrc_rating": null,
@@ -104,7 +109,8 @@
     "Investment SELL"
    ],
    "v": "HOLD",
-   "iv": "SELL"
+   "iv": "SELL",
+   "idea": null
   },
   {
    "date": "2026-11-06",
@@ -117,6 +123,7 @@
    "auto": true,
    "t": "TFG.JO",
    "lists": [],
+   "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
    "lrc_rating": null,
@@ -136,7 +143,8 @@
    "t": "VOD.JO",
    "lists": [],
    "v": "HOLD",
-   "iv": "HOLD"
+   "iv": "HOLD",
+   "idea": "Results in the next 14 days"
   },
   {
    "date": "2026-11-13",
@@ -152,7 +160,8 @@
    "t": "CFR.JO",
    "lists": [],
    "v": "HOLD",
-   "iv": "HOLD"
+   "iv": "HOLD",
+   "idea": null
   },
   {
    "date": "2026-11-16",
@@ -168,7 +177,8 @@
    "t": "NY1.JO",
    "lists": [],
    "v": "HOLD",
-   "iv": "BUY"
+   "iv": "BUY",
+   "idea": null
   },
   {
    "date": "2026-11-17",
@@ -181,6 +191,7 @@
    "auto": true,
    "t": "RNI.JO",
    "lists": [],
+   "idea": null,
    "v": "BUY",
    "iv": "HOLD",
    "lrc_rating": null,
@@ -197,6 +208,7 @@
    "auto": true,
    "t": "TKG.JO",
    "lists": [],
+   "idea": null,
    "v": "BUY",
    "iv": "BUY",
    "lrc_rating": null,
@@ -216,7 +228,8 @@
    "t": "NRP.JO",
    "lists": [],
    "v": "HOLD",
-   "iv": "HOLD"
+   "iv": "HOLD",
+   "idea": null
   },
   {
    "date": "2026-11-19",
@@ -229,6 +242,7 @@
    "auto": true,
    "t": "INP.JO",
    "lists": [],
+   "idea": null,
    "v": "BUY",
    "iv": "BUY",
    "lrc_rating": null,
@@ -248,7 +262,8 @@
    "t": "INL.JO",
    "lists": [],
    "v": "BUY",
-   "iv": "BUY"
+   "iv": "BUY",
+   "idea": null
   },
   {
    "date": "2026-11-19",
@@ -261,6 +276,7 @@
    "auto": true,
    "t": "SPP.JO",
    "lists": [],
+   "idea": null,
    "v": "HOLD",
    "iv": "SELL",
    "lrc_rating": null,
@@ -277,6 +293,7 @@
    "auto": true,
    "t": "MRP.JO",
    "lists": [],
+   "idea": null,
    "v": "HOLD",
    "iv": "BUY",
    "lrc_rating": null,
@@ -296,7 +313,8 @@
    "t": "NTC.JO",
    "lists": [],
    "v": "BUY",
-   "iv": "HOLD"
+   "iv": "HOLD",
+   "idea": null
   },
   {
    "date": "2026-11-24",
@@ -309,6 +327,7 @@
    "auto": true,
    "t": "PPH.JO",
    "lists": [],
+   "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
    "lrc_rating": null,
@@ -328,7 +347,8 @@
    "t": "NPN.JO",
    "lists": [],
    "v": "HOLD",
-   "iv": "HOLD"
+   "iv": "HOLD",
+   "idea": null
   },
   {
    "date": "2026-11-25",
@@ -344,7 +364,8 @@
    "t": "PRX.JO",
    "lists": [],
    "v": "HOLD",
-   "iv": "HOLD"
+   "iv": "HOLD",
+   "idea": null
   },
   {
    "date": "2026-11-26",
@@ -357,6 +378,7 @@
    "auto": true,
    "t": "LHC.JO",
    "lists": [],
+   "idea": null,
    "v": "HOLD",
    "iv": "BUY",
    "lrc_rating": null,
@@ -364,6 +386,6 @@
   }
  ],
  "note": "Partial list: a number of Top 100 companies (e.g. Telkom, MTN, Tiger Brands, Pepkor, Pick n Pay, Life Healthcare, Coronation, Mr Price) had no company-published date we could confirm this week; they will be added when dates are published.",
- "synced": "2026-10-25T22:10+02:00",
+ "synced": "2026-10-26T00:50+02:00",
  "coverage_note": "Ticked = on the LRC watchlist or rated by an LRC analyst. Every company the LRC Stock Scanner tracks shows its trading and investment ratings. Updated after every scanner run."
 }

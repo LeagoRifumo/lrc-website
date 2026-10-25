@@ -813,3 +813,23 @@ table.wl td.news{min-width:220px}
 /* safe mode (pre-licence): see LRC_SAFE in main.js */
 html.safe .nosafe{display:none!important}
 html:not(.safe) .onlysafe{display:none!important}
+/* research page: companies worth researching */
+.ri-h{font-family:var(--serif);font-size:30px;color:#fff;margin-top:42px}
+.ri-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:16px}
+.ri-card{border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(180deg,var(--panel),var(--ink));padding:16px 18px;display:flex;flex-direction:column;gap:10px}
+.ri-head{display:block;color:#fff}
+.ri-head .tic{color:var(--gold-2);font-weight:800;margin-right:8px}
+.ri-head b{font-size:16px}
+.ri-head small{display:block;color:var(--muted);font-size:12.5px;margin-top:3px}
+.ri-scores{display:flex;flex-wrap:wrap;gap:8px 14px;font-size:12.5px;color:var(--muted)}
+.ri-scores b{color:#fff}
+.ri-scores .sig{font-size:9.5px;margin-left:4px}
+.ri-why{font-size:13.5px;color:#C9CEDA;margin:0}
+.ri-links{display:flex;flex-wrap:wrap;gap:6px}
+.ri-links .tag,.ri-links .wtag{margin:0}
+.ri-news{font-size:12.5px;color:#C9CEDA;border-top:1px solid rgba(255,255,255,.06);padding-top:8px}
+.ri-news small{display:block;color:var(--muted)}
+.ri-open{margin-top:auto;font-size:13px;font-weight:700;color:var(--gold-2)}
+@media (max-width:1050px){.ri-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:700px){.ri-grid{grid-template-columns:minmax(0,1fr)}.ri-h{font-size:24px}}
+.wtag.i{background:rgba(242,206,114,.12);color:#F2CE72;border:1px solid rgba(242,206,114,.35)}
