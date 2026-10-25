@@ -12,6 +12,9 @@ const pc = (x, d = 1) => ok(x) ? (x >= 0 ? '+' : '') + (x * 100).toFixed(d) + '%
 const pp = (x, d = 1) => ok(x) ? (x * 100).toFixed(d) + '%' : '—';
 const big = (x, c) => { if (!ok(x)) return '—'; const a = Math.abs(x); const s = a >= 1e12 ? (x / 1e12).toFixed(2) + 'T' : a >= 1e9 ? (x / 1e9).toFixed(1) + 'B' : a >= 1e6 ? (x / 1e6).toFixed(0) + 'M' : n2(x, 0); return CUR(c) + s; };
 const chgPct = (to, from) => ok(to) && ok(from) && from ? pc(to / from - 1, 1) : '—';
+const S100 = r => r.score ?? Math.round(50 + 50 * r.total / (r.max || 1));
+const c100 = v => v >= 72 ? 2 : v >= 61 ? 1 : v <= 32 ? -2 : v <= 42 ? -1 : 0;
+const scoreCell = r => `<span class="hc" title="${r.total > 0 ? '+' : ''}${r.total} points of a possible ±${r.max}">${S100(r)}</span>`;
 const mult = x => ok(x) ? (x <= 0 ? 'neg.' : x.toFixed(1) + 'x') : '—';
 const sigCls = v => 'sig sig-' + String(v || 'hold').toLowerCase().replace(/\s+/g, '-');
 const cc = v => v === null || v === undefined ? 'cn' : v >= 2 ? 'c2' : v >= 1 ? 'c1' : v <= -2 ? 'cm2' : v <= -1 ? 'cm1' : 'c0';
@@ -32,7 +35,8 @@ if ($('scTbl')) {
   window.addEventListener('lrcmarket', e => { if (e.detail !== mkt) { mkt = e.detail; sel.value = mkt; shown = 120; fillSectors(); drawAll(); } });
   const tabs = document.querySelectorAll('#scTabs button');
   const showTab = t => { tab = ['stocks', 'setups', 'invest', 'etfs', 'sectors', 'how'].includes(t) ? t : 'stocks'; tabs.forEach(b => b.classList.toggle('on', b.dataset.t === tab));
-    ['stocks', 'setups', 'invest', 'etfs', 'sectors', 'how'].forEach(p => $('pane-' + p).hidden = p !== tab); history.replaceState(null, '', '#' + tab); drawAll(); };
+    ['stocks', 'setups', 'invest', 'etfs', 'sectors', 'how'].forEach(p => $('pane-' + p).hidden = p !== tab); $('scWrap').classList.toggle('wide', tab === 'stocks' || tab === 'etfs'); history.replaceState(null, '', '#' + tab); drawAll(); };
+  $('scFull').addEventListener('click', () => { const w = $('scTblWrap'); if (document.fullscreenElement) document.exitFullscreen(); else if (w.requestFullscreen) w.requestFullscreen(); else w.classList.toggle('fs'); });
   tabs.forEach(b => b.addEventListener('click', () => showTab(b.dataset.t)));
 
   const COLS = [
@@ -67,13 +71,13 @@ if ($('scTbl')) {
     const my = mine();
     const th = (k, l, t = '') => `<th data-k="${k}" title="${esc(t)}" class="${sortK === k ? 'sorted' + (sortD > 0 ? ' asc' : '') : ''}">${l}</th>`;
     let h = `<thead><tr><th class="grp" style="background:#0A0D15;position:sticky;left:0;z-index:3"></th><th class="grp" colspan="3" style="background:#0A0D15"></th><th class="grp g-tech" colspan="5">TECHNICAL READINGS</th><th class="grp g-sent" colspan="3">SENTIMENT</th><th class="grp g-fund" colspan="9">FINANCIAL READINGS (vs sector)</th><th class="grp" colspan="2" style="background:#0A0D15;color:var(--gold-2)">CATALYSTS</th></tr><tr>
-      <th data-k="t" style="position:sticky;left:0;z-index:3;text-align:left">COMPANY</th>${th('total', 'LRC SCORE')}<th>LRC STOCK SCANNER</th>${th('chg', 'PRICE · 1D')}` +
+      <th data-k="t" style="position:sticky;left:0;z-index:3;text-align:left">COMPANY</th>${th('total', 'LRC SCORE /100', 'LRC score 0-100: 50 = neutral; 61+ BUY, 72+ STRONG BUY, 42 or less SELL, 32 or less STRONG SELL')}<th>LRC STOCK SCANNER</th>${th('chg', 'PRICE · 1D')}` +
       COLS.map(c => th(c.k, c.l, c.t)).join('') + `<th>EVENTS</th>${th('ne', 'RESULTS')}</tr></thead><tbody>`;
     h += rows.slice(0, shown).map(r => {
-      const sc = r.total / (r.max || 1);
+      const sc = S100(r);
       const cov = r.cov ? `<span class="pill p-${r.cov.rating.toLowerCase()}" title="LRC analyst rating ${esc(r.cov.rated || '')}">LRC ${esc(r.cov.rating)}</span> ` : r.res ? '<span class="tag">LRC research</span>' : '';
       return `<tr data-t="${esc(r.t)}"><td class="nm"><button class="star ${my.has(r.t) ? 'on' : ''}" data-s="${esc(r.t)}" title="Add to my list">★</button><b>${esc(r.t.replace('.JO', ''))}</b> ${cov}<small>${esc(r.n)} · ${esc(r.sec)}</small></td>
-        <td class="${cc(sc >= .45 ? 2 : sc >= .18 ? 1 : sc <= -.45 ? -2 : sc <= -.18 ? -1 : 0)}"><span class="hc">${r.total}/${r.max}</span></td><td class="plain"><span class="${sigCls(r.v)}">${esc(r.v)}</span></td>
+        <td class="${cc(c100(sc))}">${scoreCell(r)}</td><td class="plain"><span class="${sigCls(r.v)}" title="${esc(r.v_note || 'LRC score ' + S100(r) + '/100')}">${esc(r.v)}</span></td>
         <td class="plain" style="text-align:right">${px(r.px, r.cur)}<small style="display:block;color:${r.chg >= 0 ? '#5ED39A' : '#F08A7E'}">${pc(r.chg)}</small></td>` +
         COLS.map(c => `<td class="${cc(r.sc[c.k])}"><span class="hc">${esc(c.d(r) ?? '—')}</span></td>`).join('') +
         `<td class="plain" style="text-align:left;white-space:normal;min-width:150px">${(r.cat || []).map(x => `<span class="tag ${/^Results/.test(x) ? 'ev' : ''}">${esc(x)}</span>`).join('')}</td><td class="plain">${esc(r.ne || '—')}</td></tr>`;
@@ -100,7 +104,7 @@ if ($('scTbl')) {
         (list.length ? list.map(r => { const p = r.plan, rps = Math.abs(p.entry - p.stop), sh = rps ? Math.floor(acct * risk / rps) : 0;
           const d = r.ne ? Math.round((new Date(r.ne) - new Date()) / 864e5) : null;
           return `<tr style="cursor:pointer" onclick="location.href='stock.html?t=${encodeURIComponent(r.t)}'"><td><span class="tic">${esc(r.t.replace('.JO', ''))}</span><small>${esc(r.n)}</small></td>
-          <td>${esc(r.setup)}<small>level ${px(r.lvl, r.cur)}</small></td><td><span class="${sigCls(r.v)}">${esc(r.v)}</span><small>${r.total}/${r.max}</small></td>
+          <td>${esc(r.setup)}<small>level ${px(r.lvl, r.cur)}</small></td><td><span class="${sigCls(r.v)}">${esc(r.v)}</span><small>LRC score ${S100(r)}/100</small></td>
           <td class="n">${px(p.entry, r.cur)}</td><td class="n">${px(p.stop, r.cur)}<small style="color:#F08A7E">${chgPct(p.stop, p.entry)}</small></td><td class="n">${px(p.t1, r.cur)}<small style="color:#5ED39A">${chgPct(p.t1, p.entry)}</small></td><td class="n">${px(p.t2, r.cur)}<small style="color:#5ED39A">${chgPct(p.t2, p.entry)}</small></td>
           <td class="n">${sh.toLocaleString('en-ZA')}<small>≈ ${px(sh * p.entry, r.cur)}</small></td><td>${d !== null && d >= 0 && d <= 14 ? `<span class="tag ev">Results in ${d}d</span>` : '—'}</td></tr>`; }).join('')
           : `<tr><td colspan="9" style="color:var(--muted)">No ${side.toLowerCase()} setups in this market today.</td></tr>`) + '</tbody>';
@@ -124,7 +128,7 @@ if ($('scTbl')) {
     if (!E) return fail($('etfOut'), 'ETF scan');
     const rs = E.rows.filter(r => r.m === mkt);
     const tbl = list => `<div class="tbl-wrap"><table class="heat" style="min-width:1100px"><thead><tr><th style="text-align:left;position:sticky;left:0;z-index:3">ETF</th><th>SCORE</th><th>LRC STOCK SCANNER</th><th>PRICE</th><th class="g-tech">TREND</th><th class="g-tech">MOMENTUM</th><th class="g-tech">SETUP</th><th class="g-tech">RSI</th><th class="g-tech">VOLUME</th><th>1W</th><th>1M</th><th>3M</th><th>6M</th><th>YTD</th><th>ENTRY PLAN</th></tr></thead><tbody>` +
-      list.map(r => `<tr><td class="nm"><b>${esc(r.t.replace('.JO', ''))}</b><small>${esc(r.n)}${r.full ? ' · ' + esc(r.full) : ''}</small></td><td class="${cc(r.total >= 4 ? 2 : r.total >= 2 ? 1 : r.total <= -4 ? -2 : r.total <= -2 ? -1 : 0)}"><span class="hc">${r.total}/${r.max}</span></td>
+      list.map(r => `<tr><td class="nm"><b>${esc(r.t.replace('.JO', ''))}</b><small>${esc(r.n)}${r.full ? ' · ' + esc(r.full) : ''}</small></td><td class="${cc(c100(S100(r)))}">${scoreCell(r)}</td>
         <td class="plain"><span class="${sigCls(r.v)}">${esc(r.v)}</span></td><td class="plain">${px(r.px, r.cur)}</td>
         <td class="${cc(r.sc.trend)}"><span class="hc">${({ 2: 'Up ▲▲', 1: 'Up ▲', '-1': 'Down ▼', '-2': 'Down ▼▼' })[r.sc.trend] || 'Flat'}</span></td><td class="${cc(r.sc.momentum)}"><span class="hc">${pc(r.rs, 0)}</span></td>
         <td class="${cc(r.sc.setup)}"><span class="hc">${esc(r.setup || '—')}</span></td><td class="${cc(r.sc.extension)}"><span class="hc">${ok(r.rsi) ? r.rsi.toFixed(0) : '—'}</span></td><td class="${cc(r.sc.volume)}"><span class="hc">${r.sc.volume > 0 ? 'Accum.' : r.sc.volume < 0 ? 'Distrib.' : '—'}</span></td>
@@ -138,7 +142,7 @@ if ($('scTbl')) {
     if (!SE) return fail($('secOut'), 'sector scan');
     const rs = SE.rows.filter(r => r.m === mkt).sort((a, b) => b.score - a.score);
     $('secOut').innerHTML = rs.map(r => `<div class="sec-card"><h3>${esc(r.sec)} <span class="${sigCls(r.v)}">${esc(r.v)}</span></h3>
-      <div class="sbar"><i style="left:calc(${(r.score + 10) * 5}% - 2px)"></i></div><div style="display:flex;justify-content:space-between;font-size:12px;color:var(--muted)"><span>−10</span><b style="color:var(--gold-2);font-size:15px">${r.score > 0 ? '+' : ''}${r.score}</b><span>+10</span></div>
+      <div class="sbar"><i style="left:calc(${r.score100 ?? Math.round(50 + 5 * r.score)}% - 2px)"></i></div><div style="display:flex;justify-content:space-between;font-size:12px;color:var(--muted)"><span>0</span><b style="color:var(--gold-2);font-size:15px">LRC score ${r.score100 ?? Math.round(50 + 5 * r.score)}/100</b><span>100</span></div>
       <dl><dt>Companies scanned</dt><dd>${r.n}</dd><dt>On BUY / on SELL</dt><dd>${pp(r.bull, 0)} / ${pp(r.bear, 0)}</dd><dt>Above 50-day average</dt><dd>${pp(r.above50, 0)}</dd><dt>Breakouts & retests</dt><dd>${r.setups}</dd>
       <dt>Sector ETF</dt><dd>${r.etf ? `${esc(r.etf.replace('.JO', ''))} <span class="${sigCls(r.etf_v)}" style="font-size:9.5px">${esc(r.etf_v || '')}</span>` : '—'}</dd><dt>ETF 1 month</dt><dd>${pc(r.etf_p1m)}</dd></dl>
       <p class="sec-tk" style="margin-top:10px;font-size:12.5px;color:var(--muted)">Strongest: ${r.top.map(t => `<a href="stock.html?t=${encodeURIComponent(t)}">${esc(t.replace('.JO', ''))}</a>`).join('')}<br>Weakest: ${r.bottom.map(t => `<a href="stock.html?t=${encodeURIComponent(t)}">${esc(t.replace('.JO', ''))}</a>`).join('')}</p></div>`).join('') || '<p class="muted-load">No sectors yet.</p>';
@@ -186,7 +190,7 @@ if ($('wlCov')) {
         : `<tr><td colspan="8" style="color:var(--muted)">No ${mkt === 'JSE' ? 'JSE' : 'New York'} companies carry an LRC analyst rating yet — the trading and investment watchlists below are built by the LRC Stock Scanner.</td></tr>`) + '</tbody>';
     const l = (L && L.lists && L.lists[mkt]) || { long: [], short: [], investment: [] };
     const trade = (rows, side) => `<thead><tr><th>COMPANY</th><th>SETUP</th><th>LRC STOCK SCANNER</th><th>ENTRY</th><th>STOP · ${side === 'Long' ? 'DOWNSIDE' : 'UPSIDE'}</th><th>TARGET 1</th><th>TARGET 2</th><th>RESULTS</th><th>LATEST NEWS</th></tr></thead><tbody>` +
-      (rows.length ? rows.map(r => `<tr><td>${nm(r.t, r.n)}${r.cov ? ` <span class="pill p-${r.cov.rating.toLowerCase()}">LRC ${esc(r.cov.rating)}</span>` : ''}</td><td>${esc(r.setup)}<small>level ${px(r.lvl, r.cur)}</small></td><td><span class="${sigCls(r.v)}">${esc(r.v)}</span><small>${r.total}/${r.max}</small></td>
+      (rows.length ? rows.map(r => `<tr><td>${nm(r.t, r.n)}${r.cov ? ` <span class="pill p-${r.cov.rating.toLowerCase()}">LRC ${esc(r.cov.rating)}</span>` : ''}</td><td>${esc(r.setup)}<small>level ${px(r.lvl, r.cur)}</small></td><td><span class="${sigCls(r.v)}">${esc(r.v)}</span><small>LRC score ${S100(r)}/100</small></td>
         <td class="n">${px(r.entry, r.cur)}</td><td class="n">${px(r.stop, r.cur)}<small style="color:#F08A7E">${pc(r.stop_pct)}</small></td><td class="n">${px(r.t1, r.cur)}<small style="color:#5ED39A">${pc(r.t1_pct)}</small></td><td class="n">${px(r.t2, r.cur)}<small style="color:#5ED39A">${pc(r.t2_pct)}</small></td>
         <td>${r.ne ? `<span class="tag ${Math.round((new Date(r.ne) - new Date()) / 864e5) <= 14 ? 'ev' : ''}">${esc(r.ne)}</span>` : '—'}</td><td style="max-width:300px">${head1(r.t)}</td></tr>`).join('')
         : `<tr><td colspan="9" style="color:var(--muted)">No ${side.toLowerCase()} setups pass the rules in this market today.</td></tr>`) + '</tbody>';
@@ -303,7 +307,7 @@ if ($('paper')) {
     if (ok(f.short_float)) own.push(`Short interest ${pp(f.short_float, 1)} of float.`);
     const mgmt = (pr.officers || []).map(o => `${esc(o.title || '')}: ${esc(o.name || '')}`);
     const bizText = pr.summary ? esc(pr.summary.split(/(?<=\.)\s+/).slice(0, 3).join(' ')) : '';
-    const autoBottom = `${esc(r.n)} scores <b>${r.total}/${r.max}</b> on the LRC Stock Scanner (<b>${esc(r.v)}</b>): technicals ${r.tech > 0 ? '+' : ''}${r.tech}, sentiment ${r.sent > 0 ? '+' : ''}${r.sent}, fundamentals ${r.fund > 0 ? '+' : ''}${r.fund}. ` +
+    const autoBottom = `${esc(r.n)} has an LRC score of <b>${S100(r)}/100</b> on the LRC Stock Scanner (<b>${esc(r.v)}</b>): technicals ${r.tech > 0 ? '+' : ''}${r.tech}, sentiment ${r.sent > 0 ? '+' : ''}${r.sent}, fundamentals ${r.fund > 0 ? '+' : ''}${r.fund}. ` +
       (t.setup ? `The chart shows a <b>${esc(t.setup.toLowerCase())}</b> at ${px(t.setup_level, c)}. ` : (t.sma200 && t.price > t.sma200 ? 'The long-term trend is up but there is no fresh setup today. ' : 'The trend is weak; patience until a base or retest forms. ')) +
       (vv('fpe').verdict && vv('fpe').verdict !== '—' ? `On forward earnings it looks <b>${esc(vv('fpe').verdict.toLowerCase())}</b> against its sector. ` : '') +
       (f.next_earnings ? `Next catalyst: results on ${esc(f.next_earnings)}.` : '');
@@ -311,15 +315,15 @@ if ($('paper')) {
     const S = (k, auto) => R && R[k] && R[k].length ? ul(R[k].map(esc)) : ul(auto);
 
     // ---------- chart ----------
-    const chart = priceChart(d, 470, 230);
-    const fin = finChart(d.financials, c, 470, 170);
+    const chart = priceChart(d, 470, 240);
+    const fin = finChart(d.financials, c, 760, 230, d.sec_q);
     const vals = (d.valuation || []).filter(v => v.v !== null && v.v !== undefined);
     const vcls = v => ({ Undervalued: 'v-under', Overvalued: 'v-over', 'Fairly valued': 'v-fair', Strong: 'v-strong', Weak: 'v-weak', 'In line': 'v-fair', 'Low debt': 'v-low', 'High debt': 'v-high', 'Loss-making': 'v-neg', 'Negative FCF': 'v-neg' })[v] || 'v-fair';
     const fmtV = (k, v) => ['fpe', 'tpe', 'ps', 'pfcf', 'peg', 'pb'].includes(k) ? (v <= 0 ? 'neg.' : v.toFixed(2)) : k === 'de' ? (v / 100).toFixed(2) + 'x' : k === 'current_ratio' ? v.toFixed(2) : pp(v, 1);
     const tgRows = [['Latest share price', t.price, false], ['Analyst median target', tg.analyst_median], ['P/FCF-based value', tg.pfcf], ['PEG-based value', tg.peg], ['Sector P/E-based value', tg.sector_pe],
       ['LRC Analyst Target (6 months)', lrcT]].filter(x => ok(x[1]));
     const heat = Object.entries(r.sc).filter(([k, v]) => v !== null).map(([k, v]) => `<span class="h${v >= 2 ? 2 : v >= 1 ? 1 : v <= -2 ? 'm2' : v <= -1 ? 'm1' : 0}">${esc(({ trend: 'Trend', momentum: 'Momentum', setup: 'Setup', extension: 'Extension', volume: 'Volume', analysts: 'Analysts', target: 'Target', short: 'Short int.', fpe: 'Fwd P/E', tpe: 'TTM P/E', ps: 'P/S', pfcf: 'P/FCF', rev_growth: 'Rev growth', eps_growth: 'EPS growth', de: 'Debt', roe: 'ROE', div_yield: 'Dividend' })[k] || k)} ${v > 0 ? '+' : ''}${v}</span>`).join('');
-    const gauge = gaugeSvg(r.total, r.max, r.v);
+    const gauge = gaugeSvg(S100(r));
 
     P.innerHTML = `
     <div class="ph"><div class="tkbox">${esc(r.t.replace('.JO', ''))}<small>${r.m === 'JSE' ? 'JSE' : 'NYSE / NASDAQ'}</small></div>
@@ -328,7 +332,7 @@ if ($('paper')) {
       <div><b>Market cap / Price:</b> ${big(f.mcap, c)} / ${px(t.price, c)}<br><b>52-wk low / high:</b> ${px(t.lo52, c)} / ${px(t.hi52, c)}<br><b>Beta / Yield:</b> ${ok(f.beta) ? f.beta.toFixed(2) : '—'} / ${pp(f.div_yield, 2)}<br><b>Sector:</b> ${esc(r.sec)}${r.ind ? ' · ' + esc(r.ind) : ''}</div>
       <div>${R && R.guidance ? R.guidance.slice(0, 4).map(g => `<b>${esc(g.split(':')[0])}:</b>${esc(g.split(':').slice(1).join(':'))}`).join('<br>') :
         `<b>Next results:</b> ${esc(f.next_earnings || 'not announced')}<br><b>Analysts:</b> ${recLbl(f.rec_mean)}${f.n_analysts ? ` (${f.n_analysts})` : ''}${ok(f.target_median) ? ` · median target ${px(f.target_median, c)}` : ''}<br><b>EPS growth (this yr / next yr est.):</b> ${pc(f.eps_growth_fwd, 0)} / ${pc(f.eps_growth_next, 0)}<br><b>Fwd P/E vs sector:</b> ${mult(f.fpe)} vs ${mult(d.sector_medians?.fpe)}`}</div>
-      <div><b>Last updated:</b> ${esc(updated)}<br><b>Analyst name:</b> ${analyst}<br><b>LRC Stock Scanner:</b> <span class="${sigCls(r.v)}" style="font-size:10px">${esc(r.v)}</span> ${r.total}/${r.max}${r.cov ? `<br><b>LRC analyst rating:</b> ${esc(r.cov.rating)} (${esc(r.cov.rated || '')})` : ''}${R && R.geo_mix ? `<br><b>Geo %:</b> ${esc(R.geo_mix)}` : ''}</div>
+      <div><b>Last updated:</b> ${esc(updated)}<br><b>Analyst name:</b> ${analyst}<br><b>LRC Stock Scanner:</b> <span class="${sigCls(r.v)}" style="font-size:10px">${esc(r.v)}</span> ${S100(r)}/100${r.v_note ? `<br><span style="font-size:11px;color:#7A8296">${esc(r.v_note)}</span>` : ''}${r.cov ? `<br><b>LRC analyst rating:</b> ${esc(r.cov.rating)} (${esc(r.cov.rated || '')})` : ''}${R && R.geo_mix ? `<br><b>Geo %:</b> ${esc(R.geo_mix)}` : ''}</div>
     </div>
     <div class="bar">Fundamentals <small>${R ? 'ANALYST VIEW + LIVE DATA' : 'AUTOMATED FROM LIVE DATA'}</small></div>
     <div class="cols"><div>
@@ -350,22 +354,21 @@ if ($('paper')) {
       ${vals.map(v => `<tr><td>${esc(v.label)}</td><td class="n">${fmtV(v.k, v.v)}</td><td class="n">${ok(v.sector) ? fmtV(v.k, v.sector) : '—'}</td><td class="${vcls(v.verdict)}">${esc(v.verdict)}</td></tr>`).join('')}
       </tbody></table>
     </div><div>
-      <div class="gauge">${gauge}<div><b style="color:#16223D">LRC score ${r.total}/${r.max}</b><br><span style="color:#5C6478;font-size:12px">Technicals ${r.tech > 0 ? '+' : ''}${r.tech} · Sentiment ${r.sent > 0 ? '+' : ''}${r.sent} · Fundamentals ${r.fund > 0 ? '+' : ''}${r.fund}</span><div class="heatstrip">${heat}</div></div></div>
+      <div class="gauge">${gauge}<div><b style="color:#16223D">LRC score ${S100(r)}/100</b><br><span style="color:#5C6478;font-size:12px">Technicals ${r.tech > 0 ? '+' : ''}${r.tech} · Sentiment ${r.sent > 0 ? '+' : ''}${r.sent} · Fundamentals ${r.fund > 0 ? '+' : ''}${r.fund}</span><div class="heatstrip">${heat}</div></div></div>
       <div class="tg" style="margin-top:10px">${tgRows.map(([l, v, g]) => `<span>${esc(l)}</span><span style="text-align:right;color:#5C6478">${g === false ? '' : pc(v / t.price - 1, 0)}</span><span class="${g === false ? '' : 'gv' + (v < t.price ? ' neg' : '')}" style="text-align:right;font-weight:800">${px(v, c)}</span>`).join('')}</div>
       ${R && R.valuation ? `<h4>Analyst valuation:</h4>${ul(R.valuation.map(esc))}` : ''}
       ${inv ? `<h4>Investment track (5–10 yrs): grade ${esc(inv.grade)} · ${inv.passed}/${inv.known} checks</h4><p style="font-size:11.5px;color:#5C6478">${inv.checks.filter(x => x.ok !== null).map(x => `<span style="color:${x.ok ? '#0F7B3F' : '#C5221F'}">${x.ok ? '✔' : '✘'} ${esc(x.k)}</span>`).join(' · ')}</p>` : ''}
     </div></div>
     <p class="bl"><b class="k">Bottom Line:</b> ${R && R.valuation_bottom_line ? esc(R.valuation_bottom_line) : `Against the median ${esc(r.sec)} company in ${r.m === 'JSE' ? 'the JSE' : 'New York'}, the shares look <b>${esc((vv('fpe').verdict || vv('tpe').verdict || 'n/a').toLowerCase())}</b> on earnings and <b>${esc((vv('pfcf').verdict || 'n/a').toLowerCase())}</b> on free cash flow. ${ok(lrcT) ? `The LRC Analyst Target is ${px(lrcT, c)} (${pc(lrcT / t.price - 1, 0)} from today).` : ''}`}
       ${R && R.catalysts_to_watch ? ` <b style="color:#C5221F">Catalysts to watch:</b> ${esc(R.catalysts_to_watch)}` : f.next_earnings ? ` <b style="color:#C5221F">Catalyst to watch:</b> results on ${esc(f.next_earnings)}.` : ''}</p>
-    <div class="bar pg2">Technical Setup &amp; Entry Plan <small>LRC HOUSE RULES · RISK 1% OF THE ACCOUNT PER TRADE</small></div>
-    ${pl ? `<p><b>${esc(pl.side)} — ${esc(t.setup)}.</b> ${esc(pl.how)}. ${pl.event_risk ? `<b style="color:#C5221F">${esc(pl.event_risk)}.</b>` : ''}</p>
-      <div class="plan"><div>Entry<b>${px(pl.entry, c)}</b></div><div>Stop<b>${px(pl.stop, c)}</b>${chgPct(pl.stop, pl.entry)}</div><div>Target 1<b>${px(pl.t1, c)}</b>${chgPct(pl.t1, pl.entry)}</div><div>Target 2<b>${px(pl.t2, c)}</b>${chgPct(pl.t2, pl.entry)}</div><div>LRC Analyst Target<b>${ok(lrcT) ? px(lrcT, c) : '—'}</b>${chgPct(lrcT, t.price)} from today</div><div>Next major level<b>${pl.next_level ? px(pl.next_level, c) : '—'}</b>${pl.next_level ? chgPct(pl.next_level, pl.entry) : ''}</div></div>
-      <p style="font-size:11.5px;color:#5C6478;margin-top:6px">Position size risks 1% of the account if the stop is hit. Example: ${r.m === 'JSE' ? 'R100,000' : '$10,000'} account → ${Math.floor((r.m === 'JSE' ? 1000 : 100) / pl.risk_per_share).toLocaleString('en-ZA')} shares.${pl.next_level ? `` : ''}</p>`
-      : `<p>No breakout or retest setup today. Major support: ${(t.supports || []).map(s => px(s.price, c) + ` (${s.touches} touches)`).join(', ') || '—'}. Major resistance: ${(t.resistances || []).map(s => px(s.price, c) + ` (${s.touches} touches)`).join(', ') || '—'}. The scanner flags a <b>breakout</b> when price closes through resistance on 1.5× volume, or a <b>retest</b> when it pulls back to support and holds.</p>`}
+    <div class="bar pg2">Technical Picture <small>TREND · SETUP · MAJOR SUPPORT &amp; RESISTANCE</small></div>
+    <p>${t.setup ? `<b>${esc(t.setup)}</b> at ${px(t.setup_level, c)}${t.setup_note ? ' — ' + esc(t.setup_note) : ''}. ` : 'No breakout or retest setup today. '}Price is ${t.price > t.sma50 ? 'above' : 'below'} the 50-day average (${px(t.sma50, c)})${t.sma200 ? ` and ${t.price > t.sma200 ? 'above' : 'below'} the 200-day (${px(t.sma200, c)})` : ''}; RSI ${ok(t.rsi) ? t.rsi.toFixed(0) : '—'}.
+      Major support: ${(t.supports || []).map(s => px(s.price, c) + ` (${s.touches} touches)`).join(', ') || '—'}. Major resistance: ${(t.resistances || []).map(s => px(s.price, c) + ` (${s.touches} touches)`).join(', ') || '—'}.
+      ${f.next_earnings && days(f.next_earnings) <= 14 ? `<b style="color:#C5221F">Results in ${days(f.next_earnings)} days — expect bigger moves.</b>` : ''} <span style="color:#5C6478">Trade plans with entry levels are on the <a href="scanner.html#setups" style="color:#1F3BB3">scanner's Setups tab</a>.</span></p>
     ${INTEL && ((INTEL.news || []).length || (INTEL.sec && INTEL.sec.filings || []).length) ? `<div class="bar">Latest News &amp; Filings <small>UPDATED ${esc(when(INTEL.generated))}</small></div>
       <div class="cols"><div><h4>News</h4><ul>${(INTEL.news || []).slice(0, 6).map(n => `<li><a href="${esc(n.url)}" target="_blank" rel="noopener" style="color:#1F3BB3">${esc(n.title)}</a> <span style="color:#7A8296">— ${esc(n.source)}${n.published ? ', ' + esc(n.published.slice(0, 10)) : ''}</span></li>`).join('') || '<li>No recent stories.</li>'}</ul></div>
       <div>${INTEL.sec ? `<h4>SEC filings</h4><ul>${(INTEL.sec.filings || []).slice(0, 5).map(f => `<li><a href="${esc(f.url)}" target="_blank" rel="noopener" style="color:#1F3BB3">${esc(f.form)}</a> ${esc(f.date)} — ${esc(f.desc)}</li>`).join('')}</ul><p style="font-size:11.5px;color:#5C6478">Insider (Form 4) filings in the last 90 days: ${INTEL.sec.insider_filings_90d}</p>` : `<h4>Company announcements</h4><p style="font-size:12px">JSE companies publish results and trading statements on SENS — the news list includes SENS stories carried by South African financial media.</p>`}</div></div>` : ''}
-    ${fin ? `<div class="bar">Financials <small>QUARTERLY REVENUE · NET INCOME · NET MARGIN (${esc(fin.cur)})</small></div>${fin.svg}` : ''}
+    ${fin ? `<div class="bar">Financials <small>${fin.q ? 'LAST ' + fin.n + ' QUARTERS' : 'ANNUAL'} · REVENUE · NET INCOME · NET MARGIN (${esc(fin.cur)})</small></div>${fin.svg}${!fin.q && r.m === 'JSE' ? '<p style="font-size:11px;color:#5C6478">JSE companies report half-yearly, so the chart shows full financial years.</p>' : ''}` : ''}
     <p class="src">Sources: ${R ? `LRC analyst research (${esc(R.analyst)}, ${esc(R.updated)}); ` : ''}${esc((d.sources || ['Yahoo Finance prices, fundamentals and analyst data']).concat(INTEL ? INTEL.sources || [] : []).join('; '))}${R && R.sources ? '; ' + esc(R.sources.slice(0, 6).join('; ')) : ''}. Scored by the LRC Stock Scanner (${esc(when(d.generated))}). Valuation verdicts compare each ratio with the median of the same sector in the same market. LRC Analyst Target: set by the analyst for companies with a completed LRC Work-sheet; otherwise calculated automatically every day: 60% analyst consensus and 40% LRC valuation models (P/FCF, PEG and sector P/E), kept within 20% of the consensus.
       <b>Educational only — not financial advice.</b> Leago Rifumo Capital · Ermelo, Mpumalanga · leagorifumocapital.co.za</p>`;
   }
@@ -383,51 +386,64 @@ if ($('paper')) {
     const C = s.c.slice(off), A = s.s50.slice(off), B = s.s200.slice(off), dt = s.dates.slice(off);
     const t = d.tech, pl = d.plan, cur = d.row.cur;
     const lv = [...(t.supports || []).slice(0, 2).map(x => ({ y: x.price, c: '#0F9D58', l: 'Support' })), ...(t.resistances || []).slice(0, 2).map(x => ({ y: x.price, c: '#C5221F', l: 'Resistance' }))];
-    if (pl) lv.push({ y: pl.entry, c: '#1F3BB3', l: 'Entry' }, { y: pl.stop, c: '#C5221F', l: 'Stop' }, { y: pl.t1, c: '#0F9D58', l: 'T1' }, { y: pl.t2, c: '#0F9D58', l: 'T2' });
     const all = C.concat(A.filter(ok), B.filter(ok), lv.map(x => x.y)).filter(ok);
     let lo = Math.min(...all), hi = Math.max(...all); const pad = (hi - lo) * 0.06; lo -= pad; hi += pad;
-    const L = 8, Rr = 70, Tp = 16, Bt = 22, w = W - L - Rr, h = H - Tp - Bt;
+    const L = 8, Rr = 92, Tp = 16, Bt = 22, w = W - L - Rr, h = H - Tp - Bt;
     const X = i => L + i * w / (n - 1), Y = v => Tp + (hi - v) / (hi - lo) * h;
     const path = arr => arr.map((v, i) => ok(v) ? `${X(i).toFixed(1)},${Y(v).toFixed(1)}` : null).filter(Boolean).map((p, i) => (i ? 'L' : 'M') + p).join('');
     let months = '', last = '';
     dt.forEach((x, i) => { const m = x.slice(0, 7); if (m !== last && i > 3) { months += `<text x="${X(i)}" y="${H - 6}" font-size="9" fill="#7A8296" text-anchor="middle">${new Date(x).toLocaleString('en-ZA', { month: 'short' })}</text>`; } last = m; });
-    const lines = lv.filter(x => ok(x.y)).map(x => `<line x1="${L}" x2="${L + w}" y1="${Y(x.y)}" y2="${Y(x.y)}" stroke="${x.c}" stroke-dasharray="4 3" stroke-width="1"/><text x="${L + w + 4}" y="${Y(x.y) + 3}" font-size="9" fill="${x.c}">${x.l} ${px(x.y, cur)}</text>`).join('');
+    const lvs = lv.filter(x => ok(x.y)).map(x => ({ ...x, py: Y(x.y), ly: Y(x.y) + 3 })).sort((a, b) => a.py - b.py);
+    for (let i = 1; i < lvs.length; i++) if (lvs[i].ly - lvs[i - 1].ly < 11) lvs[i].ly = lvs[i - 1].ly + 11;  // keep labels apart
+    const lines = lvs.map(x => `<line x1="${L}" x2="${L + w}" y1="${x.py}" y2="${x.py}" stroke="${x.c}" stroke-dasharray="4 3" stroke-width="1"/><text x="${L + w + 4}" y="${x.ly}" font-size="9" fill="${x.c}">${x.l} ${px(x.y, cur)}</text>`).join('');
     return `<svg viewBox="0 0 ${W} ${H}" width="100%" style="margin-top:10px;border:1px solid #E3E6EE;border-radius:4px">
       <text x="${L}" y="11" font-size="10" fill="#16223D" font-weight="700">Daily close · 50-day (gold) · 200-day (green) · 12 months</text>
       <path d="${path(B)}" fill="none" stroke="#2E9E5B" stroke-width="1.3"/><path d="${path(A)}" fill="none" stroke="#D9A93E" stroke-width="1.3"/>
       <path d="${path(C)}" fill="none" stroke="#16223D" stroke-width="1.5"/>${lines}${months}
       <circle cx="${X(n - 1)}" cy="${Y(C[n - 1])}" r="3" fill="#1F3BB3"/></svg>`;
   }
-  function finChart(fin, cur, W, H) {
-    if (!fin) return null;
-    const rev = fin.quarterlyTotalRevenue || [], ni = fin.quarterlyNetIncome || [];
-    let use = rev.length >= 3 ? 'q' : 'a';
-    const R = use === 'q' ? rev : (fin.annualTotalRevenue || []), N = use === 'q' ? ni : (fin.annualNetIncome || []);
-    if (R.length < 2) return null;
-    const rows = R.map(x => ({ d: x.date, r: x.value, n: (N.find(y => y.date === x.date) || {}).value, cur: x.currency })).filter(x => ok(x.r));
-    const cc = rows[0].cur || cur;
-    const mx = Math.max(...rows.map(x => Math.max(x.r, x.n || 0))), mn = Math.min(0, ...rows.map(x => x.n || 0));
-    const L = 50, Rr = 40, Tp = 14, Bt = 20, w = W - L - Rr, h = H - Tp - Bt, bw = w / rows.length;
-    const Y = v => Tp + (mx - v) / (mx - mn) * h;
-    const fmtB = v => (Math.abs(v) >= 1e9 ? (v / 1e9).toFixed(1) + 'B' : (v / 1e6).toFixed(0) + 'M');
-    const bars = rows.map((x, i) => { const x0 = L + i * bw + bw * 0.15, bW = bw * 0.33;
-      return `<rect x="${x0}" y="${Y(x.r)}" width="${bW}" height="${Y(0) - Y(x.r)}" fill="#2E9E5B"/>` + (ok(x.n) ? `<rect x="${x0 + bW + 2}" y="${Math.min(Y(x.n), Y(0))}" width="${bW}" height="${Math.abs(Y(0) - Y(x.n))}" fill="${x.n >= 0 ? '#9AA0A6' : '#C5221F'}"/>` : '') +
-        `<text x="${x0 + bW}" y="${H - 6}" font-size="9" fill="#7A8296" text-anchor="middle">${x.d.slice(2, 7)}</text><text x="${x0 + bW / 2}" y="${Y(x.r) - 2}" font-size="8" fill="#16223D" text-anchor="middle">${fmtB(x.r)}</text>`; }).join('');
-    const mg = rows.map((x, i) => ok(x.n) && x.r ? [L + i * bw + bw / 2, x.n / x.r] : null).filter(Boolean);
-    const mMax = Math.max(0.05, ...mg.map(m => m[1])), mMin = Math.min(0, ...mg.map(m => m[1]));
-    const YM = v => Tp + (mMax - v) / (mMax - mMin) * h;
-    const line = mg.map((m, i) => (i ? 'L' : 'M') + m[0] + ',' + YM(m[1])).join('');
-    return { cur: cc, svg: `<svg viewBox="0 0 ${W} ${H}" width="100%" style="max-width:640px;border:1px solid #E3E6EE;border-radius:4px">${bars}
-      <path d="${line}" fill="none" stroke="#D9A93E" stroke-width="1.6"/>${mg.map(m => `<circle cx="${m[0]}" cy="${YM(m[1])}" r="2.5" fill="#D9A93E"/><text x="${m[0] + 4}" y="${YM(m[1]) - 4}" font-size="8" fill="#9C7426">${(m[1] * 100).toFixed(0)}%</text>`).join('')}
-      <line x1="${L}" x2="${L + w}" y1="${Y(0)}" y2="${Y(0)}" stroke="#C9CED8"/><text x="4" y="${Tp + 8}" font-size="9" fill="#7A8296">${cc}</text>
-      <rect x="${L + w - 150}" y="2" width="8" height="8" fill="#2E9E5B"/><text x="${L + w - 138}" y="10" font-size="9" fill="#5C6478">Revenue</text><rect x="${L + w - 92}" y="2" width="8" height="8" fill="#9AA0A6"/><text x="${L + w - 80}" y="10" font-size="9" fill="#5C6478">Net income</text><text x="${L + w - 22}" y="10" font-size="9" fill="#9C7426">Margin</text></svg>` };
+  function finChart(fin, cur, W, H, secq) {
+    const pickQ = () => {
+      if (secq && (secq.revenue || []).length >= 4) return { R: secq.revenue, N: secq.net_income || [], q: true, cur: 'USD', src: 'SEC filings' };
+      if (fin && (fin.quarterlyTotalRevenue || []).length >= 3) return { R: fin.quarterlyTotalRevenue, N: fin.quarterlyNetIncome || [], q: true, src: 'Yahoo Finance' };
+      if (fin && (fin.annualTotalRevenue || []).length >= 2) return { R: fin.annualTotalRevenue, N: fin.annualNetIncome || [], q: false, src: 'Yahoo Finance' };
+      return null;
+    };
+    const P = pickQ(); if (!P) return null;
+    const rows = P.R.filter(x => ok(x.value)).slice(-8).map(x => ({ d: x.date, r: x.value, n: (P.N.find(y => y.date === x.date) || {}).value, cur: x.currency }));
+    if (rows.length < 2) return null;
+    const cc = P.cur || rows[rows.length - 1].cur || cur;
+    const lbl = d => { const dt = new Date(d + 'T00:00:00Z'); return P.q ? `Q${Math.floor(dt.getUTCMonth() / 3) + 1} '${String(dt.getUTCFullYear()).slice(2)}` : 'FY ' + dt.getUTCFullYear(); };
+    const fmtB = v => (Math.abs(v) >= 1e9 ? (v / 1e9).toFixed(1) + 'B' : Math.abs(v) >= 1e6 ? (v / 1e6).toFixed(0) + 'M' : n2(v, 0));
+    const vals = rows.flatMap(x => [x.r, x.n]).filter(ok);
+    let hi = Math.max(...vals), lo = Math.min(0, ...vals); const pad = (hi - lo) * 0.12; hi += pad;
+    const L = 52, Rr = 46, Tp = 30, Bt = 24, w = W - L - Rr, h = H - Tp - Bt, n = rows.length;
+    const X = i => L + (n === 1 ? w / 2 : i * w / (n - 1)), Y = v => Tp + (hi - v) / (hi - lo) * h;
+    const mg = rows.map(x => ok(x.n) && x.r ? x.n / x.r : null);
+    const mv = mg.filter(ok); const mHi = Math.max(0.05, ...mv) * 1.15, mLo = Math.min(0, ...mv);
+    const YM = v => Tp + (mHi - v) / (mHi - mLo) * h;
+    const line = (arr, Yf) => arr.map((v, i) => ok(v) ? `${X(i).toFixed(1)},${Yf(v).toFixed(1)}` : null).filter(Boolean).map((p, i) => (i ? 'L' : 'M') + p).join('');
+    const grid = [0, 0.25, 0.5, 0.75, 1].map(k => { const v = lo + (hi - lo) * k; return `<line x1="${L}" x2="${L + w}" y1="${Y(v)}" y2="${Y(v)}" stroke="#EEF0F4"/><text x="${L - 6}" y="${Y(v) + 3}" font-size="9" fill="#7A8296" text-anchor="end">${fmtB(v)}</text>`; }).join('');
+    const mAx = [mLo, (mLo + mHi) / 2, mHi].map(v => `<text x="${L + w + 6}" y="${YM(v) + 3}" font-size="9" fill="#9C7426">${(v * 100).toFixed(0)}%</text>`).join('');
+    const xl = rows.map((x, i) => `<text x="${X(i)}" y="${H - 7}" font-size="9" fill="#5C6478" text-anchor="middle">${lbl(x.d)}</text>`).join('');
+    const dots = (arr, Yf, col, name, fmt) => arr.map((v, i) => ok(v) ? `<circle cx="${X(i)}" cy="${Yf(v)}" r="3" fill="${col}"><title>${lbl(rows[i].d)} ${name}: ${fmt(v)}</title></circle>` : '').join('');
+    const last = rows[n - 1];
+    const endLbl = (v, Yf, col, txt, dy) => ok(v) ? `<text x="${X(n - 1) - 6}" y="${Yf(v) + dy}" font-size="9.5" font-weight="700" fill="${col}" text-anchor="end">${txt}</text>` : '';
+    const legend = `<g font-size="10" fill="#5C6478"><rect x="${L}" y="8" width="14" height="3" fill="#1E8E3E"/><text x="${L + 18}" y="12">Revenue</text><rect x="${L + 78}" y="8" width="14" height="3" fill="#16223D"/><text x="${L + 96}" y="12">Net income</text><rect x="${L + 170}" y="8" width="14" height="3" fill="#D9A93E"/><text x="${L + 188}" y="12">Net margin (right axis)</text><text x="${L + w + Rr - 4}" y="12" text-anchor="end" fill="#7A8296">${esc(cc || '')} · ${esc(P.src)}</text></g>`;
+    const nPos = ok(last.n) && Y(last.n) - Y(last.r) < 14;
+    return { cur: cc, q: P.q, n, svg: `<svg viewBox="0 0 ${W} ${H}" width="100%" style="max-width:760px;border:1px solid #E3E6EE;border-radius:4px;background:#fff">${legend}${grid}${mAx}
+      <line x1="${L}" x2="${L + w}" y1="${Y(0)}" y2="${Y(0)}" stroke="#C9CED8"/>
+      <path d="${line(mg, YM)}" fill="none" stroke="#D9A93E" stroke-width="1.6" stroke-dasharray="5 3"/>${dots(mg, YM, '#D9A93E', 'net margin', v => (v * 100).toFixed(1) + '%')}
+      <path d="${line(rows.map(x => x.r), Y)}" fill="none" stroke="#1E8E3E" stroke-width="2.2"/>${dots(rows.map(x => x.r), Y, '#1E8E3E', 'revenue', fmtB)}
+      <path d="${line(rows.map(x => x.n), Y)}" fill="none" stroke="#16223D" stroke-width="2.2"/>${dots(rows.map(x => x.n), Y, '#16223D', 'net income', fmtB)}
+      ${endLbl(last.r, Y, '#1E8E3E', fmtB(last.r), -8)}${endLbl(last.n, Y, '#16223D', fmtB(last.n), nPos ? 16 : -8)}${xl}</svg>` };
   }
-  function gaugeSvg(total, max, v) {
-    const x = Math.max(-1, Math.min(1, total / (max || 1))), ang = Math.PI * (1 - (x + 1) / 2), cx = 60, cy = 58, r = 46;
+  function gaugeSvg(sc) {
+    const x = Math.max(-1, Math.min(1, (sc - 50) / 50)), ang = Math.PI * (1 - (x + 1) / 2), cx = 60, cy = 58, r = 46;
     const arc = (a0, a1, col) => { const p0 = [cx + r * Math.cos(a0), cy - r * Math.sin(a0)], p1 = [cx + r * Math.cos(a1), cy - r * Math.sin(a1)]; return `<path d="M${p0} A${r},${r} 0 0,1 ${p1}" stroke="${col}" stroke-width="12" fill="none"/>`; };
     return `<svg width="120" height="78" viewBox="0 0 120 78">${arc(Math.PI, Math.PI * 0.62, '#C5221F')}${arc(Math.PI * 0.62, Math.PI * 0.38, '#BFC5D0')}${arc(Math.PI * 0.38, 0, '#0F9D58')}
       <line x1="${cx}" y1="${cy}" x2="${cx + (r - 6) * Math.cos(ang)}" y2="${cy - (r - 6) * Math.sin(ang)}" stroke="#E25D2B" stroke-width="3"/><circle cx="${cx}" cy="${cy}" r="5" fill="#1F3BB3"/>
-      <text x="${cx}" y="76" text-anchor="middle" font-size="12" font-weight="800" fill="#16223D">${total}</text></svg>`;
+      <text x="${cx}" y="76" text-anchor="middle" font-size="12" font-weight="800" fill="#16223D">${sc}/100</text></svg>`;
   }
 }
 })();

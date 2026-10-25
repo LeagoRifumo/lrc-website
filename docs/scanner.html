@@ -62,7 +62,7 @@
   <span class="mkt-switch mkt-big"><select id="scMkt" aria-label="Market"><option value="JSE">JSE — Johannesburg</option><option value="US">New York — NYSE &amp; Nasdaq</option></select></span>
   <div class="tabs" id="scTabs"><button data-t="stocks" class="on">Stocks</button><button data-t="setups">Setups &amp; entries</button><button data-t="invest">Investment ideas</button><button data-t="etfs">ETFs</button><button data-t="sectors">Sectors</button><button data-t="how">How scoring works</button></div>
 </div></div>
-<section style="padding-top:10px"><div class="wrap">
+<section style="padding-top:10px"><div class="wrap wide" id="scWrap">
   <div id="pane-stocks">
     <div class="kpis" id="scKpis"></div>
     <div class="scan-filters">
@@ -74,8 +74,12 @@
       <label><input type="checkbox" id="scCov"> LRC covered</label>
       <label><input type="checkbox" id="scMine"> ★ My list</label>
       <button class="chip-btn" id="scCsv">Download CSV</button>
+      <button class="chip-btn" id="scFull">⛶ Full screen</button>
     </div>
-    <div class="tbl-wrap" style="max-height:78vh;overflow:auto"><table class="heat" id="scTbl"></table></div>
+    <div class="score-key"><b>How to read the LRC score (0–100)</b> Each company gets up to 17 readings — 5 technical, 3 sentiment, 9 financial. A green cell adds points, a red cell takes points away, grey is neutral. The points are converted to a score out of 100 where <b>50 is neutral</b>, 100 means every reading is at its most bullish and 0 every reading at its most bearish.
+      <span class="keys"><span class="sig sig-strong-buy">72–100 STRONG BUY</span><span class="sig sig-buy">61–71 BUY</span><span class="sig sig-hold">43–60 HOLD</span><span class="sig sig-sell">33–42 SELL</span><span class="sig sig-strong-sell">0–32 STRONG SELL</span></span>
+      <small>Example: 9 points out of a possible ±20 → 50 + 50 × 9/20 = <b>73</b> → STRONG BUY. Hover a score to see its points.</small></div>
+    <div class="tbl-wrap" id="scTblWrap" style="max-height:80vh;overflow:auto"><table class="heat" id="scTbl"></table></div>
     <button class="btn btn-ghost more-btn" id="scMore" hidden>Show more</button>
   </div>
   <div id="pane-setups" hidden>
@@ -104,7 +108,7 @@
       <div class="card"><h3>1 · Technicals</h3><p><b>Trend</b> (−2…+2): price vs the 50- and 200-day averages and the 200-day's slope. <b>Momentum</b> (−2…+2): 6-month relative strength vs the market and RSI(14). <b>Setup</b> (−2…+2): <b>Breakout</b> through the 55-day high or a major resistance on 1.5× volume, or a <b>Retest</b> of a major support (an old resistance broken in the last 40 sessions, or the rising 50-day) that holds = +2; <b>Near breakout</b> = +1; <b>Breakdown</b> or <b>Failed retest</b> = −2. <b>Extension</b> (−1…+1): more than 3 ATR above the 20-day = chasing. <b>Volume</b> (−1…+1): up-day vs down-day volume.</p></div>
       <div class="card"><h3>2 · Sentiment</h3><p><b>Analysts</b> (−2…+2): consensus rating from 1 (strong buy) to 5 (sell). <b>Target</b> (−1…+1): upside to the median analyst target above 15% = +1, below today's price = −1. <b>Short interest</b> (−1…+1): below 3% of float = +1, above 12% = −1.</p></div>
       <div class="card"><h3>3 · Fundamentals</h3><p>Each −1 / 0 / +1, judged against the <b>median of the same sector in the same market</b>: Forward P/E, TTM P/E, Price/Sales and Price/FCF (20% cheaper = +1, 25% dearer or loss-making = −1), revenue growth, EPS growth, debt/equity, ROE and dividend yield.</p></div>
-      <div class="card"><h3>4 · The LRC Stock Scanner rating</h3><p>All readings are added up and compared with the maximum possible: ≥45% = <span class="sig sig-strong-buy">STRONG BUY</span>, ≥18% = <span class="sig sig-buy">BUY</span>, between = <span class="sig sig-hold">HOLD</span>, ≤−18% = <span class="sig sig-sell">SELL</span>, ≤−45% = <span class="sig sig-strong-sell">STRONG SELL</span>.</p></div>
+      <div class="card"><h3>4 · The LRC Stock Scanner rating</h3><p>All readings are added up and turned into a score out of 100 (50 = neutral): 72+ = <span class="sig sig-strong-buy">STRONG BUY</span>, 61–71 = <span class="sig sig-buy">BUY</span>, 43–60 = <span class="sig sig-hold">HOLD</span>, 33–42 = <span class="sig sig-sell">SELL</span>, 0–32 = <span class="sig sig-strong-sell">STRONG SELL</span>. Readings a company does not have (e.g. no analyst coverage) are left out, not counted against it.</p></div>
       <div class="card"><h3>5 · Major support</h3><p>Swing highs and lows (5-bar pivots) from the last 12 months are clustered; a level touched at least twice is a major support or resistance. The one-page summary draws them on the chart with the entry, stop and targets.</p></div>
       <div class="card"><h3>6 · Entry plans</h3><p>Breakout: buy stop above the breakout-day high, stop below the breakout level. Retest: buy stop above yesterday's high once support holds, stop below support. Shorts mirror this. Every plan shows the downside to the stop and the upside to two targets in %, and the position size that risks 1% of your account. Results within 14 days = event risk.</p></div>
     </div>

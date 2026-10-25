@@ -12,6 +12,7 @@ from concurrent.futures import ThreadPoolExecutor
 sys.path.insert(0, os.path.dirname(__file__))
 from yahoo import Yahoo, raw
 import scan_engine as E
+import sec_quarters as SECQ
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 P = lambda *a: os.path.join(ROOT, *a)
@@ -190,6 +191,21 @@ def main():
     for s, v in tsmap.items():
         if not isinstance(v, Exception): cache.setdefault(s, {}).update({'ts': v, 'ts_date': dt.date.today().isoformat()})
     print(f'financials: {sum(not isinstance(v, Exception) for v in tsmap.values())}/{len(need_ts)} refreshed ({time.time() - t0:.0f}s)')
+    # official quarterly revenue / net income for US companies (SEC EDGAR), 8 quarters, refreshed weekly in rotation
+    secq = load(P('agents', 'work', 'sec_q_cache.json'), {}) or {}
+    try:
+        ciks = SECQ.cik_map()
+        need = sorted([s for s, m in stocks if m == 'US' and s in ciks and (secq.get(s, {}).get('date') or '') < week_ago],
+                      key=lambda s: secq.get(s, {}).get('date') or '')[:int(os.environ.get('SEC_PER_RUN', '220'))]
+        def get_q(s):
+            try: return s, SECQ.quarters(ciks[s])
+            except Exception as e: return s, e
+        with ThreadPoolExecutor(4) as ex:
+            for s, v in ex.map(get_q, need):
+                if not isinstance(v, Exception): secq[s] = {'date': dt.date.today().isoformat(), 'data': v}
+        print(f'SEC quarterly financials: {len(need)} refreshed, {len(secq)} cached ({time.time() - t0:.0f}s)')
+    except Exception as e:
+        print('SEC quarterly step failed:', repr(e)[:120])
 
     # ---------- per stock ----------
     rows, details = [], {}
@@ -255,9 +271,12 @@ def main():
         cov = ratings.get(r['t'])
         if cov: tg['lrc'] = cov['target_6m']
         inv = E.investment(f, r['ts'], r['m'], t['price'], tg.get('lrc') or tg.get('blend'))
+        tgt_final = tg.get('lrc') or tg.get('blend')
+        v_score = E.verdict(total, maxabs)
+        v_final, v_note = E.consistent(v_score, (tgt_final / t['price'] - 1) if tgt_final and t['price'] else None)
         row = {'t': r['t'], 'n': r['n'], 'm': r['m'], 'sec': r['sec'], 'ind': r['ind'], 'cur': r['cur'], 'px': t['price'], 'chg': t['chg_1d'],
                'p1w': t['perf_1w'], 'p1m': t['perf_1m'], 'p6m': t['perf_6m'], 'ytd': t['perf_ytd'], 'mcap': f.get('mcap'), 'rsi': t['rsi'],
-               'sc': sc, 'tech': tech_total, 'sent': sent_total, 'fund': fund_total, 'total': total, 'max': maxabs, 'v': E.verdict(total, maxabs),
+               'sc': sc, 'tech': tech_total, 'sent': sent_total, 'fund': fund_total, 'total': total, 'max': maxabs, 'score': E.lrc_score(total, maxabs), 'v': v_final, 'v_score': v_score, 'v_note': v_note,
                'setup': t.get('setup'), 'lvl': t.get('setup_level'), 'plan': {k: pl[k] for k in ('side', 'entry', 'stop', 't1', 't2', 'risk_pct')} if pl else None,
                'ne': f.get('next_earnings'), 'cat': cats, 'tgt': tg.get('lrc') or tg.get('blend'),
                'cov': {'rating': cov['rating'], 'target': cov['target_6m'], 'rated': cov.get('rated')} if cov else None,
@@ -299,7 +318,7 @@ def main():
             else: verdict = '—'
             val.append({'k': k, 'label': label, 'v': v, 'sector': mv, 'score': sc.get(k), 'verdict': verdict})
         details[r['t']] = {'row': row, 'tech': {k: v for k, v in t.items() if k not in ('setup_bar',)}, 'f': f, 'profile': r['prof'], 'sector_medians': md,
-                           'valuation': val, 'targets': tg, 'plan': pl, 'history': hist, 'financials': r['ts'], 'dividends': r['meta'].get('dividends', [])[-8:],
+                           'valuation': val, 'targets': tg, 'plan': pl, 'history': hist, 'financials': r['ts'], 'sec_q': (secq.get(r['t']) or {}).get('data'), 'dividends': r['meta'].get('dividends', [])[-8:],
                            'benchmark': cfg['benchmarks'][r['m']]['name'], 'research': r['t'] in research, 'investment': inv}
 
     # ---------- ETFs ----------
@@ -316,7 +335,7 @@ def main():
         sc = E.tech_scores(t); tot = sum(sc.values()); pl = E.plan(bars, t)
         etf_rows.append({'t': s, 'n': label, 'full': (quotes.get(s) or {}).get('longName') or meta.get('name'), 'm': m, 'g': grp, 'px': t['price'],
                          'cur': 'ZAR' if m == 'JSE' else 'USD', 'chg': t['chg_1d'], 'p1w': t['perf_1w'], 'p1m': t['perf_1m'], 'p3m': t['perf_3m'],
-                         'p6m': t['perf_6m'], 'ytd': t['perf_ytd'], 'rs': t['rs_6m'], 'rsi': t['rsi'], 'sc': sc, 'total': tot, 'max': 8, 'v': E.verdict(tot, 8),
+                         'p6m': t['perf_6m'], 'ytd': t['perf_ytd'], 'rs': t['rs_6m'], 'rsi': t['rsi'], 'sc': sc, 'total': tot, 'max': 8, 'score': E.lrc_score(tot, 8), 'v': E.verdict(tot, 8),
                          'setup': t.get('setup'), 'lvl': t.get('setup_level'),
                          'plan': {k: pl[k] for k in ('side', 'entry', 'stop', 't1', 't2', 'risk_pct')} if pl else None,
                          'sma50': t['sma50'], 'sma200': t['sma200']})
@@ -342,7 +361,7 @@ def main():
             score = round(10 * (0.5 * avg / 0.6 + 0.3 * etf_part + 0.2 * (bull - bear)), 1)
             score = max(-10, min(10, score))
             top = sorted(rs, key=lambda x: -x['total'])
-            sectors.append({'m': m, 'sec': sec, 'n': len(rs), 'score': score, 'v': E.verdict(score, 10), 'avg': avg, 'bull': bull, 'bear': bear, 'above50': above50,
+            sectors.append({'m': m, 'sec': sec, 'n': len(rs), 'score': score, 'score100': E.lrc_score(score, 10), 'v': E.verdict(score, 10), 'avg': avg, 'bull': bull, 'bear': bear, 'above50': above50,
                             'setups': setups, 'etf': et, 'etf_name': (e or {}).get('n'), 'etf_total': (e or {}).get('total'), 'etf_v': (e or {}).get('v'),
                             'etf_p1m': (e or {}).get('p1m'), 'top': [x['t'] for x in top[:3]], 'bottom': [x['t'] for x in top[-3:]]})
     sectors.sort(key=lambda x: (x['m'], -x['score']))
@@ -358,7 +377,7 @@ def main():
     def pick(r):
         p = r['plan'] or {}
         up = lambda x: (x / p['entry'] - 1) if p.get('entry') and x else None
-        return {'t': r['t'], 'n': r['n'], 'sec': r['sec'], 'cur': r['cur'], 'px': r['px'], 'chg': r['chg'], 'v': r['v'], 'total': r['total'], 'max': r['max'],
+        return {'t': r['t'], 'n': r['n'], 'sec': r['sec'], 'cur': r['cur'], 'px': r['px'], 'chg': r['chg'], 'v': r['v'], 'total': r['total'], 'max': r['max'], 'score': r['score'],
                 'setup': r['setup'], 'lvl': r['lvl'], 'ne': r['ne'], 'cov': r['cov'], 'tgt': r['tgt'], 'tgt_up': (r['tgt'] / r['px'] - 1) if r['tgt'] and r['px'] else None,
                 'entry': p.get('entry'), 'stop': p.get('stop'), 't1': p.get('t1'), 't2': p.get('t2'),
                 'stop_pct': up(p.get('stop')), 't1_pct': up(p.get('t1')), 't2_pct': up(p.get('t2')), 'inv': r['inv']}
@@ -382,6 +401,7 @@ def main():
             if fn not in keep: os.remove(os.path.join(OUT, 't', fn))
     # keep the fundamentals cache small (no profiles' long text duplicated twice)
     dump(P('agents', 'work', 'scan_fund_cache.json'), rnd_all(cache))
+    dump(P('agents', 'work', 'sec_q_cache.json'), secq)
     for s_ in (os.environ.get('SCAN_DEBUG') or '').split(','):
         d = details.get(s_)
         if d: print('DEBUG', s_, json.dumps(rnd_all({'px': d['tech']['price'], 'cur': d['row']['cur'], 'setup': d['row']['setup'], 'v': d['row']['v'], 'sc': d['row']['sc'],

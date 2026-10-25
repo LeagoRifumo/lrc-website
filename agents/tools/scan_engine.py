@@ -253,10 +253,27 @@ def fund_scores(f, med, sector):
     return o
 
 
+def lrc_score(total, maxabs):
+    """LRC score on a 0-100 scale: 50 = neutral, 100 = every reading at its most bullish, 0 = every reading at its most bearish."""
+    return round(50 + 50 * total / maxabs) if maxabs else 50
+
+
 def verdict(total, maxabs):
-    x = total / maxabs if maxabs else 0
-    # LRC Scanner signal (automated) — separate from the analyst's BUY / HOLD / SELL rating in ratings.json
-    return 'STRONG BUY' if x >= 0.45 else 'BUY' if x >= 0.22 else 'STRONG SELL' if x <= -0.35 else 'SELL' if x <= -0.15 else 'HOLD'
+    """LRC Stock Scanner rating from the 0-100 LRC score (separate from the analyst rating in ratings.json)."""
+    sc = lrc_score(total, maxabs)
+    return 'STRONG BUY' if sc >= 72 else 'BUY' if sc >= 61 else 'STRONG SELL' if sc <= 32 else 'SELL' if sc <= 42 else 'HOLD'
+
+
+def consistent(rating, upside):
+    """A BUY needs upside to the LRC Analyst Target and a SELL needs downside, so the rating and the target never contradict.
+    Returns (rating, reason or None)."""
+    if upside is None: return rating, None
+    if rating == 'STRONG BUY' and upside < 0.10: rating = 'BUY' if upside >= 0.05 else 'HOLD'
+    elif rating == 'BUY' and upside < 0.05: rating = 'HOLD'
+    elif rating == 'STRONG SELL' and upside > -0.05: rating = 'SELL' if upside <= 0 else 'HOLD'
+    elif rating == 'SELL' and upside > 0: rating = 'HOLD'
+    else: return rating, None
+    return rating, 'Capped by the LRC Analyst Target (%+.0f%% from the price)' % (upside * 100)
 
 
 def sector_medians(rows):
@@ -293,7 +310,7 @@ def model_targets(f, med, price):
     elif cons: t = cons
     elif mdl: t = clamp(mdl, 0.6 * price, 1.6 * price)
     else: t = None
-    if t: out['blend'] = t
+    if t: out['blend'] = clamp(t, 0.65 * price, 1.5 * price)  # a 6-month target stays within -35% / +50% of the price
     if mdl: out['models'] = mdl
     return out
 
