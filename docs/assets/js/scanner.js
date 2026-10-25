@@ -387,8 +387,38 @@ if ($('paper')) {
     else if (t.setup === 'Breakdown' || t.setup === 'Failed retest') nextBits.push(`staying below ${px(t.setup_level, c)} keeps the pressure on`);
     else if ((t.supports || [])[0]) nextBits.push(`major support sits at ${px(t.supports[0].price, c)}${(t.resistances || [])[0] ? ` and resistance at ${px(t.resistances[0].price, c)}` : ''}`);
     if (ok(upT)) nextBits.push(`the LRC Analyst Target of ${px(lrcT, c)} implies ${pc(upT, 0)} over 6 months`);
-    const autoBottom = `<b>Thesis:</b> ${esc(r.n)} is a trading <b>${esc(r.v)}</b> (${S100(r)}/100, 3–12 months) and an investment <b>${esc(r.iv_v || 'HOLD')}</b> (${r.iv_score ?? '—'}/100, 5–10 years), and the shares look <b>${esc((r.val || 'fair value').toLowerCase())}</b>${gl.length ? ` — ${gname(gl[0][0])} is its strongest area${gl.length > 1 ? ` and ${gname(gl[gl.length - 1][0])} its weakest` : ''}` : ''}.${r.v_note ? ' ' + esc(r.v_note) + '.' : ''}
-      <br><b>Why:</b> ${pros.length ? pros.map(phrase).map(esc).join('; ') : 'no standout strengths on the readings'}${cons.length ? `. <b>Watch:</b> ${cons.map(phrase).map(esc).join('; ')}` : ''}.
+    // ---- fact-based mini thesis: why BUY / HOLD / SELL, every point a number from the data ----
+    const F = [];   // s: +1 supports buying, -1 supports selling; w: weight
+    const add = (s, w, txt) => F.push({ s, w, txt });
+    if (t.sma200) add(t.price > t.sma200 && t.price > t.sma50 ? 1 : t.price < t.sma200 && t.price < t.sma50 ? -1 : 0, 3, `the price (${px(t.price, c)}) is ${t.price > t.sma50 ? 'above' : 'below'} its 50-day average (${px(t.sma50, c)}) and ${t.price > t.sma200 ? 'above' : 'below'} its 200-day (${px(t.sma200, c)}) — the trend is ${t.price > t.sma200 && t.price > t.sma50 ? 'up' : t.price < t.sma200 && t.price < t.sma50 ? 'down' : 'mixed'}`);
+    if (t.setup) add(['Breakout', 'Retest', 'Near breakout'].includes(t.setup) ? 1 : -1, 3, `chart setup: ${t.setup.toLowerCase()} at ${px(t.setup_level, c)}`);
+    if (ok(t.rs_6m)) add(t.rs_6m > 0.03 ? 1 : t.rs_6m < -0.03 ? -1 : 0, 2, `the share has ${t.rs_6m >= 0 ? 'beaten' : 'lagged'} the ${esc(d.benchmark || 'market')} by ${pc(Math.abs(t.rs_6m), 0).replace('+', '')} over 6 months (${pc(t.perf_6m, 0)} in total)`);
+    if (ok(f.rev_growth)) add(f.rev_growth > 0.05 ? 1 : f.rev_growth < 0 ? -1 : 0, 2, `revenue is ${f.rev_growth >= 0 ? 'growing' : 'shrinking'} ${pc(Math.abs(f.rev_growth), 0).replace('+', '')} year on year`);
+    if (ok(f.eps_growth_fwd)) add(f.eps_growth_fwd > 0.08 ? 1 : f.eps_growth_fwd < 0 ? -1 : 0, 2, `analysts expect earnings per share to ${f.eps_growth_fwd >= 0 ? 'grow' : 'fall'} ${pc(Math.abs(f.eps_growth_fwd), 0).replace('+', '')} this year${ok(f.eps_growth_next) ? ` and ${f.eps_growth_next >= 0 ? 'grow' : 'fall'} ${pc(Math.abs(f.eps_growth_next), 0).replace('+', '')} next year` : ''}`);
+    if (ok(f.fpe) && f.fpe > 0 && ok(d.sector_medians?.fpe)) { const rel = f.fpe / d.sector_medians.fpe - 1; add(rel < -0.15 ? 1 : rel > 0.25 ? -1 : 0, 2, `it trades on ${f.fpe.toFixed(1)}x forward earnings vs ${d.sector_medians.fpe.toFixed(1)}x for its sector (${rel < 0 ? 'cheaper' : 'dearer'} by ${Math.abs(rel * 100).toFixed(0)}%)`); }
+    if (ok(f.tpe) && f.tpe < 0) add(-1, 2, 'it is loss-making on a trailing basis');
+    if (ok(f.op_margin)) add(f.op_margin > 0.15 ? 1 : f.op_margin < 0.03 ? -1 : 0, 1, `operating margin is ${pp(f.op_margin, 0)}`);
+    if (ok(f.fcf) && ok(f.mcap) && f.mcap > 0) add(f.fcf > 0 && f.fcf / f.mcap > 0.04 ? 1 : f.fcf < 0 ? -1 : 0, 1, f.fcf >= 0 ? `free cash flow of ${big(f.fcf, c)} is a ${pp(f.fcf / f.mcap, 1)} yield on the market value` : `free cash flow is negative (${big(f.fcf, c)})`);
+    if (ok(f.de) && !['Financial Services', 'Real Estate'].includes(r.sec)) add(f.de < 60 ? 1 : f.de > 150 ? -1 : 0, 1, `debt-to-equity is ${(f.de / 100).toFixed(2)}x`);
+    if (ok(f.rec_mean)) add(f.rec_mean <= 2.2 ? 1 : f.rec_mean >= 3.2 ? -1 : 0, 1, `${f.n_analysts || 'the'} analysts rate it ${recLbl(f.rec_mean).toLowerCase()} on average`);
+    if (ok(upT)) add(upT >= 0.05 ? 1 : upT <= -0.03 ? -1 : 0, 3, `the LRC Analyst Target of ${px(lrcT, c)} is ${pc(upT, 0)} from today's price`);
+    pros.forEach(x => add(1, 1, esc(phrase(x)).replace(/^./, m => m.toLowerCase())));
+    cons.forEach(x => add(-1, 1, esc(phrase(x)).replace(/^./, m => m.toLowerCase())));
+    const dir = /BUY/.test(r.v) ? 1 : /SELL/.test(r.v) ? -1 : 0;
+    const seen = new Set(), uniq = a => a.filter(x => !seen.has(x.txt) && seen.add(x.txt));
+    const by = s => uniq(F.filter(x => x.s === s).sort((a, b) => b.w - a.w));
+    const forV = dir === 0 ? by(1).slice(0, 2) : by(dir).slice(0, 4);
+    const agV = dir === 0 ? by(-1).slice(0, 2) : by(-dir).slice(0, 2);
+    const cap1 = s => s.charAt(0).toUpperCase() + s.slice(1);
+    const nums = (a, start = 1) => a.map((x, i) => `<b>${start + i}.</b> ${cap1(x.txt)}.`).join(' ');
+    const head = dir > 0 ? `We see ${esc(r.n)} as a trading <b>${esc(r.v)}</b> for the next 3–12 months because the facts line up behind buyers`
+      : dir < 0 ? `We see ${esc(r.n)} as a trading <b>${esc(r.v)}</b> for the next 3–12 months because the facts point lower`
+      : `We see ${esc(r.n)} as a trading <b>HOLD</b> for the next 3–12 months: the facts are mixed, so we would wait for a clearer signal`;
+    const ivWhy = `For long-term investors (5–10 years) it is an investment <b>${esc(r.iv_v || 'HOLD')}</b> (${r.iv_score ?? '—'}/100) and the shares look <b>${esc((r.val || 'fair value').toLowerCase())}</b>${gl.length ? `; its strongest area is ${gname(gl[0][0])}${gl.length > 1 ? ` and its weakest ${gname(gl[gl.length - 1][0])}` : ''}` : ''}.`;
+    const autoBottom = `<b>Thesis:</b> ${head} (score ${S100(r)}/100).${r.v_note ? ' ' + esc(r.v_note) + '.' : ''}
+      <br><b>Why ${dir > 0 ? 'buy' : dir < 0 ? 'sell' : 'hold'} — the facts:</b> ${dir === 0 ? `<i>For:</i> ${forV.length ? nums(forV) : '—'} <i>Against:</i> ${agV.length ? nums(agV, forV.length + 1) : '—'}` : (forV.length ? nums(forV) : 'the readings lean this way, with no single standout figure.')}
+      ${dir !== 0 && agV.length ? `<br><b>What could prove us wrong:</b> ${agV.map(x => cap1(x.txt)).join('; ')}.` : ''}
+      <br><b>Investment view:</b> ${ivWhy}
       <br><b>What next:</b> ${nextBits.length ? nextBits.join('; ') : 'no dated catalyst on the feed'}.`;
     const ul = a => `<ul>${a.map(x => `<li>${x}</li>`).join('')}</ul>`;
     const S = (k, auto) => R && R[k] && R[k].length ? ul(R[k].map(esc)) : ul(auto);
@@ -430,7 +460,7 @@ if ($('paper')) {
       <h4>Insider Activity &amp; Institutional Ownership:</h4>${S('ownership', own.length ? own : ['—'])}
       ${chart}
     </div></div>
-    <p class="bl"><b class="k">Bottom Line:</b> ${R && R.bottom_line ? esc(R.bottom_line) : autoBottom}</p>
+    <p class="bl"><b class="k">Bottom Line:</b> ${R && R.bottom_line ? esc(R.bottom_line) + '<br>' + autoBottom.replace('<b>Thesis:</b>', '<b>Model check:</b>') : autoBottom}</p>
     <div class="bar">Valuation <small>VS ${esc(r.sec.toUpperCase())} · ${r.m === 'JSE' ? 'JSE' : 'NEW YORK'} MEDIAN</small></div>
     <div class="cols"><div>
       <p style="margin-bottom:6px"><b style="color:#16223D">Valuation verdict:</b> <span class="${valCls(r.val)}" style="font-size:11px">${esc(r.val || '—')}</span></p>
