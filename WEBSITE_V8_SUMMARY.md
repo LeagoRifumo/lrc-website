@@ -59,3 +59,9 @@ Give this file (and the zip) to Claude when you next update the website.
 - Broker referral links → store.json brokers
 - Optional: weekday Company Research Agent schedule (needs approval in the app)
 - Optional: switch analyst-rated coverage (ratings.json) to fully automated
+
+## SAFE MODE (pre-licence) — switched ON 26 Oct 2026
+- Switch: `window.LRC_SAFE = true;` near the middle of docs/assets/js/main.js (search "SAFE MODE"). Set to `false` to bring everything back once LRC is FSCA-authorised.
+- ON = public pages show scores and grades only: STRONG BUY/BUY/HOLD/SELL/STRONG SELL shown as Top scoring / Strong / Average / Weak / Lowest scoring; watchlist lists "Trading: top scoring" etc.; entry prices, stop-losses, targets and the LRC Analyst Target hidden (columns, Setups tab, track-record setups and target hit rate, stock-page target table, analyst coverage section); stock bottom line = Thesis / Strengths / Weaknesses / Next; valuation badges say "· MODEL EST."; CSV download has grades, no plans or targets.
+- Nothing is deleted: the data and the scanner are unchanged, only what the website displays. Full backup of the pre-safe site: git tag `backup-before-safe-mode` (commit bc0ca0d).
+- Not changed: the Live Show page (live trades with stops/targets on screen), the rating-rules article and the tools page calculators (education). Raw JSON under /data still contains ratings and plans.

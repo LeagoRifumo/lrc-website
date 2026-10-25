@@ -810,3 +810,6 @@ table.wl td.news{min-width:220px}
 .wtag.b{background:rgba(94,211,154,.14);color:#5ED39A;border:1px solid rgba(94,211,154,.35)}
 .wtag.s{background:rgba(240,138,126,.12);color:#F08A7E;border:1px solid rgba(240,138,126,.35)}
 @media (max-width:700px){.dsel label[for]{margin-left:0!important}}
+/* safe mode (pre-licence): see LRC_SAFE in main.js */
+html.safe .nosafe{display:none!important}
+html:not(.safe) .onlysafe{display:none!important}

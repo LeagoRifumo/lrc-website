@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=8.1">
+<link rel="stylesheet" href="assets/css/style.css?v=8.2">
 </head>
 <body>
 <header class="site-header">
@@ -54,7 +54,7 @@
 <section class="page-hero"><div class="wrap">
   <span class="eyebrow">LRC Watchlist</span>
   <h1>The LRC <span class="gold">watchlist</span></h1>
-  <p class="lead">Fully automated from the LRC Stock Scanner. After every scanner run the website picks the <b>top 5 BUY</b> and <b>top 5 SELL</b> names for trading (3–12 months) and for investing (5–10 years), in the JSE and in New York. Nobody picks the names by hand. Use the JSE / New York switch to change market.</p>
+  <p class="lead">Fully automated from the LRC Stock Scanner. After every scanner run the website lists the <b>5 highest-scoring</b> and <b>5 lowest-scoring</b> companies for trading (3–12 months) and for investing (5–10 years), in the JSE and in New York. Nobody picks the names by hand. Use the JSE / New York switch to change market.</p>
   <div class="agent-meta" id="wlMeta"></div>
   <div class="mkt-inline" id="wlMktBox"></div>
   <div class="edu-note"><b>EDUCATIONAL ONLY</b> This watchlist shows how our scanner ranks companies. It is not a recommendation to buy or sell, and it does not consider your circumstances. Prices and levels can be out of date by the time you read them.</div>
@@ -63,7 +63,7 @@
   <div class="kpis" id="wlKpis"></div>
 
   <h2 class="wl-h">Trading watchlist <span class="gold">— 3 to 12 months</span></h2>
-  <p class="lead">Ranked by the Trading score (technical 35%, growth 20%, sentiment 20%, valuation 10%, profitability 10%, financial health 5%) against the 6-month LRC Analyst Target.</p>
+  <p class="lead">Ranked by the Trading score (technical 35%, growth 20%, sentiment 20%, valuation 10%, profitability 10%, financial health 5%).</p>
   <h3 class="wl-sub buy">Top 5 BUY</h3>
   <p class="wl-note" id="wlTbNote"></p>
   <div class="tbl-wrap"><table class="wl mcard" id="wlTB"></table></div>
@@ -72,7 +72,7 @@
   <div class="tbl-wrap"><table class="wl mcard" id="wlTS"></table></div>
 
   <h2 class="wl-h">Investment watchlist <span class="gold">— 5 to 10 years</span></h2>
-  <p class="lead">Ranked by the Investment score (valuation 25%, profitability 25%, financial health 20%, growth 20%, income 10%). A BUY cannot be overvalued and a SELL cannot be undervalued.</p>
+  <p class="lead">Ranked by the Investment score (valuation 25%, profitability 25%, financial health 20%, growth 20%, income 10%).</p>
   <h3 class="wl-sub buy">Top 5 BUY</h3>
   <p class="wl-note" id="wlIbNote"></p>
   <div class="tbl-wrap"><table class="wl mcard" id="wlIB"></table></div>
@@ -83,9 +83,9 @@
   <h2 class="wl-h">Watchlist <span class="gold">news</span></h2>
   <div id="wlNews" class="wire" style="margin-top:20px"></div>
 
-  <h2 class="wl-h">LRC analyst coverage <span class="gold">— Work-sheet ratings</span></h2>
+  <div class="nosafe"><h2 class="wl-h">LRC analyst coverage <span class="gold">— Work-sheet ratings</span></h2>
   <p class="lead">Companies with a completed LRC Work-sheet, re-priced automatically every day. "Under review" means today's price has crossed a rating line.</p>
-  <div class="tbl-wrap"><table class="wl mcard" id="wlCov"></table></div>
+  <div class="tbl-wrap"><table class="wl mcard" id="wlCov"></table></div></div>
 
   <h2 class="wl-h">How the watchlist <span class="gold">is built</span></h2>
   <div class="pillars" id="wlRules"></div>
@@ -106,7 +106,7 @@
   </div>
 </footer>
 <script>window.LRC_DATA = "data/";</script>
-<script src="assets/js/main.js?v=8.1"></script>
-<script src="assets/js/scanner.js?v=8.1"></script>
+<script src="assets/js/main.js?v=8.2"></script>
+<script src="assets/js/scanner.js?v=8.2"></script>
 </body>
 </html>

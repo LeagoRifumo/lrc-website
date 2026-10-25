@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=8.1">
+<link rel="stylesheet" href="assets/css/style.css?v=8.2">
 </head>
 <body>
 <header class="site-header">
@@ -70,7 +70,19 @@
     <p class="empty" id="libEmpty">No research matches that search yet.</p>
   </div>
 </section>
-<section class="light">
+<section class="light onlysafe">
+  <div class="wrap">
+    <span class="eyebrow">What a grade means</span>
+    <h2>Five grades — <em style="color:var(--gold-3)">from the LRC score</em></h2>
+    <div class="ratings">
+      <div class="rating"><b class="b-buy">TOP SCORING · STRONG</b><p>A score of 75 or more (Top scoring) or 60 to 74 (Strong): the company's readings are better than most of its sector.</p></div>
+      <div class="rating"><b class="b-hold">AVERAGE</b><p>A score of 40 to 59: the readings are close to the sector average.</p></div>
+      <div class="rating"><b class="b-sell">WEAK · LOWEST SCORING</b><p>A score of 25 to 39 (Weak) or below 25 (Lowest scoring): the readings are worse than most of its sector.</p></div>
+    </div>
+    <p style="margin-top:24px">Grades describe the company's data against its sector. They are general information, not a recommendation to buy or sell any share.</p>
+  </div>
+</section>
+<section class="light nosafe">
   <div class="wrap">
     <span class="eyebrow">What a rating means</span>
     <h2>BUY, HOLD or SELL — <em style="color:var(--gold-3)">over six months</em></h2>
@@ -98,6 +110,6 @@
   </div>
 </footer>
 <script>window.LRC_DATA = "data/";</script>
-<script src="assets/js/main.js?v=8.1"></script>
+<script src="assets/js/main.js?v=8.2"></script>
 </body>
 </html>

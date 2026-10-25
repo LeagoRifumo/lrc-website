@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=8.1">
+<link rel="stylesheet" href="assets/css/style.css?v=8.2">
 </head>
 <body>
 <header class="site-header">
@@ -54,13 +54,13 @@
 <section class="page-hero"><div class="wrap">
   <span class="eyebrow">LRC Stock Scanner</span>
   <h1>Every stock scored. <span class="gold">Every setup planned.</span></h1>
-  <p class="lead">The JSE and New York in one scanner: technicals (breakouts and retests of major support), analyst sentiment and every key ratio judged against its own sector, rolled into one LRC score and an LRC Stock Scanner rating: BUY, HOLD or SELL. Click any company for its one-page analyst summary.</p>
+  <p class="lead">The JSE and New York in one scanner: technicals (breakouts and retests of major support), analyst sentiment and every key ratio judged against its own sector, rolled into one LRC score out of 100 and a grade: <span class="nosafe">an LRC Stock Scanner rating of BUY, HOLD or SELL</span><span class="onlysafe">Top scoring, Strong, Average, Weak or Lowest scoring</span>. Click any company for its one-page analyst summary.</p>
   <div class="agent-meta" id="scMeta"></div>
   <div class="edu-note"><b>EDUCATIONAL ONLY</b> LRC Stock Scanner ratings are produced by our scoring rules and refreshed automatically. They are general research, not personal advice; where we have completed a Work-sheet, the LRC analyst rating is shown with it. Data can be delayed or wrong — always check the source.</div>
 </div></section>
 <div class="scan-bar"><div class="wrap">
   <span class="mkt-switch mkt-big"><select id="scMkt" aria-label="Market"><option value="JSE">JSE — Johannesburg</option><option value="US">New York — NYSE &amp; Nasdaq</option></select></span>
-  <div class="tabs" id="scTabs"><button data-t="stocks" class="on">Trading scanner · 3–12 months</button><button data-t="setups">Setups &amp; entries</button><button data-t="invest">Investment scanner · 5–10 years</button><button data-t="etfs">ETFs</button><button data-t="sectors">Sectors</button><button data-t="how">How scoring works</button></div>
+  <div class="tabs" id="scTabs"><button data-t="stocks" class="on">Trading scanner · 3–12 months</button><button data-t="setups" class="nosafe">Setups &amp; entries</button><button data-t="invest">Investment scanner · 5–10 years</button><button data-t="etfs">ETFs</button><button data-t="sectors">Sectors</button><button data-t="how">How scoring works</button></div>
 </div></div>
 <section style="padding-top:10px"><div class="wrap wide" id="scWrap">
   <div id="pane-stocks">
@@ -82,7 +82,7 @@
     <div class="score-key"><b>How to read it</b> Every company is checked on <b>37 readings</b> in seven groups — Valuation, Growth, Profitability, Financial health, Income, Sentiment and Technical. Click a group button to see the <b>exact numbers</b>: the big number is the company, the small number is the <b>sector median</b> (hover for the market median). Each reading scores <b>+1 better / 0 neutral / −1 worse</b> than its sector or our safety lines (Trend, Momentum and Setup count ±2).
       <span class="keys"><span class="sig" style="background:#14823F;color:#fff">Bright green · much better (best 10%)</span><span class="sig" style="background:#1F6B3E;color:#fff">Green · better (+1)</span><span class="sig" style="background:#1A1F2C;color:#C7CCD8">Grey · neutral (0)</span><span class="sig" style="background:#8C2F2F;color:#fff">Red · worse (−1)</span><span class="sig" style="background:#B3261E;color:#fff">Bright red · much worse (worst 10%)</span></span>
       <span class="keys"><b style="margin-right:6px">Scores (0–100, 50 = neutral)</b> each group score = 50 + 50 × points earned ÷ points possible; the <b>&nbsp;Trading&nbsp;</b> and <b>&nbsp;Investment&nbsp;</b> scores weight the groups for the holding period (see the note above): <span class="sig sig-strong-buy">75–100 STRONG BUY</span><span class="sig sig-buy">60–74 BUY</span><span class="sig sig-hold">40–59 HOLD</span><span class="sig sig-sell">25–39 SELL</span><span class="sig sig-strong-sell">0–24 STRONG SELL</span></span>
-      <small>Example: Valuation readings +3 of a possible ±7 → valuation score 50 + 50 × 3/7 = <b>71</b>. Trading: a BUY needs upside to the 6-month LRC Analyst Target and a SELL needs downside, otherwise HOLD. Investment: a BUY cannot be OVERVALUED and a SELL cannot be UNDERVALUED. <b>Valuation verdict</b>: UNDERVALUED = valuation readings net +2 or better and 10%+ upside to the LRC Analyst Target; OVERVALUED = valuation net −2 or worse, or the target 5%+ below the price; otherwise FAIR VALUE.</small></div>
+      <small>Example: Valuation readings +3 of a possible ±7 → valuation score 50 + 50 × 3/7 = <b>71</b>. <span class="nosafe">Trading: a BUY needs upside to the 6-month LRC Analyst Target and a SELL needs downside, otherwise HOLD. Investment: a BUY cannot be OVERVALUED and a SELL cannot be UNDERVALUED. <b>Valuation verdict</b>: UNDERVALUED = valuation readings net +2 or better and 10%+ upside to the LRC Analyst Target; OVERVALUED = valuation net −2 or worse, or the target 5%+ below the price; otherwise FAIR VALUE.</span><span class="onlysafe">Grades: Top scoring 75+, Strong 60–74, Average 40–59, Weak 25–39, Lowest scoring below 25. <b>Valuation (model estimate)</b>: UNDERVALUED or OVERVALUED when the valuation readings and the model's fair value agree; otherwise FAIR VALUE. Grades and valuations describe the data; they are not recommendations to buy or sell.</span></small></div>
     <div class="tbl-wrap" id="scTblWrap" style="max-height:80vh;overflow:auto"><table class="heat" id="scTbl"></table></div>
     <button class="btn btn-ghost more-btn" id="scMore" hidden>Show more</button>
   </div>
@@ -115,8 +115,8 @@
       <div class="card"><h3>Income (2)</h3><p>Dividend yield (+1 above 3% and above the sector; −1 after a dividend cut) and payout ratio (+1 between 20% and 70%; −1 above 100%).</p></div>
       <div class="card"><h3>Sentiment (6)</h3><p>Analyst consensus, upside to the analysts' median target, upgrades minus downgrades, short interest, insider and institutional ownership.</p></div>
       <div class="card"><h3>Technical (6)</h3><p>Trend vs the 50/200-day averages (±2), 6-month momentum vs the market (±2), setup (±2: <b>Breakout</b> or <b>Retest</b> of major support vs <b>Breakdown</b> or <b>Failed retest</b>), stretch/RSI, volume and beta.</p></div>
-      <div class="card"><h3>Trading vs Investment</h3><p><b>Trading scanner (3–12 months, 6-month target):</b> technical 35%, growth 20%, sentiment 20%, valuation 10%, profitability 10%, financial health 5%. <b>Investment scanner (5–10 years):</b> valuation 25%, profitability 25%, financial health 20%, growth 20%, income 10%. Bands: 75+ STRONG BUY, 60–74 BUY, 40–59 HOLD, 25–39 SELL, below 25 STRONG SELL. Missing data is left out, never counted against a company.</p></div>
-      <div class="card"><h3>LRC Analyst Target &amp; track record</h3><p>6-month target: the analyst's own where we have a Work-sheet; otherwise 60% analyst consensus + 40% LRC valuation models, within 20% of the consensus. Every rating is measured on the <a href="track.html" style="color:var(--gold-2)">track record</a> page.</p></div>
+      <div class="card"><h3>Trading vs Investment</h3><p><b>Trading scanner (3–12 months):</b> technical 35%, growth 20%, sentiment 20%, valuation 10%, profitability 10%, financial health 5%. <b>Investment scanner (5–10 years):</b> valuation 25%, profitability 25%, financial health 20%, growth 20%, income 10%. Bands: <span class="nosafe">75+ STRONG BUY, 60–74 BUY, 40–59 HOLD, 25–39 SELL, below 25 STRONG SELL</span><span class="onlysafe">75+ Top scoring, 60–74 Strong, 40–59 Average, 25–39 Weak, below 25 Lowest scoring</span>. Missing data is left out, never counted against a company.</p></div>
+      <div class="card nosafe"><h3>LRC Analyst Target &amp; track record</h3><p>6-month target: the analyst's own where we have a Work-sheet; otherwise 60% analyst consensus + 40% LRC valuation models, within 20% of the consensus. Every rating is measured on the <a href="track.html" style="color:var(--gold-2)">track record</a> page.</p></div>
     </div>
     <p class="edu-note" style="margin-top:30px"><b>UPDATES</b> The scanner runs automatically every trading day after the New York close (about 06:30 South African time), using Yahoo Finance prices, fundamentals and analyst data. The JSE universe is our list of large and mid caps; New York covers the S&amp;P 500 and Nasdaq-100.</p>
   </div>
@@ -137,7 +137,7 @@
   </div>
 </footer>
 <script>window.LRC_DATA = "data/";</script>
-<script src="assets/js/main.js?v=8.1"></script>
-<script src="assets/js/scanner.js?v=8.1"></script>
+<script src="assets/js/main.js?v=8.2"></script>
+<script src="assets/js/scanner.js?v=8.2"></script>
 </body>
 </html>

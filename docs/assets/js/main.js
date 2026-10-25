@@ -297,6 +297,51 @@ const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '
 const when = iso => { try { return new Date(iso).toLocaleString('en-ZA', { weekday: 'short', day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }) + ' SAST'; } catch (e) { return iso; } };
 const brandName = s => String(s ?? '').replace(/\s*\([^)]*(GitHub|Claude|Action|automation|workbook)[^)]*\)/gi, '').replace(/\b(GitHub Actions?|Claude|Anthropic)\b/gi, 'LRC').replace(/\s+Agent\b/g, '');
 window.LRCBrand = brandName;
+/* =================== SAFE MODE (pre-licence) ===================
+   true  = public site shows scores and grades only: no BUY/SELL wording, no entry prices, stop-losses or targets.
+   false = bring back BUY/HOLD/SELL ratings, entry plans and LRC Analyst Targets (only once LRC is FSCA-authorised). */
+window.LRC_SAFE = true;
+(() => {
+  if (!window.LRC_SAFE) return;
+  document.documentElement.classList.add('safe');
+  const page = (location.pathname.split('/').pop() || 'index.html');
+  if (!/^(index|scanner|watchlist|stock|track|earnings|research|dashboard)\.html$/.test(page) && page !== '') return;
+  const SKIP = 'script,style,textarea,input,.wire,.wi,.breaking,#wlNews,.tradingview-widget-container,[data-nosweep]';
+  const PHRASES = [[/\bTrading BUY\b/g, 'Trading: top scoring'], [/\bTrading SELL\b/g, 'Trading: lowest scoring'], [/\bInvestment BUY\b/g, 'Investment: top scoring'], [/\bInvestment SELL\b/g, 'Investment: lowest scoring'],
+    [/\btrading BUY\b/g, 'trading: top scoring'], [/\btrading SELL\b/g, 'trading: lowest scoring'], [/\binvestment BUY\b/g, 'investment: top scoring'], [/\binvestment SELL\b/g, 'investment: lowest scoring'],
+    [/\bTRADING RATING\b/g, 'TRADING GRADE'], [/\bINVESTMENT RATING\b/g, 'INVESTMENT GRADE'], [/\bTrading rating\b/g, 'Trading grade'], [/\bInvestment rating\b/g, 'Investment grade'], [/\bAll ratings\b/g, 'All grades'],
+    [/\bTop 5 BUY\b/g, 'Top scoring'], [/\bTop 5 SELL\b/g, 'Lowest scoring'],
+    [/\bSTRONG BUY\b/g, 'TOP SCORING'], [/\bSTRONG SELL\b/g, 'LOWEST SCORING'], [/\bBUY\b/g, 'STRONG'], [/\bSELL\b/g, 'WEAK'], [/\bHOLD\b/g, 'AVERAGE']];
+  const fix = n => {
+    let v = n.nodeValue, o = v;
+    if (!/[A-Z]{3}/.test(v)) return;
+    PHRASES.forEach(([re, to]) => { v = v.replace(re, to); });
+    const el = n.parentElement;
+    if (el && el.classList.contains('sig') && /^(UNDERVALUED|OVERVALUED|FAIR VALUE)$/.test(v.trim())) v = v.trim() + ' · MODEL EST.';
+    if (v !== o) n.nodeValue = v;
+  };
+  const hideCols = root => (root.querySelectorAll ? root : document).querySelectorAll('table').forEach(t => {
+    const hs = [...t.querySelectorAll('thead th')]; if (!hs.length) return;
+    hs.forEach((th, i) => {
+      if (!/TARGET|ENTRY|\bSTOP\b/i.test(th.textContent)) return;
+      th.style.display = 'none';
+      t.querySelectorAll('tbody tr').forEach(tr => { const td = tr.children[i]; if (td && !td.hasAttribute('colspan')) td.style.display = 'none'; });
+    });
+  });
+  const sweep = root => {
+    if (!root) return;
+    if (root.nodeType === 3) { if (!(root.parentElement && root.parentElement.closest(SKIP))) fix(root); return; }
+    if (root.nodeType !== 1 || root.closest(SKIP)) return;
+    const w = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, { acceptNode: x => x.parentElement && x.parentElement.closest(SKIP) ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT });
+    let n; while ((n = w.nextNode())) fix(n);
+  };
+  const run = () => { sweep(document.body); hideCols(document); };
+  let busy = false;
+  const mo = new MutationObserver(ms => { if (busy) return; busy = true; ms.forEach(m => { if (m.type === 'characterData') sweep(m.target); else m.addedNodes.forEach(sweep); }); hideCols(document); busy = false; });
+  run(); mo.observe(document.body, { childList: true, subtree: true, characterData: true });
+  document.title = document.title.replace(/\bBUY\b|\bSELL\b/g, m => m === 'BUY' ? 'top scoring' : 'lowest scoring');
+})();
+
 const pillR = r => `<span class="pill p-${String(r).toLowerCase()}">${esc(r)}</span>`;
 const failMsg = (el, what) => { el.innerHTML = `<p class="muted-load">The ${what} could not be loaded right now. If you opened this page as a file on your computer, the browser blocks data files — it works once the site is online.</p>`; };
 

@@ -34,6 +34,7 @@ const setMkt = m => { store.set('lrc_mkt', m); window.dispatchEvent(new CustomEv
 const when = iso => { try { return new Date(iso).toLocaleString('en-ZA', { weekday: 'short', day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }) + ' SAST'; } catch (e) { return iso; } };
 const fail = (el, what) => { el.innerHTML = `<p class="muted-load" style="padding:20px">The ${what} is not available yet — it is built by the daily scanner run. If you opened this file on your computer, it works once the site is online.</p>`; };
 window.LRCScan = { getMkt, setMkt };
+const SAFE = window.LRC_SAFE === true;   // set in main.js: hides BUY/SELL wording, entry plans and targets until LRC is licensed
 
 /* =================== SCANNER PAGE =================== */
 if ($('scTbl')) {
@@ -42,7 +43,7 @@ if ($('scTbl')) {
   sel.addEventListener('change', () => { mkt = sel.value; setMkt(mkt); shown = 120; fillSectors(); drawAll(); });
   window.addEventListener('lrcmarket', e => { if (e.detail !== mkt) { mkt = e.detail; sel.value = mkt; shown = 120; fillSectors(); drawAll(); } });
   const tabs = document.querySelectorAll('#scTabs button');
-  const showTab = t => { tab = ['stocks', 'setups', 'invest', 'etfs', 'sectors', 'how'].includes(t) ? t : 'stocks'; tabs.forEach(b => b.classList.toggle('on', b.dataset.t === tab));
+  const showTab = t => { if (SAFE && t === 'setups') t = 'stocks'; tab = ['stocks', 'setups', 'invest', 'etfs', 'sectors', 'how'].includes(t) ? t : 'stocks'; tabs.forEach(b => b.classList.toggle('on', b.dataset.t === tab));
     mode = tab === 'invest' ? 'investment' : 'trading';
     ['stocks', 'setups', 'invest', 'etfs', 'sectors', 'how'].forEach(p => $('pane-' + p).hidden = !(p === tab || (p === 'stocks' && tab === 'invest')) || (p === 'invest'));
     $('scWrap').classList.toggle('wide', tab === 'stocks' || tab === 'invest' || tab === 'etfs'); history.replaceState(null, '', '#' + tab); const tb = $('scTabs'), on = tb.querySelector('button.on'); if (on && tb.scrollWidth > tb.clientWidth) tb.scrollLeft = on.offsetLeft - (tb.clientWidth - on.offsetWidth) / 2; drawAll(); };
@@ -73,7 +74,7 @@ if ($('scTbl')) {
       const cov = r.cov ? `<span class="pill p-${r.cov.rating.toLowerCase()}" title="LRC analyst rating ${esc(r.cov.rated || '')}">LRC ${esc(r.cov.rating)}</span> ` : '';
       return `<td class="nm"><button class="star ${my.has(r.t) ? 'on' : ''}" data-s="${esc(r.t)}" title="Add to my list">★</button><b>${esc(r.t.replace('.JO', ''))}</b> ${cov}<small>${esc(r.n)} · ${esc(r.sec)}</small></td>
         <td class="${cc(gInt(SC(r)))}"><span class="hc" title="${mode === 'investment' ? 'Investment score: valuation 25%, profitability 25%, financial health 20%, growth 20%, income 10%' : 'Trading score: technical 35%, growth 20%, sentiment 20%, valuation 10%, profitability 10%, financial health 5%'}">${SC(r)}</span></td>
-        <td class="plain"><span class="${sigCls(RT(r))}" title="${esc(NT(r) || '')}">${esc(RT(r))}</span>${NT(r) ? `<small style="display:block;color:#F2CE72;font-size:10px;margin-top:2px">${mode === 'investment' ? 'held: ' + esc((r.val || '').toLowerCase()) : 'held: target ' + (r.tgt ? pc(r.tgt / r.px - 1, 0) : '')}</small>` : ''}</td>
+        <td class="plain"><span class="${sigCls(RT(r))}" title="${esc(NT(r) || '')}">${esc(RT(r))}</span>${NT(r) && !SAFE ? `<small style="display:block;color:#F2CE72;font-size:10px;margin-top:2px">${mode === 'investment' ? 'held: ' + esc((r.val || '').toLowerCase()) : 'held: target ' + (r.tgt ? pc(r.tgt / r.px - 1, 0) : '')}</small>` : ''}</td>
         <td class="plain"><span class="${valCls(r.val)}" style="font-size:9px">${esc(r.val || '—')}</span></td>
         <td class="plain" style="text-align:right">${px(r.px, r.cur)}<small style="display:block;color:${r.chg >= 0 ? '#5ED39A' : '#F08A7E'}">${pc(r.chg)}</small></td>`;
     };
@@ -106,7 +107,8 @@ if ($('scTbl')) {
     $('scMore').hidden = rows.length <= shown; $('scMore').textContent = `Show more (${rows.length - shown} more)`;
     const all = S.rows.filter(r => r.m === mkt);
     const cnt = v => all.filter(r => v.includes(RT(r))).length;
-    $('scMode').innerHTML = mode === 'investment' ? '<b>INVESTMENT SCANNER · 5–10 YEARS</b> Built for buy-and-hold: valuation 25%, profitability 25%, financial health 20%, long-term growth 20%, income 10%. Technicals and sentiment are shown but not weighted. A BUY cannot be OVERVALUED and a SELL cannot be UNDERVALUED.'
+    $('scMode').innerHTML = SAFE ? (mode === 'investment' ? '<b>INVESTMENT SCANNER · 5–10 YEARS</b> Scores each company for long-term quality: valuation 25%, profitability 25%, financial health 20%, long-term growth 20%, income 10%. Grades: Top scoring 75+, Strong 60–74, Average 40–59, Weak 25–39, Lowest scoring below 25. Grades describe the company against its sector; they are not a recommendation to buy or sell.'
+      : '<b>TRADING SCANNER · 3–12 MONTHS</b> Scores each company on what tends to matter over months: technical 35%, growth 20%, sentiment 20%, valuation 10%, profitability 10%, financial health 5%. Grades: Top scoring 75+, Strong 60–74, Average 40–59, Weak 25–39, Lowest scoring below 25. Grades describe the data; they are not a recommendation to buy or sell.') : mode === 'investment' ? '<b>INVESTMENT SCANNER · 5–10 YEARS</b> Built for buy-and-hold: valuation 25%, profitability 25%, financial health 20%, long-term growth 20%, income 10%. Technicals and sentiment are shown but not weighted. A BUY cannot be OVERVALUED and a SELL cannot be UNDERVALUED.'
       : '<b>TRADING SCANNER · 3–12 MONTHS</b> Built for trades with a 6-month LRC Analyst Target: technical 35%, growth 20%, sentiment 20%, valuation 10%, profitability 10%, financial health 5%. A BUY needs upside to the 6-month target and a SELL needs downside. Entry plans are on the Setups tab.';
     $('scKpis').innerHTML = [[all.length, 'companies scanned'], [cnt(['BUY', 'STRONG BUY']), 'rated BUY / STRONG BUY'], [cnt(['HOLD']), 'rated HOLD'], [cnt(['SELL', 'STRONG SELL']), 'rated SELL / STRONG SELL'],
       [all.filter(r => r.val === 'UNDERVALUED').length, 'undervalued']].map(([b, s]) => `<div><b>${b}</b><span>${s}</span></div>`).join('');
@@ -181,7 +183,11 @@ if ($('scTbl')) {
     const tr = e.target.closest('tr[data-t]'); if (tr) location.href = 'stock.html?t=' + encodeURIComponent(tr.dataset.t);
   });
   $('scCsv').addEventListener('click', () => {
-    const rows = rowsFor(); const head = ['Ticker', 'Name', 'Market', 'Sector', 'Price', 'Currency', 'Change 1D', 'LRC score (0-100)', 'LRC Stock Scanner rating', 'Valuation verdict', 'Valuation', 'Growth', 'Profitability', 'Financial health', 'Income', 'Sentiment', 'Technical', 'Setup', 'Entry', 'Stop', 'Target 1', 'Target 2', 'LRC Analyst Target', 'Fwd PE', 'TTM PE', 'P/S', 'P/FCF', 'Revenue growth', 'EPS growth', 'Debt/Equity %', 'ROE', 'Dividend yield', 'Analyst consensus', 'Target upside', 'Short float', 'Next results', 'LRC analyst rating'];
+    const rows = rowsFor(); if (SAFE) { const gr = v => ({ 'STRONG BUY': 'Top scoring', 'BUY': 'Strong', 'HOLD': 'Average', 'SELL': 'Weak', 'STRONG SELL': 'Lowest scoring' })[v] || v;
+      const csv = [['Ticker', 'Name', 'Market', 'Sector', 'Price', 'Currency', 'Change 1D', 'Trading score (0-100)', 'Trading grade', 'Investment score (0-100)', 'Investment grade', 'Valuation (model estimate)', 'Valuation', 'Growth', 'Profitability', 'Financial health', 'Income', 'Sentiment', 'Technical', 'Setup', 'Fwd PE', 'TTM PE', 'P/S', 'P/FCF', 'Revenue growth', 'EPS growth', 'Debt/Equity %', 'ROE', 'Dividend yield', 'Next results']].concat(rows.map(r => [r.t, r.n, r.m, r.sec, r.px, r.cur, r.chg, S100(r), gr(r.v), r.iv_score ?? '', gr(r.iv_v), r.val || '', ...GRP.map(([k]) => (r.grp || {})[k] ?? ''), r.setup || '', r.raw.fpe ?? '', r.raw.tpe ?? '', r.raw.ps ?? '', r.raw.pfcf ?? '', r.raw.rev_growth ?? '', r.raw.eps_growth ?? '', r.raw.de ?? '', r.raw.roe ?? '', r.raw.div_yield ?? '', r.ne || '']))
+        .map(a => a.map(x => `"${String(x).replace(/"/g, '""')}"`).join(',')).join('\n');
+      const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([csv], { type: 'text/csv' })); a.download = `LRC_Scanner_${mkt}_${(S.as_of || {})[mkt] || ''}.csv`; a.click(); return; }
+    const head = ['Ticker', 'Name', 'Market', 'Sector', 'Price', 'Currency', 'Change 1D', 'LRC score (0-100)', 'LRC Stock Scanner rating', 'Valuation verdict', 'Valuation', 'Growth', 'Profitability', 'Financial health', 'Income', 'Sentiment', 'Technical', 'Setup', 'Entry', 'Stop', 'Target 1', 'Target 2', 'LRC Analyst Target', 'Fwd PE', 'TTM PE', 'P/S', 'P/FCF', 'Revenue growth', 'EPS growth', 'Debt/Equity %', 'ROE', 'Dividend yield', 'Analyst consensus', 'Target upside', 'Short float', 'Next results', 'LRC analyst rating'];
     const csv = [head].concat(rows.map(r => [r.t, r.n, r.m, r.sec, r.px, r.cur, r.chg, S100(r), r.v, r.val || '', ...GRP.map(([k]) => (r.grp || {})[k] ?? ''), r.setup || '', r.plan?.entry ?? '', r.plan?.stop ?? '', r.plan?.t1 ?? '', r.plan?.t2 ?? '', r.tgt ?? '', r.raw.fpe ?? '', r.raw.tpe ?? '', r.raw.ps ?? '', r.raw.pfcf ?? '', r.raw.rev_growth ?? '', r.raw.eps_growth ?? '', r.raw.de ?? '', r.raw.roe ?? '', r.raw.div_yield ?? '', r.raw.rec ?? '', r.raw.tgt_up ?? '', r.raw.short ?? '', r.ne || '', r.cov?.rating || '']))
       .map(a => a.map(x => `"${String(x).replace(/"/g, '""')}"`).join(',')).join('\n');
     const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([csv], { type: 'text/csv' })); a.download = `LRC_Scanner_${mkt}_${(S.as_of || {})[mkt] || ''}.csv`; a.click();
@@ -204,10 +210,10 @@ if ($('wlTB')) {
   const resCell = ne => `<td>${ne ? `<span class="tag ${Math.round((new Date(ne) - new Date()) / 864e5) <= 14 ? 'ev' : ''}">${esc(ne)}</span>` : '—'}</td>`;
   const covPill = r => r.cov ? ` <span class="pill p-${r.cov.rating.toLowerCase()}">LRC ${esc(r.cov.rating)}</span>` : '';
   const none = (n, what) => `<tr class="empty"><td colspan="${n}" style="color:var(--muted);white-space:normal">${what}</td></tr>`;
-  const trade = (rows, side) => `<thead><tr><th>#</th><th>COMPANY</th><th>TRADING RATING</th><th>PRICE · 1D</th><th>UPSIDE TO 6-M TARGET</th><th>VALUATION</th><th>SETUP · ENTRY PLAN</th><th>RESULTS</th><th>LATEST NEWS</th></tr></thead><tbody>` +
+  const trade = (rows, side) => `<thead><tr><th>#</th><th>COMPANY</th><th>TRADING RATING</th><th>PRICE · 1D</th><th>UPSIDE TO 6-M TARGET</th><th>VALUATION</th><th>${SAFE ? 'SETUP' : 'SETUP · ENTRY PLAN'}</th><th>RESULTS</th><th>LATEST NEWS</th></tr></thead><tbody>` +
     (rows.length ? rows.map((r, i) => `<tr><td class="rk">${i + 1}</td><td>${nm(r.t, r.n, covPill(r))}</td><td><span class="${sigCls(r.v)}">${esc(r.v)}</span><small>score ${r.score}/100</small></td>
       <td class="n">${px(r.px, r.cur)}<small style="color:${(r.chg ?? 0) >= 0 ? '#5ED39A' : '#F08A7E'}">${pc(r.chg)}</small></td>${upCell(r.tgt_up)}<td><span class="${valCls(r.val)}" style="font-size:9px">${esc(r.val || '—')}</span></td>
-      <td>${r.setup ? esc(r.setup) : '—'}${r.entry ? `<small>${side === 'Long' ? 'buy above' : 'sell below'} ${px(r.entry, r.cur)} · stop ${pc(r.stop_pct)} · target ${pc(r.t1_pct)}</small>` : '<small>no entry trigger yet</small>'}</td>
+      <td>${r.setup ? esc(r.setup) : '—'}${SAFE ? '' : r.entry ? `<small>${side === 'Long' ? 'buy above' : 'sell below'} ${px(r.entry, r.cur)} · stop ${pc(r.stop_pct)} · target ${pc(r.t1_pct)}</small>` : '<small>no entry trigger yet</small>'}</td>
       ${resCell(r.ne)}<td class="news">${head1(r.t)}</td></tr>`).join('')
       : none(9, `No ${mkt === 'JSE' ? 'JSE' : 'New York'} company is rated ${side === 'Long' ? 'BUY' : 'SELL'} by the Trading scanner today.`)) + '</tbody>';
   const invest = (rows, side) => `<thead><tr><th>#</th><th>COMPANY</th><th>INVESTMENT RATING</th><th>PRICE · 1D</th><th>UPSIDE TO LRC TARGET</th><th>VALUATION</th><th>QUALITY CHECKS</th><th>RESULTS</th><th>LATEST NEWS</th></tr></thead><tbody>` +
@@ -243,7 +249,7 @@ if ($('wlTB')) {
     $('wlKpis').innerHTML = [[l.trading_buy.length, 'trading BUY'], [l.trading_sell.length, 'trading SELL'], [l.invest_buy.length, 'investment BUY'], [l.invest_sell.length, 'investment SELL'], [c.scanned ?? '—', 'companies scanned']]
       .map(([b, s]) => `<div><b>${b}</b><span>${s}</span></div>`).join('');
     if (L) $('wlMeta').innerHTML = `<span class="ai">● Built by <b>LRC Stock Scanner</b> · automatic</span><span>Prices as of <b>${esc((L.as_of || {})[mkt] || '—')}</b></span><span>Updated <b>${when(L.generated)}</b></span>`;
-    const R = (L && L.rules) || {};
+    const R = SAFE ? { trading_buy: 'The 5 highest Trading scores per market (3–12 month view: technical 35%, growth 20%, sentiment 20%, valuation 10%, profitability 10%, financial health 5%).', trading_sell: 'The 5 lowest Trading scores per market.', invest_buy: 'The 5 highest Investment scores per market (5–10 year view: valuation 25%, profitability 25%, financial health 20%, growth 20%, income 10%).', invest_sell: 'The 5 lowest Investment scores per market.', auto: 'Rebuilt automatically after every LRC Stock Scanner run. Grades describe the data; they are not a recommendation to buy or sell.' } : ((L && L.rules) || {});
     $('wlRules').innerHTML = [['Trading BUY', R.trading_buy], ['Trading SELL', R.trading_sell], ['Investment BUY', R.invest_buy], ['Investment SELL', R.invest_sell], ['Automatic', R.auto]]
       .filter(x => x[1]).map(([h, t]) => `<div class="card"><h3>${h}</h3><p>${esc(t)}</p></div>`).join('');
   };
@@ -334,7 +340,8 @@ if ($('paper')) {
     const lrcT = r.cov ? r.cov.target : (R && R.target) ? R.target : (tg.lrc ?? tg.blend);
     const word = r.cov ? r.cov.rating : sigTxt;
     const cap = w => w.split(' ').map(x => x[0] + x.slice(1).toLowerCase()).join(' ');
-    if (R && R.title) title = R.title;
+    if (SAFE) title = `Trading score ${S100(r)}/100 · Investment score ${r.iv_score ?? '—'}/100`;
+    else if (R && R.title) title = R.title;
     else title = `${cap(word)} Idea: LRC Analyst Target ${ok(lrcT) ? px(lrcT, c) + ` (${pc(lrcT / t.price - 1, 0)})` : 'n/a'}`;
     const analyst = R ? `${esc(R.analyst || 'Prayer Nkuna')} <span class="badge-an">${esc(R.analyst && /agent|LRC Research/i.test(R.analyst) ? 'LRC RESEARCH' : 'LRC ANALYST VIEW')}</span>` : 'Prayer Nkuna, Analyst · LRC Stock Scanner';
     const updated = R ? R.updated : (d.generated || '').slice(0, 10);
@@ -406,7 +413,7 @@ if ($('paper')) {
     else if (t.setup === 'Retest') nextBits.push(`holding support at ${px(t.setup_level, c)} keeps the uptrend intact`);
     else if (t.setup === 'Breakdown' || t.setup === 'Failed retest') nextBits.push(`staying below ${px(t.setup_level, c)} keeps the pressure on`);
     else if ((t.supports || [])[0]) nextBits.push(`major support sits at ${px(t.supports[0].price, c)}${(t.resistances || [])[0] ? ` and resistance at ${px(t.resistances[0].price, c)}` : ''}`);
-    if (ok(upT)) nextBits.push(`the LRC Analyst Target of ${px(lrcT, c)} implies ${pc(upT, 0)} over 6 months`);
+    if (ok(upT) && !SAFE) nextBits.push(`the LRC Analyst Target of ${px(lrcT, c)} implies ${pc(upT, 0)} over 6 months`);
     // ---- investment thesis: the company as a whole (business, competitive position, industry, management, balance sheet) + the numbers ----
     const X = d.context || {}, SX = X.sector || null, mktName = r.m === 'JSE' ? 'the JSE' : 'New York';
     const T0 = (R && R.thesis && typeof R.thesis === 'object') ? R.thesis : {};   // research agent / analyst text replaces the automated line when present
@@ -464,7 +471,7 @@ if ($('paper')) {
     if (bsS) add('balance', bsS, 2, bsS > 0 ? (ok(netCash) && netCash > 0 ? 'net cash and positive free cash flow' : 'low debt and positive free cash flow') : (ok(f.fcf) && f.fcf < 0 ? 'negative free cash flow' : `high debt (debt-to-equity ${(f.de / 100).toFixed(1)}x)`));
     if (insS) add('management', 1, 1, `management owns ${pp(f.insiders, 0)} of the shares`);
     if (divS) add('management', divS, 1, divS > 0 ? `a rising dividend (+${(divG * 100).toFixed(0)}%)` : `a dividend cut (${(divG * 100).toFixed(0)}%)`);
-    if (ok(upT)) add('valuation', upT >= 0.05 ? 1 : upT <= -0.03 ? -1 : 0, 3, `${pc(upT, 0)} to the LRC Analyst Target (${px(lrcT, c)})`);
+    if (ok(upT) && !SAFE) add('valuation', upT >= 0.05 ? 1 : upT <= -0.03 ? -1 : 0, 3, `${pc(upT, 0)} to the LRC Analyst Target (${px(lrcT, c)})`);
     else if (ok(f.fpe) && f.fpe > 0 && ok(d.sector_medians?.fpe)) { const rel = f.fpe / d.sector_medians.fpe - 1; add('valuation', rel < -0.15 ? 1 : rel > 0.25 ? -1 : 0, 2, `${rel < 0 ? 'cheaper' : 'dearer'} than peers (${f.fpe.toFixed(1)}x vs ${d.sector_medians.fpe.toFixed(1)}x forward earnings)`); }
     if (t.sma200) add('price', t.price > t.sma200 && t.price > t.sma50 ? 1 : t.price < t.sma200 && t.price < t.sma50 ? -1 : 0, 2, t.price > t.sma200 && t.price > t.sma50 ? 'the share price is in an uptrend' : 'the share price is in a downtrend');
     if (ok(f.rec_mean)) add('sentiment', f.rec_mean <= 2.2 ? 1 : f.rec_mean >= 3.2 ? -1 : 0, 1, `analysts rate it ${recLbl(f.rec_mean).toLowerCase()}`);
@@ -478,7 +485,13 @@ if ($('paper')) {
     const indLbl = (r.ind || r.sec || '').toLowerCase().replace(/&/g, 'and').replace(/\s+-\s+/g, ' ');
     const whoShort = `${esc(r.n)}: ${sizeAdj} ${r.m === 'JSE' ? 'JSE' : 'New York'}-listed ${esc(indLbl)} company${pr.country && !((r.m === 'JSE') === (pr.country === 'South Africa')) ? ` based in ${esc(pr.country)}` : ''}`;
     const trSide = dir > 0 ? 'Why buy' : dir < 0 ? 'Why sell' : 'For / against';
-    const autoBottom = `<b>Thesis:</b> ${T0.summary ? esc(T0.summary) : `${whoShort}. Trading <b>${esc(r.v)}</b> (3–12 m) · Investment <b>${esc(r.iv_v || 'HOLD')}</b> (5–10 y) · <b>${esc((r.val || 'fair value').toLowerCase())}</b>.`}` +
+    const strengths = pickBy(1, 3), weaknesses = pickBy(-1, 2);
+    if (f.next_earnings && days(f.next_earnings) >= 0 && days(f.next_earnings) <= 14) weaknesses.push({ txt: `results in ${days(f.next_earnings)} days` });
+    const safeBottom = `<b>Thesis:</b> ${T0.summary ? esc(T0.summary) : `${whoShort}. Trading score ${S100(r)}/100 (<b>${esc(r.v)}</b>) · Investment score ${r.iv_score ?? '—'}/100 (<b>${esc(r.iv_v || 'HOLD')}</b>) · valuation <b>${esc((r.val || 'fair value').toLowerCase())}</b> (model estimate).`}` +
+      `<br><b>Strengths:</b> ${strengths.length ? cap1(list(strengths)) + '.' : 'no standout strength in the data.'}` +
+      `<br><b>Weaknesses:</b> ${weaknesses.length ? cap1(list(weaknesses)) + '.' : 'no major weakness in the data.'}` +
+      `<br><b>Next:</b> ${nextBits.length ? cap1(nextBits[0]) : 'no dated event'}.`;
+    const autoBottom = SAFE ? safeBottom : `<b>Thesis:</b> ${T0.summary ? esc(T0.summary) : `${whoShort}. Trading <b>${esc(r.v)}</b> (3–12 m) · Investment <b>${esc(r.iv_v || 'HOLD')}</b> (5–10 y) · <b>${esc((r.val || 'fair value').toLowerCase())}</b>.`}` +
       `<br><b>${trSide}:</b> ${dir === 0 ? `${forV.length ? cap1(list(forV)) : '—'} <i>vs</i> ${agV.length ? list(agV) : '—'}.` : (forV.length ? cap1(list(forV)) + '.' : 'the readings lean this way, with no single standout.')}` +
       (dir !== 0 ? `<br><b>Risk:</b> ${T0.risks_to_thesis ? esc(T0.risks_to_thesis) : agV.length ? cap1(list(agV)) + '.' : 'no strong signal against this view in the data — watch the next results.'}` : '') +
       `<br><b>Next:</b> ${nextBits.length ? cap1(nextBits[0]) : 'no dated catalyst'}.`;
@@ -507,7 +520,7 @@ if ($('paper')) {
       <div><b>Market cap / Price:</b> ${big(f.mcap, c)} / ${px(t.price, c)}<br><b>52-wk low / high:</b> ${px(t.lo52, c)} / ${px(t.hi52, c)}<br><b>Beta / Yield:</b> ${ok(f.beta) ? f.beta.toFixed(2) : '—'} / ${pp(f.div_yield, 2)}<br><b>Sector:</b> ${esc(r.sec)}${r.ind ? ' · ' + esc(r.ind) : ''}</div>
       <div>${R && R.guidance ? R.guidance.slice(0, 4).map(g => `<b>${esc(g.split(':')[0])}:</b>${esc(g.split(':').slice(1).join(':'))}`).join('<br>') :
         `<b>Next results:</b> ${esc(f.next_earnings || 'not announced')}<br><b>Analysts:</b> ${recLbl(f.rec_mean)}${f.n_analysts ? ` (${f.n_analysts})` : ''}${ok(f.target_median) ? ` · median target ${px(f.target_median, c)}` : ''}<br><b>EPS growth (this yr / next yr est.):</b> ${pc(f.eps_growth_fwd, 0)} / ${pc(f.eps_growth_next, 0)}<br><b>Fwd P/E vs sector:</b> ${mult(f.fpe)} vs ${mult(d.sector_medians?.fpe)}`}</div>
-      <div><b>Last updated:</b> ${esc(updated)}<br><b>Analyst name:</b> ${analyst}<br><b>Trading (3–12 m):</b> <span class="${sigCls(r.v)}" style="font-size:10px">${esc(r.v)}</span> ${S100(r)}/100<br><b>Investment (5–10 y):</b> <span class="${sigCls(r.iv_v)}" style="font-size:10px">${esc(r.iv_v || '—')}</span> ${r.iv_score ?? '—'}/100<br><b>Valuation:</b> <span class="${valCls(r.val)}" style="font-size:9.5px">${esc(r.val || '—')}</span>${r.v_note ? `<br><span style="font-size:11px;color:#7A8296">${esc(r.v_note)}</span>` : ''}${r.cov ? `<br><b>LRC analyst rating:</b> ${esc(r.cov.rating)} (${esc(r.cov.rated || '')})` : ''}${R && R.geo_mix ? `<br><b>Geo %:</b> ${esc(R.geo_mix)}` : ''}</div>
+      <div><b>Last updated:</b> ${esc(updated)}<br><b>Analyst name:</b> ${analyst}<br><b>Trading (3–12 m):</b> <span class="${sigCls(r.v)}" style="font-size:10px">${esc(r.v)}</span> ${S100(r)}/100<br><b>Investment (5–10 y):</b> <span class="${sigCls(r.iv_v)}" style="font-size:10px">${esc(r.iv_v || '—')}</span> ${r.iv_score ?? '—'}/100<br><b>Valuation:</b> <span class="${valCls(r.val)}" style="font-size:9.5px">${esc(r.val || '—')}</span>${r.v_note && !SAFE ? `<br><span style="font-size:11px;color:#7A8296">${esc(r.v_note)}</span>` : ''}${r.cov ? `<br><b>LRC analyst rating:</b> ${esc(r.cov.rating)} (${esc(r.cov.rated || '')})` : ''}${R && R.geo_mix ? `<br><b>Geo %:</b> ${esc(R.geo_mix)}` : ''}</div>
     </div>
     <div class="bar">Fundamentals <small>${R ? 'ANALYST VIEW + LIVE DATA' : 'AUTOMATED FROM LIVE DATA'}</small></div>
     <div class="cols"><div>
@@ -529,13 +542,13 @@ if ($('paper')) {
       ${rtab(GRP.slice(0, 3))}
     </div><div>
       <div class="gauge">${gauge}<div><b style="color:#16223D">Trading ${S100(r)}/100 · ${esc(r.v)} &nbsp;|&nbsp; Investment ${r.iv_score ?? '—'}/100 · ${esc(r.iv_v || '—')}</b><br><span style="color:#5C6478;font-size:11.5px">${r.pts > 0 ? '+' : ''}${r.pts} points of a possible ±${r.max}. Group scores (0–100, 50 = neutral):</span><div class="fbars">${heat}</div></div></div>
-      <div class="tg" style="margin-top:10px">${tgRows.map(([l, v, g]) => `<span>${esc(l)}</span><span style="text-align:right;color:#5C6478">${g === false ? '' : pc(v / t.price - 1, 0)}</span><span class="${g === false ? '' : 'gv' + (v < t.price ? ' neg' : '')}" style="text-align:right;font-weight:800">${px(v, c)}</span>`).join('')}</div>
+      ${SAFE ? '' : `<div class="tg" style="margin-top:10px">${tgRows.map(([l, v, g]) => `<span>${esc(l)}</span><span style="text-align:right;color:#5C6478">${g === false ? '' : pc(v / t.price - 1, 0)}</span><span class="${g === false ? '' : 'gv' + (v < t.price ? ' neg' : '')}" style="text-align:right;font-weight:800">${px(v, c)}</span>`).join('')}</div>`}
       ${R && R.valuation ? `<h4>Analyst valuation:</h4>${ul(R.valuation.map(esc))}` : ''}
       ${inv ? `<h4>Investment track (5–10 yrs): grade ${esc(inv.grade)} · ${inv.passed}/${inv.known} checks</h4><p style="font-size:11.5px;color:#5C6478">${inv.checks.filter(x => x.ok !== null).map(x => `<span style="color:${x.ok ? '#0F7B3F' : '#C5221F'}">${x.ok ? '✔' : '✘'} ${esc(x.k)}</span>`).join(' · ')}</p>` : ''}
     </div></div>
     <div class="bar">All Fundamentals <small>37 READINGS · COMPANY vs SECTOR MEDIAN vs MARKET MEDIAN</small></div>
     <div class="cols"><div>${rtab(GRP.slice(3, 5))}</div><div>${rtab(GRP.slice(5))}</div></div>
-    <p class="bl"><b class="k">Bottom Line:</b> ${R && R.valuation_bottom_line ? esc(R.valuation_bottom_line) : `Against the median ${esc(r.sec)} company in ${r.m === 'JSE' ? 'the JSE' : 'New York'}, the shares look <b>${esc((vv('fpe').verdict || vv('tpe').verdict || 'n/a').toLowerCase())}</b> on earnings and <b>${esc((vv('pfcf').verdict || 'n/a').toLowerCase())}</b> on free cash flow. ${ok(lrcT) ? `The LRC Analyst Target is ${px(lrcT, c)} (${pc(lrcT / t.price - 1, 0)} from today).` : ''}`}
+    <p class="bl"><b class="k">Bottom Line:</b> ${R && R.valuation_bottom_line ? esc(R.valuation_bottom_line) : `Against the median ${esc(r.sec)} company in ${r.m === 'JSE' ? 'the JSE' : 'New York'}, the shares look <b>${esc((vv('fpe').verdict || vv('tpe').verdict || 'n/a').toLowerCase())}</b> on earnings and <b>${esc((vv('pfcf').verdict || 'n/a').toLowerCase())}</b> on free cash flow. ${ok(lrcT) && !SAFE ? `The LRC Analyst Target is ${px(lrcT, c)} (${pc(lrcT / t.price - 1, 0)} from today).` : ''}`}
       ${R && R.catalysts_to_watch ? ` <b style="color:#C5221F">Catalysts to watch:</b> ${esc(R.catalysts_to_watch)}` : f.next_earnings ? ` <b style="color:#C5221F">Catalyst to watch:</b> results on ${esc(f.next_earnings)}.` : ''}</p>
     <div class="bar pg2">Technical Picture <small>TREND · SETUP · MAJOR SUPPORT &amp; RESISTANCE</small></div>
     <p>${t.setup ? `<b>${esc(t.setup)}</b> at ${px(t.setup_level, c)}${t.setup_note ? ' — ' + esc(t.setup_note) : ''}. ` : 'No breakout or retest setup today. '}Price is ${t.price > t.sma50 ? 'above' : 'below'} the 50-day average (${px(t.sma50, c)})${t.sma200 ? ` and ${t.price > t.sma200 ? 'above' : 'below'} the 200-day (${px(t.sma200, c)})` : ''}; RSI ${ok(t.rsi) ? t.rsi.toFixed(0) : '—'}.
