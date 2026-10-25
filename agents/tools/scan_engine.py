@@ -284,8 +284,17 @@ def model_targets(f, med, price):
     feps, g = f.get('forward_eps'), f.get('eps_growth_fwd') if f.get('eps_growth_fwd') is not None else f.get('eps_growth')
     if feps and feps > 0 and g is not None: out['peg'] = feps * clamp(g * 100, 8, 30)
     if feps and feps > 0 and med.get('fpe'): out['sector_pe'] = feps * med['fpe']
-    vals = [v for v in out.values() if v and v > 0 and 0.4 * price < v < 2.5 * price]
-    if vals: out['blend'] = median(vals)
+    # LRC Analyst Target (automated): 60% analyst consensus + 40% LRC valuation models, kept within ±20% of the consensus
+    # (or within -40%/+60% of the price when no consensus exists)
+    models = [out[k] for k in ('pfcf', 'peg', 'sector_pe') if out.get(k) and 0.4 * price < out[k] < 2.5 * price]
+    mdl = median(models) if models else None
+    cons = out.get('analyst_median')
+    if cons and mdl: t = clamp(0.6 * cons + 0.4 * mdl, 0.8 * cons, 1.2 * cons)
+    elif cons: t = cons
+    elif mdl: t = clamp(mdl, 0.6 * price, 1.6 * price)
+    else: t = None
+    if t: out['blend'] = t
+    if mdl: out['models'] = mdl
     return out
 
 

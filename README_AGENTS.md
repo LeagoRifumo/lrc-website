@@ -48,4 +48,4 @@ Edit `docs/data/ratings.json` after a Work-sheet run and commit. The next daily 
   Nasdaq-100, refreshed automatically each run, plus every covered name.
 - Rules: `agents/tools/scan_engine.py` (scores, major support/resistance, Breakout / Retest / Breakdown / Failed retest, entry plans, investment track).
 - The scanner signal (STRONG BUY … STRONG SELL) is automated and labelled as such; the analyst rating in ratings.json is always shown separately.
-- Add an analyst view to a company's one-page summary: create `docs/data/research/<TICKER>.json` (see AAPL.json / ADBE.json).
+- Company research on the one-page summaries is written automatically by the research agent (`agents/research_agent.md`) into `docs/data/research/<TICKER>.json`.
