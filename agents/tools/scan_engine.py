@@ -147,7 +147,7 @@ def setup(bars, t, lv):
         if not (L > p and L - p <= 2.0 * a): continue
         cross = [i for i in range(n - 40, n - 3) if c[i - 1] > L >= c[i]]
         if cross and all(x <= L + 0.5 * a for x in c[cross[-1]:]) and highs3 >= L - 0.5 * a and (s200 is None or p < s200) \
-                and (s50 is None or p < s50) and (s50 is None or s200 is None or s50 < s200):
+                and (s50 is None or p < s50) and (s50 is None or s200 is None or s50 < s200) and c[-1] < c[-2]:
             return {'setup': 'Failed retest', 'setup_level': L, 'setup_day': bars[-1]['date'], 'setup_note': 'Rally failed at a broken support (now resistance)'}
     # --- NEAR BREAKOUT: coiling within 3% under the 55-day high / major resistance with a contracting range
     hi55 = max(c[-56:-1])
@@ -226,11 +226,12 @@ def tech_scores(t):
 def sentiment_scores(f, price):
     out = {}
     rec = f.get('rec_mean')
-    out['analysts'] = None if rec is None or not f.get('n_analysts') else (2 if rec <= 1.8 else 1 if rec <= 2.4 else -2 if rec >= 3.5 else -1 if rec >= 3.0 else 0)
+    # consensus ratings lean bullish across the market, so the bands are set tighter than the 1-5 scale suggests
+    out['analysts'] = None if rec is None or not f.get('n_analysts') else (2 if rec <= 1.6 else 1 if rec <= 2.0 else 0 if rec <= 2.6 else -1 if rec <= 3.0 else -2)
     tg = f.get('target_median') or f.get('target_mean')
-    out['target'] = None if not tg or not price else (1 if tg / price - 1 > 0.15 else -1 if tg / price - 1 < 0 else 0)
+    out['target'] = None if not tg or not price else (1 if tg / price - 1 > 0.25 else -1 if tg / price - 1 < 0.05 else 0)
     sh = f.get('short_float')
-    out['short'] = None if sh is None else (-1 if sh > 0.12 else 1 if sh < 0.03 else 0)
+    out['short'] = None if sh is None else (-1 if sh > 0.10 else 1 if sh < 0.015 else 0)
     return out
 
 
@@ -243,19 +244,19 @@ def fund_scores(f, med, sector):
         return 1 if v > 1.25 * m else -1 if v < 0.8 * m else 0
     o = {'fpe': rel(f.get('fpe'), med.get('fpe')), 'tpe': rel(f.get('tpe'), med.get('tpe')), 'ps': rel(f.get('ps'), med.get('ps')),
          'pfcf': rel(f.get('pfcf'), med.get('pfcf'))}
-    g = f.get('rev_growth'); o['rev_growth'] = None if g is None else (1 if g > max(0.10, med.get('rev_growth') or 0) else -1 if g < 0 else 0)
-    e = f.get('eps_growth'); o['eps_growth'] = None if e is None else (1 if e > 0.15 else -1 if e < 0 else 0)
+    g = f.get('rev_growth'); o['rev_growth'] = None if g is None else (1 if g > max(0.15, (med.get('rev_growth') or 0) + 0.05) else -1 if g < 0 else 0)
+    e = f.get('eps_growth'); o['eps_growth'] = None if e is None else (1 if e > 0.20 else -1 if e < 0 else 0)
     de = f.get('de')
     o['de'] = None if de is None or sector in ('Financial Services', 'Real Estate') else (1 if de < 50 else -1 if de > 150 else 0)
-    roe = f.get('roe'); o['roe'] = None if roe is None else (1 if roe > 0.15 else -1 if roe < 0.05 else 0)
-    dy = f.get('div_yield'); o['div_yield'] = None if dy is None else (1 if dy > max(0.02, med.get('div_yield') or 0) else 0)
+    roe = f.get('roe'); o['roe'] = None if roe is None else (1 if roe > 0.20 else -1 if roe < 0.08 else 0)
+    dy = f.get('div_yield'); o['div_yield'] = None if dy is None else (1 if dy > max(0.025, 1.25 * (med.get('div_yield') or 0)) else 0)
     return o
 
 
 def verdict(total, maxabs):
     x = total / maxabs if maxabs else 0
     # LRC Scanner signal (automated) — separate from the analyst's BUY / HOLD / SELL rating in ratings.json
-    return 'STRONG BUY' if x >= 0.45 else 'BUY' if x >= 0.18 else 'STRONG SELL' if x <= -0.45 else 'SELL' if x <= -0.18 else 'HOLD'
+    return 'STRONG BUY' if x >= 0.45 else 'BUY' if x >= 0.22 else 'STRONG SELL' if x <= -0.35 else 'SELL' if x <= -0.15 else 'HOLD'
 
 
 def sector_medians(rows):

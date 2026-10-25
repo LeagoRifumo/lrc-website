@@ -182,7 +182,7 @@ def main():
     with ThreadPoolExecutor(args.workers) as ex: summ = dict(ex.map(get_sum, [s for s, _ in stocks]))
     print(f'fundamentals: {sum(not isinstance(v, Exception) for v in summ.values())} ok ({time.time() - t0:.0f}s)')
     week_ago = (dt.date.today() - dt.timedelta(days=7)).isoformat()
-    need_ts = [s for s, _ in stocks if (cache.get(s, {}).get('ts_date') or '') < week_ago][:250]
+    need_ts = [s for s, _ in stocks if (cache.get(s, {}).get('ts_date') or '') < week_ago][:800]
     def get_ts(s):
         try: return s, y.timeseries(s)
         except Exception as e: return s, e
