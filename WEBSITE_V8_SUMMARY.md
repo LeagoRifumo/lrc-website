@@ -1,7 +1,19 @@
-# Leago Rifumo Capital website — v8 (25 Oct 2026)
+# Leago Rifumo Capital website — v8 (updated 26 Oct 2026, 01:05 SAST)
 
 Repository: github.com/LeagoRifumo/lrc-website (branch main, GitHub Pages serves /docs)
 Give this file (and the zip) to Claude when you next update the website.
+
+## How to start next time
+1. Open a new chat and say: "Continue the LRC website — repo LeagoRifumo/lrc-website. Read WEBSITE_V8_SUMMARY.md first."
+2. Attach this file (or the zip). Claude reads it, attaches the GitHub repo and carries on from here.
+3. Everything on the live site is in the repo; this file explains what each part does and what was decided.
+
+## Decisions made on 25–26 Oct 2026 (keep these unless Prayer changes them)
+- Fully automated: no hand ratings; every rating, target and list comes from the LRC Stock Scanner.
+- Safe mode ON until LRC is FSCA-authorised (see SAFE MODE below). The one-page summary (stock.html) keeps BUY/SELL, the LRC Analyst Target and "Why buy" by Prayer's choice.
+- "Undervalued / overvalued" kept, marked "model estimate". Page names Watchlist and Scanner kept.
+- No tool names on the public site (no GitHub, Claude, "agent"); the news section is called News Desk.
+- Prices: rand in South Africa, US dollars elsewhere (R100 / $6 report).
 
 ## Pages
 - index.html — home (LRC Stock Scanner featured)
@@ -55,10 +67,12 @@ Give this file (and the zip) to Claude when you next update the website.
 - docs/assets/js/main.js LIBRARY — research library entries
 
 ## Pending / to do
-- Paystack R100 payment link → store.json
-- Broker referral links → store.json brokers
-- Optional: weekday Company Research Agent schedule (needs approval in the app)
-- Optional: switch analyst-rated coverage (ratings.json) to fully automated
+- Book a FAIS compliance call (e.g. Moonstone or Masthead): is our content advice; Category I licence for shares; joining an existing FSP as a representative; the one-page summary, Live Show page and raw /data files. Then decide when to switch safe mode off.
+- Prayer: RE5 exam first (representative), later RE1 + qualifications for Key Individual if LRC gets its own licence.
+- Business strategy doc (claude.ai artifact "LRC Business Strategy — Traffic, Monetisation & Running LRC…"): summary written, sections 2–9 still to fill.
+- Update the SOP doc to the fully automated site (it still mentions analyst ratings / Work-sheets).
+- Payments and monetisation later: Paystack R100 / $6 links → store.json; broker partners → store.json brokers.
+- Optional: connect Gmail to Claude so updates can be emailed.
 
 ## SAFE MODE (pre-licence) — switched ON 26 Oct 2026
 - Switch: `window.LRC_SAFE = true;` near the middle of docs/assets/js/main.js (search "SAFE MODE"). Set to `false` to bring everything back once LRC is FSCA-authorised.
