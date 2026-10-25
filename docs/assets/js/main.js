@@ -290,7 +290,7 @@ const WS = [
   draw();
 })();
 
-/* =================== AI News + Watchlist (read JSON data) =================== */
+/* =================== News Desk + Watchlist (read JSON data) =================== */
 const DATA = window.LRC_DATA || 'data/';
 const getJSON = f => fetch(DATA + f + '?v=' + Date.now()).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); });
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
