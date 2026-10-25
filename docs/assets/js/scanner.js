@@ -64,7 +64,7 @@ if ($('scTbl')) {
   const sortVal = (r, k) => k === 'score' ? SC(r) : k === 'rt' ? (RORD[RT(r)] ?? -1) * 1000 + SC(r) : k === 'chk' ? (r.inv ? r.inv.p : -1) : k === 't' ? r.t : k === 'chg' ? r.chg : k === 'ne' ? (r.ne || '9') : k === 'up' ? (r.tgt ? r.tgt / r.px - 1 : -9)
     : k === 'val' ? ({ UNDERVALUED: 2, 'FAIR VALUE': 1, OVERVALUED: 0 })[r.val] ?? -1 : k.startsWith('g:') ? ((r.grp || {})[k.slice(2)] ?? -1)
     : (() => { const x = rdv(r, k); return x ? (x[1] ?? -9) * 1e9 + (typeof x[0] === 'number' ? x[0] : 0) : -9e12; })();
-  let sortK = 'score';
+  let sortK = 'rt';
   function drawStocks() {
     const rows = rowsFor().sort((a, b) => { const x = sortVal(a, sortK), y = sortVal(b, sortK); return (x > y ? 1 : x < y ? -1 : 0) * sortD; });
     const my = mine(), MED = (S.medians || {})[mkt] || {};
@@ -171,12 +171,13 @@ if ($('scTbl')) {
     if (!S) return;
     if (tab === 'stocks' || tab === 'invest') drawStocks(); else if (tab === 'setups') drawSetups(); else if (tab === 'etfs') drawEtfs(); else if (tab === 'sectors') drawSectors();
   }
+  $('scSort').addEventListener('change', () => { const [k, d] = $('scSort').value.split(':'); sortK = k; sortD = +d; shown = 120; drawStocks(); });
   ['scQ', 'scSec', 'scSig', 'scSet', 'scVal', 'scCov', 'scMine'].forEach(id => $(id).addEventListener(id === 'scQ' ? 'input' : 'change', () => { shown = 120; drawStocks(); }));
   ['invG', 'invSec', 'invMos'].forEach(id => $(id).addEventListener('change', drawInvest));
   $('scMore').addEventListener('click', () => { shown += 200; drawStocks(); });
   $('scTbl').addEventListener('click', e => {
     const st = e.target.closest('.star'); if (st) { e.stopPropagation(); st.classList.toggle('on', toggleMine(st.dataset.s)); return; }
-    const th = e.target.closest('th[data-k]'); if (th) { const k = th.dataset.k; sortD = sortK === k ? -sortD : (k === 't' || k === 'ne' ? 1 : -1); sortK = k; drawStocks(); return; }
+    const th = e.target.closest('th[data-k]'); if (th) { const k = th.dataset.k; sortD = sortK === k ? -sortD : (k === 't' || k === 'ne' ? 1 : -1); sortK = k; const o = [...$('scSort').options].find(x => x.value === k + ':' + sortD); $('scSort').value = o ? o.value : $('scSort').value; drawStocks(); return; }
     const tr = e.target.closest('tr[data-t]'); if (tr) location.href = 'stock.html?t=' + encodeURIComponent(tr.dataset.t);
   });
   $('scCsv').addEventListener('click', () => {
