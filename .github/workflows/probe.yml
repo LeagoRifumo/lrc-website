@@ -10,8 +10,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Scanner on a sample
-        env: { SCAN_DEBUG: "AAPL,NVDA,NPN.JO,PRX.JO,BHG.JO,GLN.JO,CFR.JO,AGL.JO,BTI.JO,SBK.JO,MTN.JO,SHP.JO" }
-        run: python3 agents/tools/scanner.py --limit 40
+        env: { SCAN_DEBUG: "NVDA,NPN.JO,CFR.JO,BTI.JO,CPI.JO" }
+        run: python3 agents/tools/scanner.py
       - name: Sizes and samples
         run: |
           du -sh docs/data/scan; ls docs/data/scan/t | wc -l; head -c 1500 docs/data/scan/sectors.json; echo; head -c 1200 docs/data/scan/etfs.json

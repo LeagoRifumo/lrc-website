@@ -56,10 +56,10 @@ def levels(bars, a, k=5, lookback=260):
         if b[i]['low'] <= min(x['low'] for x in win): piv.append((b[i]['low'], i))
     if not piv: return []
     piv.sort()
-    tol = max(0.6 * a, 0.012 * b[-1]['close'])
+    tol = max(0.5 * a, 0.008 * b[-1]['close'])
     groups, cur = [], [piv[0]]
     for p in piv[1:]:
-        if p[0] - cur[-1][0] <= tol: cur.append(p)
+        if p[0] - cur[-1][0] <= tol and p[0] - cur[0][0] <= 2 * tol: cur.append(p)
         else: groups.append(cur); cur = [p]
     groups.append(cur)
     out = [{'price': sum(x[0] for x in g) / len(g), 'touches': len(g), 'last': max(x[1] for x in g) - len(b)} for g in groups]
@@ -107,9 +107,9 @@ def setup(bars, t, lv):
         if len(prior) < 55: break
         av = sum(x['volume'] for x in bars[j - 20:j]) / 20 or 1
         rv = bars[j]['volume'] / av
-        crossed = [L for L in major if c[j - 1] <= L < c[j]]
+        crossed = [l['price'] for l in lv if c[j - 1] <= l['price'] < c[j] and l['touches'] >= 3]
         lvl = max(crossed) if crossed else (max(prior) if c[j] > max(prior) else None)
-        if lvl and rv >= 1.25 and p > lvl - 0.25 * a and (s50 is None or p > s50):
+        if lvl and rv >= 1.3 and p > lvl - 0.25 * a and (s50 is None or p > s50):
             return {'setup': 'Breakout', 'setup_level': lvl, 'setup_day': bars[j]['date'], 'setup_bar': j - n}
     # --- BREAKDOWN: mirror image
     breakdown = None
@@ -118,9 +118,9 @@ def setup(bars, t, lv):
         if len(prior) < 55: break
         av = sum(x['volume'] for x in bars[j - 20:j]) / 20 or 1
         rv = bars[j]['volume'] / av
-        crossed = [L for L in major if c[j - 1] >= L > c[j]]
+        crossed = [l['price'] for l in lv if c[j - 1] >= l['price'] > c[j] and l['touches'] >= 3]
         lvl = min(crossed) if crossed else (min(prior) if c[j] < min(prior) else None)
-        if lvl and rv >= 1.25 and p < lvl + 0.25 * a and (s50 is None or p < s50):
+        if lvl and rv >= 1.4 and p < lvl + 0.25 * a and (s50 is None or p < s50):
             breakdown = {'setup': 'Breakdown', 'setup_level': lvl, 'setup_day': bars[j]['date'], 'setup_bar': j - n}
             break
     # --- RETEST of a major support that was broken upward in the last 40 sessions (old resistance = new support)
@@ -131,7 +131,7 @@ def setup(bars, t, lv):
         cross = [i for i in range(n - 40, n - 3) if c[i - 1] < L <= c[i]]
         if not cross: continue
         held = all(x >= L - 0.5 * a for x in c[cross[-1]:])
-        if held and lows3 <= L + 0.75 * a and (s200 is None or p > s200):
+        if held and lows3 <= L + 0.6 * a and (s200 is None or p > s200) and (s50 is None or s200 is None or s50 > s200):
             if not best or L > best: best = L
     if best and not breakdown:
         return {'setup': 'Retest', 'setup_level': best, 'setup_day': bars[-1]['date'], 'setup_note': 'Retest of a broken resistance (now support)'}
@@ -144,7 +144,8 @@ def setup(bars, t, lv):
     for L in sorted(major):
         if not (L > p and L - p <= 2.5 * a): continue
         cross = [i for i in range(n - 40, n - 3) if c[i - 1] > L >= c[i]]
-        if cross and all(x <= L + 0.5 * a for x in c[cross[-1]:]) and highs3 >= L - 0.75 * a and (s200 is None or p < s200):
+        if cross and all(x <= L + 0.5 * a for x in c[cross[-1]:]) and highs3 >= L - 0.5 * a and (s200 is None or p < s200) \
+                and (s50 is None or p < s50) and (s50 is None or s200 is None or s50 < s200):
             return {'setup': 'Failed retest', 'setup_level': L, 'setup_day': bars[-1]['date'], 'setup_note': 'Rally failed at a broken support (now resistance)'}
     # --- NEAR BREAKOUT: coiling within 3% under the 55-day high / major resistance with a contracting range
     hi55 = max(c[-56:-1])

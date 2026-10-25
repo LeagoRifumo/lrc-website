@@ -74,9 +74,12 @@ def norm_fund(s, q, price_major, minor, fx):
     mcap = raw(sd, 'marketCap') or raw(s.get('price', {}), 'marketCap') or (q or {}).get('marketCap')
     sh = raw(ks, 'sharesOutstanding') or (q or {}).get('sharesOutstanding')
     rev, fcf = raw(fd, 'totalRevenue'), raw(fd, 'freeCashflow')
+    # Yahoo quotes EPS in the trading currency (major units) even when the company reports in another currency,
+    # while revenue / cash flow / cash / debt are in the reporting currency (fx converts those).
     teps, feps = raw(ks, 'trailingEps'), raw(ks, 'forwardEps')
-    tpe = price_major / (teps * fx) if teps and fx else None
-    fpe = price_major / (feps * fx) if feps and fx else None
+    tpe = price_major / teps if teps else None
+    fpe = price_major / feps if feps else None
+    if fpe and tpe and tpe > 0 and fpe > 0 and not (tpe / 3 < fpe < tpe * 3): fpe, feps = None, None  # inconsistent forward data
     f = {
         'mcap': mcap, 'currency_reported': fd.get('financialCurrency'), 'fx_used': fx,
         'tpe': tpe if tpe and 0 < tpe < 400 else (None if teps is None else -1 if teps < 0 else None),
@@ -92,7 +95,7 @@ def norm_fund(s, q, price_major, minor, fx):
         'revenue': rev * fx if rev and fx else None, 'fcf': fcf * fx if fcf and fx else None,
         'cash': raw(fd, 'totalCash') * fx if raw(fd, 'totalCash') and fx else None, 'debt': raw(fd, 'totalDebt') * fx if raw(fd, 'totalDebt') and fx else None,
         'fcf_per_share': fcf * fx / sh if fcf and fx and sh else None,
-        'trailing_eps': teps * fx if teps and fx else None, 'forward_eps': feps * fx if feps and fx else None,
+        'trailing_eps': teps, 'forward_eps': feps,
         'div_yield': raw(sd, 'dividendYield') if raw(sd, 'dividendYield') is not None else (raw(sd, 'trailingAnnualDividendYield') or 0),
         'beta': raw(sd, 'beta'),
         'target_median': (raw(fd, 'targetMedianPrice') or 0) / div or None, 'target_mean': (raw(fd, 'targetMeanPrice') or 0) / div or None,
