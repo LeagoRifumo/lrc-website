@@ -13,6 +13,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 from yahoo import Yahoo, raw
 import scan_engine as E
 import sec_quarters as SECQ
+import watchlist_lists as WL
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 P = lambda *a: os.path.join(ROOT, *a)
@@ -415,25 +416,8 @@ def main():
                                                      'groups': E.GROUPS, 'medians': MEDIANS, 'rows': out_rows}))
     dump(os.path.join(OUT, 'etfs.json'), rnd_all({**meta, 'rows': etf_rows}))
     dump(os.path.join(OUT, 'sectors.json'), rnd_all({**meta, 'rows': sectors}))
-    # ---------- website watchlists (both markets, rebuilt every run) ----------
-    def pick(r):
-        p = r['plan'] or {}
-        up = lambda x: (x / p['entry'] - 1) if p.get('entry') and x else None
-        return {'t': r['t'], 'n': r['n'], 'sec': r['sec'], 'cur': r['cur'], 'px': r['px'], 'chg': r['chg'], 'v': r['v'], 'score': r['score'], 'val': r['val'], 'iv_v': r['iv_v'], 'iv_score': r['iv_score'],
-                'setup': r['setup'], 'lvl': r['lvl'], 'ne': r['ne'], 'cov': r['cov'], 'tgt': r['tgt'], 'tgt_up': (r['tgt'] / r['px'] - 1) if r['tgt'] and r['px'] else None,
-                'entry': p.get('entry'), 'stop': p.get('stop'), 't1': p.get('t1'), 't2': p.get('t2'),
-                'stop_pct': up(p.get('stop')), 't1_pct': up(p.get('t1')), 't2_pct': up(p.get('t2')), 'inv': r['inv']}
-    lists = {}
-    for m in ('US', 'JSE'):
-        rs = [r for r in out_rows if r['m'] == m]
-        longs = sorted([r for r in rs if r['plan'] and r['plan']['side'] == 'Long' and r['v'] in ('BUY', 'STRONG BUY')], key=lambda r: -r['score'])[:10]
-        shorts = sorted([r for r in rs if r['plan'] and r['plan']['side'] == 'Short' and r['v'] in ('SELL', 'STRONG SELL')], key=lambda r: r['score'])[:10]
-        inv = sorted([r for r in rs if r['iv_v'] in ('BUY', 'STRONG BUY')], key=lambda r: (-r['iv_score'], -(r['inv']['p'] or 0)))[:10]
-        lists[m] = {'long': [pick(r) for r in longs], 'short': [pick(r) for r in shorts], 'investment': [pick(r) for r in inv]}
-    dump(os.path.join(OUT, 'lists.json'), rnd_all({**meta, 'rules': {
-        'long': 'Up to 10 per market: Trading scanner BUY / STRONG BUY (3-12 months, 6-month LRC target) with a Breakout, Retest or Near-breakout entry plan, strongest score first',
-        'short': 'Up to 10 per market: SELL / STRONG SELL with a Breakdown or Failed-retest plan, weakest score first',
-        'investment': 'Up to 10 per market: Investment scanner BUY / STRONG BUY (5-10 year view: valuation, profitability, financial health, growth, income), highest score first'}, 'lists': lists}))
+    # ---------- website watchlists (both markets, rebuilt every run): top 5 BUY / top 5 SELL, trading and investment ----------
+    dump(os.path.join(OUT, 'lists.json'), rnd_all(WL.payload(meta, out_rows)))
     keep = set()
     for s, d in details.items():
         fn = s.replace('^', '_') + '.json'; keep.add(fn)

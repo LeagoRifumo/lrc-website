@@ -146,7 +146,8 @@ def universe():
     if os.path.isdir(P('docs', 'data', 'research')):
         syms |= {f[:-5] for f in os.listdir(P('docs', 'data', 'research')) if f.endswith('.json')}
     for m, l in ((load(P('docs', 'data', 'scan', 'lists.json'), {}) or {}).get('lists', {})).items():
-        for k in ('long', 'short', 'investment'): syms |= {x['t'] for x in l.get(k, [])}
+        for k, v in l.items():
+            if isinstance(v, list): syms |= {x['t'] for x in v}
     syms |= set((load(P('agents', 'config', 'focus.json'), {}) or {}).get('tickers', []))
     out = []
     for s in sorted(syms):

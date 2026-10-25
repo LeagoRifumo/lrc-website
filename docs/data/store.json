@@ -1,7 +1,9 @@
 {
- "note": "Shop settings for the website. Paste your Paystack (or other) payment link into report_pay_link and every 'Buy the full report' button uses it. Leave it empty and the button opens an order email instead. Add broker referral partners to brokers and they appear on the scanner and stock pages.",
+ "note": "Shop settings for the website. Visitors in South Africa see report_price (rand) and use report_pay_link; visitors anywhere else see report_price_usd (US dollars) and use report_pay_link_usd (falls back to report_pay_link). Leave a pay link empty and the button opens an order email instead. Add broker referral partners to brokers and they appear on the scanner and stock pages.",
  "report_price": "R100",
+ "report_price_usd": "$6",
  "report_pay_link": "",
+ "report_pay_link_usd": "",
  "report_delivery": "Full report emailed to you within 24 hours of payment (PDF).",
  "order_email": "info@leagorifumocapital.co.za",
  "brokers": []

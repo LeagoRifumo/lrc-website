@@ -37,10 +37,23 @@ const LIBRARY = [
   { t: 'Stock analysis roadmap: investing and trading', type: 'Education', sector: 'Process', date: '7 Oct 2026', region: 'Global',
     s: 'The 13-page roadmap for students, interns and junior analysts — what to look at, and what it tells you, from first screen to exit.', tags: ['Academy', 'Roadmap', 'Beginner'] },
 ];
+/* ---------- visitor region: rand inside South Africa, US dollars everywhere else ---------- */
+window.LRCRegion = (() => {
+  const K = 'lrc_cur';
+  try { const q = new URLSearchParams(location.search).get('cur'); if (q && /^(ZAR|USD)$/i.test(q)) localStorage.setItem(K, q.toUpperCase()); } catch (e) { }
+  const auto = () => { try { const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ''; return tz === 'Africa/Johannesburg' ? 'ZAR' : tz ? 'USD' : ((navigator.languages || [navigator.language || '']).some(l => /-ZA$/i.test(l)) ? 'ZAR' : 'USD'); } catch (e) { return 'ZAR'; } };
+  const cur = () => { try { return localStorage.getItem(K) || auto(); } catch (e) { return auto(); } };
+  const set = c => { try { localStorage.setItem(K, c); } catch (e) { } location.reload(); };
+  const isSA = () => cur() === 'ZAR';
+  const localize = st => { if (!st) return st; const o = { ...st }; if (!isSA()) { o.report_price = st.report_price_usd || st.report_price; o.report_pay_link = st.report_pay_link_usd || st.report_pay_link; } return o; };
+  const note = () => isSA() ? `Prices in rand (South Africa). <a href="#" data-cur="USD">Show US dollars</a>` : `Prices in US dollars (outside South Africa). <a href="#" data-cur="ZAR">Show rand</a>`;
+  document.addEventListener('click', e => { const a = e.target.closest('a[data-cur]'); if (a) { e.preventDefault(); set(a.dataset.cur); } });
+  return { cur, isSA, localize, note, set };
+})();
 const STORE_LINK = d => (window.LRC_STORE && window.LRC_STORE.report_pay_link) || `mailto:${(window.LRC_STORE && window.LRC_STORE.order_email) || 'info@leagorifumocapital.co.za'}?subject=${encodeURIComponent('Order: ' + d.t + ' — ' + ((window.LRC_STORE && window.LRC_STORE.report_price) || 'R100'))}`;
 (() => {
   const lib = $('lib'); if (!lib) return;
-  fetch((window.LRC_DATA || 'data/') + 'store.json?v=' + Date.now()).then(r => r.json()).then(j => { window.LRC_STORE = j; if (typeof window.__libDraw === 'function') window.__libDraw(); }).catch(() => {});
+  fetch((window.LRC_DATA || 'data/') + 'store.json?v=' + Date.now()).then(r => r.json()).then(j => { window.LRC_STORE = window.LRCRegion.localize(j); if (typeof window.__libDraw === 'function') window.__libDraw(); }).catch(() => {});
   let type = 'all';
   const draw = () => {
     const q = ($('libSearch').value || '').toLowerCase(), sec = $('libSector').value;
@@ -302,10 +315,16 @@ const failMsg = (el, what) => { el.innerHTML = `<p class="muted-load">The ${what
     $('hNewsDate').textContent = when(d.generated);
     n.innerHTML = `<b style="font-family:var(--serif);font-size:26px;color:#fff;line-height:1.15;display:block">${esc(d.headline)}</b><p style="color:var(--muted);margin-top:10px;font-size:15.5px">${esc(d.summary)}</p><a class="btn btn-ghost" style="margin-top:16px" href="news.html">Read the full brief →</a>`;
   }).catch(() => failMsg(n, 'news brief'));
-  if (w) getJSON('watchlist.json').then(d => {
-    $('hWlDate').textContent = 'Prices ' + d.prices_as_of;
-    const top = [...d.swing].filter(x => x.grade === 'A').concat(d.swing.filter(x => x.grade !== 'A')).slice(0, 5);
-    w.innerHTML = `<ul class="mini">${top.map(x => `<li><b style="color:#fff">${esc(x.ticker)} <span style="font-weight:400">${esc(x.name)}</span></b><span>${pillR(x.direction === 'Long' ? 'LONG' : 'SHORT')} ${pillR(x.grade)}</span></li>`).join('')}</ul><a class="btn btn-ghost" style="margin-top:16px" href="watchlist.html">See the full watchlist →</a>`;
+  if (w) getJSON('scan/lists.json').then(d => {
+    const draw = () => {
+      let m; try { m = JSON.parse(localStorage.getItem('lrc_mkt')) || 'JSE'; } catch (e) { m = 'JSE'; }
+      const l = (d.lists || {})[m] || {};
+      $('hWlDate').textContent = (m === 'JSE' ? 'JSE' : 'New York') + ' · prices ' + ((d.as_of || {})[m] || '');
+      const row = (x, k) => `<li><a href="stock.html?t=${encodeURIComponent(x.t)}" style="color:#fff"><b>${esc(x.t.replace('.JO', ''))}</b> <span style="font-weight:400;color:var(--muted)">${esc(x.n)}</span></a><span>${pillR(k === 'b' ? 'BUY' : 'SELL')}</span></li>`;
+      const tb = (l.trading_buy || []).slice(0, 3), ts = (l.trading_sell || []).slice(0, 2);
+      w.innerHTML = `<small style="color:var(--muted);letter-spacing:.1em">TRADING · 3–12 MONTHS</small><ul class="mini">${tb.map(x => row(x, 'b')).join('')}${ts.map(x => row(x, 's')).join('')}</ul><a class="btn btn-ghost" style="margin-top:16px" href="watchlist.html">See the full watchlist →</a>`;
+    };
+    draw(); window.addEventListener('lrcmarket', draw);
   }).catch(() => failMsg(w, 'watchlist'));
 })();
 
@@ -546,4 +565,19 @@ const artCard = (a, pre = '') => `<a class="art" href="${pre}${esc(a.url)}">${a.
     window.addEventListener('lrcmarket', e => sync(e.detail));
     er.addEventListener('change', () => { const m = er.value === 'jse' ? 'JSE' : 'US'; if (getM() !== m) setM(m); });
   }
+})();
+
+/* ---------- v8: phone layout helpers ---------- */
+(() => {
+  // label every cell of a .mcard table with its column heading, so phones can show each row as a card
+  const label = t => {
+    const hs = [...t.querySelectorAll('thead th')].map(th => (th.childNodes[0] && th.childNodes[0].textContent || th.textContent).replace(/[⇅▾▴]/g, '').trim());
+    t.querySelectorAll('tbody tr').forEach(tr => [...tr.children].forEach((td, i) => { if (hs[i] && hs[i] !== '#' && !td.hasAttribute('data-label')) td.setAttribute('data-label', hs[i]); }));
+  };
+  const all = () => document.querySelectorAll('table.mcard').forEach(label);
+  all();
+  new MutationObserver(all).observe(document.body, { childList: true, subtree: true });
+  // short market names in the header on phones
+  const fit = () => { const s = document.getElementById('hdrMkt'); if (!s) return; const o = s.querySelector('option[value="US"]'); if (o) o.textContent = window.innerWidth <= 700 ? 'NY' : 'New York'; };
+  fit(); window.addEventListener('resize', fit);
 })();

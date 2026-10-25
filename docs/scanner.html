@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=7.4">
+<link rel="stylesheet" href="assets/css/style.css?v=8.0">
 </head>
 <body>
 <header class="site-header">
@@ -89,14 +89,14 @@
   <div id="pane-setups" hidden>
     <p class="lead" style="max-width:900px;margin-top:26px">Today's trade setups from the LRC Stock Scanner. Each plan shows the entry trigger, the downside to the stop (below the support or breakout level) and the upside to two targets in %. Position size is your own decision. Results inside 14 days are flagged as event risk.</p>
     <h2 style="font-size:36px;margin-top:40px">Long setups <span class="gold">— breakouts &amp; retests</span></h2>
-    <div class="tbl-wrap"><table class="wl" id="stLong"></table></div>
+    <div class="tbl-wrap"><table class="wl mcard" id="stLong"></table></div>
     <h2 style="font-size:36px;margin-top:50px">Short setups <span class="gold">— breakdowns &amp; failed retests</span></h2>
-    <div class="tbl-wrap"><table class="wl" id="stShort"></table></div>
+    <div class="tbl-wrap"><table class="wl mcard" id="stShort"></table></div>
   </div>
   <div id="pane-invest" hidden>
     <p class="lead" style="max-width:920px;margin-top:26px">The LRC Investment track (long-only, 5–10 years) — the quality screen from our workbook: size, ROE, ROA, operating margin, low debt, liquidity, a sensible forward P/E and P/FCF, and multi-year growth in EPS and revenue. Grade A = 8+ of 10 checks passed. Margin of safety compares today's price with the LRC target (covered names) or the model fair value.</p>
     <div class="scan-filters"><select id="invG"><option value="AB">Grades A and B</option><option value="A">Grade A only</option><option value="all">All companies</option></select><select id="invSec"><option value="all">All sectors</option></select><label><input type="checkbox" id="invMos"> Positive margin of safety only</label></div>
-    <div class="tbl-wrap"><table class="wl" id="invTbl"></table></div>
+    <div class="tbl-wrap"><table class="wl mcard" id="invTbl"></table></div>
   </div>
   <div id="pane-etfs" hidden>
     <div class="scan-filters"><div class="filters" id="etfView" style="margin:0"><button class="chip-btn on" data-v="group">Grouped</button><button class="chip-btn" data-v="rank">Ranked: most bullish → most bearish</button></div></div>
@@ -137,7 +137,7 @@
   </div>
 </footer>
 <script>window.LRC_DATA = "data/";</script>
-<script src="assets/js/main.js?v=7.4"></script>
-<script src="assets/js/scanner.js?v=7.5"></script>
+<script src="assets/js/main.js?v=8.0"></script>
+<script src="assets/js/scanner.js?v=8.0"></script>
 </body>
 </html>

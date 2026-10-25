@@ -5,7 +5,7 @@ collect news, SEC filings and official US financials. You add what only reading 
 the house format of the one-page summary, for every company on the LRC watchlists — JSE and New York.
 
 ## Which companies (5 per run)
-1. Build the list: tickers in `docs/data/ratings.json`, every ticker in `docs/data/scan/lists.json` (long, short, investment for
+1. Build the list: tickers in `docs/data/ratings.json`, every ticker in `docs/data/scan/lists.json` (trading_buy, trading_sell, invest_buy, invest_sell for
    both markets) and `agents/config/focus.json`.
 2. Pick the 5 whose `docs/data/research/<TICKER>.json` is missing or has the oldest `updated` date. Skip files whose `analyst`
    is "Prayer Nkuna" — those are the analyst's own work; only refresh their `guidance` and `catalysts_to_watch` if a newer

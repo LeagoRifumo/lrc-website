@@ -728,3 +728,79 @@ table.heat .hc{padding:8px 2px}
 .mvr .ch{text-align:center}
 @media (max-width:1200px){.mv3{grid-template-columns:repeat(2,minmax(0,1fr))}.mvc:nth-child(3){grid-column:1/-1}}
 @media (max-width:760px){.mv3{grid-template-columns:minmax(0,1fr)}.mvc:nth-child(3){grid-column:auto}.mvr{grid-template-columns:16px 54px minmax(0,1fr) 64px}.mvr .rt{display:none}.wl.dash3 .note{min-width:220px}}
+
+/* =================== v8: automated watchlist + mobile-friendly layout =================== */
+[hidden]{display:none!important}
+.wl-h{margin-top:64px}
+.wl-sub{font-family:var(--sans,Inter,sans-serif);font-size:15px;letter-spacing:.14em;text-transform:uppercase;margin-top:30px;display:flex;align-items:center;gap:10px;color:#fff}
+.wl-sub:before{content:"";width:10px;height:10px;border-radius:50%;background:#5ED39A}
+.wl-sub.sell:before{background:#F08A7E}
+.wl-note{color:var(--muted);font-size:13.5px;margin-top:6px;min-height:1px}
+table.wl td.rk{color:var(--gold-2);font-weight:800;width:34px}
+table.wl td.news{max-width:300px}
+.mkt-inline{margin-top:18px}
+.mkt-inline .seg button{padding:11px 20px}
+.cur-note{display:block;margin-top:6px;color:var(--muted);font-size:12.5px}
+.cur-note a{color:var(--gold-2)}
+.tbl-wrap{-webkit-overflow-scrolling:touch}
+img,svg,video,canvas{max-width:100%}
+
+@media (max-width:860px){
+  .menu.open{max-height:calc(100vh - 76px);overflow-y:auto}
+  .page-hero{padding:46px 0 34px}
+  section{padding:52px 0}
+}
+@media (max-width:700px){
+  /* header: keep the JSE / New York switch on phones */
+  .nav-cta .mkt-switch{display:inline-flex!important}
+  .nav-cta{gap:8px}
+  .nav-cta .mkt-switch select{padding:8px 6px;font-size:13px;max-width:96px}
+  .brand img{height:36px;width:auto}
+  .brand span{font-size:16px!important}
+  .brand small{font-size:9px}
+  /* scanner: the bar no longer sticks and eats the screen; tabs scroll sideways in one row */
+  .scan-bar{position:static}
+  .scan-bar .wrap{gap:10px}
+  .scan-bar .mkt-big,.scan-bar .mkt-big select{width:100%}
+  .tabs{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;width:100%;padding-bottom:2px}
+  .tabs::-webkit-scrollbar{display:none}
+  .tabs button{white-space:nowrap;flex:0 0 auto}
+  .scan-filters{display:grid!important;grid-template-columns:1fr 1fr;gap:8px!important}
+  .scan-filters input[type=search],.scan-filters #scSort,.scan-filters .filters{grid-column:1/-1}
+  .scan-filters select,.scan-filters input{width:100%;min-width:0}
+  .scan-filters .filters{flex-wrap:nowrap;overflow-x:auto;padding-bottom:4px}
+  .scan-filters .filters .chip-btn{flex:0 0 auto}
+  .score-key{font-size:13px}
+  #scTblWrap{max-height:70vh!important}
+  .kpis{gap:10px}
+  .kpis div{padding:14px}
+  .kpis b{font-size:28px}
+  h2{font-size:30px}
+  .wl-h{margin-top:46px}
+  .mkt-inline .seg{display:flex;width:100%}
+  .mkt-inline .seg button{flex:1}
+  .agent-meta{gap:6px}
+  .agent-meta span{font-size:12px}
+  .edu-note{font-size:13.5px}
+
+  /* tables marked .mcard turn into one card per row on phones */
+  .tbl-wrap:has(table.mcard){border:0;overflow:visible;background:none}
+  table.wl.mcard{min-width:0!important;display:block}
+  table.wl.mcard thead{display:none}
+  table.wl.mcard tbody{display:grid;gap:12px}
+  table.wl.mcard tr{display:grid;grid-template-columns:1fr 1fr;gap:10px 14px;padding:16px;border:1px solid var(--line);border-radius:var(--radius);background:#0B0E16}
+  table.wl.mcard tr:hover td{background:none}
+  table.wl.mcard td{display:block;padding:0;border:0;max-width:none!important;min-width:0!important;white-space:normal}
+  table.wl.mcard td[data-label]:before{content:attr(data-label);display:block;font-size:10.5px;letter-spacing:.12em;color:var(--gold-2);font-weight:700;margin-bottom:3px}
+  table.wl.mcard td.rk{display:none}
+  table.wl.mcard td:nth-child(1):not(.rk),table.wl.mcard td.rk+td{grid-column:1/-1;font-size:17px}
+  table.wl.mcard td:nth-child(1):not(.rk):before,table.wl.mcard td.rk+td:before{display:none}
+  table.wl.mcard td.news,table.wl.mcard td:last-child{grid-column:1/-1}
+  table.wl.mcard tr.empty{display:block}
+  table.wl.mcard tr.empty td:before{display:none}
+}
+@media (max-width:380px){
+  .brand div{display:none}
+  table.wl.mcard tr{grid-template-columns:1fr}
+}
+table.wl td.news{min-width:220px}

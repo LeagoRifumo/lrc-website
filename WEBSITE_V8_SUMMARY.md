@@ -1,4 +1,4 @@
-# Leago Rifumo Capital website — v7 (25 Oct 2026)
+# Leago Rifumo Capital website — v8 (25 Oct 2026)
 
 Repository: github.com/LeagoRifumo/lrc-website (branch main, GitHub Pages serves /docs)
 Give this file (and the zip) to Claude when you next update the website.
@@ -7,10 +7,15 @@ Give this file (and the zip) to Claude when you next update the website.
 - index.html — home (LRC Stock Scanner featured)
 - scanner.html — LRC Stock Scanner (Sort dropdown + tap the rating header to sort STRONG BUY↔STRONG SELL): JSE / New York switch; tabs Stocks (Factor grades | All readings), Setups & entries, Investment ideas, ETFs, Sectors, How scoring works; Full screen; CSV
 - stock.html?t=TICKER — free one-page summary (Download PDF) + "Buy the full report — R100"
-- watchlist.html — LRC coverage (analyst ratings), trading longs/shorts (up to 10 per market), investment (up to 10 per market), watchlist news, house-rule setups
+- watchlist.html — FULLY AUTOMATED from the scanner (agents/tools/watchlist_lists.py → docs/data/scan/lists.json, rebuilt every scanner run): per market Top 5 BUY + Top 5 SELL for Trading (3-12m, by Trading score) and Top 5 BUY + Top 5 SELL for Investment (5-10y, by Investment score); watchlist news; LRC analyst coverage (re-priced daily). Home page card reads the same lists.
 - track.html — track record of every scanner rating (from 25 Oct 2026)
 - dashboard.html — colour-coded one-screen market dashboard: 6 headline tiles, analyst/auto view, SA | US & global | Commodities | Top movers cards; green/red = good/bad for investors (rand, inflation, yields inverted); live edition every 4 h on weekdays
 - earnings.html, news.html, articles.html, research.html, tools.html, academy.html, markets.html, show.html, contact.html, write.html
+
+## v8 changes
+- Automated watchlist (above). The old house-rule swing list (build_watchlist.py → watchlist.json) still feeds the Excel workbook but is no longer shown on the website.
+- Location pricing: visitors whose device time zone is Africa/Johannesburg see rand (store.json report_price, report_pay_link); everyone else sees US dollars (report_price_usd = $6, report_pay_link_usd). Visitors can switch with the "Show rand / Show US dollars" link; ?cur=USD or ?cur=ZAR in a URL also sets it.
+- Mobile: JSE/NY switch stays in the header on phones; watchlist, setups, investment and track-record tables become one card per row; scanner tabs scroll sideways; filters in a 2-column grid; shorter page heroes; scrollable menu. Assets are ?v=8.0.
 
 ## Scoring (agents/tools/scan_engine.py) — analyst-approved 37 readings (v7)
 - 37 readings in 7 groups: Valuation (Fwd P/E, Trailing P/E, PEG, P/S, P/B, P/FCF, EV/EBITDA), Growth (revenue & EPS qtr y/y, EPS this/next year est., 3-yr revenue & EPS CAGR),
