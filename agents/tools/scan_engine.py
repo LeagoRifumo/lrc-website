@@ -434,3 +434,135 @@ def factor_model(items):
             next(it for it in items if it['key'] == k)['score'] = round(p)
     for it in items: it.setdefault('score', None)
     return items
+
+
+# ======================= LRC readings model (v7, analyst-approved 25 Oct 2026) =======================
+# 37 readings, each +1 / 0 / -1 (Trend, Momentum, Setup: +2 .. -2). Fundamentals are judged against the median of the same
+# sector in the same market. Score = 50 + 50 x points / maximum possible (0-100, 50 = neutral). Colour intensity is
+# display-only: a +1 reading in the best 10% of its sector shows bright green, a -1 in the worst 10% bright red.
+GROUPS = [('valuation', 'Valuation'), ('growth', 'Growth'), ('profitability', 'Profitability'), ('health', 'Financial health'),
+          ('income', 'Income'), ('sentiment', 'Sentiment'), ('technical', 'Technical')]
+NO_BS = {'Financial Services', 'Real Estate'}
+# key, label, group, max points, format, higher_is_better (for colour intensity), skip balance-sheet sectors
+READINGS = [
+    ('fpe', 'Forward P/E', 'valuation', 1, 'x', False, False), ('tpe', 'Trailing P/E', 'valuation', 1, 'x', False, False),
+    ('peg', 'PEG ratio', 'valuation', 1, 'r', False, False), ('ps', 'Price / Sales', 'valuation', 1, 'x', False, False),
+    ('pb', 'Price / Book', 'valuation', 1, 'x', False, False), ('pfcf', 'Price / Free cash flow', 'valuation', 1, 'x', False, False),
+    ('ev_ebitda', 'EV / EBITDA', 'valuation', 1, 'x', False, False),
+    ('rev_growth', 'Revenue growth (qtr, y/y)', 'growth', 1, 'p', True, False), ('eps_growth', 'EPS growth (qtr, y/y)', 'growth', 1, 'p', True, False),
+    ('eps_growth_fwd', 'EPS growth this year (est.)', 'growth', 1, 'p', True, False), ('eps_growth_next', 'EPS growth next year (est.)', 'growth', 1, 'p', True, False),
+    ('rev_cagr3', 'Revenue growth, 3 yrs (a year)', 'growth', 1, 'p', True, False), ('eps_cagr3', 'EPS growth, 3 yrs (a year)', 'growth', 1, 'p', True, False),
+    ('gross_margin', 'Gross margin', 'profitability', 1, 'p', True, False), ('op_margin', 'Operating margin', 'profitability', 1, 'p', True, False),
+    ('profit_margin', 'Net margin', 'profitability', 1, 'p', True, False), ('roe', 'Return on equity', 'profitability', 1, 'p', True, False),
+    ('roa', 'Return on assets', 'profitability', 1, 'p', True, False),
+    ('de', 'Debt / Equity', 'health', 1, 'de', False, True), ('current_ratio', 'Current ratio', 'health', 1, 'r', True, True),
+    ('quick_ratio', 'Quick ratio', 'health', 1, 'r', True, True), ('fcf_margin', 'Free cash flow margin', 'health', 1, 'p', True, False),
+    ('net_cash_pct', 'Net cash / market cap', 'health', 1, 'p', True, True),
+    ('div_yield', 'Dividend yield', 'income', 1, 'p', True, False), ('payout', 'Payout ratio', 'income', 1, 'p', None, False),
+    ('rec_mean', 'Analyst consensus (1-5)', 'sentiment', 1, 'r1', False, False), ('tgt_up', 'Upside to analyst target', 'sentiment', 1, 'p', True, False),
+    ('net_upgrades', 'Upgrades - downgrades (45 days)', 'sentiment', 1, 'i', True, False), ('short_float', 'Short interest', 'sentiment', 1, 'p', False, False),
+    ('insiders', 'Insider ownership', 'sentiment', 1, 'p', True, False), ('inst', 'Institutional ownership', 'sentiment', 1, 'p', None, False),
+    ('trend', 'Trend (50/200-day)', 'technical', 2, 't', True, False), ('momentum', 'Momentum (6m vs market)', 'technical', 2, 'p', True, False),
+    ('setup', 'Setup', 'technical', 2, 's', True, False), ('stretch', 'Stretch / RSI', 'technical', 1, 'r0', None, False),
+    ('volume', 'Volume (up vs down days)', 'technical', 1, 'r', True, False), ('beta', 'Beta (risk)', 'technical', 1, 'r', False, False),
+]
+REL_LOW = {'fpe', 'tpe', 'ps', 'pb', 'pfcf', 'ev_ebitda'}
+VAL_NEG_BAD = {'fpe', 'tpe', 'pfcf', 'ev_ebitda', 'peg'}
+
+
+def reading_points(k, v, med, pct, sector, extra):
+    """Points for one reading (None = left out)."""
+    if v is None: return None
+    if k in REL_LOW:
+        if v <= 0: return -1
+        if not med: return 0
+        return 1 if v <= 0.8 * med else -1 if v >= 1.25 * med else 0
+    if k == 'peg': return -1 if v <= 0 else 1 if v < 1.0 else -1 if v > 2.0 else 0
+    if k == 'rev_growth': return 1 if v > 0.15 and v > (med if med is not None else 0) else -1 if v < 0 else 0
+    if k == 'eps_growth': return 1 if v > 0.20 else -1 if v < 0 else 0
+    if k in ('eps_growth_fwd', 'eps_growth_next'): return 1 if v > 0.15 else -1 if v < 0 else 0
+    if k in ('rev_cagr3', 'eps_cagr3'): return 1 if v > 0.10 else -1 if v < 0 else 0
+    if k == 'gross_margin': return None if pct is None else 1 if pct >= 70 else -1 if pct <= 30 else 0
+    if k == 'op_margin': return 1 if v > 0.15 and v > (med if med is not None else 0) else -1 if v < 0 else 0
+    if k == 'profit_margin': return -1 if v < 0 else (1 if pct is not None and pct >= 70 else 0)
+    if k == 'roe': return 1 if v > 0.20 else -1 if v < 0.08 else 0
+    if k == 'roa': return 1 if v > 0.08 else -1 if v < 0.02 else 0
+    if k == 'de': return 1 if v < 50 else -1 if v > 150 else 0
+    if k == 'current_ratio': return 1 if v > 1.5 else -1 if v < 1.0 else 0
+    if k == 'quick_ratio': return 1 if v > 1.0 else -1 if v < 0.5 else 0
+    if k == 'fcf_margin': return 1 if v > 0.15 else -1 if v < 0 else 0
+    if k == 'net_cash_pct': return 1 if v > 0 else -1 if v < -0.5 else 0
+    if k == 'div_yield':
+        if extra.get('div_cut'): return -1
+        return 1 if v > 0.03 and v > (med or 0) else 0
+    if k == 'payout': return None if not extra.get('pays_dividend') else 1 if 0.2 <= v <= 0.7 else -1 if v > 1.0 else 0
+    if k == 'rec_mean': return 1 if v <= 2.0 else -1 if v >= 3.0 else 0
+    if k == 'tgt_up': return 1 if v > 0.20 else -1 if v < 0.05 else 0
+    if k == 'net_upgrades': return 1 if v > 0 else -1 if v < 0 else 0
+    if k == 'short_float': return 1 if v < 0.02 else -1 if v > 0.10 else 0
+    if k == 'insiders': return 1 if v > 0.05 else 0
+    if k == 'inst': return 1 if 0.40 <= v <= 0.90 else -1 if v < 0.15 else 0
+    if k == 'beta': return 1 if v < 0.8 else -1 if v > 1.6 else 0
+    return None
+
+
+def readings_model(items):
+    """items: list of {key, market, sector, v: {reading: value}, tp: tech points, extra: {...}}.
+    Adds it['rd'] {k: [value, points, intensity]}, it['groups'] {group: score 0-100}, it['points'], it['max'], it['score'];
+    returns medians {market: {'_market': {k: med}, sector: {k: med}}}."""
+    keys = [r[0] for r in READINGS]
+    vals = {}
+    for it in items:
+        for k in keys:
+            x = it['v'].get(k)
+            if x is None or isinstance(x, (str, bool)) or k in ('trend', 'setup'): continue
+            if k in VAL_NEG_BAD and x <= 0: continue  # medians of valuation ratios use positive values only
+            vals.setdefault((it['market'], it['sector'], k), []).append((it['key'], x))
+            vals.setdefault((it['market'], '_market', k), []).append((it['key'], x))
+    med = {}
+    for (m, sec, k), xs in vals.items():
+        med.setdefault(m, {}).setdefault(sec, {})[k] = median([x for _, x in xs]) if len(xs) >= 3 else None
+    # sector percentiles (higher = better for that reading; market-wide when the sector has fewer than 6 names)
+    hib = {r[0]: r[5] for r in READINGS}
+    pct = {}
+    for (m, sec, k), xs in vals.items():
+        if sec == '_market' or hib.get(k) is None: continue
+        use = xs if len(xs) >= 6 else vals.get((m, '_market', k), xs)
+        sign = 1 if hib[k] else -1
+        pp = pctile([(kk, sign * x) for kk, x in use])
+        for kk, _ in xs: pct[(kk, k)] = pp.get(kk)
+    for it in items:
+        m, sec = it['market'], it['sector']
+        smed = (med.get(m, {}).get(sec) or {}); mmed = (med.get(m, {}).get('_market') or {})
+        rd, P, M, gp = {}, 0, 0, {}
+        for k, label, grp, mx, fmt, hi, skip_bs in READINGS:
+            v = it['v'].get(k)
+            if skip_bs and sec in NO_BS: continue
+            if grp == 'technical' and k in ('trend', 'momentum', 'setup', 'stretch', 'volume'):
+                pts = it['tp'].get({'stretch': 'extension'}.get(k, k))
+            else:
+                mref = smed.get(k) if smed.get(k) is not None else mmed.get(k)
+                pts = reading_points(k, v, mref, pct.get((it['key'], k)), sec, it['extra'])
+            if pts is None:
+                if v is not None: rd[k] = [v, None, 0]
+                continue
+            p_ = pct.get((it['key'], k))
+            inten = pts if mx == 2 else (2 if pts == 1 and p_ is not None and p_ >= 90 else -2 if pts == -1 and p_ is not None and p_ <= 10 else pts)
+            rd[k] = [v, pts, inten]
+            P += pts; M += mx
+            g = gp.setdefault(grp, [0, 0]); g[0] += pts; g[1] += mx
+        it['rd'] = rd; it['points'] = P; it['max'] = M
+        it['score'] = round(50 + 50 * P / M) if M else 50
+        it['groups'] = {g: (round(50 + 50 * a / b) if b else None) for g, (a, b) in gp.items()}
+        it['val_points'] = gp.get('valuation', [0, 0])[0]
+    return med
+
+
+def rating_v7(score):
+    return 'STRONG BUY' if score >= 75 else 'BUY' if score >= 60 else 'HOLD' if score >= 40 else 'SELL' if score >= 25 else 'STRONG SELL'
+
+
+def valuation_verdict(val_points, upside):
+    if val_points >= 2 and upside is not None and upside >= 0.10: return 'UNDERVALUED'
+    if val_points <= -2 or (upside is not None and upside < -0.05): return 'OVERVALUED'
+    return 'FAIR VALUE'

@@ -92,7 +92,8 @@ def norm_fund(s, q, price_major, minor, fx):
         'rev_growth': raw(fd, 'revenueGrowth'), 'eps_growth': raw(fd, 'earningsGrowth'),
         'de': raw(fd, 'debtToEquity'), 'roe': raw(fd, 'returnOnEquity'), 'roa': raw(fd, 'returnOnAssets'),
         'gross_margin': raw(fd, 'grossMargins'), 'op_margin': raw(fd, 'operatingMargins'), 'profit_margin': raw(fd, 'profitMargins'),
-        'current_ratio': raw(fd, 'currentRatio'),
+        'current_ratio': raw(fd, 'currentRatio'), 'quick_ratio': raw(fd, 'quickRatio'),
+        'payout': raw(sd, 'payoutRatio'), 'ebitda': raw(fd, 'ebitda') * fx if raw(fd, 'ebitda') and fx else None,
         'revenue': rev * fx if rev and fx else None, 'fcf': fcf * fx if fcf and fx else None,
         'cash': raw(fd, 'totalCash') * fx if raw(fd, 'totalCash') and fx else None, 'debt': raw(fd, 'totalDebt') * fx if raw(fd, 'totalDebt') and fx else None,
         'fcf_per_share': fcf * fx / sh if fcf and fx and sh else None,
@@ -104,6 +105,11 @@ def norm_fund(s, q, price_major, minor, fx):
         'rec_mean': raw(fd, 'recommendationMean'), 'rec_key': fd.get('recommendationKey'), 'n_analysts': raw(fd, 'numberOfAnalystOpinions'),
         'short_float': raw(ks, 'shortPercentOfFloat'), 'inst': raw(ks, 'heldPercentInstitutions'), 'insiders': raw(ks, 'heldPercentInsiders'),
     }
+    if f['mcap'] and f['revenue'] and f['fcf'] is not None and f['revenue'] > 0: f['fcf_margin'] = f['fcf'] / f['revenue']
+    if f['mcap'] and f['cash'] is not None and f['debt'] is not None: f['net_cash_pct'] = (f['cash'] - f['debt']) / f['mcap']
+    if f['mcap'] and f['ebitda']:
+        ev = f['mcap'] + (f['debt'] or 0) - (f['cash'] or 0)
+        f['ev_ebitda'] = ev / f['ebitda'] if f['ebitda'] > 0 else -1
     for tr in (s.get('earningsTrend') or {}).get('trend', []):
         if tr.get('period') == '0y': f['eps_growth_fwd'] = raw(tr, 'growth')
         if tr.get('period') == '+1y': f['eps_growth_next'] = raw(tr, 'growth')
@@ -245,29 +251,39 @@ def main():
 
     med = E.sector_medians([{'market': r['m'], 'sector': r['sec'], 'f': r['f']} for r in rows])
     today = dt.date.today()
-    # ---- six-factor model: percentile ranks vs peers -> LRC score 0-100 ----
+    # ---- LRC readings model (37 readings, analyst-approved) -> LRC score 0-100 ----
+    def cagr3(series):
+        pts = [x for x in (series or []) if x.get('value') is not None][-4:]
+        if len(pts) < 3 or pts[0]['value'] <= 0 or pts[-1]['value'] <= 0: return None
+        return (pts[-1]['value'] / pts[0]['value']) ** (1 / (len(pts) - 1)) - 1
     items = []
     for r in rows:
         t, f = r['tech'], r['f']
         tp = E.tech_scores(t)
         acts = f.get('analyst_actions', [])
-        mets = {k: f.get(k) for k in ('fpe', 'tpe', 'ps', 'pfcf', 'peg', 'rev_growth', 'eps_growth', 'eps_growth_fwd', 'eps_growth_next', 'roe', 'roa',
-                                       'op_margin', 'profit_margin', 'de', 'current_ratio', 'rec_mean', 'short_float')}
-        mets.update({'perf_1m': t['perf_1m'], 'perf_3m': t['perf_3m'], 'perf_6m': t['perf_6m'], 'perf_1y': t['perf_1y'],
-                     'tgt_up': (f['target_median'] / t['price'] - 1) if f.get('target_median') and f.get('n_analysts') else None,
-                     'net_upgrades': (sum(a.get('action') == 'up' for a in acts) - sum(a.get('action') == 'down' for a in acts)) if acts else None,
-                     'tech_points': tp['trend'] + tp['setup'] + tp['extension'] + tp['volume']})
-        if not f.get('n_analysts'): mets['rec_mean'] = None
+        divs = r['meta'].get('dividends') or []
+        cut = (dt.date.today() - dt.timedelta(days=365)).isoformat(); cut2 = (dt.date.today() - dt.timedelta(days=730)).isoformat()
+        d1 = sum(d['amount'] or 0 for d in divs if d['date'] >= cut); d0 = sum(d['amount'] or 0 for d in divs if cut2 <= d['date'] < cut)
+        ts = r['ts'] or {}
+        v = {k: f.get(k) for k in ('fpe', 'tpe', 'peg', 'ps', 'pb', 'pfcf', 'ev_ebitda', 'rev_growth', 'eps_growth', 'eps_growth_fwd', 'eps_growth_next',
+                                    'gross_margin', 'op_margin', 'profit_margin', 'roe', 'roa', 'de', 'current_ratio', 'quick_ratio', 'fcf_margin',
+                                    'net_cash_pct', 'div_yield', 'payout', 'short_float', 'insiders', 'inst', 'beta')}
+        v.update({'rev_cagr3': cagr3(ts.get('annualTotalRevenue')), 'eps_cagr3': cagr3(ts.get('annualDilutedEPS')),
+                  'rec_mean': f.get('rec_mean') if f.get('n_analysts') else None,
+                  'tgt_up': (f['target_median'] / t['price'] - 1) if f.get('target_median') and f.get('n_analysts') else None,
+                  'net_upgrades': (sum(a.get('action') == 'up' for a in acts) - sum(a.get('action') == 'down' for a in acts)) if acts else None,
+                  'trend': tp['trend'], 'momentum': t.get('rs_6m'), 'setup': t.get('setup') or '—', 'stretch': t.get('rsi'), 'volume': t.get('updown_vol')})
         r['tp'] = tp
-        items.append({'key': r['t'], 'market': r['m'], 'sector': r['sec'], 'm': mets})
-    E.factor_model(items)
+        items.append({'key': r['t'], 'market': r['m'], 'sector': r['sec'], 'v': v, 'tp': tp,
+                      'extra': {'div_cut': d0 > 0 and d1 < 0.9 * d0, 'pays_dividend': (f.get('div_yield') or 0) > 0}})
+    MEDIANS = E.readings_model(items)
     fm = {it['key']: it for it in items}
     out_rows = []
     for r in rows:
         t, f = r['tech'], r['f']
         md = med.get((r['m'], r['sec']), {})
         it = fm[r['t']]
-        score = it['score'] if it['score'] is not None else 50
+        score = it['score']
         pl = E.plan(r['bars'], t, f.get('next_earnings'), today)
         cats = []
         if f.get('next_earnings'):
@@ -285,11 +301,12 @@ def main():
         if cov: tg['lrc'] = cov['target_6m']
         inv = E.investment(f, r['ts'], r['m'], t['price'], tg.get('lrc') or tg.get('blend'))
         tgt_final = tg.get('lrc') or tg.get('blend')
-        v_score = E.rating_from_score(score)
+        v_score = E.rating_v7(score)
         v_final, v_note = E.consistent(v_score, (tgt_final / t['price'] - 1) if tgt_final and t['price'] else None)
         row = {'t': r['t'], 'n': r['n'], 'm': r['m'], 'sec': r['sec'], 'ind': r['ind'], 'cur': r['cur'], 'px': t['price'], 'chg': t['chg_1d'],
                'p1w': t['perf_1w'], 'p1m': t['perf_1m'], 'p6m': t['perf_6m'], 'ytd': t['perf_ytd'], 'mcap': f.get('mcap'), 'rsi': t['rsi'],
-               'score': score, 'fac': it['factors'], 'grades': {k: E.grade(v) for k, v in it['factors'].items()}, 'pct': it['pct'], 'tp': r['tp'],
+               'score': score, 'pts': it['points'], 'max': it['max'], 'grp': it['groups'], 'rd': it['rd'], 'tp': r['tp'],
+               'val': E.valuation_verdict(it['val_points'], (tgt_final / t['price'] - 1) if tgt_final and t['price'] else None),
                'v': v_final, 'v_score': v_score, 'v_note': v_note,
                'setup': t.get('setup'), 'lvl': t.get('setup_level'), 'plan': {k: pl[k] for k in ('side', 'entry', 'stop', 't1', 't2', 'risk_pct')} if pl else None,
                'ne': f.get('next_earnings'), 'cat': cats, 'tgt': tg.get('lrc') or tg.get('blend'),
@@ -331,10 +348,12 @@ def main():
                     band = max(abs(mv) * 0.25, 0.02)
                     verdict = 'Strong' if v > mv + band else 'Weak' if v < mv - band else 'In line'
             else: verdict = '—'
-            val.append({'k': k, 'label': label, 'v': v, 'sector': mv, 'pct': it['pct'].get(k), 'verdict': verdict})
+            val.append({'k': k, 'label': label, 'v': v, 'sector': mv, 'verdict': verdict})
         details[r['t']] = {'row': row, 'tech': {k: v for k, v in t.items() if k not in ('setup_bar',)}, 'f': f, 'profile': r['prof'], 'sector_medians': md,
                            'valuation': val, 'targets': tg, 'plan': pl, 'history': hist, 'financials': r['ts'], 'sec_q': (secq.get(r['t']) or {}).get('data'), 'dividends': r['meta'].get('dividends', [])[-8:],
-                           'benchmark': cfg['benchmarks'][r['m']]['name'], 'research': r['t'] in research, 'investment': inv}
+                           'benchmark': cfg['benchmarks'][r['m']]['name'], 'research': r['t'] in research, 'investment': inv,
+                           'medians': {'sector': MEDIANS.get(r['m'], {}).get(r['sec']), 'market': MEDIANS.get(r['m'], {}).get('_market')},
+                           'readings_def': [{'k': k, 'l': l, 'g': g, 'max': mx, 'f': fm_} for k, l, g, mx, fm_, _, _ in E.READINGS]}
 
     # ---------- ETFs ----------
     etf_rows = []
@@ -354,17 +373,10 @@ def main():
                          'setup': t.get('setup'), 'lvl': t.get('setup_level'),
                          'plan': {k: pl[k] for k in ('side', 'entry', 'stop', 't1', 't2', 'risk_pct')} if pl else None,
                          'sma50': t['sma50'], 'sma200': t['sma200']})
-    # ETF score: percentile rank within its market of momentum (1/3/6/12 months) + trend/setup points
-    for mk in ('US', 'JSE'):
-        es = [e for e in etf_rows if e['m'] == mk]
-        comp = {e['t']: [] for e in es}
-        for key in ('p1m', 'p3m', 'p6m', 'p1y', 'pts'):
-            vals = [(e['t'], (e['tp']['trend'] + e['tp']['setup'] + e['tp']['extension'] + e['tp']['volume']) if key == 'pts' else e[key]) for e in es]
-            vals = [(k, v) for k, v in vals if v is not None]
-            for k, p_ in E.pctile(vals).items(): comp[k].append(p_)
-        sc_ = E.pctile([(k, sum(v) / len(v)) for k, v in comp.items() if v])
-        for e in es:
-            e['score'] = round(sc_.get(e['t'], 50)); e['v'] = E.rating_from_score(e['score'])
+    # ETF score: same points method as stocks (trend, momentum, setup ±2; stretch, volume ±1; max 8)
+    for e in etf_rows:
+        p_ = sum(e['tp'].values()); e['pts'] = p_; e['max'] = 8
+        e['score'] = round(50 + 50 * p_ / 8); e['v'] = E.rating_v7(e['score'])
     etf_rows.sort(key=lambda e: -e['score'])
 
     # ---------- sectors ----------
@@ -386,7 +398,7 @@ def main():
             # sector score 0-100: average LRC score of its companies (70%) + its sector ETF score (30%)
             score = round(0.7 * avg + 0.3 * e['score']) if e else round(avg)
             top = sorted(rs, key=lambda x: -x['score'])
-            sectors.append({'m': m, 'sec': sec, 'n': len(rs), 'score': score, 'v': E.rating_from_score(score), 'avg': round(avg), 'bull': bull, 'bear': bear, 'above50': above50,
+            sectors.append({'m': m, 'sec': sec, 'n': len(rs), 'score': score, 'v': E.rating_v7(score), 'avg': round(avg), 'bull': bull, 'bear': bear, 'above50': above50,
                             'setups': setups, 'etf': et, 'etf_name': (e or {}).get('n'), 'etf_score': (e or {}).get('score'), 'etf_v': (e or {}).get('v'),
                             'etf_p1m': (e or {}).get('p1m'), 'top': [x['t'] for x in top[:3]], 'bottom': [x['t'] for x in top[-3:]]})
     sectors.sort(key=lambda x: (x['m'], -x['score']))
@@ -395,14 +407,15 @@ def main():
     asof = {m: max((r['tech']['date'] for r in rows if r['m'] == m), default=None) for m in ('US', 'JSE')}
     meta = {'generated': gen, 'as_of': asof, 'agent': 'LRC Scanner (GitHub Action)', 'source': 'Yahoo Finance prices, fundamentals and analyst data; LRC scoring rules',
             'benchmarks': cfg['benchmarks']}
-    dump(os.path.join(OUT, 'stocks.json'), rnd_all({**meta, 'rows': out_rows}))
+    dump(os.path.join(OUT, 'stocks.json'), rnd_all({**meta, 'readings': [{'k': k, 'l': l, 'g': g, 'max': mx, 'f': fm_} for k, l, g, mx, fm_, _, _ in E.READINGS],
+                                                     'groups': E.GROUPS, 'medians': MEDIANS, 'rows': out_rows}))
     dump(os.path.join(OUT, 'etfs.json'), rnd_all({**meta, 'rows': etf_rows}))
     dump(os.path.join(OUT, 'sectors.json'), rnd_all({**meta, 'rows': sectors}))
     # ---------- website watchlists (both markets, rebuilt every run) ----------
     def pick(r):
         p = r['plan'] or {}
         up = lambda x: (x / p['entry'] - 1) if p.get('entry') and x else None
-        return {'t': r['t'], 'n': r['n'], 'sec': r['sec'], 'cur': r['cur'], 'px': r['px'], 'chg': r['chg'], 'v': r['v'], 'score': r['score'], 'grades': r['grades'],
+        return {'t': r['t'], 'n': r['n'], 'sec': r['sec'], 'cur': r['cur'], 'px': r['px'], 'chg': r['chg'], 'v': r['v'], 'score': r['score'], 'val': r['val'],
                 'setup': r['setup'], 'lvl': r['lvl'], 'ne': r['ne'], 'cov': r['cov'], 'tgt': r['tgt'], 'tgt_up': (r['tgt'] / r['px'] - 1) if r['tgt'] and r['px'] else None,
                 'entry': p.get('entry'), 'stop': p.get('stop'), 't1': p.get('t1'), 't2': p.get('t2'),
                 'stop_pct': up(p.get('stop')), 't1_pct': up(p.get('t1')), 't2_pct': up(p.get('t2')), 'inv': r['inv']}
@@ -429,7 +442,7 @@ def main():
     dump(P('agents', 'work', 'sec_q_cache.json'), secq)
     for s_ in (os.environ.get('SCAN_DEBUG') or '').split(','):
         d = details.get(s_)
-        if d: print('DEBUG', s_, json.dumps(rnd_all({'px': d['tech']['price'], 'cur': d['row']['cur'], 'setup': d['row']['setup'], 'v': d['row']['v'], 'fac': d['row']['fac'],
+        if d: print('DEBUG', s_, json.dumps(rnd_all({'px': d['tech']['price'], 'cur': d['row']['cur'], 'setup': d['row']['setup'], 'v': d['row']['v'], 'grp': d['row']['grp'],
                      **{k: d['f'].get(k) for k in ('mcap', 'currency_reported', 'fx_used', 'tpe', 'yahoo_tpe', 'fpe', 'yahoo_fpe', 'ps', 'pfcf', 'trailing_eps', 'forward_eps', 'target_median', 'rev_growth', 'eps_growth', 'de', 'roe', 'div_yield', 'next_earnings')},
                      'targets': d['targets'], 'plan': d['plan'], 'sup': d['tech']['supports'][:2], 'res': d['tech']['resistances'][:2]})))
     print(f'done: {len(out_rows)} stocks, {len(etf_rows)} ETFs, {len(sectors)} sectors in {time.time() - t0:.0f}s')
