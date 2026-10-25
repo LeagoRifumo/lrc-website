@@ -14,6 +14,7 @@ from yahoo import Yahoo, raw
 import scan_engine as E
 import sec_quarters as SECQ
 import watchlist_lists as WL
+import peers as PEERS
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 P = lambda *a: os.path.join(ROOT, *a)
@@ -410,7 +411,7 @@ def main():
 
     gen = dt.datetime.now(SAST).isoformat(timespec='minutes')
     asof = {m: max((r['tech']['date'] for r in rows if r['m'] == m), default=None) for m in ('US', 'JSE')}
-    meta = {'generated': gen, 'as_of': asof, 'agent': 'LRC Scanner (GitHub Action)', 'source': 'Yahoo Finance prices, fundamentals and analyst data; LRC scoring rules',
+    meta = {'generated': gen, 'as_of': asof, 'agent': 'LRC Stock Scanner', 'source': 'Yahoo Finance prices, fundamentals and analyst data; LRC scoring rules',
             'benchmarks': cfg['benchmarks']}
     dump(os.path.join(OUT, 'stocks.json'), rnd_all({**meta, 'readings': [{'k': k, 'l': l, 'g': g, 'max': mx, 'f': fm_} for k, l, g, mx, fm_, _, _ in E.READINGS],
                                                      'groups': E.GROUPS, 'medians': MEDIANS, 'rows': out_rows}))
@@ -418,6 +419,7 @@ def main():
     dump(os.path.join(OUT, 'sectors.json'), rnd_all({**meta, 'rows': sectors}))
     # ---------- website watchlists (both markets, rebuilt every run): top 5 BUY / top 5 SELL, trading and investment ----------
     dump(os.path.join(OUT, 'lists.json'), rnd_all(WL.payload(meta, out_rows)))
+    PEERS.enrich(details, out_rows, sectors)   # size rank, rivals and sector backdrop for the summary's thesis
     keep = set()
     for s, d in details.items():
         fn = s.replace('^', '_') + '.json'; keep.add(fn)

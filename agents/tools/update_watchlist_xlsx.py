@@ -70,7 +70,7 @@ def main(account=None):
                 'V': dt.date.fromisoformat(x['next_earnings']) if x.get('next_earnings') else None, 'W': x.get('atr14'),
                 'X': ('LONG: ' if s['direction'] == 'Long' else 'SHORT: ') + s['setup'], 'Y': s['entry'], 'Z': s['stop'], 'AA': s['target'],
                 'AP': 'Entry setup' if s['status'] == 'Entry setup' else 'Watch',
-                'AV': f"Agent {wl['generated']}: LRC rating {s['rating']} (6-m value {s['rating_target']}); {s['tech_clearance']}. Entry {s['entry']}, stop {s['stop']} (2×ATR), target {s['target']} (3R). {s.get('note','')} — LRC Watchlist Agent"}
+                'AV': f"Agent {wl['generated']}: LRC rating {s['rating']} (6-m value {s['rating_target']}); {s['tech_clearance']}. Entry {s['entry']}, stop {s['stop']} (2×ATR), target {s['target']} (3R). {s.get('note','')} — LRC Watchlist"}
         for c, v in vals.items(): put(sw, f'{c}{row}', v)
         row += 1
     # weekly review log
@@ -80,7 +80,7 @@ def main(account=None):
         if wr.getCellRangeByName(f'A{r}').getValue() == (week - base).days: break
         r += 1
     put(wr, f'A{r}', week); put(wr, f'G{r}', 0)
-    put(wr, f'I{r}', f"Built by the LRC Watchlist Agent {wl['generated']}: {sum(1 for s in wl['swing'] if s['direction']=='Long')} long / "
+    put(wr, f'I{r}', f"Built by the LRC Watchlist {wl['generated']}: {sum(1 for s in wl['swing'] if s['direction']=='Long')} long / "
                      f"{sum(1 for s in wl['swing'] if s['direction']=='Short')} short candidates under house rules. Analyst to review before any trade.")
     doc.calculateAll()
     out = P('reports', f"LRC_Watchlist_{week.isoformat()}.xlsx")

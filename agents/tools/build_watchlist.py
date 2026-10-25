@@ -107,7 +107,7 @@ def main(week_end=None, sp500_half=0.1437):
     for i, s in enumerate(shorts):
         if i >= 4: s['status'] = 'Reserve'; s['note'] = (s['note'] + '; ' if s['note'] else '') + 'house limit: max 4 shorts'
     out = {'week_ending': week_end.isoformat(), 'generated': dt.datetime.now(dt.timezone(dt.timedelta(hours=2))).isoformat(timespec='minutes'),
-           'prices_as_of': max((x.get('as_of', '') for x in snap.values()), default=''), 'agent': 'LRC Watchlist Agent',
+           'prices_as_of': max((x.get('as_of', '') for x in snap.values()), default=''), 'agent': 'LRC Watchlist',
            'rules': {'universe': 'Finviz-style presets (Swing Long, Swing Short, Investment) applied to US stocks',
                      'qualify': 'Only names with an LRC BUY or SELL rating AND technical clearance; BUY = Long, SELL = Short',
                      'stop': '2 × ATR(14)', 'target': '3R', 'risk': '1% of account per trade', 'max_shorts': 4, 'event_risk': 'results within 14 days'},
@@ -134,7 +134,7 @@ def main(week_end=None, sp500_half=0.1437):
                     'mcap_bn': x.get('mcap_bn'), 'next_earnings': x.get('next_earnings'), 'under_review': t in flagged})
     order = {'BUY': 0, 'HOLD': 1, 'SELL': 2}
     cov.sort(key=lambda c: (order.get(c['rating'], 3), -(c['upside'] or 0) if c['rating'] != 'SELL' else (c['upside'] or 0)))
-    json.dump({'generated': out['generated'], 'prices_as_of': out['prices_as_of'], 'agent': 'LRC Watchlist Agent',
+    json.dump({'generated': out['generated'], 'prices_as_of': out['prices_as_of'], 'agent': 'LRC Watchlist',
                'note': 'Analyst-approved ratings re-priced daily. Upside = 6-month value vs the latest close. A rating only changes after the analyst completes a new Work-sheet.',
                'companies': cov}, open(P('docs', 'data', 'coverage.json'), 'w'), indent=1)
     json.dump(out, open(P('docs', 'data', 'watchlist.json'), 'w'), indent=1)

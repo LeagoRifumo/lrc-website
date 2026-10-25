@@ -17,6 +17,9 @@ Give this file (and the zip) to Claude when you next update the website.
 - Location pricing: visitors whose device time zone is Africa/Johannesburg see rand (store.json report_price, report_pay_link); everyone else sees US dollars (report_price_usd = $6, report_pay_link_usd). Visitors can switch with the "Show rand / Show US dollars" link; ?cur=USD or ?cur=ZAR in a URL also sets it.
 - Mobile: JSE/NY switch stays in the header on phones; watchlist, setups, investment and track-record tables become one card per row; scanner tabs scroll sideways; filters in a 2-column grid; shorter page heroes; scrollable menu. Assets are ?v=8.0.
 
+- Bottom line on the one-page summary is a SHORT thesis: who the company is (size, market, industry), ratings + valuation verdict; Why buy/sell = 3 reasons from different areas (business quality vs rivals, growth vs sector, industry backdrop, balance sheet, management/dividend, valuation, price trend); Risk; Next. Company context (size rank, sector backdrop) comes from agents/tools/peers.py ("context" in scan/t/*.json, every scanner run). Research files may add thesis.summary / thesis.risks_to_thesis.
+- Branding: the public site never names the tools behind it (no GitHub, Claude, "agent"). Labels: LRC Stock Scanner, LRC Watchlist, LRC News Desk, LRC Research, LRC Market Dashboard, LRC Track Record. main.js brandName() strips tool names from any data label. write.html (private, noindex) still uses GitHub to publish articles.
+
 ## Scoring (agents/tools/scan_engine.py) — analyst-approved 37 readings (v7)
 - 37 readings in 7 groups: Valuation (Fwd P/E, Trailing P/E, PEG, P/S, P/B, P/FCF, EV/EBITDA), Growth (revenue & EPS qtr y/y, EPS this/next year est., 3-yr revenue & EPS CAGR),
   Profitability (gross, operating, net margin, ROE, ROA), Financial health (D/E, current, quick, FCF margin, net cash/market cap),

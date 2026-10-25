@@ -290,22 +290,24 @@ const WS = [
   draw();
 })();
 
-/* =================== AI News + Watchlist (read JSON written by the agents) =================== */
+/* =================== AI News + Watchlist (read JSON data) =================== */
 const DATA = window.LRC_DATA || 'data/';
 const getJSON = f => fetch(DATA + f + '?v=' + Date.now()).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); });
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const when = iso => { try { return new Date(iso).toLocaleString('en-ZA', { weekday: 'short', day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }) + ' SAST'; } catch (e) { return iso; } };
+const brandName = s => String(s ?? '').replace(/\s*\([^)]*(GitHub|Claude|Action|automation|workbook)[^)]*\)/gi, '').replace(/\b(GitHub Actions?|Claude|Anthropic)\b/gi, 'LRC').replace(/\s+Agent\b/g, '');
+window.LRCBrand = brandName;
 const pillR = r => `<span class="pill p-${String(r).toLowerCase()}">${esc(r)}</span>`;
 const failMsg = (el, what) => { el.innerHTML = `<p class="muted-load">The ${what} could not be loaded right now. If you opened this page as a file on your computer, the browser blocks data files — it works once the site is online.</p>`; };
 
 (() => { // full brief
   const el = $('brief'); if (!el) return;
   getJSON('news.json').then(n => {
-    $('newsMeta').innerHTML = `<span class="ai">● AI-written by <b>${esc(n.agent)}</b></span><span>Edition: <b>${esc(n.edition)}</b></span><span>Updated: <b>${when(n.generated)}</b></span><span>Covers: <b>${esc(n.covers)}</b></span>`;
+    $('newsMeta').innerHTML = `<span class="ai">● AI-written by <b>${esc(brandName(n.agent))}</b></span><span>Edition: <b>${esc(n.edition)}</b></span><span>Updated: <b>${when(n.generated)}</b></span><span>Covers: <b>${esc(n.covers)}</b></span>`;
     el.innerHTML = `<div class="bh">${esc(n.headline)}</div><p class="bs">${esc(n.summary)}</p>` +
       n.sections.map(s => `<h3>${esc(s.name)}</h3>` + s.items.map(i => `<div class="item"><b>${(i.tickers || []).map(t => `<span class="tk">${esc(t)}</span>`).join('')}${esc(i.title)}</b><p>${esc(i.summary)}</p><a href="${esc(i.url)}" target="_blank" rel="noopener">Source: ${esc(i.source)} ↗</a></div>`).join('')).join('') +
       (n.watch_today ? `<h3>What to watch today</h3><ul class="watch">${n.watch_today.map(w => `<li>${esc(w)}</li>`).join('')}</ul>` : '') +
-      `<p class="edu-note" style="margin-top:40px"><b>HOW THIS IS MADE</b>An AI agent reads the sources linked above and writes this summary. It can make mistakes — always check the original source before acting. Educational only, not financial advice.</p>`;
+      `<p class="edu-note" style="margin-top:40px"><b>HOW THIS IS MADE</b>The LRC news desk reads the sources linked above and writes this summary automatically. It can make mistakes — always check the original source before acting. Educational only, not financial advice.</p>`;
   }).catch(() => failMsg(el, 'news brief'));
 })();
 
@@ -331,7 +333,7 @@ const failMsg = (el, what) => { el.innerHTML = `<p class="muted-load">The ${what
 (() => { // watchlist page
   const T = $('wlSwing'); if (!T) return;
   getJSON('watchlist.json').then(d => {
-    $('wlMeta').innerHTML = `<span class="ai">● Built by <b>${esc(d.agent)}</b></span><span>Prices as of <b>${esc(d.prices_as_of)}</b></span><span>Updated <b>${when(d.generated)}</b></span>`;
+    $('wlMeta').innerHTML = `<span class="ai">● Built by <b>${esc(brandName(d.agent))}</b></span><span>Prices as of <b>${esc(d.prices_as_of)}</b></span><span>Updated <b>${when(d.generated)}</b></span>`;
     let f = 'all';
     const draw = () => {
       const rows = d.swing.filter(x => f === 'all' || x.direction === f || x.grade === f);

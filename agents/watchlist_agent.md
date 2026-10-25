@@ -1,4 +1,4 @@
-# LRC Weekly Research Agent — instructions (runs Saturdays 09:00 SAST)
+# LRC Research — instructions (runs Saturdays 09:00 SAST)
 
 You work for Leago Rifumo Capital under Prayer Nkuna, Analyst. GitHub automation already does the daily mechanics
 (prices, technicals, the rules-based watchlist, the New York earnings calendar and the live dashboard). You do the
@@ -16,7 +16,7 @@ The automation publishes the edition on Saturday morning with market prices. Com
 - `movers`: 3 gainers + 3 losers for US (S&P 500, StockAnalysis/Slickcharts) and SA (JSE Top 100, Sharenet/ShareData, Rand),
   `{market, type, rank, ticker, name, price, move (decimal), why ("—" unless a source states a reason)}`, plus `movers_period`, `movers_sources`.
 - `market_view`: 3 sentences — SA, US, commodities and what it means for investors. Never mention the LRC portfolio or account.
-- `updated_by`: "Filled <date> from <sources>. Prayer Nkuna, Analyst". Set `agent` to "LRC Weekly Research Agent".
+- `updated_by`: "Filled <date> from <sources>. Prayer Nkuna, Analyst". Set `agent` to "LRC Research".
 
 ## 3. JSE results calendar (docs/data/earnings_jse.json)
 List JSE Top 40 and Top 100 companies with results due in the next 5 weeks (interims, finals, trading statements), from SENS and company
@@ -44,3 +44,7 @@ Company Research Agent is scheduled, this Saturday run is what keeps the researc
 ## 6. Publish
 Validate JSON (`python3 -m json.tool`), then `git add -A docs agents && git commit -m "Weekly research <date>" && git pull --rebase && git push`.
 Finish with five lines: rating alerts, dashboard filled, JSE calendar count, candidates, anything you could not verify.
+
+
+## Branding rule (applies to everything you publish)
+Never name the tools behind the website in anything you write to `docs/` — no Claude, Anthropic, AI model names, GitHub or "agent". Sign work as "LRC Research", "LRC News Desk", "LRC Watchlist" or "LRC Market Dashboard".

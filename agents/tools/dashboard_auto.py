@@ -67,7 +67,7 @@ def main():
     live_week_end = friday if today.weekday() >= 5 else friday + dt.timedelta(days=7)
     groups, fails = build(today, friday - dt.timedelta(days=7) if today.weekday() >= 4 else friday, prev)
     live = {'week_ending': live_week_end.isoformat(), 'title': f"This week so far — as of {today.strftime('%a %d %b %Y')}", 'live': True,
-            'generated': now_sast().isoformat(timespec='minutes'), 'agent': 'LRC Dashboard automation (daily)', 'groups': groups,
+            'generated': now_sast().isoformat(timespec='minutes'), 'agent': 'LRC Market Dashboard', 'groups': groups,
             'movers': [], 'market_view': '', 'auto_view': auto_view(groups), 'missing': fails}
     save_if_changed(os.path.join(DIR, 'live.json'), live)
     print('live dashboard written; failures:', fails)
