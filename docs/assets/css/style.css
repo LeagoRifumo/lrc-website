@@ -631,3 +631,7 @@ table.heat .tag{font-size:9.5px;padding:1px 5px}
 .paper .fbar i b{display:block;height:100%}
 .paper .fbar em{font-style:normal;font-weight:700;color:#16223D;text-align:right}
 @media print{.paper .fbar{font-size:8.5px;grid-template-columns:70px 1fr 40px}.paper .fbar i{height:6px}}
+table.heat td.nm{min-width:128px;max-width:160px}
+table.heat td.nm small{max-width:140px}
+table.heat th{padding:6px 2px}
+table.heat .hc{padding:8px 2px}

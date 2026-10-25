@@ -88,7 +88,7 @@ def norm_fund(s, q, price_major, minor, fx):
         'yahoo_tpe': raw(sd, 'trailingPE'), 'yahoo_fpe': raw(sd, 'forwardPE'),
         'ps': mcap / (rev * fx) if mcap and rev and fx and rev > 0 else None,
         'pfcf': (mcap / (fcf * fx) if fcf > 0 else -1) if mcap and fcf and fx else None,
-        'pb': raw(ks, 'priceToBook'), 'peg': raw(ks, 'pegRatio') if (raw(ks, 'pegRatio') or 99) < 10 else None,
+        'pb': (raw(ks, 'priceToBook') / div) if raw(ks, 'priceToBook') else None, 'peg': raw(ks, 'pegRatio') if (raw(ks, 'pegRatio') or 99) < 10 else None,
         'rev_growth': raw(fd, 'revenueGrowth'), 'eps_growth': raw(fd, 'earningsGrowth'),
         'de': raw(fd, 'debtToEquity'), 'roe': raw(fd, 'returnOnEquity'), 'roa': raw(fd, 'returnOnAssets'),
         'gross_margin': raw(fd, 'grossMargins'), 'op_margin': raw(fd, 'operatingMargins'), 'profit_margin': raw(fd, 'profitMargins'),

@@ -71,7 +71,7 @@ if ($('scTbl')) {
     const left = r => {
       const cov = r.cov ? `<span class="pill p-${r.cov.rating.toLowerCase()}" title="LRC analyst rating ${esc(r.cov.rated || '')}">LRC ${esc(r.cov.rating)}</span> ` : '';
       return `<td class="nm"><button class="star ${my.has(r.t) ? 'on' : ''}" data-s="${esc(r.t)}" title="Add to my list">★</button><b>${esc(r.t.replace('.JO', ''))}</b> ${cov}<small>${esc(r.n)} · ${esc(r.sec)}</small></td>
-        <td class="${cc(c100(S100(r)))}">${scoreCell(r)}</td><td class="plain"><span class="${sigCls(r.v)}" title="${esc(r.v_note || 'LRC score ' + S100(r) + '/100')}">${esc(r.v)}</span></td>
+        <td class="${cc(c100(S100(r)))}">${scoreCell(r)}</td><td class="plain"><span class="${sigCls(r.v)}" title="${esc(r.v_note || 'LRC score ' + S100(r) + '/100')}">${esc(r.v)}</span>${r.v_note ? `<small style="display:block;color:#F2CE72;font-size:10px;margin-top:2px">held: target ${r.tgt ? pc(r.tgt / r.px - 1, 0) : ''}</small>` : ''}</td>
         <td class="plain" style="text-align:right">${px(r.px, r.cur)}<small style="display:block;color:${r.chg >= 0 ? '#5ED39A' : '#F08A7E'}">${pc(r.chg)}</small></td>`;
     };
     let h;
