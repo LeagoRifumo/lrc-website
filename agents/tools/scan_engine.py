@@ -566,3 +566,22 @@ def valuation_verdict(val_points, upside):
     if val_points >= 2 and upside is not None and upside >= 0.10: return 'UNDERVALUED'
     if val_points <= -2 or (upside is not None and upside < -0.05): return 'OVERVALUED'
     return 'FAIR VALUE'
+
+
+# Two scanners from the same 37 readings (group scores weighted by holding period)
+TRADING_W = {'technical': 0.35, 'growth': 0.20, 'sentiment': 0.20, 'valuation': 0.10, 'profitability': 0.10, 'health': 0.05}   # 3-12 months, 6-month target
+INVEST_W = {'valuation': 0.25, 'profitability': 0.25, 'health': 0.20, 'growth': 0.20, 'income': 0.10}                          # 5-10 years
+
+
+def weighted(groups, w):
+    t = s = 0
+    for g, x in w.items():
+        v = groups.get(g)
+        if v is not None: t += x * v; s += x
+    return round(t / s) if s else 50
+
+
+def invest_consistent(rating, verdict):
+    if rating in ('BUY', 'STRONG BUY') and verdict == 'OVERVALUED': return 'HOLD', 'Held at HOLD: the shares look overvalued'
+    if rating in ('SELL', 'STRONG SELL') and verdict == 'UNDERVALUED': return 'HOLD', 'Held at HOLD: the shares look undervalued'
+    return rating, None

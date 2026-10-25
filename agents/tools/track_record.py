@@ -30,9 +30,9 @@ def save_snapshot():
     rows = []
     for r in sc['rows']:
         p = r.get('plan') or {}
-        rows.append([r['t'], r['m'], r.get('score'), r['v'], r['px'], r.get('tgt'), r.get('setup'), p.get('side'), p.get('entry'), p.get('stop'), p.get('t1')])
+        rows.append([r['t'], r['m'], r.get('score'), r['v'], r['px'], r.get('tgt'), r.get('setup'), p.get('side'), p.get('entry'), p.get('stop'), p.get('t1'), r.get('iv_score'), r.get('iv_v')])
     os.makedirs(SNAP, exist_ok=True)
-    json.dump({'date': day, 'as_of': sc.get('as_of'), 'cols': ['t', 'm', 'score', 'rating', 'price', 'target', 'setup', 'side', 'entry', 'stop', 't1'], 'rows': rows},
+    json.dump({'date': day, 'as_of': sc.get('as_of'), 'cols': ['t', 'm', 'score', 'rating', 'price', 'target', 'setup', 'side', 'entry', 'stop', 't1', 'iv_score', 'iv_rating'], 'rows': rows},
               open(os.path.join(SNAP, day + '.json'), 'w'), separators=(',', ':'))
     return day
 
@@ -51,9 +51,11 @@ def main():
     out = {'generated': dt.datetime.now(SAST).isoformat(timespec='minutes'), 'since': snaps[0]['date'] if snaps else None, 'days': len(snaps),
            'note': 'Live record from the first scanner run; nothing is back-filled. Returns are price returns (no dividends), equal-weighted.', 'markets': {}}
     for mk in ('US', 'JSE'):
-        res = {'by_rating': {}, 'curves': {}, 'setups': {}, 'targets': {}}
-        # --- forward returns by rating
-        for hname, hd in HORIZONS.items():
+        res = {'curves': {}, 'setups': {}, 'targets': {}}
+        # --- forward returns by rating (trading scanner = column 3, investment scanner = column 12)
+        for col, key in ((3, 'by_rating'), (12, 'by_rating_inv')):
+          res.setdefault(key, {})
+          for hname, hd in HORIZONS.items():
             agg = {g: [] for g in ('STRONG BUY', 'BUY', 'HOLD', 'SELL', 'STRONG SELL')}
             mkt = []
             for i, s in enumerate(snaps):
@@ -61,16 +63,16 @@ def main():
                 if j is None: continue
                 rets = {}
                 for r in s['rows']:
-                    if r[1] != mk or not r[4] or r[0] not in px[j] or not px[j][r[0]]: continue
-                    rets[r[0]] = (px[j][r[0]] / r[4] - 1, r[3])
+                    if r[1] != mk or not r[4] or r[0] not in px[j] or not px[j][r[0]] or len(r) <= col: continue
+                    rets[r[0]] = (px[j][r[0]] / r[4] - 1, r[col])
                 if not rets: continue
                 m_avg = mean(x for x, _ in rets.values()); mkt.append(m_avg)
                 for g in agg:
                     xs = [x for x, v in rets.values() if v == g]
                     if xs: agg[g].append((mean(xs), sum((x > 0) if g in BUYS else (x < 0) if g in SELLS else (abs(x) < 0.05) for x in xs) / len(xs), len(xs), mean(xs) - m_avg))
-            res['by_rating'][hname] = {g: ({'avg_return': mean(a[0] for a in v), 'hit_rate': mean(a[1] for a in v), 'avg_names': round(mean(a[2] for a in v)),
-                                            'vs_market': mean(a[3] for a in v), 'periods': len(v)} if v else None) for g, v in agg.items()}
-            res['by_rating'][hname]['MARKET'] = {'avg_return': mean(mkt), 'periods': len(mkt)} if mkt else None
+            res[key][hname] = {g: ({'avg_return': mean(a[0] for a in v), 'hit_rate': mean(a[1] for a in v), 'avg_names': round(mean(a[2] for a in v)),
+                                    'vs_market': mean(a[3] for a in v), 'periods': len(v)} if v else None) for g, v in agg.items()}
+            res[key][hname]['MARKET'] = {'avg_return': mean(mkt), 'periods': len(mkt)} if mkt else None
         # --- daily baskets as index lines
         curves = {g: [100.0] for g in ('BUY', 'HOLD', 'SELL', 'ALL')}
         cdates = [snaps[0]['date']] if snaps else []

@@ -283,7 +283,8 @@ def main():
         t, f = r['tech'], r['f']
         md = med.get((r['m'], r['sec']), {})
         it = fm[r['t']]
-        score = it['score']
+        score = E.weighted(it['groups'], E.TRADING_W)      # trading scanner (3-12 months)
+        iv_score = E.weighted(it['groups'], E.INVEST_W)    # investment scanner (5-10 years)
         pl = E.plan(r['bars'], t, f.get('next_earnings'), today)
         cats = []
         if f.get('next_earnings'):
@@ -303,10 +304,13 @@ def main():
         tgt_final = tg.get('lrc') or tg.get('blend')
         v_score = E.rating_v7(score)
         v_final, v_note = E.consistent(v_score, (tgt_final / t['price'] - 1) if tgt_final and t['price'] else None)
+        verdict = E.valuation_verdict(it['val_points'], (tgt_final / t['price'] - 1) if tgt_final and t['price'] else None)
+        iv_v, iv_note = E.invest_consistent(E.rating_v7(iv_score), verdict)
         row = {'t': r['t'], 'n': r['n'], 'm': r['m'], 'sec': r['sec'], 'ind': r['ind'], 'cur': r['cur'], 'px': t['price'], 'chg': t['chg_1d'],
                'p1w': t['perf_1w'], 'p1m': t['perf_1m'], 'p6m': t['perf_6m'], 'ytd': t['perf_ytd'], 'mcap': f.get('mcap'), 'rsi': t['rsi'],
                'score': score, 'pts': it['points'], 'max': it['max'], 'grp': it['groups'], 'rd': it['rd'], 'tp': r['tp'],
                'val': E.valuation_verdict(it['val_points'], (tgt_final / t['price'] - 1) if tgt_final and t['price'] else None),
+               'iv_score': iv_score, 'iv_v': iv_v, 'iv_note': iv_note,
                'v': v_final, 'v_score': v_score, 'v_note': v_note,
                'setup': t.get('setup'), 'lvl': t.get('setup_level'), 'plan': {k: pl[k] for k in ('side', 'entry', 'stop', 't1', 't2', 'risk_pct')} if pl else None,
                'ne': f.get('next_earnings'), 'cat': cats, 'tgt': tg.get('lrc') or tg.get('blend'),
@@ -415,7 +419,7 @@ def main():
     def pick(r):
         p = r['plan'] or {}
         up = lambda x: (x / p['entry'] - 1) if p.get('entry') and x else None
-        return {'t': r['t'], 'n': r['n'], 'sec': r['sec'], 'cur': r['cur'], 'px': r['px'], 'chg': r['chg'], 'v': r['v'], 'score': r['score'], 'val': r['val'],
+        return {'t': r['t'], 'n': r['n'], 'sec': r['sec'], 'cur': r['cur'], 'px': r['px'], 'chg': r['chg'], 'v': r['v'], 'score': r['score'], 'val': r['val'], 'iv_v': r['iv_v'], 'iv_score': r['iv_score'],
                 'setup': r['setup'], 'lvl': r['lvl'], 'ne': r['ne'], 'cov': r['cov'], 'tgt': r['tgt'], 'tgt_up': (r['tgt'] / r['px'] - 1) if r['tgt'] and r['px'] else None,
                 'entry': p.get('entry'), 'stop': p.get('stop'), 't1': p.get('t1'), 't2': p.get('t2'),
                 'stop_pct': up(p.get('stop')), 't1_pct': up(p.get('t1')), 't2_pct': up(p.get('t2')), 'inv': r['inv']}
@@ -424,12 +428,12 @@ def main():
         rs = [r for r in out_rows if r['m'] == m]
         longs = sorted([r for r in rs if r['plan'] and r['plan']['side'] == 'Long' and r['v'] in ('BUY', 'STRONG BUY')], key=lambda r: -r['score'])[:10]
         shorts = sorted([r for r in rs if r['plan'] and r['plan']['side'] == 'Short' and r['v'] in ('SELL', 'STRONG SELL')], key=lambda r: r['score'])[:10]
-        inv = sorted([r for r in rs if r['inv']['g'] in ('A', 'B') and (r['inv']['mos'] or 0) > 0], key=lambda r: (-r['inv']['p'], -(r['inv']['mos'] or 0)))[:10]
+        inv = sorted([r for r in rs if r['iv_v'] in ('BUY', 'STRONG BUY')], key=lambda r: (-r['iv_score'], -(r['inv']['p'] or 0)))[:10]
         lists[m] = {'long': [pick(r) for r in longs], 'short': [pick(r) for r in shorts], 'investment': [pick(r) for r in inv]}
     dump(os.path.join(OUT, 'lists.json'), rnd_all({**meta, 'rules': {
-        'long': 'Up to 10 per market: LRC Stock Scanner BUY / STRONG BUY with a Breakout, Retest or Near-breakout entry plan, strongest score first',
+        'long': 'Up to 10 per market: Trading scanner BUY / STRONG BUY (3-12 months, 6-month LRC target) with a Breakout, Retest or Near-breakout entry plan, strongest score first',
         'short': 'Up to 10 per market: SELL / STRONG SELL with a Breakdown or Failed-retest plan, weakest score first',
-        'investment': 'Up to 10 per market: Investment-track grade A or B with upside to the LRC Analyst Target, most checks passed first'}, 'lists': lists}))
+        'investment': 'Up to 10 per market: Investment scanner BUY / STRONG BUY (5-10 year view: valuation, profitability, financial health, growth, income), highest score first'}, 'lists': lists}))
     keep = set()
     for s, d in details.items():
         fn = s.replace('^', '_') + '.json'; keep.add(fn)
