@@ -302,9 +302,9 @@ window.LRCBrand = brandName;
    false = bring back BUY/HOLD/SELL ratings, entry plans and LRC Analyst Targets (only once LRC is FSCA-authorised). */
 window.LRC_SAFE = true;
 (() => {
-  if (!window.LRC_SAFE) return;
-  document.documentElement.classList.add('safe');
   const page = (location.pathname.split('/').pop() || 'index.html');
+  if (!window.LRC_SAFE || page === 'stock.html') return;   // the one-page summary keeps ratings and the LRC Analyst Target
+  document.documentElement.classList.add('safe');
   if (!/^(index|scanner|watchlist|stock|track|earnings|research|dashboard)\.html$/.test(page) && page !== '') return;
   const SKIP = 'script,style,textarea,input,.wire,.wi,.breaking,#wlNews,.tradingview-widget-container,[data-nosweep]';
   const PHRASES = [[/\bTrading BUY\b/g, 'Trading: top scoring'], [/\bTrading SELL\b/g, 'Trading: lowest scoring'], [/\bInvestment BUY\b/g, 'Investment: top scoring'], [/\bInvestment SELL\b/g, 'Investment: lowest scoring'],

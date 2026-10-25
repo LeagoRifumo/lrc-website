@@ -34,7 +34,7 @@ const setMkt = m => { store.set('lrc_mkt', m); window.dispatchEvent(new CustomEv
 const when = iso => { try { return new Date(iso).toLocaleString('en-ZA', { weekday: 'short', day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }) + ' SAST'; } catch (e) { return iso; } };
 const fail = (el, what) => { el.innerHTML = `<p class="muted-load" style="padding:20px">The ${what} is not available yet — it is built by the daily scanner run. If you opened this file on your computer, it works once the site is online.</p>`; };
 window.LRCScan = { getMkt, setMkt };
-const SAFE = window.LRC_SAFE === true;   // set in main.js: hides BUY/SELL wording, entry plans and targets until LRC is licensed
+const SAFE = window.LRC_SAFE === true && !$('paper');   // the one-page summary (stock.html) is not in safe mode   // set in main.js: hides BUY/SELL wording, entry plans and targets until LRC is licensed
 
 /* =================== SCANNER PAGE =================== */
 if ($('scTbl')) {
