@@ -2,7 +2,7 @@
  "week_ending": "2026-10-23",
  "title": "Weekly market dashboard — week to 23 Oct 2026",
  "live": false,
- "generated": "2026-10-24T06:27+02:00",
+ "generated": "2026-10-25T06:29+02:00",
  "groups": [
   {
    "name": "South Africa",
@@ -14,8 +14,8 @@
      "week_ago": 110934.2031,
      "year_ago": 110742.7031,
      "as_of": "2026-10-23",
-     "source": "Yahoo Finance ^J203.JO daily close (2026-10-23; week-ago 2026-10-16; year-ago 2025-10-23); not cross-checked against ShareData/Investing.com this run",
-     "note": "Down 2.6% on the week and 2.5% lower than a year ago — a broad risk-off week on the JSE.",
+     "source": "Yahoo Finance ^J203.JO daily close (2026-10-23; week-ago 2026-10-16; year-ago 2025-10-23)",
+     "note": "",
      "carried": false
     },
     {
@@ -25,8 +25,8 @@
      "week_ago": 103230.2031,
      "year_ago": 103341.8984,
      "as_of": "2026-10-23",
-     "source": "Yahoo Finance ^J200.JO daily close (2026-10-23; week-ago 2026-10-16; year-ago 2025-10-23); not cross-checked against ShareData/Investing.com this run",
-     "note": "Large caps fell harder (−3.1% w/w) in a week when gold and platinum both dropped about 4%.",
+     "source": "Yahoo Finance ^J200.JO daily close (2026-10-23; week-ago 2026-10-16; year-ago 2025-10-23)",
+     "note": "",
      "carried": false
     },
     {
@@ -35,9 +35,9 @@
      "latest": 16.4801,
      "week_ago": 16.5072,
      "year_ago": 17.4158,
-     "as_of": "2026-10-23",
-     "source": "Yahoo Finance ZAR=X daily close (2026-10-23; week-ago 2026-10-16; year-ago 2025-10-23)",
-     "note": "Rand firmed slightly to R16.48/$ despite weaker equities; 5% stronger than a year ago.",
+     "as_of": "2026-10-22",
+     "source": "Yahoo Finance ZAR=X daily close (2026-10-22; week-ago 2026-10-15; year-ago 2025-10-22)",
+     "note": "",
      "carried": false
     },
     {
@@ -46,9 +46,9 @@
      "latest": 18.4909,
      "week_ago": 18.513,
      "year_ago": 20.2202,
-     "as_of": "2026-10-23",
-     "source": "Yahoo Finance EURZAR=X daily close (2026-10-23; week-ago 2026-10-16; year-ago 2025-10-23)",
-     "note": "Little changed on the week; the rand is 8.6% stronger against the euro y/y.",
+     "as_of": "2026-10-22",
+     "source": "Yahoo Finance EURZAR=X daily close (2026-10-22; week-ago 2026-10-15; year-ago 2025-10-22)",
+     "note": "",
      "carried": false
     },
     {
@@ -57,9 +57,9 @@
      "latest": 22.0957,
      "week_ago": 21.9139,
      "year_ago": 23.2561,
-     "as_of": "2026-10-23",
-     "source": "Yahoo Finance GBPZAR=X daily close (2026-10-23; week-ago 2026-10-16; year-ago 2025-10-23)",
-     "note": "Rand eased 0.8% against sterling on the week but is 5% stronger y/y.",
+     "as_of": "2026-10-22",
+     "source": "Yahoo Finance GBPZAR=X daily close (2026-10-22; week-ago 2026-10-15; year-ago 2025-10-22)",
+     "note": "",
      "carried": false
     },
     {
@@ -71,7 +71,7 @@
      "as_of": "2026-09-23",
      "source": "Latest: Trading Economics (25bp hike to 7.25% on 23 Sep 2026, unanimous; prior 7.00%). Week-ago: derived, no MPC between 23 Sep and 19 Nov. Year-ago: derived from FocusEconomics (20 Nov 2025 cut 25bp to 6.75% after a September 2025 pause => 7.00% on 23 Oct 2025). Next MPC: SARB MPC dates page, 19 Nov 2026.",
      "note": "Hiked 25bp to 7.25% on 23 Sep; next MPC 19 Nov 2026.",
-     "carried": false
+     "carried": true
     },
     {
      "name": "SA 10-year government bond",
@@ -82,7 +82,7 @@
      "as_of": "2026-10-23",
      "source": "Investing.com SA 10Y historical data (23 Oct 8.790, 16 Oct 8.855); Trading Economics showed 8.78% on 23 Oct. Year-ago: derived from Trading Economics yearly change of -0.11pp.",
      "note": "Near a one-month low after the medium-term budget; down about 7bp on the week.",
-     "carried": false
+     "carried": true
     },
     {
      "name": "SA CPI inflation (y/y)",
@@ -93,7 +93,7 @@
      "as_of": "2026-09",
      "source": "Stats SA P0141 September 2026 (released 21 Oct 2026): Sep 2026 4.5%, Aug 2026 4.4% (prior print, used as week_ago), Sep 2025 3.4%.",
      "note": "Up to 4.5% from 4.4%, above the 3% target; next MPC 19 Nov.",
-     "carried": false
+     "carried": true
     }
    ]
   },
@@ -108,7 +108,7 @@
      "year_ago": 6738.4399,
      "as_of": "2026-10-23",
      "source": "Yahoo Finance ^GSPC daily close (2026-10-23; week-ago 2026-10-16; year-ago 2025-10-23)",
-     "note": "Slipped 0.5% on the week but still 13% higher than a year ago.",
+     "note": "",
      "carried": false
     },
     {
@@ -119,7 +119,7 @@
      "year_ago": 22941.8008,
      "as_of": "2026-10-23",
      "source": "Yahoo Finance ^IXIC daily close (2026-10-23; week-ago 2026-10-16; year-ago 2025-10-23)",
-     "note": "Tech lagged slightly (−0.7% w/w) as yields stay near 5%.",
+     "note": "",
      "carried": false
     },
     {
@@ -131,7 +131,7 @@
      "as_of": "2026-10-23",
      "source": "MarketScreener MSCI Emerging Markets (USD) quotes: close 23 Oct 1,578.04 (Investing.com showed 1,578.86, prev close 1,575.68). Week-ago: derived from MarketScreener 1-week change of -2.63% (cross-check: 19 Oct close 1,617.86 at -0.17%). Year-ago: derived from MarketScreener 1-year change of +14.24% (Investing.com shows +14.30%).",
      "note": "Down 2.6% on the week (-2.46% on 22 Oct) but still up about 14% y/y.",
-     "carried": false
+     "carried": true
     },
     {
      "name": "US Fed funds rate (upper)",
@@ -142,7 +142,7 @@
      "as_of": "2026-10-23",
      "source": "FRED DFEDTARU (2026-10-23: 4.00). Week-ago: derived, FRED shows 4.00 for 19-23 Oct and there was no FOMC meeting between 15-16 Sep and 27-28 Oct. Year-ago: derived, Fed cut 25bp to 3.75-4.00% on 29 Oct 2025 (TSCPA report), so the upper bound was 4.25 on 23 Oct 2025. Next FOMC: federalreserve.gov, 27-28 Oct 2026.",
      "note": "Upper bound 4.00%; the next FOMC decision is on 28 Oct 2026.",
-     "carried": false
+     "carried": true
     },
     {
      "name": "US 10-year Treasury",
@@ -152,7 +152,7 @@
      "year_ago": 3.991,
      "as_of": "2026-10-23",
      "source": "Yahoo Finance ^TNX daily close (2026-10-23; week-ago 2026-10-16; year-ago 2025-10-23)",
-     "note": "Eased about 11bp to 4.99% but remains a full point above a year ago — a valuation headwind for growth shares.",
+     "note": "",
      "carried": false
     },
     {
@@ -164,7 +164,7 @@
      "as_of": "2026-09",
      "source": "BLS CPI release, 14 Oct 2026 (DOL-hosted PDF): Sep 2026 3.7%, Aug 2026 3.4% (prior print, used as week_ago), Sep 2025 3.0% (Table 5).",
      "note": "Rose to 3.7% (consensus 3.6%), well above the Fed's 2% goal, ahead of the 28 Oct FOMC.",
-     "carried": false
+     "carried": true
     }
    ]
   },
@@ -179,29 +179,29 @@
      "year_ago": 4145.6001,
      "as_of": "2026-10-23",
      "source": "Yahoo Finance GC=F daily close (2026-10-23; week-ago 2026-10-16; year-ago 2025-10-23)",
-     "note": "Fell 4.1% to about $4,008/oz, back below last year's level — a drag on JSE gold miners.",
+     "note": "",
      "carried": false
     },
     {
      "name": "Platinum",
      "unit": "$/oz",
-     "latest": 1555.8,
+     "latest": 1562.4,
      "week_ago": 1623.3,
      "year_ago": 1587.6,
      "as_of": "2026-10-23",
      "source": "Yahoo Finance PL=F daily close (2026-10-23; week-ago 2026-10-16; year-ago 2025-10-23)",
-     "note": "Down 4.2% on the week to $1,556/oz, weighing on PGM producers.",
+     "note": "",
      "carried": false
     },
     {
      "name": "Brent crude",
      "unit": "$/bbl",
-     "latest": 111.66,
+     "latest": 111.7,
      "week_ago": 109.86,
      "year_ago": 65.99,
      "as_of": "2026-10-23",
      "source": "Yahoo Finance BZ=F daily close (2026-10-23; week-ago 2026-10-16; year-ago 2025-10-23)",
-     "note": "Up 1.6% to $111.66/bbl, 69% above a year ago — an inflation and fuel-price risk for SA.",
+     "note": "",
      "carried": false
     },
     {
@@ -212,7 +212,7 @@
      "year_ago": 11203.8784,
      "as_of": "2026-10-23",
      "source": "Yahoo Finance HG=F daily close (2026-10-23; week-ago 2026-10-16; year-ago 2025-10-23) — converted $/lb × 2,204.62 to $/t",
-     "note": "Steady near $14,350/t on the week and 28% higher than a year ago.",
+     "note": "",
      "carried": false
     },
     {
@@ -224,15 +224,13 @@
      "as_of": "2026-10-23",
      "source": "Trading Economics iron ore (90.83 USD/t on 23 Oct 2026). Week-ago: Investing.com Iron ore 62% Fe CFR futures, 16 Oct 2026 close 90.90 (a different series from TE). Year-ago: derived from TE yearly change of -13.83%.",
      "note": "Flat on the week near $91/t; down about 14% y/y and 6.5% m/m, a headwind for SA iron ore miners.",
-     "carried": false
+     "carried": true
     }
    ]
   }
  ],
- "auto_view": "The JSE All Share moved -2.6% on the week to 108,020 and the rand firmed 0.2% to R16.48/$. In New York the S&P 500 moved -0.5% and the Nasdaq -0.7%, with the US 10-year at 4.99%. Commodities: gold -4.1%, platinum -4.2%, Brent +1.6%, copper -0.4%.",
- "missing": [
-  "SA movers (JSE Top 100 weekly list not sourced)"
- ],
+ "auto_view": "The JSE All Share moved -2.6% on the week to 108,020 and the rand firmed 0.2% to R16.48/$. In New York the S&P 500 moved -0.5% and the Nasdaq -0.7%, with the US 10-year at 4.99%. Commodities: gold -4.1%, platinum -3.8%, Brent +1.7%, copper -0.4%.",
+ "missing": [],
  "agent": "LRC Weekly Research Agent",
  "movers": [
   {
