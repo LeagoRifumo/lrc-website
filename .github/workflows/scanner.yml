@@ -28,8 +28,5 @@ jobs:
       - name: Track record (save today's ratings, measure past ones)
         continue-on-error: true
         run: python agents/tools/track_record.py
-      - name: Sitemap (one-page summaries)
-        continue-on-error: true
-        run: python agents/tools/build_articles.py
       - name: Publish
         run: bash agents/tools/publish.sh "LRC Scanner"
