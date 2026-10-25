@@ -65,6 +65,18 @@ def news_for(sym, name, market):
     loc = 'hl=en-ZA&gl=ZA&ceid=ZA:en' if market == 'JSE' else 'hl=en-US&gl=US&ceid=US:en'
     try: items += rss(f'https://news.google.com/rss/search?q={urllib.parse.quote(q)}&{loc}', 'Google News')
     except Exception as e: print('  google news', sym, repr(e)[:80])
+    # keep only stories that are about this company (feeds mix in market-wide headlines)
+    GENERIC = {'first', 'general', 'american', 'united', 'south', 'african', 'global', 'international', 'national', 'new', 'the', 'old', 'capital', 'resources'}
+    words = (name or '').replace(',', ' ').split()
+    keys = set()
+    if len(short) >= 4: keys.add(short.lower())
+    elif len(words) > 1: keys.add((short + ' ' + words[1][:4]).lower())
+    if words and len(words[0]) >= 5 and words[0].lower() not in GENERIC: keys.add(words[0].lower())
+    tk = sym.replace('.JO', '').split('-')[0]
+    def about(it):
+        t = it['title']
+        return any(k in t.lower() for k in keys) or (len(tk) >= 2 and re.search(rf'\b{re.escape(tk)}\b', t))
+    items = [i for i in items if about(i)]
     seen, out = set(), []
     for it in sorted(items, key=lambda i: i['published'] or '', reverse=True):
         k = re.sub(r'\W+', '', it['title'].lower())[:70]
@@ -119,7 +131,7 @@ def sec_for(sym):
         ni = quarters('NetIncomeLoss')
         out['quarterly'] = {'revenue': rev, 'net_income': ni}
         out['annual'] = {'revenue': annual('Revenues', 'RevenueFromContractWithCustomerExcludingAssessedTax', 'SalesRevenueNet'), 'net_income': annual('NetIncomeLoss'),
-                         'operating_cash_flow': annual('NetCashProvidedByUsedInOperatingActivities'), 'capex': annual('PaymentsToAcquirePropertyPlantAndEquipment')}
+                         'operating_cash_flow': annual('NetCashProvidedByUsedInOperatingActivities'), 'capex': annual('PaymentsToAcquirePropertyPlantAndEquipment', 'PaymentsToAcquireProductiveAssets')}
         a = out['annual']
         if a['operating_cash_flow'] and a['capex'] and a['operating_cash_flow'][-1]['end'] == a['capex'][-1]['end']:
             out['annual_fcf'] = {'end': a['capex'][-1]['end'], 'value': a['operating_cash_flow'][-1]['value'] - a['capex'][-1]['value']}
