@@ -2,7 +2,7 @@
  "week_ending": "2026-10-23",
  "title": "This week so far — as of Sun 25 Oct 2026",
  "live": true,
- "generated": "2026-10-25T06:29+02:00",
+ "generated": "2026-10-25T16:07+02:00",
  "agent": "LRC Dashboard automation (daily)",
  "groups": [
   {
@@ -33,22 +33,22 @@
     {
      "name": "USD / ZAR",
      "unit": "rand per $",
-     "latest": 16.5804,
+     "latest": 16.5802,
      "week_ago": 16.5072,
      "year_ago": 17.322,
-     "as_of": "2026-10-24",
-     "source": "Yahoo Finance ZAR=X daily close (2026-10-24; week-ago 2026-10-15; year-ago 2025-10-23)",
+     "as_of": "2026-10-25",
+     "source": "Yahoo Finance ZAR=X daily close (2026-10-25; week-ago 2026-10-15; year-ago 2025-10-23)",
      "note": "",
      "carried": false
     },
     {
      "name": "EUR / ZAR",
      "unit": "rand per €",
-     "latest": 18.5734,
+     "latest": 18.5819,
      "week_ago": 18.513,
      "year_ago": 20.1268,
-     "as_of": "2026-10-24",
-     "source": "Yahoo Finance EURZAR=X daily close (2026-10-24; week-ago 2026-10-15; year-ago 2025-10-23)",
+     "as_of": "2026-10-25",
+     "source": "Yahoo Finance EURZAR=X daily close (2026-10-25; week-ago 2026-10-15; year-ago 2025-10-23)",
      "note": "",
      "carried": false
     },
@@ -58,8 +58,8 @@
      "latest": 22.1515,
      "week_ago": 21.9139,
      "year_ago": 23.0881,
-     "as_of": "2026-10-24",
-     "source": "Yahoo Finance GBPZAR=X daily close (2026-10-24; week-ago 2026-10-15; year-ago 2025-10-23)",
+     "as_of": "2026-10-25",
+     "source": "Yahoo Finance GBPZAR=X daily close (2026-10-25; week-ago 2026-10-15; year-ago 2025-10-23)",
      "note": "",
      "carried": false
     },
