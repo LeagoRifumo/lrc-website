@@ -23,6 +23,9 @@ List JSE Top 40 and Top 100 companies with results due in the next 5 weeks (inte
 IR calendars. Item shape: `{"date","ticker","name","when":"Before open|After close|Not stated","period":"Interim to 30 Sep 2026",
 "eps_forecast":"","market_cap_bn":<Rand bn or null>,"covered":false,"lrc_rating":null}`. Only confirmed or company-published expected dates;
 mark expected ones in `period` ("expected"). Update `generated` and `source`.
+Always include every JSE company on the LRC watchlist (`docs/data/scan/lists.json`, JSE: trading_buy, trading_sell, invest_buy,
+invest_sell) and in `docs/data/ratings.json` when its next results date is published. Keep rows marked `"auto": true` out of your
+edit (they are rebuilt automatically); then run `python3 agents/tools/earnings_sync.py` so the ticks and ratings stay in step.
 
 ## 4. Screening — candidates for the analyst (agents/work/candidates.json)
 Start from the LRC Scanner output (`docs/data/scan/stocks.json`, rebuilt by GitHub Actions twice a day): it already scores every JSE and

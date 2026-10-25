@@ -526,17 +526,17 @@ const artCard = (a, pre = '') => `<a class="art" href="${pre}${esc(a.url)}">${a.
   const L = $('erList'); if (!L) return;
   const cache = {};
   const draw = () => {
-    const m = $('erMkt').value, days = +$('erRange').value, cov = $('erCov').checked, q = ($('erSearch').value || '').toLowerCase();
+    const m = $('erMkt').value, days = +$('erRange').value, cov = $('erCov').value, q = ($('erSearch').value || '').toLowerCase();
     const go = d => {
       const today = new Date(Date.now() + 2 * 3600e3).toISOString().slice(0, 10), end = new Date(Date.now() + (2 * 3600e3) + days * 864e5).toISOString().slice(0, 10);
-      const rows = (d.items || []).filter(x => x.date >= today && x.date <= end && (!cov || x.covered) && (!q || (x.ticker + ' ' + x.name).toLowerCase().includes(q)));
-      $('erMeta').innerHTML = `<span class="ai">● ${esc(d.market)}</span><span>Updated <b>${when(d.generated)}</b></span><span><b>${rows.length}</b> companies in range</span>`;
-      $('erSrc').textContent = 'Source: ' + d.source + ' Dates can move — confirm on the company announcement (SENS for JSE companies).';
+      const rows = (d.items || []).filter(x => x.date >= today && x.date <= end && (cov === 'all' || (cov === 'cov' ? x.covered : !!x.v)) && (!q || (x.ticker + ' ' + x.name).toLowerCase().includes(q)));
+      $('erMeta').innerHTML = `<span class="ai">● ${esc(d.market)}</span><span>Updated <b>${when(d.synced || d.generated)}</b></span><span><b>${rows.length}</b> companies in range</span><span><b>${rows.filter(x => x.covered).length}</b> ✓ on the LRC watchlist / coverage</span>`;
+      $('erSrc').textContent = (d.coverage_note ? d.coverage_note + ' ' : '') + 'Source: ' + d.source + ' Dates can move — confirm on the company announcement (SENS for JSE companies).';
       if (!rows.length) { L.innerHTML = `<p class="muted-load">${esc(d.note || 'No results dates in this range yet.')}</p>`; return; }
       const by = {}; rows.forEach(x => (by[x.date] = by[x.date] || []).push(x));
       L.innerHTML = Object.keys(by).sort().map(k => { const dd = new Date(k + 'T12:00:00');
         return `<div class="eday"><div class="edate"><b>${dd.toLocaleDateString('en-ZA', { weekday: 'long' })}</b><span>${dd.toLocaleDateString('en-ZA', { day: 'numeric', month: 'long' })}</span></div><div class="erows">` +
-          by[k].map(x => `<div class="erow${x.covered ? ' cov' : ''}"><span class="tic">${esc(x.ticker)}</span><span class="mn">${esc(x.name)}${x.covered ? ` <span class="pill p-${String(x.lrc_rating || '').toLowerCase()}">LRC ${esc(x.lrc_rating || 'COVERED')}</span>` : ''}${x.period ? `<small>${esc(x.period)}</small>` : ''}</span><span class="ew">${esc(x.when || '')}</span><span class="n">${x.eps_forecast ? 'EPS est. ' + esc(x.eps_forecast) : ''}</span><span class="n">${x.market_cap_bn ? (m === 'jse' ? 'R' : '$') + x.market_cap_bn + 'bn' : ''}</span></div>`).join('') + '</div></div>'; }).join('');
+          by[k].map(x => `<div class="erow${x.covered ? ' cov' : ''}"><span class="tic">${x.covered ? '<b class="tick">✓</b>' : ''}${x.v ? `<a href="stock.html?t=${encodeURIComponent(x.t || x.ticker)}">${esc(x.ticker)}</a>` : esc(x.ticker)}</span><span class="mn">${x.v ? `<a href="stock.html?t=${encodeURIComponent(x.t || x.ticker)}" style="color:inherit">${esc(x.name)}</a>` : esc(x.name)}${(x.lists || []).map(l => ` <span class="wtag ${/SELL/.test(l) ? 's' : 'b'}">${esc(l)}</span>`).join('')}${x.lrc_rating ? ` <span class="pill p-${String(x.lrc_rating).toLowerCase()}">LRC ${esc(x.lrc_rating)}</span>` : ''}${x.v ? `<small>LRC Stock Scanner: trading ${esc(x.v)} · investment ${esc(x.iv || '—')}</small>` : ''}${x.period ? `<small>${esc(x.period)}</small>` : ''}</span><span class="ew">${esc(x.when || '')}</span><span class="n">${x.eps_forecast ? 'EPS est. ' + esc(x.eps_forecast) : ''}</span><span class="n">${x.market_cap_bn ? (m === 'jse' ? 'R' : '$') + x.market_cap_bn + 'bn' : ''}</span></div>`).join('') + '</div></div>'; }).join('');
     };
     if (cache[m]) go(cache[m]); else getJSON('earnings_' + m + '.json').then(d => { cache[m] = d; go(d); }).catch(() => failMsg(L, 'earnings calendar'));
   };

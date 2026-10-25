@@ -2,8 +2,42 @@
  "generated": "2026-10-24T11:30+02:00",
  "market": "JSE",
  "window": "2026-10-26 to 2026-11-28",
- "source": "Compiled 24 Oct 2026 by the LRC Research from company investor-relations financial calendars and SENS announcements (via ShareData/Listcorp); each item names its source. Only company-confirmed or company-published expected dates are listed; expected dates are marked in 'period'. Market caps in Rand bn where a dated source was opened, otherwise null.",
+ "source": "Compiled 24 Oct 2026 by LRC Research from company investor-relations financial calendars and SENS announcements (via ShareData/Listcorp); each item names its source. Only company-confirmed or company-published expected dates are listed; expected dates are marked in 'period'. Market caps in Rand bn where a dated source was opened, otherwise null. Dates marked \"expected\" come from the market data feed and are added automatically for every JSE company the LRC Stock Scanner tracks.",
  "items": [
+  {
+   "date": "2026-10-26",
+   "ticker": "PIK",
+   "name": "Pick n Pay",
+   "when": "Not stated",
+   "period": "Expected date (market data feed) — confirm on SENS",
+   "eps_forecast": "",
+   "market_cap_bn": 15.5,
+   "auto": true,
+   "t": "PIK.JO",
+   "lists": [
+    "Investment SELL"
+   ],
+   "v": "HOLD",
+   "iv": "SELL",
+   "lrc_rating": null,
+   "covered": true
+  },
+  {
+   "date": "2026-10-29",
+   "ticker": "DCP",
+   "name": "Dis-Chem",
+   "when": "Not stated",
+   "period": "Expected date (market data feed) — confirm on SENS",
+   "eps_forecast": "",
+   "market_cap_bn": 24.1,
+   "auto": true,
+   "t": "DCP.JO",
+   "lists": [],
+   "v": "HOLD",
+   "iv": "HOLD",
+   "lrc_rating": null,
+   "covered": false
+  },
   {
    "date": "2026-10-29",
    "ticker": "GLN",
@@ -14,7 +48,45 @@
    "market_cap_bn": null,
    "covered": false,
    "lrc_rating": null,
-   "source": "Glencore 2026 Corporate Calendar - https://www.glencore.com/media-and-insights/news/2026-corporate-calendar"
+   "source": "Glencore 2026 Corporate Calendar - https://www.glencore.com/media-and-insights/news/2026-corporate-calendar",
+   "t": "GLN.JO",
+   "lists": [],
+   "v": "HOLD",
+   "iv": "HOLD"
+  },
+  {
+   "date": "2026-11-02",
+   "ticker": "RDF",
+   "name": "Redefine",
+   "when": "Not stated",
+   "period": "Expected date (market data feed) — confirm on SENS",
+   "eps_forecast": "",
+   "market_cap_bn": 43.6,
+   "auto": true,
+   "t": "RDF.JO",
+   "lists": [],
+   "v": "HOLD",
+   "iv": "HOLD",
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-05",
+   "ticker": "ANG",
+   "name": "AngloGold Ashanti",
+   "when": "Not stated",
+   "period": "Expected date (market data feed) — confirm on SENS",
+   "eps_forecast": "",
+   "market_cap_bn": 701.2,
+   "auto": true,
+   "t": "ANG.JO",
+   "lists": [
+    "Investment BUY"
+   ],
+   "v": "BUY",
+   "iv": "STRONG BUY",
+   "lrc_rating": null,
+   "covered": true
   },
   {
    "date": "2026-11-06",
@@ -24,9 +96,31 @@
    "period": "Q4 and full year to Sep 2026 (FY26); release 08:00 SAST",
    "eps_forecast": "",
    "market_cap_bn": null,
-   "covered": false,
+   "covered": true,
    "lrc_rating": null,
-   "source": "Sappi investors - next event - https://www.sappi.com/en-gb/investors/next-event"
+   "source": "Sappi investors - next event - https://www.sappi.com/en-gb/investors/next-event",
+   "t": "SAP.JO",
+   "lists": [
+    "Investment SELL"
+   ],
+   "v": "HOLD",
+   "iv": "SELL"
+  },
+  {
+   "date": "2026-11-06",
+   "ticker": "TFG",
+   "name": "The Foschini Group",
+   "when": "Not stated",
+   "period": "Expected date (market data feed) — confirm on SENS",
+   "eps_forecast": "",
+   "market_cap_bn": 15.1,
+   "auto": true,
+   "t": "TFG.JO",
+   "lists": [],
+   "v": "HOLD",
+   "iv": "HOLD",
+   "lrc_rating": null,
+   "covered": false
   },
   {
    "date": "2026-11-10",
@@ -38,7 +132,11 @@
    "market_cap_bn": null,
    "covered": false,
    "lrc_rating": null,
-   "source": "Vodacom interim results page - https://vodacom.com/interim-results.php"
+   "source": "Vodacom interim results page - https://vodacom.com/interim-results.php",
+   "t": "VOD.JO",
+   "lists": [],
+   "v": "HOLD",
+   "iv": "HOLD"
   },
   {
    "date": "2026-11-13",
@@ -50,7 +148,11 @@
    "market_cap_bn": null,
    "covered": false,
    "lrc_rating": null,
-   "source": "Richemont corporate calendar - https://www.richemont.com/investors/corporate-calendar/"
+   "source": "Richemont corporate calendar - https://www.richemont.com/investors/corporate-calendar/",
+   "t": "CFR.JO",
+   "lists": [],
+   "v": "HOLD",
+   "iv": "HOLD"
   },
   {
    "date": "2026-11-16",
@@ -62,7 +164,43 @@
    "market_cap_bn": null,
    "covered": false,
    "lrc_rating": null,
-   "source": "Ninety One financial calendar - https://ninetyone.com/en/singapore/investor-relations/financial-calendar"
+   "source": "Ninety One financial calendar - https://ninetyone.com/en/singapore/investor-relations/financial-calendar",
+   "t": "NY1.JO",
+   "lists": [],
+   "v": "HOLD",
+   "iv": "BUY"
+  },
+  {
+   "date": "2026-11-17",
+   "ticker": "RNI",
+   "name": "Reinet",
+   "when": "Not stated",
+   "period": "Expected date (market data feed) — confirm on SENS",
+   "eps_forecast": "",
+   "market_cap_bn": 84.3,
+   "auto": true,
+   "t": "RNI.JO",
+   "lists": [],
+   "v": "BUY",
+   "iv": "HOLD",
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-17",
+   "ticker": "TKG",
+   "name": "Telkom",
+   "when": "Not stated",
+   "period": "Expected date (market data feed) — confirm on SENS",
+   "eps_forecast": "",
+   "market_cap_bn": 27.6,
+   "auto": true,
+   "t": "TKG.JO",
+   "lists": [],
+   "v": "BUY",
+   "iv": "BUY",
+   "lrc_rating": null,
+   "covered": false
   },
   {
    "date": "2026-11-18",
@@ -74,7 +212,27 @@
    "market_cap_bn": null,
    "covered": false,
    "lrc_rating": null,
-   "source": "NEPI Rockcastle SENS 'Financial reporting schedule' (ShareData) - https://sharedata.co.za/sens.asp?id=532072"
+   "source": "NEPI Rockcastle SENS 'Financial reporting schedule' (ShareData) - https://sharedata.co.za/sens.asp?id=532072",
+   "t": "NRP.JO",
+   "lists": [],
+   "v": "HOLD",
+   "iv": "HOLD"
+  },
+  {
+   "date": "2026-11-19",
+   "ticker": "INP",
+   "name": "Investec plc",
+   "when": "Not stated",
+   "period": "Expected date (market data feed) — confirm on SENS",
+   "eps_forecast": "",
+   "market_cap_bn": 82.4,
+   "auto": true,
+   "t": "INP.JO",
+   "lists": [],
+   "v": "BUY",
+   "iv": "BUY",
+   "lrc_rating": null,
+   "covered": false
   },
   {
    "date": "2026-11-19",
@@ -86,7 +244,43 @@
    "market_cap_bn": 37.1,
    "covered": false,
    "lrc_rating": null,
-   "source": "Investec Group pre-close trading update, SENS 18 Sep 2026 (Listcorp) - https://www.listcorp.com/jse/inl/investec-limited/news/investec-group-pre-close-trading-update-3407894.html; market cap (Investec Ltd ordinary, 12 Oct 2026) ShareData - https://www.sharedata.co.za/Data/000499/main.htm"
+   "source": "Investec Group pre-close trading update, SENS 18 Sep 2026 (Listcorp) - https://www.listcorp.com/jse/inl/investec-limited/news/investec-group-pre-close-trading-update-3407894.html; market cap (Investec Ltd ordinary, 12 Oct 2026) ShareData - https://www.sharedata.co.za/Data/000499/main.htm",
+   "t": "INL.JO",
+   "lists": [],
+   "v": "BUY",
+   "iv": "BUY"
+  },
+  {
+   "date": "2026-11-19",
+   "ticker": "SPP",
+   "name": "Spar",
+   "when": "Not stated",
+   "period": "Expected date (market data feed) — confirm on SENS",
+   "eps_forecast": "",
+   "market_cap_bn": 9.0,
+   "auto": true,
+   "t": "SPP.JO",
+   "lists": [],
+   "v": "HOLD",
+   "iv": "SELL",
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-20",
+   "ticker": "MRP",
+   "name": "Mr Price",
+   "when": "Not stated",
+   "period": "Expected date (market data feed) — confirm on SENS",
+   "eps_forecast": "",
+   "market_cap_bn": 43.7,
+   "auto": true,
+   "t": "MRP.JO",
+   "lists": [],
+   "v": "HOLD",
+   "iv": "BUY",
+   "lrc_rating": null,
+   "covered": false
   },
   {
    "date": "2026-11-23",
@@ -98,7 +292,27 @@
    "market_cap_bn": 24.3,
    "covered": false,
    "lrc_rating": null,
-   "source": "Netcare voluntary update SENS 30 Sep 2026 via ShareData - https://sharedata.co.za/Data/002750/news.htm; market cap (9 Oct 2026) https://www.sharedata.co.za/Data/002750/main.htm"
+   "source": "Netcare voluntary update SENS 30 Sep 2026 via ShareData - https://sharedata.co.za/Data/002750/news.htm; market cap (9 Oct 2026) https://www.sharedata.co.za/Data/002750/main.htm",
+   "t": "NTC.JO",
+   "lists": [],
+   "v": "BUY",
+   "iv": "HOLD"
+  },
+  {
+   "date": "2026-11-24",
+   "ticker": "PPH",
+   "name": "Pepkor",
+   "when": "Not stated",
+   "period": "Expected date (market data feed) — confirm on SENS",
+   "eps_forecast": "",
+   "market_cap_bn": 67.0,
+   "auto": true,
+   "t": "PPH.JO",
+   "lists": [],
+   "v": "HOLD",
+   "iv": "HOLD",
+   "lrc_rating": null,
+   "covered": false
   },
   {
    "date": "2026-11-25",
@@ -110,7 +324,11 @@
    "market_cap_bn": 506.1,
    "covered": false,
    "lrc_rating": null,
-   "source": "Naspers financial calendar - https://www.naspers.com/investors/results-reports-events/financial-calender; market cap StockAnalysis - https://stockanalysis.com/quote/jse/NPN/"
+   "source": "Naspers financial calendar - https://www.naspers.com/investors/results-reports-events/financial-calender; market cap StockAnalysis - https://stockanalysis.com/quote/jse/NPN/",
+   "t": "NPN.JO",
+   "lists": [],
+   "v": "HOLD",
+   "iv": "HOLD"
   },
   {
    "date": "2026-11-25",
@@ -122,8 +340,30 @@
    "market_cap_bn": null,
    "covered": false,
    "lrc_rating": null,
-   "source": "Prosus financial calendar - https://www.prosus.com/investors/results-reports-events/financial-calendar"
+   "source": "Prosus financial calendar - https://www.prosus.com/investors/results-reports-events/financial-calendar",
+   "t": "PRX.JO",
+   "lists": [],
+   "v": "HOLD",
+   "iv": "HOLD"
+  },
+  {
+   "date": "2026-11-26",
+   "ticker": "LHC",
+   "name": "Life Healthcare",
+   "when": "Not stated",
+   "period": "Expected date (market data feed) — confirm on SENS",
+   "eps_forecast": "",
+   "market_cap_bn": 18.1,
+   "auto": true,
+   "t": "LHC.JO",
+   "lists": [],
+   "v": "HOLD",
+   "iv": "BUY",
+   "lrc_rating": null,
+   "covered": false
   }
  ],
- "note": "Partial list: a number of Top 100 companies (e.g. Telkom, MTN, Tiger Brands, Pepkor, Pick n Pay, Life Healthcare, Coronation, Mr Price) had no company-published date we could confirm this week; they will be added when dates are published."
+ "note": "Partial list: a number of Top 100 companies (e.g. Telkom, MTN, Tiger Brands, Pepkor, Pick n Pay, Life Healthcare, Coronation, Mr Price) had no company-published date we could confirm this week; they will be added when dates are published.",
+ "synced": "2026-10-25T22:10+02:00",
+ "coverage_note": "Ticked = on the LRC watchlist or rated by an LRC analyst. Every company the LRC Stock Scanner tracks shows its trading and investment ratings. Updated after every scanner run."
 }

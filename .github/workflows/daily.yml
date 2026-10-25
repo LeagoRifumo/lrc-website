@@ -27,6 +27,9 @@ jobs:
       - name: Earnings calendar — New York
         continue-on-error: true
         run: python agents/tools/earnings_us.py
+      - name: Earnings calendar — tick watchlist & coverage, add scanner results dates
+        continue-on-error: true
+        run: python agents/tools/earnings_sync.py
       - name: Weekly market dashboard
         continue-on-error: true
         run: python agents/tools/dashboard_auto.py

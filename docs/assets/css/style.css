@@ -804,3 +804,9 @@ img,svg,video,canvas{max-width:100%}
   table.wl.mcard tr{grid-template-columns:1fr}
 }
 table.wl td.news{min-width:220px}
+.erow .tick{color:#5ED39A;margin-right:6px}
+.erow .tic a{color:inherit}
+.wtag{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.06em;padding:2px 7px;border-radius:999px;margin-left:4px;vertical-align:middle;text-transform:uppercase}
+.wtag.b{background:rgba(94,211,154,.14);color:#5ED39A;border:1px solid rgba(94,211,154,.35)}
+.wtag.s{background:rgba(240,138,126,.12);color:#F08A7E;border:1px solid rgba(240,138,126,.35)}
+@media (max-width:700px){.dsel label[for]{margin-left:0!important}}
