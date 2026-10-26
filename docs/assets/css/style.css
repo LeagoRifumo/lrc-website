@@ -924,3 +924,11 @@ html:not(.safe) .onlysafe{display:none!important}
 .erow .ew .trk{margin-left:0}
 .erow .n small{display:block;color:var(--muted);font-size:12px}
 .cal-tools .inc{text-transform:none;letter-spacing:0}
+/* JSE: SENS-declared dividends, trading statements */
+.dvst.sens{background:rgba(127,176,255,.12);color:#9EC2FF;border:1px solid rgba(127,176,255,.4);text-decoration:none}
+.ts-note{display:block;margin-top:4px;font-weight:600}
+.ts-note.up{color:#7FE0B0}.ts-note.down{color:#F08A7E}
+.res-eps a{color:var(--gold-2)}
+.erow.rep .resbox{grid-column:3 / -1;justify-self:end;display:flex;flex-direction:column;align-items:flex-end;gap:3px;text-align:right}
+.erow.rep .resbox .res-eps{margin-top:0}
+@media (max-width:860px){.erow.rep .resbox{grid-column:2;justify-self:start;align-items:flex-start;text-align:left}}

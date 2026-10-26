@@ -100,3 +100,8 @@ Give this file (and the zip) to Claude when you next update the website.
 - Dividends: every dividend is recorded in docs/data/dividends_log.json (dividends.py). Lifecycle Expected → Confirmed → Went ex → Paid (or Paid (estimated) when the feed has no payment date: JSE 14 days, US 35 days after the ex-date). Paid view = last 60 days with raised (green) / cut (red) / unchanged vs the same payment a year earlier.
 - Both pages: Upcoming / Reported switch and a scorecard strip.
 - Calendar extras (26 Oct): weekly summary strip on both Upcoming views; countdown chips (Today / In N days; gold when within 3 days); earnings rows show the last 4 quarters as beat/miss/in-line dots (earnings_sync "track" from f.eps_hist); "Add to my calendar" (.ics) per row and for the whole filtered list (window.LRCCal in main.js); dividends income estimate (amount box → ≈ payout per row).
+
+## JSE results & dividends from SENS (26 Oct 2026)
+- docs/data/jse_sens.json holds JSE announcements: results (HEPS vs same period last year), trading statements (expected HEPS change range) and dividend declarations (amount in cents, LDT, ex, record, pay dates), each with its source. Filled every weekday by the scheduled task "LRC JSE Announcements" following agents/jse_sens_agent.md.
+- earnings_sync.py: JSE reported rows = HEPS up (green) / down (red) / flat vs last year; until SENS is read, year-end results fall back to the feed's annual EPS (marked provisional). Upcoming JSE rows show the latest trading statement.
+- dividends.py: SENS declarations replace the feed's dates and amounts (tag "SENS", record date shown); JSE dividends then show Paid on the real payment date.

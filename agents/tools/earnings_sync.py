@@ -11,6 +11,9 @@ For docs/data/earnings_us.json and docs/data/earnings_jse.json:
       t        - full ticker for the one-page summary link (JSE tickers end in .JO)
 Company-confirmed dates already in the file are never replaced.
 
+JSE: results are measured as headline earnings per share (HEPS) vs the same period last year — up (green) / down (red) / flat —
+from SENS announcements recorded in docs/data/jse_sens.json (weekday LRC JSE Announcements job); until SENS is read, a
+year-end result falls back to the feed's annual EPS. Trading statements (expected HEPS change) show on upcoming JSE rows.
 After results (automatic): every date ever listed is kept in docs/data/earnings_log.json. Once a date has passed the row stays
 on the calendar for 45 days as "reported", with reported vs expected EPS from the market data feed:
   beat (surprise above +1%) = green, missed (below -1%) = red, in line otherwise; "awaiting numbers" until the feed has them.
@@ -30,6 +33,31 @@ def load(p, default):
         return json.load(open(p, encoding='utf-8'))
     except Exception:
         return default
+
+
+def heps_change(cur, prior):
+    if cur is None or prior in (None, 0):
+        return None, None
+    ch = (cur - prior) / abs(prior)
+    return round(ch, 4), ('up' if ch > 0.01 else 'down' if ch < -0.01 else 'flat')
+
+
+def feed_annual_eps(t, date):
+    """Fallback for JSE year-end results: annual diluted EPS vs the year before from the data feed (skips unit mix-ups)."""
+    d = load(D('scan', 't', t + '.json'), {})
+    rows = sorted((d.get('financials') or {}).get('annualDilutedEPS') or [], key=lambda x: x['date'])
+    rd = dt.date.fromisoformat(date)
+    cand = [x for x in rows if dt.date.fromisoformat(x['date']) <= rd and (rd - dt.date.fromisoformat(x['date'])).days <= 120]
+    if not cand:
+        return None
+    cur = cand[-1]; prev = [x for x in rows if x['date'] < cur['date']]
+    if not prev or not prev[-1].get('value') or cur.get('value') is None:
+        return None
+    r = cur['value'] / prev[-1]['value'] if prev[-1]['value'] else None
+    if r is None or r > 8 or r < 0.125 and cur['value'] > 0:      # rand vs cents mix-up on the feed: skip
+        return None
+    ch, res = heps_change(cur['value'], prev[-1]['value'])
+    return {'heps': cur['value'], 'heps_prior': prev[-1]['value'], 'unit': 'R', 'change': ch, 'result': res, 'measure': 'EPS (feed, full year)', 'period': 'Year to ' + cur['date']}
 
 
 def eps_result(t, date, fallback_est=None):
@@ -72,6 +100,10 @@ def main(window_days=62):
     for m, g in ri.get('ideas', {}).items():
         for k, v in g.items():
             for x in v: ideas[x['t']] = titles.get(k, 'Research idea')
+    sens = load(D('jse_sens.json'), {})
+    ts_by = {}
+    for x in sens.get('trading_statements', []):
+        ts_by.setdefault(x['t'], []).append(x)
     for mk, fn, suffix in (('US', 'earnings_us.json', ''), ('JSE', 'earnings_jse.json', '.JO')):
         path = D(fn)
         cal = load(path, {'items': []})
@@ -85,12 +117,30 @@ def main(window_days=62):
                       'when': x.get('when'), 'eps_forecast': x.get('eps_forecast') or e.get('eps_forecast', ''), 'quarter': x.get('quarter') or e.get('quarter', ''),
                       'period': x.get('period') or e.get('period'), 'market_cap_bn': x.get('market_cap_bn')})
             log[k] = e
+        if mk == 'JSE':                                     # published JSE results from SENS go straight into the log
+            for r_ in sens.get('results', []):
+                k = f"{r_['t']}|{r_['date']}"
+                e = log.get(k) or {}
+                ch, res = heps_change(r_.get('heps'), r_.get('heps_prior'))
+                e.update({'t': r_['t'], 'ticker': r_['t'].replace('.JO', ''), 'name': r_.get('name') or e.get('name'), 'm': 'JSE', 'date': r_['date'],
+                          'period': r_.get('period'), 'heps': r_.get('heps'), 'heps_prior': r_.get('heps_prior'), 'unit': r_.get('unit', 'c'),
+                          'change': ch, 'result': res, 'measure': 'HEPS', 'dps': r_.get('dps'), 'source': r_.get('source'), 'result_done': res is not None})
+                log[k] = e
         items = [x for x in cal.get('items', []) if not x.get('auto') and not x.get('reported') and x.get('date', '') >= today.isoformat()]
         past = []
         for k, e in log.items():                            # results already out: keep 45 days, with beat / miss
             if e.get('m') != mk or not ((today - dt.timedelta(days=KEEP_DAYS)).isoformat() <= e['date'] < today.isoformat()):
                 continue
-            if not e.get('result_done'):
+            if not e.get('result_done') and mk == 'JSE':
+                sr = next((r_ for r_ in sens.get('results', []) if r_['t'] == e['t'] and abs((dt.date.fromisoformat(r_['date']) - dt.date.fromisoformat(e['date'])).days) <= 4), None)
+                if sr:
+                    ch, res = heps_change(sr.get('heps'), sr.get('heps_prior'))
+                    e.update({'heps': sr.get('heps'), 'heps_prior': sr.get('heps_prior'), 'unit': sr.get('unit', 'c'), 'change': ch, 'result': res, 'measure': 'HEPS',
+                              'period': sr.get('period') or e.get('period'), 'dps': sr.get('dps'), 'source': sr.get('source'), 'result_done': res is not None})
+                else:
+                    fb = feed_annual_eps(e['t'], e['date'])
+                    if fb: e.update(fb)                       # provisional until SENS is read
+            if not e.get('result_done') and mk == 'US':
                 r_ = eps_result(e['t'], e['date'], e.get('eps_forecast'))
                 if r_:
                     e.update(r_)
@@ -98,7 +148,9 @@ def main(window_days=62):
             past.append({'date': e['date'], 'ticker': e['ticker'], 'name': e.get('name'), 'when': e.get('when') or 'Not stated',
                          'period': e.get('period') or '', 'quarter': e.get('quarter', ''), 'eps_forecast': e.get('eps_forecast', ''),
                          'market_cap_bn': e.get('market_cap_bn'), 'reported': True, 'result': e.get('result'),
-                         'eps_actual': e.get('eps_actual'), 'eps_est': e.get('eps_est'), 'surprise': e.get('surprise')})
+                         'eps_actual': e.get('eps_actual'), 'eps_est': e.get('eps_est'), 'surprise': e.get('surprise'),
+                         'heps': e.get('heps'), 'heps_prior': e.get('heps_prior'), 'unit': e.get('unit'), 'change': e.get('change'), 'measure': e.get('measure'),
+                         'dps': e.get('dps'), 'source': e.get('source')})
         json.dump(dict(sorted(log.items())), open(LOG, 'w', encoding='utf-8'), ensure_ascii=False, indent=0)
         have = {x['ticker'] for x in items if x.get('date', '') >= today.isoformat()}
         added = 0
@@ -123,6 +175,10 @@ def main(window_days=62):
             x['lists'] = on_list.get(full, [])
             x['idea'] = ideas.get(full)
             x['v'] = s.get('v'); x['iv'] = s.get('iv_v')
+            tsl = [z for z in ts_by.get(full, []) if not x.get('reported') and z.get('date', '') <= x.get('date', '9999') and (dt.date.fromisoformat(x['date']) - dt.date.fromisoformat(z['date'])).days <= 120]
+            if tsl:                                         # latest trading statement before these results
+                z = max(tsl, key=lambda z: z['date'])
+                x['ts'] = {'date': z['date'], 'low': z.get('heps_change_low'), 'high': z.get('heps_change_high'), 'period': z.get('period'), 'source': z.get('source')}
             if s and not x.get('reported'):                 # last 4 quarters: beat / miss / in line (track record dots)
                 h = sorted([h for h in ((load(D('scan', 't', full.replace('^', '_') + '.json'), {}).get('f') or {}).get('eps_hist') or []) if h.get('q') and h.get('surp') is not None], key=lambda h: h['q'])[-4:]
                 x['track'] = ['beat' if h['surp'] > 0.01 else 'miss' if h['surp'] < -0.01 else 'inline' for h in h] or None
@@ -141,7 +197,8 @@ def main(window_days=62):
         cal.setdefault('generated', cal['synced'])
         json.dump(cal, open(path, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
         rp = [x for x in items if x.get('reported')]
-        print(f"{fn}: {len(items)} rows, {added} added from the scanner, {tagged} ticked; reported {len(rp)} (beat {sum(x.get('result') == 'beat' for x in rp)}, missed {sum(x.get('result') == 'miss' for x in rp)}, in line {sum(x.get('result') == 'inline' for x in rp)})")
+        cnt = lambda *v: sum(x.get('result') in v for x in rp)
+        print(f"{fn}: {len(items)} rows, {added} added from the scanner, {tagged} ticked; reported {len(rp)} (beat/up {cnt('beat', 'up')}, missed/down {cnt('miss', 'down')}, in line/flat {cnt('inline', 'flat')})")
 
 
 if __name__ == '__main__':

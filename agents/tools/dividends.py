@@ -14,6 +14,7 @@ Each row: last day to buy to qualify (JSE: the business day before the ex-date, 
 before the ex-date, T+1), ex-date, payment date, latest dividend per share, payments per year, trailing yield, payout ratio,
 LRC grades, and whether the company is on the watchlist or the research Focus List.
 JSE dividends on the data feed are in cents; they are shown in rand.
+JSE declarations recorded from SENS (docs/data/jse_sens.json, weekday job) override the feed with the real amount and dates.
 Run on its own:  python agents/tools/dividends.py
 """
 import json, os, glob, datetime as dt
@@ -116,6 +117,31 @@ def main():
             items.append({**base, 'ex': exd.isoformat(), 'ldt': prev_bday(exd).isoformat(), 'pay': None,
                           'amount': round(x['amount'] / scale, 4), 'amount_basis': 'last year', 'status': 'expected'})
             seen.append(exd)
+    # JSE declarations from SENS (docs/data/jse_sens.json): real amount, last day to trade, ex, record and payment dates.
+    # They replace the feed's confirmed / expected rows for the same payment (within 25 days) and go into the permanent log.
+    sens = load(D('jse_sens.json'), {})
+    for dv in sens.get('dividends', []):
+        t = dv.get('t'); r = rows.get(t)
+        if not t or not dv.get('ex') or not r:
+            continue
+        exd = dt.date.fromisoformat(dv['ex'])
+        amt = round(dv['amount_c'] / 100.0, 4) if dv.get('amount_c') is not None else None
+        k = f"{t}|{dv['ex']}"
+        e = log.get(k) or {'t': t, 'ex': dv['ex']}
+        e.update({'n': r.get('n'), 'm': 'JSE', 'cur': 'ZAR', 'amount': amt if amt is not None else e.get('amount'), 'pay': dv.get('pay') or e.get('pay'), 'source': dv.get('source')})
+        log[k] = e
+        items[:] = [x for x in items if not (x['t'] == t and abs((dt.date.fromisoformat(x['ex']) - exd).days) <= 25)]
+        if not (lo <= exd <= hi):
+            continue
+        base = next((x for x in items if x['t'] == t), None)
+        f_ = (load(D('scan', 't', t + '.json'), {}).get('f') or {})
+        paid = bool(dv.get('pay')) and dv['pay'] <= today.isoformat()
+        status = 'confirmed' if exd >= today else ('paid' if paid else 'went_ex')
+        items.append({'t': t, 'n': r.get('n'), 'm': 'JSE', 'sec': r.get('sec'), 'cur': 'ZAR', 'px': r.get('px'),
+                      'last_amount': amt, 'last_date': dv['ex'], 'per_year': None, 'yield': f_.get('div_yield'), 'payout': f_.get('payout'),
+                      'v': r.get('v'), 'score': r.get('score'), 'iv_v': r.get('iv_v'), 'iv_score': r.get('iv_score'), 'lists': on_list.get(t, []), 'idea': ideas.get(t),
+                      'ex': dv['ex'], 'ldt': dv.get('ldt') or prev_bday(exd).isoformat(), 'record': dv.get('record'), 'pay': dv.get('pay'), 'amount': amt,
+                      'period': dv.get('period'), 'status': status, 'source': dv.get('source'), 'sens': True})
     # raised / cut: compare each known amount with the same payment a year earlier (log, 320-410 days before)
     by_t = {}
     for e in log.values():
