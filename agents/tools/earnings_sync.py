@@ -123,6 +123,9 @@ def main(window_days=62):
             x['lists'] = on_list.get(full, [])
             x['idea'] = ideas.get(full)
             x['v'] = s.get('v'); x['iv'] = s.get('iv_v')
+            if s and not x.get('reported'):                 # last 4 quarters: beat / miss / in line (track record dots)
+                h = sorted([h for h in ((load(D('scan', 't', full.replace('^', '_') + '.json'), {}).get('f') or {}).get('eps_hist') or []) if h.get('q') and h.get('surp') is not None], key=lambda h: h['q'])[-4:]
+                x['track'] = ['beat' if h['surp'] > 0.01 else 'miss' if h['surp'] < -0.01 else 'inline' for h in h] or None
             x['lrc_rating'] = lr
             x['covered'] = bool(x['lists'] or lr)
             tagged += x['covered']

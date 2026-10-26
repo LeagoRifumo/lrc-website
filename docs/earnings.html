@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=9.1">
+<link rel="stylesheet" href="assets/css/style.css?v=9.3">
 </head>
 <body>
 <header class="site-header">
@@ -65,6 +65,7 @@
 <section style="padding-top:30px"><div class="wrap">
   <input class="search" id="erSearch" type="search" placeholder="Search a company or ticker…" aria-label="Search earnings" style="margin:0 0 18px;max-width:360px">
   <div id="erScore"></div>
+  <div class="cal-tools"><button class="chip-btn" id="erIcs" type="button">⤓ Add these dates to my calendar (.ics)</button><span class="cal-key"><i class="dot-b"></i> beat <i class="dot-m"></i> missed <i class="dot-i"></i> in line — last 4 quarters</span></div>
   <div id="erList"><p class="muted-load">Loading the calendar…</p></div>
   <p class="src-note" id="erSrc"></p>
 </div></section>
@@ -84,6 +85,6 @@
   </div>
 </footer>
 <script>window.LRC_DATA = "data/";</script>
-<script src="assets/js/main.js?v=8.9"></script>
+<script src="assets/js/main.js?v=9.3"></script>
 </body>
 </html>

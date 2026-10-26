@@ -20,6 +20,7 @@
    "idea": null,
    "v": "HOLD",
    "iv": "SELL",
+   "track": null,
    "lrc_rating": null,
    "covered": true
   },
@@ -37,6 +38,7 @@
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
+   "track": null,
    "lrc_rating": null,
    "covered": false
   },
@@ -55,7 +57,8 @@
    "lists": [],
    "v": "HOLD",
    "iv": "HOLD",
-   "idea": null
+   "idea": null,
+   "track": null
   },
   {
    "date": "2026-11-02",
@@ -71,6 +74,7 @@
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
+   "track": null,
    "lrc_rating": null,
    "covered": false
   },
@@ -90,6 +94,11 @@
    "idea": "Score leaders",
    "v": "BUY",
    "iv": "STRONG BUY",
+   "track": [
+    "beat",
+    "beat",
+    "miss"
+   ],
    "lrc_rating": null,
    "covered": true
   },
@@ -110,7 +119,12 @@
    ],
    "v": "HOLD",
    "iv": "SELL",
-   "idea": null
+   "idea": null,
+   "track": [
+    "miss",
+    "miss",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-06",
@@ -126,6 +140,7 @@
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
+   "track": null,
    "lrc_rating": null,
    "covered": false
   },
@@ -144,7 +159,8 @@
    "lists": [],
    "v": "HOLD",
    "iv": "HOLD",
-   "idea": "Earnings watch"
+   "idea": "Earnings watch",
+   "track": null
   },
   {
    "date": "2026-11-13",
@@ -161,7 +177,8 @@
    "lists": [],
    "v": "HOLD",
    "iv": "HOLD",
-   "idea": null
+   "idea": null,
+   "track": null
   },
   {
    "date": "2026-11-16",
@@ -178,7 +195,8 @@
    "lists": [],
    "v": "HOLD",
    "iv": "BUY",
-   "idea": null
+   "idea": null,
+   "track": null
   },
   {
    "date": "2026-11-17",
@@ -194,6 +212,7 @@
    "idea": null,
    "v": "BUY",
    "iv": "HOLD",
+   "track": null,
    "lrc_rating": null,
    "covered": false
   },
@@ -211,6 +230,7 @@
    "idea": null,
    "v": "BUY",
    "iv": "BUY",
+   "track": null,
    "lrc_rating": null,
    "covered": false
   },
@@ -229,7 +249,8 @@
    "lists": [],
    "v": "HOLD",
    "iv": "HOLD",
-   "idea": null
+   "idea": null,
+   "track": null
   },
   {
    "date": "2026-11-19",
@@ -245,6 +266,7 @@
    "idea": null,
    "v": "BUY",
    "iv": "BUY",
+   "track": null,
    "lrc_rating": null,
    "covered": false
   },
@@ -263,7 +285,8 @@
    "lists": [],
    "v": "BUY",
    "iv": "BUY",
-   "idea": null
+   "idea": null,
+   "track": null
   },
   {
    "date": "2026-11-19",
@@ -279,6 +302,7 @@
    "idea": null,
    "v": "HOLD",
    "iv": "SELL",
+   "track": null,
    "lrc_rating": null,
    "covered": false
   },
@@ -296,6 +320,7 @@
    "idea": null,
    "v": "HOLD",
    "iv": "BUY",
+   "track": null,
    "lrc_rating": null,
    "covered": false
   },
@@ -314,7 +339,8 @@
    "lists": [],
    "v": "BUY",
    "iv": "HOLD",
-   "idea": null
+   "idea": null,
+   "track": null
   },
   {
    "date": "2026-11-24",
@@ -330,6 +356,7 @@
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
+   "track": null,
    "lrc_rating": null,
    "covered": false
   },
@@ -348,7 +375,8 @@
    "lists": [],
    "v": "HOLD",
    "iv": "HOLD",
-   "idea": null
+   "idea": null,
+   "track": null
   },
   {
    "date": "2026-11-25",
@@ -365,7 +393,8 @@
    "lists": [],
    "v": "HOLD",
    "iv": "HOLD",
-   "idea": null
+   "idea": null,
+   "track": null
   },
   {
    "date": "2026-11-26",
@@ -381,11 +410,12 @@
    "idea": null,
    "v": "HOLD",
    "iv": "BUY",
+   "track": null,
    "lrc_rating": null,
    "covered": false
   }
  ],
  "note": "Partial list: a number of Top 100 companies (e.g. Telkom, MTN, Tiger Brands, Pepkor, Pick n Pay, Life Healthcare, Coronation, Mr Price) had no company-published date we could confirm this week; they will be added when dates are published.",
- "synced": "2026-10-26T04:05+02:00",
+ "synced": "2026-10-26T04:09+02:00",
  "coverage_note": "Ticked = on the LRC watchlist. Every company the LRC Stock Scanner tracks shows its trading and investment ratings. Updated after every scanner run."
 }

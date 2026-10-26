@@ -570,9 +570,25 @@ const artCard = (a, pre = '') => `<a class="art" href="${pre}${esc(a.url)}">${a.
   getJSON('scan/stocks.json').then(s => { rows = s.rows; rows.as_of = s.as_of; draw(); }).catch(() => failMsg(M, 'top movers'));
 })();
 
+/* shared by the earnings and dividend calendars: countdown chip and calendar (.ics) download */
+window.LRCCal = {
+  until: iso => { const t = new Date(Date.now() + 2 * 3600e3).toISOString().slice(0, 10); const n = Math.round((Date.parse(iso) - Date.parse(t)) / 864e5); return n === 0 ? 'Today' : n === 1 ? 'Tomorrow' : n > 1 ? `In ${n} days` : n === -1 ? 'Yesterday' : `${-n} days ago`; },
+  soon: iso => { const t = new Date(Date.now() + 2 * 3600e3).toISOString().slice(0, 10); const n = Math.round((Date.parse(iso) - Date.parse(t)) / 864e5); return n >= 0 && n <= 3; },
+  ics: (events, name) => {
+    const z = d => d.replace(/-/g, ''), nx = d => new Date(Date.parse(d) + 864e5).toISOString().slice(0, 10).replace(/-/g, '');
+    const esc_ = x => String(x || '').replace(/[,;\\]/g, m => '\\' + m).replace(/\n/g, '\\n');
+    const body = events.map((e, i) => ['BEGIN:VEVENT', `UID:${z(e.date)}-${i}-${(e.id || '').replace(/\W/g, '')}@leagorifumocapital.co.za`, `DTSTAMP:${new Date().toISOString().replace(/[-:]/g, '').slice(0, 15)}Z`, `DTSTART;VALUE=DATE:${z(e.date)}`, `DTEND;VALUE=DATE:${nx(e.date)}`, `SUMMARY:${esc_(e.title)}`, `DESCRIPTION:${esc_(e.desc)}`, e.url ? `URL:${e.url}` : '', 'END:VEVENT'].filter(Boolean).join('\r\n')).join('\r\n');
+    const ics = `BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//Leago Rifumo Capital//Calendar//EN\r\nCALSCALE:GREGORIAN\r\n${body}\r\nEND:VCALENDAR\r\n`;
+    const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([ics], { type: 'text/calendar' })); a.download = name; document.body.appendChild(a); a.click(); a.remove();
+  }
+};
+
 (() => { // earnings calendar: upcoming + reported (beat / missed), rebuilt after every scanner run
   const L = $('erList'); if (!L) return;
-  const cache = {}; let view = 'up';
+  const cache = {}; let view = 'up', lastRows = [], lastMkt = 'us';
+  const icsOf = list => list.map(x => ({ date: x.date, id: x.ticker, title: `${x.ticker} results${x.when && x.when !== 'Not stated' ? ' (' + x.when.toLowerCase() + ')' : ''}`, desc: `${x.name} reports${x.eps_forecast ? ' · EPS estimate ' + x.eps_forecast : ''}. Leago Rifumo Capital earnings calendar.`, url: 'https://www.leagorifumocapital.co.za/earnings.html' }));
+  $('erIcs').addEventListener('click', () => { const up = lastRows.filter(x => !x.reported); if (up.length) window.LRCCal.ics(icsOf(up), `LRC_earnings_${lastMkt}.ics`); });
+  L.addEventListener('click', e => { const a = e.target.closest('a[data-ics]'); if (!a) return; e.preventDefault(); const [t, dte] = a.dataset.ics.split('|'); const x = lastRows.find(r => r.ticker === t && r.date === dte); if (x) window.LRCCal.ics(icsOf([x]), `${t}_results.ics`); });
   const GR = { 'STRONG BUY': 'Top scoring', 'BUY': 'Strong', 'HOLD': 'Average', 'SELL': 'Weak', 'STRONG SELL': 'Lowest scoring' };
   const gr = v => !v ? '—' : window.LRC_SAFE ? (GR[v] || v) : v;
   const sp = v => v === null || v === undefined ? '' : (v >= 0 ? '+' : '−') + Math.abs(v * 100).toFixed(1) + '%';
@@ -587,9 +603,12 @@ const artCard = (a, pre = '') => `<a class="art" href="${pre}${esc(a.url)}">${a.
       const end = new Date(now + days * 864e5).toISOString().slice(0, 10), start = new Date(now - Math.min(days, 45) * 864e5).toISOString().slice(0, 10);
       const rep = view === 'rep';
       const rows = (d.items || []).filter(x => (rep ? x.reported && x.date >= start && x.date < today : !x.reported && x.date >= today && x.date <= end) && (cov === 'all' || (cov === 'cov' ? x.covered : !!x.v)) && (!q || (x.ticker + ' ' + x.name).toLowerCase().includes(q)));
+      lastRows = rows; lastMkt = m;
       const n = r => rows.filter(x => x.result === r).length, done = rows.filter(x => x.result).length;
+      const wk = new Date(now + 7 * 864e5).toISOString().slice(0, 10), thisWeek = rows.filter(x => x.date <= wk), big = rows.slice().sort((a, b) => (b.market_cap_bn || 0) - (a.market_cap_bn || 0))[0];
       $('erMeta').innerHTML = `<span class="ai">● ${esc(d.market)}</span><span>Updated <b>${when(d.synced || d.generated)}</b></span><span><b>${rows.length}</b> ${rep ? 'companies reported' : 'companies in range'}</span><span><b>${rows.filter(x => x.covered).length}</b> ✓ on the LRC watchlist</span>`;
-      $('erScore').innerHTML = rep ? `<div class="score-strip"><div><b>${rows.length}</b><span>reported</span></div><div class="g"><b>${n('beat')}</b><span>beat${done ? ' · ' + Math.round(n('beat') / done * 100) + '%' : ''}</span></div><div class="r"><b>${n('miss')}</b><span>missed${done ? ' · ' + Math.round(n('miss') / done * 100) + '%' : ''}</span></div><div><b>${n('inline')}</b><span>in line</span></div><div class="q"><b>${rows.length - done}</b><span>awaiting numbers</span></div></div>` : '';
+      $('erScore').innerHTML = !rep ? `<div class="score-strip"><div><b>${rows.length}</b><span>reporting in range</span></div><div><b>${thisWeek.length}</b><span>in the next 7 days</span></div><div class="g"><b>${rows.filter(x => x.covered).length}</b><span>on the LRC watchlist</span></div><div><b>${rows.filter(x => /before/i.test(x.when || '')).length} / ${rows.filter(x => /after/i.test(x.when || '')).length}</b><span>before open / after close</span></div><div class="q"><b>${big ? esc(big.ticker) : '—'}</b><span>${big ? 'largest: ' + (m === 'jse' ? 'R' : '$') + (big.market_cap_bn || '—') + 'bn' : 'largest company'}</span></div></div>` : `<div class="score-strip"><div><b>${rows.length}</b><span>reported</span></div><div class="g"><b>${n('beat')}</b><span>beat${done ? ' · ' + Math.round(n('beat') / done * 100) + '%' : ''}</span></div><div class="r"><b>${n('miss')}</b><span>missed${done ? ' · ' + Math.round(n('miss') / done * 100) + '%' : ''}</span></div><div><b>${n('inline')}</b><span>in line</span></div><div class="q"><b>${rows.length - done}</b><span>awaiting numbers</span></div></div>`;
+      $('erIcs').style.display = rep ? 'none' : ''; document.querySelector('#erScore + .cal-tools .cal-key').style.display = rep ? 'none' : '';
       $('erSrc').textContent = (rep ? 'Beat = reported EPS more than 1% above the analysts\' estimate; missed = more than 1% below; in line otherwise. ' : '') + (d.coverage_note ? d.coverage_note + ' ' : '') + 'Source: ' + d.source + ' Dates can move — confirm on the company announcement (SENS for JSE companies).';
       if (!rows.length) { L.innerHTML = `<p class="muted-load">${rep ? 'No results recorded in this period yet. Results appear here automatically after each company reports.' : esc(d.note || 'No results dates in this range yet.')}</p>`; return; }
       const by = {}; rows.forEach(x => (by[x.date] = by[x.date] || []).push(x));
@@ -598,7 +617,7 @@ const artCard = (a, pre = '') => `<a class="art" href="${pre}${esc(a.url)}">${a.
         return `<div class="eday"><div class="edate"><b>${dd.toLocaleDateString('en-ZA', { weekday: 'long' })}</b><span>${dd.toLocaleDateString('en-ZA', { day: 'numeric', month: 'long' })}</span>${rep ? '<small class="edl">results day</small>' : ''}</div><div class="erows">` +
           by[k].map(x => { const link = x.v ? `stock.html?t=${encodeURIComponent(x.t || x.ticker)}` : '';
             const right = rep ? (x.result ? `<span class="res ${x.result}">${RES[x.result]} ${x.result !== 'inline' ? sp(x.surprise) : ''}</span><small class="res-eps">EPS ${eps(x.eps_actual, m)} vs ${eps(x.eps_est, m)} est.</small>` : `<span class="res wait">${x.eps_actual != null ? 'Reported' : 'Awaiting numbers'}</span>${x.eps_actual != null ? `<small class="res-eps">EPS ${eps(x.eps_actual, m)} · no estimate on the feed</small>` : ''}`)
-              : `<span class="ew">${esc(x.when || '')}</span><span class="n">${x.eps_forecast ? 'EPS est. ' + esc(x.eps_forecast) : ''}${x.market_cap_bn ? `<small>${m === 'jse' ? 'R' : '$'}${x.market_cap_bn}bn</small>` : ''}</span>`;
+              : `<span class="ew"><span class="cd${window.LRCCal.soon(x.date) ? ' soon' : ''}">${window.LRCCal.until(x.date)}</span>${esc(x.when && x.when !== 'Not stated' ? x.when : '')}${(x.track || []).length ? `<span class="trk" title="Last ${x.track.length} quarters: beat ${x.track.filter(t => t === 'beat').length}, missed ${x.track.filter(t => t === 'miss').length}">${x.track.map(t => `<i class="dot-${t === 'beat' ? 'b' : t === 'miss' ? 'm' : 'i'}"></i>`).join('')}</span>` : ''}</span><span class="n">${x.eps_forecast ? 'EPS est. ' + esc(x.eps_forecast) : ''}${x.market_cap_bn ? `<small>${m === 'jse' ? 'R' : '$'}${x.market_cap_bn}bn</small>` : ''}<a class="ics1" href="#" data-ics="${esc(x.ticker)}|${x.date}" title="Add to my calendar">＋ Calendar</a></span>`;
             return `<div class="erow${x.covered ? ' cov' : ''}${rep ? ' rep res-' + (x.result || 'wait') : ''}"><span class="tic">${x.covered ? '<b class="tick">✓</b>' : ''}${link ? `<a href="${link}">${esc(x.ticker)}</a>` : esc(x.ticker)}</span><span class="mn">${link ? `<a href="${link}" style="color:inherit">${esc(x.name)}</a>` : esc(x.name)}${(x.lists || []).map(l => ` <span class="wtag ${/SELL/.test(l) ? 's' : 'b'}">${esc(l)}</span>`).join('')}${x.idea ? ` <a class="wtag i" href="research.html" title="${esc(x.idea)}">Research idea</a>` : ''}${x.v ? `<small>LRC Stock Scanner: trading ${esc(gr(x.v))} · investment ${esc(gr(x.iv))}</small>` : ''}${x.period ? `<small>${esc(x.period)}</small>` : x.quarter ? `<small>Quarter ending ${esc(x.quarter)}</small>` : ''}</span>${right}</div>`; }).join('') + '</div></div>'; }).join('');
     };
     if (cache[m]) go(cache[m]); else getJSON('earnings_' + m + '.json').then(d => { cache[m] = d; go(d); }).catch(() => failMsg(L, 'earnings calendar'));
@@ -655,13 +674,18 @@ const artCard = (a, pre = '') => `<a class="art" href="${pre}${esc(a.url)}">${a.
   const e_ = x => String(x ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
   const day = iso => new Date(iso + 'T12:00:00');
   const fmtD = iso => iso ? day(iso).toLocaleDateString('en-ZA', { weekday: 'short', day: 'numeric', month: 'short' }) : '—';
-  const money = (v, c) => v === null || v === undefined ? '—' : (c === 'ZAR' ? 'R' : '$') + Number(v).toLocaleString('en-ZA', { minimumFractionDigits: 2, maximumFractionDigits: v < 1 ? 4 : 2 });
+  const money = (v, c) => v === null || v === undefined ? '—' : (c === 'ZAR' ? 'R' : '$') + Number(v).toLocaleString('en-ZA', { minimumFractionDigits: 2, maximumFractionDigits: c === 'ZAR' ? 2 : (v < 1 ? 3 : 2) });
   const pct = v => v === null || v === undefined ? '—' : (v * 100).toFixed(1) + '%';
+  const esc_t = t => String(t || '').replace('.JO', '').replace(/[&<>"]/g, '');
   const GR = { 'STRONG BUY': 'Top scoring', 'BUY': 'Strong', 'HOLD': 'Average', 'SELL': 'Weak', 'STRONG SELL': 'Lowest scoring' };
   const gr = v => !v ? '—' : window.LRC_SAFE ? (GR[v] || v) : v;
   const PAST = new Set(['went_ex', 'paid', 'paid_est', 'recent']);
   const ST = { confirmed: 'Confirmed', expected: 'Expected', went_ex: 'Went ex', paid: 'Paid', paid_est: 'Paid (estimated)', recent: 'Went ex' };
-  let D = null, view = 'up';
+  let D = null, view = 'up', lastRows = [];
+  const icsOf = list => list.map(x => ({ date: x.ldt, id: x.t + x.ex, title: `Last day to buy ${x.t.replace('.JO', '')} for its dividend`, desc: `${x.n}: ex-dividend ${x.ex}${x.pay ? ', pays ' + x.pay : ''}${x.amount != null ? ', ' + money(x.amount, x.cur) + ' per share' : ''}${x.status === 'expected' ? ' (expected date, based on last year)' : ''}. Leago Rifumo Capital dividend calendar.`, url: 'https://www.leagorifumocapital.co.za/dividends.html' }));
+  $$('dvIcs').addEventListener('click', () => { const up = lastRows.filter(x => !PAST.has(x.status)); if (up.length) window.LRCCal.ics(icsOf(up), `LRC_dividends_${$$('dvMkt').value}.ics`); });
+  $$('dvList').addEventListener('click', e => { const a = e.target.closest('a[data-ics]'); if (!a) return; e.preventDefault(); const x = lastRows.find(r => r.t + '|' + r.ex === a.dataset.ics); if (x) window.LRCCal.ics(icsOf([x]), `${x.t.replace('.JO', '')}_dividend.ics`); });
+  $$('dvAmt').addEventListener('input', () => draw());
   const vb = $$('dvView');
   vb.addEventListener('click', e => { const b = e.target.closest('button[data-v]'); if (!b) return; view = b.dataset.v; vb.querySelectorAll('button').forEach(x => x.classList.toggle('on', x === b)); draw(); });
   let mkt; try { mkt = JSON.parse(localStorage.getItem('lrc_mkt')) || 'JSE'; } catch (e) { mkt = 'JSE'; }
@@ -674,23 +698,29 @@ const artCard = (a, pre = '') => `<a class="art" href="${pre}${esc(a.url)}">${a.
     const start = rg === 'past' ? new Date(Date.now() + 2 * 3600e3 - 60 * 864e5).toISOString().slice(0, 10) : today;
     const rows = D.items.filter(x => x.m === m && (rg === 'past' ? PAST.has(x.status) : !PAST.has(x.status)) && x.ex >= start && x.ex <= end && (kind === 'all' || x.status !== 'expected') && (x.yield || 0) >= minY && (!q || (x.t + ' ' + x.n).toLowerCase().includes(q)));
     if (rg === 'past') rows.reverse();
+    lastRows = rows;
+    const amt = Math.max(0, +$$('dvAmt').value || 0), cs = m === 'JSE' ? 'R' : '$';
+    $$('dvCur').textContent = cs;
+    const income = x => { const per = x.amount != null ? x.amount : x.last_amount; return amt && per && x.px ? cs + (amt / x.px * per).toLocaleString('en-ZA', { maximumFractionDigits: 0 }) : null; };
     $$('dvMeta').innerHTML = `<span class="ai">● ${m === 'JSE' ? 'JSE' : 'New York (NYSE &amp; Nasdaq)'}</span><span>Updated <b>${e_(new Date(D.generated).toLocaleString('en-ZA', { weekday: 'short', day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }))} SAST</b></span><span><b>${rows.length}</b> dividends in range</span><span>${rg === 'past' ? `<b>${rows.filter(x => x.status === 'paid' || x.status === 'paid_est').length}</b> paid · <b>${rows.filter(x => x.status === 'went_ex').length}</b> waiting for payment` : `<b>${rows.filter(x => x.status === 'confirmed').length}</b> confirmed · <b>${rows.filter(x => x.status === 'expected').length}</b> expected`}</span>`;
     const tn = t => rows.filter(x => x.trend === t).length;
+    const wk = new Date(Date.now() + 2 * 3600e3 + 7 * 864e5).toISOString().slice(0, 10), topY = rows.filter(x => x.yield).slice().sort((a, b) => b.yield - a.yield)[0];
+    $$('dvIcs').style.display = rg === 'past' ? 'none' : '';
     ['dvRange', 'dvKind'].forEach(id => { const on = rg !== 'past'; $$(id).style.display = on ? '' : 'none'; const lb = document.querySelector(`label[for="${id}"]`); if (lb) lb.style.display = on ? '' : 'none'; });
-    $$('dvScore').innerHTML = rg === 'past' ? `<div class="score-strip"><div><b>${rows.filter(x => x.status === 'paid' || x.status === 'paid_est').length}</b><span>paid</span></div><div class="g"><b>${tn('raised')}</b><span>raised</span></div><div class="r"><b>${tn('cut')}</b><span>cut</span></div><div><b>${tn('unchanged')}</b><span>unchanged</span></div><div class="q"><b>${rows.filter(x => x.status === 'went_ex').length}</b><span>awaiting payment</span></div></div>` : '';
+    $$('dvScore').innerHTML = rg !== 'past' ? `<div class="score-strip"><div><b>${rows.length}</b><span>dividends in range</span></div><div><b>${rows.filter(x => x.ex <= wk).length}</b><span>go ex in the next 7 days</span></div><div class="g"><b>${rows.filter(x => (x.lists || []).length).length}</b><span>on the LRC watchlist</span></div><div><b>${rows.filter(x => x.status === 'confirmed').length}</b><span>confirmed by the company</span></div><div class="q"><b>${topY ? esc_t(topY.t) + ' ' + pct(topY.yield) : '—'}</b><span>highest yield in range</span></div></div>` : rg === 'past' ? `<div class="score-strip"><div><b>${rows.filter(x => x.status === 'paid' || x.status === 'paid_est').length}</b><span>paid</span></div><div class="g"><b>${tn('raised')}</b><span>raised</span></div><div class="r"><b>${tn('cut')}</b><span>cut</span></div><div><b>${tn('unchanged')}</b><span>unchanged</span></div><div class="q"><b>${rows.filter(x => x.status === 'went_ex').length}</b><span>awaiting payment</span></div></div>` : '';
     $$('dvRule').textContent = (D.rules || {})[m] || '';
     $$('dvSrc').textContent = 'Source: ' + (D.source || '');
     if (!rows.length) { L.innerHTML = '<p class="muted-load">No dividends match these filters. Try a longer period or "Any yield".</p>'; return; }
     const by = {}; rows.forEach(x => (by[x.ex] = by[x.ex] || []).push(x));
     L.innerHTML = Object.keys(by).sort((a, b) => rg === 'past' ? b.localeCompare(a) : a.localeCompare(b)).map(k => `<div class="eday"><div class="edate"><b>${day(k).toLocaleDateString('en-ZA', { weekday: 'long' })}</b><span>${day(k).toLocaleDateString('en-ZA', { day: 'numeric', month: 'long' })}</span><small style="display:block;color:var(--muted);font-size:11.5px;margin-top:4px">ex-dividend date</small></div><div class="erows">` +
       by[k].map(x => { const cov = (x.lists || []).length > 0;
-        const amt = x.amount != null ? `${money(x.amount, x.cur)}${x.amount_basis ? ' <small>last year</small>' : ''}` : (x.last_amount != null ? `<small>last paid</small> ${money(x.last_amount, x.cur)}` : '—');
+        const amtTxt = x.amount != null ? `${money(x.amount, x.cur)}${x.amount_basis ? ' <small>last year</small>' : ''}` : (x.last_amount != null ? `<small>last paid</small> ${money(x.last_amount, x.cur)}` : '—');
         const tr = x.trend ? `<span class="res ${x.trend === 'raised' ? 'beat' : x.trend === 'cut' ? 'miss' : 'inline'}">${x.trend === 'raised' ? 'Raised' : x.trend === 'cut' ? 'Cut' : 'Unchanged'}${x.trend !== 'unchanged' ? ' ' + (x.chg >= 0 ? '+' : '−') + Math.abs(x.chg * 100).toFixed(1) + '%' : ''}</span><small class="res-eps">vs ${money(x.prev_amount, x.cur)} a year earlier</small>` : '';
         return `<div class="erow dvrow${cov ? ' cov' : ''}${PAST.has(x.status) ? ' rep res-' + (x.trend === 'raised' ? 'beat' : x.trend === 'cut' ? 'miss' : 'wait') : ''}"><span class="tic">${cov ? '<b class="tick">✓</b>' : ''}<a href="stock.html?t=${encodeURIComponent(x.t)}">${e_(x.t.replace('.JO', ''))}</a></span>
         <span class="mn"><a href="stock.html?t=${encodeURIComponent(x.t)}" style="color:inherit">${e_(x.n)}</a> <span class="dvst ${x.status}">${ST[x.status] || x.status}</span>${(x.lists || []).map(l => ` <span class="wtag ${/SELL/.test(l) ? 's' : 'b'}">${e_(l)}</span>`).join('')}${x.idea ? ' <a class="wtag i" href="research.html">Research idea</a>' : ''}
-          <small>${PAST.has(x.status) ? `Last day to buy was ${fmtD(x.ldt)} · ${x.status === 'paid' ? 'paid <b>' + fmtD(x.pay) + '</b>' : x.status === 'paid_est' ? 'payment date not on the feed (usual window passed)' : x.pay ? 'pays <b>' + fmtD(x.pay) + '</b>' : 'payment date not announced'}` : `Last day to buy <b>${fmtD(x.ldt)}</b> · pays ${x.pay ? '<b>' + fmtD(x.pay) + '</b>' : 'date not announced'}`}${x.per_year ? ` · ${x.per_year}× a year` : ''}${x.payout != null ? ` · payout ${pct(x.payout)}` : ''}</small>
+          ${!PAST.has(x.status) ? `<span class="cd${window.LRCCal.soon(x.ldt) ? ' soon' : ''}">Buy by ${fmtD(x.ldt)} · ${window.LRCCal.until(x.ldt).toLowerCase()}</span>` : ''}<small>${PAST.has(x.status) ? `Last day to buy was ${fmtD(x.ldt)} · ${x.status === 'paid' ? 'paid <b>' + fmtD(x.pay) + '</b>' : x.status === 'paid_est' ? 'payment date not on the feed (usual window passed)' : x.pay ? 'pays <b>' + fmtD(x.pay) + '</b>' : 'payment date not announced'}` : `Last day to buy <b>${fmtD(x.ldt)}</b> · pays ${x.pay ? '<b>' + fmtD(x.pay) + '</b>' : 'date not announced'}`}${x.per_year ? ` · ${x.per_year}× a year` : ''}${x.payout != null ? ` · payout ${pct(x.payout)}` : ''}</small>
           <small>LRC Stock Scanner: trading ${e_(gr(x.v))} · investment ${e_(gr(x.iv_v))}</small></span>
-        <span class="n dvamt">${amt}${tr ? '<br>' + tr : ''}</span><span class="n">yield <b>${pct(x.yield)}</b></span></div>`; }).join('') + '</div></div>').join('');
+        <span class="n dvamt">${amtTxt}${tr ? '<br>' + tr : ''}${income(x) ? `<small class="inc-v">≈ ${income(x)} on ${cs}${amt.toLocaleString('en-ZA')}</small>` : ''}</span><span class="n">yield <b>${pct(x.yield)}</b>${!PAST.has(x.status) ? `<a class="ics1" href="#" data-ics="${e_(x.t)}|${x.ex}" title="Add the last day to buy to my calendar">＋ Calendar</a>` : ''}</span></div>`; }).join('') + '</div></div>').join('');
   };
   ['dvMkt', 'dvRange', 'dvKind', 'dvYield'].forEach(i => $$(i).addEventListener('change', () => { if (i === 'dvMkt') { try { localStorage.setItem('lrc_mkt', JSON.stringify($$('dvMkt').value)); } catch (e) { } window.dispatchEvent(new CustomEvent('lrcmarket', { detail: $$('dvMkt').value })); } draw(); }));
   $$('dvSearch').addEventListener('input', draw);

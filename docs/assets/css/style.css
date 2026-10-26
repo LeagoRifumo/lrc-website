@@ -906,3 +906,21 @@ html:not(.safe) .onlysafe{display:none!important}
 @media (max-width:480px){.score-strip{grid-template-columns:repeat(2,minmax(0,1fr))}}
 /* header: room for the Dividends item (spacing only; fonts and buttons unchanged) */
 @media (min-width:1241px) and (max-width:1360px){.menu{gap:9px!important}}
+/* calendars: tools bar, countdowns, track-record dots, calendar links, income estimate */
+.cal-tools{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;margin:0 0 20px}
+.cal-key{font-size:12.5px;color:var(--muted);display:inline-flex;align-items:center;gap:6px}
+.cal-key i,.trk i{display:inline-block;width:9px;height:9px;border-radius:50%}
+.dot-b{background:#2FA36B}.dot-m{background:#D9534F}.dot-i{background:#7A8296}
+.trk{display:inline-flex;gap:4px;margin-left:10px;vertical-align:middle}
+.cd{display:inline-block;font-size:11px;font-weight:700;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:2px 8px;margin-right:8px;white-space:nowrap}
+.cd.soon{color:#141006;background:var(--gold);border-color:var(--gold)}
+.mn .cd{margin:6px 0 2px}
+.ics1{display:block;font-size:11.5px;color:var(--gold-2);margin-top:5px;white-space:nowrap}
+.inc{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;color:var(--muted)}
+.inc input{width:120px;background:#0A0D15;color:#fff;border:1px solid var(--line);border-radius:8px;padding:8px 10px;font:inherit;font-weight:700}
+.inc-v{display:block;color:#7FE0B0;font-size:12px;margin-top:4px;white-space:nowrap}
+.erow .ew{display:flex;flex-direction:column;align-items:flex-start;gap:5px}
+.erow .ew .cd{margin:0}
+.erow .ew .trk{margin-left:0}
+.erow .n small{display:block;color:var(--muted);font-size:12px}
+.cal-tools .inc{text-transform:none;letter-spacing:0}

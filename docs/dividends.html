@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=9.1">
+<link rel="stylesheet" href="assets/css/style.css?v=9.3">
 </head>
 <body>
 <header class="site-header">
@@ -66,6 +66,7 @@
 <section style="padding-top:30px"><div class="wrap">
   <input class="search" id="dvSearch" type="search" placeholder="Search a company or ticker…" aria-label="Search dividends" style="margin:0 0 18px;max-width:360px">
   <div id="dvScore"></div>
+  <div class="cal-tools"><label class="inc" for="dvAmt">Income estimate — if I invest <span id="dvCur">R</span><input id="dvAmt" type="number" min="0" step="1000" value="10000" inputmode="numeric"></label><button class="chip-btn" id="dvIcs" type="button">⤓ Add last-day-to-buy dates to my calendar (.ics)</button></div>
   <div id="dvList"><p class="muted-load">Loading the dividend calendar…</p></div>
   <div class="pillars" style="margin-top:46px">
     <div class="card"><h3>Last day to buy</h3><p id="dvRule"></p></div>
@@ -90,6 +91,6 @@
   </div>
 </footer>
 <script>window.LRC_DATA = "data/";</script>
-<script src="assets/js/main.js?v=8.9"></script>
+<script src="assets/js/main.js?v=9.3"></script>
 </body>
 </html>
