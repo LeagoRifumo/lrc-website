@@ -1,14 +1,20 @@
 {
- "edition": "Midday update · Monday 26 October 2026 10:15",
- "generated": "2026-10-26T11:15:00+02:00",
- "covers": "Weekend and Monday morning to 10:15 SAST: Middle East oil news, Brazil's election, Pick n Pay results, US futures, rand and the week ahead",
+ "edition": "Midday update · Monday 26 October 2026 12:15",
+ "generated": "2026-10-26T12:15:00+02:00",
+ "covers": "Weekend and Monday to 12:15 SAST: Moody's on SA's budget update, Middle East oil news, neocloud selloff, Brazil's election, Pick n Pay results, US futures, rand and the week ahead",
  "agent": "LRC News Desk",
- "headline": "Oil falls about 2% from a six-month high despite weekend Houthi attack claims on Saudi oil sites; US futures higher ahead of a Fed week",
- "summary": "The rand was little changed at R16.6125/$ early on Monday, weaker than Friday afternoon's R16.51, with the 2035 bond yield steady at 8.635% as traders wait for the Fed and month-end data (Reuters via Business Recorder, 26 Oct). US stock futures rose on Sunday evening, S&P 500 +0.3%, Dow +85 points (+0.2%) and Nasdaq-100 +0.4%, after the S&P 500 and Nasdaq posted back-to-back weekly losses (CNBC, 25 Oct). Brent fell 2.1% to $114.3 and WTI 2.2% to $101 even after the Houthis claimed weekend attacks on Saudi oil sites, and gold hovered around $4,000 near a three-month low (HDFC Sky; FinanceFeeds, 26 Oct). Lower oil eases some pressure on South African fuel prices and inflation, but supply risk is still high.",
+ "headline": "Moody's calls South Africa's budget update credit positive (no rating action); oil eases about 2% and US futures rise ahead of a Fed week",
+ "summary": "Moody's said on Monday that the medium-term budget statement is positive for South Africa's credit profile and that debt has probably peaked, but took no rating action on its Ba2 rating with a positive outlook; the rand was near R16.61/$ (Reuters via CNBC Africa, 26 Oct). US stock futures rose on Sunday evening, S&P 500 +0.3% and Nasdaq-100 +0.4%, while neocloud stocks CoreWeave and Nebius fell about 3% before the open after Elon Musk warned that many such firms face 'guppy-level death' (CNBC, 25 Oct; Yahoo Finance, 26 Oct). Brent fell 2.1% to $114.3 and gold hovered around $4,000 near a three-month low (HDFC Sky; FinanceFeeds, 26 Oct); lower oil eases some pressure on SA fuel prices, but supply risk is still high.",
  "sections": [
   {
    "name": "Breaking",
    "items": [
+    {
+     "title": "Moody's says South Africa's budget update is credit positive; no rating action",
+     "summary": "In a report on Monday, Moody's said the medium-term budget policy statement is positive for South Africa's credit profile, citing continued fiscal consolidation despite higher oil prices. The FY2026 consolidated deficit target was cut to 3.9% of GDP from 4.0%, helped by a R17.1bn upward revision to tax revenue. Moody's sees government debt at 84.9% of GDP by FY2028, down from about 86.8% in FY2025, and says debt has 'probably peaked', though interest took 18.8% of revenue in FY2025. It also called the draft fiscal-rules law credit positive. South Africa stays at Ba2 with a positive outlook; Moody's did not announce a rating action (Reuters via CNBC Africa, 26 Oct).",
+     "source": "CNBC Africa (Reuters)",
+     "url": "https://www.cnbcafrica.com/2026/moodys-says-south-africas-budget-update-is-credit-positive"
+    },
     {
      "title": "Oil falls about 2% despite weekend Houthi attack claims on Saudi oil sites",
      "summary": "On Monday morning Brent was at $114.3 a barrel (−2.1%) and WTI at $101 (−2.2%), easing from near six-month highs. The Houthis said they attacked a Saudi airport and oil facilities over the weekend, and Saudi Arabia said it intercepted more missiles and drones on Sunday. The US also approved a 400,000-barrel release from its Strategic Petroleum Reserve after a Louisiana refinery disruption (HDFC Sky, 26 Oct). Reported targets were an Aramco site in Yanbu, the Rabigh refinery and the East-West pipeline; damage has not been confirmed (Babypips, 26 Oct).",
@@ -25,6 +31,12 @@
      "summary": "On Sunday evening S&P 500 futures were up 0.3%, Dow futures up 85 points (0.2%) and Nasdaq-100 futures up 0.4%. On Friday the Dow fell more than 650 points, the S&P 500 lost 0.5% and the Nasdaq 0.2% (CNBC, 25 Oct).",
      "source": "CNBC (republished by 10bmnews)",
      "url": "https://10bmnews.com/stock-futures-climb-as-traders-try-to-recover-from-the-sp-500s-losing-week-live-updates/"
+    },
+    {
+     "title": "Neocloud stocks slip before the open after Musk's 'guppy-level death' warning",
+     "summary": "In pre-market trading on Monday, CoreWeave was down 2.7% and Nebius down 3.5% after Elon Musk posted that 200+ 'neocloud' data-centre firms face 'guppy-level death and consolidation' because lenders are reluctant to fund them. CoreWeave's bonds were also sold. BofA's Tal Liani called the CoreWeave selloff sentiment-driven and kept his $140 target (Yahoo Finance, 26 Oct).",
+     "source": "Yahoo Finance",
+     "url": "https://finance.yahoo.com/markets/stocks/article/elon-musk-warning-on-neoclouds-they-will-face-guppy-level-death-085841854.html"
     },
     {
      "title": "Busy week: Fed decision Wednesday, big tech results, GDP and PCE Thursday",
@@ -85,7 +97,7 @@
    "items": [
     {
      "title": "NVIDIA: SpaceX says it has funding for a large AI-chip order",
-     "summary": "Musk says SpaceX closed $40 billion in debt for GPUs (Yahoo Finance, 25 Oct). Earlier October reports said the money was for NVIDIA chips, but this has not been confirmed. If confirmed, it supports demand for NVIDIA (BUY on our list, LRC target $262.56). Musk's warning that funding is drying up for neocloud customers is a risk to watch. Rating unchanged.",
+     "summary": "Musk says SpaceX closed $40 billion in debt for GPUs (Yahoo Finance, 25 Oct). Earlier October reports said the money was for NVIDIA chips, but this has not been confirmed. If confirmed, it supports demand for NVIDIA (BUY on our list, LRC target $262.56). The other side: neocloud customers CoreWeave and Nebius fell about 3% before Monday's open after Musk warned lenders are pulling back from such firms (Yahoo Finance, 26 Oct), a demand risk to watch. Rating unchanged.",
      "source": "Yahoo Finance",
      "url": "https://finance.yahoo.com/technology/ai/articles/musk-says-spacex-raised-40-015149993.html",
      "tickers": [
@@ -97,8 +109,9 @@
  ],
  "watch_today": [
   "Oil: whether Brent holds below Friday's $116.72 settlement after the weekend Saudi attack claims, which feeds SA fuel prices",
-  "Rand near R16.61/$ ahead of the Fed decision on Wed 28 Oct (20:00 SAST)",
+  "Rand near R16.61/$ after Moody's credit-positive comment, ahead of the Fed decision on Wed 28 Oct (20:00 SAST)",
   "Brazil after Lula's run-off win and Pick n Pay's share reaction to its results on the JSE",
+  "Neocloud stocks (CoreWeave, Nebius) at the US open after Musk's warning, and any read-across to AI-chip names",
   "Wall Street open (15:30 SAST): can futures gains hold after the S&P 500's second losing week",
   "This week: Microsoft and Alphabet (Wed), Amazon and Intel (Thu), US GDP and PCE (Thu), SA rebased GDP and PPI (Thu), SA trade data (Fri)",
   "META (SELL, low conviction) and DECK (BUY; below the watchlist stop) still need analyst re-runs; ratings unchanged"
