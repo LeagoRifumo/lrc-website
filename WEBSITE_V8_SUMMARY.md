@@ -89,3 +89,8 @@ Give this file (and the zip) to Claude when you next update the website.
 
 ## Fully automated (26 Oct 2026)
 - Hand ratings retired: docs/data/ratings.json has "ratings": {} (old ratings in git history). No analyst coverage table, no "LRC covered" filter, no LRC analyst tags. Every rating and target comes from the LRC Stock Scanner. Earnings ticks = watchlist names.
+
+## Dividend calendar (26 Oct 2026)
+- dividends.html (Markets menu on every page; in sitemap). Data: docs/data/dividends.json built by agents/tools/dividends.py after every scanner run (scanner.yml step).
+- For every scanned company: confirmed next ex-date (feed), payment date (scanner now saves f.div_pay), last day to buy (business day before the ex-date; JSE T+3, US T+1), dividend per share (JSE cents shown in rand), payments a year, yield, payout, grades, watchlist / Focus List tags. Expected dates = last year's ex-date + 1 year with last year's amount, replaced once announced. Last 30 days shown as "went ex".
+- Filters: market, period (14 days to 4 months, or last 30 days), confirmed only, minimum yield, search.

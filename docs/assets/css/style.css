@@ -868,3 +868,12 @@ html:not(.safe) .onlysafe{display:none!important}
   .fl-row{grid-template-columns:28px minmax(0,1fr);gap:10px 12px}.fl-row>*:not(.fl-rk):not(.fl-co){grid-column:2}.fl-go{display:block}.fl-go{text-align:left}}
 
 .fl-va{margin-bottom:6px;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+/* dividend calendar */
+.dvrow{grid-template-columns:90px 1fr 150px 110px}
+.dvst{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.06em;padding:2px 7px;border-radius:999px;margin-left:4px;vertical-align:middle;text-transform:uppercase}
+.dvst.confirmed{background:rgba(94,211,154,.14);color:#5ED39A;border:1px solid rgba(94,211,154,.35)}
+.dvst.expected{background:rgba(255,255,255,.06);color:var(--muted);border:1px solid var(--line)}
+.dvst.recent{background:rgba(240,138,126,.10);color:#F08A7E;border:1px solid rgba(240,138,126,.3)}
+.dvamt small{color:var(--muted);font-size:11px}
+.erow .mn small b{color:#fff}
+@media (max-width:860px){.dvrow{grid-template-columns:70px 1fr}.dvrow .n{grid-column:2}}

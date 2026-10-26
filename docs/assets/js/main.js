@@ -308,7 +308,7 @@ window.LRC_SAFE = true;
   const page = (location.pathname.split('/').pop() || 'index.html');
   if (!window.LRC_SAFE || page === 'stock.html') return;   // the one-page summary keeps ratings and the LRC Analyst Target
   document.documentElement.classList.add('safe');
-  if (!/^(index|scanner|watchlist|stock|track|earnings|research|dashboard)\.html$/.test(page) && page !== '') return;
+  if (!/^(index|scanner|watchlist|stock|track|earnings|dividends|research|dashboard)\.html$/.test(page) && page !== '') return;
   const SKIP = 'script,style,textarea,input,.wire,.wi,.breaking,#wlNews,#lib,.tradingview-widget-container,[data-nosweep]';
   const PHRASES = [[/\bTrading BUY\b/g, 'Trading: top scoring'], [/\bTrading SELL\b/g, 'Trading: lowest scoring'], [/\bInvestment BUY\b/g, 'Investment: top scoring'], [/\bInvestment SELL\b/g, 'Investment: lowest scoring'],
     [/\btrading BUY\b/g, 'trading: top scoring'], [/\btrading SELL\b/g, 'trading: lowest scoring'], [/\binvestment BUY\b/g, 'investment: top scoring'], [/\binvestment SELL\b/g, 'investment: lowest scoring'],
@@ -630,4 +630,46 @@ const artCard = (a, pre = '') => `<a class="art" href="${pre}${esc(a.url)}">${a.
   // short market names in the header on phones
   const fit = () => { const s = document.getElementById('hdrMkt'); if (!s) return; const o = s.querySelector('option[value="US"]'); if (o) o.textContent = window.innerWidth <= 700 ? 'NY' : 'New York'; };
   fit(); window.addEventListener('resize', fit);
+})();
+
+/* ---------- dividend calendar (data/dividends.json, rebuilt after every scanner run) ---------- */
+(() => {
+  const L = document.getElementById('dvList'); if (!L) return;
+  const $$ = id => document.getElementById(id);
+  const e_ = x => String(x ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const day = iso => new Date(iso + 'T12:00:00');
+  const fmtD = iso => iso ? day(iso).toLocaleDateString('en-ZA', { weekday: 'short', day: 'numeric', month: 'short' }) : '—';
+  const money = (v, c) => v === null || v === undefined ? '—' : (c === 'ZAR' ? 'R' : '$') + Number(v).toLocaleString('en-ZA', { minimumFractionDigits: 2, maximumFractionDigits: v < 1 ? 4 : 2 });
+  const pct = v => v === null || v === undefined ? '—' : (v * 100).toFixed(1) + '%';
+  const GR = { 'STRONG BUY': 'Top scoring', 'BUY': 'Strong', 'HOLD': 'Average', 'SELL': 'Weak', 'STRONG SELL': 'Lowest scoring' };
+  const gr = v => !v ? '—' : window.LRC_SAFE ? (GR[v] || v) : v;
+  let D = null;
+  let mkt; try { mkt = JSON.parse(localStorage.getItem('lrc_mkt')) || 'JSE'; } catch (e) { mkt = 'JSE'; }
+  $$('dvMkt').value = mkt;
+  const draw = () => {
+    if (!D) return;
+    const m = $$('dvMkt').value, rg = $$('dvRange').value, kind = $$('dvKind').value, minY = +$$('dvYield').value, q = ($$('dvSearch').value || '').toLowerCase();
+    const today = new Date(Date.now() + 2 * 3600e3).toISOString().slice(0, 10);
+    const end = rg === 'past' ? today : new Date(Date.now() + 2 * 3600e3 + (+rg) * 864e5).toISOString().slice(0, 10);
+    const start = rg === 'past' ? new Date(Date.now() + 2 * 3600e3 - 30 * 864e5).toISOString().slice(0, 10) : today;
+    const rows = D.items.filter(x => x.m === m && (rg === 'past' ? x.status === 'recent' : x.status !== 'recent') && x.ex >= start && x.ex <= end && (kind === 'all' || x.status !== 'expected') && (x.yield || 0) >= minY && (!q || (x.t + ' ' + x.n).toLowerCase().includes(q)));
+    if (rg === 'past') rows.reverse();
+    $$('dvMeta').innerHTML = `<span class="ai">● ${m === 'JSE' ? 'JSE' : 'New York (NYSE &amp; Nasdaq)'}</span><span>Updated <b>${e_(new Date(D.generated).toLocaleString('en-ZA', { weekday: 'short', day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }))} SAST</b></span><span><b>${rows.length}</b> dividends in range</span><span><b>${rows.filter(x => x.status === 'confirmed').length}</b> confirmed · <b>${rows.filter(x => x.status === 'expected').length}</b> expected</span>`;
+    $$('dvRule').textContent = (D.rules || {})[m] || '';
+    $$('dvSrc').textContent = 'Source: ' + (D.source || '');
+    if (!rows.length) { L.innerHTML = '<p class="muted-load">No dividends match these filters. Try a longer period or "Any yield".</p>'; return; }
+    const by = {}; rows.forEach(x => (by[x.ex] = by[x.ex] || []).push(x));
+    L.innerHTML = Object.keys(by).sort((a, b) => rg === 'past' ? b.localeCompare(a) : a.localeCompare(b)).map(k => `<div class="eday"><div class="edate"><b>${day(k).toLocaleDateString('en-ZA', { weekday: 'long' })}</b><span>${day(k).toLocaleDateString('en-ZA', { day: 'numeric', month: 'long' })}</span><small style="display:block;color:var(--muted);font-size:11.5px;margin-top:4px">ex-dividend date</small></div><div class="erows">` +
+      by[k].map(x => { const cov = (x.lists || []).length > 0;
+        const amt = x.amount != null ? `${money(x.amount, x.cur)}${x.amount_basis ? ' <small>last year</small>' : ''}` : (x.last_amount != null ? `<small>last paid</small> ${money(x.last_amount, x.cur)}` : '—');
+        return `<div class="erow dvrow${cov ? ' cov' : ''}"><span class="tic">${cov ? '<b class="tick">✓</b>' : ''}<a href="stock.html?t=${encodeURIComponent(x.t)}">${e_(x.t.replace('.JO', ''))}</a></span>
+        <span class="mn"><a href="stock.html?t=${encodeURIComponent(x.t)}" style="color:inherit">${e_(x.n)}</a> <span class="dvst ${x.status}">${x.status === 'expected' ? 'Expected' : x.status === 'recent' ? 'Went ex' : 'Confirmed'}</span>${(x.lists || []).map(l => ` <span class="wtag ${/SELL/.test(l) ? 's' : 'b'}">${e_(l)}</span>`).join('')}${x.idea ? ' <a class="wtag i" href="research.html">Research idea</a>' : ''}
+          <small>Last day to buy <b>${fmtD(x.ldt)}</b> · pays ${x.pay ? '<b>' + fmtD(x.pay) + '</b>' : 'date not announced'}${x.per_year ? ` · ${x.per_year}× a year` : ''}${x.payout != null ? ` · payout ${pct(x.payout)}` : ''}</small>
+          <small>LRC Stock Scanner: trading ${e_(gr(x.v))} · investment ${e_(gr(x.iv_v))}</small></span>
+        <span class="n dvamt">${amt}</span><span class="n">yield <b>${pct(x.yield)}</b></span></div>`; }).join('') + '</div></div>').join('');
+  };
+  ['dvMkt', 'dvRange', 'dvKind', 'dvYield'].forEach(i => $$(i).addEventListener('change', () => { if (i === 'dvMkt') { try { localStorage.setItem('lrc_mkt', JSON.stringify($$('dvMkt').value)); } catch (e) { } window.dispatchEvent(new CustomEvent('lrcmarket', { detail: $$('dvMkt').value })); } draw(); }));
+  $$('dvSearch').addEventListener('input', draw);
+  window.addEventListener('lrcmarket', e => { if ($$('dvMkt').value !== e.detail) { $$('dvMkt').value = e.detail; draw(); } });
+  fetch((window.LRC_DATA || 'data/') + 'dividends.json?v=' + Math.floor(Date.now() / 6e5)).then(r => r.json()).then(d => { D = d; draw(); }).catch(() => { L.innerHTML = '<p class="muted-load">The dividend calendar is built by the daily scanner run and will appear shortly.</p>'; });
 })();

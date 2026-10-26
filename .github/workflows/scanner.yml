@@ -25,6 +25,9 @@ jobs:
       - name: Earnings calendar — tick watchlist & coverage, add scanner results dates
         continue-on-error: true
         run: python agents/tools/earnings_sync.py
+      - name: Dividend calendar — JSE & New York ex-dates, last day to buy, payment dates
+        continue-on-error: true
+        run: python agents/tools/dividends.py
       - name: Company news, SEC filings & financials for the watchlist companies
         continue-on-error: true
         run: python agents/tools/company_intel.py
