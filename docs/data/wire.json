@@ -1,18 +1,348 @@
 {
- "generated": "2026-10-26T15:41+02:00",
+ "generated": "2026-10-26T17:19+02:00",
  "agent": "LRC Live Wire",
- "sources_ok": 13,
- "sources_failed": [
-  "Investing.com Forex: The read operation timed out",
-  "Investing.com Commodities: HTTP Error 502: Bad Gateway"
- ],
+ "sources_ok": 15,
+ "sources_failed": [],
  "items": [
   {
-   "title": "Anthropic IPO live updates: AI lab lost $80.7 billion in first half of 2026",
+   "title": "Anthropic IPO live updates: AI lab has $6.2B in debt, flags data center moratoriums as key risk",
    "url": "https://www.cnbc.com/2026/10/26/anthropic-ipo-live-updates-ai-s-1-filing.html",
    "source": "CNBC",
    "region": "US",
-   "published": "2026-10-26T15:40+02:00",
+   "published": "2026-10-26T17:18+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Is getting a wedding band from Quince a bad idea? It’s a third of the price of a local jeweler.",
+   "url": "https://www.marketwatch.com/story/is-getting-a-wedding-band-from-quince-a-bad-idea-its-a-third-of-the-price-fa89c9b2?mod=mw_rss_topstories",
+   "source": "MarketWatch",
+   "region": "US",
+   "published": "2026-10-26T17:15+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Oil slips $2 a barrel but stays near six-month highs on Saudi attacks",
+   "url": "https://www.investing.com/news/commodities-news/oil-prices-down-almost-1-in-early-trading-4971306",
+   "source": "Investing.com Commodities",
+   "region": "FX",
+   "published": "2026-10-26T17:12+02:00",
+   "breaking": true,
+   "tickers": []
+  },
+  {
+   "title": "Josh Brown says Meta is near crucial levels. How he's trading the tech giant",
+   "url": "https://www.cnbc.com/2026/10/26/josh-brown-says-meta-is-near-crucial-levels-how-hes-trading-the-tech-giant.html",
+   "source": "CNBC",
+   "region": "US",
+   "published": "2026-10-26T17:10+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Dawie Roodt’s reality check for anyone paying tax in South Africa",
+   "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQZWFFRDMtamZuUzdIZEE0NS1EQ2hPeEhXNGxtbUlWT3VyNzNjTUhyMGk0MnNYT043ZWswUTdMSW9Rd3JmS2JoU1dLbDVhcHJHcmhhNkZyeFVZc0pmZkEzdzc4LU5YVmFzR210ZWZmTW5WQkN4VXpxem85cDRNZEE3Nmc3d28xQ3dFMmhrWnVDbDRfNldVRC1nQkUyRU5zSkxHQzRJN2ZOd0VOT0YtQnQ3Ymh3?oc=5",
+   "source": "BusinessTech",
+   "region": "SA",
+   "published": "2026-10-26T17:08+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "I want to pay off $4,500 in credit-card debt in 2 months. Is this possible?",
+   "url": "https://www.marketwatch.com/story/i-want-to-pay-off-4-500-in-credit-card-debt-in-2-months-is-this-possible-059d9a21?mod=mw_rss_topstories",
+   "source": "MarketWatch",
+   "region": "US",
+   "published": "2026-10-26T17:07+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Alaska Senate: Peltola seeks quick dismissal of DOJ election lawsuit before midterm",
+   "url": "https://www.cnbc.com/2026/10/26/alaska-senate-peltola-doj-lawsuit-election-sullivan.html",
+   "source": "CNBC",
+   "region": "US",
+   "published": "2026-10-26T17:06+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Fanatics teams up with OpenAI for new AI-powered shopping suggestion feature",
+   "url": "https://www.cnbc.com/2026/10/26/fanatics-openai-codex-sports-merchandise-shopping.html",
+   "source": "CNBC",
+   "region": "US",
+   "published": "2026-10-26T17:05+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Walmart, Best Buy and other stores now use digital price tags. Critics say they could lead to different prices for different shoppers.",
+   "url": "https://www.marketwatch.com/story/walmart-best-buy-and-other-stores-now-use-digital-price-tags-critics-say-they-could-lead-to-different-prices-for-different-shoppers-19e2f4da?mod=mw_rss_topstories",
+   "source": "MarketWatch",
+   "region": "US",
+   "published": "2026-10-26T17:03+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Gold price rises as lower oil prices ease inflation fears ahead of Fed meeting",
+   "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPeS1falBJUHlWUXhibUpwdHhkRlp3WnZ4dDhNX1ZneXZYeGxFUVA3eVk5V3c1US16VVZ0UmZiNmwyS3VHMXB5SW1RUGhSc0xpQk9rSnZuWmxlUXkwME00OGo4eWFWQlp4Qk5ZWi0tWTBCNmFqaHdQMnpreTZFSjY0NjhrSTNqWWVfN2M1ZFVORUFTTHA3ZjJFa3hvMXZxZVBrakpPMUl0WFlndw?oc=5",
+   "source": "Mining.com",
+   "region": "FX",
+   "published": "2026-10-26T17:02+02:00",
+   "breaking": true,
+   "tickers": []
+  },
+  {
+   "title": "Young Americans are giving up on car ownership. It’s a path to financial freedom for some.",
+   "url": "https://www.marketwatch.com/story/young-americans-are-giving-up-their-cars-its-a-path-to-financial-freedom-for-some-3cce491c?mod=mw_rss_topstories",
+   "source": "MarketWatch",
+   "region": "US",
+   "published": "2026-10-26T17:01+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Dollar rebounds as euro slips ahead of key central bank decisions",
+   "url": "https://www.investing.com/news/forex-news/asia-fx-muted-yuan-at-4yr-high-dollar-drifts-lower-ahead-of-cbankpacked-week-4971383",
+   "source": "Investing.com Forex",
+   "region": "FX",
+   "published": "2026-10-26T17:01+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Popular South African pizza restaurant coming after Roman’s and Debonairs",
+   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQY1o4bDBueWJRd29heVRkQTh3TTlpVWYxRUJRZkNWV0lLOXh5ckh5Vkt6UGtDQ01oQTZtNjZZNVR0U0dHSEdfMUpEczU2T0pRdndrRzFrYk5uVUZKVU9CUy1qMDZ0d3kyUlR6NXdLdHY3TmREeW1jTzJ4d2pUVnlPeFB5Y3hVZVY1am0zYTdVTWFQdGZwaFkwcEV4TWJ0T2U5eEJZNWNNQkdxSjBCU05YaFVPUS1FUQ?oc=5",
+   "source": "Daily Investor",
+   "region": "SA",
+   "published": "2026-10-26T17:00+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Is Wall Street Getting It All Wrong About AI, Oil, and Bonds?",
+   "url": "https://oilprice.com/Energy/Energy-General/Is-Wall-Street-Getting-It-All-Wrong-About-AI-Oil-and-Bonds.html",
+   "source": "OilPrice.com",
+   "region": "FX",
+   "published": "2026-10-26T17:00+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Gold gains as easing oil prices soothe inflation jitters",
+   "url": "https://www.investing.com/news/commodities-news/gold-steadies-near-3mth-low-as-elevated-oil-prices-weigh-fed-meet-eyed-4971362",
+   "source": "Investing.com Commodities",
+   "region": "FX",
+   "published": "2026-10-26T16:57+02:00",
+   "breaking": true,
+   "tickers": []
+  },
+  {
+   "title": "On The Road Podcast – FNB and Wesbank Renew On The Road Partnership",
+   "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPcUxiMGxvYjZ0aUV4MkJCNHgwR0Jmdm1DbGliVGQ3akJiTWc1MGhydl9kbTdELWxQMjVFWXhLWHYxU2lCYzdic3BydlNGdlJUVjlxM0Z0M1lad1pvRGFxMXhIQWFURnpjcTkwRDZzOG5aU0pBQzRWc3hORUpyeEY3SlREbWozXzBTQ0hsVUItdW5jdjJNNURUMVYwMlhlNFo3Vm93VVlWb0RZdS1GOHQ0dw?oc=5",
+   "source": "businessfocusmagazine.com",
+   "region": "SA",
+   "published": "2026-10-26T16:55+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "El Niño threatens to deepen southern Africa’s poverty crisis",
+   "url": "https://news.google.com/rss/articles/CBMinwJBVV95cUxNanE4YTdlYXZqRlp0YTdhMTNERXlhQi01aV96TVRLck55R3V3YWlLelN4SjFNRjV1am1Oc09wYmJ5T1kxbEwtOWliOC1ldXhvcEVpY1JqREV3LWxwVC1JdllPM2NlV2poeFNqRm84R0xudkNjNEFLOFZXR0ptbTkwV1llX1o1MW5ud2tCWUowNGV3NEYtc2xNMlhRZmxSemZYcXlfYjBFRlpqMWhKUU80S3dWNXNVWEhpcGxGTDl5aTNCVG9vUF9CNjM3OVlaMWRuTGdHYnR1QXpGaTl2NXpkSUt2ODloajBZX3pmSUltV2dqN01qMzA2Mi1TR1JVR1JJaUJ2c1dQMC1RREN4bl94dzZzMy0xSWIzRjhYUUFaQQ?oc=5",
+   "source": "Daily Maverick",
+   "region": "SA",
+   "published": "2026-10-26T16:54+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Oil falls from near six-month high as Iran mediation efforts ease supply worries",
+   "url": "https://www.investing.com/news/commodities-news/oil-falls-from-6mth-highs-saudi-attacks-keep-supply-risks-in-focus-4971338",
+   "source": "Investing.com Commodities",
+   "region": "FX",
+   "published": "2026-10-26T16:53+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Two stock picks to capitalize on Wall Street’s misguided AI fears",
+   "url": "https://www.marketwatch.com/story/two-stock-picks-to-capitalize-on-wall-streets-misguided-ai-fears-41f81755?mod=mw_rss_topstories",
+   "source": "MarketWatch",
+   "region": "US",
+   "published": "2026-10-26T16:47+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Trump says he'll soon decide whether to ‘make a deal’ with Iran or ‘finish it off'",
+   "url": "https://www.cnbc.com/2026/10/26/us-iran-war-hormuz.html",
+   "source": "CNBC",
+   "region": "US",
+   "published": "2026-10-26T16:36+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Baltic dry bulk freight index falls to near one-week low",
+   "url": "https://www.investing.com/news/commodities-news/baltic-dry-bulk-freight-index-falls-to-near-oneweek-low-93CH-4973124",
+   "source": "Investing.com Commodities",
+   "region": "FX",
+   "published": "2026-10-26T16:32+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Dow, S&P and Nasdaq climb in morning trading as Anthropic files for IPO",
+   "url": "https://www.marketwatch.com/bulletins/redirect/go?g=59624406-7ef1-42be-9453-cca85e755eed&mod=mw_rss_bulletins",
+   "source": "MarketWatch Bulletins",
+   "region": "US",
+   "published": "2026-10-26T16:31+02:00",
+   "breaking": true,
+   "tickers": []
+  },
+  {
+   "title": "India’s BPCL to Cut Russian Oil Imports Due to Higher Prices",
+   "url": "https://oilprice.com/Latest-Energy-News/World-News/Indias-BPCL-to-Cut-Russian-Oil-Imports-Due-to-Higher-Prices.html",
+   "source": "OilPrice.com",
+   "region": "FX",
+   "published": "2026-10-26T16:30+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Saudi defence pact countries hold talks in Iran as Houthis launch more attacks",
+   "url": "https://www.investing.com/news/commodities-news/iran-hosts-saudi-defence-pact-states-as-houthis-launch-more-attacks-4972847",
+   "source": "Investing.com Commodities",
+   "region": "FX",
+   "published": "2026-10-26T16:24+02:00",
+   "breaking": true,
+   "tickers": []
+  },
+  {
+   "title": "‘Bubble’ warning for the rand",
+   "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPVndCLXROTUUtTC1BZUNaVlNIM0QtT0tMOUpRcmM1ZzBWTkw5U2F5aHVfTkZVaS1ya0xmTFIyOWlxZW1tZm9ucEpVa1ZCbEhNcmZ3SEhFR2hkWDktbTJwQkF4dmtoc3FldFJYZ2JDc2RST1VUSFlIQjlVRHd1MjhNTA?oc=5",
+   "source": "BusinessTech",
+   "region": "SA",
+   "published": "2026-10-26T16:18+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "My wife has only $80,000 saved for retirement. I have $2.2 million. Am I wrong to be shocked?",
+   "url": "https://www.marketwatch.com/story/my-wife-has-only-80-000-saved-for-retirement-i-have-2-2-million-am-i-wrong-to-be-shocked-3e27b490?mod=mw_rss_topstories",
+   "source": "MarketWatch",
+   "region": "US",
+   "published": "2026-10-26T16:15+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Brazilian stocks rocked as Lula wins presidential election, Bolsonaro reportedly refuses to concede",
+   "url": "https://www.cnbc.com/2026/10/26/brazil-lula-win-presidential-election-runoff-vote.html",
+   "source": "CNBC",
+   "region": "US",
+   "published": "2026-10-26T16:09+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Meta announces $95 billion stock offering to fund AI expansion",
+   "url": "https://www.cnbc.com/2026/10/26/meta-stock-offering-ai.html",
+   "source": "CNBC",
+   "region": "US",
+   "published": "2026-10-26T16:05+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Rand under pressure as oil prices and Middle East tensions dominate week ahead",
+   "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOV0tqTW9yT1J3dUlhU1hudEpVbUpfZUtvbHByWjFzaXpWU1pudGY5Q1d6SEwtSUhMLUt3NF8zVElCcEk1SXNJZHNydHRBbFVmSnpweEdqVWpuWTdxMDVER1pCRzU2QzVHWkpZbU0wME9Xa0ZycTZhT0J2N21CdnNIdDNONU5IS3JaOTB3Y2ZjbUJqODdjNEl0N1NtekxLU29MRVloWElST2JUWHhVRTlJclFiZ3NyX3JMeUYwNjlR?oc=5",
+   "source": "thenational.co.za",
+   "region": "SA",
+   "published": "2026-10-26T16:04+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Mortgage rates above 7% are the 'new normal'—here's why",
+   "url": "https://www.cnbc.com/make-it/2026/10/26/mortgage-rates-above-7percent-are-the-new-normalheres-why.html",
+   "source": "CNBC",
+   "region": "US",
+   "published": "2026-10-26T16:00+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Super El Niño May Soften Winter Energy Squeeze",
+   "url": "https://oilprice.com/Energy/Energy-General/Super-El-Nio-May-Soften-Winter-Energy-Squeeze.html",
+   "source": "OilPrice.com",
+   "region": "FX",
+   "published": "2026-10-26T16:00+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Stocks Gain Before Tech Earnings as Oil Declines: Markets Wrap",
+   "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPeGVmU0kxdjhvRF9ZU0VaeFFkODlaUTRlN1dQaHNSV1JiOTBwSV9nb1RKejQ2clRzQ0doN3VjVEtHb0RaTlVBNUdhMFI3aUtTRHB1dEE3NWdXZS1ZbktuMVUtYnE0ellyLWlNa29aWThtQkdSQW5FRzFIVUZlb3hEUlg1czdXd3FyV0VwNW0wVEMyTUg4ZEpoTVg0SzIyZ0VmLTAxOUlPTUtLXy1kS0ozbw?oc=5",
+   "source": "Bloomberg.com",
+   "region": "FX",
+   "published": "2026-10-26T15:51+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "The excitement around Moderna’s cancer vaccine is cooling. Here’s why.",
+   "url": "https://www.marketwatch.com/story/the-excitement-around-modernas-cancer-vaccine-is-cooling-heres-why-994b205f?mod=mw_rss_topstories",
+   "source": "MarketWatch",
+   "region": "US",
+   "published": "2026-10-26T15:50+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Deneb Investments Limited Estimates – JSE:DNB",
+   "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBlMXpBOTd2WUFtZi1hNlUzNjRwVVdZdVRpNzRjUFFwM3VSdnVVWTNYNUdISDlRQ0VLRmh3dlRzTWRVNktIWDAteks4TjZJSXI1blE5Z3ZsbHhTSVcxZHBwS3phV1RqQ1FiZ2doMXZrZXdrdDA?oc=5",
+   "source": "TradingView",
+   "region": "SA",
+   "published": "2026-10-26T15:49+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "SIMcontrol adds Telkom as third network on one Private APN",
+   "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPVFM1VGpNX2F2aWFMQmYwa0Y4TXlkMmFlMHlQd09sQUZSQVdia3dIejlpRDUtUV9tcm9yWG9WVjdsaXkzYUVJSWJCblJPendvWGFweVF6M2FvaWhseWNCS2ZQWE9aQ3NLSHBsZGFFNHpaN0pNbmkxYVRtNXVGcHBnWXE4U3poT2dCZ3lnNDhhM1Y0bTJKTnNrM0dGbWZIOEd1Z2hYOFVkZWFRdw?oc=5",
+   "source": "Daily Investor",
+   "region": "SA",
+   "published": "2026-10-26T15:48+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Neocloud stocks fall as Elon Musk says more than 200 of them face 'guppy-level death'",
+   "url": "https://www.cnbc.com/2026/10/26/neocloud-stocks-today-coreweave-nebius-iren-elon-musk.html",
+   "source": "CNBC",
+   "region": "US",
+   "published": "2026-10-26T15:43+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Apple stock has become an anti-AI trade. Here’s why",
+   "url": "https://www.cnbc.com/2026/10/26/apple-stock-has-become-an-anti-ai-trade-heres-why.html",
+   "source": "CNBC",
+   "region": "US",
+   "published": "2026-10-26T15:43+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Market Wrap: Clear rebound in Europe against falling oil price. Assets related to Brazil in retreat",
+   "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPNmxOQkVlbTNWempwTVFTMzFFOFlxUVVncmdhRkJraUNucVItSmRVTkxtWHd4MjNKTGkteDktTVlFTDZGOFZ4WXppTWh1YXU3YmkzanBKTHVINkxFWGFEQmtwMzl6cGtxaUpqczJXeUFiUlh1VndHYXhJZ1hVNGljX2xjUnBuWXFZcUVsNGNBN0xkUFRyRVpwd3RrWllsUTN1Y3RPNDJHbXZ5c05zMDBndU13Skl6cTFfLUFhbmUxckhNbF9vTC1qdGgyNTExcklmZkg4M2xwclRQWUtsSU1SaFhnSGU5RHZJR0E?oc=5",
+   "source": "XTB.com",
+   "region": "FX",
+   "published": "2026-10-26T15:42+02:00",
    "breaking": false,
    "tickers": []
   },
@@ -80,6 +410,24 @@
    "tickers": []
   },
   {
+   "title": "Jim Cramer's top 10 things to watch in the stock market Monday",
+   "url": "https://www.cnbc.com/investingclub/2026/10/26/jim-cramers-top-10-things-to-watch-in-the-stock-market-monday.html",
+   "source": "CNBC",
+   "region": "US",
+   "published": "2026-10-26T15:20+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Russian refiners ramp up diesel output after US deal, sources say",
+   "url": "https://www.investing.com/news/commodities-news/russian-refiners-ramp-up-diesel-output-after-us-deal-sources-say-4972849",
+   "source": "Investing.com Commodities",
+   "region": "FX",
+   "published": "2026-10-26T15:19+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
    "title": "Anthropic just filed for its IPO. Follow the latest developments here.",
    "url": "https://www.marketwatch.com/bulletins/redirect/go?g=1e6d74fb-b44b-4141-ac12-1ee60b2c61ca&mod=mw_rss_bulletins",
    "source": "MarketWatch Bulletins",
@@ -94,6 +442,15 @@
    "source": "CNBC",
    "region": "US",
    "published": "2026-10-26T15:09+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Ukraine has waited nearly a month for US to sign off on Patriot missiles, Zelenskiy says",
+   "url": "https://www.investing.com/news/commodities-news/ukraine-has-waited-nearly-a-month-for-us-to-sign-off-on-patriot-missiles-zelenskiy-says-4972802",
+   "source": "Investing.com Commodities",
+   "region": "FX",
+   "published": "2026-10-26T15:06+02:00",
    "breaking": false,
    "tickers": []
   },
@@ -116,11 +473,11 @@
    "tickers": []
   },
   {
-   "title": "Fanatics teams up with OpenAI for new AI-powered shopping suggestion feature",
-   "url": "https://www.cnbc.com/2026/10/26/fanatics-openai-codex-sports-merchandise-shopping.html",
-   "source": "CNBC",
-   "region": "US",
-   "published": "2026-10-26T15:02+02:00",
+   "title": "Russian wheat export prices drop on Black Sea peace hopes",
+   "url": "https://www.investing.com/news/commodities-news/russian-wheat-export-prices-drop-on-black-sea-peace-hopes-93CH-4972773",
+   "source": "Investing.com Commodities",
+   "region": "FX",
+   "published": "2026-10-26T15:04+02:00",
    "breaking": false,
    "tickers": []
   },
@@ -134,15 +491,6 @@
    "tickers": []
   },
   {
-   "title": "This discount retailer is catching up to its main rival under its new CEO, UBS says",
-   "url": "https://www.cnbc.com/2026/10/26/this-discount-retailer-is-catching-up-to-its-main-rival-under-new-ceo-ubs-says.html",
-   "source": "CNBC",
-   "region": "US",
-   "published": "2026-10-26T14:58+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
    "title": "Marc Lore’s Wonder bets on Texas, automation and user-built restaurants as it mulls IPO",
    "url": "https://www.cnbc.com/2026/10/25/wonder-ipo-texas-automation.html",
    "source": "CNBC",
@@ -152,19 +500,19 @@
    "tickers": []
   },
   {
-   "title": "Meta announces $95 billion stock offering to fund AI expansion",
-   "url": "https://www.cnbc.com/2026/10/26/meta-stock-offering-ai.html",
-   "source": "CNBC",
-   "region": "US",
-   "published": "2026-10-26T14:42+02:00",
+   "title": "What makes Africa’s economies tick?",
+   "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9FTWdBcUQtVElMSVpqLThNSWNXRG5TSnpVam5fdkZDUm12aUMyZUs3SjVRYkFQNFlTWDdMSkMtSmxmeURHWTVtUE9xWHd0cVdLdG9KY2xuMkdnME50WDFmNXFrNTBESzl2YjhlSFFTN2lqbDRhZVVSR09hMA?oc=5",
+   "source": "CAJ News Africa",
+   "region": "SA",
+   "published": "2026-10-26T14:40+02:00",
    "breaking": false,
    "tickers": []
   },
   {
-   "title": "Musk says SpaceX’s AI rivals are in trouble, sending their stocks lower",
-   "url": "https://www.marketwatch.com/story/musk-says-spacex-landed-a-40-billion-debt-deal-and-forecasts-doom-for-some-ai-rivals-a0a4991e?mod=mw_rss_topstories",
-   "source": "MarketWatch",
-   "region": "US",
+   "title": "Brazil’s real weakens 12% as Lula wins reelection",
+   "url": "https://www.investing.com/news/forex-news/brazils-real-weakens-12-as-lula-wins-reelection-93CH-4972631",
+   "source": "Investing.com Forex",
+   "region": "FX",
    "published": "2026-10-26T14:39+02:00",
    "breaking": false,
    "tickers": []
@@ -188,11 +536,11 @@
    "tickers": []
   },
   {
-   "title": "Stocks Gain Before Tech Earnings as Oil Declines: Markets Wrap",
-   "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPeGVmU0kxdjhvRF9ZU0VaeFFkODlaUTRlN1dQaHNSV1JiOTBwSV9nb1RKejQ2clRzQ0doN3VjVEtHb0RaTlVBNUdhMFI3aUtTRHB1dEE3NWdXZS1ZbktuMVUtYnE0ellyLWlNa29aWThtQkdSQW5FRzFIVUZlb3hEUlg1czdXd3FyV0VwNW0wVEMyTUg4ZEpoTVg0SzIyZ0VmLTAxOUlPTUtLXy1kS0ozbw?oc=5",
-   "source": "Bloomberg.com",
-   "region": "FX",
-   "published": "2026-10-26T14:32+02:00",
+   "title": "Beyond structuring – What African investors look for in practice",
+   "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNRzg4LTQ4MllPNkU3cTktVm1RbGY5WEpzT3c0ZWJzLTdOVjVmakdXZUlFNC00TDZxYkVzN05ud2Q2TmRpWG5MeEtFU0d3UzUwSHZ0T3Y2dk5OblZnYlF1VXBHbVBVY1VHNHBqT2hwMzNnRkpaTzZ5SVpCaFFhXy1TLXJ6emxsSXBMSTdXZUZxZ21DcWRiS1FUQmVpVmJlZWIwTkI3TjVKTHRCZ3dhQnE0?oc=5",
+   "source": "Daily Investor",
+   "region": "SA",
+   "published": "2026-10-26T14:30+02:00",
    "breaking": false,
    "tickers": []
   },
@@ -215,11 +563,29 @@
    "tickers": []
   },
   {
-   "title": "Here are Monday's biggest analyst calls: Tesla, Nvidia, SpaceX, Apple, Ross, Dollar General, Lockheed Martin & more",
-   "url": "https://www.cnbc.com/2026/10/26/monday-biggest-wall-street-analyst-calls-like-tesla.html",
-   "source": "CNBC",
-   "region": "US",
-   "published": "2026-10-26T14:15+02:00",
+   "title": "London midday: Oil price weakness keeps FTSE 100 in the black",
+   "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNVEl5M01JNDJiSTlsUXdiX1dWMFlEd094N2ZsTlBXLXNHS2VEMnNCcDRJWkNWMjFEWnNSN1lLc3VIVHFoZnl3WDBvTEszNXJIdHppdlZXbWVzTnQ4MjZ5ak81OXJKa2xtSUV4Q1RFOFRoTFA3bW00TnVGdGt4OFgtLUdyR2szNlN6aUp2OG5velh3UEtiUEY0RlQxeEx6a0ttYTVCTVROTE04TjNSSVJvY1VWSmlrZzlLOWJmMWxIYTN0RWtYZjJMVmFFVE5oQQ?oc=5",
+   "source": "Sharecast.com",
+   "region": "FX",
+   "published": "2026-10-26T14:28+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "U.S. yields hover near 3-week lows as ahead of Fed decision",
+   "url": "https://www.investing.com/news/forex-news/french-yields-retreat-from-2002-highs-as-moodys-holds-ecb-in-focus-4971656",
+   "source": "Investing.com Forex",
+   "region": "FX",
+   "published": "2026-10-26T14:28+02:00",
+   "breaking": true,
+   "tickers": []
+  },
+  {
+   "title": "Two sectors that are leading South Africa in salary increases",
+   "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPSlE2d09MSlRhZG1Rd0szWm5KamVlQUluRXhVWXhpSnA2LVhDbVJJODJHc2RJWUlTeURXS2YzODhoOFFkMTA1ZThRdkIzbXhnTGJuYkpQMWtNQVI1SnRvV2JRem9nVnhUUEoyZHlMOHNrbHp6ajRmV25iUTRLVUJqWE9ScWhlckh5em5FTzlZV0V3MVEwYXRycjFWTzVnRzBEaFZJRWdTT08?oc=5",
+   "source": "Johannesburg Sunday World",
+   "region": "SA",
+   "published": "2026-10-26T14:18+02:00",
    "breaking": false,
    "tickers": []
   },
@@ -233,15 +599,6 @@
    "tickers": []
   },
   {
-   "title": "Brazilian stocks rocked as Lula wins presidential election, Bolsonaro reportedly refuses to concede",
-   "url": "https://www.cnbc.com/2026/10/26/brazil-lula-win-presidential-election-runoff-vote.html",
-   "source": "CNBC",
-   "region": "US",
-   "published": "2026-10-26T14:14+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
    "title": "SANBS stocks fall below target ahead of festive season",
    "url": "https://www.moneyweb.co.za/news-fast-news/sanbs-stocks-fall-below-target-ahead-of-festive-season/",
    "source": "Moneyweb",
@@ -251,20 +608,11 @@
    "tickers": []
   },
   {
-   "title": "Neocloud stocks fall as Elon Musk says more than 200 of them face 'guppy-level death'",
-   "url": "https://www.cnbc.com/2026/10/26/neocloud-stocks-today-coreweave-nebius-iren-elon-musk.html",
-   "source": "CNBC",
-   "region": "US",
-   "published": "2026-10-26T14:10+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "A dot-com survivor warns retail investors against buying the tech dip: ‘You’re taking a knife to a gunfight.’",
-   "url": "https://www.marketwatch.com/story/a-dot-com-survivor-warns-retail-investors-against-buying-the-tech-dip-youre-taking-a-knife-to-a-gunfight-6c940361?mod=mw_rss_topstories",
-   "source": "MarketWatch",
-   "region": "US",
-   "published": "2026-10-26T14:10+02:00",
+   "title": "KHI begins building 50 tonne per day hydrogen liquefication plant",
+   "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNUndHcVdJWVFzaks3MkhpNHlxaHhUcnRDWUlXc0U4Vk9Ra0kzY1pVTzl5Q2FlY0NFV0gtNUI1M0JMUWRiWVUyd3lSSUotOURjYWJhOU5pTk91eklzSGN5OE55b0QzUjlZck13WnZrVmpnMWdIeUNrSmJPUVdwYzA4LU96UngwbFF4THZIZHN3bFExRFM0MGlOTGVhVmJZcjM3X25YeVhLekw5ZkVLdV9iMkhSTQ?oc=5",
+   "source": "gasworld",
+   "region": "SA",
+   "published": "2026-10-26T14:11+02:00",
    "breaking": false,
    "tickers": []
   },
@@ -272,15 +620,6 @@
    "title": "Cracking AI trade has Wall Street looking for a hedge. An ex-Citadel quant may have the answer",
    "url": "https://www.cnbc.com/2026/10/26/gpu-futures-ai-hedge-hyperbolic.html",
    "source": "CNBC",
-   "region": "US",
-   "published": "2026-10-26T14:08+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Nvidia, AMD and Broadcom could buy Meta shares as part of $35 billion stock offering",
-   "url": "https://www.marketwatch.com/story/nvidia-amd-and-broadcom-could-buy-meta-shares-as-part-of-35-billion-stock-offering-d816fec2?mod=mw_rss_topstories",
-   "source": "MarketWatch",
    "region": "US",
    "published": "2026-10-26T14:08+02:00",
    "breaking": false,
@@ -296,6 +635,15 @@
    "tickers": []
   },
   {
+   "title": "Gold gains as oil price slide cools some inflation concerns",
+   "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPbVJHVXhEUVV3azlYZ1VzRHFwUmg0eVlSblIxdkdyaUh6WmNUaGtwYXRLOEZsRHZPaUxjU3RlUkRoZ1Nta3duZEN0Z1BldzJJTzZqZUxTTUNNbENIZmt2X21Za213YWFKNkQtXzlHcXBuSE1CdVZFX3EwZUdpcVE0VU1qNUVtcVdvdHNxQURCVmtBWF9qeGtZcTJOR2VRRy1vUEVmSUdtOXA2R3dXYk02S1FkTC12TW4wVnpGeDljaFUzODRvQmFpbQ?oc=5",
+   "source": "TradingView",
+   "region": "FX",
+   "published": "2026-10-26T14:05+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
    "title": "R3bn mixed-use development breaks ground in Harrismith",
    "url": "https://www.moneyweb.co.za/news-fast-news/r3bn-mixed-use-development-breaks-ground-in-harrismith/",
    "source": "Moneyweb",
@@ -305,19 +653,10 @@
    "tickers": []
   },
   {
-   "title": "My husband wants to sell our $1.5 million home and invest the proceeds. But this is where we raised our kids — and I can’t bear to leave.",
-   "url": "https://www.marketwatch.com/story/my-husband-wants-to-sell-our-1-5-million-home-and-invest-the-proceeds-but-this-is-where-we-raised-our-kids-and-i-cant-bear-to-leave-4feb46ed?mod=mw_rss_topstories",
-   "source": "MarketWatch",
-   "region": "US",
-   "published": "2026-10-26T14:00+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Brent Crude Oil Price Near Six-Month High on Iran War",
-   "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPTHlGbzRVWGlzNEVLVXB2T3BkQzRCbDhRVXhYb0Q5SjBhSHAxNzF4N2RpUHkzdDNnWVpzbEpta2RZaUZkamstelVKdGE5WXFIcWp3TlFhY3pMbmxSeThpc1ZBRFVUQmlmVi1pT0h3aU9CSDlHQnMtWC1EVHk2MHRYQm9RUnB2N2s?oc=5",
-   "source": "Admirals",
-   "region": "FX",
+   "title": "Eastern Cape tuck shop forced to drop Sun City name after trademark dispute",
+   "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPY1ZNSHJ4OUZWZlFXRmhLaU9uX0tDS0FobFRLNE0xbHVkUExWXy1KdU5EaVNXcmQ3aXkyYVpGX2wtRkNwQlZRQmtRSkJCVnF3VWxKSEM0RXo5UHZwLUM1VnZldUEyMVZmeTQ3bDZ4eENVd0FseUcyVm9HX1B3VVMxSUh4RlR3ZkpjeHkxc0tyZzIzd21IWnpFbGFVVF9MdU5IYU83eVFhRmhxVnJsMTBMU2R2S0pqeHVYZFE?oc=5",
+   "source": "Daily Investor",
+   "region": "SA",
    "published": "2026-10-26T14:00+02:00",
    "breaking": false,
    "tickers": []
@@ -328,15 +667,6 @@
    "source": "Moneyweb",
    "region": "SA",
    "published": "2026-10-26T13:50+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Trump says he'll soon decide whether to ‘make a deal’ with Iran or ‘finish it off'",
-   "url": "https://www.cnbc.com/2026/10/26/us-iran-war-hormuz.html",
-   "source": "CNBC",
-   "region": "US",
-   "published": "2026-10-26T13:49+02:00",
    "breaking": false,
    "tickers": []
   },
@@ -364,7 +694,7 @@
    "source": "MarketWatch Bulletins",
    "region": "US",
    "published": "2026-10-26T13:33+02:00",
-   "breaking": true,
+   "breaking": false,
    "tickers": []
   },
   {
@@ -382,7 +712,7 @@
    "source": "OilPrice.com",
    "region": "FX",
    "published": "2026-10-26T13:30+02:00",
-   "breaking": true,
+   "breaking": false,
    "tickers": []
   },
   {
@@ -395,20 +725,11 @@
    "tickers": []
   },
   {
-   "title": "Verizon’s stock rises as subscriber surge impresses Wall Street",
-   "url": "https://www.marketwatch.com/story/verizons-stock-rises-as-subscriber-surge-impresses-wall-street-2be3ef2c?mod=mw_rss_topstories",
-   "source": "MarketWatch",
-   "region": "US",
-   "published": "2026-10-26T13:11+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "We stopped helping our neighbors with free home repairs and our friendship cooled. Who’s to blame?",
-   "url": "https://www.marketwatch.com/story/we-stopped-helping-our-neighbors-with-free-home-repairs-and-our-friendship-cooled-whos-to-blame-d20b0720?mod=mw_rss_topstories",
-   "source": "MarketWatch",
-   "region": "US",
-   "published": "2026-10-26T13:00+02:00",
+   "title": "African economies see $99.4bn GDP upgrade amid renewed Iran war shocks",
+   "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOcDhSQnBYR0VJX05kUUZiVEhQa1NGdVhaaTF1NWJlSElrdEpjTnk0ZEZhSXF4M3JJUXVibUN3a0N4NHE3SnhMbEVCUktDUnlUalU5UGpyR240YURERDBSWWUwUC11c3dnWjF0Z0VsWXhUNGR6dkhrRDNhclhYZ0FURXlMU2VMNkhoMzhSTDB1LV9ITkkwMjFtOVFhVUtHbl9rWlRaeGw4dTdzUVlU0gGyAUFVX3lxTFA3UEtiMGt1Q1FRczl0Vmd5Nks1UV9iSlNWRV92cmNGaEFsS0tyUnF5UDdMOFNOR281akcyS0dpQ2VNRDU5SUhMYUFqbm5qdEhlWk1jb2U4a3pJWjZOR2IwWXVCWEdmMVd0ekZjUnhWYTA5MV9RUDJYdi1sYXBOczNfal9aVVpxZmxJSzlsSlN3Z1NRZ2YxcUphMGgyN0MtMDFiSUFycjFQdUx4QlBoYVNuRkE?oc=5",
+   "source": "Businessday NG",
+   "region": "SA",
+   "published": "2026-10-26T13:06+02:00",
    "breaking": false,
    "tickers": []
   },
@@ -422,15 +743,6 @@
    "tickers": []
   },
   {
-   "title": "These four shocks could hand investors an unexpected buying window, strategists say",
-   "url": "https://www.marketwatch.com/story/these-four-shocks-could-hand-investors-an-unexpected-buying-window-strategists-say-5ae7c4db?mod=mw_rss_topstories",
-   "source": "MarketWatch",
-   "region": "US",
-   "published": "2026-10-26T12:58+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
    "title": "Nobel laureate Navi Pillay talks justice, power and accountability",
    "url": "https://www.moneyweb.co.za/moneyweb-podcasts/moneyweb-midday/nobel-laureate-navi-pillay-talks-justice-power-and-accountability/",
    "source": "Moneyweb",
@@ -440,11 +752,29 @@
    "tickers": []
   },
   {
+   "title": "Sasol and the Rising Oil Price",
+   "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9hcmZQUmtTY0VmdlN3RThRRWtWdjU0ZFZQNkx4RzM3MDRkUHhfV2dvTWFjWk1OeDhXMk1lYnRGX3Y1al9SN2haeDdpWW11a1pQWl9qU3MwR2lhaFZMVUhRZVZMWVlOQ0ZvQXhTVWdVeVd5aGgxa2xhVUFxOXFDaUU?oc=5",
+   "source": "Investing.com South Africa",
+   "region": "FX",
+   "published": "2026-10-26T12:47+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
    "title": "Private equity pours billions into defense tech as investors debate a bubble",
    "url": "https://www.cnbc.com/2026/10/26/defense-tech-private-equity-investment.html",
    "source": "CNBC",
    "region": "US",
    "published": "2026-10-26T12:46+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Morning Bid: Lula land",
+   "url": "https://www.investing.com/news/commodities-news/morning-bid-lula-land-4972022",
+   "source": "Investing.com Commodities",
+   "region": "FX",
+   "published": "2026-10-26T12:42+02:00",
    "breaking": false,
    "tickers": []
   },
@@ -476,6 +806,33 @@
    "tickers": []
   },
   {
+   "title": "SFC could bring more global financial-services activity onshore",
+   "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQTkt3QmJRVkJTcmxRMlRsSm1uQTZCdGhfdms4NGFQYUtoZ1FsdVAxZmxHTWp1TDNmeG8wMHZIYU9zSUt2QVVrX1BGVTNDdDRvS2hmdDZJRGJITS1kNWRUQWU4SHNtdEJsbURWa3ZtbFItT1U3aGtXNG1jOW1HdzVTd0JQZk9xZlRBcWZkaTliRnZjNG1DYnE4?oc=5",
+   "source": "Moonstone Information Refinery",
+   "region": "SA",
+   "published": "2026-10-26T12:19+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Sanlam expects Santam deal to lift returns",
+   "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9FVnQ0bmpPX0w3SXdtQmItSXk3YWFLSVJqMzNVMVJWVl9oWGh1VXZ3WmcyUUVBMkJhaHgyU0hnNlZJZFNQSjJ4VlY2WjhVM2xfTlBYVi10Vk4yMDlIeTlVX2wxMi1fSXJ2Y2lUYVctMm9SOU9oSWVOSy1ibw?oc=5",
+   "source": "Moonstone Information Refinery",
+   "region": "SA",
+   "published": "2026-10-26T12:15+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "European gas surges to fresh 2022 highs on Middle East war strain",
+   "url": "https://www.investing.com/news/commodities-news/european-gas-surges-to-fresh-2022-highs-on-middle-east-war-strain-4971735",
+   "source": "Investing.com Commodities",
+   "region": "FX",
+   "published": "2026-10-26T12:11+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
    "title": "Moody’s says South Africa’s budget update is credit positive",
    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQOUZCSU1qWkt6a2VvRXIxek1GcXQyTnBXcm1QSTB5dHN1UGRBS2Vpa2NKYURsWjNMRF9qamVhOXFDNW01Y1F2TzNHcjlKVHR3cTBudU0tZC1SV3luMTZ2VmVHU3FLMHlzMTVhQlNlQ1R2QTJ5WXJ0Tkd4WGhoOWJCQ3g0WVJXRDkwUXZoMExCS21neU5TMzViMmFsa0pzTmN1S2tfaFZScUFKc1EtaVZ4UG13?oc=5",
    "source": "TimesLIVE",
@@ -494,11 +851,11 @@
    "tickers": []
   },
   {
-   "title": "KAL Group Limited Estimates – JSE:KAL",
-   "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1hQ1ZsVFMwWFlwYktjdnVmdmVkR2pueFJDNXA1blpGRXdBRjcwcHRyME5vdkgtZzg4TGxIc2liTHAxS1dsejhEdkp1TG1Qa05tYjNWMnNpMzQzYmlvLS1McnYxSG5QeGVoTzVXSUE3LTNIV2s?oc=5",
-   "source": "TradingView",
+   "title": "Audi CEO under fire for speaking at Trump rally",
+   "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPc21QV0Znb1I5U0pqT2QtQ0FPVTg4VFJaazJMbGRDbEhRbGVWNS1NMy15TEswVzBTRVp2b3ZOa0xaZVQ4UnpYdVNxcnMtNDlXTEJ5VGlKaEdoOVZiNVBTam9USzd5dDJTM0JnX2tFYl90MEt2eklrWllEaERRNnI2aHBfX0E5Z0pjNjFWOVltSlo1WGRJb3JiMjJEMG42SmRYY29uUE5R?oc=5",
+   "source": "News24",
    "region": "SA",
-   "published": "2026-10-26T11:55+02:00",
+   "published": "2026-10-26T11:57+02:00",
    "breaking": false,
    "tickers": []
   },
@@ -512,20 +869,20 @@
    "tickers": []
   },
   {
+   "title": "Wandile Sihlobo | Why table grape exporters need AGOA and efficient exports",
+   "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOQXpxekdfNXQ4d05jYklqd1FTY3kxU01oR21HZ1kxYm9BYmVNcWNYWV9pai1ET1BGZk5OZjN4VUVEa3lQSkhDUzhQdEFJS1BZLUJLeUVuTlVkN2JlWG5kb2dEcXNlSF9xb0pnZmFsSTVvSTNwZVBqWFYwa19EcU9aaEZydGJLaG9xSEY0aHo3RlFfemJKQUNONzhza0lPcWN1cFhpVmhuOEl3T3R0MGtQcEkxTXdLTm1LWlFlMDBjR1hiM2FYR3c?oc=5",
+   "source": "News24",
+   "region": "SA",
+   "published": "2026-10-26T11:50+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
    "title": "How war, security and coalition math are shaping the Israeli election",
    "url": "https://www.cnbc.com/2026/10/26/israel-election-netanyahu-iran-gaza-palestine.html",
    "source": "CNBC",
    "region": "US",
    "published": "2026-10-26T11:46+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Macro Uncertainty Global stock market dump Oil price spike A",
-   "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9jNmJHbUVLOWd5TnliYmxJeFZ2amE4S214ajdQeFZlX2MyUV9wWEphcVlVR3pIX04yV0VWUkRZNnVJRHBpUmVQZVZjRHpocFAxQm1xMHh4ZTRnYWM2aDlMbFF5UlZiNk83M1YwVzRLMGZGQQ?oc=5",
-   "source": "KuCoin",
-   "region": "FX",
-   "published": "2026-10-26T11:45+02:00",
    "breaking": false,
    "tickers": []
   },
@@ -539,18 +896,18 @@
    "tickers": []
   },
   {
-   "title": "Musk claims $40bn chips debt closed, yet talks ongoing",
-   "url": "https://www.moneyweb.co.za/news/tech/musk-claims-40bn-chips-debt-closed-yet-talks-ongoing/",
-   "source": "Moneyweb",
-   "region": "SA",
-   "published": "2026-10-26T11:30+02:00",
+   "title": "Sterling today: Pound slips as dollar holds firm ahead of Fed decision",
+   "url": "https://www.investing.com/news/forex-news/sterling-today-pound-slips-as-dollar-holds-firm-ahead-of-fed-decision-4971754",
+   "source": "Investing.com Forex",
+   "region": "FX",
+   "published": "2026-10-26T11:38+02:00",
    "breaking": false,
    "tickers": []
   },
   {
-   "title": "Audi CEO under fire for speaking at Trump rally",
-   "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPc21QV0Znb1I5U0pqT2QtQ0FPVTg4VFJaazJMbGRDbEhRbGVWNS1NMy15TEswVzBTRVp2b3ZOa0xaZVQ4UnpYdVNxcnMtNDlXTEJ5VGlKaEdoOVZiNVBTam9USzd5dDJTM0JnX2tFYl90MEt2eklrWllEaERRNnI2aHBfX0E5Z0pjNjFWOVltSlo1WGRJb3JiMjJEMG42SmRYY29uUE5R?oc=5",
-   "source": "News24",
+   "title": "Musk claims $40bn chips debt closed, yet talks ongoing",
+   "url": "https://www.moneyweb.co.za/news/tech/musk-claims-40bn-chips-debt-closed-yet-talks-ongoing/",
+   "source": "Moneyweb",
    "region": "SA",
    "published": "2026-10-26T11:30+02:00",
    "breaking": false,
@@ -576,8 +933,8 @@
   },
   {
    "title": "Effective education spending should be the next focus for Treasury – Mavuso",
-   "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNMnlVUkRUam44ZThoNno2ZmNyUTg0NjBxMWVXaU5JaEtmYnZiMzdxU3JtOE5ULTdma090azFpZzdUckZUTnc4VlNrZXI4VWc0Z3gzX3A5Q244TkItZGs3UjdRRWdiTzd2eGZHc2l6WXRuTlFqMHhHT2ZJWms5ekVURnFubkNJWklxWEZqaVdidDhobGk3eGpnRE1fOS1pdXRFbnlOVURpQ2pYcWhsVVd4VlU3T1M2UnZXRXc?oc=5",
-   "source": "Polity.org.za",
+   "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPY2NyU2E2aDY2LXM2QVdTSTJOV0xERnVYT3dCUDh3MGlsZEQxeUItc192ajRQZ0ZXVnBmZzdtbXloZFctN0ZkaVBaSWFoeHR6endRU18wVXdrdURFdkVMdzRFbTdUMGdOdFA4Y0NuSXJjQ3RYaDE2Z09ISy1xVzNWWW1oeFhaRWdsSlFjUmVBNXFzYWdiNUFBMFNLM0lzWXhaWnBqSWU0dFpRaXc2RXhhb3d5NU9pRW5uNW5SZml2YzNrMTlN?oc=5",
+   "source": "Engineering News",
    "region": "SA",
    "published": "2026-10-26T11:14+02:00",
    "breaking": false,
@@ -607,6 +964,15 @@
    "source": "Daily Maverick",
    "region": "SA",
    "published": "2026-10-26T11:11+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Galp and Moeve Scrap Plans for Major European Refining Merger",
+   "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQdTd4RmpJSVVfbmJucnpnb0l2MHZTUDZBQ2ZsbFY3SE1PajJTaWUybk9GQzhITE9zOGNCTGRBcUhxQWlNRGJ6MXBSOEktLTN6YnpOYk5KYnpXOU1XY0tGbGNBbHU2Yk4zQ25OTWp1Y1RDbVljT3Vzc1NXTjA1X2pOdERsSVoxNmtpN21iUHJ0UURNYUROemRjNGRLZndkTWpWUXfSAacBQVVfeXFMTVRtMU9nQjNWRGhTY1hCVWNhWlFJNko3RjlUT2VncDZKdjZjanIxUkNOeGlZbVU0cFM2a243S3AxRXoxZ3RjRG51Z25vQWR6dFNBWlpxSTlSTnI1cWF5RUJjYmtyc0kxRkFHcUc2cl9UUi1zSFRWbFhlZXI0bkUyQXRwTzFrSEcxdlZFc2N4TDJMUDZ6WndVTDliWU5jMEYzYS1DNmU5RkE?oc=5",
+   "source": "Crude Oil Prices Today | OilPrice.com",
+   "region": "FX",
+   "published": "2026-10-26T11:10+02:00",
    "breaking": false,
    "tickers": []
   },
@@ -656,8 +1022,26 @@
    "tickers": []
   },
   {
+   "title": "South Africa Proposes 100% Offshore Investment Rule",
+   "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNOTRld1hDT0hnMS1RUThTR2FiU3RvMkE5STROS1dGelBONnhXRnJMMGl0bUZqN2l1dmZmbmxlazk5Vk5DRXZnbHJFczBWV1BhNnZBT1ZDVl8xcmc0bXMzS0I5WFppcHpKWF9NUTRxdG5JUldnZ0U1XzhuVzEwLS1qeFBB?oc=5",
+   "source": "Serrari Group",
+   "region": "SA",
+   "published": "2026-10-26T10:49+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Crude oil price prediction: is a $120 shock coming after Brent falls to $114?",
+   "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPMWdBS2U5NVlSX3c1TE5wcEdZSnBkQXdvTEsxcXFpcVJrUjRJaUxsdGZFbXpZTlI1eDRqZnJRWUMtR0kxWEhCR1k5OC1wUkF4Z250czVlZ2hxb1U4TDR4blZwT2gyUEVXZmo1aGI3LWJ6Y2NfQlREaE9lN0g3N1hXdFRub2tld2laRlhCT0VDc1JxNFJLdVByME5MQXFSQVk1ak5HWWtYZmZPWEVDaUVlOUxsREpEZlc4QllhN0FyX095cHg0MlE?oc=5",
+   "source": "Invezz",
+   "region": "FX",
+   "published": "2026-10-26T10:43+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
    "title": "Coach Rocco Meiring’s formula fuels swimmer Pieter Coetzé’s rise",
-   "url": "https://news.google.com/rss/articles/CBMimAJBVV95cUxPN2hEV01ha3d2dzNZZlIzY1VjWG9FUVdRcnlvLWxOSlRYNTRWSGM2MlYyREZJMkZIWUJ3M2RxU3NVWEs5WXFCQXB2TXVlNEhkcVVjd3dYWXhrbmFUVFRZbi1JVy1BdnVLSFlfQjJoT3J4dkpFWkJsZlpibDV3aDJhUngxemM5LXZzMFAtem12TTdDQzZjUkpjXzBfazhYaXRoVEU5dmV6WTI3TlF2MV9JRW9PakdoN21oZVQ4SzAxdzgyMU1nR0FQWnBpdnNDMkc3Q3RVdWZqU19iQktWMUNWcWhDcHRxYzBLZnhIU09oRkdDZlR3WFFkUHd6Mlp6c0Rud1N3Y1NsU2NzajNpUHkyWDhoZkptZHFC?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQYVpfQUs4b1pEdjUtV2JxdzdwRjhpVWVPMEFxQ1pVZHdyQUlsQnpOWnRPMGg1T2xFbWtWaFhvWmN5b0VqdFVjUmRtaUlrOEc4VTdIM1NqMk92UXVDZ2VGaUlyMW1zWjg3UDJ4VVFQSFJPTTFpSWl6ZWRmMUV4N2w1UmZYVHZncG5rZnZtM3NScXh2WnFFcm0yRjB4M3J6UkhlN1I3SVhKNzNlNDZRNm1jbl83Zlc?oc=5",
    "source": "Daily Maverick",
    "region": "SA",
    "published": "2026-10-26T10:36+02:00",
@@ -668,6 +1052,15 @@
    "title": "Trump says decision nearing on Iran: deal or ‘finish it off’",
    "url": "https://www.moneyweb.co.za/news/international/trump-says-decision-nearing-on-iran-deal-or-finish-it-off/",
    "source": "Moneyweb",
+   "region": "SA",
+   "published": "2026-10-26T10:30+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "US, European Markets Dip On AI Concerns, Elevated Energy Costs",
+   "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOLWNKVVRidlh3eC01b3U0T1NBRlpGTEdDbFZmdW50NjBLcDNrWnVRT1hyNmpFWUdjQVhZUTRYQnctdHdNOWlfdnBDV1YybEhteXJud0xTUUlUWlRvQllxbkZMWjEwM1huX3ZCVFFaOHNqUU1OTnN2VE5lbGJxWTd4MkNMZXB3VU1id1B2ZlE3Rko?oc=5",
+   "source": "MarketForces Africa",
    "region": "SA",
    "published": "2026-10-26T10:30+02:00",
    "breaking": false,
@@ -688,402 +1081,6 @@
    "source": "IOL",
    "region": "SA",
    "published": "2026-10-26T10:26+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Big VAT changes coming to South Africa, and Wall Street riding on ten companies",
-   "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOXzNSSmNNVDRud3V4dVZqY0lvdG9KV2JPcVVaVFBfc19aSW9paWFaSW5IamsxeDI3N25YVzNTaGZldjgwX0xYeWVwOXNZblNPWUlmX19pME13X1ZuNVZBb3pPWnExS2RZVW13bUhwM2o2NklBdDhKVFV5c1BNOW8zZjBVMm9OLS1HTWF5RUZDV3RIakcySHlnRjJzMnlUVXUwNGdIVkc3bVc3bXJ5SEhnQUZaVzNmU0tOYkJ0YUdiNA?oc=5",
-   "source": "Daily Investor",
-   "region": "SA",
-   "published": "2026-10-26T10:19+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Froneman spat exposes government’s closed-door preference",
-   "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOZFc4b3hVSFp1dmktMll2d3g3bW9QUnM5aWFyNkhxcncxWU1NcXBobUFPYm1tOTVpaUtZdjFxWHFkLXhYZHZ2TzNiVVdlWjAzMjZfTHBmUDZZb29uem9Yb1dEU1V3eWV5TDNjUnhRRHZFTFdKeEtTUUI1bkk4aDVoTTVHYzhzVTkwUGJ4dGtTUnZfWEhoblpj?oc=5",
-   "source": "MiningMX",
-   "region": "SA",
-   "published": "2026-10-26T10:09+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Secrets to a decade of successful investing",
-   "url": "https://www.moneyweb.co.za/moneyweb-podcasts/moneyweb-now/secrets-to-a-decade-of-successful-investing/",
-   "source": "Moneyweb",
-   "region": "SA",
-   "published": "2026-10-26T10:08+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Netflix users are watching less, not opening the app as often",
-   "url": "https://www.moneyweb.co.za/news/tech/netflix-users-are-watching-less-not-opening-the-app-as-often/",
-   "source": "Moneyweb",
-   "region": "SA",
-   "published": "2026-10-26T10:00+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Crude Oil Price Forecast: Brent Drops From Near Six-Month High and Falls Below $110, Can Middle East Supply Risks Limit Losses?",
-   "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQYUptbXRZTncwd1JhemY5WXcxZ09aMGR2TjZnWEpZVzlqNzdibmhBbnlBeFZrdk4zNXFkN2ZBNVlJUmRfQmptRVM4NWFVWHhuUG1yMkJuaVNGRFRMWEQzWG5BN3JDZndndUw1SHBvWWxfTi1YTWtrb3QwcXZhVkwySlYyanlBV3ZrQmZ6OVQ0MnREdURmLVhDOGg3V2F6b0VqTUd5WEhwOWNCcUFPQ051LTFVVldKN2FrV0JjZVlLd041MnlFaTUw?oc=5",
-   "source": "TradingKey",
-   "region": "FX",
-   "published": "2026-10-26T09:57+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Lula’s Brazil election win has given the world breathing space",
-   "url": "https://news.google.com/rss/articles/CBMiogJBVV95cUxQNkFzSmx3dHZkMmNjbi05RDU3dEVzU1ZPQVc3TGRLczN5bFl4N3FTNDQ0ZWtyendMMTdlS0FKZy16cHdmUUhHTVY3UVpBRExmUGNiYjZzZWtMNl9LZGR1VWx4RkI5RTRTMnByLU9CckRjQl82dTd3U2wxbGd3VWYwamVWbW1FMlN2ZkNST1ZnMzZjQkE4SW1HLWY1YnBYRVRQaWd4ZEhXZXNXbUpGUkdBdllJZWk3Vm9lNDhlNUsxd1RMbnlVenk2M1JfRF9jaDVWQzd4TlRIcnhLMUJTRU11MGtiQTAwYmlXQjFKOUxyZkdkMVhwZkY0UmpucWdTdFo5cHJrMjVCWkNzSzFVYl92WHE2aWtHOFhYdjNXMXZmU3FNQQ?oc=5",
-   "source": "Daily Maverick",
-   "region": "SA",
-   "published": "2026-10-26T09:54+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Rand steady with local economic data, Federal decision in focus",
-   "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxObm12Vml4RGJqNnRTUUlfNTRoSEdGSVhjWnFNWWFjS25KSmdFejB1d0F4eHVnbXp1eWI5eHVuRW5MS3ZveVVhbkFnZG1RdmFCLU5jMldHZWMtVnFfZmRMc3ppOVB0NUNKRE9SNXNBOWZiN3dBeE85X0NjaWtESFk5MnFOWUx0VHlmVW81ZG5RMHFKN3N6Y296SjB6RDJNYnR2SWJlQnQyRjFxYnpQVUNTRFJVUTg?oc=5",
-   "source": "Channel Africa",
-   "region": "SA",
-   "published": "2026-10-26T09:53+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Oil Price Up More Than 3% as Fears of Renewed US-Iran Combat",
-   "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNUGJZTkRSX2U2UkI0NEhrc0YzR3BrWUpNbVNPeThKWmptczVjdjd1YjlUeFNiLXR5VWpGdVN1WmJqSU00b1JadkxNdDRRbzBxbV9HMEg0ZFlvVWVoMUNrWlNhTkEyTlQtelFPU2gySEFvV0ZEMFhEdWFJNkttTzdwMUZVWF91NHRnSHlsZFZRRlBPMTFMTGVQdlVsbw?oc=5",
-   "source": "EnergyNow.com",
-   "region": "FX",
-   "published": "2026-10-26T09:46+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Bitcoin dips below $80 000 as AI-related market selloff deepens",
-   "url": "https://www.moneyweb.co.za/moneyweb-crypto/bitcoin/bitcoin-dips-below-80-000-as-ai-related-market-selloff-deepens/",
-   "source": "Moneyweb",
-   "region": "SA",
-   "published": "2026-10-26T09:45+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "JSE weighs retail hedge fund ETF listings",
-   "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPejdaLVl1QU96czlMNF84VTllTlU5REFQOVE4TzNCVHFNb29FTUpsbW1XTHlWNlhETVJpbFJIQ0QwSFRTbUNtU24wWTNOMzZqazRwY0pmSXdoMDF4V2lJRUhxMVNITExDUTBhS1BlQ09FMEYxb2lGOXhCSFk3cll1ODRidmFyUQ?oc=5",
-   "source": "Citywire",
-   "region": "SA",
-   "published": "2026-10-26T09:22+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Gold Price Forecast: XAU/USD Reclaims $4,000 as Oil Cools Ahead of Fed Decision",
-   "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPdDdwbjFmaURadlM3WGJzNW5VTThBSEJvcldKc1FCRDV5N2xPdHB0RDdWSEpLNEtPc0NfS0JjSlNKdDk1NVItaXNHYk93QU5UVFJnX2tkUlhjVTktS1pESFpSSXAyb0thUkh0RnhLcWFrWlNPUXdDMG9DMGFFMjZ4VUpoa3c1ODZOYWRKa2plcUh0R2FJSGt4YVNqRzgtUGVPN1dlY0plUUNJYnFzOGJZanFfSE9DMnRWYzNv?oc=5",
-   "source": "FXLeaders",
-   "region": "FX",
-   "published": "2026-10-26T09:22+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Saudi Arabia Turns to Singapore for Oil Storage",
-   "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPTkNWWkxDbURla0ZTbFhESDJJUUJ1cEVkRDZNa0U4a2x3Z2RQREpwQnlxVHdDZ2wwUzhkaWlZY25WTFFwRUJCeXlyRy1vZ2lGWGVwQlFHSE84NTJNeHQyNHZLWlVIRHNycFBhTjBpU3pORWZUdGZuTWY5NFZ3TzhHRkd3Rk1KTF80aElCN191UUw0cUlaYmhJU3d1WmpCaEw0TXJ0M3Zn0gGrAUFVX3lxTE82c0xhZ3Axa0NrRERPS1dMNHF2VzBNbjZTdndfWk93RGM2eVJDNUx2UDQ4ZEdFb3JXR0FheTNvYVM0ajhiMmVhbUJyamJoVVBvekpYaXFRZEhaWEVOZWlNbEtZb0w3eUJTTmYycHpIdmpRNTJTYzZidS1UX1Y1X1NIa3pNYWRkZndEbHNPclV2cGV0VlNvSnZtU0s3VEptYTBIOElidHlVd1FDaw?oc=5",
-   "source": "Crude Oil Prices Today | OilPrice.com",
-   "region": "FX",
-   "published": "2026-10-26T09:15+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "World’s second-largest economy boosts trade with Africa’s largest economy to $15 billion as South Africa grows wary of U.S. ties despite 125,000 jobs at stake",
-   "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNcnMwZDA3ajN3Ums0S3RVaDR3eXJ4TnFua3NnUHFOb2VuV3NJaVVXeVRKZ2d1VmxBS0ZVVmZkbE5OalJQVkdQZnhSTXc0UGpzaUYySzF6eDhLQ0xid2VYWkM1VFdKemtub2ZsZ1VZNm10OE5KZ0VKUjdXMzhHN1hibUhTbVVJWWVRY1dvZW8wcU1ONGlvMk1Sa0hERENZX1Y5RWhRX3NvbzR3bVRwVWF6UURDUWU5aG5QdC03bWVmS3lXT3ZwNnVteTQtZERtZnl0dmJr?oc=5",
-   "source": "Business Insider Africa",
-   "region": "SA",
-   "published": "2026-10-26T09:12+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Articles by Sean Phillips and Risimati Mathye",
-   "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPZkdEbmVwWnY0emkyY1ZUVzdYeGJzQVB4TWNTd0dWRmIzNDEtRzQwY1hWOVZYNTd1UzVZQmZ1RXJyVWJWNktnVFVIdTdpeGxHSVk1Y0hUOEJzVEpydkVPWVYtZjJKcE16YmFlcXFuWHptVnRrOEVHRk5lZElocVpMTXpUeVBUeHBMSFRwZXE0UnYzUjBxdzRHMFU0ZE5aMWJKbXUxSDVJdDNWQlZEcmd1X0EzSW93UE94UHFmMllaRGtmOHlYdUtTWERFWjF5UnI3VF9YN3NOZk9yQUxO?oc=5",
-   "source": "Daily Maverick",
-   "region": "SA",
-   "published": "2026-10-26T09:12+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Chart of the day: Gold price tests $4,000 support, is a deeper correction looming?",
-   "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOVEFMVHgtU3Q4cWY3SHdpaUFZdTA2WGpzRmlZaHh1RlVHTUh1cm11emV3T1JrTmplNGZIcy1raUE1Yk02VG9CNHRCN3c1QXlnSXhuZXVKelhJMVEwa0Nya3d4cmVCZG83Z0VTWl9OVVNpcGlmUGU5cHhrZmFKYTFWV0g1V2pWS2VjNXVaSTB6cC1rRm5ZaUVycVhQR3A0TXdFS0FEZkFUYVRGcEs3SlFxMktMV241WkxIMkIydUtybHJDQQ?oc=5",
-   "source": "investingLive",
-   "region": "FX",
-   "published": "2026-10-26T09:05+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "South African rand steady with local economic data, Fed decision in focus",
-   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNeGU0QkhLY1JTVU5CNURmYWxHWUwwcG4wMXFwcHlEX0JQM1l1ZHRoQS1QRm9JcU1FUzM3YWhJcXUyVFFQVlZFc2Fwb2JlSUdocUlDU1UyNks2OE5JaGQ2TFZfVXJYQWVJMXpIRmttaTg5M0JXVDh2TVJBQjczR2otc0JkQ1kzWDJSZlRFME0tSldtVzF4YzhBQ0xJcUZjbnF3YmRUOGVmLW9jTkFXUElIRmRneWJpZw?oc=5",
-   "source": "Investify",
-   "region": "SA",
-   "published": "2026-10-26T09:02+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "How SA Youth helps businesses build stronger learnership pipelines",
-   "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPNExFMnU2cWxuWDREN25YOGtWbV9wOWdnbzl6X0Nqb0J5bGVGMjk2ZGxZdUdkTTRMRkdzSUZSa0Nnd1JDcXdxeWxDM1V0SWpzcm5TdmlOOU1xVXNZcEFtWUhLSkVJQWJ0WlhCSEZIRGtlSC15bkozdDB6a29YVTFlQzhrbmd3V2tKUUZDTGFEeVA0dWtkbFVJLW9ZZHRVdUdHeDUyTG50R2FYdDZuRS1yMm8zQmM?oc=5",
-   "source": "Daily Investor",
-   "region": "SA",
-   "published": "2026-10-26T08:59+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Gayton McKenzie’s mystery visits to Blu Label ahead of controversial Ticketpro deal",
-   "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOLVMyNU5iZlFwNzdsaHBuTTlFOWN1RHd0azJNcndMR2JhNG9GM1YzYnJqWHhqcHNydmdfOTBLNTJrY09IMUVrX2Y4bWZzX3Atc0xkVHFjTG4yLXdGaTF6NXVIY2JLUl9ScWRBT25fM1BQa2Y0MFFZWGZUZHJrUzQ1SUVkZ0ZLaDcyeVpMRkFDRExwR1plMzFQOXItV011TnRfUUZKWFJlSXBZSE5IQkFDWU9Ta3VDQUNYZTlzS3dLVlR2M3BoY2c?oc=5",
-   "source": "Daily Maverick",
-   "region": "SA",
-   "published": "2026-10-26T08:49+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Evening Wrap: ASX 200 gains as falling oil price sparks rally in gold, base metals and lithium stocks",
-   "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOYzJFTVlvdUhQMkdWZjNIVlJqbFNvLUZFbmJLMWNSYnBRNGFGVjNIVGxwd1JVZU80SGtqZWk5R2xQeWRGMElSQzNYNjk3RUE1eTVwamNOeTFFYzMxN0RqT0pJRU1oa3JhVGxZWFU4WVFKN3FnM2FpM3pDVk04RXBRREFqeG1oTTZtaHJvREcwdGlFTlBjeTFsUzFVQkdQUEtzanA5U1lXUEozNVVBd2c?oc=5",
-   "source": "Market Index",
-   "region": "FX",
-   "published": "2026-10-26T08:46+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "South Africa is going from zero to hero",
-   "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOcC1kanpJcDMwR09vQUJYRllmaUtlMjBrT1VkZm15bTdMenhsNnNHc29BRkZ1bllkOWpGdC1Cb19VZjJ5QkpsZ0pwOG1fM2Q3N3ljNWs2WlBlenJqR05ZUzRkcllUZWlvODhZT3BubVhRMDRCWVg4b3lZRkxhaWs1UUpaMS1NU1NF?oc=5",
-   "source": "Daily Investor",
-   "region": "SA",
-   "published": "2026-10-26T08:30+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Oil price falls back as traders remain focused on Middle East conflict",
-   "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQN0tHRndOUXpFUzZURmdJMWlMMk5sZ0Y0MlpXRjc2cldBMmhBZTFhbDFNUFprUUJiRExfUVFIZ1pTQ1d1YUFsaVBhRUVYZlZ6RDB3RGdOaFJIUHJYVndmZDYxVXNTMXZfeWZhRTNkeEhQVVpnZElIVVlSbHI4cF96b0JzQmc?oc=5",
-   "source": "Financial Times",
-   "region": "FX",
-   "published": "2026-10-26T08:16+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Why climate could be South Africa’s next big economic challenge",
-   "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxONkp0ODFQZHB0dGVyMmZrNkFlelNyUGZ5bkVrNFpmaHM4bXhTQ2M5THRYVk1JMVN6YUEyaW5sVU5QeTI1eFljYnp4cmNibFphUm5IQzhDeDJUQ0pTUnFiWnpyamQtVXNyTWc5Q0Z6QVJPNjRESklpVnE2Wm9PUkpiNC1iRTN1QjVqU2kwQV9lYVVqQmxIQnNzV2ZvTWVpeUJDUWhF?oc=5",
-   "source": "IOL",
-   "region": "SA",
-   "published": "2026-10-26T08:15+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Articles by Vicky Abraham",
-   "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5Wb3JtRkhSd3pPY2tfc01BZ2Q1YWd3OG9PcUczczZOcW9kRjZxNkJ2NjROQXc4dFhOOG9ZRExxVHZncDhGWHREWTVTVlplWXRwMFNJNF9pcXRja25xc1NpcklaQQ?oc=5",
-   "source": "Daily Maverick",
-   "region": "SA",
-   "published": "2026-10-26T08:14+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Oil Prices Dip but Hold Above $100 as Middle East Supply Threats Mount",
-   "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNZmlMck5ULUdUWUtnNHZGSlJkamtYQmVaZjB2NHk3N2NyckR0VWpTcUltdFNCRG5tSkVLZlEydHlkc1FBaW1aQURxb3FzejY1alE3R29iWmdocDlOM2tqUk5QaGdrZ2tXcENNb1N5MGlRN1J6Wml2MFMtUWd1MjZTRGE0SnhyZURUUklUT0FHVkgyZEtJZlpxaV9fYjE5RlVNMDBGTTRrU2V1dWpGc2pUZ0I3ZVFYcTBmc1c3QUh5ZGI1LXPSAcgBQVVfeXFMUFFicnBDSjh6MU0xM3pKYlhhajJoMXFQMG9pZi1qanBjQWQ0QldJek54YWJaWUhkNS1qeEhnbWM2dnlOdmtDWGtuSHd1UHFpd2NpQjdTdUJoX0tMRnNWU2d0Z1V5RHdtdTR5VmlvcFZTMXBsTUlFMFhlWWNIMzZBSVNCX2wxYjk4V2ZWMHc4SDVrZU16Q1BRLVc1RlJQalg3bGtZYUJFbzZ6ci1hR3VQYnFwcWU0NFBpWEtuZ1pqMXoxNVZ6cExpVkc?oc=5",
-   "source": "Crude Oil Prices Today | OilPrice.com",
-   "region": "FX",
-   "published": "2026-10-26T08:03+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Pick n Pay taking back control of its stores in South Africa",
-   "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOaUJtbUxJVWdGNFFwVFMzTURMYTlIblBqWG1oc0VIazNOeWhuZEJ1eFhpS3g0eUVMUW5qNy1lUjEyNXJMT25uSGN1ZlgxZTg3dTRkS2RhNkM5QXc0V2ozMDBrTVVYd0xFYVVucnFlcmR0SndpTXpLZ2otM3pxOEtFRFAzN2owX1o4aU9LeVRQblk0VGozanloY1ZsUThGak5sX3E0?oc=5",
-   "source": "Daily Investor",
-   "region": "SA",
-   "published": "2026-10-26T07:57+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Gold gains as oil price slide cools some inflation concerns",
-   "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPZml1aC0yS2NrLUloeEFPZnYyeExpazhPVExTT1BLcV9HZGxEZWFzcHFUMTJFbDhUTjgyaE5EbGRja1BRX0p2UzlDSmEzUUpzTG9ZT2xKZEZMczFvb1pzU2xrdXlNT0dDUXYtQnhoLUFpT09xQmF5Q25FQXdKNGpjOERVdTB1UTk4NkhSd2k3cUNBSTJRMVVsUlpSWQ?oc=5",
-   "source": "Reuters",
-   "region": "FX",
-   "published": "2026-10-26T07:56+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Cable thieves, sewage spills and invasive plants are choking the Baakens Valley",
-   "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPOHo3eGYyUEJ0SDd2S2I1aGFxNjJCX0hPU2IwTzhoRzVyVWk4eS1LTjZVaEE1aWxRWWVRU0FFYmw2b3BBTVBIOTNRelZFZHpGajdrdkp1aU5JdlJ6a1RJbDltRmowZ1lPcHlyaW1sQWFQNHdYb25vYm56UUhYd3hfTHJac3hwM3BZcmxGb0l5d2lsUFF6TzROWTNZZEpyQmNGTEZvLXU0UXVhQVpHOGticzRsUWh6VkVNcFBDZkdlMWQzR1paTHlSREFR?oc=5",
-   "source": "Daily Maverick",
-   "region": "SA",
-   "published": "2026-10-26T07:52+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Crude oil price prediction: is a $120 shock coming after Brent falls to $114?",
-   "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPZTYtbnJWTDlOVWpYX3Q2YUwxdDE5bmNNQnFKb01ZWkUwR2psRFFDV2FHWWF1RG42ZHRpMkFrZnJSSXZTcDFoOERxRGlXNDNFanpIRnc5X1BwYVhTV0o4MldJM1lrQ202R3pPMnFGNWdyR3hzTWY2NHgwSk40VW15RW9FOXhob0pIVjIxOEMwUHg2YlN3Vmt0MlB6VTd5aUQ4UmZtMmtlSFFISTk2NEE?oc=5",
-   "source": "Invezz",
-   "region": "FX",
-   "published": "2026-10-26T07:43+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Rand faces fresh pressure as oil tops $113 and global risks mount | The Star - newspaper",
-   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPcndJZE9XWHNkMTFyZGpwdGFxeXRqbDJsNERmd2JzcjJpY0I5Umdxb0N0UFBWdWo4UGhvUTM0RUlYcC1abEpoVkQxby00bVFIMzl2azhYZ2JFZVdvcXgxSi1GTG5kTkc5TnFncHoxOEplRmNUbTdQZEdFa2Z5aXUwRkx0SHBxSk1UQ1c0QWdxRnRtUzRUak90ZDlYWm95cXRhNXpYSDh4QVhWWTlMNmRITkZmRzhCZw?oc=5",
-   "source": "Magzter",
-   "region": "SA",
-   "published": "2026-10-26T07:40+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Cosatu: South Africa faces a jobs crisis, not a debt crisis",
-   "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQYl9yRXp5ZjVBX0wtMS1hQWx3Y1dFWkZ3bVFsSk01bDQzWFBLbVlNOVFxOW5zYXIyWjlEMTZRMkFMMzF3SnZTdEhtVTdWZ2JuU3lxOUdhV21aUkJVRXM3NUJiVVJpRnRZMS1xWmMxQ19uN3VWV2Z4WWgzTUg1cTR3YlIxX2dnMlp4dEZJb3o0QmNVTVhiZjlOR0g0NndoOFVUS1FobHZR?oc=5",
-   "source": "thenational.co.za",
-   "region": "SA",
-   "published": "2026-10-26T07:00+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Earnings Release: Here's Why Analysts Cut Their Clicks Group Limited (JSE:CLS) Price Target To R283",
-   "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNZFJac2xuSkNYTW1VcnlOa2ZVZ25iX1RKUFlwU0IyTUVaQkQ1V1BHZGpaeDhuQlVaVkpqdDBvRExybXJ2OFJIanltR21DeWJYS1NOanZQYTVHbGluQmFidUd0VWNhMnZuTWQxMW9HTnhUQVhHY0FyVWIxX2k1bzJxSVZnY1kwQ0pkcDJ1MEpYaEdBZEJUQnJHY05VTlluOExLaW1OZEpiNm0yUmxOZGZZRmNmSy1RQlNkZktxalloOUF3clprbjRzamFIa3hiWUpTRVRNWDA5cF9aa1NXZ0gyQUJR0gHiAUFVX3lxTE1kUlpzbG5KQ1hNbVVyeU5rZlVnbmJfVEpQWXBTQjJNRVpCRDVXUEdkalp4OG5CVVpWSmp0MG9ETHJtcnY4UkhqeW1HbUN5YlhLU05qdlBhNUdsaW5CYWJ1R3RVY2Eydm5NZDExb0dOeFRBWEdjQXJVYjFfaTVvMnFJVmdjWTBDSmRwMnUwSlhoR0FkQlRCckdjTlVOWW44TEtpbU5kSmI2bTJSbE5kZllGY2ZLLVFCU2RmS3FqWWg5QXdyWmtuNHNqYUhreGJZSlNFVE1YMDlwX1prU1dnSDJBQlE?oc=5",
-   "source": "Simply Wall Street",
-   "region": "SA",
-   "published": "2026-10-26T06:58+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Platinum price repeats negative closes – Forecast today – 26-10-2026",
-   "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNSGJkV1M5OHBkZlV3SWxrbjhMMVk4WWtyOFAwRWtEVmF5WmRMbEFZWDdoLVBNd1hPcjkzanJmQ1N1RnNRLW5ydVhuQWlrbHNfTWt0SUYzZEs2cmQ1X3RqWERSRWlKV0tHbFAtcklDYzBkQTBBa2Nwb2hVRTNHd0hzYnhBMUFKa2V0RlhBRG1ZcTdnMVR3b1FqVUdOY09iY0ZncnpXX2pMQ3lUQi12TFVJNEtIR3hFU05iU1BoX2dpYUNnVlZPOTZmWVNUMVR0T0lIVk1HVFgxZ1ZfV3k1dWtJOA?oc=5",
-   "source": "Economies.com",
-   "region": "FX",
-   "published": "2026-10-26T06:58+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Gold price in India: Rates on October 26",
-   "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPVFlOS3I2bXlld2hyakN3Y3p5Z2o3TGZXc2x6VlRZNEhmdy1XX0xLRFp2VXl4RVVxY3BhMmRiMFMzTm1pM2M0YkstM3lwdmNhZElER2dFV1VnNDRjUDBKdFY3dXlVdFBiXzBhMEo4elIwYkVPb19kYXNOVDFjRWJ5SGx2V2oyaGt4eTNSc0NvT0VkaTJiZk5hRzF3b1ZYSnpOSThkeFRR?oc=5",
-   "source": "FXStreet",
-   "region": "FX",
-   "published": "2026-10-26T06:35+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Gold Price Analysis Today | Forex Gold Analysis | XAU/USD Analysis - October 26, 2026",
-   "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPbkdYUzVoQUswT080NDdmemtqeEh6NDlJLTA1LWU2enN2em5qSVd5by1iNFVLU1FieEt5c2syRnk3TXVHRWJjb3VTSVpKa1hMX3RnVFJsX1UtQ2ZqV25aemRGT1ptTUtfcU1ERGRoQkJJdVFNNl9DdGVxZG4xaGdITXdqc3RTWUJkaGFUbV9LZHhyQ2NMbGVqV2wtUHA?oc=5",
-   "source": "Mitrade",
-   "region": "FX",
-   "published": "2026-10-26T06:07+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "South Africa to allow fund managers 100% foreign assets under new framework",
-   "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNY0pQMk9nc0hvak4xVndDN2ltOFA3UGxDdnUxLTJPSVdUeUtoU1F2anZFNVN5SGhDUE04ZmcyaG5SbWJKTzNQRDBvVndpeEdBN19GN09aWVdJOFNhdXByVHhjRldEcm1BNy1NdFNRdmh0OWhRbTFnS3VKSWFZZE1HajA3OTlSZXBtQzNvNk9uTWtMaXh5YXBRMVVVOU1kT3ZBYUxULWF3?oc=5",
-   "source": "MyJoyOnline",
-   "region": "SA",
-   "published": "2026-10-26T06:06+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "One South African suburb is so expensive that the average 4-bedroom house costs R60 million",
-   "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNRHBqRUJWaVM4bzJaRDR5dTFKbWRzczltNzZEODNHNi1CcDlkMVdhRXNxblpfTGxibktpcWZfVTdINXdnc1dpaU1UVG5zUE5IVlE0bmpRZlEwNXBham95ckhDVUk0a0NOZW05RnZFRy1DZF8xUnhpM0JzYmMtN3lBYTRRa0poakdaZWpwVlFyM2pIQUVjT2NiYXdfUXpjQkRHYXdVV3ZvZXRENm5JU2FYTGd4d2dLUVJfdWxrR2swY3hhbHdKaXFlQ3YyN1BXdHM?oc=5",
-   "source": "Daily Investor",
-   "region": "SA",
-   "published": "2026-10-26T06:00+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Enterprise value to revenue forward of Efora Energy Limited – JSE:EEL",
-   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOM0NoU2hCeVBaVzdMY3FxLXJma0JyaGY1RVV3REdHMW9zOEtzSFRXaDJxbjdKZVNwdGItRzZtRTJ0UUFuSDFHOHlrRW82TFcySkdKR0NWVlk3QllhalN1ZzdYQ1o2b3h6S3N0YmthLU1hbVpwY0pLY0FDZHBib3duUWxUSXhySDVFelZHdXNRRG9jay16cjc2TDdTWmtYQzYyY0hYZmo5NA?oc=5",
-   "source": "TradingView",
-   "region": "SA",
-   "published": "2026-10-26T05:37+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Coming clean on sleep hygiene — Why does nothing I do help my sleep?",
-   "url": "https://news.google.com/rss/articles/CBMiogJBVV95cUxPam0yNjlqNmtQOU9telZNNGFPRXg2cUxzQnZJVGhKa2dpUWVfajhOWnNvNkY4aXRTNHR3MzliVWJpYnl6czdwdUlrYXpGTC1uS2NmeENSdTMwWS14NzVQYUM1MUVLaFo4RGozVm9UNERqUGlSQTNIclZjV2JJZHQtbHJHak9GMEJHSXg3ZnF5Z2o1ejJrOERVd2l2SENxNUpFcW1jWHpZeFgxWUozTDZVblpfVlJnMEJSbjMwVjVFQlF6cTJPRHVTbElXcjJRdmZfTTNSQWZpcVFlQUxUcnhHLWwwZUQyUTZ2MElrZ2RBT1N1aE9SdnUxb2YwVURGNWlsUVM2Q05oMkhCeEhlTkdZWkZSZ2oxTDU3Nmx4bWRJUm1Cdw?oc=5",
-   "source": "Daily Maverick",
-   "region": "SA",
-   "published": "2026-10-26T05:34+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Gold Price Forecast: XAU/USD gains at start of Fed’s policy week",
-   "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPTmppZ3ZXUk9zWHJfSTJxMkphMWpVTk5DQXN0cWthMjhCWFowS3FwbXlmS21zb0ZHNDBxWGpMb2ZlUmQxVktDMExySFVZUExtRk1mMHoxRlRUTnpEcnJ5MDlPZFJETHNUUkF1RmVualNoVmJsd1BlclFzTFhKeHhYY1ZKZ3pIYW8yM3FIWTlRZ2lGcjM3WFpqM09ac3MtWkJSNDhQbW5SalZHM3J3d2c?oc=5",
-   "source": "FXStreet",
-   "region": "FX",
-   "published": "2026-10-26T05:26+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Spear REIT Ltd (JSE:SEA) (H1 2027) Earnings Call Highlights: Upgraded Guidance and Strategic Growth",
-   "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPc1BTeWU0UlVGX0xvVENHcm9VSUVhekF3WWFZZ2ZjWnljbkRjNVlTQUI3YXZZZEFJSzd6YjhnNUVla19Mcmc0U21obmFDbjBadVFXbkFsUnJheUFuN20xajdBaUVUUmpCejFSTDk0dlJDaWJzUjduVUhKME5nSU1ZZTRsZjJnOHUzZnYwOA?oc=5",
-   "source": "Yahoo Finance",
-   "region": "SA",
-   "published": "2026-10-26T05:02+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "HARRY SCHERZER | Every forex payment does not have to be converted into rand",
-   "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxORE9nN2tOVWdjQlZ1VTRyVDRnNHdPaFMxNXhpekhVV2lfTWg2dldnWk5kMnFORmRtck9hR1FQY0wyYjhnQ0FESnl2dndnVjJHc2VWUTRrbFBkaENhUmY3NHh6V21CaHZrYUJNVWJlOVlvZzVJWmZ2Vl85Z0E0SDY3WjUtc1V1Qnh5aDBvQThiUzdMZG1xTkFFNHdLekdXekZtS1hObnBHX0l2TVlkanlnOHN4eWZzVjg5WHFrcDFsLUo2QQ?oc=5",
-   "source": "Business Day",
-   "region": "SA",
-   "published": "2026-10-26T05:00+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Transpaco flags risks to legitimate producers from illicit economy",
-   "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNaFppYjVjRHBQTjh3aXlsWkhPay12UXY1eG1NMGQ0ZFVzYl9Ba1I0ODJNZHJla1ZuaDlibVNXNzF4bDl2Ul9vRlhsVUNfQ1FhaUJUTVlLakprSU9qQVB1VWlGSEl3M2ZzbFZRZXdVYzk0MmtoMWJsbVM4VUNLZDg2amp0d2ZidkRiVndLYjRVT29ycVZTbVcwdHoyXzRiUi1xX1phbHdUNENLNDNVdzZDU3RXUTdhQmNKUjB6TWplTDhhTGdzczRvTk1ndFJkRUJ2?oc=5",
-   "source": "Business Day",
-   "region": "SA",
-   "published": "2026-10-26T05:00+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Lula, Brazil’s iconic working class president, wins historic fourth term in dramatic comeback",
-   "url": "https://news.google.com/rss/articles/CBMiwwJBVV95cUxPWDh4SENuWGhNTG8zbmF4MDM0VmN6ZkdnLXRRd0V4SmNfUEpKUjZ2MGJpd2J5N05rYjdoYUtpQ0FRb0QzNUljUkVsblU0V3NMMHJzTWdFVko2dVV0aTEyU2hyaEZucjE5LVVpRGo2Vjk5cDVCS3FXaDg3Tm5VQmQ2OXhuVG0yMGo1UWNVS1NnZG1rd3VEams2Z05YeVJLdDF1VlBRQ19OaVE1R051UFM0Qzh5QW5VUVFIaGppRzJTM0FNUWw5Y2tlUkRDWFBlWVlwYWZ6MUpnMzNxNnRXR1lYNUpSZVlrcEd5Z1dlSjczZTRZYnc0ZXY3QVRRS3ZmRHdrOTlHZnB1cDVDNE1NcktpT1BNZjdSdkhZOUtzSmhIT3VIZEY0T2xCaVpkWHF6VTlXNjBRQm5QQldieWJfVzhkQUZTNA?oc=5",
-   "source": "Daily Maverick",
-   "region": "SA",
-   "published": "2026-10-26T04:39+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Uganda imposes 21-day quarantine on citizens returning from Congo",
-   "url": "https://news.google.com/rss/articles/CBMinAJBVV95cUxQVWlQcDNPNVBCaEIwLWZvUFB6QlVFc05pNWFQYzJKcDBMSkdaYWpMeW5vVzQ0d1Utd2hEaU1OckxVS3dTUG03RWo2a25EalRybklGOW81MGxseHFHQmNIZ0dEVm1rZm5KM2tYaDBqcEVNMXdVMTY0cGFHQ2N6YnJPUUowaXV1eUdZS1BkRkRKVlBGQmRkcTk0WFhGdXpheGpleEtRal9XeTB6NFR0RmtNMER6aGJZcWJ6T0ZVcks1RnFBLWwxV0Robm5Ed05mR3NXbVItQzZLejcwdkNJU2JzbURKakNzZGVJUU0tNWFFV0IyelBaRE9scHJkWEtQWlZJQ3ZFYlo4NUg3clVuUTg4Y2V0a2RPekt3VVd4ZA?oc=5",
-   "source": "Daily Maverick",
-   "region": "SA",
-   "published": "2026-10-26T04:39+02:00",
    "breaking": false,
    "tickers": []
   }
