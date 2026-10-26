@@ -21,7 +21,9 @@ def techs(bars):
     return t
 
 def main():
-    ratings = load(P('docs', 'data', 'ratings.json'))['ratings']
+    ratings = (load(P('docs', 'data', 'ratings.json'), {}) or {}).get('ratings', {})
+    if not ratings:
+        print('no hand-rated companies (site is fully automated) — house-rule watchlist skipped'); return
     snap = {x['ticker']: x for x in load(P('agents', 'work', 'snapshot.json'), [])}
     ok, bad = [], []
     for t, r in ratings.items():

@@ -23,6 +23,7 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: '3.12' }
       - name: Watchlist (house rules)
+        continue-on-error: true
         run: python agents/tools/market_refresh.py
       - name: Earnings calendar — New York
         continue-on-error: true
