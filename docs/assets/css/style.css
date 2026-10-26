@@ -880,3 +880,27 @@ html:not(.safe) .onlysafe{display:none!important}
 .dvst.went_ex,.dvst.recent{background:rgba(242,206,114,.10);color:#F2CE72;border:1px solid rgba(242,206,114,.3)}
 .dvst.paid{background:rgba(94,211,154,.22);color:#7FE0B0;border:1px solid rgba(94,211,154,.5)}
 .dvst.paid_est{background:rgba(94,211,154,.08);color:#9FD9BC;border:1px dashed rgba(94,211,154,.4)}
+/* calendars: upcoming / reported switch, scorecard, beat-miss colours */
+.cal-view{margin:22px 0 4px}
+.cal-view button{padding:11px 20px}
+.score-strip{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin:0 0 22px}
+.score-strip div{border:1px solid var(--line);border-radius:12px;padding:14px 16px;background:linear-gradient(180deg,var(--panel),var(--ink))}
+.score-strip b{display:block;font-family:var(--serif);font-size:30px;color:#fff;line-height:1}
+.score-strip span{font-size:12.5px;color:var(--muted);letter-spacing:.04em}
+.score-strip .g{border-color:rgba(94,211,154,.45)} .score-strip .g b{color:#5ED39A}
+.score-strip .r{border-color:rgba(240,138,126,.45)} .score-strip .r b{color:#F08A7E}
+.score-strip .q b{color:#F2CE72}
+.erow.rep{border-left:3px solid transparent;padding-left:12px}
+.erow.res-beat{border-left-color:#2FA36B;background:linear-gradient(90deg,rgba(47,163,107,.10),transparent 45%)}
+.erow.res-miss{border-left-color:#D9534F;background:linear-gradient(90deg,rgba(217,83,79,.10),transparent 45%)}
+.erow.res-inline,.erow.res-wait{border-left-color:var(--line)}
+.res{display:inline-block;font-size:11.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:999px;white-space:nowrap}
+.res.beat{background:#1F7A4D;color:#fff}
+.res.miss{background:#B83B36;color:#fff}
+.res.inline{background:#3A4152;color:#E4E7EE}
+.res.wait{background:rgba(242,206,114,.12);color:#F2CE72;border:1px solid rgba(242,206,114,.35)}
+.res-eps{display:block;color:var(--muted);font-size:12px;margin-top:4px;white-space:nowrap}
+.edl{display:block;color:var(--muted);font-size:11.5px;margin-top:4px}
+.erow.rep .res,.erow.rep .res-eps{justify-self:end;text-align:right}
+@media (max-width:860px){.score-strip{grid-template-columns:repeat(3,minmax(0,1fr))}.erow.rep .res,.erow.rep .res-eps{justify-self:start;text-align:left;grid-column:2}}
+@media (max-width:480px){.score-strip{grid-template-columns:repeat(2,minmax(0,1fr))}}

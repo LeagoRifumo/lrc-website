@@ -7,6 +7,7 @@ For every company the LRC Stock Scanner tracks:
              (marked "expected — based on last year"; replaced by the confirmed date once announced)
   went_ex    ex-date has passed, payment not yet made (or payment date not announced)
   paid       payment date has passed: reported as paid, with the amount per share
+  trend      raised (green) / cut (red) / unchanged vs the same payment a year earlier
   paid_est   no payment date on the feed, but the usual window has passed (JSE 14 days, New York 35 days after the ex-date): 'Paid (estimated)'
 A permanent log (docs/data/dividends_log.json) keeps every dividend seen, so a dividend stays on record after it is paid.
 Each row: last day to buy to qualify (JSE: the business day before the ex-date, T+3 settlement; New York: the business day
@@ -69,7 +70,7 @@ def main():
             continue
         scale = 100.0 if r['m'] == 'JSE' else 1.0          # JSE feed amounts are in cents
         last = hist[-1] if hist else None
-        yr = [x for x in hist if x['date'] > (today - dt.timedelta(days=380)).isoformat()]
+        yr = [x for x in hist if x['date'] > (today - dt.timedelta(days=350)).isoformat()]
         freq = len(yr) or None
         base = {'t': t, 'n': r.get('n'), 'm': r['m'], 'sec': r.get('sec'), 'cur': r.get('cur'), 'px': r.get('px'),
                 'last_amount': round(last['amount'] / scale, 4) if last else None, 'last_date': last['date'] if last else None,
@@ -115,6 +116,19 @@ def main():
             items.append({**base, 'ex': exd.isoformat(), 'ldt': prev_bday(exd).isoformat(), 'pay': None,
                           'amount': round(x['amount'] / scale, 4), 'amount_basis': 'last year', 'status': 'expected'})
             seen.append(exd)
+    # raised / cut: compare each known amount with the same payment a year earlier (log, 320-410 days before)
+    by_t = {}
+    for e in log.values():
+        if e.get('amount'): by_t.setdefault(e['t'], []).append(e)
+    for x in items:
+        if x.get('amount') is None or x.get('amount_basis'):
+            continue
+        exd = dt.date.fromisoformat(x['ex'])
+        prev = [e for e in by_t.get(x['t'], []) if 320 <= (exd - dt.date.fromisoformat(e['ex'])).days <= 410]
+        if prev:
+            p_ = min(prev, key=lambda e: abs((exd - dt.date.fromisoformat(e['ex'])).days - 365))
+            ch = x['amount'] / p_['amount'] - 1
+            x.update({'prev_amount': p_['amount'], 'prev_ex': p_['ex'], 'chg': round(ch, 4), 'trend': 'raised' if ch > 0.01 else 'cut' if ch < -0.01 else 'unchanged'})
     items.sort(key=lambda x: (x['ex'], x['status'] != 'confirmed', -(x.get('yield') or 0)))
     json.dump(dict(sorted(log.items())), open(LOG, 'w', encoding='utf-8'), ensure_ascii=False, indent=0)
     out = {'generated': dt.datetime.now(SAST).isoformat(timespec='minutes'),

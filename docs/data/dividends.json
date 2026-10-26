@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-26T03:58+02:00",
+ "generated": "2026-10-26T04:01+02:00",
  "source": "Ex-dividend and payment dates and dividend history from the market data feed; expected dates are last year's dates rolled forward one year. Confirm every date on the company announcement (SENS for JSE companies).",
  "rules": {
   "JSE": "JSE trades settle in 3 business days (T+3): buy by the last day to trade (usually a Tuesday) to receive the dividend; the share trades ex-dividend the next business day and the record date is the Friday.",
@@ -28,7 +28,11 @@
    "ldt": "2026-08-26",
    "pay": "2026-09-24",
    "amount": 0.43,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.4,
+   "prev_ex": "2025-08-28",
+   "chg": 0.075,
+   "trend": "raised"
   },
   {
    "t": "EXPE",
@@ -52,7 +56,11 @@
    "ldt": "2026-08-26",
    "pay": "2026-09-17",
    "amount": 0.48,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.4,
+   "prev_ex": "2025-08-28",
+   "chg": 0.2,
+   "trend": "raised"
   },
   {
    "t": "TMUS",
@@ -76,7 +84,11 @@
    "ldt": "2026-08-27",
    "pay": null,
    "amount": 1.02,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 0.88,
+   "prev_ex": "2025-08-29",
+   "chg": 0.1591,
+   "trend": "raised"
   },
   {
    "t": "NEE",
@@ -100,7 +112,11 @@
    "ldt": "2026-08-27",
    "pay": null,
    "amount": 0.623,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 0.567,
+   "prev_ex": "2025-08-28",
+   "chg": 0.0988,
+   "trend": "raised"
   },
   {
    "t": "HII",
@@ -124,7 +140,11 @@
    "ldt": "2026-08-27",
    "pay": null,
    "amount": 1.38,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 1.35,
+   "prev_ex": "2025-08-29",
+   "chg": 0.0222,
+   "trend": "raised"
   },
   {
    "t": "EBAY",
@@ -148,7 +168,11 @@
    "ldt": "2026-08-27",
    "pay": "2026-09-11",
    "amount": 0.31,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.29,
+   "prev_ex": "2025-08-29",
+   "chg": 0.069,
+   "trend": "raised"
   },
   {
    "t": "LH",
@@ -172,7 +196,11 @@
    "ldt": "2026-08-27",
    "pay": null,
    "amount": 0.72,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 0.72,
+   "prev_ex": "2025-08-28",
+   "chg": 0.0,
+   "trend": "unchanged"
   },
   {
    "t": "BAX",
@@ -196,7 +224,11 @@
    "ldt": "2026-08-27",
    "pay": "2026-10-01",
    "amount": 0.01,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.17,
+   "prev_ex": "2025-08-29",
+   "chg": -0.9412,
+   "trend": "cut"
   },
   {
    "t": "O",
@@ -244,7 +276,11 @@
    "ldt": "2026-08-28",
    "pay": null,
    "amount": 0.35,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 0.35,
+   "prev_ex": "2025-08-29",
+   "chg": 0.0,
+   "trend": "unchanged"
   },
   {
    "t": "UNP",
@@ -268,7 +304,11 @@
    "ldt": "2026-08-28",
    "pay": "2026-09-30",
    "amount": 1.42,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 1.38,
+   "prev_ex": "2025-08-29",
+   "chg": 0.029,
+   "trend": "raised"
   },
   {
    "t": "NOC",
@@ -292,7 +332,11 @@
    "ldt": "2026-08-28",
    "pay": "2026-09-16",
    "amount": 2.47,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 2.31,
+   "prev_ex": "2025-09-02",
+   "chg": 0.0693,
+   "trend": "raised"
   },
   {
    "t": "DD",
@@ -316,7 +360,11 @@
    "ldt": "2026-08-28",
    "pay": null,
    "amount": 0.6,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 0.5146,
+   "prev_ex": "2025-08-29",
+   "chg": 0.166,
+   "trend": "raised"
   },
   {
    "t": "ALL",
@@ -340,7 +388,11 @@
    "ldt": "2026-08-28",
    "pay": "2026-10-01",
    "amount": 1.08,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 1.0,
+   "prev_ex": "2025-08-29",
+   "chg": 0.08,
+   "trend": "raised"
   },
   {
    "t": "FDS",
@@ -364,7 +416,11 @@
    "ldt": "2026-08-28",
    "pay": "2026-09-17",
    "amount": 1.16,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 1.1,
+   "prev_ex": "2025-08-29",
+   "chg": 0.0545,
+   "trend": "raised"
   },
   {
    "t": "EL",
@@ -388,7 +444,11 @@
    "ldt": "2026-08-28",
    "pay": "2026-09-15",
    "amount": 0.35,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.35,
+   "prev_ex": "2025-09-02",
+   "chg": 0.0,
+   "trend": "unchanged"
   },
   {
    "t": "HUBB",
@@ -412,7 +472,11 @@
    "ldt": "2026-08-28",
    "pay": "2026-12-15",
    "amount": 1.42,
-   "status": "went_ex"
+   "status": "went_ex",
+   "prev_amount": 1.32,
+   "prev_ex": "2025-08-29",
+   "chg": 0.0758,
+   "trend": "raised"
   },
   {
    "t": "AIZ",
@@ -436,7 +500,11 @@
    "ldt": "2026-08-28",
    "pay": "2026-09-28",
    "amount": 0.88,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.8,
+   "prev_ex": "2025-09-02",
+   "chg": 0.1,
+   "trend": "raised"
   },
   {
    "t": "EFX",
@@ -460,7 +528,11 @@
    "ldt": "2026-08-28",
    "pay": "2026-09-15",
    "amount": 0.56,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.5,
+   "prev_ex": "2025-09-02",
+   "chg": 0.12,
+   "trend": "raised"
   },
   {
    "t": "CSX",
@@ -484,7 +556,11 @@
    "ldt": "2026-08-28",
    "pay": null,
    "amount": 0.14,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 0.13,
+   "prev_ex": "2025-08-29",
+   "chg": 0.0769,
+   "trend": "raised"
   },
   {
    "t": "DOV",
@@ -508,7 +584,11 @@
    "ldt": "2026-08-28",
    "pay": "2026-09-15",
    "amount": 0.525,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.52,
+   "prev_ex": "2025-08-29",
+   "chg": 0.0096,
+   "trend": "unchanged"
   },
   {
    "t": "CBOE",
@@ -543,7 +623,7 @@
    "px": 880.6,
    "last_amount": 2.0,
    "last_date": "2026-08-31",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.0091,
    "payout": 0.2598,
    "v": "HOLD",
@@ -556,7 +636,11 @@
    "ldt": "2026-08-28",
    "pay": "2026-09-11",
    "amount": 2.0,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 1.8,
+   "prev_ex": "2025-09-02",
+   "chg": 0.1111,
+   "trend": "raised"
   },
   {
    "t": "GLW",
@@ -580,7 +664,11 @@
    "ldt": "2026-08-28",
    "pay": null,
    "amount": 0.28,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 0.28,
+   "prev_ex": "2025-08-29",
+   "chg": 0.0,
+   "trend": "unchanged"
   },
   {
    "t": "Q",
@@ -630,7 +718,11 @@
    "ldt": "2026-08-31",
    "pay": "2026-10-01",
    "amount": 0.41,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.4,
+   "prev_ex": "2025-09-02",
+   "chg": 0.025,
+   "trend": "raised"
   },
   {
    "t": "RF",
@@ -654,7 +746,11 @@
    "ldt": "2026-08-31",
    "pay": null,
    "amount": 0.3,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 0.265,
+   "prev_ex": "2025-09-02",
+   "chg": 0.1321,
+   "trend": "raised"
   },
   {
    "t": "KEY",
@@ -678,7 +774,11 @@
    "ldt": "2026-08-31",
    "pay": "2026-09-15",
    "amount": 0.205,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.205,
+   "prev_ex": "2025-09-02",
+   "chg": 0.0,
+   "trend": "unchanged"
   },
   {
    "t": "TSN",
@@ -702,7 +802,11 @@
    "ldt": "2026-08-31",
    "pay": null,
    "amount": 0.51,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 0.5,
+   "prev_ex": "2025-08-29",
+   "chg": 0.02,
+   "trend": "raised"
   },
   {
    "t": "MCD",
@@ -726,7 +830,11 @@
    "ldt": "2026-08-31",
    "pay": null,
    "amount": 1.86,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 1.77,
+   "prev_ex": "2025-09-02",
+   "chg": 0.0508,
+   "trend": "raised"
   },
   {
    "t": "MTB",
@@ -750,7 +858,11 @@
    "ldt": "2026-08-31",
    "pay": "2026-09-30",
    "amount": 1.5,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 1.5,
+   "prev_ex": "2025-09-02",
+   "chg": 0.0,
+   "trend": "unchanged"
   },
   {
    "t": "LMT",
@@ -774,7 +886,11 @@
    "ldt": "2026-08-31",
    "pay": null,
    "amount": 3.45,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 3.3,
+   "prev_ex": "2025-09-02",
+   "chg": 0.0455,
+   "trend": "raised"
   },
   {
    "t": "GS",
@@ -798,7 +914,11 @@
    "ldt": "2026-08-31",
    "pay": null,
    "amount": 5.0,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 4.0,
+   "prev_ex": "2025-08-29",
+   "chg": 0.25,
+   "trend": "raised"
   },
   {
    "t": "HIG",
@@ -822,7 +942,11 @@
    "ldt": "2026-08-31",
    "pay": "2026-10-02",
    "amount": 0.6,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.52,
+   "prev_ex": "2025-09-02",
+   "chg": 0.1538,
+   "trend": "raised"
   },
   {
    "t": "BALL",
@@ -846,7 +970,11 @@
    "ldt": "2026-08-31",
    "pay": "2026-09-15",
    "amount": 0.2,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.2,
+   "prev_ex": "2025-09-02",
+   "chg": 0.0,
+   "trend": "unchanged"
   },
   {
    "t": "ADI",
@@ -870,7 +998,11 @@
    "ldt": "2026-08-31",
    "pay": "2026-09-15",
    "amount": 1.1,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.99,
+   "prev_ex": "2025-09-02",
+   "chg": 0.1111,
+   "trend": "raised"
   },
   {
    "t": "TPL",
@@ -894,7 +1026,11 @@
    "ldt": "2026-08-31",
    "pay": "2026-09-15",
    "amount": 0.6,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.5333,
+   "prev_ex": "2025-09-02",
+   "chg": 0.1251,
+   "trend": "raised"
   },
   {
    "t": "MLM",
@@ -918,7 +1054,11 @@
    "ldt": "2026-08-31",
    "pay": "2026-09-30",
    "amount": 0.84,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.83,
+   "prev_ex": "2025-09-02",
+   "chg": 0.012,
+   "trend": "raised"
   },
   {
    "t": "IBKR",
@@ -942,7 +1082,11 @@
    "ldt": "2026-08-31",
    "pay": null,
    "amount": 0.088,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 0.08,
+   "prev_ex": "2025-08-29",
+   "chg": 0.1,
+   "trend": "raised"
   },
   {
    "t": "UHS",
@@ -966,7 +1110,11 @@
    "ldt": "2026-08-31",
    "pay": "2026-09-15",
    "amount": 0.2,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.2,
+   "prev_ex": "2025-09-02",
+   "chg": 0.0,
+   "trend": "unchanged"
   },
   {
    "t": "MCK",
@@ -990,7 +1138,11 @@
    "ldt": "2026-08-31",
    "pay": null,
    "amount": 0.94,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 0.82,
+   "prev_ex": "2025-09-02",
+   "chg": 0.1463,
+   "trend": "raised"
   },
   {
    "t": "RES.JO",
@@ -1016,7 +1168,11 @@
    "ldt": "2026-09-01",
    "pay": null,
    "amount": 2.744,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 2.457,
+   "prev_ex": "2025-09-03",
+   "chg": 0.1168,
+   "trend": "raised"
   },
   {
    "t": "BHG.JO",
@@ -1040,7 +1196,11 @@
    "ldt": "2026-09-01",
    "pay": null,
    "amount": 15.81,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 10.58,
+   "prev_ex": "2025-09-03",
+   "chg": 0.4943,
+   "trend": "raised"
   },
   {
    "t": "SLB",
@@ -1064,7 +1224,11 @@
    "ldt": "2026-09-01",
    "pay": null,
    "amount": 0.295,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 0.285,
+   "prev_ex": "2025-09-03",
+   "chg": 0.0351,
+   "trend": "raised"
   },
   {
    "t": "AVY",
@@ -1088,7 +1252,11 @@
    "ldt": "2026-09-01",
    "pay": null,
    "amount": 1.0,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 0.94,
+   "prev_ex": "2025-09-03",
+   "chg": 0.0638,
+   "trend": "raised"
   },
   {
    "t": "HAL",
@@ -1112,7 +1280,11 @@
    "ldt": "2026-09-01",
    "pay": "2026-09-23",
    "amount": 0.17,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.17,
+   "prev_ex": "2025-09-03",
+   "chg": 0.0,
+   "trend": "unchanged"
   },
   {
    "t": "FOX",
@@ -1136,7 +1308,11 @@
    "ldt": "2026-09-01",
    "pay": "2026-09-23",
    "amount": 0.29,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.28,
+   "prev_ex": "2025-09-03",
+   "chg": 0.0357,
+   "trend": "raised"
   },
   {
    "t": "FOXA",
@@ -1160,7 +1336,11 @@
    "ldt": "2026-09-01",
    "pay": "2026-09-23",
    "amount": 0.29,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.28,
+   "prev_ex": "2025-09-03",
+   "chg": 0.0357,
+   "trend": "raised"
   },
   {
    "t": "ODFL",
@@ -1184,7 +1364,11 @@
    "ldt": "2026-09-01",
    "pay": null,
    "amount": 0.29,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 0.28,
+   "prev_ex": "2025-09-03",
+   "chg": 0.0357,
+   "trend": "raised"
   },
   {
    "t": "BF-B",
@@ -1208,7 +1392,11 @@
    "ldt": "2026-09-02",
    "pay": "2026-10-01",
    "amount": 0.231,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.227,
+   "prev_ex": "2025-09-03",
+   "chg": 0.0176,
+   "trend": "raised"
   },
   {
    "t": "PFG",
@@ -1232,7 +1420,11 @@
    "ldt": "2026-09-02",
    "pay": "2026-09-25",
    "amount": 0.84,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.78,
+   "prev_ex": "2025-09-04",
+   "chg": 0.0769,
+   "trend": "raised"
   },
   {
    "t": "HD",
@@ -1256,7 +1448,11 @@
    "ldt": "2026-09-02",
    "pay": "2026-09-17",
    "amount": 2.33,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 2.3,
+   "prev_ex": "2025-09-04",
+   "chg": 0.013,
+   "trend": "raised"
   },
   {
    "t": "BR",
@@ -1280,7 +1476,11 @@
    "ldt": "2026-09-02",
    "pay": "2026-10-05",
    "amount": 1.09,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.975,
+   "prev_ex": "2025-09-11",
+   "chg": 0.1179,
+   "trend": "raised"
   },
   {
    "t": "QCOM",
@@ -1304,7 +1504,11 @@
    "ldt": "2026-09-02",
    "pay": null,
    "amount": 0.92,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 0.89,
+   "prev_ex": "2025-09-04",
+   "chg": 0.0337,
+   "trend": "raised"
   },
   {
    "t": "LUV",
@@ -1328,7 +1532,11 @@
    "ldt": "2026-09-02",
    "pay": "2026-09-24",
    "amount": 0.18,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.18,
+   "prev_ex": "2025-09-03",
+   "chg": 0.0,
+   "trend": "unchanged"
   },
   {
    "t": "LIN",
@@ -1352,7 +1560,11 @@
    "ldt": "2026-09-02",
    "pay": "2026-09-17",
    "amount": 1.6,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 1.5,
+   "prev_ex": "2025-09-04",
+   "chg": 0.0667,
+   "trend": "raised"
   },
   {
    "t": "NEM",
@@ -1376,7 +1588,11 @@
    "ldt": "2026-09-02",
    "pay": null,
    "amount": 0.26,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 0.25,
+   "prev_ex": "2025-09-04",
+   "chg": 0.04,
+   "trend": "raised"
   },
   {
    "t": "KHC",
@@ -1400,7 +1616,11 @@
    "ldt": "2026-09-03",
    "pay": "2026-09-25",
    "amount": 0.4,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.4,
+   "prev_ex": "2025-08-29",
+   "chg": 0.0,
+   "trend": "unchanged"
   },
   {
    "t": "AMCR",
@@ -1424,7 +1644,11 @@
    "ldt": "2026-09-03",
    "pay": "2026-09-24",
    "amount": 0.65,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.64,
+   "prev_ex": "2025-09-05",
+   "chg": 0.0156,
+   "trend": "raised"
   },
   {
    "t": "KIM",
@@ -1448,7 +1672,11 @@
    "ldt": "2026-09-03",
    "pay": "2026-09-17",
    "amount": 0.28,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.25,
+   "prev_ex": "2025-09-05",
+   "chg": 0.12,
+   "trend": "raised"
   },
   {
    "t": "KMB",
@@ -1472,7 +1700,11 @@
    "ldt": "2026-09-03",
    "pay": "2026-10-02",
    "amount": 1.28,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 1.26,
+   "prev_ex": "2025-09-05",
+   "chg": 0.0159,
+   "trend": "raised"
   },
   {
    "t": "PEP",
@@ -1496,7 +1728,11 @@
    "ldt": "2026-09-03",
    "pay": "2026-09-30",
    "amount": 1.48,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 1.423,
+   "prev_ex": "2025-09-05",
+   "chg": 0.0401,
+   "trend": "raised"
   },
   {
    "t": "WY",
@@ -1520,7 +1756,11 @@
    "ldt": "2026-09-03",
    "pay": "2026-09-18",
    "amount": 0.21,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.21,
+   "prev_ex": "2025-08-29",
+   "chg": 0.0,
+   "trend": "unchanged"
   },
   {
    "t": "D",
@@ -1544,7 +1784,11 @@
    "ldt": "2026-09-03",
    "pay": "2026-09-20",
    "amount": 0.668,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.668,
+   "prev_ex": "2025-09-05",
+   "chg": 0.0,
+   "trend": "unchanged"
   },
   {
    "t": "EXC",
@@ -1555,7 +1799,7 @@
    "px": 44.43,
    "last_amount": 0.42,
    "last_date": "2026-09-04",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.0378,
    "payout": 0.6029,
    "v": "HOLD",
@@ -1568,7 +1812,11 @@
    "ldt": "2026-09-03",
    "pay": "2026-09-15",
    "amount": 0.42,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.4,
+   "prev_ex": "2025-08-11",
+   "chg": 0.05,
+   "trend": "raised"
   },
   {
    "t": "GPC",
@@ -1592,7 +1840,11 @@
    "ldt": "2026-09-03",
    "pay": "2026-10-02",
    "amount": 1.063,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 1.03,
+   "prev_ex": "2025-09-05",
+   "chg": 0.032,
+   "trend": "raised"
   },
   {
    "t": "BAC",
@@ -1616,7 +1868,11 @@
    "ldt": "2026-09-03",
    "pay": null,
    "amount": 0.32,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 0.28,
+   "prev_ex": "2025-09-05",
+   "chg": 0.1429,
+   "trend": "raised"
   },
   {
    "t": "NTRS",
@@ -1640,7 +1896,11 @@
    "ldt": "2026-09-03",
    "pay": null,
    "amount": 0.88,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 0.8,
+   "prev_ex": "2025-09-05",
+   "chg": 0.1,
+   "trend": "raised"
   },
   {
    "t": "LHX",
@@ -1664,7 +1924,11 @@
    "ldt": "2026-09-03",
    "pay": null,
    "amount": 1.25,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 1.2,
+   "prev_ex": "2025-09-05",
+   "chg": 0.0417,
+   "trend": "raised"
   },
   {
    "t": "CHRW",
@@ -1688,7 +1952,11 @@
    "ldt": "2026-09-03",
    "pay": "2026-10-02",
    "amount": 0.63,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.62,
+   "prev_ex": "2025-09-05",
+   "chg": 0.0161,
+   "trend": "raised"
   },
   {
    "t": "TPR",
@@ -1712,7 +1980,11 @@
    "ldt": "2026-09-03",
    "pay": "2026-09-21",
    "amount": 0.463,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.4,
+   "prev_ex": "2025-09-05",
+   "chg": 0.1575,
+   "trend": "raised"
   },
   {
    "t": "JKHY",
@@ -1736,7 +2008,11 @@
    "ldt": "2026-09-03",
    "pay": "2026-09-23",
    "amount": 0.61,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.58,
+   "prev_ex": "2025-09-05",
+   "chg": 0.0517,
+   "trend": "raised"
   },
   {
    "t": "STE",
@@ -1760,7 +2036,11 @@
    "ldt": "2026-09-03",
    "pay": "2026-09-25",
    "amount": 0.69,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.63,
+   "prev_ex": "2025-09-04",
+   "chg": 0.0952,
+   "trend": "raised"
   },
   {
    "t": "PYPL",
@@ -1808,7 +2088,11 @@
    "ldt": "2026-09-03",
    "pay": null,
    "amount": 0.18,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 0.15,
+   "prev_ex": "2025-09-05",
+   "chg": 0.2,
+   "trend": "raised"
   },
   {
    "t": "TT",
@@ -1832,7 +2116,11 @@
    "ldt": "2026-09-03",
    "pay": null,
    "amount": 1.05,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 0.94,
+   "prev_ex": "2025-09-05",
+   "chg": 0.117,
+   "trend": "raised"
   },
   {
    "t": "FTV",
@@ -1856,7 +2144,11 @@
    "ldt": "2026-09-03",
    "pay": "2026-09-25",
    "amount": 0.07,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.06,
+   "prev_ex": "2025-09-12",
+   "chg": 0.1667,
+   "trend": "raised"
   },
   {
    "t": "GOOG",
@@ -1880,7 +2172,11 @@
    "ldt": "2026-09-03",
    "pay": "2026-09-14",
    "amount": 0.22,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.21,
+   "prev_ex": "2025-09-08",
+   "chg": 0.0476,
+   "trend": "raised"
   },
   {
    "t": "GOOGL",
@@ -1904,7 +2200,11 @@
    "ldt": "2026-09-03",
    "pay": "2026-09-14",
    "amount": 0.22,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.21,
+   "prev_ex": "2025-09-08",
+   "chg": 0.0476,
+   "trend": "raised"
   },
   {
    "t": "TER",
@@ -1928,7 +2228,11 @@
    "ldt": "2026-09-03",
    "pay": "2026-09-25",
    "amount": 0.13,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.12,
+   "prev_ex": "2025-09-05",
+   "chg": 0.0833,
+   "trend": "raised"
   },
   {
    "t": "SWK",
@@ -1952,7 +2256,11 @@
    "ldt": "2026-09-07",
    "pay": "2026-09-22",
    "amount": 0.84,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.83,
+   "prev_ex": "2025-09-02",
+   "chg": 0.012,
+   "trend": "raised"
   },
   {
    "t": "AEE",
@@ -1976,7 +2284,11 @@
    "ldt": "2026-09-07",
    "pay": null,
    "amount": 0.75,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 0.71,
+   "prev_ex": "2025-09-09",
+   "chg": 0.0563,
+   "trend": "raised"
   },
   {
    "t": "BLK",
@@ -2002,7 +2314,11 @@
    "ldt": "2026-09-07",
    "pay": "2026-09-22",
    "amount": 5.73,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 5.21,
+   "prev_ex": "2025-09-05",
+   "chg": 0.0998,
+   "trend": "raised"
   },
   {
    "t": "CI",
@@ -2026,7 +2342,11 @@
    "ldt": "2026-09-07",
    "pay": "2026-09-23",
    "amount": 1.56,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 1.51,
+   "prev_ex": "2025-09-04",
+   "chg": 0.0331,
+   "trend": "raised"
   },
   {
    "t": "AJG",
@@ -2050,7 +2370,11 @@
    "ldt": "2026-09-07",
    "pay": "2026-09-18",
    "amount": 0.7,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.65,
+   "prev_ex": "2025-09-05",
+   "chg": 0.0769,
+   "trend": "raised"
   },
   {
    "t": "ROST",
@@ -2074,7 +2398,11 @@
    "ldt": "2026-09-07",
    "pay": "2026-09-30",
    "amount": 0.445,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.405,
+   "prev_ex": "2025-09-09",
+   "chg": 0.0988,
+   "trend": "raised"
   },
   {
    "t": "WDC",
@@ -2098,7 +2426,11 @@
    "ldt": "2026-09-07",
    "pay": null,
    "amount": 0.15,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 0.1,
+   "prev_ex": "2025-09-04",
+   "chg": 0.5,
+   "trend": "raised"
   },
   {
    "t": "NRP.JO",
@@ -2122,7 +2454,11 @@
    "ldt": "2026-09-08",
    "pay": null,
    "amount": 5.386,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 5.204,
+   "prev_ex": "2025-09-10",
+   "chg": 0.035,
+   "trend": "raised"
   },
   {
    "t": "SBK.JO",
@@ -2146,7 +2482,11 @@
    "ldt": "2026-09-08",
    "pay": null,
    "amount": 9.02,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 8.17,
+   "prev_ex": "2025-09-10",
+   "chg": 0.104,
+   "trend": "raised"
   },
   {
    "t": "DRD.JO",
@@ -2170,7 +2510,11 @@
    "ldt": "2026-09-08",
    "pay": null,
    "amount": 1.2,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 0.4,
+   "prev_ex": "2025-09-10",
+   "chg": 2.0,
+   "trend": "raised"
   },
   {
    "t": "ITE.JO",
@@ -2194,7 +2538,11 @@
    "ldt": "2026-09-08",
    "pay": null,
    "amount": 0.46,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 1.2,
+   "prev_ex": "2025-09-10",
+   "chg": -0.6167,
+   "trend": "cut"
   },
   {
    "t": "GFI.JO",
@@ -2220,7 +2568,11 @@
    "ldt": "2026-09-08",
    "pay": null,
    "amount": 16.25,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 7.0,
+   "prev_ex": "2025-09-10",
+   "chg": 1.3214,
+   "trend": "raised"
   },
   {
    "t": "SPG",
@@ -2244,7 +2596,11 @@
    "ldt": "2026-09-08",
    "pay": "2026-09-30",
    "amount": 2.25,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 2.15,
+   "prev_ex": "2025-09-09",
+   "chg": 0.0465,
+   "trend": "raised"
   },
   {
    "t": "PEG",
@@ -2268,7 +2624,11 @@
    "ldt": "2026-09-08",
    "pay": "2026-09-30",
    "amount": 0.67,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.63,
+   "prev_ex": "2025-09-09",
+   "chg": 0.0635,
+   "trend": "raised"
   },
   {
    "t": "HPQ",
@@ -2292,7 +2652,11 @@
    "ldt": "2026-09-08",
    "pay": "2026-10-07",
    "amount": 0.3,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.289,
+   "prev_ex": "2025-09-10",
+   "chg": 0.0381,
+   "trend": "raised"
   },
   {
    "t": "ADH.JO",
@@ -2316,7 +2680,11 @@
    "ldt": "2026-09-08",
    "pay": null,
    "amount": 0.53,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 0.45,
+   "prev_ex": "2025-09-10",
+   "chg": 0.1778,
+   "trend": "raised"
   },
   {
    "t": "BDX",
@@ -2340,7 +2708,11 @@
    "ldt": "2026-09-08",
    "pay": "2026-09-30",
    "amount": 1.05,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.8176,
+   "prev_ex": "2025-09-08",
+   "chg": 0.2842,
+   "trend": "raised"
   },
   {
    "t": "EG",
@@ -2388,7 +2760,11 @@
    "ldt": "2026-09-08",
    "pay": "2026-09-18",
    "amount": 0.75,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.71,
+   "prev_ex": "2025-09-02",
+   "chg": 0.0563,
+   "trend": "raised"
   },
   {
    "t": "CME",
@@ -2412,7 +2788,11 @@
    "ldt": "2026-09-08",
    "pay": "2026-09-25",
    "amount": 1.3,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 1.25,
+   "prev_ex": "2025-09-09",
+   "chg": 0.04,
+   "trend": "raised"
   },
   {
    "t": "NWSA",
@@ -2436,7 +2816,11 @@
    "ldt": "2026-09-08",
    "pay": "2026-10-07",
    "amount": 0.1,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.1,
+   "prev_ex": "2025-09-10",
+   "chg": 0.0,
+   "trend": "unchanged"
   },
   {
    "t": "NWS",
@@ -2460,7 +2844,11 @@
    "ldt": "2026-09-08",
    "pay": "2026-10-07",
    "amount": 0.1,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.1,
+   "prev_ex": "2025-09-10",
+   "chg": 0.0,
+   "trend": "unchanged"
   },
   {
    "t": "MOS",
@@ -2486,7 +2874,11 @@
    "ldt": "2026-09-09",
    "pay": null,
    "amount": 0.22,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 0.22,
+   "prev_ex": "2025-09-08",
+   "chg": 0.0,
+   "trend": "unchanged"
   },
   {
    "t": "PPL",
@@ -2510,7 +2902,11 @@
    "ldt": "2026-09-09",
    "pay": "2026-10-01",
    "amount": 0.285,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.273,
+   "prev_ex": "2025-09-10",
+   "chg": 0.044,
+   "trend": "raised"
   },
   {
    "t": "OXY",
@@ -2534,7 +2930,11 @@
    "ldt": "2026-09-09",
    "pay": "2026-10-15",
    "amount": 0.28,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.24,
+   "prev_ex": "2025-09-10",
+   "chg": 0.1667,
+   "trend": "raised"
   },
   {
    "t": "ELV",
@@ -2558,7 +2958,11 @@
    "ldt": "2026-09-09",
    "pay": null,
    "amount": 1.72,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 1.71,
+   "prev_ex": "2025-09-10",
+   "chg": 0.0058,
+   "trend": "unchanged"
   },
   {
    "t": "TRV",
@@ -2582,7 +2986,11 @@
    "ldt": "2026-09-09",
    "pay": null,
    "amount": 1.25,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 1.1,
+   "prev_ex": "2025-09-10",
+   "chg": 0.1364,
+   "trend": "raised"
   },
   {
    "t": "NDSN",
@@ -2606,7 +3014,11 @@
    "ldt": "2026-09-09",
    "pay": "2026-10-02",
    "amount": 0.94,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.82,
+   "prev_ex": "2025-09-11",
+   "chg": 0.1463,
+   "trend": "raised"
   },
   {
    "t": "NVDA",
@@ -2630,7 +3042,11 @@
    "ldt": "2026-09-09",
    "pay": "2026-10-01",
    "amount": 0.25,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.01,
+   "prev_ex": "2025-09-11",
+   "chg": 24.0,
+   "trend": "raised"
   },
   {
    "t": "FIS",
@@ -2654,7 +3070,11 @@
    "ldt": "2026-09-10",
    "pay": "2026-09-25",
    "amount": 0.44,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.4,
+   "prev_ex": "2025-09-10",
+   "chg": 0.1,
+   "trend": "raised"
   },
   {
    "t": "REG",
@@ -2678,7 +3098,11 @@
    "ldt": "2026-09-10",
    "pay": "2026-10-02",
    "amount": 0.755,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.705,
+   "prev_ex": "2025-09-11",
+   "chg": 0.0709,
+   "trend": "raised"
   },
   {
    "t": "WMB",
@@ -2702,7 +3126,11 @@
    "ldt": "2026-09-10",
    "pay": "2026-09-28",
    "amount": 0.525,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.5,
+   "prev_ex": "2025-09-12",
+   "chg": 0.05,
+   "trend": "raised"
   },
   {
    "t": "ADP",
@@ -2726,7 +3154,11 @@
    "ldt": "2026-09-10",
    "pay": "2026-10-01",
    "amount": 1.7,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 1.54,
+   "prev_ex": "2025-09-12",
+   "chg": 0.1039,
+   "trend": "raised"
   },
   {
    "t": "ALB",
@@ -2750,7 +3182,11 @@
    "ldt": "2026-09-10",
    "pay": "2026-10-01",
    "amount": 0.41,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.405,
+   "prev_ex": "2025-09-12",
+   "chg": 0.0123,
+   "trend": "raised"
   },
   {
    "t": "WM",
@@ -2774,7 +3210,11 @@
    "ldt": "2026-09-10",
    "pay": "2026-09-25",
    "amount": 0.945,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.825,
+   "prev_ex": "2025-09-12",
+   "chg": 0.1455,
+   "trend": "raised"
   },
   {
    "t": "GRMN",
@@ -2798,7 +3238,11 @@
    "ldt": "2026-09-10",
    "pay": null,
    "amount": 1.05,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 0.9,
+   "prev_ex": "2025-09-12",
+   "chg": 0.1667,
+   "trend": "raised"
   },
   {
    "t": "GPN",
@@ -2822,7 +3266,11 @@
    "ldt": "2026-09-10",
    "pay": "2026-09-25",
    "amount": 0.25,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.25,
+   "prev_ex": "2025-09-12",
+   "chg": 0.0,
+   "trend": "unchanged"
   },
   {
    "t": "CB",
@@ -2870,7 +3318,11 @@
    "ldt": "2026-09-10",
    "pay": null,
    "amount": 0.31,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 0.27,
+   "prev_ex": "2025-09-12",
+   "chg": 0.1481,
+   "trend": "raised"
   },
   {
    "t": "BKNG",
@@ -2894,7 +3346,11 @@
    "ldt": "2026-09-10",
    "pay": "2026-09-30",
    "amount": 0.42,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.384,
+   "prev_ex": "2025-09-05",
+   "chg": 0.0938,
+   "trend": "raised"
   },
   {
    "t": "TXT",
@@ -2918,7 +3374,11 @@
    "ldt": "2026-09-10",
    "pay": "2026-10-01",
    "amount": 0.02,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.02,
+   "prev_ex": "2025-09-12",
+   "chg": 0.0,
+   "trend": "unchanged"
   },
   {
    "t": "DOC",
@@ -2966,7 +3426,11 @@
    "ldt": "2026-09-11",
    "pay": "2026-09-22",
    "amount": 2.32,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 2.21,
+   "prev_ex": "2025-09-15",
+   "chg": 0.0498,
+   "trend": "raised"
   },
   {
    "t": "FDX",
@@ -2990,7 +3454,11 @@
    "ldt": "2026-09-11",
    "pay": "2026-10-01",
    "amount": 1.22,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 1.168,
+   "prev_ex": "2025-09-08",
+   "chg": 0.0445,
+   "trend": "raised"
   },
   {
    "t": "VRT",
@@ -3014,7 +3482,11 @@
    "ldt": "2026-09-11",
    "pay": "2026-09-24",
    "amount": 0.063,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.038,
+   "prev_ex": "2025-09-15",
+   "chg": 0.6579,
+   "trend": "raised"
   },
   {
    "t": "MO",
@@ -3038,7 +3510,11 @@
    "ldt": "2026-09-14",
    "pay": "2026-10-09",
    "amount": 1.11,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 1.06,
+   "prev_ex": "2025-09-15",
+   "chg": 0.0472,
+   "trend": "raised"
   },
   {
    "t": "TROW",
@@ -3062,7 +3538,11 @@
    "ldt": "2026-09-14",
    "pay": "2026-09-29",
    "amount": 1.3,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 1.27,
+   "prev_ex": "2025-09-15",
+   "chg": 0.0236,
+   "trend": "raised"
   },
   {
    "t": "CCI",
@@ -3086,7 +3566,11 @@
    "ldt": "2026-09-14",
    "pay": "2026-09-30",
    "amount": 1.063,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 1.063,
+   "prev_ex": "2025-09-15",
+   "chg": 0.0,
+   "trend": "unchanged"
   },
   {
    "t": "UDR",
@@ -3110,7 +3594,11 @@
    "ldt": "2026-09-14",
    "pay": null,
    "amount": 0.145,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 0.43,
+   "prev_ex": "2025-10-09",
+   "chg": -0.6628,
+   "trend": "cut"
   },
   {
    "t": "EXR",
@@ -3134,7 +3622,11 @@
    "ldt": "2026-09-14",
    "pay": "2026-09-30",
    "amount": 1.62,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 1.62,
+   "prev_ex": "2025-09-15",
+   "chg": 0.0,
+   "trend": "unchanged"
   },
   {
    "t": "PSA",
@@ -3158,7 +3650,11 @@
    "ldt": "2026-09-14",
    "pay": "2026-10-06",
    "amount": 3.0,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 3.0,
+   "prev_ex": "2025-09-15",
+   "chg": 0.0,
+   "trend": "unchanged"
   },
   {
    "t": "IRM",
@@ -3182,7 +3678,11 @@
    "ldt": "2026-09-14",
    "pay": "2026-10-02",
    "amount": 0.864,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.785,
+   "prev_ex": "2025-09-15",
+   "chg": 0.1006,
+   "trend": "raised"
   },
   {
    "t": "XEL",
@@ -3206,7 +3706,11 @@
    "ldt": "2026-09-14",
    "pay": "2026-10-20",
    "amount": 0.593,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.57,
+   "prev_ex": "2025-09-15",
+   "chg": 0.0404,
+   "trend": "raised"
   },
   {
    "t": "DLR",
@@ -3230,7 +3734,11 @@
    "ldt": "2026-09-14",
    "pay": "2026-09-30",
    "amount": 1.22,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 1.22,
+   "prev_ex": "2025-09-15",
+   "chg": 0.0,
+   "trend": "unchanged"
   },
   {
    "t": "SKYD",
@@ -3254,7 +3762,11 @@
    "ldt": "2026-09-14",
    "pay": "2026-10-01",
    "amount": 0.05,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.05,
+   "prev_ex": "2025-09-15",
+   "chg": 0.0,
+   "trend": "unchanged"
   },
   {
    "t": "DPZ",
@@ -3278,7 +3790,11 @@
    "ldt": "2026-09-14",
    "pay": null,
    "amount": 1.99,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 1.74,
+   "prev_ex": "2025-09-15",
+   "chg": 0.1437,
+   "trend": "raised"
   },
   {
    "t": "DVN",
@@ -3302,7 +3818,11 @@
    "ldt": "2026-09-14",
    "pay": "2026-09-30",
    "amount": 0.32,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.24,
+   "prev_ex": "2025-09-15",
+   "chg": 0.3333,
+   "trend": "raised"
   },
   {
    "t": "PKG",
@@ -3326,7 +3846,11 @@
    "ldt": "2026-09-14",
    "pay": "2026-10-15",
    "amount": 1.5,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 1.25,
+   "prev_ex": "2025-09-15",
+   "chg": 0.2,
+   "trend": "raised"
   },
   {
    "t": "MRK",
@@ -3350,7 +3874,11 @@
    "ldt": "2026-09-14",
    "pay": "2026-10-07",
    "amount": 0.85,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.81,
+   "prev_ex": "2025-09-15",
+   "chg": 0.0494,
+   "trend": "raised"
   },
   {
    "t": "KO",
@@ -3374,7 +3902,11 @@
    "ldt": "2026-09-14",
    "pay": null,
    "amount": 0.53,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 0.51,
+   "prev_ex": "2025-09-15",
+   "chg": 0.0392,
+   "trend": "raised"
   },
   {
    "t": "GILD",
@@ -3398,7 +3930,11 @@
    "ldt": "2026-09-14",
    "pay": "2026-09-29",
    "amount": 0.82,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.79,
+   "prev_ex": "2025-09-15",
+   "chg": 0.038,
+   "trend": "raised"
   },
   {
    "t": "TKO",
@@ -3422,7 +3958,11 @@
    "ldt": "2026-09-14",
    "pay": "2026-09-30",
    "amount": 0.79,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.76,
+   "prev_ex": "2025-09-15",
+   "chg": 0.0395,
+   "trend": "raised"
   },
   {
    "t": "LDOS",
@@ -3446,7 +3986,11 @@
    "ldt": "2026-09-14",
    "pay": "2026-09-30",
    "amount": 0.43,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.4,
+   "prev_ex": "2025-09-15",
+   "chg": 0.075,
+   "trend": "raised"
   },
   {
    "t": "ALLE",
@@ -3494,7 +4038,11 @@
    "ldt": "2026-09-14",
    "pay": "2026-09-30",
    "amount": 0.5,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.45,
+   "prev_ex": "2025-09-15",
+   "chg": 0.1111,
+   "trend": "raised"
   },
   {
    "t": "ECL",
@@ -3518,7 +4066,11 @@
    "ldt": "2026-09-14",
    "pay": "2026-10-15",
    "amount": 0.73,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.65,
+   "prev_ex": "2025-09-16",
+   "chg": 0.1231,
+   "trend": "raised"
   },
   {
    "t": "PHM",
@@ -3542,7 +4094,11 @@
    "ldt": "2026-09-14",
    "pay": "2026-10-02",
    "amount": 0.26,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.22,
+   "prev_ex": "2025-09-16",
+   "chg": 0.1818,
+   "trend": "raised"
   },
   {
    "t": "AME",
@@ -3566,7 +4122,11 @@
    "ldt": "2026-09-14",
    "pay": "2026-09-30",
    "amount": 0.34,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.31,
+   "prev_ex": "2025-09-15",
+   "chg": 0.0968,
+   "trend": "raised"
   },
   {
    "t": "TMO",
@@ -3590,7 +4150,11 @@
    "ldt": "2026-09-14",
    "pay": "2026-10-15",
    "amount": 0.47,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.43,
+   "prev_ex": "2025-09-15",
+   "chg": 0.093,
+   "trend": "raised"
   },
   {
    "t": "TRU.JO",
@@ -3614,7 +4178,11 @@
    "ldt": "2026-09-15",
    "pay": null,
    "amount": 1.53,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 1.7,
+   "prev_ex": "2025-09-17",
+   "chg": -0.1,
+   "trend": "cut"
   },
   {
    "t": "SSW.JO",
@@ -3662,7 +4230,11 @@
    "ldt": "2026-09-15",
    "pay": null,
    "amount": 10.0,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 2.0,
+   "prev_ex": "2025-09-17",
+   "chg": 4.0,
+   "trend": "raised"
   },
   {
    "t": "ABG.JO",
@@ -3686,7 +4258,11 @@
    "ldt": "2026-09-15",
    "pay": null,
    "amount": 8.5,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 7.85,
+   "prev_ex": "2025-09-10",
+   "chg": 0.0828,
+   "trend": "raised"
   },
   {
    "t": "ARES",
@@ -3710,7 +4286,11 @@
    "ldt": "2026-09-15",
    "pay": "2026-09-30",
    "amount": 1.35,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 1.12,
+   "prev_ex": "2025-09-16",
+   "chg": 0.2054,
+   "trend": "raised"
   },
   {
    "t": "PLD",
@@ -3734,7 +4314,11 @@
    "ldt": "2026-09-15",
    "pay": "2026-09-30",
    "amount": 1.07,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 1.01,
+   "prev_ex": "2025-09-16",
+   "chg": 0.0594,
+   "trend": "raised"
   },
   {
    "t": "S32.JO",
@@ -3758,7 +4342,11 @@
    "ldt": "2026-09-15",
    "pay": null,
    "amount": 0.8661,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 0.4548,
+   "prev_ex": "2025-09-17",
+   "chg": 0.9044,
+   "trend": "raised"
   },
   {
    "t": "AIG",
@@ -3782,7 +4370,11 @@
    "ldt": "2026-09-15",
    "pay": "2026-09-30",
    "amount": 0.5,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.45,
+   "prev_ex": "2025-09-16",
+   "chg": 0.1111,
+   "trend": "raised"
   },
   {
    "t": "CFR.JO",
@@ -3806,7 +4398,11 @@
    "ldt": "2026-09-15",
    "pay": null,
    "amount": 86.72,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 60.5,
+   "prev_ex": "2025-09-17",
+   "chg": 0.4334,
+   "trend": "raised"
   },
   {
    "t": "NXPI",
@@ -3830,7 +4426,11 @@
    "ldt": "2026-09-15",
    "pay": "2026-10-08",
    "amount": 1.014,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 1.014,
+   "prev_ex": "2025-09-17",
+   "chg": 0.0,
+   "trend": "unchanged"
   },
   {
    "t": "ICE",
@@ -3854,7 +4454,11 @@
    "ldt": "2026-09-15",
    "pay": null,
    "amount": 0.52,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 0.48,
+   "prev_ex": "2025-09-16",
+   "chg": 0.0833,
+   "trend": "raised"
   },
   {
    "t": "MSI",
@@ -3878,7 +4482,11 @@
    "ldt": "2026-09-15",
    "pay": "2026-10-15",
    "amount": 1.21,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 1.09,
+   "prev_ex": "2025-09-15",
+   "chg": 0.1101,
+   "trend": "raised"
   },
   {
    "t": "HCA",
@@ -3902,7 +4510,11 @@
    "ldt": "2026-09-15",
    "pay": "2026-09-30",
    "amount": 0.78,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.72,
+   "prev_ex": "2025-09-16",
+   "chg": 0.0833,
+   "trend": "raised"
   },
   {
    "t": "VICI",
@@ -3926,7 +4538,11 @@
    "ldt": "2026-09-16",
    "pay": "2026-10-08",
    "amount": 0.46,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.45,
+   "prev_ex": "2025-09-18",
+   "chg": 0.0222,
+   "trend": "raised"
   },
   {
    "t": "HBAN",
@@ -3950,7 +4566,11 @@
    "ldt": "2026-09-16",
    "pay": null,
    "amount": 0.155,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 0.155,
+   "prev_ex": "2025-09-17",
+   "chg": 0.0,
+   "trend": "unchanged"
   },
   {
    "t": "BBY",
@@ -3974,7 +4594,11 @@
    "ldt": "2026-09-16",
    "pay": "2026-10-08",
    "amount": 0.96,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.95,
+   "prev_ex": "2025-09-18",
+   "chg": 0.0105,
+   "trend": "raised"
   },
   {
    "t": "RCL",
@@ -3998,7 +4622,11 @@
    "ldt": "2026-09-16",
    "pay": "2026-10-08",
    "amount": 1.5,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 1.0,
+   "prev_ex": "2025-09-25",
+   "chg": 0.5,
+   "trend": "raised"
   },
   {
    "t": "HPE",
@@ -4022,7 +4650,11 @@
    "ldt": "2026-09-16",
    "pay": "2026-10-16",
    "amount": 0.143,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.13,
+   "prev_ex": "2025-09-18",
+   "chg": 0.1,
+   "trend": "raised"
   },
   {
    "t": "CRM",
@@ -4046,7 +4678,11 @@
    "ldt": "2026-09-16",
    "pay": "2026-10-08",
    "amount": 0.44,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.416,
+   "prev_ex": "2025-09-17",
+   "chg": 0.0577,
+   "trend": "raised"
   },
   {
    "t": "OMC",
@@ -4070,7 +4706,11 @@
    "ldt": "2026-09-17",
    "pay": "2026-10-09",
    "amount": 0.8,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.7,
+   "prev_ex": "2025-09-02",
+   "chg": 0.1429,
+   "trend": "raised"
   },
   {
    "t": "IFF",
@@ -4094,7 +4734,11 @@
    "ldt": "2026-09-17",
    "pay": "2026-10-09",
    "amount": 0.4,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.4,
+   "prev_ex": "2025-09-29",
+   "chg": 0.0,
+   "trend": "unchanged"
   },
   {
    "t": "ES",
@@ -4118,7 +4762,11 @@
    "ldt": "2026-09-18",
    "pay": "2026-09-30",
    "amount": 0.788,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.753,
+   "prev_ex": "2025-09-22",
+   "chg": 0.0465,
+   "trend": "raised"
   },
   {
    "t": "KVUE",
@@ -4142,7 +4790,11 @@
    "ldt": "2026-09-18",
    "pay": "2026-10-02",
    "amount": 0.21,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.208,
+   "prev_ex": "2025-08-13",
+   "chg": 0.0096,
+   "trend": "unchanged"
   },
   {
    "t": "DTE",
@@ -4166,7 +4818,11 @@
    "ldt": "2026-09-18",
    "pay": "2026-10-15",
    "amount": 1.165,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 1.09,
+   "prev_ex": "2025-09-15",
+   "chg": 0.0688,
+   "trend": "raised"
   },
   {
    "t": "JCI",
@@ -4214,7 +4870,11 @@
    "ldt": "2026-09-18",
    "pay": "2026-09-30",
    "amount": 0.65,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.59,
+   "prev_ex": "2025-09-22",
+   "chg": 0.1017,
+   "trend": "raised"
   },
   {
    "t": "VST",
@@ -4238,7 +4898,11 @@
    "ldt": "2026-09-18",
    "pay": "2026-09-30",
    "amount": 0.23,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.226,
+   "prev_ex": "2025-09-19",
+   "chg": 0.0177,
+   "trend": "raised"
   },
   {
    "t": "WRB",
@@ -4262,7 +4926,11 @@
    "ldt": "2026-09-18",
    "pay": "2026-09-30",
    "amount": 0.1,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.09,
+   "prev_ex": "2025-09-22",
+   "chg": 0.1111,
+   "trend": "raised"
   },
   {
    "t": "META",
@@ -4286,7 +4954,11 @@
    "ldt": "2026-09-18",
    "pay": "2026-09-28",
    "amount": 0.525,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.525,
+   "prev_ex": "2025-09-22",
+   "chg": 0.0,
+   "trend": "unchanged"
   },
   {
    "t": "SUI.JO",
@@ -4310,7 +4982,11 @@
    "ldt": "2026-09-21",
    "pay": null,
    "amount": 1.85,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 1.72,
+   "prev_ex": "2025-09-23",
+   "chg": 0.0756,
+   "trend": "raised"
   },
   {
    "t": "IMP.JO",
@@ -4336,7 +5012,11 @@
    "ldt": "2026-09-21",
    "pay": null,
    "amount": 14.45,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 1.65,
+   "prev_ex": "2025-09-17",
+   "chg": 7.7576,
+   "trend": "raised"
   },
   {
    "t": "WHL.JO",
@@ -4360,7 +5040,11 @@
    "ldt": "2026-09-21",
    "pay": null,
    "amount": 0.81,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 0.81,
+   "prev_ex": "2025-09-23",
+   "chg": 0.0,
+   "trend": "unchanged"
   },
   {
    "t": "BVT.JO",
@@ -4384,7 +5068,11 @@
    "ldt": "2026-09-21",
    "pay": null,
    "amount": 4.83,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 4.53,
+   "prev_ex": "2025-09-23",
+   "chg": 0.0662,
+   "trend": "raised"
   },
   {
    "t": "SNT.JO",
@@ -4408,7 +5096,11 @@
    "ldt": "2026-09-21",
    "pay": null,
    "amount": 6.5,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 5.9,
+   "prev_ex": "2025-09-17",
+   "chg": 0.1017,
+   "trend": "raised"
   },
   {
    "t": "BID.JO",
@@ -4432,7 +5124,11 @@
    "ldt": "2026-09-21",
    "pay": null,
    "amount": 6.25,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 6.0,
+   "prev_ex": "2025-09-23",
+   "chg": 0.0417,
+   "trend": "raised"
   },
   {
    "t": "SHP.JO",
@@ -4456,7 +5152,11 @@
    "ldt": "2026-09-21",
    "pay": null,
    "amount": 5.66,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 4.96,
+   "prev_ex": "2025-09-23",
+   "chg": 0.1411,
+   "trend": "raised"
   },
   {
    "t": "APH",
@@ -4480,7 +5180,11 @@
    "ldt": "2026-09-21",
    "pay": "2026-10-14",
    "amount": 0.125,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.0825,
+   "prev_ex": "2025-09-16",
+   "chg": 0.5152,
+   "trend": "raised"
   },
   {
    "t": "CINF",
@@ -4504,7 +5208,11 @@
    "ldt": "2026-09-22",
    "pay": "2026-10-15",
    "amount": 0.94,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.87,
+   "prev_ex": "2025-09-22",
+   "chg": 0.0805,
+   "trend": "raised"
   },
   {
    "t": "LRCX",
@@ -4528,7 +5236,11 @@
    "ldt": "2026-09-22",
    "pay": "2026-10-14",
    "amount": 0.33,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.26,
+   "prev_ex": "2025-09-24",
+   "chg": 0.2692,
+   "trend": "raised"
   },
   {
    "t": "INVH",
@@ -4552,7 +5264,11 @@
    "ldt": "2026-09-23",
    "pay": "2026-10-16",
    "amount": 0.3,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.29,
+   "prev_ex": "2025-09-25",
+   "chg": 0.0345,
+   "trend": "raised"
   },
   {
    "t": "SRE",
@@ -4576,7 +5292,11 @@
    "ldt": "2026-09-23",
    "pay": "2026-10-15",
    "amount": 0.658,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.645,
+   "prev_ex": "2025-10-01",
+   "chg": 0.0202,
+   "trend": "raised"
   },
   {
    "t": "STX",
@@ -4600,7 +5320,11 @@
    "ldt": "2026-09-23",
    "pay": "2026-10-07",
    "amount": 0.74,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.72,
+   "prev_ex": "2025-09-30",
+   "chg": 0.0278,
+   "trend": "raised"
   },
   {
    "t": "MDT",
@@ -4624,7 +5348,11 @@
    "ldt": "2026-09-24",
    "pay": "2026-10-16",
    "amount": 0.72,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.71,
+   "prev_ex": "2025-09-26",
+   "chg": 0.0141,
+   "trend": "raised"
   },
   {
    "t": "RL",
@@ -4648,7 +5376,11 @@
    "ldt": "2026-09-24",
    "pay": "2026-10-09",
    "amount": 1.0,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.913,
+   "prev_ex": "2025-09-26",
+   "chg": 0.0953,
+   "trend": "raised"
   },
   {
    "t": "KDP",
@@ -4672,7 +5404,11 @@
    "ldt": "2026-09-25",
    "pay": "2026-10-09",
    "amount": 0.23,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.23,
+   "prev_ex": "2025-09-26",
+   "chg": 0.0,
+   "trend": "unchanged"
   },
   {
    "t": "EXX.JO",
@@ -4696,7 +5432,11 @@
    "ldt": "2026-09-29",
    "pay": null,
    "amount": 7.0,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 8.43,
+   "prev_ex": "2025-10-01",
+   "chg": -0.1696,
+   "trend": "cut"
   },
   {
    "t": "OMU.JO",
@@ -4720,7 +5460,11 @@
    "ldt": "2026-09-29",
    "pay": null,
    "amount": 0.4,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 0.37,
+   "prev_ex": "2025-10-01",
+   "chg": 0.0811,
+   "trend": "raised"
   },
   {
    "t": "ARE",
@@ -4744,7 +5488,11 @@
    "ldt": "2026-09-29",
    "pay": "2026-10-15",
    "amount": 0.72,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 1.32,
+   "prev_ex": "2025-09-30",
+   "chg": -0.4545,
+   "trend": "cut"
   },
   {
    "t": "MTH.JO",
@@ -4768,7 +5516,11 @@
    "ldt": "2026-09-29",
    "pay": null,
    "amount": 4.1,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 3.1,
+   "prev_ex": "2025-10-01",
+   "chg": 0.3226,
+   "trend": "raised"
   },
   {
    "t": "O",
@@ -4816,7 +5568,11 @@
    "ldt": "2026-09-29",
    "pay": null,
    "amount": 13.3,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 14.12,
+   "prev_ex": "2025-10-01",
+   "chg": -0.0581,
+   "trend": "cut"
   },
   {
    "t": "BXP",
@@ -4840,7 +5596,11 @@
    "ldt": "2026-09-29",
    "pay": "2026-10-30",
    "amount": 0.7,
-   "status": "went_ex"
+   "status": "went_ex",
+   "prev_amount": 0.7,
+   "prev_ex": "2025-09-30",
+   "chg": 0.0,
+   "trend": "unchanged"
   },
   {
    "t": "BEN",
@@ -4864,7 +5624,11 @@
    "ldt": "2026-09-29",
    "pay": "2026-10-09",
    "amount": 0.33,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.32,
+   "prev_ex": "2025-09-30",
+   "chg": 0.0312,
+   "trend": "raised"
   },
   {
    "t": "CPT",
@@ -4888,7 +5652,11 @@
    "ldt": "2026-09-29",
    "pay": "2026-10-16",
    "amount": 1.06,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 1.05,
+   "prev_ex": "2025-09-30",
+   "chg": 0.0095,
+   "trend": "unchanged"
   },
   {
    "t": "AMT",
@@ -4912,7 +5680,11 @@
    "ldt": "2026-09-29",
    "pay": "2026-10-20",
    "amount": 1.79,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 1.7,
+   "prev_ex": "2025-09-30",
+   "chg": 0.0529,
+   "trend": "raised"
   },
   {
    "t": "ESS",
@@ -4936,7 +5708,11 @@
    "ldt": "2026-09-29",
    "pay": "2026-10-15",
    "amount": 2.59,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 2.57,
+   "prev_ex": "2025-09-30",
+   "chg": 0.0078,
+   "trend": "unchanged"
   },
   {
    "t": "USB",
@@ -4960,7 +5736,11 @@
    "ldt": "2026-09-29",
    "pay": "2026-10-15",
    "amount": 0.54,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.52,
+   "prev_ex": "2025-09-30",
+   "chg": 0.0385,
+   "trend": "raised"
   },
   {
    "t": "OUT.JO",
@@ -4971,7 +5751,7 @@
    "px": 86.01,
    "last_amount": 2.583,
    "last_date": "2026-09-30",
-   "per_year": 3,
+   "per_year": 2,
    "yield": 0.0339,
    "payout": 0.745,
    "v": "HOLD",
@@ -4984,7 +5764,11 @@
    "ldt": "2026-09-29",
    "pay": null,
    "amount": 2.583,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 1.821,
+   "prev_ex": "2025-10-15",
+   "chg": 0.4185,
+   "trend": "raised"
   },
   {
    "t": "MDLZ",
@@ -5008,7 +5792,11 @@
    "ldt": "2026-09-29",
    "pay": "2026-10-14",
    "amount": 0.52,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.5,
+   "prev_ex": "2025-09-30",
+   "chg": 0.04,
+   "trend": "raised"
   },
   {
    "t": "HST",
@@ -5032,7 +5820,11 @@
    "ldt": "2026-09-29",
    "pay": "2026-10-15",
    "amount": 0.2,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.2,
+   "prev_ex": "2025-09-30",
+   "chg": 0.0,
+   "trend": "unchanged"
   },
   {
    "t": "SPG.JO",
@@ -5080,7 +5872,11 @@
    "ldt": "2026-09-29",
    "pay": "2026-10-15",
    "amount": 0.42,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.4,
+   "prev_ex": "2025-09-30",
+   "chg": 0.05,
+   "trend": "raised"
   },
   {
    "t": "ITW",
@@ -5104,7 +5900,11 @@
    "ldt": "2026-09-29",
    "pay": "2026-10-09",
    "amount": 1.72,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 1.61,
+   "prev_ex": "2025-09-30",
+   "chg": 0.0683,
+   "trend": "raised"
   },
   {
    "t": "VTR",
@@ -5128,7 +5928,11 @@
    "ldt": "2026-09-29",
    "pay": "2026-10-15",
    "amount": 0.52,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.48,
+   "prev_ex": "2025-09-30",
+   "chg": 0.0833,
+   "trend": "raised"
   },
   {
    "t": "PCG",
@@ -5152,7 +5956,11 @@
    "ldt": "2026-09-29",
    "pay": "2026-10-15",
    "amount": 0.05,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.025,
+   "prev_ex": "2025-09-30",
+   "chg": 1.0,
+   "trend": "raised"
   },
   {
    "t": "LII",
@@ -5176,7 +5984,11 @@
    "ldt": "2026-09-29",
    "pay": "2026-10-15",
    "amount": 1.36,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 1.3,
+   "prev_ex": "2025-09-30",
+   "chg": 0.0462,
+   "trend": "raised"
   },
   {
    "t": "WTW",
@@ -5200,7 +6012,11 @@
    "ldt": "2026-09-29",
    "pay": "2026-10-15",
    "amount": 0.96,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.92,
+   "prev_ex": "2025-09-30",
+   "chg": 0.0435,
+   "trend": "raised"
   },
   {
    "t": "SYK",
@@ -5224,7 +6040,11 @@
    "ldt": "2026-09-29",
    "pay": "2026-10-30",
    "amount": 0.88,
-   "status": "went_ex"
+   "status": "went_ex",
+   "prev_amount": 0.84,
+   "prev_ex": "2025-09-30",
+   "chg": 0.0476,
+   "trend": "raised"
   },
   {
    "t": "DE",
@@ -5248,7 +6068,11 @@
    "ldt": "2026-09-29",
    "pay": "2026-11-09",
    "amount": 1.62,
-   "status": "went_ex"
+   "status": "went_ex",
+   "prev_amount": 1.62,
+   "prev_ex": "2025-09-30",
+   "chg": 0.0,
+   "trend": "unchanged"
   },
   {
    "t": "ZBH",
@@ -5272,7 +6096,11 @@
    "ldt": "2026-09-29",
    "pay": "2026-10-30",
    "amount": 0.24,
-   "status": "went_ex"
+   "status": "went_ex",
+   "prev_amount": 0.24,
+   "prev_ex": "2025-09-30",
+   "chg": 0.0,
+   "trend": "unchanged"
   },
   {
    "t": "STLD",
@@ -5296,7 +6124,11 @@
    "ldt": "2026-09-29",
    "pay": "2026-10-09",
    "amount": 0.53,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.5,
+   "prev_ex": "2025-09-30",
+   "chg": 0.06,
+   "trend": "raised"
   },
   {
    "t": "NUE",
@@ -5320,7 +6152,11 @@
    "ldt": "2026-09-29",
    "pay": "2026-11-10",
    "amount": 0.56,
-   "status": "went_ex"
+   "status": "went_ex",
+   "prev_amount": 0.55,
+   "prev_ex": "2025-09-30",
+   "chg": 0.0182,
+   "trend": "raised"
   },
   {
    "t": "MPWR",
@@ -5344,7 +6180,11 @@
    "ldt": "2026-09-29",
    "pay": "2026-10-15",
    "amount": 2.0,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 1.56,
+   "prev_ex": "2025-09-30",
+   "chg": 0.2821,
+   "trend": "raised"
   },
   {
    "t": "DHR",
@@ -5368,7 +6208,11 @@
    "ldt": "2026-09-29",
    "pay": "2026-10-30",
    "amount": 0.4,
-   "status": "went_ex"
+   "status": "went_ex",
+   "prev_amount": 0.32,
+   "prev_ex": "2025-09-26",
+   "chg": 0.25,
+   "trend": "raised"
   },
   {
    "t": "VLTO",
@@ -5392,7 +6236,11 @@
    "ldt": "2026-09-29",
    "pay": "2026-10-30",
    "amount": 0.13,
-   "status": "went_ex"
+   "status": "went_ex",
+   "prev_amount": 0.11,
+   "prev_ex": "2025-09-30",
+   "chg": 0.1818,
+   "trend": "raised"
   },
   {
    "t": "FRT",
@@ -5416,7 +6264,11 @@
    "ldt": "2026-09-30",
    "pay": "2026-10-15",
    "amount": 1.16,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 1.13,
+   "prev_ex": "2025-10-01",
+   "chg": 0.0265,
+   "trend": "raised"
   },
   {
    "t": "APD",
@@ -5442,7 +6294,11 @@
    "ldt": "2026-09-30",
    "pay": null,
    "amount": 1.81,
-   "status": "went_ex"
+   "status": "went_ex",
+   "prev_amount": 1.79,
+   "prev_ex": "2025-10-01",
+   "chg": 0.0112,
+   "trend": "raised"
   },
   {
    "t": "STT",
@@ -5466,7 +6322,11 @@
    "ldt": "2026-09-30",
    "pay": "2026-10-13",
    "amount": 0.92,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.84,
+   "prev_ex": "2025-10-01",
+   "chg": 0.0952,
+   "trend": "raised"
   },
   {
    "t": "MRSH",
@@ -5490,7 +6350,11 @@
    "ldt": "2026-09-30",
    "pay": "2026-11-13",
    "amount": 0.99,
-   "status": "went_ex"
+   "status": "went_ex",
+   "prev_amount": 0.9,
+   "prev_ex": "2025-10-02",
+   "chg": 0.1,
+   "trend": "raised"
   },
   {
    "t": "RJF",
@@ -5514,7 +6378,11 @@
    "ldt": "2026-09-30",
    "pay": "2026-10-15",
    "amount": 0.54,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.5,
+   "prev_ex": "2025-10-01",
+   "chg": 0.08,
+   "trend": "raised"
   },
   {
    "t": "CAH",
@@ -5538,7 +6406,11 @@
    "ldt": "2026-09-30",
    "pay": "2026-10-15",
    "amount": 0.516,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.511,
+   "prev_ex": "2025-10-01",
+   "chg": 0.0098,
+   "trend": "unchanged"
   },
   {
    "t": "PGR",
@@ -5562,7 +6434,11 @@
    "ldt": "2026-09-30",
    "pay": "2026-10-09",
    "amount": 0.1,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.1,
+   "prev_ex": "2025-10-02",
+   "chg": 0.0,
+   "trend": "unchanged"
   },
   {
    "t": "PWR",
@@ -5586,7 +6462,11 @@
    "ldt": "2026-09-30",
    "pay": "2026-10-09",
    "amount": 0.11,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.1,
+   "prev_ex": "2025-10-01",
+   "chg": 0.1,
+   "trend": "raised"
   },
   {
    "t": "BMY",
@@ -5610,7 +6490,11 @@
    "ldt": "2026-10-01",
    "pay": "2026-11-02",
    "amount": 0.63,
-   "status": "went_ex"
+   "status": "went_ex",
+   "prev_amount": 0.62,
+   "prev_ex": "2025-10-03",
+   "chg": 0.0161,
+   "trend": "raised"
   },
   {
    "t": "PM",
@@ -5634,7 +6518,11 @@
    "ldt": "2026-10-01",
    "pay": "2026-10-26",
    "amount": 1.6,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 1.47,
+   "prev_ex": "2025-10-03",
+   "chg": 0.0884,
+   "trend": "raised"
   },
   {
    "t": "SYY",
@@ -5658,7 +6546,11 @@
    "ldt": "2026-10-01",
    "pay": "2026-10-23",
    "amount": 0.55,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.54,
+   "prev_ex": "2025-10-03",
+   "chg": 0.0185,
+   "trend": "raised"
   },
   {
    "t": "CSCO",
@@ -5682,7 +6574,11 @@
    "ldt": "2026-10-01",
    "pay": "2026-10-21",
    "amount": 0.42,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.41,
+   "prev_ex": "2025-10-03",
+   "chg": 0.0244,
+   "trend": "raised"
   },
   {
    "t": "IEX",
@@ -5706,7 +6602,11 @@
    "ldt": "2026-10-01",
    "pay": "2026-10-16",
    "amount": 0.73,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.71,
+   "prev_ex": "2025-10-10",
+   "chg": 0.0282,
+   "trend": "raised"
   },
   {
    "t": "RSG",
@@ -5730,7 +6630,11 @@
    "ldt": "2026-10-01",
    "pay": "2026-10-15",
    "amount": 0.67,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.625,
+   "prev_ex": "2025-10-02",
+   "chg": 0.072,
+   "trend": "raised"
   },
   {
    "t": "ROP",
@@ -5754,7 +6658,11 @@
    "ldt": "2026-10-01",
    "pay": "2026-10-21",
    "amount": 0.91,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.825,
+   "prev_ex": "2025-10-03",
+   "chg": 0.103,
+   "trend": "raised"
   },
   {
    "t": "VMRK",
@@ -5780,7 +6688,11 @@
    "ldt": "2026-10-02",
    "pay": "2026-10-16",
    "amount": 0.703,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.693,
+   "prev_ex": "2025-09-25",
+   "chg": 0.0144,
+   "trend": "raised"
   },
   {
    "t": "ERIE",
@@ -5804,7 +6716,11 @@
    "ldt": "2026-10-02",
    "pay": "2026-10-20",
    "amount": 1.463,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 1.365,
+   "prev_ex": "2025-10-06",
+   "chg": 0.0718,
+   "trend": "raised"
   },
   {
    "t": "GL",
@@ -5828,7 +6744,11 @@
    "ldt": "2026-10-02",
    "pay": "2026-10-30",
    "amount": 0.33,
-   "status": "went_ex"
+   "status": "went_ex",
+   "prev_amount": 0.27,
+   "prev_ex": "2025-10-03",
+   "chg": 0.2222,
+   "trend": "raised"
   },
   {
    "t": "GE",
@@ -5852,7 +6772,11 @@
    "ldt": "2026-10-02",
    "pay": "2026-10-26",
    "amount": 0.47,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.36,
+   "prev_ex": "2025-09-29",
+   "chg": 0.3056,
+   "trend": "raised"
   },
   {
    "t": "JPM",
@@ -5876,7 +6800,11 @@
    "ldt": "2026-10-05",
    "pay": "2026-10-31",
    "amount": 1.65,
-   "status": "went_ex"
+   "status": "went_ex",
+   "prev_amount": 1.5,
+   "prev_ex": "2025-10-06",
+   "chg": 0.1,
+   "trend": "raised"
   },
   {
    "t": "DG",
@@ -5900,7 +6828,11 @@
    "ldt": "2026-10-05",
    "pay": "2026-10-20",
    "amount": 0.59,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.59,
+   "prev_ex": "2025-10-07",
+   "chg": 0.0,
+   "trend": "unchanged"
   },
   {
    "t": "DGX",
@@ -5924,7 +6856,11 @@
    "ldt": "2026-10-05",
    "pay": "2026-10-21",
    "amount": 0.86,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.8,
+   "prev_ex": "2025-10-03",
+   "chg": 0.075,
+   "trend": "raised"
   },
   {
    "t": "A",
@@ -5948,7 +6884,11 @@
    "ldt": "2026-10-05",
    "pay": "2026-10-28",
    "amount": 0.255,
-   "status": "went_ex"
+   "status": "went_ex",
+   "prev_amount": 0.248,
+   "prev_ex": "2025-09-30",
+   "chg": 0.0282,
+   "trend": "raised"
   },
   {
    "t": "RBO.JO",
@@ -5974,7 +6914,11 @@
    "ldt": "2026-10-06",
    "pay": null,
    "amount": 1.2,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 0.2,
+   "prev_ex": "2025-09-23",
+   "chg": 5.0,
+   "trend": "raised"
   },
   {
    "t": "ARI.JO",
@@ -5998,7 +6942,11 @@
    "ldt": "2026-10-06",
    "pay": null,
    "amount": 7.0,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 6.0,
+   "prev_ex": "2025-10-01",
+   "chg": 0.1667,
+   "trend": "raised"
   },
   {
    "t": "MTM.JO",
@@ -6022,7 +6970,11 @@
    "ldt": "2026-10-06",
    "pay": null,
    "amount": 1.2,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 0.9,
+   "prev_ex": "2025-10-08",
+   "chg": 0.3333,
+   "trend": "raised"
   },
   {
    "t": "FSR.JO",
@@ -6046,7 +6998,11 @@
    "ldt": "2026-10-06",
    "pay": null,
    "amount": 2.8,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 2.47,
+   "prev_ex": "2025-10-08",
+   "chg": 0.1336,
+   "trend": "raised"
   },
   {
    "t": "EIX",
@@ -6070,7 +7026,11 @@
    "ldt": "2026-10-06",
    "pay": "2026-10-31",
    "amount": 0.878,
-   "status": "went_ex"
+   "status": "went_ex",
+   "prev_amount": 0.828,
+   "prev_ex": "2025-10-07",
+   "chg": 0.0604,
+   "trend": "raised"
   },
   {
    "t": "CMCSA",
@@ -6094,7 +7054,11 @@
    "ldt": "2026-10-06",
    "pay": null,
    "amount": 0.33,
-   "status": "went_ex"
+   "status": "went_ex",
+   "prev_amount": 0.3093,
+   "prev_ex": "2025-10-01",
+   "chg": 0.0669,
+   "trend": "raised"
   },
   {
    "t": "HYP.JO",
@@ -6118,7 +7082,11 @@
    "ldt": "2026-10-06",
    "pay": null,
    "amount": 2.329,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 1.943,
+   "prev_ex": "2025-10-08",
+   "chg": 0.1987,
+   "trend": "raised"
   },
   {
    "t": "HAR.JO",
@@ -6144,7 +7112,11 @@
    "ldt": "2026-10-06",
    "pay": null,
    "amount": 7.5,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 1.55,
+   "prev_ex": "2025-10-08",
+   "chg": 3.8387,
+   "trend": "raised"
   },
   {
    "t": "LEN",
@@ -6170,7 +7142,11 @@
    "ldt": "2026-10-06",
    "pay": "2026-10-22",
    "amount": 0.5,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.5,
+   "prev_ex": "2025-10-10",
+   "chg": 0.0,
+   "trend": "unchanged"
   },
   {
    "t": "APN.JO",
@@ -6194,7 +7170,11 @@
    "ldt": "2026-10-06",
    "pay": null,
    "amount": 2.32,
-   "status": "paid_est"
+   "status": "paid_est",
+   "prev_amount": 2.11,
+   "prev_ex": "2025-10-01",
+   "chg": 0.0995,
+   "trend": "raised"
   },
   {
    "t": "INTU",
@@ -6218,7 +7198,11 @@
    "ldt": "2026-10-07",
    "pay": "2026-10-16",
    "amount": 1.38,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 1.2,
+   "prev_ex": "2025-10-09",
+   "chg": 0.15,
+   "trend": "raised"
   },
   {
    "t": "VZ",
@@ -6242,7 +7226,11 @@
    "ldt": "2026-10-08",
    "pay": "2026-11-02",
    "amount": 0.708,
-   "status": "went_ex"
+   "status": "went_ex",
+   "prev_amount": 0.69,
+   "prev_ex": "2025-10-10",
+   "chg": 0.0261,
+   "trend": "raised"
   },
   {
    "t": "T",
@@ -6266,7 +7254,11 @@
    "ldt": "2026-10-08",
    "pay": "2026-11-02",
    "amount": 0.278,
-   "status": "went_ex"
+   "status": "went_ex",
+   "prev_amount": 0.278,
+   "prev_ex": "2025-10-10",
+   "chg": 0.0,
+   "trend": "unchanged"
   },
   {
    "t": "DRI",
@@ -6290,7 +7282,11 @@
    "ldt": "2026-10-08",
    "pay": "2026-11-02",
    "amount": 1.62,
-   "status": "went_ex"
+   "status": "went_ex",
+   "prev_amount": 1.5,
+   "prev_ex": "2025-10-10",
+   "chg": 0.08,
+   "trend": "raised"
   },
   {
    "t": "GD",
@@ -6314,7 +7310,11 @@
    "ldt": "2026-10-08",
    "pay": "2026-11-13",
    "amount": 1.59,
-   "status": "went_ex"
+   "status": "went_ex",
+   "prev_amount": 1.5,
+   "prev_ex": "2025-10-10",
+   "chg": 0.06,
+   "trend": "raised"
   },
   {
    "t": "ORCL",
@@ -6338,7 +7338,11 @@
    "ldt": "2026-10-08",
    "pay": "2026-10-23",
    "amount": 0.5,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.5,
+   "prev_ex": "2025-10-09",
+   "chg": 0.0,
+   "trend": "unchanged"
   },
   {
    "t": "AXP",
@@ -6362,7 +7366,11 @@
    "ldt": "2026-10-08",
    "pay": "2026-11-10",
    "amount": 0.95,
-   "status": "went_ex"
+   "status": "went_ex",
+   "prev_amount": 0.82,
+   "prev_ex": "2025-10-10",
+   "chg": 0.1585,
+   "trend": "raised"
   },
   {
    "t": "NTAP",
@@ -6386,7 +7394,11 @@
    "ldt": "2026-10-08",
    "pay": "2026-10-28",
    "amount": 0.52,
-   "status": "went_ex"
+   "status": "went_ex",
+   "prev_amount": 0.52,
+   "prev_ex": "2025-10-03",
+   "chg": 0.0,
+   "trend": "unchanged"
   },
   {
    "t": "MA",
@@ -6410,7 +7422,11 @@
    "ldt": "2026-10-08",
    "pay": "2026-11-09",
    "amount": 0.87,
-   "status": "went_ex"
+   "status": "went_ex",
+   "prev_amount": 0.76,
+   "prev_ex": "2025-10-09",
+   "chg": 0.1447,
+   "trend": "raised"
   },
   {
    "t": "MRVL",
@@ -6434,7 +7450,11 @@
    "ldt": "2026-10-08",
    "pay": "2026-10-29",
    "amount": 0.06,
-   "status": "went_ex"
+   "status": "went_ex",
+   "prev_amount": 0.06,
+   "prev_ex": "2025-10-10",
+   "chg": 0.0,
+   "trend": "unchanged"
   },
   {
    "t": "GIS",
@@ -6458,7 +7478,11 @@
    "ldt": "2026-10-12",
    "pay": "2026-11-02",
    "amount": 0.61,
-   "status": "went_ex"
+   "status": "went_ex",
+   "prev_amount": 0.61,
+   "prev_ex": "2025-10-10",
+   "chg": 0.0,
+   "trend": "unchanged"
   },
   {
    "t": "HRL",
@@ -6469,7 +7493,7 @@
    "px": 21.06,
    "last_amount": 0.293,
    "last_date": "2026-10-13",
-   "per_year": 5,
+   "per_year": 4,
    "yield": 0.0556,
    "payout": 1.883,
    "v": "HOLD",
@@ -6482,7 +7506,11 @@
    "ldt": "2026-10-12",
    "pay": "2026-11-16",
    "amount": 0.293,
-   "status": "went_ex"
+   "status": "went_ex",
+   "prev_amount": 0.29,
+   "prev_ex": "2025-10-14",
+   "chg": 0.0103,
+   "trend": "raised"
   },
   {
    "t": "MKC",
@@ -6493,7 +7521,7 @@
    "px": 48.12,
    "last_amount": 0.48,
    "last_date": "2026-10-13",
-   "per_year": 5,
+   "per_year": 4,
    "yield": 0.0399,
    "payout": 0.3418,
    "v": "HOLD",
@@ -6506,7 +7534,11 @@
    "ldt": "2026-10-12",
    "pay": "2026-10-26",
    "amount": 0.48,
-   "status": "paid"
+   "status": "paid",
+   "prev_amount": 0.45,
+   "prev_ex": "2025-10-14",
+   "chg": 0.0667,
+   "trend": "raised"
   },
   {
    "t": "ACN",
@@ -6541,7 +7573,7 @@
    "px": 81.9,
    "last_amount": 7.18,
    "last_date": "2026-10-14",
-   "per_year": 3,
+   "per_year": 2,
    "yield": 0.1021,
    "payout": 0.8564,
    "v": "HOLD",
@@ -6554,7 +7586,11 @@
    "ldt": "2026-10-13",
    "pay": null,
    "amount": 7.18,
-   "status": "went_ex"
+   "status": "went_ex",
+   "prev_amount": 4.06,
+   "prev_ex": "2025-10-15",
+   "chg": 0.7685,
+   "trend": "raised"
   },
   {
    "t": "GRT.JO",
@@ -6565,7 +7601,7 @@
    "px": 15.67,
    "last_amount": 0.673,
    "last_date": "2026-10-14",
-   "per_year": 3,
+   "per_year": 2,
    "yield": 0.0859,
    "payout": 0.5845,
    "v": "HOLD",
@@ -6578,7 +7614,11 @@
    "ldt": "2026-10-13",
    "pay": null,
    "amount": 0.673,
-   "status": "went_ex"
+   "status": "went_ex",
+   "prev_amount": 0.633,
+   "prev_ex": "2025-10-15",
+   "chg": 0.0632,
+   "trend": "raised"
   },
   {
    "t": "FFB.JO",
@@ -6589,7 +7629,7 @@
    "px": 24.3,
    "last_amount": 0.9091,
    "last_date": "2026-10-14",
-   "per_year": 3,
+   "per_year": 2,
    "yield": 0.0748,
    "payout": 0.4196,
    "v": "HOLD",
@@ -6602,7 +7642,11 @@
    "ldt": "2026-10-13",
    "pay": null,
    "amount": 0.9091,
-   "status": "went_ex"
+   "status": "went_ex",
+   "prev_amount": 0.8629,
+   "prev_ex": "2025-10-15",
+   "chg": 0.0535,
+   "trend": "raised"
   },
   {
    "t": "DTC.JO",
@@ -6637,7 +7681,7 @@
    "px": 224.5,
    "last_amount": 2.0,
    "last_date": "2026-10-14",
-   "per_year": 5,
+   "per_year": 4,
    "yield": 0.0356,
    "payout": 0.3744,
    "v": "HOLD",
@@ -6650,7 +7694,11 @@
    "ldt": "2026-10-13",
    "pay": "2026-11-05",
    "amount": 2.0,
-   "status": "went_ex"
+   "status": "went_ex",
+   "prev_amount": 1.7,
+   "prev_ex": "2025-10-14",
+   "chg": 0.1765,
+   "trend": "raised"
   },
   {
    "t": "DSY.JO",
@@ -6661,7 +7709,7 @@
    "px": 269.1,
    "last_amount": 2.73,
    "last_date": "2026-10-14",
-   "per_year": 3,
+   "per_year": 2,
    "yield": 0.0143,
    "payout": 0.162,
    "v": "BUY",
@@ -6676,7 +7724,11 @@
    "ldt": "2026-10-13",
    "pay": null,
    "amount": 2.73,
-   "status": "went_ex"
+   "status": "went_ex",
+   "prev_amount": 2.01,
+   "prev_ex": "2025-10-15",
+   "chg": 0.3582,
+   "trend": "raised"
   },
   {
    "t": "MU",
@@ -6703,7 +7755,11 @@
    "ldt": "2026-10-13",
    "pay": "2026-10-29",
    "amount": 0.15,
-   "status": "went_ex"
+   "status": "went_ex",
+   "prev_amount": 0.115,
+   "prev_ex": "2025-10-03",
+   "chg": 0.3043,
+   "trend": "raised"
   },
   {
    "t": "MAA",
@@ -6714,7 +7770,7 @@
    "px": 119.8,
    "last_amount": 1.53,
    "last_date": "2026-10-15",
-   "per_year": 5,
+   "per_year": 4,
    "yield": 0.0511,
    "payout": 1.781,
    "v": "HOLD",
@@ -6727,7 +7783,11 @@
    "ldt": "2026-10-14",
    "pay": "2026-10-30",
    "amount": 1.53,
-   "status": "went_ex"
+   "status": "went_ex",
+   "prev_amount": 1.515,
+   "prev_ex": "2025-10-15",
+   "chg": 0.0099,
+   "trend": "unchanged"
   },
   {
    "t": "ABT",
@@ -6738,7 +7798,7 @@
    "px": 103.7,
    "last_amount": 0.63,
    "last_date": "2026-10-15",
-   "per_year": 5,
+   "per_year": 4,
    "yield": 0.0243,
    "payout": 0.7871,
    "v": "HOLD",
@@ -6751,7 +7811,11 @@
    "ldt": "2026-10-14",
    "pay": "2026-11-16",
    "amount": 0.63,
-   "status": "went_ex"
+   "status": "went_ex",
+   "prev_amount": 0.59,
+   "prev_ex": "2025-10-15",
+   "chg": 0.0678,
+   "trend": "raised"
   },
   {
    "t": "ABBV",
@@ -6762,7 +7826,7 @@
    "px": 285.6,
    "last_amount": 1.73,
    "last_date": "2026-10-15",
-   "per_year": 5,
+   "per_year": 4,
    "yield": 0.0242,
    "payout": 1.904,
    "v": "HOLD",
@@ -6775,7 +7839,11 @@
    "ldt": "2026-10-14",
    "pay": "2026-11-16",
    "amount": 1.73,
-   "status": "went_ex"
+   "status": "went_ex",
+   "prev_amount": 1.64,
+   "prev_ex": "2025-10-15",
+   "chg": 0.0549,
+   "trend": "raised"
   },
   {
    "t": "DAL",
@@ -6786,7 +7854,7 @@
    "px": 76.78,
    "last_amount": 0.215,
    "last_date": "2026-10-15",
-   "per_year": 5,
+   "per_year": 4,
    "yield": 0.0112,
    "payout": 0.1552,
    "v": "BUY",
@@ -6799,7 +7867,11 @@
    "ldt": "2026-10-14",
    "pay": "2026-11-05",
    "amount": 0.215,
-   "status": "went_ex"
+   "status": "went_ex",
+   "prev_amount": 0.188,
+   "prev_ex": "2025-10-16",
+   "chg": 0.1436,
+   "trend": "raised"
   },
   {
    "t": "FCX",
@@ -6810,7 +7882,7 @@
    "px": 65.18,
    "last_amount": 0.15,
    "last_date": "2026-10-15",
-   "per_year": 5,
+   "per_year": 4,
    "yield": 0.0092,
    "payout": 0.2956,
    "v": "HOLD",
@@ -6823,7 +7895,11 @@
    "ldt": "2026-10-14",
    "pay": "2026-11-02",
    "amount": 0.15,
-   "status": "went_ex"
+   "status": "went_ex",
+   "prev_amount": 0.15,
+   "prev_ex": "2025-10-15",
+   "chg": 0.0,
+   "trend": "unchanged"
   },
   {
    "t": "EME",
@@ -6834,7 +7910,7 @@
    "px": 647.7,
    "last_amount": 0.4,
    "last_date": "2026-10-15",
-   "per_year": 5,
+   "per_year": 4,
    "yield": 0.0025,
    "payout": 0.0405,
    "v": "HOLD",
@@ -6847,7 +7923,11 @@
    "ldt": "2026-10-14",
    "pay": "2026-10-30",
    "amount": 0.4,
-   "status": "went_ex"
+   "status": "went_ex",
+   "prev_amount": 0.25,
+   "prev_ex": "2025-10-15",
+   "chg": 0.6,
+   "trend": "raised"
   },
   {
    "t": "EOG",
@@ -6858,7 +7938,7 @@
    "px": 163.0,
    "last_amount": 1.02,
    "last_date": "2026-10-16",
-   "per_year": 5,
+   "per_year": 4,
    "yield": 0.025,
    "payout": 0.314,
    "v": "BUY",
@@ -6871,7 +7951,11 @@
    "ldt": "2026-10-15",
    "pay": "2026-10-30",
    "amount": 1.02,
-   "status": "went_ex"
+   "status": "went_ex",
+   "prev_amount": 1.02,
+   "prev_ex": "2025-10-17",
+   "chg": 0.0,
+   "trend": "unchanged"
   },
   {
    "t": "WSM",
@@ -6882,7 +7966,7 @@
    "px": 252.5,
    "last_amount": 0.76,
    "last_date": "2026-10-16",
-   "per_year": 5,
+   "per_year": 4,
    "yield": 0.012,
    "payout": 0.2913,
    "v": "HOLD",
@@ -6895,7 +7979,11 @@
    "ldt": "2026-10-15",
    "pay": "2026-11-20",
    "amount": 0.76,
-   "status": "went_ex"
+   "status": "went_ex",
+   "prev_amount": 0.66,
+   "prev_ex": "2025-10-17",
+   "chg": 0.1515,
+   "trend": "raised"
   },
   {
    "t": "DOC",
@@ -6943,7 +8031,11 @@
    "ldt": "2026-10-16",
    "pay": null,
    "amount": 0.145,
-   "status": "went_ex"
+   "status": "went_ex",
+   "prev_amount": 0.43,
+   "prev_ex": "2025-10-09",
+   "chg": -0.6628,
+   "trend": "cut"
   },
   {
    "t": "CL",
@@ -6954,7 +8046,7 @@
    "px": 94.04,
    "last_amount": 0.53,
    "last_date": "2026-10-20",
-   "per_year": 5,
+   "per_year": 4,
    "yield": 0.0225,
    "payout": 0.8228,
    "v": "HOLD",
@@ -6967,7 +8059,11 @@
    "ldt": "2026-10-19",
    "pay": "2026-11-13",
    "amount": 0.53,
-   "status": "went_ex"
+   "status": "went_ex",
+   "prev_amount": 0.52,
+   "prev_ex": "2025-10-17",
+   "chg": 0.0192,
+   "trend": "raised"
   },
   {
    "t": "DELL",
@@ -6978,7 +8074,7 @@
    "px": 456.4,
    "last_amount": 0.63,
    "last_date": "2026-10-20",
-   "per_year": 5,
+   "per_year": 4,
    "yield": 0.0055,
    "payout": 0.1343,
    "v": "BUY",
@@ -6991,7 +8087,11 @@
    "ldt": "2026-10-19",
    "pay": "2026-10-30",
    "amount": 0.63,
-   "status": "went_ex"
+   "status": "went_ex",
+   "prev_amount": 0.525,
+   "prev_ex": "2025-10-21",
+   "chg": 0.2,
+   "trend": "raised"
   },
   {
    "t": "REM.JO",
@@ -7002,7 +8102,7 @@
    "px": 200.3,
    "last_amount": 9.72,
    "last_date": "2026-10-21",
-   "per_year": 3,
+   "per_year": 2,
    "yield": 0.0297,
    "payout": 1.677,
    "v": "HOLD",
@@ -7017,7 +8117,11 @@
    "ldt": "2026-10-20",
    "pay": null,
    "amount": 9.72,
-   "status": "went_ex"
+   "status": "went_ex",
+   "prev_amount": 4.48,
+   "prev_ex": "2025-10-22",
+   "chg": 1.1696,
+   "trend": "raised"
   },
   {
    "t": "LOW",
@@ -7028,7 +8132,7 @@
    "px": 198.7,
    "last_amount": 1.25,
    "last_date": "2026-10-21",
-   "per_year": 5,
+   "per_year": 4,
    "yield": 0.0252,
    "payout": 0.41,
    "v": "HOLD",
@@ -7041,7 +8145,11 @@
    "ldt": "2026-10-20",
    "pay": "2026-11-04",
    "amount": 1.25,
-   "status": "went_ex"
+   "status": "went_ex",
+   "prev_amount": 1.2,
+   "prev_ex": "2025-10-22",
+   "chg": 0.0417,
+   "trend": "raised"
   },
   {
    "t": "CPI.JO",
@@ -7052,7 +8160,7 @@
    "px": 4533.0,
    "last_amount": 31.1,
    "last_date": "2026-10-21",
-   "per_year": 3,
+   "per_year": 2,
    "yield": 0.0187,
    "payout": 0.5036,
    "v": "HOLD",
@@ -7065,7 +8173,11 @@
    "ldt": "2026-10-20",
    "pay": null,
    "amount": 31.1,
-   "status": "went_ex"
+   "status": "went_ex",
+   "prev_amount": 26.2,
+   "prev_ex": "2025-10-22",
+   "chg": 0.187,
+   "trend": "raised"
   },
   {
    "t": "CVS",
@@ -7076,7 +8188,7 @@
    "px": 93.47,
    "last_amount": 0.665,
    "last_date": "2026-10-22",
-   "per_year": 5,
+   "per_year": 4,
    "yield": 0.0285,
    "payout": 0.7,
    "v": "BUY",
@@ -7089,7 +8201,11 @@
    "ldt": "2026-10-21",
    "pay": "2026-11-02",
    "amount": 0.665,
-   "status": "went_ex"
+   "status": "went_ex",
+   "prev_amount": 0.665,
+   "prev_ex": "2025-10-23",
+   "chg": 0.0,
+   "trend": "unchanged"
   },
   {
    "t": "APA",
@@ -7100,7 +8216,7 @@
    "px": 51.9,
    "last_amount": 0.25,
    "last_date": "2026-10-22",
-   "per_year": 5,
+   "per_year": 4,
    "yield": 0.0193,
    "payout": 0.2114,
    "v": "BUY",
@@ -7113,7 +8229,11 @@
    "ldt": "2026-10-21",
    "pay": "2026-11-23",
    "amount": 0.25,
-   "status": "went_ex"
+   "status": "went_ex",
+   "prev_amount": 0.25,
+   "prev_ex": "2025-10-22",
+   "chg": 0.0,
+   "trend": "unchanged"
   },
   {
    "t": "PG",
@@ -7124,7 +8244,7 @@
    "px": 161.0,
    "last_amount": 1.089,
    "last_date": "2026-10-23",
-   "per_year": 5,
+   "per_year": 4,
    "yield": 0.027,
    "payout": 0.6462,
    "v": "HOLD",
@@ -7137,7 +8257,11 @@
    "ldt": "2026-10-22",
    "pay": "2026-11-16",
    "amount": 1.089,
-   "status": "went_ex"
+   "status": "went_ex",
+   "prev_amount": 1.057,
+   "prev_ex": "2025-10-24",
+   "chg": 0.0303,
+   "trend": "raised"
   },
   {
    "t": "PNR",
@@ -7148,7 +8272,7 @@
    "px": 55.3,
    "last_amount": 0.27,
    "last_date": "2026-10-23",
-   "per_year": 5,
+   "per_year": 4,
    "yield": 0.0195,
    "payout": 0.268,
    "v": "HOLD",
@@ -7161,7 +8285,11 @@
    "ldt": "2026-10-22",
    "pay": "2026-11-06",
    "amount": 0.27,
-   "status": "went_ex"
+   "status": "went_ex",
+   "prev_amount": 0.25,
+   "prev_ex": "2025-10-24",
+   "chg": 0.08,
+   "trend": "raised"
   },
   {
    "t": "GEHC",
@@ -7172,7 +8300,7 @@
    "px": 71.45,
    "last_amount": 0.04,
    "last_date": "2026-10-23",
-   "per_year": 5,
+   "per_year": 4,
    "yield": 0.0022,
    "payout": 0.0322,
    "v": "HOLD",
@@ -7185,7 +8313,11 @@
    "ldt": "2026-10-22",
    "pay": "2026-11-13",
    "amount": 0.04,
-   "status": "went_ex"
+   "status": "went_ex",
+   "prev_amount": 0.035,
+   "prev_ex": "2025-10-24",
+   "chg": 0.1429,
+   "trend": "raised"
   },
   {
    "t": "RVTY",
@@ -7196,7 +8328,7 @@
    "px": 158.8,
    "last_amount": 0.07,
    "last_date": "2026-10-23",
-   "per_year": 5,
+   "per_year": 4,
    "yield": 0.0018,
    "payout": 0.134,
    "v": "HOLD",
@@ -7209,7 +8341,11 @@
    "ldt": "2026-10-22",
    "pay": "2026-11-13",
    "amount": 0.07,
-   "status": "went_ex"
+   "status": "went_ex",
+   "prev_amount": 0.07,
+   "prev_ex": "2025-10-17",
+   "chg": 0.0,
+   "trend": "unchanged"
   },
   {
    "t": "PAYX",
@@ -7220,7 +8356,7 @@
    "px": 118.0,
    "last_amount": 1.19,
    "last_date": "2026-07-28",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.0403,
    "payout": 0.9008,
    "v": "HOLD",
@@ -7244,7 +8380,7 @@
    "px": 145.3,
    "last_amount": 0.63,
    "last_date": "2026-07-27",
-   "per_year": 6,
+   "per_year": 5,
    "yield": 0.0153,
    "payout": 0.2474,
    "v": "BUY",
@@ -7268,7 +8404,7 @@
    "px": 687.0,
    "last_amount": 1.63,
    "last_date": "2026-07-20",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.0095,
    "payout": 0.26,
    "v": "HOLD",
@@ -7292,7 +8428,7 @@
    "px": 1572.0,
    "last_amount": 2.138,
    "last_date": "2026-07-28",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.0058,
    "payout": 0.2226,
    "v": "BUY",
@@ -7316,7 +8452,7 @@
    "px": 815.0,
    "last_amount": 0.5,
    "last_date": "2026-06-16",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.0025,
    "payout": 0.0573,
    "v": "HOLD",
@@ -7340,7 +8476,7 @@
    "px": 86.4,
    "last_amount": 1.25,
    "last_date": "2026-08-12",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.0579,
    "payout": 1.031,
    "v": "HOLD",
@@ -7364,7 +8500,7 @@
    "px": 51.91,
    "last_amount": 0.26,
    "last_date": "2026-07-28",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.02,
    "payout": 0.7805,
    "v": "HOLD",
@@ -7388,7 +8524,7 @@
    "px": 56.24,
    "last_amount": 0.24,
    "last_date": "2026-07-21",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.0171,
    "payout": 0.6739,
    "v": "HOLD",
@@ -7436,7 +8572,7 @@
    "px": 15.0,
    "last_amount": 0.176,
    "last_date": "2026-07-31",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.0469,
    "payout": 0.2636,
    "v": "HOLD",
@@ -7460,7 +8596,7 @@
    "px": 65.14,
    "last_amount": 0.46,
    "last_date": "2026-07-30",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.0319,
    "payout": 0.3922,
    "v": "HOLD",
@@ -7484,7 +8620,7 @@
    "px": 69.66,
    "last_amount": 0.535,
    "last_date": "2026-07-31",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.0307,
    "payout": 0.6598,
    "v": "HOLD",
@@ -7508,7 +8644,7 @@
    "px": 138.7,
    "last_amount": 1.03,
    "last_date": "2026-07-30",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.0297,
    "payout": 0.3671,
    "v": "HOLD",
@@ -7532,7 +8668,7 @@
    "px": 43.28,
    "last_amount": 0.3,
    "last_date": "2026-07-31",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.0277,
    "payout": 0.617,
    "v": "HOLD",
@@ -7556,7 +8692,7 @@
    "px": 81.03,
    "last_amount": 0.53,
    "last_date": "2026-07-20",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.0262,
    "payout": 0.3388,
    "v": "HOLD",
@@ -7580,7 +8716,7 @@
    "px": 179.5,
    "last_amount": 1.15,
    "last_date": "2026-07-31",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.0256,
    "payout": 0.3231,
    "v": "HOLD",
@@ -7604,7 +8740,7 @@
    "px": 61.65,
    "last_amount": 0.36,
    "last_date": "2026-07-31",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.0247,
    "payout": 0.3955,
    "v": "HOLD",
@@ -7628,7 +8764,7 @@
    "px": 284.7,
    "last_amount": 1.42,
    "last_date": "2026-07-31",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.0214,
    "payout": 0.8554,
    "v": "HOLD",
@@ -7652,7 +8788,7 @@
    "px": 302.4,
    "last_amount": 1.25,
    "last_date": "2026-07-31",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.0165,
    "payout": 0.4063,
    "v": "HOLD",
@@ -7700,7 +8836,7 @@
    "px": 1003.0,
    "last_amount": 1.47,
    "last_date": "2026-07-24",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.0059,
    "payout": 0.2669,
    "v": "HOLD",
@@ -7724,7 +8860,7 @@
    "px": 699.3,
    "last_amount": 0.65,
    "last_date": "2026-07-31",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.0037,
    "payout": 0.1137,
    "v": "HOLD",
@@ -7748,7 +8884,7 @@
    "px": 95.83,
    "last_amount": 1.07,
    "last_date": "2026-08-03",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.0447,
    "payout": 0.7254,
    "v": "HOLD",
@@ -7772,7 +8908,7 @@
    "px": 105.9,
    "last_amount": 0.91,
    "last_date": "2026-08-03",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.0349,
    "payout": 0.6958,
    "v": "HOLD",
@@ -7796,7 +8932,7 @@
    "px": 34.43,
    "last_amount": 0.298,
    "last_date": "2026-08-03",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.0346,
    "payout": 0.7581,
    "v": "HOLD",
@@ -7820,7 +8956,7 @@
    "px": 35.68,
    "last_amount": 0.3,
    "last_date": "2026-08-04",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.0336,
    "payout": 0.428,
    "v": "HOLD",
@@ -7844,7 +8980,7 @@
    "px": 120.6,
    "last_amount": 0.67,
    "last_date": "2026-08-03",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.0222,
    "payout": 0.2592,
    "v": "HOLD",
@@ -7868,7 +9004,7 @@
    "px": 92.31,
    "last_amount": 0.475,
    "last_date": "2026-08-03",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.0206,
    "payout": 0.4791,
    "v": "HOLD",
@@ -7916,7 +9052,7 @@
    "px": 118.0,
    "last_amount": 1.29,
    "last_date": "2026-08-03",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.0443,
    "payout": 1.112,
    "v": "HOLD",
@@ -7941,7 +9077,7 @@
    "px": 98.82,
    "last_amount": 0.593,
    "last_date": "2026-08-04",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.024,
    "payout": 0.4397,
    "v": "BUY",
@@ -7967,7 +9103,7 @@
    "px": 29.85,
    "last_amount": 0.45,
    "last_date": "2026-05-06",
-   "per_year": 2,
+   "per_year": 1,
    "yield": 0.0218,
    "payout": 0.479,
    "v": "HOLD",
@@ -7991,7 +9127,7 @@
    "px": 55.86,
    "last_amount": 0.23,
    "last_date": "2026-08-07",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.0165,
    "payout": 0.2958,
    "v": "HOLD",
@@ -8016,7 +9152,7 @@
    "px": 55.63,
    "last_amount": 0.165,
    "last_date": "2026-08-05",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.0122,
    "payout": 0.1514,
    "v": "HOLD",
@@ -8040,7 +9176,7 @@
    "px": 366.1,
    "last_amount": 1.1,
    "last_date": "2026-08-07",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.012,
    "payout": 0.4354,
    "v": "HOLD",
@@ -8065,7 +9201,7 @@
    "px": 72.97,
    "last_amount": 0.165,
    "last_date": "2026-08-12",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.009,
    "payout": 0.2035,
    "v": "HOLD",
@@ -8090,7 +9226,7 @@
    "px": 73.64,
    "last_amount": 0.34,
    "last_date": "2026-08-05",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.0185,
    "payout": 0.1294,
    "v": "HOLD",
@@ -8114,7 +9250,7 @@
    "px": 637.6,
    "last_amount": 3.725,
    "last_date": "2025-10-30",
-   "per_year": 1,
+   "per_year": null,
    "yield": 0.0081,
    "payout": 0.0445,
    "v": "HOLD",
@@ -8138,7 +9274,7 @@
    "px": 30.03,
    "last_amount": 0.43,
    "last_date": "2026-07-24",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.0573,
    "payout": 2.263,
    "v": "HOLD",
@@ -8162,7 +9298,7 @@
    "px": 46.15,
    "last_amount": 0.465,
    "last_date": "2026-08-07",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.0403,
    "payout": 0.9626,
    "v": "HOLD",
@@ -8186,7 +9322,7 @@
    "px": 69.58,
    "last_amount": 0.57,
    "last_date": "2026-08-07",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.0328,
    "payout": 0.6682,
    "v": "HOLD",
@@ -8234,7 +9370,7 @@
    "px": 330.0,
    "last_amount": 1.35,
    "last_date": "2026-08-07",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.0164,
    "payout": 0.4526,
    "v": "HOLD",
@@ -8258,7 +9394,7 @@
    "px": 226.0,
    "last_amount": 0.45,
    "last_date": "2026-08-07",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.008,
    "payout": 0.2532,
    "v": "HOLD",
@@ -8282,7 +9418,7 @@
    "px": 185.9,
    "last_amount": 0.14,
    "last_date": "2026-08-07",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.003,
    "payout": 0.1034,
    "v": "HOLD",
@@ -8306,7 +9442,7 @@
    "px": 11.6,
    "last_amount": 0.15,
    "last_date": "2026-08-11",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.0517,
    "payout": 0.641,
    "v": "HOLD",
@@ -8333,7 +9469,7 @@
    "px": 82.39,
    "last_amount": 0.5,
    "last_date": "2026-08-07",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.0243,
    "payout": 0.2616,
    "v": "HOLD",
@@ -8358,7 +9494,7 @@
    "px": 76.01,
    "last_amount": 0.32,
    "last_date": "2026-08-24",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.0168,
    "payout": 0.2903,
    "v": "HOLD",
@@ -8383,7 +9519,7 @@
    "px": 880.6,
    "last_amount": 2.0,
    "last_date": "2026-08-31",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.0091,
    "payout": 0.2598,
    "v": "HOLD",
@@ -8408,7 +9544,7 @@
    "px": 261.7,
    "last_amount": 0.52,
    "last_date": "2026-08-13",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.0079,
    "payout": 0.2382,
    "v": "HOLD",
@@ -8432,7 +9568,7 @@
    "px": 44.43,
    "last_amount": 0.42,
    "last_date": "2026-09-04",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.0378,
    "payout": 0.6029,
    "v": "HOLD",
@@ -8457,7 +9593,7 @@
    "px": 237.3,
    "last_amount": 0.85,
    "last_date": "2026-08-12",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.0143,
    "payout": 1.327,
    "v": "HOLD",
@@ -8482,7 +9618,7 @@
    "px": 492.2,
    "last_amount": 1.7,
    "last_date": "2026-08-03",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.0138,
    "payout": 0.1569,
    "v": "HOLD",
@@ -8507,7 +9643,7 @@
    "px": 1350.0,
    "last_amount": 2.49,
    "last_date": "2026-08-10",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.0074,
    "payout": 0.2364,
    "v": "HOLD",
@@ -8532,7 +9668,7 @@
    "px": 347.7,
    "last_amount": 0.27,
    "last_date": "2026-08-10",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.0031,
    "payout": 0.1204,
    "v": "HOLD",
@@ -8581,7 +9717,7 @@
    "px": 129.7,
    "last_amount": 0.95,
    "last_date": "2026-08-10",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.0299,
    "payout": 0.6551,
    "v": "HOLD",
@@ -8605,7 +9741,7 @@
    "px": 110.6,
    "last_amount": 0.74,
    "last_date": "2026-08-10",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.0268,
    "payout": 0.408,
    "v": "HOLD",
@@ -8629,7 +9765,7 @@
    "px": 253.6,
    "last_amount": 1.69,
    "last_date": "2026-08-10",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.0267,
    "payout": 0.5751,
    "v": "HOLD",
@@ -8653,7 +9789,7 @@
    "px": 34.82,
    "last_amount": 0.183,
    "last_date": "2026-08-10",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.023,
    "payout": 0.671,
    "v": "HOLD",
@@ -12673,7 +13809,7 @@
    "px": 49.65,
    "last_amount": 0.649,
    "last_date": "2026-05-18",
-   "per_year": 3,
+   "per_year": 2,
    "yield": 0.0259,
    "payout": 0.7124,
    "v": "HOLD",
@@ -15484,7 +16620,7 @@
    "px": 48.12,
    "last_amount": 0.48,
    "last_date": "2026-10-13",
-   "per_year": 5,
+   "per_year": 4,
    "yield": 0.0399,
    "payout": 0.3418,
    "v": "HOLD",
@@ -16864,7 +18000,7 @@
    "px": 71.45,
    "last_amount": 0.04,
    "last_date": "2026-10-23",
-   "per_year": 5,
+   "per_year": 4,
    "yield": 0.0022,
    "payout": 0.0322,
    "v": "HOLD",
@@ -16939,7 +18075,7 @@
    "px": 21.06,
    "last_amount": 0.293,
    "last_date": "2026-10-13",
-   "per_year": 5,
+   "per_year": 4,
    "yield": 0.0556,
    "payout": 1.883,
    "v": "HOLD",
@@ -17064,7 +18200,7 @@
    "px": 647.7,
    "last_amount": 0.4,
    "last_date": "2026-10-15",
-   "per_year": 5,
+   "per_year": 4,
    "yield": 0.0025,
    "payout": 0.0405,
    "v": "HOLD",
@@ -17089,7 +18225,7 @@
    "px": 119.8,
    "last_amount": 1.53,
    "last_date": "2026-10-15",
-   "per_year": 5,
+   "per_year": 4,
    "yield": 0.0511,
    "payout": 1.781,
    "v": "HOLD",
@@ -17114,7 +18250,7 @@
    "px": 103.7,
    "last_amount": 0.63,
    "last_date": "2026-10-15",
-   "per_year": 5,
+   "per_year": 4,
    "yield": 0.0243,
    "payout": 0.7871,
    "v": "HOLD",
@@ -17139,7 +18275,7 @@
    "px": 65.18,
    "last_amount": 0.15,
    "last_date": "2026-10-15",
-   "per_year": 5,
+   "per_year": 4,
    "yield": 0.0092,
    "payout": 0.2956,
    "v": "HOLD",
@@ -17164,7 +18300,7 @@
    "px": 163.0,
    "last_amount": 1.02,
    "last_date": "2026-10-16",
-   "per_year": 5,
+   "per_year": 4,
    "yield": 0.025,
    "payout": 0.314,
    "v": "BUY",
@@ -17189,7 +18325,7 @@
    "px": 285.6,
    "last_amount": 1.73,
    "last_date": "2026-10-15",
-   "per_year": 5,
+   "per_year": 4,
    "yield": 0.0242,
    "payout": 1.904,
    "v": "HOLD",
@@ -17264,7 +18400,7 @@
    "px": 252.5,
    "last_amount": 0.76,
    "last_date": "2026-10-16",
-   "per_year": 5,
+   "per_year": 4,
    "yield": 0.012,
    "payout": 0.2913,
    "v": "HOLD",
@@ -17289,7 +18425,7 @@
    "px": 158.8,
    "last_amount": 0.07,
    "last_date": "2026-10-23",
-   "per_year": 5,
+   "per_year": 4,
    "yield": 0.0018,
    "payout": 0.134,
    "v": "HOLD",
@@ -17314,7 +18450,7 @@
    "px": 224.5,
    "last_amount": 2.0,
    "last_date": "2026-10-14",
-   "per_year": 5,
+   "per_year": 4,
    "yield": 0.0356,
    "payout": 0.3744,
    "v": "HOLD",
@@ -17339,7 +18475,7 @@
    "px": 456.4,
    "last_amount": 0.63,
    "last_date": "2026-10-20",
-   "per_year": 5,
+   "per_year": 4,
    "yield": 0.0055,
    "payout": 0.1343,
    "v": "BUY",
@@ -17438,7 +18574,7 @@
    "px": 198.7,
    "last_amount": 1.25,
    "last_date": "2026-10-21",
-   "per_year": 5,
+   "per_year": 4,
    "yield": 0.0252,
    "payout": 0.41,
    "v": "HOLD",
@@ -17463,7 +18599,7 @@
    "px": 94.04,
    "last_amount": 0.53,
    "last_date": "2026-10-20",
-   "per_year": 5,
+   "per_year": 4,
    "yield": 0.0225,
    "payout": 0.8228,
    "v": "HOLD",
@@ -17488,7 +18624,7 @@
    "px": 93.47,
    "last_amount": 0.665,
    "last_date": "2026-10-22",
-   "per_year": 5,
+   "per_year": 4,
    "yield": 0.0285,
    "payout": 0.7,
    "v": "BUY",
@@ -17513,7 +18649,7 @@
    "px": 51.9,
    "last_amount": 0.25,
    "last_date": "2026-10-22",
-   "per_year": 5,
+   "per_year": 4,
    "yield": 0.0193,
    "payout": 0.2114,
    "v": "BUY",
@@ -17538,7 +18674,7 @@
    "px": 161.0,
    "last_amount": 1.089,
    "last_date": "2026-10-23",
-   "per_year": 5,
+   "per_year": 4,
    "yield": 0.027,
    "payout": 0.6462,
    "v": "HOLD",
@@ -17563,7 +18699,7 @@
    "px": 55.3,
    "last_amount": 0.27,
    "last_date": "2026-10-23",
-   "per_year": 5,
+   "per_year": 4,
    "yield": 0.0195,
    "payout": 0.268,
    "v": "HOLD",
@@ -17640,7 +18776,7 @@
    "px": 72.97,
    "last_amount": 0.165,
    "last_date": "2026-08-12",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.009,
    "payout": 0.2035,
    "v": "HOLD",
@@ -17715,7 +18851,7 @@
    "px": 82.39,
    "last_amount": 0.5,
    "last_date": "2026-08-07",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.0243,
    "payout": 0.2616,
    "v": "HOLD",
@@ -17740,7 +18876,7 @@
    "px": 880.6,
    "last_amount": 2.0,
    "last_date": "2026-08-31",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.0091,
    "payout": 0.2598,
    "v": "HOLD",
@@ -17765,7 +18901,7 @@
    "px": 118.0,
    "last_amount": 1.29,
    "last_date": "2026-08-03",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.0443,
    "payout": 1.112,
    "v": "HOLD",
@@ -17815,7 +18951,7 @@
    "px": 492.2,
    "last_amount": 1.7,
    "last_date": "2026-08-03",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.0138,
    "payout": 0.1569,
    "v": "HOLD",
@@ -17840,7 +18976,7 @@
    "px": 1350.0,
    "last_amount": 2.49,
    "last_date": "2026-08-10",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.0074,
    "payout": 0.2364,
    "v": "HOLD",
@@ -17865,7 +19001,7 @@
    "px": 347.7,
    "last_amount": 0.27,
    "last_date": "2026-08-10",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.0031,
    "payout": 0.1204,
    "v": "HOLD",
@@ -18015,7 +19151,7 @@
    "px": 11.6,
    "last_amount": 0.15,
    "last_date": "2026-08-11",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.0517,
    "payout": 0.641,
    "v": "HOLD",
@@ -18542,7 +19678,7 @@
    "px": 55.86,
    "last_amount": 0.23,
    "last_date": "2026-08-07",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.0165,
    "payout": 0.2958,
    "v": "HOLD",
@@ -18842,7 +19978,7 @@
    "px": 76.01,
    "last_amount": 0.32,
    "last_date": "2026-08-24",
-   "per_year": 4,
+   "per_year": 3,
    "yield": 0.0168,
    "payout": 0.2903,
    "v": "HOLD",

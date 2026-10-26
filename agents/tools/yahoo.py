@@ -72,7 +72,7 @@ class Yahoo:
         return out
 
     def summary(self, symbol):
-        mods = 'price,summaryDetail,defaultKeyStatistics,financialData,calendarEvents,recommendationTrend,assetProfile,upgradeDowngradeHistory,earningsTrend,majorHoldersBreakdown'
+        mods = 'price,summaryDetail,defaultKeyStatistics,financialData,calendarEvents,recommendationTrend,assetProfile,upgradeDowngradeHistory,earningsTrend,earningsHistory,majorHoldersBreakdown'
         j = json.loads(self.get(f'https://query2.finance.yahoo.com/v10/finance/quoteSummary/{urllib.parse.quote(symbol)}?modules={mods}&crumb={urllib.parse.quote(self.ensure_crumb())}'))
         return j['quoteSummary']['result'][0]
 

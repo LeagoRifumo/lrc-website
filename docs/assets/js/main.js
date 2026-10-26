@@ -570,25 +570,41 @@ const artCard = (a, pre = '') => `<a class="art" href="${pre}${esc(a.url)}">${a.
   getJSON('scan/stocks.json').then(s => { rows = s.rows; rows.as_of = s.as_of; draw(); }).catch(() => failMsg(M, 'top movers'));
 })();
 
-(() => { // earnings calendar
+(() => { // earnings calendar: upcoming + reported (beat / missed), rebuilt after every scanner run
   const L = $('erList'); if (!L) return;
-  const cache = {};
+  const cache = {}; let view = 'up';
+  const GR = { 'STRONG BUY': 'Top scoring', 'BUY': 'Strong', 'HOLD': 'Average', 'SELL': 'Weak', 'STRONG SELL': 'Lowest scoring' };
+  const gr = v => !v ? '—' : window.LRC_SAFE ? (GR[v] || v) : v;
+  const sp = v => v === null || v === undefined ? '' : (v >= 0 ? '+' : '−') + Math.abs(v * 100).toFixed(1) + '%';
+  const eps = (v, m) => v === null || v === undefined ? '—' : (m === 'us' ? '$' : '') + Number(v).toFixed(2) + (m === 'jse' ? 'c' : '');
+  const RES = { beat: 'Beat', miss: 'Missed', inline: 'In line' };
+  const vb = $('erView');
+  vb.addEventListener('click', e => { const b = e.target.closest('button[data-v]'); if (!b) return; view = b.dataset.v; vb.querySelectorAll('button').forEach(x => x.classList.toggle('on', x === b)); draw(); });
   const draw = () => {
     const m = $('erMkt').value, days = +$('erRange').value, cov = $('erCov').value, q = ($('erSearch').value || '').toLowerCase();
     const go = d => {
-      const today = new Date(Date.now() + 2 * 3600e3).toISOString().slice(0, 10), end = new Date(Date.now() + (2 * 3600e3) + days * 864e5).toISOString().slice(0, 10);
-      const rows = (d.items || []).filter(x => x.date >= today && x.date <= end && (cov === 'all' || (cov === 'cov' ? x.covered : !!x.v)) && (!q || (x.ticker + ' ' + x.name).toLowerCase().includes(q)));
-      $('erMeta').innerHTML = `<span class="ai">● ${esc(d.market)}</span><span>Updated <b>${when(d.synced || d.generated)}</b></span><span><b>${rows.length}</b> companies in range</span><span><b>${rows.filter(x => x.covered).length}</b> ✓ on the LRC watchlist</span>`;
-      $('erSrc').textContent = (d.coverage_note ? d.coverage_note + ' ' : '') + 'Source: ' + d.source + ' Dates can move — confirm on the company announcement (SENS for JSE companies).';
-      if (!rows.length) { L.innerHTML = `<p class="muted-load">${esc(d.note || 'No results dates in this range yet.')}</p>`; return; }
+      const now = Date.now() + 2 * 3600e3, today = new Date(now).toISOString().slice(0, 10);
+      const end = new Date(now + days * 864e5).toISOString().slice(0, 10), start = new Date(now - Math.min(days, 45) * 864e5).toISOString().slice(0, 10);
+      const rep = view === 'rep';
+      const rows = (d.items || []).filter(x => (rep ? x.reported && x.date >= start && x.date < today : !x.reported && x.date >= today && x.date <= end) && (cov === 'all' || (cov === 'cov' ? x.covered : !!x.v)) && (!q || (x.ticker + ' ' + x.name).toLowerCase().includes(q)));
+      const n = r => rows.filter(x => x.result === r).length, done = rows.filter(x => x.result).length;
+      $('erMeta').innerHTML = `<span class="ai">● ${esc(d.market)}</span><span>Updated <b>${when(d.synced || d.generated)}</b></span><span><b>${rows.length}</b> ${rep ? 'companies reported' : 'companies in range'}</span><span><b>${rows.filter(x => x.covered).length}</b> ✓ on the LRC watchlist</span>`;
+      $('erScore').innerHTML = rep ? `<div class="score-strip"><div><b>${rows.length}</b><span>reported</span></div><div class="g"><b>${n('beat')}</b><span>beat${done ? ' · ' + Math.round(n('beat') / done * 100) + '%' : ''}</span></div><div class="r"><b>${n('miss')}</b><span>missed${done ? ' · ' + Math.round(n('miss') / done * 100) + '%' : ''}</span></div><div><b>${n('inline')}</b><span>in line</span></div><div class="q"><b>${rows.length - done}</b><span>awaiting numbers</span></div></div>` : '';
+      $('erSrc').textContent = (rep ? 'Beat = reported EPS more than 1% above the analysts\' estimate; missed = more than 1% below; in line otherwise. ' : '') + (d.coverage_note ? d.coverage_note + ' ' : '') + 'Source: ' + d.source + ' Dates can move — confirm on the company announcement (SENS for JSE companies).';
+      if (!rows.length) { L.innerHTML = `<p class="muted-load">${rep ? 'No results recorded in this period yet. Results appear here automatically after each company reports.' : esc(d.note || 'No results dates in this range yet.')}</p>`; return; }
       const by = {}; rows.forEach(x => (by[x.date] = by[x.date] || []).push(x));
-      L.innerHTML = Object.keys(by).sort().map(k => { const dd = new Date(k + 'T12:00:00');
-        return `<div class="eday"><div class="edate"><b>${dd.toLocaleDateString('en-ZA', { weekday: 'long' })}</b><span>${dd.toLocaleDateString('en-ZA', { day: 'numeric', month: 'long' })}</span></div><div class="erows">` +
-          by[k].map(x => `<div class="erow${x.covered ? ' cov' : ''}"><span class="tic">${x.covered ? '<b class="tick">✓</b>' : ''}${x.v ? `<a href="stock.html?t=${encodeURIComponent(x.t || x.ticker)}">${esc(x.ticker)}</a>` : esc(x.ticker)}</span><span class="mn">${x.v ? `<a href="stock.html?t=${encodeURIComponent(x.t || x.ticker)}" style="color:inherit">${esc(x.name)}</a>` : esc(x.name)}${(x.lists || []).map(l => ` <span class="wtag ${/SELL/.test(l) ? 's' : 'b'}">${esc(l)}</span>`).join('')}${x.idea ? ` <a class="wtag i" href="research.html" title="${esc(x.idea)}">Research idea</a>` : ''}${x.lrc_rating ? ` <span class="pill p-${String(x.lrc_rating).toLowerCase()}">LRC ${esc(x.lrc_rating)}</span>` : ''}${x.v ? `<small>LRC Stock Scanner: trading ${esc(x.v)} · investment ${esc(x.iv || '—')}</small>` : ''}${x.period ? `<small>${esc(x.period)}</small>` : ''}</span><span class="ew">${esc(x.when || '')}</span><span class="n">${x.eps_forecast ? 'EPS est. ' + esc(x.eps_forecast) : ''}</span><span class="n">${x.market_cap_bn ? (m === 'jse' ? 'R' : '$') + x.market_cap_bn + 'bn' : ''}</span></div>`).join('') + '</div></div>'; }).join('');
+      const keys = Object.keys(by).sort(); if (rep) keys.reverse();
+      L.innerHTML = keys.map(k => { const dd = new Date(k + 'T12:00:00');
+        return `<div class="eday"><div class="edate"><b>${dd.toLocaleDateString('en-ZA', { weekday: 'long' })}</b><span>${dd.toLocaleDateString('en-ZA', { day: 'numeric', month: 'long' })}</span>${rep ? '<small class="edl">results day</small>' : ''}</div><div class="erows">` +
+          by[k].map(x => { const link = x.v ? `stock.html?t=${encodeURIComponent(x.t || x.ticker)}` : '';
+            const right = rep ? (x.result ? `<span class="res ${x.result}">${RES[x.result]} ${x.result !== 'inline' ? sp(x.surprise) : ''}</span><small class="res-eps">EPS ${eps(x.eps_actual, m)} vs ${eps(x.eps_est, m)} est.</small>` : `<span class="res wait">${x.eps_actual != null ? 'Reported' : 'Awaiting numbers'}</span>${x.eps_actual != null ? `<small class="res-eps">EPS ${eps(x.eps_actual, m)} · no estimate on the feed</small>` : ''}`)
+              : `<span class="ew">${esc(x.when || '')}</span><span class="n">${x.eps_forecast ? 'EPS est. ' + esc(x.eps_forecast) : ''}${x.market_cap_bn ? `<small>${m === 'jse' ? 'R' : '$'}${x.market_cap_bn}bn</small>` : ''}</span>`;
+            return `<div class="erow${x.covered ? ' cov' : ''}${rep ? ' rep res-' + (x.result || 'wait') : ''}"><span class="tic">${x.covered ? '<b class="tick">✓</b>' : ''}${link ? `<a href="${link}">${esc(x.ticker)}</a>` : esc(x.ticker)}</span><span class="mn">${link ? `<a href="${link}" style="color:inherit">${esc(x.name)}</a>` : esc(x.name)}${(x.lists || []).map(l => ` <span class="wtag ${/SELL/.test(l) ? 's' : 'b'}">${esc(l)}</span>`).join('')}${x.idea ? ` <a class="wtag i" href="research.html" title="${esc(x.idea)}">Research idea</a>` : ''}${x.v ? `<small>LRC Stock Scanner: trading ${esc(gr(x.v))} · investment ${esc(gr(x.iv))}</small>` : ''}${x.period ? `<small>${esc(x.period)}</small>` : x.quarter ? `<small>Quarter ending ${esc(x.quarter)}</small>` : ''}</span>${right}</div>`; }).join('') + '</div></div>'; }).join('');
     };
     if (cache[m]) go(cache[m]); else getJSON('earnings_' + m + '.json').then(d => { cache[m] = d; go(d); }).catch(() => failMsg(L, 'earnings calendar'));
   };
   if (location.hash === '#jse') $('erMkt').value = 'jse';
+  if (/reported/.test(location.hash)) { view = 'rep'; vb.querySelectorAll('button').forEach(x => x.classList.toggle('on', x.dataset.v === 'rep')); }
   ['erMkt', 'erRange', 'erCov'].forEach(i => $(i).addEventListener('change', () => { if (i === 'erMkt') history.replaceState(null, '', '#' + $('erMkt').value); draw(); }));
   $('erSearch').addEventListener('input', draw);
   draw();
@@ -645,18 +661,23 @@ const artCard = (a, pre = '') => `<a class="art" href="${pre}${esc(a.url)}">${a.
   const gr = v => !v ? '—' : window.LRC_SAFE ? (GR[v] || v) : v;
   const PAST = new Set(['went_ex', 'paid', 'paid_est', 'recent']);
   const ST = { confirmed: 'Confirmed', expected: 'Expected', went_ex: 'Went ex', paid: 'Paid', paid_est: 'Paid (estimated)', recent: 'Went ex' };
-  let D = null;
+  let D = null, view = 'up';
+  const vb = $$('dvView');
+  vb.addEventListener('click', e => { const b = e.target.closest('button[data-v]'); if (!b) return; view = b.dataset.v; vb.querySelectorAll('button').forEach(x => x.classList.toggle('on', x === b)); draw(); });
   let mkt; try { mkt = JSON.parse(localStorage.getItem('lrc_mkt')) || 'JSE'; } catch (e) { mkt = 'JSE'; }
   $$('dvMkt').value = mkt;
   const draw = () => {
     if (!D) return;
-    const m = $$('dvMkt').value, rg = $$('dvRange').value, kind = $$('dvKind').value, minY = +$$('dvYield').value, q = ($$('dvSearch').value || '').toLowerCase();
+    const m = $$('dvMkt').value, rg = view === 'past' ? 'past' : $$('dvRange').value, kind = $$('dvKind').value, minY = +$$('dvYield').value, q = ($$('dvSearch').value || '').toLowerCase();
     const today = new Date(Date.now() + 2 * 3600e3).toISOString().slice(0, 10);
     const end = rg === 'past' ? today : new Date(Date.now() + 2 * 3600e3 + (+rg) * 864e5).toISOString().slice(0, 10);
     const start = rg === 'past' ? new Date(Date.now() + 2 * 3600e3 - 60 * 864e5).toISOString().slice(0, 10) : today;
     const rows = D.items.filter(x => x.m === m && (rg === 'past' ? PAST.has(x.status) : !PAST.has(x.status)) && x.ex >= start && x.ex <= end && (kind === 'all' || x.status !== 'expected') && (x.yield || 0) >= minY && (!q || (x.t + ' ' + x.n).toLowerCase().includes(q)));
     if (rg === 'past') rows.reverse();
     $$('dvMeta').innerHTML = `<span class="ai">● ${m === 'JSE' ? 'JSE' : 'New York (NYSE &amp; Nasdaq)'}</span><span>Updated <b>${e_(new Date(D.generated).toLocaleString('en-ZA', { weekday: 'short', day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }))} SAST</b></span><span><b>${rows.length}</b> dividends in range</span><span>${rg === 'past' ? `<b>${rows.filter(x => x.status === 'paid' || x.status === 'paid_est').length}</b> paid · <b>${rows.filter(x => x.status === 'went_ex').length}</b> waiting for payment` : `<b>${rows.filter(x => x.status === 'confirmed').length}</b> confirmed · <b>${rows.filter(x => x.status === 'expected').length}</b> expected`}</span>`;
+    const tn = t => rows.filter(x => x.trend === t).length;
+    ['dvRange', 'dvKind'].forEach(id => { const on = rg !== 'past'; $$(id).style.display = on ? '' : 'none'; const lb = document.querySelector(`label[for="${id}"]`); if (lb) lb.style.display = on ? '' : 'none'; });
+    $$('dvScore').innerHTML = rg === 'past' ? `<div class="score-strip"><div><b>${rows.filter(x => x.status === 'paid' || x.status === 'paid_est').length}</b><span>paid</span></div><div class="g"><b>${tn('raised')}</b><span>raised</span></div><div class="r"><b>${tn('cut')}</b><span>cut</span></div><div><b>${tn('unchanged')}</b><span>unchanged</span></div><div class="q"><b>${rows.filter(x => x.status === 'went_ex').length}</b><span>awaiting payment</span></div></div>` : '';
     $$('dvRule').textContent = (D.rules || {})[m] || '';
     $$('dvSrc').textContent = 'Source: ' + (D.source || '');
     if (!rows.length) { L.innerHTML = '<p class="muted-load">No dividends match these filters. Try a longer period or "Any yield".</p>'; return; }
@@ -664,11 +685,12 @@ const artCard = (a, pre = '') => `<a class="art" href="${pre}${esc(a.url)}">${a.
     L.innerHTML = Object.keys(by).sort((a, b) => rg === 'past' ? b.localeCompare(a) : a.localeCompare(b)).map(k => `<div class="eday"><div class="edate"><b>${day(k).toLocaleDateString('en-ZA', { weekday: 'long' })}</b><span>${day(k).toLocaleDateString('en-ZA', { day: 'numeric', month: 'long' })}</span><small style="display:block;color:var(--muted);font-size:11.5px;margin-top:4px">ex-dividend date</small></div><div class="erows">` +
       by[k].map(x => { const cov = (x.lists || []).length > 0;
         const amt = x.amount != null ? `${money(x.amount, x.cur)}${x.amount_basis ? ' <small>last year</small>' : ''}` : (x.last_amount != null ? `<small>last paid</small> ${money(x.last_amount, x.cur)}` : '—');
-        return `<div class="erow dvrow${cov ? ' cov' : ''}"><span class="tic">${cov ? '<b class="tick">✓</b>' : ''}<a href="stock.html?t=${encodeURIComponent(x.t)}">${e_(x.t.replace('.JO', ''))}</a></span>
+        const tr = x.trend ? `<span class="res ${x.trend === 'raised' ? 'beat' : x.trend === 'cut' ? 'miss' : 'inline'}">${x.trend === 'raised' ? 'Raised' : x.trend === 'cut' ? 'Cut' : 'Unchanged'}${x.trend !== 'unchanged' ? ' ' + (x.chg >= 0 ? '+' : '−') + Math.abs(x.chg * 100).toFixed(1) + '%' : ''}</span><small class="res-eps">vs ${money(x.prev_amount, x.cur)} a year earlier</small>` : '';
+        return `<div class="erow dvrow${cov ? ' cov' : ''}${PAST.has(x.status) ? ' rep res-' + (x.trend === 'raised' ? 'beat' : x.trend === 'cut' ? 'miss' : 'wait') : ''}"><span class="tic">${cov ? '<b class="tick">✓</b>' : ''}<a href="stock.html?t=${encodeURIComponent(x.t)}">${e_(x.t.replace('.JO', ''))}</a></span>
         <span class="mn"><a href="stock.html?t=${encodeURIComponent(x.t)}" style="color:inherit">${e_(x.n)}</a> <span class="dvst ${x.status}">${ST[x.status] || x.status}</span>${(x.lists || []).map(l => ` <span class="wtag ${/SELL/.test(l) ? 's' : 'b'}">${e_(l)}</span>`).join('')}${x.idea ? ' <a class="wtag i" href="research.html">Research idea</a>' : ''}
           <small>${PAST.has(x.status) ? `Last day to buy was ${fmtD(x.ldt)} · ${x.status === 'paid' ? 'paid <b>' + fmtD(x.pay) + '</b>' : x.status === 'paid_est' ? 'payment date not on the feed (usual window passed)' : x.pay ? 'pays <b>' + fmtD(x.pay) + '</b>' : 'payment date not announced'}` : `Last day to buy <b>${fmtD(x.ldt)}</b> · pays ${x.pay ? '<b>' + fmtD(x.pay) + '</b>' : 'date not announced'}`}${x.per_year ? ` · ${x.per_year}× a year` : ''}${x.payout != null ? ` · payout ${pct(x.payout)}` : ''}</small>
           <small>LRC Stock Scanner: trading ${e_(gr(x.v))} · investment ${e_(gr(x.iv_v))}</small></span>
-        <span class="n dvamt">${amt}</span><span class="n">yield <b>${pct(x.yield)}</b></span></div>`; }).join('') + '</div></div>').join('');
+        <span class="n dvamt">${amt}${tr ? '<br>' + tr : ''}</span><span class="n">yield <b>${pct(x.yield)}</b></span></div>`; }).join('') + '</div></div>').join('');
   };
   ['dvMkt', 'dvRange', 'dvKind', 'dvYield'].forEach(i => $$(i).addEventListener('change', () => { if (i === 'dvMkt') { try { localStorage.setItem('lrc_mkt', JSON.stringify($$('dvMkt').value)); } catch (e) { } window.dispatchEvent(new CustomEvent('lrcmarket', { detail: $$('dvMkt').value })); } draw(); }));
   $$('dvSearch').addEventListener('input', draw);

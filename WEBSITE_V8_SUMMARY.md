@@ -94,3 +94,8 @@ Give this file (and the zip) to Claude when you next update the website.
 - dividends.html (Markets menu on every page; in sitemap). Data: docs/data/dividends.json built by agents/tools/dividends.py after every scanner run (scanner.yml step).
 - For every scanned company: confirmed next ex-date (feed), payment date (scanner now saves f.div_pay), last day to buy (business day before the ex-date; JSE T+3, US T+1), dividend per share (JSE cents shown in rand), payments a year, yield, payout, grades, watchlist / Focus List tags. Expected dates = last year's ex-date + 1 year with last year's amount, replaced once announced. Last 30 days shown as "went ex".
 - Filters: market, period (14 days to 4 months, or last 30 days), confirmed only, minimum yield, search.
+
+## Results tracking — earnings & dividends (26 Oct 2026)
+- Earnings: every calendar date is recorded in docs/data/earnings_log.json (earnings_sync.py, every scanner run). After a company reports, the row stays 45 days under "Reported · beat or missed": beat (EPS >1% above estimate, green), missed (red), in line, or awaiting numbers. New York results come from the Nasdaq calendar (earnings_us.py past_results, last 30 days, daily); otherwise from the scanner's EPS history (f.eps_hist, Yahoo earningsHistory). JSE companies rarely have a consensus estimate, so most show "Reported".
+- Dividends: every dividend is recorded in docs/data/dividends_log.json (dividends.py). Lifecycle Expected → Confirmed → Went ex → Paid (or Paid (estimated) when the feed has no payment date: JSE 14 days, US 35 days after the ex-date). Paid view = last 60 days with raised (green) / cut (red) / unchanged vs the same payment a year earlier.
+- Both pages: Upcoming / Reported switch and a scorecard strip.

@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=8.8">
+<link rel="stylesheet" href="assets/css/style.css?v=8.9">
 </head>
 <body>
 <header class="site-header">
@@ -54,14 +54,16 @@
 <section class="page-hero"><div class="wrap">
   <span class="eyebrow">Earnings calendar</span>
   <h1>Who reports, <span class="gold">and when</span></h1>
-  <p class="lead">Upcoming results for the JSE and New York. Every company on the LRC watchlist is ticked ✓ and highlighted, and every company the LRC Stock Scanner tracks shows its ratings. The calendar updates after every scanner run, together with the watchlist. Results inside 14 days count as event risk. Looking for dividends? See the <a href="dividends.html" style="color:var(--gold-2)">dividend calendar</a>.</p>
+  <p class="lead">Upcoming results for the JSE and New York — and, once a company has reported, whether it beat (green) or missed (red) the analysts' estimate. Every company on the LRC watchlist is ticked ✓ and highlighted, and every company the LRC Stock Scanner tracks shows its ratings. The calendar updates after every scanner run, together with the watchlist. Results inside 14 days count as event risk. Looking for dividends? See the <a href="dividends.html" style="color:var(--gold-2)">dividend calendar</a>.</p>
+  <div class="seg cal-view" id="erView" role="tablist"><button data-v="up" class="on">Upcoming results</button><button data-v="rep">Reported · beat or missed</button></div>
   <div class="dsel"><label for="erMkt">Exchange</label><select id="erMkt"><option value="us">New York — NYSE &amp; Nasdaq</option><option value="jse">Johannesburg — JSE</option></select>
-  <label for="erRange" style="margin-left:14px">Show</label><select id="erRange"><option value="7">Next 7 days</option><option value="14" selected>Next 14 days</option><option value="31">Next month</option><option value="62">Next 2 months</option></select>
+  <label for="erRange" style="margin-left:14px">Show</label><select id="erRange"><option value="7">7 days</option><option value="14" selected>14 days</option><option value="31">1 month</option><option value="62">2 months</option></select>
   <label for="erCov" style="margin-left:14px">Companies</label><select id="erCov"><option value="all" selected>All companies</option><option value="cov">✓ On the LRC watchlist</option><option value="scan">Tracked by the LRC Stock Scanner</option></select></div>
   <div class="agent-meta" id="erMeta"></div>
 </div></section>
 <section style="padding-top:30px"><div class="wrap">
   <input class="search" id="erSearch" type="search" placeholder="Search a company or ticker…" aria-label="Search earnings" style="margin:0 0 18px;max-width:360px">
+  <div id="erScore"></div>
   <div id="erList"><p class="muted-load">Loading the calendar…</p></div>
   <p class="src-note" id="erSrc"></p>
 </div></section>
@@ -81,6 +83,6 @@
   </div>
 </footer>
 <script>window.LRC_DATA = "data/";</script>
-<script src="assets/js/main.js?v=8.8"></script>
+<script src="assets/js/main.js?v=8.9"></script>
 </body>
 </html>

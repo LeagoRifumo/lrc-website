@@ -120,6 +120,9 @@ def norm_fund(s, q, price_major, minor, fx):
     ed = [x.get('fmt') for x in (ce.get('earnings') or {}).get('earningsDate', []) if isinstance(x, dict)]
     f['next_earnings'] = next((d for d in ed if d and d >= today), None)
     f['ex_div'] = (ce.get('exDividendDate') or {}).get('fmt') if isinstance(ce.get('exDividendDate'), dict) else None
+    # reported vs expected EPS for the last 4 quarters (earnings calendar: beat / miss after results)
+    f['eps_hist'] = [{'q': (h.get('quarter') or {}).get('fmt'), 'act': raw(h, 'epsActual'), 'est': raw(h, 'epsEstimate'), 'surp': raw(h, 'surprisePercent')}
+                     for h in ((s.get('earningsHistory') or {}).get('history') or []) if isinstance(h, dict)]
     f['div_pay'] = (ce.get('dividendDate') or {}).get('fmt') if isinstance(ce.get('dividendDate'), dict) else None   # payment date (dividend calendar)
     rt = ((s.get('recommendationTrend') or {}).get('trend') or [{}])[0]
     f['rec_trend'] = {k: rt.get(k) for k in ('strongBuy', 'buy', 'hold', 'sell', 'strongSell')} if rt else None
