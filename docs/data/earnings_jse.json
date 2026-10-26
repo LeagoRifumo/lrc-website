@@ -5,6 +5,35 @@
  "source": "Compiled 24 Oct 2026 by LRC Research from company investor-relations financial calendars and SENS announcements (via ShareData/Listcorp); each item names its source. Only company-confirmed or company-published expected dates are listed; expected dates are marked in 'period'. Market caps in Rand bn where a dated source was opened, otherwise null. Dates marked \"expected\" come from the market data feed and are added automatically for every JSE company the LRC Stock Scanner tracks.",
  "items": [
   {
+   "date": "2026-10-22",
+   "ticker": "CLS",
+   "name": "Clicks Group",
+   "when": "Not stated",
+   "period": "Year to 31 Aug 2026",
+   "quarter": "",
+   "eps_forecast": "",
+   "market_cap_bn": null,
+   "reported": true,
+   "result": "up",
+   "eps_actual": null,
+   "eps_est": null,
+   "surprise": null,
+   "heps": 1421.7,
+   "heps_prior": 1361.7,
+   "unit": "c",
+   "change": 0.0441,
+   "measure": "HEPS",
+   "dps": 667.0,
+   "source": "Clicks Group — Annual results for the year ended 31 August 2026 and cash dividend declaration (22 Oct 2026) https://www.clicksgroup.co.za/wp-content/uploads/2026/10/CGL-2026-Annual-results-announcement.pdf (HEPS 1 421.7c vs 1 361.7c; final dividend 667.0c, total for the year 925c)",
+   "t": "CLS.JO",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
    "date": "2026-10-26",
    "ticker": "PIK",
    "name": "Pick n Pay",
@@ -20,6 +49,13 @@
    "idea": null,
    "v": "HOLD",
    "iv": "SELL",
+   "ts": {
+    "date": "2026-10-22",
+    "low": 0.25,
+    "high": 0.35,
+    "period": "26 weeks to 30 Aug 2026",
+    "source": "Pick n Pay Stores SENS — Trading statement for the 26 weeks ended 30 August 2026 and conclusion of store labour agreement (22 Oct 2026), as reported by Business Day https://www.businessday.co.za/companies/2026-10-22-pick-n-pay-drops-restructuring-plan-as-interim-loss-narrows/ and IOL https://iol.co.za/business/economy/2026-10-23-pick-n-pay-reaches-union-deal-as-projected-losses-narrow/ (headline loss per share expected to narrow 25%-35% to 38.85c-44.83c from 59.77c)"
+   },
    "track": null,
    "lrc_rating": null,
    "covered": true
@@ -416,6 +452,6 @@
   }
  ],
  "note": "Partial list: a number of Top 100 companies (e.g. Telkom, MTN, Tiger Brands, Pepkor, Pick n Pay, Life Healthcare, Coronation, Mr Price) had no company-published date we could confirm this week; they will be added when dates are published.",
- "synced": "2026-10-26T04:31+02:00",
+ "synced": "2026-10-26T04:46+02:00",
  "coverage_note": "Ticked = on the LRC watchlist. Every company the LRC Stock Scanner tracks shows its trading and investment ratings. Updated after every scanner run."
 }

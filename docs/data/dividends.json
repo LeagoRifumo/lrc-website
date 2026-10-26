@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-26T04:31+02:00",
+ "generated": "2026-10-26T04:46+02:00",
  "source": "Ex-dividend and payment dates and dividend history from the market data feed; expected dates are last year's dates rolled forward one year. Confirm every date on the company announcement (SENS for JSE companies).",
  "rules": {
   "JSE": "JSE trades settle in 3 business days (T+3): buy by the last day to trade (usually a Tuesday) to receive the dividend; the share trades ex-dividend the next business day and the record date is the Friday.",
@@ -18498,9 +18498,9 @@
    "sec": "Healthcare",
    "cur": "ZAR",
    "px": 216.6,
-   "last_amount": 2.58,
-   "last_date": "2026-07-01",
-   "per_year": 2,
+   "last_amount": 6.67,
+   "last_date": "2027-01-20",
+   "per_year": null,
    "yield": 0.0418,
    "payout": 0.6381,
    "v": "HOLD",
@@ -18511,9 +18511,17 @@
    "idea": null,
    "ex": "2027-01-20",
    "ldt": "2027-01-19",
-   "pay": null,
-   "amount": null,
-   "status": "confirmed"
+   "record": "2027-01-22",
+   "pay": "2027-01-25",
+   "amount": 6.67,
+   "period": "Final",
+   "status": "confirmed",
+   "source": "Clicks Group — Annual results for the year ended 31 August 2026 and cash dividend declaration (22 Oct 2026) https://www.clicksgroup.co.za/wp-content/uploads/2026/10/CGL-2026-Annual-results-announcement.pdf",
+   "sens": true,
+   "prev_amount": 6.48,
+   "prev_ex": "2026-01-21",
+   "chg": 0.0293,
+   "trend": "raised"
   },
   {
    "t": "RLO.JO",

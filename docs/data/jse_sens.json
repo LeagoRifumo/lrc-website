@@ -1,7 +1,40 @@
 {
  "note": "JSE company announcements (SENS) recorded by the LRC JSE Announcements job every weekday. results = published results with headline earnings per share (HEPS) vs the same period last year; trading_statements = expected HEPS change ranges; dividends = declared dividends with the JSE dates. Amounts in cents. Every entry carries its source.",
- "updated": null,
- "results": [],
- "trading_statements": [],
- "dividends": []
+ "updated": "2026-10-26T18:30+02:00",
+ "results": [
+  {
+   "t": "CLS.JO",
+   "name": "Clicks Group",
+   "date": "2026-10-22",
+   "period": "Year to 31 Aug 2026",
+   "heps": 1421.7,
+   "heps_prior": 1361.7,
+   "unit": "c",
+   "dps": 667.0,
+   "source": "Clicks Group — Annual results for the year ended 31 August 2026 and cash dividend declaration (22 Oct 2026) https://www.clicksgroup.co.za/wp-content/uploads/2026/10/CGL-2026-Annual-results-announcement.pdf (HEPS 1 421.7c vs 1 361.7c; final dividend 667.0c, total for the year 925c)"
+  }
+ ],
+ "trading_statements": [
+  {
+   "t": "PIK.JO",
+   "date": "2026-10-22",
+   "period": "26 weeks to 30 Aug 2026",
+   "heps_change_low": 0.25,
+   "heps_change_high": 0.35,
+   "source": "Pick n Pay Stores SENS — Trading statement for the 26 weeks ended 30 August 2026 and conclusion of store labour agreement (22 Oct 2026), as reported by Business Day https://www.businessday.co.za/companies/2026-10-22-pick-n-pay-drops-restructuring-plan-as-interim-loss-narrows/ and IOL https://iol.co.za/business/economy/2026-10-23-pick-n-pay-reaches-union-deal-as-projected-losses-narrow/ (headline loss per share expected to narrow 25%-35% to 38.85c-44.83c from 59.77c)"
+  }
+ ],
+ "dividends": [
+  {
+   "t": "CLS.JO",
+   "period": "Final",
+   "declared": "2026-10-22",
+   "amount_c": 667.0,
+   "ldt": "2027-01-19",
+   "ex": "2027-01-20",
+   "record": "2027-01-22",
+   "pay": "2027-01-25",
+   "source": "Clicks Group — Annual results for the year ended 31 August 2026 and cash dividend declaration (22 Oct 2026) https://www.clicksgroup.co.za/wp-content/uploads/2026/10/CGL-2026-Annual-results-announcement.pdf"
+  }
+ ]
 }
