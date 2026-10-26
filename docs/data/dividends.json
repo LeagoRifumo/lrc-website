@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-26T03:54+02:00",
+ "generated": "2026-10-26T03:56+02:00",
  "source": "Ex-dividend and payment dates and dividend history from the market data feed; expected dates are last year's dates rolled forward one year. Confirm every date on the company announcement (SENS for JSE companies).",
  "rules": {
   "JSE": "JSE trades settle in 3 business days (T+3): buy by the last day to trade (usually a Tuesday) to receive the dividend; the share trades ex-dividend the next business day and the record date is the Friday.",
@@ -26,7 +26,7 @@
    "idea": null,
    "ex": "2026-09-28",
    "ldt": "2026-09-25",
-   "pay": null,
+   "pay": "2026-10-09",
    "amount": 0.23,
    "status": "recent"
   },
@@ -98,7 +98,7 @@
    "idea": null,
    "ex": "2026-09-30",
    "ldt": "2026-09-29",
-   "pay": null,
+   "pay": "2026-10-15",
    "amount": 0.72,
    "status": "recent"
   },
@@ -146,7 +146,7 @@
    "idea": null,
    "ex": "2026-09-30",
    "ldt": "2026-09-29",
-   "pay": null,
+   "pay": "2026-10-30",
    "amount": 0.7,
    "status": "recent"
   },
@@ -170,7 +170,7 @@
    "idea": null,
    "ex": "2026-09-30",
    "ldt": "2026-09-29",
-   "pay": null,
+   "pay": "2026-10-09",
    "amount": 0.33,
    "status": "recent"
   },
@@ -194,7 +194,7 @@
    "idea": null,
    "ex": "2026-09-30",
    "ldt": "2026-09-29",
-   "pay": null,
+   "pay": "2026-10-16",
    "amount": 1.06,
    "status": "recent"
   },
@@ -218,7 +218,7 @@
    "idea": null,
    "ex": "2026-09-30",
    "ldt": "2026-09-29",
-   "pay": null,
+   "pay": "2026-10-20",
    "amount": 1.79,
    "status": "recent"
   },
@@ -242,7 +242,7 @@
    "idea": null,
    "ex": "2026-09-30",
    "ldt": "2026-09-29",
-   "pay": null,
+   "pay": "2026-10-15",
    "amount": 2.59,
    "status": "recent"
   },
@@ -266,7 +266,7 @@
    "idea": null,
    "ex": "2026-09-30",
    "ldt": "2026-09-29",
-   "pay": null,
+   "pay": "2026-10-15",
    "amount": 0.54,
    "status": "recent"
   },
@@ -314,7 +314,7 @@
    "idea": null,
    "ex": "2026-09-30",
    "ldt": "2026-09-29",
-   "pay": null,
+   "pay": "2026-10-14",
    "amount": 0.52,
    "status": "recent"
   },
@@ -338,7 +338,7 @@
    "idea": null,
    "ex": "2026-09-30",
    "ldt": "2026-09-29",
-   "pay": null,
+   "pay": "2026-10-15",
    "amount": 0.2,
    "status": "recent"
   },
@@ -386,7 +386,7 @@
    "idea": null,
    "ex": "2026-09-30",
    "ldt": "2026-09-29",
-   "pay": null,
+   "pay": "2026-10-15",
    "amount": 0.42,
    "status": "recent"
   },
@@ -410,7 +410,7 @@
    "idea": null,
    "ex": "2026-09-30",
    "ldt": "2026-09-29",
-   "pay": null,
+   "pay": "2026-10-09",
    "amount": 1.72,
    "status": "recent"
   },
@@ -434,7 +434,7 @@
    "idea": null,
    "ex": "2026-09-30",
    "ldt": "2026-09-29",
-   "pay": null,
+   "pay": "2026-10-15",
    "amount": 0.52,
    "status": "recent"
   },
@@ -458,7 +458,7 @@
    "idea": null,
    "ex": "2026-09-30",
    "ldt": "2026-09-29",
-   "pay": null,
+   "pay": "2026-10-15",
    "amount": 0.05,
    "status": "recent"
   },
@@ -482,7 +482,7 @@
    "idea": null,
    "ex": "2026-09-30",
    "ldt": "2026-09-29",
-   "pay": null,
+   "pay": "2026-10-15",
    "amount": 1.36,
    "status": "recent"
   },
@@ -506,7 +506,7 @@
    "idea": null,
    "ex": "2026-09-30",
    "ldt": "2026-09-29",
-   "pay": null,
+   "pay": "2026-10-15",
    "amount": 0.96,
    "status": "recent"
   },
@@ -530,7 +530,7 @@
    "idea": null,
    "ex": "2026-09-30",
    "ldt": "2026-09-29",
-   "pay": null,
+   "pay": "2026-10-30",
    "amount": 0.88,
    "status": "recent"
   },
@@ -554,7 +554,7 @@
    "idea": null,
    "ex": "2026-09-30",
    "ldt": "2026-09-29",
-   "pay": null,
+   "pay": "2026-11-09",
    "amount": 1.62,
    "status": "recent"
   },
@@ -578,7 +578,7 @@
    "idea": null,
    "ex": "2026-09-30",
    "ldt": "2026-09-29",
-   "pay": null,
+   "pay": "2026-10-30",
    "amount": 0.24,
    "status": "recent"
   },
@@ -602,7 +602,7 @@
    "idea": null,
    "ex": "2026-09-30",
    "ldt": "2026-09-29",
-   "pay": null,
+   "pay": "2026-10-09",
    "amount": 0.53,
    "status": "recent"
   },
@@ -626,7 +626,7 @@
    "idea": "Earnings watch",
    "ex": "2026-09-30",
    "ldt": "2026-09-29",
-   "pay": null,
+   "pay": "2026-11-10",
    "amount": 0.56,
    "status": "recent"
   },
@@ -650,7 +650,7 @@
    "idea": null,
    "ex": "2026-09-30",
    "ldt": "2026-09-29",
-   "pay": null,
+   "pay": "2026-10-15",
    "amount": 2.0,
    "status": "recent"
   },
@@ -674,7 +674,7 @@
    "idea": null,
    "ex": "2026-09-30",
    "ldt": "2026-09-29",
-   "pay": null,
+   "pay": "2026-10-30",
    "amount": 0.4,
    "status": "recent"
   },
@@ -698,7 +698,7 @@
    "idea": null,
    "ex": "2026-09-30",
    "ldt": "2026-09-29",
-   "pay": null,
+   "pay": "2026-10-30",
    "amount": 0.13,
    "status": "recent"
   },
@@ -722,7 +722,7 @@
    "idea": null,
    "ex": "2026-10-01",
    "ldt": "2026-09-30",
-   "pay": null,
+   "pay": "2026-10-15",
    "amount": 1.16,
    "status": "recent"
   },
@@ -746,7 +746,7 @@
    "idea": null,
    "ex": "2026-10-01",
    "ldt": "2026-09-30",
-   "pay": null,
+   "pay": "2026-10-13",
    "amount": 0.92,
    "status": "recent"
   },
@@ -770,7 +770,7 @@
    "idea": null,
    "ex": "2026-10-01",
    "ldt": "2026-09-30",
-   "pay": null,
+   "pay": "2026-11-13",
    "amount": 0.99,
    "status": "recent"
   },
@@ -794,7 +794,7 @@
    "idea": null,
    "ex": "2026-10-01",
    "ldt": "2026-09-30",
-   "pay": null,
+   "pay": "2026-10-15",
    "amount": 0.54,
    "status": "recent"
   },
@@ -818,7 +818,7 @@
    "idea": null,
    "ex": "2026-10-01",
    "ldt": "2026-09-30",
-   "pay": null,
+   "pay": "2026-10-15",
    "amount": 0.516,
    "status": "recent"
   },
@@ -842,7 +842,7 @@
    "idea": null,
    "ex": "2026-10-01",
    "ldt": "2026-09-30",
-   "pay": null,
+   "pay": "2026-10-09",
    "amount": 0.1,
    "status": "recent"
   },
@@ -866,7 +866,7 @@
    "idea": null,
    "ex": "2026-10-01",
    "ldt": "2026-09-30",
-   "pay": null,
+   "pay": "2026-10-09",
    "amount": 0.11,
    "status": "recent"
   },
@@ -890,7 +890,7 @@
    "idea": "Score leaders",
    "ex": "2026-10-02",
    "ldt": "2026-10-01",
-   "pay": null,
+   "pay": "2026-11-02",
    "amount": 0.63,
    "status": "recent"
   },
@@ -914,7 +914,7 @@
    "idea": null,
    "ex": "2026-10-02",
    "ldt": "2026-10-01",
-   "pay": null,
+   "pay": "2026-10-26",
    "amount": 1.6,
    "status": "recent"
   },
@@ -938,7 +938,7 @@
    "idea": null,
    "ex": "2026-10-02",
    "ldt": "2026-10-01",
-   "pay": null,
+   "pay": "2026-10-23",
    "amount": 0.55,
    "status": "recent"
   },
@@ -962,7 +962,7 @@
    "idea": null,
    "ex": "2026-10-02",
    "ldt": "2026-10-01",
-   "pay": null,
+   "pay": "2026-10-21",
    "amount": 0.42,
    "status": "recent"
   },
@@ -986,7 +986,7 @@
    "idea": null,
    "ex": "2026-10-02",
    "ldt": "2026-10-01",
-   "pay": null,
+   "pay": "2026-10-16",
    "amount": 0.73,
    "status": "recent"
   },
@@ -1010,7 +1010,7 @@
    "idea": null,
    "ex": "2026-10-02",
    "ldt": "2026-10-01",
-   "pay": null,
+   "pay": "2026-10-15",
    "amount": 0.67,
    "status": "recent"
   },
@@ -1034,7 +1034,7 @@
    "idea": null,
    "ex": "2026-10-02",
    "ldt": "2026-10-01",
-   "pay": null,
+   "pay": "2026-10-21",
    "amount": 0.91,
    "status": "recent"
   },
@@ -1060,7 +1060,7 @@
    "idea": null,
    "ex": "2026-10-05",
    "ldt": "2026-10-02",
-   "pay": null,
+   "pay": "2026-10-16",
    "amount": 0.703,
    "status": "recent"
   },
@@ -1084,7 +1084,7 @@
    "idea": null,
    "ex": "2026-10-05",
    "ldt": "2026-10-02",
-   "pay": null,
+   "pay": "2026-10-20",
    "amount": 1.463,
    "status": "recent"
   },
@@ -1108,7 +1108,7 @@
    "idea": null,
    "ex": "2026-10-05",
    "ldt": "2026-10-02",
-   "pay": null,
+   "pay": "2026-10-30",
    "amount": 0.33,
    "status": "recent"
   },
@@ -1132,7 +1132,7 @@
    "idea": null,
    "ex": "2026-10-05",
    "ldt": "2026-10-02",
-   "pay": null,
+   "pay": "2026-10-26",
    "amount": 0.47,
    "status": "recent"
   },
@@ -1156,7 +1156,7 @@
    "idea": null,
    "ex": "2026-10-06",
    "ldt": "2026-10-05",
-   "pay": null,
+   "pay": "2026-10-31",
    "amount": 1.65,
    "status": "recent"
   },
@@ -1180,7 +1180,7 @@
    "idea": null,
    "ex": "2026-10-06",
    "ldt": "2026-10-05",
-   "pay": null,
+   "pay": "2026-10-20",
    "amount": 0.59,
    "status": "recent"
   },
@@ -1204,7 +1204,7 @@
    "idea": null,
    "ex": "2026-10-06",
    "ldt": "2026-10-05",
-   "pay": null,
+   "pay": "2026-10-21",
    "amount": 0.86,
    "status": "recent"
   },
@@ -1228,7 +1228,7 @@
    "idea": null,
    "ex": "2026-10-06",
    "ldt": "2026-10-05",
-   "pay": null,
+   "pay": "2026-10-28",
    "amount": 0.255,
    "status": "recent"
   },
@@ -1350,7 +1350,7 @@
    "idea": null,
    "ex": "2026-10-07",
    "ldt": "2026-10-06",
-   "pay": null,
+   "pay": "2026-10-31",
    "amount": 0.878,
    "status": "recent"
   },
@@ -1426,7 +1426,7 @@
    "idea": null,
    "ex": "2026-10-07",
    "ldt": "2026-10-06",
-   "pay": null,
+   "pay": "2026-10-22",
    "amount": 0.5,
    "status": "recent"
   },
@@ -1474,7 +1474,7 @@
    "idea": null,
    "ex": "2026-10-08",
    "ldt": "2026-10-07",
-   "pay": null,
+   "pay": "2026-10-16",
    "amount": 1.38,
    "status": "recent"
   },
@@ -1498,7 +1498,7 @@
    "idea": null,
    "ex": "2026-10-09",
    "ldt": "2026-10-08",
-   "pay": null,
+   "pay": "2026-11-02",
    "amount": 0.708,
    "status": "recent"
   },
@@ -1522,7 +1522,7 @@
    "idea": null,
    "ex": "2026-10-09",
    "ldt": "2026-10-08",
-   "pay": null,
+   "pay": "2026-11-02",
    "amount": 0.278,
    "status": "recent"
   },
@@ -1546,7 +1546,7 @@
    "idea": null,
    "ex": "2026-10-09",
    "ldt": "2026-10-08",
-   "pay": null,
+   "pay": "2026-11-02",
    "amount": 1.62,
    "status": "recent"
   },
@@ -1570,7 +1570,7 @@
    "idea": null,
    "ex": "2026-10-09",
    "ldt": "2026-10-08",
-   "pay": null,
+   "pay": "2026-11-13",
    "amount": 1.59,
    "status": "recent"
   },
@@ -1594,7 +1594,7 @@
    "idea": null,
    "ex": "2026-10-09",
    "ldt": "2026-10-08",
-   "pay": null,
+   "pay": "2026-10-23",
    "amount": 0.5,
    "status": "recent"
   },
@@ -1618,7 +1618,7 @@
    "idea": null,
    "ex": "2026-10-09",
    "ldt": "2026-10-08",
-   "pay": null,
+   "pay": "2026-11-10",
    "amount": 0.95,
    "status": "recent"
   },
@@ -1642,7 +1642,7 @@
    "idea": null,
    "ex": "2026-10-09",
    "ldt": "2026-10-08",
-   "pay": null,
+   "pay": "2026-10-28",
    "amount": 0.52,
    "status": "recent"
   },
@@ -1666,7 +1666,7 @@
    "idea": null,
    "ex": "2026-10-09",
    "ldt": "2026-10-08",
-   "pay": null,
+   "pay": "2026-11-09",
    "amount": 0.87,
    "status": "recent"
   },
@@ -1690,7 +1690,7 @@
    "idea": null,
    "ex": "2026-10-09",
    "ldt": "2026-10-08",
-   "pay": null,
+   "pay": "2026-10-29",
    "amount": 0.06,
    "status": "recent"
   },
@@ -1714,7 +1714,7 @@
    "idea": null,
    "ex": "2026-10-13",
    "ldt": "2026-10-12",
-   "pay": null,
+   "pay": "2026-11-02",
    "amount": 0.61,
    "status": "recent"
   },
@@ -1738,7 +1738,7 @@
    "idea": null,
    "ex": "2026-10-13",
    "ldt": "2026-10-12",
-   "pay": null,
+   "pay": "2026-11-16",
    "amount": 0.293,
    "status": "recent"
   },
@@ -1762,7 +1762,7 @@
    "idea": null,
    "ex": "2026-10-13",
    "ldt": "2026-10-12",
-   "pay": null,
+   "pay": "2026-10-26",
    "amount": 0.48,
    "status": "recent"
   },
@@ -1786,7 +1786,7 @@
    "idea": null,
    "ex": "2026-10-13",
    "ldt": "2026-10-12",
-   "pay": null,
+   "pay": "2026-11-13",
    "amount": 1.71,
    "status": "recent"
   },
@@ -1906,7 +1906,7 @@
    "idea": null,
    "ex": "2026-10-14",
    "ldt": "2026-10-13",
-   "pay": null,
+   "pay": "2026-11-05",
    "amount": 2.0,
    "status": "recent"
   },
@@ -1959,7 +1959,7 @@
    "idea": "Value & quality",
    "ex": "2026-10-14",
    "ldt": "2026-10-13",
-   "pay": null,
+   "pay": "2026-10-29",
    "amount": 0.15,
    "status": "recent"
   },
@@ -1983,7 +1983,7 @@
    "idea": null,
    "ex": "2026-10-15",
    "ldt": "2026-10-14",
-   "pay": null,
+   "pay": "2026-10-30",
    "amount": 1.53,
    "status": "recent"
   },
@@ -2007,7 +2007,7 @@
    "idea": null,
    "ex": "2026-10-15",
    "ldt": "2026-10-14",
-   "pay": null,
+   "pay": "2026-11-16",
    "amount": 0.63,
    "status": "recent"
   },
@@ -2031,7 +2031,7 @@
    "idea": null,
    "ex": "2026-10-15",
    "ldt": "2026-10-14",
-   "pay": null,
+   "pay": "2026-11-16",
    "amount": 1.73,
    "status": "recent"
   },
@@ -2055,7 +2055,7 @@
    "idea": null,
    "ex": "2026-10-15",
    "ldt": "2026-10-14",
-   "pay": null,
+   "pay": "2026-11-05",
    "amount": 0.215,
    "status": "recent"
   },
@@ -2079,7 +2079,7 @@
    "idea": null,
    "ex": "2026-10-15",
    "ldt": "2026-10-14",
-   "pay": null,
+   "pay": "2026-11-02",
    "amount": 0.15,
    "status": "recent"
   },
@@ -2103,7 +2103,7 @@
    "idea": null,
    "ex": "2026-10-15",
    "ldt": "2026-10-14",
-   "pay": null,
+   "pay": "2026-10-30",
    "amount": 0.4,
    "status": "recent"
   },
@@ -2127,7 +2127,7 @@
    "idea": null,
    "ex": "2026-10-16",
    "ldt": "2026-10-15",
-   "pay": null,
+   "pay": "2026-10-30",
    "amount": 1.02,
    "status": "recent"
   },
@@ -2151,7 +2151,7 @@
    "idea": null,
    "ex": "2026-10-16",
    "ldt": "2026-10-15",
-   "pay": null,
+   "pay": "2026-11-20",
    "amount": 0.76,
    "status": "recent"
   },
@@ -2175,7 +2175,7 @@
    "idea": null,
    "ex": "2026-10-20",
    "ldt": "2026-10-19",
-   "pay": null,
+   "pay": "2026-11-13",
    "amount": 0.53,
    "status": "recent"
   },
@@ -2199,7 +2199,7 @@
    "idea": null,
    "ex": "2026-10-20",
    "ldt": "2026-10-19",
-   "pay": null,
+   "pay": "2026-10-30",
    "amount": 0.63,
    "status": "recent"
   },
@@ -2249,7 +2249,7 @@
    "idea": null,
    "ex": "2026-10-21",
    "ldt": "2026-10-20",
-   "pay": null,
+   "pay": "2026-11-04",
    "amount": 1.25,
    "status": "recent"
   },
@@ -2297,7 +2297,7 @@
    "idea": null,
    "ex": "2026-10-22",
    "ldt": "2026-10-21",
-   "pay": null,
+   "pay": "2026-11-02",
    "amount": 0.665,
    "status": "recent"
   },
@@ -2321,7 +2321,7 @@
    "idea": null,
    "ex": "2026-10-22",
    "ldt": "2026-10-21",
-   "pay": null,
+   "pay": "2026-11-23",
    "amount": 0.25,
    "status": "recent"
   },
@@ -2345,7 +2345,7 @@
    "idea": null,
    "ex": "2026-10-23",
    "ldt": "2026-10-22",
-   "pay": null,
+   "pay": "2026-11-16",
    "amount": 1.089,
    "status": "recent"
   },
@@ -2369,7 +2369,7 @@
    "idea": null,
    "ex": "2026-10-23",
    "ldt": "2026-10-22",
-   "pay": null,
+   "pay": "2026-11-06",
    "amount": 0.27,
    "status": "recent"
   },
@@ -2393,7 +2393,7 @@
    "idea": null,
    "ex": "2026-10-23",
    "ldt": "2026-10-22",
-   "pay": null,
+   "pay": "2026-11-13",
    "amount": 0.04,
    "status": "recent"
   },
@@ -2417,7 +2417,7 @@
    "idea": null,
    "ex": "2026-10-23",
    "ldt": "2026-10-22",
-   "pay": null,
+   "pay": "2026-11-13",
    "amount": 0.07,
    "status": "recent"
   },
@@ -2441,7 +2441,7 @@
    "idea": null,
    "ex": "2026-10-26",
    "ldt": "2026-10-23",
-   "pay": null,
+   "pay": "2026-11-25",
    "amount": null,
    "status": "confirmed"
   },
@@ -2465,7 +2465,7 @@
    "idea": null,
    "ex": "2026-10-26",
    "ldt": "2026-10-23",
-   "pay": null,
+   "pay": "2026-11-09",
    "amount": null,
    "status": "confirmed"
   },
@@ -2481,15 +2481,15 @@
    "per_year": 4,
    "yield": 0.0095,
    "payout": 0.26,
-   "v": "BUY",
-   "score": 61,
+   "v": "HOLD",
+   "score": 59,
    "iv_v": "HOLD",
    "iv_score": 59,
    "lists": [],
    "idea": null,
    "ex": "2026-10-26",
    "ldt": "2026-10-23",
-   "pay": null,
+   "pay": "2026-11-19",
    "amount": null,
    "status": "confirmed"
   },
@@ -2513,7 +2513,7 @@
    "idea": null,
    "ex": "2026-10-27",
    "ldt": "2026-10-26",
-   "pay": null,
+   "pay": "2026-11-04",
    "amount": null,
    "status": "confirmed"
   },
@@ -2537,7 +2537,7 @@
    "idea": null,
    "ex": "2026-10-27",
    "ldt": "2026-10-26",
-   "pay": null,
+   "pay": "2026-11-24",
    "amount": null,
    "status": "confirmed"
   },
@@ -2561,7 +2561,7 @@
    "idea": null,
    "ex": "2026-10-28",
    "ldt": "2026-10-27",
-   "pay": null,
+   "pay": "2026-11-13",
    "amount": null,
    "status": "confirmed"
   },
@@ -2585,7 +2585,7 @@
    "idea": null,
    "ex": "2026-10-28",
    "ldt": "2026-10-27",
-   "pay": null,
+   "pay": "2026-11-25",
    "amount": null,
    "status": "confirmed"
   },
@@ -2609,7 +2609,7 @@
    "idea": null,
    "ex": "2026-10-29",
    "ldt": "2026-10-28",
-   "pay": null,
+   "pay": "2026-11-18",
    "amount": null,
    "status": "confirmed"
   },
@@ -2633,7 +2633,7 @@
    "idea": null,
    "ex": "2026-10-30",
    "ldt": "2026-10-29",
-   "pay": null,
+   "pay": "2026-11-13",
    "amount": null,
    "status": "confirmed"
   },
@@ -2657,7 +2657,7 @@
    "idea": null,
    "ex": "2026-10-30",
    "ldt": "2026-10-29",
-   "pay": null,
+   "pay": "2026-11-13",
    "amount": null,
    "status": "confirmed"
   },
@@ -2681,7 +2681,7 @@
    "idea": null,
    "ex": "2026-10-30",
    "ldt": "2026-10-29",
-   "pay": null,
+   "pay": "2026-11-13",
    "amount": null,
    "status": "confirmed"
   },
@@ -2705,7 +2705,7 @@
    "idea": null,
    "ex": "2026-10-30",
    "ldt": "2026-10-29",
-   "pay": null,
+   "pay": "2026-11-16",
    "amount": null,
    "status": "confirmed"
   },
@@ -2729,7 +2729,7 @@
    "idea": null,
    "ex": "2026-10-30",
    "ldt": "2026-10-29",
-   "pay": null,
+   "pay": "2026-11-13",
    "amount": null,
    "status": "confirmed"
   },
@@ -2753,7 +2753,7 @@
    "idea": null,
    "ex": "2026-10-30",
    "ldt": "2026-10-29",
-   "pay": null,
+   "pay": "2026-11-20",
    "amount": null,
    "status": "confirmed"
   },
@@ -2777,7 +2777,7 @@
    "idea": null,
    "ex": "2026-10-30",
    "ldt": "2026-10-29",
-   "pay": null,
+   "pay": "2026-12-01",
    "amount": null,
    "status": "confirmed"
   },
@@ -2801,7 +2801,7 @@
    "idea": null,
    "ex": "2026-10-30",
    "ldt": "2026-10-29",
-   "pay": null,
+   "pay": "2026-11-13",
    "amount": null,
    "status": "confirmed"
   },
@@ -2825,7 +2825,7 @@
    "idea": null,
    "ex": "2026-10-30",
    "ldt": "2026-10-29",
-   "pay": null,
+   "pay": "2026-11-16",
    "amount": null,
    "status": "confirmed"
   },
@@ -2849,7 +2849,7 @@
    "idea": null,
    "ex": "2026-10-30",
    "ldt": "2026-10-29",
-   "pay": null,
+   "pay": "2026-11-10",
    "amount": null,
    "status": "confirmed"
   },
@@ -2873,7 +2873,7 @@
    "idea": null,
    "ex": "2026-10-30",
    "ldt": "2026-10-29",
-   "pay": null,
+   "pay": "2026-11-17",
    "amount": null,
    "status": "confirmed"
   },
@@ -2897,7 +2897,7 @@
    "idea": null,
    "ex": "2026-10-30",
    "ldt": "2026-10-29",
-   "pay": null,
+   "pay": "2026-11-27",
    "amount": null,
    "status": "confirmed"
   },
@@ -2921,7 +2921,7 @@
    "idea": null,
    "ex": "2026-10-30",
    "ldt": "2026-10-29",
-   "pay": null,
+   "pay": "2026-11-13",
    "amount": null,
    "status": "confirmed"
   },
@@ -2945,7 +2945,7 @@
    "idea": null,
    "ex": "2026-10-30",
    "ldt": "2026-10-29",
-   "pay": null,
+   "pay": "2026-11-13",
    "amount": null,
    "status": "confirmed"
   },
@@ -2969,7 +2969,7 @@
    "idea": null,
    "ex": "2026-11-02",
    "ldt": "2026-10-30",
-   "pay": null,
+   "pay": "2026-11-16",
    "amount": null,
    "status": "confirmed"
   },
@@ -2993,7 +2993,7 @@
    "idea": null,
    "ex": "2026-11-02",
    "ldt": "2026-10-30",
-   "pay": null,
+   "pay": "2026-12-01",
    "amount": null,
    "status": "confirmed"
   },
@@ -3017,7 +3017,7 @@
    "idea": null,
    "ex": "2026-11-02",
    "ldt": "2026-10-30",
-   "pay": null,
+   "pay": "2026-11-16",
    "amount": null,
    "status": "confirmed"
   },
@@ -3041,7 +3041,7 @@
    "idea": null,
    "ex": "2026-11-02",
    "ldt": "2026-10-30",
-   "pay": null,
+   "pay": "2026-11-10",
    "amount": null,
    "status": "confirmed"
   },
@@ -3065,7 +3065,7 @@
    "idea": null,
    "ex": "2026-11-02",
    "ldt": "2026-10-30",
-   "pay": null,
+   "pay": "2026-11-25",
    "amount": null,
    "status": "confirmed"
   },
@@ -3089,7 +3089,7 @@
    "idea": null,
    "ex": "2026-11-02",
    "ldt": "2026-10-30",
-   "pay": null,
+   "pay": "2026-11-16",
    "amount": null,
    "status": "confirmed"
   },
@@ -3113,7 +3113,7 @@
    "idea": null,
    "ex": "2026-11-02",
    "ldt": "2026-10-30",
-   "pay": null,
+   "pay": "2026-11-13",
    "amount": null,
    "status": "confirmed"
   },
@@ -3164,7 +3164,7 @@
    "idea": "Technical setups",
    "ex": "2026-11-03",
    "ldt": "2026-11-02",
-   "pay": null,
+   "pay": "2026-12-08",
    "amount": null,
    "status": "confirmed"
   },
@@ -3237,7 +3237,7 @@
    "idea": null,
    "ex": "2026-11-04",
    "ldt": "2026-11-03",
-   "pay": null,
+   "pay": "2026-12-01",
    "amount": null,
    "status": "confirmed"
   },
@@ -3311,7 +3311,7 @@
    "idea": null,
    "ex": "2026-11-05",
    "ldt": "2026-11-04",
-   "pay": null,
+   "pay": "2026-11-16",
    "amount": null,
    "status": "confirmed"
   },
@@ -3322,7 +3322,7 @@
    "sec": "Consumer Cyclical",
    "cur": "ZAR",
    "px": 637.6,
-   "last_amount": 3.712,
+   "last_amount": 3.725,
    "last_date": "2025-10-30",
    "per_year": 1,
    "yield": 0.0081,
@@ -3359,7 +3359,7 @@
    "idea": null,
    "ex": "2026-11-06",
    "ldt": "2026-11-05",
-   "pay": null,
+   "pay": "2026-12-07",
    "amount": null,
    "status": "confirmed"
   },
@@ -3383,7 +3383,7 @@
    "idea": null,
    "ex": "2026-11-06",
    "ldt": "2026-11-05",
-   "pay": null,
+   "pay": "2026-12-01",
    "amount": null,
    "status": "confirmed"
   },
@@ -3407,7 +3407,7 @@
    "idea": null,
    "ex": "2026-11-06",
    "ldt": "2026-11-05",
-   "pay": null,
+   "pay": "2026-12-01",
    "amount": null,
    "status": "confirmed"
   },
@@ -3431,7 +3431,7 @@
    "idea": null,
    "ex": "2026-11-06",
    "ldt": "2026-11-05",
-   "pay": null,
+   "pay": "2026-11-27",
    "amount": null,
    "status": "confirmed"
   },
@@ -3455,7 +3455,7 @@
    "idea": null,
    "ex": "2026-11-06",
    "ldt": "2026-11-05",
-   "pay": null,
+   "pay": "2026-11-20",
    "amount": null,
    "status": "confirmed"
   },
@@ -3479,7 +3479,7 @@
    "idea": null,
    "ex": "2026-11-06",
    "ldt": "2026-11-05",
-   "pay": null,
+   "pay": "2026-11-20",
    "amount": null,
    "status": "confirmed"
   },
@@ -3503,7 +3503,7 @@
    "idea": null,
    "ex": "2026-11-06",
    "ldt": "2026-11-05",
-   "pay": null,
+   "pay": "2026-11-25",
    "amount": null,
    "status": "confirmed"
   },
@@ -3629,7 +3629,7 @@
    "idea": null,
    "ex": "2026-11-09",
    "ldt": "2026-11-06",
-   "pay": null,
+   "pay": "2026-11-24",
    "amount": null,
    "status": "confirmed"
   },
@@ -3778,7 +3778,7 @@
    "idea": null,
    "ex": "2026-11-10",
    "ldt": "2026-11-09",
-   "pay": null,
+   "pay": "2026-12-01",
    "amount": null,
    "status": "confirmed"
   },
@@ -3802,7 +3802,7 @@
    "idea": null,
    "ex": "2026-11-10",
    "ldt": "2026-11-09",
-   "pay": null,
+   "pay": "2026-12-10",
    "amount": null,
    "status": "confirmed"
   },
@@ -3826,7 +3826,7 @@
    "idea": null,
    "ex": "2026-11-10",
    "ldt": "2026-11-09",
-   "pay": null,
+   "pay": "2026-12-11",
    "amount": null,
    "status": "confirmed"
   },
@@ -3850,7 +3850,7 @@
    "idea": null,
    "ex": "2026-11-10",
    "ldt": "2026-11-09",
-   "pay": null,
+   "pay": "2026-12-10",
    "amount": null,
    "status": "confirmed"
   },
@@ -3874,7 +3874,7 @@
    "idea": null,
    "ex": "2026-11-10",
    "ldt": "2026-11-09",
-   "pay": null,
+   "pay": "2026-12-10",
    "amount": null,
    "status": "confirmed"
   },
@@ -3891,14 +3891,14 @@
    "yield": 0.0131,
    "payout": 0.2821,
    "v": "HOLD",
-   "score": 50,
+   "score": 49,
    "iv_v": "HOLD",
    "iv_score": 59,
    "lists": [],
    "idea": null,
    "ex": "2026-11-10",
    "ldt": "2026-11-09",
-   "pay": null,
+   "pay": "2026-12-02",
    "amount": null,
    "status": "confirmed"
   },
@@ -3915,14 +3915,14 @@
    "yield": 0.0072,
    "payout": 0.1695,
    "v": "BUY",
-   "score": 67,
+   "score": 69,
    "iv_v": "BUY",
    "iv_score": 64,
    "lists": [],
    "idea": null,
    "ex": "2026-11-10",
    "ldt": "2026-11-09",
-   "pay": null,
+   "pay": "2026-11-25",
    "amount": null,
    "status": "confirmed"
   },
@@ -3946,7 +3946,7 @@
    "idea": null,
    "ex": "2026-11-10",
    "ldt": "2026-11-09",
-   "pay": null,
+   "pay": "2026-11-18",
    "amount": null,
    "status": "confirmed"
   },
@@ -4020,7 +4020,7 @@
    "idea": null,
    "ex": "2026-11-12",
    "ldt": "2026-11-11",
-   "pay": null,
+   "pay": "2026-12-03",
    "amount": null,
    "status": "confirmed"
   },
@@ -4044,7 +4044,7 @@
    "idea": null,
    "ex": "2026-11-12",
    "ldt": "2026-11-11",
-   "pay": null,
+   "pay": "2026-11-23",
    "amount": null,
    "status": "confirmed"
   },
@@ -4068,7 +4068,7 @@
    "idea": null,
    "ex": "2026-11-12",
    "ldt": "2026-11-11",
-   "pay": null,
+   "pay": "2026-12-03",
    "amount": null,
    "status": "confirmed"
   },
@@ -4267,7 +4267,7 @@
    "idea": null,
    "ex": "2026-11-13",
    "ldt": "2026-11-12",
-   "pay": null,
+   "pay": "2026-12-30",
    "amount": null,
    "status": "confirmed"
   },
@@ -4291,7 +4291,7 @@
    "idea": null,
    "ex": "2026-11-13",
    "ldt": "2026-11-12",
-   "pay": null,
+   "pay": "2026-12-16",
    "amount": null,
    "status": "confirmed"
   },
@@ -4315,7 +4315,7 @@
    "idea": null,
    "ex": "2026-11-13",
    "ldt": "2026-11-12",
-   "pay": null,
+   "pay": "2026-12-01",
    "amount": null,
    "status": "confirmed"
   },
@@ -4339,7 +4339,7 @@
    "idea": null,
    "ex": "2026-11-13",
    "ldt": "2026-11-12",
-   "pay": null,
+   "pay": "2026-12-01",
    "amount": null,
    "status": "confirmed"
   },
@@ -4363,7 +4363,7 @@
    "idea": null,
    "ex": "2026-11-13",
    "ldt": "2026-11-12",
-   "pay": null,
+   "pay": "2026-11-27",
    "amount": null,
    "status": "confirmed"
   },
@@ -4387,7 +4387,7 @@
    "idea": null,
    "ex": "2026-11-13",
    "ldt": "2026-11-12",
-   "pay": null,
+   "pay": "2026-11-27",
    "amount": null,
    "status": "confirmed"
   },
@@ -4411,7 +4411,7 @@
    "idea": null,
    "ex": "2026-11-13",
    "ldt": "2026-11-12",
-   "pay": null,
+   "pay": "2026-11-27",
    "amount": null,
    "status": "confirmed"
   },
@@ -4435,7 +4435,7 @@
    "idea": null,
    "ex": "2026-11-13",
    "ldt": "2026-11-12",
-   "pay": null,
+   "pay": "2026-12-04",
    "amount": null,
    "status": "confirmed"
   },
@@ -4459,7 +4459,7 @@
    "idea": null,
    "ex": "2026-11-13",
    "ldt": "2026-11-12",
-   "pay": null,
+   "pay": "2026-12-04",
    "amount": null,
    "status": "confirmed"
   },
@@ -4483,7 +4483,7 @@
    "idea": null,
    "ex": "2026-11-13",
    "ldt": "2026-11-12",
-   "pay": null,
+   "pay": "2026-12-11",
    "amount": null,
    "status": "confirmed"
   },
@@ -4782,7 +4782,7 @@
    "idea": null,
    "ex": "2026-11-16",
    "ldt": "2026-11-13",
-   "pay": null,
+   "pay": "2026-12-15",
    "amount": null,
    "status": "confirmed"
   },
@@ -4806,7 +4806,7 @@
    "idea": null,
    "ex": "2026-11-16",
    "ldt": "2026-11-13",
-   "pay": null,
+   "pay": "2026-12-31",
    "amount": null,
    "status": "confirmed"
   },
@@ -4830,7 +4830,7 @@
    "idea": null,
    "ex": "2026-11-16",
    "ldt": "2026-11-13",
-   "pay": null,
+   "pay": "2026-12-07",
    "amount": null,
    "status": "confirmed"
   },
@@ -4854,7 +4854,7 @@
    "idea": null,
    "ex": "2026-11-16",
    "ldt": "2026-11-13",
-   "pay": null,
+   "pay": "2026-12-01",
    "amount": null,
    "status": "confirmed"
   },
@@ -4878,7 +4878,7 @@
    "idea": null,
    "ex": "2026-11-16",
    "ldt": "2026-11-13",
-   "pay": null,
+   "pay": "2026-11-30",
    "amount": null,
    "status": "confirmed"
   },
@@ -4902,7 +4902,7 @@
    "idea": null,
    "ex": "2026-11-16",
    "ldt": "2026-11-13",
-   "pay": null,
+   "pay": "2026-12-02",
    "amount": null,
    "status": "confirmed"
   },
@@ -5226,7 +5226,7 @@
    "idea": null,
    "ex": "2026-11-17",
    "ldt": "2026-11-16",
-   "pay": null,
+   "pay": "2027-03-02",
    "amount": null,
    "status": "confirmed"
   },
@@ -5250,7 +5250,7 @@
    "idea": null,
    "ex": "2026-11-17",
    "ldt": "2026-11-16",
-   "pay": null,
+   "pay": "2026-12-01",
    "amount": null,
    "status": "confirmed"
   },
@@ -5274,7 +5274,7 @@
    "idea": null,
    "ex": "2026-11-17",
    "ldt": "2026-11-16",
-   "pay": null,
+   "pay": "2026-11-24",
    "amount": null,
    "status": "confirmed"
   },
@@ -5298,7 +5298,7 @@
    "idea": null,
    "ex": "2026-11-17",
    "ldt": "2026-11-16",
-   "pay": null,
+   "pay": "2026-12-01",
    "amount": null,
    "status": "confirmed"
   },
@@ -5447,7 +5447,7 @@
    "idea": null,
    "ex": "2026-11-18",
    "ldt": "2026-11-17",
-   "pay": null,
+   "pay": "2026-12-15",
    "amount": null,
    "status": "confirmed"
   },
@@ -5471,7 +5471,7 @@
    "idea": null,
    "ex": "2026-11-18",
    "ldt": "2026-11-17",
-   "pay": null,
+   "pay": "2026-12-02",
    "amount": null,
    "status": "confirmed"
   },
@@ -5720,7 +5720,7 @@
    "idea": null,
    "ex": "2026-11-19",
    "ldt": "2026-11-18",
-   "pay": null,
+   "pay": "2026-12-10",
    "amount": null,
    "status": "confirmed"
   },
@@ -5744,7 +5744,7 @@
    "idea": "Technical setups",
    "ex": "2026-11-19",
    "ldt": "2026-11-18",
-   "pay": null,
+   "pay": "2026-12-10",
    "amount": null,
    "status": "confirmed"
   },
@@ -5768,7 +5768,7 @@
    "idea": null,
    "ex": "2026-11-19",
    "ldt": "2026-11-18",
-   "pay": null,
+   "pay": "2026-12-10",
    "amount": null,
    "status": "confirmed"
   },
@@ -5867,7 +5867,7 @@
    "idea": null,
    "ex": "2026-11-20",
    "ldt": "2026-11-19",
-   "pay": null,
+   "pay": "2026-12-03",
    "amount": null,
    "status": "confirmed"
   },
@@ -5891,7 +5891,7 @@
    "idea": null,
    "ex": "2026-11-20",
    "ldt": "2026-11-19",
-   "pay": null,
+   "pay": "2026-12-11",
    "amount": null,
    "status": "confirmed"
   },
@@ -6215,7 +6215,7 @@
    "idea": null,
    "ex": "2026-11-24",
    "ldt": "2026-11-23",
-   "pay": null,
+   "pay": "2026-12-08",
    "amount": null,
    "status": "confirmed"
   },
@@ -6239,7 +6239,7 @@
    "idea": null,
    "ex": "2026-11-24",
    "ldt": "2026-11-23",
-   "pay": null,
+   "pay": "2026-12-11",
    "amount": null,
    "status": "confirmed"
   },
@@ -6338,7 +6338,7 @@
    "idea": null,
    "ex": "2026-11-25",
    "ldt": "2026-11-24",
-   "pay": null,
+   "pay": "2026-12-10",
    "amount": null,
    "status": "confirmed"
   },
@@ -6362,7 +6362,7 @@
    "idea": "Value & quality",
    "ex": "2026-11-25",
    "ldt": "2026-11-24",
-   "pay": null,
+   "pay": "2026-12-21",
    "amount": null,
    "status": "confirmed"
   },
@@ -6386,7 +6386,7 @@
    "idea": null,
    "ex": "2026-11-25",
    "ldt": "2026-11-24",
-   "pay": null,
+   "pay": "2026-12-10",
    "amount": null,
    "status": "confirmed"
   },
@@ -6397,13 +6397,13 @@
    "sec": "Basic Materials",
    "cur": "ZAR",
    "px": 1386.0,
-   "last_amount": 11.93,
+   "last_amount": 11.96,
    "last_date": "2026-08-19",
    "per_year": 4,
    "yield": 0.0544,
    "payout": 0.6166,
    "v": "BUY",
-   "score": 63,
+   "score": 65,
    "iv_v": "STRONG BUY",
    "iv_score": 84,
    "lists": [
@@ -6413,7 +6413,7 @@
    "ex": "2026-11-25",
    "ldt": "2026-11-24",
    "pay": null,
-   "amount": 15.08,
+   "amount": 15.11,
    "amount_basis": "last year",
    "status": "expected"
   },
@@ -6487,7 +6487,7 @@
    "idea": null,
    "ex": "2026-11-27",
    "ldt": "2026-11-26",
-   "pay": null,
+   "pay": "2026-12-15",
    "amount": null,
    "status": "confirmed"
   },
@@ -6511,7 +6511,7 @@
    "idea": null,
    "ex": "2026-11-27",
    "ldt": "2026-11-26",
-   "pay": null,
+   "pay": "2026-12-11",
    "amount": null,
    "status": "confirmed"
   },
@@ -6785,7 +6785,7 @@
    "idea": null,
    "ex": "2026-11-30",
    "ldt": "2026-11-27",
-   "pay": null,
+   "pay": "2026-12-11",
    "amount": null,
    "status": "confirmed"
   },
@@ -6809,7 +6809,7 @@
    "idea": null,
    "ex": "2026-11-30",
    "ldt": "2026-11-27",
-   "pay": null,
+   "pay": "2026-12-15",
    "amount": null,
    "status": "confirmed"
   },
@@ -6833,7 +6833,7 @@
    "idea": null,
    "ex": "2026-11-30",
    "ldt": "2026-11-27",
-   "pay": null,
+   "pay": "2026-12-15",
    "amount": null,
    "status": "confirmed"
   },
@@ -6881,7 +6881,7 @@
    "idea": null,
    "ex": "2026-11-30",
    "ldt": "2026-11-27",
-   "pay": null,
+   "pay": "2026-12-15",
    "amount": null,
    "status": "confirmed"
   },
@@ -7063,31 +7063,6 @@
    "status": "expected"
   },
   {
-   "t": "BALL",
-   "n": "Ball Corporation",
-   "m": "US",
-   "sec": "Consumer Cyclical",
-   "cur": "USD",
-   "px": 64.76,
-   "last_amount": 0.2,
-   "last_date": "2026-09-01",
-   "per_year": 4,
-   "yield": 0.0124,
-   "payout": 0.2279,
-   "v": "HOLD",
-   "score": 57,
-   "iv_v": "HOLD",
-   "iv_score": 53,
-   "lists": [],
-   "idea": null,
-   "ex": "2026-11-30",
-   "ldt": "2026-11-27",
-   "pay": null,
-   "amount": 0.2,
-   "amount_basis": "last year",
-   "status": "expected"
-  },
-  {
    "t": "AIZ",
    "n": "Assurant, Inc.",
    "m": "US",
@@ -7109,6 +7084,31 @@
    "ldt": "2026-11-27",
    "pay": null,
    "amount": 0.88,
+   "amount_basis": "last year",
+   "status": "expected"
+  },
+  {
+   "t": "BALL",
+   "n": "Ball Corporation",
+   "m": "US",
+   "sec": "Consumer Cyclical",
+   "cur": "USD",
+   "px": 64.76,
+   "last_amount": 0.2,
+   "last_date": "2026-09-01",
+   "per_year": 4,
+   "yield": 0.0124,
+   "payout": 0.2279,
+   "v": "HOLD",
+   "score": 57,
+   "iv_v": "HOLD",
+   "iv_score": 53,
+   "lists": [],
+   "idea": null,
+   "ex": "2026-11-30",
+   "ldt": "2026-11-27",
+   "pay": null,
+   "amount": 0.2,
    "amount_basis": "last year",
    "status": "expected"
   },
@@ -7232,7 +7232,7 @@
    "idea": null,
    "ex": "2026-12-01",
    "ldt": "2026-11-30",
-   "pay": null,
+   "pay": "2027-01-04",
    "amount": null,
    "status": "confirmed"
   },
@@ -7256,7 +7256,7 @@
    "idea": null,
    "ex": "2026-12-01",
    "ldt": "2026-11-30",
-   "pay": null,
+   "pay": "2026-12-15",
    "amount": null,
    "status": "confirmed"
   },
@@ -7280,7 +7280,7 @@
    "idea": null,
    "ex": "2026-12-01",
    "ldt": "2026-11-30",
-   "pay": null,
+   "pay": "2026-12-15",
    "amount": null,
    "status": "confirmed"
   },
@@ -7304,7 +7304,7 @@
    "idea": null,
    "ex": "2026-12-01",
    "ldt": "2026-11-30",
-   "pay": null,
+   "pay": "2026-12-31",
    "amount": null,
    "status": "confirmed"
   },
@@ -7328,7 +7328,7 @@
    "idea": null,
    "ex": "2026-12-01",
    "ldt": "2026-11-30",
-   "pay": null,
+   "pay": "2026-12-15",
    "amount": null,
    "status": "confirmed"
   },
@@ -7352,7 +7352,7 @@
    "idea": null,
    "ex": "2026-12-01",
    "ldt": "2026-11-30",
-   "pay": null,
+   "pay": "2026-12-14",
    "amount": null,
    "status": "confirmed"
   },
@@ -7376,7 +7376,7 @@
    "idea": null,
    "ex": "2026-12-01",
    "ldt": "2026-11-30",
-   "pay": null,
+   "pay": "2027-01-04",
    "amount": null,
    "status": "confirmed"
   },
@@ -7418,7 +7418,7 @@
    "yield": 0.02,
    "payout": 0.3678,
    "v": "HOLD",
-   "score": 53,
+   "score": 51,
    "iv_v": "HOLD",
    "iv_score": 50,
    "lists": [],
@@ -7500,7 +7500,7 @@
    "idea": null,
    "ex": "2026-12-02",
    "ldt": "2026-12-01",
-   "pay": null,
+   "pay": "2026-12-30",
    "amount": null,
    "status": "confirmed"
   },
@@ -7524,7 +7524,7 @@
    "idea": null,
    "ex": "2026-12-02",
    "ldt": "2026-12-01",
-   "pay": null,
+   "pay": "2027-01-07",
    "amount": null,
    "status": "confirmed"
   },
@@ -7548,7 +7548,7 @@
    "idea": null,
    "ex": "2026-12-02",
    "ldt": "2026-12-01",
-   "pay": null,
+   "pay": "2026-12-16",
    "amount": null,
    "status": "confirmed"
   },
@@ -7596,7 +7596,7 @@
    "idea": null,
    "ex": "2026-12-02",
    "ldt": "2026-12-01",
-   "pay": null,
+   "pay": "2026-12-16",
    "amount": null,
    "status": "confirmed"
   },
@@ -7845,7 +7845,7 @@
    "idea": null,
    "ex": "2026-12-03",
    "ldt": "2026-12-02",
-   "pay": null,
+   "pay": "2026-12-17",
    "amount": null,
    "status": "confirmed"
   },
@@ -7971,7 +7971,7 @@
    "idea": null,
    "ex": "2026-12-04",
    "ldt": "2026-12-03",
-   "pay": null,
+   "pay": "2026-12-18",
    "amount": null,
    "status": "confirmed"
   },
@@ -7995,7 +7995,7 @@
    "idea": null,
    "ex": "2026-12-04",
    "ldt": "2026-12-03",
-   "pay": null,
+   "pay": "2026-12-24",
    "amount": null,
    "status": "confirmed"
   },
@@ -8019,7 +8019,7 @@
    "idea": null,
    "ex": "2026-12-04",
    "ldt": "2026-12-03",
-   "pay": null,
+   "pay": "2027-01-01",
    "amount": null,
    "status": "confirmed"
   },
@@ -8043,7 +8043,7 @@
    "idea": null,
    "ex": "2026-12-04",
    "ldt": "2026-12-03",
-   "pay": null,
+   "pay": "2026-12-18",
    "amount": null,
    "status": "confirmed"
   },
@@ -8067,7 +8067,7 @@
    "idea": null,
    "ex": "2026-12-04",
    "ldt": "2026-12-03",
-   "pay": null,
+   "pay": "2026-12-18",
    "amount": null,
    "status": "confirmed"
   },
@@ -8091,7 +8091,7 @@
    "idea": null,
    "ex": "2026-12-04",
    "ldt": "2026-12-03",
-   "pay": null,
+   "pay": "2026-12-18",
    "amount": null,
    "status": "confirmed"
   },
@@ -8115,7 +8115,7 @@
    "idea": null,
    "ex": "2026-12-04",
    "ldt": "2026-12-03",
-   "pay": null,
+   "pay": "2026-12-17",
    "amount": null,
    "status": "confirmed"
   },
@@ -8139,7 +8139,7 @@
    "idea": null,
    "ex": "2026-12-04",
    "ldt": "2026-12-03",
-   "pay": null,
+   "pay": "2026-12-31",
    "amount": null,
    "status": "confirmed"
   },
@@ -8163,7 +8163,7 @@
    "idea": null,
    "ex": "2026-12-04",
    "ldt": "2026-12-03",
-   "pay": null,
+   "pay": "2026-12-17",
    "amount": null,
    "status": "confirmed"
   },
@@ -8664,7 +8664,7 @@
    "idea": null,
    "ex": "2026-12-08",
    "ldt": "2026-12-07",
-   "pay": null,
+   "pay": "2026-12-31",
    "amount": null,
    "status": "confirmed"
   },
@@ -8775,7 +8775,7 @@
    "sec": "Financial Services",
    "cur": "ZAR",
    "px": 131.5,
-   "last_amount": 4.649,
+   "last_amount": 4.667,
    "last_date": "2026-08-19",
    "per_year": 2,
    "yield": 0.0652,
@@ -8938,7 +8938,7 @@
    "idea": null,
    "ex": "2026-12-10",
    "ldt": "2026-12-09",
-   "pay": null,
+   "pay": "2026-12-31",
    "amount": null,
    "status": "confirmed"
   },
@@ -9012,7 +9012,7 @@
    "idea": null,
    "ex": "2026-12-11",
    "ldt": "2026-12-10",
-   "pay": null,
+   "pay": "2027-03-26",
    "amount": null,
    "status": "confirmed"
   },
@@ -9036,7 +9036,7 @@
    "idea": null,
    "ex": "2026-12-11",
    "ldt": "2026-12-10",
-   "pay": null,
+   "pay": "2027-01-04",
    "amount": null,
    "status": "confirmed"
   },
@@ -9809,7 +9809,7 @@
    "idea": null,
    "ex": "2026-12-15",
    "ldt": "2026-12-14",
-   "pay": null,
+   "pay": "2026-12-30",
    "amount": null,
    "status": "confirmed"
   },
@@ -9983,7 +9983,7 @@
    "idea": null,
    "ex": "2026-12-16",
    "ldt": "2026-12-15",
-   "pay": null,
+   "pay": "2026-12-31",
    "amount": null,
    "status": "confirmed"
   },
@@ -11762,7 +11762,7 @@
    "idea": null,
    "ex": "2027-01-04",
    "ldt": "2027-01-01",
-   "pay": null,
+   "pay": "2027-02-08",
    "amount": null,
    "status": "confirmed"
   },
@@ -11911,7 +11911,7 @@
    "idea": null,
    "ex": "2027-01-06",
    "ldt": "2027-01-05",
-   "pay": null,
+   "pay": "2027-01-27",
    "amount": null,
    "status": "confirmed"
   },
@@ -14031,7 +14031,7 @@
    "yield": 0.02,
    "payout": 0.3678,
    "v": "HOLD",
-   "score": 53,
+   "score": 51,
    "iv_v": "HOLD",
    "iv_score": 50,
    "lists": [],
