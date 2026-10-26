@@ -1,14 +1,20 @@
 {
- "edition": "Midday update · Monday 26 October 2026 12:15",
- "generated": "2026-10-26T13:25:00+02:00",
- "covers": "Weekend and Monday to 12:15 SAST: Moody's on SA's budget update, Middle East oil news, neocloud selloff, Brazil's election, Pick n Pay results, US futures, rand and the week ahead",
+ "edition": "Midday update · Monday 26 October 2026 14:30",
+ "generated": "2026-10-26T14:30:00+02:00",
+ "covers": "JSE session and global markets, Monday 26 October 2026, to 14:30 SAST",
  "agent": "LRC News Desk",
- "headline": "Moody's calls South Africa's budget update credit positive (no rating action); oil eases about 2% and US futures rise ahead of a Fed week",
- "summary": "Moody's said on Monday that the medium-term budget statement is positive for South Africa's credit profile and that debt has probably peaked, but took no rating action on its Ba2 rating with a positive outlook; the rand was near R16.61/$ (Reuters via CNBC Africa, 26 Oct). US stock futures rose on Sunday evening, S&P 500 +0.3% and Nasdaq-100 +0.4%, while neocloud stocks CoreWeave and Nebius fell about 3% before the open after Elon Musk warned that many such firms face 'guppy-level death' (CNBC, 25 Oct; Yahoo Finance, 26 Oct). Brent fell 2.1% to $114.3 and gold hovered around $4,000 near a three-month low (HDFC Sky; FinanceFeeds, 26 Oct); lower oil eases some pressure on SA fuel prices, but supply risk is still high.",
+ "headline": "Meta launches a $35 billion share sale to fund AI spending and its shares slip before the open; Moody's calls SA's budget update credit positive",
+ "summary": "Moody's said the medium-term budget statement is positive for South Africa's credit profile but took no rating action on its Ba2 rating (positive outlook); the rand was near R16.61/$ (Reuters via CNBC Africa, 26 Oct). In the US, Meta launched about $35 billion of common and convertible preferred stock offerings to fund its AI expansion and its shares fell more than 4% before the open, while Verizon raised its 2026 profit and cash-flow guidance after adding 406,000 postpaid phone customers (Reuters via BNN Bloomberg; TokenPost; Verizon results, 26 Oct). Brent was down 1.6% at $114.82 and WTI down 2% at $101.19 at 09:59 GMT on hopes of US–Iran mediation, though Houthi attacks on Saudi sites keep supply risk high (Reuters via Business Recorder, 26 Oct); lower oil eases some pressure on SA fuel prices.",
  "sections": [
   {
    "name": "Breaking",
    "items": [
+    {
+     "title": "Meta launches about $35 billion stock offering to fund AI expansion",
+     "summary": "Meta launched public offerings of about $35 billion in common stock and convertible preferred stock on Monday 26 Oct to pay for data centres and computing capacity; it also plans an at-the-market share sale programme of up to $60 billion once new non-voting Class C shares trade, expected in Q1 2027. At 30 Sept it had $82.45 billion in cash and securities and $80.92 billion of long-term debt (Reuters via BNN Bloomberg, 26 Oct). The common stock part is $22.5 billion plus 250 million depositary shares tied to preferred stock, and the shares fell more than 4% in premarket trading (TokenPost, 26 Oct). New shares dilute existing holders.",
+     "source": "BNN Bloomberg (Reuters); TokenPost",
+     "url": "https://www.bnnbloomberg.ca/business/artificial-intelligence/2026/10/26/meta-launches-us35b-stock-offering-to-fund-ai-expansion/"
+    },
     {
      "title": "Moody's says South Africa's budget update is credit positive; no rating action",
      "summary": "In a report on Monday, Moody's said the medium-term budget policy statement is positive for South Africa's credit profile, citing continued fiscal consolidation despite higher oil prices. The FY2026 consolidated deficit target was cut to 3.9% of GDP from 4.0%, helped by a R17.1bn upward revision to tax revenue. Moody's sees government debt at 84.9% of GDP by FY2028, down from about 86.8% in FY2025, and says debt has 'probably peaked', though interest took 18.8% of revenue in FY2025. It also called the draft fiscal-rules law credit positive. South Africa stays at Ba2 with a positive outlook; Moody's did not announce a rating action (Reuters via CNBC Africa, 26 Oct).",
@@ -16,10 +22,10 @@
      "url": "https://www.cnbcafrica.com/2026/moodys-says-south-africas-budget-update-is-credit-positive"
     },
     {
-     "title": "Oil falls about 2% despite weekend Houthi attack claims on Saudi oil sites",
-     "summary": "On Monday morning Brent was at $114.3 a barrel (−2.1%) and WTI at $101 (−2.2%), easing from near six-month highs. The Houthis said they attacked a Saudi airport and oil facilities over the weekend, and Saudi Arabia said it intercepted more missiles and drones on Sunday. The US also approved a 400,000-barrel release from its Strategic Petroleum Reserve after a Louisiana refinery disruption (HDFC Sky, 26 Oct). Reported targets were an Aramco site in Yanbu, the Rabigh refinery and the East-West pipeline; damage has not been confirmed (Babypips, 26 Oct).",
-     "source": "HDFC Sky; Babypips",
-     "url": "https://hdfcsky.com/news/brent-crude-oil-price-today-october-26-2026-brent-falls-2-1percent-to-114-3-wti-drops-2-2percent-to-101-even-as-attacks-continue-on-saudi"
+     "title": "Oil eases from near six-month highs on hopes of US–Iran mediation",
+     "summary": "At 09:59 GMT on 26 Oct Brent was down $1.90 (1.6%) at $114.82 a barrel and WTI down $2.08 (2%) at $101.19, after Qatari mediators travelled to Tehran and Saudi, Turkish and Pakistani officials were due to meet Iran's leaders. Houthi claims of strikes on Saudi East-West pipeline pumping stations, and disrupted shipping through Hormuz and Bab el-Mandeb, keep supply risk high; Brent rose 6% last week (Reuters via Business Recorder, 26 Oct).",
+     "source": "Business Recorder (Reuters)",
+     "url": "https://www.brecorder.com/news/40445943/oil-drops-from-near-six-month-highs-on-hopes-iran-war-hostilities-to-ease"
     }
    ]
   },
@@ -31,6 +37,12 @@
      "summary": "On Sunday evening S&P 500 futures were up 0.3%, Dow futures up 85 points (0.2%) and Nasdaq-100 futures up 0.4%. On Friday the Dow fell more than 650 points, the S&P 500 lost 0.5% and the Nasdaq 0.2% (CNBC, 25 Oct).",
      "source": "CNBC (republished by 10bmnews)",
      "url": "https://10bmnews.com/stock-futures-climb-as-traders-try-to-recover-from-the-sp-500s-losing-week-live-updates/"
+    },
+    {
+     "title": "Verizon raises 2026 guidance after a strong quarter for phone customers",
+     "summary": "Verizon reported third-quarter revenue of $34.3 billion (+1.5% year on year) and adjusted EPS of $1.31 (+8.3%), with 406,000 postpaid phone net additions. It raised 2026 adjusted EPS guidance to $5.04–$5.06 (7.0%–7.5% growth) and now expects free cash flow growth near 12%, up from 9%–10%; capex guidance is unchanged at $16.0–16.5 billion (Verizon results filing, 26 Oct).",
+     "source": "Verizon (SEC Form 8-K)",
+     "url": "https://www.sec.gov/Archives/edgar/data/0000732712/000073271226000049/a2026q3exhibit99.htm"
     },
     {
      "title": "Neocloud stocks slip before the open after Musk's 'guppy-level death' warning",
@@ -96,6 +108,15 @@
    "name": "Our coverage",
    "items": [
     {
+     "title": "META: $35 billion share sale to fund AI spending",
+     "summary": "See Breaking. The offering adds new shares and the stock fell more than 4% premarket on 26 Oct (TokenPost). The LRC Stock Scanner last scored META 61/100 on 23 Oct prices ($642.60), with valuation flagged as overvalued and a breakdown chart setup; this news does not change any rating.",
+     "source": "BNN Bloomberg (Reuters); TokenPost",
+     "url": "https://www.bnnbloomberg.ca/business/artificial-intelligence/2026/10/26/meta-launches-us35b-stock-offering-to-fund-ai-expansion/",
+     "tickers": [
+      "META"
+     ]
+    },
+    {
      "title": "NVIDIA: SpaceX says it has funding for a large AI-chip order",
      "summary": "Musk says SpaceX closed $40 billion in debt for GPUs (Yahoo Finance, 25 Oct). Earlier October reports said the money was for NVIDIA chips, but this has not been confirmed. If confirmed, it supports demand for NVIDIA (BUY on our list, LRC target $262.56). The other side: neocloud customers CoreWeave and Nebius fell about 3% before Monday's open after Musk warned lenders are pulling back from such firms (Yahoo Finance, 26 Oct), a demand risk to watch. Rating unchanged.",
      "source": "Yahoo Finance",
@@ -108,12 +129,12 @@
   }
  ],
  "watch_today": [
-  "Oil: whether Brent holds below Friday's $116.72 settlement after the weekend Saudi attack claims, which feeds SA fuel prices",
+  "Meta's share sale: pricing of the ~$35 billion offering and how the shares trade at the US open (15:30 SAST)",
+  "Oil: whether US–Iran mediation talks keep Brent below Friday's $116.72 settlement, which feeds SA fuel prices",
   "Rand near R16.61/$ after Moody's credit-positive comment, ahead of the Fed decision on Wed 28 Oct (20:00 SAST)",
   "Brazil after Lula's run-off win and Pick n Pay's share reaction to its results on the JSE",
   "Neocloud stocks (CoreWeave, Nebius) at the US open after Musk's warning, and any read-across to AI-chip names",
   "Wall Street open (15:30 SAST): can futures gains hold after the S&P 500's second losing week",
-  "This week: Microsoft and Alphabet (Wed), Amazon and Intel (Thu), US GDP and PCE (Thu), SA rebased GDP and PPI (Thu), SA trade data (Fri)",
-  "META (SELL, low conviction) and DECK (BUY; below the watchlist stop) still need analyst re-runs; ratings unchanged"
+  "This week: Microsoft and Alphabet (Wed), Amazon and Intel (Thu), US GDP and PCE (Thu), SA rebased GDP and PPI (Thu), SA trade data (Fri)"
  ]
 }
