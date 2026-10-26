@@ -1,191 +1,93 @@
 {
-  "edition": "Evening update · Friday 23 October 2026 22:10",
-  "generated": "2026-10-23T22:10:00+02:00",
-  "covers": "Wall Street close and oil settlement on Fri 23 Oct (to 22:15 SAST); earlier JSE, Europe, US data and company items kept from the 21:15 update",
-  "agent": "LRC News Desk",
-  "headline": "Wall Street closes lower: Dow −1.2%, S&P 500 −0.5% as Brent settles at $116.72, a six-month high; SA unveils plan to run offshore money from home",
-  "summary": "The rand was at about R16.51/$ in the afternoon, roughly 0.2% weaker on the day (Trading Economics, 23 Oct), and the Reserve Bank, Treasury and JSE briefed investors on a draft framework that lets licensed funds managed from South Africa hold up to 100% foreign assets (Sunday World, 23 Oct). On Wall Street the Dow closed down 652.82 points (−1.23%) at 52,215.16, the S&P 500 fell 0.52% to 7,623.68 and the Nasdaq 0.21% to 25,955.34; the S&P 500 and Nasdaq fell for a second week while the Dow ended the week higher (Yahoo Finance, 23 Oct). Brent settled at $116.72 a barrel, a six-month high and a third weekly gain, with WTI just above $103, on Middle East supply fears (Yahoo Finance, 23 Oct) — a fuel-price and inflation risk for South Africa.",
-  "sections": [
+ "edition": "Midday update · Monday 26 October 2026 09:30",
+ "generated": "2026-10-26T09:30:00+02:00",
+ "covers": "Weekend and Monday morning to 09:30 SAST: Middle East oil news, Asia/early Europe, US futures, rand and the week ahead (no morning brief ran today)",
+ "agent": "LRC News Desk",
+ "headline": "Oil falls about 2% from a six-month high despite weekend Houthi attack claims on Saudi oil sites; US futures higher ahead of a Fed week",
+ "summary": "The rand was little changed at R16.6125/$ early on Monday, weaker than Friday afternoon's R16.51, with the 2035 bond yield steady at 8.635% as traders wait for the Fed and month-end data (Reuters via Business Recorder, 26 Oct). US stock futures rose on Sunday evening, S&P 500 +0.3%, Dow +85 points (+0.2%) and Nasdaq-100 +0.4%, after the S&P 500 and Nasdaq posted back-to-back weekly losses (CNBC, 25 Oct). Brent fell 2.1% to $114.3 and WTI 2.2% to $101 even after the Houthis claimed weekend attacks on Saudi oil sites, and gold hovered around $4,000 near a three-month low (HDFC Sky; FinanceFeeds, 26 Oct). Lower oil eases some pressure on South African fuel prices and inflation, but supply risk is still high.",
+ "sections": [
+  {
+   "name": "Breaking",
+   "items": [
     {
-      "name": "Breaking",
-      "items": [
-        {
-          "title": "Wall Street close: Dow −1.23%, S&P 500 −0.52%, Nasdaq −0.21%",
-          "summary": "On Fri 23 Oct the Dow closed at 52,215.16 (−652.82, −1.23%), the S&P 500 at 7,623.68 (−39.75, −0.52%), the Nasdaq Composite at 25,955.34 (−53.52, −0.21%) and the Russell 2000 at 2,775.84 (−0.29%). The S&P 500 and Nasdaq fell for a second straight week; the Dow still ended the week higher (TheStreet puts its weekly gain at about 1.4%). Airlines United, Delta and American each fell more than 4% on fuel costs, American Express fell 3% after announcing about 5% job cuts, while Palo Alto Networks (+7.2%) and Cloudflare (+7.3%) led cybersecurity higher. The 10-year Treasury yield was about 4.99% and the VIX 19.72 (Yahoo Finance, 23 Oct).",
-          "source": "Yahoo Finance; TheStreet",
-          "url": "https://finance.yahoo.com/markets/live/stock-market-today-friday-october-23-dow-sp-500-nasdaq-tesla-meta-093000521.html"
-        },
-        {
-          "title": "Brent settles at $116.72, a six-month high and third weekly gain; WTI just above $103",
-          "summary": "Brent for December delivery settled at $116.72 a barrel on Fri 23 Oct, its highest in six months and a third straight weekly gain; WTI closed just above $103 (quoted at $103.56, +4.1%) (Yahoo Finance, 23 Oct). Intraday Brent reached $117.26 (Business Today). Drivers: President Trump said the US was not negotiating with Iran, a drone attack on Saudi Arabia's Shaybah oil field was reported, and markets are watching the Bab el-Mandeb Strait. For South Africa this adds to fuel-price and inflation pressure. Gold ended near $4,011 (−1.2%).",
-          "source": "Yahoo Finance; Business Today",
-          "url": "https://finance.yahoo.com/markets/live/stock-market-today-friday-october-23-dow-sp-500-nasdaq-tesla-meta-093000521.html"
-        },
-        {
-          "title": "Deckers (DECK) about −8% pre-market at $78.60; Piper Sandler cuts to Underweight, target $75",
-          "summary": "Piper Sandler downgraded Deckers to Underweight from Neutral on Fri 23 Oct and cut its price target to $75 from $100, calling the Q2 sales miss the first in at least five years and saying HOKA and UGG are showing signs of maturity (UGG direct-to-consumer sales −8%) (Investing.com). Needham kept a Buy but cut its target to $96 from $125; the shares were down 7.8% at $78.60 pre-market (Benzinga, 23 Oct). This follows Q2 revenue of $1.48bn versus about $1.51bn expected and a full-year sales outlook cut to $5.700–5.725bn. DECK is a BUY on our list with a 6-month target of $103; $78.60 is below the watchlist pullback entry (88.10) and stop (82.94), so the rating needs an analyst re-run with the new guidance — the rating is unchanged. In early US trading on Friday DECK was down 8.38% (TheStreet). TheStreet's live page later showed DECK down 6.17% at 10:14 ET (16:14 SAST).",
-          "source": "Investing.com; Benzinga",
-          "url": "https://www.investing.com/news/earnings/piper-sandler-cuts-deckers-to-underweight-as-hoka-ugg-show-maturity-4968849",
-          "tickers": [
-            "DECK"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "US markets",
-      "items": [
-        {
-          "title": "Final October consumer sentiment 48; inflation expectations edge up",
-          "summary": "The University of Michigan's final October sentiment index was 48, above the 46.3 consensus (the preliminary reading) and little changed from 48.1 in September. One-year inflation expectations rose to 4.7% from 4.6% and long-run expectations to 3.5% from 3.4% (released 10:00 ET / 16:00 SAST, Fri 23 Oct). Spot gold was at $4,014.71/oz (+0.24%) shortly after.",
-          "source": "Kitco",
-          "url": "https://www.kitco.com/news/article/2026-10-23/gold-price-trades-near-4000oz-after-final-consumer-sentiment-holds-steady"
-        },
-        {
-          "title": "US flash PMIs: services slow to 57.9, manufacturing 56.0",
-          "summary": "S&P Global's October flash services PMI was 57.9 versus 58.0 expected and 59.8 in September; manufacturing was 56.0 versus 55.5 expected and 57.0 prior; the composite eased to 57.6 from 58.4 (released 09:45 ET / 15:45 SAST, Fri 23 Oct). Readings above 50 still mean growth.",
-          "source": "investingLive",
-          "url": "https://investinglive.com/news/us-s-p-global-flash-october-services-pmi-57-9-vs-58-0-expected/"
-        },
-        {
-          "title": "Movers: Moderna slides again, Verizon −4.6%, SpaceX rebounds",
-          "summary": "Moderna plunged almost 20% on Thursday and fell another 4% early Friday; Verizon was −4.6% after reports SpaceX may buy cell towers; SpaceX rose 2.4% after a 9% drop on Thursday; American Express was −1.2% despite beating estimates; memory-chip names SK Hynix, Sandisk and Micron rose (early Fri 23 Oct).",
-          "source": "Charles Schwab",
-          "url": "https://www.schwab.com/learn/story/stock-market-update-open"
-        },
-        {
-          "title": "Early movers: American Express −2.85% on job cuts; RingCentral +15%",
-          "summary": "In early trading on Fri 23 Oct American Express fell 2.85% after announcing plans to cut about 5% of its workforce; Deckers was −8.38%, while RingCentral rose 14.95%, Crown Castle 9.83% and Robert Half 8.81%. Gold futures were −0.55% at $4,037.90/oz, silver −1.89% at $53.97 and bitcoin near $81,601.",
-          "source": "TheStreet",
-          "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-oct-23-2026"
-        },
-        {
-          "title": "Investors buy bonds: US 10-year yield down 16bp to 4.97%",
-          "summary": "The US 10-year Treasury yield fell 16 basis points to 4.97% on Thursday 22 Oct, from 5.13%, having traded above 5.30% earlier in October, as investors moved into bonds during the AI-led stock sell-off. In Europe on Friday, France's 10-year yield was about 5.07% versus Germany's 3.33%, a spread above 170bp.",
-          "source": "Euronews",
-          "url": "https://www.euronews.com/2026/10/23/oil-prices-climb-above-113-as-ai-sell-off-rattles-stocks-and-investors-buy-bonds"
-        },
-        {
-          "title": "Nasdaq −2.6%, S&P 500 −1.2% as AI-trade worries hit tech",
-          "summary": "The S&P 500 closed at 7,663.43 and the Nasdaq at 26,008.86; the Dow edged up 0.02% to 52,867.98. Lam Research fell about 9%, Applied Materials and KLA about 6%, AMD and Intel 4–5% and NVIDIA about 2%. Treasuries rallied: the 10-year yield fell about 11bp to near 5.0%.",
-          "source": "Yahoo Finance",
-          "url": "https://finance.yahoo.com/markets/article/stock-market-today-thursday-october-22-dow-sp-500-nasdaq-tesla-meta-112217857.html"
-        },
-        {
-          "title": "Tesla beats, shares still fall 3%",
-          "summary": "Adjusted EPS of $0.48 beat the $0.44 expected and adjusted EBITDA came in at $3.90bn, but revenue of $28.05bn was slightly short and investors weighed higher 2027–28 spending plans.",
-          "source": "Yahoo Finance",
-          "url": "https://finance.yahoo.com/markets/article/stock-market-today-thursday-october-22-dow-sp-500-nasdaq-tesla-meta-112217857.html"
-        },
-        {
-          "title": "Blackstone +8% on exit outlook; jobless claims at a three-month low",
-          "summary": "Blackstone rose 8.4% on an upbeat outlook for exits and fees despite weaker Q3 realisations. Initial jobless claims fell to 194,000.",
-          "source": "Yahoo Finance",
-          "url": "https://finance.yahoo.com/markets/article/stock-market-today-thursday-october-22-dow-sp-500-nasdaq-tesla-meta-112217857.html"
-        }
-      ]
-    },
-    {
-      "name": "Asia overnight",
-      "items": [
-        {
-          "title": "Asia slides as the chip rout spreads: Kospi −2.2%, Nikkei −1.4%",
-          "summary": "On Friday 23 Oct the Kospi fell 2.2%, the Kosdaq 3.5%, the Nikkei 1.4% and Shanghai 1.3%, while the Hang Seng edged up 0.25%, after the Philadelphia semiconductor index dropped 6.7% on Thursday. Japan's September core CPI rose to 2.1% y/y (in line, up from 1.7%); the yen firmed to about 156.25 per dollar before easing to 157.",
-          "source": "investingLive",
-          "url": "https://investinglive.com/news/investinglive-asia-pacific-market-news-asian-stocks-slide-as-chip-rout-spreads/"
-        }
-      ]
-    },
-    {
-      "name": "Europe",
-      "items": [
-        {
-          "title": "Europe lower: Stoxx 600 −0.4%, Kering −11% on Gucci sales",
-          "summary": "Early on Fri 23 Oct (about 09:45 SAST) the Stoxx 600 was −0.4%, FTSE 100 −0.3%, DAX −0.5% and CAC 40 −0.8%. Kering fell more than 11% after Gucci's third-quarter sales dropped 6% year on year on a comparable basis, slightly worse than expected.",
-          "source": "Euronews",
-          "url": "https://www.euronews.com/2026/10/23/oil-prices-climb-above-113-as-ai-sell-off-rattles-stocks-and-investors-buy-bonds"
-        }
-      ]
-    },
-    {
-      "name": "South Africa",
-      "items": [
-        {
-          "title": "SARB, Treasury and JSE outline plan to manage offshore money from South Africa",
-          "summary": "At a briefing on Fri 23 Oct the Reserve Bank, National Treasury and the JSE explained a draft 'Synthetic Financial Centre' framework (published Wednesday 21 Oct). Licensed asset managers, banks, insurers and private-equity firms could run global portfolios in any currency from South Africa, and qualifying vehicles could hold 100% foreign assets. The 45% offshore limit still applies when a local institution commits money to such a vehicle, and the SARB said the 45% limit stays a 'long-term feature'. South African portfolios hold close to R5 trillion offshore; the JSE estimates the framework could attract R10 trillion over time. Comments close 30 November; a second phase may cover tax and foreign-currency listings on local exchanges.",
-          "source": "Sunday World",
-          "url": "https://sundayworld.co.za/business/government-to-allow-funds-to-hold-100-foreign-assets-under-new-framework/"
-        },
-        {
-          "title": "Rand near R16.51/$, slightly weaker; 2035 bond flat at 8.615%",
-          "summary": "The rand traded at R16.5050/$ at 08:36 SAST on Fri 23 Oct, broadly unchanged from Thursday's close after a sharp fall that session. The 2035 government bond was flat, yielding 8.615%. Traders are waiting for month-end data; better-than-expected inflation and two months of temporary fuel-levy relief are in the background. Later in the day Trading Economics showed USD/ZAR at about 16.51, the dollar up about 0.2% against the rand on 23 Oct.",
-          "source": "CNBC Africa (Reuters)",
-          "url": "https://www.cnbcafrica.com/2026/south-african-rand-steady-as-traders-await-month-end-data"
-        },
-        {
-          "title": "Mid-year budget: temporary fuel levy cuts return from November",
-          "summary": "Wednesday's medium-term budget review reintroduced temporary fuel levy relief for two months from November, worth about R10bn, to ease cost-of-living pressure. The 2035 government bond yield was little changed at about 8.6%.",
-          "source": "CNBC Africa",
-          "url": "https://www.cnbcafrica.com/2026/south-african-rand-slips-as-oil-hits-highest-since-may-fuel-levy-cuts-loom"
-        }
-      ]
-    },
-    {
-      "name": "Forex & commodities",
-      "items": [
-        {
-          "title": "Gold below $4,000 for the first time since July",
-          "summary": "Spot gold fell 0.3% to $4,013.91 by 03:26 SAST on 23 Oct after slipping 2.8% on Thursday, touching its lowest since 20 July, and is heading for a weekly loss of more than 3.5%; it briefly traded under $4,000. Platinum was flat at $1,567.10 after a 3.6% drop on Thursday. CME FedWatch shows a 78% chance of a December rate hike; the Fed is expected to hold on 27–28 Oct. On Friday morning Trading Economics showed gold near $4,014/oz, down 0.3% on the day and about 6% lower over the past month. Gold futures were −0.8% at $4,027.40/oz around 10:00 SAST on Fri 23 Oct (Euronews).",
-          "source": "Reuters via Yahoo Finance",
-          "url": "https://finance.yahoo.com/markets/commodities/articles/gold-hits-3-mth-low-022145269.html"
-        },
-        {
-          "title": "Bitcoin below $82,000",
-          "summary": "Bitcoin fell about 4% to roughly $81,350 alongside the tech sell-off.",
-          "source": "Yahoo Finance",
-          "url": "https://finance.yahoo.com/markets/article/stock-market-today-thursday-october-22-dow-sp-500-nasdaq-tesla-meta-112217857.html"
-        }
-      ]
-    },
-    {
-      "name": "Our coverage",
-      "items": [
-        {
-          "title": "META −7% after results — on our list as a low-conviction SELL",
-          "summary": "Meta fell 6.98% to $648.85 as investors weighed its quarterly results and a 2-for-1 stock split. Our 14 Oct work-sheet had a 6-month value near $677; at $649 the shares are now below it, so the rating needs a re-run with the new results. On Friday Meta fell about another 2% in midday trade (Upstox, 23 Oct). Separately, a New Mexico judge on Wed 21 Oct ordered Meta to pay $25 billion for misleading Facebook users about data privacy; Meta says it is confident it will win on appeal (Axios). Rating unchanged; re-run pending.",
-          "source": "Yahoo Finance",
-          "url": "https://finance.yahoo.com/markets/article/stock-market-today-thursday-october-22-dow-sp-500-nasdaq-tesla-meta-112217857.html",
-          "tickers": [
-            "META"
-          ]
-        },
-        {
-          "title": "Chip sell-off: AMD and NVIDIA lower",
-          "summary": "AMD fell more than 8% and NVIDIA 4.4% on Thu 22 Oct; both edged up pre-market on Friday (AMD +~1%, NVIDIA +0.4% at 12:00 SAST, Stocktwits). AMD is a SELL on our list; this morning's watchlist (23 Oct, 06:30) has it as a cleared short setup at 501.59 (stop 558.05), with results within 14 days. NVIDIA is a BUY but is not technically cleared; its pullback entry is 222.63 (stop 210.13). Check both levels at the US open.",
-          "source": "Stocktwits / Euronews",
-          "url": "https://stocktwits.com/news-articles/markets/equity/nasdaq-dow-s-and-p-500-futures-drop-premarket-nvda-amd-meta-crwv-mrna-wdc-be-in-focus/cZxyfNARBxI",
-          "tickers": [
-            "AMD",
-            "NVDA"
-          ]
-        },
-        {
-          "title": "Wabtec beats and lifts profit guidance; shares near $273, still above our SELL value",
-          "summary": "Wabtec's third-quarter sales rose 8.1% to $3.12 billion and adjusted earnings per share rose 22% to $2.83; the 12-month backlog grew 8.8% to $8.99 billion, and the company raised its 2026 adjusted EPS range to $10.85–$11.05 while keeping sales guidance at $12.3–$12.6 billion (Wabtec 8-K, 21 Oct). The shares were at $272.85, down 1.3%, in Friday afternoon trade (StockAnalysis, 23 Oct 15:12 EDT). Our 14 Oct work-sheet has a 6-month value of $248.07; the price is about 10% above it and just above the $271.62 short-setup level on our watchlist. Stronger guidance cuts against the SELL case, so it should be checked at the next re-price. Rating unchanged.",
-          "source": "Wabtec (SEC 8-K)",
-          "url": "https://www.sec.gov/Archives/edgar/data/0000943452/000094345226000017/a3q26pressreleaseword.htm",
-          "tickers": [
-            "WAB"
-          ]
-        }
-      ]
+     "title": "Oil falls about 2% despite weekend Houthi attack claims on Saudi oil sites",
+     "summary": "On Monday morning Brent was at $114.3 a barrel (−2.1%) and WTI at $101 (−2.2%), easing from near six-month highs. The Houthis said they attacked a Saudi airport and oil facilities over the weekend, and Saudi Arabia said it intercepted more missiles and drones on Sunday. The US also approved a 400,000-barrel release from its Strategic Petroleum Reserve after a Louisiana refinery disruption (HDFC Sky, 26 Oct). Reported targets were an Aramco site in Yanbu, the Rabigh refinery and the East-West pipeline; damage has not been confirmed (Babypips, 26 Oct).",
+     "source": "HDFC Sky; Babypips",
+     "url": "https://hdfcsky.com/news/brent-crude-oil-price-today-october-26-2026-brent-falls-2-1percent-to-114-3-wti-drops-2-2percent-to-101-even-as-attacks-continue-on-saudi"
     }
-  ],
-  "watch_today": [
-    "Weekend: any US move on Iran, further attacks in Saudi Arabia or Bab el-Mandeb disruption — feeds SA fuel prices and inflation expectations",
-    "Monday JSE open and rand after Brent's $116.72 settlement",
-    "DECK after the Piper Sandler downgrade (BUY, target $103; below the 82.94 watchlist stop — analyst re-run needed, rating unchanged)",
-    "META after its post-results fall (SELL, low conviction; re-run pending)",
-    "Next week: Fed meeting 27–28 Oct; month-end SA data; SFC framework comments due 30 Nov"
-  ]
+   ]
+  },
+  {
+   "name": "US markets",
+   "items": [
+    {
+     "title": "Futures rise after the S&P 500's second losing week",
+     "summary": "On Sunday evening S&P 500 futures were up 0.3%, Dow futures up 85 points (0.2%) and Nasdaq-100 futures up 0.4%. On Friday the Dow fell more than 650 points, the S&P 500 lost 0.5% and the Nasdaq 0.2% (CNBC, 25 Oct).",
+     "source": "CNBC (republished by 10bmnews)",
+     "url": "https://10bmnews.com/stock-futures-climb-as-traders-try-to-recover-from-the-sp-500s-losing-week-live-updates/"
+    },
+    {
+     "title": "Busy week: Fed decision Wednesday, big tech results, GDP and PCE Thursday",
+     "summary": "The Fed announces its decision on Wed 28 Oct at 18:00 GMT (20:00 SAST) and is expected to hold at 3.75%–4.00%. Microsoft and Alphabet report after the close on Wednesday, Amazon and Intel on Thursday. Q3 GDP (forecast 3.1% annualised) and core PCE (forecast +0.2% m/m) come out on Thursday, and the ECB (Thursday) and Bank of Japan (Friday) also decide on rates (Babypips, 26 Oct). Futures pricing (CME FedWatch) gives a 75% chance of a Fed hike in December (Reuters via Business Recorder, 26 Oct).",
+     "source": "Babypips; Business Recorder (Reuters)",
+     "url": "https://www.babypips.com/analysis/fundies-cheat-sheet-2026-10-26-fed-big-tech-oil-saudi"
+    },
+    {
+     "title": "Musk says SpaceX closed a $40 billion debt deal for AI chips",
+     "summary": "In a Sunday post on X, Elon Musk said SpaceX closed $40 billion in debt financing, mainly for GPUs arriving in the first half of 2027. He warned that lenders have nearly stopped funding 'neocloud' data-centre firms such as CoreWeave and Nebius. The claim comes from Musk's post; no filing or lender statement has been cited (Yahoo Finance, 25 Oct).",
+     "source": "Yahoo Finance",
+     "url": "https://finance.yahoo.com/technology/ai/articles/musk-says-spacex-raised-40-015149993.html"
+    }
+   ]
+  },
+  {
+   "name": "South Africa",
+   "items": [
+    {
+     "title": "Rand steady at about R16.61/$ ahead of the Fed and month-end data",
+     "summary": "At 06:02 GMT the rand was at 16.6125 to the dollar, little changed from its previous close, and the 2035 bond yield was steady at 8.635% (Reuters via Business Recorder, 26 Oct).",
+     "source": "Business Recorder (Reuters)",
+     "url": "https://www.brecorder.com/news/40445970/south-african-rand-steady-with-local-economic-data-fed-decision-in-focus"
+    },
+    {
+     "title": "Stats SA to publish rebased GDP figures on Thursday",
+     "summary": "This week Stats SA releases rebased and benchmarked GDP estimates and the September PPI on Thu 29 Oct; Nedbank expects PPI inflation to rise to 5.3% from 5.0%. SARS trade data for September follows on Friday, after August's R20.5bn surplus (Business Day, 26 Oct).",
+     "source": "Business Day",
+     "url": "https://www.businessday.co.za/economy/2026-10-26-economic-week-ahead-stats-sa-to-rebase-gdp-data-on-thursday/"
+    }
+   ]
+  },
+  {
+   "name": "Forex & commodities",
+   "items": [
+    {
+     "title": "Gold hovers around $4,000 near a three-month low",
+     "summary": "Spot gold was at $4,009.87 (+0.4%) at 03:42 GMT as oil eased, after Friday's first close below $4,000 since mid-July and a roughly 4% weekly fall, the steepest since June (FinanceFeeds, 26 Oct). Later on Monday morning it was quoted at $3,987.45 (−0.2%) (NewsBytes, 26 Oct).",
+     "source": "FinanceFeeds; NewsBytes",
+     "url": "https://financefeeds.com/gold-price-today-4010-monday-fed-week-28-october-pce-29-october-bull-4075-bear-3890/"
+    }
+   ]
+  },
+  {
+   "name": "Our coverage",
+   "items": [
+    {
+     "title": "NVIDIA: SpaceX says it has funding for a large AI-chip order",
+     "summary": "Musk says SpaceX closed $40 billion in debt for GPUs (Yahoo Finance, 25 Oct). Earlier October reports said the money was for NVIDIA chips, but this has not been confirmed. If confirmed, it supports demand for NVIDIA (BUY on our list, LRC target $262.56). Musk's warning that funding is drying up for neocloud customers is a risk to watch. Rating unchanged.",
+     "source": "Yahoo Finance",
+     "url": "https://finance.yahoo.com/technology/ai/articles/musk-says-spacex-raised-40-015149993.html",
+     "tickers": [
+      "NVDA"
+     ]
+    }
+   ]
+  }
+ ],
+ "watch_today": [
+  "Oil: whether Brent holds below Friday's $116.72 settlement after the weekend Saudi attack claims, which feeds SA fuel prices",
+  "Rand near R16.61/$ ahead of the Fed decision on Wed 28 Oct (20:00 SAST)",
+  "Wall Street open (15:30 SAST): can futures gains hold after the S&P 500's second losing week",
+  "This week: Microsoft and Alphabet (Wed), Amazon and Intel (Thu), US GDP and PCE (Thu), SA rebased GDP and PPI (Thu), SA trade data (Fri)",
+  "META (SELL, low conviction) and DECK (BUY; below the watchlist stop) still need analyst re-runs; ratings unchanged"
+ ]
 }
