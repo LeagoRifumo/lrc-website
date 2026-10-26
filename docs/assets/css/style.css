@@ -904,3 +904,6 @@ html:not(.safe) .onlysafe{display:none!important}
 .erow.rep .res,.erow.rep .res-eps{justify-self:end;text-align:right}
 @media (max-width:860px){.score-strip{grid-template-columns:repeat(3,minmax(0,1fr))}.erow.rep .res,.erow.rep .res-eps{justify-self:start;text-align:left;grid-column:2}}
 @media (max-width:480px){.score-strip{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* header with the Dividends item: keep one clean row on 1240–1360 px screens */
+@media (min-width:861px) and (max-width:1360px){.menu{gap:11px!important}.menu a{font-size:13px!important}.brand span{font-size:16.5px!important}.brand img{height:36px}.nav-cta{gap:8px}.nav-cta .btn-red{padding:10px 12px;font-size:13px}}
+@media (min-width:861px) and (max-width:1290px){.nav-cta .btn-red{display:none}}
