@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=8.7">
+<link rel="stylesheet" href="assets/css/style.css?v=8.8">
 </head>
 <body>
 <header class="site-header">
@@ -56,7 +56,7 @@
   <h1>Who pays, <span class="gold">and when</span></h1>
   <p class="lead">Upcoming dividends for the JSE and New York: the last day to buy to qualify, the ex-dividend date, the payment date, the dividend per share and the yield. Updated after every LRC Stock Scanner run. Companies on the LRC watchlist are ticked ✓. Results dates are on the <a href="earnings.html" style="color:var(--gold-2)">earnings calendar</a>.</p>
   <div class="dsel"><label for="dvMkt">Exchange</label><select id="dvMkt"><option value="JSE">Johannesburg — JSE</option><option value="US">New York — NYSE &amp; Nasdaq</option></select>
-  <label for="dvRange" style="margin-left:14px">Show</label><select id="dvRange"><option value="14">Next 14 days</option><option value="31" selected>Next month</option><option value="62">Next 2 months</option><option value="120">Next 4 months</option><option value="past">Last 30 days (already ex)</option></select>
+  <label for="dvRange" style="margin-left:14px">Show</label><select id="dvRange"><option value="14">Next 14 days</option><option value="31" selected>Next month</option><option value="62">Next 2 months</option><option value="120">Next 4 months</option><option value="past">Paid &amp; went ex — last 60 days</option></select>
   <label for="dvKind" style="margin-left:14px">Dates</label><select id="dvKind"><option value="all">Confirmed and expected</option><option value="confirmed">Confirmed only</option></select>
   <label for="dvYield" style="margin-left:14px">Yield</label><select id="dvYield"><option value="0">Any yield</option><option value="0.03">3% or more</option><option value="0.05">5% or more</option><option value="0.08">8% or more</option></select></div>
   <div class="agent-meta" id="dvMeta"></div>
@@ -66,7 +66,7 @@
   <div id="dvList"><p class="muted-load">Loading the dividend calendar…</p></div>
   <div class="pillars" style="margin-top:46px">
     <div class="card"><h3>Last day to buy</h3><p id="dvRule"></p></div>
-    <div class="card"><h3>Confirmed vs expected</h3><p><b>Confirmed</b> dates have been announced by the company. <b>Expected</b> dates are last year's dates for the same payment, rolled forward one year, with last year's amount. They are replaced automatically once the company announces.</p></div>
+    <div class="card"><h3>From expected to paid</h3><p>Every dividend moves through the calendar automatically: <b>Expected</b> (last year's date rolled forward, until the company announces) → <b>Confirmed</b> → <b>Went ex</b> (the ex-date has passed) → <b>Paid</b> on the payment date. Where the feed has no payment date, it shows <b>Paid (estimated)</b> once the usual window has passed. Choose "Paid &amp; went ex" to see the last 60 days.</p></div>
     <div class="card"><h3>Check before you act</h3><p>Dates and amounts come from the market data feed and can change. Confirm them on the company announcement (SENS for JSE companies). JSE amounts are shown in rand.</p></div>
   </div>
   <p class="src-note" id="dvSrc"></p>
@@ -87,6 +87,6 @@
   </div>
 </footer>
 <script>window.LRC_DATA = "data/";</script>
-<script src="assets/js/main.js?v=8.7"></script>
+<script src="assets/js/main.js?v=8.8"></script>
 </body>
 </html>

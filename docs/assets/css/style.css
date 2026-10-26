@@ -877,3 +877,6 @@ html:not(.safe) .onlysafe{display:none!important}
 .dvamt small{color:var(--muted);font-size:11px}
 .erow .mn small b{color:#fff}
 @media (max-width:860px){.dvrow{grid-template-columns:70px 1fr}.dvrow .n{grid-column:2}}
+.dvst.went_ex,.dvst.recent{background:rgba(242,206,114,.10);color:#F2CE72;border:1px solid rgba(242,206,114,.3)}
+.dvst.paid{background:rgba(94,211,154,.22);color:#7FE0B0;border:1px solid rgba(94,211,154,.5)}
+.dvst.paid_est{background:rgba(94,211,154,.08);color:#9FD9BC;border:1px dashed rgba(94,211,154,.4)}

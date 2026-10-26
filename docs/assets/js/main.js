@@ -643,6 +643,8 @@ const artCard = (a, pre = '') => `<a class="art" href="${pre}${esc(a.url)}">${a.
   const pct = v => v === null || v === undefined ? '—' : (v * 100).toFixed(1) + '%';
   const GR = { 'STRONG BUY': 'Top scoring', 'BUY': 'Strong', 'HOLD': 'Average', 'SELL': 'Weak', 'STRONG SELL': 'Lowest scoring' };
   const gr = v => !v ? '—' : window.LRC_SAFE ? (GR[v] || v) : v;
+  const PAST = new Set(['went_ex', 'paid', 'paid_est', 'recent']);
+  const ST = { confirmed: 'Confirmed', expected: 'Expected', went_ex: 'Went ex', paid: 'Paid', paid_est: 'Paid (estimated)', recent: 'Went ex' };
   let D = null;
   let mkt; try { mkt = JSON.parse(localStorage.getItem('lrc_mkt')) || 'JSE'; } catch (e) { mkt = 'JSE'; }
   $$('dvMkt').value = mkt;
@@ -651,10 +653,10 @@ const artCard = (a, pre = '') => `<a class="art" href="${pre}${esc(a.url)}">${a.
     const m = $$('dvMkt').value, rg = $$('dvRange').value, kind = $$('dvKind').value, minY = +$$('dvYield').value, q = ($$('dvSearch').value || '').toLowerCase();
     const today = new Date(Date.now() + 2 * 3600e3).toISOString().slice(0, 10);
     const end = rg === 'past' ? today : new Date(Date.now() + 2 * 3600e3 + (+rg) * 864e5).toISOString().slice(0, 10);
-    const start = rg === 'past' ? new Date(Date.now() + 2 * 3600e3 - 30 * 864e5).toISOString().slice(0, 10) : today;
-    const rows = D.items.filter(x => x.m === m && (rg === 'past' ? x.status === 'recent' : x.status !== 'recent') && x.ex >= start && x.ex <= end && (kind === 'all' || x.status !== 'expected') && (x.yield || 0) >= minY && (!q || (x.t + ' ' + x.n).toLowerCase().includes(q)));
+    const start = rg === 'past' ? new Date(Date.now() + 2 * 3600e3 - 60 * 864e5).toISOString().slice(0, 10) : today;
+    const rows = D.items.filter(x => x.m === m && (rg === 'past' ? PAST.has(x.status) : !PAST.has(x.status)) && x.ex >= start && x.ex <= end && (kind === 'all' || x.status !== 'expected') && (x.yield || 0) >= minY && (!q || (x.t + ' ' + x.n).toLowerCase().includes(q)));
     if (rg === 'past') rows.reverse();
-    $$('dvMeta').innerHTML = `<span class="ai">● ${m === 'JSE' ? 'JSE' : 'New York (NYSE &amp; Nasdaq)'}</span><span>Updated <b>${e_(new Date(D.generated).toLocaleString('en-ZA', { weekday: 'short', day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }))} SAST</b></span><span><b>${rows.length}</b> dividends in range</span><span><b>${rows.filter(x => x.status === 'confirmed').length}</b> confirmed · <b>${rows.filter(x => x.status === 'expected').length}</b> expected</span>`;
+    $$('dvMeta').innerHTML = `<span class="ai">● ${m === 'JSE' ? 'JSE' : 'New York (NYSE &amp; Nasdaq)'}</span><span>Updated <b>${e_(new Date(D.generated).toLocaleString('en-ZA', { weekday: 'short', day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }))} SAST</b></span><span><b>${rows.length}</b> dividends in range</span><span>${rg === 'past' ? `<b>${rows.filter(x => x.status === 'paid' || x.status === 'paid_est').length}</b> paid · <b>${rows.filter(x => x.status === 'went_ex').length}</b> waiting for payment` : `<b>${rows.filter(x => x.status === 'confirmed').length}</b> confirmed · <b>${rows.filter(x => x.status === 'expected').length}</b> expected`}</span>`;
     $$('dvRule').textContent = (D.rules || {})[m] || '';
     $$('dvSrc').textContent = 'Source: ' + (D.source || '');
     if (!rows.length) { L.innerHTML = '<p class="muted-load">No dividends match these filters. Try a longer period or "Any yield".</p>'; return; }
@@ -663,8 +665,8 @@ const artCard = (a, pre = '') => `<a class="art" href="${pre}${esc(a.url)}">${a.
       by[k].map(x => { const cov = (x.lists || []).length > 0;
         const amt = x.amount != null ? `${money(x.amount, x.cur)}${x.amount_basis ? ' <small>last year</small>' : ''}` : (x.last_amount != null ? `<small>last paid</small> ${money(x.last_amount, x.cur)}` : '—');
         return `<div class="erow dvrow${cov ? ' cov' : ''}"><span class="tic">${cov ? '<b class="tick">✓</b>' : ''}<a href="stock.html?t=${encodeURIComponent(x.t)}">${e_(x.t.replace('.JO', ''))}</a></span>
-        <span class="mn"><a href="stock.html?t=${encodeURIComponent(x.t)}" style="color:inherit">${e_(x.n)}</a> <span class="dvst ${x.status}">${x.status === 'expected' ? 'Expected' : x.status === 'recent' ? 'Went ex' : 'Confirmed'}</span>${(x.lists || []).map(l => ` <span class="wtag ${/SELL/.test(l) ? 's' : 'b'}">${e_(l)}</span>`).join('')}${x.idea ? ' <a class="wtag i" href="research.html">Research idea</a>' : ''}
-          <small>Last day to buy <b>${fmtD(x.ldt)}</b> · pays ${x.pay ? '<b>' + fmtD(x.pay) + '</b>' : 'date not announced'}${x.per_year ? ` · ${x.per_year}× a year` : ''}${x.payout != null ? ` · payout ${pct(x.payout)}` : ''}</small>
+        <span class="mn"><a href="stock.html?t=${encodeURIComponent(x.t)}" style="color:inherit">${e_(x.n)}</a> <span class="dvst ${x.status}">${ST[x.status] || x.status}</span>${(x.lists || []).map(l => ` <span class="wtag ${/SELL/.test(l) ? 's' : 'b'}">${e_(l)}</span>`).join('')}${x.idea ? ' <a class="wtag i" href="research.html">Research idea</a>' : ''}
+          <small>${PAST.has(x.status) ? `Last day to buy was ${fmtD(x.ldt)} · ${x.status === 'paid' ? 'paid <b>' + fmtD(x.pay) + '</b>' : x.status === 'paid_est' ? 'payment date not on the feed (usual window passed)' : x.pay ? 'pays <b>' + fmtD(x.pay) + '</b>' : 'payment date not announced'}` : `Last day to buy <b>${fmtD(x.ldt)}</b> · pays ${x.pay ? '<b>' + fmtD(x.pay) + '</b>' : 'date not announced'}`}${x.per_year ? ` · ${x.per_year}× a year` : ''}${x.payout != null ? ` · payout ${pct(x.payout)}` : ''}</small>
           <small>LRC Stock Scanner: trading ${e_(gr(x.v))} · investment ${e_(gr(x.iv_v))}</small></span>
         <span class="n dvamt">${amt}</span><span class="n">yield <b>${pct(x.yield)}</b></span></div>`; }).join('') + '</div></div>').join('');
   };
