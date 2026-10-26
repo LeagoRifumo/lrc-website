@@ -1,4 +1,20 @@
 {
+"AAL|2026-10-22": {
+"t": "AAL",
+"ticker": "AAL",
+"name": "American Airlines Group, Inc.",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "($0.28)",
+"quarter": "Sep/2026",
+"market_cap_bn": 8.3,
+"eps_actual": -0.28,
+"eps_est": -0.28,
+"surprise": 0.0,
+"result": "inline",
+"result_done": true,
+"source": "Nasdaq"
+},
 "AAMI|2026-10-29": {
 "t": "AAMI",
 "ticker": "AAMI",
@@ -71,6 +87,22 @@
 "period": null,
 "market_cap_bn": 2.8
 },
+"AA|2026-10-15": {
+"t": "AA",
+"ticker": "AA",
+"name": "Alcoa Corporation",
+"m": "US",
+"date": "2026-10-15",
+"eps_forecast": "$1.65",
+"quarter": "Sep/2026",
+"market_cap_bn": 10.2,
+"eps_actual": 1.82,
+"eps_est": 1.65,
+"surprise": 0.10300000000000001,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "ABBV|2026-10-30": {
 "t": "ABBV",
 "ticker": "ABBV",
@@ -82,6 +114,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 504.0
+},
+"ABCB|2026-10-22": {
+"t": "ABCB",
+"ticker": "ABCB",
+"name": "Ameris Bancorp",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$1.68",
+"quarter": "Sep/2026",
+"market_cap_bn": 5.5,
+"eps_actual": 1.73,
+"eps_est": 1.68,
+"surprise": 0.0298,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "ABCL|2026-11-09": {
 "t": "ABCL",
@@ -130,6 +178,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 105.2
+},
+"ABT|2026-10-21": {
+"t": "ABT",
+"ticker": "ABT",
+"name": "Abbott Laboratories",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$1.43",
+"quarter": "Sep/2026",
+"market_cap_bn": 177.4,
+"eps_actual": 1.42,
+"eps_est": 1.43,
+"surprise": -0.006999999999999999,
+"result": "inline",
+"result_done": true,
+"source": "Nasdaq"
 },
 "AB|2026-10-27": {
 "t": "AB",
@@ -215,6 +279,22 @@
 "period": null,
 "market_cap_bn": 5.7
 },
+"ACI|2026-10-13": {
+"t": "ACI",
+"ticker": "ACI",
+"name": "Albertsons Companies, Inc.",
+"m": "US",
+"date": "2026-10-13",
+"eps_forecast": "$0.31",
+"quarter": "Aug/2026",
+"market_cap_bn": 6.5,
+"eps_actual": 0.34,
+"eps_est": 0.31,
+"surprise": 0.0968,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "ACLS|2026-11-05": {
 "t": "ACLS",
 "ticker": "ACLS",
@@ -238,6 +318,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 3.4
+},
+"ACN|2026-10-01": {
+"t": "ACN",
+"ticker": "ACN",
+"name": "Accenture plc",
+"m": "US",
+"date": "2026-10-01",
+"eps_forecast": "$3.19",
+"quarter": "Aug/2026",
+"market_cap_bn": 173.0,
+"eps_actual": 3.29,
+"eps_est": 3.19,
+"surprise": 0.0313,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "ACN|2026-12-17": {
 "t": "ACN",
@@ -274,6 +370,22 @@
 "quarter": "",
 "period": "Expected date (market data feed)",
 "market_cap_bn": 102.7
+},
+"ADC|2026-10-20": {
+"t": "ADC",
+"ticker": "ADC",
+"name": "Agree Realty Corporation",
+"m": "US",
+"date": "2026-10-20",
+"eps_forecast": "$1.11",
+"quarter": "Sep/2026",
+"market_cap_bn": 8.7,
+"eps_actual": 1.15,
+"eps_est": 1.11,
+"surprise": 0.036000000000000004,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "ADEA|2026-11-02": {
 "t": "ADEA",
@@ -443,6 +555,22 @@
 "period": null,
 "market_cap_bn": 71.1
 },
+"AERO|2026-10-19": {
+"t": "AERO",
+"ticker": "AERO",
+"name": "Grupo Aeromexico, S.A.B. de C.V.",
+"m": "US",
+"date": "2026-10-19",
+"eps_forecast": "$0.29",
+"quarter": "Sep/2026",
+"market_cap_bn": 2.2,
+"eps_actual": 0.28,
+"eps_est": 0.29,
+"surprise": -0.0345,
+"result": "miss",
+"result_done": true,
+"source": "Nasdaq"
+},
 "AER|2026-10-28": {
 "t": "AER",
 "ticker": "AER",
@@ -551,6 +679,22 @@
 "period": null,
 "market_cap_bn": 2.2
 },
+"AGNC|2026-10-19": {
+"t": "AGNC",
+"ticker": "AGNC",
+"name": "AGNC Investment Corp.",
+"m": "US",
+"date": "2026-10-19",
+"eps_forecast": "$0.39",
+"quarter": "Sep/2026",
+"market_cap_bn": 10.5,
+"eps_actual": 0.37,
+"eps_est": 0.39,
+"surprise": -0.0513,
+"result": "miss",
+"result_done": true,
+"source": "Nasdaq"
+},
 "AGO|2026-11-05": {
 "t": "AGO",
 "ticker": "AGO",
@@ -610,6 +754,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 43.4
+},
+"AIR|2026-09-28": {
+"t": "AIR",
+"ticker": "AIR",
+"name": "AAR Corp.",
+"m": "US",
+"date": "2026-09-28",
+"eps_forecast": "",
+"quarter": "Aug/2026",
+"market_cap_bn": 3.9,
+"eps_actual": 1.49,
+"eps_est": null,
+"surprise": null,
+"result": null,
+"result_done": false,
+"source": "Nasdaq"
 },
 "AIT|2026-10-27": {
 "t": "AIT",
@@ -779,6 +939,54 @@
 "period": null,
 "market_cap_bn": 7.4
 },
+"ALK|2026-10-20": {
+"t": "ALK",
+"ticker": "ALK",
+"name": "Alaska Air Group, Inc.",
+"m": "US",
+"date": "2026-10-20",
+"eps_forecast": "$0.35",
+"quarter": "Sep/2026",
+"market_cap_bn": 3.9,
+"eps_actual": 0.36,
+"eps_est": 0.35,
+"surprise": 0.0286,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
+"ALLE|2026-10-22": {
+"t": "ALLE",
+"ticker": "ALLE",
+"name": "Allegion plc",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$2.49",
+"quarter": "Sep/2026",
+"market_cap_bn": 15.0,
+"eps_actual": 2.6,
+"eps_est": 2.49,
+"surprise": 0.044199999999999996,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
+"ALLY|2026-10-20": {
+"t": "ALLY",
+"ticker": "ALLY",
+"name": "Ally Financial Inc.",
+"m": "US",
+"date": "2026-10-20",
+"eps_forecast": "$1.32",
+"quarter": "Sep/2026",
+"market_cap_bn": 12.0,
+"eps_actual": 1.34,
+"eps_est": 1.32,
+"surprise": 0.0152,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "ALL|2026-11-04": {
 "t": "ALL",
 "ticker": "ALL",
@@ -851,6 +1059,22 @@
 "period": null,
 "market_cap_bn": 9.0
 },
+"ALV|2026-10-23": {
+"t": "ALV",
+"ticker": "ALV",
+"name": "Autoliv, Inc.",
+"m": "US",
+"date": "2026-10-23",
+"eps_forecast": "$2.21",
+"quarter": "Sep/2026",
+"market_cap_bn": 8.7,
+"eps_actual": 2.19,
+"eps_est": 2.21,
+"surprise": -0.009000000000000001,
+"result": "inline",
+"result_done": true,
+"source": "Nasdaq"
+},
 "AMAT|2026-11-12": {
 "t": "AMAT",
 "ticker": "AMAT",
@@ -862,6 +1086,22 @@
 "quarter": "Oct/2026",
 "period": null,
 "market_cap_bn": 298.1
+},
+"AMBP|2026-10-22": {
+"t": "AMBP",
+"ticker": "AMBP",
+"name": "Ardagh Metal Packaging S.A.",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$0.08",
+"quarter": "Sep/2026",
+"market_cap_bn": 2.8,
+"eps_actual": 0.08,
+"eps_est": 0.08,
+"surprise": 0.0,
+"result": "inline",
+"result_done": true,
+"source": "Nasdaq"
 },
 "AMCR|2026-11-04": {
 "t": "AMCR",
@@ -1043,6 +1283,22 @@
 "period": null,
 "market_cap_bn": 84.6
 },
+"AMX|2026-10-20": {
+"t": "AMX",
+"ticker": "AMX",
+"name": "America Movil, S.A.B. de C.V.",
+"m": "US",
+"date": "2026-10-20",
+"eps_forecast": "$0.46",
+"quarter": "Sep/2026",
+"market_cap_bn": 75.2,
+"eps_actual": 0.47,
+"eps_est": 0.46,
+"surprise": 0.0217,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "AMZN|2026-10-29": {
 "t": "AMZN",
 "ticker": "AMZN",
@@ -1211,6 +1467,22 @@
 "period": null,
 "market_cap_bn": 180.2
 },
+"APLD|2026-10-07": {
+"t": "APLD",
+"ticker": "APLD",
+"name": "Applied Digital Corporation",
+"m": "US",
+"date": "2026-10-07",
+"eps_forecast": "($0.26)",
+"quarter": "Aug/2026",
+"market_cap_bn": 5.8,
+"eps_actual": -0.76,
+"eps_est": -0.26,
+"surprise": -1.9231,
+"result": "miss",
+"result_done": true,
+"source": "Nasdaq"
+},
 "APLE|2026-11-05": {
 "t": "APLE",
 "ticker": "APLE",
@@ -1234,6 +1506,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 67.8
+},
+"APPF|2026-10-22": {
+"t": "APPF",
+"ticker": "APPF",
+"name": "AppFolio, Inc.",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$1.34",
+"quarter": "Sep/2026",
+"market_cap_bn": 7.7,
+"eps_actual": 1.35,
+"eps_est": 1.34,
+"surprise": 0.0075,
+"result": "inline",
+"result_done": true,
+"source": "Nasdaq"
 },
 "APPN|2026-11-05": {
 "t": "APPN",
@@ -1330,6 +1618,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 7.6
+},
+"ARGX|2026-10-22": {
+"t": "ARGX",
+"ticker": "ARGX",
+"name": "argenx SE",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$7.44",
+"quarter": "Sep/2026",
+"market_cap_bn": 54.4,
+"eps_actual": 7.8,
+"eps_est": 7.44,
+"surprise": 0.0484,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "ARIS|2026-11-04": {
 "t": "ARIS",
@@ -1439,6 +1743,22 @@
 "period": null,
 "market_cap_bn": 12.0
 },
+"ASB|2026-10-22": {
+"t": "ASB",
+"ticker": "ASB",
+"name": "Associated Banc-Corp",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$0.76",
+"quarter": "Sep/2026",
+"market_cap_bn": 5.6,
+"eps_actual": 0.76,
+"eps_est": 0.76,
+"surprise": 0.0,
+"result": "inline",
+"result_done": true,
+"source": "Nasdaq"
+},
 "ASH|2026-11-03": {
 "t": "ASH",
 "ticker": "ASH",
@@ -1451,6 +1771,22 @@
 "period": null,
 "market_cap_bn": 3.4
 },
+"ASML|2026-10-14": {
+"t": "ASML",
+"ticker": "ASML",
+"name": "ASML Holding N.V.",
+"m": "US",
+"date": "2026-10-14",
+"eps_forecast": "$12.47",
+"quarter": "Sep/2026",
+"market_cap_bn": 601.5,
+"eps_actual": 14.89,
+"eps_est": 12.47,
+"surprise": 0.1941,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "ASND|2026-11-11": {
 "t": "ASND",
 "ticker": "ASND",
@@ -1462,6 +1798,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 16.0
+},
+"ASR|2026-10-22": {
+"t": "ASR",
+"ticker": "ASR",
+"name": "Grupo Aeroportuario del Sureste, S.A. de C.V.",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$4.60",
+"quarter": "Sep/2026",
+"market_cap_bn": 7.5,
+"eps_actual": 3.98,
+"eps_est": 4.6,
+"surprise": -0.1348,
+"result": "miss",
+"result_done": true,
+"source": "Nasdaq"
 },
 "ASST|2026-11-09": {
 "t": "ASST",
@@ -1582,6 +1934,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 8.1
+},
+"AUB|2026-10-20": {
+"t": "AUB",
+"ticker": "AUB",
+"name": "Atlantic Union Bankshares Corporation",
+"m": "US",
+"date": "2026-10-20",
+"eps_forecast": "$0.96",
+"quarter": "Sep/2026",
+"market_cap_bn": 5.6,
+"eps_actual": 0.96,
+"eps_est": 0.96,
+"surprise": 0.0,
+"result": "inline",
+"result_done": true,
+"source": "Nasdaq"
 },
 "AUGO|2026-11-05": {
 "t": "AUGO",
@@ -1799,6 +2167,22 @@
 "period": null,
 "market_cap_bn": 33.7
 },
+"AXP|2026-10-23": {
+"t": "AXP",
+"ticker": "AXP",
+"name": "American Express Company",
+"m": "US",
+"date": "2026-10-23",
+"eps_forecast": "$4.47",
+"quarter": "Sep/2026",
+"market_cap_bn": 219.6,
+"eps_actual": 4.68,
+"eps_est": 4.47,
+"surprise": 0.047,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "AXSM|2026-11-02": {
 "t": "AXSM",
 "ticker": "AXSM",
@@ -1871,6 +2255,22 @@
 "period": null,
 "market_cap_bn": 3.4
 },
+"AYI|2026-10-01": {
+"t": "AYI",
+"ticker": "AYI",
+"name": "Acuity Inc.",
+"m": "US",
+"date": "2026-10-01",
+"eps_forecast": "$5.19",
+"quarter": "Aug/2026",
+"market_cap_bn": 9.5,
+"eps_actual": 5.51,
+"eps_est": 5.19,
+"surprise": 0.0617,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "AZN|2026-10-30": {
 "t": "AZN",
 "ticker": "AZN",
@@ -1895,6 +2295,22 @@
 "period": "Expected date (market data feed)",
 "market_cap_bn": 51.8
 },
+"AZZ|2026-10-13": {
+"t": "AZZ",
+"ticker": "AZZ",
+"name": "AZZ Inc.",
+"m": "US",
+"date": "2026-10-13",
+"eps_forecast": "$1.82",
+"quarter": "Aug/2026",
+"market_cap_bn": 4.0,
+"eps_actual": 2.0,
+"eps_est": 1.82,
+"surprise": 0.0989,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "A|2026-11-25": {
 "t": "A",
 "ticker": "A",
@@ -1906,6 +2322,38 @@
 "quarter": "",
 "period": "Expected date (market data feed)",
 "market_cap_bn": 48.8
+},
+"BAC|2026-10-14": {
+"t": "BAC",
+"ticker": "BAC",
+"name": "Bank of America Corporation",
+"m": "US",
+"date": "2026-10-14",
+"eps_forecast": "$1.11",
+"quarter": "Sep/2026",
+"market_cap_bn": 357.2,
+"eps_actual": 1.08,
+"eps_est": 1.11,
+"surprise": -0.027000000000000003,
+"result": "miss",
+"result_done": true,
+"source": "Nasdaq"
+},
+"BAH|2026-10-23": {
+"t": "BAH",
+"ticker": "BAH",
+"name": "Booz Allen Hamilton Holding Corporation",
+"m": "US",
+"date": "2026-10-23",
+"eps_forecast": "$1.44",
+"quarter": "Sep/2026",
+"market_cap_bn": 9.5,
+"eps_actual": 1.76,
+"eps_est": 1.44,
+"surprise": 0.22219999999999998,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "BALL|2026-11-03": {
 "t": "BALL",
@@ -1942,6 +2390,38 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 2.8
+},
+"BANF|2026-10-21": {
+"t": "BANF",
+"ticker": "BANF",
+"name": "BancFirst Corporation",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$1.93",
+"quarter": "Sep/2026",
+"market_cap_bn": 3.8,
+"eps_actual": 1.97,
+"eps_est": 1.93,
+"surprise": 0.0207,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
+"BANR|2026-10-21": {
+"t": "BANR",
+"ticker": "BANR",
+"name": "Banner Corporation",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$1.54",
+"quarter": "Sep/2026",
+"market_cap_bn": 2.6,
+"eps_actual": 1.51,
+"eps_est": 1.54,
+"surprise": -0.0195,
+"result": "miss",
+"result_done": true,
+"source": "Nasdaq"
 },
 "BAP|2026-11-09": {
 "t": "BAP",
@@ -2003,6 +2483,38 @@
 "period": null,
 "market_cap_bn": 148.2
 },
+"BBDO|2026-10-22": {
+"t": "BBDO",
+"ticker": "BBDO",
+"name": "Banco Bradesco Sa",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "",
+"quarter": "Sep/2026",
+"market_cap_bn": 44.2,
+"eps_actual": 0.12,
+"eps_est": null,
+"surprise": null,
+"result": null,
+"result_done": false,
+"source": "Nasdaq"
+},
+"BBD|2026-10-22": {
+"t": "BBD",
+"ticker": "BBD",
+"name": "Banco Bradesco Sa",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$0.13",
+"quarter": "Sep/2026",
+"market_cap_bn": 44.2,
+"eps_actual": 0.12,
+"eps_est": 0.13,
+"surprise": -0.07690000000000001,
+"result": "miss",
+"result_done": true,
+"source": "Nasdaq"
+},
 "BBIO|2026-10-29": {
 "t": "BBIO",
 "ticker": "BBIO",
@@ -2014,6 +2526,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 13.3
+},
+"BBT|2026-10-21": {
+"t": "BBT",
+"ticker": "BBT",
+"name": "Beacon Financial Corporation",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$0.78",
+"quarter": "Sep/2026",
+"market_cap_bn": 2.5,
+"eps_actual": 0.77,
+"eps_est": 0.78,
+"surprise": -0.0128,
+"result": "miss",
+"result_done": true,
+"source": "Nasdaq"
 },
 "BBUC|2026-11-05": {
 "t": "BBUC",
@@ -2098,6 +2626,38 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 4.6
+},
+"BCPC|2026-10-23": {
+"t": "BCPC",
+"ticker": "BCPC",
+"name": "Balchem Corporation",
+"m": "US",
+"date": "2026-10-23",
+"eps_forecast": "$1.54",
+"quarter": "Sep/2026",
+"market_cap_bn": 5.5,
+"eps_actual": 1.57,
+"eps_est": 1.54,
+"surprise": 0.0195,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
+"BCS|2026-10-22": {
+"t": "BCS",
+"ticker": "BCS",
+"name": "Barclays PLC",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$0.67",
+"quarter": "Sep/2026",
+"market_cap_bn": 75.5,
+"eps_actual": 0.66,
+"eps_est": 0.67,
+"surprise": -0.0149,
+"result": "miss",
+"result_done": true,
+"source": "Nasdaq"
 },
 "BC|2026-10-29": {
 "t": "BC",
@@ -2231,6 +2791,22 @@
 "period": null,
 "market_cap_bn": 4.4
 },
+"BE|2026-10-22": {
+"t": "BE",
+"ticker": "BE",
+"name": "Bloom Energy Corporation",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$0.56",
+"quarter": "Sep/2026",
+"market_cap_bn": 64.1,
+"eps_actual": 0.76,
+"eps_est": 0.56,
+"surprise": 0.35710000000000003,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "BF-B|2026-12-03": {
 "t": "BF-B",
 "ticker": "BF-B",
@@ -2254,6 +2830,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 3.5
+},
+"BFH|2026-10-22": {
+"t": "BFH",
+"ticker": "BFH",
+"name": "Bread Financial Holdings, Inc.",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$3.26",
+"quarter": "Sep/2026",
+"market_cap_bn": 3.9,
+"eps_actual": 3.84,
+"eps_est": 3.26,
+"surprise": 0.1779,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "BGC|2026-11-05": {
 "t": "BGC",
@@ -2483,6 +3075,22 @@
 "period": null,
 "market_cap_bn": 53.2
 },
+"BKU|2026-10-21": {
+"t": "BKU",
+"ticker": "BKU",
+"name": "BankUnited, Inc.",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$1.05",
+"quarter": "Sep/2026",
+"market_cap_bn": 3.1,
+"eps_actual": 1.03,
+"eps_est": 1.05,
+"surprise": -0.019,
+"result": "miss",
+"result_done": true,
+"source": "Nasdaq"
+},
 "BKV|2026-11-05": {
 "t": "BKV",
 "ticker": "BKV",
@@ -2531,6 +3139,22 @@
 "period": null,
 "market_cap_bn": 2.6
 },
+"BLK|2026-10-14": {
+"t": "BLK",
+"ticker": "BLK",
+"name": "BlackRock, Inc.",
+"m": "US",
+"date": "2026-10-14",
+"eps_forecast": "$14.01",
+"quarter": "Sep/2026",
+"market_cap_bn": 176.1,
+"eps_actual": 15.93,
+"eps_est": 14.01,
+"surprise": 0.13699999999999998,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "BLLN|2026-11-04": {
 "t": "BLLN",
 "ticker": "BLLN",
@@ -2566,6 +3190,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 2.1
+},
+"BMI|2026-10-22": {
+"t": "BMI",
+"ticker": "BMI",
+"name": "Badger Meter, Inc.",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$1.21",
+"quarter": "Sep/2026",
+"market_cap_bn": 4.3,
+"eps_actual": 1.24,
+"eps_est": 1.21,
+"surprise": 0.0248,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "BMRN|2026-10-26": {
 "t": "BMRN",
@@ -2627,6 +3267,22 @@
 "period": null,
 "market_cap_bn": 12.9
 },
+"BNY|2026-10-15": {
+"t": "BNY",
+"ticker": "BNY",
+"name": "The Bank Of New York Mellon Corporation ",
+"m": "US",
+"date": "2026-10-15",
+"eps_forecast": "$2.26",
+"quarter": "Sep/2026",
+"market_cap_bn": 98.6,
+"eps_actual": 2.37,
+"eps_est": 2.26,
+"surprise": 0.0487,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "BN|2026-11-12": {
 "t": "BN",
 "ticker": "BN",
@@ -2663,6 +3319,22 @@
 "period": null,
 "market_cap_bn": 2.8
 },
+"BOKF|2026-10-19": {
+"t": "BOKF",
+"ticker": "BOKF",
+"name": "BOK Financial Corporation",
+"m": "US",
+"date": "2026-10-19",
+"eps_forecast": "$2.54",
+"quarter": "Sep/2026",
+"market_cap_bn": 7.8,
+"eps_actual": 2.64,
+"eps_est": 2.54,
+"surprise": 0.0394,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "BOOT|2026-10-28": {
 "t": "BOOT",
 "ticker": "BOOT",
@@ -2674,6 +3346,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 3.6
+},
+"BPOP|2026-10-22": {
+"t": "BPOP",
+"ticker": "BPOP",
+"name": "Popular, Inc.",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$3.90",
+"quarter": "Sep/2026",
+"market_cap_bn": 10.1,
+"eps_actual": 4.21,
+"eps_est": 3.9,
+"surprise": 0.0795,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "BP|2026-10-30": {
 "t": "BP",
@@ -2987,6 +3675,38 @@
 "period": null,
 "market_cap_bn": 4.6
 },
+"BX|2026-10-22": {
+"t": "BX",
+"ticker": "BX",
+"name": "Blackstone Inc.",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$1.26",
+"quarter": "Sep/2026",
+"market_cap_bn": 89.1,
+"eps_actual": 1.32,
+"eps_est": 1.26,
+"surprise": 0.047599999999999996,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
+"BYD|2026-10-22": {
+"t": "BYD",
+"ticker": "BYD",
+"name": "Boyd Gaming Corporation",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$1.65",
+"quarter": "Sep/2026",
+"market_cap_bn": 5.3,
+"eps_actual": 1.67,
+"eps_est": 1.65,
+"surprise": 0.0121,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "B|2026-11-09": {
 "t": "B",
 "ticker": "B",
@@ -3011,6 +3731,22 @@
 "period": null,
 "market_cap_bn": 5.8
 },
+"CACI|2026-10-21": {
+"t": "CACI",
+"ticker": "CACI",
+"name": "CACI International, Inc.",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$6.45",
+"quarter": "Sep/2026",
+"market_cap_bn": 13.7,
+"eps_actual": 7.66,
+"eps_est": 6.45,
+"surprise": 0.18760000000000002,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "CAE|2026-11-10": {
 "t": "CAE",
 "ticker": "CAE",
@@ -3022,6 +3758,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 8.0
+},
+"CAG|2026-09-30": {
+"t": "CAG",
+"ticker": "CAG",
+"name": "ConAgra Brands, Inc.",
+"m": "US",
+"date": "2026-09-30",
+"eps_forecast": "$0.31",
+"quarter": "Aug/2026",
+"market_cap_bn": 7.2,
+"eps_actual": 0.41,
+"eps_est": 0.31,
+"surprise": 0.3226,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "CAH|2026-11-05": {
 "t": "CAH",
@@ -3058,6 +3810,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 5.6
+},
+"CALM|2026-09-30": {
+"t": "CALM",
+"ticker": "CALM",
+"name": "Cal-Maine Foods, Inc.",
+"m": "US",
+"date": "2026-09-30",
+"eps_forecast": "",
+"quarter": "Aug/2026",
+"market_cap_bn": 3.0,
+"eps_actual": -1.26,
+"eps_est": null,
+"surprise": null,
+"result": null,
+"result_done": false,
+"source": "Nasdaq"
 },
 "CALX|2026-11-02": {
 "t": "CALX",
@@ -3155,6 +3923,22 @@
 "period": "Expected date (market data feed)",
 "market_cap_bn": 25.8
 },
+"CATY|2026-10-21": {
+"t": "CATY",
+"ticker": "CATY",
+"name": "Cathay General Bancorp",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$1.44",
+"quarter": "Sep/2026",
+"market_cap_bn": 4.3,
+"eps_actual": 1.43,
+"eps_est": 1.44,
+"surprise": -0.0069,
+"result": "inline",
+"result_done": true,
+"source": "Nasdaq"
+},
 "CAT|2026-10-29": {
 "t": "CAT",
 "ticker": "CAT",
@@ -3203,6 +3987,22 @@
 "period": null,
 "market_cap_bn": 11.6
 },
+"CBRE|2026-10-22": {
+"t": "CBRE",
+"ticker": "CBRE",
+"name": "CBRE Group, Inc.",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$1.97",
+"quarter": "Sep/2026",
+"market_cap_bn": 38.0,
+"eps_actual": 2.05,
+"eps_est": 1.97,
+"surprise": 0.0406,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "CBRS|2026-11-12": {
 "t": "CBRS",
 "ticker": "CBRS",
@@ -3214,6 +4014,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 25.9
+},
+"CBSH|2026-10-20": {
+"t": "CBSH",
+"ticker": "CBSH",
+"name": "Commerce Bancshares, Inc.",
+"m": "US",
+"date": "2026-10-20",
+"eps_forecast": "$1.07",
+"quarter": "Sep/2026",
+"market_cap_bn": 8.1,
+"eps_actual": 1.08,
+"eps_est": 1.07,
+"surprise": 0.009300000000000001,
+"result": "inline",
+"result_done": true,
+"source": "Nasdaq"
 },
 "CBT|2026-11-02": {
 "t": "CBT",
@@ -3239,6 +4055,38 @@
 "period": null,
 "market_cap_bn": 3.3
 },
+"CBZ|2026-10-19": {
+"t": "CBZ",
+"ticker": "CBZ",
+"name": "CBIZ, Inc.",
+"m": "US",
+"date": "2026-10-19",
+"eps_forecast": "$1.28",
+"quarter": "Sep/2026",
+"market_cap_bn": 3.0,
+"eps_actual": 1.21,
+"eps_est": 1.28,
+"surprise": -0.0547,
+"result": "miss",
+"result_done": true,
+"source": "Nasdaq"
+},
+"CB|2026-10-20": {
+"t": "CB",
+"ticker": "CB",
+"name": "Chubb Limited",
+"m": "US",
+"date": "2026-10-20",
+"eps_forecast": "$6.53",
+"quarter": "Sep/2026",
+"market_cap_bn": 140.4,
+"eps_actual": 7.66,
+"eps_est": 6.53,
+"surprise": 0.17300000000000001,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "CCC|2026-10-29": {
 "t": "CCC",
 "ticker": "CCC",
@@ -3251,6 +4099,22 @@
 "period": null,
 "market_cap_bn": 4.5
 },
+"CCI|2026-10-21": {
+"t": "CCI",
+"ticker": "CCI",
+"name": "Crown Castle Inc.",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$1.16",
+"quarter": "Sep/2026",
+"market_cap_bn": 33.5,
+"eps_actual": 1.24,
+"eps_est": 1.16,
+"surprise": 0.069,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "CCJ|2026-10-30": {
 "t": "CCJ",
 "ticker": "CCJ",
@@ -3262,6 +4126,38 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 34.3
+},
+"CCK|2026-10-19": {
+"t": "CCK",
+"ticker": "CCK",
+"name": "Crown Holdings, Inc.",
+"m": "US",
+"date": "2026-10-19",
+"eps_forecast": "$2.25",
+"quarter": "Sep/2026",
+"market_cap_bn": 13.0,
+"eps_actual": 2.39,
+"eps_est": 2.25,
+"surprise": 0.0622,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
+"CCL|2026-09-29": {
+"t": "CCL",
+"ticker": "CCL",
+"name": "Carnival Corporation Ltd.",
+"m": "US",
+"date": "2026-09-29",
+"eps_forecast": "$1.36",
+"quarter": "Aug/2026",
+"market_cap_bn": 36.4,
+"eps_actual": 1.43,
+"eps_est": 1.36,
+"surprise": 0.051500000000000004,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "CCL|2026-12-18": {
 "t": "CCL",
@@ -3394,6 +4290,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 5.2
+},
+"CFG|2026-10-16": {
+"t": "CFG",
+"ticker": "CFG",
+"name": "Citizens Financial Group, Inc.",
+"m": "US",
+"date": "2026-10-16",
+"eps_forecast": "$1.38",
+"quarter": "Sep/2026",
+"market_cap_bn": 27.5,
+"eps_actual": 1.41,
+"eps_est": 1.38,
+"surprise": 0.0217,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "CFR.JO|2026-11-13": {
 "t": "CFR.JO",
@@ -3575,6 +4487,22 @@
 "period": null,
 "market_cap_bn": 8.2
 },
+"CHRN|2026-10-14": {
+"t": "CHRN",
+"ticker": "CHRN",
+"name": "ChronoScale Holdings Corporation",
+"m": "US",
+"date": "2026-10-14",
+"eps_forecast": "",
+"quarter": "Aug/2026",
+"market_cap_bn": 2.3,
+"eps_actual": -0.18,
+"eps_est": null,
+"surprise": null,
+"result": null,
+"result_done": false,
+"source": "Nasdaq"
+},
 "CHRW|2026-10-28": {
 "t": "CHRW",
 "ticker": "CHRW",
@@ -3731,6 +4659,22 @@
 "period": null,
 "market_cap_bn": 2.3
 },
+"CLF|2026-10-19": {
+"t": "CLF",
+"ticker": "CLF",
+"name": "Cleveland-Cliffs Inc.",
+"m": "US",
+"date": "2026-10-19",
+"eps_forecast": "$0.24",
+"quarter": "Sep/2026",
+"market_cap_bn": 7.4,
+"eps_actual": 0.28,
+"eps_est": 0.24,
+"surprise": 0.16670000000000001,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "CLH|2026-10-28": {
 "t": "CLH",
 "ticker": "CLH",
@@ -3802,6 +4746,54 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 77.6
+},
+"CMCSA|2026-10-22": {
+"t": "CMCSA",
+"ticker": "CMCSA",
+"name": "Comcast Corporation",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$0.98",
+"quarter": "Sep/2026",
+"market_cap_bn": 81.1,
+"eps_actual": 1.07,
+"eps_est": 0.98,
+"surprise": 0.09179999999999999,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
+"CMC|2026-10-15": {
+"t": "CMC",
+"ticker": "CMC",
+"name": "Commercial Metals Company",
+"m": "US",
+"date": "2026-10-15",
+"eps_forecast": "$1.97",
+"quarter": "Aug/2026",
+"market_cap_bn": 7.0,
+"eps_actual": 2.09,
+"eps_est": 1.97,
+"surprise": 0.060899999999999996,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
+"CME|2026-10-21": {
+"t": "CME",
+"ticker": "CME",
+"name": "CME Group Inc.",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$2.98",
+"quarter": "Sep/2026",
+"market_cap_bn": 110.0,
+"eps_actual": 3.02,
+"eps_est": 2.98,
+"surprise": 0.0134,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "CMG|2026-10-28": {
 "t": "CMG",
@@ -3959,6 +4951,38 @@
 "period": null,
 "market_cap_bn": 4.4
 },
+"CNS|2026-10-15": {
+"t": "CNS",
+"ticker": "CNS",
+"name": "Cohen & Steers Inc",
+"m": "US",
+"date": "2026-10-15",
+"eps_forecast": "$0.87",
+"quarter": "Sep/2026",
+"market_cap_bn": 3.7,
+"eps_actual": 0.89,
+"eps_est": 0.87,
+"surprise": 0.023,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
+"CNXC|2026-09-29": {
+"t": "CNXC",
+"ticker": "CNXC",
+"name": "Concentrix Corporation",
+"m": "US",
+"date": "2026-09-29",
+"eps_forecast": "$2.40",
+"quarter": "Aug/2026",
+"market_cap_bn": 2.1,
+"eps_actual": 2.57,
+"eps_est": 2.4,
+"surprise": 0.0708,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "CNXN|2026-10-28": {
 "t": "CNXN",
 "ticker": "CNXN",
@@ -3982,6 +5006,38 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 5.3
+},
+"COCO|2026-10-22": {
+"t": "COCO",
+"ticker": "COCO",
+"name": "The Vita Coco Company, Inc.",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$0.51",
+"quarter": "Sep/2026",
+"market_cap_bn": 3.5,
+"eps_actual": 0.58,
+"eps_est": 0.51,
+"surprise": 0.1373,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
+"COF|2026-10-20": {
+"t": "COF",
+"ticker": "COF",
+"name": "Capital One Financial Corporation",
+"m": "US",
+"date": "2026-10-20",
+"eps_forecast": "$5.45",
+"quarter": "Sep/2026",
+"market_cap_bn": 124.8,
+"eps_actual": 6.69,
+"eps_est": 5.45,
+"surprise": 0.2275,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "COGT|2026-11-06": {
 "t": "COGT",
@@ -4042,6 +5098,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 14.3
+},
+"COLB|2026-10-22": {
+"t": "COLB",
+"ticker": "COLB",
+"name": "Columbia Banking System, Inc.",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$0.77",
+"quarter": "Sep/2026",
+"market_cap_bn": 8.5,
+"eps_actual": 0.82,
+"eps_est": 0.77,
+"surprise": 0.0649,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "COLD|2026-11-05": {
 "t": "COLD",
@@ -4367,6 +5439,22 @@
 "period": null,
 "market_cap_bn": 4.8
 },
+"CRS|2026-10-22": {
+"t": "CRS",
+"ticker": "CRS",
+"name": "Carpenter Technology Corporation",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$2.97",
+"quarter": "Sep/2026",
+"market_cap_bn": 14.5,
+"eps_actual": 3.25,
+"eps_est": 2.97,
+"surprise": 0.0943,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "CRUS|2026-11-04": {
 "t": "CRUS",
 "ticker": "CRUS",
@@ -4499,6 +5587,22 @@
 "period": null,
 "market_cap_bn": 4.8
 },
+"CSX|2026-10-21": {
+"t": "CSX",
+"ticker": "CSX",
+"name": "CSX Corporation",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$0.52",
+"quarter": "Sep/2026",
+"market_cap_bn": 95.2,
+"eps_actual": 0.57,
+"eps_est": 0.52,
+"surprise": 0.0962,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "CTAS|2026-12-17": {
 "t": "CTAS",
 "ticker": "CTAS",
@@ -4571,6 +5675,38 @@
 "period": null,
 "market_cap_bn": 9.0
 },
+"CUBI|2026-10-22": {
+"t": "CUBI",
+"ticker": "CUBI",
+"name": "Customers Bancorp, Inc",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$2.15",
+"quarter": "Sep/2026",
+"market_cap_bn": 2.7,
+"eps_actual": 2.27,
+"eps_est": 2.15,
+"surprise": 0.0558,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
+"CURB|2026-10-22": {
+"t": "CURB",
+"ticker": "CURB",
+"name": "Curbline Properties Corp.",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$0.32",
+"quarter": "Sep/2026",
+"market_cap_bn": 3.3,
+"eps_actual": 0.32,
+"eps_est": 0.32,
+"surprise": 0.0,
+"result": "inline",
+"result_done": true,
+"source": "Nasdaq"
+},
 "CUZ|2026-10-29": {
 "t": "CUZ",
 "ticker": "CUZ",
@@ -4582,6 +5718,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 4.7
+},
+"CVBF|2026-10-21": {
+"t": "CVBF",
+"ticker": "CVBF",
+"name": "CVB Financial Corporation",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$0.45",
+"quarter": "Sep/2026",
+"market_cap_bn": 4.1,
+"eps_actual": 0.44,
+"eps_est": 0.45,
+"surprise": -0.0222,
+"result": "miss",
+"result_done": true,
+"source": "Nasdaq"
 },
 "CVCO|2026-10-29": {
 "t": "CVCO",
@@ -4799,6 +5951,38 @@
 "period": null,
 "market_cap_bn": 5.9
 },
+"C|2026-10-13": {
+"t": "C",
+"ticker": "C",
+"name": "Citigroup Inc.",
+"m": "US",
+"date": "2026-10-13",
+"eps_forecast": "$2.66",
+"quarter": "Sep/2026",
+"market_cap_bn": 205.5,
+"eps_actual": 2.85,
+"eps_est": 2.66,
+"surprise": 0.07139999999999999,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
+"DAL|2026-10-09": {
+"t": "DAL",
+"ticker": "DAL",
+"name": "Delta Air Lines, Inc.",
+"m": "US",
+"date": "2026-10-09",
+"eps_forecast": "$1.80",
+"quarter": "Sep/2026",
+"market_cap_bn": 52.1,
+"eps_actual": 1.72,
+"eps_est": 1.8,
+"surprise": -0.0444,
+"result": "miss",
+"result_done": true,
+"source": "Nasdaq"
+},
 "DAN|2026-10-28": {
 "t": "DAN",
 "ticker": "DAN",
@@ -4931,6 +6115,22 @@
 "period": null,
 "market_cap_bn": 18.2
 },
+"DECK|2026-10-22": {
+"t": "DECK",
+"ticker": "DECK",
+"name": "Deckers Outdoor Corporation",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$1.82",
+"quarter": "Sep/2026",
+"market_cap_bn": 11.6,
+"eps_actual": 2.03,
+"eps_est": 1.82,
+"surprise": 0.11539999999999999,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "DELL|2026-11-27": {
 "t": "DELL",
 "ticker": "DELL",
@@ -4979,6 +6179,22 @@
 "period": null,
 "market_cap_bn": 2.8
 },
+"DGX|2026-10-22": {
+"t": "DGX",
+"ticker": "DGX",
+"name": "Quest Diagnostics Incorporated",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$2.85",
+"quarter": "Sep/2026",
+"market_cap_bn": 26.9,
+"eps_actual": 3.0,
+"eps_est": 2.85,
+"surprise": 0.0526,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "DHI|2026-10-29": {
 "t": "DHI",
 "ticker": "DHI",
@@ -4990,6 +6206,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 41.3
+},
+"DHR|2026-10-21": {
+"t": "DHR",
+"ticker": "DHR",
+"name": "Danaher Corporation",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$1.92",
+"quarter": "Sep/2026",
+"market_cap_bn": 161.6,
+"eps_actual": 2.11,
+"eps_est": 1.92,
+"surprise": 0.099,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "DHT|2026-11-04": {
 "t": "DHT",
@@ -5183,6 +6415,38 @@
 "period": null,
 "market_cap_bn": 3.8
 },
+"DOV|2026-10-22": {
+"t": "DOV",
+"ticker": "DOV",
+"name": "Dover Corporation",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$2.83",
+"quarter": "Sep/2026",
+"market_cap_bn": 26.3,
+"eps_actual": 2.88,
+"eps_est": 2.83,
+"surprise": 0.0177,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
+"DOW|2026-10-22": {
+"t": "DOW",
+"ticker": "DOW",
+"name": "Dow Inc.",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$0.64",
+"quarter": "Sep/2026",
+"market_cap_bn": 23.0,
+"eps_actual": 0.71,
+"eps_est": 0.64,
+"surprise": 0.1094,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "DOX|2026-11-10": {
 "t": "DOX",
 "ticker": "DOX",
@@ -5206,6 +6470,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 3.9
+},
+"DPZ|2026-10-13": {
+"t": "DPZ",
+"ticker": "DPZ",
+"name": "Domino's Pizza Inc",
+"m": "US",
+"date": "2026-10-13",
+"eps_forecast": "$4.33",
+"quarter": "Sep/2026",
+"market_cap_bn": 10.5,
+"eps_actual": 4.6,
+"eps_est": 4.33,
+"surprise": 0.062400000000000004,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "DRH|2026-11-03": {
 "t": "DRH",
@@ -5375,6 +6655,22 @@
 "period": null,
 "market_cap_bn": 2.4
 },
+"DX|2026-10-19": {
+"t": "DX",
+"ticker": "DX",
+"name": "Dynex Capital, Inc.",
+"m": "US",
+"date": "2026-10-19",
+"eps_forecast": "",
+"quarter": "Sep/2026",
+"market_cap_bn": 2.7,
+"eps_actual": 0.38,
+"eps_est": null,
+"surprise": null,
+"result": null,
+"result_done": false,
+"source": "Nasdaq"
+},
 "DYN|2026-11-04": {
 "t": "DYN",
 "ticker": "DYN",
@@ -5422,6 +6718,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 54.3
+},
+"EBC|2026-10-22": {
+"t": "EBC",
+"ticker": "EBC",
+"name": "Eastern Bankshares, Inc.",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$0.49",
+"quarter": "Sep/2026",
+"market_cap_bn": 5.1,
+"eps_actual": 0.51,
+"eps_est": 0.49,
+"surprise": 0.0408,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "ECG|2026-11-03": {
 "t": "ECG",
@@ -5543,6 +6855,22 @@
 "period": null,
 "market_cap_bn": 3.6
 },
+"EFSC|2026-10-21": {
+"t": "EFSC",
+"ticker": "EFSC",
+"name": "Enterprise Financial Services Corporation",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$1.38",
+"quarter": "Sep/2026",
+"market_cap_bn": 2.2,
+"eps_actual": 1.17,
+"eps_est": 1.38,
+"surprise": -0.1522,
+"result": "miss",
+"result_done": true,
+"source": "Nasdaq"
+},
 "EFXT|2026-10-29": {
 "t": "EFXT",
 "ticker": "EFXT",
@@ -5555,6 +6883,22 @@
 "period": null,
 "market_cap_bn": 2.8
 },
+"EFX|2026-10-20": {
+"t": "EFX",
+"ticker": "EFX",
+"name": "Equifax, Inc.",
+"m": "US",
+"date": "2026-10-20",
+"eps_forecast": "$2.19",
+"quarter": "Sep/2026",
+"market_cap_bn": 21.9,
+"eps_actual": 2.26,
+"eps_est": 2.19,
+"surprise": 0.032,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "EGO|2026-10-28": {
 "t": "EGO",
 "ticker": "EGO",
@@ -5566,6 +6910,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 8.6
+},
+"EGP|2026-10-21": {
+"t": "EGP",
+"ticker": "EGP",
+"name": "EastGroup Properties, Inc.",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$2.43",
+"quarter": "Sep/2026",
+"market_cap_bn": 10.9,
+"eps_actual": 2.45,
+"eps_est": 2.43,
+"surprise": 0.008199999999999999,
+"result": "inline",
+"result_done": true,
+"source": "Nasdaq"
 },
 "EG|2026-10-28": {
 "t": "EG",
@@ -5639,6 +6999,22 @@
 "period": null,
 "market_cap_bn": 10.3
 },
+"ELS|2026-10-20": {
+"t": "ELS",
+"ticker": "ELS",
+"name": "Equity Lifestyle Properties, Inc.",
+"m": "US",
+"date": "2026-10-20",
+"eps_forecast": "$0.79",
+"quarter": "Sep/2026",
+"market_cap_bn": 11.9,
+"eps_actual": 0.79,
+"eps_est": 0.79,
+"surprise": 0.0,
+"result": "inline",
+"result_done": true,
+"source": "Nasdaq"
+},
 "ELVN|2026-11-11": {
 "t": "ELVN",
 "ticker": "ELVN",
@@ -5650,6 +7026,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 3.1
+},
+"ELV|2026-10-21": {
+"t": "ELV",
+"ticker": "ELV",
+"name": "Elevance Health, Inc.",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$4.66",
+"quarter": "Sep/2026",
+"market_cap_bn": 96.2,
+"eps_actual": 6.99,
+"eps_est": 4.66,
+"surprise": 0.5,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "EL|2026-11-02": {
 "t": "EL",
@@ -5807,6 +7199,22 @@
 "period": null,
 "market_cap_bn": 19.6
 },
+"ENVA|2026-10-22": {
+"t": "ENVA",
+"ticker": "ENVA",
+"name": "Enova International, Inc.",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$4.19",
+"quarter": "Sep/2026",
+"market_cap_bn": 4.4,
+"eps_actual": 4.15,
+"eps_est": 4.19,
+"surprise": -0.0095,
+"result": "inline",
+"result_done": true,
+"source": "Nasdaq"
+},
 "EOG|2026-11-05": {
 "t": "EOG",
 "ticker": "EOG",
@@ -5842,6 +7250,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 78.9
+},
+"EPRT|2026-10-21": {
+"t": "EPRT",
+"ticker": "EPRT",
+"name": "Essential Properties Realty Trust, Inc.",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$0.49",
+"quarter": "Sep/2026",
+"market_cap_bn": 5.8,
+"eps_actual": 0.51,
+"eps_est": 0.49,
+"surprise": 0.0408,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "EPR|2026-10-28": {
 "t": "EPR",
@@ -5939,6 +7363,22 @@
 "period": null,
 "market_cap_bn": 4.9
 },
+"ERIC|2026-10-15": {
+"t": "ERIC",
+"ticker": "ERIC",
+"name": "Ericsson",
+"m": "US",
+"date": "2026-10-15",
+"eps_forecast": "$0.14",
+"quarter": "Sep/2026",
+"market_cap_bn": 35.0,
+"eps_actual": 0.18,
+"eps_est": 0.14,
+"surprise": 0.2857,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "ERIE|2026-10-29": {
 "t": "ERIE",
 "ticker": "ERIE",
@@ -5986,6 +7426,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 4.2
+},
+"ESI|2026-10-21": {
+"t": "ESI",
+"ticker": "ESI",
+"name": "Element Solutions Inc.",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$0.48",
+"quarter": "Sep/2026",
+"market_cap_bn": 8.1,
+"eps_actual": 0.5,
+"eps_est": 0.48,
+"surprise": 0.0417,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "ESNT|2026-11-06": {
 "t": "ESNT",
@@ -6082,6 +7538,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 9.8
+},
+"EWBC|2026-10-20": {
+"t": "EWBC",
+"ticker": "EWBC",
+"name": "East West Bancorp, Inc.",
+"m": "US",
+"date": "2026-10-20",
+"eps_forecast": "$2.69",
+"quarter": "Sep/2026",
+"market_cap_bn": 18.2,
+"eps_actual": 2.76,
+"eps_est": 2.69,
+"surprise": 0.026000000000000002,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "EWTX|2026-11-05": {
 "t": "EWTX",
@@ -6239,6 +7711,38 @@
 "period": null,
 "market_cap_bn": 2.9
 },
+"E|2026-10-23": {
+"t": "E",
+"ticker": "E",
+"name": "ENI S.p.A.",
+"m": "US",
+"date": "2026-10-23",
+"eps_forecast": "$1.92",
+"quarter": "Sep/2026",
+"market_cap_bn": 93.7,
+"eps_actual": 2.13,
+"eps_est": 1.92,
+"surprise": 0.1094,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
+"FAF|2026-10-21": {
+"t": "FAF",
+"ticker": "FAF",
+"name": "First American Corporation (The)",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$1.85",
+"quarter": "Sep/2026",
+"market_cap_bn": 6.6,
+"eps_actual": 1.78,
+"eps_est": 1.85,
+"surprise": -0.0378,
+"result": "miss",
+"result_done": true,
+"source": "Nasdaq"
+},
 "FANG|2026-11-02": {
 "t": "FANG",
 "ticker": "FANG",
@@ -6250,6 +7754,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 55.2
+},
+"FAST|2026-10-14": {
+"t": "FAST",
+"ticker": "FAST",
+"name": "Fastenal Company",
+"m": "US",
+"date": "2026-10-14",
+"eps_forecast": "$0.34",
+"quarter": "Sep/2026",
+"market_cap_bn": 60.5,
+"eps_actual": 0.35,
+"eps_est": 0.34,
+"surprise": 0.0294,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "FA|2026-11-05": {
 "t": "FA",
@@ -6275,6 +7795,70 @@
 "period": null,
 "market_cap_bn": 5.2
 },
+"FBK|2026-10-13": {
+"t": "FBK",
+"ticker": "FBK",
+"name": "FB Financial Corporation",
+"m": "US",
+"date": "2026-10-13",
+"eps_forecast": "$1.21",
+"quarter": "Sep/2026",
+"market_cap_bn": 2.7,
+"eps_actual": 1.21,
+"eps_est": 1.21,
+"surprise": 0.0,
+"result": "inline",
+"result_done": true,
+"source": "Nasdaq"
+},
+"FBNC|2026-10-21": {
+"t": "FBNC",
+"ticker": "FBNC",
+"name": "First Bancorp",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$1.18",
+"quarter": "Sep/2026",
+"market_cap_bn": 2.6,
+"eps_actual": 1.24,
+"eps_est": 1.18,
+"surprise": 0.0508,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
+"FBP|2026-10-22": {
+"t": "FBP",
+"ticker": "FBP",
+"name": "First BanCorp.",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$0.58",
+"quarter": "Sep/2026",
+"market_cap_bn": 4.2,
+"eps_actual": 0.63,
+"eps_est": 0.58,
+"surprise": 0.0862,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
+"FCFS|2026-10-22": {
+"t": "FCFS",
+"ticker": "FCFS",
+"name": "FirstCash Holdings, Inc.",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$2.64",
+"quarter": "Sep/2026",
+"market_cap_bn": 8.0,
+"eps_actual": 2.68,
+"eps_est": 2.64,
+"surprise": 0.0152,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "FCF|2026-10-27": {
 "t": "FCF",
 "ticker": "FCF",
@@ -6286,6 +7870,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 2.1
+},
+"FCNCA|2026-10-23": {
+"t": "FCNCA",
+"ticker": "FCNCA",
+"name": "First Citizens BancShares, Inc.",
+"m": "US",
+"date": "2026-10-23",
+"eps_forecast": "$46.61",
+"quarter": "Sep/2026",
+"market_cap_bn": 24.8,
+"eps_actual": 55.37,
+"eps_est": 46.61,
+"surprise": 0.18789999999999998,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "FCN|2026-10-29": {
 "t": "FCN",
@@ -6322,6 +7922,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 92.8
+},
+"FDS|2026-09-30": {
+"t": "FDS",
+"ticker": "FDS",
+"name": "FactSet Research Systems Inc.",
+"m": "US",
+"date": "2026-09-30",
+"eps_forecast": "$4.32",
+"quarter": "Aug/2026",
+"market_cap_bn": 11.8,
+"eps_actual": 4.52,
+"eps_est": 4.32,
+"surprise": 0.0463,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "FDS|2026-12-17": {
 "t": "FDS",
@@ -6419,6 +8035,22 @@
 "period": null,
 "market_cap_bn": 3.4
 },
+"FFIN|2026-10-15": {
+"t": "FFIN",
+"ticker": "FFIN",
+"name": "First Financial Bankshares, Inc.",
+"m": "US",
+"date": "2026-10-15",
+"eps_forecast": "$0.52",
+"quarter": "Sep/2026",
+"market_cap_bn": 4.3,
+"eps_actual": 0.52,
+"eps_est": 0.52,
+"surprise": 0.0,
+"result": "inline",
+"result_done": true,
+"source": "Nasdaq"
+},
 "FFIV|2026-10-27": {
 "t": "FFIV",
 "ticker": "FFIV",
@@ -6443,6 +8075,22 @@
 "period": null,
 "market_cap_bn": 2.8
 },
+"FHB|2026-10-23": {
+"t": "FHB",
+"ticker": "FHB",
+"name": "First Hawaiian, Inc.",
+"m": "US",
+"date": "2026-10-23",
+"eps_forecast": "$0.60",
+"quarter": "Sep/2026",
+"market_cap_bn": 3.2,
+"eps_actual": 0.52,
+"eps_est": 0.6,
+"surprise": -0.1333,
+"result": "miss",
+"result_done": true,
+"source": "Nasdaq"
+},
 "FHI|2026-10-29": {
 "t": "FHI",
 "ticker": "FHI",
@@ -6454,6 +8102,38 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 4.3
+},
+"FHN|2026-10-15": {
+"t": "FHN",
+"ticker": "FHN",
+"name": "First Horizon Corporation",
+"m": "US",
+"date": "2026-10-15",
+"eps_forecast": "$0.53",
+"quarter": "Sep/2026",
+"market_cap_bn": 11.2,
+"eps_actual": 0.53,
+"eps_est": 0.53,
+"surprise": 0.0,
+"result": "inline",
+"result_done": true,
+"source": "Nasdaq"
+},
+"FIBK|2026-10-22": {
+"t": "FIBK",
+"ticker": "FIBK",
+"name": "First Interstate BancSystem, Inc.",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$0.70",
+"quarter": "Sep/2026",
+"market_cap_bn": 3.5,
+"eps_actual": 0.65,
+"eps_est": 0.7,
+"surprise": -0.07139999999999999,
+"result": "miss",
+"result_done": true,
+"source": "Nasdaq"
 },
 "FICO|2026-11-04": {
 "t": "FICO",
@@ -6527,6 +8207,22 @@
 "period": null,
 "market_cap_bn": 19.7
 },
+"FITB|2026-10-19": {
+"t": "FITB",
+"ticker": "FITB",
+"name": "Fifth Third Bancorp",
+"m": "US",
+"date": "2026-10-19",
+"eps_forecast": "$1.09",
+"quarter": "Sep/2026",
+"market_cap_bn": 48.3,
+"eps_actual": 1.13,
+"eps_est": 1.09,
+"surprise": 0.036699999999999997,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "FIVN|2026-11-05": {
 "t": "FIVN",
 "ticker": "FIVN",
@@ -6539,6 +8235,22 @@
 "period": null,
 "market_cap_bn": 2.6
 },
+"FIX|2026-10-22": {
+"t": "FIX",
+"ticker": "FIX",
+"name": "Comfort Systems USA, Inc.",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$12.71",
+"quarter": "Sep/2026",
+"market_cap_bn": 45.0,
+"eps_actual": 13.91,
+"eps_est": 12.71,
+"surprise": 0.0944,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "FLEX|2026-10-28": {
 "t": "FLEX",
 "ticker": "FLEX",
@@ -6550,6 +8262,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 28.3
+},
+"FLG|2026-10-23": {
+"t": "FLG",
+"ticker": "FLG",
+"name": "Flagstar Bank, N.A.",
+"m": "US",
+"date": "2026-10-23",
+"eps_forecast": "$0.06",
+"quarter": "Sep/2026",
+"market_cap_bn": 4.7,
+"eps_actual": 0.01,
+"eps_est": 0.06,
+"surprise": -0.8332999999999999,
+"result": "miss",
+"result_done": true,
+"source": "Nasdaq"
 },
 "FLR|2026-11-06": {
 "t": "FLR",
@@ -6634,6 +8362,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 44.0
+},
+"FNB|2026-10-19": {
+"t": "FNB",
+"ticker": "FNB",
+"name": "F.N.B. Corporation",
+"m": "US",
+"date": "2026-10-19",
+"eps_forecast": "$0.43",
+"quarter": "Sep/2026",
+"market_cap_bn": 6.4,
+"eps_actual": 0.43,
+"eps_est": 0.43,
+"surprise": 0.0,
+"result": "inline",
+"result_done": true,
+"source": "Nasdaq"
 },
 "FND|2026-10-29": {
 "t": "FND",
@@ -6743,6 +8487,22 @@
 "period": null,
 "market_cap_bn": 10.7
 },
+"FRME|2026-10-21": {
+"t": "FRME",
+"ticker": "FRME",
+"name": "First Merchants Corporation",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$1.04",
+"quarter": "Sep/2026",
+"market_cap_bn": 2.6,
+"eps_actual": 1.1,
+"eps_est": 1.04,
+"surprise": 0.057699999999999994,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "FROG|2026-11-05": {
 "t": "FROG",
 "ticker": "FROG",
@@ -6803,6 +8563,22 @@
 "period": null,
 "market_cap_bn": 2.4
 },
+"FR|2026-10-21": {
+"t": "FR",
+"ticker": "FR",
+"name": "First Industrial Realty Trust, Inc.",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$0.82",
+"quarter": "Sep/2026",
+"market_cap_bn": 7.3,
+"eps_actual": 0.81,
+"eps_est": 0.82,
+"surprise": -0.012199999999999999,
+"result": "miss",
+"result_done": true,
+"source": "Nasdaq"
+},
 "FSK|2026-11-05": {
 "t": "FSK",
 "ticker": "FSK",
@@ -6862,6 +8638,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 7.1
+},
+"FSV|2026-10-22": {
+"t": "FSV",
+"ticker": "FSV",
+"name": "FirstService Corporation",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$1.76",
+"quarter": "Sep/2026",
+"market_cap_bn": 6.4,
+"eps_actual": 1.77,
+"eps_est": 1.76,
+"surprise": 0.005699999999999999,
+"result": "inline",
+"result_done": true,
+"source": "Nasdaq"
 },
 "FTAI|2026-10-29": {
 "t": "FTAI",
@@ -6947,6 +8739,22 @@
 "period": null,
 "market_cap_bn": 18.1
 },
+"FULT|2026-10-21": {
+"t": "FULT",
+"ticker": "FULT",
+"name": "Fulton Financial Corporation",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$0.55",
+"quarter": "Sep/2026",
+"market_cap_bn": 4.5,
+"eps_actual": 0.62,
+"eps_est": 0.55,
+"surprise": 0.1273,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "FWONA|2026-11-05": {
 "t": "FWONA",
 "ticker": "FWONA",
@@ -6994,6 +8802,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 5.9
+},
+"GBCI|2026-10-22": {
+"t": "GBCI",
+"ticker": "GBCI",
+"name": "Glacier Bancorp, Inc.",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$0.79",
+"quarter": "Sep/2026",
+"market_cap_bn": 6.0,
+"eps_actual": 0.81,
+"eps_est": 0.79,
+"surprise": 0.0253,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "GCMG|2026-11-04": {
 "t": "GCMG",
@@ -7115,6 +8939,22 @@
 "period": null,
 "market_cap_bn": 220.4
 },
+"GE|2026-10-20": {
+"t": "GE",
+"ticker": "GE",
+"name": "GE Aerospace",
+"m": "US",
+"date": "2026-10-20",
+"eps_forecast": "$2.02",
+"quarter": "Sep/2026",
+"market_cap_bn": 303.3,
+"eps_actual": 2.25,
+"eps_est": 2.02,
+"surprise": 0.1139,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "GFL|2026-10-28": {
 "t": "GFL",
 "ticker": "GFL",
@@ -7150,6 +8990,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 10.0
+},
+"GGG|2026-10-21": {
+"t": "GGG",
+"ticker": "GGG",
+"name": "Graco Inc.",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$0.82",
+"quarter": "Sep/2026",
+"market_cap_bn": 11.1,
+"eps_actual": 0.81,
+"eps_est": 0.82,
+"surprise": -0.012199999999999999,
+"result": "miss",
+"result_done": true,
+"source": "Nasdaq"
 },
 "GHC|2026-11-04": {
 "t": "GHC",
@@ -7283,6 +9139,22 @@
 "period": null,
 "market_cap_bn": 6.0
 },
+"GL|2026-10-21": {
+"t": "GL",
+"ticker": "GL",
+"name": "Globe Life Inc.",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$4.87",
+"quarter": "Sep/2026",
+"market_cap_bn": 12.9,
+"eps_actual": 4.84,
+"eps_est": 4.87,
+"surprise": -0.0062,
+"result": "inline",
+"result_done": true,
+"source": "Nasdaq"
+},
 "GMAB|2026-11-05": {
 "t": "GMAB",
 "ticker": "GMAB",
@@ -7307,6 +9179,22 @@
 "period": null,
 "market_cap_bn": 11.0
 },
+"GM|2026-10-20": {
+"t": "GM",
+"ticker": "GM",
+"name": "General Motors Company",
+"m": "US",
+"date": "2026-10-20",
+"eps_forecast": "$3.55",
+"quarter": "Sep/2026",
+"market_cap_bn": 65.1,
+"eps_actual": 3.7,
+"eps_est": 3.55,
+"surprise": 0.042300000000000004,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "GNRC|2026-10-28": {
 "t": "GNRC",
 "ticker": "GNRC",
@@ -7318,6 +9206,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 11.1
+},
+"GNTX|2026-10-23": {
+"t": "GNTX",
+"ticker": "GNTX",
+"name": "Gentex Corporation",
+"m": "US",
+"date": "2026-10-23",
+"eps_forecast": "$0.51",
+"quarter": "Sep/2026",
+"market_cap_bn": 4.6,
+"eps_actual": 0.47,
+"eps_est": 0.51,
+"surprise": -0.0784,
+"result": "miss",
+"result_done": true,
+"source": "Nasdaq"
 },
 "GNW|2026-11-04": {
 "t": "GNW",
@@ -7366,6 +9270,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 3965.2
+},
+"GPC|2026-10-20": {
+"t": "GPC",
+"ticker": "GPC",
+"name": "Genuine Parts Company",
+"m": "US",
+"date": "2026-10-20",
+"eps_forecast": "$2.09",
+"quarter": "Sep/2026",
+"market_cap_bn": 17.6,
+"eps_actual": 2.07,
+"eps_est": 2.09,
+"surprise": -0.0096,
+"result": "inline",
+"result_done": true,
+"source": "Nasdaq"
 },
 "GPGI|2026-11-05": {
 "t": "GPGI",
@@ -7523,6 +9443,22 @@
 "period": null,
 "market_cap_bn": 101.2
 },
+"GS|2026-10-13": {
+"t": "GS",
+"ticker": "GS",
+"name": "The Goldman Sachs Group, Inc.",
+"m": "US",
+"date": "2026-10-13",
+"eps_forecast": "$12.90",
+"quarter": "Sep/2026",
+"market_cap_bn": 259.5,
+"eps_actual": 17.01,
+"eps_est": 12.9,
+"surprise": 0.3186,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "GTES|2026-10-30": {
 "t": "GTES",
 "ticker": "GTES",
@@ -7619,6 +9555,22 @@
 "period": null,
 "market_cap_bn": 14.1
 },
+"HAL|2026-10-20": {
+"t": "HAL",
+"ticker": "HAL",
+"name": "Halliburton Company",
+"m": "US",
+"date": "2026-10-20",
+"eps_forecast": "$0.58",
+"quarter": "Sep/2026",
+"market_cap_bn": 27.7,
+"eps_actual": 0.6,
+"eps_est": 0.58,
+"surprise": 0.0345,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "HASI|2026-11-05": {
 "t": "HASI",
 "ticker": "HASI",
@@ -7631,6 +9583,22 @@
 "period": null,
 "market_cap_bn": 4.7
 },
+"HAS|2026-10-20": {
+"t": "HAS",
+"ticker": "HAS",
+"name": "Hasbro, Inc.",
+"m": "US",
+"date": "2026-10-20",
+"eps_forecast": "$1.86",
+"quarter": "Sep/2026",
+"market_cap_bn": 16.5,
+"eps_actual": 2.9,
+"eps_est": 1.86,
+"surprise": 0.5590999999999999,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "HAYW|2026-10-28": {
 "t": "HAYW",
 "ticker": "HAYW",
@@ -7642,6 +9610,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 2.7
+},
+"HBAN|2026-10-22": {
+"t": "HBAN",
+"ticker": "HBAN",
+"name": "Huntington Bancshares Incorporated",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$0.38",
+"quarter": "Sep/2026",
+"market_cap_bn": 31.6,
+"eps_actual": 0.38,
+"eps_est": 0.38,
+"surprise": 0.0,
+"result": "inline",
+"result_done": true,
+"source": "Nasdaq"
 },
 "HBM|2026-11-12": {
 "t": "HBM",
@@ -7931,6 +9915,22 @@
 "period": null,
 "market_cap_bn": 3.0
 },
+"HOMB|2026-10-14": {
+"t": "HOMB",
+"ticker": "HOMB",
+"name": "Home BancShares, Inc.",
+"m": "US",
+"date": "2026-10-14",
+"eps_forecast": "$0.64",
+"quarter": "Sep/2026",
+"market_cap_bn": 6.0,
+"eps_actual": 0.65,
+"eps_est": 0.64,
+"surprise": 0.015600000000000001,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "HONA|2026-10-28": {
 "t": "HONA",
 "ticker": "HONA",
@@ -7942,6 +9942,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 51.7
+},
+"HON|2026-10-22": {
+"t": "HON",
+"ticker": "HON",
+"name": "Honeywell International Inc.",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$2.17",
+"quarter": "Sep/2026",
+"market_cap_bn": 69.2,
+"eps_actual": 2.27,
+"eps_est": 2.17,
+"surprise": 0.0461,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "HOOD|2026-10-27": {
 "t": "HOOD",
@@ -8087,6 +10103,22 @@
 "period": null,
 "market_cap_bn": 3.1
 },
+"HTH|2026-10-22": {
+"t": "HTH",
+"ticker": "HTH",
+"name": "Hilltop Holdings Inc.",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$0.64",
+"quarter": "Sep/2026",
+"market_cap_bn": 2.1,
+"eps_actual": 0.44,
+"eps_est": 0.64,
+"surprise": -0.3125,
+"result": "miss",
+"result_done": true,
+"source": "Nasdaq"
+},
 "HTO|2026-10-26": {
 "t": "HTO",
 "ticker": "HTO",
@@ -8159,6 +10191,22 @@
 "period": null,
 "market_cap_bn": 7.9
 },
+"HWC|2026-10-20": {
+"t": "HWC",
+"ticker": "HWC",
+"name": "Hancock Whitney Corporation",
+"m": "US",
+"date": "2026-10-20",
+"eps_forecast": "$1.65",
+"quarter": "Sep/2026",
+"market_cap_bn": 5.9,
+"eps_actual": 1.66,
+"eps_est": 1.65,
+"surprise": 0.0060999999999999995,
+"result": "inline",
+"result_done": true,
+"source": "Nasdaq"
+},
 "HWKN|2026-10-26": {
 "t": "HWKN",
 "ticker": "HWKN",
@@ -8183,6 +10231,22 @@
 "period": null,
 "market_cap_bn": 77.1
 },
+"HXL|2026-10-21": {
+"t": "HXL",
+"ticker": "HXL",
+"name": "Hexcel Corporation",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$0.48",
+"quarter": "Sep/2026",
+"market_cap_bn": 6.2,
+"eps_actual": 0.5,
+"eps_est": 0.48,
+"surprise": 0.0417,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "H|2026-10-29": {
 "t": "H",
 "ticker": "H",
@@ -8206,6 +10270,38 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 9.4
+},
+"IBKR|2026-10-15": {
+"t": "IBKR",
+"ticker": "IBKR",
+"name": "Interactive Brokers Group, Inc.",
+"m": "US",
+"date": "2026-10-15",
+"eps_forecast": "$0.67",
+"quarter": "Sep/2026",
+"market_cap_bn": 37.3,
+"eps_actual": 0.67,
+"eps_est": 0.67,
+"surprise": 0.0,
+"result": "inline",
+"result_done": true,
+"source": "Nasdaq"
+},
+"IBM|2026-10-21": {
+"t": "IBM",
+"ticker": "IBM",
+"name": "International Business Machines Corporation",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$2.88",
+"quarter": "Sep/2026",
+"market_cap_bn": 237.5,
+"eps_actual": 2.95,
+"eps_est": 2.88,
+"surprise": 0.024300000000000002,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "IBP|2026-11-05": {
 "t": "IBP",
@@ -8302,6 +10398,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 8.6
+},
+"IDT|2026-09-28": {
+"t": "IDT",
+"ticker": "IDT",
+"name": "IDT Corporation",
+"m": "US",
+"date": "2026-09-28",
+"eps_forecast": "",
+"quarter": "Jul/2026",
+"market_cap_bn": 2.1,
+"eps_actual": 0.94,
+"eps_est": null,
+"surprise": null,
+"result": null,
+"result_done": false,
+"source": "Nasdaq"
 },
 "IDXX|2026-11-02": {
 "t": "IDXX",
@@ -8459,6 +10571,22 @@
 "period": null,
 "market_cap_bn": 23.7
 },
+"INDB|2026-10-15": {
+"t": "INDB",
+"ticker": "INDB",
+"name": "Independent Bank Corp.",
+"m": "US",
+"date": "2026-10-15",
+"eps_forecast": "$1.84",
+"quarter": "Sep/2026",
+"market_cap_bn": 4.0,
+"eps_actual": 1.9,
+"eps_est": 1.84,
+"surprise": 0.0326,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "INDV|2026-10-29": {
 "t": "INDV",
 "ticker": "INDV",
@@ -8470,6 +10598,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 4.2
+},
+"INFY|2026-10-23": {
+"t": "INFY",
+"ticker": "INFY",
+"name": "Infosys Limited",
+"m": "US",
+"date": "2026-10-23",
+"eps_forecast": "$0.21",
+"quarter": "Sep/2026",
+"market_cap_bn": 53.6,
+"eps_actual": 0.2,
+"eps_est": 0.21,
+"surprise": -0.047599999999999996,
+"result": "miss",
+"result_done": true,
+"source": "Nasdaq"
 },
 "INGM|2026-10-29": {
 "t": "INGM",
@@ -8759,6 +10903,22 @@
 "period": null,
 "market_cap_bn": 45.8
 },
+"IRDM|2026-10-20": {
+"t": "IRDM",
+"ticker": "IRDM",
+"name": "Iridium Communications Inc",
+"m": "US",
+"date": "2026-10-20",
+"eps_forecast": "$0.29",
+"quarter": "Sep/2026",
+"market_cap_bn": 4.6,
+"eps_actual": 0.38,
+"eps_est": 0.29,
+"surprise": 0.3103,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "IREN|2026-11-05": {
 "t": "IREN",
 "ticker": "IREN",
@@ -8830,6 +10990,38 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 28.8
+},
+"ISRG|2026-10-20": {
+"t": "ISRG",
+"ticker": "ISRG",
+"name": "Intuitive Surgical, Inc.",
+"m": "US",
+"date": "2026-10-20",
+"eps_forecast": "$2.13",
+"quarter": "Sep/2026",
+"market_cap_bn": 153.9,
+"eps_actual": 2.53,
+"eps_est": 2.13,
+"surprise": 0.18780000000000002,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
+"ITGR|2026-10-22": {
+"t": "ITGR",
+"ticker": "ITGR",
+"name": "Integer Holdings Corporation",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$1.65",
+"quarter": "Sep/2026",
+"market_cap_bn": 4.3,
+"eps_actual": 1.79,
+"eps_est": 1.65,
+"surprise": 0.08484848484848492,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "ITRI|2026-10-27": {
 "t": "ITRI",
@@ -8951,6 +11143,38 @@
 "period": null,
 "market_cap_bn": 13.9
 },
+"JBHT|2026-10-15": {
+"t": "JBHT",
+"ticker": "JBHT",
+"name": "J.B. Hunt Transport Services, Inc.",
+"m": "US",
+"date": "2026-10-15",
+"eps_forecast": "$1.81",
+"quarter": "Sep/2026",
+"market_cap_bn": 21.7,
+"eps_actual": 1.82,
+"eps_est": 1.81,
+"surprise": 0.0055000000000000005,
+"result": "inline",
+"result_done": true,
+"source": "Nasdaq"
+},
+"JBL|2026-09-30": {
+"t": "JBL",
+"ticker": "JBL",
+"name": "Jabil Inc.",
+"m": "US",
+"date": "2026-09-30",
+"eps_forecast": "$3.89",
+"quarter": "Aug/2026",
+"market_cap_bn": 28.0,
+"eps_actual": 4.17,
+"eps_est": 3.89,
+"surprise": 0.07200000000000001,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "JBL|2026-12-16": {
 "t": "JBL",
 "ticker": "JBL",
@@ -9011,6 +11235,22 @@
 "period": null,
 "market_cap_bn": 34.5
 },
+"JEF|2026-09-28": {
+"t": "JEF",
+"ticker": "JEF",
+"name": "Jefferies Financial Group Inc.",
+"m": "US",
+"date": "2026-09-28",
+"eps_forecast": "$1.04",
+"quarter": "Aug/2026",
+"market_cap_bn": 10.5,
+"eps_actual": 1.09,
+"eps_est": 1.04,
+"surprise": 0.0481,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "JKHY|2026-11-03": {
 "t": "JKHY",
 "ticker": "JKHY",
@@ -9047,6 +11287,22 @@
 "period": null,
 "market_cap_bn": 5.6
 },
+"JNJ|2026-10-13": {
+"t": "JNJ",
+"ticker": "JNJ",
+"name": "Johnson & Johnson",
+"m": "US",
+"date": "2026-10-13",
+"eps_forecast": "$2.53",
+"quarter": "Sep/2026",
+"market_cap_bn": 644.2,
+"eps_actual": 2.59,
+"eps_est": 2.53,
+"surprise": 0.023700000000000002,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "JOBY|2026-11-04": {
 "t": "JOBY",
 "ticker": "JOBY",
@@ -9070,6 +11326,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 4.0
+},
+"JPM|2026-10-13": {
+"t": "JPM",
+"ticker": "JPM",
+"name": "J P Morgan Chase & Co",
+"m": "US",
+"date": "2026-10-13",
+"eps_forecast": "$5.94",
+"quarter": "Sep/2026",
+"market_cap_bn": 894.6,
+"eps_actual": 5.75,
+"eps_est": 5.94,
+"surprise": -0.032,
+"result": "miss",
+"result_done": true,
+"source": "Nasdaq"
 },
 "JXN|2026-11-03": {
 "t": "JXN",
@@ -9179,6 +11451,22 @@
 "period": "Expected date (market data feed)",
 "market_cap_bn": 53.6
 },
+"KEY|2026-10-20": {
+"t": "KEY",
+"ticker": "KEY",
+"name": "KeyCorp",
+"m": "US",
+"date": "2026-10-20",
+"eps_forecast": "$0.46",
+"quarter": "Sep/2026",
+"market_cap_bn": 22.6,
+"eps_actual": 0.51,
+"eps_est": 0.46,
+"surprise": 0.10869999999999999,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "KGC|2026-10-28": {
 "t": "KGC",
 "ticker": "KGC",
@@ -9263,6 +11551,22 @@
 "period": null,
 "market_cap_bn": 37.4
 },
+"KMI|2026-10-21": {
+"t": "KMI",
+"ticker": "KMI",
+"name": "Kinder Morgan, Inc.",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$0.33",
+"quarter": "Sep/2026",
+"market_cap_bn": 75.1,
+"eps_actual": 0.35,
+"eps_est": 0.33,
+"surprise": 0.060599999999999994,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "KMT|2026-11-04": {
 "t": "KMT",
 "ticker": "KMT",
@@ -9274,6 +11578,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 2.3
+},
+"KMX|2026-09-29": {
+"t": "KMX",
+"ticker": "KMX",
+"name": "CarMax Inc",
+"m": "US",
+"date": "2026-09-29",
+"eps_forecast": "$0.68",
+"quarter": "Aug/2026",
+"market_cap_bn": 7.5,
+"eps_actual": 1.16,
+"eps_est": 0.68,
+"surprise": 0.7059000000000001,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "KNF|2026-11-03": {
 "t": "KNF",
@@ -9299,6 +11619,22 @@
 "period": null,
 "market_cap_bn": 6.3
 },
+"KNSL|2026-10-22": {
+"t": "KNSL",
+"ticker": "KNSL",
+"name": "Kinsale Capital Group, Inc.",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$4.95",
+"quarter": "Sep/2026",
+"market_cap_bn": 8.9,
+"eps_actual": 5.7,
+"eps_est": 4.95,
+"surprise": 0.1515,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "KNTK|2026-11-04": {
 "t": "KNTK",
 "ticker": "KNTK",
@@ -9310,6 +11646,38 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 8.9
+},
+"KNX|2026-10-21": {
+"t": "KNX",
+"ticker": "KNX",
+"name": "Knight Transportation, Inc.",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$0.75",
+"quarter": "Sep/2026",
+"market_cap_bn": 10.2,
+"eps_actual": 0.83,
+"eps_est": 0.75,
+"surprise": 0.1067,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
+"KN|2026-10-22": {
+"t": "KN",
+"ticker": "KN",
+"name": "Knowles Corporation",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$0.30",
+"quarter": "Sep/2026",
+"market_cap_bn": 2.9,
+"eps_actual": 0.32,
+"eps_est": 0.3,
+"surprise": 0.0667,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "KOD|2026-11-12": {
 "t": "KOD",
@@ -9346,6 +11714,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 410.2
+},
+"KRC|2026-10-22": {
+"t": "KRC",
+"ticker": "KRC",
+"name": "Kilroy Realty Corporation",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$0.89",
+"quarter": "Sep/2026",
+"market_cap_bn": 4.2,
+"eps_actual": 0.88,
+"eps_est": 0.89,
+"surprise": -0.011200000000000002,
+"result": "miss",
+"result_done": true,
+"source": "Nasdaq"
 },
 "KRG|2026-10-30": {
 "t": "KRG",
@@ -9491,6 +11875,22 @@
 "period": null,
 "market_cap_bn": 9.2
 },
+"LAD|2026-10-21": {
+"t": "LAD",
+"ticker": "LAD",
+"name": "Lithia Motors, Inc.",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$9.70",
+"quarter": "Sep/2026",
+"market_cap_bn": 6.4,
+"eps_actual": 10.34,
+"eps_est": 9.7,
+"surprise": 0.066,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "LAMR|2026-11-05": {
 "t": "LAMR",
 "ticker": "LAMR",
@@ -9526,6 +11926,38 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 5.3
+},
+"LAZ|2026-10-22": {
+"t": "LAZ",
+"ticker": "LAZ",
+"name": "Lazard, Inc.",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$0.43",
+"quarter": "Sep/2026",
+"market_cap_bn": 3.6,
+"eps_actual": 0.36,
+"eps_est": 0.43,
+"surprise": -0.1628,
+"result": "miss",
+"result_done": true,
+"source": "Nasdaq"
+},
+"LBRT|2026-10-21": {
+"t": "LBRT",
+"ticker": "LBRT",
+"name": "Liberty Energy Inc.",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$0.08",
+"quarter": "Sep/2026",
+"market_cap_bn": 2.5,
+"eps_actual": 0.06,
+"eps_est": 0.08,
+"surprise": -0.25,
+"result": "miss",
+"result_done": true,
+"source": "Nasdaq"
 },
 "LBTYA|2026-11-03": {
 "t": "LBTYA",
@@ -9670,6 +12102,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 2.1
+},
+"LEVI|2026-10-07": {
+"t": "LEVI",
+"ticker": "LEVI",
+"name": "Levi Strauss & Co.",
+"m": "US",
+"date": "2026-10-07",
+"eps_forecast": "$0.36",
+"quarter": "Aug/2026",
+"market_cap_bn": 8.2,
+"eps_actual": 0.48,
+"eps_est": 0.36,
+"surprise": 0.3333,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "LFST|2026-11-05": {
 "t": "LFST",
@@ -9923,6 +12371,22 @@
 "period": null,
 "market_cap_bn": 3.5
 },
+"LMT|2026-10-22": {
+"t": "LMT",
+"ticker": "LMT",
+"name": "Lockheed Martin Corporation",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$7.49",
+"quarter": "Sep/2026",
+"market_cap_bn": 136.1,
+"eps_actual": 7.97,
+"eps_est": 7.49,
+"surprise": 0.0641,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "LNC|2026-11-05": {
 "t": "LNC",
 "ticker": "LNC",
@@ -10079,6 +12543,38 @@
 "period": null,
 "market_cap_bn": 3.6
 },
+"LRCX|2026-10-21": {
+"t": "LRCX",
+"ticker": "LRCX",
+"name": "Lam Research Corporation",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$2.17",
+"quarter": "Sep/2026",
+"market_cap_bn": 288.0,
+"eps_actual": 2.2,
+"eps_est": 2.17,
+"surprise": 0.0138,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
+"LRN|2026-10-20": {
+"t": "LRN",
+"ticker": "LRN",
+"name": "Stride, Inc.",
+"m": "US",
+"date": "2026-10-20",
+"eps_forecast": "$1.30",
+"quarter": "Sep/2026",
+"market_cap_bn": 3.4,
+"eps_actual": 1.37,
+"eps_est": 1.3,
+"surprise": 0.0538,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "LSCC|2026-11-02": {
 "t": "LSCC",
 "ticker": "LSCC",
@@ -10162,6 +12658,54 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 2.4
+},
+"LUV|2026-10-21": {
+"t": "LUV",
+"ticker": "LUV",
+"name": "Southwest Airlines Company",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$0.61",
+"quarter": "Sep/2026",
+"market_cap_bn": 20.6,
+"eps_actual": 0.66,
+"eps_est": 0.61,
+"surprise": 0.08199999999999999,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
+"LVS|2026-10-21": {
+"t": "LVS",
+"ticker": "LVS",
+"name": "Las Vegas Sands Corp.",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$0.71",
+"quarter": "Sep/2026",
+"market_cap_bn": 23.7,
+"eps_actual": 0.54,
+"eps_est": 0.71,
+"surprise": -0.2394,
+"result": "miss",
+"result_done": true,
+"source": "Nasdaq"
+},
+"LW|2026-10-06": {
+"t": "LW",
+"ticker": "LW",
+"name": "Lamb Weston Holdings, Inc.",
+"m": "US",
+"date": "2026-10-06",
+"eps_forecast": "$0.59",
+"quarter": "Aug/2026",
+"market_cap_bn": 7.6,
+"eps_actual": 0.75,
+"eps_est": 0.59,
+"surprise": 0.2712,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "LXP|2026-10-29": {
 "t": "LXP",
@@ -10306,6 +12850,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 14.1
+},
+"MAN|2026-10-15": {
+"t": "MAN",
+"ticker": "MAN",
+"name": "ManpowerGroup",
+"m": "US",
+"date": "2026-10-15",
+"eps_forecast": "$1.01",
+"quarter": "Sep/2026",
+"market_cap_bn": 2.2,
+"eps_actual": 1.01,
+"eps_est": 1.01,
+"surprise": 0.0,
+"result": "inline",
+"result_done": true,
+"source": "Nasdaq"
 },
 "MARA|2026-11-03": {
 "t": "MARA",
@@ -10475,6 +13035,22 @@
 "period": null,
 "market_cap_bn": 118.0
 },
+"MCO|2026-10-21": {
+"t": "MCO",
+"ticker": "MCO",
+"name": "Moody's Corporation",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$4.25",
+"quarter": "Sep/2026",
+"market_cap_bn": 84.7,
+"eps_actual": 4.14,
+"eps_est": 4.25,
+"surprise": -0.0259,
+"result": "miss",
+"result_done": true,
+"source": "Nasdaq"
+},
 "MCRI|2026-10-27": {
 "t": "MCRI",
 "ticker": "MCRI",
@@ -10595,6 +13171,22 @@
 "period": null,
 "market_cap_bn": 2.4
 },
+"MEDP|2026-10-21": {
+"t": "MEDP",
+"ticker": "MEDP",
+"name": "Medpace Holdings, Inc.",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$4.45",
+"quarter": "Sep/2026",
+"market_cap_bn": 18.3,
+"eps_actual": 4.84,
+"eps_est": 4.45,
+"surprise": 0.0876,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "MELI|2026-11-04": {
 "t": "MELI",
 "ticker": "MELI",
@@ -10618,6 +13210,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 4.7
+},
+"META|2026-10-21": {
+"t": "META",
+"ticker": "META",
+"name": "Meta Platforms, Inc.",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$6.52",
+"quarter": "Sep/2026",
+"market_cap_bn": 1658.6,
+"eps_actual": 7.4,
+"eps_est": 6.52,
+"surprise": 0.135,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "MET|2026-11-04": {
 "t": "MET",
@@ -10739,6 +13347,22 @@
 "period": null,
 "market_cap_bn": 8.7
 },
+"MHO|2026-10-21": {
+"t": "MHO",
+"ticker": "MHO",
+"name": "M/I Homes, Inc.",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$3.05",
+"quarter": "Sep/2026",
+"market_cap_bn": 3.1,
+"eps_actual": 2.7,
+"eps_est": 3.05,
+"surprise": -0.1148,
+"result": "miss",
+"result_done": true,
+"source": "Nasdaq"
+},
 "MH|2026-11-05": {
 "t": "MH",
 "ticker": "MH",
@@ -10799,6 +13423,38 @@
 "period": null,
 "market_cap_bn": 3.7
 },
+"MKC.V|2026-10-01": {
+"t": "MKC.V",
+"ticker": "MKC.V",
+"name": "McCormick & Company, Incorporated",
+"m": "US",
+"date": "2026-10-01",
+"eps_forecast": "",
+"quarter": "Aug/2026",
+"market_cap_bn": 13.1,
+"eps_actual": 0.86,
+"eps_est": null,
+"surprise": null,
+"result": null,
+"result_done": false,
+"source": "Nasdaq"
+},
+"MKC|2026-10-01": {
+"t": "MKC",
+"ticker": "MKC",
+"name": "McCormick & Company, Incorporated",
+"m": "US",
+"date": "2026-10-01",
+"eps_forecast": "$0.75",
+"quarter": "Aug/2026",
+"market_cap_bn": 13.1,
+"eps_actual": 0.86,
+"eps_est": 0.75,
+"surprise": 0.1467,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "MKL|2026-11-04": {
 "t": "MKL",
 "ticker": "MKL",
@@ -10823,6 +13479,22 @@
 "period": null,
 "market_cap_bn": 13.3
 },
+"MKTX|2026-10-23": {
+"t": "MKTX",
+"ticker": "MKTX",
+"name": "MarketAxess Holdings, Inc.",
+"m": "US",
+"date": "2026-10-23",
+"eps_forecast": "$1.95",
+"quarter": "Sep/2026",
+"market_cap_bn": 5.8,
+"eps_actual": 1.86,
+"eps_est": 1.95,
+"surprise": -0.0462,
+"result": "miss",
+"result_done": true,
+"source": "Nasdaq"
+},
 "MKTX|2026-11-06": {
 "t": "MKTX",
 "ticker": "MKTX",
@@ -10835,6 +13507,22 @@
 "period": null,
 "market_cap_bn": 5.8
 },
+"MLI|2026-10-20": {
+"t": "MLI",
+"ticker": "MLI",
+"name": "Mueller Industries, Inc.",
+"m": "US",
+"date": "2026-10-20",
+"eps_forecast": "",
+"quarter": "Sep/2026",
+"market_cap_bn": 11.9,
+"eps_actual": 1.0,
+"eps_est": null,
+"surprise": null,
+"result": null,
+"result_done": false,
+"source": "Nasdaq"
+},
 "MLM|2026-11-04": {
 "t": "MLM",
 "ticker": "MLM",
@@ -10846,6 +13534,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 36.8
+},
+"MMM|2026-10-20": {
+"t": "MMM",
+"ticker": "MMM",
+"name": "3M Company",
+"m": "US",
+"date": "2026-10-20",
+"eps_forecast": "$2.40",
+"quarter": "Sep/2026",
+"market_cap_bn": 90.7,
+"eps_actual": 2.5,
+"eps_est": 2.4,
+"surprise": 0.0417,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "MMSI|2026-10-29": {
 "t": "MMSI",
@@ -10906,6 +13610,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 7.2
+},
+"MOH|2026-10-21": {
+"t": "MOH",
+"ticker": "MOH",
+"name": "Molina Healthcare Inc",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$0.72",
+"quarter": "Sep/2026",
+"market_cap_bn": 11.3,
+"eps_actual": 0.89,
+"eps_est": 0.72,
+"surprise": 0.2361,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "MORN|2026-10-28": {
 "t": "MORN",
@@ -11063,6 +13783,22 @@
 "period": null,
 "market_cap_bn": 4.0
 },
+"MRSH|2026-10-15": {
+"t": "MRSH",
+"ticker": "MRSH",
+"name": "Marsh",
+"m": "US",
+"date": "2026-10-15",
+"eps_forecast": "$1.96",
+"quarter": "Sep/2026",
+"market_cap_bn": 94.8,
+"eps_actual": 2.03,
+"eps_est": 1.96,
+"surprise": 0.035699999999999996,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "MRVL|2026-12-01": {
 "t": "MRVL",
 "ticker": "MRVL",
@@ -11098,6 +13834,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 7.1
+},
+"MSCI|2026-10-20": {
+"t": "MSCI",
+"ticker": "MSCI",
+"name": "MSCI Inc.",
+"m": "US",
+"date": "2026-10-20",
+"eps_forecast": "$4.98",
+"quarter": "Sep/2026",
+"market_cap_bn": 44.3,
+"eps_actual": 5.11,
+"eps_est": 4.98,
+"surprise": 0.026099999999999998,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "MSFT|2026-10-28": {
 "t": "MSFT",
@@ -11147,6 +13899,22 @@
 "period": null,
 "market_cap_bn": 79.1
 },
+"MSM|2026-10-22": {
+"t": "MSM",
+"ticker": "MSM",
+"name": "MSC Industrial Direct Company, Inc.",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$1.39",
+"quarter": "Aug/2026",
+"market_cap_bn": 6.3,
+"eps_actual": 1.45,
+"eps_est": 1.39,
+"surprise": 0.0432,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "MSTR|2026-10-29": {
 "t": "MSTR",
 "ticker": "MSTR",
@@ -11158,6 +13926,38 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 61.5
+},
+"MS|2026-10-14": {
+"t": "MS",
+"ticker": "MS",
+"name": "Morgan Stanley",
+"m": "US",
+"date": "2026-10-14",
+"eps_forecast": "$2.83",
+"quarter": "Sep/2026",
+"market_cap_bn": 288.9,
+"eps_actual": 3.03,
+"eps_est": 2.83,
+"surprise": 0.0707,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
+"MTB|2026-10-16": {
+"t": "MTB",
+"ticker": "MTB",
+"name": "M&T Bank Corporation",
+"m": "US",
+"date": "2026-10-16",
+"eps_forecast": "$4.98",
+"quarter": "Sep/2026",
+"market_cap_bn": 32.2,
+"eps_actual": 5.08,
+"eps_est": 4.98,
+"surprise": 0.020099999999999996,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "MTCH|2026-11-02": {
 "t": "MTCH",
@@ -11218,6 +14018,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 4.1
+},
+"MTN|2026-09-28": {
+"t": "MTN",
+"ticker": "MTN",
+"name": "Vail Resorts, Inc.",
+"m": "US",
+"date": "2026-09-28",
+"eps_forecast": "($5.40)",
+"quarter": "Jul/2026",
+"market_cap_bn": 5.3,
+"eps_actual": -5.34,
+"eps_est": -5.4,
+"surprise": 0.0111,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "MTRN|2026-11-04": {
 "t": "MTRN",
@@ -11303,6 +14119,22 @@
 "period": null,
 "market_cap_bn": 9.8
 },
+"MU|2026-09-30": {
+"t": "MU",
+"ticker": "MU",
+"name": "Micron Technology, Inc.",
+"m": "US",
+"date": "2026-09-30",
+"eps_forecast": "$31.41",
+"quarter": "Aug/2026",
+"market_cap_bn": 969.1,
+"eps_actual": 33.19,
+"eps_est": 31.41,
+"surprise": 0.0567,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "MU|2026-12-23": {
 "t": "MU",
 "ticker": "MU",
@@ -11338,6 +14170,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 4.4
+},
+"MXL|2026-10-22": {
+"t": "MXL",
+"ticker": "MXL",
+"name": "MaxLinear, Inc",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$0.32",
+"quarter": "Sep/2026",
+"market_cap_bn": 5.9,
+"eps_actual": 0.43,
+"eps_est": 0.32,
+"surprise": 0.34380000000000005,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "MYRG|2026-10-28": {
 "t": "MYRG",
@@ -11435,6 +14283,70 @@
 "period": null,
 "market_cap_bn": 7.1
 },
+"NDAQ|2026-10-22": {
+"t": "NDAQ",
+"ticker": "NDAQ",
+"name": "Nasdaq, Inc.",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$1.02",
+"quarter": "Sep/2026",
+"market_cap_bn": 57.7,
+"eps_actual": 1.04,
+"eps_est": 1.02,
+"surprise": 0.0196,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
+"NEE|2026-10-21": {
+"t": "NEE",
+"ticker": "NEE",
+"name": "NextEra Energy, Inc.",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$1.20",
+"quarter": "Sep/2026",
+"market_cap_bn": 171.8,
+"eps_actual": 1.24,
+"eps_est": 1.2,
+"surprise": 0.0333,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
+"NEM|2026-10-22": {
+"t": "NEM",
+"ticker": "NEM",
+"name": "Newmont Corporation",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$1.94",
+"quarter": "Sep/2026",
+"market_cap_bn": 120.2,
+"eps_actual": 2.2,
+"eps_est": 1.94,
+"surprise": 0.134,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
+"NEOG|2026-10-06": {
+"t": "NEOG",
+"ticker": "NEOG",
+"name": "Neogen Corporation",
+"m": "US",
+"date": "2026-10-06",
+"eps_forecast": "$0.04",
+"quarter": "Aug/2026",
+"market_cap_bn": 2.6,
+"eps_actual": 0.07,
+"eps_est": 0.04,
+"surprise": 0.75,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "NEO|2026-10-28": {
 "t": "NEO",
 "ticker": "NEO",
@@ -11495,6 +14407,22 @@
 "period": null,
 "market_cap_bn": 7.7
 },
+"NFLX|2026-10-20": {
+"t": "NFLX",
+"ticker": "NFLX",
+"name": "Netflix, Inc.",
+"m": "US",
+"date": "2026-10-20",
+"eps_forecast": "$0.82",
+"quarter": "Sep/2026",
+"market_cap_bn": 275.3,
+"eps_actual": 0.87,
+"eps_est": 0.82,
+"surprise": 0.061,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "NGVT|2026-11-04": {
 "t": "NGVT",
 "ticker": "NGVT",
@@ -11506,6 +14434,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 2.4
+},
+"NG|2026-10-08": {
+"t": "NG",
+"ticker": "NG",
+"name": "Novagold Resources Inc.",
+"m": "US",
+"date": "2026-10-08",
+"eps_forecast": "($0.08)",
+"quarter": "Aug/2026",
+"market_cap_bn": 2.7,
+"eps_actual": -0.08,
+"eps_est": -0.08,
+"surprise": 0.0,
+"result": "inline",
+"result_done": true,
+"source": "Nasdaq"
 },
 "NHC|2026-11-06": {
 "t": "NHC",
@@ -11543,6 +14487,22 @@
 "period": null,
 "market_cap_bn": 7.0
 },
+"NIC|2026-10-20": {
+"t": "NIC",
+"ticker": "NIC",
+"name": "Nicolet Bankshares Inc.",
+"m": "US",
+"date": "2026-10-20",
+"eps_forecast": "$3.06",
+"quarter": "Sep/2026",
+"market_cap_bn": 3.6,
+"eps_actual": 3.15,
+"eps_est": 3.06,
+"surprise": 0.0294,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "NIQ|2026-11-12": {
 "t": "NIQ",
 "ticker": "NIQ",
@@ -11567,6 +14527,22 @@
 "period": null,
 "market_cap_bn": 21.0
 },
+"NKE|2026-10-01": {
+"t": "NKE",
+"ticker": "NKE",
+"name": "Nike, Inc.",
+"m": "US",
+"date": "2026-10-01",
+"eps_forecast": "$0.43",
+"quarter": "Aug/2026",
+"market_cap_bn": 56.9,
+"eps_actual": 0.48,
+"eps_est": 0.43,
+"surprise": 0.11630000000000001,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "NKE|2026-12-17": {
 "t": "NKE",
 "ticker": "NKE",
@@ -11578,6 +14554,22 @@
 "quarter": "",
 "period": "Expected date (market data feed)",
 "market_cap_bn": 55.4
+},
+"NLY|2026-10-20": {
+"t": "NLY",
+"ticker": "NLY",
+"name": "Annaly Capital Management Inc.",
+"m": "US",
+"date": "2026-10-20",
+"eps_forecast": "$0.77",
+"quarter": "Sep/2026",
+"market_cap_bn": 14.4,
+"eps_actual": 0.8,
+"eps_est": 0.77,
+"surprise": 0.039,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "NMIH|2026-11-05": {
 "t": "NMIH",
@@ -11639,6 +14631,22 @@
 "period": null,
 "market_cap_bn": 8.1
 },
+"NOC|2026-10-20": {
+"t": "NOC",
+"ticker": "NOC",
+"name": "Northrop Grumman Corporation",
+"m": "US",
+"date": "2026-10-20",
+"eps_forecast": "$7.22",
+"quarter": "Sep/2026",
+"market_cap_bn": 78.5,
+"eps_actual": 7.89,
+"eps_est": 7.22,
+"surprise": 0.0928,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "NOG|2026-11-05": {
 "t": "NOG",
 "ticker": "NOG",
@@ -11650,6 +14658,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 2.9
+},
+"NOK|2026-10-22": {
+"t": "NOK",
+"ticker": "NOK",
+"name": "Nokia Corporation",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$0.08",
+"quarter": "Sep/2026",
+"market_cap_bn": 45.2,
+"eps_actual": 0.1,
+"eps_est": 0.08,
+"surprise": 0.25,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "NOVT|2026-11-09": {
 "t": "NOVT",
@@ -11711,6 +14735,22 @@
 "period": null,
 "market_cap_bn": 5.7
 },
+"NP|2026-10-20": {
+"t": "NP",
+"ticker": "NP",
+"name": "Neptune Insurance Holdings Inc.",
+"m": "US",
+"date": "2026-10-20",
+"eps_forecast": "$0.12",
+"quarter": "Sep/2026",
+"market_cap_bn": 3.9,
+"eps_actual": 0.15,
+"eps_est": 0.12,
+"surprise": 0.25,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "NRG|2026-11-05": {
 "t": "NRG",
 "ticker": "NRG",
@@ -11723,6 +14763,22 @@
 "period": null,
 "market_cap_bn": 19.8
 },
+"NRIX|2026-10-12": {
+"t": "NRIX",
+"ticker": "NRIX",
+"name": "Nurix Therapeutics, Inc.",
+"m": "US",
+"date": "2026-10-12",
+"eps_forecast": "($0.56)",
+"quarter": "Aug/2026",
+"market_cap_bn": 2.8,
+"eps_actual": 4.73,
+"eps_est": -0.56,
+"surprise": 9.4464,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "NRP.JO|2026-11-18": {
 "t": "NRP.JO",
 "ticker": "NRP",
@@ -11734,6 +14790,22 @@
 "quarter": "",
 "period": "Q3 2026 business update (expected; per 2026 financial reporting schedule, SENS 21 Nov 2025)",
 "market_cap_bn": null
+},
+"NSC|2026-10-22": {
+"t": "NSC",
+"ticker": "NSC",
+"name": "Norfolk Southern Corporation",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$3.48",
+"quarter": "Sep/2026",
+"market_cap_bn": 76.0,
+"eps_actual": 3.62,
+"eps_est": 3.48,
+"surprise": 0.04019999999999999,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "NSIT|2026-11-05": {
 "t": "NSIT",
@@ -11819,6 +14891,22 @@
 "period": null,
 "market_cap_bn": 57.9
 },
+"NTRS|2026-10-21": {
+"t": "NTRS",
+"ticker": "NTRS",
+"name": "Northern Trust Corporation",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$2.86",
+"quarter": "Sep/2026",
+"market_cap_bn": 30.3,
+"eps_actual": 3.2,
+"eps_est": 2.86,
+"surprise": 0.1189,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "NTR|2026-11-04": {
 "t": "NTR",
 "ticker": "NTR",
@@ -11830,6 +14918,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 33.2
+},
+"NTST|2026-10-21": {
+"t": "NTST",
+"ticker": "NTST",
+"name": "NetSTREIT Corp.",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$0.33",
+"quarter": "Sep/2026",
+"market_cap_bn": 2.1,
+"eps_actual": 0.35,
+"eps_est": 0.33,
+"surprise": 0.060599999999999994,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "NUE|2026-10-26": {
 "t": "NUE",
@@ -11890,6 +14994,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 174.6
+},
+"NVR|2026-10-22": {
+"t": "NVR",
+"ticker": "NVR",
+"name": "NVR, Inc.",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$106.11",
+"quarter": "Sep/2026",
+"market_cap_bn": 16.3,
+"eps_actual": 89.45,
+"eps_est": 106.11,
+"surprise": -0.157,
+"result": "miss",
+"result_done": true,
+"source": "Nasdaq"
 },
 "NVST|2026-11-04": {
 "t": "NVST",
@@ -12143,6 +15263,22 @@
 "period": null,
 "market_cap_bn": 39.4
 },
+"OFG|2026-10-21": {
+"t": "OFG",
+"ticker": "OFG",
+"name": "OFG Bancorp",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$1.25",
+"quarter": "Sep/2026",
+"market_cap_bn": 2.2,
+"eps_actual": 1.33,
+"eps_est": 1.25,
+"surprise": 0.064,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "OGC|2026-11-04": {
 "t": "OGC",
 "ticker": "OGC",
@@ -12203,6 +15339,22 @@
 "period": null,
 "market_cap_bn": 14.0
 },
+"OII|2026-10-21": {
+"t": "OII",
+"ticker": "OII",
+"name": "Oceaneering International, Inc.",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$0.58",
+"quarter": "Sep/2026",
+"market_cap_bn": 3.6,
+"eps_actual": 0.52,
+"eps_est": 0.58,
+"surprise": -0.10339999999999999,
+"result": "miss",
+"result_done": true,
+"source": "Nasdaq"
+},
 "OKE|2026-10-27": {
 "t": "OKE",
 "ticker": "OKE",
@@ -12239,6 +15391,38 @@
 "period": null,
 "market_cap_bn": 4.0
 },
+"OMAB|2026-10-22": {
+"t": "OMAB",
+"ticker": "OMAB",
+"name": "Grupo Aeroportuario del Centro Norte S.A.B. de C.V.",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$1.86",
+"quarter": "Sep/2026",
+"market_cap_bn": 4.7,
+"eps_actual": 1.7,
+"eps_est": 1.86,
+"surprise": -0.08602150537634416,
+"result": "miss",
+"result_done": true,
+"source": "Nasdaq"
+},
+"OMC|2026-10-22": {
+"t": "OMC",
+"ticker": "OMC",
+"name": "Omnicom Group Inc.",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$2.68",
+"quarter": "Sep/2026",
+"market_cap_bn": 22.7,
+"eps_actual": 2.73,
+"eps_est": 2.68,
+"surprise": 0.0187,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "OMF|2026-10-30": {
 "t": "OMF",
 "ticker": "OMF",
@@ -12250,6 +15434,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 6.6
+},
+"ONB|2026-10-21": {
+"t": "ONB",
+"ticker": "ONB",
+"name": "Old National Bancorp",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$0.66",
+"quarter": "Sep/2026",
+"market_cap_bn": 9.6,
+"eps_actual": 0.66,
+"eps_est": 0.66,
+"surprise": 0.0,
+"result": "inline",
+"result_done": true,
+"source": "Nasdaq"
 },
 "ONC|2026-11-05": {
 "t": "ONC",
@@ -12358,6 +15558,22 @@
 "quarter": "",
 "period": "Expected date (market data feed)",
 "market_cap_bn": 382.5
+},
+"ORI|2026-10-22": {
+"t": "ORI",
+"ticker": "ORI",
+"name": "Old Republic International Corporation",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$0.77",
+"quarter": "Sep/2026",
+"market_cap_bn": 9.7,
+"eps_actual": 0.73,
+"eps_est": 0.77,
+"surprise": -0.0519,
+"result": "miss",
+"result_done": true,
+"source": "Nasdaq"
 },
 "ORKA|2026-11-11": {
 "t": "ORKA",
@@ -12551,6 +15767,22 @@
 "period": null,
 "market_cap_bn": 62.5
 },
+"OZK|2026-10-20": {
+"t": "OZK",
+"ticker": "OZK",
+"name": "Bank OZK",
+"m": "US",
+"date": "2026-10-20",
+"eps_forecast": "$1.45",
+"quarter": "Sep/2026",
+"market_cap_bn": 5.6,
+"eps_actual": 1.5,
+"eps_est": 1.45,
+"surprise": 0.0345,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "O|2026-11-02": {
 "t": "O",
 "ticker": "O",
@@ -12586,6 +15818,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 18.3
+},
+"PAC|2026-10-19": {
+"t": "PAC",
+"ticker": "PAC",
+"name": "Grupo Aeroportuario Del Pacifico, S.A. de C.V.",
+"m": "US",
+"date": "2026-10-19",
+"eps_forecast": "$2.72",
+"quarter": "Sep/2026",
+"market_cap_bn": 13.1,
+"eps_actual": 2.84,
+"eps_est": 2.72,
+"surprise": 0.0441,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "PAGP|2026-11-06": {
 "t": "PAGP",
@@ -12839,6 +16087,22 @@
 "period": null,
 "market_cap_bn": 57.7
 },
+"PCG|2026-10-22": {
+"t": "PCG",
+"ticker": "PCG",
+"name": "PG&E Corp",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$0.42",
+"quarter": "Sep/2026",
+"market_cap_bn": 34.8,
+"eps_actual": 0.41,
+"eps_est": 0.42,
+"surprise": -0.023799999999999998,
+"result": "miss",
+"result_done": true,
+"source": "Nasdaq"
+},
 "PCOR|2026-11-03": {
 "t": "PCOR",
 "ticker": "PCOR",
@@ -12911,6 +16175,22 @@
 "period": null,
 "market_cap_bn": 4.9
 },
+"PEGA|2026-10-20": {
+"t": "PEGA",
+"ticker": "PEGA",
+"name": "Pegasystems Inc.",
+"m": "US",
+"date": "2026-10-20",
+"eps_forecast": "$0.30",
+"quarter": "Sep/2026",
+"market_cap_bn": 6.0,
+"eps_actual": 0.22,
+"eps_est": 0.3,
+"surprise": -0.2667,
+"result": "miss",
+"result_done": true,
+"source": "Nasdaq"
+},
 "PEG|2026-11-02": {
 "t": "PEG",
 "ticker": "PEG",
@@ -12922,6 +16202,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 36.2
+},
+"PENG|2026-10-06": {
+"t": "PENG",
+"ticker": "PENG",
+"name": "Penguin Solutions, Inc.",
+"m": "US",
+"date": "2026-10-06",
+"eps_forecast": "$0.61",
+"quarter": "Aug/2026",
+"market_cap_bn": 3.1,
+"eps_actual": 0.91,
+"eps_est": 0.61,
+"surprise": 0.4918,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "PENN|2026-11-05": {
 "t": "PENN",
@@ -12946,6 +16242,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 12.8
+},
+"PEP|2026-10-08": {
+"t": "PEP",
+"ticker": "PEP",
+"name": "Pepsico, Inc.",
+"m": "US",
+"date": "2026-10-08",
+"eps_forecast": "$2.29",
+"quarter": "Sep/2026",
+"market_cap_bn": 189.2,
+"eps_actual": 2.34,
+"eps_est": 2.29,
+"surprise": 0.0218,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "PFE|2026-11-03": {
 "t": "PFE",
@@ -13031,6 +16343,38 @@
 "period": null,
 "market_cap_bn": 2.2
 },
+"PGR|2026-10-14": {
+"t": "PGR",
+"ticker": "PGR",
+"name": "Progressive Corporation (The)",
+"m": "US",
+"date": "2026-10-14",
+"eps_forecast": "$4.46",
+"quarter": "Sep/2026",
+"market_cap_bn": 133.5,
+"eps_actual": 4.6,
+"eps_est": 4.46,
+"surprise": 0.031400000000000004,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
+"PG|2026-10-22": {
+"t": "PG",
+"ticker": "PG",
+"name": "Procter & Gamble Company (The)",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$1.89",
+"quarter": "Sep/2026",
+"market_cap_bn": 384.9,
+"eps_actual": 2.0,
+"eps_est": 1.89,
+"surprise": 0.0582,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "PHG|2026-11-03": {
 "t": "PHG",
 "ticker": "PHG",
@@ -13066,6 +16410,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 4.2
+},
+"PHM|2026-10-22": {
+"t": "PHM",
+"ticker": "PHM",
+"name": "PulteGroup, Inc.",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$2.63",
+"quarter": "Sep/2026",
+"market_cap_bn": 22.4,
+"eps_actual": 2.53,
+"eps_est": 2.63,
+"surprise": -0.038,
+"result": "miss",
+"result_done": true,
+"source": "Nasdaq"
 },
 "PHVS|2026-11-11": {
 "t": "PHVS",
@@ -13163,6 +16523,22 @@
 "period": null,
 "market_cap_bn": 5.9
 },
+"PKG|2026-10-21": {
+"t": "PKG",
+"ticker": "PKG",
+"name": "Packaging Corporation of America",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$2.95",
+"quarter": "Sep/2026",
+"market_cap_bn": 22.2,
+"eps_actual": 3.04,
+"eps_est": 2.95,
+"surprise": 0.0305,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "PKX|2026-10-26": {
 "t": "PKX",
 "ticker": "PKX",
@@ -13186,6 +16562,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 3.4
+},
+"PLD|2026-10-15": {
+"t": "PLD",
+"ticker": "PLD",
+"name": "Prologis, Inc.",
+"m": "US",
+"date": "2026-10-15",
+"eps_forecast": "$1.58",
+"quarter": "Sep/2026",
+"market_cap_bn": 120.1,
+"eps_actual": 1.6,
+"eps_est": 1.58,
+"surprise": 0.0127,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "PLGO|2026-11-11": {
 "t": "PLGO",
@@ -13271,6 +16663,54 @@
 "period": null,
 "market_cap_bn": 5.9
 },
+"PM|2026-10-21": {
+"t": "PM",
+"ticker": "PM",
+"name": "Philip Morris International Inc",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$2.30",
+"quarter": "Sep/2026",
+"market_cap_bn": 314.4,
+"eps_actual": 2.36,
+"eps_est": 2.3,
+"surprise": 0.026099999999999998,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
+"PNC|2026-10-15": {
+"t": "PNC",
+"ticker": "PNC",
+"name": "PNC Financial Services Group, Inc. (The)",
+"m": "US",
+"date": "2026-10-15",
+"eps_forecast": "$4.97",
+"quarter": "Sep/2026",
+"market_cap_bn": 90.0,
+"eps_actual": 5.09,
+"eps_est": 4.97,
+"surprise": 0.0241,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
+"PNFP|2026-10-21": {
+"t": "PNFP",
+"ticker": "PNFP",
+"name": "Pinnacle Financial Partners, Inc.",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$2.61",
+"quarter": "Sep/2026",
+"market_cap_bn": 15.2,
+"eps_actual": 2.69,
+"eps_est": 2.61,
+"surprise": 0.030699999999999998,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "PNR|2026-10-27": {
 "t": "PNR",
 "ticker": "PNR",
@@ -13306,6 +16746,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 10.3
+},
+"POOL|2026-10-22": {
+"t": "POOL",
+"ticker": "POOL",
+"name": "Pool Corporation",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$3.36",
+"quarter": "Sep/2026",
+"market_cap_bn": 7.2,
+"eps_actual": 3.4,
+"eps_est": 3.36,
+"surprise": 0.011899999999999999,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "POR|2026-10-29": {
 "t": "POR",
@@ -13799,6 +17255,22 @@
 "period": null,
 "market_cap_bn": 34.7
 },
+"QS|2026-10-21": {
+"t": "QS",
+"ticker": "QS",
+"name": "QuantumScape Corporation",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "($0.18)",
+"quarter": "Sep/2026",
+"market_cap_bn": 2.6,
+"eps_actual": -0.14,
+"eps_est": -0.18,
+"surprise": 0.22219999999999998,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "QTWO|2026-10-28": {
 "t": "QTWO",
 "ticker": "QTWO",
@@ -13907,6 +17379,22 @@
 "period": null,
 "market_cap_bn": 38.5
 },
+"RCI|2026-10-23": {
+"t": "RCI",
+"ticker": "RCI",
+"name": "Rogers Communication, Inc.",
+"m": "US",
+"date": "2026-10-23",
+"eps_forecast": "$0.84",
+"quarter": "Sep/2026",
+"market_cap_bn": 17.9,
+"eps_actual": 0.92,
+"eps_est": 0.84,
+"surprise": 0.09519999999999999,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "RCL|2026-10-27": {
 "t": "RCL",
 "ticker": "RCL",
@@ -13991,6 +17479,22 @@
 "period": null,
 "market_cap_bn": 2.0
 },
+"RDY|2026-10-23": {
+"t": "RDY",
+"ticker": "RDY",
+"name": "Dr. Reddy's Laboratories Ltd",
+"m": "US",
+"date": "2026-10-23",
+"eps_forecast": "$0.16",
+"quarter": "Sep/2026",
+"market_cap_bn": 11.0,
+"eps_actual": 0.12,
+"eps_est": 0.16,
+"surprise": -0.25,
+"result": "miss",
+"result_done": true,
+"source": "Nasdaq"
+},
 "REGN|2026-10-30": {
 "t": "REGN",
 "ticker": "REGN",
@@ -14027,6 +17531,22 @@
 "period": null,
 "market_cap_bn": 5.4
 },
+"REXR|2026-10-22": {
+"t": "REXR",
+"ticker": "REXR",
+"name": "Rexford Industrial Realty, Inc.",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$0.60",
+"quarter": "Sep/2026",
+"market_cap_bn": 8.1,
+"eps_actual": 0.6,
+"eps_est": 0.6,
+"surprise": 0.0,
+"result": "inline",
+"result_done": true,
+"source": "Nasdaq"
+},
 "REYN|2026-11-04": {
 "t": "REYN",
 "ticker": "REYN",
@@ -14050,6 +17570,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 2.7
+},
+"RF|2026-10-16": {
+"t": "RF",
+"ticker": "RF",
+"name": "Regions Financial Corporation",
+"m": "US",
+"date": "2026-10-16",
+"eps_forecast": "$0.67",
+"quarter": "Sep/2026",
+"market_cap_bn": 24.2,
+"eps_actual": 0.73,
+"eps_est": 0.67,
+"surprise": 0.08960000000000001,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "RGA|2026-11-05": {
 "t": "RGA",
@@ -14099,6 +17635,22 @@
 "period": null,
 "market_cap_bn": 3.8
 },
+"RHI|2026-10-22": {
+"t": "RHI",
+"ticker": "RHI",
+"name": "Robert Half Inc.",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$0.47",
+"quarter": "Sep/2026",
+"market_cap_bn": 3.9,
+"eps_actual": 0.49,
+"eps_est": 0.47,
+"surprise": 0.0426,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "RHP|2026-11-02": {
 "t": "RHP",
 "ticker": "RHP",
@@ -14134,6 +17686,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 4.8
+},
+"RITM|2026-10-23": {
+"t": "RITM",
+"ticker": "RITM",
+"name": "Rithm Capital Corp.",
+"m": "US",
+"date": "2026-10-23",
+"eps_forecast": "$0.51",
+"quarter": "Sep/2026",
+"market_cap_bn": 4.8,
+"eps_actual": 0.55,
+"eps_est": 0.51,
+"surprise": 0.0784,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "RIVN|2026-10-29": {
 "t": "RIVN",
@@ -14195,6 +17763,22 @@
 "period": null,
 "market_cap_bn": 4.0
 },
+"RLI|2026-10-19": {
+"t": "RLI",
+"ticker": "RLI",
+"name": "RLI Corp.",
+"m": "US",
+"date": "2026-10-19",
+"eps_forecast": "$0.58",
+"quarter": "Sep/2026",
+"market_cap_bn": 6.1,
+"eps_actual": 0.86,
+"eps_est": 0.58,
+"surprise": 0.4828,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "RLX|2026-11-13": {
 "t": "RLX",
 "ticker": "RLX",
@@ -14242,6 +17826,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 35.6
+},
+"RNG|2026-10-22": {
+"t": "RNG",
+"ticker": "RNG",
+"name": "RingCentral, Inc.",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$0.69",
+"quarter": "Sep/2026",
+"market_cap_bn": 6.6,
+"eps_actual": 0.73,
+"eps_est": 0.69,
+"surprise": 0.057999999999999996,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "RNI.JO|2026-11-17": {
 "t": "RNI.JO",
@@ -14339,6 +17939,38 @@
 "period": null,
 "market_cap_bn": 47.2
 },
+"ROL|2026-10-21": {
+"t": "ROL",
+"ticker": "ROL",
+"name": "Rollins, Inc.",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$0.35",
+"quarter": "Sep/2026",
+"market_cap_bn": 17.0,
+"eps_actual": 0.34,
+"eps_est": 0.35,
+"surprise": -0.0286,
+"result": "miss",
+"result_done": true,
+"source": "Nasdaq"
+},
+"ROP|2026-10-22": {
+"t": "ROP",
+"ticker": "ROP",
+"name": "Roper Technologies, Inc.",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$5.79",
+"quarter": "Sep/2026",
+"market_cap_bn": 43.1,
+"eps_actual": 5.89,
+"eps_est": 5.79,
+"surprise": 0.0173,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "ROST|2026-11-19": {
 "t": "ROST",
 "ticker": "ROST",
@@ -14350,6 +17982,22 @@
 "quarter": "",
 "period": "Expected date (market data feed)",
 "market_cap_bn": 73.3
+},
+"RPM|2026-10-06": {
+"t": "RPM",
+"ticker": "RPM",
+"name": "RPM International Inc.",
+"m": "US",
+"date": "2026-10-06",
+"eps_forecast": "$1.95",
+"quarter": "Aug/2026",
+"market_cap_bn": 13.0,
+"eps_actual": 1.98,
+"eps_est": 1.95,
+"surprise": 0.0154,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "RPRX|2026-11-04": {
 "t": "RPRX",
@@ -14422,6 +18070,38 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 3.8
+},
+"RS|2026-10-21": {
+"t": "RS",
+"ticker": "RS",
+"name": "Reliance, Inc.",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$6.76",
+"quarter": "Sep/2026",
+"market_cap_bn": 21.3,
+"eps_actual": 8.02,
+"eps_est": 6.76,
+"surprise": 0.1864,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
+"RTX|2026-10-20": {
+"t": "RTX",
+"ticker": "RTX",
+"name": "RTX Corporation",
+"m": "US",
+"date": "2026-10-20",
+"eps_forecast": "$1.78",
+"quarter": "Sep/2026",
+"market_cap_bn": 262.7,
+"eps_actual": 2.26,
+"eps_est": 1.78,
+"surprise": 0.2697,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "RUM|2026-11-09": {
 "t": "RUM",
@@ -14555,6 +18235,22 @@
 "period": null,
 "market_cap_bn": 6.3
 },
+"R|2026-10-22": {
+"t": "R",
+"ticker": "R",
+"name": "Ryder System, Inc.",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$4.17",
+"quarter": "Sep/2026",
+"market_cap_bn": 10.2,
+"eps_actual": 4.33,
+"eps_est": 4.17,
+"surprise": 0.0384,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "SAIA|2026-10-29": {
 "t": "SAIA",
 "ticker": "SAIA",
@@ -14566,6 +18262,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 9.2
+},
+"SAM|2026-10-22": {
+"t": "SAM",
+"ticker": "SAM",
+"name": "Boston Beer Company, Inc. (The)",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$4.30",
+"quarter": "Sep/2026",
+"market_cap_bn": 2.0,
+"eps_actual": 4.37,
+"eps_est": 4.3,
+"surprise": 0.0163,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "SANM|2026-11-09": {
 "t": "SANM",
@@ -14602,6 +18314,22 @@
 "quarter": "",
 "period": "Q4 and full year to Sep 2026 (FY26); release 08:00 SAST",
 "market_cap_bn": null
+},
+"SAP|2026-10-21": {
+"t": "SAP",
+"ticker": "SAP",
+"name": "SAP SE",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$2.03",
+"quarter": "Sep/2026",
+"market_cap_bn": 295.6,
+"eps_actual": 2.18,
+"eps_est": 2.03,
+"surprise": 0.0739,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "SARO|2026-11-05": {
 "t": "SARO",
@@ -14687,6 +18415,38 @@
 "period": null,
 "market_cap_bn": 116.2
 },
+"SCCO|2026-10-21": {
+"t": "SCCO",
+"ticker": "SCCO",
+"name": "Southern Copper Corporation",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$2.04",
+"quarter": "Sep/2026",
+"market_cap_bn": 155.0,
+"eps_actual": 2.15,
+"eps_est": 2.04,
+"surprise": 0.053899999999999997,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
+"SCHW|2026-10-15": {
+"t": "SCHW",
+"ticker": "SCHW",
+"name": "The Charles Schwab Corporation",
+"m": "US",
+"date": "2026-10-15",
+"eps_forecast": "$1.66",
+"quarter": "Sep/2026",
+"market_cap_bn": 158.1,
+"eps_actual": 1.69,
+"eps_est": 1.66,
+"surprise": 0.0181,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "SCI|2026-10-28": {
 "t": "SCI",
 "ticker": "SCI",
@@ -14735,6 +18495,22 @@
 "period": null,
 "market_cap_bn": 2.0
 },
+"SEIC|2026-10-21": {
+"t": "SEIC",
+"ticker": "SEIC",
+"name": "SEI Investments Company",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$1.59",
+"quarter": "Sep/2026",
+"market_cap_bn": 12.5,
+"eps_actual": 1.64,
+"eps_est": 1.59,
+"surprise": 0.031400000000000004,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "SEI|2026-11-04": {
 "t": "SEI",
 "ticker": "SEI",
@@ -14771,6 +18547,22 @@
 "period": null,
 "market_cap_bn": 46.4
 },
+"SFBS|2026-10-19": {
+"t": "SFBS",
+"ticker": "SFBS",
+"name": "ServisFirst Bancshares, Inc.",
+"m": "US",
+"date": "2026-10-19",
+"eps_forecast": "$0.83",
+"quarter": "Sep/2026",
+"market_cap_bn": 4.5,
+"eps_actual": 0.8,
+"eps_est": 0.83,
+"surprise": -0.0361,
+"result": "miss",
+"result_done": true,
+"source": "Nasdaq"
+},
 "SFD|2026-10-27": {
 "t": "SFD",
 "ticker": "SFD",
@@ -14794,6 +18586,38 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 6.4
+},
+"SFNC|2026-10-15": {
+"t": "SFNC",
+"ticker": "SFNC",
+"name": "Simmons First National Corporation",
+"m": "US",
+"date": "2026-10-15",
+"eps_forecast": "$0.53",
+"quarter": "Sep/2026",
+"market_cap_bn": 3.4,
+"eps_actual": 0.54,
+"eps_est": 0.53,
+"surprise": 0.0189,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
+"SF|2026-10-21": {
+"t": "SF",
+"ticker": "SF",
+"name": "Stifel Financial Corporation",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$1.43",
+"quarter": "Sep/2026",
+"market_cap_bn": 10.2,
+"eps_actual": 1.46,
+"eps_est": 1.43,
+"surprise": 0.021,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "SGHC|2026-11-03": {
 "t": "SGHC",
@@ -14926,6 +18750,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 83.9
+},
+"SIGI|2026-10-22": {
+"t": "SIGI",
+"ticker": "SIGI",
+"name": "Selective Insurance Group, Inc.",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$1.91",
+"quarter": "Sep/2026",
+"market_cap_bn": 5.5,
+"eps_actual": 2.37,
+"eps_est": 1.91,
+"surprise": 0.2408,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "SII|2026-11-04": {
 "t": "SII",
@@ -15107,6 +18947,22 @@
 "period": null,
 "market_cap_bn": 7.4
 },
+"SLB|2026-10-23": {
+"t": "SLB",
+"ticker": "SLB",
+"name": "SLB Limited",
+"m": "US",
+"date": "2026-10-23",
+"eps_forecast": "$0.62",
+"quarter": "Sep/2026",
+"market_cap_bn": 73.5,
+"eps_actual": 0.64,
+"eps_est": 0.62,
+"surprise": 0.0323,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "SLDE|2026-10-27": {
 "t": "SLDE",
 "ticker": "SLDE",
@@ -15142,6 +18998,38 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 4.2
+},
+"SLG|2026-10-21": {
+"t": "SLG",
+"ticker": "SLG",
+"name": "SL Green Realty Corp",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$1.59",
+"quarter": "Sep/2026",
+"market_cap_bn": 3.5,
+"eps_actual": 1.59,
+"eps_est": 1.59,
+"surprise": -0.36479999999999996,
+"result": "miss",
+"result_done": true,
+"source": "Nasdaq"
+},
+"SLM|2026-10-22": {
+"t": "SLM",
+"ticker": "SLM",
+"name": "SLM Corporation",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$0.12",
+"quarter": "Sep/2026",
+"market_cap_bn": 4.1,
+"eps_actual": -0.19,
+"eps_est": 0.12,
+"surprise": -2.5833,
+"result": "miss",
+"result_done": true,
+"source": "Nasdaq"
 },
 "SLS|2026-11-11": {
 "t": "SLS",
@@ -15238,6 +19126,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 10.7
+},
+"SNA|2026-10-22": {
+"t": "SNA",
+"ticker": "SNA",
+"name": "Snap-On Incorporated",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$4.91",
+"quarter": "Sep/2026",
+"market_cap_bn": 18.4,
+"eps_actual": 4.64,
+"eps_est": 4.91,
+"surprise": -0.055,
+"result": "miss",
+"result_done": true,
+"source": "Nasdaq"
 },
 "SNDK|2026-10-29": {
 "t": "SNDK",
@@ -15359,6 +19263,22 @@
 "period": null,
 "market_cap_bn": 154.5
 },
+"SON|2026-10-21": {
+"t": "SON",
+"ticker": "SON",
+"name": "Sonoco Products Company",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$1.76",
+"quarter": "Sep/2026",
+"market_cap_bn": 5.0,
+"eps_actual": 1.67,
+"eps_est": 1.76,
+"surprise": -0.051100000000000007,
+"result": "miss",
+"result_done": true,
+"source": "Nasdaq"
+},
 "SOUN|2026-11-05": {
 "t": "SOUN",
 "ticker": "SOUN",
@@ -15382,6 +19302,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 107.9
+},
+"SPCX|2026-10-20": {
+"t": "SPCX",
+"ticker": "SPCX",
+"name": "Space Exploration Technologies Corp.",
+"m": "US",
+"date": "2026-10-20",
+"eps_forecast": "$0.10",
+"quarter": "Sep/2026",
+"market_cap_bn": 1964.7,
+"eps_actual": 0.35,
+"eps_est": 0.1,
+"surprise": 2.5,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "SPGI|2026-10-27": {
 "t": "SPGI",
@@ -15431,6 +19367,22 @@
 "period": null,
 "market_cap_bn": 3.0
 },
+"SPOT|2026-10-22": {
+"t": "SPOT",
+"ticker": "SPOT",
+"name": "Spotify Technology S.A.",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$3.10",
+"quarter": "Sep/2026",
+"market_cap_bn": 120.1,
+"eps_actual": 2.85,
+"eps_est": 3.1,
+"surprise": -0.0806,
+"result": "miss",
+"result_done": true,
+"source": "Nasdaq"
+},
 "SPP.JO|2026-11-19": {
 "t": "SPP.JO",
 "ticker": "SPP",
@@ -15479,6 +19431,22 @@
 "period": null,
 "market_cap_bn": 3.7
 },
+"SRCE|2026-10-22": {
+"t": "SRCE",
+"ticker": "SRCE",
+"name": "1st Source Corporation",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$1.83",
+"quarter": "Sep/2026",
+"market_cap_bn": 2.1,
+"eps_actual": 2.16,
+"eps_est": 1.83,
+"surprise": 0.18030000000000002,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "SRE|2026-11-05": {
 "t": "SRE",
 "ticker": "SRE",
@@ -15503,6 +19471,22 @@
 "period": null,
 "market_cap_bn": 5.1
 },
+"SSB|2026-10-21": {
+"t": "SSB",
+"ticker": "SSB",
+"name": "SouthState Bank Corporation",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$2.39",
+"quarter": "Sep/2026",
+"market_cap_bn": 10.2,
+"eps_actual": 2.3,
+"eps_est": 2.39,
+"surprise": -0.0377,
+"result": "miss",
+"result_done": true,
+"source": "Nasdaq"
+},
 "SSD|2026-10-26": {
 "t": "SSD",
 "ticker": "SSD",
@@ -15514,6 +19498,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 7.7
+},
+"SSNC|2026-10-22": {
+"t": "SSNC",
+"ticker": "SSNC",
+"name": "SS&C Technologies Holdings, Inc.",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$1.59",
+"quarter": "Sep/2026",
+"market_cap_bn": 21.0,
+"eps_actual": 1.58,
+"eps_est": 1.59,
+"surprise": -0.0063,
+"result": "inline",
+"result_done": true,
+"source": "Nasdaq"
 },
 "SSRM|2026-11-03": {
 "t": "SSRM",
@@ -15587,6 +19587,22 @@
 "period": null,
 "market_cap_bn": 12.4
 },
+"STLD|2026-10-19": {
+"t": "STLD",
+"ticker": "STLD",
+"name": "Steel Dynamics, Inc.",
+"m": "US",
+"date": "2026-10-19",
+"eps_forecast": "$5.42",
+"quarter": "Sep/2026",
+"market_cap_bn": 34.4,
+"eps_actual": 5.26,
+"eps_est": 5.42,
+"surprise": -0.029500000000000002,
+"result": "miss",
+"result_done": true,
+"source": "Nasdaq"
+},
 "STM|2026-10-29": {
 "t": "STM",
 "ticker": "STM",
@@ -15647,6 +19663,22 @@
 "period": null,
 "market_cap_bn": 11.4
 },
+"STT|2026-10-14": {
+"t": "STT",
+"ticker": "STT",
+"name": "State Street Corporation",
+"m": "US",
+"date": "2026-10-14",
+"eps_forecast": "$3.65",
+"quarter": "Sep/2026",
+"market_cap_bn": 46.1,
+"eps_actual": 3.69,
+"eps_est": 3.65,
+"surprise": 0.011000000000000001,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "STUB|2026-11-10": {
 "t": "STUB",
 "ticker": "STUB",
@@ -15694,6 +19726,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 146.9
+},
+"STZ|2026-10-06": {
+"t": "STZ",
+"ticker": "STZ",
+"name": "Constellation Brands Inc",
+"m": "US",
+"date": "2026-10-06",
+"eps_forecast": "$3.62",
+"quarter": "Aug/2026",
+"market_cap_bn": 23.5,
+"eps_actual": 3.74,
+"eps_est": 3.62,
+"surprise": 0.0331,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "ST|2026-10-27": {
 "t": "ST",
@@ -15838,6 +19886,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 2.4
+},
+"SYF|2026-10-20": {
+"t": "SYF",
+"ticker": "SYF",
+"name": "Synchrony Financial",
+"m": "US",
+"date": "2026-10-20",
+"eps_forecast": "$2.48",
+"quarter": "Sep/2026",
+"market_cap_bn": 27.9,
+"eps_actual": 2.68,
+"eps_est": 2.48,
+"surprise": 0.0806,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "SYK|2026-10-29": {
 "t": "SYK",
@@ -16043,6 +20107,22 @@
 "period": null,
 "market_cap_bn": 4.0
 },
+"TDY|2026-10-21": {
+"t": "TDY",
+"ticker": "TDY",
+"name": "Teledyne Technologies Incorporated",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$6.15",
+"quarter": "Sep/2026",
+"market_cap_bn": 28.8,
+"eps_actual": 6.72,
+"eps_est": 6.15,
+"surprise": 0.09269999999999999,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "TEAM|2026-11-05": {
 "t": "TEAM",
 "ticker": "TEAM",
@@ -16162,6 +20242,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 6.0
+},
+"TFC|2026-10-16": {
+"t": "TFC",
+"ticker": "TFC",
+"name": "Truist Financial Corporation",
+"m": "US",
+"date": "2026-10-16",
+"eps_forecast": "$1.17",
+"quarter": "Sep/2026",
+"market_cap_bn": 59.2,
+"eps_actual": 1.16,
+"eps_est": 1.17,
+"surprise": -0.0085,
+"result": "inline",
+"result_done": true,
+"source": "Nasdaq"
 },
 "TFG.JO|2026-11-06": {
 "t": "TFG.JO",
@@ -16438,6 +20534,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 2.5
+},
+"TMO|2026-10-21": {
+"t": "TMO",
+"ticker": "TMO",
+"name": "Thermo Fisher Scientific Inc",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$6.40",
+"quarter": "Sep/2026",
+"market_cap_bn": 250.1,
+"eps_actual": 6.68,
+"eps_est": 6.4,
+"surprise": 0.0437,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "TMUS|2026-10-28": {
 "t": "TMUS",
@@ -16727,6 +20839,22 @@
 "period": null,
 "market_cap_bn": 16.0
 },
+"TRV|2026-10-16": {
+"t": "TRV",
+"ticker": "TRV",
+"name": "The Travelers Companies, Inc.",
+"m": "US",
+"date": "2026-10-16",
+"eps_forecast": "$7.07",
+"quarter": "Sep/2026",
+"market_cap_bn": 83.1,
+"eps_actual": 9.18,
+"eps_est": 7.07,
+"surprise": 0.2984,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "TR|2026-10-28": {
 "t": "TR",
 "ticker": "TR",
@@ -16739,6 +20867,22 @@
 "period": null,
 "market_cap_bn": 2.8
 },
+"TSCO|2026-10-22": {
+"t": "TSCO",
+"ticker": "TSCO",
+"name": "Tractor Supply Company",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$0.40",
+"quarter": "Sep/2026",
+"market_cap_bn": 18.1,
+"eps_actual": 0.43,
+"eps_est": 0.4,
+"surprise": 0.075,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "TSEM|2026-11-02": {
 "t": "TSEM",
 "ticker": "TSEM",
@@ -16750,6 +20894,38 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 19.0
+},
+"TSLA|2026-10-21": {
+"t": "TSLA",
+"ticker": "TSLA",
+"name": "Tesla, Inc. ",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$0.22",
+"quarter": "Sep/2026",
+"market_cap_bn": 1480.6,
+"eps_actual": 0.2,
+"eps_est": 0.22,
+"surprise": -0.0909,
+"result": "miss",
+"result_done": true,
+"source": "Nasdaq"
+},
+"TSM|2026-10-15": {
+"t": "TSM",
+"ticker": "TSM",
+"name": "Taiwan Semiconductor Manufacturing Company Ltd.",
+"m": "US",
+"date": "2026-10-15",
+"eps_forecast": "$4.45",
+"quarter": "Sep/2026",
+"market_cap_bn": 2138.7,
+"eps_actual": 4.6,
+"eps_est": 4.45,
+"surprise": 0.0337,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "TSN|2026-11-16": {
 "t": "TSN",
@@ -16822,6 +20998,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 195.5
+},
+"TTMI|2026-10-22": {
+"t": "TTMI",
+"ticker": "TTMI",
+"name": "TTM Technologies, Inc.",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$1.11",
+"quarter": "Sep/2026",
+"market_cap_bn": 7.8,
+"eps_actual": 1.31,
+"eps_est": 1.11,
+"surprise": 0.1802,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "TTWO|2026-11-09": {
 "t": "TTWO",
@@ -16931,6 +21123,22 @@
 "period": null,
 "market_cap_bn": 6.5
 },
+"TXN|2026-10-21": {
+"t": "TXN",
+"ticker": "TXN",
+"name": "Texas Instruments Incorporated",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$2.40",
+"quarter": "Sep/2026",
+"market_cap_bn": 255.3,
+"eps_actual": 2.62,
+"eps_est": 2.4,
+"surprise": 0.0917,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "TXRH|2026-11-05": {
 "t": "TXRH",
 "ticker": "TXRH",
@@ -16979,6 +21187,22 @@
 "period": null,
 "market_cap_bn": 16.1
 },
+"T|2026-10-21": {
+"t": "T",
+"ticker": "T",
+"name": "AT&T Inc.",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$0.61",
+"quarter": "Sep/2026",
+"market_cap_bn": 153.2,
+"eps_actual": 0.65,
+"eps_est": 0.61,
+"surprise": 0.06559999999999999,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "UAA|2026-11-06": {
 "t": "UAA",
 "ticker": "UAA",
@@ -16990,6 +21214,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 2.1
+},
+"UAL|2026-10-20": {
+"t": "UAL",
+"ticker": "UAL",
+"name": "United Airlines Holdings, Inc.",
+"m": "US",
+"date": "2026-10-20",
+"eps_forecast": "$2.60",
+"quarter": "Sep/2026",
+"market_cap_bn": 33.1,
+"eps_actual": 2.54,
+"eps_est": 2.6,
+"surprise": -0.0231,
+"result": "miss",
+"result_done": true,
+"source": "Nasdaq"
 },
 "UA|2026-11-06": {
 "t": "UA",
@@ -17015,6 +21255,22 @@
 "period": null,
 "market_cap_bn": 141.1
 },
+"UBSI|2026-10-22": {
+"t": "UBSI",
+"ticker": "UBSI",
+"name": "United Bankshares, Inc.",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$0.94",
+"quarter": "Sep/2026",
+"market_cap_bn": 6.6,
+"eps_actual": 0.94,
+"eps_est": 0.94,
+"surprise": 0.0,
+"result": "inline",
+"result_done": true,
+"source": "Nasdaq"
+},
 "UBS|2026-10-28": {
 "t": "UBS",
 "ticker": "UBS",
@@ -17026,6 +21282,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 145.5
+},
+"UCB|2026-10-20": {
+"t": "UCB",
+"ticker": "UCB",
+"name": "United Community Banks, Inc.",
+"m": "US",
+"date": "2026-10-20",
+"eps_forecast": "$0.77",
+"quarter": "Sep/2026",
+"market_cap_bn": 4.5,
+"eps_actual": 0.77,
+"eps_est": 0.77,
+"surprise": 0.0,
+"result": "inline",
+"result_done": true,
+"source": "Nasdaq"
 },
 "UCTT|2026-10-27": {
 "t": "UCTT",
@@ -17050,6 +21322,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 11.6
+},
+"UEC|2026-09-29": {
+"t": "UEC",
+"ticker": "UEC",
+"name": "Uranium Energy Corp.",
+"m": "US",
+"date": "2026-09-29",
+"eps_forecast": "($0.04)",
+"quarter": "Jul/2026",
+"market_cap_bn": 3.7,
+"eps_actual": -0.07,
+"eps_est": -0.04,
+"surprise": -0.75,
+"result": "miss",
+"result_done": true,
+"source": "Nasdaq"
 },
 "UE|2026-10-28": {
 "t": "UE",
@@ -17195,6 +21483,38 @@
 "period": null,
 "market_cap_bn": 46.7
 },
+"UNF|2026-10-21": {
+"t": "UNF",
+"ticker": "UNF",
+"name": "Unifirst Corporation",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$2.09",
+"quarter": "Aug/2026",
+"market_cap_bn": 5.0,
+"eps_actual": 2.61,
+"eps_est": 2.09,
+"surprise": 0.2488,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
+"UNH|2026-10-13": {
+"t": "UNH",
+"ticker": "UNH",
+"name": "UnitedHealth Group Incorporated",
+"m": "US",
+"date": "2026-10-13",
+"eps_forecast": "$4.12",
+"quarter": "Sep/2026",
+"market_cap_bn": 381.5,
+"eps_actual": 4.69,
+"eps_est": 4.12,
+"surprise": 0.1383,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "UNM|2026-11-03": {
 "t": "UNM",
 "ticker": "UNM",
@@ -17206,6 +21526,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 14.8
+},
+"UNP|2026-10-22": {
+"t": "UNP",
+"ticker": "UNP",
+"name": "Union Pacific Corporation",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$3.47",
+"quarter": "Sep/2026",
+"market_cap_bn": 177.1,
+"eps_actual": 3.53,
+"eps_est": 3.47,
+"surprise": 0.0173,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "UPST|2026-11-03": {
 "t": "UPST",
@@ -17231,6 +21567,22 @@
 "period": null,
 "market_cap_bn": 86.4
 },
+"URI|2026-10-21": {
+"t": "URI",
+"ticker": "URI",
+"name": "United Rentals, Inc.",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$13.83",
+"quarter": "Sep/2026",
+"market_cap_bn": 68.8,
+"eps_actual": 15.55,
+"eps_est": 13.83,
+"surprise": 0.1244,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "USAR|2026-11-05": {
 "t": "USAR",
 "ticker": "USAR",
@@ -17242,6 +21594,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 3.6
+},
+"USB|2026-10-15": {
+"t": "USB",
+"ticker": "USB",
+"name": "U.S. Bancorp",
+"m": "US",
+"date": "2026-10-15",
+"eps_forecast": "$1.32",
+"quarter": "Sep/2026",
+"market_cap_bn": 93.5,
+"eps_actual": 1.34,
+"eps_est": 1.32,
+"surprise": 0.0152,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "USFD|2026-11-05": {
 "t": "USFD",
@@ -17375,6 +21743,22 @@
 "period": null,
 "market_cap_bn": 3.7
 },
+"VC|2026-10-22": {
+"t": "VC",
+"ticker": "VC",
+"name": "Visteon Corporation",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$2.25",
+"quarter": "Sep/2026",
+"market_cap_bn": 2.2,
+"eps_actual": 0.19,
+"eps_est": 2.25,
+"surprise": -0.9156,
+"result": "miss",
+"result_done": true,
+"source": "Nasdaq"
+},
 "VECO|2026-11-04": {
 "t": "VECO",
 "ticker": "VECO",
@@ -17459,6 +21843,22 @@
 "period": null,
 "market_cap_bn": 6.9
 },
+"VFS|2026-10-19": {
+"t": "VFS",
+"ticker": "VFS",
+"name": "VinFast Auto Ltd.",
+"m": "US",
+"date": "2026-10-19",
+"eps_forecast": "",
+"quarter": "Jun/2026",
+"market_cap_bn": 6.9,
+"eps_actual": -0.53,
+"eps_est": null,
+"surprise": null,
+"result": null,
+"result_done": false,
+"source": "Nasdaq"
+},
 "VGNT|2026-11-04": {
 "t": "VGNT",
 "ticker": "VGNT",
@@ -17519,6 +21919,22 @@
 "period": null,
 "market_cap_bn": 26.4
 },
+"VICR|2026-10-20": {
+"t": "VICR",
+"ticker": "VICR",
+"name": "Vicor Corporation",
+"m": "US",
+"date": "2026-10-20",
+"eps_forecast": "$1.39",
+"quarter": "Sep/2026",
+"market_cap_bn": 8.3,
+"eps_actual": 1.33,
+"eps_est": 1.39,
+"surprise": -0.0432,
+"result": "miss",
+"result_done": true,
+"source": "Nasdaq"
+},
 "VIRT|2026-11-05": {
 "t": "VIRT",
 "ticker": "VIRT",
@@ -17567,6 +21983,22 @@
 "period": null,
 "market_cap_bn": 3.2
 },
+"VLO|2026-10-22": {
+"t": "VLO",
+"ticker": "VLO",
+"name": "Valero Energy Corporation",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$21.28",
+"quarter": "Sep/2026",
+"market_cap_bn": 122.7,
+"eps_actual": 23.9,
+"eps_est": 21.28,
+"surprise": 0.1231,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "VLTO|2026-10-29": {
 "t": "VLTO",
 "ticker": "VLTO",
@@ -17579,6 +22011,22 @@
 "period": null,
 "market_cap_bn": 25.6
 },
+"VLY|2026-10-22": {
+"t": "VLY",
+"ticker": "VLY",
+"name": "Valley National Bancorp",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$0.33",
+"quarter": "Sep/2026",
+"market_cap_bn": 7.6,
+"eps_actual": 0.36,
+"eps_est": 0.33,
+"surprise": 0.0909,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "VMC|2026-10-29": {
 "t": "VMC",
 "ticker": "VMC",
@@ -17590,6 +22038,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 34.8
+},
+"VMI|2026-10-20": {
+"t": "VMI",
+"ticker": "VMI",
+"name": "Valmont Industries, Inc.",
+"m": "US",
+"date": "2026-10-20",
+"eps_forecast": "$5.70",
+"quarter": "Sep/2026",
+"market_cap_bn": 8.4,
+"eps_actual": 6.24,
+"eps_est": 5.7,
+"surprise": 0.0947,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "VMRK|2026-11-04": {
 "t": "VMRK",
@@ -17711,6 +22175,22 @@
 "period": null,
 "market_cap_bn": 26.5
 },
+"VRSN|2026-10-22": {
+"t": "VRSN",
+"ticker": "VRSN",
+"name": "VeriSign, Inc.",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$2.42",
+"quarter": "Sep/2026",
+"market_cap_bn": 27.5,
+"eps_actual": 2.41,
+"eps_est": 2.42,
+"surprise": -0.0040999999999999995,
+"result": "inline",
+"result_done": true,
+"source": "Nasdaq"
+},
 "VRTX|2026-11-02": {
 "t": "VRTX",
 "ticker": "VRTX",
@@ -17795,6 +22275,22 @@
 "period": null,
 "market_cap_bn": 47.3
 },
+"VTMX|2026-10-22": {
+"t": "VTMX",
+"ticker": "VTMX",
+"name": "Corporacion Inmobiliaria Vesta, S.A.B de C.V.",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$0.30",
+"quarter": "Sep/2026",
+"market_cap_bn": 3.2,
+"eps_actual": 1.18,
+"eps_est": 0.3,
+"surprise": 2.9333,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "VTRS|2026-11-05": {
 "t": "VTRS",
 "ticker": "VTRS",
@@ -17867,6 +22363,54 @@
 "period": null,
 "market_cap_bn": 740.3
 },
+"WAB|2026-10-21": {
+"t": "WAB",
+"ticker": "WAB",
+"name": "Westinghouse Air Brake Technologies Corporation",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$2.72",
+"quarter": "Sep/2026",
+"market_cap_bn": 46.4,
+"eps_actual": 2.83,
+"eps_est": 2.72,
+"surprise": 0.0404,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
+"WAFD|2026-10-15": {
+"t": "WAFD",
+"ticker": "WAFD",
+"name": "WaFd, Inc.",
+"m": "US",
+"date": "2026-10-15",
+"eps_forecast": "$0.84",
+"quarter": "Sep/2026",
+"market_cap_bn": 2.2,
+"eps_actual": 0.85,
+"eps_est": 0.84,
+"surprise": 0.011899999999999999,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
+"WAL|2026-10-19": {
+"t": "WAL",
+"ticker": "WAL",
+"name": "Western Alliance Bancorporation",
+"m": "US",
+"date": "2026-10-19",
+"eps_forecast": "$2.43",
+"quarter": "Sep/2026",
+"market_cap_bn": 8.4,
+"eps_actual": 2.45,
+"eps_est": 2.43,
+"surprise": 0.008199999999999999,
+"result": "inline",
+"result_done": true,
+"source": "Nasdaq"
+},
 "WAT|2026-11-03": {
 "t": "WAT",
 "ticker": "WAT",
@@ -17914,6 +22458,54 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 15.8
+},
+"WCN|2026-10-21": {
+"t": "WCN",
+"ticker": "WCN",
+"name": "Waste Connections, Inc.",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$1.52",
+"quarter": "Sep/2026",
+"market_cap_bn": 46.3,
+"eps_actual": 1.58,
+"eps_est": 1.52,
+"surprise": 0.0395,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
+"WDC|2026-10-22": {
+"t": "WDC",
+"ticker": "WDC",
+"name": "Western Digital Corporation",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$3.99",
+"quarter": "Sep/2026",
+"market_cap_bn": 132.3,
+"eps_actual": 4.43,
+"eps_est": 3.99,
+"surprise": 0.1103,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
+"WDFC|2026-10-21": {
+"t": "WDFC",
+"ticker": "WDFC",
+"name": "WD-40 Company",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$1.11",
+"quarter": "Aug/2026",
+"market_cap_bn": 2.8,
+"eps_actual": 1.06,
+"eps_est": 1.11,
+"surprise": -0.045,
+"result": "miss",
+"result_done": true,
+"source": "Nasdaq"
 },
 "WEC|2026-10-29": {
 "t": "WEC",
@@ -17963,6 +22555,22 @@
 "period": null,
 "market_cap_bn": 6.8
 },
+"WFC|2026-10-13": {
+"t": "WFC",
+"ticker": "WFC",
+"name": "Wells Fargo & Company",
+"m": "US",
+"date": "2026-10-13",
+"eps_forecast": "$1.85",
+"quarter": "Sep/2026",
+"market_cap_bn": 251.0,
+"eps_actual": 1.87,
+"eps_est": 1.85,
+"surprise": 0.0108,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "WFG|2026-10-29": {
 "t": "WFG",
 "ticker": "WFG",
@@ -17974,6 +22582,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 5.4
+},
+"WFRD|2026-10-20": {
+"t": "WFRD",
+"ticker": "WFRD",
+"name": "Weatherford International plc",
+"m": "US",
+"date": "2026-10-20",
+"eps_forecast": "$1.21",
+"quarter": "Sep/2026",
+"market_cap_bn": 5.9,
+"eps_actual": 1.66,
+"eps_est": 1.21,
+"surprise": 0.37189999999999995,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "WF|2026-11-13": {
 "t": "WF",
@@ -18011,6 +22635,22 @@
 "period": null,
 "market_cap_bn": 4.8
 },
+"WH|2026-10-21": {
+"t": "WH",
+"ticker": "WH",
+"name": "Wyndham Hotels & Resorts, Inc.",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$1.32",
+"quarter": "Sep/2026",
+"market_cap_bn": 5.6,
+"eps_actual": 1.43,
+"eps_est": 1.32,
+"surprise": 0.0833,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "WING|2026-10-28": {
 "t": "WING",
 "ticker": "WING",
@@ -18022,6 +22662,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 3.3
+},
+"WIT|2026-10-15": {
+"t": "WIT",
+"ticker": "WIT",
+"name": "Wipro Limited",
+"m": "US",
+"date": "2026-10-15",
+"eps_forecast": "$0.04",
+"quarter": "Sep/2026",
+"market_cap_bn": 21.7,
+"eps_actual": 0.03,
+"eps_est": 0.04,
+"surprise": -0.25,
+"result": "miss",
+"result_done": true,
+"source": "Nasdaq"
 },
 "WIX|2026-11-10": {
 "t": "WIX",
@@ -18143,6 +22799,38 @@
 "period": null,
 "market_cap_bn": 3.2
 },
+"WRB|2026-10-19": {
+"t": "WRB",
+"ticker": "WRB",
+"name": "W.R. Berkley Corporation",
+"m": "US",
+"date": "2026-10-19",
+"eps_forecast": "$1.14",
+"quarter": "Sep/2026",
+"market_cap_bn": 28.0,
+"eps_actual": 1.17,
+"eps_est": 1.14,
+"surprise": 0.0263,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
+"WSBC|2026-10-21": {
+"t": "WSBC",
+"ticker": "WSBC",
+"name": "WesBanco, Inc.",
+"m": "US",
+"date": "2026-10-21",
+"eps_forecast": "$0.87",
+"quarter": "Sep/2026",
+"market_cap_bn": 3.8,
+"eps_actual": 0.89,
+"eps_est": 0.87,
+"surprise": 0.023,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "WSC|2026-11-05": {
 "t": "WSC",
 "ticker": "WSC",
@@ -18154,6 +22842,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 3.0
+},
+"WSFS|2026-10-22": {
+"t": "WSFS",
+"ticker": "WSFS",
+"name": "WSFS Financial Corporation",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "$1.61",
+"quarter": "Sep/2026",
+"market_cap_bn": 4.0,
+"eps_actual": 1.75,
+"eps_est": 1.61,
+"surprise": 0.087,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "WSM|2026-11-18": {
 "t": "WSM",
@@ -18202,6 +22906,38 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 27.7
+},
+"WS|2026-10-06": {
+"t": "WS",
+"ticker": "WS",
+"name": "Worthington Steel, Inc.",
+"m": "US",
+"date": "2026-10-06",
+"eps_forecast": "$1.16",
+"quarter": "Aug/2026",
+"market_cap_bn": 2.1,
+"eps_actual": 0.57,
+"eps_est": 1.16,
+"surprise": -0.5085999999999999,
+"result": "miss",
+"result_done": true,
+"source": "Nasdaq"
+},
+"WTFC|2026-10-19": {
+"t": "WTFC",
+"ticker": "WTFC",
+"name": "Wintrust Financial Corporation",
+"m": "US",
+"date": "2026-10-19",
+"eps_forecast": "$3.29",
+"quarter": "Sep/2026",
+"market_cap_bn": 10.1,
+"eps_actual": 3.37,
+"eps_est": 3.29,
+"surprise": 0.024300000000000002,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "WTM|2026-11-05": {
 "t": "WTM",
@@ -18539,6 +23275,16 @@
 "period": null,
 "market_cap_bn": 8.4
 },
+"ZGN|2026-10-22": {
+"t": "ZGN",
+"ticker": "ZGN",
+"name": "Ermenegildo Zegna N.V.",
+"m": "US",
+"date": "2026-10-22",
+"eps_forecast": "",
+"quarter": "Sep/2026",
+"market_cap_bn": 3.7
+},
 "ZG|2026-11-04": {
 "t": "ZG",
 "ticker": "ZG",
@@ -18550,6 +23296,22 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 7.9
+},
+"ZION|2026-10-19": {
+"t": "ZION",
+"ticker": "ZION",
+"name": "Zions Bancorporation N.A.",
+"m": "US",
+"date": "2026-10-19",
+"eps_forecast": "$1.64",
+"quarter": "Sep/2026",
+"market_cap_bn": 9.7,
+"eps_actual": 1.78,
+"eps_est": 1.64,
+"surprise": 0.08539999999999999,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "ZLAB|2026-11-05": {
 "t": "ZLAB",
