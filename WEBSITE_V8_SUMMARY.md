@@ -1,4 +1,4 @@
-# Leago Rifumo Capital website — v8 (updated 26 Oct 2026, 01:05 SAST)
+# Leago Rifumo Capital website — v8 (updated 26 Oct 2026, 04:20 SAST)
 
 Repository: github.com/LeagoRifumo/lrc-website (branch main, GitHub Pages serves /docs)
 Give this file (and the zip) to Claude when you next update the website.
