@@ -1,6 +1,6 @@
 {
  "note": "JSE company announcements (SENS) recorded by the LRC JSE Announcements job every weekday. results = published results with headline earnings per share (HEPS) vs the same period last year; trading_statements = expected HEPS change ranges; dividends = declared dividends with the JSE dates. Amounts in cents. Every entry carries its source.",
- "updated": "2026-10-26T04:47+02:00",
+ "updated": "2026-10-26T18:52+02:00",
  "results": [
   {
    "t": "CLS.JO",
@@ -12,6 +12,16 @@
    "unit": "c",
    "dps": 667.0,
    "source": "Clicks Group — Annual results for the year ended 31 August 2026 and cash dividend declaration (22 Oct 2026) https://www.clicksgroup.co.za/wp-content/uploads/2026/10/CGL-2026-Annual-results-announcement.pdf (HEPS 1 421.7c vs 1 361.7c; final dividend 667.0c, total for the year 925c)"
+  },
+  {
+   "t": "PIK.JO",
+   "name": "Pick n Pay Stores",
+   "date": "2026-10-26",
+   "period": "26 weeks to 30 Aug 2026",
+   "heps": -40.71,
+   "heps_prior": -59.77,
+   "unit": "c",
+   "source": "Pick n Pay Stores SENS — Condensed consolidated interim financial results for the 26 weeks ended 30 August 2026 (\"H1 FY27\") (26 Oct 2026), via Sharenet https://www.sharenet.co.za/v3/sens_display.php?tdate=20261026070500&seq=2&scode=PIK (headline loss per share 40.71c vs 59.77c; basic loss per share 36.77c; no interim dividend declared in the announcement)"
   }
  ],
  "trading_statements": [
