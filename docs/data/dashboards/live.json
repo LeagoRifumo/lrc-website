@@ -2,7 +2,7 @@
  "week_ending": "2026-10-30",
  "title": "This week so far — as of Tue 27 Oct 2026",
  "live": true,
- "generated": "2026-10-27T12:51+02:00",
+ "generated": "2026-10-27T16:59+02:00",
  "agent": "LRC Market Dashboard",
  "groups": [
   {
@@ -11,7 +11,7 @@
     {
      "name": "JSE All Share (J203)",
      "unit": "index",
-     "latest": 109491.29,
+     "latest": 109650.83,
      "week_ago": 108020.1016,
      "year_ago": 108707.2969,
      "as_of": "2026-10-27",
@@ -22,7 +22,7 @@
     {
      "name": "JSE Top 40 (J200)",
      "unit": "index",
-     "latest": 101259.96,
+     "latest": 101430.7,
      "week_ago": 99990.8984,
      "year_ago": 101365.0,
      "as_of": "2026-10-27",
@@ -33,7 +33,7 @@
     {
      "name": "USD / ZAR",
      "unit": "rand per $",
-     "latest": 16.6541,
+     "latest": 16.591,
      "week_ago": 16.4801,
      "year_ago": 17.1995,
      "as_of": "2026-10-27",
@@ -44,7 +44,7 @@
     {
      "name": "EUR / ZAR",
      "unit": "rand per €",
-     "latest": 18.5657,
+     "latest": 18.496,
      "week_ago": 18.4909,
      "year_ago": 20.008,
      "as_of": "2026-10-27",
@@ -55,7 +55,7 @@
     {
      "name": "GBP / ZAR",
      "unit": "rand per £",
-     "latest": 22.1775,
+     "latest": 22.102,
      "week_ago": 22.0957,
      "year_ago": 22.9165,
      "as_of": "2026-10-27",
@@ -104,22 +104,22 @@
     {
      "name": "S&P 500",
      "unit": "index",
-     "latest": 7676.77,
+     "latest": 7712.26,
      "week_ago": 7623.6802,
-     "year_ago": 6791.6899,
-     "as_of": "2026-10-26",
-     "source": "Yahoo Finance ^GSPC daily close (2026-10-26; week-ago 2026-10-23; year-ago 2025-10-24)",
+     "year_ago": 6875.1602,
+     "as_of": "2026-10-27",
+     "source": "Yahoo Finance ^GSPC daily close (2026-10-27; week-ago 2026-10-23; year-ago 2025-10-27)",
      "note": "",
      "carried": false
     },
     {
      "name": "Nasdaq Composite",
      "unit": "index",
-     "latest": 26169.38,
+     "latest": 26406.271,
      "week_ago": 25955.3398,
-     "year_ago": 23204.8691,
-     "as_of": "2026-10-26",
-     "source": "Yahoo Finance ^IXIC daily close (2026-10-26; week-ago 2026-10-23; year-ago 2025-10-24)",
+     "year_ago": 23637.4609,
+     "as_of": "2026-10-27",
+     "source": "Yahoo Finance ^IXIC daily close (2026-10-27; week-ago 2026-10-23; year-ago 2025-10-27)",
      "note": "",
      "carried": false
     },
@@ -148,11 +148,11 @@
     {
      "name": "US 10-year Treasury",
      "unit": "%",
-     "latest": 4.986,
+     "latest": 4.993,
      "week_ago": 4.988,
      "year_ago": 3.997,
-     "as_of": "2026-10-26",
-     "source": "Yahoo Finance ^TNX daily close (2026-10-26; week-ago 2026-10-23; year-ago 2025-10-24)",
+     "as_of": "2026-10-27",
+     "source": "Yahoo Finance ^TNX daily close (2026-10-27; week-ago 2026-10-23; year-ago 2025-10-27)",
      "note": "",
      "carried": false
     },
@@ -175,7 +175,7 @@
     {
      "name": "Gold",
      "unit": "$/oz",
-     "latest": 4012.4,
+     "latest": 4061.2,
      "week_ago": 4007.8999,
      "year_ago": 4019.7,
      "as_of": "2026-10-27",
@@ -186,7 +186,7 @@
     {
      "name": "Platinum",
      "unit": "$/oz",
-     "latest": 1504.4,
+     "latest": 1533.2,
      "week_ago": 1554.2,
      "year_ago": 1578.4,
      "as_of": "2026-10-27",
@@ -197,7 +197,7 @@
     {
      "name": "Brent crude",
      "unit": "$/bbl",
-     "latest": 110.64,
+     "latest": 109.54,
      "week_ago": 116.72,
      "year_ago": 65.62,
      "as_of": "2026-10-27",
@@ -208,7 +208,7 @@
     {
      "name": "Copper",
      "unit": "$/t",
-     "latest": 14546.0828,
+     "latest": 14616.6306,
      "week_ago": 14277.1187,
      "year_ago": 11332.8493,
      "as_of": "2026-10-27",
@@ -232,6 +232,6 @@
  ],
  "movers": [],
  "market_view": "",
- "auto_view": "The JSE All Share moved +1.4% on the week to 109,491 and the rand weakened 1.1% to R16.65/$. In New York the S&P 500 moved +0.7% and the Nasdaq +0.8%, with the US 10-year at 4.99%. Commodities: gold +0.1%, platinum -3.2%, Brent -5.2%, copper +1.9%.",
+ "auto_view": "The JSE All Share moved +1.5% on the week to 109,651 and the rand weakened 0.7% to R16.59/$. In New York the S&P 500 moved +1.2% and the Nasdaq +1.7%, with the US 10-year at 4.99%. Commodities: gold +1.3%, platinum -1.4%, Brent -6.2%, copper +2.4%.",
  "missing": []
 }
