@@ -1,10 +1,10 @@
 {
- "edition": "Morning brief · Tuesday 27 October 2026 06:20",
- "generated": "2026-10-27T09:20:00+02:00",
- "covers": "Wall Street's Monday 26 October close, the JSE's Monday close, and Asian and overnight trading to 06:20 SAST on Tuesday 27 October 2026",
+ "edition": "Midday update · Tuesday 27 October 2026 10:20",
+ "generated": "2026-10-27T10:20:00+02:00",
+ "covers": "The JSE morning session, European open and US pre-market to 10:20 SAST on Tuesday 27 October 2026, after the 06:20 morning brief",
  "agent": "LRC News Desk",
- "headline": "Asian chip stocks jump and US futures edge up as the Fed's two-day meeting starts; oil slips for a second day on Iran mediation, and Moody's is seen as the agency most likely to upgrade South Africa",
- "summary": "The JSE All Share closed up about 1.0% at 109,130 on Monday (Yahoo Finance via LRC Market Dashboard, 26 Oct) despite Brazil's crash, and Business Day reports that Moody's could upgrade South Africa from Ba2 within about a year, with Moody's and S&P both reviewing on 27 November; the rand was near R16.64/$ early on Tuesday (Yahoo Finance, 27 Oct). Wall Street closed higher on Monday (S&P 500 +0.70% at 7,676.77) and in Asia the Nikkei rose 1.9% and the KOSPI more than 4% on chip stocks, with Nasdaq futures up 0.4% (Reuters via Business Recorder, 27 Oct). Brent eased about 0.7% to near $115 a barrel as talks with Iran continue, and gold was little changed near $4,010 an ounce ahead of Wednesday's Fed decision (Investing.com; Reuters via Business Recorder, 27 Oct).",
+ "headline": "HSBC falls more than 5% in Hong Kong despite a 32% profit jump, Microsoft offers buyouts to about 60,000 staff a day before results, and SA's leading indicator turns up",
+ "summary": "The rand was steady at R16.65/$ early on Tuesday with the 2035 bond yield at 8.62% (Reuters via CNBC Africa, 27 Oct), and the SARB's leading business cycle indicator rose 1.1% in August after falling 0.8% in July (Newsquawk, 27 Oct). US stock futures were little changed ahead of the Fed decision on Wednesday, while HSBC shares fell 5.6% in Hong Kong after results and FTSE 100 futures pointed 0.5% lower (Share Talk, 27 Oct); Microsoft, which reports on Wednesday, is offering buyouts to about 60,000 employees (Bloomberg via Investing.com, 26 Oct). Spot gold briefly slipped below $4,000 an ounce and Brent stayed near $115 a barrel as talks with Iran continue (TokenPost; CNBC TV18, 27 Oct).",
  "sections": [
   {
    "name": "Breaking",
@@ -14,12 +14,6 @@
      "summary": "Israelis elect the 26th Knesset on Tuesday 27 October; most polling stations are open from 7am to 10pm local time. A government needs 61 of 120 seats, and polls show neither Netanyahu's bloc nor the opposition clearly reaching that number (Al Jazeera, 20 Oct). Why it matters: the result could shape Israel's role in the wider Gulf conflict, which is keeping oil above $100 a barrel.",
      "source": "Al Jazeera",
      "url": "https://www.aljazeera.com/amp/news/2026/10/20/israels-elections-2026-explained-in-maps-and-charts"
-    },
-    {
-     "title": "Oil falls for a second day as Iran talks ease fears of a wider war",
-     "summary": "At 00:10 GMT on Tuesday Brent December futures were down 0.6% at $115.15 a barrel and WTI down 0.5% at $105.25 (Investing.com, 27 Oct); Reuters later had Brent down 0.7% at $114.95 (Business Recorder, 27 Oct). Talks involve Iran, Saudi Arabia, Turkey and Pakistan, with Qatar also engaging with Tehran. Supply risks remain: the Houthis said on Monday they attacked pumping stations on Saudi Arabia's East-West pipeline and Riyadh airport, which Saudi Arabia had not confirmed, and Tehran wants the US blockade of its ports lifted as part of any deal (Investing.com, 27 Oct).",
-     "source": "Investing.com; Business Recorder (Reuters)",
-     "url": "https://www.investing.com/news/commodities-news/oil-extends-losses-as-iran-mediation-efforts-ease-escalation-fears-4973997"
     }
    ]
   },
@@ -27,22 +21,22 @@
    "name": "US markets",
    "items": [
     {
-     "title": "Wall Street closed higher on Monday; futures edge up as the Fed meets",
-     "summary": "On Monday the S&P 500 closed at 7,676.77, the Nasdaq at 26,169.38 and the Dow at 52,361.58 (Reuters via Business Recorder, 26 Oct close); the S&P gained 0.70% on the day (Yahoo Finance, 26 Oct). US chip stocks rose 2.8% and Nasdaq futures were up 0.4% in Asian hours on Tuesday; the 10-year Treasury yield was steady at 4.992% (Reuters via Business Recorder, 27 Oct). The Fed's two-day meeting starts today; its decision is on Wednesday at 20:00 SAST and markets price only about a 10% chance of a hike this week (Investing.com, 27 Oct).",
-     "source": "Business Recorder (Reuters)",
-     "url": "https://www.brecorder.com/news/40446086/asian-stocks-surge-as-anthropic-ipo-lifts-sentiment-ahead-of-earnings-central-banks"
+     "title": "HSBC shares slide more than 5% despite a 32% rise in quarterly profit",
+     "summary": "HSBC's third-quarter pre-tax profit rose 32% to $9.6 billion, in line with the bank's compiled forecasts, and it announced another buyback of up to $1 billion. Wealth revenue was flat at $2.7 billion after 15% and 23% growth in the first two quarters, and the shares fell 5% in Hong Kong, though they are still up 11% this year (Reuters via The Star, 27 Oct). Share Talk put the Hong Kong fall at 5.6% and said FTSE 100 futures pointed to a 0.5% lower open near 10,711 after Monday's close of 10,767.33 (Share Talk, 27 Oct).",
+     "source": "The Star (Reuters); Share Talk",
+     "url": "https://www.thestar.com.my/business/business-news/2026/10/27/hsbc-quarterly-profit-jumps-but-shares-slide-after-flat-revenue-for-wealth-business"
     },
     {
-     "title": "Asia: Nikkei up 1.9%, KOSPI up more than 4% as chip stocks rally",
-     "summary": "On Tuesday morning the Nikkei was up 1.9%, South Korea's KOSPI more than 4% higher in early trade and MSCI's Asia-Pacific index outside Japan up 1.2%, after a large AI start-up filed for a Nasdaq listing. European stock futures were down 0.23% (Reuters via Business Recorder, 27 Oct).",
-     "source": "Business Recorder (Reuters)",
-     "url": "https://www.brecorder.com/news/40446086/asian-stocks-surge-as-anthropic-ipo-lifts-sentiment-ahead-of-earnings-central-banks"
+     "title": "Fed meeting starts; markets price an 82% chance of a December hike",
+     "summary": "Traders price about an 11% chance of a Fed rate hike at this week's meeting and an 82% chance of an increase in December, according to the CME FedWatch tool (Reuters via CNBC Africa, 27 Oct). The decision is on Wednesday at 20:00 SAST. On Monday the S&P 500 closed at 7,676.77, the Nasdaq at 26,169.38 and the Dow at 52,361.58 (Reuters via Business Recorder, 26 Oct close).",
+     "source": "CNBC Africa (Reuters); Business Recorder (Reuters)",
+     "url": "https://www.cnbcafrica.com/2026/south-african-rand-steady-ahead-of-leading-indicator-data"
     },
     {
-     "title": "China's industrial profits rise 14.4% in September",
-     "summary": "Profits at China's industrial firms rose 14.4% from a year earlier in September, the fastest pace since June, led by AI-related industries, while consumer-facing sectors lagged (National Bureau of Statistics via Investing.com, 27 Oct). Why it matters: China is the biggest buyer of South Africa's metals.",
-     "source": "Investing.com",
-     "url": "https://www.investing.com/news/economic-indicators/china-industrial-profits-rise-144-in-september-on-ai-demand-4974109"
+     "title": "Asia: Nikkei up 2.2% and KOSPI up 3.6% at midday on the chip rally",
+     "summary": "At midday on Tuesday the Nikkei 225 was up 2.2% at 63,542.77 and the KOSPI up 3.6% at 5,667.99, while the Hang Seng slipped 0.2% to 23,174.44 and the Shanghai Composite 0.1% to 3,692.58 (AP via WSB Radio, 27 Oct).",
+     "source": "WSB Radio (AP)",
+     "url": "https://www.wsbradio.com/news/business/us-futures-asian/FKDPOQQ63I7YBDX6TMSNV4MIMI/"
     },
     {
      "title": "Results today: Visa after the close, Coca-Cola before the open",
@@ -55,6 +49,12 @@
   {
    "name": "South Africa",
    "items": [
+    {
+     "title": "SA leading indicator rises 1.1% in August; rand steady near R16.65/$",
+     "summary": "The SARB's leading business cycle indicator rose 1.1% month on month in August after a 0.8% fall in July (Newsquawk, 27 Oct). The index tracks items such as vehicle sales, business confidence and money supply; one month's rise can be revised or reversed. Before the release the rand was at 16.6525 to the dollar, little changed, and the 2035 government bond yield was 8.62% (Reuters via CNBC Africa, 27 Oct).",
+     "source": "Newsquawk; CNBC Africa (Reuters)",
+     "url": "https://www.newsquawk.com/headlines/south-african-leading-business-cycle-indicator-aug-mm-11-prev--08"
+    },
     {
      "title": "Moody's seen as most likely to upgrade South Africa, possibly within a year",
      "summary": "After Moody's called the medium-term budget 'credit positive', Business Day reports an upgrade from Ba2 (positive outlook since May) could come within about a year. Bank of America sees Moody's as the most likely agency to act, possibly to Ba1, and calls an S&P move to BB+ 'a closer call'; Investec's Annabel Bishop expects a Moody's upgrade in about 18 months, and Treasury says Moody's and S&P could upgrade within 12 to 18 months. Moody's and S&P review South Africa on 27 November and Fitch on 11 December. Moody's says a track record of fiscal delivery still has to be built (Business Day, 27 Oct). No rating action has been announced.",
@@ -73,10 +73,10 @@
    "name": "Forex & commodities",
    "items": [
     {
-     "title": "Gold little changed near $4,010 ahead of the Fed",
-     "summary": "At 00:53 GMT on Tuesday spot gold was down 0.2% at $4,010.39 an ounce and US gold futures down 0.3% at $4,023.57; silver was near $53.96, platinum down 0.1% at $1,529.27 and palladium up 0.1% at $1,046.65. The dollar index was at 102.04. High energy prices keep alive bets on a Fed hike before year-end (Investing.com, 27 Oct).",
-     "source": "Investing.com",
-     "url": "https://uk.investing.com/news/commodities-news/gold-slips-near-4010-as-traders-await-fed-decision-iran-diplomacy-offers-hope-4932809"
+     "title": "Gold briefly dips below $4,000; Brent near $115",
+     "summary": "Spot gold slipped to $3,999.81 an ounce on Tuesday morning, down 0.42% (TokenPost, 27 Oct), while COMEX gold futures were at $4,029.70, down 0.22%, and silver futures at $54.18; Brent crude was near $115 a barrel (CNBC TV18, 27 Oct). Gold is about 5% below its October record (Brickwork Ratings via CNBC TV18, 27 Oct). Earlier, at 00:53 GMT, platinum was at $1,529.27 (Investing.com, 27 Oct).",
+     "source": "TokenPost; CNBC TV18 via TradingView",
+     "url": "https://www.tradingview.com/news/cnbctv:8e1b687a2094b:0/"
     },
     {
      "title": "Dollar firm; yen weaker before Bank of Japan decision",
@@ -89,6 +89,26 @@
   {
    "name": "Our coverage",
    "items": [
+    {
+     "title": "MSFT: Microsoft offers buyouts to about 60,000 staff a day before results",
+     "summary": "Microsoft is offering voluntary buyouts to about 60,000 employees at vice-president level and below on selected teams in the US, Canada, India and the UK, with some data-centre, sales and marketing staff excluded; the package is 'similar to a standard severance offer' and the company expects fewer takers than for a July retirement-age offer (Bloomberg via Investing.com, 26 Oct). That is roughly a quarter of the 223,000 staff it had at the end of June. Microsoft closed at $532.60 on Monday, up 1.5% (LRC Stock Scanner, 26 Oct close), and reports results on Wednesday 28 October. MSFT is a HOLD on the LRC Stock Scanner, held back by the LRC Analyst Target of $513.80 (about 4% below the price); rating unchanged.",
+     "source": "Investing.com (Bloomberg)",
+     "url": "https://www.investing.com/news/stock-market-news/microsoft-offers-buyouts-to-60000-workers-as-ai-reshapes-workforce-4973255",
+     "tickers": [
+      "MSFT"
+     ]
+    },
+    {
+     "title": "KO and V: results today; GOOGL tomorrow",
+     "summary": "Coca-Cola reports before the US open and Visa after the close today, and Alphabet on Wednesday (Nasdaq earnings calendar, 26 Oct). On the LRC Stock Scanner KO ($92.70) and V ($404.20) are HOLD, both held back by LRC Analyst Targets below the price, and GOOGL ($316.80) is a BUY (LRC Stock Scanner, 26 Oct close); ratings unchanged.",
+     "source": "Nasdaq earnings calendar",
+     "url": "https://www.nasdaq.com/market-activity/earnings",
+     "tickers": [
+      "KO",
+      "V",
+      "GOOGL"
+     ]
+    },
     {
      "title": "META: shares flat after the $35 billion share sale",
      "summary": "Meta closed at $642.70 on Monday, roughly unchanged on the day (LRC Stock Scanner, 26 Oct close), after launching $22.5 billion of common stock and $12.5 billion of mandatory convertible preferred, with up to $60 billion more planned from 2027 (TIKR, 26 Oct). Pricing of the offering is still to come. META is a BUY on the LRC Stock Scanner; rating unchanged.",
@@ -111,12 +131,12 @@
   }
  ],
  "watch_today": [
-  "Israel's election: polls close at 22:00 local time; exit polls tonight, with no bloc clearly at 61 seats in polling",
-  "Fed meeting day one; the decision is Wednesday 28 Oct at 20:00 SAST, with markets pricing about a 10% chance of a hike",
-  "Oil: progress in talks with Iran and any Saudi confirmation of the Houthi pipeline attacks",
-  "Rand and JSE: whether Monday's gains hold after Brazil's crash, with the rand near R16.64/$",
-  "Results: Coca-Cola before the US open, Visa after the close, and HSBC",
-  "South Africa's credit rating: Moody's and S&P reviews on 27 November, Fitch on 11 December",
-  "Coming up: Microsoft and Alphabet (Wed), Amazon and Intel, US GDP and PCE, SA rebased GDP and PPI (Thu), SA trade data (Fri), Bank of Japan (Fri)"
+  "Israel's election: polls close at 22:00 local time; exit polls tonight",
+  "Results: Coca-Cola before the US open and Visa after the close",
+  "Whether HSBC's slide weighs on European banks and the FTSE 100 at the open",
+  "Gold around $4,000 an ounce and Brent near $115 as talks with Iran continue",
+  "Fed decision Wednesday 28 Oct at 20:00 SAST: about an 11% chance of a hike priced this week, 82% for December",
+  "Microsoft and Alphabet results on Wednesday after the US close",
+  "Coming up: Amazon and Intel, US GDP and PCE, SA rebased GDP and PPI (Thu); SA trade data and Bank of Japan (Fri)"
  ]
 }
