@@ -2,7 +2,7 @@
  "week_ending": "2026-10-30",
  "title": "This week so far — as of Tue 27 Oct 2026",
  "live": true,
- "generated": "2026-10-27T16:59+02:00",
+ "generated": "2026-10-27T20:56+02:00",
  "agent": "LRC Market Dashboard",
  "groups": [
   {
@@ -11,7 +11,7 @@
     {
      "name": "JSE All Share (J203)",
      "unit": "index",
-     "latest": 109650.83,
+     "latest": 109820.15,
      "week_ago": 108020.1016,
      "year_ago": 108707.2969,
      "as_of": "2026-10-27",
@@ -22,7 +22,7 @@
     {
      "name": "JSE Top 40 (J200)",
      "unit": "index",
-     "latest": 101430.7,
+     "latest": 101609.02,
      "week_ago": 99990.8984,
      "year_ago": 101365.0,
      "as_of": "2026-10-27",
@@ -33,7 +33,7 @@
     {
      "name": "USD / ZAR",
      "unit": "rand per $",
-     "latest": 16.591,
+     "latest": 16.6237,
      "week_ago": 16.4801,
      "year_ago": 17.1995,
      "as_of": "2026-10-27",
@@ -44,7 +44,7 @@
     {
      "name": "EUR / ZAR",
      "unit": "rand per €",
-     "latest": 18.496,
+     "latest": 18.5088,
      "week_ago": 18.4909,
      "year_ago": 20.008,
      "as_of": "2026-10-27",
@@ -55,7 +55,7 @@
     {
      "name": "GBP / ZAR",
      "unit": "rand per £",
-     "latest": 22.102,
+     "latest": 22.127,
      "week_ago": 22.0957,
      "year_ago": 22.9165,
      "as_of": "2026-10-27",
@@ -104,7 +104,7 @@
     {
      "name": "S&P 500",
      "unit": "index",
-     "latest": 7712.26,
+     "latest": 7720.27,
      "week_ago": 7623.6802,
      "year_ago": 6875.1602,
      "as_of": "2026-10-27",
@@ -115,7 +115,7 @@
     {
      "name": "Nasdaq Composite",
      "unit": "index",
-     "latest": 26406.271,
+     "latest": 26479.969,
      "week_ago": 25955.3398,
      "year_ago": 23637.4609,
      "as_of": "2026-10-27",
@@ -175,7 +175,7 @@
     {
      "name": "Gold",
      "unit": "$/oz",
-     "latest": 4061.2,
+     "latest": 4069.0,
      "week_ago": 4007.8999,
      "year_ago": 4019.7,
      "as_of": "2026-10-27",
@@ -197,7 +197,7 @@
     {
      "name": "Brent crude",
      "unit": "$/bbl",
-     "latest": 109.54,
+     "latest": 109.5,
      "week_ago": 116.72,
      "year_ago": 65.62,
      "as_of": "2026-10-27",
@@ -208,7 +208,7 @@
     {
      "name": "Copper",
      "unit": "$/t",
-     "latest": 14616.6306,
+     "latest": 14669.5415,
      "week_ago": 14277.1187,
      "year_ago": 11332.8493,
      "as_of": "2026-10-27",
@@ -232,6 +232,6 @@
  ],
  "movers": [],
  "market_view": "",
- "auto_view": "The JSE All Share moved +1.5% on the week to 109,651 and the rand weakened 0.7% to R16.59/$. In New York the S&P 500 moved +1.2% and the Nasdaq +1.7%, with the US 10-year at 4.99%. Commodities: gold +1.3%, platinum -1.4%, Brent -6.2%, copper +2.4%.",
+ "auto_view": "The JSE All Share moved +1.7% on the week to 109,820 and the rand weakened 0.9% to R16.62/$. In New York the S&P 500 moved +1.3% and the Nasdaq +2.0%, with the US 10-year at 4.99%. Commodities: gold +1.5%, platinum -1.4%, Brent -6.2%, copper +2.7%.",
  "missing": []
 }
