@@ -438,7 +438,7 @@
    "t": "ACN",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "BUY",
    "lrc_rating": null,
    "covered": false
@@ -902,7 +902,7 @@
    "t": "JPM",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -2178,7 +2178,7 @@
    "t": "FITB",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -4180,7 +4180,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "BUY",
+   "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
   },
@@ -4411,7 +4411,7 @@
    "t": "WAB",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -6039,7 +6039,7 @@
    "t": "VLO",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -6416,7 +6416,7 @@
    "t": "ROP",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "BUY",
    "lrc_rating": null,
    "covered": false
@@ -8679,7 +8679,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "BUY",
    "lrc_rating": null,
    "covered": false
   },
@@ -8880,7 +8880,7 @@
    "source": null,
    "t": "CINF",
    "lists": [],
-   "idea": "Score leaders",
+   "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
    "lrc_rating": null,
@@ -9795,9 +9795,9 @@
    "v": "HOLD",
    "iv": "HOLD",
    "track": [
+    "beat",
+    "beat",
     "miss",
-    "beat",
-    "beat",
     "miss"
    ]
   },
@@ -9841,10 +9841,10 @@
    "v": "HOLD",
    "iv": "HOLD",
    "track": [
-    "beat",
     "inline",
     "beat",
-    "miss"
+    "miss",
+    "beat"
    ]
   },
   {
@@ -9864,7 +9864,7 @@
    "v": "HOLD",
    "iv": "HOLD",
    "track": [
-    "inline",
+    "beat",
     "beat",
     "beat",
     "beat"
@@ -9888,8 +9888,8 @@
    "iv": "HOLD",
    "track": [
     "beat",
-    "beat",
     "inline",
+    "beat",
     "beat"
    ]
   },
@@ -9954,12 +9954,12 @@
    "lists": [],
    "idea": "Earnings watch",
    "v": "BUY",
-   "iv": "BUY",
+   "iv": "STRONG BUY",
    "track": [
     "beat",
     "beat",
     "beat",
-    "beat"
+    "inline"
    ]
   },
   {
@@ -9976,7 +9976,7 @@
    "t": "JCI",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "track": [
     "beat",
@@ -10051,7 +10051,7 @@
     "beat",
     "beat",
     "beat",
-    "beat"
+    "miss"
    ]
   },
   {
@@ -10071,7 +10071,6 @@
    "v": "HOLD",
    "iv": "HOLD",
    "track": [
-    "inline",
     "inline",
     "inline",
     "inline"
@@ -10096,8 +10095,8 @@
    "track": [
     "beat",
     "beat",
-    "beat",
-    "inline"
+    "inline",
+    "beat"
    ]
   },
   {
@@ -10120,7 +10119,7 @@
     "beat",
     "beat",
     "beat",
-    "beat"
+    "inline"
    ]
   },
   {
@@ -10137,11 +10136,11 @@
    "t": "RCL",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "track": [
-    "beat",
     "inline",
+    "beat",
     "beat",
     "beat"
    ]
@@ -10183,7 +10182,7 @@
    "t": "NXPI",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "STRONG BUY",
    "track": [
     "inline",
@@ -10207,12 +10206,12 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "BUY",
    "track": [
-    "miss",
     "inline",
     "inline",
-    "beat"
+    "beat",
+    "inline"
    ]
   },
   {
@@ -10252,11 +10251,11 @@
    "t": "PYPL",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "BUY",
    "track": [
-    "beat",
     "miss",
+    "beat",
     "beat",
     "beat"
    ]
@@ -10302,7 +10301,7 @@
    "iv": "HOLD",
    "track": [
     "inline",
-    "inline",
+    "beat",
     "beat",
     "beat"
    ]
@@ -10337,7 +10336,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 36.2,
+   "market_cap_bn": 39.2,
    "auto": true,
    "t": "FER",
    "lists": [],
@@ -10457,8 +10456,8 @@
    "v": "HOLD",
    "iv": "HOLD",
    "track": [
-    "beat",
     "inline",
+    "beat",
     "beat",
     "beat"
    ]
@@ -10523,13 +10522,13 @@
    "t": "XYL",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "BUY",
    "track": [
-    "beat",
     "inline",
     "beat",
-    "beat"
+    "beat",
+    "inline"
    ]
   },
   {
@@ -10589,8 +10588,8 @@
    "v": "HOLD",
    "iv": "BUY",
    "track": [
-    "beat",
     "inline",
+    "beat",
     "beat",
     "beat"
    ]
@@ -10892,9 +10891,9 @@
    "iv": "STRONG BUY",
    "track": [
     "beat",
-    "beat",
     "miss",
-    "beat"
+    "beat",
+    "miss"
    ]
   },
   {
@@ -10945,7 +10944,7 @@
    "t": "UHS",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "BUY",
    "track": [
     "beat",
@@ -11047,8 +11046,8 @@
    "track": [
     "beat",
     "beat",
-    "beat",
-    "inline"
+    "inline",
+    "beat"
    ]
   },
   {
@@ -11937,31 +11936,6 @@
   },
   {
    "date": "2026-10-28",
-   "ticker": "F",
-   "name": "Ford Motor Company",
-   "when": "After close",
-   "eps_forecast": "$0.39",
-   "eps_last_year": "$0.45",
-   "quarter": "Sep/2026",
-   "market_cap_bn": 45.4,
-   "covered": true,
-   "lrc_rating": null,
-   "t": "F",
-   "lists": [
-    "Investment SELL"
-   ],
-   "idea": null,
-   "v": "HOLD",
-   "iv": "SELL",
-   "track": [
-    "beat",
-    "miss",
-    "beat",
-    "beat"
-   ]
-  },
-  {
-   "date": "2026-10-28",
    "ticker": "GOOG",
    "name": "Alphabet Inc.",
    "when": "After close",
@@ -12107,7 +12081,7 @@
    "lists": [],
    "idea": null,
    "v": "BUY",
-   "iv": "BUY",
+   "iv": "HOLD",
    "track": [
     "beat",
     "beat",
@@ -12208,7 +12182,7 @@
    "lrc_rating": null,
    "t": "FTNT",
    "lists": [],
-   "idea": "Technical setups",
+   "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
    "track": [
@@ -12603,6 +12577,29 @@
    "idea": null,
    "v": null,
    "iv": null
+  },
+  {
+   "date": "2026-10-28",
+   "ticker": "F",
+   "name": "Ford Motor Company",
+   "when": "After close",
+   "eps_forecast": "$0.39",
+   "eps_last_year": "$0.45",
+   "quarter": "Sep/2026",
+   "market_cap_bn": 45.4,
+   "covered": false,
+   "lrc_rating": null,
+   "t": "F",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "SELL",
+   "track": [
+    "beat",
+    "miss",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-10-28",
@@ -13225,7 +13222,7 @@
    "t": "MAS",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "BUY",
    "track": [
     "miss",
@@ -14968,7 +14965,7 @@
    "lists": [
     "Trading BUY"
    ],
-   "idea": "Technical setups",
+   "idea": null,
    "v": "STRONG BUY",
    "iv": "BUY",
    "track": [
@@ -14992,7 +14989,7 @@
    "t": "AMZN",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "track": [
     "beat",
@@ -15037,7 +15034,7 @@
    "lrc_rating": null,
    "t": "MA",
    "lists": [],
-   "idea": null,
+   "idea": "Score leaders",
    "v": "HOLD",
    "iv": "HOLD",
    "track": [
@@ -15107,7 +15104,7 @@
    "t": "CAT",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "track": [
     "beat",
@@ -15226,7 +15223,7 @@
    "lrc_rating": null,
    "t": "BMY",
    "lists": [],
-   "idea": null,
+   "idea": "Score leaders",
    "v": "BUY",
    "iv": "STRONG BUY",
    "track": [
@@ -15250,7 +15247,7 @@
    "t": "MO",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "track": [
     "inline",
@@ -15731,7 +15728,7 @@
    "t": "LHX",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "track": [
     "beat",
@@ -15886,7 +15883,7 @@
    "t": "ARES",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "track": [
     "beat",
@@ -16132,7 +16129,7 @@
    "t": "WTW",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "track": [
     "inline",
@@ -16790,7 +16787,7 @@
    "t": "AVY",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "track": [
     "beat",
@@ -16870,7 +16867,7 @@
    "t": "BAX",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "track": [
     "beat",
@@ -18741,6 +18738,31 @@
   },
   {
    "date": "2026-10-30",
+   "ticker": "REGN",
+   "name": "Regeneron Pharmaceuticals, Inc.",
+   "when": "Before open",
+   "eps_forecast": "$13.76",
+   "eps_last_year": "$9.63",
+   "quarter": "Sep/2026",
+   "market_cap_bn": 82.9,
+   "covered": true,
+   "lrc_rating": null,
+   "t": "REGN",
+   "lists": [
+    "Trading BUY"
+   ],
+   "idea": "Technical setups",
+   "v": "STRONG BUY",
+   "iv": "BUY",
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ]
+  },
+  {
+   "date": "2026-10-30",
    "ticker": "XOM",
    "name": "ExxonMobil Holdings Corporation",
    "when": "Before open",
@@ -18875,29 +18897,6 @@
    "idea": null,
    "v": "BUY",
    "iv": "HOLD",
-   "track": [
-    "beat",
-    "beat",
-    "beat",
-    "beat"
-   ]
-  },
-  {
-   "date": "2026-10-30",
-   "ticker": "REGN",
-   "name": "Regeneron Pharmaceuticals, Inc.",
-   "when": "Before open",
-   "eps_forecast": "$13.76",
-   "eps_last_year": "$9.63",
-   "quarter": "Sep/2026",
-   "market_cap_bn": 82.9,
-   "covered": false,
-   "lrc_rating": null,
-   "t": "REGN",
-   "lists": [],
-   "idea": null,
-   "v": "BUY",
-   "iv": "BUY",
    "track": [
     "beat",
     "beat",
@@ -19796,7 +19795,7 @@
    "lrc_rating": null,
    "t": "FOX",
    "lists": [],
-   "idea": null,
+   "idea": "Technical setups",
    "v": "HOLD",
    "iv": "BUY",
    "track": null
@@ -19815,7 +19814,7 @@
    "t": "FOXA",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "BUY",
    "track": [
     "beat",
@@ -20049,7 +20048,7 @@
    "t": "DOC",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "BUY",
    "track": [
     "miss",
@@ -21302,8 +21301,8 @@
    "t": "TRI",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
-   "iv": "HOLD",
+   "v": "BUY",
+   "iv": "BUY",
    "track": [
     "beat",
     "inline",
@@ -21387,7 +21386,7 @@
    "lrc_rating": null,
    "t": "ALAB",
    "lists": [],
-   "idea": "Technical setups",
+   "idea": null,
    "v": "BUY",
    "iv": "HOLD",
    "track": [
@@ -21685,7 +21684,7 @@
    "lrc_rating": null,
    "t": "SMCI",
    "lists": [],
-   "idea": "Technical setups",
+   "idea": null,
    "v": "BUY",
    "iv": "BUY",
    "track": [
@@ -23838,31 +23837,6 @@
   },
   {
    "date": "2026-11-04",
-   "ticker": "MET",
-   "name": "MetLife, Inc.",
-   "when": "After close",
-   "eps_forecast": "$2.71",
-   "eps_last_year": "$2.34",
-   "quarter": "Sep/2026",
-   "market_cap_bn": 62.8,
-   "covered": true,
-   "lrc_rating": null,
-   "t": "MET",
-   "lists": [
-    "Trading BUY"
-   ],
-   "idea": "Technical setups",
-   "v": "BUY",
-   "iv": "HOLD",
-   "track": [
-    "beat",
-    "beat",
-    "beat",
-    "beat"
-   ]
-  },
-  {
-   "date": "2026-11-04",
    "ticker": "VMRK",
    "name": "Vivmark Residential",
    "when": "After close",
@@ -23912,7 +23886,7 @@
    "t": "ARM",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "track": [
     "beat",
@@ -24291,6 +24265,29 @@
     "beat",
     "inline",
     "inline",
+    "beat"
+   ]
+  },
+  {
+   "date": "2026-11-04",
+   "ticker": "MET",
+   "name": "MetLife, Inc.",
+   "when": "After close",
+   "eps_forecast": "$2.71",
+   "eps_last_year": "$2.34",
+   "quarter": "Sep/2026",
+   "market_cap_bn": 62.8,
+   "covered": false,
+   "lrc_rating": null,
+   "t": "MET",
+   "lists": [],
+   "idea": "Technical setups",
+   "v": "BUY",
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "beat",
+    "beat",
     "beat"
    ]
   },
@@ -24810,7 +24807,7 @@
    "lrc_rating": null,
    "t": "AMCR",
    "lists": [],
-   "idea": null,
+   "idea": "Technical setups",
    "v": "BUY",
    "iv": "HOLD",
    "track": [
@@ -25514,7 +25511,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "BUY",
+   "iv": "HOLD",
    "track": [
     "beat",
     "miss",
@@ -28587,7 +28584,7 @@
    "t": "LITE",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "track": [
     "beat",
@@ -29154,7 +29151,7 @@
    "t": "VRSK",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "BUY",
    "track": [
     "inline",
@@ -29228,7 +29225,7 @@
    "t": "RL",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "track": [
     "beat",
@@ -33490,7 +33487,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 1174.3,
+   "market_cap_bn": 1165.9,
    "auto": true,
    "t": "BRK-B",
    "lists": [],
@@ -33505,6 +33502,31 @@
    ],
    "lrc_rating": null,
    "covered": false
+  },
+  {
+   "date": "2026-11-09",
+   "ticker": "CRWV",
+   "name": "CoreWeave, Inc.",
+   "when": "Not stated",
+   "eps_forecast": "($1.45)",
+   "eps_last_year": "($0.31)",
+   "quarter": "Sep/2026",
+   "market_cap_bn": 29.9,
+   "covered": true,
+   "lrc_rating": null,
+   "t": "CRWV",
+   "lists": [
+    "Investment SELL"
+   ],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "SELL",
+   "track": [
+    "beat",
+    "miss",
+    "miss",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-09",
@@ -33599,7 +33621,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 44.4,
+   "market_cap_bn": 44.1,
    "auto": true,
    "t": "FERG",
    "lists": [],
@@ -33681,29 +33703,6 @@
     "beat",
     "beat",
     "miss"
-   ]
-  },
-  {
-   "date": "2026-11-09",
-   "ticker": "CRWV",
-   "name": "CoreWeave, Inc.",
-   "when": "Not stated",
-   "eps_forecast": "($1.45)",
-   "eps_last_year": "($0.31)",
-   "quarter": "Sep/2026",
-   "market_cap_bn": 29.9,
-   "covered": false,
-   "lrc_rating": null,
-   "t": "CRWV",
-   "lists": [],
-   "idea": null,
-   "v": "HOLD",
-   "iv": "SELL",
-   "track": [
-    "beat",
-    "miss",
-    "miss",
-    "beat"
    ]
   },
   {
@@ -34798,7 +34797,7 @@
    "lists": [],
    "idea": null,
    "v": "BUY",
-   "iv": "BUY",
+   "iv": "HOLD",
    "track": [
     "beat",
     "beat",
@@ -36378,7 +36377,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 5215.8,
+   "market_cap_bn": 5280.3,
    "auto": true,
    "t": "NVDA",
    "lists": [],
@@ -36401,7 +36400,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 318.6,
+   "market_cap_bn": 317.6,
    "auto": true,
    "t": "HD",
    "lists": [],
@@ -36424,7 +36423,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 190.6,
+   "market_cap_bn": 189.2,
    "auto": true,
    "t": "DIS",
    "lists": [],
@@ -36447,7 +36446,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 121.2,
+   "market_cap_bn": 120.1,
    "auto": true,
    "t": "MDT",
    "lists": [],
@@ -36470,7 +36469,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 111.2,
+   "market_cap_bn": 110.9,
    "auto": true,
    "t": "PDD",
    "lists": [
@@ -36495,7 +36494,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 158.1,
+   "market_cap_bn": 154.7,
    "auto": true,
    "t": "TJX",
    "lists": [],
@@ -36518,7 +36517,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 111.2,
+   "market_cap_bn": 110.7,
    "auto": true,
    "t": "LOW",
    "lists": [],
@@ -36541,7 +36540,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 67.5,
+   "market_cap_bn": 67.4,
    "auto": true,
    "t": "TGT",
    "lists": [],
@@ -36564,7 +36563,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 29.4,
+   "market_cap_bn": 29.5,
    "auto": true,
    "t": "WSM",
    "lists": [],
@@ -36587,7 +36586,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 957.3,
+   "market_cap_bn": 947.5,
    "auto": true,
    "t": "WMT",
    "lists": [],
@@ -36610,7 +36609,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 319.4,
+   "market_cap_bn": 329.9,
    "auto": true,
    "t": "PANW",
    "lists": [],
@@ -36633,7 +36632,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 90.8,
+   "market_cap_bn": 87.5,
    "auto": true,
    "t": "INTU",
    "lists": [],
@@ -36656,7 +36655,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 75.1,
+   "market_cap_bn": 73.7,
    "auto": true,
    "t": "ROST",
    "lists": [],
@@ -36679,7 +36678,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 27.0,
+   "market_cap_bn": 26.7,
    "auto": true,
    "t": "CPRT",
    "lists": [],
@@ -36725,7 +36724,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 197.7,
+   "market_cap_bn": 203.0,
    "auto": true,
    "t": "ADI",
    "lists": [],
@@ -36748,7 +36747,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 55.5,
+   "market_cap_bn": 57.2,
    "auto": true,
    "t": "KEYS",
    "lists": [],
@@ -36771,7 +36770,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 30.7,
+   "market_cap_bn": 30.5,
    "auto": true,
    "t": "HPQ",
    "lists": [],
@@ -36840,7 +36839,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 172.9,
+   "market_cap_bn": 173.1,
    "auto": true,
    "t": "DE",
    "lists": [],
@@ -36863,7 +36862,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 51.5,
+   "market_cap_bn": 50.8,
    "auto": true,
    "t": "VEEV",
    "lists": [],
@@ -36886,7 +36885,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 49.6,
+   "market_cap_bn": 50.1,
    "auto": true,
    "t": "A",
    "lists": [],
@@ -36909,7 +36908,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 297.0,
+   "market_cap_bn": 322.1,
    "auto": true,
    "t": "DELL",
    "lists": [],
@@ -36932,7 +36931,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 52.1,
+   "market_cap_bn": 50.8,
    "auto": true,
    "t": "ADSK",
    "lists": [],
@@ -36955,7 +36954,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 268.1,
+   "market_cap_bn": 274.5,
    "auto": true,
    "t": "CRWD",
    "lists": [],
@@ -36978,7 +36977,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 210.1,
+   "market_cap_bn": 218.7,
    "auto": true,
    "t": "MRVL",
    "lists": [],
@@ -37001,7 +37000,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 43.6,
+   "market_cap_bn": 45.3,
    "auto": true,
    "t": "NTAP",
    "lists": [],
@@ -37024,7 +37023,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 203.8,
+   "market_cap_bn": 199.9,
    "auto": true,
    "t": "CRM",
    "lists": [],
@@ -37047,7 +37046,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 39.4,
+   "market_cap_bn": 38.8,
    "auto": true,
    "t": "KR",
    "lists": [],
@@ -37093,7 +37092,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 13.3,
+   "market_cap_bn": 13.1,
    "auto": true,
    "t": "BF-B",
    "lists": [],
@@ -37116,7 +37115,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 51.6,
+   "market_cap_bn": 50.8,
    "auto": true,
    "t": "AZO",
    "lists": [],
@@ -37139,7 +37138,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 26.0,
+   "market_cap_bn": 25.5,
    "auto": true,
    "t": "CASY",
    "lists": [],
@@ -37162,7 +37161,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 1571.3,
+   "market_cap_bn": 1634.3,
    "auto": true,
    "t": "AVGO",
    "lists": [],
@@ -37185,11 +37184,11 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 100.7,
+   "market_cap_bn": 97.7,
    "auto": true,
    "t": "ADBE",
    "lists": [],
-   "idea": "Score leaders",
+   "idea": null,
    "v": "BUY",
    "iv": "STRONG BUY",
    "track": [
@@ -37208,7 +37207,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 445.4,
+   "market_cap_bn": 439.6,
    "auto": true,
    "t": "COST",
    "lists": [],
@@ -37231,7 +37230,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 382.2,
+   "market_cap_bn": 400.1,
    "auto": true,
    "t": "ORCL",
    "lists": [],
@@ -37254,7 +37253,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 20.0,
+   "market_cap_bn": 19.8,
    "auto": true,
    "t": "LEN",
    "lists": [
@@ -37279,7 +37278,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 28.4,
+   "market_cap_bn": 29.3,
    "auto": true,
    "t": "JBL",
    "lists": [],
@@ -37302,7 +37301,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 56.3,
+   "market_cap_bn": 55.6,
    "auto": true,
    "t": "NKE",
    "lists": [
@@ -37327,12 +37326,12 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 151.3,
+   "market_cap_bn": 144.2,
    "auto": true,
    "t": "ACN",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "BUY",
    "track": [
     "beat",
@@ -37350,7 +37349,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 89.7,
+   "market_cap_bn": 85.2,
    "auto": true,
    "t": "CTAS",
    "lists": [],
@@ -37373,7 +37372,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 11.5,
+   "market_cap_bn": 11.0,
    "auto": true,
    "t": "FDS",
    "lists": [],
@@ -37396,7 +37395,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 41.2,
+   "market_cap_bn": 39.6,
    "auto": true,
    "t": "PAYX",
    "lists": [],
@@ -37419,7 +37418,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 36.1,
+   "market_cap_bn": 37.7,
    "auto": true,
    "t": "CCL",
    "lists": [],
@@ -37465,7 +37464,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 1022.5,
+   "market_cap_bn": 1055.5,
    "auto": true,
    "t": "MU",
    "lists": [
@@ -37491,7 +37490,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 18.0,
+   "market_cap_bn": 17.8,
    "auto": true,
    "t": "GIS",
    "lists": [],
@@ -37508,6 +37507,6 @@
    "covered": false
   }
  ],
- "synced": "2026-10-27T07:07+02:00",
+ "synced": "2026-10-27T18:29+02:00",
  "coverage_note": "Ticked = on the LRC watchlist. Every company the LRC Stock Scanner tracks shows its trading and investment ratings. Updated after every scanner run."
 }
