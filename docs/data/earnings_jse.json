@@ -36,12 +36,24 @@
   {
    "date": "2026-10-26",
    "ticker": "PIK",
-   "name": "Pick n Pay",
+   "name": "Pick n Pay Stores",
    "when": "Not stated",
-   "period": "Expected date (market data feed) — confirm on SENS",
+   "period": "26 weeks to 30 Aug 2026",
+   "quarter": "",
    "eps_forecast": "",
    "market_cap_bn": 16.5,
-   "auto": true,
+   "reported": true,
+   "result": "up",
+   "eps_actual": null,
+   "eps_est": null,
+   "surprise": null,
+   "heps": -40.71,
+   "heps_prior": -59.77,
+   "unit": "c",
+   "change": 0.3189,
+   "measure": "HEPS",
+   "dps": null,
+   "source": "Pick n Pay Stores SENS — Condensed consolidated interim financial results for the 26 weeks ended 30 August 2026 (\"H1 FY27\") (26 Oct 2026), via Sharenet https://www.sharenet.co.za/v3/sens_display.php?tdate=20261026070500&seq=2&scode=PIK (headline loss per share 40.71c vs 59.77c; basic loss per share 36.77c; no interim dividend declared in the announcement)",
    "t": "PIK.JO",
    "lists": [
     "Investment SELL"
@@ -49,14 +61,6 @@
    "idea": "Earnings watch",
    "v": "HOLD",
    "iv": "SELL",
-   "ts": {
-    "date": "2026-10-22",
-    "low": 0.25,
-    "high": 0.35,
-    "period": "26 weeks to 30 Aug 2026",
-    "source": "Pick n Pay Stores SENS — Trading statement for the 26 weeks ended 30 August 2026 and conclusion of store labour agreement (22 Oct 2026), as reported by Business Day https://www.businessday.co.za/companies/2026-10-22-pick-n-pay-drops-restructuring-plan-as-interim-loss-narrows/ and IOL https://iol.co.za/business/economy/2026-10-23-pick-n-pay-reaches-union-deal-as-projected-losses-narrow/ (headline loss per share expected to narrow 25%-35% to 38.85c-44.83c from 59.77c)"
-   },
-   "track": null,
    "lrc_rating": null,
    "covered": true
   },
@@ -452,6 +456,6 @@
   }
  ],
  "note": "Partial list: a number of Top 100 companies (e.g. Telkom, MTN, Tiger Brands, Pepkor, Pick n Pay, Life Healthcare, Coronation, Mr Price) had no company-published date we could confirm this week; they will be added when dates are published.",
- "synced": "2026-10-26T18:52+02:00",
+ "synced": "2026-10-27T06:32+02:00",
  "coverage_note": "Ticked = on the LRC watchlist. Every company the LRC Stock Scanner tracks shows its trading and investment ratings. Updated after every scanner run."
 }
