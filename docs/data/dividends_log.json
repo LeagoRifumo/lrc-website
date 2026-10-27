@@ -868,7 +868,7 @@
 "n": "Anglo American",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 3.827
+"amount": 3.824
 },
 "AIG|2024-12-16": {
 "t": "AIG",
@@ -1654,7 +1654,7 @@
 "n": "AngloGold Ashanti",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 11.48
+"amount": 11.47
 },
 "ANG.JO|2025-05-28": {
 "t": "ANG.JO",
@@ -1662,7 +1662,7 @@
 "n": "AngloGold Ashanti",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 2.08
+"amount": 2.078
 },
 "ANG.JO|2025-08-20": {
 "t": "ANG.JO",
@@ -1670,7 +1670,7 @@
 "n": "AngloGold Ashanti",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 13.31
+"amount": 13.3
 },
 "ANG.JO|2025-11-26": {
 "t": "ANG.JO",
@@ -1678,7 +1678,7 @@
 "n": "AngloGold Ashanti",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 15.14
+"amount": 15.13
 },
 "ANG.JO|2026-03-11": {
 "t": "ANG.JO",
@@ -1686,7 +1686,7 @@
 "n": "AngloGold Ashanti",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 28.78
+"amount": 28.76
 },
 "ANG.JO|2026-05-27": {
 "t": "ANG.JO",
@@ -1694,7 +1694,7 @@
 "n": "AngloGold Ashanti",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 19.3
+"amount": 19.28
 },
 "ANG.JO|2026-08-19": {
 "t": "ANG.JO",
@@ -1702,7 +1702,7 @@
 "n": "AngloGold Ashanti",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 11.98
+"amount": 11.97
 },
 "AON|2024-11-01": {
 "t": "AON",
@@ -3722,7 +3722,8 @@
 "n": "The Bank of New York Mellon Corporation",
 "m": "US",
 "cur": "USD",
-"pay": "2026-11-09"
+"pay": "2026-11-09",
+"amount": 0.63
 },
 "BRO|2024-11-06": {
 "t": "BRO",
@@ -4358,7 +4359,8 @@
 "n": "Caterpillar Inc.",
 "m": "US",
 "cur": "USD",
-"pay": "2026-11-19"
+"pay": "2026-11-19",
+"amount": 1.63
 },
 "CBOE|2024-11-29": {
 "t": "CBOE",
@@ -4802,7 +4804,7 @@
 "n": "Richemont",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 60.35
+"amount": 60.27
 },
 "CFR.JO|2026-09-16": {
 "t": "CFR.JO",
@@ -4810,7 +4812,7 @@
 "n": "Richemont",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 86.49
+"amount": 86.38
 },
 "CF|2024-11-15": {
 "t": "CF",
@@ -11192,7 +11194,7 @@
 "n": "Glencore",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 0.8319
+"amount": 0.8312
 },
 "GLN.JO|2025-08-27": {
 "t": "GLN.JO",
@@ -11200,7 +11202,7 @@
 "n": "Glencore",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 0.8319
+"amount": 0.8312
 },
 "GLN.JO|2026-05-06": {
 "t": "GLN.JO",
@@ -11208,7 +11210,7 @@
 "n": "Glencore",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 1.414
+"amount": 1.413
 },
 "GLN.JO|2026-08-26": {
 "t": "GLN.JO",
@@ -11216,7 +11218,7 @@
 "n": "Glencore",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 2.828
+"amount": 2.826
 },
 "GLW|2024-11-15": {
 "t": "GLW",
@@ -13602,7 +13604,7 @@
 "n": "Investec plc",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 4.665
+"amount": 4.654
 },
 "INTC|2024-08-07": {
 "t": "INTC",
@@ -15861,6 +15863,13 @@
 "cur": "USD",
 "amount": 1.6,
 "pay": "2026-09-17"
+},
+"LIN|2026-12-03": {
+"t": "LIN",
+"ex": "2026-12-03",
+"n": "Linde plc",
+"m": "US",
+"cur": "USD"
 },
 "LLY|2024-11-15": {
 "t": "LLY",
@@ -19138,7 +19147,7 @@
 "n": "NEPI Rockcastle",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 5.116
+"amount": 5.106
 },
 "NRP.JO|2025-09-10": {
 "t": "NRP.JO",
@@ -19146,7 +19155,7 @@
 "n": "NEPI Rockcastle",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 5.2
+"amount": 5.19
 },
 "NRP.JO|2026-03-18": {
 "t": "NRP.JO",
@@ -19154,7 +19163,7 @@
 "n": "NEPI Rockcastle",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 5.187
+"amount": 5.177
 },
 "NRP.JO|2026-09-09": {
 "t": "NRP.JO",
@@ -19162,7 +19171,7 @@
 "n": "NEPI Rockcastle",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 5.382
+"amount": 5.372
 },
 "NSC|2024-11-01": {
 "t": "NSC",
@@ -20182,6 +20191,13 @@
 "amount": 0.28,
 "pay": "2026-10-15"
 },
+"OXY|2026-12-10": {
+"t": "OXY",
+"ex": "2026-12-10",
+"n": "Occidental Petroleum Corporation",
+"m": "US",
+"cur": "USD"
+},
 "O|2026-02-27": {
 "t": "O",
 "ex": "2026-02-27",
@@ -20355,7 +20371,8 @@
 "n": "Paychex, Inc.",
 "m": "US",
 "cur": "USD",
-"pay": "2026-11-25"
+"pay": "2026-11-25",
+"amount": 1.19
 },
 "PCAR|2025-02-12": {
 "t": "PCAR",
@@ -21649,7 +21666,7 @@
 "n": "Prosus",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 1.86
+"amount": 1.857
 },
 "PRX.JO|2025-10-30": {
 "t": "PRX.JO",
@@ -21657,7 +21674,7 @@
 "n": "Prosus",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 3.721
+"amount": 3.714
 },
 "PRX.JO|2026-11-05": {
 "t": "PRX.JO",
@@ -22665,7 +22682,7 @@
 "n": "Reinet",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 6.884
+"amount": 6.87
 },
 "RNI.JO|2026-08-26": {
 "t": "RNI.JO",
@@ -22673,7 +22690,7 @@
 "n": "Reinet",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 8.093
+"amount": 8.077
 },
 "ROK|2024-11-18": {
 "t": "ROK",
