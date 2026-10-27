@@ -1,10 +1,10 @@
 {
- "edition": "Midday update · Tuesday 27 October 2026 10:20",
- "generated": "2026-10-27T10:20:00+02:00",
- "covers": "The JSE morning session, European open and US pre-market to 10:20 SAST on Tuesday 27 October 2026, after the 06:20 morning brief",
+ "edition": "Midday update · Tuesday 27 October 2026 12:15",
+ "generated": "2026-10-27T12:15:00+02:00",
+ "covers": "The JSE session, London open and US pre-market to 12:15 SAST on Tuesday 27 October 2026, after the 10:20 update",
  "agent": "LRC News Desk",
- "headline": "HSBC falls more than 5% in Hong Kong despite a 32% profit jump, Microsoft offers buyouts to about 60,000 staff a day before results, and SA's leading indicator turns up",
- "summary": "The rand was steady at R16.65/$ early on Tuesday with the 2035 bond yield at 8.62% (Reuters via CNBC Africa, 27 Oct), and the SARB's leading business cycle indicator rose 1.1% in August after falling 0.8% in July (Newsquawk, 27 Oct). US stock futures were little changed ahead of the Fed decision on Wednesday, while HSBC shares fell 5.6% in Hong Kong after results and FTSE 100 futures pointed 0.5% lower (Share Talk, 27 Oct); Microsoft, which reports on Wednesday, is offering buyouts to about 60,000 employees (Bloomberg via Investing.com, 26 Oct). Spot gold briefly slipped below $4,000 an ounce and Brent stayed near $115 a barrel as talks with Iran continue (TokenPost; CNBC TV18, 27 Oct).",
+ "headline": "Nvidia takes $3 billion of Meta's share sale as Meta prices its stock at $625, HSBC drags the FTSE 100 down 0.9%, and SA's leading indicator turns up",
+ "summary": "The rand was steady at R16.65/$ early on Tuesday with the 2035 bond yield at 8.62% (Reuters via CNBC Africa, 27 Oct), and the SARB's leading business cycle indicator rose 1.1% in August after falling 0.8% in July (Newsquawk, 27 Oct). Nvidia will buy $3 billion of Meta's equity offering, which Meta priced at $625 a share, below Monday's $642.70 close (TokenPost; Axios, 27 Oct), while the FTSE 100 fell 0.9% to 10,673 in early trade as HSBC slid after results (Share Talk, 27 Oct); the Fed decides on Wednesday. Brent eased 0.87% to $114.80 a barrel as diplomatic efforts to end the US-Iran war continue (Reuters via CNBC Africa, 27 Oct), and spot gold briefly slipped below $4,000 an ounce (TokenPost, 27 Oct).",
  "sections": [
   {
    "name": "Breaking",
@@ -21,10 +21,10 @@
    "name": "US markets",
    "items": [
     {
-     "title": "HSBC shares slide more than 5% despite a 32% rise in quarterly profit",
-     "summary": "HSBC's third-quarter pre-tax profit rose 32% to $9.6 billion, in line with the bank's compiled forecasts, and it announced another buyback of up to $1 billion. Wealth revenue was flat at $2.7 billion after 15% and 23% growth in the first two quarters, and the shares fell 5% in Hong Kong, though they are still up 11% this year (Reuters via The Star, 27 Oct). Share Talk put the Hong Kong fall at 5.6% and said FTSE 100 futures pointed to a 0.5% lower open near 10,711 after Monday's close of 10,767.33 (Share Talk, 27 Oct).",
+     "title": "HSBC slides after results; FTSE 100 down 0.9% in early trade",
+     "summary": "HSBC's third-quarter pre-tax profit rose 32% to $9.6 billion, in line with the bank's compiled forecasts, and it announced another buyback of up to $1 billion, but wealth revenue was flat at $2.7 billion after 15% and 23% growth in the first two quarters; the shares fell 5% in Hong Kong (Reuters via The Star, 27 Oct). In London the FTSE 100 fell 94 points, or 0.9%, to 10,673 in early Tuesday trade from Monday's close of 10,767.33, and the FTSE 250 was down 46 points at 24,455 (Share Talk, 27 Oct, 09:19 UTC).",
      "source": "The Star (Reuters); Share Talk",
-     "url": "https://www.thestar.com.my/business/business-news/2026/10/27/hsbc-quarterly-profit-jumps-but-shares-slide-after-flat-revenue-for-wealth-business"
+     "url": "https://www.share-talk.com/ftse-100-falls-94-points-as-hsbc-sell-off-weighs-on-london-stocks/"
     },
     {
      "title": "Fed meeting starts; markets price an 82% chance of a December hike",
@@ -73,10 +73,10 @@
    "name": "Forex & commodities",
    "items": [
     {
-     "title": "Gold briefly dips below $4,000; Brent near $115",
-     "summary": "Spot gold slipped to $3,999.81 an ounce on Tuesday morning, down 0.42% (TokenPost, 27 Oct), while COMEX gold futures were at $4,029.70, down 0.22%, and silver futures at $54.18; Brent crude was near $115 a barrel (CNBC TV18, 27 Oct). Gold is about 5% below its October record (Brickwork Ratings via CNBC TV18, 27 Oct). Earlier, at 00:53 GMT, platinum was at $1,529.27 (Investing.com, 27 Oct).",
-     "source": "TokenPost; CNBC TV18 via TradingView",
-     "url": "https://www.tradingview.com/news/cnbctv:8e1b687a2094b:0/"
+     "title": "Brent eases to $114.80 on Iran diplomacy; gold briefly below $4,000",
+     "summary": "Brent crude for December fell 0.87% to $114.80 a barrel on Tuesday as renewed diplomatic efforts to end the US-Iran war raised hopes of de-escalation; losses were limited because Houthi attacks on Saudi Arabia continued over the weekend and President Trump said he was weighing a deal or more military action (Reuters via CNBC Africa, 27 Oct). Spot gold slipped to $3,999.81 an ounce on Tuesday morning, down 0.42% (TokenPost, 27 Oct), and COMEX gold futures were at $4,029.70, down 0.22% (CNBC TV18, 27 Oct). Earlier, at 00:53 GMT, platinum was at $1,529.27 (Investing.com, 27 Oct).",
+     "source": "CNBC Africa (Reuters); TokenPost; CNBC TV18",
+     "url": "https://www.cnbcafrica.com/2026/oil-falls-as-renewed-diplomatic-efforts-to-end-mideast-conflict-ease-supply-concerns"
     },
     {
      "title": "Dollar firm; yen weaker before Bank of Japan decision",
@@ -110,12 +110,13 @@
      ]
     },
     {
-     "title": "META: shares flat after the $35 billion share sale",
-     "summary": "Meta closed at $642.70 on Monday, roughly unchanged on the day (LRC Stock Scanner, 26 Oct close), after launching $22.5 billion of common stock and $12.5 billion of mandatory convertible preferred, with up to $60 billion more planned from 2027 (TIKR, 26 Oct). Pricing of the offering is still to come. META is a BUY on the LRC Stock Scanner; rating unchanged.",
-     "source": "TIKR",
-     "url": "https://www.tikr.com/blog/meta-stopped-buying-back-stock-in-2026-now-its-selling-up-to-95-billion-of-it",
+     "title": "META and NVDA: Nvidia to invest $3 billion in Meta; stock priced at $625",
+     "summary": "Nvidia will buy $3 billion of the stock offering Meta announced on Monday, as part of a wider partnership on Meta's Muse agent platform and models (Axios, 27 Oct). Meta priced $25 billion of common stock at $625 a share, up from a $22.5 billion target, alongside $12.5 billion of mandatory convertible preferred; Nvidia, AMD and Broadcom were named as anchor investors, and the offerings are expected to close on 29 October (TokenPost, 27 Oct). The $625 price is about 2.8% below Monday's close of $642.70 (LRC Stock Scanner, 26 Oct close). Meta also plans wider use of Nvidia's Vera Rubin platform. META and NVDA are BUY on the LRC Stock Scanner; ratings unchanged.",
+     "source": "Axios; TokenPost",
+     "url": "https://www.axios.com/2026/10/27/nvidia-meta-muse-investment",
      "tickers": [
-      "META"
+      "META",
+      "NVDA"
      ]
     },
     {
@@ -133,7 +134,7 @@
  "watch_today": [
   "Israel's election: polls close at 22:00 local time; exit polls tonight",
   "Results: Coca-Cola before the US open and Visa after the close",
-  "Whether HSBC's slide weighs on European banks and the FTSE 100 at the open",
+  "How Meta and Nvidia trade at the US open after the $625 share pricing and Nvidia's $3 billion stake",
   "Gold around $4,000 an ounce and Brent near $115 as talks with Iran continue",
   "Fed decision Wednesday 28 Oct at 20:00 SAST: about an 11% chance of a hike priced this week, 82% for December",
   "Microsoft and Alphabet results on Wednesday after the US close",
