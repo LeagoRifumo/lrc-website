@@ -1,10 +1,10 @@
 {
- "edition": "Midday update · Tuesday 27 October 2026 12:15",
- "generated": "2026-10-27T12:15:00+02:00",
- "covers": "The JSE session, London open and US pre-market to 12:15 SAST on Tuesday 27 October 2026, after the 10:20 update",
+ "edition": "Midday update · Tuesday 27 October 2026 13:25",
+ "generated": "2026-10-27T13:25:00+02:00",
+ "covers": "The JSE session, London trade and US pre-market to 13:25 SAST on Tuesday 27 October 2026, after the 12:15 update",
  "agent": "LRC News Desk",
- "headline": "Nvidia takes $3 billion of Meta's share sale as Meta prices its stock at $625, HSBC drags the FTSE 100 down 0.9%, and SA's leading indicator turns up",
- "summary": "The rand was steady at R16.65/$ early on Tuesday with the 2035 bond yield at 8.62% (Reuters via CNBC Africa, 27 Oct), and the SARB's leading business cycle indicator rose 1.1% in August after falling 0.8% in July (Newsquawk, 27 Oct). Nvidia will buy $3 billion of Meta's equity offering, which Meta priced at $625 a share, below Monday's $642.70 close (TokenPost; Axios, 27 Oct), while the FTSE 100 fell 0.9% to 10,673 in early trade as HSBC slid after results (Share Talk, 27 Oct); the Fed decides on Wednesday. Brent eased 0.87% to $114.80 a barrel as diplomatic efforts to end the US-Iran war continue (Reuters via CNBC Africa, 27 Oct), and spot gold briefly slipped below $4,000 an ounce (TokenPost, 27 Oct).",
+ "headline": "Coca-Cola beats and raises its 2026 profit outlook, Nvidia takes $3 billion of Meta's $625 share sale, and US futures edge up before the Fed",
+ "summary": "The rand was steady at R16.65/$ early on Tuesday with the 2035 bond yield at 8.62% (Reuters via CNBC Africa, 27 Oct), and the SARB's leading business cycle indicator rose 1.1% in August after falling 0.8% in July (Newsquawk, 27 Oct). Coca-Cola's third-quarter comparable earnings rose 11% to $0.91 a share on 7% revenue growth, and it now expects comparable EPS growth of at least 11% this year (Coca-Cola, 27 Oct); US stock futures were slightly higher before the open, with Dow E-minis up 0.14% (Reuters via WBOW, 27 Oct), and the Fed decides on Wednesday. Brent eased 0.87% to $114.80 a barrel on Iran diplomacy (Reuters via CNBC Africa, 27 Oct), and spot gold briefly slipped below $4,000 an ounce (TokenPost, 27 Oct).",
  "sections": [
   {
    "name": "Breaking",
@@ -20,6 +20,12 @@
   {
    "name": "US markets",
    "items": [
+    {
+     "title": "US futures edge higher before results and the Fed",
+     "summary": "At 5:17 a.m. New York time (11:17 SAST) Dow E-minis were up 70 points, or 0.14%, S&P 500 E-minis up 0.05% and Nasdaq 100 E-minis up 0.01%. Whirlpool fell 8.8% in pre-market trade after a third-quarter loss and a revenue miss, and Tesla was close to 1% higher after Monday's gain of more than 5% (Reuters via WBOW, 27 Oct). Coca-Cola, Boeing and PayPal report before the open.",
+     "source": "WBOW (Reuters)",
+     "url": "https://1027wbow.com/2026/10/27/us-stock-futures-muted-as-oil-holds-near-april-highs-ahead-of-fed-decision/"
+    },
     {
      "title": "HSBC slides after results; FTSE 100 down 0.9% in early trade",
      "summary": "HSBC's third-quarter pre-tax profit rose 32% to $9.6 billion, in line with the bank's compiled forecasts, and it announced another buyback of up to $1 billion, but wealth revenue was flat at $2.7 billion after 15% and 23% growth in the first two quarters; the shares fell 5% in Hong Kong (Reuters via The Star, 27 Oct). In London the FTSE 100 fell 94 points, or 0.9%, to 10,673 in early Tuesday trade from Monday's close of 10,767.33, and the FTSE 250 was down 46 points at 24,455 (Share Talk, 27 Oct, 09:19 UTC).",
@@ -39,8 +45,8 @@
      "url": "https://www.wsbradio.com/news/business/us-futures-asian/FKDPOQQ63I7YBDX6TMSNV4MIMI/"
     },
     {
-     "title": "Results today: Visa after the close, Coca-Cola before the open",
-     "summary": "Coca-Cola reports before the US open and Visa after the close on Tuesday 27 October; HSBC also reports today (Nasdaq earnings calendar, 26 Oct). Microsoft and Alphabet follow on Wednesday and Amazon on Thursday.",
+     "title": "Results today: Visa after the close; Boeing and PayPal before the open",
+     "summary": "Coca-Cola has reported (see Our coverage); Boeing and PayPal report before the US open and Visa after the close on Tuesday 27 October (Reuters via WBOW; Nasdaq earnings calendar, 26–27 Oct). Microsoft and Alphabet follow on Wednesday and Amazon on Thursday.",
      "source": "Nasdaq earnings calendar",
      "url": "https://www.nasdaq.com/market-activity/earnings"
     }
@@ -90,23 +96,31 @@
    "name": "Our coverage",
    "items": [
     {
+     "title": "KO: Coca-Cola beats, raises its 2026 earnings outlook",
+     "summary": "For the quarter to 2 October, Coca-Cola's net revenue rose 7% to $13.4 billion, organic revenue rose 7%, unit case volume rose 5%, and comparable EPS rose 11% to $0.91. It raised its 2026 guidance to at least 5% organic revenue growth (from about 5%) and at least 11% comparable EPS growth (from 9% to 10%) (Coca-Cola results release, 27 Oct); Quartz reports both earnings and revenue beat expectations (Quartz, 27 Oct). KO closed at $92.70 on Monday and is a HOLD on the LRC Stock Scanner, held back by an LRC Analyst Target below the price (LRC Stock Scanner, 26 Oct close); the higher guidance may lift estimates, but the rating is unchanged.",
+     "source": "The Coca-Cola Company; Quartz",
+     "url": "https://investors.coca-colacompany.com/news-events/press-releases/detail/1176/coca-cola-reports-third-quarter-2026-results-and-raises-full-year-guidance",
+     "tickers": [
+      "KO"
+     ]
+    },
+    {
+     "title": "V and GOOGL: Visa after today's close; Alphabet tomorrow",
+     "summary": "Visa reports after the US close today and Alphabet on Wednesday (Nasdaq earnings calendar, 26 Oct). On the LRC Stock Scanner V ($404.20) is a HOLD, held back by an LRC Analyst Target below the price, and GOOGL ($316.80) is a BUY (LRC Stock Scanner, 26 Oct close); ratings unchanged.",
+     "source": "Nasdaq earnings calendar",
+     "url": "https://www.nasdaq.com/market-activity/earnings",
+     "tickers": [
+      "V",
+      "GOOGL"
+     ]
+    },
+    {
      "title": "MSFT: Microsoft offers buyouts to about 60,000 staff a day before results",
      "summary": "Microsoft is offering voluntary buyouts to about 60,000 employees at vice-president level and below on selected teams in the US, Canada, India and the UK, with some data-centre, sales and marketing staff excluded; the package is 'similar to a standard severance offer' and the company expects fewer takers than for a July retirement-age offer (Bloomberg via Investing.com, 26 Oct). That is roughly a quarter of the 223,000 staff it had at the end of June. Microsoft closed at $532.60 on Monday, up 1.5% (LRC Stock Scanner, 26 Oct close), and reports results on Wednesday 28 October. MSFT is a HOLD on the LRC Stock Scanner, held back by the LRC Analyst Target of $513.80 (about 4% below the price); rating unchanged.",
      "source": "Investing.com (Bloomberg)",
      "url": "https://www.investing.com/news/stock-market-news/microsoft-offers-buyouts-to-60000-workers-as-ai-reshapes-workforce-4973255",
      "tickers": [
       "MSFT"
-     ]
-    },
-    {
-     "title": "KO and V: results today; GOOGL tomorrow",
-     "summary": "Coca-Cola reports before the US open and Visa after the close today, and Alphabet on Wednesday (Nasdaq earnings calendar, 26 Oct). On the LRC Stock Scanner KO ($92.70) and V ($404.20) are HOLD, both held back by LRC Analyst Targets below the price, and GOOGL ($316.80) is a BUY (LRC Stock Scanner, 26 Oct close); ratings unchanged.",
-     "source": "Nasdaq earnings calendar",
-     "url": "https://www.nasdaq.com/market-activity/earnings",
-     "tickers": [
-      "KO",
-      "V",
-      "GOOGL"
      ]
     },
     {
@@ -133,7 +147,7 @@
  ],
  "watch_today": [
   "Israel's election: polls close at 22:00 local time; exit polls tonight",
-  "Results: Coca-Cola before the US open and Visa after the close",
+  "How Coca-Cola trades at the US open after beating and raising guidance; Visa after the close",
   "How Meta and Nvidia trade at the US open after the $625 share pricing and Nvidia's $3 billion stake",
   "Gold around $4,000 an ounce and Brent near $115 as talks with Iran continue",
   "Fed decision Wednesday 28 Oct at 20:00 SAST: about an 11% chance of a hike priced this week, 82% for December",
