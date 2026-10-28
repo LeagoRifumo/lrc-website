@@ -13,12 +13,12 @@ concurrency:
 jobs:
   statements:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 55
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: '3.12' }
-      - run: python agents/tools/statements.py --per-run 700
+      - run: python agents/tools/statements.py --per-run 1000
       - name: Company pages for search engines (docs/shares) + sitemap
         continue-on-error: true
         run: python agents/tools/company_pages.py
