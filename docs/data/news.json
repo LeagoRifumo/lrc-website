@@ -1,31 +1,37 @@
 {
- "edition": "Midday update · Wednesday 28 October 2026 16:25",
- "generated": "2026-10-28T16:25:00+02:00",
- "covers": "Wednesday 28 October 2026, 09:15 to 14:40 SAST: oil and gas after the Houthi strikes and a Qatari peace draft for Iran, gold easing, US futures and Alphabet's chip report, Moody's on the budget update, the rand and JSE, ahead of tonight's Fed decision",
+ "edition": "Evening update · Wednesday 28 October 2026 17:15",
+ "generated": "2026-10-28T17:15:00+02:00",
+ "covers": "Wednesday 28 October 2026, 09:15 to 17:10 SAST: the Bank of Canada's rate hike, oil after US stock data, Qatar's LNG force majeure, early Wall Street trade, the rand and JSE, ahead of tonight's Fed decision and Microsoft and Alphabet results",
  "agent": "LRC News Desk",
- "headline": "Wall Street opens quietly before the Fed: S&P 500 +0.17%, Nasdaq +0.24%, Dow -0.08%; Iran rejects Qatar's ideas, oil holds near $115",
- "summary": "The rand was at R16.68 per dollar at 06:52 GMT and the Top 40 about 0.2% lower in early trade (Reuters via CNBC Africa, 28 Oct), while Moody's called the budget update credit positive for South Africa's Ba2 rating, which has a positive outlook (Reuters via CNBC Africa, 26 Oct). Wall Street opened mixed at 09:35 ET, with the S&P 500 up 0.17% at 7,735.56, the Nasdaq up 0.24% at 26,541.61 and the Dow down 0.08% at 52,335.43 as memory-chip stocks rose after SK Hynix's results (Reuters via MarketScreener, 28 Oct); the Fed decides at 20:00 SAST and Microsoft and Alphabet report after the close (Reuters via Investing.com, 28 Oct). Brent was $114.87, up 0.87%, at 10:00 GMT after Saudi Arabia said it intercepted a Houthi missile aimed at Taif and Qatari mediators gave Iran a new draft deal (The National, 28 Oct), though a senior Iranian official told Reuters the plan contained only \"unacceptable ideas and not an offer\" (Investing.com, 28 Oct); spot gold slipped 0.4% to $4,045.45 at 11:08 GMT as the dollar firmed (Investing.com, 28 Oct).",
+ "headline": "Bank of Canada hikes to 2.50% and warns more may come; Brent $115.61 after a US crude draw; Wall Street edges up before the Fed",
+ "summary": "The rand was at R16.66 per dollar on 28 October, 0.19% weaker on the day and near its weakest since early October (Trading Economics, 28 Oct), while Moody's called the budget update credit positive for South Africa's Ba2 rating, which has a positive outlook (Reuters via CNBC Africa, 26 Oct). Wall Street edged higher early on Wednesday, with the S&P 500 up 0.2% and the Nasdaq up 0.4%, as Alphabet rose almost 2% before its results tonight (AP via Daily Union, 28 Oct); the Bank of Canada raised its rate by 25 basis points to 2.50% and said more hikes could be needed (investingLive, 28 Oct), and the Fed decides at 20:00 SAST. Brent was $115.61, up 1.52%, at 10:26 New York time after US crude stocks fell 1.9 million barrels (Oilprice.com, 28 Oct), and QatarEnergy extended its LNG force majeure to the end of 2026, with Dutch gas at its highest since 2022 (Oilprice.com, 28 Oct).",
  "sections": [
   {
    "name": "Breaking",
    "items": [
     {
+     "title": "Bank of Canada raises its rate to 2.50%, its first hike since 2023, and warns more may be needed",
+     "summary": "The Bank of Canada raised its policy rate by 25 basis points to 2.50% from 2.25% on 28 October; markets had priced about a 78% chance. It said \"There could be a need to raise the policy rate further, but given the uncertainties, we will proceed carefully,\" and lifted its inflation forecasts to 2.9% for 2026 (from 2.5%) and 3.1% for 2027 (from 2.0%), mainly because of energy prices (investingLive, 28 Oct). A second G7 central bank tightening on oil-driven inflation adds weight to tonight's Fed decision.",
+     "source": "investingLive",
+     "url": "https://investinglive.com/central-banks/bank-of-canada-rate-decision/"
+    },
+    {
+     "title": "Oil: Brent $115.61 as US crude stocks fall 1.9 million barrels",
+     "summary": "The EIA said US commercial crude stocks fell 1.9 million barrels to 410.6 million in the week to 23 October, 4% below the five-year average; gasoline stocks rose 3.9 million barrels and distillates fell 1.5 million. At 10:26 New York time Brent was $115.61 a barrel, up 1.52%, and WTI $102.41, up 2.51% (Oilprice.com, 28 Oct). Earlier, the Saudi-led coalition said it intercepted a Houthi missile aimed at Taif (The National, 28 Oct).",
+     "source": "Oilprice.com",
+     "url": "https://oilprice.com/Energy/Crude-Oil/US-Oil-Inventories-Fall-Again-As-Prices-Rise.html"
+    },
+    {
+     "title": "QatarEnergy extends LNG force majeure to the end of 2026; European gas at a post-2022 high",
+     "summary": "QatarEnergy has extended the force majeure on LNG deliveries, in place since April, to the end of the year, according to Italy's Edison and a Petrobangla source cited by Reuters. The Dutch TTF front-month gas price rose 1.5% to EUR97.53 per megawatt-hour on Wednesday morning, its highest since the 2022 energy crisis (Oilprice.com, 28 Oct). Higher gas and oil prices feed into fuel and import costs for South Africa.",
+     "source": "Oilprice.com",
+     "url": "https://oilprice.com/Latest-Energy-News/World-News/QatarEnergy-Extends-LNG-Force-Majeure-to-End-of-2026.html"
+    },
+    {
      "title": "Iran: Qatar's latest mediation holds only \"unacceptable ideas\"",
      "summary": "A senior Iranian official involved in the talks told Reuters on 28 October that Qatar offered \"unacceptable ideas and not an offer\" and that Tehran's nuclear position is unchanged. Qatar's seven-day draft, presented on Sunday, had a reply expected by the end of the week. Oil was above $115 a barrel after a Houthi attack on Saudi Arabia's Ras Tanura refinery (Reuters via Investing.com, 28 Oct). This lowers hopes of a quick reopening of the Strait of Hormuz.",
      "source": "Investing.com (Reuters)",
      "url": "https://www.investing.com/news/commodities-news/iran-sees-only-unacceptable-ideas-in-latest-mediation-to-end-war-official-says-4979005"
-    },
-    {
-     "title": "Oil: Brent $114.87 as Saudi Arabia intercepts a missile and Qatar puts a new deal to Iran",
-     "summary": "Brent was up 0.87% at $114.87 a barrel and WTI up 1.59% at $101.49 at 2pm UAE time (10:00 GMT), having been up more than 2% earlier. The Saudi-led coalition said it intercepted a Houthi ballistic missile aimed at Taif on Wednesday morning; Saudi Arabia has not confirmed the earlier claimed strikes. Qatari mediators presented Iran with a new draft deal to end the war, and Tehran is expected to reply by the end of the week, an official told Reuters (The National, 28 Oct). US EIA crude stock data is due at 16:30 SAST.",
-     "source": "The National",
-     "url": "https://www.thenationalnews.com/business/energy/2026/10/28/oil-prices-up-due-to-houthi-strikes-and-us-threat-to-renew-iran-war/"
-    },
-    {
-     "title": "European gas at a four-year high after Houthi claims on Saudi energy sites",
-     "summary": "The front-month Dutch TTF contract rose 1.2% to EUR97.35 per megawatt-hour on Wednesday, its highest in roughly four years, after the Houthis said on Tuesday they targeted Saudi Arabia's Ras Tanura refinery with a ballistic missile; earlier attacks hit pumping stations on the East-West crude pipeline. There was no independent confirmation from Saudi authorities (Investing.com, 28 Oct). Higher gas and oil prices feed into fuel and import costs for South Africa.",
-     "source": "Investing.com",
-     "url": "https://ph.investing.com/news/commodities-news/europe-gas-climbs-to-fresh-2022-peaks-as-houthi-strikes-on-saudi-energy-hubs-2654607"
     },
     {
      "title": "Israel: Netanyahu's bloc falls to 55 seats with just over half the vote counted",
@@ -39,16 +45,16 @@
    "name": "US markets",
    "items": [
     {
+     "title": "Wall Street edges higher before the Fed; Stellantis +6%, Alphabet almost +2%",
+     "summary": "Early on Wednesday the S&P 500 was up 0.2%, the Dow up 44 points and the Nasdaq up 0.4%. Stellantis rose 6%, Alphabet almost 2% and Microsoft was little changed before their results, while Robinhood fell sharply after its profit missed estimates; the 10-year Treasury yield was about 5.0% (AP via Daily Union, 28 Oct). The Fed decides at 2pm ET (20:00 SAST).",
+     "source": "AP via Daily Union",
+     "url": "https://www.dailyunion.com/news/nation_world/us-stocks-edge-higher-ahead-of-federal-reserve-decision-on-interest-rates/article_88df587a-8fa9-53eb-b76c-9c78e8e5a822.html"
+    },
+    {
      "title": "Wall Street opens mixed before the Fed; chips lift the Nasdaq",
      "summary": "At 09:35 ET on 28 October the S&P 500 was up 13.0 points (0.17%) at 7,735.56, the Nasdaq Composite up 63.8 points (0.24%) at 26,541.61 and the Dow down 42.1 points (0.08%) at 52,335.43. Memory-chip makers climbed after SK Hynix's results, ahead of tonight's Fed decision and Microsoft and Alphabet results after the close.",
      "source": "Reuters via MarketScreener, 28 Oct 2026",
      "url": "https://www.marketscreener.com/news/s-p-500-nasdaq-open-higher-as-sk-hynix-lifts-chips-fed-in-focus-ce785cd2df8af32c"
-    },
-    {
-     "title": "US futures mixed before the Fed; Micron +4%, Robinhood -8% pre-market",
-     "summary": "At 04:53 ET Nasdaq 100 futures were up 0.41%, S&P 500 futures up 0.1% and Dow futures down 0.17%. Before the open Micron rose 4% and SK Hynix's US shares 7.8% after SK Hynix's sevenfold profit jump, Seagate fell 3.7% after its results and Robinhood 8% after missing profit estimates. The Fed decides at 2pm ET (20:00 SAST) (Reuters via Investing.com, 28 Oct).",
-     "source": "Investing.com (Reuters)",
-     "url": "https://www.investing.com/news/economy-news/nasdaq-futures-rise-as-sk-hynix-boosts-chips-before-fed-decision-earnings-4978026"
     },
     {
      "title": "US goods trade deficit widens to $134.9 billion in September",
@@ -92,10 +98,10 @@
    "name": "South Africa",
    "items": [
     {
-     "title": "Rand R16.68/$, Top 40 down 0.2% early; December Fed hike 84% priced",
-     "summary": "The rand traded at 16.68 per dollar at 06:52 GMT, 0.2% weaker than its previous close, the Top 40 was down about 0.2% in early trade and the 2035 government bond yield rose 2 basis points to 8.6%. Traders expect no change from the Fed at 18:00 GMT, but CME FedWatch shows an 84% chance of a December hike; ETM Analytics said the rand could weaken beyond R17 if oil and Fed pressures persist (Reuters via CNBC Africa, 28 Oct).",
-     "source": "CNBC Africa (Reuters)",
-     "url": "https://www.cnbcafrica.com/2026/south-african-rand-softens-as-oil-prices-rise-fed-in-focus"
+     "title": "Rand R16.66/$, near its weakest since early October",
+     "summary": "The rand was at 16.6615 per dollar on 28 October, 0.19% weaker on the day, trading near its weakest level since early October on a firmer dollar, softer gold and platinum and higher oil (Trading Economics, 28 Oct). Earlier, the Top 40 was about 0.2% lower in early trade and the 2035 bond yield up 2 basis points at 8.6%; ETM Analytics said the rand could weaken beyond R17 if oil and Fed pressures persist (Reuters via CNBC Africa, 28 Oct).",
+     "source": "Trading Economics",
+     "url": "https://tradingeconomics.com/south-africa/currency"
     },
     {
      "title": "Moody's: budget update is credit positive; Ba2 rating, positive outlook",
@@ -148,7 +154,7 @@
     },
     {
      "title": "MSFT: Microsoft reports after tonight's close; Azure guide 44%–45%",
-     "summary": "Consensus is about $90.6 billion of revenue and adjusted EPS of about $4.71 for the September quarter, with Azure guided to 44%–45% growth in constant currency and capex expected above $50 billion (FinanceFeeds, 28 Oct). MSFT is a HOLD on the LRC Stock Scanner, capped by the $512 target, with a trigger level at $515; rating unchanged.",
+     "summary": "Consensus is about $90.6 billion of revenue and adjusted EPS of about $4.71 for the September quarter, with Azure guided to 44%–45% growth in constant currency and capex expected above $50 billion (FinanceFeeds, 28 Oct). The shares were little changed in early trade on Wednesday (AP via Daily Union, 28 Oct). MSFT is a HOLD on the LRC Stock Scanner, capped by the $512 target, with a trigger level at $515; rating unchanged.",
      "source": "FinanceFeeds",
      "url": "https://financefeeds.com/microsoft-stock-before-wednesdays-results-the-45-azure-guide-and-50-billion-capex-quarter/",
      "tickers": [
@@ -156,8 +162,8 @@
      ]
     },
     {
-     "title": "GOOGL and META: Alphabet up 1.2% pre-market on OpenAI chip report before tonight's results",
-     "summary": "The Information reported on Tuesday that OpenAI plans to buy Google's AI chips (TPUs); no terms were disclosed, and Alphabet's CFO expects most TPU sales revenue to be recognised in 2027 (Reuters via Investing.com, 27 Oct). Alphabet was up 1.2% pre-market and reports after Wednesday's close (Reuters via Investing.com, 28 Oct); Meta fell 1.6% on Tuesday after its equity fundraising (Reuters via Yahoo Finance, 27 Oct). Both are BUYs on the LRC Stock Scanner (targets $344 and $680); Meta is trading below its $633.70 trigger level; ratings unchanged.",
+     "title": "GOOGL and META: Alphabet up almost 2% on OpenAI chip report before tonight's results",
+     "summary": "The Information reported on Tuesday that OpenAI plans to buy Google's AI chips (TPUs); no terms were disclosed, and Alphabet's CFO expects most TPU sales revenue to be recognised in 2027 (Reuters via Investing.com, 27 Oct). Alphabet was up almost 2% in early trade and reports after Wednesday's close (AP via Daily Union, 28 Oct); Meta fell 1.6% on Tuesday after its equity fundraising (Reuters via Yahoo Finance, 27 Oct). Both are BUYs on the LRC Stock Scanner (targets $344 and $680); Meta is trading below its $633.70 trigger level; ratings unchanged.",
      "source": "Investing.com (Reuters)",
      "url": "https://www.investing.com/news/stock-market-news/openai-plans-to-buy-googles-ai-chips-the-information-reports-4977342",
      "tickers": [
@@ -190,11 +196,11 @@
   }
  ],
  "watch_today": [
-  "Fed decision at 20:00 SAST: a hold is expected; futures price an 84% chance of a December hike",
+  "Fed decision at 20:00 SAST and Chair Warsh's press conference: a hold is expected; futures price an 84% chance of a December hike",
   "Microsoft and Alphabet results after the US close (about 22:00 SAST onwards)",
-  "Oil: Saudi damage reports, Iran's formal reply to the Qatari draft (an official calls it \"unacceptable\"; reply due by the end of the week); US EIA crude stocks at 16:30 SAST",
+  "Oil near $115: Saudi damage reports and Iran's formal reply to the Qatari draft (an official calls it \"unacceptable\"; reply due by the end of the week)",
+  "Rand near R16.66/$ (ETM Analytics flags R17 risk) after the Fed",
   "Israel: the count continues; double-envelope ballots could take until Friday",
-  "Rand near R16.68/$ (ETM Analytics flags R17 risk) and the JSE's reaction to oil, gas, the Fed and the chip rally",
   "Coming up: Amazon and Intel results, US GDP (3.2% expected) and PCE, SA PPI (Thu); SA trade data and Bank of Japan (Fri); OPEC+ on Sunday 1 November"
  ]
 }
