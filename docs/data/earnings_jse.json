@@ -274,7 +274,14 @@
    "v": "HOLD",
    "iv": "HOLD",
    "idea": "Earnings watch",
-   "track": null
+   "track": null,
+   "ts": {
+    "date": "2026-10-28",
+    "low": 0.22,
+    "high": 0.27,
+    "period": "Six months to 30 Sep 2026",
+    "source": "Vodacom Group SENS — Trading statement for the interim results period ended 30 September 2026 (28 Oct 2026), via Sharenet https://www.sharenet.co.za/v3/sens_display.php?tdate=20261028170000&seq=59&scode= (HEPS expected 570c to 593c vs 467c; EPS 1 756c to 1 789c vs 472c, incl. once-off R23.2bn Safaricom remeasurement gain excluded from HEPS; interim results on or about 10 Nov 2026)"
+   }
   },
   {
    "date": "2026-11-12",
@@ -584,6 +591,6 @@
   }
  ],
  "note": "Partial list: a number of Top 100 companies (e.g. Telkom, MTN, Tiger Brands, Pepkor, Pick n Pay, Life Healthcare, Coronation, Mr Price) had no company-published date we could confirm this week; they will be added when dates are published.",
- "synced": "2026-10-28T18:45+02:00",
+ "synced": "2026-10-28T18:56+02:00",
  "coverage_note": "Ticked = on the LRC watchlist. Every company the LRC Stock Scanner tracks shows its trading and investment ratings. Updated after every scanner run."
 }

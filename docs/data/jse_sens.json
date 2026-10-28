@@ -1,6 +1,6 @@
 {
  "note": "JSE company announcements (SENS) recorded by the LRC JSE Announcements job every weekday. results = published results with headline earnings per share (HEPS) vs the same period last year; trading_statements = expected HEPS change ranges; dividends = declared dividends with the JSE dates. Amounts in cents. Every entry carries its source.",
- "updated": "2026-10-26T18:52+02:00",
+ "updated": "2026-10-28T19:10+02:00",
  "results": [
   {
    "t": "CLS.JO",
@@ -32,6 +32,14 @@
    "heps_change_low": 0.25,
    "heps_change_high": 0.35,
    "source": "Pick n Pay Stores SENS — Trading statement for the 26 weeks ended 30 August 2026 and conclusion of store labour agreement (22 Oct 2026), as reported by Business Day https://www.businessday.co.za/companies/2026-10-22-pick-n-pay-drops-restructuring-plan-as-interim-loss-narrows/ and IOL https://iol.co.za/business/economy/2026-10-23-pick-n-pay-reaches-union-deal-as-projected-losses-narrow/ (headline loss per share expected to narrow 25%-35% to 38.85c-44.83c from 59.77c)"
+  },
+  {
+   "t": "VOD.JO",
+   "date": "2026-10-28",
+   "period": "Six months to 30 Sep 2026",
+   "heps_change_low": 0.22,
+   "heps_change_high": 0.27,
+   "source": "Vodacom Group SENS — Trading statement for the interim results period ended 30 September 2026 (28 Oct 2026), via Sharenet https://www.sharenet.co.za/v3/sens_display.php?tdate=20261028170000&seq=59&scode= (HEPS expected 570c to 593c vs 467c; EPS 1 756c to 1 789c vs 472c, incl. once-off R23.2bn Safaricom remeasurement gain excluded from HEPS; interim results on or about 10 Nov 2026)"
   }
  ],
  "dividends": [
@@ -45,6 +53,17 @@
    "record": "2027-01-22",
    "pay": "2027-01-25",
    "source": "Clicks Group — Annual results for the year ended 31 August 2026 and cash dividend declaration (22 Oct 2026) https://www.clicksgroup.co.za/wp-content/uploads/2026/10/CGL-2026-Annual-results-announcement.pdf"
+  },
+  {
+   "t": "PRX.JO",
+   "period": "Final",
+   "declared": "2026-10-28",
+   "amount_c": 520.2386,
+   "ldt": "2026-11-05",
+   "ex": "2026-11-06",
+   "record": "2026-11-10",
+   "pay": "2026-12-03",
+   "source": "Prosus N.V. — Finalisation of distributions to shareholders / Dividend declaration (28 Oct 2026), regulatory release via Reuters on TradingView https://www.tradingview.com/news/reuters.com,2026-10-28:newsml_RSb7890Aa:0-reg-prosus-nv-naspers-limited-dividend-declaration/ (year to 31 Mar 2026; 28 euro cents per N share, gross 520.23860 ZAR cents for JSE holders at EUR/ZAR 18.57995; paid as a capital repayment unless the holder elects a dividend; payment date depends on elections)"
   }
  ]
 }
