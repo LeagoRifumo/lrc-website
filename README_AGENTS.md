@@ -28,6 +28,7 @@ agents/
 | Watchlist (house rules), NY earnings, dashboard | every day 06:07 SAST | GitHub Action | free |
 | LRC Scanner (JSE + New York stocks, ETFs, sectors, entry plans) | 06:37 SAST Tue–Sat and 17:47 SAST Mon–Fri | GitHub Action | free |
 | Market dashboard (live) | hourly 06:17–22:17 SAST, weekdays | GitHub Action | free |
+| Health check (opens a GitHub issue if anything is late) | every 3 hours | GitHub Action | free |
 | Financial statements + company pages (SEO) | daily 05:23 SAST (each company weekly) | GitHub Action | free |
 | Weekly dashboard edition + Excel workbook | Saturdays | GitHub Action | free |
 | Articles → pages, SEO, sitemap | every time you add one | GitHub Action | free |
