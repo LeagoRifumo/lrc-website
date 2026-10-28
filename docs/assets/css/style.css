@@ -1036,3 +1036,28 @@ html:not(.safe) .onlysafe{display:none!important}
 @media print{.paper #ivchart+svg{max-height:70mm}}
 .paper .ivwrap{overflow-x:auto}.paper .ivwrap svg{display:block}
 @media screen and (max-width:700px){.paper .ivwrap svg{min-width:640px}}
+.paper .trange{margin-top:4px;font-size:13px;color:#16223D}.paper .trange b{color:#16223D}.paper .trange span{color:#5C6478}.paper .trange a{color:#1F3BB3;font-weight:700}
+@media print{.paper .trange{font-size:9.5px}}
+.paper .ivtop{display:flex;justify-content:flex-end;margin:2px 0 6px}
+.paper .seg{display:inline-flex;border:1px solid #DDE1EA;border-radius:8px;overflow:hidden;background:#fff}.paper .seg button{background:none;border:0;color:#16223D;font:600 12.5px var(--sans);padding:6px 14px;cursor:pointer}.paper .seg button+button{border-left:1px solid #DDE1EA}.paper .seg button.on{background:#16223D;color:#fff}
+.paper table.tgt-tbl th{background:#16223D;color:#fff;font-size:10.5px;letter-spacing:.04em}.paper table.tgt-tbl td.n{white-space:nowrap}.paper table.tgt-tbl tr.tgt-final td{background:#F4F1E6;border-top:2px solid #16223D}
+
+/* v10.7: track record made simple */
+.tr-steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:14px}
+.tr-steps div{border:1px solid var(--line);border-radius:14px;background:linear-gradient(180deg,var(--panel),var(--ink));padding:16px 18px;position:relative}
+.tr-steps i{font-style:normal;display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:var(--gold);color:#111;font-weight:800;margin-bottom:8px}
+.tr-steps b{display:block;color:#fff;font-size:18px;margin-bottom:4px}.tr-steps p{font-size:14px;color:#C9CEDA;line-height:1.55}
+.tr-verdict{display:flex;flex-wrap:wrap;gap:16px;align-items:center;border:1px solid var(--line);border-radius:14px;background:var(--panel);padding:18px 20px;margin-top:12px}
+.trv-badge{border:2px solid;border-radius:10px;padding:10px 16px;font-weight:800;letter-spacing:.1em;font-size:15px;white-space:nowrap}
+.trv-text{flex:1 1 420px;font-size:16px;line-height:1.6;color:#D5D9E3}
+.tr-bars{margin-top:14px;border:1px solid var(--line);border-radius:14px;background:var(--panel);padding:14px 18px}
+.trb{display:grid;grid-template-columns:120px minmax(0,1fr) 80px;gap:12px;align-items:center;padding:6px 0}
+.trb span{font-weight:700;color:#E3E6EE;font-size:14px}.trb em{font-style:normal;font-weight:800;text-align:right}
+.trb-track{position:relative;height:16px;background:#1A1F2C;border-radius:8px;overflow:hidden}.trb-track b{position:absolute;top:0;bottom:0;border-radius:8px}.trb-mid{position:absolute;left:50%;top:-2px;bottom:-2px;width:2px;background:#5C6478}
+.trb-note{font-size:12px;color:var(--muted);margin-top:6px}
+.tr-ctl{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;margin:12px 0}
+.tr-gloss{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:14px}
+.tr-gloss div{border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:var(--panel)}.tr-gloss b{display:block;color:var(--gold-2);font-size:13px;margin-bottom:4px}.tr-gloss span{font-size:13.5px;color:#C9CEDA;line-height:1.5}.tr-gloss em{font-style:normal;font-weight:700}
+@media (max-width:900px){.tr-steps,.tr-gloss{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.tr-steps,.tr-gloss{grid-template-columns:minmax(0,1fr)}.trb{grid-template-columns:90px minmax(0,1fr) 64px}}
+#trChart svg{min-width:640px}

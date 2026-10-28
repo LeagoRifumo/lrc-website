@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=10.6">
+<link rel="stylesheet" href="assets/css/style.css?v=10.7">
 </head>
 <body>
 <header class="site-header">
@@ -54,27 +54,46 @@
 
 <section class="page-hero"><div class="wrap">
   <span class="eyebrow">LRC Track Record</span>
-  <h1>Is the model <span class="gold">winning?</span></h1>
-  <p class="lead">Every LRC Stock Scanner rating is saved automatically every day and measured afterwards against the market. Nothing is back-filled or edited — this is the live record from the first day the scanner ran. Use the JSE / New York switch at the top of the page.</p>
+  <h1>Are our ratings <span class="gold">working?</span></h1>
+  <p class="lead">We keep score in public. Every rating the LRC Stock Scanner gives is saved every day and checked later against what the share price actually did. Nothing is back-filled or edited.</p>
   <div class="agent-meta" id="trMeta"></div>
-  <div class="edu-note"><b>HOW TO JUDGE IT</b> The model is working when (1) BUY-rated names beat the market average and SELL-rated names lag it, (2) the BUY line on the chart sits above the ALL line and the SELL line below it, and (3) hit rates stay above 50%. One week of data proves nothing — look at months. Past performance does not guarantee future results.</div>
 </div></section>
-<section style="padding-top:40px"><div class="wrap">
-  <div class="kpis" id="trKpis"></div>
-  <h2 style="margin-top:50px"><span class="nosafe">Rating</span><span class="onlysafe">Grade</span> baskets <span class="gold">— growth of 100</span></h2>
-  <p class="lead">Equal-weighted baskets rebuilt daily from that day's ratings. If the model adds value, BUY rises above ALL and SELL falls below it.</p>
-  <div id="trChart" style="margin-top:20px"></div>
-  <h2 style="margin-top:60px">Returns by <span class="nosafe">rating</span><span class="onlysafe">grade</span></h2>
-  <div class="filters" id="trMode"><button class="chip-btn on" data-v="by_rating">Trading scanner (3–12 months)</button><button class="chip-btn" data-v="by_rating_inv">Investment scanner (5–10 years)</button></div>
-  <p class="lead">Average price return after each period, the difference to the market average (all companies scanned in that market) and the hit rate (BUY: share that rose; SELL: share that fell; HOLD: share that moved less than 5%).</p>
-  <div class="tbl-wrap"><table class="wl" id="trTbl"></table></div>
+<section style="padding-top:26px"><div class="wrap">
+  <h2>How we track our ratings <span class="gold">— in 4 steps</span></h2>
+  <div class="tr-steps">
+    <div><i>1</i><b>Save</b><p>After every scan we save each company's rating (STRONG BUY to STRONG SELL), price and LRC Analyst Target.</p></div>
+    <div><i>2</i><b>Wait</b><p>We let time pass: 1 week, 1 month, 3 months and 6 months.</p></div>
+    <div><i>3</i><b>Measure</b><p>We work out each share's price change since the rating, and group them by rating.</p></div>
+    <div><i>4</i><b>Compare</b><p>We compare each group with the market (the average of every company we scan). BUY-rated shares should beat it and SELL-rated shares should trail it.</p></div>
+  </div>
+
+  <h2 style="margin-top:46px">The scorecard <span class="gold" id="trMk"></span></h2>
+  <div class="tr-verdict" id="trVerdict"></div>
+  <div class="tr-bars" id="trBars"></div>
+
+  <h2 style="margin-top:46px">Day by day <span class="gold">— R100 invested in each group</span></h2>
+  <p class="lead">Imagine R100 split equally across every BUY-rated share, every HOLD, every SELL and every company (the market), rebalanced each day to that day's ratings. If the ratings work, the green BUY line rises above the dashed market line and the red SELL line falls below it.</p>
+  <div id="trChart" style="margin-top:14px"></div>
+
+  <h2 style="margin-top:46px">Results by rating</h2>
+  <div class="tr-ctl"><div class="filters" id="trMode"><button class="chip-btn on" data-v="by_rating">Trading ratings (3–12 months)</button><button class="chip-btn" data-v="by_rating_inv">Investment ratings (5–10 years)</button></div>
+    <div class="filters" id="trHz"><button class="chip-btn" data-h="1 week">After 1 week</button><button class="chip-btn on" data-h="1 month">After 1 month</button><button class="chip-btn" data-h="3 months">After 3 months</button><button class="chip-btn" data-h="6 months">After 6 months</button></div></div>
+  <div class="tbl-wrap"><table class="wl mcard" id="trTbl"></table></div>
+  <div class="tr-gloss">
+    <div><b>Average return</b><span>The average price change of every share that had this rating, measured over the period you picked.</span></div>
+    <div><b>vs market</b><span>Average return minus the market's. <em class="up">Green</em> = beat the market, <em class="dn">red</em> = trailed it. For SELL ratings, red is good.</span></div>
+    <div><b>Hit rate</b><span>BUY: share of BUY-rated shares that went up. SELL: share of SELL-rated shares that went down. HOLD: share that moved less than 5%. Above 50% is better than a coin toss.</span></div>
+    <div><b>Periods</b><span>How many daily snapshots are old enough to be measured. One week of data proves nothing — judge the model on months.</span></div>
+  </div>
+
   <div class="nosafe">
-  <h2 style="margin-top:60px">Trade setups <span class="gold">— outcomes</span></h2>
-  <p class="lead">Each breakout/retest plan is followed for 30 days after its entry triggers: did the price reach target 1 before the stop?</p>
+  <h2 style="margin-top:46px">Trade setups <span class="gold">— did they reach target 1 before the stop?</span></h2>
+  <p class="lead">Each breakout or retest plan is followed for 30 days after its entry price is hit.</p>
   <div class="tbl-wrap"><table class="wl mcard" id="trSet"></table></div>
-  <h2 style="margin-top:60px">LRC Analyst Target <span class="gold">— hit rate</span></h2>
+  <h2 style="margin-top:46px">LRC Analyst Target <span class="gold">— hit rate</span></h2>
   <p class="lead" id="trTgt"></p>
   </div>
+  <div class="edu-note" style="margin-top:30px"><b>GOOD TO KNOW</b> Returns are price changes only (dividends not included), equal-weighted, before costs. The record started on the first day the scanner ran. Past performance does not guarantee future results.</div>
 </div></section>
 
 </main>
@@ -93,6 +112,6 @@
 </footer>
 <script>window.LRC_DATA = "data/";</script>
 <script src="assets/js/main.js?v=10.5"></script>
-<script src="assets/js/scanner.js?v=10.6"></script>
+<script src="assets/js/scanner.js?v=10.7"></script>
 </body>
 </html>

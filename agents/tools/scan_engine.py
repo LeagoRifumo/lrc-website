@@ -419,7 +419,7 @@ def model_targets(f, med, price, fs=None, market='US', sector=None, rf=None):
     if cons: vals.append(cons)
     if vals:
         out['blend'] = clamp(sum(vals) / len(vals), 0.5 * price, 2.0 * price)
-        out['low'], out['high'] = clamp(min(vals), 0.5 * price, 2.0 * price), clamp(max(vals), 0.5 * price, 2.0 * price)
+        out['low'], out['high'] = min(vals), max(vals)   # the real spread of the methods (the target itself stays within 0.5x-2x the price)
         out['n_methods'] = len(vals)
         out['basis'] = ' + '.join([{'dcf': 'DCF', 'residual_income': 'residual income', 'ddm': 'dividend & buyback model', 'ev_ebitda': 'EV/EBITDA vs peers'}[k] for k in iv['methods']] + (['analyst consensus'] if cons else []))
     return out

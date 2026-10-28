@@ -191,7 +191,7 @@ def main():
     age = {}
     for t, m in uni:
         o = load(os.path.join(OUT, t + '.json'))
-        age[t] = (o or {}).get('updated') or ''
+        age[t] = ((o or {}).get('updated') or '') if (o or {}).get('px_m') else ''   # files without monthly prices are refreshed first
     week = (dt.date.today() - dt.timedelta(days=6)).isoformat()
     need = sorted([x for x in uni if age[x[0]] < week], key=lambda x: age[x[0]])[:a.per_run]
     try: ciks = SECQ.cik_map()
@@ -217,6 +217,12 @@ def main():
             o['sec_date'] = prev['sec_date']
             if 'SEC EDGAR 10-K filings (older years)' in (prev.get('src') or []) and 'SEC EDGAR 10-K filings (older years)' not in o['src']: o['src'].append('SEC EDGAR 10-K filings (older years)')
         if m == 'JSE': o['interim'] = True   # JSE companies report every six months
+        try:   # 10 years of month-end prices for the intrinsic value vs price chart (trading currency, major units)
+            j = json.loads(y.get(f'https://query1.finance.yahoo.com/v8/finance/chart/{urllib.parse.quote(t)}?range=10y&interval=1mo'))['chart']['result'][0]
+            div = 100.0 if (j.get('meta') or {}).get('currency') in ('ZAc', 'ZAC', 'GBp', 'GBX') else 1.0
+            cl = j['indicators']['quote'][0]['close']
+            o['px_m'] = [[dt.datetime.utcfromtimestamp(ts).strftime('%Y-%m'), round(c / div, 4)] for ts, c in zip(j.get('timestamp') or [], cl) if c]
+        except Exception: o['px_m'] = (prev or {}).get('px_m') or []
         json.dump(o, open(os.path.join(OUT, t + '.json'), 'w'), separators=(',', ':'))
         return t, None
     t0 = time.time()

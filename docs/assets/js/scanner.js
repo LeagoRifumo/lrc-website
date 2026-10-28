@@ -306,10 +306,10 @@ if ($('riOut')) {
 if ($('trTbl')) {
   let mkt = getMkt(), T = null, rkey = 'by_rating';
   document.querySelectorAll('#trMode .chip-btn').forEach(b => b.addEventListener('click', () => { document.querySelectorAll('#trMode .chip-btn').forEach(x => x.classList.remove('on')); b.classList.add('on'); rkey = b.dataset.v; draw(); }));
-  const col = { BUY: '#2FA36B', HOLD: '#9AA1B2', SELL: '#E3262B', ALL: '#F2CE72' };
+  const col = { BUY: '#2FA36B', HOLD: '#9AA1B2', SELL: '#E3262B', ALL: '#F2CE72' };  // ALL = market (every company scanned)
   const chart = c => {
     if (!c || !c.dates || c.dates.length < 2) return '<p class="muted-load">The chart starts after the second daily snapshot.</p>';
-    const W = 1000, H = 300, L = 44, R = 70, Tp = 16, B = 26, w = W - L - R, h = H - Tp - B, n = c.dates.length;
+    const W = 1000, H = 300, L = 44, R = 150, Tp = 16, B = 26, w = W - L - R, h = H - Tp - B, n = c.dates.length;
     const all = ['BUY', 'HOLD', 'SELL', 'ALL'].flatMap(k => c[k]); let lo = Math.min(...all), hi = Math.max(...all); const pd = (hi - lo) * 0.1 || 1; lo -= pd; hi += pd;
     const X = i => L + i * w / (n - 1), Y = v => Tp + (hi - v) / (hi - lo) * h;
     const path = a => a.map((v, i) => (i ? 'L' : 'M') + X(i).toFixed(1) + ',' + Y(v).toFixed(1)).join('');
@@ -319,29 +319,47 @@ if ($('trTbl')) {
     const lab = ['BUY', 'HOLD', 'SELL', 'ALL'].map(k => ({ k, y: Y(c[k][n - 1]), v: c[k][n - 1] })).sort((a, b) => a.y - b.y);
     for (let i = 1; i < lab.length; i++) if (lab[i].y - lab[i - 1].y < 14) lab[i].y = lab[i - 1].y + 14;
     return `<div class="tbl-wrap" style="padding:10px"><svg viewBox="0 0 ${W} ${H}" width="100%">${ys}${xs}${['ALL', 'HOLD', 'SELL', 'BUY'].map(k => `<path d="${path(c[k])}" fill="none" stroke="${col[k]}" stroke-width="${k === 'ALL' ? 1.6 : 2.4}" ${k === 'ALL' ? 'stroke-dasharray="6 4"' : ''}/>`).join('')}
-      ${lab.map(l => `<text x="${L + w + 6}" y="${l.y + 4}" fill="${col[l.k]}" font-size="12" font-weight="700">${l.k} ${l.v.toFixed(1)}</text>`).join('')}</svg></div>`;
+      ${lab.map(l => `<text x="${L + w + 6}" y="${l.y + 4}" fill="${col[l.k]}" font-size="12" font-weight="700">${l.k === "ALL" ? "MARKET" : l.k} ${l.v.toFixed(1)}</text>`).join('')}</svg></div>`;
   };
+  let hz = '1 month';
+  document.querySelectorAll('#trHz .chip-btn').forEach(b => b.addEventListener('click', () => { document.querySelectorAll('#trHz .chip-btn').forEach(x => x.classList.remove('on')); b.classList.add('on'); hz = b.dataset.h; draw(); }));
   const draw = () => {
     const m = T && T.markets && T.markets[mkt];
-    $('trMeta').innerHTML = T ? `<span class="ai">● Built by <b>LRC Track Record</b></span><span>Tracking since <b>${esc(T.since || '—')}</b></span><span><b>${T.days}</b> daily snapshots</span><span>Updated <b>${when(T.generated)}</b></span>` : '';
-    if (!m) { $('trTbl').innerHTML = '<tr><td style="color:var(--muted)">The first snapshot is saved after the next scanner run.</td></tr>'; return; }
+    $('trMeta').innerHTML = T ? `<span class="ai">● LRC Track Record</span><span>Tracking since <b>${esc(T.since || '—')}</b></span><span><b>${T.days}</b> daily snapshots</span><span>Updated <b>${when(T.generated)}</b></span>` : '';
+    $('trMk').textContent = '— ' + (mkt === 'JSE' ? 'JSE' : 'New York');
+    if (!m) { $('trVerdict').innerHTML = '<p class="muted-load">The first snapshot is saved after the next scanner run.</p>'; return; }
     const c = m.curves || {}; const n = (c.dates || []).length;
     const ret = k => n > 1 ? c[k][n - 1] / 100 - 1 : null;
-    $('trKpis').innerHTML = [[T.days, 'days tracked'], [pc(ret('BUY')), 'BUY basket'], [pc(ret('ALL')), 'all companies (market)'], [pc(ret('SELL')), 'SELL basket'],
-      [n > 1 ? pc((ret('BUY') ?? 0) - (ret('SELL') ?? 0)) : '—', 'BUY minus SELL']].map(([b, s]) => `<div><b>${b}</b><span>${s}</span></div>`).join('');
+    const b = ret('BUY'), s = ret('SELL'), a = ret('ALL'), hd = ret('HOLD');
+    const days = n > 1 ? Math.round((new Date(c.dates[n - 1]) - new Date(c.dates[0])) / 864e5) : 0;
+    const spread = ok(b) && ok(s) ? b - s : null;
+    const early = days < 90;
+    const state = !ok(spread) ? ['WAITING', '#9AA1B2', 'The first measurement appears after the second daily snapshot.'] :
+      early ? ['TOO EARLY TO JUDGE', '#F2CE72', `Only ${days} day${days === 1 ? '' : 's'} of history. We need at least 3 months before the numbers mean anything.`] :
+      spread > 0.02 && b > a ? ['WORKING', '#2FA36B', 'BUY-rated shares are beating the market and the SELL-rated shares.'] :
+      spread < -0.02 ? ['NOT WORKING', '#E3262B', 'SELL-rated shares are doing better than BUY-rated shares. We review the rules when this lasts.'] : ['NO CLEAR EDGE YET', '#9AA1B2', 'BUY and SELL ratings are performing about the same.'];
+    $('trVerdict').innerHTML = `<div class="trv-badge" style="border-color:${state[1]};color:${state[1]}">${state[0]}</div>
+      <p class="trv-text">Since <b>${esc(c.dates?.[0] || '—')}</b> (${days} days): shares rated <b class="up">BUY</b> moved <b>${pc(b)}</b>, the market <b>${pc(a)}</b> and shares rated <b class="dn">SELL</b> <b>${pc(s)}</b>.
+      ${ok(spread) ? `BUY minus SELL: <b style="color:${spread >= 0 ? '#5ED39A' : '#F08A7E'}">${pc(spread)}</b>.` : ''} ${esc(state[2])}</p>`;
+    // simple bars: return since tracking began, by group
+    const grp = [['BUY', b, '#2FA36B'], ['HOLD', hd, '#9AA1B2'], ['SELL', s, '#E3262B'], ['MARKET (all)', a, '#F2CE72']].filter(x => ok(x[1]));
+    const mx = Math.max(0.005, ...grp.map(x => Math.abs(x[1])));
+    $('trBars').innerHTML = grp.length ? grp.map(([l, v, col]) => `<div class="trb"><span>${l}</span><div class="trb-track"><i class="trb-mid"></i><b style="${v >= 0 ? 'left:50%' : `right:50%`};width:${Math.abs(v) / mx * 50}%;background:${col}"></b></div><em style="color:${v >= 0 ? '#5ED39A' : '#F08A7E'}">${pc(v, 2)}</em></div>`).join('') + '<p class="trb-note">Return since tracking began · bars to the right = up, to the left = down</p>' : '';
     $('trChart').innerHTML = chart(c);
-    const H = ['1 week', '1 month', '3 months', '6 months'];
-    $('trTbl').innerHTML = `<thead><tr><th>RATING</th>${H.map(h => `<th>${h.toUpperCase()}<small>return · vs market · hit rate</small></th>`).join('')}</tr></thead><tbody>` +
-      ['STRONG BUY', 'BUY', 'HOLD', 'SELL', 'STRONG SELL', 'MARKET'].map(g => `<tr><td>${g === 'MARKET' ? '<b>Market average</b>' : `<span class="${sigCls(g)}">${g}</span>`}</td>` + H.map(h => {
-        const x = ((m[rkey] || {})[h] || {})[g];
-        if (!x) return '<td style="color:var(--muted)">not enough history yet</td>';
-        return `<td class="n"><b style="color:${x.avg_return >= 0 ? '#5ED39A' : '#F08A7E'}">${pc(x.avg_return)}</b>${x.vs_market !== undefined ? ` · <span style="color:${x.vs_market >= 0 ? '#5ED39A' : '#F08A7E'}">${pc(x.vs_market)}</span> · ${pp(x.hit_rate, 0)}<small>${x.avg_names} names · ${x.periods} periods</small>` : `<small>${x.periods} periods</small>`}</td>`;
-      }).join('') + '</tr>').join('') + '</tbody>';
+    const rows = ['STRONG BUY', 'BUY', 'HOLD', 'SELL', 'STRONG SELL', 'MARKET'];
+    const box = ((m[rkey] || {})[hz]) || {};
+    const any = rows.some(g => box[g]);
+    $('trTbl').innerHTML = `<thead><tr><th>RATING</th><th>AVERAGE RETURN</th><th>VS MARKET</th><th>HIT RATE</th><th>SHARES / PERIODS</th></tr></thead><tbody>` +
+      (any ? rows.map(g => { const x = box[g]; const lbl = g === 'MARKET' ? '<b>Market average</b>' : `<span class="${sigCls(g)}">${g}</span>`;
+        if (!x) return `<tr><td>${lbl}</td><td colspan="4" style="color:var(--muted)">no shares with this rating in the measured period</td></tr>`;
+        const good = g.includes('SELL') ? x.vs_market <= 0 : x.vs_market >= 0;
+        return `<tr><td>${lbl}</td><td class="n"><b style="color:${x.avg_return >= 0 ? '#5ED39A' : '#F08A7E'}">${pc(x.avg_return)}</b></td><td class="n">${x.vs_market !== undefined ? `<span style="color:${good ? '#5ED39A' : '#F08A7E'}">${pc(x.vs_market)} ${good ? '✓' : '✗'}</span>` : '—'}</td><td class="n">${x.hit_rate !== undefined ? `<b>${pp(x.hit_rate, 0)}</b>` : '—'}</td><td class="n">${x.avg_names ?? '—'} / ${x.periods}</td></tr>`; }).join('')
+        : `<tr><td colspan="5" style="color:var(--muted)">Not enough history yet: results ${esc(hz)} after a rating appear once the first ratings are ${esc(hz)} old (the record started ${esc(T.since || '')}).</td></tr>`) + '</tbody>';
     const st = m.setups || {};
-    $('trSet').innerHTML = `<thead><tr><th>SIDE</th><th>TARGET 1 HIT</th><th>STOPPED</th><th>STILL OPEN</th><th>EXPIRED (30 DAYS)</th><th>WIN RATE</th></tr></thead><tbody>` +
-      ['Long', 'Short'].map(k => { const o = st[k] || {}; return `<tr><td>${k}</td><td class="n">${o.target ?? 0}</td><td class="n">${o.stop ?? 0}</td><td class="n">${o.open ?? 0}</td><td class="n">${o.expired ?? 0}</td><td class="n"><b>${o.win_rate === null || o.win_rate === undefined ? '—' : pp(o.win_rate, 0)}</b></td></tr>`; }).join('') + '</tbody>';
+    $('trSet').innerHTML = `<thead><tr><th>SIDE</th><th>REACHED TARGET 1</th><th>STOPPED OUT</th><th>STILL OPEN</th><th>EXPIRED (30 DAYS)</th><th>WIN RATE</th></tr></thead><tbody>` +
+      ['Long', 'Short'].map(k => { const o = st[k] || {}; return `<tr><td>${k === 'Long' ? 'Long (buy)' : 'Short (sell)'}</td><td class="n">${o.target ?? 0}</td><td class="n">${o.stop ?? 0}</td><td class="n">${o.open ?? 0}</td><td class="n">${o.expired ?? 0}</td><td class="n"><b>${o.win_rate === null || o.win_rate === undefined ? '—' : pp(o.win_rate, 0)}</b></td></tr>`; }).join('') + '</tbody>';
     const tg = m.targets || {};
-    $('trTgt').innerHTML = tg.evaluated ? `<b style="color:var(--gold-2)">${pp(tg.hit_rate, 0)}</b> of ${tg.evaluated} LRC Analyst Targets set at least 6 months ago were reached within 6 months.` : 'Targets are judged after 6 months, so this fills in from six months after the record started.';
+    $('trTgt').innerHTML = tg.evaluated ? `<b style="color:var(--gold-2)">${pp(tg.hit_rate, 0)}</b> of ${tg.evaluated} LRC Analyst Targets set at least 6 months ago were reached within 6 months.` : 'Targets are judged 6 months after they are set, so this fills in from six months after the record started.';
   };
   window.addEventListener('lrcmarket', e => { mkt = e.detail; draw(); });
   get('track/performance.json').then(j => { T = j; draw(); }).catch(() => { T = null; draw(); });
@@ -547,11 +565,17 @@ if ($('paper')) {
     const vals = (d.valuation || []).filter(v => v.v !== null && v.v !== undefined);
     const vcls = v => ({ Undervalued: 'v-under', Overvalued: 'v-over', 'Fairly valued': 'v-fair', Strong: 'v-strong', Weak: 'v-weak', 'In line': 'v-fair', 'Low debt': 'v-low', 'High debt': 'v-high', 'Loss-making': 'v-neg', 'Negative FCF': 'v-neg' })[v] || 'v-fair';
     const fmtV = (k, v) => ['fpe', 'tpe', 'ps', 'pfcf', 'peg', 'pb'].includes(k) ? (v <= 0 ? 'neg.' : v.toFixed(2)) : k === 'de' ? (v / 100).toFixed(2) + 'x' : k === 'current_ratio' ? v.toFixed(2) : pp(v, 1);
-    const tgRows = [['Latest share price', t.price, false], ['1 · DCF (free cash flow)', tg.dcf], ['2 · Residual income (banks & insurers)', tg.residual_income], ['3 · Dividend & buyback model', tg.ddm],
-      ['4 · EV/EBITDA vs sector peers', tg.ev_ebitda], ['Analyst consensus (median)', (f.n_analysts || 0) >= 3 ? tg.analyst_median : null],
-      ['LRC Analyst Target (average)', lrcT]].filter(x => ok(x[1]));
-    const tgRange = ok(tg.low) && ok(tg.high) && !(r.cov || (R && R.target)) ? `<span>Target range (low – high)</span><span></span><span style="text-align:right;font-weight:800">${px(tg.low, c)} – ${px(tg.high, c)}</span>` : '';
-    const tgRev = ok(tg.implied_growth) ? `<span>5 · Reverse DCF: growth the price assumes</span><span></span><span style="text-align:right;font-weight:800">${pc(tg.implied_growth, 0)} a year</span>` : '';
+    const tgM = [['Method 1: Discounted cash flow (DCF)', tg.dcf], ['Method 2: Residual income (banks & insurers)', tg.residual_income], ['Method 3: Dividend & buyback model', tg.ddm],
+      ['Method 4: EV/EBITDA vs sector peers', tg.ev_ebitda], ['Analyst consensus (median, 3+ analysts)', (f.n_analysts || 0) >= 3 ? tg.analyst_median : null]].filter(x => ok(x[1]));
+    const tgW = tgM.length ? 1 / tgM.length : 0;
+    if (tgM.length) { tg.low = Math.min(...tgM.map(x => x[1])); tg.high = Math.max(...tgM.map(x => x[1])); }
+    const tgTable = tgM.length && !(r.cov || (R && R.target)) ? `<table class="rtab tgt-tbl"><thead><tr><th>Methodology</th><th style="text-align:right">Implied value</th><th style="text-align:right">vs current (${px(t.price, c)})</th><th style="text-align:right">Weight</th></tr></thead><tbody>` +
+      tgM.map(([l, v]) => `<tr><td>${esc(l)}</td><td class="n"><b>${px(v, c)}</b></td><td class="n" style="color:${v >= t.price ? '#0F7B3F' : '#C5221F'}">${pc(v / t.price - 1, 1)}</td><td class="n">${(tgW * 100).toFixed(0)}%</td></tr>`).join('') +
+      `${ok(tg.low) && ok(tg.high) ? `<tr><td>Range (lowest – highest method)</td><td class="n">${px(tg.low, c)} – ${px(tg.high, c)}</td><td class="n">${pc(tg.low / t.price - 1, 0)} to ${pc(tg.high / t.price - 1, 0)}</td><td class="n">—</td></tr>` : ''}` +
+      `<tr class="tgt-final"><td><b>LRC Analyst Target (equal-weight average)</b></td><td class="n"><b>${px(lrcT, c)}</b></td><td class="n"><b>${pc(lrcT / t.price - 1, 1)}</b></td><td class="n"><b>100%</b></td></tr>` +
+      `${ok(tg.implied_growth) ? `<tr><td colspan="4" style="color:#5C6478">Method 5: Reverse DCF — today's price assumes free cash flow grows about <b>${pc(tg.implied_growth, 0)} a year</b> for five years (shown, not averaged).</td></tr>` : ''}</tbody></table>` : '';
+    const tgRows = [['Latest share price', t.price, false], ['LRC Analyst Target (average)', lrcT]].filter(x => ok(x[1]));
+    const tgRange = '', tgRev = '';
     const heat = GRP.map(([k, l]) => { const v = (r.grp || {})[k]; const w = v ?? 0; return `<div class="fbar"><span>${l[0] + l.slice(1).toLowerCase()}</span><i><b style="width:${w}%;background:${v === null || v === undefined ? '#C9CED8' : v >= 60 ? '#0F9D58' : v >= 40 ? '#9AA0A6' : '#C5221F'}"></b></i><em>${v ?? '—'}</em></div>`; }).join('');
     const chip = (p, it) => p === null || p === undefined ? '<span style="color:#9AA0A6">—</span>' : `<span class="rchip r${it >= 2 ? 'p2' : it >= 1 ? 'p1' : it <= -2 ? 'm2' : it <= -1 ? 'm1' : '0'}">${p > 0 ? '+' + p : p} ${p > 0 ? 'Better' : p < 0 ? 'Worse' : 'Neutral'}</span>`;
     const rtab = groups => `<table class="rtab"><thead><tr><th>Reading</th><th style="text-align:right">${esc(r.t.replace('.JO', ''))}</th><th style="text-align:right">Sector</th><th style="text-align:right">Market</th><th>Score</th></tr></thead><tbody>` +
@@ -561,12 +585,12 @@ if ($('paper')) {
 
     P.innerHTML = `
     <div class="ph"><div class="tkbox">${esc(r.t.replace('.JO', ''))}<small>${r.m === 'JSE' ? 'JSE' : 'NYSE / NASDAQ'}</small></div>
-      <div><div style="font-size:15px;font-weight:800;color:#16223D">${esc(r.n)}</div><h1>${esc(title)}</h1></div><img src="assets/img/logo-lrc.png" alt="Leago Rifumo Capital"></div>
+      <div><div style="font-size:15px;font-weight:800;color:#16223D">${esc(r.n)}</div><h1>${esc(title)}</h1>${ok(tg.low) && ok(tg.high) && !SAFE ? `<div class="trange"><b>Target range:</b> ${px(tg.low, c)} – ${px(tg.high, c)} <span>(${pc(tg.low / t.price - 1, 0)} to ${pc(tg.high / t.price - 1, 0)})</span>${tg.n_methods ? ` · average of ${tg.n_methods} valuation ${tg.n_methods === 1 ? 'input' : 'inputs'}` : ''} · <a href="#ivchart" class="no-print">see the chart ↓</a></div>` : ''}</div><img src="assets/img/logo-lrc.png" alt="Leago Rifumo Capital"></div>
     <div class="pfacts">
       <div><b>Market cap / Price:</b> ${big(f.mcap, c)} / ${px(t.price, c)}<br><b>52-wk low / high:</b> ${px(t.lo52, c)} / ${px(t.hi52, c)}<br><b>Beta / Yield:</b> ${ok(f.beta) ? f.beta.toFixed(2) : '—'} / ${pp(f.div_yield, 2)}<br><b>Sector:</b> ${esc(r.sec)}${r.ind ? ' · ' + esc(r.ind) : ''}</div>
       <div>${R && R.guidance ? R.guidance.slice(0, 4).map(g => `<b>${esc(g.split(':')[0])}:</b>${esc(g.split(':').slice(1).join(':'))}`).join('<br>') :
         `<b>Next results:</b> ${esc(f.next_earnings || 'not announced')}<br><b>Analysts:</b> ${recLbl(f.rec_mean)}${f.n_analysts ? ` (${f.n_analysts})` : ''}${ok(f.target_median) ? ` · median target ${px(f.target_median, c)}` : ''}<br><b>EPS growth (this yr / next yr est.):</b> ${pc(f.eps_growth_fwd, 0)} / ${pc(f.eps_growth_next, 0)}<br><b>Fwd P/E vs sector:</b> ${mult(f.fpe)} vs ${mult(d.sector_medians?.fpe)}`}</div>
-      <div><b>Last updated:</b> ${esc(updated)}<br><b>Analyst name:</b> ${analyst}<br><b>Trading (3–12 m):</b> <span class="${sigCls(r.v)}" style="font-size:10px">${esc(r.v)}</span> ${S100(r)}/100<br><b>Investment (5–10 y):</b> <span class="${sigCls(r.iv_v)}" style="font-size:10px">${esc(r.iv_v || '—')}</span> ${r.iv_score ?? '—'}/100<br><b>Valuation:</b> <span class="${valCls(r.val)}" style="font-size:9.5px">${esc(r.val || '—')}</span>${r.v_note && !SAFE ? `<br><span style="font-size:11px;color:#7A8296">${esc(r.v_note)}</span>` : ''}${r.cov ? `<br><b>LRC analyst rating:</b> ${esc(r.cov.rating)} (${esc(r.cov.rated || '')})` : ''}${R && R.geo_mix ? `<br><b>Geo %:</b> ${esc(R.geo_mix)}` : ''}</div>
+      <div><b>Last updated:</b> ${esc(updated)}<br><b>Analyst name:</b> ${analyst}<br><b>Trading (3–12 m):</b> <span class="${sigCls(r.v)}" style="font-size:10px">${esc(r.v)}</span> ${S100(r)}/100${ok(lrcT) && !SAFE ? `<br><b>Target:</b> ${px(lrcT, c)}${ok(tg.low) && ok(tg.high) ? ` <span style="color:#5C6478">(range ${px(tg.low, c)} – ${px(tg.high, c)})</span>` : ''}` : ''}<br><b>Investment (5–10 y):</b> <span class="${sigCls(r.iv_v)}" style="font-size:10px">${esc(r.iv_v || '—')}</span> ${r.iv_score ?? '—'}/100<br><b>Valuation:</b> <span class="${valCls(r.val)}" style="font-size:9.5px">${esc(r.val || '—')}</span>${r.v_note && !SAFE ? `<br><span style="font-size:11px;color:#7A8296">${esc(r.v_note)}</span>` : ''}${r.cov ? `<br><b>LRC analyst rating:</b> ${esc(r.cov.rating)} (${esc(r.cov.rated || '')})` : ''}${R && R.geo_mix ? `<br><b>Geo %:</b> ${esc(R.geo_mix)}` : ''}</div>
     </div>
     <div class="pwhy" id="pWhy"></div>
     <div class="bar">Fundamentals <small>${R ? 'ANALYST VIEW + LIVE DATA' : 'AUTOMATED FROM LIVE DATA'}</small></div>
@@ -589,11 +613,11 @@ if ($('paper')) {
       ${rtab(GRP.slice(0, 3))}
     </div><div>
       <div class="gauge">${gauge}<div><b style="color:#16223D">Trading ${S100(r)}/100 · ${esc(r.v)} &nbsp;|&nbsp; Investment ${r.iv_score ?? '—'}/100 · ${esc(r.iv_v || '—')}</b><br><span style="color:#5C6478;font-size:11.5px">${r.pts > 0 ? '+' : ''}${r.pts} points of a possible ±${r.max}. Group scores (0–100, 50 = neutral):</span><div class="fbars">${heat}</div></div></div>
-      ${SAFE ? '' : `<div class="tg" style="margin-top:10px">${tgRows.map(([l, v, g]) => `<span>${esc(l)}</span><span style="text-align:right;color:#5C6478">${g === false ? '' : pc(v / t.price - 1, 0)}</span><span class="${g === false ? '' : 'gv' + (v < t.price ? ' neg' : '')}" style="text-align:right;font-weight:800">${px(v, c)}</span>`).join('')}${tgRange}${tgRev}</div>${tg.basis ? `<p style="font-size:10.5px;color:#7A8296;margin-top:4px">Average of: ${esc(tg.basis)}.${tg.inputs ? ` Cost of equity ${pp(tg.inputs.r, 1)}, growth years 1–5 ${pp(tg.inputs.g1, 0)} fading to ${pp(tg.inputs.g_term, 1)}.` : ''}</p>` : ''}`}
+      ${SAFE ? '' : tgTable ? `<div style="margin-top:10px">${tgTable}${tg.inputs ? `<p style="font-size:10.5px;color:#7A8296;margin-top:4px">Assumptions: cost of equity ${pp(tg.inputs.r, 1)} (10-year bond yield + equity risk premium, adjusted for beta); growth years 1–5 ${pp(tg.inputs.g1, 0)} fading to ${pp(tg.inputs.g_term, 1)} long-term. Methods that do not fit the company are left out.</p>` : ''}</div>` : `<div class="tg" style="margin-top:10px">${tgRows.map(([l, v, g]) => `<span>${esc(l)}</span><span style="text-align:right;color:#5C6478">${g === false ? '' : pc(v / t.price - 1, 0)}</span><span class="${g === false ? '' : 'gv' + (v < t.price ? ' neg' : '')}" style="text-align:right;font-weight:800">${px(v, c)}</span>`).join('')}${tgRange}${tgRev}</div>${tg.basis ? `<p style="font-size:10.5px;color:#7A8296;margin-top:4px">Average of: ${esc(tg.basis)}.${tg.inputs ? ` Cost of equity ${pp(tg.inputs.r, 1)}, growth years 1–5 ${pp(tg.inputs.g1, 0)} fading to ${pp(tg.inputs.g_term, 1)}.` : ''}</p>` : ''}`}
       ${R && R.valuation ? `<h4>Analyst valuation:</h4>${ul(R.valuation.map(esc))}` : ''}
       ${inv ? `<h4>Investment track (5–10 yrs): grade ${esc(inv.grade)} · ${inv.passed}/${inv.known} checks</h4><p style="font-size:11.5px;color:#5C6478">${inv.checks.filter(x => x.ok !== null).map(x => `<span style="color:${x.ok ? '#0F7B3F' : '#C5221F'}">${x.ok ? '✔' : '✘'} ${esc(x.k)}</span>`).join(' · ')}</p>` : ''}
     </div></div>
-    ${(() => { const iv = ivChart(d, lrcT, 760, 300); return iv ? `<div class="bar" id="ivchart">Intrinsic Value vs Market Price <small>LRC VALUE (AVERAGE OF METHODS) · BUY / HOLD / SELL ZONES</small></div>${iv}` : ''; })()}
+    ${ok(lrcT) && !SAFE ? `<div class="bar" id="ivchart">Intrinsic Value vs Market Price <small>LRC VALUE OVER TIME · BUY / HOLD / SELL ZONES</small></div><div id="ivBox">${ivChart(d, lrcT, 760, 300)}</div>` : ''}
     <div class="bar">All Fundamentals <small>37 READINGS · COMPANY vs SECTOR MEDIAN vs MARKET MEDIAN</small></div>
     <div class="cols"><div>${rtab(GRP.slice(3, 5))}</div><div>${rtab(GRP.slice(5))}</div></div>
     <p class="bl"><b class="k">Bottom Line:</b> ${R && R.valuation_bottom_line ? esc(R.valuation_bottom_line) : `Against the median ${esc(r.sec)} company in ${r.m === 'JSE' ? 'the JSE' : 'New York'}, the shares look <b>${esc((vv('fpe').verdict || vv('tpe').verdict || 'n/a').toLowerCase())}</b> on earnings and <b>${esc((vv('pfcf').verdict || 'n/a').toLowerCase())}</b> on free cash flow. ${ok(lrcT) && !SAFE ? `The LRC Analyst Target is ${px(lrcT, c)} (${pc(lrcT / t.price - 1, 0)} from today).` : ''}`}
@@ -613,7 +637,7 @@ if ($('paper')) {
       const md = document.querySelector('meta[name=description]'); if (md) md.content = `${r.n} (${r.t.replace('.JO', '')}) one-page summary: LRC scores, valuation vs peers, thesis and financial statements.`;
       document.title = `${r.n} (${r.t.replace('.JO', '')}) One-Page Summary, Thesis & Financial Statements | Leago Rifumo Capital`; } catch (e) { }
     try { renderThesis({ d, r, t, f, pr, c, X, SX, MS, lrcT, upT, what, compTxt, indTxt, mgmtTxt, bsTxt, pickBy, nextBits, recLbl, days, finCo, sizeWord, mktName, cap1 }); } catch (e) { console.error(e); }
-    loadStatements(r, c);
+    loadStatements(r, c, d, lrcT);
   }
 
   /* ---------- LRC THESIS: why we are looking at this company (automated from the data, refreshed every scanner run) ---------- */
@@ -678,9 +702,9 @@ if ($('paper')) {
   }
 
   /* ---------- FINANCIAL STATEMENTS (annual 5+ years and quarterly / interim) ---------- */
-  function loadStatements(r, c0) {
+  function loadStatements(r, c0, d, V) {
     const el = $('fsSec'); if (!el) return;
-    get('fs/' + r.t.replace('^', '_') + '.json').then(fs => drawStatements(el, fs, r)).catch(() => {
+    get('fs/' + r.t.replace('^', '_') + '.json').then(fs => { try { drawIV(fs, d, V); } catch (e) { console.error(e); } drawStatements(el, fs, r); }).catch(() => {
       el.innerHTML = `<div class="th-head"><div><span class="eyebrow">Financial statements</span><h2>${esc(r.n)} <span class="gold">financial statements</span></h2></div></div><p class="muted-load">The statements for this company are being collected and appear within a day.</p>`;
     });
   }
@@ -756,6 +780,111 @@ if ($('paper')) {
     const fP = fcf.filter(ok); if (fP.length >= 3) hb.push(`free cash flow was positive in ${fP.filter(v => v > 0).length} of ${fP.length} years`);
     const sP = so.filter(ok); if (sP.length >= 3) { const ch = sP[sP.length - 1] / sP[0] - 1; if (Math.abs(ch) >= 0.02) hb.push(`the share count has ${ch < 0 ? 'fallen' : 'risen'} ${pp(Math.abs(ch), 0)} (${ch < 0 ? 'buybacks add to each share' : 'new shares dilute existing holders'})`); }
     const th = $('thHist'); if (th && hb.length) th.innerHTML = `<p><b>Track record (financial statements):</b> ${hb.join('; ')}. <a href="#fsSec">See the statements ↓</a></p>`;
+  }
+
+  /* ---------- LRC intrinsic value over time (own design) ----------
+     The same valuation methods as the LRC Analyst Target, re-run on each year's (or each quarter's trailing-12-month) reported
+     figures with today's cost of equity and growth assumptions, then scaled so the latest point equals today's LRC Analyst Target.
+     Price = month-end closes (yearly view) or daily closes (quarterly view). Zones: 20%+ below value = BUY, 20%+ above = SELL. */
+  function ivSeries(fs, d, V, per) {
+    const f = d.f || {}, fx = f.fx_used || 1, tg = d.targets || {}, inp = tg.inputs || {}, sec = d.row.sec;
+    const r = inp.r || 0.11, gT = ok(inp.g_term) ? inp.g_term : 0.03, g1 = ok(inp.g1) ? inp.g1 : gT;
+    const fin = sec === 'Financial Services', ddmS = ['Real Estate', 'Utilities', 'Financial Services'].includes(sec);
+    const mEV = (d.sector_medians || {}).ev_ebitda;
+    const S = fs[per] || {}, dates = S.dates || [], R = S.rows || {};
+    const at = (k, i) => { const a = R[k] || []; return ok(a[i]) ? a[i] * fx : null; };
+    const flow = (k, i) => { if (per === 'annual') return at(k, i); if (i < 3) return null; let s = 0; for (let q = i - 3; q <= i; q++) { const v = at(k, q); if (v === null) return null; s += v; } return s; };
+    const dcf = (cf, sh) => { let v = 0, c = cf; for (let y = 1; y <= 5; y++) { c *= 1 + g1 + (gT - g1) * (y - 1) / 4; v += c / Math.pow(1 + r, y); } v += c * (1 + gT) / (r - gT) / Math.pow(1 + r, 5); return v / sh; };
+    const pts = [];
+    dates.forEach((dte, i) => {
+      const shOf = k => (R[k] || []).map((v, q) => ok(v) ? [Math.abs(q - i), v] : null).filter(Boolean).sort((a, b) => a[0] - b[0])[0];
+      const shx = (R.so && ok(R.so[i]) ? R.so[i] : null) || (R.shares && ok(R.shares[i]) ? R.shares[i] : null) || (shOf('so') || shOf('shares') || [])[1];   // nearest reported share count when a year has none
+      const sh = shx; if (!sh) return;
+      const m = [];
+      const fcf = (() => { const v = flow('fcf', i); if (v !== null) return v; const a = flow('cfo', i), b = flow('capex', i); return a !== null && b !== null ? a + b : null; })(), eb = flow('ebitda', i), debt = at('debt', i), cash = at('cash', i), eq = at('eq', i), ni = flow('ni', i);
+      if (!fin && ok(fcf) && fcf > 0) m.push(dcf(fcf, sh));
+      if (!fin && ok(eb) && eb > 0 && ok(mEV) && mEV > 0) { const e = eb * mEV - ((debt || 0) - (cash || 0)); if (e > 0) m.push(e / sh); }
+      const paid = -((flow('div', i) || 0) + (flow('buyback', i) || 0));
+      const roe = ok(ni) && ok(eq) && eq > 0 ? Math.max(0, Math.min(0.35, ni / eq)) : null, pay = ok(ni) && ni > 0 ? Math.max(0, Math.min(1, paid / ni)) : 0.5;
+      if (fin && ok(eq) && eq > 0 && ok(roe)) { const gb = Math.max(0, Math.min(0.15, roe * (1 - pay))); let b = eq / sh, v = b; for (let y = 1; y <= 5; y++) { v += (roe - r) * b / Math.pow(1 + r, y); b *= 1 + gb; } const rt = (roe - r) * b; v += rt > 0 ? rt * (1 + gT) / (r - gT) / Math.pow(1 + r, 5) : rt / Math.pow(1 + r, 5); if (v > 0) m.push(v); }
+      if (ddmS && paid > 0 && ok(roe)) { const gd = Math.max(0, Math.min(gT + 0.015, roe * (1 - pay))); if (r - gd > 0.02) m.push(paid / sh * (1 + gd) / (r - gd)); }
+      if (m.length) pts.push({ date: dte, raw: m.reduce((a, b) => a + b, 0) / m.length });
+    });
+    if (!pts.length) return null;
+    const last = pts[pts.length - 1].raw, k = V / last;
+    const ok_k = k > 0.2 && k < 5;
+    pts.forEach(p => p.v = ok_k ? p.raw * k : p.raw);
+    return { pts, k, calibrated: ok_k, g1, gT };
+  }
+  function drawIV(fs, d, V) {
+    const box = $('ivBox'); if (!box || !ok(V)) return;
+    const interim = !!fs.interim;
+    let per = 'annual';
+    const render = () => {
+      const ser = ivSeries(fs, d, V, per);
+      if (!ser || ser.pts.length < 2) { if (per === 'quarterly') { box.querySelector('.ivbody').innerHTML = `<p class="ivnote">${interim ? 'JSE companies report every six months and the data feed has no quarterly cash flow for them, so the value history is shown yearly.' : 'Not enough quarterly figures to build a value history.'}</p>`; return; } return; }
+      const cur = d.row.cur, P0 = d.tech.price, tg = d.targets || {};
+      const today = new Date(), tY = d2 => { const x = new Date(d2.length === 7 ? d2 + '-15' : d2); return x.getFullYear() + (x.getMonth() + x.getDate() / 31) / 12; };
+      const T0 = tY(today.toISOString().slice(0, 10)), fwd = per === 'annual' ? 3 : 1;
+      // value path: reported periods, then today's LRC Analyst Target, then the projection
+      const path = ser.pts.map(p => [tY(p.date), p.v]); path.push([T0, V]);
+      let pv = V; for (let y = 1; y <= fwd; y++) { pv *= 1 + ser.g1 + (ser.gT - ser.g1) * (y - 1) / 4; path.push([T0 + y, pv]); }
+      const x0 = per === 'annual' ? path[0][0] - 0.5 : Math.min(path[0][0] - 0.25, T0 - 2);
+      // price: monthly closes (yearly view) or daily closes (quarterly view)
+      let price = [];
+      if (per === 'annual') price = (fs.px_m || []).map(([m, c]) => [tY(m), c]).filter(p => p[0] >= x0);
+      if (per !== 'annual' || price.length < 6) { const s = series(d); if (s) price = s.dates.map((dt_, i) => [tY(dt_), s.c[i]]).filter(p => p[0] >= x0); }
+      price.push([T0, P0]);
+      const vAt = x => { if (x <= path[0][0]) return path[0][1]; for (let i = 1; i < path.length; i++) if (x <= path[i][0]) { const [a, va] = path[i - 1], [b, vb] = path[i]; return va + (vb - va) * (x - a) / (b - a || 1); } return path[path.length - 1][1]; };
+      const X0 = x0, X1 = T0 + fwd + 0.05;
+      const allV = path.map(p => p[1]), allP = price.map(p => p[1]);
+      const hi = Math.max(...allP, ...allV.map(v => v * 1.25)) * 1.04, lo = Math.max(0, Math.min(...allP, ...allV.map(v => v * 0.7)) * 0.92);
+      const W = 760, H = 320, L = 60, Rm = 18, Tm = 16, Bm = 40, w = W - L - Rm, h = H - Tm - Bm;
+      const X = x => L + (x - X0) / (X1 - X0) * w, Y = v => Tm + (hi - Math.min(hi, Math.max(lo, v))) / (hi - lo) * h;
+      const xs = []; for (let x = X0; x <= X1 + 1e-9; x += (X1 - X0) / 120) xs.push(x);
+      const band = (a, b) => xs.map(x => `${X(x).toFixed(1)},${Y(vAt(x) * a).toFixed(1)}`).join(' ') + ' ' + xs.slice().reverse().map(x => `${X(x).toFixed(1)},${Y(vAt(x) * b).toFixed(1)}`).join(' ');
+      const halo = 'paint-order="stroke" stroke="#fff" stroke-width="4" stroke-linejoin="round"';
+      let g = `<rect x="${L}" y="${Tm}" width="${w}" height="${h}" fill="#FBFBFD"/>`;
+      g += `<polygon points="${band(1.2, 99)}" fill="#FCEBE8"/><polygon points="${band(0.8, 1.2)}" fill="#F3F4F8"/><polygon points="${band(0, 0.8)}" fill="#E7F4EB"/>`;
+      g += `<rect x="${X(T0)}" y="${Tm}" width="${X(X1) - X(T0)}" height="${h}" fill="#16223D" opacity=".035"/>`;
+      for (let i = 0; i <= 4; i++) { const v = lo + (hi - lo) * i / 4; g += `<line x1="${L}" x2="${W - Rm}" y1="${Y(v)}" y2="${Y(v)}" stroke="#E3E6EE"/><text x="${L - 7}" y="${Y(v) + 3}" font-size="10" fill="#7A8296" text-anchor="end">${CUR(cur)}${v >= 100 ? Math.round(v).toLocaleString('en-ZA') : v.toFixed(2)}</text>`; }
+      const yrs = []; for (let y = Math.ceil(X0); y <= X1; y++) yrs.push(y);
+      const step = yrs.length > 8 ? 2 : 1;
+      if (per === 'annual') yrs.forEach((y, i) => { if (i % step) return; g += `<line x1="${X(y)}" x2="${X(y)}" y1="${Tm}" y2="${Tm + h}" stroke="#EEF0F4"/><text x="${X(y)}" y="${H - 22}" font-size="10" fill="#7A8296" text-anchor="middle">${y}</text>`; });
+      else for (let q = Math.ceil(X0 * 4) / 4; q <= X1; q += 0.25) { const yy = Math.floor(q + 1e-6), mo = ['Jan', 'Apr', 'Jul', 'Oct'][Math.round((q - yy) * 4) % 4]; g += `<line x1="${X(q)}" x2="${X(q)}" y1="${Tm}" y2="${Tm + h}" stroke="${mo === 'Jan' ? '#E3E6EE' : '#F1F2F6'}"/><text x="${X(q)}" y="${H - 22}" font-size="9.5" fill="#7A8296" text-anchor="middle">${mo} ${String(yy).slice(2)}</text>`; }
+      g += `<line x1="${X(T0)}" x2="${X(T0)}" y1="${Tm}" y2="${Tm + h}" stroke="#16223D" stroke-dasharray="3 3"/><text x="${X(T0) + 4}" y="${Tm + 11}" font-size="10" font-weight="700" fill="#16223D">TODAY</text><text x="${X(T0) + 4}" y="${Tm + 23}" font-size="9.5" fill="#7A8296">projection →</text>`;
+      g += `<text x="${L + 6}" y="${Tm + 14}" font-size="10.5" font-weight="800" fill="#B3261E" ${halo}>SELL ZONE · 20%+ above value</text>`;
+      g += `<text x="${L + 6}" y="${Tm + h - 7}" font-size="10.5" font-weight="800" fill="#0F7B3F" ${halo}>BUY ZONE · 20%+ below value</text>`;
+      // value line (reported periods solid, projection dashed) with period markers
+      const hist = path.slice(0, ser.pts.length + 1), proj = path.slice(ser.pts.length);
+      g += `<polyline points="${hist.map(p => `${X(p[0]).toFixed(1)},${Y(p[1]).toFixed(1)}`).join(' ')}" fill="none" stroke="#1F3BB3" stroke-width="2.8" stroke-linejoin="round"/>`;
+      g += `<polyline points="${proj.map(p => `${X(p[0]).toFixed(1)},${Y(p[1]).toFixed(1)}`).join(' ')}" fill="none" stroke="#1F3BB3" stroke-width="2.4" stroke-dasharray="6 5"/>`;
+      ser.pts.forEach(p => { g += `<circle cx="${X(tY(p.date))}" cy="${Y(p.v)}" r="3.2" fill="#fff" stroke="#1F3BB3" stroke-width="2"><title>${per === 'annual' ? 'FY' + p.date.slice(0, 4) : p.date}: LRC value ${px(p.v, cur)}</title></circle>`; });
+      // price
+      g += `<polyline points="${price.map(p => `${X(p[0]).toFixed(1)},${Y(p[1]).toFixed(1)}`).join(' ')}" fill="none" stroke="#D9822B" stroke-width="2" stroke-linejoin="round"/>`;
+      // buy / sell triggers: the first month the price enters a zone
+      let zone = 0, trig = '';
+      let lastT = -99; price.forEach(([x, v], i) => { const iv = vAt(x), z = v <= iv * 0.8 ? 1 : v >= iv * 1.2 ? -1 : (v > iv * 0.9 && v < iv * 1.1 ? 0 : zone); if (z && z !== zone && i > 0 && x - lastT >= 0.25 && (lastT = x)) trig += `<circle cx="${X(x)}" cy="${Y(v)}" r="5" fill="${z > 0 ? '#0F9D58' : '#C5221F'}" stroke="#fff" stroke-width="1.5"><title>${z > 0 ? 'Entered the BUY zone' : 'Entered the SELL zone'} (${px(v, cur)} vs value ${px(iv, cur)})</title></circle>`; zone = z; });
+      g += trig;
+      // today's labels
+      const yP = Y(P0), yV = Y(V), pAbove = P0 >= V;
+      g += `<circle cx="${X(T0)}" cy="${yP}" r="5" fill="#D9822B" stroke="#fff" stroke-width="1.5"/><circle cx="${X(T0)}" cy="${yV}" r="5" fill="#1F3BB3" stroke="#fff" stroke-width="1.5"/>`;
+      g += `<text x="${X(T0) - 9}" y="${pAbove ? Math.min(yP, yV) - 9 : Math.max(yP, yV) + 17}" font-size="11.5" font-weight="800" fill="#B5651D" text-anchor="end" ${halo}>Price ${px(P0, cur)}</text>`;
+      g += `<text x="${X(T0) - 9}" y="${pAbove ? Math.max(yP, yV) + 17 : Math.min(yP, yV) - 9}" font-size="11.5" font-weight="800" fill="#1F3BB3" text-anchor="end" ${halo}>LRC value ${px(V, cur)} (${pc(V / P0 - 1, 0)})</text>`;
+      g += `<text x="${X(X1) - 4}" y="${Y(pv) - 8}" font-size="10.5" font-weight="700" fill="#1F3BB3" text-anchor="end" ${halo}>${px(pv, cur)} in ${fwd} year${fwd > 1 ? 's' : ''}</text>`;
+      g += `<text x="${L + w / 2}" y="${H - 6}" font-size="10" fill="#7A8296" text-anchor="middle">${per === 'annual' ? 'Each dot = LRC value from that financial year’s reported figures · price = month-end close' : 'Each dot = LRC value from the trailing 12 months to that quarter · price = daily close'}</text>`;
+      const up = V / P0 - 1, zn = up >= 0.2 ? ['BUY ZONE', '#0F7B3F', 'price 20%+ below our value'] : up <= -0.2 ? ['SELL ZONE', '#B3261E', 'price 20%+ above our value'] : ['HOLD ZONE', '#5C6478', 'price within 20% of our value'];
+      box.querySelector('.ivbody').innerHTML = `<div class="ivwrap"><svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="LRC intrinsic value versus market price over time">${g}</svg></div>
+        <div class="ivleg"><span><i style="background:#1F3BB3"></i>LRC intrinsic value (dots = reported periods, dashed = projection)</span><span><i style="background:#D9822B"></i>Market price</span><span><b style="color:#0F9D58">●</b> entered buy zone <b style="color:#C5221F">●</b> entered sell zone</span>
+        <span class="ivz" style="color:${zn[1]}">Today: <b>${zn[0]}</b> — ${zn[2]}.</span></div>
+        <p class="ivnote">How it is built: the LRC valuation methods are re-run on each ${per === 'annual' ? 'year' : 'quarter'}’s reported figures with today’s cost of equity and growth assumptions${ser.calibrated ? ', then scaled so the latest point equals today’s LRC Analyst Target (which also includes the analyst consensus)' : ''}. Projection: ${pp(ser.g1, 0)} a year fading to ${pp(ser.gT, 1)}.${ok(tg.low) && ok(tg.high) ? ` Today’s method range: ${px(tg.low, cur)} – ${px(tg.high, cur)}.` : ''}${ok(tg.implied_growth) ? ` Reverse DCF: the price assumes about ${pc(tg.implied_growth, 0)} a year.` : ''}</p>`;
+      box.querySelectorAll('[data-ivp]').forEach(b => b.classList.toggle('on', b.dataset.ivp === per));
+    };
+    const ser0 = ivSeries(fs, d, V, 'annual');
+    if (!ser0 || ser0.pts.length < 2) return;   // keep the simple chart when there is too little history
+    box.innerHTML = `<div class="ivtop no-print"><div class="seg"><button data-ivp="annual">Yearly</button><button data-ivp="quarterly">Quarterly</button></div></div><div class="ivbody"></div>`;
+    box.querySelectorAll('[data-ivp]').forEach(b => b.onclick = () => { per = b.dataset.ivp; render(); });
+    render();
   }
 
   /* Intrinsic value vs market price: 2 years of price history, today's LRC value projected 5 years ahead with the model's growth
