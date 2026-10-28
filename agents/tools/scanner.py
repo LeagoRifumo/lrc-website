@@ -361,7 +361,7 @@ def main():
                'setup': t.get('setup'), 'lvl': t.get('setup_level'), 'plan': {k: pl[k] for k in ('side', 'entry', 'stop', 't1', 't2', 'risk_pct')} if pl else None,
                'ne': f.get('next_earnings'), 'cat': cats, 'tgt': tg.get('lrc') or tg.get('blend'),
                'cov': {'rating': cov['rating'], 'target': cov['target_6m'], 'rated': cov.get('rated')} if cov else None,
-               'res': r['t'] in research, 'stale': r['stale'] or None, 'liq': 'thin' if 'thin' in g_fl else None, 'vt': round(t.get('value_traded') or 0),
+               'res': r['t'] in research, 'stale': r['stale'] or None, 'liq': 'thin' if 'thin' in g_fl else None, 'vt': round(t.get('value_traded') or 0), 'rv': t.get('rel_vol'), 'atrp': (t['atr'] / t['price']) if t.get('atr') and t.get('price') else None,
                'inv': {'p': inv['passed'], 'k': inv['known'], 'g': inv['grade'], 'mos': inv['mos'], 'rc': inv['rev_cagr'], 'ec': inv['eps_cagr']},
                'raw': {'rs': t.get('rs_6m'), 'uv': t.get('updown_vol'), 'ext': (t['price'] - t['sma20']) / t['atr'] if t['atr'] and t['sma20'] else None,
                        'fpe': f.get('fpe'), 'tpe': f.get('tpe'), 'ps': f.get('ps'), 'pfcf': f.get('pfcf'), 'rev_growth': f.get('rev_growth'),

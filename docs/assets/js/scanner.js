@@ -62,7 +62,9 @@ if ($('scTbl')) {
   };
   const rdv = (r, k) => (r.rd && r.rd[k]) ? r.rd[k] : null;
   const RORD = { 'STRONG BUY': 4, 'BUY': 3, 'HOLD': 2, 'SELL': 1, 'STRONG SELL': 0 };
-  const sortVal = (r, k) => k === 'score' ? SC(r) : k === 'rt' ? (RORD[RT(r)] ?? -1) * 1000 + SC(r) : k === 'chk' ? (r.inv ? r.inv.p : -1) : k === 't' ? r.t : k === 'chg' ? r.chg : k === 'ne' ? (r.ne || '9') : k === 'up' ? (r.tgt ? r.tgt / r.px - 1 : -9)
+  const money = (v, cur) => !ok(v) ? '—' : (cur === 'ZAR' ? 'R' : '$') + (v >= 1e9 ? (v / 1e9).toFixed(1) + 'bn' : v >= 1e6 ? (v / 1e6).toFixed(v >= 1e8 ? 0 : 1) + 'm' : Math.round(v / 1e3) + 'k');
+  const liq = r => `<b style="color:${r.liq === 'thin' ? '#F2CE72' : '#E3E6EE'}">${money(r.vt, r.cur)}</b><small style="display:block;color:var(--muted)">${ok(r.rv) ? `<span style="color:${r.rv >= 1.5 ? '#5ED39A' : 'inherit'}">${r.rv.toFixed(1)}× vol</span>` : ''}${ok(r.atrp) ? ` · ${(r.atrp * 100).toFixed(1)}%` : ''}</small>`;
+  const sortVal = (r, k) => k === 'vt' ? (r.vt || 0) : k === 'rv' ? (r.rv ?? -1) : k === 'atr' ? (r.atrp ?? -1) : k === 'score' ? SC(r) : k === 'rt' ? (RORD[RT(r)] ?? -1) * 1000 + SC(r) : k === 'chk' ? (r.inv ? r.inv.p : -1) : k === 't' ? r.t : k === 'chg' ? r.chg : k === 'ne' ? (r.ne || '9') : k === 'up' ? (r.tgt ? r.tgt / r.px - 1 : -9)
     : k === 'val' ? ({ UNDERVALUED: 2, 'FAIR VALUE': 1, OVERVALUED: 0 })[r.val] ?? -1 : k.startsWith('g:') ? ((r.grp || {})[k.slice(2)] ?? -1)
     : (() => { const x = rdv(r, k); return x ? (x[1] ?? -9) * 1e9 + (typeof x[0] === 'number' ? x[0] : 0) : -9e12; })();
   let sortK = 'rt';
@@ -76,9 +78,10 @@ if ($('scTbl')) {
         <td class="${cc(gInt(SC(r)))}"><span class="hc" title="${mode === 'investment' ? 'Investment score: valuation 25%, profitability 25%, financial health 20%, growth 20%, income 10%' : 'Trading score: technical 35%, growth 20%, sentiment 20%, valuation 10%, profitability 10%, financial health 5%'}">${SC(r)}</span></td>
         <td class="plain"><span class="${sigCls(RT(r))}" title="${esc(NT(r) || '')}">${esc(RT(r))}</span>${NT(r) && !SAFE ? `<small style="display:block;color:#F2CE72;font-size:10px;margin-top:2px">${esc((() => { const n = String(NT(r)).split('; ').pop().replace(/^Capped by the LRC Analyst Target \((.*)\)$/, 'target $1'); return n.length > 46 ? n.slice(0, 44) + '…' : n; })())}</small>` : ''}</td>
         <td class="plain"><span class="${valCls(r.val)}" style="font-size:9px">${esc(r.val || '—')}</span></td>
-        <td class="plain" style="text-align:right">${px(r.px, r.cur)}<small style="display:block;color:${r.chg >= 0 ? '#5ED39A' : '#F08A7E'}">${pc(r.chg)}</small></td>`;
+        <td class="plain" style="text-align:right">${px(r.px, r.cur)}<small style="display:block;color:${r.chg >= 0 ? '#5ED39A' : '#F08A7E'}">${pc(r.chg)}</small></td>
+        <td class="plain liqc" style="text-align:right" title="Value traded a day (20-day average) · today's volume vs normal · average daily move">${liq(r)}</td>`;
     };
-    const head = `<th data-k="t" style="position:sticky;left:0;z-index:3;text-align:left">COMPANY</th>${th('score', mode === 'investment' ? 'INVESTMENT SCORE' : 'TRADING SCORE', '50 = neutral; 75+ STRONG BUY, 60+ BUY, 40+ HOLD, 25+ SELL, below 25 STRONG SELL')}${th('rt', (mode === 'investment' ? 'INVESTMENT RATING' : 'TRADING RATING') + ' ⇅', 'Tap to sort: STRONG BUY first, tap again for STRONG SELL first')}${th('val', 'VALUATION VERDICT')}${th('chg', 'PRICE · 1D')}`;
+    const head = `<th data-k="t" style="position:sticky;left:0;z-index:3;text-align:left">COMPANY</th>${th('score', mode === 'investment' ? 'INVESTMENT SCORE' : 'TRADING SCORE', '50 = neutral; 75+ STRONG BUY, 60+ BUY, 40+ HOLD, 25+ SELL, below 25 STRONG SELL')}${th('rt', (mode === 'investment' ? 'INVESTMENT RATING' : 'TRADING RATING') + ' ⇅', 'Tap to sort: STRONG BUY first, tap again for STRONG SELL first')}${th('val', 'VALUATION VERDICT')}${th('chg', 'PRICE · 1D')}${th('vt', 'LIQUIDITY<small style="display:block;color:var(--muted);font-weight:500">value / day · vol · move</small>', 'Not scored. Value traded a day (20-day average), today\'s volume vs normal, and the average daily move (ATR %). Traders need enough of both to get in and out.')}`;
     let h;
     if (view === 'overview') {
       const ORD = mode === 'investment' ? ['valuation', 'profitability', 'health', 'growth', 'income', 'sentiment', 'technical'] : ['technical', 'growth', 'sentiment', 'valuation', 'profitability', 'health', 'income'];
@@ -818,71 +821,74 @@ if ($('paper')) {
   }
   function drawIV(fs, d, V) {
     const box = $('ivBox'); if (!box || !ok(V)) return;
-    const interim = !!fs.interim;
+    const interim = !!fs.interim, nm = d.row.n, cur = d.row.cur, P0 = d.tech.price, tg = d.targets || {};
     let per = 'annual';
+    const nice = (lo, hi, n) => { const raw = (hi - lo) / n, p10 = Math.pow(10, Math.floor(Math.log10(raw))), st = [1, 2, 2.5, 5, 10].map(m => m * p10).find(s => s >= raw) || raw; const out = []; for (let v = Math.floor(lo / st) * st; v <= hi + st - 1e-9; v += st) out.push(v); return out; };
+    const money = v => CUR(cur) + (v === 0 ? '0' : v >= 1000 ? Math.round(v).toLocaleString('en-ZA') : v >= 100 ? v.toFixed(0) : v >= 10 ? v.toFixed(1) : v.toFixed(2));
+    // 1. plain-English verdict + price-vs-value meter (same for both views)
+    const ratio = P0 / V, gap = ratio - 1;
+    const zone = ratio <= 0.8 ? { k: 'cheap', w: 'looks CHEAP', c: '#0F7B3F', bg: '#E7F4EB', s: `The share price is ${Math.round(-gap * 100)}% below what we think the company is worth.` }
+      : ratio >= 1.2 ? { k: 'dear', w: 'looks EXPENSIVE', c: '#B3261E', bg: '#FCEBE8', s: `The share price is ${Math.round(gap * 100)}% above what we think the company is worth.` }
+      : { k: 'fair', w: 'is FAIRLY PRICED', c: '#5C6478', bg: '#F3F4F8', s: `The share price is within 20% of what we think the company is worth (${gap >= 0 ? Math.round(gap * 100) + '% above' : Math.round(-gap * 100) + '% below'}).` };
+    const mPos = Math.max(0, Math.min(1, (ratio - 0.5) / 1.0));   // meter: 0.5x value .. 1.5x value
+    const head = `<div class="ivh" style="background:${zone.bg};border-color:${zone.c}"><div class="ivh-t"><b style="color:${zone.c}">${esc(nm)} ${zone.w}</b><span>${zone.s}</span></div>
+      <div class="ivh-n"><div><small>Share price</small><b style="color:#B5651D">${px(P0, cur)}</b></div><div><small>What we think it's worth</small><b style="color:#1F3BB3">${px(V, cur)}</b></div></div></div>
+      <div class="ivm"><div class="ivm-bar"><span class="c">CHEAP</span><span class="f">FAIR PRICE</span><span class="e">EXPENSIVE</span><i style="left:${(mPos * 100).toFixed(1)}%"><em style="${mPos < 0.08 ? 'left:0;transform:none' : mPos > 0.92 ? 'left:auto;right:0;transform:none' : ''}">price today</em></i></div>
+      <div class="ivm-scale"><span>50% below value</span><span>20% below</span><span>= value</span><span>20% above</span><span>50% above</span></div></div>`;
     const render = () => {
-      const ser = ivSeries(fs, d, V, per);
-      if (!ser || ser.pts.length < 2) { if (per === 'quarterly') { box.querySelector('.ivbody').innerHTML = `<p class="ivnote">${interim ? 'JSE companies report every six months and the data feed has no quarterly cash flow for them, so the value history is shown yearly.' : 'Not enough quarterly figures to build a value history.'}</p>`; return; } return; }
-      const cur = d.row.cur, P0 = d.tech.price, tg = d.targets || {};
-      const today = new Date(), tY = d2 => { const x = new Date(d2.length === 7 ? d2 + '-15' : d2); return x.getFullYear() + (x.getMonth() + x.getDate() / 31) / 12; };
-      const T0 = tY(today.toISOString().slice(0, 10)), fwd = per === 'annual' ? 3 : 1;
-      // value path: reported periods, then today's LRC Analyst Target, then the projection
-      const path = ser.pts.map(p => [tY(p.date), p.v]); path.push([T0, V]);
-      let pv = V; for (let y = 1; y <= fwd; y++) { pv *= 1 + ser.g1 + (ser.gT - ser.g1) * (y - 1) / 4; path.push([T0 + y, pv]); }
-      const x0 = per === 'annual' ? path[0][0] - 0.5 : Math.min(path[0][0] - 0.25, T0 - 2);
-      // price: monthly closes (yearly view) or daily closes (quarterly view)
-      let price = [];
-      if (per === 'annual') price = (fs.px_m || []).map(([m, c]) => [tY(m), c]).filter(p => p[0] >= x0);
-      if (per !== 'annual' || price.length < 6) { const s = series(d); if (s) price = s.dates.map((dt_, i) => [tY(dt_), s.c[i]]).filter(p => p[0] >= x0); }
-      price.push([T0, P0]);
-      const vAt = x => { if (x <= path[0][0]) return path[0][1]; for (let i = 1; i < path.length; i++) if (x <= path[i][0]) { const [a, va] = path[i - 1], [b, vb] = path[i]; return va + (vb - va) * (x - a) / (b - a || 1); } return path[path.length - 1][1]; };
-      const X0 = x0, X1 = T0 + fwd + 0.05;
-      const allV = path.map(p => p[1]), allP = price.map(p => p[1]);
-      const hi = Math.max(...allP, ...allV.map(v => v * 1.25)) * 1.04, lo = Math.max(0, Math.min(...allP, ...allV.map(v => v * 0.7)) * 0.92);
-      const W = 760, H = 320, L = 60, Rm = 18, Tm = 16, Bm = 40, w = W - L - Rm, h = H - Tm - Bm;
+      let ser = ivSeries(fs, d, V, per);
+      const body = box.querySelector('.ivbody');
+      if (!ser || ser.pts.length < 2) { body.innerHTML = `<p class="ivnote">${per === 'quarterly' ? (interim ? 'JSE companies report every six months and the data feed has no quarterly cash flow for them — the history is shown yearly.' : 'Not enough quarterly figures for a history yet.') : 'Not enough reported years for a history yet.'}</p>`; return; }
+      // smooth one-off years so the line shows the trend, not accounting noise
+      if (per === 'annual' && ser.pts.length >= 3) ser.pts = ser.pts.map((p, i, a) => ({ ...p, v: i ? (a[i - 1].v + p.v) / 2 : p.v }));
+      const tY = s => { const x = new Date(s.length === 7 ? s + '-15' : s); return x.getFullYear() + (x.getMonth() + x.getDate() / 31) / 12; };
+      const T0 = tY(new Date().toISOString().slice(0, 10)), fwd = per === 'annual' ? 2 : 1;
+      let price = per === 'annual' ? (fs.px_m || []).map(([m, c]) => [tY(m), c]) : [];
+      if (price.length < 12) { const s = series(d); if (s) price = s.dates.map((x, i) => [tY(x), s.c[i]]); }
+      price = price.filter(p => p[1] > 0); price.push([T0, P0]);
+      let path = ser.pts.map(p => [tY(p.date), p.v]); path.push([T0, V]);
+      const start = Math.max(path[0][0], price[0][0] - 0.1);
+      path = path.filter(p => p[0] >= start - 1e-6); if (path.length < 2) path.unshift([start, path[0][1]]);
+      price = price.filter(p => p[0] >= start);
+      let pv = V; const proj = [[T0, V]]; for (let y = 1; y <= fwd; y++) { pv *= 1 + ser.g1 + (ser.gT - ser.g1) * (y - 1) / 4; proj.push([T0 + y, pv]); }
+      const vAt = x => { const all = path.concat(proj.slice(1)); if (x <= all[0][0]) return all[0][1]; for (let i = 1; i < all.length; i++) if (x <= all[i][0]) { const [a, va] = all[i - 1], [b, vb] = all[i]; return va + (vb - va) * (x - a) / (b - a || 1); } return all[all.length - 1][1]; };
+      const X0 = start, X1 = T0 + fwd;
+      const vals = path.concat(proj).map(p => p[1]).concat(price.map(p => p[1]));
+      const ticks = nice(Math.max(0, Math.min(...vals) * 0.8), Math.max(...vals) * 1.15, 4);
+      const lo = ticks[0], hi = ticks[ticks.length - 1];
+      const W = 760, H = 300, L = 56, Rm = 92, Tm = 12, Bm = 30, w = W - L - Rm, h = H - Tm - Bm;
       const X = x => L + (x - X0) / (X1 - X0) * w, Y = v => Tm + (hi - Math.min(hi, Math.max(lo, v))) / (hi - lo) * h;
-      const xs = []; for (let x = X0; x <= X1 + 1e-9; x += (X1 - X0) / 120) xs.push(x);
+      const xs = []; for (let x = X0; x <= X1 + 1e-9; x += (X1 - X0) / 100) xs.push(x);
       const band = (a, b) => xs.map(x => `${X(x).toFixed(1)},${Y(vAt(x) * a).toFixed(1)}`).join(' ') + ' ' + xs.slice().reverse().map(x => `${X(x).toFixed(1)},${Y(vAt(x) * b).toFixed(1)}`).join(' ');
       const halo = 'paint-order="stroke" stroke="#fff" stroke-width="4" stroke-linejoin="round"';
-      let g = `<rect x="${L}" y="${Tm}" width="${w}" height="${h}" fill="#FBFBFD"/>`;
-      g += `<polygon points="${band(1.2, 99)}" fill="#FCEBE8"/><polygon points="${band(0.8, 1.2)}" fill="#F3F4F8"/><polygon points="${band(0, 0.8)}" fill="#E7F4EB"/>`;
-      g += `<rect x="${X(T0)}" y="${Tm}" width="${X(X1) - X(T0)}" height="${h}" fill="#16223D" opacity=".035"/>`;
-      for (let i = 0; i <= 4; i++) { const v = lo + (hi - lo) * i / 4; g += `<line x1="${L}" x2="${W - Rm}" y1="${Y(v)}" y2="${Y(v)}" stroke="#E3E6EE"/><text x="${L - 7}" y="${Y(v) + 3}" font-size="10" fill="#7A8296" text-anchor="end">${CUR(cur)}${v >= 100 ? Math.round(v).toLocaleString('en-ZA') : v.toFixed(2)}</text>`; }
-      const yrs = []; for (let y = Math.ceil(X0); y <= X1; y++) yrs.push(y);
-      const step = yrs.length > 8 ? 2 : 1;
-      if (per === 'annual') yrs.forEach((y, i) => { if (i % step) return; g += `<line x1="${X(y)}" x2="${X(y)}" y1="${Tm}" y2="${Tm + h}" stroke="#EEF0F4"/><text x="${X(y)}" y="${H - 22}" font-size="10" fill="#7A8296" text-anchor="middle">${y}</text>`; });
-      else for (let q = Math.ceil(X0 * 4) / 4; q <= X1; q += 0.25) { const yy = Math.floor(q + 1e-6), mo = ['Jan', 'Apr', 'Jul', 'Oct'][Math.round((q - yy) * 4) % 4]; g += `<line x1="${X(q)}" x2="${X(q)}" y1="${Tm}" y2="${Tm + h}" stroke="${mo === 'Jan' ? '#E3E6EE' : '#F1F2F6'}"/><text x="${X(q)}" y="${H - 22}" font-size="9.5" fill="#7A8296" text-anchor="middle">${mo} ${String(yy).slice(2)}</text>`; }
-      g += `<line x1="${X(T0)}" x2="${X(T0)}" y1="${Tm}" y2="${Tm + h}" stroke="#16223D" stroke-dasharray="3 3"/><text x="${X(T0) + 4}" y="${Tm + 11}" font-size="10" font-weight="700" fill="#16223D">TODAY</text><text x="${X(T0) + 4}" y="${Tm + 23}" font-size="9.5" fill="#7A8296">projection →</text>`;
-      g += `<text x="${L + 6}" y="${Tm + 14}" font-size="10.5" font-weight="800" fill="#B3261E" ${halo}>SELL ZONE · 20%+ above value</text>`;
-      g += `<text x="${L + 6}" y="${Tm + h - 7}" font-size="10.5" font-weight="800" fill="#0F7B3F" ${halo}>BUY ZONE · 20%+ below value</text>`;
-      // value line (reported periods solid, projection dashed) with period markers
-      const hist = path.slice(0, ser.pts.length + 1), proj = path.slice(ser.pts.length);
-      g += `<polyline points="${hist.map(p => `${X(p[0]).toFixed(1)},${Y(p[1]).toFixed(1)}`).join(' ')}" fill="none" stroke="#1F3BB3" stroke-width="2.8" stroke-linejoin="round"/>`;
-      g += `<polyline points="${proj.map(p => `${X(p[0]).toFixed(1)},${Y(p[1]).toFixed(1)}`).join(' ')}" fill="none" stroke="#1F3BB3" stroke-width="2.4" stroke-dasharray="6 5"/>`;
-      ser.pts.forEach(p => { g += `<circle cx="${X(tY(p.date))}" cy="${Y(p.v)}" r="3.2" fill="#fff" stroke="#1F3BB3" stroke-width="2"><title>${per === 'annual' ? 'FY' + p.date.slice(0, 4) : p.date}: LRC value ${px(p.v, cur)}</title></circle>`; });
-      // price
-      g += `<polyline points="${price.map(p => `${X(p[0]).toFixed(1)},${Y(p[1]).toFixed(1)}`).join(' ')}" fill="none" stroke="#D9822B" stroke-width="2" stroke-linejoin="round"/>`;
-      // buy / sell triggers: the first month the price enters a zone
-      let zone = 0, trig = '';
-      let lastT = -99; price.forEach(([x, v], i) => { const iv = vAt(x), z = v <= iv * 0.8 ? 1 : v >= iv * 1.2 ? -1 : (v > iv * 0.9 && v < iv * 1.1 ? 0 : zone); if (z && z !== zone && i > 0 && x - lastT >= 0.25 && (lastT = x)) trig += `<circle cx="${X(x)}" cy="${Y(v)}" r="5" fill="${z > 0 ? '#0F9D58' : '#C5221F'}" stroke="#fff" stroke-width="1.5"><title>${z > 0 ? 'Entered the BUY zone' : 'Entered the SELL zone'} (${px(v, cur)} vs value ${px(iv, cur)})</title></circle>`; zone = z; });
-      g += trig;
-      // today's labels
-      const yP = Y(P0), yV = Y(V), pAbove = P0 >= V;
-      g += `<circle cx="${X(T0)}" cy="${yP}" r="5" fill="#D9822B" stroke="#fff" stroke-width="1.5"/><circle cx="${X(T0)}" cy="${yV}" r="5" fill="#1F3BB3" stroke="#fff" stroke-width="1.5"/>`;
-      g += `<text x="${X(T0) - 9}" y="${pAbove ? Math.min(yP, yV) - 9 : Math.max(yP, yV) + 17}" font-size="11.5" font-weight="800" fill="#B5651D" text-anchor="end" ${halo}>Price ${px(P0, cur)}</text>`;
-      g += `<text x="${X(T0) - 9}" y="${pAbove ? Math.max(yP, yV) + 17 : Math.min(yP, yV) - 9}" font-size="11.5" font-weight="800" fill="#1F3BB3" text-anchor="end" ${halo}>LRC value ${px(V, cur)} (${pc(V / P0 - 1, 0)})</text>`;
-      g += `<text x="${X(X1) - 4}" y="${Y(pv) - 8}" font-size="10.5" font-weight="700" fill="#1F3BB3" text-anchor="end" ${halo}>${px(pv, cur)} in ${fwd} year${fwd > 1 ? 's' : ''}</text>`;
-      g += `<text x="${L + w / 2}" y="${H - 6}" font-size="10" fill="#7A8296" text-anchor="middle">${per === 'annual' ? 'Each dot = LRC value from that financial year’s reported figures · price = month-end close' : 'Each dot = LRC value from the trailing 12 months to that quarter · price = daily close'}</text>`;
-      const up = V / P0 - 1, zn = up >= 0.2 ? ['BUY ZONE', '#0F7B3F', 'price 20%+ below our value'] : up <= -0.2 ? ['SELL ZONE', '#B3261E', 'price 20%+ above our value'] : ['HOLD ZONE', '#5C6478', 'price within 20% of our value'];
-      box.querySelector('.ivbody').innerHTML = `<div class="ivwrap"><svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="LRC intrinsic value versus market price over time">${g}</svg></div>
-        <div class="ivleg"><span><i style="background:#1F3BB3"></i>LRC intrinsic value (dots = reported periods, dashed = projection)</span><span><i style="background:#D9822B"></i>Market price</span><span><b style="color:#0F9D58">●</b> entered buy zone <b style="color:#C5221F">●</b> entered sell zone</span>
-        <span class="ivz" style="color:${zn[1]}">Today: <b>${zn[0]}</b> — ${zn[2]}.</span></div>
-        <p class="ivnote">How it is built: the LRC valuation methods are re-run on each ${per === 'annual' ? 'year' : 'quarter'}’s reported figures with today’s cost of equity and growth assumptions${ser.calibrated ? ', then scaled so the latest point equals today’s LRC Analyst Target (which also includes the analyst consensus)' : ''}. Projection: ${pp(ser.g1, 0)} a year fading to ${pp(ser.gT, 1)}.${ok(tg.low) && ok(tg.high) ? ` Today’s method range: ${px(tg.low, cur)} – ${px(tg.high, cur)}.` : ''}${ok(tg.implied_growth) ? ` Reverse DCF: the price assumes about ${pc(tg.implied_growth, 0)} a year.` : ''}</p>`;
+      let g = `<polygon points="${band(1.2, 99)}" fill="#FCEBE8"/><polygon points="${band(0.8, 1.2)}" fill="#F5F6F9"/><polygon points="${band(0, 0.8)}" fill="#E7F4EB"/>`;
+      ticks.forEach(v => { g += `<line x1="${L}" x2="${L + w}" y1="${Y(v)}" y2="${Y(v)}" stroke="#E6E8EE"/><text x="${L - 8}" y="${Y(v) + 4}" font-size="11" fill="#7A8296" text-anchor="end">${money(v)}</text>`; });
+      if (per === 'annual') { for (let y = Math.ceil(X0); y <= X1; y++) if (Math.abs(y - T0) > 0.3) g += `<text x="${X(y)}" y="${H - 8}" font-size="11" fill="#7A8296" text-anchor="middle">${y}</text>`; }
+      else for (let q = Math.ceil(X0 * 2) / 2; q <= X1; q += 0.5) { const yy = Math.floor(q + 1e-6); if (Math.abs(q - T0) < 0.15) continue; g += `<text x="${X(q)}" y="${H - 8}" font-size="11" fill="#7A8296" text-anchor="middle">${q - yy > 0.25 ? 'Jul' : 'Jan'} ${String(yy).slice(2)}</text>`; }
+      g += `<rect x="${X(T0)}" y="${Tm}" width="${X(X1) - X(T0)}" height="${h}" fill="#fff" opacity=".45"/><line x1="${X(T0)}" x2="${X(T0)}" y1="${Tm}" y2="${Tm + h}" stroke="#16223D" stroke-width="1.2" stroke-dasharray="3 3"/>`;
+      g += `<text x="${X(T0)}" y="${Tm + h + 18}" font-size="11" font-weight="800" fill="#16223D" text-anchor="middle">TODAY</text>`;
+      // zone names on the right edge
+      const yr = X1, zr = v => Math.max(Tm + 10, Math.min(Tm + h - 4, Y(v)));
+      let zy = [zr((hi + vAt(yr) * 1.2) / 2), zr(vAt(yr)) + 4, zr((lo + vAt(yr) * 0.8) / 2)];
+      for (let i = 1; i < 3; i++) if (zy[i] - zy[i - 1] < 15) zy[i] = zy[i - 1] + 15;
+      if (zy[2] > Tm + h - 2) { zy[2] = Tm + h - 2; for (let i = 1; i >= 0; i--) if (zy[i + 1] - zy[i] < 15) zy[i] = zy[i + 1] - 15; }
+      [['Expensive', '#B3261E'], ['Fair price', '#5C6478'], ['Cheap', '#0F7B3F']].forEach(([l, c], i) => { g += `<text x="${L + w + 8}" y="${zy[i]}" font-size="11.5" font-weight="800" fill="${c}">${l}</text>`; });
+      // lines
+      g += `<polyline points="${path.map(p => `${X(p[0]).toFixed(1)},${Y(p[1]).toFixed(1)}`).join(' ')}" fill="none" stroke="#1F3BB3" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"/>`;
+      g += `<polyline points="${proj.map(p => `${X(p[0]).toFixed(1)},${Y(p[1]).toFixed(1)}`).join(' ')}" fill="none" stroke="#1F3BB3" stroke-width="2.6" stroke-dasharray="2 6" stroke-linecap="round"/>`;
+      g += `<polyline points="${price.map(p => `${X(p[0]).toFixed(1)},${Y(p[1]).toFixed(1)}`).join(' ')}" fill="none" stroke="#E07B24" stroke-width="2.4" stroke-linejoin="round"/>`;
+      path.slice(0, -1).forEach(p => { g += `<circle cx="${X(p[0])}" cy="${Y(p[1])}" r="3.5" fill="#fff" stroke="#1F3BB3" stroke-width="2"><title>${money(p[1])}</title></circle>`; });
+      g += `<circle cx="${X(T0)}" cy="${Y(V)}" r="6" fill="#1F3BB3" stroke="#fff" stroke-width="2"/><circle cx="${X(T0)}" cy="${Y(P0)}" r="6" fill="#E07B24" stroke="#fff" stroke-width="2"/>`;
+      g += `<text x="${X(X1) - 2}" y="${Y(pv) - 10 < Tm + 12 ? Y(pv) + 20 : Y(pv) - 10}" font-size="11" font-weight="700" fill="#1F3BB3" text-anchor="end" ${halo}>our estimate ${money(pv)}</text>`;
+      body.innerHTML = `<div class="ivwrap"><svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Share price compared with what we think ${esc(nm)} is worth">${g}</svg></div>
+        <div class="ivleg"><span><i style="background:#1F3BB3"></i><b>What we think it's worth</b> (LRC value)</span><span><i style="background:#E07B24"></i><b>Share price</b></span><span><i style="background:#1F3BB3;height:3px;opacity:.6"></i>dotted = our estimate for the next ${fwd} year${fwd > 1 ? 's' : ''}</span></div>
+        <div class="ivread"><b>How to read it:</b> when the orange price line is in the <span style="color:#0F7B3F;font-weight:700">green area</span> the shares cost at least 20% less than our value (cheap); in the <span style="color:#B3261E;font-weight:700">red area</span> they cost at least 20% more (expensive). The blue line moves as the company's profits and cash flow change.</div>
+        <p class="ivnote">Method: our valuation methods (DCF, residual income, dividend & buyback model, EV/EBITDA vs peers) re-run on each ${per === 'annual' ? 'year' : 'quarter'}’s reported figures${ser.calibrated ? ', scaled so today equals the LRC Analyst Target' : ''}${per === 'annual' ? '; each point is the average of that year and the year before' : ''}. Estimate: ${pp(ser.g1, 0)} a year growth fading to ${pp(ser.gT, 1)}.${ok(tg.low) && ok(tg.high) ? ` Range of methods today: ${px(tg.low, cur)} – ${px(tg.high, cur)}.` : ''}${Math.abs(V / P0 - 2) < 0.005 || Math.abs(V / P0 - 0.5) < 0.005 ? ' <b>Note:</b> the methods point even further from the price, so the value is capped at ' + (V > P0 ? 'twice' : 'half') + ' the share price (our safety limit) — treat it with extra care.' : ''}</p>`;
       box.querySelectorAll('[data-ivp]').forEach(b => b.classList.toggle('on', b.dataset.ivp === per));
     };
     const ser0 = ivSeries(fs, d, V, 'annual');
-    if (!ser0 || ser0.pts.length < 2) return;   // keep the simple chart when there is too little history
-    box.innerHTML = `<div class="ivtop no-print"><div class="seg"><button data-ivp="annual">Yearly</button><button data-ivp="quarterly">Quarterly</button></div></div><div class="ivbody"></div>`;
+    box.innerHTML = head + (ser0 && ser0.pts.length >= 2 ? `<div class="ivtop no-print"><span>Show history:</span><div class="seg"><button data-ivp="annual">Yearly</button><button data-ivp="quarterly">Quarterly</button></div></div><div class="ivbody"></div>` : box.innerHTML);
+    if (!(ser0 && ser0.pts.length >= 2)) return;
     box.querySelectorAll('[data-ivp]').forEach(b => b.onclick = () => { per = b.dataset.ivp; render(); });
     render();
   }

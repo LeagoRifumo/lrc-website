@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=10.7">
+<link rel="stylesheet" href="assets/css/style.css?v=10.8">
 </head>
 <body>
 <header class="site-header">
@@ -70,7 +70,7 @@
     <div class="scan-filters">
       <input type="search" id="scQ" placeholder="Search ticker or company…">
       <select id="scSec"><option value="all">All sectors</option></select>
-      <select id="scSort" aria-label="Sort"><option value="rt:-1">Sort: rating STRONG BUY → STRONG SELL</option><option value="rt:1">Sort: rating STRONG SELL → STRONG BUY</option><option value="score:-1">Sort: score high → low</option><option value="score:1">Sort: score low → high</option><option value="up:-1">Sort: upside to LRC target</option><option value="val:-1">Sort: undervalued first</option><option value="chg:-1">Sort: best day first</option><option value="ne:1">Sort: next results first</option><option value="t:1">Sort: ticker A → Z</option></select>
+      <select id="scSort" aria-label="Sort"><option value="rt:-1">Sort: rating STRONG BUY → STRONG SELL</option><option value="rt:1">Sort: rating STRONG SELL → STRONG BUY</option><option value="score:-1">Sort: score high → low</option><option value="score:1">Sort: score low → high</option><option value="up:-1">Sort: upside to LRC target</option><option value="val:-1">Sort: undervalued first</option><option value="chg:-1">Sort: best day first</option><option value="vt:-1">Sort: most traded (value a day)</option><option value="rv:-1">Sort: volume today vs normal</option><option value="atr:-1">Sort: biggest daily moves (volatility)</option><option value="ne:1">Sort: next results first</option><option value="t:1">Sort: ticker A → Z</option></select>
       <select id="scSig"><option value="all">All ratings</option><option>STRONG BUY</option><option>BUY</option><option>HOLD</option><option>SELL</option><option>STRONG SELL</option></select>
       <select id="scSet"><option value="all">All setups</option><option>Breakout</option><option>Retest</option><option>Near breakout</option><option>Breakdown</option><option>Failed retest</option><option value="none">No setup</option></select>
       <select id="scVal"><option value="all">Any valuation verdict</option><option value="under">Undervalued</option><option value="fair">Fair value</option><option value="over">Overvalued</option></select>
@@ -139,6 +139,6 @@
 </footer>
 <script>window.LRC_DATA = "data/";</script>
 <script src="assets/js/main.js?v=10.5"></script>
-<script src="assets/js/scanner.js?v=10.7"></script>
+<script src="assets/js/scanner.js?v=10.8"></script>
 </body>
 </html>
