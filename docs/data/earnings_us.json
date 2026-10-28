@@ -172,7 +172,7 @@
    "t": "KMX",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -234,37 +234,6 @@
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
-  },
-  {
-   "date": "2026-09-30",
-   "ticker": "CALM",
-   "name": "Cal-Maine Foods, Inc.",
-   "when": "Not stated",
-   "period": "",
-   "quarter": "Aug/2026",
-   "eps_forecast": "",
-   "market_cap_bn": 2.9,
-   "reported": true,
-   "result": "miss",
-   "eps_actual": -1.24,
-   "eps_est": -0.76,
-   "surprise": -0.6318,
-   "heps": null,
-   "heps_prior": null,
-   "unit": null,
-   "change": null,
-   "measure": null,
-   "dps": null,
-   "source": "Nasdaq",
-   "t": "CALM",
-   "lists": [
-    "Trading SELL"
-   ],
-   "idea": null,
-   "v": "SELL",
-   "iv": "SELL",
-   "lrc_rating": null,
-   "covered": true
   },
   {
    "date": "2026-09-30",
@@ -375,6 +344,35 @@
    "dps": null,
    "source": "Nasdaq",
    "t": "CAG",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-09-30",
+   "ticker": "CALM",
+   "name": "Cal-Maine Foods, Inc.",
+   "when": "Not stated",
+   "period": "",
+   "quarter": "Aug/2026",
+   "eps_forecast": "",
+   "market_cap_bn": 2.9,
+   "reported": true,
+   "result": "miss",
+   "eps_actual": -1.24,
+   "eps_est": -0.76,
+   "surprise": -0.6318,
+   "heps": null,
+   "heps_prior": null,
+   "unit": null,
+   "change": null,
+   "measure": null,
+   "dps": null,
+   "source": "Nasdaq",
+   "t": "CALM",
    "lists": [],
    "idea": null,
    "v": "HOLD",
@@ -580,7 +578,7 @@
    "t": "RPM",
    "lists": [],
    "idea": null,
-   "v": "SELL",
+   "v": "HOLD",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -1453,7 +1451,7 @@
    ],
    "idea": "Score leaders",
    "v": "STRONG BUY",
-   "iv": "BUY",
+   "iv": "STRONG BUY",
    "lrc_rating": null,
    "covered": true
   },
@@ -1771,8 +1769,8 @@
    "t": "FHN",
    "lists": [],
    "idea": null,
-   "v": "STRONG SELL",
-   "iv": "SELL",
+   "v": "HOLD",
+   "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
   },
@@ -2264,7 +2262,7 @@
    "t": "PAC",
    "lists": [],
    "idea": null,
-   "v": "SELL",
+   "v": "HOLD",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -2380,8 +2378,8 @@
    "t": "ZION",
    "lists": [],
    "idea": null,
-   "v": null,
-   "iv": null,
+   "v": "BUY",
+   "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
   },
@@ -3395,8 +3393,8 @@
    "t": "VICR",
    "lists": [],
    "idea": null,
-   "v": "SELL",
-   "iv": "HOLD",
+   "v": "HOLD",
+   "iv": "BUY",
    "lrc_rating": null,
    "covered": false
   },
@@ -3453,8 +3451,8 @@
    "t": "VMI",
    "lists": [],
    "idea": null,
-   "v": "SELL",
-   "iv": "HOLD",
+   "v": "HOLD",
+   "iv": "BUY",
    "lrc_rating": null,
    "covered": false
   },
@@ -3512,7 +3510,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "BUY",
    "lrc_rating": null,
    "covered": false
   },
@@ -3570,7 +3568,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "SELL",
+   "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
   },
@@ -3743,7 +3741,7 @@
    "t": "NP",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -3773,7 +3771,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "SELL",
    "lrc_rating": null,
    "covered": false
   },
@@ -3947,7 +3945,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "BUY",
+   "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
   },
@@ -4005,7 +4003,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "SELL",
    "lrc_rating": null,
    "covered": false
   },
@@ -4729,8 +4727,8 @@
    "t": "CACI",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
-   "iv": "HOLD",
+   "v": "BUY",
+   "iv": "BUY",
    "lrc_rating": null,
    "covered": false
   },
@@ -4758,7 +4756,7 @@
    "t": "SEIC",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -4932,7 +4930,7 @@
    "t": "SF",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "SELL",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -5077,7 +5075,7 @@
    "t": "FAF",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "SELL",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -5164,7 +5162,7 @@
    "t": "HXL",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "SELL",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -5309,7 +5307,7 @@
    "t": "CATY",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -5368,7 +5366,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "SELL",
+   "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
   },
@@ -5425,7 +5423,7 @@
    "t": "WSBC",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -6325,7 +6323,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "BUY",
+   "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
   },
@@ -6615,7 +6613,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "BUY",
    "lrc_rating": null,
    "covered": false
   },
@@ -6818,7 +6816,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "BUY",
+   "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
   },
@@ -6905,7 +6903,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "SELL",
+   "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
   },
@@ -6933,7 +6931,7 @@
    "t": "ORI",
    "lists": [],
    "idea": null,
-   "v": "SELL",
+   "v": "HOLD",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -7310,7 +7308,7 @@
    "t": "MSM",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -7397,7 +7395,7 @@
    "t": "MXL",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -7485,7 +7483,7 @@
    "lists": [],
    "idea": null,
    "v": "SELL",
-   "iv": "HOLD",
+   "iv": "SELL",
    "lrc_rating": null,
    "covered": false
   },
@@ -7572,7 +7570,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "BUY",
    "lrc_rating": null,
    "covered": false
   },
@@ -7919,8 +7917,8 @@
    "t": "ZGN",
    "lists": [],
    "idea": null,
-   "v": null,
-   "iv": null,
+   "v": "HOLD",
+   "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
   },
@@ -8122,7 +8120,7 @@
    "t": "VC",
    "lists": [],
    "idea": null,
-   "v": "STRONG SELL",
+   "v": "HOLD",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -8151,7 +8149,7 @@
    "t": "HTH",
    "lists": [],
    "idea": null,
-   "v": "SELL",
+   "v": "HOLD",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -8528,8 +8526,8 @@
    "t": "BCPC",
    "lists": [],
    "idea": null,
-   "v": "SELL",
-   "iv": "SELL",
+   "v": "HOLD",
+   "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
   },
@@ -9021,7 +9019,7 @@
    "t": "SUI",
    "lists": [],
    "idea": null,
-   "v": "SELL",
+   "v": "HOLD",
    "iv": "SELL",
    "lrc_rating": null,
    "covered": false
@@ -9065,10 +9063,10 @@
    "eps_forecast": "($0.30)",
    "market_cap_bn": 10.8,
    "reported": true,
-   "result": null,
-   "eps_actual": null,
-   "eps_est": null,
-   "surprise": null,
+   "result": "beat",
+   "eps_actual": 1.2,
+   "eps_est": 0.9542,
+   "surprise": 0.2575,
    "heps": null,
    "heps_prior": null,
    "unit": null,
@@ -9079,7 +9077,7 @@
    "t": "BMRN",
    "lists": [],
    "idea": null,
-   "v": "SELL",
+   "v": "HOLD",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -9427,8 +9425,8 @@
    "t": "DORM",
    "lists": [],
    "idea": null,
-   "v": "BUY",
-   "iv": "BUY",
+   "v": "HOLD",
+   "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
   },
@@ -9515,7 +9513,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "SELL",
+   "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
   },
@@ -9572,8 +9570,8 @@
    "t": "BOH",
    "lists": [],
    "idea": null,
-   "v": "STRONG SELL",
-   "iv": "SELL",
+   "v": "SELL",
+   "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
   },
@@ -9833,7 +9831,7 @@
    "t": "HSBC",
    "lists": [],
    "idea": null,
-   "v": "SELL",
+   "v": "HOLD",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -10007,8 +10005,8 @@
    "t": "HCA",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
-   "iv": "BUY",
+   "v": "BUY",
+   "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
   },
@@ -10965,7 +10963,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "BUY",
+   "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
   },
@@ -11081,7 +11079,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "BUY",
+   "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
   },
@@ -11110,7 +11108,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "BUY",
    "lrc_rating": null,
    "covered": false
   },
@@ -11226,7 +11224,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "SELL",
+   "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
   },
@@ -11400,7 +11398,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "SELL",
    "lrc_rating": null,
    "covered": false
   },
@@ -11602,7 +11600,7 @@
    "t": "BXP",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "SELL",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -11660,7 +11658,7 @@
    "t": "RGEN",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -11704,10 +11702,10 @@
    "eps_forecast": "$0.50",
    "market_cap_bn": 8.2,
    "reported": true,
-   "result": null,
-   "eps_actual": null,
-   "eps_est": null,
-   "surprise": null,
+   "result": "beat",
+   "eps_actual": 0.52,
+   "eps_est": 0.499,
+   "surprise": 0.0421,
    "heps": null,
    "heps_prior": null,
    "unit": null,
@@ -11718,8 +11716,8 @@
    "t": "ZWS",
    "lists": [],
    "idea": null,
-   "v": null,
-   "iv": null,
+   "v": "HOLD",
+   "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
   },
@@ -12095,7 +12093,7 @@
    "t": "LSTR",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "SELL",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -12298,7 +12296,7 @@
    "t": "HRI",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -12444,7 +12442,7 @@
    "lists": [],
    "idea": null,
    "v": "BUY",
-   "iv": "HOLD",
+   "iv": "BUY",
    "lrc_rating": null,
    "covered": false
   },
@@ -12559,7 +12557,7 @@
    "t": "INTA",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -12603,10 +12601,10 @@
    "eps_forecast": "$0.88",
    "market_cap_bn": 3.4,
    "reported": true,
-   "result": null,
-   "eps_actual": null,
-   "eps_est": null,
-   "surprise": null,
+   "result": "beat",
+   "eps_actual": 0.1617,
+   "eps_est": 0.13,
+   "surprise": 0.2438,
    "heps": null,
    "heps_prior": null,
    "unit": null,
@@ -12936,7 +12934,7 @@
    "t": "TRMK",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -12951,10 +12949,10 @@
    "eps_forecast": "$0.67",
    "market_cap_bn": 2.5,
    "reported": true,
-   "result": null,
-   "eps_actual": null,
-   "eps_est": null,
-   "surprise": null,
+   "result": "miss",
+   "eps_actual": 0.63,
+   "eps_est": 0.6714,
+   "surprise": -0.0617,
    "heps": null,
    "heps_prior": null,
    "unit": null,
@@ -13267,7 +13265,7 @@
    "lrc_rating": null,
    "t": "GOOG",
    "lists": [],
-   "idea": null,
+   "idea": "Earnings watch",
    "v": "HOLD",
    "iv": "BUY",
    "track": [
@@ -13290,7 +13288,7 @@
    "lrc_rating": null,
    "t": "GOOGL",
    "lists": [],
-   "idea": null,
+   "idea": "Earnings watch",
    "v": "HOLD",
    "iv": "BUY",
    "track": [
@@ -13317,10 +13315,10 @@
    "v": "HOLD",
    "iv": "HOLD",
    "track": [
+    "beat",
+    "beat",
     "miss",
-    "beat",
-    "beat",
-    "miss"
+    "beat"
    ]
   },
   {
@@ -13336,7 +13334,7 @@
    "lrc_rating": null,
    "t": "KLAC",
    "lists": [],
-   "idea": null,
+   "idea": "Earnings watch",
    "v": "HOLD",
    "iv": "BUY",
    "track": [
@@ -13404,7 +13402,7 @@
    "lrc_rating": null,
    "t": "NOW",
    "lists": [],
-   "idea": null,
+   "idea": "Earnings watch",
    "v": "HOLD",
    "iv": "HOLD",
    "track": [
@@ -13427,7 +13425,7 @@
    "lrc_rating": null,
    "t": "TMUS",
    "lists": [],
-   "idea": null,
+   "idea": "Earnings watch",
    "v": "HOLD",
    "iv": "HOLD",
    "track": [
@@ -13475,7 +13473,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "BUY",
    "track": [
     "miss",
     "miss",
@@ -13519,9 +13517,9 @@
    "lrc_rating": null,
    "t": "ADP",
    "lists": [],
-   "idea": "Earnings watch",
+   "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "BUY",
    "track": [
     "beat",
     "beat",
@@ -13566,9 +13564,14 @@
    "t": "GSK",
    "lists": [],
    "idea": null,
-   "v": "SELL",
-   "iv": "SELL",
-   "track": null
+   "v": "HOLD",
+   "iv": "BUY",
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-10-28",
@@ -13606,9 +13609,9 @@
    "lrc_rating": null,
    "t": "AEM",
    "lists": [],
-   "idea": "Earnings watch",
+   "idea": null,
    "v": "HOLD",
-   "iv": "BUY",
+   "iv": "HOLD",
    "track": [
     "beat",
     "beat",
@@ -13750,7 +13753,7 @@
     "beat",
     "beat",
     "beat",
-    "beat"
+    "inline"
    ]
   },
   {
@@ -13772,8 +13775,8 @@
    "track": [
     "beat",
     "beat",
-    "beat",
-    "inline"
+    "inline",
+    "beat"
    ]
   },
   {
@@ -13839,7 +13842,7 @@
    "v": "HOLD",
    "iv": "HOLD",
    "track": [
-    "inline",
+    "beat",
     "beat",
     "beat",
     "beat"
@@ -14089,10 +14092,10 @@
    "v": "HOLD",
    "iv": "HOLD",
    "track": [
-    "beat",
     "inline",
     "inline",
-    "inline"
+    "inline",
+    "beat"
    ]
   },
   {
@@ -14225,7 +14228,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "BUY",
    "track": [
     "miss",
     "miss",
@@ -14269,7 +14272,7 @@
    "lrc_rating": null,
    "t": "AER",
    "lists": [],
-   "idea": "Earnings watch",
+   "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
    "track": [
@@ -14615,7 +14618,7 @@
    "v": "HOLD",
    "iv": "BUY",
    "track": [
-    "miss",
+    "beat",
     "beat",
     "beat",
     "beat"
@@ -14659,8 +14662,13 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
-   "track": null
+   "iv": "SELL",
+   "track": [
+    "miss",
+    "beat",
+    "beat",
+    "inline"
+   ]
   },
   {
    "date": "2026-10-28",
@@ -14700,7 +14708,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "BUY",
    "track": [
     "beat",
     "beat",
@@ -14767,9 +14775,9 @@
    "lrc_rating": null,
    "t": "AGI",
    "lists": [],
-   "idea": "Earnings watch",
+   "idea": null,
    "v": "HOLD",
-   "iv": "STRONG BUY",
+   "iv": "BUY",
    "track": [
     "beat",
     "beat",
@@ -14794,10 +14802,10 @@
    "v": "HOLD",
    "iv": "BUY",
    "track": [
-    "beat",
     "miss",
     "beat",
-    "inline"
+    "inline",
+    "miss"
    ]
   },
   {
@@ -14883,7 +14891,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "BUY",
+   "iv": "STRONG BUY",
    "track": [
     "beat",
     "beat",
@@ -14972,7 +14980,7 @@
    "lrc_rating": null,
    "t": "ALGN",
    "lists": [],
-   "idea": "Earnings watch",
+   "idea": null,
    "v": "HOLD",
    "iv": "BUY",
    "track": [
@@ -15157,9 +15165,14 @@
    "t": "HLI",
    "lists": [],
    "idea": null,
-   "v": "SELL",
-   "iv": "HOLD",
-   "track": null
+   "v": "HOLD",
+   "iv": "SELL",
+   "track": [
+    "beat",
+    "beat",
+    "miss",
+    "miss"
+   ]
   },
   {
    "date": "2026-10-28",
@@ -15174,7 +15187,7 @@
    "lrc_rating": null,
    "t": "EDU",
    "lists": [],
-   "idea": "Technical setups",
+   "idea": null,
    "v": "HOLD",
    "iv": "BUY",
    "track": [
@@ -15221,7 +15234,7 @@
    "t": "FLS",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "SELL",
    "iv": "BUY",
    "track": [
     "beat",
@@ -15245,7 +15258,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "BUY",
    "track": [
     "beat",
     "beat",
@@ -15267,9 +15280,14 @@
    "t": "PB",
    "lists": [],
    "idea": null,
-   "v": "SELL",
+   "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "inline",
+    "beat",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-10-28",
@@ -15286,7 +15304,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "BUY",
    "track": [
     "beat",
     "beat",
@@ -15330,10 +15348,15 @@
    "lrc_rating": null,
    "t": "VIST",
    "lists": [],
-   "idea": null,
+   "idea": "Technical setups",
    "v": "HOLD",
-   "iv": "HOLD",
-   "track": null
+   "iv": "BUY",
+   "track": [
+    "beat",
+    "miss",
+    "miss",
+    "miss"
+   ]
   },
   {
    "date": "2026-10-28",
@@ -15483,7 +15506,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "BUY",
    "track": [
     "beat",
     "beat",
@@ -15507,7 +15530,12 @@
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "beat",
+    "beat",
+    "miss",
+    "beat"
+   ]
   },
   {
    "date": "2026-10-28",
@@ -15749,7 +15777,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "SELL",
    "track": [
     "beat",
     "beat",
@@ -16136,7 +16164,12 @@
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "beat",
+    "miss",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-10-28",
@@ -16198,9 +16231,14 @@
    "t": "BNL",
    "lists": [],
    "idea": null,
-   "v": "STRONG SELL",
+   "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "miss",
+    "beat",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-10-28",
@@ -16222,7 +16260,7 @@
     "beat",
     "beat",
     "beat",
-    "beat"
+    "miss"
    ]
   },
   {
@@ -16239,9 +16277,14 @@
    "t": "VKTX",
    "lists": [],
    "idea": null,
-   "v": "STRONG SELL",
+   "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "miss",
+    "miss",
+    "miss",
+    "beat"
+   ]
   },
   {
    "date": "2026-10-28",
@@ -16372,9 +16415,14 @@
    "t": "GRBK",
    "lists": [],
    "idea": null,
-   "v": "STRONG SELL",
+   "v": "SELL",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-10-28",
@@ -16413,9 +16461,14 @@
    "t": "HAYW",
    "lists": [],
    "idea": null,
-   "v": "SELL",
+   "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-10-28",
@@ -16433,7 +16486,12 @@
    "idea": null,
    "v": "SELL",
    "iv": "SELL",
-   "track": null
+   "track": [
+    "beat",
+    "miss",
+    "beat",
+    "miss"
+   ]
   },
   {
    "date": "2026-10-28",
@@ -16496,8 +16554,13 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
-   "track": null
+   "iv": "SELL",
+   "track": [
+    "miss",
+    "beat",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-10-28",
@@ -16630,7 +16693,12 @@
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "miss",
+    "beat",
+    "inline",
+    "beat"
+   ]
   },
   {
    "date": "2026-10-28",
@@ -16764,9 +16832,9 @@
    "v": "HOLD",
    "iv": "HOLD",
    "track": [
+    "miss",
+    "miss",
     "beat",
-    "miss",
-    "miss",
     "beat"
    ]
   },
@@ -16785,7 +16853,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "SELL",
+   "iv": "HOLD",
    "track": [
     "beat",
     "beat",
@@ -16818,29 +16886,6 @@
   },
   {
    "date": "2026-10-28",
-   "ticker": "AIN",
-   "name": "Albany International Corp.",
-   "when": "Not stated",
-   "period": "Expected date (market data feed)",
-   "eps_forecast": "",
-   "market_cap_bn": 1.8,
-   "auto": true,
-   "t": "AIN",
-   "lists": [],
-   "idea": null,
-   "v": "HOLD",
-   "iv": "SELL",
-   "track": [
-    "miss",
-    "miss",
-    "beat",
-    "beat"
-   ],
-   "lrc_rating": null,
-   "covered": false
-  },
-  {
-   "date": "2026-10-28",
    "ticker": "EPAC",
    "name": "Enerpac Tool Group Corp.",
    "when": "Not stated",
@@ -16852,7 +16897,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "STRONG BUY",
+   "iv": "BUY",
    "track": [
     "beat",
     "miss",
@@ -16879,6 +16924,29 @@
    "track": [
     "miss",
     "beat",
+    "beat",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-10-28",
+   "ticker": "AIN",
+   "name": "Albany International Corp.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.8,
+   "auto": true,
+   "t": "AIN",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "SELL",
+   "track": [
+    "miss",
+    "miss",
     "beat",
     "beat"
    ],
@@ -16932,6 +17000,29 @@
   },
   {
    "date": "2026-10-28",
+   "ticker": "HAPN",
+   "name": "Happen, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.7,
+   "auto": true,
+   "t": "HAPN",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-10-28",
    "ticker": "ALKT",
    "name": "Alkami Technology, Inc.",
    "when": "Not stated",
@@ -16965,8 +17056,8 @@
    "t": "CCS",
    "lists": [],
    "idea": null,
-   "v": "SELL",
-   "iv": "SELL",
+   "v": "HOLD",
+   "iv": "HOLD",
    "track": [
     "beat",
     "beat",
@@ -17001,29 +17092,6 @@
   },
   {
    "date": "2026-10-28",
-   "ticker": "RDWR",
-   "name": "Radware Ltd.",
-   "when": "Not stated",
-   "period": "Expected date (market data feed)",
-   "eps_forecast": "",
-   "market_cap_bn": 1.5,
-   "auto": true,
-   "t": "RDWR",
-   "lists": [],
-   "idea": null,
-   "v": "HOLD",
-   "iv": "SELL",
-   "track": [
-    "beat",
-    "beat",
-    "miss",
-    "miss"
-   ],
-   "lrc_rating": null,
-   "covered": false
-  },
-  {
-   "date": "2026-10-28",
    "ticker": "RYZ",
    "name": "Ryerson Holding Corporation",
    "when": "Not stated",
@@ -17047,6 +17115,29 @@
   },
   {
    "date": "2026-10-28",
+   "ticker": "RDWR",
+   "name": "Radware Ltd.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.5,
+   "auto": true,
+   "t": "RDWR",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "SELL",
+   "track": [
+    "beat",
+    "beat",
+    "miss",
+    "miss"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-10-28",
    "ticker": "SCL",
    "name": "Stepan Company",
    "when": "Not stated",
@@ -17061,7 +17152,7 @@
    "iv": "HOLD",
    "track": [
     "miss",
-    "miss",
+    "beat",
     "beat",
     "beat"
    ],
@@ -17103,7 +17194,7 @@
    "t": "DMC",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "SELL",
    "iv": "HOLD",
    "track": [
     "beat",
@@ -17139,29 +17230,6 @@
   },
   {
    "date": "2026-10-28",
-   "ticker": "PRG",
-   "name": "PROG Holdings, Inc.",
-   "when": "Not stated",
-   "period": "Expected date (market data feed)",
-   "eps_forecast": "",
-   "market_cap_bn": 1.2,
-   "auto": true,
-   "t": "PRG",
-   "lists": [],
-   "idea": null,
-   "v": "HOLD",
-   "iv": "BUY",
-   "track": [
-    "beat",
-    "beat",
-    "beat",
-    "beat"
-   ],
-   "lrc_rating": null,
-   "covered": false
-  },
-  {
-   "date": "2026-10-28",
    "ticker": "REPL",
    "name": "Replimune Group, Inc.",
    "when": "Not stated",
@@ -17178,6 +17246,29 @@
     "miss",
     "beat",
     "miss",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-10-28",
+   "ticker": "PRG",
+   "name": "PROG Holdings, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.2,
+   "auto": true,
+   "t": "PRG",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "BUY",
+   "track": [
+    "beat",
+    "beat",
+    "beat",
     "beat"
    ],
    "lrc_rating": null,
@@ -17208,22 +17299,22 @@
   },
   {
    "date": "2026-10-28",
-   "ticker": "CFFN",
-   "name": "Capitol Federal Financial, Inc.",
+   "ticker": "UVSP",
+   "name": "Univest Financial Corporation",
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 1.1,
+   "market_cap_bn": 1.2,
    "auto": true,
-   "t": "CFFN",
+   "t": "UVSP",
    "lists": [],
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
    "track": [
-    "inline",
     "beat",
-    "inline",
+    "beat",
+    "beat",
     "beat"
    ],
    "lrc_rating": null,
@@ -17267,6 +17358,29 @@
    "v": "HOLD",
    "iv": "HOLD",
    "track": null,
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-10-28",
+   "ticker": "CFFN",
+   "name": "Capitol Federal Financial, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.1,
+   "auto": true,
+   "t": "CFFN",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "inline",
+    "beat",
+    "inline",
+    "beat"
+   ],
    "lrc_rating": null,
    "covered": false
   },
@@ -17443,7 +17557,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "BUY",
+   "iv": "HOLD",
    "track": [
     "beat",
     "miss",
@@ -17558,7 +17672,12 @@
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-10-29",
@@ -17690,7 +17809,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "BUY",
    "track": [
     "beat",
     "beat",
@@ -17736,7 +17855,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "SELL",
+   "iv": "HOLD",
    "track": [
     "beat",
     "beat",
@@ -17961,7 +18080,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "SELL",
+   "iv": "HOLD",
    "track": [
     "miss",
     "miss",
@@ -18052,9 +18171,14 @@
    "t": "VALE",
    "lists": [],
    "idea": null,
-   "v": "STRONG SELL",
+   "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "beat",
+    "miss",
+    "miss",
+    "miss"
+   ]
   },
   {
    "date": "2026-10-29",
@@ -18139,7 +18263,7 @@
    "t": "HLN",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "track": null
   },
@@ -18388,7 +18512,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "BUY",
+   "iv": "HOLD",
    "track": [
     "beat",
     "beat",
@@ -18934,7 +19058,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "SELL",
+   "iv": "HOLD",
    "track": [
     "beat",
     "beat",
@@ -19001,7 +19125,7 @@
    "lrc_rating": null,
    "t": "FSLR",
    "lists": [],
-   "idea": "Value & quality",
+   "idea": null,
    "v": "HOLD",
    "iv": "STRONG BUY",
    "track": [
@@ -19135,8 +19259,13 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
-   "track": null
+   "iv": "SELL",
+   "track": [
+    "miss",
+    "beat",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-10-29",
@@ -19244,9 +19373,14 @@
    "t": "OWL",
    "lists": [],
    "idea": null,
-   "v": "SELL",
+   "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "inline",
+    "beat",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-10-29",
@@ -19615,9 +19749,14 @@
    "t": "BWA",
    "lists": [],
    "idea": null,
-   "v": "SELL",
-   "iv": "SELL",
-   "track": null
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-10-29",
@@ -19750,7 +19889,12 @@
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-10-29",
@@ -19927,9 +20071,14 @@
    "t": "OSK",
    "lists": [],
    "idea": null,
-   "v": "SELL",
-   "iv": "HOLD",
-   "track": null
+   "v": "HOLD",
+   "iv": "BUY",
+   "track": [
+    "beat",
+    "miss",
+    "miss",
+    "beat"
+   ]
   },
   {
    "date": "2026-10-29",
@@ -19969,7 +20118,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "BUY",
    "track": [
     "beat",
     "inline",
@@ -20084,8 +20233,13 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
-   "track": null
+   "iv": "BUY",
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "miss"
+   ]
   },
   {
    "date": "2026-10-29",
@@ -20171,7 +20325,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "SELL",
+   "iv": "HOLD",
    "track": [
     "beat",
     "miss",
@@ -20239,8 +20393,8 @@
    "t": "ALGM",
    "lists": [],
    "idea": null,
-   "v": "SELL",
-   "iv": "SELL",
+   "v": "HOLD",
+   "iv": "HOLD",
    "track": [
     "beat",
     "beat",
@@ -20378,8 +20532,13 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "SELL",
-   "track": null
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-10-29",
@@ -20419,7 +20578,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "SELL",
    "track": [
     "miss",
     "beat",
@@ -20465,7 +20624,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "BUY",
    "track": [
     "beat",
     "beat",
@@ -20580,7 +20739,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "BUY",
    "track": [
     "beat",
     "beat",
@@ -20695,7 +20854,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "BUY",
    "track": [
     "beat",
     "miss",
@@ -20719,7 +20878,12 @@
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "miss"
+   ]
   },
   {
    "date": "2026-10-29",
@@ -20782,8 +20946,13 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
-   "track": null
+   "iv": "BUY",
+   "track": [
+    "beat",
+    "miss",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-10-29",
@@ -21053,8 +21222,13 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
-   "track": null
+   "iv": "BUY",
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-10-29",
@@ -21300,8 +21474,8 @@
    "t": "MIAX",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
-   "iv": "HOLD",
+   "v": "SELL",
+   "iv": "SELL",
    "track": [
     "beat",
     "beat",
@@ -21369,9 +21543,14 @@
    "t": "OSIS",
    "lists": [],
    "idea": null,
-   "v": "SELL",
+   "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "inline"
+   ]
   },
   {
    "date": "2026-10-29",
@@ -21435,7 +21614,12 @@
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-10-29",
@@ -21543,9 +21727,14 @@
    "t": "HGV",
    "lists": [],
    "idea": null,
-   "v": "SELL",
+   "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "miss",
+    "miss",
+    "beat",
+    "miss"
+   ]
   },
   {
    "date": "2026-10-29",
@@ -21677,7 +21866,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "SELL",
+   "iv": "HOLD",
    "track": [
     "miss",
     "miss",
@@ -21699,9 +21888,14 @@
    "t": "PATK",
    "lists": [],
    "idea": null,
-   "v": "SELL",
+   "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-10-29",
@@ -21912,20 +22106,20 @@
   },
   {
    "date": "2026-10-29",
-   "ticker": "BFLY",
-   "name": "Butterfly Network, Inc.",
+   "ticker": "SAH",
+   "name": "Sonic Automotive, Inc.",
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
    "market_cap_bn": 2.0,
    "auto": true,
-   "t": "BFLY",
+   "t": "SAH",
    "lists": [],
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
    "track": [
-    "beat",
+    "miss",
     "beat",
     "beat",
     "beat"
@@ -21958,37 +22152,14 @@
   },
   {
    "date": "2026-10-29",
-   "ticker": "SAH",
-   "name": "Sonic Automotive, Inc.",
+   "ticker": "BFLY",
+   "name": "Butterfly Network, Inc.",
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
    "market_cap_bn": 2.0,
    "auto": true,
-   "t": "SAH",
-   "lists": [],
-   "idea": null,
-   "v": "HOLD",
-   "iv": "HOLD",
-   "track": [
-    "miss",
-    "beat",
-    "beat",
-    "beat"
-   ],
-   "lrc_rating": null,
-   "covered": false
-  },
-  {
-   "date": "2026-10-29",
-   "ticker": "DRVN",
-   "name": "Driven Brands Holdings Inc.",
-   "when": "Not stated",
-   "period": "Expected date (market data feed)",
-   "eps_forecast": "",
-   "market_cap_bn": 1.9,
-   "auto": true,
-   "t": "DRVN",
+   "t": "BFLY",
    "lists": [],
    "idea": null,
    "v": "HOLD",
@@ -22021,6 +22192,29 @@
     "inline",
     "beat",
     "miss"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-10-29",
+   "ticker": "DRVN",
+   "name": "Driven Brands Holdings Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.9,
+   "auto": true,
+   "t": "DRVN",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
    ],
    "lrc_rating": null,
    "covered": false
@@ -22073,46 +22267,23 @@
   },
   {
    "date": "2026-10-29",
-   "ticker": "ALHC",
-   "name": "Alignment Healthcare, Inc.",
+   "ticker": "BXMT",
+   "name": "Blackstone Mortgage Trust, Inc.",
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 1.7,
+   "market_cap_bn": 1.8,
    "auto": true,
-   "t": "ALHC",
+   "t": "BXMT",
    "lists": [],
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
    "track": [
-    "beat",
-    "beat",
-    "beat",
-    "beat"
-   ],
-   "lrc_rating": null,
-   "covered": false
-  },
-  {
-   "date": "2026-10-29",
-   "ticker": "ATEC",
-   "name": "Alphatec Holdings, Inc.",
-   "when": "Not stated",
-   "period": "Expected date (market data feed)",
-   "eps_forecast": "",
-   "market_cap_bn": 1.7,
-   "auto": true,
-   "t": "ATEC",
-   "lists": [],
-   "idea": null,
-   "v": "HOLD",
-   "iv": "HOLD",
-   "track": [
-    "beat",
-    "beat",
-    "beat",
-    "beat"
+    "miss",
+    "miss",
+    "miss",
+    "miss"
    ],
    "lrc_rating": null,
    "covered": false
@@ -22153,7 +22324,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "SELL",
+   "iv": "HOLD",
    "track": [
     "beat",
     "beat",
@@ -22188,20 +22359,89 @@
   },
   {
    "date": "2026-10-29",
-   "ticker": "BAND",
-   "name": "Bandwidth Inc.",
+   "ticker": "ATEC",
+   "name": "Alphatec Holdings, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.7,
+   "auto": true,
+   "t": "ATEC",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-10-29",
+   "ticker": "OMCL",
+   "name": "Omnicell, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.7,
+   "auto": true,
+   "t": "OMCL",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "miss",
+    "beat",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-10-29",
+   "ticker": "ALHC",
+   "name": "Alignment Healthcare, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.7,
+   "auto": true,
+   "t": "ALHC",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-10-29",
+   "ticker": "PGY",
+   "name": "Pagaya Technologies Ltd.",
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
    "market_cap_bn": 1.6,
    "auto": true,
-   "t": "BAND",
+   "t": "PGY",
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "SELL",
+   "iv": "BUY",
    "track": [
-    "miss",
+    "beat",
     "beat",
     "beat",
     "beat"
@@ -22234,6 +22474,29 @@
   },
   {
    "date": "2026-10-29",
+   "ticker": "BAND",
+   "name": "Bandwidth Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.6,
+   "auto": true,
+   "t": "BAND",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "SELL",
+   "track": [
+    "miss",
+    "beat",
+    "beat",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-10-29",
    "ticker": "NEXA",
    "name": "Nexa Resources S.A.",
    "when": "Not stated",
@@ -22257,29 +22520,6 @@
   },
   {
    "date": "2026-10-29",
-   "ticker": "PGY",
-   "name": "Pagaya Technologies Ltd.",
-   "when": "Not stated",
-   "period": "Expected date (market data feed)",
-   "eps_forecast": "",
-   "market_cap_bn": 1.6,
-   "auto": true,
-   "t": "PGY",
-   "lists": [],
-   "idea": null,
-   "v": "HOLD",
-   "iv": "BUY",
-   "track": [
-    "beat",
-    "beat",
-    "beat",
-    "beat"
-   ],
-   "lrc_rating": null,
-   "covered": false
-  },
-  {
-   "date": "2026-10-29",
    "ticker": "RES",
    "name": "RPC, Inc.",
    "when": "Not stated",
@@ -22295,52 +22535,6 @@
    "track": [
     "beat",
     "miss",
-    "beat",
-    "beat"
-   ],
-   "lrc_rating": null,
-   "covered": false
-  },
-  {
-   "date": "2026-10-29",
-   "ticker": "COUR",
-   "name": "Coursera, Inc.",
-   "when": "Not stated",
-   "period": "Expected date (market data feed)",
-   "eps_forecast": "",
-   "market_cap_bn": 1.4,
-   "auto": true,
-   "t": "COUR",
-   "lists": [],
-   "idea": null,
-   "v": "HOLD",
-   "iv": "HOLD",
-   "track": [
-    "beat",
-    "inline",
-    "miss",
-    "beat"
-   ],
-   "lrc_rating": null,
-   "covered": false
-  },
-  {
-   "date": "2026-10-29",
-   "ticker": "FMBH",
-   "name": "First Mid Bancshares, Inc.",
-   "when": "Not stated",
-   "period": "Expected date (market data feed)",
-   "eps_forecast": "",
-   "market_cap_bn": 1.4,
-   "auto": true,
-   "t": "FMBH",
-   "lists": [],
-   "idea": null,
-   "v": "HOLD",
-   "iv": "HOLD",
-   "track": [
-    "inline",
-    "inline",
     "beat",
     "beat"
    ],
@@ -22372,21 +22566,21 @@
   },
   {
    "date": "2026-10-29",
-   "ticker": "DFIN",
-   "name": "Donnelley Financial Solutions, Inc.",
+   "ticker": "FMBH",
+   "name": "First Mid Bancshares, Inc.",
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 1.3,
+   "market_cap_bn": 1.4,
    "auto": true,
-   "t": "DFIN",
+   "t": "FMBH",
    "lists": [],
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
    "track": [
-    "beat",
-    "beat",
+    "inline",
+    "inline",
     "beat",
     "beat"
    ],
@@ -22429,7 +22623,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "SELL",
+   "iv": "HOLD",
    "track": [
     "beat",
     "beat",
@@ -22441,14 +22635,14 @@
   },
   {
    "date": "2026-10-29",
-   "ticker": "MYE",
-   "name": "Myers Industries, Inc.",
+   "ticker": "DFIN",
+   "name": "Donnelley Financial Solutions, Inc.",
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 1.2,
+   "market_cap_bn": 1.3,
    "auto": true,
-   "t": "MYE",
+   "t": "DFIN",
    "lists": [],
    "idea": null,
    "v": "HOLD",
@@ -22457,6 +22651,29 @@
     "beat",
     "beat",
     "beat",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-10-29",
+   "ticker": "COUR",
+   "name": "Coursera, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.3,
+   "auto": true,
+   "t": "COUR",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "inline",
+    "miss",
     "beat"
    ],
    "lrc_rating": null,
@@ -22480,6 +22697,29 @@
     "miss",
     "beat",
     "miss",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-10-29",
+   "ticker": "MYE",
+   "name": "Myers Industries, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.2,
+   "auto": true,
+   "t": "MYE",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "beat",
+    "beat",
     "beat"
    ],
    "lrc_rating": null,
@@ -22521,7 +22761,30 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "SELL",
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-10-29",
+   "ticker": "HIPO",
+   "name": "Hippo Holdings Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.0,
+   "auto": true,
+   "t": "HIPO",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
    "track": [
     "beat",
     "beat",
@@ -22658,9 +22921,14 @@
    "t": "BP",
    "lists": [],
    "idea": null,
-   "v": "SELL",
-   "iv": "STRONG SELL",
-   "track": null
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "inline",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-10-30",
@@ -22746,7 +23014,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "SELL",
    "track": [
     "beat",
     "beat",
@@ -23089,9 +23357,13 @@
    "t": "BSAC",
    "lists": [],
    "idea": null,
-   "v": "SELL",
+   "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "inline",
+    "miss",
+    "beat"
+   ]
   },
   {
    "date": "2026-10-30",
@@ -23109,7 +23381,12 @@
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "beat",
+    "miss",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-10-30",
@@ -23189,9 +23466,14 @@
    "t": "OMF",
    "lists": [],
    "idea": null,
-   "v": "SELL",
+   "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-10-30",
@@ -23208,8 +23490,13 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "SELL",
-   "track": null
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-10-30",
@@ -23272,7 +23559,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "SELL",
    "track": [
     "beat",
     "miss",
@@ -23317,7 +23604,7 @@
    "t": "KRG",
    "lists": [],
    "idea": null,
-   "v": "SELL",
+   "v": "HOLD",
    "iv": "HOLD",
    "track": [
     "miss",
@@ -23443,6 +23730,29 @@
   },
   {
    "date": "2026-10-30",
+   "ticker": "OPY",
+   "name": "Oppenheimer Holdings Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.1,
+   "auto": true,
+   "t": "OPY",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-10-30",
    "ticker": "IRMD",
    "name": "IRADIMED CORPORATION",
    "when": "Not stated",
@@ -23500,7 +23810,7 @@
    "lrc_rating": null,
    "t": "PLTR",
    "lists": [],
-   "idea": "Technical setups",
+   "idea": null,
    "v": "BUY",
    "iv": "BUY",
    "track": [
@@ -23928,7 +24238,12 @@
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "beat",
+    "miss",
+    "beat",
+    "miss"
+   ]
   },
   {
    "date": "2026-11-02",
@@ -23986,7 +24301,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "SELL",
+   "iv": "HOLD",
    "track": [
     "miss",
     "beat",
@@ -24032,7 +24347,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "SELL",
+   "iv": "HOLD",
    "track": [
     "miss",
     "inline",
@@ -24169,9 +24484,14 @@
    "t": "BWXT",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "SELL",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-02",
@@ -24279,9 +24599,14 @@
    "t": "BMRN",
    "lists": [],
    "idea": null,
-   "v": "SELL",
+   "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "miss",
+    "miss",
+    "miss",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-02",
@@ -24504,7 +24829,12 @@
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "beat",
+    "miss",
+    "beat",
+    "miss"
+   ]
   },
   {
    "date": "2026-11-02",
@@ -24614,7 +24944,12 @@
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "beat",
+    "beat",
+    "miss",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-02",
@@ -24654,8 +24989,13 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
-   "track": null
+   "iv": "SELL",
+   "track": [
+    "beat",
+    "miss",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-02",
@@ -24672,7 +25012,7 @@
    "lists": [],
    "idea": null,
    "v": "BUY",
-   "iv": "HOLD",
+   "iv": "BUY",
    "track": [
     "beat",
     "miss",
@@ -24717,7 +25057,7 @@
    "t": "SBRA",
    "lists": [],
    "idea": null,
-   "v": "SELL",
+   "v": "HOLD",
    "iv": "HOLD",
    "track": [
     "miss",
@@ -24832,9 +25172,14 @@
    "t": "PAM",
    "lists": [],
    "idea": null,
-   "v": "STRONG SELL",
+   "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-02",
@@ -24875,7 +25220,12 @@
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-02",
@@ -24891,9 +25241,14 @@
    "t": "HESM",
    "lists": [],
    "idea": null,
-   "v": "SELL",
+   "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-02",
@@ -24957,7 +25312,12 @@
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "inline",
+    "miss",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-02",
@@ -25083,7 +25443,7 @@
    "t": "ERO",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "BUY",
    "track": [
     "miss",
@@ -25146,7 +25506,7 @@
    "t": "PPLI",
    "lists": [],
    "idea": null,
-   "v": "SELL",
+   "v": "HOLD",
    "iv": "HOLD",
    "track": [
     "miss",
@@ -25214,7 +25574,7 @@
    "t": "BCC",
    "lists": [],
    "idea": null,
-   "v": "SELL",
+   "v": "HOLD",
    "iv": "HOLD",
    "track": [
     "miss",
@@ -25340,6 +25700,29 @@
   },
   {
    "date": "2026-11-02",
+   "ticker": "UUUU",
+   "name": "Energy Fuels Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 2.2,
+   "auto": true,
+   "t": "UUUU",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "miss",
+    "miss",
+    "miss",
+    "miss"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-02",
    "ticker": "INSP",
    "name": "Inspire Medical Systems, Inc.",
    "when": "After close",
@@ -25396,8 +25779,8 @@
    "t": "CC",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
-   "iv": "HOLD",
+   "v": "SELL",
+   "iv": "SELL",
    "track": [
     "miss",
     "beat",
@@ -25455,6 +25838,52 @@
   },
   {
    "date": "2026-11-02",
+   "ticker": "VOYG",
+   "name": "Voyager Technologies, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.7,
+   "auto": true,
+   "t": "VOYG",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "miss",
+    "inline",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-02",
+   "ticker": "KOS",
+   "name": "Kosmos Energy Ltd.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.6,
+   "auto": true,
+   "t": "KOS",
+   "lists": [],
+   "idea": null,
+   "v": "BUY",
+   "iv": "HOLD",
+   "track": [
+    "miss",
+    "miss",
+    "miss",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-02",
    "ticker": "HUN",
    "name": "Huntsman Corporation",
    "when": "Not stated",
@@ -25501,22 +25930,45 @@
   },
   {
    "date": "2026-11-02",
-   "ticker": "KOS",
-   "name": "Kosmos Energy Ltd.",
+   "ticker": "SAFT",
+   "name": "Safety Insurance Group, Inc.",
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 1.6,
+   "market_cap_bn": 1.5,
    "auto": true,
-   "t": "KOS",
+   "t": "SAFT",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "miss"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-02",
+   "ticker": "ICHR",
+   "name": "Ichor Holdings, Ltd.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.5,
+   "auto": true,
+   "t": "ICHR",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
    "iv": "HOLD",
    "track": [
     "miss",
-    "miss",
-    "miss",
+    "beat",
+    "beat",
     "beat"
    ],
    "lrc_rating": null,
@@ -25547,52 +25999,6 @@
   },
   {
    "date": "2026-11-02",
-   "ticker": "ICHR",
-   "name": "Ichor Holdings, Ltd.",
-   "when": "Not stated",
-   "period": "Expected date (market data feed)",
-   "eps_forecast": "",
-   "market_cap_bn": 1.5,
-   "auto": true,
-   "t": "ICHR",
-   "lists": [],
-   "idea": null,
-   "v": "HOLD",
-   "iv": "HOLD",
-   "track": [
-    "miss",
-    "beat",
-    "beat",
-    "beat"
-   ],
-   "lrc_rating": null,
-   "covered": false
-  },
-  {
-   "date": "2026-11-02",
-   "ticker": "SAFT",
-   "name": "Safety Insurance Group, Inc.",
-   "when": "Not stated",
-   "period": "Expected date (market data feed)",
-   "eps_forecast": "",
-   "market_cap_bn": 1.5,
-   "auto": true,
-   "t": "SAFT",
-   "lists": [],
-   "idea": null,
-   "v": "HOLD",
-   "iv": "HOLD",
-   "track": [
-    "beat",
-    "beat",
-    "beat",
-    "miss"
-   ],
-   "lrc_rating": null,
-   "covered": false
-  },
-  {
-   "date": "2026-11-02",
    "ticker": "NSSC",
    "name": "Napco Security Technologies, Inc.",
    "when": "Not stated",
@@ -25616,19 +26022,47 @@
   },
   {
    "date": "2026-11-02",
-   "ticker": "ALX",
-   "name": "Alexander's, Inc.",
+   "ticker": "HLMN",
+   "name": "Hillman Solutions Corp.",
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 1.3,
+   "market_cap_bn": 1.4,
    "auto": true,
-   "t": "ALX",
+   "t": "HLMN",
    "lists": [],
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
-   "track": null,
+   "track": [
+    "beat",
+    "beat",
+    "miss",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-02",
+   "ticker": "HLF",
+   "name": "Herbalife Ltd.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.4,
+   "auto": true,
+   "t": "HLF",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "miss",
+    "beat",
+    "miss"
+   ],
    "lrc_rating": null,
    "covered": false
   },
@@ -25652,6 +26086,24 @@
     "beat",
     "beat"
    ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-02",
+   "ticker": "ALX",
+   "name": "Alexander's, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.3,
+   "auto": true,
+   "t": "ALX",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": null,
    "lrc_rating": null,
    "covered": false
   },
@@ -25703,6 +26155,29 @@
   },
   {
    "date": "2026-11-02",
+   "ticker": "HLIT",
+   "name": "Harmonic Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.2,
+   "auto": true,
+   "t": "HLIT",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-02",
    "ticker": "AESI",
    "name": "Atlas Energy Solutions Inc.",
    "when": "Not stated",
@@ -25720,6 +26195,29 @@
     "miss",
     "miss",
     "miss"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-02",
+   "ticker": "UPWK",
+   "name": "Upwork Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.1,
+   "auto": true,
+   "t": "UPWK",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
    ],
    "lrc_rating": null,
    "covered": false
@@ -25772,23 +26270,23 @@
   },
   {
    "date": "2026-11-02",
-   "ticker": "UPWK",
-   "name": "Upwork Inc.",
+   "ticker": "BVS",
+   "name": "Bioventus Inc.",
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 1.1,
+   "market_cap_bn": 1.0,
    "auto": true,
-   "t": "UPWK",
+   "t": "BVS",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "STRONG BUY",
    "iv": "HOLD",
    "track": [
     "beat",
     "beat",
     "beat",
-    "beat"
+    "inline"
    ],
    "lrc_rating": null,
    "covered": false
@@ -25817,29 +26315,27 @@
    "covered": false
   },
   {
-   "date": "2026-11-03",
-   "ticker": "TALO",
-   "name": "Talos Energy, Inc.",
-   "when": "After close",
-   "eps_forecast": "$0.39",
-   "eps_last_year": "($0.21)",
-   "quarter": "Sep/2026",
-   "market_cap_bn": 3.1,
-   "covered": true,
-   "lrc_rating": null,
-   "t": "TALO",
-   "lists": [
-    "Trading BUY"
-   ],
+   "date": "2026-11-02",
+   "ticker": "UTL",
+   "name": "Unitil Corporation",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.0,
+   "auto": true,
+   "t": "UTL",
+   "lists": [],
    "idea": null,
-   "v": "STRONG BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "track": [
     "beat",
-    "miss",
     "beat",
-    "beat"
-   ]
+    "inline",
+    "miss"
+   ],
+   "lrc_rating": null,
+   "covered": false
   },
   {
    "date": "2026-11-03",
@@ -26039,7 +26535,7 @@
    "t": "SU",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "BUY",
    "track": [
     "beat",
@@ -26211,7 +26707,7 @@
    "t": "TEVA",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "track": null
   },
@@ -26321,8 +26817,8 @@
    "t": "YUM",
    "lists": [],
    "idea": null,
-   "v": null,
-   "iv": null,
+   "v": "HOLD",
+   "iv": "HOLD",
    "track": [
     "beat",
     "miss",
@@ -26551,9 +27047,14 @@
    "t": "BNTX",
    "lists": [],
    "idea": null,
-   "v": "STRONG SELL",
-   "iv": "STRONG SELL",
-   "track": null
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "miss",
+    "miss",
+    "miss",
+    "miss"
+   ]
   },
   {
    "date": "2026-11-03",
@@ -26592,9 +27093,14 @@
    "t": "OVV",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
-   "iv": "HOLD",
-   "track": null
+   "v": "BUY",
+   "iv": "BUY",
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "miss"
+   ]
   },
   {
    "date": "2026-11-03",
@@ -26610,7 +27116,7 @@
    "t": "BR",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "BUY",
    "track": [
     "beat",
@@ -26702,8 +27208,8 @@
    "t": "ZBRA",
    "lists": [],
    "idea": null,
-   "v": null,
-   "iv": null,
+   "v": "HOLD",
+   "iv": "HOLD",
    "track": [
     "beat",
     "inline",
@@ -26817,8 +27323,14 @@
    "t": "YUMC",
    "lists": [],
    "idea": null,
-   "v": null,
-   "iv": null
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "inline",
+    "beat",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-03",
@@ -26881,7 +27393,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "SELL",
+   "iv": "HOLD",
    "track": [
     "miss",
     "miss",
@@ -26904,7 +27416,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "BUY",
    "track": [
     "beat",
     "beat",
@@ -26949,7 +27461,7 @@
    "t": "EMBJ",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "track": [
     "miss",
@@ -27065,7 +27577,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "SELL",
+   "iv": "HOLD",
    "track": [
     "beat",
     "beat",
@@ -27225,9 +27737,12 @@
    "t": "PAYP",
    "lists": [],
    "idea": null,
-   "v": "SELL",
+   "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "miss",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-03",
@@ -27289,7 +27804,7 @@
    "t": "SM",
    "lists": [],
    "idea": null,
-   "v": "STRONG BUY",
+   "v": "BUY",
    "iv": "HOLD",
    "track": [
     "beat",
@@ -27314,7 +27829,12 @@
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "beat",
+    "beat",
+    "miss",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-03",
@@ -27332,7 +27852,12 @@
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "miss",
+    "miss",
+    "miss",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-03",
@@ -27440,8 +27965,14 @@
    "t": "ZETA",
    "lists": [],
    "idea": null,
-   "v": null,
-   "iv": null
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-03",
@@ -27457,7 +27988,7 @@
    "t": "IBRX",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "track": [
     "beat",
@@ -27465,6 +27996,29 @@
     "miss",
     "miss"
    ]
+  },
+  {
+   "date": "2026-11-03",
+   "ticker": "PACS",
+   "name": "PACS Group, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 7.6,
+   "auto": true,
+   "t": "PACS",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "miss",
+    "beat",
+    "beat",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
   },
   {
    "date": "2026-11-03",
@@ -27596,7 +28150,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "BUY",
    "track": [
     "beat",
     "miss",
@@ -27735,7 +28289,12 @@
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "beat",
+    "beat",
+    "miss",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-03",
@@ -27751,7 +28310,7 @@
    "t": "NPO",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "SELL",
    "iv": "HOLD",
    "track": [
     "beat",
@@ -27776,7 +28335,12 @@
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "inline",
+    "beat",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-03",
@@ -27839,8 +28403,13 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
-   "track": null
+   "iv": "SELL",
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-03",
@@ -27856,8 +28425,8 @@
    "t": "MCY",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
-   "iv": "HOLD",
+   "v": "BUY",
+   "iv": "BUY",
    "track": [
     "beat",
     "beat",
@@ -27994,7 +28563,7 @@
    "t": "SHC",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "track": [
     "beat",
@@ -28063,7 +28632,7 @@
    "t": "LPX",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "SELL",
    "iv": "SELL",
    "track": [
     "miss",
@@ -28155,8 +28724,8 @@
    "t": "KGS",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
-   "iv": "HOLD",
+   "v": "SELL",
+   "iv": "SELL",
    "track": [
     "miss",
     "miss",
@@ -28201,9 +28770,14 @@
    "t": "HLNE",
    "lists": [],
    "idea": null,
-   "v": "SELL",
-   "iv": "HOLD",
-   "track": null
+   "v": "HOLD",
+   "iv": "BUY",
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-03",
@@ -28221,7 +28795,30 @@
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "beat",
+    "inline",
+    "beat",
+    "miss"
+   ]
+  },
+  {
+   "date": "2026-11-03",
+   "ticker": "IQMX",
+   "name": "IQM Quantum Computers Oyj",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 4.5,
+   "auto": true,
+   "t": "IQMX",
+   "lists": [],
+   "idea": null,
+   "v": "SELL",
+   "iv": "SELL",
+   "track": null,
+   "lrc_rating": null,
+   "covered": false
   },
   {
    "date": "2026-11-03",
@@ -28237,8 +28834,8 @@
    "t": "SKY",
    "lists": [],
    "idea": null,
-   "v": "SELL",
-   "iv": "SELL",
+   "v": "HOLD",
+   "iv": "HOLD",
    "track": [
     "beat",
     "beat",
@@ -28283,9 +28880,12 @@
    "t": "VSNT",
    "lists": [],
    "idea": null,
-   "v": "SELL",
+   "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "miss",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-03",
@@ -28301,9 +28901,14 @@
    "t": "PARR",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "beat",
+    "miss",
+    "miss",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-03",
@@ -28342,7 +28947,7 @@
    "t": "SPHR",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "SELL",
    "iv": "SELL",
    "track": [
     "beat",
@@ -28389,7 +28994,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "SELL",
+   "iv": "HOLD",
    "track": [
     "miss",
     "miss",
@@ -28453,7 +29058,12 @@
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "beat",
+    "beat",
+    "miss",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-03",
@@ -28539,7 +29149,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "SELL",
+   "iv": "HOLD",
    "track": [
     "beat",
     "miss",
@@ -28561,7 +29171,7 @@
    "t": "HNI",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "track": [
     "beat",
@@ -28584,7 +29194,7 @@
    "t": "ASH",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "track": [
     "miss",
@@ -28687,6 +29297,29 @@
   },
   {
    "date": "2026-11-03",
+   "ticker": "TALO",
+   "name": "Talos Energy, Inc.",
+   "when": "After close",
+   "eps_forecast": "$0.39",
+   "eps_last_year": "($0.21)",
+   "quarter": "Sep/2026",
+   "market_cap_bn": 3.1,
+   "covered": false,
+   "lrc_rating": null,
+   "t": "TALO",
+   "lists": [],
+   "idea": null,
+   "v": "STRONG BUY",
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "miss",
+    "beat",
+    "beat"
+   ]
+  },
+  {
+   "date": "2026-11-03",
    "ticker": "ATRC",
    "name": "AtriCure, Inc.",
    "when": "After close",
@@ -28745,8 +29378,8 @@
    "t": "KNF",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
-   "iv": "HOLD",
+   "v": "SELL",
+   "iv": "SELL",
    "track": [
     "miss",
     "beat",
@@ -28861,7 +29494,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "SELL",
    "track": [
     "miss",
     "beat",
@@ -29100,7 +29733,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "SELL",
+   "iv": "HOLD",
    "track": [
     "beat",
     "miss",
@@ -29168,8 +29801,8 @@
    "t": "UPST",
    "lists": [],
    "idea": null,
-   "v": "SELL",
-   "iv": "SELL",
+   "v": "HOLD",
+   "iv": "HOLD",
    "track": [
     "beat",
     "beat",
@@ -29259,9 +29892,14 @@
    "t": "OUST",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "beat",
+    "beat",
+    "miss",
+    "miss"
+   ]
   },
   {
    "date": "2026-11-03",
@@ -29285,23 +29923,23 @@
   },
   {
    "date": "2026-11-03",
-   "ticker": "DEI",
-   "name": "Douglas Emmett, Inc.",
+   "ticker": "XPRO",
+   "name": "Expro Ltd",
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
    "market_cap_bn": 2.0,
    "auto": true,
-   "t": "DEI",
+   "t": "XPRO",
    "lists": [],
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
    "track": [
+    "inline",
     "miss",
     "beat",
-    "beat",
-    "beat"
+    "miss"
    ],
    "lrc_rating": null,
    "covered": false
@@ -29331,23 +29969,45 @@
   },
   {
    "date": "2026-11-03",
-   "ticker": "XPRO",
-   "name": "Expro Ltd",
+   "ticker": "DEI",
+   "name": "Douglas Emmett, Inc.",
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
    "market_cap_bn": 2.0,
    "auto": true,
-   "t": "XPRO",
+   "t": "DEI",
    "lists": [],
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
    "track": [
-    "inline",
     "miss",
     "beat",
-    "miss"
+    "beat",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-03",
+   "ticker": "WMK",
+   "name": "Weis Markets, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.9,
+   "auto": true,
+   "t": "WMK",
+   "lists": [],
+   "idea": null,
+   "v": "BUY",
+   "iv": "HOLD",
+   "track": [
+    "miss",
+    "beat",
+    "beat"
    ],
    "lrc_rating": null,
    "covered": false
@@ -29377,12 +30037,35 @@
   },
   {
    "date": "2026-11-03",
+   "ticker": "HMN",
+   "name": "Horace Mann Educators Corporation",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.9,
+   "auto": true,
+   "t": "HMN",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-03",
    "ticker": "EVTC",
    "name": "EVERTEC, Inc.",
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 1.8,
+   "market_cap_bn": 1.9,
    "auto": true,
    "t": "EVTC",
    "lists": [],
@@ -29394,47 +30077,6 @@
     "beat",
     "miss",
     "beat"
-   ],
-   "lrc_rating": null,
-   "covered": false
-  },
-  {
-   "date": "2026-11-03",
-   "ticker": "IQMX",
-   "name": "IQM Quantum Computers Oyj",
-   "when": "Not stated",
-   "period": "Expected date (market data feed)",
-   "eps_forecast": "",
-   "market_cap_bn": 1.8,
-   "auto": true,
-   "t": "IQMX",
-   "lists": [],
-   "idea": null,
-   "v": "SELL",
-   "iv": "SELL",
-   "track": null,
-   "lrc_rating": null,
-   "covered": false
-  },
-  {
-   "date": "2026-11-03",
-   "ticker": "GIC",
-   "name": "Global Industrial Company",
-   "when": "Not stated",
-   "period": "Expected date (market data feed)",
-   "eps_forecast": "",
-   "market_cap_bn": 1.7,
-   "auto": true,
-   "t": "GIC",
-   "lists": [],
-   "idea": null,
-   "v": "HOLD",
-   "iv": "HOLD",
-   "track": [
-    "miss",
-    "beat",
-    "miss",
-    "inline"
    ],
    "lrc_rating": null,
    "covered": false
@@ -29464,6 +30106,29 @@
   },
   {
    "date": "2026-11-03",
+   "ticker": "GIC",
+   "name": "Global Industrial Company",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.7,
+   "auto": true,
+   "t": "GIC",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "BUY",
+   "track": [
+    "miss",
+    "beat",
+    "miss",
+    "inline"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-03",
    "ticker": "RARE",
    "name": "Ultragenyx Pharmaceutical Inc.",
    "when": "Not stated",
@@ -29479,6 +30144,29 @@
    "track": [
     "miss",
     "miss",
+    "miss",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-03",
+   "ticker": "TSLX",
+   "name": "Sixth Street Specialty Lending, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.6,
+   "auto": true,
+   "t": "TSLX",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "beat",
     "miss",
     "beat"
    ],
@@ -29521,7 +30209,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "SELL",
    "track": [
     "miss",
     "miss",
@@ -29556,51 +30244,6 @@
   },
   {
    "date": "2026-11-03",
-   "ticker": "TSLX",
-   "name": "Sixth Street Specialty Lending, Inc.",
-   "when": "Not stated",
-   "period": "Expected date (market data feed)",
-   "eps_forecast": "",
-   "market_cap_bn": 1.6,
-   "auto": true,
-   "t": "TSLX",
-   "lists": [],
-   "idea": null,
-   "v": "HOLD",
-   "iv": "HOLD",
-   "track": [
-    "beat",
-    "beat",
-    "miss",
-    "beat"
-   ],
-   "lrc_rating": null,
-   "covered": false
-  },
-  {
-   "date": "2026-11-03",
-   "ticker": "ANAB",
-   "name": "AnaptysBio, Inc.",
-   "when": "Not stated",
-   "period": "Expected date (market data feed)",
-   "eps_forecast": "",
-   "market_cap_bn": 1.5,
-   "auto": true,
-   "t": "ANAB",
-   "lists": [],
-   "idea": null,
-   "v": "HOLD",
-   "iv": "HOLD",
-   "track": [
-    "beat",
-    "beat",
-    "beat"
-   ],
-   "lrc_rating": null,
-   "covered": false
-  },
-  {
-   "date": "2026-11-03",
    "ticker": "LIME",
    "name": "Neutron Holdings, Inc.",
    "when": "Not stated",
@@ -29614,6 +30257,29 @@
    "v": "HOLD",
    "iv": "HOLD",
    "track": [
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-03",
+   "ticker": "PAX",
+   "name": "Patria Investments Limited",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.5,
+   "auto": true,
+   "t": "PAX",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "beat",
+    "miss",
     "beat"
    ],
    "lrc_rating": null,
@@ -29644,20 +30310,19 @@
   },
   {
    "date": "2026-11-03",
-   "ticker": "CRCT",
-   "name": "Cricut, Inc.",
+   "ticker": "ANAB",
+   "name": "AnaptysBio, Inc.",
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 1.3,
+   "market_cap_bn": 1.5,
    "auto": true,
-   "t": "CRCT",
+   "t": "ANAB",
    "lists": [],
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
    "track": [
-    "beat",
     "beat",
     "beat",
     "beat"
@@ -29690,23 +30355,23 @@
   },
   {
    "date": "2026-11-03",
-   "ticker": "GDRX",
-   "name": "GoodRx Holdings, Inc.",
+   "ticker": "CRCT",
+   "name": "Cricut, Inc.",
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 1.2,
+   "market_cap_bn": 1.3,
    "auto": true,
-   "t": "GDRX",
+   "t": "CRCT",
    "lists": [],
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
    "track": [
-    "miss",
-    "miss",
-    "miss",
-    "inline"
+    "beat",
+    "beat",
+    "beat",
+    "beat"
    ],
    "lrc_rating": null,
    "covered": false
@@ -29759,6 +30424,52 @@
   },
   {
    "date": "2026-11-03",
+   "ticker": "GDRX",
+   "name": "GoodRx Holdings, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.2,
+   "auto": true,
+   "t": "GDRX",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "miss",
+    "miss",
+    "miss",
+    "inline"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-03",
+   "ticker": "BOW",
+   "name": "Bowhead Specialty Holdings Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.1,
+   "auto": true,
+   "t": "BOW",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "BUY",
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-03",
    "ticker": "CBLL",
    "name": "CeriBell, Inc.",
    "when": "Not stated",
@@ -29792,7 +30503,7 @@
    "t": "LGIH",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "SELL",
    "iv": "HOLD",
    "track": [
     "miss",
@@ -29800,24 +30511,6 @@
     "beat",
     "inline"
    ],
-   "lrc_rating": null,
-   "covered": false
-  },
-  {
-   "date": "2026-11-03",
-   "ticker": "WMK",
-   "name": "Weis Markets, Inc.",
-   "when": "Not stated",
-   "period": "Expected date (market data feed)",
-   "eps_forecast": "",
-   "market_cap_bn": null,
-   "auto": true,
-   "t": "WMK",
-   "lists": [],
-   "idea": null,
-   "v": "HOLD",
-   "iv": "HOLD",
-   "track": null,
    "lrc_rating": null,
    "covered": false
   },
@@ -29842,31 +30535,6 @@
    "track": [
     "miss",
     "beat",
-    "miss"
-   ]
-  },
-  {
-   "date": "2026-11-04",
-   "ticker": "TRMD",
-   "name": "TORM plc",
-   "when": "Before open",
-   "eps_forecast": "",
-   "eps_last_year": "$0.77",
-   "quarter": "Sep/2026",
-   "market_cap_bn": 4.2,
-   "covered": true,
-   "lrc_rating": null,
-   "t": "TRMD",
-   "lists": [
-    "Trading BUY"
-   ],
-   "idea": null,
-   "v": "STRONG BUY",
-   "iv": "BUY",
-   "track": [
-    "beat",
-    "inline",
-    "miss",
     "miss"
    ]
   },
@@ -29972,7 +30640,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 1.1,
+   "market_cap_bn": 1.2,
    "auto": true,
    "t": "REPX",
    "lists": [
@@ -30097,7 +30765,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "BUY",
    "track": [
     "beat",
     "beat",
@@ -30325,7 +30993,7 @@
    "t": "MFC",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "track": [
     "beat",
@@ -30547,8 +31215,8 @@
    "t": "SLF",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
-   "iv": "SELL",
+   "v": "BUY",
+   "iv": "HOLD",
    "track": [
     "beat",
     "beat",
@@ -30685,7 +31353,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "BUY",
+   "iv": "HOLD",
    "track": [
     "inline",
     "miss",
@@ -30754,7 +31422,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "SELL",
+   "iv": "HOLD",
    "track": [
     "beat",
     "beat",
@@ -30892,8 +31560,13 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
-   "track": null
+   "iv": "BUY",
+   "track": [
+    "beat",
+    "beat",
+    "miss",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-04",
@@ -31002,7 +31675,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "BUY",
    "track": [
     "beat",
     "beat",
@@ -31093,8 +31766,8 @@
    "t": "CRCL",
    "lists": [],
    "idea": null,
-   "v": "SELL",
-   "iv": "SELL",
+   "v": "HOLD",
+   "iv": "HOLD",
    "track": [
     "beat",
     "beat",
@@ -31196,8 +31869,8 @@
    "t": "ZBH",
    "lists": [],
    "idea": null,
-   "v": null,
-   "iv": null,
+   "v": "BUY",
+   "iv": "BUY",
    "track": [
     "beat",
     "inline",
@@ -31334,7 +32007,7 @@
    "t": "HST",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "BUY",
    "track": [
     "beat",
@@ -31403,9 +32076,14 @@
    "t": "PAAS",
    "lists": [],
    "idea": null,
-   "v": "SELL",
-   "iv": "HOLD",
-   "track": null
+   "v": "HOLD",
+   "iv": "BUY",
+   "track": [
+    "miss",
+    "beat",
+    "beat",
+    "miss"
+   ]
   },
   {
    "date": "2026-11-04",
@@ -31742,8 +32420,13 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
-   "track": null
+   "iv": "BUY",
+   "track": [
+    "miss",
+    "inline",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-04",
@@ -31914,7 +32597,7 @@
    "t": "SNAP",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "track": [
     "beat",
@@ -31961,7 +32644,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "BUY",
+   "iv": "HOLD",
    "track": [
     "beat",
     "beat",
@@ -32047,7 +32730,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "SELL",
    "track": [
     "miss",
     "beat",
@@ -32068,9 +32751,14 @@
    "t": "HL",
    "lists": [],
    "idea": null,
-   "v": "STRONG SELL",
+   "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "beat",
+    "beat",
+    "inline",
+    "miss"
+   ]
   },
   {
    "date": "2026-11-04",
@@ -32180,7 +32868,12 @@
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "beat",
+    "miss",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-04",
@@ -32242,7 +32935,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "BUY",
    "track": [
     "beat",
     "beat",
@@ -32333,9 +33026,14 @@
    "t": "VIAV",
    "lists": [],
    "idea": null,
-   "v": "SELL",
+   "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-04",
@@ -32420,8 +33118,14 @@
    "t": "Z",
    "lists": [],
    "idea": null,
-   "v": null,
-   "iv": null
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "inline",
+    "miss",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-04",
@@ -32437,8 +33141,14 @@
    "t": "ZG",
    "lists": [],
    "idea": null,
-   "v": null,
-   "iv": null
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "miss",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-04",
@@ -32547,7 +33257,12 @@
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-04",
@@ -32680,7 +33395,12 @@
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-04",
@@ -32765,9 +33485,14 @@
    "t": "BTG",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
-   "iv": "HOLD",
-   "track": null
+   "v": "BUY",
+   "iv": "STRONG BUY",
+   "track": [
+    "beat",
+    "miss",
+    "beat",
+    "miss"
+   ]
   },
   {
    "date": "2026-11-04",
@@ -32783,7 +33508,7 @@
    "t": "MUR",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "track": [
     "beat",
@@ -32829,8 +33554,14 @@
    "t": "YOU",
    "lists": [],
    "idea": null,
-   "v": null,
-   "iv": null
+   "v": "HOLD",
+   "iv": "STRONG BUY",
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-04",
@@ -33070,9 +33801,9 @@
    "lrc_rating": null,
    "t": "OGC",
    "lists": [],
-   "idea": null,
+   "idea": "Value & quality",
    "v": "HOLD",
-   "iv": "BUY",
+   "iv": "STRONG BUY",
    "track": null
   },
   {
@@ -33089,9 +33820,14 @@
    "t": "ORA",
    "lists": [],
    "idea": null,
-   "v": "SELL",
-   "iv": "HOLD",
-   "track": null
+   "v": "HOLD",
+   "iv": "SELL",
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-04",
@@ -33107,7 +33843,7 @@
    "t": "EXP",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "SELL",
    "iv": "HOLD",
    "track": [
     "miss",
@@ -33153,7 +33889,7 @@
    "lists": [],
    "idea": "Technical setups",
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "BUY",
    "track": [
     "beat",
     "beat",
@@ -33453,7 +34189,12 @@
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "beat",
+    "miss",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-04",
@@ -33515,9 +34256,14 @@
    "t": "HCC",
    "lists": [],
    "idea": null,
-   "v": "SELL",
+   "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "beat",
+    "miss",
+    "miss",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-04",
@@ -33607,6 +34353,29 @@
   },
   {
    "date": "2026-11-04",
+   "ticker": "TRMD",
+   "name": "TORM plc",
+   "when": "Before open",
+   "eps_forecast": "",
+   "eps_last_year": "$0.77",
+   "quarter": "Sep/2026",
+   "market_cap_bn": 4.2,
+   "covered": false,
+   "lrc_rating": null,
+   "t": "TRMD",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "BUY",
+   "track": [
+    "beat",
+    "inline",
+    "miss",
+    "miss"
+   ]
+  },
+  {
+   "date": "2026-11-04",
    "ticker": "CRK",
    "name": "Comstock Resources, Inc.",
    "when": "After close",
@@ -33620,7 +34389,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "SELL",
+   "iv": "HOLD",
    "track": [
     "beat",
     "beat",
@@ -33734,9 +34503,14 @@
    "t": "OTF",
    "lists": [],
    "idea": null,
-   "v": "STRONG SELL",
+   "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "inline"
+   ]
   },
   {
    "date": "2026-11-04",
@@ -33752,9 +34526,14 @@
    "t": "VSEC",
    "lists": [],
    "idea": null,
-   "v": "SELL",
+   "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-04",
@@ -33818,7 +34597,12 @@
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "miss",
+    "miss",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-04",
@@ -33834,8 +34618,8 @@
    "t": "IEP",
    "lists": [],
    "idea": null,
-   "v": "STRONG SELL",
-   "iv": "SELL",
+   "v": "HOLD",
+   "iv": "HOLD",
    "track": [
     "miss",
     "beat",
@@ -33858,7 +34642,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "SELL",
+   "iv": "HOLD",
    "track": [
     "beat",
     "beat",
@@ -33903,7 +34687,7 @@
    "t": "DHT",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "track": [
     "beat",
@@ -33928,7 +34712,12 @@
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-04",
@@ -34036,7 +34825,7 @@
    "t": "WBI",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "track": [
     "miss",
@@ -34287,7 +35076,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "BUY",
+   "iv": "HOLD",
    "track": [
     "beat",
     "beat",
@@ -34333,7 +35122,12 @@
    "idea": null,
    "v": "SELL",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "beat",
+    "miss",
+    "miss",
+    "miss"
+   ]
   },
   {
    "date": "2026-11-04",
@@ -34530,7 +35324,9 @@
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "beat"
+   ]
   },
   {
    "date": "2026-11-04",
@@ -34747,9 +35543,14 @@
    "t": "BTU",
    "lists": [],
    "idea": null,
-   "v": "STRONG SELL",
-   "iv": "STRONG SELL",
-   "track": null
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "miss",
+    "miss",
+    "miss"
+   ]
   },
   {
    "date": "2026-11-04",
@@ -34790,7 +35591,12 @@
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "beat",
+    "miss",
+    "beat",
+    "miss"
+   ]
   },
   {
    "date": "2026-11-04",
@@ -34807,8 +35613,13 @@
    "lists": [],
    "idea": null,
    "v": "SELL",
-   "iv": "HOLD",
-   "track": null
+   "iv": "SELL",
+   "track": [
+    "beat",
+    "miss",
+    "miss",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-04",
@@ -34847,9 +35658,14 @@
    "t": "HCI",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
-   "iv": "HOLD",
-   "track": null
+   "v": "BUY",
+   "iv": "BUY",
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-04",
@@ -34913,7 +35729,12 @@
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-04",
@@ -34953,7 +35774,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "SELL",
+   "iv": "HOLD",
    "track": [
     "beat",
     "miss",
@@ -34975,8 +35796,8 @@
    "t": "CLOV",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
-   "iv": "SELL",
+   "v": "BUY",
+   "iv": "HOLD",
    "track": [
     "miss",
     "beat",
@@ -35044,7 +35865,7 @@
    "t": "RAMP",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "track": [
     "beat",
@@ -35201,7 +36022,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "SELL",
+   "iv": "HOLD",
    "track": [
     "beat",
     "miss",
@@ -35223,9 +36044,14 @@
    "t": "VET",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "miss",
+    "miss",
+    "miss",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-04",
@@ -35252,6 +36078,29 @@
   },
   {
    "date": "2026-11-04",
+   "ticker": "LEU",
+   "name": "Centrus Energy Corp.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 2.2,
+   "auto": true,
+   "t": "LEU",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "miss",
+    "miss",
+    "beat",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-04",
    "ticker": "FLOC",
    "name": "Flowco Holdings Inc.",
    "when": "Not stated",
@@ -35275,29 +36124,6 @@
   },
   {
    "date": "2026-11-04",
-   "ticker": "LEU",
-   "name": "Centrus Energy Corp.",
-   "when": "Not stated",
-   "period": "Expected date (market data feed)",
-   "eps_forecast": "",
-   "market_cap_bn": 2.2,
-   "auto": true,
-   "t": "LEU",
-   "lists": [],
-   "idea": null,
-   "v": "HOLD",
-   "iv": "SELL",
-   "track": [
-    "miss",
-    "miss",
-    "beat",
-    "beat"
-   ],
-   "lrc_rating": null,
-   "covered": false
-  },
-  {
-   "date": "2026-11-04",
    "ticker": "ECPG",
    "name": "Encore Capital Group Inc",
    "when": "After close",
@@ -35310,8 +36136,8 @@
    "t": "ECPG",
    "lists": [],
    "idea": null,
-   "v": "BUY",
-   "iv": "BUY",
+   "v": "HOLD",
+   "iv": "HOLD",
    "track": [
     "beat",
     "beat",
@@ -35436,6 +36262,29 @@
   },
   {
    "date": "2026-11-04",
+   "ticker": "VIR",
+   "name": "Vir Biotechnology, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 2.0,
+   "auto": true,
+   "t": "VIR",
+   "lists": [],
+   "idea": null,
+   "v": "BUY",
+   "iv": "HOLD",
+   "track": [
+    "miss",
+    "beat",
+    "miss",
+    "miss"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-04",
    "ticker": "SMA",
    "name": "SmartStop Self Storage REIT, Inc.",
    "when": "Not stated",
@@ -35447,35 +36296,12 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "SELL",
+   "iv": "HOLD",
    "track": [
     "beat",
     "miss",
     "beat",
     "beat"
-   ],
-   "lrc_rating": null,
-   "covered": false
-  },
-  {
-   "date": "2026-11-04",
-   "ticker": "ATS",
-   "name": "ATS Corporation",
-   "when": "Not stated",
-   "period": "Expected date (market data feed)",
-   "eps_forecast": "",
-   "market_cap_bn": 1.9,
-   "auto": true,
-   "t": "ATS",
-   "lists": [],
-   "idea": null,
-   "v": "HOLD",
-   "iv": "HOLD",
-   "track": [
-    "beat",
-    "beat",
-    "miss",
-    "miss"
    ],
    "lrc_rating": null,
    "covered": false
@@ -35551,6 +36377,29 @@
   },
   {
    "date": "2026-11-04",
+   "ticker": "ATS",
+   "name": "ATS Corporation",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.9,
+   "auto": true,
+   "t": "ATS",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "beat",
+    "miss",
+    "miss"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-04",
    "ticker": "RUN",
    "name": "Sunrun Inc.",
    "when": "Not stated",
@@ -35574,22 +36423,22 @@
   },
   {
    "date": "2026-11-04",
-   "ticker": "ARDT",
-   "name": "Ardent Health, Inc.",
+   "ticker": "KMPR",
+   "name": "Kemper Corporation",
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
    "market_cap_bn": 1.7,
    "auto": true,
-   "t": "ARDT",
+   "t": "KMPR",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "track": [
-    "beat",
-    "beat",
-    "beat",
+    "miss",
+    "miss",
+    "miss",
     "beat"
    ],
    "lrc_rating": null,
@@ -35618,22 +36467,22 @@
   },
   {
    "date": "2026-11-04",
-   "ticker": "KMPR",
-   "name": "Kemper Corporation",
+   "ticker": "ARDT",
+   "name": "Ardent Health, Inc.",
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
    "market_cap_bn": 1.7,
    "auto": true,
-   "t": "KMPR",
+   "t": "ARDT",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "track": [
-    "miss",
-    "miss",
-    "miss",
+    "beat",
+    "beat",
+    "beat",
     "beat"
    ],
    "lrc_rating": null,
@@ -35664,22 +36513,22 @@
   },
   {
    "date": "2026-11-04",
-   "ticker": "ALNT",
-   "name": "Allient Inc.",
+   "ticker": "NOMD",
+   "name": "Nomad Foods Limited",
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
    "market_cap_bn": 1.6,
    "auto": true,
-   "t": "ALNT",
+   "t": "NOMD",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "track": [
     "beat",
+    "inline",
     "beat",
-    "miss",
     "beat"
    ],
    "lrc_rating": null,
@@ -35710,22 +36559,22 @@
   },
   {
    "date": "2026-11-04",
-   "ticker": "NOMD",
-   "name": "Nomad Foods Limited",
+   "ticker": "ALNT",
+   "name": "Allient Inc.",
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
    "market_cap_bn": 1.6,
    "auto": true,
-   "t": "NOMD",
+   "t": "ALNT",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "track": [
     "beat",
-    "inline",
     "beat",
+    "miss",
     "beat"
    ],
    "lrc_rating": null,
@@ -35741,6 +36590,117 @@
    "market_cap_bn": 1.6,
    "auto": true,
    "t": "NUVB",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "miss",
+    "miss",
+    "miss"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-04",
+   "ticker": "TRIN",
+   "name": "Trinity Capital Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.6,
+   "auto": true,
+   "t": "TRIN",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "miss",
+    "inline",
+    "beat",
+    "miss"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-04",
+   "ticker": "NRP",
+   "name": "Natural Resource Partners L.P.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.6,
+   "auto": true,
+   "t": "NRP",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "miss",
+    "miss",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-04",
+   "ticker": "PAHC",
+   "name": "Phibro Animal Health Corporation",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.6,
+   "auto": true,
+   "t": "PAHC",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-04",
+   "ticker": "LILA",
+   "name": "Liberty Latin America Ltd.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.5,
+   "auto": true,
+   "t": "LILA",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-04",
+   "ticker": "LILAK",
+   "name": "Liberty Latin America Ltd.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.5,
+   "auto": true,
+   "t": "LILAK",
    "lists": [],
    "idea": null,
    "v": "HOLD",
@@ -35779,29 +36739,6 @@
   },
   {
    "date": "2026-11-04",
-   "ticker": "EFC",
-   "name": "Ellington Financial Inc.",
-   "when": "Not stated",
-   "period": "Expected date (market data feed)",
-   "eps_forecast": "",
-   "market_cap_bn": 1.5,
-   "auto": true,
-   "t": "EFC",
-   "lists": [],
-   "idea": null,
-   "v": "HOLD",
-   "iv": "HOLD",
-   "track": [
-    "beat",
-    "beat",
-    "beat",
-    "beat"
-   ],
-   "lrc_rating": null,
-   "covered": false
-  },
-  {
-   "date": "2026-11-04",
    "ticker": "INVA",
    "name": "Innoviva, Inc.",
    "when": "Not stated",
@@ -35825,19 +36762,22 @@
   },
   {
    "date": "2026-11-04",
-   "ticker": "LILA",
-   "name": "Liberty Latin America Ltd.",
+   "ticker": "EFC",
+   "name": "Ellington Financial Inc.",
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
    "market_cap_bn": 1.5,
    "auto": true,
-   "t": "LILA",
+   "t": "EFC",
    "lists": [],
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
    "track": [
+    "beat",
+    "beat",
+    "beat",
     "beat"
    ],
    "lrc_rating": null,
@@ -35845,14 +36785,36 @@
   },
   {
    "date": "2026-11-04",
-   "ticker": "LILAK",
-   "name": "Liberty Latin America Ltd.",
+   "ticker": "XZO",
+   "name": "Exzeo Group, Inc.",
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
    "market_cap_bn": 1.5,
    "auto": true,
-   "t": "LILAK",
+   "t": "XZO",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "BUY",
+   "track": [
+    "inline",
+    "beat",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-04",
+   "ticker": "TYRA",
+   "name": "Tyra Biosciences, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.5,
+   "auto": true,
+   "t": "TYRA",
    "lists": [],
    "idea": null,
    "v": "HOLD",
@@ -35914,74 +36876,6 @@
   },
   {
    "date": "2026-11-04",
-   "ticker": "TRIN",
-   "name": "Trinity Capital Inc.",
-   "when": "Not stated",
-   "period": "Expected date (market data feed)",
-   "eps_forecast": "",
-   "market_cap_bn": 1.5,
-   "auto": true,
-   "t": "TRIN",
-   "lists": [],
-   "idea": null,
-   "v": "HOLD",
-   "iv": "HOLD",
-   "track": [
-    "miss",
-    "inline",
-    "beat",
-    "miss"
-   ],
-   "lrc_rating": null,
-   "covered": false
-  },
-  {
-   "date": "2026-11-04",
-   "ticker": "TYRA",
-   "name": "Tyra Biosciences, Inc.",
-   "when": "Not stated",
-   "period": "Expected date (market data feed)",
-   "eps_forecast": "",
-   "market_cap_bn": 1.5,
-   "auto": true,
-   "t": "TYRA",
-   "lists": [],
-   "idea": null,
-   "v": "HOLD",
-   "iv": "HOLD",
-   "track": [
-    "beat",
-    "miss",
-    "miss",
-    "miss"
-   ],
-   "lrc_rating": null,
-   "covered": false
-  },
-  {
-   "date": "2026-11-04",
-   "ticker": "XZO",
-   "name": "Exzeo Group, Inc.",
-   "when": "Not stated",
-   "period": "Expected date (market data feed)",
-   "eps_forecast": "",
-   "market_cap_bn": 1.5,
-   "auto": true,
-   "t": "XZO",
-   "lists": [],
-   "idea": null,
-   "v": "HOLD",
-   "iv": "BUY",
-   "track": [
-    "inline",
-    "beat",
-    "beat"
-   ],
-   "lrc_rating": null,
-   "covered": false
-  },
-  {
-   "date": "2026-11-04",
    "ticker": "TSHA",
    "name": "Taysha Gene Therapies, Inc.",
    "when": "Not stated",
@@ -35998,29 +36892,6 @@
     "beat",
     "beat",
     "miss",
-    "miss"
-   ],
-   "lrc_rating": null,
-   "covered": false
-  },
-  {
-   "date": "2026-11-04",
-   "ticker": "ADNT",
-   "name": "Adient plc",
-   "when": "Not stated",
-   "period": "Expected date (market data feed)",
-   "eps_forecast": "",
-   "market_cap_bn": 1.3,
-   "auto": true,
-   "t": "ADNT",
-   "lists": [],
-   "idea": null,
-   "v": "HOLD",
-   "iv": "HOLD",
-   "track": [
-    "miss",
-    "beat",
-    "beat",
     "miss"
    ],
    "lrc_rating": null,
@@ -36051,6 +36922,29 @@
   },
   {
    "date": "2026-11-04",
+   "ticker": "WOLF",
+   "name": "Wolfspeed, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.3,
+   "auto": true,
+   "t": "WOLF",
+   "lists": [],
+   "idea": null,
+   "v": "SELL",
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "miss",
+    "beat",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-04",
    "ticker": "CDRE",
    "name": "Cadre Holdings, Inc.",
    "when": "Not stated",
@@ -36066,29 +36960,6 @@
    "track": [
     "beat",
     "miss",
-    "beat",
-    "beat"
-   ],
-   "lrc_rating": null,
-   "covered": false
-  },
-  {
-   "date": "2026-11-04",
-   "ticker": "EYE",
-   "name": "National Vision Holdings, Inc.",
-   "when": "Not stated",
-   "period": "Expected date (market data feed)",
-   "eps_forecast": "",
-   "market_cap_bn": 1.3,
-   "auto": true,
-   "t": "EYE",
-   "lists": [],
-   "idea": null,
-   "v": "HOLD",
-   "iv": "HOLD",
-   "track": [
-    "inline",
-    "beat",
     "beat",
     "beat"
    ],
@@ -36120,6 +36991,121 @@
   },
   {
    "date": "2026-11-04",
+   "ticker": "USPH",
+   "name": "U.S. Physical Therapy, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.3,
+   "auto": true,
+   "t": "USPH",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "inline",
+    "inline",
+    "miss",
+    "miss"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-04",
+   "ticker": "ADNT",
+   "name": "Adient plc",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.3,
+   "auto": true,
+   "t": "ADNT",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "miss",
+    "beat",
+    "beat",
+    "miss"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-04",
+   "ticker": "EYE",
+   "name": "National Vision Holdings, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.3,
+   "auto": true,
+   "t": "EYE",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "inline",
+    "beat",
+    "beat",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-04",
+   "ticker": "GTM",
+   "name": "ZoomInfo Technologies Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.3,
+   "auto": true,
+   "t": "GTM",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-04",
+   "ticker": "GT",
+   "name": "The Goodyear Tire & Rubber Company",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.3,
+   "auto": true,
+   "t": "GT",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "miss",
+    "beat",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-04",
    "ticker": "SHLS",
    "name": "Shoals Technologies Group, Inc.",
    "when": "Not stated",
@@ -36137,52 +37123,6 @@
     "miss",
     "beat",
     "beat"
-   ],
-   "lrc_rating": null,
-   "covered": false
-  },
-  {
-   "date": "2026-11-04",
-   "ticker": "WOLF",
-   "name": "Wolfspeed, Inc.",
-   "when": "Not stated",
-   "period": "Expected date (market data feed)",
-   "eps_forecast": "",
-   "market_cap_bn": 1.3,
-   "auto": true,
-   "t": "WOLF",
-   "lists": [],
-   "idea": null,
-   "v": "SELL",
-   "iv": "HOLD",
-   "track": [
-    "beat",
-    "miss",
-    "beat",
-    "beat"
-   ],
-   "lrc_rating": null,
-   "covered": false
-  },
-  {
-   "date": "2026-11-04",
-   "ticker": "GOLD",
-   "name": "Gold.com, Inc.",
-   "when": "Not stated",
-   "period": "Expected date (market data feed)",
-   "eps_forecast": "",
-   "market_cap_bn": 1.2,
-   "auto": true,
-   "t": "GOLD",
-   "lists": [],
-   "idea": null,
-   "v": "HOLD",
-   "iv": "HOLD",
-   "track": [
-    "miss",
-    "inline",
-    "beat",
-    "miss"
    ],
    "lrc_rating": null,
    "covered": false
@@ -36207,29 +37147,6 @@
   },
   {
    "date": "2026-11-04",
-   "ticker": "RPD",
-   "name": "Rapid7, Inc.",
-   "when": "Not stated",
-   "period": "Expected date (market data feed)",
-   "eps_forecast": "",
-   "market_cap_bn": 1.2,
-   "auto": true,
-   "t": "RPD",
-   "lists": [],
-   "idea": null,
-   "v": "HOLD",
-   "iv": "HOLD",
-   "track": [
-    "beat",
-    "beat",
-    "beat",
-    "beat"
-   ],
-   "lrc_rating": null,
-   "covered": false
-  },
-  {
-   "date": "2026-11-04",
    "ticker": "STAA",
    "name": "STAAR Surgical Company",
    "when": "Not stated",
@@ -36245,6 +37162,29 @@
    "track": [
     "beat",
     "miss",
+    "beat",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-04",
+   "ticker": "RPD",
+   "name": "Rapid7, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.2,
+   "auto": true,
+   "t": "RPD",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "beat",
     "beat",
     "beat"
    ],
@@ -36276,22 +37216,68 @@
   },
   {
    "date": "2026-11-04",
-   "ticker": "DLX",
-   "name": "Deluxe Corporation",
+   "ticker": "GOLD",
+   "name": "Gold.com, Inc.",
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 1.1,
+   "market_cap_bn": 1.2,
    "auto": true,
-   "t": "DLX",
+   "t": "GOLD",
    "lists": [],
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
    "track": [
+    "miss",
+    "inline",
     "beat",
+    "miss"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-04",
+   "ticker": "PRCT",
+   "name": "PROCEPT BioRobotics Corporation",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.1,
+   "auto": true,
+   "t": "PRCT",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "SELL",
+   "track": [
     "beat",
-    "beat",
+    "miss",
+    "inline",
+    "miss"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-04",
+   "ticker": "LZ",
+   "name": "LegalZoom.com, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.1,
+   "auto": true,
+   "t": "LZ",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "miss",
+    "miss",
+    "miss",
     "beat"
    ],
    "lrc_rating": null,
@@ -36322,24 +37308,19 @@
   },
   {
    "date": "2026-11-04",
-   "ticker": "LZ",
-   "name": "LegalZoom.com, Inc.",
+   "ticker": "NHP",
+   "name": "National Healthcare Properties, Inc.",
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
    "market_cap_bn": 1.1,
    "auto": true,
-   "t": "LZ",
+   "t": "NHP",
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
-   "track": [
-    "miss",
-    "miss",
-    "miss",
-    "beat"
-   ],
+   "iv": "SELL",
+   "track": null,
    "lrc_rating": null,
    "covered": false
   },
@@ -36368,41 +37349,23 @@
   },
   {
    "date": "2026-11-04",
-   "ticker": "NHP",
-   "name": "National Healthcare Properties, Inc.",
+   "ticker": "DLX",
+   "name": "Deluxe Corporation",
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
    "market_cap_bn": 1.1,
    "auto": true,
-   "t": "NHP",
+   "t": "DLX",
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "SELL",
-   "track": null,
-   "lrc_rating": null,
-   "covered": false
-  },
-  {
-   "date": "2026-11-04",
-   "ticker": "PRCT",
-   "name": "PROCEPT BioRobotics Corporation",
-   "when": "Not stated",
-   "period": "Expected date (market data feed)",
-   "eps_forecast": "",
-   "market_cap_bn": 1.1,
-   "auto": true,
-   "t": "PRCT",
-   "lists": [],
-   "idea": null,
-   "v": "HOLD",
-   "iv": "SELL",
+   "iv": "HOLD",
    "track": [
     "beat",
-    "miss",
-    "inline",
-    "miss"
+    "beat",
+    "beat",
+    "beat"
    ],
    "lrc_rating": null,
    "covered": false
@@ -36472,24 +37435,6 @@
    "covered": false
   },
   {
-   "date": "2026-11-04",
-   "ticker": "NRP",
-   "name": "Natural Resource Partners L.P.",
-   "when": "Not stated",
-   "period": "Expected date (market data feed)",
-   "eps_forecast": "",
-   "market_cap_bn": null,
-   "auto": true,
-   "t": "NRP",
-   "lists": [],
-   "idea": null,
-   "v": "HOLD",
-   "iv": "HOLD",
-   "track": null,
-   "lrc_rating": null,
-   "covered": false
-  },
-  {
    "date": "2026-11-05",
    "ticker": "CG",
    "name": "The Carlyle Group Inc.",
@@ -36512,6 +37457,31 @@
     "beat",
     "miss",
     "beat"
+   ]
+  },
+  {
+   "date": "2026-11-05",
+   "ticker": "WTM",
+   "name": "White Mountains Insurance Group, Ltd.",
+   "when": "Not stated",
+   "eps_forecast": "",
+   "eps_last_year": "$72.21",
+   "quarter": "Sep/2026",
+   "market_cap_bn": 5.3,
+   "covered": true,
+   "lrc_rating": null,
+   "t": "WTM",
+   "lists": [
+    "Investment BUY"
+   ],
+   "idea": "Score leaders",
+   "v": "STRONG BUY",
+   "iv": "BUY",
+   "track": [
+    "beat",
+    "miss",
+    "miss",
+    "miss"
    ]
   },
   {
@@ -36668,8 +37638,8 @@
    "t": "CNQ",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
-   "iv": "HOLD",
+   "v": "BUY",
+   "iv": "BUY",
    "track": [
     "beat",
     "beat",
@@ -36962,7 +37932,7 @@
    "t": "NTRA",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "track": [
     "miss",
@@ -37194,7 +38164,12 @@
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "beat",
+    "miss",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-05",
@@ -37343,8 +38318,8 @@
    "t": "ZTS",
    "lists": [],
    "idea": null,
-   "v": null,
-   "iv": null,
+   "v": "HOLD",
+   "iv": "HOLD",
    "track": [
     "beat",
     "beat",
@@ -37413,8 +38388,13 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
-   "track": null
+   "iv": "SELL",
+   "track": [
+    "miss",
+    "inline",
+    "beat",
+    "miss"
+   ]
   },
   {
    "date": "2026-11-05",
@@ -37500,7 +38480,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "BUY",
+   "iv": "HOLD",
    "track": [
     "inline",
     "beat",
@@ -37522,7 +38502,7 @@
    "t": "AFRM",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "track": [
     "miss",
@@ -37632,8 +38612,13 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
-   "track": null
+   "iv": "SELL",
+   "track": [
+    "beat",
+    "beat",
+    "miss",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-05",
@@ -37857,7 +38842,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "BUY",
    "track": [
     "miss",
     "beat",
@@ -37902,7 +38887,7 @@
    "t": "JHX",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "track": [
     "beat",
@@ -37949,7 +38934,12 @@
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "beat",
+    "miss",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-05",
@@ -37966,7 +38956,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "BUY",
+   "iv": "HOLD",
    "track": [
     "beat",
     "miss",
@@ -38103,7 +39093,7 @@
    "t": "FROG",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "track": [
     "beat",
@@ -38128,7 +39118,12 @@
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "inline",
+    "beat",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-05",
@@ -38228,7 +39223,7 @@
    "t": "TXRH",
    "lists": [],
    "idea": null,
-   "v": "SELL",
+   "v": "HOLD",
    "iv": "SELL",
    "track": [
     "miss",
@@ -38274,8 +39269,13 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
-   "track": null
+   "iv": "SELL",
+   "track": [
+    "beat",
+    "miss",
+    "miss",
+    "miss"
+   ]
   },
   {
    "date": "2026-11-05",
@@ -38449,9 +39449,14 @@
    "t": "OSCR",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
-   "iv": "HOLD",
-   "track": null
+   "v": "BUY",
+   "iv": "BUY",
+   "track": [
+    "beat",
+    "miss",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-05",
@@ -38491,7 +39496,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "BUY",
+   "iv": "STRONG BUY",
    "track": [
     "beat",
     "beat",
@@ -38515,7 +39520,12 @@
    "idea": null,
    "v": "HOLD",
    "iv": "BUY",
-   "track": null
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-05",
@@ -38577,9 +39587,14 @@
    "t": "VIRT",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
-   "iv": "HOLD",
-   "track": null
+   "v": "BUY",
+   "iv": "BUY",
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-05",
@@ -38797,7 +39812,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "BUY",
+   "iv": "HOLD",
    "track": [
     "miss",
     "beat",
@@ -38888,9 +39903,14 @@
    "t": "OTEX",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
-   "iv": "HOLD",
-   "track": null
+   "v": "BUY",
+   "iv": "BUY",
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-05",
@@ -38975,7 +39995,7 @@
    "t": "AUGO",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "BUY",
    "track": [
     "miss",
@@ -39114,7 +40134,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "BUY",
    "track": [
     "miss",
     "miss",
@@ -39205,7 +40225,7 @@
    "t": "INSW",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "BUY",
    "track": [
     "beat",
@@ -39296,8 +40316,8 @@
    "lrc_rating": null,
    "t": "ACIW",
    "lists": [],
-   "idea": "Technical setups",
-   "v": "BUY",
+   "idea": null,
+   "v": "HOLD",
    "iv": "BUY",
    "track": [
     "beat",
@@ -39322,7 +40342,12 @@
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-05",
@@ -39362,8 +40387,13 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "SELL",
-   "track": null
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-05",
@@ -39380,35 +40410,12 @@
    "lists": [],
    "idea": null,
    "v": "SELL",
-   "iv": "SELL",
+   "iv": "HOLD",
    "track": [
     "beat",
     "beat",
     "miss",
     "beat"
-   ]
-  },
-  {
-   "date": "2026-11-05",
-   "ticker": "WTM",
-   "name": "White Mountains Insurance Group, Ltd.",
-   "when": "Not stated",
-   "eps_forecast": "",
-   "eps_last_year": "$72.21",
-   "quarter": "Sep/2026",
-   "market_cap_bn": 5.3,
-   "covered": false,
-   "lrc_rating": null,
-   "t": "WTM",
-   "lists": [],
-   "idea": "Score leaders",
-   "v": "HOLD",
-   "iv": "HOLD",
-   "track": [
-    "beat",
-    "miss",
-    "miss",
-    "miss"
    ]
   },
   {
@@ -39587,7 +40594,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "BUY",
    "track": [
     "inline",
     "beat",
@@ -39701,8 +40708,13 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
-   "track": null
+   "iv": "BUY",
+   "track": [
+    "beat",
+    "beat",
+    "inline",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-05",
@@ -39743,7 +40755,12 @@
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-05",
@@ -39781,7 +40798,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "SELL",
    "track": [
     "beat",
     "beat",
@@ -39897,7 +40914,12 @@
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "beat",
+    "miss",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-05",
@@ -40115,8 +41137,8 @@
    "t": "IRTC",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
-   "iv": "SELL",
+   "v": "BUY",
+   "iv": "HOLD",
    "track": [
     "beat",
     "beat",
@@ -40184,9 +41206,14 @@
    "t": "BTE",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
-   "iv": "STRONG SELL",
-   "track": null
+   "v": "BUY",
+   "iv": "HOLD",
+   "track": [
+    "miss",
+    "miss",
+    "miss",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-05",
@@ -40294,7 +41321,7 @@
    "t": "FA",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "track": [
     "beat",
@@ -40363,7 +41390,7 @@
    "t": "LION",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "track": [
     "miss",
@@ -40524,7 +41551,7 @@
    "t": "ACLS",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "SELL",
    "iv": "HOLD",
    "track": [
     "beat",
@@ -40547,9 +41574,14 @@
    "t": "USAR",
    "lists": [],
    "idea": null,
-   "v": "STRONG SELL",
+   "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "miss",
+    "miss",
+    "beat",
+    "miss"
+   ]
   },
   {
    "date": "2026-11-05",
@@ -40956,7 +41988,7 @@
    "t": "FIVN",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "track": [
     "beat",
@@ -41071,8 +42103,14 @@
    "t": "ZLAB",
    "lists": [],
    "idea": null,
-   "v": null,
-   "iv": null
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "miss",
+    "miss",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-05",
@@ -41225,7 +42263,7 @@
    "t": "PLUS",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "track": [
     "beat",
@@ -41250,7 +42288,12 @@
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-05",
@@ -41267,7 +42310,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "SELL",
+   "iv": "HOLD",
    "track": [
     "beat",
     "beat",
@@ -41334,7 +42377,12 @@
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "miss",
+    "beat",
+    "beat",
+    "miss"
+   ]
   },
   {
    "date": "2026-11-05",
@@ -41419,9 +42467,14 @@
    "t": "PBH",
    "lists": [],
    "idea": null,
-   "v": "STRONG SELL",
+   "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "miss",
+    "miss",
+    "miss",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-05",
@@ -41438,8 +42491,13 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
-   "track": null
+   "iv": "STRONG BUY",
+   "track": [
+    "beat",
+    "miss",
+    "beat",
+    "miss"
+   ]
   },
   {
    "date": "2026-11-05",
@@ -41518,9 +42576,14 @@
    "t": "HLIO",
    "lists": [],
    "idea": null,
-   "v": "SELL",
+   "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-05",
@@ -41538,7 +42601,12 @@
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-05",
@@ -41623,7 +42691,7 @@
    "t": "GCT",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "BUY",
    "track": [
     "beat",
@@ -41716,7 +42784,11 @@
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "beat",
+    "beat",
+    "inline"
+   ]
   },
   {
    "date": "2026-11-05",
@@ -41847,9 +42919,14 @@
    "t": "VERA",
    "lists": [],
    "idea": null,
-   "v": "STRONG SELL",
+   "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "miss",
+    "miss",
+    "miss",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-05",
@@ -41888,8 +42965,14 @@
    "t": "ZYME",
    "lists": [],
    "idea": null,
-   "v": null,
-   "iv": null
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "miss",
+    "miss",
+    "miss"
+   ]
   },
   {
    "date": "2026-11-05",
@@ -41906,25 +42989,53 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
-   "track": null
+   "iv": "SELL",
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "miss"
+   ]
   },
   {
    "date": "2026-11-05",
-   "ticker": "ATEN",
-   "name": "A10 Networks, Inc.",
+   "ticker": "SRPT",
+   "name": "Sarepta Therapeutics, Inc.",
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
    "market_cap_bn": 2.0,
    "auto": true,
-   "t": "ATEN",
+   "t": "SRPT",
    "lists": [],
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
    "track": [
     "beat",
+    "miss",
+    "beat",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-05",
+   "ticker": "PENN",
+   "name": "PENN Entertainment, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 2.0,
+   "auto": true,
+   "t": "PENN",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "miss",
     "beat",
     "beat",
     "beat"
@@ -41957,22 +43068,22 @@
   },
   {
    "date": "2026-11-05",
-   "ticker": "PENN",
-   "name": "PENN Entertainment, Inc.",
+   "ticker": "ZD",
+   "name": "Ziff Davis, Inc.",
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
    "market_cap_bn": 2.0,
    "auto": true,
-   "t": "PENN",
+   "t": "ZD",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "track": [
     "miss",
-    "beat",
-    "beat",
+    "miss",
+    "miss",
     "beat"
    ],
    "lrc_rating": null,
@@ -41980,37 +43091,14 @@
   },
   {
    "date": "2026-11-05",
-   "ticker": "SRPT",
-   "name": "Sarepta Therapeutics, Inc.",
+   "ticker": "ATEN",
+   "name": "A10 Networks, Inc.",
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
    "market_cap_bn": 2.0,
    "auto": true,
-   "t": "SRPT",
-   "lists": [],
-   "idea": null,
-   "v": "HOLD",
-   "iv": "SELL",
-   "track": [
-    "beat",
-    "miss",
-    "beat",
-    "beat"
-   ],
-   "lrc_rating": null,
-   "covered": false
-  },
-  {
-   "date": "2026-11-05",
-   "ticker": "PDFS",
-   "name": "PDF Solutions, Inc.",
-   "when": "Not stated",
-   "period": "Expected date (market data feed)",
-   "eps_forecast": "",
-   "market_cap_bn": 1.9,
-   "auto": true,
-   "t": "PDFS",
+   "t": "ATEN",
    "lists": [],
    "idea": null,
    "v": "HOLD",
@@ -42019,7 +43107,7 @@
     "beat",
     "beat",
     "beat",
-    "inline"
+    "beat"
    ],
    "lrc_rating": null,
    "covered": false
@@ -42092,6 +43180,29 @@
   },
   {
    "date": "2026-11-05",
+   "ticker": "PDFS",
+   "name": "PDF Solutions, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.9,
+   "auto": true,
+   "t": "PDFS",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "inline"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-05",
    "ticker": "XRAY",
    "name": "DENTSPLY SIRONA Inc.",
    "when": "Not stated",
@@ -42108,29 +43219,6 @@
     "miss",
     "miss",
     "miss",
-    "beat"
-   ],
-   "lrc_rating": null,
-   "covered": false
-  },
-  {
-   "date": "2026-11-05",
-   "ticker": "AMN",
-   "name": "AMN Healthcare Services, Inc.",
-   "when": "Not stated",
-   "period": "Expected date (market data feed)",
-   "eps_forecast": "",
-   "market_cap_bn": 1.8,
-   "auto": true,
-   "t": "AMN",
-   "lists": [],
-   "idea": null,
-   "v": "HOLD",
-   "iv": "HOLD",
-   "track": [
-    "beat",
-    "miss",
-    "beat",
     "beat"
    ],
    "lrc_rating": null,
@@ -42161,22 +43249,23 @@
   },
   {
    "date": "2026-11-05",
-   "ticker": "MAZE",
-   "name": "Maze Therapeutics, Inc.",
+   "ticker": "AMN",
+   "name": "AMN Healthcare Services, Inc.",
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
    "market_cap_bn": 1.8,
    "auto": true,
-   "t": "MAZE",
+   "t": "AMN",
    "lists": [],
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
    "track": [
     "beat",
+    "miss",
     "beat",
-    "miss"
+    "beat"
    ],
    "lrc_rating": null,
    "covered": false
@@ -42206,23 +43295,91 @@
   },
   {
    "date": "2026-11-05",
-   "ticker": "CERT",
-   "name": "Certara, Inc.",
+   "ticker": "MAZE",
+   "name": "Maze Therapeutics, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.8,
+   "auto": true,
+   "t": "MAZE",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "beat",
+    "miss"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-05",
+   "ticker": "NTLA",
+   "name": "Intellia Therapeutics, Inc.",
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
    "market_cap_bn": 1.7,
    "auto": true,
-   "t": "CERT",
+   "t": "NTLA",
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "SELL",
+   "iv": "HOLD",
    "track": [
     "beat",
-    "miss",
-    "miss",
+    "beat",
+    "beat",
     "miss"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-05",
+   "ticker": "TGLS",
+   "name": "Tecnoglass Holdings Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.7,
+   "auto": true,
+   "t": "TGLS",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "miss",
+    "miss",
+    "beat",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-05",
+   "ticker": "ICFI",
+   "name": "ICF International, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.7,
+   "auto": true,
+   "t": "ICFI",
+   "lists": [],
+   "idea": null,
+   "v": "BUY",
+   "iv": "HOLD",
+   "track": [
+    "miss",
+    "miss",
+    "miss",
+    "beat"
    ],
    "lrc_rating": null,
    "covered": false
@@ -42273,45 +43430,22 @@
   },
   {
    "date": "2026-11-05",
-   "ticker": "ICFI",
-   "name": "ICF International, Inc.",
+   "ticker": "CERT",
+   "name": "Certara, Inc.",
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
    "market_cap_bn": 1.7,
    "auto": true,
-   "t": "ICFI",
-   "lists": [],
-   "idea": null,
-   "v": "BUY",
-   "iv": "HOLD",
-   "track": [
-    "miss",
-    "miss",
-    "miss",
-    "beat"
-   ],
-   "lrc_rating": null,
-   "covered": false
-  },
-  {
-   "date": "2026-11-05",
-   "ticker": "NTLA",
-   "name": "Intellia Therapeutics, Inc.",
-   "when": "Not stated",
-   "period": "Expected date (market data feed)",
-   "eps_forecast": "",
-   "market_cap_bn": 1.7,
-   "auto": true,
-   "t": "NTLA",
+   "t": "CERT",
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "SELL",
    "track": [
     "beat",
-    "beat",
-    "beat",
+    "miss",
+    "miss",
     "miss"
    ],
    "lrc_rating": null,
@@ -42333,52 +43467,6 @@
    "iv": "HOLD",
    "track": [
     "miss",
-    "beat",
-    "beat",
-    "beat"
-   ],
-   "lrc_rating": null,
-   "covered": false
-  },
-  {
-   "date": "2026-11-05",
-   "ticker": "TGLS",
-   "name": "Tecnoglass Holdings Inc.",
-   "when": "Not stated",
-   "period": "Expected date (market data feed)",
-   "eps_forecast": "",
-   "market_cap_bn": 1.7,
-   "auto": true,
-   "t": "TGLS",
-   "lists": [],
-   "idea": null,
-   "v": "HOLD",
-   "iv": "HOLD",
-   "track": [
-    "miss",
-    "miss",
-    "beat",
-    "beat"
-   ],
-   "lrc_rating": null,
-   "covered": false
-  },
-  {
-   "date": "2026-11-05",
-   "ticker": "ANIP",
-   "name": "ANI Pharmaceuticals, Inc.",
-   "when": "Not stated",
-   "period": "Expected date (market data feed)",
-   "eps_forecast": "",
-   "market_cap_bn": 1.6,
-   "auto": true,
-   "t": "ANIP",
-   "lists": [],
-   "idea": null,
-   "v": "HOLD",
-   "iv": "HOLD",
-   "track": [
-    "beat",
     "beat",
     "beat",
     "beat"
@@ -42411,6 +43499,52 @@
   },
   {
    "date": "2026-11-05",
+   "ticker": "IMCR",
+   "name": "Immunocore Holdings plc",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.6,
+   "auto": true,
+   "t": "IMCR",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "miss",
+    "beat",
+    "miss"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-05",
+   "ticker": "ANIP",
+   "name": "ANI Pharmaceuticals, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.6,
+   "auto": true,
+   "t": "ANIP",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-05",
    "ticker": "DSGR",
    "name": "Distribution Solutions Group, Inc.",
    "when": "Not stated",
@@ -42428,29 +43562,6 @@
     "miss",
     "miss",
     "beat"
-   ],
-   "lrc_rating": null,
-   "covered": false
-  },
-  {
-   "date": "2026-11-05",
-   "ticker": "IMCR",
-   "name": "Immunocore Holdings plc",
-   "when": "Not stated",
-   "period": "Expected date (market data feed)",
-   "eps_forecast": "",
-   "market_cap_bn": 1.6,
-   "auto": true,
-   "t": "IMCR",
-   "lists": [],
-   "idea": null,
-   "v": "HOLD",
-   "iv": "SELL",
-   "track": [
-    "beat",
-    "miss",
-    "beat",
-    "miss"
    ],
    "lrc_rating": null,
    "covered": false
@@ -42497,6 +43608,29 @@
   },
   {
    "date": "2026-11-05",
+   "ticker": "VISN",
+   "name": "Vistance Networks, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.5,
+   "auto": true,
+   "t": "VISN",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "miss"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-05",
    "ticker": "CRSR",
    "name": "Corsair Gaming, Inc.",
    "when": "Not stated",
@@ -42520,21 +43654,21 @@
   },
   {
    "date": "2026-11-05",
-   "ticker": "ARLO",
-   "name": "Arlo Technologies, Inc.",
+   "ticker": "PCRX",
+   "name": "Pacira BioSciences, Inc.",
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 1.4,
+   "market_cap_bn": 1.5,
    "auto": true,
-   "t": "ARLO",
+   "t": "PCRX",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "track": [
     "beat",
-    "beat",
+    "miss",
     "beat",
     "beat"
    ],
@@ -42543,65 +43677,22 @@
   },
   {
    "date": "2026-11-05",
-   "ticker": "DMRA",
-   "name": "Damora Therapeutics, Inc.",
+   "ticker": "MLCO",
+   "name": "Melco Resorts & Entertainment Limited",
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
    "market_cap_bn": 1.4,
    "auto": true,
-   "t": "DMRA",
+   "t": "MLCO",
    "lists": [],
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
    "track": [
-    "miss"
-   ],
-   "lrc_rating": null,
-   "covered": false
-  },
-  {
-   "date": "2026-11-05",
-   "ticker": "GHRS",
-   "name": "GH Research PLC",
-   "when": "Not stated",
-   "period": "Expected date (market data feed)",
-   "eps_forecast": "",
-   "market_cap_bn": 1.4,
-   "auto": true,
-   "t": "GHRS",
-   "lists": [],
-   "idea": null,
-   "v": "HOLD",
-   "iv": "HOLD",
-   "track": [
-    "miss",
     "beat",
-    "miss",
-    "beat"
-   ],
-   "lrc_rating": null,
-   "covered": false
-  },
-  {
-   "date": "2026-11-05",
-   "ticker": "KEEL",
-   "name": "Keel Infrastructure Corp.",
-   "when": "Not stated",
-   "period": "Expected date (market data feed)",
-   "eps_forecast": "",
-   "market_cap_bn": 1.4,
-   "auto": true,
-   "t": "KEEL",
-   "lists": [],
-   "idea": null,
-   "v": "HOLD",
-   "iv": "HOLD",
-   "track": [
-    "miss",
-    "miss",
-    "miss",
+    "beat",
+    "beat",
     "miss"
    ],
    "lrc_rating": null,
@@ -42632,45 +43723,22 @@
   },
   {
    "date": "2026-11-05",
-   "ticker": "MBC",
-   "name": "MasterBrand, Inc.",
+   "ticker": "PRKS",
+   "name": "United Parks & Resorts Inc.",
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
    "market_cap_bn": 1.4,
    "auto": true,
-   "t": "MBC",
-   "lists": [],
-   "idea": null,
-   "v": "SELL",
-   "iv": "SELL",
-   "track": [
-    "miss",
-    "miss",
-    "beat",
-    "miss"
-   ],
-   "lrc_rating": null,
-   "covered": false
-  },
-  {
-   "date": "2026-11-05",
-   "ticker": "MLCO",
-   "name": "Melco Resorts & Entertainment Limited",
-   "when": "Not stated",
-   "period": "Expected date (market data feed)",
-   "eps_forecast": "",
-   "market_cap_bn": 1.4,
-   "auto": true,
-   "t": "MLCO",
+   "t": "PRKS",
    "lists": [],
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
    "track": [
-    "beat",
-    "beat",
-    "beat",
+    "miss",
+    "miss",
+    "miss",
     "miss"
    ],
    "lrc_rating": null,
@@ -42701,29 +43769,6 @@
   },
   {
    "date": "2026-11-05",
-   "ticker": "PRKS",
-   "name": "United Parks & Resorts Inc.",
-   "when": "Not stated",
-   "period": "Expected date (market data feed)",
-   "eps_forecast": "",
-   "market_cap_bn": 1.4,
-   "auto": true,
-   "t": "PRKS",
-   "lists": [],
-   "idea": null,
-   "v": "HOLD",
-   "iv": "HOLD",
-   "track": [
-    "miss",
-    "miss",
-    "miss",
-    "miss"
-   ],
-   "lrc_rating": null,
-   "covered": false
-  },
-  {
-   "date": "2026-11-05",
    "ticker": "TH",
    "name": "Target Hospitality Corp.",
    "when": "Not stated",
@@ -42747,21 +43792,21 @@
   },
   {
    "date": "2026-11-05",
-   "ticker": "FLO",
-   "name": "Flowers Foods, Inc.",
+   "ticker": "MBC",
+   "name": "MasterBrand, Inc.",
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 1.3,
+   "market_cap_bn": 1.4,
    "auto": true,
-   "t": "FLO",
+   "t": "MBC",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
-   "iv": "HOLD",
+   "v": "SELL",
+   "iv": "SELL",
    "track": [
     "miss",
-    "beat",
+    "miss",
     "beat",
     "miss"
    ],
@@ -42770,14 +43815,14 @@
   },
   {
    "date": "2026-11-05",
-   "ticker": "IE",
-   "name": "Ivanhoe Electric Inc.",
+   "ticker": "ARLO",
+   "name": "Arlo Technologies, Inc.",
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 1.3,
+   "market_cap_bn": 1.4,
    "auto": true,
-   "t": "IE",
+   "t": "ARLO",
    "lists": [],
    "idea": null,
    "v": "HOLD",
@@ -42785,6 +43830,29 @@
    "track": [
     "beat",
     "beat",
+    "beat",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-05",
+   "ticker": "KEEL",
+   "name": "Keel Infrastructure Corp.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.4,
+   "auto": true,
+   "t": "KEEL",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "miss",
+    "miss",
     "miss",
     "miss"
    ],
@@ -42793,22 +43861,42 @@
   },
   {
    "date": "2026-11-05",
-   "ticker": "RAPP",
-   "name": "Rapport Therapeutics, Inc.",
+   "ticker": "GHRS",
+   "name": "GH Research PLC",
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 1.3,
+   "market_cap_bn": 1.4,
    "auto": true,
-   "t": "RAPP",
+   "t": "GHRS",
    "lists": [],
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
    "track": [
-    "beat",
     "miss",
     "beat",
+    "miss",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-05",
+   "ticker": "DMRA",
+   "name": "Damora Therapeutics, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.4,
+   "auto": true,
+   "t": "DMRA",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
     "miss"
    ],
    "lrc_rating": null,
@@ -42831,6 +43919,29 @@
    "track": [
     "inline",
     "miss",
+    "miss",
+    "miss"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-05",
+   "ticker": "IE",
+   "name": "Ivanhoe Electric Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.3,
+   "auto": true,
+   "t": "IE",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "beat",
     "miss",
     "miss"
    ],
@@ -42862,6 +43973,52 @@
   },
   {
    "date": "2026-11-05",
+   "ticker": "RAPP",
+   "name": "Rapport Therapeutics, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.3,
+   "auto": true,
+   "t": "RAPP",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "miss",
+    "beat",
+    "miss"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-05",
+   "ticker": "FLO",
+   "name": "Flowers Foods, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.3,
+   "auto": true,
+   "t": "FLO",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "miss",
+    "beat",
+    "beat",
+    "miss"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-05",
    "ticker": "TRUP",
    "name": "Trupanion, Inc.",
    "when": "Not stated",
@@ -42885,46 +44042,23 @@
   },
   {
    "date": "2026-11-05",
-   "ticker": "BJRI",
-   "name": "BJ's Restaurants, Inc.",
+   "ticker": "SCSC",
+   "name": "ScanSource, Inc.",
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
    "market_cap_bn": 1.2,
    "auto": true,
-   "t": "BJRI",
+   "t": "SCSC",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
-   "iv": "SELL",
-   "track": [
-    "beat",
-    "beat",
-    "miss",
-    "beat"
-   ],
-   "lrc_rating": null,
-   "covered": false
-  },
-  {
-   "date": "2026-11-05",
-   "ticker": "CRAI",
-   "name": "CRA International, Inc.",
-   "when": "Not stated",
-   "period": "Expected date (market data feed)",
-   "eps_forecast": "",
-   "market_cap_bn": 1.2,
-   "auto": true,
-   "t": "CRAI",
-   "lists": [],
-   "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "track": [
     "beat",
-    "inline",
     "miss",
-    "inline"
+    "beat",
+    "beat"
    ],
    "lrc_rating": null,
    "covered": false
@@ -42977,23 +44111,23 @@
   },
   {
    "date": "2026-11-05",
-   "ticker": "SCSC",
-   "name": "ScanSource, Inc.",
+   "ticker": "SLN",
+   "name": "Silence Therapeutics plc",
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
    "market_cap_bn": 1.2,
    "auto": true,
-   "t": "SCSC",
+   "t": "SLN",
    "lists": [],
    "idea": null,
-   "v": "BUY",
-   "iv": "HOLD",
+   "v": "HOLD",
+   "iv": "SELL",
    "track": [
     "beat",
-    "miss",
     "beat",
-    "beat"
+    "miss",
+    "miss"
    ],
    "lrc_rating": null,
    "covered": false
@@ -43023,14 +44157,37 @@
   },
   {
    "date": "2026-11-05",
-   "ticker": "SLN",
-   "name": "Silence Therapeutics plc",
+   "ticker": "VSTM",
+   "name": "Verastem, Inc.",
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
    "market_cap_bn": 1.2,
    "auto": true,
-   "t": "SLN",
+   "t": "VSTM",
+   "lists": [],
+   "idea": null,
+   "v": "BUY",
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-05",
+   "ticker": "BJRI",
+   "name": "BJ's Restaurants, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.2,
+   "auto": true,
+   "t": "BJRI",
    "lists": [],
    "idea": null,
    "v": "HOLD",
@@ -43039,7 +44196,30 @@
     "beat",
     "beat",
     "miss",
-    "miss"
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-05",
+   "ticker": "CRAI",
+   "name": "CRA International, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.2,
+   "auto": true,
+   "t": "CRAI",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "inline",
+    "miss",
+    "inline"
    ],
    "lrc_rating": null,
    "covered": false
@@ -43092,21 +44272,67 @@
   },
   {
    "date": "2026-11-05",
-   "ticker": "AMPH",
-   "name": "Amphastar Pharmaceuticals, Inc.",
+   "ticker": "OMDA",
+   "name": "Omada Health, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.2,
+   "auto": true,
+   "t": "OMDA",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-05",
+   "ticker": "ROCK",
+   "name": "Gibraltar Industries, Inc.",
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
    "market_cap_bn": 1.1,
    "auto": true,
-   "t": "AMPH",
+   "t": "ROCK",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "miss",
+    "beat",
+    "miss",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-05",
+   "ticker": "PSIX",
+   "name": "Power Solutions International, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.1,
+   "auto": true,
+   "t": "PSIX",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
    "iv": "HOLD",
    "track": [
     "beat",
-    "miss",
+    "beat",
     "miss",
     "beat"
    ],
@@ -43138,22 +44364,22 @@
   },
   {
    "date": "2026-11-05",
-   "ticker": "CSTL",
-   "name": "Castle Biosciences, Inc.",
+   "ticker": "WLDN",
+   "name": "Willdan Group, Inc.",
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
    "market_cap_bn": 1.1,
    "auto": true,
-   "t": "CSTL",
+   "t": "WLDN",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "track": [
     "beat",
     "beat",
-    "inline",
+    "beat",
     "beat"
    ],
    "lrc_rating": null,
@@ -43184,23 +44410,23 @@
   },
   {
    "date": "2026-11-05",
-   "ticker": "JANX",
-   "name": "Janux Therapeutics, Inc.",
+   "ticker": "AMPH",
+   "name": "Amphastar Pharmaceuticals, Inc.",
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
    "market_cap_bn": 1.1,
    "auto": true,
-   "t": "JANX",
+   "t": "AMPH",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "track": [
     "beat",
-    "beat",
-    "beat",
-    "miss"
+    "miss",
+    "miss",
+    "beat"
    ],
    "lrc_rating": null,
    "covered": false
@@ -43252,52 +44478,6 @@
   },
   {
    "date": "2026-11-05",
-   "ticker": "PSIX",
-   "name": "Power Solutions International, Inc.",
-   "when": "Not stated",
-   "period": "Expected date (market data feed)",
-   "eps_forecast": "",
-   "market_cap_bn": 1.1,
-   "auto": true,
-   "t": "PSIX",
-   "lists": [],
-   "idea": null,
-   "v": "HOLD",
-   "iv": "HOLD",
-   "track": [
-    "beat",
-    "beat",
-    "miss",
-    "beat"
-   ],
-   "lrc_rating": null,
-   "covered": false
-  },
-  {
-   "date": "2026-11-05",
-   "ticker": "ROCK",
-   "name": "Gibraltar Industries, Inc.",
-   "when": "Not stated",
-   "period": "Expected date (market data feed)",
-   "eps_forecast": "",
-   "market_cap_bn": 1.1,
-   "auto": true,
-   "t": "ROCK",
-   "lists": [],
-   "idea": null,
-   "v": "HOLD",
-   "iv": "HOLD",
-   "track": [
-    "miss",
-    "beat",
-    "miss",
-    "beat"
-   ],
-   "lrc_rating": null,
-   "covered": false
-  },
-  {
-   "date": "2026-11-05",
    "ticker": "VYX",
    "name": "NCR Voyix Corporation",
    "when": "Not stated",
@@ -43321,14 +44501,14 @@
   },
   {
    "date": "2026-11-05",
-   "ticker": "WLDN",
-   "name": "Willdan Group, Inc.",
+   "ticker": "JANX",
+   "name": "Janux Therapeutics, Inc.",
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
    "market_cap_bn": 1.1,
    "auto": true,
-   "t": "WLDN",
+   "t": "JANX",
    "lists": [],
    "idea": null,
    "v": "HOLD",
@@ -43337,7 +44517,74 @@
     "beat",
     "beat",
     "beat",
+    "miss"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-05",
+   "ticker": "CSTL",
+   "name": "Castle Biosciences, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.1,
+   "auto": true,
+   "t": "CSTL",
+   "lists": [],
+   "idea": null,
+   "v": "BUY",
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "beat",
+    "inline",
     "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-05",
+   "ticker": "TRIP",
+   "name": "Tripadvisor, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.1,
+   "auto": true,
+   "t": "TRIP",
+   "lists": [],
+   "idea": null,
+   "v": "SELL",
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "miss",
+    "miss",
+    "miss"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-05",
+   "ticker": "SGP",
+   "name": "SpyGlass Pharma, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.0,
+   "auto": true,
+   "t": "SGP",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "miss",
+    "miss"
    ],
    "lrc_rating": null,
    "covered": false
@@ -43360,6 +44607,29 @@
     "beat",
     "beat",
     "miss"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-05",
+   "ticker": "YELP",
+   "name": "Yelp Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.0,
+   "auto": true,
+   "t": "YELP",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "BUY",
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
    ],
    "lrc_rating": null,
    "covered": false
@@ -43389,66 +44659,22 @@
   },
   {
    "date": "2026-11-05",
-   "ticker": "SGP",
-   "name": "SpyGlass Pharma, Inc.",
+   "ticker": "GSBD",
+   "name": "Goldman Sachs BDC, Inc.",
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
    "market_cap_bn": 1.0,
    "auto": true,
-   "t": "SGP",
-   "lists": [],
-   "idea": null,
-   "v": "HOLD",
-   "iv": "HOLD",
-   "track": [
-    "miss",
-    "miss"
-   ],
-   "lrc_rating": null,
-   "covered": false
-  },
-  {
-   "date": "2026-11-05",
-   "ticker": "TRIP",
-   "name": "Tripadvisor, Inc.",
-   "when": "Not stated",
-   "period": "Expected date (market data feed)",
-   "eps_forecast": "",
-   "market_cap_bn": 1.0,
-   "auto": true,
-   "t": "TRIP",
+   "t": "GSBD",
    "lists": [],
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
    "track": [
     "beat",
+    "beat",
     "miss",
-    "miss",
-    "miss"
-   ],
-   "lrc_rating": null,
-   "covered": false
-  },
-  {
-   "date": "2026-11-05",
-   "ticker": "YELP",
-   "name": "Yelp Inc.",
-   "when": "Not stated",
-   "period": "Expected date (market data feed)",
-   "eps_forecast": "",
-   "market_cap_bn": 1.0,
-   "auto": true,
-   "t": "YELP",
-   "lists": [],
-   "idea": null,
-   "v": "HOLD",
-   "iv": "BUY",
-   "track": [
-    "beat",
-    "beat",
-    "beat",
     "beat"
    ],
    "lrc_rating": null,
@@ -43681,8 +44907,14 @@
    "t": "YPF",
    "lists": [],
    "idea": null,
-   "v": null,
-   "iv": null
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "miss",
+    "miss",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-06",
@@ -43872,7 +45104,12 @@
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "beat",
+    "beat",
+    "miss",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-06",
@@ -43929,7 +45166,7 @@
    "t": "ESNT",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "BUY",
    "track": [
     "miss",
@@ -43975,9 +45212,14 @@
    "t": "VEON",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "miss",
+    "miss",
+    "beat",
+    "miss"
+   ]
   },
   {
    "date": "2026-11-06",
@@ -44122,7 +45364,7 @@
    "t": "BIPC",
    "lists": [],
    "idea": null,
-   "v": "SELL",
+   "v": "HOLD",
    "iv": "SELL",
    "track": [
     "beat",
@@ -44423,8 +45665,13 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
-   "track": null
+   "iv": "SELL",
+   "track": [
+    "inline",
+    "beat",
+    "beat",
+    "miss"
+   ]
   },
   {
    "date": "2026-11-06",
@@ -44440,32 +45687,14 @@
    "t": "AMR",
    "lists": [],
    "idea": null,
-   "v": "SELL",
-   "iv": "SELL",
+   "v": "HOLD",
+   "iv": "HOLD",
    "track": [
     "beat",
     "beat",
     "inline",
     "beat"
    ]
-  },
-  {
-   "date": "2026-11-06",
-   "ticker": "UA",
-   "name": "Under Armour, Inc.",
-   "when": "Not stated",
-   "period": "Expected date (market data feed)",
-   "eps_forecast": "",
-   "market_cap_bn": 2.0,
-   "auto": true,
-   "t": "UA",
-   "lists": [],
-   "idea": null,
-   "v": "SELL",
-   "iv": "SELL",
-   "track": null,
-   "lrc_rating": null,
-   "covered": false
   },
   {
    "date": "2026-11-06",
@@ -44487,6 +45716,24 @@
     "miss",
     "beat"
    ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-06",
+   "ticker": "UA",
+   "name": "Under Armour, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 2.0,
+   "auto": true,
+   "t": "UA",
+   "lists": [],
+   "idea": null,
+   "v": "SELL",
+   "iv": "SELL",
+   "track": null,
    "lrc_rating": null,
    "covered": false
   },
@@ -44524,6 +45771,29 @@
    "iv": "SELL",
    "track": [
     "miss",
+    "miss",
+    "miss"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-06",
+   "ticker": "HE",
+   "name": "Hawaiian Electric Industries, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.4,
+   "auto": true,
+   "t": "HE",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "inline",
     "miss",
     "miss"
    ],
@@ -44600,6 +45870,29 @@
    "covered": false
   },
   {
+   "date": "2026-11-07",
+   "ticker": "BRK-A",
+   "name": "Berkshire Hathaway Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1156.1,
+   "auto": true,
+   "t": "BRK-A",
+   "lists": [],
+   "idea": null,
+   "v": "BUY",
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "miss",
+    "miss",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
    "date": "2026-11-09",
    "ticker": "CEG",
    "name": "Constellation Energy Corporation",
@@ -44659,7 +45952,7 @@
    "t": "OXY",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "BUY",
    "track": [
     "beat",
@@ -44819,7 +46112,7 @@
    "t": "BAP",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "BUY",
    "track": [
     "beat",
@@ -44865,7 +46158,7 @@
    "t": "BEKE",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "track": [
     "beat",
@@ -44889,7 +46182,7 @@
    "lists": [],
    "idea": null,
    "v": "BUY",
-   "iv": "HOLD",
+   "iv": "BUY",
    "track": [
     "miss",
     "miss",
@@ -44979,8 +46272,8 @@
    "t": "SGI",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
-   "iv": "HOLD",
+   "v": "SELL",
+   "iv": "SELL",
    "track": [
     "beat",
     "inline",
@@ -45025,7 +46318,7 @@
    "t": "JBS",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "SELL",
    "iv": "HOLD",
    "track": [
     "beat",
@@ -45048,7 +46341,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "BUY",
+   "iv": "HOLD",
    "track": [
     "beat",
     "beat",
@@ -45070,9 +46363,14 @@
    "t": "ONTO",
    "lists": [],
    "idea": null,
-   "v": "SELL",
+   "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "beat",
+    "inline",
+    "inline",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-09",
@@ -45135,7 +46433,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "BUY",
    "track": [
     "beat",
     "beat",
@@ -45182,7 +46480,12 @@
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "miss",
+    "beat",
+    "miss",
+    "miss"
+   ]
   },
   {
    "date": "2026-11-09",
@@ -45654,8 +46957,12 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
-   "track": null
+   "iv": "SELL",
+   "track": [
+    "beat",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-09",
@@ -45718,7 +47025,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "BUY",
+   "iv": "STRONG BUY",
    "track": [
     "beat",
     "beat",
@@ -45861,6 +47168,29 @@
   },
   {
    "date": "2026-11-09",
+   "ticker": "GSHD",
+   "name": "Goosehead Insurance, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.6,
+   "auto": true,
+   "t": "GSHD",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "inline",
+    "beat",
+    "beat",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-09",
    "ticker": "QUBT",
    "name": "Quantum Computing Inc.",
    "when": "Not stated",
@@ -45876,6 +47206,29 @@
    "track": [
     "beat",
     "beat",
+    "beat",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-09",
+   "ticker": "GSL",
+   "name": "Global Ship Lease, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.5,
+   "auto": true,
+   "t": "GSL",
+   "lists": [],
+   "idea": null,
+   "v": "BUY",
+   "iv": "STRONG BUY",
+   "track": [
+    "beat",
+    "miss",
     "beat",
     "beat"
    ],
@@ -45912,7 +47265,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 1.4,
+   "market_cap_bn": 1.3,
    "auto": true,
    "t": "TPB",
    "lists": [],
@@ -45953,26 +47306,6 @@
   },
   {
    "date": "2026-11-09",
-   "ticker": "KARD",
-   "name": "Kardigan, Inc.",
-   "when": "Not stated",
-   "period": "Expected date (market data feed)",
-   "eps_forecast": "",
-   "market_cap_bn": 1.3,
-   "auto": true,
-   "t": "KARD",
-   "lists": [],
-   "idea": null,
-   "v": "HOLD",
-   "iv": "HOLD",
-   "track": [
-    "miss"
-   ],
-   "lrc_rating": null,
-   "covered": false
-  },
-  {
-   "date": "2026-11-09",
    "ticker": "LCID",
    "name": "Lucid Group, Inc.",
    "when": "Not stated",
@@ -45989,6 +47322,26 @@
     "miss",
     "miss",
     "miss",
+    "miss"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-09",
+   "ticker": "KARD",
+   "name": "Kardigan, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.3,
+   "auto": true,
+   "t": "KARD",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
     "miss"
    ],
    "lrc_rating": null,
@@ -46065,29 +47418,6 @@
   },
   {
    "date": "2026-11-09",
-   "ticker": "AMRC",
-   "name": "Ameresco, Inc.",
-   "when": "Not stated",
-   "period": "Expected date (market data feed)",
-   "eps_forecast": "",
-   "market_cap_bn": 1.1,
-   "auto": true,
-   "t": "AMRC",
-   "lists": [],
-   "idea": null,
-   "v": "HOLD",
-   "iv": "HOLD",
-   "track": [
-    "beat",
-    "beat",
-    "miss",
-    "inline"
-   ],
-   "lrc_rating": null,
-   "covered": false
-  },
-  {
-   "date": "2026-11-09",
    "ticker": "DCH",
    "name": "Dauch Corporation",
    "when": "Not stated",
@@ -46133,6 +47463,29 @@
    "covered": false
   },
   {
+   "date": "2026-11-09",
+   "ticker": "AMRC",
+   "name": "Ameresco, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.1,
+   "auto": true,
+   "t": "AMRC",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "beat",
+    "miss",
+    "inline"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
    "date": "2026-11-10",
    "ticker": "AU",
    "name": "AngloGold Ashanti PLC",
@@ -46171,9 +47524,14 @@
    "t": "PBR",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "beat",
+    "miss",
+    "miss",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-10",
@@ -46316,9 +47674,14 @@
    "t": "VG",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "miss",
+    "beat",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-10",
@@ -46334,9 +47697,14 @@
    "t": "VIV",
    "lists": [],
    "idea": null,
-   "v": "SELL",
-   "iv": "HOLD",
-   "track": null
+   "v": "HOLD",
+   "iv": "BUY",
+   "track": [
+    "miss",
+    "beat",
+    "miss",
+    "miss"
+   ]
   },
   {
    "date": "2026-11-10",
@@ -46443,7 +47811,7 @@
    "lists": [],
    "idea": null,
    "v": "SELL",
-   "iv": "HOLD",
+   "iv": "SELL",
    "track": [
     "beat",
     "beat",
@@ -46671,6 +48039,29 @@
   },
   {
    "date": "2026-11-10",
+   "ticker": "BTDR",
+   "name": "Bitdeer Technologies Group",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 2.0,
+   "auto": true,
+   "t": "BTDR",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "miss",
+    "miss",
+    "miss",
+    "miss"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-10",
    "ticker": "NN",
    "name": "NextNav Inc.",
    "when": "Not stated",
@@ -46756,6 +48147,29 @@
     "beat",
     "beat",
     "beat",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-10",
+   "ticker": "BRSL",
+   "name": "Brightstar Lottery PLC",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.7,
+   "auto": true,
+   "t": "BRSL",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "beat",
+    "miss",
     "beat"
    ],
    "lrc_rating": null,
@@ -47035,9 +48449,14 @@
    "t": "ONON",
    "lists": [],
    "idea": null,
-   "v": "SELL",
+   "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-11",
@@ -47053,7 +48472,7 @@
    "t": "GIB",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "BUY",
    "track": [
     "beat",
@@ -47161,9 +48580,14 @@
    "t": "OR",
    "lists": [],
    "idea": null,
-   "v": "SELL",
+   "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-11",
@@ -47226,7 +48650,12 @@
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "miss",
+    "beat",
+    "beat",
+    "miss"
+   ]
   },
   {
    "date": "2026-11-11",
@@ -47470,9 +48899,13 @@
    "t": "PAGS",
    "lists": [],
    "idea": null,
-   "v": "SELL",
+   "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "beat",
+    "beat",
+    "inline"
+   ]
   },
   {
    "date": "2026-11-11",
@@ -47629,26 +49062,6 @@
   },
   {
    "date": "2026-11-11",
-   "ticker": "AADX",
-   "name": "Applied Aerospace & Defense, Inc.",
-   "when": "Not stated",
-   "period": "Expected date (market data feed)",
-   "eps_forecast": "",
-   "market_cap_bn": 1.9,
-   "auto": true,
-   "t": "AADX",
-   "lists": [],
-   "idea": null,
-   "v": "HOLD",
-   "iv": "HOLD",
-   "track": [
-    "miss"
-   ],
-   "lrc_rating": null,
-   "covered": false
-  },
-  {
-   "date": "2026-11-11",
    "ticker": "PVLA",
    "name": "Palvella Therapeutics, Inc.",
    "when": "Not stated",
@@ -47665,6 +49078,26 @@
     "miss",
     "miss",
     "miss",
+    "miss"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-11",
+   "ticker": "AADX",
+   "name": "Applied Aerospace & Defense, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.9,
+   "auto": true,
+   "t": "AADX",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
     "miss"
    ],
    "lrc_rating": null,
@@ -47861,7 +49294,7 @@
    "lists": [],
    "idea": null,
    "v": "SELL",
-   "iv": "HOLD",
+   "iv": "SELL",
    "track": null
   },
   {
@@ -47902,7 +49335,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "BUY",
    "track": [
     "beat",
     "miss",
@@ -47925,8 +49358,10 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
-   "track": null
+   "iv": "SELL",
+   "track": [
+    "beat"
+   ]
   },
   {
    "date": "2026-11-12",
@@ -47961,8 +49396,8 @@
    "t": "KEP",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
-   "iv": "SELL",
+   "v": "SELL",
+   "iv": "HOLD",
    "track": [
     "miss",
     "beat",
@@ -48020,9 +49455,14 @@
    "t": "HBM",
    "lists": [],
    "idea": null,
-   "v": "SELL",
-   "iv": "HOLD",
-   "track": null
+   "v": "HOLD",
+   "iv": "BUY",
+   "track": [
+    "miss",
+    "miss",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-12",
@@ -48147,8 +49587,8 @@
    "t": "NICE",
    "lists": [],
    "idea": null,
-   "v": "BUY",
-   "iv": "HOLD",
+   "v": "STRONG BUY",
+   "iv": "BUY",
    "track": [
     "inline",
     "inline",
@@ -48472,9 +49912,14 @@
    "t": "ONDS",
    "lists": [],
    "idea": null,
-   "v": "STRONG SELL",
+   "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "beat",
+    "beat",
+    "miss",
+    "miss"
+   ]
   },
   {
    "date": "2026-11-12",
@@ -48572,9 +50017,34 @@
    "t": "PBLS",
    "lists": [],
    "idea": null,
-   "v": "SELL",
+   "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "miss"
+   ]
+  },
+  {
+   "date": "2026-11-12",
+   "ticker": "BULL",
+   "name": "Webull Corporation",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 3.0,
+   "auto": true,
+   "t": "BULL",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "miss",
+    "miss",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
   },
   {
    "date": "2026-11-12",
@@ -48820,6 +50290,29 @@
   },
   {
    "date": "2026-11-12",
+   "ticker": "ZBIO",
+   "name": "Zenas BioPharma, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.8,
+   "auto": true,
+   "t": "ZBIO",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "miss",
+    "miss",
+    "beat",
+    "miss"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-12",
    "ticker": "FRMI",
    "name": "Fermi Inc.",
    "when": "Not stated",
@@ -48859,6 +50352,29 @@
     "beat",
     "beat",
     "beat",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-12",
+   "ticker": "PBT",
+   "name": "Permian Basin Royalty Trust",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.5,
+   "auto": true,
+   "t": "PBT",
+   "lists": [],
+   "idea": "Technical setups",
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "beat",
+    "miss",
     "beat"
    ],
    "lrc_rating": null,
@@ -48913,7 +50429,7 @@
   {
    "date": "2026-11-12",
    "ticker": "ADIG",
-   "name": "ADI Global Distribution Inc",
+   "name": "ADI Global Distribution Inc.",
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
@@ -48925,6 +50441,29 @@
    "v": "HOLD",
    "iv": "HOLD",
    "track": null,
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-12",
+   "ticker": "NKTR",
+   "name": "Nektar Therapeutics",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.3,
+   "auto": true,
+   "t": "NKTR",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "beat",
+    "miss",
+    "beat"
+   ],
    "lrc_rating": null,
    "covered": false
   },
@@ -48975,14 +50514,14 @@
   },
   {
    "date": "2026-11-12",
-   "ticker": "NKTR",
-   "name": "Nektar Therapeutics",
+   "ticker": "OMER",
+   "name": "Omeros Corporation",
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
    "market_cap_bn": 1.3,
    "auto": true,
-   "t": "NKTR",
+   "t": "OMER",
    "lists": [],
    "idea": null,
    "v": "HOLD",
@@ -48990,7 +50529,7 @@
    "track": [
     "beat",
     "beat",
-    "miss",
+    "beat",
     "beat"
    ],
    "lrc_rating": null,
@@ -48998,14 +50537,14 @@
   },
   {
    "date": "2026-11-12",
-   "ticker": "ELE",
-   "name": "Elemental Royalty Corporation",
+   "ticker": "TMC",
+   "name": "TMC the metals company Inc.",
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
    "market_cap_bn": 1.2,
    "auto": true,
-   "t": "ELE",
+   "t": "TMC",
    "lists": [],
    "idea": null,
    "v": "HOLD",
@@ -49013,29 +50552,7 @@
    "track": [
     "miss",
     "miss",
-    "miss"
-   ],
-   "lrc_rating": null,
-   "covered": false
-  },
-  {
-   "date": "2026-11-12",
-   "ticker": "HZO",
-   "name": "MarineMax, Inc.",
-   "when": "Not stated",
-   "period": "Expected date (market data feed)",
-   "eps_forecast": "",
-   "market_cap_bn": 1.2,
-   "auto": true,
-   "t": "HZO",
-   "lists": [],
-   "idea": null,
-   "v": "BUY",
-   "iv": "HOLD",
-   "track": [
-    "beat",
-    "miss",
-    "beat",
+    "inline",
     "miss"
    ],
    "lrc_rating": null,
@@ -49066,22 +50583,22 @@
   },
   {
    "date": "2026-11-12",
-   "ticker": "TMC",
-   "name": "TMC the metals company Inc.",
+   "ticker": "HZO",
+   "name": "MarineMax, Inc.",
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
    "market_cap_bn": 1.2,
    "auto": true,
-   "t": "TMC",
+   "t": "HZO",
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "SELL",
    "track": [
+    "beat",
     "miss",
-    "miss",
-    "inline",
+    "beat",
     "miss"
    ],
    "lrc_rating": null,
@@ -49089,19 +50606,67 @@
   },
   {
    "date": "2026-11-12",
-   "ticker": "CD",
-   "name": "Chaince Digital Holdings Inc.",
+   "ticker": "ELE",
+   "name": "Elemental Royalty Corporation",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.2,
+   "auto": true,
+   "t": "ELE",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "miss",
+    "miss",
+    "miss"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-12",
+   "ticker": "VOR",
+   "name": "Vor Biopharma Inc.",
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
    "market_cap_bn": 1.1,
    "auto": true,
-   "t": "CD",
+   "t": "VOR",
+   "lists": [],
+   "idea": null,
+   "v": "BUY",
+   "iv": "HOLD",
+   "track": [
+    "miss",
+    "beat",
+    "beat",
+    "miss"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-12",
+   "ticker": "SPTX",
+   "name": "Seaport Therapeutics, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.1,
+   "auto": true,
+   "t": "SPTX",
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "SELL",
-   "track": null,
+   "iv": "HOLD",
+   "track": [
+    "miss",
+    "miss"
+   ],
    "lrc_rating": null,
    "covered": false
   },
@@ -49128,22 +50693,19 @@
   },
   {
    "date": "2026-11-12",
-   "ticker": "SPTX",
-   "name": "Seaport Therapeutics, Inc.",
+   "ticker": "CD",
+   "name": "Chaince Digital Holdings Inc.",
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
    "market_cap_bn": 1.1,
    "auto": true,
-   "t": "SPTX",
+   "t": "CD",
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
-   "track": [
-    "miss",
-    "miss"
-   ],
+   "iv": "SELL",
+   "track": null,
    "lrc_rating": null,
    "covered": false
   },
@@ -49225,6 +50787,7 @@
    "lrc_rating": null,
    "t": "LPL",
    "lists": [
+    "Trading SELL",
     "Investment SELL"
    ],
    "idea": null,
@@ -49539,6 +51102,29 @@
   },
   {
    "date": "2026-11-13",
+   "ticker": "USAS",
+   "name": "Americas Gold and Silver Corporation",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.1,
+   "auto": true,
+   "t": "USAS",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "miss",
+    "miss",
+    "miss"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-13",
    "ticker": "NEWP",
    "name": "New Pacific Metals Corp.",
    "when": "Not stated",
@@ -49598,7 +51184,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "BUY",
    "track": [
     "beat",
     "beat",
@@ -49735,8 +51321,14 @@
    "t": "YMM",
    "lists": [],
    "idea": null,
-   "v": null,
-   "iv": null
+   "v": "HOLD",
+   "iv": "BUY",
+   "track": [
+    "miss",
+    "beat",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-16",
@@ -49753,7 +51345,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "BUY",
    "track": [
     "beat",
     "beat",
@@ -49843,9 +51435,14 @@
    "t": "BRC",
    "lists": [],
    "idea": null,
-   "v": "SELL",
-   "iv": "HOLD",
-   "track": null
+   "v": "HOLD",
+   "iv": "STRONG BUY",
+   "track": [
+    "beat",
+    "inline",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-16",
@@ -49912,6 +51509,47 @@
   },
   {
    "date": "2026-11-16",
+   "ticker": "BXDC",
+   "name": "Blackstone Digital Infrastructure Trust Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.6,
+   "auto": true,
+   "t": "BXDC",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-16",
+   "ticker": "HAWK",
+   "name": "HawkEye 360, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.3,
+   "auto": true,
+   "t": "HAWK",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "miss",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-16",
    "ticker": "JCAP",
    "name": "Jefferson Capital, Inc.",
    "when": "Not stated",
@@ -49953,6 +51591,74 @@
    ],
    "lrc_rating": null,
    "covered": false
+  },
+  {
+   "date": "2026-11-16",
+   "ticker": "YSWY",
+   "name": "Yesway, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 0.8,
+   "auto": true,
+   "t": "YSWY",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": null,
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-17",
+   "ticker": "BZ",
+   "name": "KANZHUN LIMITED",
+   "when": "Not stated",
+   "eps_forecast": "$0.27",
+   "eps_last_year": "$0.24",
+   "quarter": "Sep/2026",
+   "market_cap_bn": 7.9,
+   "covered": true,
+   "lrc_rating": null,
+   "t": "BZ",
+   "lists": [
+    "Trading BUY"
+   ],
+   "idea": null,
+   "v": "STRONG BUY",
+   "iv": "STRONG BUY",
+   "track": [
+    "beat",
+    "inline",
+    "beat",
+    "beat"
+   ]
+  },
+  {
+   "date": "2026-11-17",
+   "ticker": "OPRA",
+   "name": "Opera Limited",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.6,
+   "auto": true,
+   "t": "OPRA",
+   "lists": [
+    "Trading BUY"
+   ],
+   "idea": "Technical setups",
+   "v": "STRONG BUY",
+   "iv": "HOLD",
+   "track": [
+    "miss",
+    "miss",
+    "beat",
+    "inline"
+   ],
+   "lrc_rating": null,
+   "covered": true
   },
   {
    "date": "2026-11-17",
@@ -50077,7 +51783,7 @@
    "lrc_rating": null,
    "t": "PDD",
    "lists": [],
-   "idea": "Value & quality",
+   "idea": null,
    "v": "HOLD",
    "iv": "STRONG BUY",
    "track": [
@@ -50193,8 +51899,14 @@
    "t": "ZTO",
    "lists": [],
    "idea": null,
-   "v": null,
-   "iv": null
+   "v": "HOLD",
+   "iv": "STRONG BUY",
+   "track": [
+    "beat",
+    "beat",
+    "miss",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-17",
@@ -50234,7 +51946,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "BUY",
    "track": [
     "beat",
     "inline",
@@ -50264,24 +51976,6 @@
     "beat",
     "beat"
    ]
-  },
-  {
-   "date": "2026-11-17",
-   "ticker": "BZ",
-   "name": "KANZHUN LIMITED",
-   "when": "Not stated",
-   "eps_forecast": "$0.27",
-   "eps_last_year": "$0.24",
-   "quarter": "Sep/2026",
-   "market_cap_bn": 7.9,
-   "covered": false,
-   "lrc_rating": null,
-   "t": "BZ",
-   "lists": [],
-   "idea": null,
-   "v": "HOLD",
-   "iv": "HOLD",
-   "track": null
   },
   {
    "date": "2026-11-17",
@@ -50451,7 +52145,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "SELL",
+   "iv": "HOLD",
    "track": [
     "beat",
     "miss",
@@ -50560,7 +52254,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 154.2,
+   "market_cap_bn": 154.9,
    "auto": true,
    "t": "TJX",
    "lists": [],
@@ -50617,6 +52311,29 @@
     "beat",
     "beat",
     "beat",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-18",
+   "ticker": "VIK",
+   "name": "Viking Holdings Ltd",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 38.1,
+   "auto": true,
+   "t": "VIK",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "inline",
+    "beat",
+    "miss",
     "beat"
    ],
    "lrc_rating": null,
@@ -50687,6 +52404,29 @@
     "beat",
     "beat",
     "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-18",
+   "ticker": "HAFN",
+   "name": "Hafnia Limited",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 5.7,
+   "auto": true,
+   "t": "HAFN",
+   "lists": [],
+   "idea": null,
+   "v": "BUY",
+   "iv": "STRONG BUY",
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "miss"
    ],
    "lrc_rating": null,
    "covered": false
@@ -50767,7 +52507,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 4.6,
+   "market_cap_bn": 4.5,
    "auto": true,
    "t": "GFF",
    "lists": [],
@@ -50842,7 +52582,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "SELL",
+   "iv": "HOLD",
    "track": [
     "miss",
     "beat",
@@ -50967,6 +52707,75 @@
   },
   {
    "date": "2026-11-18",
+   "ticker": "BORR",
+   "name": "Borr Drilling Limited",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.3,
+   "auto": true,
+   "t": "BORR",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "beat",
+    "miss",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-18",
+   "ticker": "UTI",
+   "name": "Universal Technical Institute, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.2,
+   "auto": true,
+   "t": "UTI",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "SELL",
+   "track": [
+    "beat",
+    "beat",
+    "inline",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-18",
+   "ticker": "BRBR",
+   "name": "BellRing Brands, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.1,
+   "auto": true,
+   "t": "BRBR",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "BUY",
+   "track": [
+    "miss",
+    "beat",
+    "miss",
+    "miss"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-18",
    "ticker": "ODD",
    "name": "Oddity Tech Ltd.",
    "when": "Not stated",
@@ -50989,13 +52798,36 @@
    "covered": false
   },
   {
+   "date": "2026-11-18",
+   "ticker": "BV",
+   "name": "BrightView Holdings, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.0,
+   "auto": true,
+   "t": "BV",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "miss",
+    "miss",
+    "miss",
+    "miss"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
    "date": "2026-11-19",
    "ticker": "WMT",
    "name": "Walmart Inc.",
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 949.6,
+   "market_cap_bn": 946.7,
    "auto": true,
    "t": "WMT",
    "lists": [],
@@ -51064,7 +52896,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 73.8,
+   "market_cap_bn": 73.5,
    "auto": true,
    "t": "ROST",
    "lists": [],
@@ -51139,7 +52971,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "SELL",
    "track": [
     "beat",
     "beat",
@@ -51162,7 +52994,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "BUY",
+   "iv": "HOLD",
    "track": [
     "beat",
     "beat",
@@ -51220,6 +53052,29 @@
   },
   {
    "date": "2026-11-19",
+   "ticker": "VIPS",
+   "name": "Vipshop Holdings Limited",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 6.0,
+   "auto": true,
+   "t": "VIPS",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-19",
    "ticker": "ROAD",
    "name": "Construction Partners, Inc.",
    "when": "Not stated",
@@ -51260,6 +53115,28 @@
     "beat",
     "beat",
     "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-19",
+   "ticker": "ZIM",
+   "name": "ZIM Integrated Shipping Services Ltd.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 3.6,
+   "auto": true,
+   "t": "ZIM",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "miss",
+    "beat",
+    "miss"
    ],
    "lrc_rating": null,
    "covered": false
@@ -51426,6 +53303,29 @@
    "covered": false
   },
   {
+   "date": "2026-11-19",
+   "ticker": "VNET",
+   "name": "VNET Group, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.1,
+   "auto": true,
+   "t": "VNET",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "miss",
+    "beat",
+    "miss",
+    "miss"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
    "date": "2026-11-20",
    "ticker": "BJ",
    "name": "BJ's Wholesale Club Holdings, Inc.",
@@ -51444,6 +53344,29 @@
     "beat",
     "beat",
     "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-20",
+   "ticker": "BMNR",
+   "name": "Bitmine Immersion Technologies, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 13.0,
+   "auto": true,
+   "t": "BMNR",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "SELL",
+   "track": [
+    "beat",
+    "miss",
+    "miss",
+    "miss"
    ],
    "lrc_rating": null,
    "covered": false
@@ -51570,7 +53493,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 17.4,
+   "market_cap_bn": 17.5,
    "auto": true,
    "t": "J",
    "lists": [],
@@ -51651,6 +53574,47 @@
     "beat",
     "beat",
     "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-23",
+   "ticker": "BWLP",
+   "name": "BW LPG Limited",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 3.9,
+   "auto": true,
+   "t": "BWLP",
+   "lists": [],
+   "idea": null,
+   "v": "BUY",
+   "iv": "BUY",
+   "track": null,
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-23",
+   "ticker": "CAAP",
+   "name": "Corporación América Airports S.A.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 3.8,
+   "auto": true,
+   "t": "CAAP",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "BUY",
+   "track": [
+    "miss",
+    "beat",
+    "miss",
+    "miss"
    ],
    "lrc_rating": null,
    "covered": false
@@ -51749,6 +53713,29 @@
   },
   {
    "date": "2026-11-24",
+   "ticker": "ZS",
+   "name": "Zscaler, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 42.4,
+   "auto": true,
+   "t": "ZS",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "SELL",
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-24",
    "ticker": "HPQ",
    "name": "HP Inc.",
    "when": "Not stated",
@@ -51764,6 +53751,29 @@
    "track": [
     "inline",
     "beat",
+    "beat",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-24",
+   "ticker": "ZM",
+   "name": "Zoom Communications, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 28.4,
+   "auto": true,
+   "t": "ZM",
+   "lists": [],
+   "idea": null,
+   "v": "BUY",
+   "iv": "STRONG BUY",
+   "track": [
+    "beat",
+    "miss",
     "beat",
     "beat"
    ],
@@ -51828,7 +53838,7 @@
    "t": "SJM",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "track": [
     "inline",
@@ -51898,7 +53908,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "BUY",
    "track": [
     "beat",
     "miss",
@@ -51921,7 +53931,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "SELL",
+   "iv": "HOLD",
    "track": [
     "miss",
     "miss",
@@ -52017,6 +54027,29 @@
     "miss",
     "miss",
     "miss"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-24",
+   "ticker": "PD",
+   "name": "PagerDuty, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.4,
+   "auto": true,
+   "t": "PD",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
    ],
    "lrc_rating": null,
    "covered": false
@@ -52207,6 +54240,29 @@
   },
   {
    "date": "2026-11-25",
+   "ticker": "BMA",
+   "name": "Banco Macro S.A.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 3.9,
+   "auto": true,
+   "t": "BMA",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "miss",
+    "beat",
+    "beat",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-25",
    "ticker": "CENT",
    "name": "Central Garden & Pet Company",
    "when": "Not stated",
@@ -52352,6 +54408,29 @@
    "idea": null,
    "v": "HOLD",
    "iv": "BUY",
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-27",
+   "ticker": "BURL",
+   "name": "Burlington Stores, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 14.8,
+   "auto": true,
+   "t": "BURL",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
    "track": [
     "beat",
     "beat",
@@ -52533,8 +54612,31 @@
    "t": "MDB",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-12-01",
+   "ticker": "GTLB",
+   "name": "GitLab Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 9.5,
+   "auto": true,
+   "t": "GTLB",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "SELL",
    "track": [
     "beat",
     "beat",
@@ -52556,7 +54658,7 @@
    "t": "SIG",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "track": [
     "beat",
@@ -52661,6 +54763,29 @@
   },
   {
    "date": "2026-12-02",
+   "ticker": "BMO",
+   "name": "Bank of Montreal",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 119.6,
+   "auto": true,
+   "t": "BMO",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "SELL",
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-12-02",
    "ticker": "SNOW",
    "name": "Snowflake Inc.",
    "when": "Not stated",
@@ -52673,6 +54798,29 @@
    "idea": null,
    "v": "BUY",
    "iv": "HOLD",
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-12-02",
+   "ticker": "BNS",
+   "name": "The Bank of Nova Scotia",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 114.2,
+   "auto": true,
+   "t": "BNS",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "SELL",
    "track": [
     "beat",
     "beat",
@@ -52723,6 +54871,29 @@
     "beat",
     "beat",
     "beat",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-12-02",
+   "ticker": "PATH",
+   "name": "UiPath, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 7.3,
+   "auto": true,
+   "t": "PATH",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "BUY",
+   "track": [
+    "beat",
+    "beat",
+    "miss",
     "beat"
    ],
    "lrc_rating": null,
@@ -52833,7 +55004,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "SELL",
    "track": [
     "beat",
     "beat",
@@ -52878,8 +55049,8 @@
    "t": "RY",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
-   "iv": "SELL",
+   "v": "BUY",
+   "iv": "HOLD",
    "track": [
     "beat",
     "beat",
@@ -52901,8 +55072,8 @@
    "t": "TD",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
-   "iv": "SELL",
+   "v": "BUY",
+   "iv": "HOLD",
    "track": [
     "beat",
     "beat",
@@ -53029,6 +55200,29 @@
   },
   {
    "date": "2026-12-03",
+   "ticker": "GWRE",
+   "name": "Guidewire Software, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 13.9,
+   "auto": true,
+   "t": "GWRE",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-12-03",
    "ticker": "TTAN",
    "name": "ServiceTitan, Inc.",
    "when": "Not stated",
@@ -53086,7 +55280,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "SELL",
+   "iv": "HOLD",
    "track": [
     "beat",
     "beat",
@@ -53199,7 +55393,12 @@
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
-   "track": null,
+   "track": [
+    "miss",
+    "miss",
+    "miss",
+    "miss"
+   ],
    "lrc_rating": null,
    "covered": false
   },
@@ -53287,6 +55486,29 @@
    "iv": "HOLD",
    "track": [
     "beat",
+    "miss",
+    "miss",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-12-08",
+   "ticker": "BRZE",
+   "name": "Braze, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 5.2,
+   "auto": true,
+   "t": "BRZE",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "SELL",
+   "track": [
+    "miss",
     "miss",
     "miss",
     "beat"
@@ -53513,7 +55735,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "SELL",
    "track": [
     "beat",
     "inline",
@@ -53582,7 +55804,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "SELL",
    "track": [
     "miss",
     "miss",
@@ -53878,7 +56100,7 @@
    "t": "KMX",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "track": [
     "beat",
@@ -53947,7 +56169,7 @@
    "t": "KBH",
    "lists": [],
    "idea": null,
-   "v": "STRONG SELL",
+   "v": "SELL",
    "iv": "SELL",
    "track": [
     "miss",
@@ -53970,7 +56192,7 @@
    "t": "PAYX",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "BUY",
    "track": [
     "beat",
@@ -54040,7 +56262,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "SELL",
+   "iv": "HOLD",
    "track": [
     "beat",
     "miss",
@@ -54097,6 +56319,6 @@
    "covered": false
   }
  ],
- "synced": "2026-10-28T14:08+02:00",
+ "synced": "2026-10-28T14:37+02:00",
  "coverage_note": "Ticked = on the LRC watchlist. Every company the LRC Stock Scanner tracks shows its trading and investment ratings. Updated after every scanner run."
 }
