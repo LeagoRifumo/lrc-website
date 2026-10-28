@@ -1,14 +1,20 @@
 {
- "edition": "Midday update · Wednesday 28 October 2026 09:15",
- "generated": "2026-10-28T11:15:00+02:00",
- "covers": "Wednesday 28 October 2026, 06:30 to 09:15 SAST: Israel's count, oil after the Ras Tanura claim, Asia's close, US futures and the rand at the JSE open, ahead of tonight's Fed decision",
+ "edition": "Midday update · Wednesday 28 October 2026 12:20",
+ "generated": "2026-10-28T12:20:00+02:00",
+ "covers": "Wednesday 28 October 2026, 09:15 to 12:20 SAST: European gas at a four-year high after the Houthi claims on Saudi energy sites, SA's gas-to-power tender, the rand and JSE in early trade, and Israel's count, ahead of tonight's Fed decision",
  "agent": "LRC News Desk",
- "headline": "Netanyahu's bloc slips below a majority as counting passes half; Brent near $115; KOSPI closes 6.6% higher; Fed tonight",
- "summary": "The rand was at R16.67 per dollar on Wednesday, 0.21% weaker, near its weakest since early October, as a firm dollar and oil near $115 weigh ahead of tonight's Fed decision (Trading Economics, 28 Oct). US futures were mixed early on Wednesday, with Nasdaq 100 futures up 0.46% and Dow futures down 0.26% at 02:13 ET, after SK Hynix's results lifted chip stocks and the KOSPI closed 6.6% higher (Investing.com, 28 Oct). Brent was $115.47 at 04:35 GMT, up 1.4%, with Saudi Arabia not confirming the claimed strike on Ras Tanura (Reuters via Yahoo Finance, 28 Oct), and in Israel the pro-Netanyahu bloc fell to 55 seats with 51.5% of votes counted, short of the 61 needed (Ynet, 28 Oct).",
+ "headline": "European gas hits a four-year high on Houthi claims; SA's first gas-to-power tender fails; rand R16.68 before tonight's Fed",
+ "summary": "The rand was at R16.68 per dollar at 06:52 GMT, 0.2% weaker, with the Top 40 down about 0.2% in early trade and the 2035 bond yield up 2 basis points at 8.6%, while the energy ministry said South Africa's first 2,000 MW gas-to-power tender closed without a preferred bidder (Reuters via CNBC Africa, 28 Oct). The Fed is expected to hold at 20:00 SAST, but futures price an 84% chance of a December hike (CME FedWatch via Reuters/CNBC Africa, 28 Oct), and Microsoft and Alphabet report after the US close. Dutch TTF gas rose 1.2% to EUR97.35/MWh, its highest in about four years, after the Houthis said they hit Saudi Arabia's Ras Tanura refinery, which Saudi authorities have not confirmed (Investing.com, 28 Oct); Brent was $115.47 at 04:35 GMT (Reuters via Yahoo Finance, 28 Oct).",
  "sections": [
   {
    "name": "Breaking",
    "items": [
+    {
+     "title": "European gas at a four-year high after Houthi claims on Saudi energy sites",
+     "summary": "The front-month Dutch TTF contract rose 1.2% to EUR97.35 per megawatt-hour on Wednesday, its highest in roughly four years, after the Houthis said on Tuesday they targeted Saudi Arabia's Ras Tanura refinery with a ballistic missile; earlier attacks hit pumping stations on the East-West crude pipeline. There was no independent confirmation from Saudi authorities (Investing.com, 28 Oct). Higher gas and oil prices feed into fuel and import costs for South Africa.",
+     "source": "Investing.com",
+     "url": "https://ph.investing.com/news/commodities-news/europe-gas-climbs-to-fresh-2022-peaks-as-houthi-strikes-on-saudi-energy-hubs-2654607"
+    },
     {
      "title": "Israel: Netanyahu's bloc falls to 55 seats with just over half the vote counted",
      "summary": "With 51.5% of votes counted at about 07:37 Israel time, the pro-Netanyahu bloc had 55 seats, Gadi Eisenkot's opposition bloc 49 and the Arab parties 16; 61 seats are needed for a majority. Earlier, at 41.9% counted, the bloc had 57 (Times of Israel, 28 Oct). About 650,000 double-envelope ballots, including soldiers', are counted separately and the process could run into Friday, so the numbers may still change (Ynet, 27–28 Oct).",
@@ -68,16 +74,22 @@
    "name": "South Africa",
    "items": [
     {
+     "title": "Rand R16.68/$, Top 40 down 0.2% early; December Fed hike 84% priced",
+     "summary": "The rand traded at 16.68 per dollar at 06:52 GMT, 0.2% weaker than its previous close, the Top 40 was down about 0.2% in early trade and the 2035 government bond yield rose 2 basis points to 8.6%. Traders expect no change from the Fed at 18:00 GMT, but CME FedWatch shows an 84% chance of a December hike; ETM Analytics said the rand could weaken beyond R17 if oil and Fed pressures persist (Reuters via CNBC Africa, 28 Oct).",
+     "source": "CNBC Africa (Reuters)",
+     "url": "https://www.cnbcafrica.com/2026/south-african-rand-softens-as-oil-prices-rise-fed-in-focus"
+    },
+    {
+     "title": "South Africa's first gas-to-power tender fails on gas-supply concerns",
+     "summary": "The 2,000 MW tender for private producers closed without a preferred bidder because bidders could not give the required assurances of gas supply, the energy and electricity ministry said on Wednesday; four bids totalling 2,830 MW were received in May, and no date was given for the next window (Reuters via CNBC Africa, 28 Oct).",
+     "source": "CNBC Africa (Reuters)",
+     "url": "https://www.cnbcafrica.com/2026/south-africas-first-gas-to-power-tender-fails-on-supply-concerns"
+    },
+    {
      "title": "JSE All Share up 0.63%; Naspers gains 2.5%",
      "summary": "The JSE All Share closed at 109,820.15 on Tuesday, up 689.83 points or 0.63%, with Naspers up 2.48% and AngloGold Ashanti up 1.63% (Trading Economics, 27 Oct).",
      "source": "Trading Economics",
      "url": "https://tradingeconomics.com/south-africa/stock-market"
-    },
-    {
-     "title": "Rand at R16.67/$ at the open, near a one-month low",
-     "summary": "The rand was at R16.6658 per dollar on Wednesday, 0.21% weaker than the previous session and near its weakest since early October, pressured by a firmer dollar, softer gold and platinum and higher oil prices; the Medium-Term Budget Policy Statement's commitment to fiscal consolidation has offered some support (Trading Economics, 28 Oct). The 2035 government bond yield was 8.62% on Tuesday morning (Reuters via CNBC Africa, 27 Oct).",
-     "source": "Trading Economics",
-     "url": "https://tradingeconomics.com/south-africa/currency"
     }
    ]
   },
@@ -154,11 +166,11 @@
   }
  ],
  "watch_today": [
-  "Fed decision at 20:00 SAST: a hold is about 91% priced; watch the December hike signal",
+  "Fed decision at 20:00 SAST: a hold is expected; futures price an 84% chance of a December hike",
   "Microsoft and Alphabet results after the US close (about 22:00 SAST onwards)",
   "Oil: whether Saudi Arabia confirms damage at Ras Tanura; US EIA crude stocks at 16:30 SAST",
   "Israel: the count continues; double-envelope ballots could take until Friday",
-  "Rand near R16.67/$ and the JSE's reaction to oil, the Fed and the chip rally",
+  "Rand near R16.68/$ (ETM Analytics flags R17 risk) and the JSE's reaction to oil, gas, the Fed and the chip rally",
   "Coming up: Amazon and Intel results, US GDP and PCE, SA PPI (Thu); SA trade data and Bank of Japan (Fri); OPEC+ on Sunday 1 November"
  ]
 }
