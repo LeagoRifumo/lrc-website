@@ -1130,6 +1130,13 @@
 "amount": 0.41,
 "pay": "2026-10-01"
 },
+"ALB|2026-12-18": {
+"t": "ALB",
+"ex": "2026-12-18",
+"n": "Albemarle Corporation",
+"m": "US",
+"cur": "USD"
+},
 "ALLE|2024-12-17": {
 "t": "ALLE",
 "ex": "2024-12-17",
@@ -2656,6 +2663,13 @@
 "cur": "USD",
 "amount": 0.895,
 "pay": "2026-09-01"
+},
+"AWK|2026-11-12": {
+"t": "AWK",
+"ex": "2026-11-12",
+"n": "American Water Works Company, Inc.",
+"m": "US",
+"cur": "USD"
 },
 "AXP|2025-01-03": {
 "t": "AXP",
@@ -4805,7 +4819,7 @@
 "n": "Richemont",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 60.24
+"amount": 60.2
 },
 "CFR.JO|2026-09-16": {
 "t": "CFR.JO",
@@ -4813,7 +4827,7 @@
 "n": "Richemont",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 86.34
+"amount": 86.28
 },
 "CF|2024-11-15": {
 "t": "CF",
@@ -6398,6 +6412,13 @@
 "cur": "USD",
 "amount": 0.52,
 "pay": "2026-09-15"
+},
+"CTAS|2026-11-13": {
+"t": "CTAS",
+"ex": "2026-11-13",
+"n": "Cintas Corporation",
+"m": "US",
+"cur": "USD"
 },
 "CTSH|2024-11-19": {
 "t": "CTSH",
@@ -9150,6 +9171,13 @@
 "amount": 1.1,
 "pay": "2026-08-28"
 },
+"ETN|2026-11-10": {
+"t": "ETN",
+"ex": "2026-11-10",
+"n": "Eaton Corporation plc",
+"m": "US",
+"cur": "USD"
+},
 "ETR|2024-11-13": {
 "t": "ETR",
 "ex": "2024-11-13",
@@ -11220,7 +11248,7 @@
 "n": "Glencore",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 2.832
+"amount": 2.833
 },
 "GLW|2024-11-15": {
 "t": "GLW",
@@ -13606,7 +13634,7 @@
 "n": "Investec plc",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 4.646
+"amount": 4.65
 },
 "INTC|2024-08-07": {
 "t": "INTC",
@@ -14123,6 +14151,13 @@
 "cur": "USD",
 "amount": 0.215,
 "pay": "2026-09-02"
+},
+"IVZ|2026-11-13": {
+"t": "IVZ",
+"ex": "2026-11-13",
+"n": "Invesco Ltd.",
+"m": "US",
+"cur": "USD"
 },
 "JBHT|2024-11-08": {
 "t": "JBHT",
@@ -19156,7 +19191,7 @@
 "n": "NEPI Rockcastle",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 5.095
+"amount": 5.096
 },
 "NRP.JO|2025-09-10": {
 "t": "NRP.JO",
@@ -19180,7 +19215,7 @@
 "n": "NEPI Rockcastle",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 5.36
+"amount": 5.361
 },
 "NSC|2024-11-01": {
 "t": "NSC",
@@ -22699,7 +22734,7 @@
 "n": "Reinet",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 8.06
+"amount": 8.061
 },
 "ROK|2024-11-18": {
 "t": "ROK",
@@ -28268,6 +28303,13 @@
 "amount": 0.5,
 "pay": "2026-09-01"
 },
+"WFC|2026-11-06": {
+"t": "WFC",
+"ex": "2026-11-06",
+"n": "Wells Fargo & Company",
+"m": "US",
+"cur": "USD"
+},
 "WHL.JO|2025-03-26": {
 "t": "WHL.JO",
 "ex": "2025-03-26",
@@ -28364,6 +28406,13 @@
 "cur": "USD",
 "amount": 0.525,
 "pay": "2026-09-28"
+},
+"WMB|2026-12-11": {
+"t": "WMB",
+"ex": "2026-12-11",
+"n": "The Williams Companies, Inc.",
+"m": "US",
+"cur": "USD"
 },
 "WMT|2024-12-13": {
 "t": "WMT",

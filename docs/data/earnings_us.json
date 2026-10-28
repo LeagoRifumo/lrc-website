@@ -385,37 +385,6 @@
   },
   {
    "date": "2026-10-01",
-   "ticker": "NKE",
-   "name": "Nike, Inc.",
-   "when": "Not stated",
-   "period": "",
-   "quarter": "Aug/2026",
-   "eps_forecast": "$0.43",
-   "market_cap_bn": 56.3,
-   "reported": true,
-   "result": "beat",
-   "eps_actual": 0.48,
-   "eps_est": 0.43,
-   "surprise": 0.11630000000000001,
-   "heps": null,
-   "heps_prior": null,
-   "unit": null,
-   "change": null,
-   "measure": null,
-   "dps": null,
-   "source": "Nasdaq",
-   "t": "NKE",
-   "lists": [
-    "Trading SELL"
-   ],
-   "idea": null,
-   "v": "SELL",
-   "iv": "HOLD",
-   "lrc_rating": null,
-   "covered": true
-  },
-  {
-   "date": "2026-10-01",
    "ticker": "ACN",
    "name": "Accenture plc",
    "when": "Not stated",
@@ -440,6 +409,35 @@
    "idea": null,
    "v": "BUY",
    "iv": "BUY",
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-10-01",
+   "ticker": "NKE",
+   "name": "Nike, Inc.",
+   "when": "Not stated",
+   "period": "",
+   "quarter": "Aug/2026",
+   "eps_forecast": "$0.43",
+   "market_cap_bn": 56.3,
+   "reported": true,
+   "result": "beat",
+   "eps_actual": 0.48,
+   "eps_est": 0.43,
+   "surprise": 0.11630000000000001,
+   "heps": null,
+   "heps_prior": null,
+   "unit": null,
+   "change": null,
+   "measure": null,
+   "dps": null,
+   "source": "Nasdaq",
+   "t": "NKE",
+   "lists": [],
+   "idea": null,
+   "v": "SELL",
+   "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
   },
@@ -990,7 +988,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "BUY",
+   "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
   },
@@ -1192,7 +1190,7 @@
    "t": "ASML",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -1251,7 +1249,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "BUY",
+   "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
   },
@@ -1279,7 +1277,7 @@
    "t": "BLK",
    "lists": [],
    "idea": "Technical setups",
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -1308,7 +1306,7 @@
    "t": "PGR",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -1366,8 +1364,8 @@
    "t": "STT",
    "lists": [],
    "idea": null,
-   "v": "BUY",
-   "iv": "BUY",
+   "v": "HOLD",
+   "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
   },
@@ -1540,7 +1538,7 @@
    "t": "BNY",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -1570,7 +1568,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "BUY",
+   "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
   },
@@ -1598,7 +1596,7 @@
    "t": "MRSH",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -2207,8 +2205,8 @@
    "t": "STLD",
    "lists": [],
    "idea": null,
-   "v": "BUY",
-   "iv": "BUY",
+   "v": "HOLD",
+   "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
   },
@@ -2758,7 +2756,7 @@
    "t": "RTX",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -2874,7 +2872,7 @@
    "t": "COF",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -2903,7 +2901,7 @@
    "t": "MMM",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -3136,7 +3134,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "BUY",
+   "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
   },
@@ -3251,7 +3249,7 @@
    "t": "HAS",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "BUY",
    "lrc_rating": null,
    "covered": false
@@ -3831,7 +3829,7 @@
    "t": "META",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -4353,8 +4351,8 @@
    "t": "URI",
    "lists": [],
    "idea": null,
-   "v": "BUY",
-   "iv": "BUY",
+   "v": "HOLD",
+   "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
   },
@@ -4411,7 +4409,7 @@
    "t": "WAB",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -5810,68 +5808,6 @@
   },
   {
    "date": "2026-10-22",
-   "ticker": "NEM",
-   "name": "Newmont Corporation",
-   "when": "Not stated",
-   "period": "",
-   "quarter": "Sep/2026",
-   "eps_forecast": "$1.94",
-   "market_cap_bn": 114.7,
-   "reported": true,
-   "result": "beat",
-   "eps_actual": 2.2,
-   "eps_est": 1.94,
-   "surprise": 0.134,
-   "heps": null,
-   "heps_prior": null,
-   "unit": null,
-   "change": null,
-   "measure": null,
-   "dps": null,
-   "source": "Nasdaq",
-   "t": "NEM",
-   "lists": [
-    "Trading BUY"
-   ],
-   "idea": "Score leaders",
-   "v": "BUY",
-   "iv": "STRONG BUY",
-   "lrc_rating": null,
-   "covered": true
-  },
-  {
-   "date": "2026-10-22",
-   "ticker": "NVR",
-   "name": "NVR, Inc.",
-   "when": "Not stated",
-   "period": "",
-   "quarter": "Sep/2026",
-   "eps_forecast": "$106.11",
-   "market_cap_bn": 15.3,
-   "reported": true,
-   "result": "miss",
-   "eps_actual": 89.45,
-   "eps_est": 106.11,
-   "surprise": -0.157,
-   "heps": null,
-   "heps_prior": null,
-   "unit": null,
-   "change": null,
-   "measure": null,
-   "dps": null,
-   "source": "Nasdaq",
-   "t": "NVR",
-   "lists": [
-    "Trading SELL"
-   ],
-   "idea": null,
-   "v": "SELL",
-   "iv": "HOLD",
-   "lrc_rating": null,
-   "covered": true
-  },
-  {
-   "date": "2026-10-22",
    "ticker": "DECK",
    "name": "Deckers Outdoor Corporation",
    "when": "Not stated",
@@ -6072,6 +6008,35 @@
    "idea": null,
    "v": null,
    "iv": null,
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-10-22",
+   "ticker": "NEM",
+   "name": "Newmont Corporation",
+   "when": "Not stated",
+   "period": "",
+   "quarter": "Sep/2026",
+   "eps_forecast": "$1.94",
+   "market_cap_bn": 114.7,
+   "reported": true,
+   "result": "beat",
+   "eps_actual": 2.2,
+   "eps_est": 1.94,
+   "surprise": 0.134,
+   "heps": null,
+   "heps_prior": null,
+   "unit": null,
+   "change": null,
+   "measure": null,
+   "dps": null,
+   "source": "Nasdaq",
+   "t": "NEM",
+   "lists": [],
+   "idea": "Score leaders",
+   "v": "BUY",
+   "iv": "STRONG BUY",
    "lrc_rating": null,
    "covered": false
   },
@@ -6651,7 +6616,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "SELL",
+   "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
   },
@@ -6802,6 +6767,35 @@
   },
   {
    "date": "2026-10-22",
+   "ticker": "NVR",
+   "name": "NVR, Inc.",
+   "when": "Not stated",
+   "period": "",
+   "quarter": "Sep/2026",
+   "eps_forecast": "$106.11",
+   "market_cap_bn": 15.3,
+   "reported": true,
+   "result": "miss",
+   "eps_actual": 89.45,
+   "eps_est": 106.11,
+   "surprise": -0.157,
+   "heps": null,
+   "heps_prior": null,
+   "unit": null,
+   "change": null,
+   "measure": null,
+   "dps": null,
+   "source": "Nasdaq",
+   "t": "NVR",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-10-22",
    "ticker": "ALLE",
    "name": "Allegion plc",
    "when": "Not stated",
@@ -6824,7 +6818,7 @@
    "t": "ALLE",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "BUY",
    "lrc_rating": null,
    "covered": false
@@ -8767,7 +8761,7 @@
    "t": "NUE",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -8883,8 +8877,8 @@
    "t": "CINF",
    "lists": [],
    "idea": "Score leaders",
-   "v": "HOLD",
-   "iv": "HOLD",
+   "v": "BUY",
+   "iv": "STRONG BUY",
    "lrc_rating": null,
    "covered": false
   },
@@ -8913,7 +8907,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "BUY",
+   "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
   },
@@ -10130,8 +10124,8 @@
    "t": "AMT",
    "lists": [],
    "idea": null,
-   "v": "BUY",
-   "iv": "STRONG BUY",
+   "v": "HOLD",
+   "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
   },
@@ -10361,7 +10355,7 @@
    "source": null,
    "t": "NXPI",
    "lists": [],
-   "idea": "Score leaders",
+   "idea": null,
    "v": "BUY",
    "iv": "STRONG BUY",
    "lrc_rating": null,
@@ -10711,7 +10705,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "BUY",
+   "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
   },
@@ -10885,7 +10879,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "BUY",
+   "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
   },
@@ -10914,7 +10908,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "BUY",
+   "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
   },
@@ -13247,12 +13241,14 @@
    "eps_last_year": "$4.13",
    "quarter": "Sep/2026",
    "market_cap_bn": 3955.3,
-   "covered": false,
+   "covered": true,
    "lrc_rating": null,
    "t": "MSFT",
-   "lists": [],
+   "lists": [
+    "Trading BUY"
+   ],
    "idea": "Technical setups",
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "track": [
     "beat",
@@ -13275,7 +13271,7 @@
    "t": "GOOG",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "track": [
     "beat",
@@ -13298,7 +13294,7 @@
    "t": "GOOGL",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "track": [
     "beat",
@@ -13384,7 +13380,7 @@
    "t": "APH",
    "lists": [],
    "idea": "Earnings watch",
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "track": [
     "beat",
@@ -13533,7 +13529,7 @@
    "t": "PSX",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "track": [
     "beat",
@@ -14395,7 +14391,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "BUY",
+   "iv": "HOLD",
    "track": [
     "beat",
     "beat",
@@ -14681,7 +14677,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "BUY",
    "track": [
     "beat",
     "miss",
@@ -14789,7 +14785,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "BUY",
+   "iv": "HOLD",
    "track": [
     "miss",
     "miss",
@@ -16285,7 +16281,7 @@
    "t": "AMZN",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "track": [
     "beat",
@@ -16330,7 +16326,7 @@
    "lrc_rating": null,
    "t": "MA",
    "lists": [],
-   "idea": null,
+   "idea": "Score leaders",
    "v": "HOLD",
    "iv": "HOLD",
    "track": [
@@ -16566,8 +16562,8 @@
    "t": "SYK",
    "lists": [],
    "idea": null,
-   "v": "BUY",
-   "iv": "BUY",
+   "v": "HOLD",
+   "iv": "HOLD",
    "track": [
     "beat",
     "beat",
@@ -17448,7 +17444,7 @@
    "t": "WTW",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "track": [
     "inline",
@@ -17471,7 +17467,7 @@
    "t": "DXCM",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "track": [
     "beat",
@@ -20074,31 +20070,6 @@
   },
   {
    "date": "2026-10-30",
-   "ticker": "REGN",
-   "name": "Regeneron Pharmaceuticals, Inc.",
-   "when": "Before open",
-   "eps_forecast": "$13.76",
-   "eps_last_year": "$9.63",
-   "quarter": "Sep/2026",
-   "market_cap_bn": 83.2,
-   "covered": true,
-   "lrc_rating": null,
-   "t": "REGN",
-   "lists": [
-    "Trading BUY"
-   ],
-   "idea": "Technical setups",
-   "v": "STRONG BUY",
-   "iv": "BUY",
-   "track": [
-    "beat",
-    "beat",
-    "beat",
-    "beat"
-   ]
-  },
-  {
-   "date": "2026-10-30",
    "ticker": "XOM",
    "name": "ExxonMobil Holdings Corporation",
    "when": "Before open",
@@ -20157,7 +20128,7 @@
    "t": "CVX",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "track": [
     "beat",
@@ -20233,6 +20204,29 @@
    "idea": null,
    "v": "BUY",
    "iv": "HOLD",
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ]
+  },
+  {
+   "date": "2026-10-30",
+   "ticker": "REGN",
+   "name": "Regeneron Pharmaceuticals, Inc.",
+   "when": "Before open",
+   "eps_forecast": "$13.76",
+   "eps_last_year": "$9.63",
+   "quarter": "Sep/2026",
+   "market_cap_bn": 83.2,
+   "covered": false,
+   "lrc_rating": null,
+   "t": "REGN",
+   "lists": [],
+   "idea": "Technical setups",
+   "v": "HOLD",
+   "iv": "BUY",
    "track": [
     "beat",
     "beat",
@@ -20603,7 +20597,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "BUY",
+   "iv": "HOLD",
    "track": [
     "miss",
     "beat",
@@ -21115,7 +21109,7 @@
    "t": "FOX",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "BUY",
    "track": null
   },
@@ -21209,7 +21203,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "STRONG BUY",
+   "iv": "HOLD",
    "track": [
     "beat",
     "miss",
@@ -22402,7 +22396,7 @@
    "t": "ANET",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "track": [
     "beat",
@@ -22654,8 +22648,8 @@
    "t": "TRI",
    "lists": [],
    "idea": null,
-   "v": "BUY",
-   "iv": "BUY",
+   "v": "HOLD",
+   "iv": "HOLD",
    "track": [
     "beat",
     "inline",
@@ -22677,7 +22671,7 @@
    "t": "KDP",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "track": [
     "inline",
@@ -23136,7 +23130,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "BUY",
+   "iv": "HOLD",
    "track": [
     "beat",
     "beat",
@@ -23158,7 +23152,7 @@
    "t": "ZBRA",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "track": [
     "beat",
@@ -23301,7 +23295,7 @@
    "t": "IT",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "BUY",
    "track": [
     "beat",
@@ -25173,23 +25167,28 @@
   },
   {
    "date": "2026-11-04",
-   "ticker": "VMRK",
-   "name": "Vivmark Residential",
+   "ticker": "AMCR",
+   "name": "Amcor plc",
    "when": "After close",
-   "eps_forecast": "$0.97",
-   "eps_last_year": "$0.76",
+   "eps_forecast": "$0.96",
+   "eps_last_year": "$0.95",
    "quarter": "Sep/2026",
-   "market_cap_bn": 49.4,
+   "market_cap_bn": 21.4,
    "covered": true,
    "lrc_rating": null,
-   "t": "VMRK",
+   "t": "AMCR",
    "lists": [
-    "Trading SELL"
+    "Trading BUY"
    ],
-   "idea": null,
-   "v": "SELL",
+   "idea": "Technical setups",
+   "v": "BUY",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "miss",
+    "miss",
+    "beat",
+    "beat"
+   ]
   },
   {
    "date": "2026-11-04",
@@ -25527,7 +25526,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "BUY",
+   "iv": "HOLD",
    "track": [
     "miss",
     "miss",
@@ -25549,7 +25548,7 @@
    "t": "ALL",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "BUY",
    "track": [
     "beat",
@@ -25689,6 +25688,24 @@
     "beat",
     "beat"
    ]
+  },
+  {
+   "date": "2026-11-04",
+   "ticker": "VMRK",
+   "name": "Vivmark Residential",
+   "when": "After close",
+   "eps_forecast": "$0.97",
+   "eps_last_year": "$0.76",
+   "quarter": "Sep/2026",
+   "market_cap_bn": 49.4,
+   "covered": false,
+   "lrc_rating": null,
+   "t": "VMRK",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "track": null
   },
   {
    "date": "2026-11-04",
@@ -26088,7 +26105,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "BUY",
+   "iv": "HOLD",
    "track": [
     "beat",
     "inline",
@@ -26115,29 +26132,6 @@
   },
   {
    "date": "2026-11-04",
-   "ticker": "AMCR",
-   "name": "Amcor plc",
-   "when": "After close",
-   "eps_forecast": "$0.96",
-   "eps_last_year": "$0.95",
-   "quarter": "Sep/2026",
-   "market_cap_bn": 21.4,
-   "covered": false,
-   "lrc_rating": null,
-   "t": "AMCR",
-   "lists": [],
-   "idea": "Technical setups",
-   "v": "BUY",
-   "iv": "HOLD",
-   "track": [
-    "miss",
-    "miss",
-    "beat",
-    "beat"
-   ]
-  },
-  {
-   "date": "2026-11-04",
    "ticker": "PTC",
    "name": "PTC Inc.",
    "when": "After close",
@@ -26150,7 +26144,7 @@
    "t": "PTC",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "BUY",
    "track": [
     "beat",
@@ -26173,7 +26167,7 @@
    "t": "CDW",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "track": [
     "beat",
@@ -29636,16 +29630,42 @@
    "lrc_rating": null,
    "t": "ECHO",
    "lists": [
+    "Trading SELL",
     "Investment SELL"
    ],
    "idea": null,
-   "v": "HOLD",
+   "v": "SELL",
    "iv": "SELL",
    "track": [
     "miss",
     "miss",
     "beat",
     "beat"
+   ]
+  },
+  {
+   "date": "2026-11-05",
+   "ticker": "CPT",
+   "name": "Camden Property Trust",
+   "when": "After close",
+   "eps_forecast": "$1.69",
+   "eps_last_year": "$1.70",
+   "quarter": "Sep/2026",
+   "market_cap_bn": 10.3,
+   "covered": true,
+   "lrc_rating": null,
+   "t": "CPT",
+   "lists": [
+    "Trading SELL"
+   ],
+   "idea": null,
+   "v": "SELL",
+   "iv": "SELL",
+   "track": [
+    "miss",
+    "beat",
+    "miss",
+    "miss"
    ]
   },
   {
@@ -29662,7 +29682,7 @@
    "t": "COP",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "track": [
     "beat",
@@ -29805,7 +29825,7 @@
    "t": "ABNB",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "track": [
     "miss",
@@ -30852,7 +30872,7 @@
    "t": "SOLV",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "BUY",
    "track": [
     "beat",
@@ -30950,7 +30970,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "BUY",
+   "iv": "HOLD",
    "track": [
     "beat",
     "beat",
@@ -31212,29 +31232,6 @@
    "idea": null,
    "v": null,
    "iv": null
-  },
-  {
-   "date": "2026-11-05",
-   "ticker": "CPT",
-   "name": "Camden Property Trust",
-   "when": "After close",
-   "eps_forecast": "$1.69",
-   "eps_last_year": "$1.70",
-   "quarter": "Sep/2026",
-   "market_cap_bn": 10.3,
-   "covered": false,
-   "lrc_rating": null,
-   "t": "CPT",
-   "lists": [],
-   "idea": null,
-   "v": "HOLD",
-   "iv": "SELL",
-   "track": [
-    "miss",
-    "beat",
-    "miss",
-    "miss"
-   ]
   },
   {
    "date": "2026-11-05",
@@ -34052,7 +34049,7 @@
    "t": "HUM",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "track": [
     "beat",
@@ -34790,6 +34787,31 @@
   },
   {
    "date": "2026-11-09",
+   "ticker": "TTWO",
+   "name": "Take-Two Interactive Software, Inc.",
+   "when": "After close",
+   "eps_forecast": "$0.49",
+   "eps_last_year": "$1.04",
+   "quarter": "Sep/2026",
+   "market_cap_bn": 38.0,
+   "covered": true,
+   "lrc_rating": null,
+   "t": "TTWO",
+   "lists": [
+    "Trading SELL"
+   ],
+   "idea": null,
+   "v": "SELL",
+   "iv": "SELL",
+   "track": [
+    "miss",
+    "miss",
+    "beat",
+    "beat"
+   ]
+  },
+  {
+   "date": "2026-11-09",
    "ticker": "CRWV",
    "name": "CoreWeave, Inc.",
    "when": "Not stated",
@@ -34917,29 +34939,6 @@
    "iv": "HOLD",
    "track": [
     "inline",
-    "beat",
-    "beat"
-   ]
-  },
-  {
-   "date": "2026-11-09",
-   "ticker": "TTWO",
-   "name": "Take-Two Interactive Software, Inc.",
-   "when": "After close",
-   "eps_forecast": "$0.49",
-   "eps_last_year": "$1.04",
-   "quarter": "Sep/2026",
-   "market_cap_bn": 38.0,
-   "covered": false,
-   "lrc_rating": null,
-   "t": "TTWO",
-   "lists": [],
-   "idea": null,
-   "v": "HOLD",
-   "iv": "SELL",
-   "track": [
-    "miss",
-    "miss",
     "beat",
     "beat"
    ]
@@ -36149,7 +36148,7 @@
    "t": "CSCO",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "track": [
     "beat",
@@ -37876,7 +37875,7 @@
    "t": "DIS",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "track": [
     "beat",
@@ -38382,7 +38381,7 @@
    "t": "J",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "track": [
     "beat",
@@ -38589,7 +38588,7 @@
    "t": "DELL",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "track": [
     "beat",
@@ -38612,7 +38611,7 @@
    "t": "ADSK",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "BUY",
    "track": [
     "beat",
@@ -38658,7 +38657,7 @@
    "t": "MRVL",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "track": [
     "beat",
@@ -38972,31 +38971,6 @@
   },
   {
    "date": "2026-12-17",
-   "ticker": "NKE",
-   "name": "NIKE, Inc.",
-   "when": "Not stated",
-   "period": "Expected date (market data feed)",
-   "eps_forecast": "",
-   "market_cap_bn": 55.8,
-   "auto": true,
-   "t": "NKE",
-   "lists": [
-    "Trading SELL"
-   ],
-   "idea": null,
-   "v": "SELL",
-   "iv": "HOLD",
-   "track": [
-    "beat",
-    "beat",
-    "beat",
-    "beat"
-   ],
-   "lrc_rating": null,
-   "covered": true
-  },
-  {
-   "date": "2026-12-17",
    "ticker": "ACN",
    "name": "Accenture plc",
    "when": "Not stated",
@@ -39043,6 +39017,29 @@
   },
   {
    "date": "2026-12-17",
+   "ticker": "NKE",
+   "name": "NIKE, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 55.8,
+   "auto": true,
+   "t": "NKE",
+   "lists": [],
+   "idea": null,
+   "v": "SELL",
+   "iv": "HOLD",
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-12-17",
    "ticker": "FDS",
    "name": "FactSet Research Systems Inc.",
    "when": "Not stated",
@@ -39076,7 +39073,7 @@
    "t": "PAYX",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "BUY",
    "track": [
     "beat",
@@ -39183,6 +39180,6 @@
    "covered": false
   }
  ],
- "synced": "2026-10-28T07:15+02:00",
+ "synced": "2026-10-28T09:46+02:00",
  "coverage_note": "Ticked = on the LRC watchlist. Every company the LRC Stock Scanner tracks shows its trading and investment ratings. Updated after every scanner run."
 }
