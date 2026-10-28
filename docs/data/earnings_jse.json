@@ -105,7 +105,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed) — confirm on SENS",
    "eps_forecast": "",
-   "market_cap_bn": 43.8,
+   "market_cap_bn": 44.0,
    "auto": true,
    "t": "RDF.JO",
    "lists": [],
@@ -123,44 +123,22 @@
    "when": "Not stated",
    "period": "Expected date (market data feed) — confirm on SENS",
    "eps_forecast": "",
-   "market_cap_bn": 726.4,
+   "market_cap_bn": 725.3,
    "auto": true,
    "t": "ANG.JO",
-   "lists": [],
+   "lists": [
+    "Investment BUY"
+   ],
    "idea": "Score leaders",
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "STRONG BUY",
    "track": [
     "beat",
     "beat",
     "miss"
    ],
    "lrc_rating": null,
-   "covered": false
-  },
-  {
-   "date": "2026-11-06",
-   "ticker": "SAP",
-   "name": "Sappi",
-   "when": "Before open",
-   "period": "Q4 and full year to Sep 2026 (FY26); release 08:00 SAST",
-   "eps_forecast": "",
-   "market_cap_bn": null,
-   "covered": true,
-   "lrc_rating": null,
-   "source": "Sappi investors - next event - https://www.sappi.com/en-gb/investors/next-event",
-   "t": "SAP.JO",
-   "lists": [
-    "Investment SELL"
-   ],
-   "v": "HOLD",
-   "iv": "STRONG SELL",
-   "idea": null,
-   "track": [
-    "miss",
-    "miss",
-    "beat"
-   ]
+   "covered": true
   },
   {
    "date": "2026-11-06",
@@ -169,7 +147,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed) — confirm on SENS",
    "eps_forecast": "",
-   "market_cap_bn": 15.6,
+   "market_cap_bn": 15.5,
    "auto": true,
    "t": "TFG.JO",
    "lists": [],
@@ -181,6 +159,28 @@
    "covered": false
   },
   {
+   "date": "2026-11-06",
+   "ticker": "SAP",
+   "name": "Sappi",
+   "when": "Before open",
+   "period": "Q4 and full year to Sep 2026 (FY26); release 08:00 SAST",
+   "eps_forecast": "",
+   "market_cap_bn": null,
+   "covered": false,
+   "lrc_rating": null,
+   "source": "Sappi investors - next event - https://www.sappi.com/en-gb/investors/next-event",
+   "t": "SAP.JO",
+   "lists": [],
+   "v": "HOLD",
+   "iv": "HOLD",
+   "idea": null,
+   "track": [
+    "miss",
+    "miss",
+    "beat"
+   ]
+  },
+  {
    "date": "2026-11-10",
    "ticker": "VOD",
    "name": "Vodacom Group",
@@ -188,13 +188,11 @@
    "period": "Interim to 30 Sep 2026 (presentation webcast 15:00 SAST)",
    "eps_forecast": "",
    "market_cap_bn": null,
-   "covered": true,
+   "covered": false,
    "lrc_rating": null,
    "source": "Vodacom interim results page - https://vodacom.com/interim-results.php",
    "t": "VOD.JO",
-   "lists": [
-    "Trading BUY"
-   ],
+   "lists": [],
    "v": "BUY",
    "iv": "HOLD",
    "idea": "Earnings watch",
@@ -243,7 +241,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed) — confirm on SENS",
    "eps_forecast": "",
-   "market_cap_bn": 86.4,
+   "market_cap_bn": 86.3,
    "auto": true,
    "t": "RNI.JO",
    "lists": [],
@@ -292,6 +290,26 @@
   },
   {
    "date": "2026-11-19",
+   "ticker": "SPP",
+   "name": "Spar",
+   "when": "Not stated",
+   "period": "Expected date (market data feed) — confirm on SENS",
+   "eps_forecast": "",
+   "market_cap_bn": 9.8,
+   "auto": true,
+   "t": "SPP.JO",
+   "lists": [
+    "Investment SELL"
+   ],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "SELL",
+   "track": null,
+   "lrc_rating": null,
+   "covered": true
+  },
+  {
+   "date": "2026-11-19",
    "ticker": "INP",
    "name": "Investec plc",
    "when": "Not stated",
@@ -327,24 +345,6 @@
    "track": null
   },
   {
-   "date": "2026-11-19",
-   "ticker": "SPP",
-   "name": "Spar",
-   "when": "Not stated",
-   "period": "Expected date (market data feed) — confirm on SENS",
-   "eps_forecast": "",
-   "market_cap_bn": 9.8,
-   "auto": true,
-   "t": "SPP.JO",
-   "lists": [],
-   "idea": null,
-   "v": "HOLD",
-   "iv": "SELL",
-   "track": null,
-   "lrc_rating": null,
-   "covered": false
-  },
-  {
    "date": "2026-11-20",
    "ticker": "MRP",
    "name": "Mr Price",
@@ -355,7 +355,7 @@
    "auto": true,
    "t": "MRP.JO",
    "lists": [],
-   "idea": null,
+   "idea": "Value & quality",
    "v": "BUY",
    "iv": "BUY",
    "track": null,
@@ -387,7 +387,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed) — confirm on SENS",
    "eps_forecast": "",
-   "market_cap_bn": 67.9,
+   "market_cap_bn": 67.8,
    "auto": true,
    "t": "PPH.JO",
    "lists": [],
@@ -430,7 +430,7 @@
    "t": "PRX.JO",
    "lists": [],
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "BUY",
    "idea": null,
    "track": null
   },
@@ -441,19 +441,21 @@
    "when": "Not stated",
    "period": "Expected date (market data feed) — confirm on SENS",
    "eps_forecast": "",
-   "market_cap_bn": 18.5,
+   "market_cap_bn": 18.3,
    "auto": true,
    "t": "LHC.JO",
-   "lists": [],
+   "lists": [
+    "Trading BUY"
+   ],
    "idea": null,
    "v": "BUY",
    "iv": "BUY",
    "track": null,
    "lrc_rating": null,
-   "covered": false
+   "covered": true
   }
  ],
  "note": "Partial list: a number of Top 100 companies (e.g. Telkom, MTN, Tiger Brands, Pepkor, Pick n Pay, Life Healthcare, Coronation, Mr Price) had no company-published date we could confirm this week; they will be added when dates are published.",
- "synced": "2026-10-28T09:46+02:00",
+ "synced": "2026-10-28T09:56+02:00",
  "coverage_note": "Ticked = on the LRC watchlist. Every company the LRC Stock Scanner tracks shows its trading and investment ratings. Updated after every scanner run."
 }
