@@ -24,9 +24,9 @@ const num = id => parseFloat(($(id) || {}).value);
 /* ---------- research library ---------- */
 /* To SELL a report: add  price: 'R199', buy: 'https://paystack.shop/pay/your-link'  to its entry below. */
 const LIBRARY = [
-  { t: 'Weekly market dashboard — week to 9 Oct 2026', type: 'Market brief', sector: 'Macro & markets', date: '9 Oct 2026', region: 'SA & US', link: 'dashboard.html#2026-10-09',
+  { t: 'Market dashboard — week to 9 Oct 2026', type: 'Market brief', sector: 'Macro & markets', date: '9 Oct 2026', region: 'SA & US', link: 'dashboard.html#2026-10-09',
     s: 'JSE flat on the week, the rand firmer at about R16.51/$, US shares higher and Brent above $100 — what it means for portfolios.', tags: ['JSE', 'Rand', 'S&P 500', 'Commodities'] },
-  { t: 'Weekly market dashboard — week to 2 Oct 2026', type: 'Market brief', sector: 'Macro & markets', date: '2 Oct 2026', region: 'SA & US', link: 'dashboard.html#2026-10-02',
+  { t: 'Market dashboard — week to 2 Oct 2026', type: 'Market brief', sector: 'Macro & markets', date: '2 Oct 2026', region: 'SA & US', link: 'dashboard.html#2026-10-02',
     s: 'A risk-off week for SA after the SARB raised the repo rate to 7.25%; US 10-year yields above 5% and the rand weaker.', tags: ['SARB', 'Yields', 'Rand'] },
   { t: 'Momentum vs valuation: why market leaders fail our test', type: 'Education', sector: 'Process', date: '14 Oct 2026', region: 'US',
     s: 'Our October screen found that the strongest-trending US shares were also the most expensive. Here is why a great chart is not a BUY.', tags: ['Screening', 'Discipline'] },
@@ -526,7 +526,7 @@ const artCard = (a, pre = '') => `<a class="art" href="${pre}${esc(a.url)}">${a.
     return { txt, cls: mag === 0 ? 'g0' : (good ? 'g' : 'r') + mag };
   };
   const show = f => getJSON('dashboards/' + f + '.json').then(d => {
-    $('dashMeta').innerHTML = `<span class="ai">● ${esc(d.live ? 'Live — updates every 4 hours on weekdays' : 'Weekly edition')}</span><span>${esc(d.title)}</span><span>Updated <b>${when(d.generated)}</b></span>`;
+    $('dashMeta').innerHTML = `<span class="ai">● ${esc(d.live ? 'Live — updates every hour on weekdays' : 'Saved end-of-week snapshot')}</span><span>${esc(d.title)}</span><span>Updated <b>${when(d.generated)}</b></span>`;
     const view = d.market_view || d.auto_view;
     $('dashView').innerHTML = view ? `<div class="lbl">${d.market_view ? "THE ANALYST'S VIEW" : 'AUTOMATIC SUMMARY'}</div><p>${esc(view)}</p>` : '';
     T.innerHTML = '<thead><tr><th>INDICATOR</th><th>LATEST</th><th>A WEEK AGO</th><th>WEEK</th><th>A YEAR AGO</th><th>1 YEAR</th><th>AS OF</th><th>WHAT IT TELLS US</th></tr></thead><tbody>' +
@@ -535,7 +535,7 @@ const artCard = (a, pre = '') => `<a class="art" href="${pre}${esc(a.url)}">${a.
     $('dashSrc').textContent = d.updated_by || '';
   }).catch(() => failMsg(T, 'dashboard'));
   Promise.all([getJSON('dashboards/index.json'), getJSON('dashboards/live.json').catch(() => null)]).then(([idx, live]) => {
-    const opts = (live ? [`<option value="live">● This week so far (live)</option>`] : []).concat(idx.weeks.map(w => `<option value="${esc(w.week_ending)}">${esc(w.title.replace('Weekly market dashboard — ', 'Edition: '))}</option>`));
+    const opts = (live ? [`<option value="live">● Live now (updates hourly)</option>`] : []).concat(idx.weeks.map(w => `<option value="${esc(w.week_ending)}">${esc(w.title.replace(/^(Weekly )?market dashboard — /i, 'Saved: '))}</option>`));
     sel.innerHTML = opts.join('');
     const want = location.hash.slice(1); sel.value = [...sel.options].some(o => o.value === want) ? want : (live ? 'live' : (idx.latest || sel.options[0].value));
     sel.onchange = () => { history.replaceState(null, '', '#' + sel.value); show(sel.value); };
@@ -550,6 +550,51 @@ const artCard = (a, pre = '') => `<a class="art" href="${pre}${esc(a.url)}">${a.
   const cls = x => x >= 0 ? (x >= 0.05 ? 'g2' : 'g1') : (x <= -0.05 ? 'r2' : 'r1');
   const px = r => (r.m === 'JSE' ? 'R' : '$') + Number(r.px).toLocaleString('en-ZA', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   const list = (title, sub, xs) => `<div class="mvc"><h3>${title}</h3><p class="mvs">${sub}</p>` + (xs.length ? xs.map((r, i) => `<a class="mvr" href="stock.html?t=${encodeURIComponent(r.t)}" title="${esc(r.n)} · ${esc(r.sec || '')}"><span class="rk">${i + 1}</span><span class="tk">${esc(r.t.replace('.JO', ''))}</span><span class="mn">${esc(r.n)}<small>${esc(r.sec || '')} · ${px(r)}</small></span><span class="rt rt-${(r.v || 'HOLD').replace(' ', '-').toLowerCase()}">${esc(r.v || '')}</span><span class="ch ${cls(r[per])}">${pct(r[per])}</span></a>`).join('') : '<p class="mvs">No data yet.</p>') + '</div>';
+  // ---- market heatmap: sectors → companies, size = market value, colour = price move
+  const H = $('heatmap');
+  const squarify = (items, x, y, w, h) => {   // items: [{v}] sorted desc; returns [{...item, x, y, w, h}]
+    const out = [], tot = items.reduce((a, b) => a + b.v, 0); if (!tot || w <= 0 || h <= 0) return out;
+    const sc = w * h / tot; let rest = items.map(i => ({ ...i, _ar: i.v * sc }));
+    while (rest.length) {
+      const side = Math.min(w, h); let row = [], best = Infinity;
+      for (const it of rest) {
+        const r2 = row.concat(it), s = r2.reduce((a, b) => a + b._ar, 0), mx = Math.max(...r2.map(z => z._ar)), mn = Math.min(...r2.map(z => z._ar));
+        const worst = Math.max(side * side * mx / (s * s), (s * s) / (side * side * mn));
+        if (worst > best) break; best = worst; row = r2;
+      }
+      const s = row.reduce((a, b) => a + b._ar, 0), thick = s / side; let off = 0;
+      row.forEach(it => { const len = it._ar / thick; if (w >= h) out.push({ ...it, x, y: y + off, w: thick, h: len }); else out.push({ ...it, x: x + off, y, w: len, h: thick }); off += len; });
+      if (w >= h) { x += thick; w -= thick; } else { y += thick; h -= thick; }
+      rest = rest.slice(row.length);
+    }
+    return out;
+  };
+  const SAT = { chg: 0.03, p1w: 0.06, p1m: 0.12 };
+  const mix = (a, b, t) => a.map((v, i) => Math.round(v + (b[i] - v) * t));
+  const hcol = x => { if (!isFinite(x)) return 'rgb(42,47,58)'; const t = Math.max(-1, Math.min(1, x / SAT[per])); const g0 = [42, 47, 58];
+    return `rgb(${(t >= 0 ? mix(g0, [16, 140, 66], t) : mix(g0, [190, 38, 30], -t)).join(',')})`; };
+  const heat = (xs, nm) => {
+    if (!H) return;
+    const W = H.clientWidth || 1000, HT = W < 700 ? 620 : Math.min(640, Math.max(460, W * 0.5));
+    let pool = xs.filter(r => r.mcap > 0);
+    if (mkt === 'US') pool = pool.sort((a, b) => b.mcap - a.mcap).slice(0, 200);   // the 200 biggest New York companies
+    const bySec = {}; pool.forEach(r => (bySec[r.sec || 'Other'] = bySec[r.sec || 'Other'] || []).push(r));
+    const secs = Object.entries(bySec).map(([s, a]) => ({ s, a: a.sort((p, q) => q.mcap - p.mcap), v: a.reduce((t, r) => t + Math.sqrt(r.mcap), 0) })).sort((a, b) => b.v - a.v);
+    let html = '';
+    squarify(secs, 0, 0, W, HT).forEach(S => {
+      const hdr = S.h > 40 && S.w > 60 ? 16 : 0;
+      const avg = S.a.reduce((t, r) => t + r[per] * r.mcap, 0) / S.a.reduce((t, r) => t + r.mcap, 0);
+      html += `<div class="hm-sec" style="left:${S.x}px;top:${S.y}px;width:${S.w}px;height:${S.h}px">${hdr ? `<span class="hm-sh" title="${esc(S.s)}: ${pct(avg)} (weighted by size)">${esc(S.s)} <b>${pct(avg)}</b></span>` : ''}</div>`;
+      squarify(S.a.map(r => ({ r, v: Math.sqrt(r.mcap) })), S.x + 1, S.y + 1 + hdr, S.w - 2, S.h - 2 - hdr).forEach(b => {
+        const r = b.r, big = b.w > 46 && b.h > 30, tk = esc(r.t.replace('.JO', ''));
+        html += `<a class="hm-b" href="stock.html?t=${encodeURIComponent(r.t)}" style="left:${b.x}px;top:${b.y}px;width:${Math.max(0, b.w - 1)}px;height:${Math.max(0, b.h - 1)}px;background:${hcol(r[per])}" title="${esc(r.n)} (${tk}) · ${esc(r.sec || '')}\n${pct(r[per])} ${PER[per]}">${big ? `<b style="font-size:${Math.max(10, Math.min(20, Math.min(b.w / 4.2, b.h / 2.6)))}px">${tk}</b><span>${pct(r[per])}</span>` : ''}</a>`;
+      });
+    });
+    H.style.height = HT + 'px'; H.innerHTML = html;
+    const s = SAT[per];
+    $('hmKey').innerHTML = [-s, -s / 2, 0, s / 2, s].map(v => `<span style="background:${hcol(v)}">${v > 0 ? '+' : ''}${(v * 100).toFixed(1).replace('.0', '')}%</span>`).join('') + `<em>${nm} · ${PER[per]}${mkt === 'US' ? ' · 200 biggest companies' : ''}</em>`;
+  };
+  let rz; window.addEventListener('resize', () => { clearTimeout(rz); rz = setTimeout(draw, 200); });
   const draw = () => {
     seg('mvMkt', mkt); seg('mvPer', per);
     if (!rows) return;
@@ -560,6 +605,7 @@ const artCard = (a, pre = '') => `<a class="art" href="${pre}${esc(a.url)}">${a.
     const big = [...xs].sort((a, b) => Math.abs(b[per]) - Math.abs(a[per])).slice(0, 10);
     const adv = xs.filter(r => r[per] > 0).length, dec = xs.filter(r => r[per] < 0).length;
     const nm = mkt === 'JSE' ? 'JSE' : 'New York';
+    heat(xs, nm);
     M.innerHTML = list('▲ Top gainers', `${nm} · ${PER[per]}`, up) + list('▼ Top losers', `${nm} · ${PER[per]}`, dn) + list('◆ Biggest moves', `${nm} · up or down, ${PER[per]}`, big);
     $('movMeta').innerHTML = `<b class="up">${adv} up</b> · <b class="dn">${dec} down</b> of ${xs.length} ${nm} shares in the LRC Stock Scanner · prices as of ${esc((rows.as_of && rows.as_of[mkt]) || '')} · click a name for its one-page summary`;
   };

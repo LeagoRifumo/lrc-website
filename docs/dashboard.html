@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Weekly Market Dashboard — JSE, Rand, S&P 500, Gold & Oil | Leago Rifumo Capital</title>
-<meta name="description" content="Every week on one screen: JSE All Share and Top 40, the rand, SA and US rates and inflation, the S&P 500 and Nasdaq, gold, platinum, Brent, copper and iron ore — plus the top movers. Updated automatically.">
-<meta name="keywords" content="weekly market dashboard, JSE weekly review, rand weekly, S&P 500 weekly, gold price week, Brent oil week, SA repo rate, SA CPI, US 10-year yield, top movers JSE, top movers S&P 500, Leago Rifumo Capital">
+<title>Market Dashboard — JSE, Rand, S&P 500, Gold & Oil | Leago Rifumo Capital</title>
+<meta name="description" content="Live market dashboard, updated through the day: JSE All Share and Top 40, the rand, SA and US rates and inflation, the S&P 500 and Nasdaq, gold, platinum, Brent, copper and iron ore — plus the top movers. Updated automatically.">
+<meta name="keywords" content="market dashboard, live market dashboard, JSE weekly review, rand weekly, S&P 500 weekly, gold price week, Brent oil week, SA repo rate, SA CPI, US 10-year yield, top movers JSE, top movers S&P 500, Leago Rifumo Capital">
 <meta name="author" content="Leago Rifumo Capital">
 <meta name="geo.region" content="ZA-MP"><meta name="geo.placename" content="Ermelo, Mpumalanga">
 <meta property="og:site_name" content="Leago Rifumo Capital"><meta property="og:locale" content="en_ZA">
-<meta property="og:title" content="Weekly Market Dashboard — JSE, Rand, S&P 500, Gold & Oil | Leago Rifumo Capital">
-<meta property="og:description" content="Every week on one screen: JSE All Share and Top 40, the rand, SA and US rates and inflation, the S&P 500 and Nasdaq, gold, platinum, Brent, copper and iron ore — plus the top movers. Updated automatically.">
+<meta property="og:title" content="Market Dashboard — JSE, Rand, S&P 500, Gold & Oil | Leago Rifumo Capital">
+<meta property="og:description" content="Live market dashboard, updated through the day: JSE All Share and Top 40, the rand, SA and US rates and inflation, the S&P 500 and Nasdaq, gold, platinum, Brent, copper and iron ore — plus the top movers. Updated automatically.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.leagorifumocapital.co.za/dashboard.html">
 <meta property="og:image" content="https://www.leagorifumocapital.co.za/assets/img/og-image.png">
@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=9.5">
+<link rel="stylesheet" href="assets/css/style.css?v=9.6">
 </head>
 <body>
 <header class="site-header">
@@ -32,12 +32,12 @@
     <a class="brand" href="index.html" aria-label="Leago Rifumo Capital home"><img src="assets/img/monogram.png" alt=""><div><span>LEAGO RIFUMO</span><small>CAPITAL</small></div></a>
     <ul class="menu" id="menu">
       <li><a href="articles.html">Articles</a></li>
-      <li class="dd"><a href="research.html" class="active">Research <span class="car">▾</span></a><ul class="sub"><li><a href="research.html">Research library</a></li><li><a href="scanner.html">LRC Stock Scanner</a></li><li><a href="dashboard.html" class="active">Weekly market dashboard</a></li><li><a href="watchlist.html">Watchlist</a></li><li><a href="track.html">Track record</a></li></ul></li>
+      <li class="dd"><a href="research.html" class="active">Research <span class="car">▾</span></a><ul class="sub"><li><a href="research.html">Research library</a></li><li><a href="scanner.html">LRC Stock Scanner</a></li><li><a href="dashboard.html" class="active">Market dashboard</a></li><li><a href="watchlist.html">Watchlist</a></li><li><a href="track.html">Track record</a></li></ul></li>
       <li><a href="scanner.html" class="nav-hot">Stock Scanner</a></li>
       <li><a href="earnings.html">Earnings</a></li>
       <li><a href="dividends.html" class="nav-div">Dividends</a></li>
       <li><a href="news.html">News Desk</a></li>
-      <li class="dd"><a href="markets.html">Markets <span class="car">▾</span></a><ul class="sub"><li><a href="markets.html">Live markets</a></li><li><a href="dashboard.html" class="active">Weekly market dashboard</a></li><li><a href="earnings.html">Earnings calendar</a></li><li><a href="dividends.html">Dividend calendar</a></li></ul></li>
+      <li class="dd"><a href="markets.html">Markets <span class="car">▾</span></a><ul class="sub"><li><a href="markets.html">Live markets</a></li><li><a href="dashboard.html" class="active">Market dashboard</a></li><li><a href="earnings.html">Earnings calendar</a></li><li><a href="dividends.html">Dividend calendar</a></li></ul></li>
       <li class="dd"><a href="academy.html">Learn <span class="car">▾</span></a><ul class="sub"><li><a href="academy.html">Academy</a></li><li><a href="tools.html">Analyst tools</a></li></ul></li>
       <li><a href="show.html">Live Show</a></li>
       <li><a href="contact.html">Contact</a></li>
@@ -53,7 +53,7 @@
 <main>
 <section class="page-hero dash-hero"><div class="wrap wide">
   <span class="eyebrow">Market dashboard</span>
-  <h1>The week in markets, <span class="gold">on one screen</span></h1>
+  <h1>Markets today, <span class="gold">on one screen</span></h1>
   <div class="dsel"><label for="dashWeek">Edition</label><select id="dashWeek"></select></div>
   <div class="agent-meta" id="dashMeta"></div>
 </div></section>
@@ -64,13 +64,16 @@
     <em>Green means good for investors: markets up, the rand stronger, inflation and interest rates lower. Hover a row to see the source.</em></div>
 
   <div class="mv-head" id="movers-top">
-    <h2>Top <span class="gold">movers</span></h2>
+    <h2>Market <span class="gold">heatmap</span> &amp; top movers</h2>
     <div class="mv-ctl">
       <div class="seg" id="mvMkt"><button data-v="JSE">JSE</button><button data-v="US">New York</button></div>
       <div class="seg" id="mvPer"><button data-v="chg">Today</button><button data-v="p1w">This week</button><button data-v="p1m">This month</button></div>
     </div>
   </div>
   <p class="mv-meta" id="movMeta"></p>
+  <div class="hm-wrap"><div class="hm" id="heatmap"><p class="muted-load">Loading the heatmap…</p></div>
+    <div class="hm-key" id="hmKey"></div>
+    <p class="hm-note">Each box is a company, grouped by sector. Bigger box = bigger company (market value). Colour = share-price move for the period: green up, red down, grey flat. Tap a box for the company summary.</p></div>
   <div class="mv3" id="movers"><p class="muted-load">Loading top movers…</p></div>
   <p class="src-note" id="dashSrc"></p>
   <div class="edu-note" style="margin-top:24px"><b>EDUCATIONAL ONLY</b> Market data for information. Check the source before acting; prices can be delayed or revised.</div>
@@ -90,6 +93,6 @@
   </div>
 </footer>
 <script>window.LRC_DATA = "data/";</script>
-<script src="assets/js/main.js?v=9.5"></script>
+<script src="assets/js/main.js?v=9.6"></script>
 </body>
 </html>

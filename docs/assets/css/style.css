@@ -932,3 +932,18 @@ html:not(.safe) .onlysafe{display:none!important}
 .erow.rep .resbox{grid-column:3 / -1;justify-self:end;display:flex;flex-direction:column;align-items:flex-end;gap:3px;text-align:right}
 .erow.rep .resbox .res-eps{margin-top:0}
 @media (max-width:860px){.erow.rep .resbox{grid-column:2;justify-self:start;align-items:flex-start;text-align:left}}
+
+/* v8.1: market heatmap */
+.hm-wrap{margin:14px 0 22px}
+.hm{position:relative;width:100%;border-radius:12px;overflow:hidden;background:#0B0D13;border:1px solid var(--line)}
+.hm-sec{position:absolute;box-sizing:border-box;border:1px solid #07080C}
+.hm-sh{position:absolute;left:4px;top:1px;right:4px;font-size:11px;font-weight:700;letter-spacing:.04em;color:#E8E3D3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-transform:uppercase}
+.hm-sh b{color:#fff;font-weight:800;margin-left:4px}
+.hm-b{position:absolute;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;text-decoration:none;overflow:hidden;line-height:1.1;text-align:center;transition:filter .12s}
+.hm-b:hover{filter:brightness(1.25);outline:2px solid #fff;z-index:2}
+.hm-b b{font-weight:800;text-shadow:0 1px 2px rgba(0,0,0,.4)}
+.hm-b span{font-size:11px;font-weight:600;opacity:.95}
+.hm-key{display:flex;flex-wrap:wrap;align-items:center;gap:4px;margin-top:10px;font-size:11.5px}
+.hm-key span{padding:3px 10px;border-radius:4px;color:#fff;font-weight:700}
+.hm-key em{font-style:normal;color:var(--muted);margin-left:10px}
+.hm-note{font-size:12.5px;color:var(--muted);margin-top:6px}

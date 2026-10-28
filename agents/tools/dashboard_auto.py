@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""DAILY (GitHub Action): weekly market dashboard, automated.
+"""HOURLY on weekdays (GitHub Action): market dashboard, automated.
  * Every day:   docs/data/dashboards/live.json  = this week so far (latest close vs last Friday vs a year ago).
  * Saturday/Sunday: also publishes the official edition docs/data/dashboards/<Friday>.json and adds it to index.json.
 Rows with a market price come from Yahoo Finance. Rows that are releases (repo rate, CPI, Fed funds, SA 10-year,
@@ -66,7 +66,7 @@ def main():
     # live = week so far: latest close vs last Friday's close
     live_week_end = friday if today.weekday() >= 5 else friday + dt.timedelta(days=7)
     groups, fails = build(today, friday - dt.timedelta(days=7) if today.weekday() >= 4 else friday, prev)
-    live = {'week_ending': live_week_end.isoformat(), 'title': f"This week so far — as of {today.strftime('%a %d %b %Y')}", 'live': True,
+    live = {'week_ending': live_week_end.isoformat(), 'title': f"Live — as of {today.strftime('%a %d %b %Y')}", 'live': True,
             'generated': now_sast().isoformat(timespec='minutes'), 'agent': 'LRC Market Dashboard', 'groups': groups,
             'movers': [], 'market_view': '', 'auto_view': auto_view(groups), 'missing': fails}
     save_if_changed(os.path.join(DIR, 'live.json'), live)
@@ -97,7 +97,7 @@ def main():
                     g['rows'][i] = old
                 elif old.get('note') and not r.get('note'):
                     r['note'] = old['note']
-        ed.update({'week_ending': friday.isoformat(), 'title': f"Weekly market dashboard — week to {friday.day} {friday.strftime('%b %Y')}", 'live': False,
+        ed.update({'week_ending': friday.isoformat(), 'title': f"Market dashboard — week to {friday.day} {friday.strftime('%b %Y')}", 'live': False,
                    'generated': now_sast().isoformat(timespec='minutes'), 'groups': g2, 'auto_view': auto_view(g2), 'missing': fails2})
         ed.setdefault('agent', 'LRC Dashboard automation'); ed.setdefault('movers', []); ed.setdefault('market_view', '')
         save_if_changed(f, ed)
