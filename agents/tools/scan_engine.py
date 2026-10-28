@@ -673,8 +673,12 @@ def rating_v7(score):
 
 
 def valuation_verdict(val_points, upside):
-    if val_points >= 2 and upside is not None and upside >= 0.10: return 'UNDERVALUED'
-    if val_points <= -2 or (upside is not None and upside < -0.05): return 'OVERVALUED'
+    """Upside = to the LRC Analyst Target (average of the valuation methods + consensus). 28 Oct 2026:
+    UNDERVALUED = 20%+ upside, or cheap on the ratios (net +2) with 10%+ upside;
+    OVERVALUED = 20%+ downside, or expensive on the ratios (net -2) with 5%+ downside; otherwise FAIR VALUE."""
+    if upside is None: return 'OVERVALUED' if val_points <= -2 else 'UNDERVALUED' if val_points >= 2 else 'FAIR VALUE'
+    if upside >= 0.20 or (val_points >= 2 and upside >= 0.10): return 'UNDERVALUED'
+    if upside <= -0.20 or (val_points <= -2 and upside <= -0.05): return 'OVERVALUED'
     return 'FAIR VALUE'
 
 

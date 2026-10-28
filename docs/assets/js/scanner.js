@@ -623,7 +623,7 @@ if ($('paper')) {
     if (/STRONG/.test(r.iv_v || '')) radar.push(`It is rated <b>${esc(r.iv_v)}</b> on our Investment scanner (score ${r.iv_score}/100) for 5–10 year investors.`);
     if (t.setup) radar.push(`The chart shows a <b>${esc(t.setup.toLowerCase())}</b> at ${px(t.setup_level, c)}${t.setup_note ? ' — ' + esc(t.setup_note) : ''}.`);
     if (r.val === 'UNDERVALUED') radar.push(`Our valuation models say the shares are <b>undervalued</b>${ok(upT) ? ` (${pc(upT, 0)} to the LRC Analyst Target)` : ''}.`);
-    else if (r.val === 'OVERVALUED') radar.push(ok(upT) && upT > 0 ? `The shares look <b>expensive against their peers</b> on our valuation ratios (model estimate), even though the LRC Analyst Target is ${pc(upT, 0)} above the price — growth has to deliver.` : `Our valuation models say the shares are <b>overvalued</b>${ok(upT) ? ` (${pc(upT, 0)} to the LRC Analyst Target)` : ''}.`);
+    else if (r.val === 'OVERVALUED') radar.push(`Our valuation models say the shares are <b>overvalued</b>${ok(upT) ? ` (${pc(upT, 0)} to the LRC Analyst Target)` : ''}.`);
     if (ok(t.perf_1m) && Math.abs(t.perf_1m) >= 0.1) radar.push(`The share price has moved <b>${pc(t.perf_1m, 0)}</b> in the past month.`);
     if (f.next_earnings && days(f.next_earnings) >= 0 && days(f.next_earnings) <= 30) radar.push(`Results are due on <b>${esc(f.next_earnings)}</b> (${days(f.next_earnings)} days).`);
     (o.extra || []).forEach(x => radar.push(x));

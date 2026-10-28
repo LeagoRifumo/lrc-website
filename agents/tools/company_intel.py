@@ -177,7 +177,7 @@ def main():
     idx = {}
     for d in res:
         json.dump(d, open(os.path.join(OUT, d['ticker'].replace('^', '_') + '.json'), 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
-        idx[d['ticker']] = {'n': d['name'], 'news': d['news'][:3], 'filing': (d.get('sec') or {}).get('filings', [None])[0] if d.get('sec') else None}
+        idx[d['ticker']] = {'n': d['name'], 'news': d['news'][:3], 'filing': ((d.get('sec') or {}).get('filings') or [None])[0]}
     json.dump({'generated': dt.datetime.now(SAST).isoformat(timespec='minutes'), 'companies': idx}, open(os.path.join(OUT, 'index.json'), 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
     keep = {d['ticker'].replace('^', '_') + '.json' for d in res} | {'index.json'}
     for fn in os.listdir(OUT):
