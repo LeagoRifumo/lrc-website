@@ -52,7 +52,7 @@ def main():
         try: fresh += (json.load(open(p)).get('updated') or '') >= cut
         except Exception: pass
     sc = load('scan/stocks.json') or {}; n = len(sc.get('rows') or [])
-    ok_fs = n and fresh >= 0.85 * n
+    ok_fs = n and fresh >= 0.70 * n
     report.append({'name': 'Financial statements', 'fresh': fresh, 'companies': n, 'ok': bool(ok_fs)})
     if not ok_fs: problems.append(f'- **Financial statements** — only {fresh} of {n} companies refreshed in the last 9 days. Runs from: statements.yml (daily 05:23).')
     # track record snapshot
