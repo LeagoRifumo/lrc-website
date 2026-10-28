@@ -563,6 +563,7 @@ if ($('paper')) {
         `<b>Next results:</b> ${esc(f.next_earnings || 'not announced')}<br><b>Analysts:</b> ${recLbl(f.rec_mean)}${f.n_analysts ? ` (${f.n_analysts})` : ''}${ok(f.target_median) ? ` · median target ${px(f.target_median, c)}` : ''}<br><b>EPS growth (this yr / next yr est.):</b> ${pc(f.eps_growth_fwd, 0)} / ${pc(f.eps_growth_next, 0)}<br><b>Fwd P/E vs sector:</b> ${mult(f.fpe)} vs ${mult(d.sector_medians?.fpe)}`}</div>
       <div><b>Last updated:</b> ${esc(updated)}<br><b>Analyst name:</b> ${analyst}<br><b>Trading (3–12 m):</b> <span class="${sigCls(r.v)}" style="font-size:10px">${esc(r.v)}</span> ${S100(r)}/100<br><b>Investment (5–10 y):</b> <span class="${sigCls(r.iv_v)}" style="font-size:10px">${esc(r.iv_v || '—')}</span> ${r.iv_score ?? '—'}/100<br><b>Valuation:</b> <span class="${valCls(r.val)}" style="font-size:9.5px">${esc(r.val || '—')}</span>${r.v_note && !SAFE ? `<br><span style="font-size:11px;color:#7A8296">${esc(r.v_note)}</span>` : ''}${r.cov ? `<br><b>LRC analyst rating:</b> ${esc(r.cov.rating)} (${esc(r.cov.rated || '')})` : ''}${R && R.geo_mix ? `<br><b>Geo %:</b> ${esc(R.geo_mix)}` : ''}</div>
     </div>
+    <div class="pwhy" id="pWhy"></div>
     <div class="bar">Fundamentals <small>${R ? 'ANALYST VIEW + LIVE DATA' : 'AUTOMATED FROM LIVE DATA'}</small></div>
     <div class="cols"><div>
       <h4>Drivers / <span class="red">Catalysts</span>:</h4>${S('drivers', drivers.length ? drivers : ['No dated catalysts on the data feed.'])}
@@ -619,7 +620,7 @@ if ($('paper')) {
     if (/STRONG/.test(r.iv_v || '')) radar.push(`It is rated <b>${esc(r.iv_v)}</b> on our Investment scanner (score ${r.iv_score}/100) for 5–10 year investors.`);
     if (t.setup) radar.push(`The chart shows a <b>${esc(t.setup.toLowerCase())}</b> at ${px(t.setup_level, c)}${t.setup_note ? ' — ' + esc(t.setup_note) : ''}.`);
     if (r.val === 'UNDERVALUED') radar.push(`Our valuation models say the shares are <b>undervalued</b>${ok(upT) ? ` (${pc(upT, 0)} to the LRC Analyst Target)` : ''}.`);
-    else if (r.val === 'OVERVALUED') radar.push(`Our valuation models say the shares are <b>overvalued</b>${ok(upT) ? ` (${pc(upT, 0)} to the LRC Analyst Target)` : ''}.`);
+    else if (r.val === 'OVERVALUED') radar.push(ok(upT) && upT > 0 ? `The shares look <b>expensive against their peers</b> on our valuation ratios (model estimate), even though the LRC Analyst Target is ${pc(upT, 0)} above the price — growth has to deliver.` : `Our valuation models say the shares are <b>overvalued</b>${ok(upT) ? ` (${pc(upT, 0)} to the LRC Analyst Target)` : ''}.`);
     if (ok(t.perf_1m) && Math.abs(t.perf_1m) >= 0.1) radar.push(`The share price has moved <b>${pc(t.perf_1m, 0)}</b> in the past month.`);
     if (f.next_earnings && days(f.next_earnings) >= 0 && days(f.next_earnings) <= 30) radar.push(`Results are due on <b>${esc(f.next_earnings)}</b> (${days(f.next_earnings)} days).`);
     (o.extra || []).forEach(x => radar.push(x));
@@ -653,6 +654,9 @@ if ($('paper')) {
         <div class="th-card th-wide"><h3>What to watch next</h3><ul>${li(nextBits.map(x => cap1(x) + '.')) || '<li>No dated catalyst on the feed.</li>'}${f.ex_div ? `<li>Ex-dividend date: ${esc(f.ex_div)}.</li>` : ''}</ul></div>
       </div>
       <p class="th-foot">This thesis is written automatically from the latest LRC Stock Scanner data (${esc(when(d.generated))}) and updates after every scan. It is a starting point for your own research. <a href="shares/${r.t.toLowerCase().replace('.jo', '-jse').replace(/[^a-z0-9-]+/g, '-')}.html">Company profile page →</a> <b>Educational only — not financial advice.</b></p>`;
+    const pw = $('pWhy');
+    const drawWhy = items => { if (pw) pw.innerHTML = `<b>Why we're looking at ${nm}:</b> ${items.slice(0, 3).map(x => x.replace(/<\/?a[^>]*>/g, '')).join(' ')} <span class="no-print"><a href="#thesisSec">Full LRC Thesis ↓</a> · <a href="#fsSec">Financial statements ↓</a></span>`; };
+    drawWhy(radar);
     // extra radar reasons from the watchlist and the Focus List
     Promise.allSettled([get('scan/lists.json'), get('scan/research_ideas.json')]).then(([L, RI]) => {
       const add = [];
@@ -661,6 +665,7 @@ if ($('paper')) {
       if (RI.status === 'fulfilled') { const v = RI.value, G = {}; (v.groups || []).forEach(g => G[g.key] = g.title);
         Object.entries((v.ideas || {})[r.m] || {}).forEach(([k, a]) => { const x = Array.isArray(a) ? a.find(y => y.t === r.t) : null; if (x) add.push(`It is on the <a href="research.html">LRC Focus List</a> — ${esc(G[k] || k)}${x.why ? ': ' + esc(x.why) : ''}.`); }); }
       if (add.length) { const ul = el.querySelector('.th-card ul'); if (ul) ul.insertAdjacentHTML('afterbegin', add.map(x => `<li>${x}</li>`).join('')); }
+      if (add.length) drawWhy(add.concat(radar));
     });
   }
 

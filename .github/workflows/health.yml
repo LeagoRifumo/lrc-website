@@ -1,0 +1,21 @@
+# LRC health check — every 3 hours: checks that every automated part of the website is still updating.
+# Opens one GitHub issue (GitHub emails the owner) when something is late, and closes it when all is fresh again.
+name: Health check
+on:
+  schedule:
+    - cron: '41 */3 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+  issues: write
+jobs:
+  health:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - run: python agents/tools/health_check.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

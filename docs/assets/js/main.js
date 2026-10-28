@@ -700,6 +700,35 @@ window.LRCCal = {
   }
 })();
 
+/* ---------- v10: site-wide company search (header 🔍 or press "/") ---------- */
+(() => {
+  const cta = document.querySelector('.nav-cta'); if (!cta || document.getElementById('hdrFind')) return;
+  const DATA_ = window.LRC_DATA || 'data/', PRE = DATA_.replace(/data\/$/, '');
+  const b = document.createElement('button'); b.id = 'hdrFind'; b.className = 'find-btn'; b.type = 'button'; b.setAttribute('aria-label', 'Search companies'); b.title = 'Search companies (press /)';
+  b.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6"/></svg>';
+  cta.insertBefore(b, cta.firstChild);
+  const box = document.createElement('div'); box.className = 'find-box'; box.hidden = true;
+  box.innerHTML = '<div class="wrap"><input type="search" id="findQ" placeholder="Search 600+ JSE and New York companies — name or ticker (e.g. Sasol, NPN, Apple)" autocomplete="off"><div class="find-res" id="findRes"></div></div>';
+  (document.querySelector('.site-header') || document.body).appendChild(box);
+  let rows = null;
+  const q = box.querySelector('#findQ'), res = box.querySelector('#findRes');
+  const load = () => rows ? Promise.resolve(rows) : fetch(DATA_ + 'scan/stocks.json?v=' + Math.floor(Date.now() / 6e5)).then(r => r.json()).then(s => rows = s.rows.map(r => ({ t: r.t, n: r.n, m: r.m, sec: r.sec, px: r.px, chg: r.chg, cur: r.cur, mc: r.mcap || 0 })));
+  const slug = t => t.toLowerCase().replace('.jo', '-jse').replace(/[^a-z0-9-]+/g, '-').replace(/^-+|-+$/g, '');
+  const find = s => { s = s.trim().toLowerCase(); if (!s || !rows) return [];
+    return rows.map(r => { const t = r.t.toLowerCase().replace('.jo', ''), n = r.n.toLowerCase(); const sc = t === s ? 100 : t.startsWith(s) ? 80 : n.startsWith(s) ? 70 : n.includes(' ' + s) ? 55 : n.includes(s) || t.includes(s) ? 40 : 0; return [sc + Math.log10(r.mc + 10) / 10, r]; })
+      .filter(x => x[0] >= 40).sort((a, b) => b[0] - a[0]).slice(0, 8).map(x => x[1]); };
+  const draw = () => { const f = find(q.value);
+    res.innerHTML = f.map((r, i) => `<div class="find-row${i ? '' : ' on'}"><a class="fr-main" href="${PRE}stock.html?t=${encodeURIComponent(r.t)}"><b>${r.t.replace('.JO', '')}</b><span>${r.n.replace(/[<>&]/g, '')}<small>${r.m === 'JSE' ? 'JSE' : 'New York'} · ${(r.sec || '').replace(/[<>&]/g, '')}</small></span><em class="${(r.chg || 0) >= 0 ? 'up' : 'dn'}">${r.chg != null ? ((r.chg >= 0 ? '+' : '') + (r.chg * 100).toFixed(1) + '%') : ''}</em></a><a class="fr-alt" href="${PRE}shares/${slug(r.t)}.html">Profile</a></div>`).join('')
+      || (q.value.trim() ? '<p class="find-none">No company found. Try the ticker, e.g. SOL or AAPL.</p>' : '<p class="find-none">Type a company name or ticker. Opens the one-page summary with the LRC Thesis and financial statements.</p>'); };
+  const open = () => { box.hidden = false; load().then(draw).catch(() => { res.innerHTML = '<p class="find-none">Search is loading — try again in a moment.</p>'; }); setTimeout(() => q.focus(), 30); };
+  const close = () => { box.hidden = true; };
+  b.addEventListener('click', () => box.hidden ? open() : close());
+  q.addEventListener('input', draw);
+  q.addEventListener('keydown', e => { if (e.key === 'Enter') { const a = res.querySelector('.fr-main'); if (a) location.href = a.href; } if (e.key === 'Escape') close(); });
+  document.addEventListener('keydown', e => { if (e.key === '/' && !/INPUT|TEXTAREA|SELECT/.test((document.activeElement || {}).tagName || '')) { e.preventDefault(); open(); } if (e.key === 'Escape' && !box.hidden) close(); });
+  document.addEventListener('click', e => { if (!box.hidden && !box.contains(e.target) && !b.contains(e.target)) close(); });
+})();
+
 /* ---------- v8: phone layout helpers ---------- */
 (() => {
   // label every cell of a .mcard table with its column heading, so phones can show each row as a card
