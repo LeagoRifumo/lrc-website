@@ -1,4 +1,4 @@
-# Leago Rifumo Capital website — v8 (updated 26 Oct 2026, 04:20 SAST)
+# Leago Rifumo Capital website — v10 (updated 28 Oct 2026) — ready to roll out
 
 Repository: github.com/LeagoRifumo/lrc-website (branch main, GitHub Pages serves /docs)
 Give this file (and the zip) to Claude when you next update the website.
@@ -120,3 +120,14 @@ Give this file (and the zip) to Claude when you next update the website.
 - Strict senior-analyst gates (scan_engine.analyst_gates, after the score-based rating): Trading BUY needs 10%+ upside, price above 200-day, not thin, no results within 3 days, fresh fundamentals; STRONG BUY also 15%+ upside, above 50-day, RSI < 75; broken chart (below 50 & 200-day) + score < 50 + 5% downside → SELL; STRONG SELL = broken + score < 35 + 10% downside; no SELL while the target is above the price. Investment BUY needs not overvalued, quality grade A/B, positive FCF (non-financials), D/E < 2; STRONG BUY needs undervalued + grade A; overvalued + score < 50 → SELL; loss-making + negative FCF + score < 50 → SELL. Reasons go into v_note / iv_note (shown in the scanner and on summaries).
 - Statements: 1,000 companies per daily run; SEC 10-K history fetched only when missing or older than 90 days (sec_date).
 - Repo size: per-company files are rewritten every scan; .git was 134 MB on 28 Oct. If it passes ~2 GB, squash the history of docs/data (keep the code history) — ask Claude.
+
+## 28 Oct 2026 (evening) — final roll-out pass
+- Summary page (stock.html):
+  * Top: title + "Target range: low – high" (real spread of the methods) and Target in the facts box.
+  * Valuation section: worksheet-style table "Methodology | Implied value | vs current | Weight" (equal weights, only methods that fit + analyst consensus when 3+ analysts), range row, final row = LRC Analyst Target, reverse DCF line, assumptions note.
+  * "Intrinsic Value vs Market Price" (drawIV in scanner.js): plain-English verdict ("X looks CHEAP / is FAIRLY PRICED / looks EXPENSIVE"), cheap/fair/expensive meter, chart of "what we think it's worth" (methods re-run on each year's or quarter's reported figures with today's cost of equity and growth, scaled so today = LRC Analyst Target; yearly points smoothed over two years) vs share price (10-year month-end closes from statements.py px_m, else 2 years daily), cheap/fair/expensive zones (±20%), 2-year (yearly) / 1-year (quarterly) dotted estimate, Yearly/Quarterly toggle. Falls back to a simple chart when a company has too little history. Notes when the value is capped at 2x / 0.5x the price.
+  * LRC Thesis + Financial statements stay below the page (owner's choice), with jump buttons and a short "Why we're looking" box in the page.
+- Scanner: LIQUIDITY column (not scored): average value traded a day, today's volume vs normal (rv), average daily move ATR% (atrp); sort by most traded, volume vs normal, biggest daily moves.
+- Track record page rewritten for everyone: 4 steps (Save, Wait, Measure, Compare), plain-English scorecard (TOO EARLY / WORKING / NO CLEAR EDGE / NOT WORKING), bars per rating group, R100 chart, results by rating with a period picker, glossary.
+- Old target worksheet (Fwd P/E comps 40%, DCF 30%, EV/NTM FCF 30%, weighted) is NOT what the site uses now: owner approved DCF, residual income, dividend & buyback model, EV/EBITDA vs peers + consensus, equal-weight average (28 Oct).
+- Housekeeping: test branches fs-probe and probe2 can be deleted on GitHub (Branches page).
