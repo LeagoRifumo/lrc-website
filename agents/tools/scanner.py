@@ -170,8 +170,11 @@ def main():
         print('universe discovery failed, using the old lists:', repr(e)[:120])
         us = us_universe(y, cfg); jse_all = {s: n for s, (n, sec) in jse_cfg.items()}
     for s_, n_ in jse_all.items(): jse_cfg.setdefault(s_, (n_, None))
-    us_syms = sorted(set(s.replace('.', '-') for s in us) | set(ratings) | {r for r in research if not r.endswith('.JO')})
-    stocks = [(s, 'US') for s in us_syms] + [(s, 'JSE') for s in jse_cfg]
+    # order matters when the data feed starts throttling: JSE first (curated names first), then New York largest first
+    seen_us, us_syms = set(), []
+    for x in [s.replace('.', '-') for s in us] + sorted(set(ratings) | {r for r in research if not r.endswith('.JO')}):
+        if x not in seen_us: seen_us.add(x); us_syms.append(x)
+    stocks = [(s, 'JSE') for s in jse_cfg] + [(s, 'US') for s in us_syms]
     if args.only: stocks = [x for x in stocks if x[0] in args.only.split(',')]
     if args.limit: stocks = stocks[:args.limit] + [x for x in stocks if x[1] == 'JSE'][:max(5, args.limit // 4)]
     etfs = cfg['etfs'] if not args.only else [e for e in cfg['etfs'] if e[0] in ('SPY', 'STX40.JO', 'XLK', 'STXRES.JO')]
@@ -193,6 +196,11 @@ def main():
         try: return s, y.bars(s)
         except Exception as e: return s, e
     with ThreadPoolExecutor(args.workers) as ex: barmap = dict(ex.map(get_bars, syms))
+    for attempt in (1, 2):   # retry what the feed refused (throttling), slower each time
+        bad = [s for s, v in barmap.items() if isinstance(v, Exception)]
+        if not bad: break
+        time.sleep(20 * attempt)
+        with ThreadPoolExecutor(3) as ex: barmap.update(dict(ex.map(get_bars, bad)))
     bad_bars = [s for s, v in barmap.items() if isinstance(v, Exception)]
     print(f'bars: {len(syms) - len(bad_bars)} ok, {len(bad_bars)} failed ({time.time() - t0:.0f}s) {bad_bars[:15]}')
 
@@ -201,6 +209,11 @@ def main():
         try: return s, y.summary(s)
         except Exception as e: return s, e
     with ThreadPoolExecutor(args.workers) as ex: summ = dict(ex.map(get_sum, [s for s, _ in stocks]))
+    for attempt in (1, 2):
+        bad = [s for s, v in summ.items() if isinstance(v, Exception)]
+        if not bad: break
+        time.sleep(20 * attempt)
+        with ThreadPoolExecutor(3) as ex: summ.update(dict(ex.map(get_sum, bad)))
     print(f'fundamentals: {sum(not isinstance(v, Exception) for v in summ.values())} ok ({time.time() - t0:.0f}s)')
     week_ago = (dt.date.today() - dt.timedelta(days=7)).isoformat()
     need_ts = [s for s, _ in stocks if (cache.get(s, {}).get('ts_date') or '') < week_ago][:800]

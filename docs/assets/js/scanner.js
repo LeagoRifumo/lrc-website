@@ -593,6 +593,7 @@ if ($('paper')) {
       ${R && R.valuation ? `<h4>Analyst valuation:</h4>${ul(R.valuation.map(esc))}` : ''}
       ${inv ? `<h4>Investment track (5–10 yrs): grade ${esc(inv.grade)} · ${inv.passed}/${inv.known} checks</h4><p style="font-size:11.5px;color:#5C6478">${inv.checks.filter(x => x.ok !== null).map(x => `<span style="color:${x.ok ? '#0F7B3F' : '#C5221F'}">${x.ok ? '✔' : '✘'} ${esc(x.k)}</span>`).join(' · ')}</p>` : ''}
     </div></div>
+    ${(() => { const iv = ivChart(d, lrcT, 760, 300); return iv ? `<div class="bar" id="ivchart">Intrinsic Value vs Market Price <small>LRC VALUE (AVERAGE OF METHODS) · BUY / HOLD / SELL ZONES</small></div>${iv}` : ''; })()}
     <div class="bar">All Fundamentals <small>37 READINGS · COMPANY vs SECTOR MEDIAN vs MARKET MEDIAN</small></div>
     <div class="cols"><div>${rtab(GRP.slice(3, 5))}</div><div>${rtab(GRP.slice(5))}</div></div>
     <p class="bl"><b class="k">Bottom Line:</b> ${R && R.valuation_bottom_line ? esc(R.valuation_bottom_line) : `Against the median ${esc(r.sec)} company in ${r.m === 'JSE' ? 'the JSE' : 'New York'}, the shares look <b>${esc((vv('fpe').verdict || vv('tpe').verdict || 'n/a').toLowerCase())}</b> on earnings and <b>${esc((vv('pfcf').verdict || 'n/a').toLowerCase())}</b> on free cash flow. ${ok(lrcT) && !SAFE ? `The LRC Analyst Target is ${px(lrcT, c)} (${pc(lrcT / t.price - 1, 0)} from today).` : ''}`}
@@ -757,6 +758,55 @@ if ($('paper')) {
     const th = $('thHist'); if (th && hb.length) th.innerHTML = `<p><b>Track record (financial statements):</b> ${hb.join('; ')}. <a href="#fsSec">See the statements ↓</a></p>`;
   }
 
+  /* Intrinsic value vs market price: 2 years of price history, today's LRC value projected 5 years ahead with the model's growth
+     assumptions, and the zones the valuation verdict uses (20%+ below value = undervalued, 20%+ above = overvalued). */
+  function ivChart(d, V, W, H) {
+    const s = series(d); if (!s || !ok(V) || V <= 0) return '';
+    const tg = d.targets || {}, inp = tg.inputs || {}, cur = d.row.cur, P0 = d.tech.price;
+    const n = Math.min(504, s.c.length), C = s.c.slice(-n), D = s.dates.slice(-n);
+    const g1 = ok(inp.g1) ? inp.g1 : (ok(inp.g_term) ? inp.g_term : 0.04), gT = ok(inp.g_term) ? inp.g_term : g1;
+    const proj = [V]; for (let y = 1; y <= 5; y++) proj.push(proj[y - 1] * (1 + g1 + (gT - g1) * (y - 1) / 4));
+    const yrsBack = n / 252, X0 = -yrsBack, X1 = 5;
+    const hiV = Math.max(...C, proj[5] * 1.2, V * 1.25, ok(tg.high) ? tg.high : 0), loV = Math.min(...C, V * 0.7, ok(tg.low) ? tg.low : Infinity);
+    const lo = Math.max(0, loV * 0.85), hi = hiV * 1.06;
+    const L = 58, R = 16, T = 14, B = 34, w = W - L - R, h = H - T - B;
+    const X = x => L + (x - X0) / (X1 - X0) * w, Y = v => T + (hi - Math.min(hi, Math.max(lo, v))) / (hi - lo) * h;
+    const ivAt = x => x <= 0 ? V : (() => { const k = Math.floor(x), f = x - k; return k >= 5 ? proj[5] : proj[k] * Math.pow(proj[k + 1] / proj[k], f); })();
+    const xs = []; for (let x = X0; x <= X1 + 1e-9; x += (X1 - X0) / 80) xs.push(x);
+    const band = (m1, m2) => xs.map(x => `${X(x).toFixed(1)},${Y(ivAt(x) * m1).toFixed(1)}`).join(' ') + ' ' + xs.slice().reverse().map(x => `${X(x).toFixed(1)},${Y(ivAt(x) * m2).toFixed(1)}`).join(' ');
+    let g = '';
+    g += `<polygon points="${band(1.2, 99)}" fill="#FBE9E7"/><polygon points="${band(0.8, 1.2)}" fill="#F4F5F7"/><polygon points="${band(0, 0.8)}" fill="#E8F5EC"/>`;
+    // grid + axes
+    const ticks = 4; for (let i = 0; i <= ticks; i++) { const v = lo + (hi - lo) * i / ticks; g += `<line x1="${L}" x2="${W - R}" y1="${Y(v)}" y2="${Y(v)}" stroke="#E3E6EE"/><text x="${L - 6}" y="${Y(v) + 3}" font-size="10" fill="#7A8296" text-anchor="end">${CUR(cur)}${v >= 100 ? Math.round(v).toLocaleString('en-ZA') : v.toFixed(2)}</text>`; }
+    for (let x = Math.ceil(X0); x <= X1; x++) g += `<line x1="${X(x)}" x2="${X(x)}" y1="${T}" y2="${T + h}" stroke="#EEF0F4"/><text x="${X(x)}" y="${H - 16}" font-size="10" fill="#7A8296" text-anchor="middle">${x === 0 ? 'Today' : (x > 0 ? '+' : '') + x + 'y'}</text>`;
+    g += `<text x="${L + w / 2}" y="${H - 3}" font-size="10" fill="#7A8296" text-anchor="middle">Years (past 2 years of prices · next 5 years of projected value)</text>`;
+    g += `<line x1="${X(0)}" x2="${X(0)}" y1="${T}" y2="${T + h}" stroke="#16223D" stroke-dasharray="3 3"/>`;
+    // zone labels
+    const zl = (txt, x, v, col) => `<text x="${X(x)}" y="${Y(v)}" font-size="10.5" font-weight="800" fill="${col}" letter-spacing=".04em" paint-order="stroke" stroke="rgba(255,255,255,.85)" stroke-width="4" stroke-linejoin="round">${txt}</text>`;
+    const xl = 0.35, top = lo + (hi - lo) * 0.93;
+    g += zl('SELL ZONE · overvalued (20%+ above value)', xl, Math.min(top, Math.max(ivAt(xl) * 1.2 + (hi - lo) * 0.06, (ivAt(xl) * 1.2 + hi) / 2)), '#B3261E');
+    g += zl('HOLD ZONE · fair value (±20%)', xl, ivAt(xl) * 0.9, '#5C6478');
+    g += zl('BUY ZONE · undervalued (20%+ below value)', xl, Math.max(lo + (hi - lo) * 0.05, (ivAt(xl) * 0.8 + lo) / 2), '#0F7B3F');
+    // value range today (methods low-high)
+    if (ok(tg.low) && ok(tg.high) && tg.high > tg.low) g += `<rect x="${X(0) - 5}" y="${Y(tg.high)}" width="10" height="${Math.max(2, Y(tg.low) - Y(tg.high))}" fill="#1F3BB3" opacity=".18" rx="3"><title>Range of the valuation methods: ${px(tg.low, cur)} – ${px(tg.high, cur)}</title></rect>`;
+    // intrinsic value line: dashed in the past (today's estimate), solid ahead (projection)
+    g += `<line x1="${X(X0)}" x2="${X(0)}" y1="${Y(V)}" y2="${Y(V)}" stroke="#1F3BB3" stroke-width="1.6" stroke-dasharray="5 4" opacity=".7"/>`;
+    g += `<polyline points="${xs.filter(x => x >= 0).map(x => `${X(x).toFixed(1)},${Y(ivAt(x)).toFixed(1)}`).join(' ')}" fill="none" stroke="#1F3BB3" stroke-width="2.6"/>`;
+    // market price
+    g += `<polyline points="${C.map((v, i) => `${X(X0 + i / 252).toFixed(1)},${Y(v).toFixed(1)}`).join(' ')}" fill="none" stroke="#D9822B" stroke-width="2"/>`;
+    // today's markers + labels (placed so they do not overlap)
+    const up = V / P0 - 1, yP = Y(P0), yV = Y(V), apart = Math.abs(yP - yV) > 16;
+    g += `<circle cx="${X(0)}" cy="${yP}" r="4.5" fill="#D9822B" stroke="#fff" stroke-width="1.5"/><circle cx="${X(0)}" cy="${yV}" r="4.5" fill="#1F3BB3" stroke="#fff" stroke-width="1.5"/>`;
+    const pAbove = P0 >= V, yPl = pAbove ? Math.min(yP, yV) - 9 : Math.max(yP, yV) + 17, yVl = pAbove ? Math.max(yP, yV) + 17 : Math.min(yP, yV) - 9;
+    g += `<text x="${X(0) - 9}" y="${yPl}" font-size="11.5" font-weight="800" fill="#B5651D" text-anchor="end" paint-order="stroke" stroke="#fff" stroke-width="4" stroke-linejoin="round">Price ${px(P0, cur)}</text>`;
+    g += `<text x="${X(0) - 9}" y="${yVl}" font-size="11.5" font-weight="800" fill="#1F3BB3" text-anchor="end" paint-order="stroke" stroke="#fff" stroke-width="4" stroke-linejoin="round">LRC value ${px(V, cur)} (${pc(up, 0)})</text>`;
+    g += `<text x="${X(5) - 4}" y="${Y(proj[5]) - 8}" font-size="10.5" font-weight="700" fill="#1F3BB3" text-anchor="end" paint-order="stroke" stroke="#fff" stroke-width="4" stroke-linejoin="round">${px(proj[5], cur)} in 5 years</text>`;
+    const zone = up >= 0.2 ? ['BUY ZONE', '#0F7B3F', 'the price is 20%+ below our intrinsic value'] : up <= -0.2 ? ['SELL ZONE', '#B3261E', 'the price is 20%+ above our intrinsic value'] : ['HOLD ZONE', '#5C6478', 'the price is within 20% of our intrinsic value'];
+    return `<div class="ivwrap"><svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Intrinsic value versus market price">${g}</svg></div>
+      <div class="ivleg"><span><i style="background:#1F3BB3"></i>LRC intrinsic value (average of the valuation methods${ok(tg.low) ? `; range ${px(tg.low, cur)}–${px(tg.high, cur)}` : ''})</span><span><i style="background:#D9822B"></i>Market price</span>
+        <span class="ivz" style="color:${zone[1]}">Today: <b>${zone[0]}</b> — ${zone[2]}.</span></div>
+      <p class="ivnote">The value line ahead grows with our base-case growth (${pp(g1, 0)} a year fading to ${pp(gT, 1)}); behind today it shows today's estimate for reference, not past estimates.${ok(tg.implied_growth) ? ` Reverse DCF: today's price assumes about ${pc(tg.implied_growth, 0)} a year.` : ''}</p>`;
+  }
   function series(d) {
     const h = d.history; if (!h || !h.c) return null;
     const dates = [h.d0]; let cur = new Date(h.d0 + 'T00:00:00Z');
