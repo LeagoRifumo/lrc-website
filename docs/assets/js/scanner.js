@@ -601,6 +601,144 @@ if ($('paper')) {
     ${fin ? `<div class="bar">Financials <small>${fin.q ? 'LAST ' + fin.n + ' QUARTERS' : 'ANNUAL'} · REVENUE · NET INCOME · NET MARGIN (${esc(fin.cur)})</small></div>${fin.svg}${!fin.q && r.m === 'JSE' ? '<p style="font-size:11px;color:#5C6478">JSE companies report half-yearly, so the chart shows full financial years.</p>' : ''}` : ''}
     <p class="src">Sources: ${R ? `LRC analyst research (${esc(R.analyst)}, ${esc(R.updated)}); ` : ''}${esc((d.sources || ['Yahoo Finance prices, fundamentals and analyst data']).concat(INTEL ? INTEL.sources || [] : []).join('; '))}${R && R.sources ? '; ' + esc(R.sources.slice(0, 6).join('; ')) : ''}. Scored by the LRC Stock Scanner (${esc(when(d.generated))}). Valuation verdicts compare each ratio with the median of the same sector in the same market. LRC Analyst Target: set by the analyst for companies with a completed LRC Work-sheet; otherwise calculated automatically every day: 60% analyst consensus and 40% LRC valuation models (P/FCF, PEG and sector P/E), kept within 20% of the consensus.
       <b>Educational only — not financial advice.</b> Leago Rifumo Capital · Ermelo, Mpumalanga · leagorifumocapital.co.za</p>`;
+    try { renderThesis({ d, r, t, f, pr, c, X, SX, MS, lrcT, upT, what, compTxt, indTxt, mgmtTxt, bsTxt, pickBy, nextBits, recLbl, days, finCo, sizeWord, mktName, cap1 }); } catch (e) { console.error(e); }
+    loadStatements(r, c);
+  }
+
+  /* ---------- LRC THESIS: why we are looking at this company (automated from the data, refreshed every scanner run) ---------- */
+  function renderThesis(o) {
+    const { d, r, t, f, pr, c, X, SX, MS, lrcT, upT, what, compTxt, indTxt, mgmtTxt, bsTxt, pickBy, nextBits, recLbl, days, finCo, sizeWord, mktName, cap1 } = o;
+    const el = $('thesisSec'); if (!el) return;
+    const nm = esc(r.n), tk = esc(r.t.replace('.JO', ''));
+    const radar = [];
+    if (/STRONG/.test(r.v)) radar.push(`It is rated <b>${esc(r.v)}</b> on our Trading scanner (score ${S100(r)}/100) — one of the ${/BUY/.test(r.v) ? 'strongest' : 'weakest'} readings in ${mktName}.`);
+    if (/STRONG/.test(r.iv_v || '')) radar.push(`It is rated <b>${esc(r.iv_v)}</b> on our Investment scanner (score ${r.iv_score}/100) for 5–10 year investors.`);
+    if (t.setup) radar.push(`The chart shows a <b>${esc(t.setup.toLowerCase())}</b> at ${px(t.setup_level, c)}${t.setup_note ? ' — ' + esc(t.setup_note) : ''}.`);
+    if (r.val === 'UNDERVALUED') radar.push(`Our valuation models say the shares are <b>undervalued</b>${ok(upT) ? ` (${pc(upT, 0)} to the LRC Analyst Target)` : ''}.`);
+    else if (r.val === 'OVERVALUED') radar.push(`Our valuation models say the shares are <b>overvalued</b>${ok(upT) ? ` (${pc(upT, 0)} to the LRC Analyst Target)` : ''}.`);
+    if (ok(t.perf_1m) && Math.abs(t.perf_1m) >= 0.1) radar.push(`The share price has moved <b>${pc(t.perf_1m, 0)}</b> in the past month.`);
+    if (f.next_earnings && days(f.next_earnings) >= 0 && days(f.next_earnings) <= 30) radar.push(`Results are due on <b>${esc(f.next_earnings)}</b> (${days(f.next_earnings)} days).`);
+    (o.extra || []).forEach(x => radar.push(x));
+    if (!radar.length) radar.push(`${nm} is ${sizeWord || 'a company'} we score every day; the picture is mixed, which is useful to know before you act.`);
+    const strengths = pickBy(1, 4), weaknesses = pickBy(-1, 4);
+    const ig = ['valuation', 'profitability', 'health', 'growth', 'income'].map(k => [k, (r.grp || {})[k]]).filter(x => ok(x[1])).sort((a, b) => b[1] - a[1]);
+    const gn = k => ({ valuation: 'valuation', profitability: 'profitability', health: 'financial health', growth: 'long-term growth', income: 'dividend income' })[k];
+    const rivals = (X.rivals || []).map(x => `<a href="stock.html?t=${encodeURIComponent(x.t)}">${esc(x.n)}</a>`);
+    const fpe = f.fpe, sfpe = d.sector_medians?.fpe, mfpe = (d.medians?.market || {}).fpe;
+    const valBits = [];
+    if (ok(fpe) && fpe > 0) valBits.push(`${tk} trades on <b>${fpe.toFixed(1)}x</b> forward earnings${ok(sfpe) ? ` vs ${sfpe.toFixed(1)}x for its sector` : ''}${ok(mfpe) ? ` and ${mfpe.toFixed(1)}x for the ${r.m === 'JSE' ? 'JSE' : 'New York'} market` : ''}.`);
+    else if (ok(f.tpe) && f.tpe < 0) valBits.push(`${tk} is loss-making, so earnings multiples do not apply — investors are paying for a recovery or future growth.`);
+    if (ok(f.pfcf) && f.pfcf > 0) valBits.push(`Price to free cash flow is ${f.pfcf.toFixed(1)}x${ok(MS.pfcf) ? ` (sector ${MS.pfcf.toFixed(1)}x)` : ''}.`);
+    if (ok(f.div_yield) && f.div_yield > 0) valBits.push(`The dividend yield is ${pp(f.div_yield, 1)}.`);
+    if (ok(f.target_median)) valBits.push(`The median analyst target is ${px(f.target_median, c)} (${pc(f.target_median / t.price - 1, 0)}).`);
+    if (ok(lrcT)) valBits.push(`The <b>LRC Analyst Target</b> (6 months) is <b>${px(lrcT, c)}</b>, ${pc(upT, 0)} from ${px(t.price, c)}. Valuation verdict: <b>${esc((r.val || 'fair value').toLowerCase())}</b> (model estimate).`);
+    const li = a => a.map(x => `<li>${x}</li>`).join('');
+    const trWhy = strengths.length || weaknesses.length ? (/BUY/.test(r.v) ? `The case rests on ${strengths.slice(0, 3).map(x => x.txt).join(', ') || 'the overall score'}.` : /SELL/.test(r.v) ? `The case rests on ${weaknesses.slice(0, 3).map(x => x.txt).join(', ') || 'the overall score'}.` : `Strengths (${strengths.slice(0, 2).map(x => x.txt).join(', ') || '—'}) are balanced by weaknesses (${weaknesses.slice(0, 2).map(x => x.txt).join(', ') || '—'}).`) : '';
+    el.innerHTML = `<div class="th-head"><div><span class="eyebrow">LRC Thesis</span><h2>Why we're looking at <span class="gold">${nm}</span></h2></div>
+        <div class="th-chips"><span class="${sigCls(r.v)}">TRADING ${esc(r.v)}</span><span class="${sigCls(r.iv_v)}">INVESTMENT ${esc(r.iv_v || 'HOLD')}</span><span class="${valCls(r.val)}">${esc(r.val || 'FAIR VALUE')}</span></div></div>
+      <div class="th-grid">
+        <div class="th-card th-wide"><h3>Why it's on our radar</h3><ul>${li(radar)}</ul></div>
+        <div class="th-card"><h3>The company</h3><p>${esc(what) || nm + ' is listed on ' + mktName + '.'}</p><p>${nm} is ${sizeWord || 'listed on ' + mktName}${X.mkt_rank ? ` (number ${X.mkt_rank} of ${X.mkt_n} by market value in our ${r.m === 'JSE' ? 'JSE' : 'New York'} universe)` : ''}, in the ${esc(r.sec)}${r.ind ? ' · ' + esc(r.ind) : ''} industry.${rivals.length ? ` Main listed rivals we track: ${rivals.join(', ')}.` : ''}</p></div>
+        <div class="th-card"><h3>The fundamentals</h3>${[compTxt, bsTxt ? cap1(bsTxt) + '.' : '', indTxt, mgmtTxt].filter(Boolean).map(x => `<p>${x}</p>`).join('')}<div id="thHist"></div></div>
+        <div class="th-card"><h3>Valuation</h3>${valBits.map(x => `<p>${x}</p>`).join('') || '<p>Not enough valuation data on the feed.</p>'}</div>
+        <div class="th-card th-bull"><h3>Bull case</h3><ul>${li(strengths.map(x => cap1(x.txt) + '.')) || '<li>No standout strength in the data.</li>'}</ul></div>
+        <div class="th-card th-bear"><h3>Bear case</h3><ul>${li(weaknesses.map(x => cap1(x.txt) + '.')) || '<li>No major weakness in the data.</li>'}</ul></div>
+        <div class="th-card th-wide th-rec"><h3>Our recommendation</h3>
+          <div class="th-recs"><div><b class="${sigCls(r.v)}">TRADING · ${esc(r.v)}</b><span>3–12 months · score ${S100(r)}/100</span><p>${trWhy}${ok(upT) ? ` The LRC Analyst Target implies ${pc(upT, 0)} over 6 months.` : ''}${r.v_note ? ' ' + esc(r.v_note) + '.' : ''}</p></div>
+          <div><b class="${sigCls(r.iv_v)}">INVESTMENT · ${esc(r.iv_v || 'HOLD')}</b><span>5–10 years · score ${r.iv_score ?? '—'}/100</span><p>${ig.length ? `Best on ${gn(ig[0][0])} (${ig[0][1]}/100)${ig.length > 1 ? `, weakest on ${gn(ig[ig.length - 1][0])} (${ig[ig.length - 1][1]}/100)` : ''}. ` : ''}${r.iv_note ? esc(r.iv_note) + '. ' : ''}${r.val === 'UNDERVALUED' ? 'The price looks low against our valuation models, which gives long-term investors a margin of safety.' : r.val === 'OVERVALUED' ? 'The price already looks high against our valuation models, so long-term returns depend on growth beating expectations.' : 'The price is close to our estimate of fair value.'}</p></div></div></div>
+        <div class="th-card th-wide"><h3>What to watch next</h3><ul>${li(nextBits.map(x => cap1(x) + '.')) || '<li>No dated catalyst on the feed.</li>'}${f.ex_div ? `<li>Ex-dividend date: ${esc(f.ex_div)}.</li>` : ''}</ul></div>
+      </div>
+      <p class="th-foot">This thesis is written automatically from the latest LRC Stock Scanner data (${esc(when(d.generated))}) and updates after every scan. It is a starting point for your own research. <b>Educational only — not financial advice.</b></p>`;
+    // extra radar reasons from the watchlist and the Focus List
+    Promise.allSettled([get('scan/lists.json'), get('scan/research_ideas.json')]).then(([L, RI]) => {
+      const add = [];
+      const NAMES = { trading_buy: 'Trading BUY list', trading_sell: 'Trading SELL list', invest_buy: 'Investment BUY list', invest_sell: 'Investment SELL list' };
+      if (L.status === 'fulfilled') Object.entries((L.value.lists || {})[r.m] || {}).forEach(([k, a]) => { if (Array.isArray(a) && a.some(x => x.t === r.t)) add.push(`It is on the <a href="watchlist.html">LRC Watchlist</a> — ${esc(NAMES[k] || k)} (top 5 in ${mktName}).`); });
+      if (RI.status === 'fulfilled') { const v = RI.value, G = {}; (v.groups || []).forEach(g => G[g.key] = g.title);
+        Object.entries((v.ideas || {})[r.m] || {}).forEach(([k, a]) => { const x = Array.isArray(a) ? a.find(y => y.t === r.t) : null; if (x) add.push(`It is on the <a href="research.html">LRC Focus List</a> — ${esc(G[k] || k)}${x.why ? ': ' + esc(x.why) : ''}.`); }); }
+      if (add.length) { const ul = el.querySelector('.th-card ul'); if (ul) ul.insertAdjacentHTML('afterbegin', add.map(x => `<li>${x}</li>`).join('')); }
+    });
+  }
+
+  /* ---------- FINANCIAL STATEMENTS (annual 5+ years and quarterly / interim) ---------- */
+  function loadStatements(r, c0) {
+    const el = $('fsSec'); if (!el) return;
+    get('fs/' + r.t.replace('^', '_') + '.json').then(fs => drawStatements(el, fs, r)).catch(() => {
+      el.innerHTML = `<div class="th-head"><div><span class="eyebrow">Financial statements</span><h2>${esc(r.n)} <span class="gold">financial statements</span></h2></div></div><p class="muted-load">The statements for this company are being collected and appear within a day.</p>`;
+    });
+  }
+  function drawStatements(el, fs, r) {
+    const cur = fs.cur || r.cur, sym = CUR(cur) || (cur + ' ');
+    const LBL = {}; (fs.lines || []).forEach(([k, l, st, kind]) => LBL[k] = { l, st, kind });
+    let per = 'annual', st = 'is';
+    const ST = { is: 'Income statement', bs: 'Balance sheet', cf: 'Cash flow' };
+    const ORDER = { is: [], bs: [], cf: [] }; (fs.lines || []).forEach(([k, l, s]) => ORDER[s].push(k));
+    const colLbl = (dte, p) => { const x = new Date(dte + 'T00:00:00'); const mo = x.toLocaleString('en-GB', { month: 'short' });
+      return p === 'annual' ? `FY${x.getFullYear()}${x.getMonth() === 11 ? '' : `<small>${mo}</small>`}` : `${mo} ${x.getFullYear()}`; };
+    const unitOf = data => { const ta = (data.rows.ta || data.rows.rev || []).filter(ok).map(Math.abs); const m = ta.length ? Math.max(...ta) : 0; return m >= 5e10 ? [1e9, 'billions'] : [1e6, 'millions']; };
+    const fmt = (v, kind, U) => { if (!ok(v)) return '<span class="fs-na">—</span>'; const x = kind === 'e' ? v : kind === 's' ? v / 1e6 : v / U[0];
+      const s = Math.abs(x).toLocaleString('en-ZA', { minimumFractionDigits: kind === 'e' ? 2 : Math.abs(x) < 10 ? 1 : 0, maximumFractionDigits: kind === 'e' ? 2 : Math.abs(x) < 10 ? 1 : 0 });
+      return v < 0 ? `<span class="fs-neg">(${s})</span>` : s; };
+    const ratio = (data, a, b, i) => { const x = (data.rows[a] || [])[i], y = (data.rows[b] || [])[i]; return ok(x) && ok(y) && y !== 0 ? x / y : null; };
+    const RAT = {
+      is: [['Gross margin', d_ => i => ratio(d_, 'gp', 'rev', i), 'p'], ['Operating margin', d_ => i => ratio(d_, 'op', 'rev', i), 'p'], ['Net margin', d_ => i => ratio(d_, 'ni', 'rev', i), 'p'],
+        ['Revenue growth', d_ => i => { const k = per === 'annual' ? 1 : 4, a = (d_.rows.rev || [])[i], b = (d_.rows.rev || [])[i - k]; return ok(a) && ok(b) && b ? a / b - 1 : null; }, 'g']],
+      bs: [['Current ratio', d_ => i => ratio(d_, 'ca', 'cl', i), 'x'], ['Debt to equity', d_ => i => ratio(d_, 'debt', 'eq', i), 'x'], ['Equity to assets', d_ => i => ratio(d_, 'eq', 'ta', i), 'p']],
+      cf: [['Free cash flow margin', d_ => i => ratio(d_, 'fcf', 'rev', i), 'p'], ['Cash conversion (CFO ÷ net income)', d_ => i => ratio(d_, 'cfo', 'ni', i), 'x'], ['Capex as % of revenue', d_ => i => { const v = ratio(d_, 'capex', 'rev', i); return ok(v) ? -v : null; }, 'p']]
+    };
+    const KEY = { is: [['rev', 'Revenue', '#D9A93E'], ['ni', 'Net income', '#2BB673']], bs: [['ta', 'Total assets', '#D9A93E'], ['tl', 'Total liabilities', '#C5221F'], ['eq', 'Equity', '#2BB673']], cf: [['cfo', 'Cash from operations', '#D9A93E'], ['fcf', 'Free cash flow', '#2BB673'], ['capex', 'Capex', '#C5221F']] };
+    const chart = (data, U) => {
+      const keys = KEY[st].filter(([k]) => (data.rows[k] || []).some(ok)); const n = data.dates.length; if (!keys.length || !n) return '';
+      const W = 760, H = 190, L = 54, R = 10, T = 12, B = 26, w = W - L - R, h = H - T - B;
+      const vals = keys.flatMap(([k]) => (data.rows[k] || []).filter(ok).map(v => v / U[0])); let hi = Math.max(0, ...vals), lo = Math.min(0, ...vals); if (hi === lo) hi = lo + 1;
+      const Y = v => T + (hi - v) / (hi - lo) * h, gw = w / n, bw = Math.min(26, (gw - 10) / keys.length);
+      let g = `<line x1="${L}" x2="${W - R}" y1="${Y(0)}" y2="${Y(0)}" stroke="#3A4152"/>`;
+      [hi, (hi + lo) / 2, lo].forEach(v => { g += `<text x="${L - 6}" y="${Y(v) + 3}" font-size="10" fill="#8A93A6" text-anchor="end">${v.toLocaleString('en-ZA', { maximumFractionDigits: v !== 0 && Math.abs(v) < 10 ? 1 : 0 })}</text>`; });
+      data.dates.forEach((dte, i) => { const x0 = L + i * gw + (gw - bw * keys.length) / 2;
+        keys.forEach(([k, l, col], j) => { const v = (data.rows[k] || [])[i]; if (!ok(v)) return; const y1 = Y(Math.max(0, v / U[0])), y2 = Y(Math.min(0, v / U[0]));
+          g += `<rect x="${x0 + j * bw}" y="${y1}" width="${bw - 2}" height="${Math.max(1, y2 - y1)}" fill="${col}" rx="2"><title>${esc(l)} ${colLbl(dte, per).replace(/<[^>]+>/g, ' ')}: ${sym}${(v / U[0]).toLocaleString('en-ZA', { maximumFractionDigits: 1 })} ${U[1]}</title></rect>`; });
+        g += `<text x="${L + i * gw + gw / 2}" y="${H - 8}" font-size="10" fill="#8A93A6" text-anchor="middle">${colLbl(dte, per).replace(/<small>.*<\/small>/, '')}</text>`; });
+      return `<div class="fs-chart"><svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" role="img" aria-label="${esc(ST[st])} chart">${g}</svg><div class="fs-leg">${keys.map(([k, l, col]) => `<span><i style="background:${col}"></i>${esc(l)}</span>`).join('')}</div></div>`;
+    };
+    const csv = () => { const data = fs[per]; const U = unitOf(data); const rows = [['Line (' + cur + ' ' + U[1] + ')'].concat(data.dates)];
+      ['is', 'bs', 'cf'].forEach(s => { rows.push([ST[s]]); ORDER[s].forEach(k => { if (data.rows[k]) rows.push([LBL[k].l].concat(data.rows[k].map(v => !ok(v) ? '' : LBL[k].kind === 'e' ? v : LBL[k].kind === 's' ? (v / 1e6).toFixed(2) : (v / U[0]).toFixed(2)))); }); });
+      const b = new Blob([rows.map(r_ => r_.map(x => `"${String(x).replace(/"/g, '""')}"`).join(',')).join('\n')], { type: 'text/csv' });
+      const a = document.createElement('a'); a.href = URL.createObjectURL(b); a.download = `${r.t}_financial_statements_${per}.csv`; a.click(); };
+    const draw = () => {
+      const data = fs[per] || { dates: [], rows: {} }, U = unitOf(data), n = data.dates.length;
+      const keys = ORDER[st].filter(k => (data.rows[k] || []).some(ok));
+      const yoy = k => { const a = data.rows[k] || [], s = per === 'annual' ? 1 : (fs.interim ? 2 : 4); const x = a[n - 1], y = a[n - 1 - s]; return ok(x) && ok(y) && y !== 0 ? (x - y) / Math.abs(y) : null; };
+      const body = keys.length ? keys.map(k => { const L_ = LBL[k] || { l: k, kind: 'm' }, ch = yoy(k), bold = ['rev', 'gp', 'op', 'ni', 'eps', 'ta', 'tl', 'eq', 'cfo', 'fcf'].includes(k);
+          return `<tr class="${bold ? 'fs-b' : ''}"><td>${esc(L_.l)}${L_.kind === 'e' ? ` <small>${sym.trim()}</small>` : L_.kind === 's' ? ' <small>millions</small>' : ''}</td>${data.rows[k].map(v => `<td class="n">${fmt(v, L_.kind, U)}</td>`).join('')}<td class="n fs-ch ${ok(ch) ? (ch >= 0 ? 'up' : 'dn') : ''}">${ok(ch) ? pc(ch, 0) : '—'}</td></tr>`; }).join('') +
+        `<tr class="fs-sep"><td colspan="${n + 2}">Key ratios</td></tr>` + RAT[st].map(([l, fn, f_]) => { const g_ = fn(data); const vs = data.dates.map((_, i) => g_(i));
+          if (!vs.some(ok)) return ''; return `<tr class="fs-r"><td>${esc(l)}</td>${vs.map(v => `<td class="n">${!ok(v) ? '—' : f_ === 'x' ? v.toFixed(2) + 'x' : f_ === 'g' ? pc(v, 0) : pp(v, 1)}</td>`).join('')}<td></td></tr>`; }).join('')
+        : `<tr><td colspan="${n + 2}" class="muted-load">${per !== 'annual' && fs.interim && st !== 'bs' ? 'JSE companies report every six months. The data feed carries their interim balance sheets but not the interim income statement or cash flow — switch to Annual, or Balance sheet.' : 'No figures on the data feed for this statement.'}</td></tr>`;
+      if (!keys.length) { el.querySelector('.fs-body').innerHTML = `<p class="fs-empty">${per !== 'annual' && fs.interim && st !== 'bs' ? 'JSE companies report every six months. The data feed carries their interim balance sheets but not the interim income statement or cash flow — choose <b>Annual</b>, or the <b>Balance sheet</b>.' : 'No figures on the data feed for this statement.'}</p>`; el.querySelectorAll('[data-per]').forEach(b => b.classList.toggle('on', b.dataset.per === per)); el.querySelectorAll('[data-st]').forEach(b => b.classList.toggle('on', b.dataset.st === st)); return; }
+      el.querySelector('.fs-body').innerHTML = `${keys.length ? chart(data, U) : ''}<div class="tbl-wrap"><table class="wl fs-tbl"><thead><tr><th>${esc(ST[st])} <small>${esc(cur || '')} ${U[1]}</small></th>${data.dates.map(dte => `<th class="n">${colLbl(dte, per)}</th>`).join('')}<th class="n">${per === 'annual' ? 'Y/Y' : fs.interim ? 'vs year ago' : 'Y/Y'}</th></tr></thead><tbody>${body}</tbody></table></div>`;
+      el.querySelectorAll('[data-per]').forEach(b => b.classList.toggle('on', b.dataset.per === per));
+      el.querySelectorAll('[data-st]').forEach(b => b.classList.toggle('on', b.dataset.st === st));
+    };
+    const ya = (fs.annual || {}).dates || [], yq = (fs.quarterly || {}).dates || [];
+    el.innerHTML = `<div class="th-head"><div><span class="eyebrow">Financial statements</span><h2>${esc(r.n)} <span class="gold">financial statements</span></h2>
+        <p class="fs-sub">${ya.length} financial years${ya.length ? ` (FY${ya[0].slice(0, 4)}–FY${ya[ya.length - 1].slice(0, 4)})` : ''} and the latest ${yq.length} ${fs.interim ? 'reporting periods (JSE companies report half-yearly)' : 'quarters'}. Figures in ${esc(cur || '')} ${'as reported'}.</p></div>
+        <div class="fs-ctl"><div class="seg"><button data-st="is">Income statement</button><button data-st="bs">Balance sheet</button><button data-st="cf">Cash flow</button></div>
+        <div class="seg"><button data-per="annual">Annual</button><button data-per="quarterly">${fs.interim ? 'Interim' : 'Quarterly'}</button></div><button class="btn btn-ghost fs-csv">Download CSV</button></div></div>
+      <div class="fs-body"></div>
+      <p class="th-foot">Sources: ${esc((fs.src || []).join('; '))}. Updated ${esc(fs.updated || '')}; refreshed weekly and kept year by year, so the history grows. Negative numbers in brackets. Y/Y = change in the latest period against the same period a year earlier.</p>`;
+    el.querySelectorAll('[data-per]').forEach(b => b.onclick = () => { per = b.dataset.per; draw(); });
+    el.querySelectorAll('[data-st]').forEach(b => b.onclick = () => { st = b.dataset.st; draw(); });
+    el.querySelector('.fs-csv').onclick = csv;
+    draw();
+    // 5-year history line in the thesis
+    const A = fs.annual || {}, rv = (A.rows || {}).rev || [], ni = (A.rows || {}).ni || [], fcf = (A.rows || {}).fcf || [], so = (A.rows || {}).so || (A.rows || {}).shares || [];
+    const idx = rv.map((v, i) => ok(v) ? i : -1).filter(i => i >= 0);
+    const hb = [];
+    if (idx.length >= 3) { const a = idx[0], b = idx[idx.length - 1], yrs = (new Date(A.dates[b]) - new Date(A.dates[a])) / 3.156e10, cg = yrs > 0 && rv[a] > 0 && rv[b] > 0 ? Math.pow(rv[b] / rv[a], 1 / yrs) - 1 : null;
+      if (ok(cg)) hb.push(`revenue has grown ${pc(cg, 1)} a year over ${Math.round(yrs)} years`); }
+    const nP = ni.filter(ok); if (nP.length >= 3) hb.push(`it made a profit in ${nP.filter(v => v > 0).length} of the last ${nP.length} years`);
+    const fP = fcf.filter(ok); if (fP.length >= 3) hb.push(`free cash flow was positive in ${fP.filter(v => v > 0).length} of ${fP.length} years`);
+    const sP = so.filter(ok); if (sP.length >= 3) { const ch = sP[sP.length - 1] / sP[0] - 1; if (Math.abs(ch) >= 0.02) hb.push(`the share count has ${ch < 0 ? 'fallen' : 'risen'} ${pp(Math.abs(ch), 0)} (${ch < 0 ? 'buybacks add to each share' : 'new shares dilute existing holders'})`); }
+    const th = $('thHist'); if (th && hb.length) th.innerHTML = `<p><b>Track record (financial statements):</b> ${hb.join('; ')}. <a href="#fsSec">See the statements ↓</a></p>`;
   }
 
   function series(d) {

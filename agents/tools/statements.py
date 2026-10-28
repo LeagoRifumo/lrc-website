@@ -72,7 +72,7 @@ SEC_TAGS = {
     'op': (['OperatingIncomeLoss'], 'flow', 1),
     'pti': (['IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest', 'IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments'], 'flow', 1),
     'ni': (['NetIncomeLossAvailableToCommonStockholdersBasic', 'NetIncomeLoss'], 'flow', 1),
-    'eps': (['EarningsPerShareDiluted'], 'flow', 1),
+    # EPS is not taken from old filings: those figures are not adjusted for later share splits
     'ta': (['Assets'], 'inst', 1),
     'tl': (['Liabilities'], 'inst', 1),
     'eq': (['StockholdersEquity'], 'inst', 1),
