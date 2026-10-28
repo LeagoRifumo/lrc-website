@@ -149,13 +149,19 @@ const STORE_LINK = d => (window.LRC_STORE && window.LRC_STORE.report_pay_link) |
     $('p-stop').textContent = fmt(stop); $('p-tgt').textContent = fmt(tgt);
     $('p-riskv').textContent = fmt(units * dist); $('p-gain').textContent = fmt(units * dist * R);
     $('p-val').textContent = fmt(val); $('p-lev').textContent = isFinite(val / A) ? (val / A).toFixed(2) + 'x' : '—';
+    const lev = Math.max(1, num('p-levmax') || 1), gap = (num('p-gap') || 0) / 100, margin = val / lev, gapLoss = units * E * gap;
+    $('p-margin').textContent = fmt(margin); $('p-marginp').textContent = isFinite(margin / A) ? (margin / A * 100).toFixed(1) + '%' : '—';
+    $('p-gapl').textContent = isFinite(gapLoss) ? `${fmt(gapLoss)} (${(gapLoss / A * 100).toFixed(1)}% of the account)` : '—';
     const w = $('p-warn'), msgs = [];
     if (R < 2) msgs.push('Reward is under 2R — LRC skips trades like this.');
+    if (margin > A) msgs.push(`The margin needed (${fmt(margin)}) is more than the account — this trade is too big for 1:${lev} leverage.`);
+    else if (margin > A * 0.5) msgs.push(`This one trade ties up ${(margin / A * 100).toFixed(0)}% of the account as margin — little room left for other trades or a bad day.`);
+    if (gapLoss > A * 0.05) msgs.push(`A ${(gap * 100).toFixed(0)}% gap past your stop would cost ${(gapLoss / A * 100).toFixed(0)}% of the account. Avoid holding through results or cut the size.`);
     if (val > A) msgs.push(`Position value is ${(val / A).toFixed(1)}x the account — that needs leverage. Check your margin before you trade.`);
     if (dir === 'long' && stop <= 0) msgs.push('The stop is at or below zero — the ATR is too large for this price.');
     w.style.display = msgs.length ? 'block' : 'none'; w.innerHTML = msgs.join('<br>');
   };
-  ['p-acct', 'p-risk', 'p-entry', 'p-atr', 'p-k', 'p-rr'].forEach(id => $(id).addEventListener('input', run)); run();
+  ['p-acct', 'p-risk', 'p-entry', 'p-atr', 'p-k', 'p-rr', 'p-levmax', 'p-gap'].forEach(id => $(id).addEventListener('input', run)); run();
 })();
 
 /* ---------- academy: interactive roadmap ---------- */

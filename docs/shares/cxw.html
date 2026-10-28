@@ -95,7 +95,7 @@
   </div>
 </footer>
 <script>window.LRC_DATA = "../data/";</script>
-<script src="../assets/js/main.js?v=10.5"></script>
+<script src="../assets/js/main.js?v=11.0"></script>
 <script>(()=>{const el=document.getElementById('coLive');if(!el)return;fetch('../data/scan/t/'+el.dataset.t+'.json?v='+Math.floor(Date.now()/6e5)).then(r=>r.json()).then(d=>{const t=d.tech||{},c=d.row.cur==='ZAR'?'R':'$';const ch=t.chg_1d||0;el.innerHTML='<b>'+c+Number(t.price).toLocaleString('en-ZA',{minimumFractionDigits:2,maximumFractionDigits:2})+'</b> <span class="'+(ch>=0?'up':'dn')+'">'+(ch>=0?'+':'')+(ch*100).toFixed(1)+'%</span> <small>close '+(t.date||'')+' · live from the LRC Stock Scanner</small>';}).catch(()=>{});})();</script>
 </body>
 </html>
