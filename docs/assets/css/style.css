@@ -1021,3 +1021,14 @@ html:not(.safe) .onlysafe{display:none!important}
 .fr-alt{font-size:12px;color:var(--muted);padding:6px 10px;border:1px solid var(--line);border-radius:6px;text-decoration:none;white-space:nowrap}.fr-alt:hover{color:var(--gold-2);border-color:var(--gold)}
 .find-none{color:var(--muted);font-size:14px;padding:8px 4px}
 @media (max-width:700px){.fr-main{grid-template-columns:58px minmax(0,1fr) 54px}.fr-main small{display:none}.find-btn{width:34px;height:34px}}
+.liq-thin{display:inline-block;font-size:9.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#F2CE72;border:1px solid rgba(242,206,114,.4);border-radius:4px;padding:0 5px;margin-left:4px;vertical-align:1px}
+
+/* v10.4: market breadth strip on the dashboard */
+.brd{margin:12px 0 4px}
+.brd-bar{display:flex;height:10px;border-radius:6px;overflow:hidden;background:#1A1F2C}.brd-bar i{display:block;height:100%}.brd-bar .g{background:#14823F}.brd-bar .r{background:#B3261E;margin-left:auto}
+.brd-tiles{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-top:10px}
+.brd-tiles div{border:1px solid var(--line);border-radius:12px;background:linear-gradient(180deg,var(--panel),var(--ink));padding:10px 14px}
+.brd-tiles span{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.brd-tiles b{display:block;font-family:var(--serif);font-size:26px;line-height:1.15;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.brd-tiles small{font-size:12px;color:var(--muted)}
+@media (max-width:800px){.brd-tiles{grid-template-columns:repeat(2,minmax(0,1fr))}.brd-tiles b{font-size:22px}}

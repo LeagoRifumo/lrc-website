@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=10.1">
+<link rel="stylesheet" href="assets/css/style.css?v=10.5">
 </head>
 <body>
 <header class="site-header">
@@ -57,7 +57,7 @@
   <h1>Every stock scored. <span class="gold">Every setup planned.</span></h1>
   <p class="lead">The JSE and New York in one scanner: technicals (breakouts and retests of major support), analyst sentiment and every key ratio judged against its own sector, rolled into one LRC score out of 100 and a grade: <span class="nosafe">an LRC Stock Scanner rating of BUY, HOLD or SELL</span><span class="onlysafe">Top scoring, Strong, Average, Weak or Lowest scoring</span>. Click any company for its one-page analyst summary.</p>
   <div class="agent-meta" id="scMeta"></div>
-  <div class="edu-note"><b>EDUCATIONAL ONLY</b> LRC Stock Scanner ratings are produced by our scoring rules and refreshed automatically. They are general research, not personal advice; where we have completed a Work-sheet, the LRC analyst rating is shown with it. Data can be delayed or wrong — always check the source.</div>
+  <div class="edu-note"><b>EDUCATIONAL ONLY</b> LRC Stock Scanner ratings are produced by our scoring rules and refreshed automatically. They are general research, not personal advice. Data can be delayed or wrong — always check the source.</div>
 </div></section>
 <div class="scan-bar"><div class="wrap">
   <span class="mkt-switch mkt-big"><select id="scMkt" aria-label="Market"><option value="JSE">JSE — Johannesburg</option><option value="US">New York — NYSE &amp; Nasdaq</option></select></span>
@@ -116,9 +116,10 @@
       <div class="card"><h3>Sentiment (6)</h3><p>Analyst consensus, upside to the analysts' median target, upgrades minus downgrades, short interest, insider and institutional ownership.</p></div>
       <div class="card"><h3>Technical (6)</h3><p>Trend vs the 50/200-day averages (±2), 6-month momentum vs the market (±2), setup (±2: <b>Breakout</b> or <b>Retest</b> of major support vs <b>Breakdown</b> or <b>Failed retest</b>), stretch/RSI, volume and beta.</p></div>
       <div class="card"><h3>Trading vs Investment</h3><p><b>Trading scanner (3–12 months):</b> technical 35%, growth 20%, sentiment 20%, valuation 10%, profitability 10%, financial health 5%. <b>Investment scanner (5–10 years):</b> valuation 25%, profitability 25%, financial health 20%, growth 20%, income 10%. Bands: <span class="nosafe">75+ STRONG BUY, 60–74 BUY, 40–59 HOLD, 25–39 SELL, below 25 STRONG SELL</span><span class="onlysafe">75+ Top scoring, 60–74 Strong, 40–59 Average, 25–39 Weak, below 25 Lowest scoring</span>. Missing data is left out, never counted against a company.</p></div>
+      <div class="card nosafe"><h3>Senior-analyst gates (strict)</h3><p>The score sets the starting rating; these rules can only make it more cautious. <b>Trading BUY</b> needs 10%+ upside to the LRC Analyst Target, the price above its 200-day average, enough daily trading and no results in the next 3 days; <b>STRONG BUY</b> also needs 15%+ upside, the price above the 50-day and an RSI below 75. A weak score with a broken chart (below the 50- and 200-day) and 5%+ downside becomes <b>SELL</b>. <b>Investment BUY</b> needs a price that is not overvalued, quality grade A or B, positive free cash flow and debt under 2x equity; <b>STRONG BUY</b> needs an undervalued price and grade A. Overvalued with a below-average score, or loss-making and burning cash, becomes <b>SELL</b>. The reason for every cap is shown on the company's summary.</p></div>
       <div class="card nosafe"><h3>LRC Analyst Target &amp; track record</h3><p>The target is the average of the LRC valuation methods that fit each company — <b>1 DCF</b> on free cash flow, <b>2 residual income</b> (banks &amp; insurers), <b>3 dividend &amp; buyback model</b> (property, utilities, financials), <b>4 EV/EBITDA vs sector peers</b> (miners and oil on 5-year average EBITDA) — plus the analyst consensus when 3+ analysts cover it. The range runs from the lowest to the highest method. <b>5 Reverse DCF</b> shows the growth the price already assumes. Cost of equity: 10-year bond yield + 5.5% (JSE) or 5% (New York), adjusted for beta. Every rating is measured on the <a href="track.html" style="color:var(--gold-2)">track record</a> page.</p></div>
     </div>
-    <p class="edu-note" style="margin-top:30px"><b>UPDATES</b> The scanner runs automatically every trading day after the New York close (about 06:30 South African time), using Yahoo Finance prices, fundamentals and analyst data. The JSE universe is our list of large and mid caps; New York covers the S&amp;P 500 and Nasdaq-100.</p>
+    <p class="edu-note" style="margin-top:30px"><b>UPDATES</b> Full scores twice every weekday (about 06:40 after the New York close and 17:50 after the JSE close); live prices every 15 minutes. Universe: every ordinary share on the JSE that trades at least R100,000 a day, and the 2,500 largest New York stocks (NYSE, Nasdaq, NYSE American — small caps from about $1bn up to the mega caps). Shares trading under R1m (JSE) or $5m (New York) a day are marked <b>thinly traded</b> and cannot be rated BUY on the Trading scanner. Data: Yahoo Finance, Nasdaq, SEC EDGAR.</p>
   </div>
 </div></section>
 
@@ -137,7 +138,7 @@
   </div>
 </footer>
 <script>window.LRC_DATA = "data/";</script>
-<script src="assets/js/main.js?v=10.1"></script>
-<script src="assets/js/scanner.js?v=10.3"></script>
+<script src="assets/js/main.js?v=10.5"></script>
+<script src="assets/js/scanner.js?v=10.5"></script>
 </body>
 </html>

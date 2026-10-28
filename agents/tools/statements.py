@@ -204,11 +204,18 @@ def main():
         except Exception as e:
             return t, 'yahoo ' + repr(e)[:80]
         sec = None
-        if m == 'US' and t in ciks:
+        prev = load(os.path.join(OUT, t + '.json'))
+        # SEC older years only change once a year: fetch them when missing or older than 90 days (keeps the run light)
+        sec_due = not prev or (prev.get('sec_date') or '') < (dt.date.today() - dt.timedelta(days=90)).isoformat()
+        if m == 'US' and t in ciks and sec_due:
             try: sec = sec_annual(ciks[t])
             except Exception as e: sec = None
         if not ys and not sec: return t, 'no data'
-        o = build(t, ys, sec, load(os.path.join(OUT, t + '.json')))
+        o = build(t, ys, sec, prev)
+        if sec is not None: o['sec_date'] = dt.date.today().isoformat()
+        elif prev and prev.get('sec_date'):
+            o['sec_date'] = prev['sec_date']
+            if 'SEC EDGAR 10-K filings (older years)' in (prev.get('src') or []) and 'SEC EDGAR 10-K filings (older years)' not in o['src']: o['src'].append('SEC EDGAR 10-K filings (older years)')
         if m == 'JSE': o['interim'] = True   # JSE companies report every six months
         json.dump(o, open(os.path.join(OUT, t + '.json'), 'w'), separators=(',', ':'))
         return t, None

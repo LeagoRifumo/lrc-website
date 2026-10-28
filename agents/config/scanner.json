@@ -1,5 +1,5 @@
 {
- "about": "LRC Scanner universe. US stocks = S&P 500 + Nasdaq-100 (list refreshed automatically) + every LRC-covered name. JSE stocks = the curated list below (large & mid caps; Yahoo symbols end in .JO, prices quoted in cents). Add or remove names here.",
+ "about": "LRC Scanner universe (29 Oct 2026): New York = the 2,500 largest US-listed common stocks from the Nasdaq screener (market value $300m+, price $2+; agents/tools/universe.py), JSE = every ordinary share Yahoo lists on the JSE (3-letter codes, no ETFs/ETNs/preference shares) plus the curated list below, which also supplies clean names and sectors. JSE shares trading under R100k a day are skipped; under R1m (JSE) / $5m (US) a day are flagged thinly traded.",
  "us_lists": [
   "https://stockanalysis.com/list/sp-500-stocks/",
   "https://stockanalysis.com/list/nasdaq-100-stocks/"

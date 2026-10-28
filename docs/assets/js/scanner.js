@@ -72,9 +72,9 @@ if ($('scTbl')) {
     const th = (k, l, t = '') => `<th data-k="${k}" title="${esc(t)}" class="${sortK === k ? 'sorted' + (sortD > 0 ? ' asc' : '') : ''}">${l}</th>`;
     const left = r => {
       const cov = r.cov ? `<span class="pill p-${r.cov.rating.toLowerCase()}" title="LRC analyst rating ${esc(r.cov.rated || '')}">LRC ${esc(r.cov.rating)}</span> ` : '';
-      return `<td class="nm"><button class="star ${my.has(r.t) ? 'on' : ''}" data-s="${esc(r.t)}" title="Add to my list">★</button><b>${esc(r.t.replace('.JO', ''))}</b> ${cov}<small>${esc(r.n)} · ${esc(r.sec)}</small></td>
+      return `<td class="nm"><button class="star ${my.has(r.t) ? 'on' : ''}" data-s="${esc(r.t)}" title="Add to my list">★</button><b>${esc(r.t.replace('.JO', ''))}</b> ${cov}${r.liq === 'thin' ? '<span class="liq-thin" title="Thinly traded: under R1m (JSE) or $5m (New York) a day">thin</span> ' : ''}<small>${esc(r.n)} · ${esc(r.sec)}</small></td>
         <td class="${cc(gInt(SC(r)))}"><span class="hc" title="${mode === 'investment' ? 'Investment score: valuation 25%, profitability 25%, financial health 20%, growth 20%, income 10%' : 'Trading score: technical 35%, growth 20%, sentiment 20%, valuation 10%, profitability 10%, financial health 5%'}">${SC(r)}</span></td>
-        <td class="plain"><span class="${sigCls(RT(r))}" title="${esc(NT(r) || '')}">${esc(RT(r))}</span>${NT(r) && !SAFE ? `<small style="display:block;color:#F2CE72;font-size:10px;margin-top:2px">${mode === 'investment' ? 'held: ' + esc((r.val || '').toLowerCase()) : 'held: target ' + (r.tgt ? pc(r.tgt / r.px - 1, 0) : '')}</small>` : ''}</td>
+        <td class="plain"><span class="${sigCls(RT(r))}" title="${esc(NT(r) || '')}">${esc(RT(r))}</span>${NT(r) && !SAFE ? `<small style="display:block;color:#F2CE72;font-size:10px;margin-top:2px">${esc((() => { const n = String(NT(r)).split('; ').pop().replace(/^Capped by the LRC Analyst Target \((.*)\)$/, 'target $1'); return n.length > 46 ? n.slice(0, 44) + '…' : n; })())}</small>` : ''}</td>
         <td class="plain"><span class="${valCls(r.val)}" style="font-size:9px">${esc(r.val || '—')}</span></td>
         <td class="plain" style="text-align:right">${px(r.px, r.cur)}<small style="display:block;color:${r.chg >= 0 ? '#5ED39A' : '#F08A7E'}">${pc(r.chg)}</small></td>`;
     };
@@ -192,10 +192,12 @@ if ($('scTbl')) {
       .map(a => a.map(x => `"${String(x).replace(/"/g, '""')}"`).join(',')).join('\n');
     const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([csv], { type: 'text/csv' })); a.download = `LRC_Scanner_${mkt}_${(S.as_of || {})[mkt] || ''}.csv`; a.click();
   });
-  Promise.allSettled([get('scan/stocks.json'), get('scan/etfs.json'), get('scan/sectors.json')]).then(([a, b, c]) => {
+  Promise.allSettled([get('scan/stocks.json'), get('scan/etfs.json'), get('scan/sectors.json'), get('scan/quotes.json')]).then(([a, b, c, qq]) => {
     if (a.status !== 'fulfilled') { fail($('scTbl'), 'scanner'); return; }
     S = a.value; E = b.status === 'fulfilled' ? b.value : null; SE = c.status === 'fulfilled' ? c.value : null;
-    $('scMeta').innerHTML = `<span class="ai">● Built by <b>${esc((window.LRCBrand || (x => x))(S.agent))}</b></span><span>Prices as of <b>JSE ${esc(S.as_of?.JSE || '—')} · NY ${esc(S.as_of?.US || '—')}</b></span><span>Updated <b>${when(S.generated)}</b></span><span><b>${S.rows.length}</b> companies · <b>${E ? E.rows.length : 0}</b> ETFs</span>`;
+    // live prices (refreshed every 15 minutes) laid over the last full scan
+    if (qq.status === 'fulfilled' && qq.value && qq.value.q && qq.value.generated > S.generated) { const Q = qq.value.q; S.rows.forEach(r => { const x = Q[r.t]; if (x && x[0]) { r.px = x[0]; if (x[1] !== null && x[1] !== undefined) r.chg = x[1]; } }); S.live = qq.value.generated; }
+    $('scMeta').innerHTML = `<span class="ai">● Built by <b>${esc((window.LRCBrand || (x => x))(S.agent))}</b></span><span>Prices as of <b>JSE ${esc(S.as_of?.JSE || '—')} · NY ${esc(S.as_of?.US || '—')}</b></span><span>Scored <b>${when(S.generated)}</b></span>${S.live ? `<span class="ai">● Live prices <b>${when(S.live)}</b></span>` : ''}<span><b>${S.rows.length}</b> companies · <b>${E ? E.rows.length : 0}</b> ETFs</span>`;
     fillSectors(); showTab(tab);
   });
 }

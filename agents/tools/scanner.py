@@ -156,13 +156,20 @@ def fx_for(reported, trading, rates):
 # ---------------- main ----------------
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument('--limit', type=int, default=0); ap.add_argument('--only', default='')
-    ap.add_argument('--workers', type=int, default=8); args = ap.parse_args()
+    ap.add_argument('--workers', type=int, default=10); args = ap.parse_args()
     t0 = time.time(); y = Yahoo()
     cfg = load(P('agents', 'config', 'scanner.json'))
     ratings = (load(P('docs', 'data', 'ratings.json'), {}) or {}).get('ratings', {})
     research = {f[:-5] for f in os.listdir(P('docs', 'data', 'research'))} if os.path.isdir(P('docs', 'data', 'research')) else set()
     jse_cfg = {s: (n, sec) for s, n, sec in cfg['jse']}
-    us = us_universe(y, cfg)
+    try:
+        import universe as UNI
+        U = UNI.build(y, cfg)
+        us = list(U['US']); jse_all = U['JSE']
+    except Exception as e:
+        print('universe discovery failed, using the old lists:', repr(e)[:120])
+        us = us_universe(y, cfg); jse_all = {s: n for s, (n, sec) in jse_cfg.items()}
+    for s_, n_ in jse_all.items(): jse_cfg.setdefault(s_, (n_, None))
     us_syms = sorted(set(s.replace('.', '-') for s in us) | set(ratings) | {r for r in research if not r.endswith('.JO')})
     stocks = [(s, 'US') for s in us_syms] + [(s, 'JSE') for s in jse_cfg]
     if args.only: stocks = [x for x in stocks if x[0] in args.only.split(',')]
@@ -253,6 +260,7 @@ def main():
             name = q.get('longName') or q.get('shortName') or meta.get('name') or s
             sector = prof.get('sector') or 'Other'
         if m == 'US' and t['value_traded'] < 2e6 and s not in ratings: continue
+        if m == 'JSE' and t['value_traded'] < 1e5 and s not in {x[0] for x in cfg['jse']}: continue   # JSE shares that hardly trade (< R100k a day)
         rows.append({'t': s, 'n': name, 'm': m, 'sec': sector, 'ind': prof.get('industry'), 'cur': cur, 'tech': t, 'f': f, 'prof': prof,
                      'bars': bars, 'meta': meta, 'stale': stale, 'ts': cache.get(s, {}).get('ts')})
 
@@ -322,6 +330,15 @@ def main():
         v_final, v_note = E.consistent(v_score, (tgt_final / t['price'] - 1) if tgt_final and t['price'] else None)
         verdict = E.valuation_verdict(it['val_points'], (tgt_final / t['price'] - 1) if tgt_final and t['price'] else None)
         iv_v, iv_note = E.invest_consistent(E.rating_v7(iv_score), verdict)
+        # senior-analyst gates (strict): trend, liquidity, results risk, quality, cash flow, debt
+        dtr = (dt.date.fromisoformat(f['next_earnings']) - today).days if f.get('next_earnings') else None
+        v_final, g_tn, iv_v, g_in, g_fl = E.analyst_gates(v_final, iv_v, {
+            'market': r['m'], 'score': score, 'iv_score': iv_score, 'price': t['price'], 'sma50': t.get('sma50'), 'sma200': t.get('sma200'), 'rsi': t.get('rsi'),
+            'upside': (tgt_final / t['price'] - 1) if tgt_final and t['price'] else None, 'verdict': verdict, 'grade': inv['grade'], 'fcf': f.get('fcf'),
+            'de': f.get('de'), 'fin': r['sec'] == 'Financial Services', 'stale': r['stale'], 'value_traded': t.get('value_traded'), 'days_to_results': dtr,
+            'loss': (f.get('tpe') or 0) < 0})
+        if g_tn: v_note = '; '.join(([v_note] if v_note else []) + g_tn)
+        if g_in: iv_note = '; '.join(([iv_note] if iv_note else []) + g_in)
         row = {'t': r['t'], 'n': r['n'], 'm': r['m'], 'sec': r['sec'], 'ind': r['ind'], 'cur': r['cur'], 'px': t['price'], 'chg': t['chg_1d'],
                'p1w': t['perf_1w'], 'p1m': t['perf_1m'], 'p6m': t['perf_6m'], 'ytd': t['perf_ytd'], 'mcap': f.get('mcap'), 'rsi': t['rsi'],
                'score': score, 'pts': it['points'], 'max': it['max'], 'grp': it['groups'], 'rd': it['rd'], 'tp': r['tp'],
@@ -331,7 +348,7 @@ def main():
                'setup': t.get('setup'), 'lvl': t.get('setup_level'), 'plan': {k: pl[k] for k in ('side', 'entry', 'stop', 't1', 't2', 'risk_pct')} if pl else None,
                'ne': f.get('next_earnings'), 'cat': cats, 'tgt': tg.get('lrc') or tg.get('blend'),
                'cov': {'rating': cov['rating'], 'target': cov['target_6m'], 'rated': cov.get('rated')} if cov else None,
-               'res': r['t'] in research, 'stale': r['stale'] or None,
+               'res': r['t'] in research, 'stale': r['stale'] or None, 'liq': 'thin' if 'thin' in g_fl else None, 'vt': round(t.get('value_traded') or 0),
                'inv': {'p': inv['passed'], 'k': inv['known'], 'g': inv['grade'], 'mos': inv['mos'], 'rc': inv['rev_cagr'], 'ec': inv['eps_cagr']},
                'raw': {'rs': t.get('rs_6m'), 'uv': t.get('updown_vol'), 'ext': (t['price'] - t['sma20']) / t['atr'] if t['atr'] and t['sma20'] else None,
                        'fpe': f.get('fpe'), 'tpe': f.get('tpe'), 'ps': f.get('ps'), 'pfcf': f.get('pfcf'), 'rev_growth': f.get('rev_growth'),
@@ -429,6 +446,9 @@ def main():
             'benchmarks': cfg['benchmarks']}
     dump(os.path.join(OUT, 'stocks.json'), rnd_all({**meta, 'readings': [{'k': k, 'l': l, 'g': g, 'max': mx, 'f': fm_} for k, l, g, mx, fm_, _, _ in E.READINGS],
                                                      'groups': E.GROUPS, 'medians': MEDIANS, 'rows': out_rows}))
+    # light index for site search, the dashboard heatmap and top movers (small file, loads fast on phones)
+    dump(os.path.join(OUT, 'index.json'), rnd_all({**meta, 'cols': ['t', 'n', 'm', 'sec', 'cur', 'px', 'chg', 'p1w', 'p1m', 'mcap', 'v', 'score', 'iv_v', 'val', 'liq'],
+                                                   'rows': [[r.get(k) for k in ('t', 'n', 'm', 'sec', 'cur', 'px', 'chg', 'p1w', 'p1m', 'mcap', 'v', 'score', 'iv_v', 'val', 'liq')] for r in out_rows]}))
     dump(os.path.join(OUT, 'etfs.json'), rnd_all({**meta, 'rows': etf_rows}))
     dump(os.path.join(OUT, 'sectors.json'), rnd_all({**meta, 'rows': sectors}))
     # ---------- website watchlists (both markets, rebuilt every run): top 5 BUY / top 5 SELL, trading and investment ----------

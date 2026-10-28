@@ -1,5 +1,5 @@
-# LRC Live Wire — breaking-news headlines every 15 minutes (free, runs on GitHub)
-name: Live news wire (every 15 min)
+# LRC Live — every 15 minutes: breaking-news wire, live prices for every scanned company, and the live market dashboard (one push)
+name: Live wire, prices & dashboard (every 15 min)
 on:
   schedule:
     - cron: '*/15 * * * *'
@@ -19,5 +19,11 @@ jobs:
         with: { python-version: '3.12' }
       - name: Read the newsrooms
         run: python agents/tools/wire.py
+      - name: Live prices for every company in the scanner
+        continue-on-error: true
+        run: python agents/tools/quotes_live.py
+      - name: Live market dashboard
+        continue-on-error: true
+        run: python agents/tools/dashboard_auto.py
       - name: Publish
-        run: bash agents/tools/publish.sh "Live wire update"
+        run: bash agents/tools/publish.sh "Live update"

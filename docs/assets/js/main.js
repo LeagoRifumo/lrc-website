@@ -296,6 +296,11 @@ const WS = [
 /* =================== News Desk + Watchlist (read JSON data) =================== */
 const DATA = window.LRC_DATA || 'data/';
 const getJSON = f => fetch(DATA + f + '?v=' + Date.now()).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); });
+/* light company index (search, heatmap, movers) with live prices laid over it (quotes.json refreshes every 15 minutes) */
+window.LRCIndex = (() => { let p = null; return () => p || (p = Promise.all([fetch(DATA + 'scan/index.json?v=' + Math.floor(Date.now() / 3e5)).then(r => r.json()), fetch(DATA + 'scan/quotes.json?v=' + Math.floor(Date.now() / 3e5)).then(r => r.ok ? r.json() : null).catch(() => null)])
+  .then(([ix, qq]) => { const C = ix.cols, rows = ix.rows.map(a => Object.fromEntries(C.map((k, i) => [k, a[i]]))); let live = null;
+    if (qq && qq.q && qq.generated > ix.generated) { rows.forEach(r => { const x = qq.q[r.t]; if (x && x[0]) { r.px = x[0]; if (x[1] !== null && x[1] !== undefined) r.chg = x[1]; } }); live = qq.generated; }
+    return { rows, as_of: ix.as_of, generated: ix.generated, live }; })); })();
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const when = iso => { try { return new Date(iso).toLocaleString('en-ZA', { weekday: 'short', day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }) + ' SAST'; } catch (e) { return iso; } };
 const brandName = s => String(s ?? '').replace(/\s*\([^)]*(GitHub|Claude|Action|automation|workbook)[^)]*\)/gi, '').replace(/\b(GitHub Actions?|Claude|Anthropic)\b/gi, 'LRC').replace(/\s+Agent\b/g, '');
@@ -526,7 +531,7 @@ const artCard = (a, pre = '') => `<a class="art" href="${pre}${esc(a.url)}">${a.
     return { txt, cls: mag === 0 ? 'g0' : (good ? 'g' : 'r') + mag };
   };
   const show = f => getJSON('dashboards/' + f + '.json').then(d => {
-    $('dashMeta').innerHTML = `<span class="ai">● ${esc(d.live ? 'Live — updates every hour on weekdays' : 'Saved end-of-week snapshot')}</span><span>${esc(d.title)}</span><span>Updated <b>${when(d.generated)}</b></span>`;
+    $('dashMeta').innerHTML = `<span class="ai">● ${esc(d.live ? 'Live — updates every 15 minutes' : 'Saved end-of-week snapshot')}</span><span>${esc(d.title)}</span><span>Updated <b>${when(d.generated)}</b></span>`;
     const view = d.market_view || d.auto_view;
     $('dashView').innerHTML = view ? `<div class="lbl">${d.market_view ? "THE ANALYST'S VIEW" : 'AUTOMATIC SUMMARY'}</div><p>${esc(view)}</p>` : '';
     T.innerHTML = '<thead><tr><th>INDICATOR</th><th>LATEST</th><th>A WEEK AGO</th><th>WEEK</th><th>A YEAR AGO</th><th>1 YEAR</th><th>AS OF</th><th>WHAT IT TELLS US</th></tr></thead><tbody>' +
@@ -535,7 +540,7 @@ const artCard = (a, pre = '') => `<a class="art" href="${pre}${esc(a.url)}">${a.
     $('dashSrc').textContent = d.updated_by || '';
   }).catch(() => failMsg(T, 'dashboard'));
   Promise.all([getJSON('dashboards/index.json'), getJSON('dashboards/live.json').catch(() => null)]).then(([idx, live]) => {
-    const opts = (live ? [`<option value="live">● Live now (updates hourly)</option>`] : []).concat(idx.weeks.map(w => `<option value="${esc(w.week_ending)}">${esc(w.title.replace(/^(Weekly )?market dashboard — /i, 'Saved: '))}</option>`));
+    const opts = (live ? [`<option value="live">● Live now (updates every 15 minutes)</option>`] : []).concat(idx.weeks.map(w => `<option value="${esc(w.week_ending)}">${esc(w.title.replace(/^(Weekly )?market dashboard — /i, 'Saved: '))}</option>`));
     sel.innerHTML = opts.join('');
     const want = location.hash.slice(1); sel.value = [...sel.options].some(o => o.value === want) ? want : (live ? 'live' : (idx.latest || sel.options[0].value));
     sel.onchange = () => { history.replaceState(null, '', '#' + sel.value); show(sel.value); };
@@ -606,14 +611,26 @@ const artCard = (a, pre = '') => `<a class="art" href="${pre}${esc(a.url)}">${a.
     const adv = xs.filter(r => r[per] > 0).length, dec = xs.filter(r => r[per] < 0).length;
     const nm = mkt === 'JSE' ? 'JSE' : 'New York';
     heat(xs, nm);
+    // market breadth: advancers vs decliners, average move, best and worst sector
+    const B = $('breadth');
+    if (B && xs.length) {
+      const avg = xs.reduce((a, r) => a + r[per], 0) / xs.length, secs = {};
+      xs.forEach(r => { (secs[r.sec || 'Other'] = secs[r.sec || 'Other'] || []).push(r[per]); });
+      const sa = Object.entries(secs).filter(([, v]) => v.length >= 3).map(([k, v]) => [k, v.reduce((a, b) => a + b, 0) / v.length]).sort((a, b) => b[1] - a[1]);
+      const upP = adv / xs.length * 100, dnP = dec / xs.length * 100;
+      B.innerHTML = `<div class="brd-bar"><i class="g" style="width:${upP}%"></i><i class="r" style="width:${dnP}%"></i></div>
+        <div class="brd-tiles"><div><span>Rising</span><b class="up">${adv}</b><small>${upP.toFixed(0)}% of ${xs.length}</small></div><div><span>Falling</span><b class="dn">${dec}</b><small>${dnP.toFixed(0)}%</small></div>
+        <div><span>Average move</span><b class="${avg >= 0 ? 'up' : 'dn'}">${pct(avg)}</b><small>${PER[per]}</small></div>
+        ${sa.length ? `<div><span>Best sector</span><b class="up">${esc(sa[0][0])}</b><small>${pct(sa[0][1])}</small></div><div><span>Worst sector</span><b class="dn">${esc(sa[sa.length - 1][0])}</b><small>${pct(sa[sa.length - 1][1])}</small></div>` : ''}</div>`;
+    }
     M.innerHTML = list('▲ Top gainers', `${nm} · ${PER[per]}`, up) + list('▼ Top losers', `${nm} · ${PER[per]}`, dn) + list('◆ Biggest moves', `${nm} · up or down, ${PER[per]}`, big);
-    $('movMeta').innerHTML = `<b class="up">${adv} up</b> · <b class="dn">${dec} down</b> of ${xs.length} ${nm} shares in the LRC Stock Scanner · prices as of ${esc((rows.as_of && rows.as_of[mkt]) || '')} · click a name for its one-page summary`;
+    $('movMeta').innerHTML = `<b class="up">${adv} up</b> · <b class="dn">${dec} down</b> of ${xs.length} ${nm} shares in the LRC Stock Scanner · ${rows.live && per === 'chg' ? `live prices ${esc(when(rows.live))}` : `prices as of ${esc((rows.as_of && rows.as_of[mkt]) || '')}`} · click a name for its one-page summary`;
   };
   $('mvMkt').onclick = e => { const b = e.target.closest('button'); if (!b) return; mkt = b.dataset.v; try { localStorage.setItem('lrc_mkt', JSON.stringify(mkt)); } catch (er) { } window.dispatchEvent(new CustomEvent('lrcmarket', { detail: mkt })); draw(); };
   $('mvPer').onclick = e => { const b = e.target.closest('button'); if (!b) return; per = b.dataset.v; draw(); };
   window.addEventListener('lrcmarket', e => { if (e.detail !== mkt) { mkt = e.detail; draw(); } });
   draw();
-  getJSON('scan/stocks.json').then(s => { rows = s.rows; rows.as_of = s.as_of; draw(); }).catch(() => failMsg(M, 'top movers'));
+  window.LRCIndex().then(s => { rows = s.rows; rows.as_of = s.as_of; rows.live = s.live; draw(); }).catch(() => failMsg(M, 'top movers'));
 })();
 
 /* shared by the earnings and dividend calendars: countdown chip and calendar (.ics) download */
@@ -708,11 +725,11 @@ window.LRCCal = {
   b.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6"/></svg>';
   cta.insertBefore(b, cta.firstChild);
   const box = document.createElement('div'); box.className = 'find-box'; box.hidden = true;
-  box.innerHTML = '<div class="wrap"><input type="search" id="findQ" placeholder="Search 600+ JSE and New York companies — name or ticker (e.g. Sasol, NPN, Apple)" autocomplete="off"><div class="find-res" id="findRes"></div></div>';
+  box.innerHTML = '<div class="wrap"><input type="search" id="findQ" placeholder="Search 2,500+ JSE and New York companies — name or ticker (e.g. Sasol, NPN, Apple)" autocomplete="off"><div class="find-res" id="findRes"></div></div>';
   (document.querySelector('.site-header') || document.body).appendChild(box);
   let rows = null;
   const q = box.querySelector('#findQ'), res = box.querySelector('#findRes');
-  const load = () => rows ? Promise.resolve(rows) : fetch(DATA_ + 'scan/stocks.json?v=' + Math.floor(Date.now() / 6e5)).then(r => r.json()).then(s => rows = s.rows.map(r => ({ t: r.t, n: r.n, m: r.m, sec: r.sec, px: r.px, chg: r.chg, cur: r.cur, mc: r.mcap || 0 })));
+  const load = () => rows ? Promise.resolve(rows) : window.LRCIndex().then(s => rows = s.rows.map(r => ({ t: r.t, n: r.n, m: r.m, sec: r.sec, px: r.px, chg: r.chg, cur: r.cur, mc: r.mcap || 0 })));
   const slug = t => t.toLowerCase().replace('.jo', '-jse').replace(/[^a-z0-9-]+/g, '-').replace(/^-+|-+$/g, '');
   const find = s => { s = s.trim().toLowerCase(); if (!s || !rows) return [];
     return rows.map(r => { const t = r.t.toLowerCase().replace('.jo', ''), n = r.n.toLowerCase(); const sc = t === s ? 100 : t.startsWith(s) ? 80 : n.startsWith(s) ? 70 : n.includes(' ' + s) ? 55 : n.includes(s) || t.includes(s) ? 40 : 0; return [sc + Math.log10(r.mc + 10) / 10, r]; })

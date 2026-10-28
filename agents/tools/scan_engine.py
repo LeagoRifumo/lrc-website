@@ -699,3 +699,52 @@ def invest_consistent(rating, verdict):
     if rating in ('BUY', 'STRONG BUY') and verdict == 'OVERVALUED': return 'HOLD', 'Held at HOLD: the shares look overvalued'
     if rating in ('SELL', 'STRONG SELL') and verdict == 'UNDERVALUED': return 'HOLD', 'Held at HOLD: the shares look undervalued'
     return rating, None
+
+
+# ---------------- Senior-analyst gates (strict, 29 Oct 2026) ----------------
+# The score decides the starting rating; these gates can only make a rating MORE cautious (or turn a broken chart into a SELL).
+LIQ_MIN = {'JSE': 1e6, 'US': 5e6}   # average value traded a day (rand / dollars) below which a share is "thinly traded"
+
+
+def analyst_gates(trading, invest, c):
+    """c: market, score, iv_score, price, sma50, sma200, rsi, upside, verdict, grade, fcf, de, fin, stale, value_traded, days_to_results, loss.
+    Returns (trading, trading_notes, invest, invest_notes, flags)."""
+    tn, iv_n, flags = [], [], []
+    up = c.get('upside'); px, s50, s200 = c.get('price'), c.get('sma50'), c.get('sma200')
+    above200 = bool(s200 and px and px > s200); above50 = bool(s50 and px and px > s50)
+    broken = bool(s200 and s50 and px and px < s200 and px < s50)
+    thin = (c.get('value_traded') or 0) < LIQ_MIN.get(c.get('market'), 1e6)
+    if thin: flags.append('thin')
+    order = ['STRONG SELL', 'SELL', 'HOLD', 'BUY', 'STRONG BUY']
+    cap = lambda r, mx: order[min(order.index(r), order.index(mx))]
+    # ---- Trading (3-12 months)
+    t0 = trading
+    if trading == 'STRONG BUY' and not ((up or 0) >= 0.15 and above200 and above50 and (c.get('rsi') or 50) < 75):
+        trading = 'BUY'; tn.append('STRONG BUY needs 15%+ upside, price above the 50- and 200-day averages and RSI below 75')
+    if trading in ('BUY', 'STRONG BUY'):
+        if (up or 0) < 0.10: trading = 'HOLD'; tn.append('BUY needs 10%+ upside to the LRC Analyst Target')
+        elif not above200: trading = 'HOLD'; tn.append('no BUY below the 200-day average (falling trend)')
+        elif thin: trading = 'HOLD'; tn.append('thinly traded — hard to buy and sell at a fair price')
+        elif c.get('days_to_results') is not None and 0 <= c['days_to_results'] <= 3: trading = 'HOLD'; tn.append('results in %d days — wait for the numbers' % c['days_to_results'])
+        elif c.get('stale'): trading = 'HOLD'; tn.append('fundamentals not refreshed today')
+    if trading in ('HOLD',) and broken and (c.get('score') or 50) < 50 and up is not None and up <= -0.05:
+        trading = 'SELL'; tn.append('broken chart (below the 50- and 200-day averages), weak score and downside to the target')
+    if trading == 'SELL' and up is not None and up <= -0.10 and broken and (c.get('score') or 50) < 35:
+        trading = 'STRONG SELL'; tn.append('broken chart, very weak score and 10%+ downside')
+    if trading in ('SELL', 'STRONG SELL') and up is not None and up > 0:
+        trading = 'HOLD'; tn.append('no SELL while the LRC Analyst Target is above the price')
+    # ---- Investment (5-10 years)
+    if invest == 'STRONG BUY' and not (c.get('verdict') == 'UNDERVALUED' and c.get('grade') == 'A'):
+        invest = 'BUY'; iv_n.append('STRONG BUY needs an undervalued price and quality grade A')
+    if invest in ('BUY', 'STRONG BUY'):
+        if c.get('verdict') == 'OVERVALUED': invest = 'HOLD'; iv_n.append('the shares look overvalued')
+        elif c.get('grade') not in ('A', 'B'): invest = 'HOLD'; iv_n.append('quality grade below B on the investment checklist')
+        elif not c.get('fin') and c.get('fcf') is not None and c['fcf'] <= 0: invest = 'HOLD'; iv_n.append('negative free cash flow')
+        elif not c.get('fin') and (c.get('de') or 0) > 200: invest = 'HOLD'; iv_n.append('debt above 2x equity')
+    if invest == 'HOLD' and c.get('verdict') == 'OVERVALUED' and (c.get('iv_score') or 50) < 50:
+        invest = 'SELL'; iv_n.append('overvalued with a below-average investment score')
+    if invest == 'HOLD' and c.get('loss') and not c.get('fin') and (c.get('fcf') or 0) < 0 and (c.get('iv_score') or 50) < 50:
+        invest = 'SELL'; iv_n.append('loss-making and burning cash')
+    if invest in ('SELL', 'STRONG SELL') and c.get('verdict') == 'UNDERVALUED':
+        invest = 'HOLD'; iv_n.append('held at HOLD: the shares look undervalued')
+    return trading, tn, invest, iv_n, flags
