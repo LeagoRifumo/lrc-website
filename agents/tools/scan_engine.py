@@ -277,7 +277,7 @@ def consistent(rating, upside):
 
 
 def sector_medians(rows):
-    keys = ['fpe', 'tpe', 'ps', 'pfcf', 'peg', 'pb', 'rev_growth', 'eps_growth', 'eps_growth_fwd', 'eps_growth_next', 'div_yield', 'roe', 'roa', 'de',
+    keys = ['fpe', 'tpe', 'ps', 'pfcf', 'peg', 'pb', 'ev_ebitda', 'rev_growth', 'eps_growth', 'eps_growth_fwd', 'eps_growth_next', 'div_yield', 'roe', 'roa', 'de',
             'gross_margin', 'op_margin', 'profit_margin', 'current_ratio']
     signed = {'rev_growth', 'eps_growth', 'eps_growth_fwd', 'eps_growth_next', 'div_yield', 'roe', 'roa', 'de', 'gross_margin', 'op_margin', 'profit_margin', 'current_ratio'}
     out = {}
@@ -292,26 +292,136 @@ def sector_medians(rows):
     return med
 
 
-def model_targets(f, med, price):
-    """Target triangulation: analyst median, P/FCF-based, PEG-based (P/E = growth), sector P/E-based, and their blend."""
+# ---------------- LRC valuation: intrinsic-value methods (analyst-approved 28 Oct 2026) ----------------
+# 1 DCF on free cash flow (2-stage)          -> companies with positive free cash flow (not banks / insurers)
+# 2 Residual income (justified P/B)          -> banks, insurers and other financials
+# 3 Dividend discount model (Gordon growth)  -> dividend payers (REITs, utilities, financials, payout >= 40%)
+# 4 EV/EBITDA vs sector median (cyclicals on 5-year average EBITDA = mid-cycle) -> non-financials with positive EBITDA
+# 5 Reverse DCF: the growth the share price already assumes (shown, not averaged)
+# LRC Analyst Target = average of the methods that fit (1-4); range = lowest to highest method. No PEG.
+VAL = {'JSE': {'erp': 0.055, 'g_term': 0.045, 'rf_default': 0.088}, 'US': {'erp': 0.05, 'g_term': 0.025, 'rf_default': 0.045}}
+FIN_SECTORS = {'Financial Services'}
+CYCLICAL_SECTORS = {'Basic Materials', 'Energy'}
+DDM_SECTORS = {'Real Estate', 'Utilities', 'Financial Services'}   # dividends + buybacks are how these return value
+
+
+def _avg(xs):
+    xs = [x for x in xs if x is not None]
+    return sum(xs) / len(xs) if xs else None
+
+
+def cost_of_equity(market, beta, rf):
+    p = VAL[market]
+    rf = rf if rf else p['rf_default']
+    b = beta if beta is not None and 0 < beta < 4 else 1.0
+    return rf + p['erp'] + clamp((b - 1) * p['erp'], -0.02, 0.02)
+
+
+def _dcf_per_share(fcf0, g1, gT, r, shares):
+    """Years 1-5 grow at g1 fading to gT by year 5; terminal value at year 5 with gT."""
+    v, cf = 0.0, fcf0
+    for y in range(1, 6):
+        g = g1 + (gT - g1) * (y - 1) / 4
+        cf *= 1 + g
+        v += cf / (1 + r) ** y
+    v += cf * (1 + gT) / (r - gT) / (1 + r) ** 5
+    return v / shares
+
+
+def intrinsic(f, fs, med, price, market, sector, rf=None):
+    """Returns {'methods': {...per-share values...}, 'target', 'low', 'high', 'implied_growth', 'inputs'} in the trading currency."""
+    out = {'methods': {}, 'notes': {}}
+    if not price or not f.get('mcap'): return out
+    shares = f['mcap'] / price
+    fx = f.get('fx_used') or 1.0
+    A = (fs or {}).get('annual') or {}
+    rows = A.get('rows') or {}
+    hist = lambda k, n=5: [v * fx for v in (rows.get(k) or [])[-n:] if v is not None]
+    p = VAL[market]; gT = p['g_term']
+    r = cost_of_equity(market, f.get('beta'), rf)
+    fin = sector in FIN_SECTORS
+    # growth for years 1-5: analysts' EPS growth blended with 5-year revenue growth, capped
+    rv = hist('rev', 6)
+    rev_cagr = (rv[-1] / rv[0]) ** (1 / (len(rv) - 1)) - 1 if len(rv) >= 3 and rv[0] > 0 and rv[-1] > 0 else None
+    eg = _avg([f.get('eps_growth_fwd'), f.get('eps_growth_next')])
+    g1 = _avg([clamp(eg, -0.10, 0.30) if eg is not None else None, rev_cagr])
+    g1 = clamp(g1 if g1 is not None else gT, -0.05, 0.20)
+    out['inputs'] = {'r': round(r, 4), 'g1': round(g1, 4), 'g_term': gT, 'rev_cagr': rev_cagr}
+    # 1. DCF on free cash flow
+    fcfh = hist('fcf', 3)
+    base = _avg([f.get('fcf'), _avg(fcfh)]) if f.get('fcf') is not None or fcfh else None
+    if not fin and base and base > 0 and (not fcfh or sum(1 for x in fcfh if x > 0) >= max(1, len(fcfh) - 1)):
+        out['methods']['dcf'] = _dcf_per_share(base, g1, gT, r, shares)
+    elif not fin: out['notes']['dcf'] = 'free cash flow negative or unstable'
+    # 2. Residual income for financials (2-stage): book value + present value of returns above the cost of equity
+    if fin and f.get('pb') and f['pb'] > 0:
+        bv = price / f['pb']
+        roes = [n / e for n, e in zip(rows.get('ni') or [], rows.get('eq') or []) if n is not None and e and e > 0][-3:]
+        roe = _avg([f.get('roe'), _avg(roes)])
+        if roe is not None:
+            roe = clamp(roe, 0.0, 0.35)
+            pay = clamp(f.get('payout') if f.get('payout') is not None else 0.5, 0, 1)
+            gb = clamp(roe * (1 - pay), 0.0, 0.15)
+            v, b_ = bv, bv
+            for y in range(1, 6):
+                ri = (roe - r) * b_; v += ri / (1 + r) ** y; b_ *= 1 + gb
+            ri_t = (roe - r) * b_
+            v += ri_t * (1 + gT) / (r - gT) / (1 + r) ** 5 if ri_t > 0 else ri_t / (1 + r) ** 5
+            if v > 0: out['methods']['residual_income'] = v
+    # 3. Dividend discount model on total cash returned to shareholders (dividends + buybacks), for income sectors
+    if sector in DDM_SECTORS:
+        dv, bb = (rows.get('div') or [None])[-1:], (rows.get('buyback') or [None])[-1:]
+        paid = -sum(x for x in (dv + bb) if x is not None and x < 0) * fx
+        yld = max(f.get('div_yield') or 0, paid / f['mcap'] if paid > 0 else 0)
+        pay = f.get('payout')
+        if yld > 0:
+            sus = (f.get('roe') or 0) * (1 - clamp(pay if pay is not None else 0.6, 0, 1))
+            gd = clamp(sus, 0.0, gT + 0.015)
+            if r - gd > 0.02: out['methods']['ddm'] = yld * price * (1 + gd) / (r - gd)
+    # 4. EV/EBITDA vs sector on 5-year average EBITDA
+    # cyclicals (miners, oil, chemicals): 5-year average EBITDA = mid-cycle; everyone else: latest 12 months
+    eb = hist('ebitda', 5) if sector in CYCLICAL_SECTORS else []
+    eb_avg = _avg(eb + ([f['ebitda']] if f.get('ebitda') else [])) if (eb or f.get('ebitda')) else None
+    m_ev = med.get('ev_ebitda')
+    if not fin and eb_avg and eb_avg > 0 and m_ev and 0 < m_ev < 40:
+        net_debt = (f.get('debt') or 0) - (f.get('cash') or 0)
+        eq = eb_avg * m_ev - net_debt
+        if eq > 0: out['methods']['ev_ebitda'] = eq / shares
+        else: out['notes']['ev_ebitda'] = 'debt larger than the peer value of the business'
+    # sanity: drop a method that is wildly off the price (usually a data error)
+    for k in list(out['methods']):
+        v = out['methods'][k]
+        if v is None or not (0.25 * price < v < 4 * price): out['notes'][k] = 'outside 0.25x-4x the price (left out)'; out['methods'].pop(k)
+    # 5. Reverse DCF: growth (years 1-5) that makes the DCF equal today's price
+    if not fin and base and base > 0:
+        lo, hi = -0.30, 0.60
+        if _dcf_per_share(base, lo, gT, r, shares) < price < _dcf_per_share(base, hi, gT, r, shares):
+            for _ in range(50):
+                mid = (lo + hi) / 2
+                if _dcf_per_share(base, mid, gT, r, shares) < price: lo = mid
+                else: hi = mid
+            out['implied_growth'] = (lo + hi) / 2
+    return out
+
+
+def model_targets(f, med, price, fs=None, market='US', sector=None, rf=None):
+    """LRC Analyst Target = average of the LRC valuation methods that fit (DCF, residual income, dividend/buyback model,
+    EV/EBITDA vs peers) plus the analyst consensus median when 3+ analysts cover the company (owner decision 28 Oct 2026).
+    Range = lowest to highest of those values. Reverse DCF (implied growth) is shown, not averaged. No PEG."""
     out = {}
     if f.get('target_median'): out['analyst_median'] = f['target_median']
-    fcfps = f.get('fcf_per_share'); mp = med.get('pfcf')
-    if fcfps and fcfps > 0 and mp: out['pfcf'] = fcfps * mp
-    feps, g = f.get('forward_eps'), f.get('eps_growth_fwd') if f.get('eps_growth_fwd') is not None else f.get('eps_growth')
-    if feps and feps > 0 and g is not None: out['peg'] = feps * clamp(g * 100, 8, 30)
-    if feps and feps > 0 and med.get('fpe'): out['sector_pe'] = feps * med['fpe']
-    # LRC Analyst Target (automated): 60% analyst consensus + 40% LRC valuation models, kept within ±20% of the consensus
-    # (or within -40%/+60% of the price when no consensus exists)
-    models = [out[k] for k in ('pfcf', 'peg', 'sector_pe') if out.get(k) and 0.4 * price < out[k] < 2.5 * price]
-    mdl = median(models) if models else None
-    cons = out.get('analyst_median')
-    if cons and mdl: t = clamp(0.6 * cons + 0.4 * mdl, 0.8 * cons, 1.2 * cons)
-    elif cons: t = cons
-    elif mdl: t = clamp(mdl, 0.6 * price, 1.6 * price)
-    else: t = None
-    if t: out['blend'] = clamp(t, 0.65 * price, 1.5 * price)  # a 6-month target stays within -35% / +50% of the price
-    if mdl: out['models'] = mdl
+    iv = intrinsic(f, fs, med, price, market, sector, rf)
+    out.update(iv['methods'])
+    out['inputs'] = iv.get('inputs'); out['notes'] = iv.get('notes')
+    if iv.get('implied_growth') is not None: out['implied_growth'] = iv['implied_growth']
+    vals = list(iv['methods'].values())
+    cons = out.get('analyst_median') if (f.get('n_analysts') or 0) >= 3 and 0.25 * price < (out.get('analyst_median') or 0) < 4 * price else None
+    if cons: vals.append(cons)
+    if vals:
+        out['blend'] = clamp(sum(vals) / len(vals), 0.5 * price, 2.0 * price)
+        out['low'], out['high'] = clamp(min(vals), 0.5 * price, 2.0 * price), clamp(max(vals), 0.5 * price, 2.0 * price)
+        out['n_methods'] = len(vals)
+        out['basis'] = ' + '.join([{'dcf': 'DCF', 'residual_income': 'residual income', 'ddm': 'dividend & buyback model', 'ev_ebitda': 'EV/EBITDA vs peers'}[k] for k in iv['methods']] + (['analyst consensus'] if cons else []))
     return out
 
 

@@ -257,6 +257,15 @@ def main():
                      'bars': bars, 'meta': meta, 'stale': stale, 'ts': cache.get(s, {}).get('ts')})
 
     med = E.sector_medians([{'market': r['m'], 'sector': r['sec'], 'f': r['f']} for r in rows])
+    # risk-free rates for the cost of equity: SA and US 10-year yields from the live market dashboard
+    RF = {}
+    try:
+        for g in (load(P('docs', 'data', 'dashboards', 'live.json'), {}) or {}).get('groups', []):
+            for x in g.get('rows', []):
+                if x.get('name', '').startswith('SA 10-year') and x.get('latest'): RF['JSE'] = float(x['latest']) / 100
+                if x.get('name', '').startswith('US 10-year') and x.get('latest'): RF['US'] = float(x['latest']) / 100
+    except Exception as e: print('risk-free rates not read:', e)
+    print('risk-free rates', RF)
     today = dt.date.today()
     # ---- LRC readings model (37 readings, analyst-approved) -> LRC score 0-100 ----
     def cagr3(series):
@@ -304,7 +313,7 @@ def main():
         if dns: cats.append(f"Downgrade: {dns[0]['firm']}")
         if t['price'] >= t['hi52'] * 0.995: cats.append('New 52-week high')
         if t['price'] <= t['lo52'] * 1.005: cats.append('New 52-week low')
-        tg = E.model_targets(f, md, t['price'])
+        tg = E.model_targets(f, md, t['price'], load(P('docs', 'data', 'fs', r['t'] + '.json')), r['m'], r['sec'], RF.get(r['m']))
         cov = ratings.get(r['t'])
         if cov: tg['lrc'] = cov['target_6m']
         inv = E.investment(f, r['ts'], r['m'], t['price'], tg.get('lrc') or tg.get('blend'))
