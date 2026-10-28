@@ -1076,3 +1076,4 @@ html:not(.safe) .onlysafe{display:none!important}
 .paper .ivtop{display:flex;align-items:center;justify-content:flex-end;gap:8px;margin:2px 0 6px;font-size:12px;color:#5C6478}
 .paper .ivread{font-size:12.5px;color:#16223D;background:#F7F8FB;border-radius:6px;padding:8px 12px;margin-top:6px;line-height:1.5}
 @media print{.paper .ivh-t b{font-size:13px}.paper .ivh-n b{font-size:14px}.paper .ivread{font-size:9px}}
+@media screen and (max-width:700px){.paper table.rtab{display:block;overflow-x:auto;max-width:100%}.paper{overflow-wrap:anywhere}}
