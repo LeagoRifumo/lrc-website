@@ -601,6 +601,10 @@ if ($('paper')) {
     ${fin ? `<div class="bar">Financials <small>${fin.q ? 'LAST ' + fin.n + ' QUARTERS' : 'ANNUAL'} · REVENUE · NET INCOME · NET MARGIN (${esc(fin.cur)})</small></div>${fin.svg}${!fin.q && r.m === 'JSE' ? '<p style="font-size:11px;color:#5C6478">JSE companies report half-yearly, so the chart shows full financial years.</p>' : ''}` : ''}
     <p class="src">Sources: ${R ? `LRC analyst research (${esc(R.analyst)}, ${esc(R.updated)}); ` : ''}${esc((d.sources || ['Yahoo Finance prices, fundamentals and analyst data']).concat(INTEL ? INTEL.sources || [] : []).join('; '))}${R && R.sources ? '; ' + esc(R.sources.slice(0, 6).join('; ')) : ''}. Scored by the LRC Stock Scanner (${esc(when(d.generated))}). Valuation verdicts compare each ratio with the median of the same sector in the same market. LRC Analyst Target: set by the analyst for companies with a completed LRC Work-sheet; otherwise calculated automatically every day: 60% analyst consensus and 40% LRC valuation models (P/FCF, PEG and sector P/E), kept within 20% of the consensus.
       <b>Educational only — not financial advice.</b> Leago Rifumo Capital · Ermelo, Mpumalanga · leagorifumocapital.co.za</p>`;
+    try { const sl = r.t.toLowerCase().replace('.jo', '-jse').replace(/[^a-z0-9-]+/g, '-').replace(/^-+|-+$/g, ''), cu = 'https://www.leagorifumocapital.co.za/shares/' + sl + '.html';
+      const cn = document.querySelector('link[rel=canonical]'); if (cn) cn.href = cu;
+      const md = document.querySelector('meta[name=description]'); if (md) md.content = `${r.n} (${r.t.replace('.JO', '')}) one-page summary: LRC scores, valuation vs peers, thesis and financial statements.`;
+      document.title = `${r.n} (${r.t.replace('.JO', '')}) One-Page Summary, Thesis & Financial Statements | Leago Rifumo Capital`; } catch (e) { }
     try { renderThesis({ d, r, t, f, pr, c, X, SX, MS, lrcT, upT, what, compTxt, indTxt, mgmtTxt, bsTxt, pickBy, nextBits, recLbl, days, finCo, sizeWord, mktName, cap1 }); } catch (e) { console.error(e); }
     loadStatements(r, c);
   }
@@ -648,7 +652,7 @@ if ($('paper')) {
           <div><b class="${sigCls(r.iv_v)}">INVESTMENT · ${esc(r.iv_v || 'HOLD')}</b><span>5–10 years · score ${r.iv_score ?? '—'}/100</span><p>${ig.length ? `Best on ${gn(ig[0][0])} (${ig[0][1]}/100)${ig.length > 1 ? `, weakest on ${gn(ig[ig.length - 1][0])} (${ig[ig.length - 1][1]}/100)` : ''}. ` : ''}${r.iv_note ? esc(r.iv_note) + '. ' : ''}${r.val === 'UNDERVALUED' ? 'The price looks low against our valuation models, which gives long-term investors a margin of safety.' : r.val === 'OVERVALUED' ? 'The price already looks high against our valuation models, so long-term returns depend on growth beating expectations.' : 'The price is close to our estimate of fair value.'}</p></div></div></div>
         <div class="th-card th-wide"><h3>What to watch next</h3><ul>${li(nextBits.map(x => cap1(x) + '.')) || '<li>No dated catalyst on the feed.</li>'}${f.ex_div ? `<li>Ex-dividend date: ${esc(f.ex_div)}.</li>` : ''}</ul></div>
       </div>
-      <p class="th-foot">This thesis is written automatically from the latest LRC Stock Scanner data (${esc(when(d.generated))}) and updates after every scan. It is a starting point for your own research. <b>Educational only — not financial advice.</b></p>`;
+      <p class="th-foot">This thesis is written automatically from the latest LRC Stock Scanner data (${esc(when(d.generated))}) and updates after every scan. It is a starting point for your own research. <a href="shares/${r.t.toLowerCase().replace('.jo', '-jse').replace(/[^a-z0-9-]+/g, '-')}.html">Company profile page →</a> <b>Educational only — not financial advice.</b></p>`;
     // extra radar reasons from the watchlist and the Focus List
     Promise.allSettled([get('scan/lists.json'), get('scan/research_ideas.json')]).then(([L, RI]) => {
       const add = [];

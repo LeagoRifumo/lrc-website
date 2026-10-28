@@ -19,4 +19,7 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: '3.12' }
       - run: python agents/tools/statements.py --per-run 700
+      - name: Company pages for search engines (docs/shares) + sitemap
+        continue-on-error: true
+        run: python agents/tools/company_pages.py
       - run: bash agents/tools/publish.sh "Financial statements"

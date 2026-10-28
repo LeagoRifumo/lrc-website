@@ -104,10 +104,12 @@ def main():
     today = now_sast().date().isoformat()
     urls = [(SITE + s, today, 'daily' if s in ('', 'scanner.html', 'news.html', 'watchlist.html', 'articles.html', 'dashboard.html', 'earnings.html', 'dividends.html') else 'monthly') for s in STATIC]
     urls += [(f"{SITE}{a['url']}", a['date'], 'monthly') for a in arts]
-    try:  # one-page stock summaries from the scanner (stock.html?t=...)
+    try:  # static company pages (agents/tools/company_pages.py builds docs/shares/*.html)
+        import company_pages as CP
         sc = json.load(open(P('docs', 'data', 'scan', 'stocks.json'), encoding='utf-8'))
-        urls += [(f"{SITE}stock.html?t={r['t'].replace('&', '%26')}", today, 'daily') for r in sc.get('rows', [])]
-    except Exception: pass
+        urls.append((f'{SITE}shares/', today, 'daily'))
+        urls += [(f"{SITE}shares/{CP.slug(r['t'])}.html", today, 'weekly') for r in sc.get('rows', []) if os.path.exists(P('docs', 'shares', CP.slug(r['t']) + '.html'))]
+    except Exception as e: print('company pages not added to sitemap:', e)
     xml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(
         f'  <url><loc>{u}</loc><lastmod>{m}</lastmod><changefreq>{c}</changefreq></url>\n' for u, m, c in urls) + '</urlset>\n'
     open(P('docs', 'sitemap.xml'), 'w').write(xml)
