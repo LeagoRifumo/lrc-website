@@ -170,7 +170,7 @@
    "t": "LSK.JO",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "SELL",
    "iv": "SELL",
    "track": null,
    "lrc_rating": null,
@@ -229,9 +229,10 @@
    "source": "Sappi investors - next event - https://www.sappi.com/en-gb/investors/next-event",
    "t": "SAP.JO",
    "lists": [
+    "Trading SELL",
     "Investment SELL"
    ],
-   "v": "HOLD",
+   "v": "SELL",
    "iv": "STRONG SELL",
    "idea": null,
    "track": [
@@ -294,7 +295,7 @@
    "auto": true,
    "t": "ISO.JO",
    "lists": [],
-   "idea": null,
+   "idea": "Earnings watch",
    "v": "HOLD",
    "iv": "SELL",
    "track": null,
@@ -476,7 +477,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "SELL",
    "track": null,
    "lrc_rating": null,
    "covered": false
@@ -492,7 +493,7 @@
    "auto": true,
    "t": "MRP.JO",
    "lists": [],
-   "idea": "Value & quality",
+   "idea": null,
    "v": "BUY",
    "iv": "BUY",
    "track": null,
@@ -591,6 +592,6 @@
   }
  ],
  "note": "Partial list: a number of Top 100 companies (e.g. Telkom, MTN, Tiger Brands, Pepkor, Pick n Pay, Life Healthcare, Coronation, Mr Price) had no company-published date we could confirm this week; they will be added when dates are published.",
- "synced": "2026-10-29T06:44+02:00",
+ "synced": "2026-10-29T07:29+02:00",
  "coverage_note": "Ticked = on the LRC watchlist. Every company the LRC Stock Scanner tracks shows its trading and investment ratings. Updated after every scanner run."
 }
