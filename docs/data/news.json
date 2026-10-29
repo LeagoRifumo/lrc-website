@@ -1,14 +1,20 @@
 {
- "edition": "Morning brief · Thursday 29 October 2026 06:25",
- "generated":"2026-10-29T09:15:00+02:00",
- "covers": "Wednesday 28 October 2026 US close and after-hours results to Thursday 29 October 06:25 SAST: Alphabet's profit miss, Microsoft's capex shortfall, US futures, Asia, oil, gold and the rand",
+ "edition": "Midday update · Thursday 29 October 2026 10:25",
+ "generated": "2026-10-29T10:25:00+02:00",
+ "covers": "JSE morning session and SA data to 10:25 SAST, Thursday 29 October 2026; US after-hours and futures",
  "agent": "LRC News Desk",
- "headline": "Alphabet falls about 10% after hours on a profit miss and negative free cash flow; Nasdaq futures drop about 1%; Microsoft up about 3%",
- "summary": "Alphabet's third-quarter adjusted EPS of $2.67 missed the $3.02 expected and free cash flow was negative $9.1 billion, sending the shares down about 10% after hours and Nasdaq 100 futures down about 1% (Reuters via Investing.com, 28 Oct), while Microsoft rose about 3% after beating forecasts (Reuters via Yahoo Finance, 29 Oct). Asia was mixed on Thursday morning: the KOSPI fell 2.6% and Samsung more than 4% despite record profit, while the Nikkei rose 0.3% (Reuters via Yahoo Finance, 29 Oct). Brent eased 0.7% to $114.50 on peace-talk hopes (Reuters via TradingView, 29 Oct), gold was near $4,038 (GoodReturns, 29 Oct) and the rand closed Wednesday at about R16.61 per dollar (Trading Economics, 28 Oct); Amazon, Intel, US GDP and PCE inflation come later today.",
+ "headline": "Rand weakens to about R16.65 per dollar ahead of PPI data; Nasdaq futures still down about 1% after Alphabet; Shell beats on record refining margins",
+ "summary": "The rand traded at about R16.65 per dollar early on Thursday, 0.4% weaker, as gold and platinum fell, while the 2035 bond yield eased 2.5 basis points to 8.56%; September producer inflation is due at 11:30 SAST with 5.7% expected (Reuters via CNBC Africa, 29 Oct). US futures stay lower after Alphabet's profit miss, with Nasdaq 100 futures down more than 1% and S&P 500 futures down 0.5%, while Microsoft gained nearly 3% after hours (InstaForex, 29 Oct). Brent slipped about 1.1% to $114.10 after a reported letter from US Vice President Vance to Iran on reviving talks (The National, 29 Oct), and Shell's third-quarter adjusted earnings of $10.81 billion beat the $10.33 billion expected on a record $42 refining margin (Reuters via Finimize, 29 Oct); US GDP and PCE inflation come at 14:30 SAST.",
  "sections": [
   {
    "name": "Breaking",
    "items": [
+    {
+     "title": "Shell beats: Q3 adjusted earnings $10.81 billion vs $10.33 billion expected; buyback raised to $5 billion",
+     "summary": "Shell's adjusted third-quarter earnings were $10.81 billion, above the $10.33 billion analysts expected and nearly double a year earlier, on a record refining margin of $42 a barrel (from $11.6 a year earlier). Quarterly buybacks rise to $5 billion from $3 billion (Reuters via Finimize; Rallies, 29 Oct 2026).",
+     "source": "Reuters via Finimize, 29 Oct 2026",
+     "url": "https://finimize.com/content/shells-biggest-profit-since-2022-powered-a-bigger-buyback"
+    },
     {
      "title": "Alphabet misses on profit and burns cash; shares down about 10% after hours",
      "summary": "Alphabet's third-quarter adjusted EPS was $2.67 against $3.02 expected and revenue $127.6 billion against $128.2 billion (LSEG); advertising revenue of $82 billion missed the $83.4 billion estimate as search-ad growth slowed more than expected. Google Cloud revenue more than doubled to $30.71 billion with a $561 billion backlog, but free cash flow was negative $9.1 billion against expectations of about break-even. Alphabet kept 2026 capital spending at $195–$205 billion and said spending will rise significantly in 2027. The shares fell about 10% after hours, wiping out close to $400 billion in market value (Reuters via Investing.com and Yahoo Finance, 28–29 Oct). This replaces our evening note, which described revenue as roughly in line before the profit figures were verified.",
@@ -56,10 +62,16 @@
    "name": "South Africa",
    "items": [
     {
-     "title": "Rand closes Wednesday at about R16.61 per dollar",
-     "summary": "The rand was at R16.61 per dollar on 28 October, about 0.1% firmer on the day but about 1.4% weaker over the month; it touched about R16.70 on 27 October, its weakest since early October. Trading Economics cites a firmer dollar, lower gold and platinum-group metal prices and high oil prices as pressures, with the medium-term budget a support (Trading Economics, 28 Oct). A weaker Nasdaq and Asian tech this morning may weigh on Naspers and Prosus at today's JSE open.",
-     "source": "Trading Economics",
-     "url": "https://tradingeconomics.com/south-africa/currency"
+     "title": "Rand weakens 0.4% to about R16.65 per dollar ahead of producer inflation data",
+     "summary": "The rand traded at 16.65 per dollar at 08:07 SAST, about 0.4% weaker, as gold fell nearly 1% and platinum 1.5%. The 2035 government bond yield fell 2.5 basis points to 8.56%. Economists expect September PPI of 5.7% year on year, up from 5.0% in August, due at 11:30 SAST (Reuters via CNBC Africa, 29 Oct 2026).",
+     "source": "Reuters via CNBC Africa, 29 Oct 2026",
+     "url": "https://www.cnbcafrica.com/2026/south-african-rand-weakens-ahead-of-producer-inflation-data"
+    },
+    {
+     "title": "Money supply and credit growth slow in September",
+     "summary": "M3 money supply growth slowed to 7.93% year on year in September from 8.89% in August, and private-sector credit growth slowed to 6.23% from 7.47%; trade and budget balance data are due Friday (Reuters via CNBC Africa, 29 Oct 2026).",
+     "source": "Reuters via CNBC Africa, 29 Oct 2026",
+     "url": "https://www.cnbcafrica.com/2026/south-african-rand-weakens-ahead-of-producer-inflation-data"
     },
     {
      "title": "Moody's: budget update is credit positive; Ba2 rating, positive outlook",
@@ -73,10 +85,10 @@
    "name": "Forex & commodities",
    "items": [
     {
-     "title": "Oil eases: Brent down 0.7% to $114.50 on peace-talk hopes",
-     "summary": "Brent was down 82 cents, or 0.7%, at $114.50 a barrel at 01:32 GMT on Thursday, giving back much of Wednesday's gain as hopes for peace talks offset fears of a wider Middle East conflict (Reuters via TradingView, 29 Oct).",
-     "source": "Reuters via TradingView",
-     "url": "https://www.tradingview.com/news/reuters.com,2026:newsml_L2N46F00I:0-oil-prices-fall-as-peace-hopes-offset-fears-of-growing-middle-east-conflict/"
+     "title": "Oil slips: Brent down about 1.1% to $114.10 after Vance letter to Iran",
+     "summary": "Brent fell to $114.10 a barrel early on Thursday from Wednesday's $115.32 settlement, and WTI traded above $101 after closing at $102.78, after the Wall Street Journal reported Vice President Vance wrote to Iran's Mohsen Rezaei to revive talks; President Trump downplayed the outreach (The National, 29 Oct 2026).",
+     "source": "The National, 29 Oct 2026",
+     "url": "https://www.thenationalnews.com/business/energy/2026/10/29/oil-prices-decline-after-diplomatic-push-in-iran-war/"
     },
     {
      "title": "Dollar steady after the Fed; euro $1.1134, yen ¥158.05",
@@ -133,10 +145,10 @@
   }
  ],
  "watch_today": [
-  "JSE open: Naspers and Prosus after the Nasdaq futures drop; rand near R16.61/$",
-  "US third-quarter GDP and September PCE inflation; SA PPI",
-  "Amazon and Intel results after the US close; Alphabet's regular-session reaction",
-  "Oil near $115: Iran's reply to the Qatari draft and attacks on Saudi facilities",
-  "Coming ECB and Bank of Japan decisions (both expected to hold); December Fed hike odds near 78%–84%"
+  "SA September PPI at 11:30 SAST (5.7% expected); rand near R16.65/$",
+  "US third-quarter GDP and September PCE inflation at 14:30 SAST",
+  "Alphabet's regular-session reaction; Amazon and Intel results after the US close",
+  "Oil near $114: US–Iran contacts and Middle East supply risk",
+  "Coming ECB and Bank of Japan decisions (both expected to hold); December Fed hike odds"
  ]
 }
