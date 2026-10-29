@@ -1,79 +1,37 @@
 {
- "edition": "Evening update · Wednesday 28 October 2026 22:15",
- "generated": "2026-10-28T22:15:00+02:00",
- "covers": "US close and after-hours results on Wednesday 28 October 2026, after the Fed decision",
+ "edition": "Morning brief · Thursday 29 October 2026 06:25",
+ "generated": "2026-10-29T06:25:00+02:00",
+ "covers": "Wednesday 28 October 2026 US close and after-hours results to Thursday 29 October 06:25 SAST: Alphabet's profit miss, Microsoft's capex shortfall, US futures, Asia, oil, gold and the rand",
  "agent": "LRC News Desk",
- "headline": "Microsoft beats with Azure up 48% and shares rise about 5% after hours; Alphabet revenue up 25% to $127.6 billion; Wall Street closes slightly higher after the Fed hold",
- "summary": "Microsoft reported fiscal first-quarter revenue of $92.28 billion, up 19%, and adjusted EPS of $4.89 against about $4.73 expected, with Azure up 48%; the shares rose about 5% in extended trading (SSBCrack News; PANews, 28 Oct), while Alphabet reported third-quarter revenue of $127.6 billion, up 25%, with Google Cloud at $30.71 billion (9to5Google, 28 Oct). Wall Street closed slightly higher after the Fed held at 3.75%–4.00% in a 10–2 vote: the Dow rose 0.19% to 52,479.62, the S&P 500 0.28% to 7,744.28 and the Nasdaq 0.27% to 26,549.85, with the 10-year Treasury yield at about 5.05% (Yahoo Finance, 28 Oct). Earlier the rand was at R16.66 per dollar and Brent near $115.61 (Trading Economics; Oilprice.com, 28 Oct); Amazon and Intel report on Thursday.",
+ "headline": "Alphabet falls about 10% after hours on a profit miss and negative free cash flow; Nasdaq futures drop about 1%; Microsoft up about 3%",
+ "summary": "Alphabet's third-quarter adjusted EPS of $2.67 missed the $3.02 expected and free cash flow was negative $9.1 billion, sending the shares down about 10% after hours and Nasdaq 100 futures down about 1% (Reuters via Investing.com, 28 Oct), while Microsoft rose about 3% after beating forecasts (Reuters via Yahoo Finance, 29 Oct). Asia was mixed on Thursday morning: the KOSPI fell 2.6% and Samsung more than 4% despite record profit, while the Nikkei rose 0.3% (Reuters via Yahoo Finance, 29 Oct). Brent eased 0.7% to $114.50 on peace-talk hopes (Reuters via TradingView, 29 Oct), gold was near $4,038 (GoodReturns, 29 Oct) and the rand closed Wednesday at about R16.61 per dollar (Trading Economics, 28 Oct); Amazon, Intel, US GDP and PCE inflation come later today.",
  "sections": [
   {
    "name": "Breaking",
    "items": [
     {
-     "title": "Microsoft beats: revenue $92.3 billion, Azure up 48%; shares up about 5% after hours",
-     "summary": "Microsoft's fiscal first-quarter revenue rose 19% to $92.28 billion against about $90.69 billion expected, and adjusted EPS was $4.89 against about $4.73; Azure grew 48% (from 42% the quarter before) to $33.17 billion, the first time Microsoft has given Azure revenue in dollars, and the shares rose about 5% in extended trading (SSBCrack News, 28 Oct). Net income rose 32% to $36.6 billion, Microsoft Cloud revenue was $63.9 billion (up 30%), commercial remaining performance obligations rose 73% to $677 billion and capital spending on property and equipment was $39.4 billion (PANews, 28 Oct).",
-     "source": "SSBCrack News",
-     "url": "https://news.ssbcrack.com/microsoft-shares-rise-5-after-stronger-than-expected-fiscal-q1-results-highlighting-ai-infrastructure-growth/"
+     "title": "Alphabet misses on profit and burns cash; shares down about 10% after hours",
+     "summary": "Alphabet's third-quarter adjusted EPS was $2.67 against $3.02 expected and revenue $127.6 billion against $128.2 billion (LSEG); advertising revenue of $82 billion missed the $83.4 billion estimate as search-ad growth slowed more than expected. Google Cloud revenue more than doubled to $30.71 billion with a $561 billion backlog, but free cash flow was negative $9.1 billion against expectations of about break-even. Alphabet kept 2026 capital spending at $195–$205 billion and said spending will rise significantly in 2027. The shares fell about 10% after hours, wiping out close to $400 billion in market value (Reuters via Investing.com and Yahoo Finance, 28–29 Oct). This replaces our evening note, which described revenue as roughly in line before the profit figures were verified.",
+     "source": "Reuters via Investing.com",
+     "url": "https://investing.com/news/stock-market-news/alphabets-heavy-cloud-spending-drives-biggerthanexpected-cash-burn-4980612"
     },
     {
-     "title": "Alphabet: revenue up 25% to $127.6 billion; Google Cloud $30.71 billion",
-     "summary": "Alphabet's third-quarter revenue rose 25% to $127.6 billion from $102.3 billion, roughly in line with the $128.2 billion consensus compiled by Reuters (TheStreet, 28 Oct); Google Cloud revenue was $30.71 billion against $15.16 billion a year earlier, YouTube ads $11.2 billion and operating income $40.58 billion, while net income was $26.17 billion against $34.9 billion a year earlier (9to5Google, 28 Oct). The first report did not give EPS, capital spending or the after-hours share move; we will add them once verified.",
-     "source": "9to5Google",
-     "url": "https://9to5google.com/2026/10/28/alphabet-q3-2026-earnings/"
+     "title": "US futures fall: Nasdaq 100 down 1.2%, S&P 500 down 0.5%",
+     "summary": "At 7:39 pm New York time on Wednesday, Nasdaq 100 futures were down 1.2% at 29,619.50, S&P 500 futures down 0.5% at 7,743.25 and Dow futures down 0.06% at 52,663, led by Alphabet's 9.8% after-hours fall; Microsoft was up 2.7% (Investing.com, 28 Oct).",
+     "source": "Investing.com",
+     "url": "https://www.investing.com/news/stock-market-news/us-stock-futures-drop-as-alphabet-slides-on-soft-earnings-microsoft-firms-4981271"
+    },
+    {
+     "title": "Microsoft capex $45.2 billion, below the $50.7 billion expected; CoreWeave and Nebius drop",
+     "summary": "Microsoft's fiscal first-quarter capital spending including finance leases was $45.2 billion against a $50.7 billion StreetAccount estimate and its own target of about $50 billion; CFO Amy Hood said some third-party capacity deliveries were delayed. Alphabet's quarterly capex of $51.36 billion was also below the $55.09 billion expected. In overnight trade CoreWeave fell 5.8%, Nebius 6.3%, IREN 5.3% and Applied Digital 4.3% (Stocktwits, 28 Oct).",
+     "source": "Stocktwits",
+     "url": "https://stocktwits.com/news-articles/markets/equity/crwv-nbis-iren-apld-stocks-drop-after-microsoft-capex-falls-short-on-delayed-third-party-capacity/cZUQeHWR9bT"
     },
     {
      "title": "Fed holds rates at 3.75%–4.00% in a 10–2 vote; Cook and Hammack wanted a hike",
-     "summary": "The Federal Reserve left its target range at 3.75% to 4.00% on 28 October, as markets expected (CME FedWatch had a hold about 90.6% priced). Governor Lisa Cook and Cleveland Fed President Beth Hammack dissented in favour of a 0.25-point hike; it is Cook's first dissent on a policy action since she joined the Board in 2022. The statement said inflation 'remains elevated', described growth as 'strong' and said 'the accumulation of more information will help the Committee determine the policy stance appropriate', which leaves further hikes possible. Futures priced roughly a 78%–84% chance of a December hike before the decision. A two-vote hawkish dissent tends to support US yields and the dollar, which matters for the rand.",
+     "summary": "The Federal Reserve left its target range at 3.75% to 4.00% on 28 October in a 10–2 vote; Governor Lisa Cook and Cleveland Fed President Beth Hammack wanted a 0.25-point hike (American Banker, 28 Oct). Chair Kevin Warsh gave no guidance on December; the 10-year Treasury yield went back above 5% after his comments before easing, and CME FedWatch put the chance of a December hike at 83.5%, up from 72.8% (Investing.com, 28 Oct). By early Thursday in Asia, traders priced about 78% (Free Malaysia Today, 29 Oct).",
      "source": "American Banker; AFP via Yahoo News; HousingWire, 28 Oct 2026",
      "url": "https://www.americanbanker.com/live-blog/federal-open-market-committee-press-conference-october-2026-live-coverage"
-    },
-    {
-     "title": "Warsh: tighter credit conditions are helping inflation; Fed keeps eight meetings a year but one in 2027 will be strategy-only",
-     "summary": "At his press conference after the hold, Fed Chair Kevin Warsh said 'we have started to see some changes in financial and credit conditions', which he said are helping create a path toward lower inflation, though he would not call conditions broadly tight. He gave no guidance on December. He said eight meetings a year remains the right number, but from 2027 one meeting will focus only on policy strategy with no rate vote or statement, and in 2028 there will be two strategy meetings and six rate-setting meetings (IBTimes, 28 Oct 2026, 15:08 New York time; Yahoo Finance live blog, 28 Oct). Before the meeting traders priced about an 84% chance of a December hike (Yahoo Finance, 28 Oct).",
-     "source": "IBTimes; Yahoo Finance, 28 Oct 2026",
-     "url": "https://www.ibtimes.com/fed-chair-warsh-says-current-conditions-are-helping-create-path-toward-lower-inflation-3809109"
-    },
-    {
-     "title": "Bank of Canada raises its rate to 2.50%, its first hike since 2023, and warns more may be needed",
-     "summary": "The Bank of Canada raised its policy rate by 25 basis points to 2.50% from 2.25% on 28 October; markets had priced about a 78% chance. It said \"There could be a need to raise the policy rate further, but given the uncertainties, we will proceed carefully,\" and lifted its inflation forecasts to 2.9% for 2026 (from 2.5%) and 3.1% for 2027 (from 2.0%), mainly because of energy prices (investingLive, 28 Oct). A second G7 central bank tightening on oil-driven inflation adds weight to tonight's Fed decision.",
-     "source": "investingLive",
-     "url": "https://investinglive.com/central-banks/bank-of-canada-rate-decision/"
-    },
-    {
-     "title": "UK Budget: £100 energy payments, a higher bank surcharge, defence plan fully funded",
-     "summary": "Chancellor John Healey's Budget on 28 October gives £100 to 20 million households in council tax bands A to D this winter and scraps gas standing charges from 2027, paid for partly by a 3% rise in the banking surcharge from January for 15 months. The OBR sees UK growth of 1.2% in 2026 and 1% in 2027 and inflation averaging 3.5% in 2027; fiscal headroom falls to £15 billion in 2030 from £23.6 billion in March. The 10-year gilt yield was about 5.33%, little changed, and NatWest and Lloyds were up 4.2% and 4.1% (MoneyWeek, 28 Oct). Gilts were steady because the measures were broadly expected (Portfolio Adviser, 28 Oct).",
-     "source": "MoneyWeek",
-     "url": "https://moneyweek.com/economy/news/live/autumn-budget-2026"
-    },
-    {
-     "title": "Oil: Brent $115.61 as US crude stocks fall 1.9 million barrels",
-     "summary": "The EIA said US commercial crude stocks fell 1.9 million barrels to 410.6 million in the week to 23 October, 4% below the five-year average; gasoline stocks rose 3.9 million barrels and distillates fell 1.5 million. At 10:26 New York time Brent was $115.61 a barrel, up 1.52%, and WTI $102.41, up 2.51% (Oilprice.com, 28 Oct). Earlier, the Saudi-led coalition said it intercepted a Houthi missile aimed at Taif (The National, 28 Oct).",
-     "source": "Oilprice.com",
-     "url": "https://oilprice.com/Energy/Crude-Oil/US-Oil-Inventories-Fall-Again-As-Prices-Rise.html"
-    },
-    {
-     "title": "QatarEnergy extends LNG force majeure to the end of 2026; European gas at a post-2022 high",
-     "summary": "QatarEnergy has extended the force majeure on LNG deliveries, in place since April, to the end of the year, according to Italy's Edison and a Petrobangla source cited by Reuters. The Dutch TTF front-month gas price rose 1.5% to EUR97.53 per megawatt-hour on Wednesday morning, its highest since the 2022 energy crisis (Oilprice.com, 28 Oct). Higher gas and oil prices feed into fuel and import costs for South Africa.",
-     "source": "Oilprice.com",
-     "url": "https://oilprice.com/Latest-Energy-News/World-News/QatarEnergy-Extends-LNG-Force-Majeure-to-End-of-2026.html"
-    },
-    {
-     "title": "Iran: Qatar's latest mediation holds only \"unacceptable ideas\"",
-     "summary": "A senior Iranian official involved in the talks told Reuters on 28 October that Qatar offered \"unacceptable ideas and not an offer\" and that Tehran's nuclear position is unchanged. Qatar's seven-day draft, presented on Sunday, had a reply expected by the end of the week. Oil was above $115 a barrel after a Houthi attack on Saudi Arabia's Ras Tanura refinery (Reuters via Investing.com, 28 Oct). This lowers hopes of a quick reopening of the Strait of Hormuz.",
-     "source": "Investing.com (Reuters)",
-     "url": "https://www.investing.com/news/commodities-news/iran-sees-only-unacceptable-ideas-in-latest-mediation-to-end-war-official-says-4979005"
-    },
-    {
-     "title": "Israel: Netanyahu's bloc falls to 55 seats with just over half the vote counted",
-     "summary": "With 51.5% of votes counted at about 07:37 Israel time, the pro-Netanyahu bloc had 55 seats, Gadi Eisenkot's opposition bloc 49 and the Arab parties 16; 61 seats are needed for a majority. Earlier, at 41.9% counted, the bloc had 57 (Times of Israel, 28 Oct). About 650,000 double-envelope ballots, including soldiers', are counted separately and the process could run into Friday, so the numbers may still change (Ynet, 27–28 Oct).",
-     "source": "Ynet",
-     "url": "https://www.ynetnews.com/article/hjnatbkaml"
-    },
-    {
-     "title": "Spain: two high-speed trains collide on the Madrid–Seville line",
-     "summary": "A Renfe AVE train and an Iryo train, both heading from Madrid to Seville, collided shortly after 09:00 local time on 28 October in Toledo province; more than 500 people were on board. By late morning the Castilla-La Mancha government had confirmed 30 deaths, and later reports put the toll higher. The rail operator Adif called it a rear-end collision; no official cause has been given (Irish Times, 28 Oct).",
-     "source": "The Irish Times",
-     "url": "https://www.irishtimes.com/world/europe/2026/10/28/spain-train-crash-live-updates/"
     }
    ]
   },
@@ -87,40 +45,10 @@
      "url": "https://finance.yahoo.com/markets/live/stock-market-today-wednesday-october-28-dow-sp-500-nasdaq-fed-meeting-decision-big-tech-earnings-130508769.html"
     },
     {
-     "title": "Wall Street opens mixed before the Fed; chips lift the Nasdaq",
-     "summary": "At 09:35 ET on 28 October the S&P 500 was up 13.0 points (0.17%) at 7,735.56, the Nasdaq Composite up 63.8 points (0.24%) at 26,541.61 and the Dow down 42.1 points (0.08%) at 52,335.43. Memory-chip makers climbed after SK Hynix's results, ahead of tonight's Fed decision and Microsoft and Alphabet results after the close.",
-     "source": "Reuters via MarketScreener, 28 Oct 2026",
-     "url": "https://www.marketscreener.com/news/s-p-500-nasdaq-open-higher-as-sk-hynix-lifts-chips-fed-in-focus-ce785cd2df8af32c"
-    },
-    {
-     "title": "US goods trade deficit widens to $134.9 billion in September",
-     "summary": "The goods deficit rose 2.1% to $134.9 billion, above the $130.2 billion economists expected, as imports rose $8.1 billion to $344.1 billion, much of it AI-related capital goods (Census Bureau via Reuters, 28 Oct). Third-quarter GDP is due on Thursday; a Reuters poll expects 3.2% annualised growth after 2.2% in the second quarter.",
-     "source": "Reuters via WBOW",
-     "url": "https://1027wbow.com/2026/10/28/us-goods-trade-deficit-unexpectedly-widens-in-september/"
-    },
-    {
-     "title": "Wall Street ends higher; chip index up 3.6%",
-     "summary": "The S&P 500 rose 0.60% to 7,722.60, the Nasdaq 1.18% to 26,477.81 and the Dow 0.03% to 52,377.57 on Tuesday (Reuters via Yahoo Finance, 27 Oct). The Philadelphia Semiconductor Index gained 3.6% to 11,482.51 and CoreWeave rose 7.9% (TradingKey, 27 Oct). Most S&P 500 stocks fell, with AI names leading the gains (AP, 28 Oct).",
-     "source": "Yahoo Finance (Reuters)",
-     "url": "https://finance.yahoo.com/markets/stocks/articles/us-stock-futures-muted-oil-095309821.html"
-    },
-    {
-     "title": "Boeing falls 10.7%; UPS up 5.8%",
-     "summary": "Boeing dropped 10.7% after a bigger-than-expected third-quarter loss, while UPS rose 5.8% after raising its annual revenue and profit forecasts (Reuters via Yahoo Finance, 27 Oct).",
-     "source": "Yahoo Finance (Reuters)",
-     "url": "https://finance.yahoo.com/markets/stocks/articles/us-stock-futures-muted-oil-095309821.html"
-    },
-    {
-     "title": "Asia closes higher: KOSPI +6.6% as SK Hynix jumps nearly 11%; Jio up over 20% on debut",
-     "summary": "The KOSPI ended 6.6% higher on Wednesday, its highest in two weeks, as SK Hynix closed nearly 11% up after its results; the Nikkei rose 1.5%, the Hang Seng 0.2% and the Shanghai Composite 0.9% (Investing.com, 28 Oct). In India, Jio Platforms, backed by Meta and Google, opened at 1,358 rupees against an IPO price of 1,119 rupees and rose as much as 22.8% after raising $3.2 billion (Investing.com, 28 Oct).",
-     "source": "Investing.com",
-     "url": "https://www.investing.com/news/stock-market-news/asia-stocks-rally-as-sk-hynix-earnings-boost-ai-trade-fed-decision-ahead-4977421"
-    },
-    {
-     "title": "UBS: third-quarter net profit up 8% to $2.69 billion, just below estimates",
-     "summary": "UBS reported net profit of $2.69 billion for the quarter to 30 September, up from $2.48 billion a year earlier but just short of the $2.74 billion Bloomberg estimate, with a higher tax charge of $887 million; operating profit rose to $3.59 billion from $2.83 billion (Investing.com, 28 Oct).",
-     "source": "Investing.com",
-     "url": "https://in.investing.com/news/earnings/ubs-q3-profit-rises-8-but-falls-short-of-expectations-5658719"
+     "title": "Bank of Canada raises its rate to 2.50%, its first hike since 2023, and warns more may be needed",
+     "summary": "The Bank of Canada raised its policy rate by 25 basis points to 2.50% from 2.25% on 28 October; markets had priced about a 78% chance. It said \"There could be a need to raise the policy rate further, but given the uncertainties, we will proceed carefully,\" and lifted its inflation forecasts to 2.9% for 2026 (from 2.5%) and 3.1% for 2027 (from 2.0%), mainly because of energy prices (investingLive, 28 Oct). A second G7 central bank tightening on oil-driven inflation adds weight to tonight's Fed decision.",
+     "source": "investingLive",
+     "url": "https://investinglive.com/central-banks/bank-of-canada-rate-decision/"
     }
    ]
   },
@@ -128,8 +56,8 @@
    "name": "South Africa",
    "items": [
     {
-     "title": "Rand R16.66/$, near its weakest since early October",
-     "summary": "The rand was at 16.6615 per dollar on 28 October, 0.19% weaker on the day, trading near its weakest level since early October on a firmer dollar, softer gold and platinum and higher oil (Trading Economics, 28 Oct). Earlier, the Top 40 was about 0.2% lower in early trade and the 2035 bond yield up 2 basis points at 8.6%; ETM Analytics said the rand could weaken beyond R17 if oil and Fed pressures persist (Reuters via CNBC Africa, 28 Oct).",
+     "title": "Rand closes Wednesday at about R16.61 per dollar",
+     "summary": "The rand was at R16.61 per dollar on 28 October, about 0.1% firmer on the day but about 1.4% weaker over the month; it touched about R16.70 on 27 October, its weakest since early October. Trading Economics cites a firmer dollar, lower gold and platinum-group metal prices and high oil prices as pressures, with the medium-term budget a support (Trading Economics, 28 Oct). A weaker Nasdaq and Asian tech this morning may weigh on Naspers and Prosus at today's JSE open.",
      "source": "Trading Economics",
      "url": "https://tradingeconomics.com/south-africa/currency"
     },
@@ -138,18 +66,6 @@
      "summary": "In a report released on Monday, Moody's said the medium-term budget policy statement was credit positive, citing continued fiscal consolidation despite higher oil prices; the 2026 consolidated deficit target was cut to 3.9% of GDP from 4.0%, helped by a R17.1 billion upward revision to tax revenue. Moody's sees debt at 84.9% of GDP by fiscal 2028, down from about 86.8% in fiscal 2025, but said interest absorbed 18.8% of revenue in fiscal 2025. There was no rating action (Reuters via CNBC Africa, 26 Oct).",
      "source": "CNBC Africa (Reuters)",
      "url": "https://cnbcafrica.com/2026/moodys-says-south-africas-budget-update-is-credit-positive"
-    },
-    {
-     "title": "South Africa's first gas-to-power tender fails on gas-supply concerns",
-     "summary": "The 2,000 MW tender for private producers closed without a preferred bidder because bidders could not give the required assurances of gas supply, the energy and electricity ministry said on Wednesday; four bids totalling 2,830 MW were received in May, and no date was given for the next window (Reuters via CNBC Africa, 28 Oct).",
-     "source": "CNBC Africa (Reuters)",
-     "url": "https://www.cnbcafrica.com/2026/south-africas-first-gas-to-power-tender-fails-on-supply-concerns"
-    },
-    {
-     "title": "JSE All Share up 0.63%; Naspers gains 2.5%",
-     "summary": "The JSE All Share closed at 109,820.15 on Tuesday, up 689.83 points or 0.63%, with Naspers up 2.48% and AngloGold Ashanti up 1.63% (Trading Economics, 27 Oct).",
-     "source": "Trading Economics",
-     "url": "https://tradingeconomics.com/south-africa/stock-market"
     }
    ]
   },
@@ -157,16 +73,28 @@
    "name": "Forex & commodities",
    "items": [
     {
-     "title": "Dollar at a two-week high; euro $1.1129, pound $1.3307",
-     "summary": "The dollar index rose 0.3% to 102.40 on Tuesday, its highest since 14 October, and held steady early on Wednesday; the euro was flat at $1.1129, sterling at $1.3307 and the dollar at 158.03 yen (Reuters via Kitco, 27 Oct).",
-     "source": "Kitco (Reuters)",
-     "url": "https://www.kitco.com/news/off-the-wire/2026-10-27/dollar-holds-gains-ahead-fed-policy-signal-rbnz-decision"
+     "title": "Oil eases: Brent down 0.7% to $114.50 on peace-talk hopes",
+     "summary": "Brent was down 82 cents, or 0.7%, at $114.50 a barrel at 01:32 GMT on Thursday, giving back much of Wednesday's gain as hopes for peace talks offset fears of a wider Middle East conflict (Reuters via TradingView, 29 Oct).",
+     "source": "Reuters via TradingView",
+     "url": "https://www.tradingview.com/news/reuters.com,2026:newsml_L2N46F00I:0-oil-prices-fall-as-peace-hopes-offset-fears-of-growing-middle-east-conflict/"
     },
     {
-     "title": "Gold eases 0.4% to $4,045 as the dollar firms",
-     "summary": "Spot gold was down 0.4% at $4,045.45 an ounce and gold futures down 0.4% at $4,058.47 at 07:08 ET (11:08 GMT), with the dollar index up 0.1% at 102.42 before the Fed (Investing.com, 28 Oct). Earlier, platinum was $1,542.63 at 00:46 GMT (Investing.com, 28 Oct).",
-     "source": "Investing.com",
-     "url": "https://in.investing.com/news/commodities-news/gold-retreats-as-dollar-firms-slightly-ahead-of-fed-decision-5659745"
+     "title": "Dollar steady after the Fed; euro $1.1134, yen ¥158.05",
+     "summary": "The dollar index was at 102.26 early on Thursday in Asia; the euro was down 0.15% at $1.1134 and the dollar up 0.14% at ¥158.045. The dollar slipped after Warsh's press conference, and the 2-year Treasury yield was about 4.71%. The ECB and Bank of Japan are both expected to hold rates (Free Malaysia Today, 29 Oct).",
+     "source": "Free Malaysia Today (Reuters)",
+     "url": "https://www.freemalaysiatoday.com/category/business/2026/10/29/dollar-steady-after-fed-hold-leaves-rate-path-murky"
+    },
+    {
+     "title": "Gold slips about 1% to near $4,038; silver near $53.15",
+     "summary": "Spot gold fell nearly 1% to about $4,044 an ounce early on Thursday and was below $4,038 by 05:14 SAST; silver fell as much as 1.5% to about $53.15 (GoodReturns, 29 Oct). Traders are waiting for today's US PCE inflation data.",
+     "source": "GoodReturns",
+     "url": "https://www.goodreturns.in/news/gold-rates-silver-rates-today-29-10-2026-live-spot-gold-silver-price-mcx-gold-24k-22k-18k-gold-price-1543821.html"
+    },
+    {
+     "title": "Asia: KOSPI down 2.6%; Samsung falls over 4% despite record profit",
+     "summary": "MSCI's Asia-Pacific index outside Japan fell 0.7%, the KOSPI 2.6% after a nearly 7% jump on Wednesday and China's blue chips 0.9%, while the Nikkei rose 0.3% and the Hang Seng 0.2%. Samsung Electronics fell more than 4% even though third-quarter operating profit rose nearly ninefold to a record; SK Hynix rose 1.3% (Reuters via Yahoo Finance, 29 Oct).",
+     "source": "Reuters via Yahoo Finance",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/asian-shares-fall-alphabet-earnings-022830389.html"
     }
    ]
   },
@@ -174,62 +102,41 @@
    "name": "Our coverage",
    "items": [
     {
-     "title": "V: Visa beats but shares slip 2.3% after hours on a slower 2027 outlook",
-     "summary": "Visa grew fiscal fourth-quarter revenue 13% to $12.1 billion with adjusted EPS of $3.48, above the $3.44 estimate, and raised its dividend 16% to 78 cents. It guided to low-double-digit revenue growth and low-double-digit to low-teens adjusted EPS growth for fiscal 2027, slower than 2026's 16%, and agreed to buy BioCatch for $2.4 billion; shares fell 2.3% after hours (Investing.com, 27 Oct) and were down 1.7% pre-market on Wednesday (Reuters via Investing.com, 28 Oct). V is a HOLD on the LRC Stock Scanner, capped by the $344 target; rating unchanged.",
-     "source": "Investing.com",
-     "url": "https://www.investing.com/news/earnings/visa-q4-revenue-rises-13-as-payment-volumes-remain-strong-4976751",
+     "title": "GOOGL: about 10% after-hours fall would take Alphabet below its scanner target",
+     "summary": "Alphabet closed at $323.10 on 28 October (LRC Stock Scanner) before falling about 10% after hours on its profit miss and negative free cash flow (Reuters via Investing.com, 28 Oct); a 10% fall would put it near $291, below the scanner's $314.70 target. GOOGL is a HOLD on the LRC Stock Scanner; rating unchanged.",
+     "source": "Reuters via Investing.com",
+     "url": "https://investing.com/news/stock-market-news/alphabets-heavy-cloud-spending-drives-biggerthanexpected-cash-burn-4980612",
      "tickers": [
-      "V"
+      "GOOGL"
      ]
     },
     {
-     "title": "MSFT: Microsoft beats; Azure up 48%, shares up about 5% after hours",
-     "summary": "Revenue of $92.28 billion and adjusted EPS of $4.89 topped estimates of about $90.69 billion and $4.73, and Azure grew 48% against the 44%–45% guide; the shares rose about 5% in extended trading (SSBCrack News, 28 Oct) from $529.49 in afternoon trade (Yahoo Finance, 28 Oct). That leaves MSFT above both its $512 target and its $515 trigger level; it is a HOLD on the LRC Stock Scanner and the rating is unchanged.",
-     "source": "SSBCrack News",
-     "url": "https://news.ssbcrack.com/microsoft-shares-rise-5-after-stronger-than-expected-fiscal-q1-results-highlighting-ai-infrastructure-growth/",
+     "title": "MSFT: up about 3% after hours; capex below plan",
+     "summary": "Microsoft rose 2.7% after hours (Investing.com, 28 Oct), smaller than the roughly 5% first reported, as capex of $45.2 billion came in below expectations (Stocktwits, 28 Oct). It closed at $527.90 (LRC Stock Scanner, 28 Oct); a 3% rise would leave it below the $561.20 scanner target. MSFT is a HOLD; rating unchanged.",
+     "source": "Investing.com",
+     "url": "https://www.investing.com/news/stock-market-news/us-stock-futures-drop-as-alphabet-slides-on-soft-earnings-microsoft-firms-4981271",
      "tickers": [
       "MSFT"
      ]
     },
     {
-     "title": "GOOGL and META: Alphabet's revenue up 25%; Google Cloud roughly doubles",
-     "summary": "Alphabet reported third-quarter revenue of $127.6 billion (up 25%) and Google Cloud revenue of $30.71 billion against $15.16 billion a year earlier (9to5Google, 28 Oct); the share reaction was not yet verified at publication. Alphabet had risen almost 2% in early trade on the OpenAI chip report (AP via Daily Union, 28 Oct). Both are BUYs on the LRC Stock Scanner (targets $344 and $680); Meta is trading below its $633.70 trigger level; ratings unchanged.",
-     "source": "9to5Google",
-     "url": "https://9to5google.com/2026/10/28/alphabet-q3-2026-earnings/",
+     "title": "AMZN and INTC report today",
+     "summary": "Amazon reports its September-quarter results on Thursday (Investing.com, 28 Oct). Amazon closed at $252.60, just above its $249.80 scanner target and $247.10 trigger level, and Intel at $93.88 against an $86.22 target (LRC Stock Scanner, 28 Oct). Both are HOLDs; ratings unchanged. Microsoft's and Alphabet's capex shortfalls put cloud spending at the centre of Amazon's report.",
+     "source": "Investing.com",
+     "url": "https://www.investing.com/news/stock-market-news/us-stock-futures-drop-as-alphabet-slides-on-soft-earnings-microsoft-firms-4981271",
      "tickers": [
-      "GOOGL",
-      "META"
-     ]
-    },
-    {
-     "title": "BA and UPS: Boeing's 10.7% fall takes it further below its trigger",
-     "summary": "Boeing's 10.7% drop after its third-quarter loss and UPS's 5.8% gain on a raised outlook were among Tuesday's biggest moves (Reuters via Yahoo Finance, 27 Oct). Boeing is a HOLD on the LRC Stock Scanner and now trades below its $184.40 trigger level; UPS is a HOLD; ratings unchanged.",
-     "source": "Yahoo Finance (Reuters)",
-     "url": "https://finance.yahoo.com/markets/stocks/articles/us-stock-futures-muted-oil-095309821.html",
-     "tickers": [
-      "BA",
-      "UPS"
-     ]
-    },
-    {
-     "title": "NVDA, AMD and AVGO: chip rally continues",
-     "summary": "The chip index rose 3.6% on Tuesday (TradingKey, 27 Oct), Nvidia gained 0.9% and Broadcom 4% after a $63 billion AI computing financing deal (AP, 28 Oct). NVDA, AMD and AVGO are BUYs on the LRC Stock Scanner; AMD reports on 3 November and Nvidia on 17 November; ratings unchanged.",
-     "source": "AP via WSLS",
-     "url": "https://www.wsls.com/business/2026/10/28/asian-stocks-rise-after-a-rally-on-wall-street-while-oil-prices-edge-higher/",
-     "tickers": [
-      "NVDA",
-      "AMD",
-      "AVGO"
+      "AMZN",
+      "INTC"
      ]
     }
    ]
   }
  ],
  "watch_today": [
-  "Alphabet's EPS, capital-spending guidance and share reaction; Microsoft's conference call and capex outlook",
-  "Thursday: Amazon and Intel results, US GDP (3.2% expected) and PCE, SA PPI",
-  "December Fed meeting (8–9 Dec, with new projections): Warsh gave no guidance",
-  "Oil near $115: Saudi damage reports and Iran's formal reply to the Qatari draft (due by the end of the week)",
-  "Rand near R16.66/$ after the Fed; Friday: SA trade data and Bank of Japan; OPEC+ on Sunday 1 November"
+  "JSE open: Naspers and Prosus after the Nasdaq futures drop; rand near R16.61/$",
+  "US third-quarter GDP and September PCE inflation; SA PPI",
+  "Amazon and Intel results after the US close; Alphabet's regular-session reaction",
+  "Oil near $115: Iran's reply to the Qatari draft and attacks on Saudi facilities",
+  "Coming ECB and Bank of Japan decisions (both expected to hold); December Fed hike odds near 78%–84%"
  ]
 }
