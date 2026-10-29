@@ -1,14 +1,32 @@
 {
- "edition": "Midday update · Thursday 29 October 2026 14:30",
- "generated": "2026-10-29T14:30:00+02:00",
- "covers": "JSE session to 14:30 SAST, Thursday 29 October 2026; updates the 13:15 edition",
+ "edition": "Midday update · Thursday 29 October 2026 15:45",
+ "generated": "2026-10-29T15:45:00+02:00",
+ "covers": "JSE session and US data, 29 October 2026, to 15:45 SAST",
  "agent": "LRC News Desk",
- "headline": "DoorDash agrees to buy Instacart for $17 billion; Lilly beats and lifts outlook; SA economy about 5% bigger after rebasing",
- "summary": "Statistics South Africa's move to a 2022 base year puts last year's nominal GDP at R8.04 trillion, up from R7.64 trillion, which should flatter debt-to-GDP and other ratios (Reuters via Investing.com, 29 Oct), and comes on the same day producer inflation jumped to 6.2% from 5.0% (FX.co, 29 Oct); the rand is near R16.65 per dollar (Trading Economics, 29 Oct). In the US, DoorDash agreed to buy Instacart for $65 a share, about $17 billion (DoorDash, 29 Oct), Eli Lilly beat forecasts and raised its revenue outlook to $91–92 billion, and ServiceNow was about 19% lower before the open on an earnings miss (Yahoo Finance, 29 Oct); GDP and PCE data were due at 14:30 SAST and the ECB decides at 15:15 SAST. Brent is near $114 after a reported US approach to Iran (The National, 29 Oct), and Shell beat profit forecasts on a record refining margin (Reuters via Finimize, 29 Oct).",
+ "headline": "US economy grows 3.4% in Q3, ahead of forecasts; ECB holds at 2.50%; Caterpillar slides after results",
+ "summary": "Statistics South Africa's rebasing puts 2025 nominal GDP at R8.04 trillion, about 5% bigger than thought (Reuters via Investing.com, 29 Oct), on the same day producer inflation jumped to 6.2% (FX.co, 29 Oct); the rand is near R16.65 per dollar (Trading Economics, 29 Oct). In the US, third-quarter GDP grew at a 3.4% annualised pace, ahead of the 3.2% expected (Convera, 29 Oct), which supports the dollar and the case for the Fed to stay tight; DoorDash agreed to buy Instacart for about $17 billion and Caterpillar was about 9% lower before the open despite an earnings beat (24/7 Wall St., 29 Oct). The ECB kept its deposit rate at 2.50% as expected (Sweden Herald, 29 Oct), hours after Christine Lagarde said she will leave early, and Brent is near $114 (The National, 29 Oct).",
  "sections": [
   {
    "name": "Breaking",
    "items": [
+    {
+     "title": "US economy grows 3.4% in the third quarter, faster than the 3.2% expected",
+     "summary": "The first estimate of US GDP showed 3.4% annualised growth in July–September (Convera, 29 Oct 2026), above the 3.2% forecast. Stronger growth alongside elevated inflation supports the dollar and makes a near-term Fed cut less likely; the Fed held at 3.75%–4.00% on 28 October with two members wanting a hike.",
+     "source": "Convera",
+     "url": "https://convera.com/blog/market-insights/fx-research/daily-market-updates/us-growth-widens-the-dollars-policy-advantage"
+    },
+    {
+     "title": "ECB holds: deposit rate stays at 2.50%",
+     "summary": "The European Central Bank left its key rates unchanged, with the deposit rate at 2.50%, in line with the analyst consensus (Sweden Herald, 29 Oct 2026, 14:15 CET). It raised rates by 25 basis points in September. The decision comes hours after Christine Lagarde said she will step down in February.",
+     "source": "Sweden Herald",
+     "url": "https://swedenherald.com/article/ecb-holds-key-interest-rates-steady-deposit-rate-remains-at-250"
+    },
+    {
+     "title": "Caterpillar down about 9% before the open despite beating profit forecasts",
+     "summary": "Caterpillar reported third-quarter adjusted EPS of $7.20 against $7.04 expected and revenue of $20.68 billion, in line with the $20.69 billion forecast. Shares fell about 9% to $647.90 before the open: the beat included $128 million of tariff refunds and the company gave no numeric guidance (24/7 Wall St., 29 Oct 2026).",
+     "source": "24/7 Wall St.",
+     "url": "https://247wallst.com/investing/2026/10/29/caterpillar-beat-earnings-and-still-dropped-9-the-ai-power-trade-just-hit-the-same-wall-as-software"
+    },
     {
      "title": "DoorDash agrees to buy Instacart for $65 a share, about $17 billion",
      "summary": "DoorDash signed a deal on 29 October to buy Instacart owner Maplebear at $65.00 a share, an equity value of about $17 billion. Holders can take cash, 0.3372 DoorDash shares, or a mix, with at least 75% of the total paid in cash. The price is 26% above Instacart's 22 October close, before deal reports, and about 11% above its last close. Closing is expected at the end of 2027 or in the first half of 2028, subject to Instacart shareholder and competition approvals in the US, Canada and Israel; holders of about 19% of Instacart have agreed to vote for it. (DoorDash, 29 Oct 2026; InsideArbitrage, 29 Oct 2026)",
@@ -144,6 +162,15 @@
    "name": "Our coverage",
    "items": [
     {
+     "title": "CAT: premarket fall to about $648 leaves Caterpillar still above its scanner target",
+     "summary": "Caterpillar closed at $713.40 on 28 October and was about $647.90 before the open on 29 October (24/7 Wall St., 29 Oct), still above the $542 LRC Stock Scanner target, which already flagged the shares as overvalued. CAT is a HOLD; rating unchanged.",
+     "source": "24/7 Wall St.",
+     "url": "https://247wallst.com/investing/2026/10/29/caterpillar-beat-earnings-and-still-dropped-9-the-ai-power-trade-just-hit-the-same-wall-as-software",
+     "tickers": [
+      "CAT"
+     ]
+    },
+    {
      "title": "CART and DASH: $65 deal price is above Instacart's scanner target",
      "summary": "Instacart (Maplebear) closed at $58.42 on 28 October against a $55.28 LRC Stock Scanner target; the $65 offer is about 11% above that close (DoorDash, 29 Oct). DoorDash closed at $169.50 against a $141.80 target (LRC Stock Scanner, 28 Oct). Both are HOLDs on the LRC Stock Scanner; ratings unchanged.",
      "source": "DoorDash investor relations",
@@ -203,10 +230,10 @@
   }
  ],
  "watch_today": [
-  "US third-quarter GDP (3.2% expected) and September PCE inflation (3.6% y/y expected), due 14:30 SAST",
-  "ECB rate decision at 15:15 SAST and Lagarde's press conference at 15:45 SAST, her first since announcing her February exit",
-  "Wall Street open: Alphabet, ServiceNow and Lilly reactions; DoorDash and Instacart after the deal",
-  "Rand and bonds after the 6.2% PPI surprise and the GDP rebasing; rand near R16.65/$",
+  "Wall Street's first hours: Alphabet, Caterpillar, ServiceNow and Lilly reactions; DoorDash and Instacart after the deal",
+  "Dollar and US yields after the 3.4% GDP print; rand near R16.65",
+  "Lagarde's press conference after the ECB hold, her first since announcing her February exit",
+  "JSE close and bonds after the 6.2% PPI surprise and the GDP rebasing",
   "Amazon and Intel results after the US close",
   "Oil near $114: US–Iran contacts and Middle East supply risk"
  ]
