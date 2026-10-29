@@ -1,4 +1,4 @@
-# Leago Rifumo Capital website — v10 (updated 28 Oct 2026) — ready to roll out
+# Leago Rifumo Capital website — v11 (updated 29 Oct 2026) — Stock Analyzer added
 
 Repository: github.com/LeagoRifumo/lrc-website (branch main, GitHub Pages serves /docs)
 Give this file (and the zip) to Claude when you next update the website.
@@ -22,6 +22,7 @@ Give this file (and the zip) to Claude when you next update the website.
 - watchlist.html — FULLY AUTOMATED from the scanner (agents/tools/watchlist_lists.py → docs/data/scan/lists.json, rebuilt every scanner run): per market Top 5 BUY + Top 5 SELL for Trading (3-12m, by Trading score) and Top 5 BUY + Top 5 SELL for Investment (5-10y, by Investment score); watchlist news; LRC analyst coverage (re-priced daily). Home page card reads the same lists.
 - track.html — track record of every scanner rating (from 25 Oct 2026)
 - dashboard.html — Market dashboard (renamed from "Weekly", 28 Oct): one colour-coded table (SA | US & global | Commodities; green/red = good/bad for investors), live edition every hour 06:17–22:17 SAST on weekdays, saved end-of-week snapshots; Market heatmap (sectors → companies, size = market value, colour = move; JSE / New York; Today / Week / Month) and Top gainers / Top losers / Biggest moves from the scanner
+- analyzer.html — LRC Stock Analyzer: search or quick-screen any company, every ratio, statement and valuation method explained (Plain English / Analyst; Investor / Trader)
 - earnings.html, news.html, articles.html, research.html, tools.html, academy.html, markets.html, show.html, contact.html, write.html
 
 ## v8 changes
@@ -131,3 +132,14 @@ Give this file (and the zip) to Claude when you next update the website.
 - Track record page rewritten for everyone: 4 steps (Save, Wait, Measure, Compare), plain-English scorecard (TOO EARLY / WORKING / NO CLEAR EDGE / NOT WORKING), bars per rating group, R100 chart, results by rating with a period picker, glossary.
 - Old target worksheet (Fwd P/E comps 40%, DCF 30%, EV/NTM FCF 30%, weighted) is NOT what the site uses now: owner approved DCF, residual income, dividend & buyback model, EV/EBITDA vs peers + consensus, equal-weight average (28 Oct).
 - Housekeeping: test branches fs-probe and probe2 can be deleted on GitHub (Branches page).
+
+## 29 Oct 2026 — LRC Stock Analyzer + phone fixes
+- NEW analyzer.html + assets/js/analyzer.js (styles: "LRC Stock Analyzer" block at the end of style.css). In the Research menu, footers, sitemap, header search ("Analyse" next to "Profile"), stock.html toolbar ("Analyse in depth") and company pages ("Analyse every ratio", from the next company_pages.py rebuild).
+  * Top: search by name or ticker (keyboard friendly) + Quick screener (market, sector, long-term grade, trading grade, valuation, size, sort, hide thin; presets Quality at a fair price / Looks cheap / Strong trend / Biggest / Warning signs). Folds away once a company is opened. Full scanner stays the place for heavy screening.
+  * Two switches, remembered per visitor: "Plain English" vs "Like an analyst" (same numbers, different explanations) and "Investor 5–10 yrs" vs "Trader 3–12 m" (changes section order and which grade leads).
+  * Sections: header (price, size rank, both grades, valuation, what the company does) · In one minute (7 plain questions = the 7 score groups, traffic lights + one auto sentence each) · What is it worth? (price vs LRC Analyst Target as model estimate, cheap/fair/expensive meter, method range, every method explained, reverse DCF, model inputs) · Every number explained (all 37 readings; plain = cards with explanation + sector comparison that always agrees with the scanner's +1/0/-1; analyst = table with sector & market medians and definitions) · Financial statements (income / balance / cash flow, yearly / quarterly-or-half-yearly, plain story sentences, bar chart, every line explained; analyst adds all lines, Y/Y vs the same period a year earlier and a computed ratio-history table) · Price & chart (2-yr price, 50/200-day, support/resistance, RSI, 52-week position, ATR, liquidity) · Professionals (consensus bar, target range, EPS beats/misses, next results) · Dividends (per payment, JSE cents → rand) · Investor checklist · Keep going (rivals, sector backdrop).
+  * One set of numbers: reads scan/t/<T>.json + fs/<T>.json only; nothing re-estimated.
+  * Safe mode: grades instead of BUY/SELL, no entry/stop/targets (trade plan appears only when LRC_SAFE = false and Analyst mode). Intrinsic values shown as "model estimate", educational — same exemption as the one-page summary (owner decision 29 Oct).
+  * Guard rails in the explanations: n/m explained, P/E < 3x and yield > 9% warnings, ROE > 60% buyback warning, bank-irrelevant readings (gross margin, current/quick ratio, D/E, EV/EBITDA, P/FCF, FCF margin) shown as n/m for Financial Services; "Net interest income" line only for financials.
+- Phone fixes: stock.html toolbar is one sideways-scrolling row with short labels (Scanner, Full report, Free PDF, Analyse, Thesis, Statements); ticker box hidden on phones (header 🔍 does that). Research Focus List score bars fit 360px phones. Assets: style.css 11.1, main.js 11.1, scanner.js 11.1, analyzer.js 1.0.
+- To consider: the valuation verdict marks ~1,000 of ~2,400 New York companies UNDERVALUED (rule "ratios net ≥ +2 with 10%+ upside" is loose). Tightening it is a scan_engine.py change — owner to decide.

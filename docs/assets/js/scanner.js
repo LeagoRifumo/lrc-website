@@ -383,7 +383,8 @@ if ($('paper')) {
     if (st.status === 'fulfilled') STORE = { ...STORE, ...st.value };
     if (window.LRCRegion) STORE = window.LRCRegion.localize(STORE);
     if (it.status === 'fulfilled') INTEL = it.value;
-    $('buyRep').textContent = `Buy the full report — ${STORE.report_price}`;
+    if ($('toAz')) $('toAz').href = 'analyzer.html?t=' + encodeURIComponent(T);
+    $('buyRep').innerHTML = `<span class="lbl-lg">Buy the full report</span><span class="lbl-sm">Full report</span> — ${esc(STORE.report_price)}`;
     if (a.status !== 'fulfilled') { P.innerHTML = `<h1>${esc(T)}</h1><p style="margin-top:12px">This company is not in the LRC Scanner universe yet (or today's scan has not run). <a href="scanner.html" style="color:#1F3BB3">Open the scanner</a> to pick another, or ask us to add it.</p>`; return; }
     render(a.value, b.status === 'fulfilled' ? b.value : null);
     const nm = a.value.row.n;

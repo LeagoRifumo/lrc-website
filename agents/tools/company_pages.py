@@ -199,7 +199,7 @@ def build_page(d, fs, intel, peers, head_html, foot_html, today):
   <h1>{E(nm)} <span class="gold">({E(tk(T))})</span> {word} analysis</h1>
   <p class="lead">Share price, LRC scores, ratios against peers and {str(fs_years) + " years of " if fs_years else ""}financial statements for {E(nm)} — updated automatically from the LRC Stock Scanner.</p>
   <div class="co-live" id="coLive" data-t="{E(T)}"><b>{sym}{t.get("price", 0):,.2f}</b> <span class="{"up" if (t.get("chg_1d") or 0) >= 0 else "dn"}">{pc(t.get("chg_1d"))}</span> <small>close {E(t.get("date") or "")}</small></div>
-  <div class="co-cta"><a class="btn btn-gold" href="../stock.html?t={E(T)}">Open the one-page summary</a><a class="btn btn-ghost" href="../stock.html?t={E(T)}#fsSec">Full financial statements</a><a class="btn btn-ghost" href="../scanner.html">LRC Stock Scanner</a></div>
+  <div class="co-cta"><a class="btn btn-gold" href="../stock.html?t={E(T)}">Open the one-page summary</a><a class="btn btn-ghost" href="../analyzer.html?t={E(T)}">Analyse every ratio</a><a class="btn btn-ghost" href="../stock.html?t={E(T)}#fsSec">Full financial statements</a><a class="btn btn-ghost" href="../scanner.html">LRC Stock Scanner</a></div>
 </div></section>
 <section style="padding-top:26px"><div class="wrap co-grid">
   <div class="th-card th-wide"><h2>About {E(nm)}</h2><p>{E(what) or E(nm) + " is listed on the " + mkt + "."}</p>
