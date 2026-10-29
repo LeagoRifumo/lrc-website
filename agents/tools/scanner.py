@@ -341,7 +341,8 @@ def main():
         tgt_final = tg.get('lrc') or tg.get('blend')
         v_score = E.rating_v7(score)
         v_final, v_note = E.consistent(v_score, (tgt_final / t['price'] - 1) if tgt_final and t['price'] else None)
-        verdict = E.valuation_verdict(it['val_points'], (tgt_final / t['price'] - 1) if tgt_final and t['price'] else None)
+        _vm, _vc = E.verdict_inputs(tg, t['price'])
+        verdict = E.valuation_verdict(it['val_points'], (tgt_final / t['price'] - 1) if tgt_final and t['price'] else None, _vm, _vc)
         iv_v, iv_note = E.invest_consistent(E.rating_v7(iv_score), verdict)
         # senior-analyst gates (strict): trend, liquidity, results risk, quality, cash flow, debt
         dtr = (dt.date.fromisoformat(f['next_earnings']) - today).days if f.get('next_earnings') else None
@@ -355,7 +356,7 @@ def main():
         row = {'t': r['t'], 'n': r['n'], 'm': r['m'], 'sec': r['sec'], 'ind': r['ind'], 'cur': r['cur'], 'px': t['price'], 'chg': t['chg_1d'],
                'p1w': t['perf_1w'], 'p1m': t['perf_1m'], 'p6m': t['perf_6m'], 'ytd': t['perf_ytd'], 'mcap': f.get('mcap'), 'rsi': t['rsi'],
                'score': score, 'pts': it['points'], 'max': it['max'], 'grp': it['groups'], 'rd': it['rd'], 'tp': r['tp'],
-               'val': E.valuation_verdict(it['val_points'], (tgt_final / t['price'] - 1) if tgt_final and t['price'] else None),
+               'val': verdict,
                'iv_score': iv_score, 'iv_v': iv_v, 'iv_note': iv_note,
                'v': v_final, 'v_score': v_score, 'v_note': v_note,
                'setup': t.get('setup'), 'lvl': t.get('setup_level'), 'plan': {k: pl[k] for k in ('side', 'entry', 'stop', 't1', 't2', 'risk_pct')} if pl else None,
