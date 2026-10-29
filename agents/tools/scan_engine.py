@@ -672,14 +672,38 @@ def rating_v7(score):
     return 'STRONG BUY' if score >= 75 else 'BUY' if score >= 60 else 'HOLD' if score >= 40 else 'SELL' if score >= 25 else 'STRONG SELL'
 
 
-def valuation_verdict(val_points, upside):
-    """Upside = to the LRC Analyst Target (average of the valuation methods + consensus). 28 Oct 2026:
-    UNDERVALUED = 20%+ upside, or cheap on the ratios (net +2) with 10%+ upside;
-    OVERVALUED = 20%+ downside, or expensive on the ratios (net -2) with 5%+ downside; otherwise FAIR VALUE."""
-    if upside is None: return 'OVERVALUED' if val_points <= -2 else 'UNDERVALUED' if val_points >= 2 else 'FAIR VALUE'
-    if upside >= 0.20 or (val_points >= 2 and upside >= 0.10): return 'UNDERVALUED'
+def valuation_verdict(val_points, upside, models=None, consensus_up=None):
+    """Upside = to the LRC Analyst Target. Tightened 29 Oct 2026 (was: 20%+ upside, or ratios net +2 with 10%+ upside).
+    UNDERVALUED needs ALL of:
+      1. 20%+ upside to the LRC Analyst Target;
+      2. our own models agree: at least one of DCF / residual income / dividend & buyback / EV-EBITDA applies,
+         their average is 15%+ above the price and most of them are above the price
+         (analyst consensus alone can never make a share look cheap);
+      3. a second independent source agrees: another model 10%+ above the price, or analyst consensus 10%+ above;
+      4. not expensive on the valuation ratios (net points >= 0 vs the sector).
+    No target at all: UNDERVALUED only when clearly cheap on the ratios (net +3).
+    OVERVALUED unchanged on purpose (quick to call expensive, slow to call cheap):
+      20%+ downside, or expensive on the ratios (net -2) with 5%+ downside. Otherwise FAIR VALUE."""
+    if upside is None: return 'OVERVALUED' if val_points <= -2 else 'UNDERVALUED' if val_points >= 3 else 'FAIR VALUE'
     if upside <= -0.20 or (val_points <= -2 and upside <= -0.05): return 'OVERVALUED'
+    if models is None:   # caller without model detail: old ratio route removed, upside rule only
+        return 'UNDERVALUED' if upside >= 0.20 and val_points >= 0 else 'FAIR VALUE'
+    m = [x for x in models if x is not None]
+    if (upside >= 0.20 and m and sum(m) / len(m) >= 0.15 and sum(1 for x in m if x > 0) > len(m) / 2 and val_points >= 0
+            and (sum(1 for x in m if x >= 0.10) >= 2 or (consensus_up is not None and consensus_up >= 0.10))):
+        return 'UNDERVALUED'
     return 'FAIR VALUE'
+
+
+MODEL_KEYS = ('dcf', 'residual_income', 'ddm', 'ev_ebitda')
+
+
+def verdict_inputs(tg, price):
+    """own-model upsides and analyst-consensus upside from model_targets() output"""
+    if not price: return None, None
+    m = [tg[k] / price - 1 for k in MODEL_KEYS if tg.get(k)]
+    c = tg['analyst_median'] / price - 1 if tg.get('analyst_median') else None
+    return m, c
 
 
 # Two scanners from the same 37 readings (group scores weighted by holding period)

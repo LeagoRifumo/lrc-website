@@ -613,7 +613,7 @@ button.btn-ghost{background:transparent;border:1px solid var(--line);color:var(-
 .scan-filters label{text-transform:none;letter-spacing:0;font-weight:500;margin:0}
 .calc input{margin:0}
 .menu a.nav-hot{color:var(--gold-2);opacity:1;font-weight:700}
-.menu a.nav-hot:after{content:"NEW";font-size:9px;letter-spacing:.1em;background:var(--gold);color:#141006;border-radius:3px;padding:1px 4px;margin-left:5px;vertical-align:2px}
+.menu a.nav-new:after{content:"NEW";font-size:9px;letter-spacing:.1em;background:var(--gold);color:#141006;border-radius:3px;padding:1px 4px;margin-left:5px;vertical-align:2px}
 @media (max-width:1240px){.nav-cta .mkt-switch select{padding:7px 6px}}
 
 @media (max-width:1440px){.menu{gap:15px}.menu a{font-size:13.5px}.brand span{font-size:18px}.nav-cta .btn-red{padding:11px 14px;font-size:13.5px}}
@@ -1302,3 +1302,21 @@ i.p{background:#fff}i.v{background:var(--gold-2)}
   .az-grp>summary:after{display:none}
   .az-r-top b{flex-basis:100%}
 }
+
+/* ---------- 29 Oct 2026: header with Stock Analyzer in the top menu ----------
+   ≥1680px: full menu + full logo · 1281–1679px: full menu, monogram only · ≤1280px: ☰ menu */
+.site-header .brand,.nav-cta{flex-shrink:0}
+@media (min-width:1281px) and (max-width:1679px){.site-header .brand div{display:none}}
+@media (min-width:1441px){.site-header .wrap.nav{max-width:1640px}}
+@media (max-width:1280px){
+  .menu,.nav-cta .btn-ghost{display:none}
+  .burger{display:block}
+  .menu.open{display:flex;position:absolute;top:76px;left:0;right:0;flex-direction:column;align-items:flex-start;gap:0;background:var(--black);border-bottom:1px solid var(--line);padding:8px 24px 18px;max-height:calc(100vh - 76px);overflow-y:auto}
+  .menu.open li{width:100%}
+  .menu.open a{display:block;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:15px}
+  .menu .sub{display:block;position:static;border:0;box-shadow:none;background:none;padding:0 0 0 14px;min-width:0}
+  .menu .car,.menu .dd:after{display:none}
+  .menu.open a.active:after{display:none}
+}
+@media (min-width:561px) and (max-width:1280px){.nav-cta .btn-red{display:inline-flex}}
+@media (min-width:1441px) and (max-width:1535px){.menu{gap:14px!important}.menu a{font-size:13.5px}}

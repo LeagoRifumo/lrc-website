@@ -204,7 +204,7 @@
   const sizeOf = r => { const m = r.mcap || 0, z = r.m === 'JSE'; const L = z ? 50e9 : 10e9, M = z ? 5e9 : 2e9; return m >= L ? 'large' : m >= M ? 'mid' : 'small'; };
   const PRESETS = {
     quality: { l: 'Quality at a fair price', d: 'Strong long-term grade and not expensive on our models', f: r => RANK[r.iv_v] >= 4 && r.val !== 'OVERVALUED' },
-    cheap: { l: 'Looks cheap (model)', d: 'At least 20% below the LRC model estimate, or cheap on ratios', f: r => r.val === 'UNDERVALUED' },
+    cheap: { l: 'Looks cheap (model)', d: '20%+ below the LRC model estimate, confirmed by our own models, a second source and the ratios', f: r => r.val === 'UNDERVALUED' },
     trend: { l: 'Strong price trend', d: 'Strong or top trading grade', f: r => RANK[r.v] >= 4 },
     big: { l: 'Biggest companies', d: 'Large companies, sorted by size', f: r => sizeOf(r) === 'large', sort: 'mcap' },
     weak: { l: 'Warning signs', d: 'Weak or lowest long-term grade', f: r => RANK[r.iv_v] <= 2 }
@@ -395,7 +395,7 @@
       <div class="az-ms">${rows}${rev}</div>
       ${skipped.length ? `<p class="az-note">${P() ? 'Not used for this company: ' : 'Excluded: '}${skipped.map(([k, l]) => `<b>${l}</b> (${esc(notes[k])})`).join('; ')}.</p>` : ''}
       ${assum}
-      <p class="az-note">${SAFE ? 'Model estimates are educational and are not a price target or a recommendation. ' : ''}Valuation verdict rules: <b>cheap</b> = 20%+ below the estimate, or cheap on ratios with 10%+ room; <b>expensive</b> = 20%+ above it, or expensive on ratios with 5%+ downside; otherwise fair.</p>
+      <p class="az-note">${SAFE ? 'Model estimates are educational and are not a price target or a recommendation. ' : ''}${P() ? 'We only call a share <b>cheap</b> when four things agree: the estimate is 20%+ above the price, our own models (not just Wall Street targets) say so, a second source backs it up, and its ratios are not expensive for its sector. <b>Expensive</b> = the price is 20%+ above the estimate, or the ratios are expensive with 5%+ downside.' : 'Verdict: <b>UNDERVALUED</b> = 20%+ upside AND own-model average ≥ +15% with most models above price AND a second source ≥ +10% (model or consensus) AND valuation points ≥ 0. <b>OVERVALUED</b> = 20%+ downside, or valuation points ≤ −2 with 5%+ downside.'}</p>
     </section>`;
   }
 
