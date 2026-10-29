@@ -1320,3 +1320,24 @@ i.p{background:#fff}i.v{background:var(--gold-2)}
 }
 @media (min-width:561px) and (max-width:1280px){.nav-cta .btn-red{display:inline-flex}}
 @media (min-width:1441px) and (max-width:1535px){.menu{gap:14px!important}.menu a{font-size:13.5px}}
+/* Analyzer: intrinsic value vs market price over time */
+.az-ivc svg{height:auto}
+.az-ivc text{fill:#8A93A6;font-size:11px}
+.az-ivc .grid{stroke:rgba(255,255,255,.07)}
+.az-ivc .z-exp{fill:rgba(197,34,31,.16)}.az-ivc .z-fair{fill:rgba(255,255,255,.035)}.az-ivc .z-cheap{fill:rgba(15,157,88,.17)}
+.az-ivc .fut{fill:rgba(7,8,12,.35)}
+.az-ivc .today{stroke:var(--ivory);stroke-width:1.2;stroke-dasharray:3 3;opacity:.7}
+.az-ivc .today-t{fill:var(--ivory);font-weight:800}
+.az-ivc .zl{font-size:11.5px;font-weight:800}.az-ivc .zl-exp{fill:#FF8A80}.az-ivc .zl-fair{fill:#B8BFCC}.az-ivc .zl-cheap{fill:#5FE3A1}
+.az-ivc .ivl{fill:none;stroke:#6E9BFF;stroke-width:3.2;stroke-linejoin:round;stroke-linecap:round}
+.az-ivc .ivl.proj{stroke-width:2.6;stroke-dasharray:2 6}
+.az-ivc .pxl{fill:none;stroke:#F2A541;stroke-width:2.4;stroke-linejoin:round}
+.az-ivc .ivd{fill:#0D1018;stroke:#6E9BFF;stroke-width:2}.az-ivc .ivd.now{fill:#6E9BFF;stroke:#0D1018}
+.az-ivc .pxd{fill:#F2A541;stroke:#0D1018;stroke-width:2}
+.az-ivc .est{fill:#9DBBFF;font-weight:700}
+.az-leg i.ivk{background:#6E9BFF}.az-leg i.ivk.dash{background:repeating-linear-gradient(90deg,#6E9BFF 0 3px,transparent 3px 7px)}.az-leg i.pxk{background:#F2A541}
+.c-iv{color:#9DBBFF}.c-px{color:#F2A541}
+.az-ivseg{margin:6px 0 0}
+@media (max-width:619px){.az-ivc .zl{font-size:10.5px}}
+.az-divs div{min-width:0}.az-divs b,.az-divs span{white-space:nowrap}
+@media (max-width:619px){.az-divs{gap:4px}.az-divs b{font-size:10.5px}.az-divs span{font-size:10.5px}}

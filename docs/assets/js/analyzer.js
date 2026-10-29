@@ -24,6 +24,7 @@
   let LENS = store('lrc_az_lens') === 'trader' ? 'trader' : 'investor';
   let CUR = null;          // { t, d, fs }
   let FSV = { st: 'is', per: 'annual' };
+  let IVP = 'annual';   // intrinsic value history: 'annual' | 'quarterly'
   const P = () => MODE === 'plain';
 
   /* ---------------- formatting ---------------- */
@@ -299,7 +300,7 @@
         $('azOut').innerHTML = `<div class="az-card"><h3>We couldn't find “${esc(T)}”</h3><p>It may not be in the LRC Stock Scanner yet (we cover about 2,500 New York and all liquid JSE companies). Search by name above or pick one from the screener.</p></div>`; return;
       }
       CUR = { t: T, d: a.value, fs: b.status === 'fulfilled' ? b.value : null };
-      FSV = { st: 'is', per: 'annual' };
+      FSV = { st: 'is', per: 'annual' }; IVP = 'annual';
       render();
     });
   }
@@ -392,6 +393,7 @@
       <p class="az-lead">${esc(r.n)} ${verdict[1]}.</p>
       <div class="az-meter"><div class="az-meter-bar"><span>Cheap</span><span>Fair</span><span>Expensive</span></div><i style="left:${pos}%"></i></div>
       ${ok(tg.low) && ok(tg.high) ? `<div class="az-range"><div class="az-range-bar"><b style="left:${X(tg.low)}%;width:${(X(tg.high) - X(tg.low))}%"></b><i class="p" style="left:${X(price)}%" title="Price"></i><i class="v" style="left:${X(blend)}%" title="Estimate"></i></div><div class="az-range-l"><span>Lowest method ${px(tg.low, c)}</span><span><i class="p"></i>Price <i class="v"></i>Estimate</span><span>Highest method ${px(tg.high, c)}</span></div></div>` : ''}
+      <div id="azIvH">${ivHistory(d)}</div>
       <div class="az-ms">${rows}${rev}</div>
       ${skipped.length ? `<p class="az-note">${P() ? 'Not used for this company: ' : 'Excluded: '}${skipped.map(([k, l]) => `<b>${l}</b> (${esc(notes[k])})`).join('; ')}.</p>` : ''}
       ${assum}
@@ -593,7 +595,7 @@
         <div class="az-f"><span>Payout ratio</span><b>${pp(f.payout, 0)}</b><p>${P() ? (f.payout > 0.9 ? 'Pays out almost all its profit — little cushion if profits fall.' : f.payout > 0.6 ? 'Pays out a large part of profit.' : 'Keeps most profit to reinvest — the dividend has room to grow.') : 'DPS ÷ EPS.'}</p></div>
         <div class="az-f"><span>Last ex-dividend date</span><b>${esc(fdate(f.ex_div))}</b><p>${P() ? 'You must own the share before this date to get that dividend.' : (f.div_pay ? `Paid ${esc(fdate(f.div_pay))}.` : 'Payment date not in the feed.')}</p></div>
       </div>
-      ${pay.length ? `<div class="az-divs">${pay.map(x => `<div><i style="height:${(x.amount * k / mx * 100).toFixed(0)}%"></i><b>${sym(c)}${NF(x.amount * k, 2)}</b><span>${fdate(x.date, true)}</span></div>`).join('')}</div>` : ''}
+      ${pay.length ? `<div class="az-divs">${pay.map(x => `<div><i style="height:${(x.amount * k / mx * 100).toFixed(0)}%"></i><b>${sym(c)}${NF(x.amount * k, 2)}</b><span>${(() => { const dd = new Date(x.date + 'T12:00:00'); return isNaN(dd) ? esc(x.date) : dd.toLocaleDateString('en-ZA', { month: 'short' }) + " '" + String(dd.getFullYear()).slice(2); })()}</span></div>`).join('')}</div>` : ''}
       <p class="az-note">${pay.length ? `Each bar is one dividend per share, by ex-dividend date.${same ? ` Latest payment ${sym(c)}${NF(last.amount * k, 2)} vs ${sym(c)}${NF(same.amount * k, 2)} a year earlier (${pc(last.amount / same.amount - 1, 0)}).` : ''}` : ''} <a href="dividends.html">Dividend calendar →</a></p>
     </section>`;
   }
@@ -621,12 +623,117 @@
     </section>`;
   }
 
+
+  /* ---------- Intrinsic value vs market price, over time ----------
+     SAME maths as the one-page summary (scanner.js ivSeries / drawIV), so both pages draw identical lines:
+     our valuation methods (DCF, residual income, dividend & buyback, EV/EBITDA vs peers) re-run on each year's
+     (or each quarter's trailing-12-month) reported figures with today's cost of equity and growth, scaled so the
+     latest point equals today's LRC Analyst Target; yearly points averaged with the year before. */
+  function priceSeries(d) {
+    const h = d.history; if (!h || !h.c) return null;
+    const dates = [h.d0]; let cur = new Date(h.d0 + 'T00:00:00Z');
+    for (const g of h.gap || '') { cur = new Date(cur.getTime() + (+g) * 864e5); dates.push(cur.toISOString().slice(0, 10)); }
+    return { dates, c: h.c };
+  }
+  function ivSeries(fs, d, V, per) {
+    const f = d.f || {}, fx = f.fx_used || 1, tg = d.targets || {}, inp = tg.inputs || {}, sec = d.row.sec;
+    const r = inp.r || 0.11, gT = ok(inp.g_term) ? inp.g_term : 0.03, g1 = ok(inp.g1) ? inp.g1 : gT;
+    const fin = sec === 'Financial Services', ddmS = ['Real Estate', 'Utilities', 'Financial Services'].includes(sec);
+    const mEV = (d.sector_medians || {}).ev_ebitda;
+    const S = fs[per] || {}, dates = S.dates || [], R = S.rows || {};
+    const at = (k, i) => { const a = R[k] || []; return ok(a[i]) ? a[i] * fx : null; };
+    const flow = (k, i) => { if (per === 'annual') return at(k, i); if (i < 3) return null; let s_ = 0; for (let q = i - 3; q <= i; q++) { const v = at(k, q); if (v === null) return null; s_ += v; } return s_; };
+    const dcf = (cf, sh) => { let v = 0, c = cf; for (let y = 1; y <= 5; y++) { c *= 1 + g1 + (gT - g1) * (y - 1) / 4; v += c / Math.pow(1 + r, y); } v += c * (1 + gT) / (r - gT) / Math.pow(1 + r, 5); return v / sh; };
+    const pts = [];
+    dates.forEach((dte, i) => {
+      const shOf = k => (R[k] || []).map((v, q) => ok(v) ? [Math.abs(q - i), v] : null).filter(Boolean).sort((a, b) => a[0] - b[0])[0];
+      const sh = (R.so && ok(R.so[i]) ? R.so[i] : null) || (R.shares && ok(R.shares[i]) ? R.shares[i] : null) || (shOf('so') || shOf('shares') || [])[1];
+      if (!sh) return;
+      const m = [];
+      const fcf = (() => { const v = flow('fcf', i); if (v !== null) return v; const a = flow('cfo', i), b = flow('capex', i); return a !== null && b !== null ? a + b : null; })(), eb = flow('ebitda', i), debt = at('debt', i), cash = at('cash', i), eq = at('eq', i), ni = flow('ni', i);
+      if (!fin && ok(fcf) && fcf > 0) m.push(dcf(fcf, sh));
+      if (!fin && ok(eb) && eb > 0 && ok(mEV) && mEV > 0) { const e = eb * mEV - ((debt || 0) - (cash || 0)); if (e > 0) m.push(e / sh); }
+      const paid = -((flow('div', i) || 0) + (flow('buyback', i) || 0));
+      const roe = ok(ni) && ok(eq) && eq > 0 ? Math.max(0, Math.min(0.35, ni / eq)) : null, pay = ok(ni) && ni > 0 ? Math.max(0, Math.min(1, paid / ni)) : 0.5;
+      if (fin && ok(eq) && eq > 0 && ok(roe)) { const gb = Math.max(0, Math.min(0.15, roe * (1 - pay))); let b = eq / sh, v = b; for (let y = 1; y <= 5; y++) { v += (roe - r) * b / Math.pow(1 + r, y); b *= 1 + gb; } const rt = (roe - r) * b; v += rt > 0 ? rt * (1 + gT) / (r - gT) / Math.pow(1 + r, 5) : rt / Math.pow(1 + r, 5); if (v > 0) m.push(v); }
+      if (ddmS && paid > 0 && ok(roe)) { const gd = Math.max(0, Math.min(gT + 0.015, roe * (1 - pay))); if (r - gd > 0.02) m.push(paid / sh * (1 + gd) / (r - gd)); }
+      if (m.length) pts.push({ date: dte, raw: m.reduce((a, b) => a + b, 0) / m.length });
+    });
+    if (!pts.length) return null;
+    const last = pts[pts.length - 1].raw, k = V / last, okk = k > 0.2 && k < 5;
+    pts.forEach(p_ => p_.v = okk ? p_.raw * k : p_.raw);
+    return { pts, k, calibrated: okk, g1, gT };
+  }
+  function ivHistory(d) {
+    const fs = CUR && CUR.fs, tg = d.targets || {}, V = tg.blend, P0 = (d.tech || {}).price || d.row.px, cur = d.row.cur, nm = d.row.n;
+    if (!ok(V) || !ok(P0)) return '';
+    const title = `<h4 class="az-h4">${P() ? 'Price vs value over the years' : 'Intrinsic value vs market price'}</h4>`;
+    if (!fs) return title + `<p class="az-note">The value history appears once ${esc(nm)}'s financial statements are loaded (they refresh weekly).</p>`;
+    const per = IVP === 'quarterly' && !fs.interim ? 'quarterly' : 'annual';
+    const ser = ivSeries(fs, d, V, per);
+    const canQ = !fs.interim && (() => { const q = ivSeries(fs, d, V, 'quarterly'); return q && q.pts.length >= 2; })();
+    const seg = `<div class="az-seg az-seg-s az-ivseg"><button data-ivp="annual" class="${per === 'annual' ? 'on' : ''}">Yearly</button>${canQ ? `<button data-ivp="quarterly" class="${per === 'quarterly' ? 'on' : ''}">Quarterly</button>` : ''}</div>`;
+    if (!ser || ser.pts.length < 2) return title + `<p class="az-note">${P() ? `Not enough reported years yet to draw how ${esc(nm)}'s value has changed over time.` : 'Too few periods with usable cash flow, EBITDA or book value to build a value history.'}</p>`;
+    if (per === 'annual' && ser.pts.length >= 3) ser.pts = ser.pts.map((p_, i, a) => ({ ...p_, v: i ? (a[i - 1].v + p_.v) / 2 : p_.v }));
+    const money = v => sym(cur) + (v === 0 ? '0' : v >= 1000 ? Math.round(v).toLocaleString('en-ZA') : v >= 100 ? v.toFixed(0) : v >= 10 ? v.toFixed(1) : v.toFixed(2));
+    const nice = (lo, hi, n) => { const raw = (hi - lo) / n, p10 = Math.pow(10, Math.floor(Math.log10(raw))), st = [1, 2, 2.5, 5, 10].map(m => m * p10).find(x => x >= raw) || raw; const o = []; for (let v = Math.floor(lo / st) * st; v <= hi + st - 1e-9; v += st) o.push(v); return o; };
+    const tY = x_ => { const x = new Date(x_.length === 7 ? x_ + '-15' : x_); return x.getFullYear() + (x.getMonth() + x.getDate() / 31) / 12; };
+    const T0 = tY(new Date().toISOString().slice(0, 10)), fwd = per === 'annual' ? 2 : 1;
+    let price = per === 'annual' ? (fs.px_m || []).map(([m, c]) => [tY(m), c]) : [];
+    if (price.length < 12) { const s_ = priceSeries(d); if (s_) price = s_.dates.map((x, i) => [tY(x), s_.c[i]]); }
+    price = price.filter(p_ => p_[1] > 0); price.push([T0, P0]);
+    let path = ser.pts.map(p_ => [tY(p_.date), p_.v]); path.push([T0, V]);
+    const start = Math.max(path[0][0], price[0][0] - 0.1);
+    path = path.filter(p_ => p_[0] >= start - 1e-6); if (path.length < 2) path.unshift([start, path[0][1]]);
+    price = price.filter(p_ => p_[0] >= start);
+    let pv = V; const proj = [[T0, V]]; for (let y = 1; y <= fwd; y++) { pv *= 1 + ser.g1 + (ser.gT - ser.g1) * (y - 1) / 4; proj.push([T0 + y, pv]); }
+    const all = path.concat(proj.slice(1));
+    const vAt = x => { if (x <= all[0][0]) return all[0][1]; for (let i = 1; i < all.length; i++) if (x <= all[i][0]) { const [a, va] = all[i - 1], [b, vb] = all[i]; return va + (vb - va) * (x - a) / (b - a || 1); } return all[all.length - 1][1]; };
+    const X0 = start, X1 = T0 + fwd;
+    const vals = path.concat(proj).map(p_ => p_[1]).concat(price.map(p_ => p_[1]));
+    const ticks = nice(Math.max(0, Math.min(...vals) * 0.8), Math.max(...vals) * 1.15, 4), lo = ticks[0], hi = ticks[ticks.length - 1];
+    const NARROW = window.innerWidth < 620, W = NARROW ? 380 : 760, H = NARROW ? 300 : 300, L = NARROW ? 44 : 56, Rm = NARROW ? 74 : 92, Tm = 12, Bm = 30, w = W - L - Rm, h = H - Tm - Bm;
+    const X = x => L + (x - X0) / (X1 - X0) * w, Y = v => Tm + (hi - Math.min(hi, Math.max(lo, v))) / (hi - lo) * h;
+    const xs = []; for (let x = X0; x <= X1 + 1e-9; x += (X1 - X0) / 100) xs.push(x);
+    const band = (a, b) => xs.map(x => `${X(x).toFixed(1)},${Y(vAt(x) * a).toFixed(1)}`).join(' ') + ' ' + xs.slice().reverse().map(x => `${X(x).toFixed(1)},${Y(vAt(x) * b).toFixed(1)}`).join(' ');
+    const halo = 'paint-order="stroke" stroke="#0D1018" stroke-width="4" stroke-linejoin="round"';
+    let g = `<polygon points="${band(1.2, 99)}" class="z-exp"/><polygon points="${band(0.8, 1.2)}" class="z-fair"/><polygon points="${band(0, 0.8)}" class="z-cheap"/>`;
+    ticks.forEach(v => { g += `<line x1="${L}" x2="${L + w}" y1="${Y(v)}" y2="${Y(v)}" class="grid"/><text x="${L - 8}" y="${Y(v) + 4}" text-anchor="end">${money(v)}</text>`; });
+    if (per === 'annual') { const stp = NARROW && X1 - X0 > 6 ? 2 : 1; for (let y = Math.ceil(X0); y <= X1; y++) if (Math.abs(y - T0) > 0.3 && (Math.ceil(X1) - y) % stp === 0) g += `<text x="${X(y)}" y="${H - 8}" text-anchor="middle">${NARROW && stp > 1 ? "'" + String(y).slice(2) : y}</text>`; }
+    else for (let q = Math.ceil(X0 * 2) / 2; q <= X1; q += 0.5) { const yy = Math.floor(q + 1e-6); if (Math.abs(q - T0) < 0.15) continue; g += `<text x="${X(q)}" y="${H - 8}" text-anchor="middle">${q - yy > 0.25 ? 'Jul' : 'Jan'} ${String(yy).slice(2)}</text>`; }
+    g += `<rect x="${X(T0)}" y="${Tm}" width="${X(X1) - X(T0)}" height="${h}" class="fut"/><line x1="${X(T0)}" x2="${X(T0)}" y1="${Tm}" y2="${Tm + h}" class="today"/><text x="${X(T0)}" y="${Tm + h + 18}" text-anchor="middle" class="today-t">TODAY</text>`;
+    const zr = v => Math.max(Tm + 10, Math.min(Tm + h - 4, Y(v)));
+    let zy = [zr((hi + vAt(X1) * 1.2) / 2), zr(vAt(X1)) + 4, zr((lo + vAt(X1) * 0.8) / 2)];
+    for (let i = 1; i < 3; i++) if (zy[i] - zy[i - 1] < 15) zy[i] = zy[i - 1] + 15;
+    if (zy[2] > Tm + h - 2) { zy[2] = Tm + h - 2; for (let i = 1; i >= 0; i--) if (zy[i + 1] - zy[i] < 15) zy[i] = zy[i + 1] - 15; }
+    [['Expensive', 'zl-exp'], [NARROW ? 'Fair' : 'Fair price', 'zl-fair'], ['Cheap', 'zl-cheap']].forEach(([l, c], i) => { g += `<text x="${L + w + 8}" y="${zy[i]}" class="zl ${c}">${l}</text>`; });
+    g += `<polyline points="${path.map(p_ => `${X(p_[0]).toFixed(1)},${Y(p_[1]).toFixed(1)}`).join(' ')}" class="ivl"/>`;
+    g += `<polyline points="${proj.map(p_ => `${X(p_[0]).toFixed(1)},${Y(p_[1]).toFixed(1)}`).join(' ')}" class="ivl proj"/>`;
+    g += `<polyline points="${price.map(p_ => `${X(p_[0]).toFixed(1)},${Y(p_[1]).toFixed(1)}`).join(' ')}" class="pxl"/>`;
+    path.slice(0, -1).forEach(p_ => { g += `<circle cx="${X(p_[0])}" cy="${Y(p_[1])}" r="3.5" class="ivd"><title>${money(p_[1])}</title></circle>`; });
+    g += `<circle cx="${X(T0)}" cy="${Y(V)}" r="6" class="ivd now"><title>Model estimate today ${money(V)}</title></circle><circle cx="${X(T0)}" cy="${Y(P0)}" r="6" class="pxd"><title>Price today ${money(P0)}</title></circle>`;
+    g += `<text x="${X(X1) - 2}" y="${Y(pv) - 10 < Tm + 12 ? Y(pv) + 20 : Y(pv) - 10}" text-anchor="end" class="est" ${halo}>${NARROW ? '' : (P() ? 'our estimate ' : 'base case ')}${money(pv)}</text>`;
+    // what the history says: how often the price sat in each zone
+    const inZ = price.slice(0, -1).map(([x, c]) => c / vAt(x));
+    const share = f_ => inZ.length ? Math.round(inZ.filter(f_).length / inZ.length * 100) : null;
+    const pCheap = share(z => z <= 0.8), pExp = share(z => z >= 1.2), yrs = Math.round(T0 - start);
+    const hist = inZ.length >= 6 ? (P() ? `Over the last ${yrs} year${yrs === 1 ? '' : 's'}, the share price spent about <b>${pCheap}%</b> of the time in the cheap zone and <b>${pExp}%</b> in the expensive zone.` : `Price/value over ${yrs}y: ≤0.8x ${pCheap}% of observations, ≥1.2x ${pExp}%, median ${NF(inZ.slice().sort((a, b) => a - b)[Math.floor(inZ.length / 2)], 2)}x.`) : '';
+    const capped = Math.abs(V / P0 - 2) < 0.005 || Math.abs(V / P0 - 0.5) < 0.005;
+    return title + `<p class="az-note" style="margin-top:0">${P() ? `The <b class="c-iv">blue line</b> is what we think ${esc(nm)} was worth each ${per === 'annual' ? 'year' : 'quarter'}, worked out from the results it actually reported. The <b class="c-px">orange line</b> is the share price. When the price dips into the green area it was cheap; in the red area it was expensive.` : `Methods re-run on each ${per === 'annual' ? 'fiscal year' : 'trailing-12-month quarter'} with today's r = ${pp((tg.inputs || {}).r, 1)}, g₁ = ${pp(ser.g1, 1)} → g∞ = ${pp(ser.gT, 1)}${ser.calibrated ? `; scaled ×${NF(ser.k, 2)} so the latest point = LRC Analyst Target` : '; not scaled (raw history too far from today\'s target)'}${per === 'annual' ? '; points = 2-year average' : ''}. Bands ±20% of value.`}</p>
+      ${seg}<div class="az-chart az-ivc"><svg viewBox="0 0 ${W} ${H}" style="aspect-ratio:${W}/${H}" data-narrow="${NARROW ? 1 : 0}" role="img" aria-label="Share price compared with what we think ${esc(nm)} is worth">${g}</svg>
+      <div class="az-leg"><span><i class="ivk"></i>${P() ? "What we think it's worth" : 'LRC intrinsic value'}</span><span><i class="pxk"></i>Share price</span><span><i class="ivk dash"></i>${P() ? `our estimate for the next ${fwd === 1 ? 'year' : fwd + ' years'}` : `base-case projection (${fwd}y)`}</span></div></div>
+      ${hist || capped ? `<p class="az-note">${hist}${capped ? ` <b>Note:</b> the methods point even further from the price, so today's value is capped at ${V > P0 ? 'twice' : 'half'} the share price (our safety limit) — treat it with extra care.` : ''}</p>` : ''}`;
+  }
+
   function bindRender() {
     const out = $('azOut');
     out.querySelectorAll('#azFsSt button').forEach(b => b.addEventListener('click', () => { FSV.st = b.dataset.st; reFs(); }));
     out.querySelectorAll('#azFsPer button').forEach(b => b.addEventListener('click', () => { FSV.per = b.dataset.per; reFs(); }));
+    bindIv();
     out.querySelectorAll('.az-riv').forEach(a => a.addEventListener('click', e => { e.preventDefault(); open(a.dataset.t, true); }));
   }
+  window.addEventListener('resize', () => { const sv = document.querySelector('#azIvH svg'); if (!sv || !CUR) return; if ((sv.dataset.narrow === '1') !== (window.innerWidth < 620)) { $('azIvH').innerHTML = ivHistory(CUR.d); bindIv(); } });
+  function bindIv() { document.querySelectorAll('#azIvH .az-ivseg button').forEach(b => b.addEventListener('click', () => { IVP = b.dataset.ivp; const el = $('azIvH'); if (el && CUR) { el.innerHTML = ivHistory(CUR.d); bindIv(); } })); }
   function reFs() { const el = $('az-fs'); if (!el) return; const tmp = document.createElement('div'); tmp.innerHTML = secStatements(); el.replaceWith(tmp.firstElementChild); bindRender(); }
 
   /* ---------------- boot ---------------- */
