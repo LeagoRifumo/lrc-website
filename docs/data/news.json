@@ -1,19 +1,25 @@
 {
- "edition": "Midday update · Friday 30 October 2026 15:55",
- "generated": "2026-10-30T15:55:00+02:00",
- "covers": "Wall Street open, US labour-cost data, oil and gold, and South African news to mid-afternoon on Friday 30 October 2026",
+ "edition": "Midday update · Friday 30 October 2026 16:55",
+ "generated": "2026-10-30T16:55:00+02:00",
+ "covers": "JSE session and the first hour of Wall Street trading, Friday 30 October 2026",
  "agent": "LRC News Desk",
- "headline": "Wall Street opens lower as Intel sinks 25.6% and Reddit 23%; Brent near $118 on Iran risk",
- "summary": "In South Africa the rand was little changed at about R16.63 per dollar (Trading Economics, 30 Oct) after the People's Bank of China renewed its R74 billion currency swap with the SARB for five years (Reuters via CNBC Africa, 30 Oct). On Wall Street, a minute after the open the S&P 500 was down 1.20%, the Nasdaq 1.38% and the Dow 0.26%, with Intel down 25.57% and Reddit 22.97%, while US labour costs rose 0.8% in the third quarter, in line with forecasts (TheStreet; Reuters via 93.3 The Drive, 30 Oct). Brent rose 2.5% to $117.80 and gold futures fell 1.43% to $3,973.90 (TheStreet, 30 Oct), a mix that keeps SA fuel-price pressure high and weighs on JSE gold miners.",
+ "headline": "Nasdaq slides 2.5% as Intel sinks 28%; gold drops below $3,920; SA trade surplus widens to R19.8 billion",
+ "summary": "In South Africa the trade surplus widened to R19.80 billion in September from R18.97 billion in August, and the monthly budget deficit narrowed to R22.10 billion from R29.14 billion (FX.co, 30 Oct), while the rand held near R16.63 per dollar (Trading Economics, 30 Oct). About an hour into US trading (10:21 New York time) the Nasdaq was down 2.52%, the S&P 500 1.49% and the Dow 0.72%, with Intel down 28.09%, Reddit about 24% and Amazon about 3.3% (Yahoo Finance, 30 Oct). Gold fell 2.87% to $3,915.80 and US crude rose 2.40% to $104.45 a barrel (Yahoo Finance, 30 Oct), a mix that keeps pressure on JSE gold and PGM miners and on SA fuel prices.",
  "sections": [
   {
    "name": "Breaking",
    "items": [
     {
-     "title": "Wall Street opens lower: S&P 500 down 1.2%, Nasdaq down 1.4%; Intel down 25.6%, Reddit down 23%",
-     "summary": "At 9:31 a.m. ET (15:31 SAST) the S&P 500 was down 1.20%, the Dow 0.26% and the Nasdaq 1.38%, while the small-cap Russell 2000 rose 1.01%. Intel fell 25.57% after a much weaker-than-expected fourth-quarter forecast, Reddit 22.97% and Twilio 20.20%; Exxon rose 2.09% and Chevron 1.70%, and the Roundhill Magnificent Seven ETF fell 2.25% (TheStreet, 30 Oct 2026). Before the open Dell was down 13%, AMD 10% and Nvidia 3% (24/7 Wall St., 30 Oct 2026).",
-     "source": "TheStreet, 30 Oct 2026; 24/7 Wall St., 30 Oct 2026",
-     "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-oct-30-2026"
+     "title": "Tech rout deepens: Nasdaq down 2.5%, S&P 500 down 1.5%; Intel down 28%",
+     "summary": "At 10:21 New York time (16:21 SAST) on 30 October the Nasdaq Composite was at 25,524.20, down 2.52%; the S&P 500 at 7,605.60, down 1.49%; and the Dow at 51,963.26, down 0.72%. Intel was down 28.09% at $66.21, Reddit about 24% and Roblox about 16%. The VIX fear gauge rose 9.62% to 18.85 and the 10-year Treasury yield eased to 4.945% (Yahoo Finance, 30 Oct).",
+     "source": "Yahoo Finance",
+     "url": "https://finance.yahoo.com/markets/live/stock-market-today-friday-october-30-dow-sp-500-nasdaq-amazon-intel-131609630.html"
+    },
+    {
+     "title": "Gold falls 2.9% to about $3,916 as oil rises and Fed-hike bets grow",
+     "summary": "Gold was down 2.87% at $3,915.80 an ounce and bitcoin down 5.41% at about $76,700, while US crude (December) rose 2.40% to $104.45 a barrel, as of mid-morning New York time on 30 October (Yahoo Finance, 30 Oct). Gold had been at $3,973.90 earlier in the morning (TheStreet, 30 Oct).",
+     "source": "Yahoo Finance",
+     "url": "https://finance.yahoo.com/markets/live/stock-market-today-friday-october-30-dow-sp-500-nasdaq-amazon-intel-131609630.html"
     },
     {
      "title": "Iran says four tankers hit mines near Hormuz; US Central Command says main routes are clear",
@@ -111,6 +117,18 @@
    "name": "South Africa",
    "items": [
     {
+     "title": "SA trade surplus widens to R19.80 billion in September",
+     "summary": "South Africa's trade surplus rose to R19.80 billion in September from R18.97 billion in August (FX.co, 30 Oct), above the R16.40 billion a Reuters poll had expected (CNBC Africa, 30 Oct). A bigger surplus generally supports the rand.",
+     "source": "FX.co",
+     "url": "https://www.fx.co/en/forex-news/3262853"
+    },
+    {
+     "title": "Monthly budget deficit narrows to R22.10 billion in September",
+     "summary": "Government's monthly budget deficit narrowed to R22.10 billion in September from R29.14 billion in August (FX.co, 30 Oct).",
+     "source": "FX.co",
+     "url": "https://www.fx.co/en/forex-news/3262887"
+    },
+    {
      "title": "China and South Africa renew R74 billion currency swap for five years",
      "summary": "The People's Bank of China said it had extended its bilateral currency swap with the South African Reserve Bank for five years, at 30 billion yuan (about $4.51 billion, or R74 billion) (Reuters via CNBC Africa, 30 Oct 2026). A swap line is a back-up source of foreign currency, which adds to SA's buffers.",
      "source": "Reuters via CNBC Africa, 30 Oct 2026",
@@ -158,10 +176,10 @@
      "url": "https://tradingeconomics.com/south-africa/currency"
     },
     {
-     "title": "Gold at $3,976, down 1.1%; silver and platinum down about 3.3%",
-     "summary": "At 07:12 ET (13:12 SAST) spot gold was bid at $3,976.20, down $44.30 (1.10%); silver $50.31 (-3.33%), platinum $1,433 (-3.31%) and palladium $961 (-2.54%) (Kitco, 30 Oct 2026). Weaker precious metals weigh on JSE gold and PGM miners. Later, at 8:40 a.m. ET (14:40 SAST), gold futures were down 1.43% at $3,973.90 and silver futures down 4.37% at $50.09 (TheStreet, 30 Oct 2026).",
-     "source": "Kitco, 30 Oct 2026",
-     "url": "https://www.kitco.com/price/precious-metals"
+     "title": "Gold down 2.9% at about $3,916; silver down 4.4%",
+     "summary": "Gold was at $3,915.80, down 2.87%, by mid-morning New York time (Yahoo Finance, 30 Oct); silver futures were down 4.37% at $50.09 earlier in the morning (TheStreet, 30 Oct). Weaker metal prices weigh on JSE gold and PGM miners.",
+     "source": "Yahoo Finance",
+     "url": "https://finance.yahoo.com/markets/live/stock-market-today-friday-october-30-dow-sp-500-nasdaq-amazon-intel-131609630.html"
     },
     {
      "title": "Bank of Japan holds at 1.25%, says underlying inflation is in line with 2% for the first time since 2013",
@@ -202,19 +220,19 @@
      ]
     },
     {
-     "title": "INTC: opens down about 25.6%, well below its scanner target",
-     "summary": "Intel closed at $92.07 on 29 October (LRC Stock Scanner), above the $85.87 scanner target that flagged it as overvalued. It fell 25.57% at the open (TheStreet, 30 Oct), with a quote of $68.48 at 9:30 a.m. ET (Yahoo Finance), well below that target. Fourth-quarter revenue guidance of $15–16 billion was below the $17 billion expected (24/7 Wall St., 30 Oct). INTC is a HOLD; rating unchanged.",
-     "source": "LRC Stock Scanner, 29 Oct 2026; TheStreet, 30 Oct 2026; Yahoo Finance, 30 Oct 2026",
-     "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-oct-30-2026",
+     "title": "INTC: down about 28% in early trade, well below its scanner target",
+     "summary": "Intel was at $66.21, down 28.09%, at 10:21 New York time after a weak fourth-quarter outlook and soft PC sales (Yahoo Finance, 30 Oct). This is a covered-company move of far more than 5%; the scanner rating is unchanged by this brief.",
+     "source": "Yahoo Finance",
+     "url": "https://finance.yahoo.com/markets/live/stock-market-today-friday-october-30-dow-sp-500-nasdaq-amazon-intel-131609630.html",
      "tickers": [
       "INTC"
      ]
     },
     {
-     "title": "RDDT: opens down about 23%, below its scanner target",
-     "summary": "Reddit closed at $129.60 on 29 October (LRC Stock Scanner); a 22.97% fall at the open (TheStreet, 30 Oct) puts it near $100, below the $104.80 scanner target and well below the $142.80 scanner level. RDDT is a HOLD; rating unchanged.",
-     "source": "LRC Stock Scanner, 29 Oct 2026; TheStreet, 30 Oct 2026",
-     "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-oct-30-2026",
+     "title": "RDDT: down about 24% in early trade, below its scanner target",
+     "summary": "Reddit was down about 24% after weaker-than-expected daily active users and a soft revenue forecast (Yahoo Finance, 30 Oct). The scanner rating is unchanged by this brief.",
+     "source": "Yahoo Finance",
+     "url": "https://finance.yahoo.com/markets/live/stock-market-today-friday-october-30-dow-sp-500-nasdaq-amazon-intel-131609630.html",
      "tickers": [
       "RDDT"
      ]
@@ -245,10 +263,10 @@
   }
  ],
  "watch_today": [
-  "Whether Intel (-25.6%), Reddit (-23%) and Amazon hold their losses into the US close at 22:00 SAST",
-  "SARS September trade balance (Reuters poll: R16.40 billion surplus) and Treasury budget balance; rand near R16.63",
-  "Chicago PMI (forecast 54.6, prior 58.8) — input for December Fed-hike bets",
-  "Iran: any US military move after the reported briefing; Brent near $118",
-  "Gold below $4,000 — JSE gold and PGM miners; month-end flows"
+  "Whether the Nasdaq (-2.5%) and Intel (-28%) recover into the US close at 22:00 SAST",
+  "Rand near R16.63 after a stronger-than-expected R19.80 billion September trade surplus",
+  "Gold below $3,920 — JSE gold and PGM miners; month-end flows",
+  "Iran and the Strait of Hormuz: any US military move; oil prices",
+  "Crypto after the $6.3 billion Binance theft; bitcoin near $76,700"
  ]
 }
