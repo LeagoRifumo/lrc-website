@@ -2509,7 +2509,7 @@
 "n": "Anglo American",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 3.822
+"amount": 3.845
 },
 "AGM|2024-12-16": {
 "t": "AGM",
@@ -4642,6 +4642,13 @@
 "amount": 1.7,
 "pay": "2026-08-21"
 },
+"AMP|2026-11-09": {
+"t": "AMP",
+"ex": "2026-11-09",
+"n": "Ameriprise Financial, Inc.",
+"m": "US",
+"cur": "USD"
+},
 "AMRZ|2026-04-24": {
 "t": "AMRZ",
 "ex": "2026-04-24",
@@ -4666,6 +4673,13 @@
 "cur": "USD",
 "amount": 0.11,
 "pay": "2026-08-26"
+},
+"AMRZ|2026-11-10": {
+"t": "AMRZ",
+"ex": "2026-11-10",
+"n": "Amrize Ltd",
+"m": "US",
+"cur": "USD"
 },
 "AMR|2023-11-30": {
 "t": "AMR",
@@ -4956,7 +4970,7 @@
 "n": "AngloGold Ashanti",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 11.47
+"amount": 11.53
 },
 "ANG.JO|2025-05-28": {
 "t": "ANG.JO",
@@ -4964,7 +4978,7 @@
 "n": "AngloGold Ashanti",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 2.077
+"amount": 2.09
 },
 "ANG.JO|2025-08-20": {
 "t": "ANG.JO",
@@ -4972,7 +4986,7 @@
 "n": "AngloGold Ashanti",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 13.29
+"amount": 13.37
 },
 "ANG.JO|2025-11-26": {
 "t": "ANG.JO",
@@ -4980,7 +4994,7 @@
 "n": "AngloGold Ashanti",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 15.12
+"amount": 15.21
 },
 "ANG.JO|2026-03-11": {
 "t": "ANG.JO",
@@ -4988,7 +5002,7 @@
 "n": "AngloGold Ashanti",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 28.75
+"amount": 28.92
 },
 "ANG.JO|2026-05-27": {
 "t": "ANG.JO",
@@ -4996,7 +5010,7 @@
 "n": "AngloGold Ashanti",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 19.28
+"amount": 19.39
 },
 "ANG.JO|2026-08-19": {
 "t": "ANG.JO",
@@ -5004,7 +5018,7 @@
 "n": "AngloGold Ashanti",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 11.96
+"amount": 12.04
 },
 "ANH.JO|2025-05-05": {
 "t": "ANH.JO",
@@ -5012,7 +5026,7 @@
 "n": "Anheuser-Busch InBev SA/NV",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 18.57
+"amount": 18.66
 },
 "ANH.JO|2025-11-17": {
 "t": "ANH.JO",
@@ -5020,7 +5034,7 @@
 "n": "Anheuser-Busch InBev SA/NV",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 2.785
+"amount": 2.799
 },
 "ANH.JO|2026-05-06": {
 "t": "ANH.JO",
@@ -5028,7 +5042,7 @@
 "n": "Anheuser-Busch InBev SA/NV",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 18.57
+"amount": 18.66
 },
 "AON|2024-11-01": {
 "t": "AON",
@@ -5380,7 +5394,7 @@
 "n": "Alphamin Resources Corp.",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 0.8324
+"amount": 0.8388
 },
 "APH.JO|2025-11-19": {
 "t": "APH.JO",
@@ -5388,7 +5402,7 @@
 "n": "Alphamin Resources Corp.",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 0.4756
+"amount": 0.4793
 },
 "APH.JO|2026-05-20": {
 "t": "APH.JO",
@@ -5396,7 +5410,7 @@
 "n": "Alphamin Resources Corp.",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 1.546
+"amount": 1.558
 },
 "APH.JO|2026-10-21": {
 "t": "APH.JO",
@@ -5404,7 +5418,7 @@
 "n": "Alphamin Resources Corp.",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 1.546
+"amount": 1.558
 },
 "APH|2024-12-17": {
 "t": "APH",
@@ -11034,6 +11048,13 @@
 "amount": 0.703,
 "pay": "2026-09-01"
 },
+"BKH|2026-11-17": {
+"t": "BKH",
+"ex": "2026-11-17",
+"n": "Black Hills Corporation",
+"m": "US",
+"cur": "USD"
+},
 "BKNG|2024-12-06": {
 "t": "BKNG",
 "ex": "2024-12-06",
@@ -11728,6 +11749,13 @@
 "cur": "USD",
 "amount": 0.293,
 "pay": "2026-10-15"
+},
+"BNL|2026-12-31": {
+"t": "BNL",
+"ex": "2026-12-31",
+"n": "Broadstone Net Lease, Inc.",
+"m": "US",
+"cur": "USD"
 },
 "BNS|2025-01-07": {
 "t": "BNS",
@@ -13659,6 +13687,13 @@
 "cur": "USD",
 "amount": 0.47,
 "pay": "2026-10-15"
+},
+"BXMT|2026-12-31": {
+"t": "BXMT",
+"ex": "2026-12-31",
+"n": "Blackstone Mortgage Trust, Inc.",
+"m": "US",
+"cur": "USD"
 },
 "BXP|2024-12-31": {
 "t": "BXP",
@@ -16168,7 +16203,7 @@
 "n": "Richemont",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 60.63
+"amount": 60.89
 },
 "CFR.JO|2026-09-16": {
 "t": "CFR.JO",
@@ -16176,7 +16211,7 @@
 "n": "Richemont",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 86.9
+"amount": 87.28
 },
 "CFR|2024-11-29": {
 "t": "CFR",
@@ -16242,6 +16277,13 @@
 "cur": "USD",
 "amount": 1.03,
 "pay": "2026-09-15"
+},
+"CFR|2026-11-30": {
+"t": "CFR",
+"ex": "2026-11-30",
+"n": "Cullen/Frost Bankers, Inc.",
+"m": "US",
+"cur": "USD"
 },
 "CF|2024-11-15": {
 "t": "CF",
@@ -16600,6 +16642,13 @@
 "cur": "USD",
 "amount": 0.438,
 "pay": "2026-01-06"
+},
+"CHDN|2026-12-04": {
+"t": "CHDN",
+"ex": "2026-12-04",
+"n": "Churchill Downs Incorporated",
+"m": "US",
+"cur": "USD"
 },
 "CHD|2024-11-15": {
 "t": "CHD",
@@ -17112,6 +17161,13 @@
 "cur": "USD",
 "amount": 1.56,
 "pay": "2026-09-23"
+},
+"CI|2026-12-03": {
+"t": "CI",
+"ex": "2026-12-03",
+"n": "The Cigna Group",
+"m": "US",
+"cur": "USD"
 },
 "CKS.JO|2025-08-06": {
 "t": "CKS.JO",
@@ -18668,6 +18724,13 @@
 "amount": 0.2,
 "pay": "2026-08-28"
 },
+"CNXN|2026-11-10": {
+"t": "CNXN",
+"ex": "2026-11-10",
+"n": "PC Connection, Inc.",
+"m": "US",
+"cur": "USD"
+},
 "CNX|2016-02-11": {
 "t": "CNX",
 "ex": "2016-02-11",
@@ -19640,6 +19703,13 @@
 "cur": "USD",
 "amount": 0.19,
 "pay": "2026-10-26"
+},
+"CP|2026-12-31": {
+"t": "CP",
+"ex": "2026-12-31",
+"n": "Canadian Pacific Kansas City Limited",
+"m": "US",
+"cur": "USD"
 },
 "CRAI|2024-11-26": {
 "t": "CRAI",
@@ -20966,6 +21036,13 @@
 "amount": 0.33,
 "pay": "2026-08-25"
 },
+"CTSH|2026-11-13": {
+"t": "CTSH",
+"ex": "2026-11-13",
+"n": "Cognizant Technology Solutions Corporation",
+"m": "US",
+"cur": "USD"
+},
 "CTS|2024-12-27": {
 "t": "CTS",
 "ex": "2024-12-27",
@@ -21695,6 +21772,13 @@
 "cur": "USD",
 "amount": 0.335,
 "pay": "2026-08-21"
+},
+"CWT|2026-11-09": {
+"t": "CWT",
+"ex": "2026-11-09",
+"n": "California Water Service Group",
+"m": "US",
+"cur": "USD"
 },
 "CW|2024-11-22": {
 "t": "CW",
@@ -23062,6 +23146,13 @@
 "amount": 0.45,
 "pay": "2026-08-13"
 },
+"DHI|2026-11-12": {
+"t": "DHI",
+"ex": "2026-11-12",
+"n": "D.R. Horton, Inc.",
+"m": "US",
+"cur": "USD"
+},
 "DHR|2024-12-27": {
 "t": "DHR",
 "ex": "2024-12-27",
@@ -23272,6 +23363,13 @@
 "cur": "USD",
 "amount": 0.525,
 "pay": "2026-09-02"
+},
+"DINO|2026-11-12": {
+"t": "DINO",
+"ex": "2026-11-12",
+"n": "HF Sinclair Corporation",
+"m": "US",
+"cur": "USD"
 },
 "DIS|2024-12-16": {
 "t": "DIS",
@@ -24511,6 +24609,13 @@
 "cur": "ZAR",
 "amount": 29.0
 },
+"DTC.JO|2026-12-02": {
+"t": "DTC.JO",
+"ex": "2026-12-02",
+"n": "Datatec",
+"m": "JSE",
+"cur": "ZAR"
+},
 "DTE|2024-12-16": {
 "t": "DTE",
 "ex": "2024-12-16",
@@ -24995,6 +25100,13 @@
 "cur": "USD",
 "amount": 0.31,
 "pay": "2026-09-11"
+},
+"EBAY|2026-12-04": {
+"t": "EBAY",
+"ex": "2026-12-04",
+"n": "eBay Inc.",
+"m": "US",
+"cur": "USD"
 },
 "EBC|2024-12-03": {
 "t": "EBC",
@@ -25639,6 +25751,13 @@
 "amount": 0.031,
 "pay": "2026-09-02"
 },
+"EFXT|2026-11-12": {
+"t": "EFXT",
+"ex": "2026-11-12",
+"n": "Enerflex Ltd.",
+"m": "US",
+"cur": "USD"
+},
 "EFX|2024-11-22": {
 "t": "EFX",
 "ex": "2024-11-22",
@@ -25785,6 +25904,13 @@
 "cur": "USD",
 "amount": 0.075,
 "pay": "2026-09-15"
+},
+"EGO|2026-12-01": {
+"t": "EGO",
+"ex": "2026-12-01",
+"n": "Eldorado Gold Corporation",
+"m": "US",
+"cur": "USD"
 },
 "EGP|2024-12-31": {
 "t": "EGP",
@@ -27552,6 +27678,13 @@
 "amount": 5.16,
 "pay": "2026-09-16"
 },
+"EQIX|2026-11-18": {
+"t": "EQIX",
+"ex": "2026-11-18",
+"n": "Equinix, Inc.",
+"m": "US",
+"cur": "USD"
+},
 "EQNR|2024-11-19": {
 "t": "EQNR",
 "ex": "2024-11-19",
@@ -28911,6 +29044,38 @@
 "n": "Expand Energy Corporation",
 "m": "US",
 "cur": "USD"
+},
+"EXP.JO|2024-11-20": {
+"t": "EXP.JO",
+"ex": "2024-11-20",
+"n": "Exemplar REITail Limited",
+"m": "JSE",
+"cur": "ZAR",
+"amount": 0.7025
+},
+"EXP.JO|2025-06-11": {
+"t": "EXP.JO",
+"ex": "2025-06-11",
+"n": "Exemplar REITail Limited",
+"m": "JSE",
+"cur": "ZAR",
+"amount": 0.8316
+},
+"EXP.JO|2025-11-26": {
+"t": "EXP.JO",
+"ex": "2025-11-26",
+"n": "Exemplar REITail Limited",
+"m": "JSE",
+"cur": "ZAR",
+"amount": 0.8493
+},
+"EXP.JO|2026-06-10": {
+"t": "EXP.JO",
+"ex": "2026-06-10",
+"n": "Exemplar REITail Limited",
+"m": "JSE",
+"cur": "ZAR",
+"amount": 0.9192
 },
 "EXPD|2024-12-02": {
 "t": "EXPD",
@@ -31355,6 +31520,13 @@
 "amount": 0.01,
 "pay": "2026-09-17"
 },
+"FLG|2026-12-07": {
+"t": "FLG",
+"ex": "2026-12-07",
+"n": "Flagstar Bank, National Association",
+"m": "US",
+"cur": "USD"
+},
 "FLNG|2025-02-19": {
 "t": "FLNG",
 "ex": "2025-02-19",
@@ -31686,6 +31858,13 @@
 "cur": "USD",
 "amount": 0.26,
 "pay": "2026-09-01"
+},
+"FMBH|2026-11-16": {
+"t": "FMBH",
+"ex": "2026-11-16",
+"n": "First Mid Bancshares, Inc.",
+"m": "US",
+"cur": "USD"
 },
 "FMS|2025-05-23": {
 "t": "FMS",
@@ -33197,6 +33376,13 @@
 "amount": 0.15,
 "pay": "2026-09-01"
 },
+"F|2026-11-10": {
+"t": "F",
+"ex": "2026-11-10",
+"n": "Ford Motor Company",
+"m": "US",
+"cur": "USD"
+},
 "GABC|2024-11-08": {
 "t": "GABC",
 "ex": "2024-11-08",
@@ -34093,6 +34279,13 @@
 "cur": "USD",
 "amount": 0.125,
 "pay": "2026-09-09"
+},
+"GEN|2026-11-16": {
+"t": "GEN",
+"ex": "2026-11-16",
+"n": "Gen Digital Inc.",
+"m": "US",
+"cur": "USD"
 },
 "GEO|2021-01-22": {
 "t": "GEO",
@@ -35028,7 +35221,7 @@
 "n": "Glencore",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 0.8308
+"amount": 0.8359
 },
 "GLN.JO|2025-08-27": {
 "t": "GLN.JO",
@@ -35036,7 +35229,7 @@
 "n": "Glencore",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 0.8308
+"amount": 0.8359
 },
 "GLN.JO|2026-05-06": {
 "t": "GLN.JO",
@@ -35044,7 +35237,7 @@
 "n": "Glencore",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 1.412
+"amount": 1.421
 },
 "GLN.JO|2026-08-26": {
 "t": "GLN.JO",
@@ -35052,7 +35245,7 @@
 "n": "Glencore",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 2.825
+"amount": 2.842
 },
 "GLNG|2024-11-25": {
 "t": "GLNG",
@@ -36713,6 +36906,13 @@
 "cur": "USD",
 "amount": 0.08,
 "pay": "2026-09-15"
+},
+"GTX|2026-12-02": {
+"t": "GTX",
+"ex": "2026-12-02",
+"n": "Garrett Motion Inc.",
+"m": "US",
+"cur": "USD"
 },
 "GTY|2024-12-26": {
 "t": "GTY",
@@ -38473,6 +38673,13 @@
 "amount": 0.7,
 "pay": "2026-09-15"
 },
+"HLI|2026-12-01": {
+"t": "HLI",
+"ex": "2026-12-01",
+"n": "Houlihan Lokey, Inc.",
+"m": "US",
+"cur": "USD"
+},
 "HLM.JO|2019-04-10": {
 "t": "HLM.JO",
 "ex": "2019-04-10",
@@ -38762,7 +38969,7 @@
 "n": "Hammerson Plc",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 2.15
+"amount": 2.165
 },
 "HMN|2024-12-16": {
 "t": "HMN",
@@ -39055,6 +39262,13 @@
 "m": "US",
 "cur": "USD",
 "pay": "2026-12-02"
+},
+"HONA|2026-11-13": {
+"t": "HONA",
+"ex": "2026-11-13",
+"n": "Honeywell Aerospace Inc.",
+"m": "US",
+"cur": "USD"
 },
 "HON|2024-11-15": {
 "t": "HON",
@@ -40035,6 +40249,13 @@
 "amount": 1.452,
 "pay": "2026-09-15"
 },
+"HSY|2026-11-16": {
+"t": "HSY",
+"ex": "2026-11-16",
+"n": "The Hershey Company",
+"m": "US",
+"cur": "USD"
+},
 "HTGC|2024-11-13": {
 "t": "HTGC",
 "ex": "2024-11-13",
@@ -40928,6 +41149,13 @@
 "amount": 0.15,
 "pay": "2026-09-10"
 },
+"H|2026-11-23": {
+"t": "H",
+"ex": "2026-11-23",
+"n": "Hyatt Hotels Corporation",
+"m": "US",
+"cur": "USD"
+},
 "IAG|2013-07-01": {
 "t": "IAG",
 "ex": "2013-07-01",
@@ -41745,6 +41973,13 @@
 "amount": 0.4,
 "pay": "2026-10-09"
 },
+"IFF|2026-12-18": {
+"t": "IFF",
+"ex": "2026-12-18",
+"n": "International Flavors & Fragrances Inc.",
+"m": "US",
+"cur": "USD"
+},
 "IFS|2025-04-24": {
 "t": "IFS",
 "ex": "2025-04-24",
@@ -42369,7 +42604,7 @@
 "n": "Investec plc",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 4.67
+"amount": 4.702
 },
 "INSW|2024-12-13": {
 "t": "INSW",
@@ -44247,6 +44482,13 @@
 "amount": 0.16,
 "pay": "2026-09-18"
 },
+"JOE|2026-11-12": {
+"t": "JOE",
+"ex": "2026-11-12",
+"n": "The St. Joe Company",
+"m": "US",
+"cur": "USD"
+},
 "JOYY|2025-04-17": {
 "t": "JOYY",
 "ex": "2025-04-17",
@@ -45223,6 +45465,13 @@
 "cur": "USD",
 "amount": 0.04,
 "pay": "2026-09-03"
+},
+"KGC|2026-11-19": {
+"t": "KGC",
+"ex": "2026-11-19",
+"n": "Kinross Gold Corporation",
+"m": "US",
+"cur": "USD"
 },
 "KGS|2024-11-01": {
 "t": "KGS",
@@ -46324,7 +46573,7 @@
 "n": "Karooooo Ltd.",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 20.77
+"amount": 20.9
 },
 "KRO.JO|2026-07-15": {
 "t": "KRO.JO",
@@ -46332,7 +46581,7 @@
 "n": "Karooooo Ltd.",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 24.93
+"amount": 25.08
 },
 "KRT|2024-11-20": {
 "t": "KRT",
@@ -48666,6 +48915,13 @@
 "amount": 0.555,
 "pay": "2026-08-18"
 },
+"LNG|2026-11-09": {
+"t": "LNG",
+"ex": "2026-11-09",
+"n": "Cheniere Energy, Inc.",
+"m": "US",
+"cur": "USD"
+},
 "LNN|2024-11-15": {
 "t": "LNN",
 "ex": "2024-11-15",
@@ -49389,7 +49645,7 @@
 "n": "Lighthouse Properties p.l.c.",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 0.2508
+"amount": 0.252
 },
 "LTE.JO|2025-09-03": {
 "t": "LTE.JO",
@@ -49397,7 +49653,7 @@
 "n": "Lighthouse Properties p.l.c.",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 0.2437
+"amount": 0.2449
 },
 "LTE.JO|2026-03-25": {
 "t": "LTE.JO",
@@ -49405,7 +49661,7 @@
 "n": "Lighthouse Properties p.l.c.",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 0.2688
+"amount": 0.2702
 },
 "LTE.JO|2026-08-26": {
 "t": "LTE.JO",
@@ -49413,7 +49669,7 @@
 "n": "Lighthouse Properties p.l.c.",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 0.2674
+"amount": 0.2687
 },
 "LTM|2025-04-14": {
 "t": "LTM",
@@ -52929,6 +53185,13 @@
 "amount": 1.0,
 "pay": "2026-09-10"
 },
+"MPC|2026-11-18": {
+"t": "MPC",
+"ex": "2026-11-18",
+"n": "Marathon Petroleum Corporation",
+"m": "US",
+"cur": "USD"
+},
 "MPT.JO|2025-04-09": {
 "t": "MPT.JO",
 "ex": "2025-04-09",
@@ -55197,7 +55460,7 @@
 "n": "Ninety One Group",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 1.645
+"amount": 1.657
 },
 "NAT|2024-12-17": {
 "t": "NAT",
@@ -57226,6 +57489,13 @@
 "amount": 0.32,
 "pay": "2026-09-16"
 },
+"NPO|2026-12-02": {
+"t": "NPO",
+"ex": "2026-12-02",
+"n": "Enpro Inc.",
+"m": "US",
+"cur": "USD"
+},
 "NRG|2024-11-01": {
 "t": "NRG",
 "ex": "2024-11-01",
@@ -57304,7 +57574,7 @@
 "n": "NEPI Rockcastle",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 5.106
+"amount": 5.132
 },
 "NRP.JO|2025-09-10": {
 "t": "NRP.JO",
@@ -57312,7 +57582,7 @@
 "n": "NEPI Rockcastle",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 5.19
+"amount": 5.216
 },
 "NRP.JO|2026-03-18": {
 "t": "NRP.JO",
@@ -57320,7 +57590,7 @@
 "n": "NEPI Rockcastle",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 5.177
+"amount": 5.203
 },
 "NRP.JO|2026-09-09": {
 "t": "NRP.JO",
@@ -57328,7 +57598,7 @@
 "n": "NEPI Rockcastle",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 5.372
+"amount": 5.399
 },
 "NRP|2025-03-11": {
 "t": "NRP",
@@ -59942,6 +60212,13 @@
 "amount": 0.5,
 "pay": "2026-09-30"
 },
+"OLED|2026-12-17": {
+"t": "OLED",
+"ex": "2026-12-17",
+"n": "Universal Display Corporation",
+"m": "US",
+"cur": "USD"
+},
 "OLN|2024-11-14": {
 "t": "OLN",
 "ex": "2024-11-14",
@@ -60767,6 +61044,13 @@
 "cur": "USD",
 "amount": 0.57,
 "pay": "2026-08-27"
+},
+"OSK|2026-11-16": {
+"t": "OSK",
+"ex": "2026-11-16",
+"n": "Oshkosh Corporation",
+"m": "US",
+"cur": "USD"
 },
 "OSW|2024-11-20": {
 "t": "OSW",
@@ -62279,6 +62563,13 @@
 "amount": 0.275,
 "pay": "2026-08-28"
 },
+"PBF|2026-11-12": {
+"t": "PBF",
+"ex": "2026-11-12",
+"n": "PBF Energy Inc.",
+"m": "US",
+"cur": "USD"
+},
 "PBI|2024-11-18": {
 "t": "PBI",
 "ex": "2024-11-18",
@@ -62343,6 +62634,13 @@
 "cur": "USD",
 "amount": 0.1,
 "pay": "2026-09-08"
+},
+"PBI|2026-11-16": {
+"t": "PBI",
+"ex": "2026-11-16",
+"n": "Pitney Bowes Inc.",
+"m": "US",
+"cur": "USD"
 },
 "PBR|2024-12-13": {
 "t": "PBR",
@@ -63695,7 +63993,7 @@
 "n": "Primary Health Properties Plc",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 0.3946
+"amount": 0.3974
 },
 "PHP.JO|2025-03-26": {
 "t": "PHP.JO",
@@ -63703,7 +64001,7 @@
 "n": "Primary Health Properties Plc",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 0.3946
+"amount": 0.3974
 },
 "PHP.JO|2025-07-02": {
 "t": "PHP.JO",
@@ -63711,7 +64009,7 @@
 "n": "Primary Health Properties Plc",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 0.3946
+"amount": 0.3974
 },
 "PHP.JO|2025-10-08": {
 "t": "PHP.JO",
@@ -63719,7 +64017,7 @@
 "n": "Primary Health Properties Plc",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 0.3946
+"amount": 0.3974
 },
 "PHP.JO|2026-01-28": {
 "t": "PHP.JO",
@@ -63727,7 +64025,7 @@
 "n": "Primary Health Properties Plc",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 0.4057
+"amount": 0.4086
 },
 "PHP.JO|2026-03-25": {
 "t": "PHP.JO",
@@ -63735,7 +64033,7 @@
 "n": "Primary Health Properties Plc",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 0.4057
+"amount": 0.4086
 },
 "PHP.JO|2026-07-01": {
 "t": "PHP.JO",
@@ -63743,7 +64041,7 @@
 "n": "Primary Health Properties Plc",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 0.4057
+"amount": 0.4086
 },
 "PHP.JO|2026-10-14": {
 "t": "PHP.JO",
@@ -63751,7 +64049,7 @@
 "n": "Primary Health Properties Plc",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 0.4057
+"amount": 0.4086
 },
 "PH|2024-11-08": {
 "t": "PH",
@@ -63817,6 +64115,13 @@
 "cur": "USD",
 "amount": 2.0,
 "pay": "2026-09-11"
+},
+"PH|2026-11-13": {
+"t": "PH",
+"ex": "2026-11-13",
+"n": "Parker-Hannifin Corporation",
+"m": "US",
+"cur": "USD"
 },
 "PII|2024-12-02": {
 "t": "PII",
@@ -64847,6 +65152,13 @@
 "amount": 1.3,
 "pay": "2026-08-27"
 },
+"POOL|2026-11-10": {
+"t": "POOL",
+"ex": "2026-11-10",
+"n": "Pool Corporation",
+"m": "US",
+"cur": "USD"
+},
 "POR|2024-12-24": {
 "t": "POR",
 "ex": "2024-12-24",
@@ -65822,7 +66134,7 @@
 "n": "Prosus",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 1.859
+"amount": 1.866
 },
 "PRX.JO|2025-10-30": {
 "t": "PRX.JO",
@@ -65830,7 +66142,7 @@
 "n": "Prosus",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 3.717
+"amount": 3.732
 },
 "PRX.JO|2026-11-05": {
 "t": "PRX.JO",
@@ -66206,6 +66518,13 @@
 "amount": 0.1,
 "pay": "2026-09-15"
 },
+"PTEN|2026-12-01": {
+"t": "PTEN",
+"ex": "2026-12-01",
+"n": "Patterson-UTI Energy, Inc.",
+"m": "US",
+"cur": "USD"
+},
 "PUK|2025-03-28": {
 "t": "PUK",
 "ex": "2025-03-28",
@@ -66304,6 +66623,13 @@
 "amount": 0.038,
 "pay": "2026-09-23"
 },
+"PVH|2026-11-25": {
+"t": "PVH",
+"ex": "2026-11-25",
+"n": "PVH Corp.",
+"m": "US",
+"cur": "USD"
+},
 "PWP|2024-12-04": {
 "t": "PWP",
 "ex": "2024-12-04",
@@ -66368,6 +66694,13 @@
 "cur": "USD",
 "amount": 0.07,
 "pay": "2026-09-10"
+},
+"PWP|2026-11-24": {
+"t": "PWP",
+"ex": "2026-11-24",
+"n": "Perella Weinberg Partners",
+"m": "US",
+"cur": "USD"
 },
 "PWR|2025-01-02": {
 "t": "PWR",
@@ -67656,6 +67989,13 @@
 "amount": 0.04,
 "pay": "2026-09-10"
 },
+"RES|2026-11-10": {
+"t": "RES",
+"ex": "2026-11-10",
+"n": "RPC, Inc.",
+"m": "US",
+"cur": "USD"
+},
 "REXR|2024-12-31": {
 "t": "REXR",
 "ex": "2024-12-31",
@@ -68658,7 +68998,7 @@
 "n": "Reinet",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 6.877
+"amount": 6.904
 },
 "RNI.JO|2026-08-26": {
 "t": "RNI.JO",
@@ -68666,7 +69006,7 @@
 "n": "Reinet",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 8.085
+"amount": 8.117
 },
 "RNR|2024-12-13": {
 "t": "RNR",
@@ -69070,6 +69410,71 @@
 "cur": "USD",
 "amount": 0.445,
 "pay": "2026-09-30"
+},
+"RPC|2024-11-29": {
+"t": "RPC",
+"ex": "2024-11-29",
+"n": "Ridgepost Capital, Inc",
+"m": "US",
+"cur": "USD",
+"amount": 0.035
+},
+"RPC|2025-02-28": {
+"t": "RPC",
+"ex": "2025-02-28",
+"n": "Ridgepost Capital, Inc",
+"m": "US",
+"cur": "USD",
+"amount": 0.035
+},
+"RPC|2025-05-30": {
+"t": "RPC",
+"ex": "2025-05-30",
+"n": "Ridgepost Capital, Inc",
+"m": "US",
+"cur": "USD",
+"amount": 0.038
+},
+"RPC|2025-08-29": {
+"t": "RPC",
+"ex": "2025-08-29",
+"n": "Ridgepost Capital, Inc",
+"m": "US",
+"cur": "USD",
+"amount": 0.038
+},
+"RPC|2025-11-28": {
+"t": "RPC",
+"ex": "2025-11-28",
+"n": "Ridgepost Capital, Inc",
+"m": "US",
+"cur": "USD",
+"amount": 0.038
+},
+"RPC|2026-02-27": {
+"t": "RPC",
+"ex": "2026-02-27",
+"n": "Ridgepost Capital, Inc",
+"m": "US",
+"cur": "USD",
+"amount": 0.038
+},
+"RPC|2026-05-29": {
+"t": "RPC",
+"ex": "2026-05-29",
+"n": "Ridgepost Capital, Inc",
+"m": "US",
+"cur": "USD",
+"amount": 0.04
+},
+"RPC|2026-08-31": {
+"t": "RPC",
+"ex": "2026-08-31",
+"n": "Ridgepost Capital, Inc",
+"m": "US",
+"cur": "USD",
+"amount": 0.04,
+"pay": "2026-09-18"
 },
 "RPM|2025-01-17": {
 "t": "RPM",
@@ -70153,6 +70558,13 @@
 "amount": 0.188,
 "pay": "2026-09-17"
 },
+"RYZ|2026-12-03": {
+"t": "RYZ",
+"ex": "2026-12-03",
+"n": "Ryerson Holding Corporation",
+"m": "US",
+"cur": "USD"
+},
 "RY|2025-01-27": {
 "t": "RY",
 "ex": "2025-01-27",
@@ -70467,6 +70879,13 @@
 "cur": "USD",
 "amount": 0.41,
 "pay": "2026-10-15"
+},
+"SAH|2026-12-15": {
+"t": "SAH",
+"ex": "2026-12-15",
+"n": "Sonic Automotive, Inc.",
+"m": "US",
+"cur": "USD"
 },
 "SAIC|2025-01-10": {
 "t": "SAIC",
@@ -70920,6 +71339,71 @@
 "cur": "USD",
 "amount": 0.3,
 "pay": "2026-08-31"
+},
+"SBSI|2024-11-21": {
+"t": "SBSI",
+"ex": "2024-11-21",
+"n": "Southside Bancshares, Inc.",
+"m": "US",
+"cur": "USD",
+"amount": 0.36
+},
+"SBSI|2025-02-20": {
+"t": "SBSI",
+"ex": "2025-02-20",
+"n": "Southside Bancshares, Inc.",
+"m": "US",
+"cur": "USD",
+"amount": 0.36
+},
+"SBSI|2025-05-22": {
+"t": "SBSI",
+"ex": "2025-05-22",
+"n": "Southside Bancshares, Inc.",
+"m": "US",
+"cur": "USD",
+"amount": 0.36
+},
+"SBSI|2025-08-21": {
+"t": "SBSI",
+"ex": "2025-08-21",
+"n": "Southside Bancshares, Inc.",
+"m": "US",
+"cur": "USD",
+"amount": 0.36
+},
+"SBSI|2025-11-20": {
+"t": "SBSI",
+"ex": "2025-11-20",
+"n": "Southside Bancshares, Inc.",
+"m": "US",
+"cur": "USD",
+"amount": 0.36
+},
+"SBSI|2026-02-19": {
+"t": "SBSI",
+"ex": "2026-02-19",
+"n": "Southside Bancshares, Inc.",
+"m": "US",
+"cur": "USD",
+"amount": 0.36
+},
+"SBSI|2026-05-18": {
+"t": "SBSI",
+"ex": "2026-05-18",
+"n": "Southside Bancshares, Inc.",
+"m": "US",
+"cur": "USD",
+"amount": 0.36
+},
+"SBSI|2026-08-20": {
+"t": "SBSI",
+"ex": "2026-08-20",
+"n": "Southside Bancshares, Inc.",
+"m": "US",
+"cur": "USD",
+"amount": 0.37,
+"pay": "2026-09-03"
 },
 "SBSW|2026-03-20": {
 "t": "SBSW",
@@ -72053,6 +72537,13 @@
 "cur": "USD",
 "amount": 0.7812,
 "pay": "2026-09-21"
+},
+"SHEL|2026-11-13": {
+"t": "SHEL",
+"ex": "2026-11-13",
+"n": "Shell plc",
+"m": "US",
+"cur": "USD"
 },
 "SHG.JO|2025-04-09": {
 "t": "SHG.JO",
@@ -74506,7 +74997,7 @@
 "n": "Sirius Real Estate Limited",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 0.5682
+"amount": 0.571
 },
 "SRE.JO|2025-06-25": {
 "t": "SRE.JO",
@@ -74514,7 +75005,7 @@
 "n": "Sirius Real Estate Limited",
 "m": "JSE",
 "cur": "ZAR",
-"amount": 0.5738
+"amount": 0.5766
 },
 "SRE.JO|2025-12-10": {
 "t": "SRE.JO",
@@ -74596,6 +75087,38 @@
 "cur": "USD",
 "amount": 0.658,
 "pay": "2026-10-15"
+},
+"SRI.JO|2026-01-28": {
+"t": "SRI.JO",
+"ex": "2026-01-28",
+"n": "Supermarket Income REIT plc",
+"m": "JSE",
+"cur": "ZAR",
+"amount": 0.3459
+},
+"SRI.JO|2026-05-06": {
+"t": "SRI.JO",
+"ex": "2026-05-06",
+"n": "Supermarket Income REIT plc",
+"m": "JSE",
+"cur": "ZAR",
+"amount": 0.3459
+},
+"SRI.JO|2026-07-22": {
+"t": "SRI.JO",
+"ex": "2026-07-22",
+"n": "Supermarket Income REIT plc",
+"m": "JSE",
+"cur": "ZAR",
+"amount": 0.3459
+},
+"SRI.JO|2026-10-28": {
+"t": "SRI.JO",
+"ex": "2026-10-28",
+"n": "Supermarket Income REIT plc",
+"m": "JSE",
+"cur": "ZAR",
+"amount": 0.3527
 },
 "SR|2024-12-11": {
 "t": "SR",
@@ -75096,6 +75619,13 @@
 "amount": 0.37,
 "pay": "2026-08-27"
 },
+"STBA|2026-11-12": {
+"t": "STBA",
+"ex": "2026-11-12",
+"n": "S&T Bancorp, Inc.",
+"m": "US",
+"cur": "USD"
+},
 "STC|2024-12-16": {
 "t": "STC",
 "ex": "2024-12-16",
@@ -75282,6 +75812,13 @@
 "cur": "USD",
 "amount": 0.69,
 "pay": "2026-09-25"
+},
+"STE|2026-11-17": {
+"t": "STE",
+"ex": "2026-11-17",
+"n": "STERIS plc",
+"m": "US",
+"cur": "USD"
 },
 "STLA|2025-04-23": {
 "t": "STLA",
@@ -76971,6 +77508,13 @@
 "m": "US",
 "cur": "USD",
 "pay": "2017-05-25"
+},
+"TAL|2026-12-01": {
+"t": "TAL",
+"ex": "2026-12-01",
+"n": "TAL Education Group",
+"m": "US",
+"cur": "USD"
 },
 "TAP|2024-12-06": {
 "t": "TAP",
@@ -79635,6 +80179,13 @@
 "amount": 0.59,
 "pay": "2026-08-28"
 },
+"TPG|2026-11-09": {
+"t": "TPG",
+"ex": "2026-11-09",
+"n": "TPG Inc.",
+"m": "US",
+"cur": "USD"
+},
 "TPL|2024-12-02": {
 "t": "TPL",
 "ex": "2024-12-02",
@@ -81464,6 +82015,13 @@
 "amount": 0.14,
 "pay": "2026-09-15"
 },
+"TW|2026-12-01": {
+"t": "TW",
+"ex": "2026-12-01",
+"n": "Tradeweb Markets Inc.",
+"m": "US",
+"cur": "USD"
+},
 "TXNM|2025-01-31": {
 "t": "TXNM",
 "ex": "2025-01-31",
@@ -82622,6 +83180,13 @@
 "amount": 0.531,
 "pay": "2026-09-18"
 },
+"UL|2026-11-13": {
+"t": "UL",
+"ex": "2026-11-13",
+"n": "Unilever PLC",
+"m": "US",
+"cur": "USD"
+},
 "UMBF|2024-12-10": {
 "t": "UMBF",
 "ex": "2024-12-10",
@@ -83520,6 +84085,13 @@
 "amount": 0.475,
 "pay": "2026-08-31"
 },
+"UTL|2026-11-13": {
+"t": "UTL",
+"ex": "2026-11-13",
+"n": "Unitil Corporation",
+"m": "US",
+"cur": "USD"
+},
 "UTZ|2024-12-16": {
 "t": "UTZ",
 "ex": "2024-12-16",
@@ -83714,6 +84286,71 @@
 "cur": "USD",
 "amount": 0.23,
 "pay": "2026-08-19"
+},
+"UVV|2025-01-13": {
+"t": "UVV",
+"ex": "2025-01-13",
+"n": "Universal Corporation",
+"m": "US",
+"cur": "USD",
+"amount": 0.81
+},
+"UVV|2025-04-14": {
+"t": "UVV",
+"ex": "2025-04-14",
+"n": "Universal Corporation",
+"m": "US",
+"cur": "USD",
+"amount": 0.81
+},
+"UVV|2025-07-14": {
+"t": "UVV",
+"ex": "2025-07-14",
+"n": "Universal Corporation",
+"m": "US",
+"cur": "USD",
+"amount": 0.82
+},
+"UVV|2025-10-10": {
+"t": "UVV",
+"ex": "2025-10-10",
+"n": "Universal Corporation",
+"m": "US",
+"cur": "USD",
+"amount": 0.82
+},
+"UVV|2026-01-12": {
+"t": "UVV",
+"ex": "2026-01-12",
+"n": "Universal Corporation",
+"m": "US",
+"cur": "USD",
+"amount": 0.82
+},
+"UVV|2026-04-15": {
+"t": "UVV",
+"ex": "2026-04-15",
+"n": "Universal Corporation",
+"m": "US",
+"cur": "USD",
+"amount": 0.82
+},
+"UVV|2026-07-13": {
+"t": "UVV",
+"ex": "2026-07-13",
+"n": "Universal Corporation",
+"m": "US",
+"cur": "USD",
+"amount": 0.83
+},
+"UVV|2026-10-09": {
+"t": "UVV",
+"ex": "2026-10-09",
+"n": "Universal Corporation",
+"m": "US",
+"cur": "USD",
+"amount": 0.83,
+"pay": "2026-11-02"
 },
 "VAC|2024-12-19": {
 "t": "VAC",
@@ -87189,6 +87826,13 @@
 "amount": 0.15,
 "pay": "2026-09-11"
 },
+"WHD|2026-11-30": {
+"t": "WHD",
+"ex": "2026-11-30",
+"n": "Cactus, Inc.",
+"m": "US",
+"cur": "USD"
+},
 "WHL.JO|2025-03-26": {
 "t": "WHL.JO",
 "ex": "2025-03-26",
@@ -87471,6 +88115,13 @@
 "cur": "USD",
 "amount": 0.33,
 "pay": "2026-09-05"
+},
+"WING|2026-11-13": {
+"t": "WING",
+"ex": "2026-11-13",
+"n": "Wingstop Inc.",
+"m": "US",
+"cur": "USD"
 },
 "WIT|2025-01-28": {
 "t": "WIT",
