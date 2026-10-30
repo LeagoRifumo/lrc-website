@@ -1,6 +1,6 @@
 {
  "note": "JSE company announcements (SENS) recorded by the LRC JSE Announcements job every weekday. results = published results with headline earnings per share (HEPS) vs the same period last year; trading_statements = expected HEPS change ranges; dividends = declared dividends with the JSE dates. Amounts in cents. Every entry carries its source.",
- "updated": "2026-10-28T19:10+02:00",
+ "updated": "2026-10-30T19:30+02:00",
  "results": [
   {
    "t": "CLS.JO",
@@ -22,6 +22,28 @@
    "heps_prior": -59.77,
    "unit": "c",
    "source": "Pick n Pay Stores SENS — Condensed consolidated interim financial results for the 26 weeks ended 30 August 2026 (\"H1 FY27\") (26 Oct 2026), via Sharenet https://www.sharenet.co.za/v3/sens_display.php?tdate=20261026070500&seq=2&scode=PIK (headline loss per share 40.71c vs 59.77c; basic loss per share 36.77c; no interim dividend declared in the announcement)"
+  },
+  {
+   "t": "DCP.JO",
+   "name": "Dis-Chem",
+   "date": "2026-10-29",
+   "period": "Six months to 31 Aug 2026",
+   "heps": 64.3,
+   "heps_prior": 73.8,
+   "unit": "c",
+   "dps": 25.62181,
+   "source": "Dis-Chem Pharmacies SENS — Interim consolidated financial results for the six months ended 31 August 2026 and dividend declaration (29 Oct 2026), via ShareData https://www.sharedata.co.za/v2/scripts/SENS.aspx?id=564807 (HEPS 64.3c vs 73.8c; interim dividend 25.62181c gross)"
+  },
+  {
+   "t": "ADR.JO",
+   "name": "Adcorp",
+   "date": "2026-10-29",
+   "period": "Six months to 31 Aug 2026",
+   "heps": 60.5,
+   "heps_prior": 53.0,
+   "unit": "c",
+   "dps": 28.46216,
+   "source": "Adcorp Holdings SENS — Summary of the unaudited interim financial results and declaration of interim cash dividend for the six months ended 31 August 2026 (29 Oct 2026), via ShareData https://www.sharedata.co.za/v2/scripts/SENS.aspx?id=564734 (HEPS 60.5c vs 53.0c; interim dividend 28.46216c gross vs 24.77681c)"
   }
  ],
  "trading_statements": [
@@ -40,6 +62,14 @@
    "heps_change_low": 0.22,
    "heps_change_high": 0.27,
    "source": "Vodacom Group SENS — Trading statement for the interim results period ended 30 September 2026 (28 Oct 2026), via Sharenet https://www.sharenet.co.za/v3/sens_display.php?tdate=20261028170000&seq=59&scode= (HEPS expected 570c to 593c vs 467c; EPS 1 756c to 1 789c vs 472c, incl. once-off R23.2bn Safaricom remeasurement gain excluded from HEPS; interim results on or about 10 Nov 2026)"
+  },
+  {
+   "t": "ARL.JO",
+   "date": "2026-10-29",
+   "period": "Year to 30 Sep 2026",
+   "heps_change_low": 0.95,
+   "heps_change_high": 1.05,
+   "source": "Astral Foods SENS — Trading statement and operational update (29 Oct 2026) https://www.astralfoods.com/wp-content/uploads/2026/10/Trading-Statement-and-Operational-Update-29-October-2026.pdf (HEPS expected 4 277c to 4 496c vs 2 193c; EPS up 90%-100% to 4 324c-4 552c vs 2 276c; results on SENS on 23 Nov 2026)"
   }
  ],
  "dividends": [
@@ -64,6 +94,46 @@
    "record": "2026-11-10",
    "pay": "2026-12-03",
    "source": "Prosus N.V. — Finalisation of distributions to shareholders / Dividend declaration (28 Oct 2026), regulatory release via Reuters on TradingView https://www.tradingview.com/news/reuters.com,2026-10-28:newsml_RSb7890Aa:0-reg-prosus-nv-naspers-limited-dividend-declaration/ (year to 31 Mar 2026; 28 euro cents per N share, gross 520.23860 ZAR cents for JSE holders at EUR/ZAR 18.57995; paid as a capital repayment unless the holder elects a dividend; payment date depends on elections)"
+  },
+  {
+   "t": "DCP.JO",
+   "period": "Interim",
+   "declared": "2026-10-29",
+   "amount_c": 25.62181,
+   "ldt": "2026-11-17",
+   "ex": "2026-11-18",
+   "record": "2026-11-20",
+   "pay": "2026-11-23",
+   "source": "Dis-Chem Pharmacies SENS — Interim consolidated financial results for the six months ended 31 August 2026 and dividend declaration (29 Oct 2026), via ShareData https://www.sharedata.co.za/v2/scripts/SENS.aspx?id=564807"
+  },
+  {
+   "t": "ADR.JO",
+   "period": "Interim",
+   "declared": "2026-10-29",
+   "amount_c": 28.46216,
+   "ldt": "2027-01-12",
+   "ex": "2027-01-13",
+   "record": "2027-01-15",
+   "pay": "2027-01-18",
+   "source": "Adcorp Holdings SENS — Summary of the unaudited interim financial results and declaration of interim cash dividend for the six months ended 31 August 2026 (29 Oct 2026), via ShareData https://www.sharedata.co.za/v2/scripts/SENS.aspx?id=564734"
+  },
+  {
+   "t": "ANH.JO",
+   "period": "Interim",
+   "declared": "2026-10-29",
+   "ex": "2026-11-18",
+   "record": "2026-11-20",
+   "pay": "2026-11-23",
+   "source": "Anheuser-Busch InBev — Third quarter 2026 results (29 Oct 2026) https://www.sec.gov/Archives/edgar/data/0001668717/000119312526437051/d159047dex991.htm (interim dividend for FY2026 of 0.40 EUR per share; JSE ex-dividend 18 Nov 2026, record 20 Nov 2026, payment 23 Nov 2026; ZAR amount for the South African register not stated in the release)"
+  },
+  {
+   "t": "BYI.JO",
+   "period": "Interim",
+   "declared": "2026-10-13",
+   "amount_c": 73.54677,
+   "record": "2026-11-06",
+   "pay": "2026-11-20",
+   "source": "Bytes Technology Group SENS — Notice of dividend currency exchange rate (30 Oct 2026), via ShareData https://www.sharedata.co.za/v2/scripts/SENS.aspx?id=564905 (interim dividend for the six months ended 31 Aug 2026 of 3.3 pence per share, declared with results on 13 Oct 2026; 73.54677 ZAR cents gross for the South African register at GBP1 = ZAR22.28690; last day to trade and ex-dividend date not stated in this notice)"
   }
  ]
 }

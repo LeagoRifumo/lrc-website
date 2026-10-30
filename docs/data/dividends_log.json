@@ -1437,7 +1437,10 @@
 "ex": "2027-01-13",
 "n": "Adcorp Holdings Limited",
 "m": "JSE",
-"cur": "ZAR"
+"cur": "ZAR",
+"amount": 0.2846,
+"pay": "2027-01-18",
+"source": "Adcorp Holdings SENS — Summary of the unaudited interim financial results and declaration of interim cash dividend for the six months ended 31 August 2026 (29 Oct 2026), via ShareData https://www.sharedata.co.za/v2/scripts/SENS.aspx?id=564734"
 },
 "ADSK|2005-03-22": {
 "t": "ADSK",
@@ -5043,6 +5046,16 @@
 "m": "JSE",
 "cur": "ZAR",
 "amount": 18.66
+},
+"ANH.JO|2026-11-18": {
+"t": "ANH.JO",
+"ex": "2026-11-18",
+"n": "Anheuser-Busch InBev SA/NV",
+"m": "JSE",
+"cur": "ZAR",
+"amount": null,
+"pay": "2026-11-23",
+"source": "Anheuser-Busch InBev — Third quarter 2026 results (29 Oct 2026) https://www.sec.gov/Archives/edgar/data/0001668717/000119312526437051/d159047dex991.htm (interim dividend for FY2026 of 0.40 EUR per share; JSE ex-dividend 18 Nov 2026, record 20 Nov 2026, payment 23 Nov 2026; ZAR amount for the South African register not stated in the release)"
 },
 "AON|2024-11-01": {
 "t": "AON",
@@ -22440,7 +22453,10 @@
 "ex": "2026-11-18",
 "n": "Dis-Chem",
 "m": "JSE",
-"cur": "ZAR"
+"cur": "ZAR",
+"amount": 0.2562,
+"pay": "2026-11-23",
+"source": "Dis-Chem Pharmacies SENS — Interim consolidated financial results for the six months ended 31 August 2026 and dividend declaration (29 Oct 2026), via ShareData https://www.sharedata.co.za/v2/scripts/SENS.aspx?id=564807"
 },
 "DD|2024-11-29": {
 "t": "DD",
