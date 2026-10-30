@@ -1,0 +1,237 @@
+{
+ "week_ending": "2026-10-30",
+ "title": "Market dashboard — week to 30 Oct 2026",
+ "live": false,
+ "generated": "2026-10-31T00:15+02:00",
+ "groups": [
+  {
+   "name": "South Africa",
+   "rows": [
+    {
+     "name": "JSE All Share (J203)",
+     "unit": "index",
+     "latest": 107621.67,
+     "week_ago": 108020.1016,
+     "year_ago": 109669.7969,
+     "as_of": "2026-10-30",
+     "source": "Yahoo Finance ^J203.JO daily close (2026-10-30; week-ago 2026-10-23; year-ago 2025-10-30)",
+     "note": "",
+     "carried": false
+    },
+    {
+     "name": "JSE Top 40 (J200)",
+     "unit": "index",
+     "latest": 99412.34,
+     "week_ago": 99990.8984,
+     "year_ago": 102366.7031,
+     "as_of": "2026-10-30",
+     "source": "Yahoo Finance ^J200.JO daily close (2026-10-30; week-ago 2026-10-23; year-ago 2025-10-30)",
+     "note": "",
+     "carried": false
+    },
+    {
+     "name": "USD / ZAR",
+     "unit": "rand per $",
+     "latest": 16.7073,
+     "week_ago": 16.4801,
+     "year_ago": 17.1627,
+     "as_of": "2026-10-30",
+     "source": "Yahoo Finance ZAR=X daily close (2026-10-30; week-ago 2026-10-22; year-ago 2025-10-30)",
+     "note": "",
+     "carried": false
+    },
+    {
+     "name": "EUR / ZAR",
+     "unit": "rand per €",
+     "latest": 18.6422,
+     "week_ago": 18.4909,
+     "year_ago": 19.9158,
+     "as_of": "2026-10-30",
+     "source": "Yahoo Finance EURZAR=X daily close (2026-10-30; week-ago 2026-10-22; year-ago 2025-10-30)",
+     "note": "",
+     "carried": false
+    },
+    {
+     "name": "GBP / ZAR",
+     "unit": "rand per £",
+     "latest": 22.3447,
+     "week_ago": 22.0957,
+     "year_ago": 22.6478,
+     "as_of": "2026-10-30",
+     "source": "Yahoo Finance GBPZAR=X daily close (2026-10-30; week-ago 2026-10-22; year-ago 2025-10-30)",
+     "note": "",
+     "carried": false
+    },
+    {
+     "name": "SA repo rate",
+     "unit": "%",
+     "latest": 7.25,
+     "week_ago": 7.25,
+     "year_ago": 7.0,
+     "as_of": "2026-09-23",
+     "source": "Latest: Trading Economics (25bp hike to 7.25% on 23 Sep 2026, unanimous; prior 7.00%). Week-ago: derived, no MPC between 23 Sep and 19 Nov. Year-ago: derived from FocusEconomics (20 Nov 2025 cut 25bp to 6.75% after a September 2025 pause => 7.00% on 23 Oct 2025). Next MPC: SARB MPC dates page, 19 Nov 2026.",
+     "note": "Hiked 25bp to 7.25% on 23 Sep; next MPC 19 Nov 2026.",
+     "carried": true
+    },
+    {
+     "name": "SA 10-year government bond",
+     "unit": "%",
+     "latest": 8.79,
+     "week_ago": 8.855,
+     "year_ago": 8.89,
+     "as_of": "2026-10-23",
+     "source": "Investing.com SA 10Y historical data (23 Oct 8.790, 16 Oct 8.855); Trading Economics showed 8.78% on 23 Oct. Year-ago: derived from Trading Economics yearly change of -0.11pp.",
+     "note": "Near a one-month low after the medium-term budget; down about 7bp on the week.",
+     "carried": true
+    },
+    {
+     "name": "SA CPI inflation (y/y)",
+     "unit": "%",
+     "latest": 4.5,
+     "week_ago": 4.4,
+     "year_ago": 3.4,
+     "as_of": "2026-09",
+     "source": "Stats SA P0141 September 2026 (released 21 Oct 2026): Sep 2026 4.5%, Aug 2026 4.4% (prior print, used as week_ago), Sep 2025 3.4%.",
+     "note": "Up to 4.5% from 4.4%, above the 3% target; next MPC 19 Nov.",
+     "carried": true
+    }
+   ]
+  },
+  {
+   "name": "United States & global",
+   "rows": [
+    {
+     "name": "S&P 500",
+     "unit": "index",
+     "latest": 7580.07,
+     "week_ago": 7623.6802,
+     "year_ago": 6822.3398,
+     "as_of": "2026-10-30",
+     "source": "Yahoo Finance ^GSPC daily close (2026-10-30; week-ago 2026-10-23; year-ago 2025-10-30)",
+     "note": "",
+     "carried": false
+    },
+    {
+     "name": "Nasdaq Composite",
+     "unit": "index",
+     "latest": 25436.998,
+     "week_ago": 25955.3398,
+     "year_ago": 23581.1406,
+     "as_of": "2026-10-30",
+     "source": "Yahoo Finance ^IXIC daily close (2026-10-30; week-ago 2026-10-23; year-ago 2025-10-30)",
+     "note": "",
+     "carried": false
+    },
+    {
+     "name": "MSCI Emerging Markets",
+     "unit": "index",
+     "latest": 1578.04,
+     "week_ago": 1620.6,
+     "year_ago": 1381.3,
+     "as_of": "2026-10-23",
+     "source": "MarketScreener MSCI Emerging Markets (USD) quotes: close 23 Oct 1,578.04 (Investing.com showed 1,578.86, prev close 1,575.68). Week-ago: derived from MarketScreener 1-week change of -2.63% (cross-check: 19 Oct close 1,617.86 at -0.17%). Year-ago: derived from MarketScreener 1-year change of +14.24% (Investing.com shows +14.30%).",
+     "note": "Down 2.6% on the week (-2.46% on 22 Oct) but still up about 14% y/y.",
+     "carried": true
+    },
+    {
+     "name": "US Fed funds rate (upper)",
+     "unit": "%",
+     "latest": 4.0,
+     "week_ago": 4.0,
+     "year_ago": 4.25,
+     "as_of": "2026-10-23",
+     "source": "FRED DFEDTARU (2026-10-23: 4.00). Week-ago: derived, FRED shows 4.00 for 19-23 Oct and there was no FOMC meeting between 15-16 Sep and 27-28 Oct. Year-ago: derived, Fed cut 25bp to 3.75-4.00% on 29 Oct 2025 (TSCPA report), so the upper bound was 4.25 on 23 Oct 2025. Next FOMC: federalreserve.gov, 27-28 Oct 2026.",
+     "note": "Upper bound 4.00%; the next FOMC decision is on 28 Oct 2026.",
+     "carried": true
+    },
+    {
+     "name": "US 10-year Treasury",
+     "unit": "%",
+     "latest": 4.929,
+     "week_ago": 4.988,
+     "year_ago": 4.093,
+     "as_of": "2026-10-30",
+     "source": "Yahoo Finance ^TNX daily close (2026-10-30; week-ago 2026-10-23; year-ago 2025-10-30)",
+     "note": "",
+     "carried": false
+    },
+    {
+     "name": "US CPI inflation (y/y)",
+     "unit": "%",
+     "latest": 3.7,
+     "week_ago": 3.4,
+     "year_ago": 3.0,
+     "as_of": "2026-09",
+     "source": "BLS CPI release, 14 Oct 2026 (DOL-hosted PDF): Sep 2026 3.7%, Aug 2026 3.4% (prior print, used as week_ago), Sep 2025 3.0% (Table 5).",
+     "note": "Rose to 3.7% (consensus 3.6%), well above the Fed's 2% goal, ahead of the 28 Oct FOMC.",
+     "carried": true
+    }
+   ]
+  },
+  {
+   "name": "Commodities",
+   "rows": [
+    {
+     "name": "Gold",
+     "unit": "$/oz",
+     "latest": 3884.9,
+     "week_ago": 4007.8999,
+     "year_ago": 4015.8999,
+     "as_of": "2026-10-30",
+     "source": "Yahoo Finance GC=F daily close (2026-10-30; week-ago 2026-10-23; year-ago 2025-10-30)",
+     "note": "",
+     "carried": false
+    },
+    {
+     "name": "Platinum",
+     "unit": "$/oz",
+     "latest": 1434.5,
+     "week_ago": 1554.2,
+     "year_ago": 1608.3,
+     "as_of": "2026-10-30",
+     "source": "Yahoo Finance PL=F daily close (2026-10-30; week-ago 2026-10-23; year-ago 2025-10-30)",
+     "note": "",
+     "carried": false
+    },
+    {
+     "name": "Brent crude",
+     "unit": "$/bbl",
+     "latest": 112.33,
+     "week_ago": 116.72,
+     "year_ago": 65.0,
+     "as_of": "2026-10-30",
+     "source": "Yahoo Finance BZ=F daily close (2026-10-30; week-ago 2026-10-23; year-ago 2025-10-30)",
+     "note": "",
+     "carried": false
+    },
+    {
+     "name": "Copper",
+     "unit": "$/t",
+     "latest": 14350.9739,
+     "week_ago": 14277.1187,
+     "year_ago": 11195.0605,
+     "as_of": "2026-10-30",
+     "source": "Yahoo Finance HG=F daily close (2026-10-30; week-ago 2026-10-23; year-ago 2025-10-30) — converted $/lb × 2,204.62 to $/t",
+     "note": "",
+     "carried": false
+    },
+    {
+     "name": "Iron ore",
+     "unit": "$/t",
+     "latest": 90.83,
+     "week_ago": 90.9,
+     "year_ago": 105.41,
+     "as_of": "2026-10-23",
+     "source": "Trading Economics iron ore (90.83 USD/t on 23 Oct 2026). Week-ago: Investing.com Iron ore 62% Fe CFR futures, 16 Oct 2026 close 90.90 (a different series from TE). Year-ago: derived from TE yearly change of -13.83%.",
+     "note": "Flat on the week near $91/t; down about 14% y/y and 6.5% m/m, a headwind for SA iron ore miners.",
+     "carried": true
+    }
+   ]
+  }
+ ],
+ "auto_view": "The JSE All Share moved -0.4% on the week to 107,622 and the rand weakened 1.4% to R16.71/$. In New York the S&P 500 moved -0.6% and the Nasdaq -2.0%, with the US 10-year at 4.93%. Commodities: gold -3.1%, platinum -7.7%, Brent -3.8%, copper +0.5%.",
+ "missing": [],
+ "agent": "LRC Dashboard automation",
+ "movers": [],
+ "market_view": ""
+}
