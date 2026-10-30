@@ -1,25 +1,55 @@
 {
- "edition": "Evening update · Thursday 29 October 2026 22:15",
- "generated": "2026-10-29T22:15:00+02:00",
- "covers": "JSE session, the Wall Street close and Amazon's after-hours results, Thursday 29 October 2026",
+ "edition": "Morning brief · Friday 30 October 2026 06:30",
+ "generated": "2026-10-30T06:30:00+02:00",
+ "covers": "Wall Street's Thursday close and after-hours results (Amazon, Intel, Reddit), Asia and commodities overnight, and the SA open on Friday 30 October 2026",
  "agent": "LRC News Desk",
- "headline": "Nasdaq closes down 1.4% as Alphabet sinks about 13%; Amazon reports AWS growth of 39% after the bell; US inflation at 3.6%",
- "summary": "In South Africa the rand traded at R16.645 per dollar, about 0.3% weaker, and the JSE Top 40 was up 0.1% as gold and platinum fell and producer inflation jumped to 6.2% (Reuters via CNBC Africa, 29 Oct), on the day Stats SA's rebasing put the economy about 5% bigger than thought. On Wall Street the Nasdaq closed down 1.38% at 26,184.73, the S&P 500 down 0.30% at 7,720.39 and the Dow down 0.25% at 52,342.56 as Alphabet fell about 13% (Yahoo Finance, 29 Oct), after September PCE inflation rose to 3.6% and markets priced about an 84.6% chance of a December Fed hike (Reuters via GV Wire, 29 Oct); after the close Amazon reported sales of $201.9 billion and AWS growth of 39% (Cord Cutters News, 29 Oct). Hotter US inflation and a likely Fed hike tend to support the dollar and weigh on the rand and on richly valued tech shares; Amazon's AWS result is the next test of the AI-spending trade when US trading resumes on Friday.",
+ "headline": "Nasdaq-100 futures down 2% as Amazon falls about 7% and Intel about 17–23% after results; Houthi strikes on Saudi oil sites push Brent to $115.74 and gold dips below $4,000",
+ "summary": "In South Africa the rand was at about R16.61 per dollar early on Friday and the JSE Top 40 closed Thursday at 101,875.93 (Yahoo Finance via LRC Market Dashboard, 29–30 Oct), with gold and platinum lower overnight ahead of today's trade and budget balance data. On Wall Street Nasdaq-100 futures were down 2% and S&P 500 futures down 0.8% by 8:47 pm ET after Amazon fell 6.7% after hours on a revenue and profit miss and Intel slumped nearly 23% on weak fourth-quarter guidance (Investing.com, 29 Oct). Brent rose 0.75% to $115.74 after Houthi attacks on Saudi oil facilities (Reuters via Business Standard, 30 Oct) while spot gold fell 0.7% to $3,992.46 on December Fed-hike bets (Investing.com, 30 Oct) — a mix that tends to support the dollar and weigh on the rand and on richly valued tech shares.",
  "sections": [
   {
    "name": "Breaking",
    "items": [
     {
+     "title": "US futures sink: Nasdaq-100 down 2%, S&P 500 down 0.8% after Amazon and Intel results",
+     "summary": "By 8:47 pm ET on Thursday Nasdaq-100 futures were down 2% at 28,975.0, S&P 500 futures down 0.8% at 7,690.25 and Dow futures up 0.04% at 52,533.0. Amazon fell 6.7% after hours, extending a 4.3% regular-session drop, and Intel slumped nearly 23% after hours; investors also kept bets on a December Fed hike after strong GDP and PCE data (Investing.com, 29 Oct 2026).",
+     "source": "Investing.com, 29 Oct 2026",
+     "url": "https://www.investing.com/news/stock-market-news/us-stock-futures-sink-nasdaq-down-2-as-amazon-intel-earnings-underwhelm-4985675"
+    },
+    {
+     "title": "Amazon misses on sales and profit; Q3 capex $77.3 billion and free cash flow negative $42.4 billion",
+     "summary": "Third-quarter revenue was $201.94 billion (+12%) against $202.31 billion expected and adjusted EPS $1.89 against $1.96; operating income of $28.1 billion beat the $26.2 billion estimate. AWS sales rose 39% to about $45.98 billion, just above forecasts, but online stores ($68.47 billion, +2%) and advertising ($19.64 billion, +11%) missed. Quarterly capex was $77.3 billion against $58.7 billion expected, free cash flow was negative $42.4 billion, and fourth-quarter sales guidance of $240–247 billion has a midpoint below the $244.5 billion consensus; the full-year capex plan stays at $220 billion. Shares fell more than 7% in late trading (SiliconANGLE, 29 Oct 2026).",
+     "source": "SiliconANGLE, 29 Oct 2026",
+     "url": "https://siliconangle.com/2026/10/29/amazons-stock-falls-after-posts-disappointing-earnings-and-revenue-miss",
+     "tickers": [
+      "AMZN"
+     ]
+    },
+    {
+     "title": "Intel falls about 17% after hours on weak fourth-quarter guidance",
+     "summary": "Intel's third-quarter revenue was $16.5 billion (+21%), in line with estimates, and adjusted EPS $0.52 beat the $0.41 consensus. But it guided fourth-quarter revenue to $15–16 billion against about $17 billion expected and adjusted EPS to $0.25 against $0.43, with gross margin narrowing to 38% from 43%, citing a PC slump expected to last at least through the first half of 2027, high memory prices and supply limits including a 14 October explosion at its Fab 28 plant in Israel. Data centre and AI revenue rose 78% to $7.3 billion (Yahoo Finance, 29 Oct 2026). Shares fell about 17% after hours (Yahoo Finance) and nearly 23% later in the evening (Investing.com, 29 Oct).",
+     "source": "Yahoo Finance, 29 Oct 2026; Investing.com, 29 Oct 2026",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/intc-stock-tumbles-hours-q3-205401483.html",
+     "tickers": [
+      "INTC"
+     ]
+    },
+    {
+     "title": "Houthis say they struck Saudi oil sites; Brent up 0.75% to $115.74, on course for a fourth monthly gain",
+     "summary": "Brent rose 86 cents to $115.74 a barrel and WTI 72 cents to $102.72 at 01:22 GMT on Friday after Yemen's Houthis said they hit Ras Tanura, the Rabigh refinery and an Aramco facility at Abqaiq; Iran's Revolutionary Guards said three tankers hit sea mines near Hormuz. Brent was on course for a gain of nearly 14% in October and WTI about 15%, the fourth straight monthly rise (Reuters via Business Standard, 30 Oct 2026). Higher oil feeds SA fuel prices and inflation.",
+     "source": "Reuters via Business Standard, 30 Oct 2026",
+     "url": "https://www.business-standard.com/amp/markets/commodities/oil-prices-rise-on-supply-concerns-as-houthis-attack-saudi-arabia-126103000085_1.html"
+    },
+    {
+     "title": "Binance hit by a record crypto theft of about $6.3 billion; bitcoin at a six-week low",
+     "summary": "Binance estimated a $6.3 billion impact from a security breach and said about $3 billion had been frozen with partners; Chainalysis put the amount stolen at at least $5.912 billion. Bitcoin fell 3% to $76,469.82, a six-week low, and ether more than 3% to $2,185.83 (Reuters via Investing.com, 29–30 Oct 2026).",
+     "source": "Reuters via Investing.com, 30 Oct 2026",
+     "url": "https://www.investing.com/news/economy-news/analysts-react-as-binance-freezes-assets-after-63-billion-security-breach-4985760"
+    },
+    {
      "title": "Wall Street closes lower: Nasdaq down 1.38%, S&P 500 down 0.30%, Dow down 0.25%",
      "summary": "The Nasdaq Composite closed at 26,184.73, down 365.13 points or 1.38%; the S&P 500 at 7,720.39, down 23.59 or 0.30%, its first loss in four days; and the Dow at 52,342.56, down 132.54 or 0.25%. Alphabet fell about 13% after its profit miss and negative free cash flow, the main drag on technology shares (Yahoo Finance, 29 Oct 2026).",
      "source": "Yahoo Finance, 29 Oct 2026",
      "url": "https://finance.yahoo.com/markets/live/stock-market-today-thursday-october-29-dow-sp-500-nasdaq-alphabet-microsoft-earnings-130305714.html"
-    },
-    {
-     "title": "Amazon after the bell: sales $201.9 billion, AWS up 39%, record operating margin",
-     "summary": "Amazon's third-quarter net sales rose 12% to $201.9 billion and AWS revenue rose 39.3% to $46.0 billion, its fastest growth in nearly five years. Operating income was $28.1 billion (13.9% margin, a record) against $17.4 billion a year earlier; diluted EPS was $1.89 against $1.95, as last year included a $9.5 billion investment gain. Fourth-quarter guidance: sales $240–247 billion and operating income $28.5–33.5 billion; 2026 cash capex still about $220 billion (Cord Cutters News, citing Amazon's release, 29 Oct 2026). The share reaction after hours could not yet be verified.",
-     "source": "Cord Cutters News, 29 Oct 2026",
-     "url": "https://cordcuttersnews.com/amazon-posts-201-9-billion-in-q3-sales-aws-revenue-climbs-39/"
     },
     {
      "title": "Alphabet down about 13%, on course for its worst day since its 2004 listing",
@@ -32,66 +62,26 @@
      "summary": "The headline PCE price index rose 0.5% in September and 3.6% from a year earlier (August 3.4%); core PCE rose 0.3% and 3.1% (August 3.0%). Inflation-adjusted consumer spending was flat in September. CME FedWatch showed about an 84.6% probability of a Fed rate hike in December (Reuters via GV Wire, 29 Oct 2026).",
      "source": "Reuters via GV Wire, 29 Oct 2026",
      "url": "https://gvwire.com/2026/10/29/us-inflation-heats-up-in-september-consumer-spending-rises/"
-    },
+    }
+   ]
+  },
+  {
+   "name": "US markets",
+   "items": [
     {
-     "title": "Rand slips to R16.645 as gold and platinum fall; JSE Top 40 edges up 0.1%",
-     "summary": "The rand traded at 16.6450 per dollar at 13:55 GMT, about 0.3% weaker, as gold fell nearly 1% and platinum 2.9%, and after producer inflation rose to 6.2% in September from 5.0% in August. The Top 40 was up 0.1% and the 2035 government bond yield fell 3 basis points to 8.555% in early trade (Reuters via CNBC Africa, 29 Oct 2026).",
-     "source": "Reuters via CNBC Africa, 29 Oct 2026",
-     "url": "https://www.cnbcafrica.com/2026/south-african-rand-slips-as-weaker-gold-and-platinum-add-pressure"
+     "title": "Reddit falls 8.5% after a soft fourth-quarter outlook",
+     "summary": "Reddit's third-quarter revenue rose 53% to $895 million, above the $874.9 million estimate, and adjusted EPS was $1.40 against $1.33. Fourth-quarter revenue guidance of $1.00–1.03 billion has a $1.015 billion midpoint, below the $1.05 billion expected; shares fell 8.5% after the report (Investing.com, 29 Oct 2026).",
+     "source": "Investing.com, 29 Oct 2026",
+     "url": "https://www.investing.com/news/stock-market-news/reddit-shares-tumble-on-weak-guidance-despite-earnings-beat-4985080",
+     "tickers": [
+      "RDDT"
+     ]
     },
     {
      "title": "US economy grows 3.4% in the third quarter, faster than the 3.2% expected",
      "summary": "The first estimate of US GDP showed 3.4% annualised growth in July–September (Convera, 29 Oct 2026), above the 3.2% forecast. Stronger growth alongside elevated inflation supports the dollar and makes a near-term Fed cut less likely; the Fed held at 3.75%–4.00% on 28 October with two members wanting a hike.",
      "source": "Convera",
      "url": "https://convera.com/blog/market-insights/fx-research/daily-market-updates/us-growth-widens-the-dollars-policy-advantage"
-    },
-    {
-     "title": "ECB holds: deposit rate stays at 2.50%",
-     "summary": "The European Central Bank left its key rates unchanged, with the deposit rate at 2.50%, in line with the analyst consensus (Sweden Herald, 29 Oct 2026, 14:15 CET). It raised rates by 25 basis points in September. The decision comes hours after Christine Lagarde said she will step down in February.",
-     "source": "Sweden Herald",
-     "url": "https://swedenherald.com/article/ecb-holds-key-interest-rates-steady-deposit-rate-remains-at-250"
-    },
-    {
-     "title": "Caterpillar down about 9% before the open despite beating profit forecasts",
-     "summary": "Caterpillar reported third-quarter adjusted EPS of $7.20 against $7.04 expected and revenue of $20.68 billion, in line with the $20.69 billion forecast. Shares fell about 9% to $647.90 before the open: the beat included $128 million of tariff refunds and the company gave no numeric guidance (24/7 Wall St., 29 Oct 2026).",
-     "source": "24/7 Wall St.",
-     "url": "https://247wallst.com/investing/2026/10/29/caterpillar-beat-earnings-and-still-dropped-9-the-ai-power-trade-just-hit-the-same-wall-as-software"
-    },
-    {
-     "title": "DoorDash agrees to buy Instacart for $65 a share, about $17 billion",
-     "summary": "DoorDash signed a deal on 29 October to buy Instacart owner Maplebear at $65.00 a share, an equity value of about $17 billion. Holders can take cash, 0.3372 DoorDash shares, or a mix, with at least 75% of the total paid in cash. The price is 26% above Instacart's 22 October close, before deal reports, and about 11% above its last close. Closing is expected at the end of 2027 or in the first half of 2028, subject to Instacart shareholder and competition approvals in the US, Canada and Israel; holders of about 19% of Instacart have agreed to vote for it. (DoorDash, 29 Oct 2026; InsideArbitrage, 29 Oct 2026)",
-     "source": "DoorDash investor relations",
-     "url": "https://ir.doordash.com/news/news-details/2026/DoorDash-to-Acquire-Instacart-to-Help-Local-Stores-Win/default.aspx"
-    },
-    {
-     "title": "Eli Lilly beats and raises 2026 revenue outlook to $91–92 billion; shares up about 4% before the open",
-     "summary": "Lilly's third-quarter revenue rose 39% to $24.4 billion against about $22.6 billion expected, and adjusted earnings per share were $7.48 against $6.35 expected. Mounjaro sales rose 65% to $10.7 billion and Zepbound 49% to $5.35 billion. The full-year revenue forecast was raised to $91–92 billion. Shares were about 4% higher before the open. (Yahoo Finance, 29 Oct 2026)",
-     "source": "Yahoo Finance",
-     "url": "https://finance.yahoo.com/markets/stocks/live/earnings-live-updates-eli-lilly-stock-pops-as-strong-glp-1-drug-demand-lifts-results-servicenow-stock-plunges-114628789.html"
-    },
-    {
-     "title": "SA economy about 5% bigger after Stats SA rebasing: 2025 GDP now R8.04 trillion",
-     "summary": "Statistics South Africa moved the GDP base year from 2015 to 2022, lifting last year's nominal GDP to R8.04 trillion (about $483 billion) from R7.64 trillion. All 10 sectors were revised up, led by mining, finance and trade, and newly measured activity such as self-generated electricity, illegal mining and e-hailing was added. Economists say a bigger GDP base makes debt-to-GDP and deficit ratios look better; it does not change the debt itself. (Reuters via Investing.com, 29 Oct 2026)",
-     "source": "Reuters via Investing.com",
-     "url": "https://www.investing.com/news/economic-indicators/south-africa-economy-estimated-to-be-49-bigger-after-rebasing-4982161"
-    },
-    {
-     "title": "ECB President Lagarde to step down on 7 February 2027, about eight months early",
-     "summary": "The ECB said Christine Lagarde will leave on 7 February 2027; her term was due to end in October 2027. No reason was given; reports link her to the World Economic Forum. Pablo Hernández de Cos and Klaas Knot are named as leading candidates. The news lands before today's ECB rate decision at 15:15 SAST and her press conference at 15:45 SAST. (Global Banking & Finance Review, 29 Oct 2026)",
-     "source": "Global Banking & Finance Review",
-     "url": "https://www.globalbankingandfinance.com/ecb-president-lagarde-resigns-effective-feb-7/"
-    },
-    {
-     "title": "SA producer inflation jumps to 6.2% in September, above the 5.7% expected",
-     "summary": "Producer price inflation rose to 6.2% year on year in September from 5.0% in August, according to data released on 29 October (FX.co, 29 Oct 2026). Economists polled by Reuters had expected 5.7% (Reuters via Finimize, 29 Oct 2026). Higher factory-gate prices can feed into consumer inflation, which was 4.5% in September; the breakdown by product will be added once verified.",
-     "source": "FX.co; Reuters via Finimize, 29 Oct 2026",
-     "url": "https://www.fx.co/en/forex-news/3256580"
-    },
-    {
-     "title": "Shell beats: Q3 adjusted earnings $10.81 billion vs $10.33 billion expected; buyback raised to $5 billion",
-     "summary": "Shell's adjusted third-quarter earnings were $10.81 billion, above the $10.33 billion analysts expected and nearly double a year earlier, on a record refining margin of $42 a barrel (from $11.6 a year earlier). Quarterly buybacks rise to $5 billion from $3 billion (Reuters via Finimize; Rallies, 29 Oct 2026).",
-     "source": "Reuters via Finimize, 29 Oct 2026",
-     "url": "https://finimize.com/content/shells-biggest-profit-since-2022-powered-a-bigger-buyback"
     },
     {
      "title": "Microsoft capex $45.2 billion, below the $50.7 billion expected; CoreWeave and Nebius drop",
@@ -108,25 +98,26 @@
    ]
   },
   {
-   "name": "US markets",
-   "items": [
-    {
-     "title": "Wall Street closes slightly higher after the Fed: Dow +0.19% at 52,480; S&P 500 +0.28%; Nasdaq +0.27%",
-     "summary": "The Dow closed up 0.19% at 52,479.62, the S&P 500 up 0.28% at 7,744.28 and the Nasdaq up 0.27% at 26,549.85 after the Fed held rates in a 10–2 vote; the 10-year Treasury yield rose to about 5.05% (Yahoo Finance, 28 Oct).",
-     "source": "Yahoo Finance",
-     "url": "https://finance.yahoo.com/markets/live/stock-market-today-wednesday-october-28-dow-sp-500-nasdaq-fed-meeting-decision-big-tech-earnings-130508769.html"
-    },
-    {
-     "title": "Bank of Canada raises its rate to 2.50%, its first hike since 2023, and warns more may be needed",
-     "summary": "The Bank of Canada raised its policy rate by 25 basis points to 2.50% from 2.25% on 28 October; markets had priced about a 78% chance. It said \"There could be a need to raise the policy rate further, but given the uncertainties, we will proceed carefully,\" and lifted its inflation forecasts to 2.9% for 2026 (from 2.5%) and 3.1% for 2027 (from 2.0%), mainly because of energy prices (investingLive, 28 Oct). A second G7 central bank tightening on oil-driven inflation adds weight to tonight's Fed decision.",
-     "source": "investingLive",
-     "url": "https://investinglive.com/central-banks/bank-of-canada-rate-decision/"
-    }
-   ]
-  },
-  {
    "name": "South Africa",
    "items": [
+    {
+     "title": "Rand slips to R16.645 as gold and platinum fall; JSE Top 40 edges up 0.1%",
+     "summary": "The rand traded at 16.6450 per dollar at 13:55 GMT, about 0.3% weaker, as gold fell nearly 1% and platinum 2.9%, and after producer inflation rose to 6.2% in September from 5.0% in August. The Top 40 was up 0.1% and the 2035 government bond yield fell 3 basis points to 8.555% in early trade (Reuters via CNBC Africa, 29 Oct 2026).",
+     "source": "Reuters via CNBC Africa, 29 Oct 2026",
+     "url": "https://www.cnbcafrica.com/2026/south-african-rand-slips-as-weaker-gold-and-platinum-add-pressure"
+    },
+    {
+     "title": "SA economy about 5% bigger after Stats SA rebasing: 2025 GDP now R8.04 trillion",
+     "summary": "Statistics South Africa moved the GDP base year from 2015 to 2022, lifting last year's nominal GDP to R8.04 trillion (about $483 billion) from R7.64 trillion. All 10 sectors were revised up, led by mining, finance and trade, and newly measured activity such as self-generated electricity, illegal mining and e-hailing was added. Economists say a bigger GDP base makes debt-to-GDP and deficit ratios look better; it does not change the debt itself. (Reuters via Investing.com, 29 Oct 2026)",
+     "source": "Reuters via Investing.com",
+     "url": "https://www.investing.com/news/economic-indicators/south-africa-economy-estimated-to-be-49-bigger-after-rebasing-4982161"
+    },
+    {
+     "title": "SA producer inflation jumps to 6.2% in September, above the 5.7% expected",
+     "summary": "Producer price inflation rose to 6.2% year on year in September from 5.0% in August, according to data released on 29 October (FX.co, 29 Oct 2026). Economists polled by Reuters had expected 5.7% (Reuters via Finimize, 29 Oct 2026). Higher factory-gate prices can feed into consumer inflation, which was 4.5% in September; the breakdown by product will be added once verified.",
+     "source": "FX.co; Reuters via Finimize, 29 Oct 2026",
+     "url": "https://www.fx.co/en/forex-news/3256580"
+    },
     {
      "title": "Money supply and credit growth slow in September",
      "summary": "M3 money supply growth slowed to 7.93% year on year in September from 8.89% in August, and private-sector credit growth slowed to 6.23% from 7.47%; trade and budget balance data are due Friday (Reuters via CNBC Africa, 29 Oct 2026).",
@@ -145,10 +136,22 @@
    "name": "Forex & commodities",
    "items": [
     {
-     "title": "Oil slips: Brent down about 1.1% to $114.10 after Vance letter to Iran",
-     "summary": "Brent fell to $114.10 a barrel early on Thursday from Wednesday's $115.32 settlement, and WTI traded above $101 after closing at $102.78, after the Wall Street Journal reported Vice President Vance wrote to Iran's Mohsen Rezaei to revive talks; President Trump downplayed the outreach (The National, 29 Oct 2026).",
-     "source": "The National, 29 Oct 2026",
-     "url": "https://www.thenationalnews.com/business/energy/2026/10/29/oil-prices-decline-after-diplomatic-push-in-iran-war/"
+     "title": "Gold slips below $4,000; platinum down 1.8%",
+     "summary": "Spot gold fell 0.7% to $3,992.46 an ounce at about 03:50 GMT on Friday, silver 1.7% to $51.29, platinum 1.8% to $1,460.79 and palladium 1.7% to $989.46, as September's 0.5% monthly PCE rise lifted bets on a Fed hike before year-end. Gold is down more than 3% in October, a second monthly fall (Investing.com, 30 Oct 2026). Weaker gold and platinum weigh on SA miners and the rand.",
+     "source": "Investing.com, 30 Oct 2026",
+     "url": "https://za.investing.com/news/commodities-news/gold-hovers-near-4000-as-pce-inflation-oil-risks-revive-fed-hike-concerns-4537514"
+    },
+    {
+     "title": "Bank of Japan holds at 1.25%, says underlying inflation is in line with 2% for the first time since 2013",
+     "summary": "The BoJ kept its policy rate at 1.25%, the highest since 1995, in an 8–1 vote; Hajime Takata wanted a hike to 1.5%. It said underlying inflation was \"generally consistent\" with its 2% target; core inflation was 2.1% in September (TokenPost, 30 Oct 2026).",
+     "source": "TokenPost, 30 Oct 2026",
+     "url": "https://www.tokenpost.com/news/regulation/44194"
+    },
+    {
+     "title": "CME odds of a December Fed hike near 75% after the PCE data",
+     "summary": "After September PCE inflation of 3.6% a year (core 3.1%), CME data put the chance of a December Fed rate hike at about 74.9%, with the Fed funds range at 3.75%–4.00% (TradingKey, 30 Oct 2026); an earlier Reuters reading was 84.6%.",
+     "source": "TradingKey, 30 Oct 2026",
+     "url": "https://www.tradingkey.com/analysis/commodities/metal/262258297-us-pce-inflation-3-6-gold-below-4000-bitcoin-below-77000-tradingkey"
     },
     {
      "title": "Europe to release 42 million barrels from emergency oil reserves",
@@ -161,18 +164,6 @@
      "summary": "The dollar index was at 102.26 early on Thursday in Asia; the euro was down 0.15% at $1.1134 and the dollar up 0.14% at ¥158.045. The dollar slipped after Warsh's press conference, and the 2-year Treasury yield was about 4.71%. The ECB and Bank of Japan are both expected to hold rates (Free Malaysia Today, 29 Oct).",
      "source": "Free Malaysia Today (Reuters)",
      "url": "https://www.freemalaysiatoday.com/category/business/2026/10/29/dollar-steady-after-fed-hold-leaves-rate-path-murky"
-    },
-    {
-     "title": "Gold slips about 1% to near $4,038; silver near $53.15",
-     "summary": "Spot gold fell nearly 1% to about $4,044 an ounce early on Thursday and was below $4,038 by 05:14 SAST; silver fell as much as 1.5% to about $53.15 (GoodReturns, 29 Oct). Traders are waiting for today's US PCE inflation data.",
-     "source": "GoodReturns",
-     "url": "https://www.goodreturns.in/news/gold-rates-silver-rates-today-29-10-2026-live-spot-gold-silver-price-mcx-gold-24k-22k-18k-gold-price-1543821.html"
-    },
-    {
-     "title": "Asia: KOSPI down 2.6%; Samsung falls over 4% despite record profit",
-     "summary": "MSCI's Asia-Pacific index outside Japan fell 0.7%, the KOSPI 2.6% after a nearly 7% jump on Wednesday and China's blue chips 0.9%, while the Nikkei rose 0.3% and the Hang Seng 0.2%. Samsung Electronics fell more than 4% even though third-quarter operating profit rose nearly ninefold to a record; SK Hynix rose 1.3% (Reuters via Yahoo Finance, 29 Oct).",
-     "source": "Reuters via Yahoo Finance",
-     "url": "https://finance.yahoo.com/markets/stocks/articles/asian-shares-fall-alphabet-earnings-022830389.html"
     }
    ]
   },
@@ -180,78 +171,52 @@
    "name": "Our coverage",
    "items": [
     {
-     "title": "CAT: premarket fall to about $648 leaves Caterpillar still above its scanner target",
-     "summary": "Caterpillar closed at $713.40 on 28 October and was about $647.90 before the open on 29 October (24/7 Wall St., 29 Oct), still above the $542 LRC Stock Scanner target, which already flagged the shares as overvalued. CAT is a HOLD; rating unchanged.",
-     "source": "24/7 Wall St.",
-     "url": "https://247wallst.com/investing/2026/10/29/caterpillar-beat-earnings-and-still-dropped-9-the-ai-power-trade-just-hit-the-same-wall-as-software",
+     "title": "AMZN: after-hours fall takes Amazon further below its scanner target",
+     "summary": "Amazon closed at $243.79 on 29 October, down 4.2% (LRC Stock Scanner, 29 Oct), already below the $250.70 LRC Stock Scanner target; a fall of about 7% after hours on the revenue and profit miss and heavy capex (SiliconANGLE, 29 Oct) would put it near $227. AMZN is a HOLD; rating unchanged.",
+     "source": "LRC Stock Scanner, 29 Oct 2026; SiliconANGLE, 29 Oct 2026",
+     "url": "https://siliconangle.com/2026/10/29/amazons-stock-falls-after-posts-disappointing-earnings-and-revenue-miss",
      "tickers": [
-      "CAT"
+      "AMZN"
      ]
     },
     {
-     "title": "CART and DASH: $65 deal price is above Instacart's scanner target",
-     "summary": "Instacart (Maplebear) closed at $58.42 on 28 October against a $55.28 LRC Stock Scanner target; the $65 offer is about 11% above that close (DoorDash, 29 Oct). DoorDash closed at $169.50 against a $141.80 target (LRC Stock Scanner, 28 Oct). Both are HOLDs on the LRC Stock Scanner; ratings unchanged.",
-     "source": "DoorDash investor relations",
-     "url": "https://ir.doordash.com/news/news-details/2026/DoorDash-to-Acquire-Instacart-to-Help-Local-Stores-Win/default.aspx",
+     "title": "INTC: guidance shock takes Intel well below its scanner target",
+     "summary": "Intel closed at $92.07 on 29 October (LRC Stock Scanner), above the $85.88 scanner target that flagged it as overvalued; a 17–23% after-hours fall (Yahoo Finance; Investing.com, 29 Oct) would put it roughly between $71 and $76, below that target. INTC is a HOLD; rating unchanged.",
+     "source": "LRC Stock Scanner, 29 Oct 2026; Yahoo Finance, 29 Oct 2026",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/intc-stock-tumbles-hours-q3-205401483.html",
      "tickers": [
-      "CART",
-      "DASH"
-     ]
-    },
-    {
-     "title": "NOW: about 19% slide after weak fourth-quarter guidance keeps ServiceNow below its trigger level",
-     "summary": "ServiceNow fell 19% before the open after guiding fourth-quarter revenue to $4.25–4.26 billion, below the $4.36 billion consensus, and forecasting current RPO growth of 18.5%; third-quarter revenue of $4.11 billion rose 20.5% and beat by $20 million, while adjusted EPS of $1.00 missed the $1.02 consensus (24/7 Wall St., 29 Oct). A 19% fall from the $150.13 close (Yahoo Finance, 29 Oct) is below the $149.40 trigger level on the LRC Stock Scanner but still above the $99.11 target. NOW is a HOLD; rating unchanged.",
-     "source": "24/7 Wall St., 29 Oct 2026; Yahoo Finance, 29 Oct 2026",
-     "url": "https://247wallst.com/investing/2026/10/29/servicenows-19-crash-says-wall-street-thinks-ai-will-eat-software-its-openai-deal-says-the-opposite/",
-     "tickers": [
-      "NOW"
-     ]
-    },
-    {
-     "title": "LLY: beat lifts shares further above the scanner target",
-     "summary": "Lilly closed at $1,288.30 on 28 October and was quoted at $1,350.00 before the open, up 4.7% (Yahoo Finance, 29 Oct), well above the $1,065 LRC Stock Scanner target. LLY is a HOLD; rating unchanged.",
-     "source": "Yahoo Finance",
-     "url": "https://finance.yahoo.com/markets/stocks/live/earnings-live-updates-eli-lilly-stock-pops-as-strong-glp-1-drug-demand-lifts-results-servicenow-stock-plunges-114628789.html",
-     "tickers": [
-      "LLY"
-     ]
-    },
-    {
-     "title": "GOOGL: about 13% fall takes Alphabet below its scanner target",
-     "summary": "Alphabet closed at $323.10 on 28 October (LRC Stock Scanner) and fell about 13% on Thursday after its profit miss and negative free cash flow, its worst day since listing (IBTimes, 29 Oct); a 13% fall puts it near $281, below the scanner's $314.70 target. GOOGL is a HOLD on the LRC Stock Scanner; rating unchanged.",
-     "source": "IBTimes Australia, 29 Oct 2026",
-     "url": "https://www.ibtimes.com.au/alphabet-shares-plunge-ai-spending-profit-cash-flow-1877589",
-     "tickers": [
-      "GOOGL"
-     ]
-    },
-    {
-     "title": "MSFT: up about 3% after hours; capex below plan",
-     "summary": "Microsoft rose 2.7% after hours (Investing.com, 28 Oct), smaller than the roughly 5% first reported, as capex of $45.2 billion came in below expectations (Stocktwits, 28 Oct). It closed at $527.90 (LRC Stock Scanner, 28 Oct); a 3% rise would leave it below the $561.20 scanner target. MSFT is a HOLD; rating unchanged.",
-     "source": "Investing.com",
-     "url": "https://www.investing.com/news/stock-market-news/us-stock-futures-drop-as-alphabet-slides-on-soft-earnings-microsoft-firms-4981271",
-     "tickers": [
-      "MSFT"
-     ]
-    },
-    {
-     "title": "AMZN: AWS growth of 39% after the close; INTC results due",
-     "summary": "Amazon reported third-quarter sales of $201.9 billion and AWS growth of 39.3%, with fourth-quarter sales guided to $240–247 billion (Cord Cutters News, 29 Oct). It closed at $252.60 on 28 October, just above its $249.80 scanner target and $247.10 trigger level (LRC Stock Scanner, 28 Oct); the after-hours move was not yet verified at the time of writing. Intel was due to report after the close; its figures were not yet confirmed. Intel closed at $93.88 on 28 October against an $86.22 target (LRC Stock Scanner, 28 Oct). Both are HOLDs; ratings unchanged.",
-     "source": "Cord Cutters News, 29 Oct 2026",
-     "url": "https://cordcuttersnews.com/amazon-posts-201-9-billion-in-q3-sales-aws-revenue-climbs-39/",
-     "tickers": [
-      "AMZN",
       "INTC"
+     ]
+    },
+    {
+     "title": "RDDT: after-hours fall leaves Reddit above its scanner target",
+     "summary": "Reddit closed at $129.60 on 29 October (LRC Stock Scanner); an 8.5% fall after the report (Investing.com, 29 Oct) would put it near $119, still above the $104.70 scanner target and below the $142.80 scanner level. RDDT is a HOLD; rating unchanged.",
+     "source": "LRC Stock Scanner, 29 Oct 2026; Investing.com, 29 Oct 2026",
+     "url": "https://www.investing.com/news/stock-market-news/reddit-shares-tumble-on-weak-guidance-despite-earnings-beat-4985080",
+     "tickers": [
+      "RDDT"
+     ]
+    },
+    {
+     "title": "GOOGL, NOW, CAT, LLY: Thursday closes against scanner targets",
+     "summary": "Closes on 29 October (LRC Stock Scanner): Alphabet $283.82 (-12.6%) against a $315.60 target; ServiceNow $109.67 (-27.0%) against $98.96; Caterpillar $647.39 (-9.3%) against $546.30; Eli Lilly $1,373.70 (+6.6%) against $1,068. All four are HOLDs; ratings unchanged.",
+     "source": "LRC Stock Scanner, 29 Oct 2026",
+     "url": "https://www.investing.com/news/stock-market-news/us-stock-futures-sink-nasdaq-down-2-as-amazon-intel-earnings-underwhelm-4985675",
+     "tickers": [
+      "GOOGL",
+      "NOW",
+      "CAT",
+      "LLY"
      ]
     }
    ]
   }
  ],
  "watch_today": [
-  "Amazon's share reaction to AWS growth of 39% when trading resumes on Friday, against its $247.10 trigger level",
-  "Intel's third-quarter results and guidance",
-  "Whether Alphabet, ServiceNow and Caterpillar extend or recover Thursday's losses",
-  "SA trade and budget balance data on Friday; rand near R16.65 after the PPI surprise",
-  "Dollar, US yields and December rate-hike pricing after the 3.6% PCE print; Brent above $110"
+  "Wall Street open: whether Amazon and Intel's after-hours losses hold and drag the Nasdaq-100 (futures -2%)",
+  "SA trade balance and budget balance data today; rand near R16.61",
+  "Brent near $116 after Houthi strikes on Saudi oil sites; any Iran response to US outreach",
+  "Gold around $4,000 and platinum near $1,460 — pressure on JSE miners",
+  "Binance hack fallout and crypto prices; month-end flows on the last trading day of October"
  ]
 }
