@@ -658,14 +658,14 @@
 "AEHR|2026-11-02": {
 "t": "AEHR",
 "ticker": "AEHR",
-"name": "Aehr Test Systems",
+"name": "Aehr Test Systems, Inc.",
 "m": "US",
 "date": "2026-11-02",
-"when": "After close",
+"when": "Not stated",
 "eps_forecast": "$0.05",
 "quarter": "Aug/2026",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 2.1
+"market_cap_bn": 1.8
 },
 "AEIS|2026-11-02": {
 "t": "AEIS",
@@ -5362,7 +5362,13 @@
 "eps_forecast": "$0.65",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 14.8
+"market_cap_bn": 14.8,
+"eps_actual": 0.5,
+"eps_est": 0.6965,
+"surprise": -0.2821,
+"result": "miss",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "BSM|2026-11-02": {
 "t": "BSM",
@@ -6415,10 +6421,10 @@
 "CC|2026-11-02": {
 "t": "CC",
 "ticker": "CC",
-"name": "Chemours Company (The)",
+"name": "The Chemours Company",
 "m": "US",
 "date": "2026-11-02",
-"when": "After close",
+"when": "Not stated",
 "eps_forecast": "$0.26",
 "quarter": "Sep/2026",
 "period": "Expected date (market data feed)",
@@ -7182,6 +7188,18 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 2.9
+},
+"CLBK|2026-11-03": {
+"t": "CLBK",
+"ticker": "CLBK",
+"name": "Columbia Financial, Inc.",
+"m": "US",
+"date": "2026-11-03",
+"when": "Not stated",
+"eps_forecast": "",
+"quarter": "",
+"period": "Expected date (market data feed)",
+"market_cap_bn": 3.0
 },
 "CLBT|2026-11-12": {
 "t": "CLBT",
@@ -17717,6 +17735,18 @@
 "period": "Expected date (market data feed)",
 "market_cap_bn": 2.6
 },
+"KC|2026-11-24": {
+"t": "KC",
+"ticker": "KC",
+"name": "Kingsoft Cloud Holdings Limited",
+"m": "US",
+"date": "2026-11-24",
+"when": "Not stated",
+"eps_forecast": "",
+"quarter": "",
+"period": "Expected date (market data feed)",
+"market_cap_bn": 2.3
+},
 "KDP|2026-11-03": {
 "t": "KDP",
 "ticker": "KDP",
@@ -21453,6 +21483,18 @@
 "quarter_end": "2026-06-30",
 "result_done": true
 },
+"MSGK|2026-11-05": {
+"t": "MSGK",
+"ticker": "MSGK",
+"name": "MSG Knickerbockers Corp.",
+"m": "US",
+"date": "2026-11-05",
+"when": "Not stated",
+"eps_forecast": "",
+"quarter": "",
+"period": "Expected date (market data feed)",
+"market_cap_bn": 7.5
+},
 "MSGS|2026-10-30": {
 "t": "MSGS",
 "ticker": "MSGS",
@@ -25046,8 +25088,8 @@
 "when": "Not stated",
 "eps_forecast": "",
 "quarter": "Sep/2026",
-"period": null,
-"market_cap_bn": 12.5
+"period": "Expected date (market data feed)",
+"market_cap_bn": 12.6
 },
 "PEP|2026-10-08": {
 "t": "PEP",
