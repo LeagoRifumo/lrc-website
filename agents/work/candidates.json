@@ -1,219 +1,376 @@
 {
- "date": "2026-10-24",
- "note": "Finviz and direct API access were blocked, so the screens could not be run in bulk. Candidates were picked likely candidates by sector reasoning and checked each one against stockanalysis.com statistics, overview and financials pages (close Fri 2026-10-23), plus company earnings releases (SEC 8-K, StockTitan). Price, market cap, SMA50/200, RSI, average volume, short float, ROE, ROIC, operating margin, D/E, current ratio, forward P/E and P/FCF come from the stockanalysis statistics pages. Quarterly EPS and sales y/y come from the earnings releases. 5-year growth is a CAGR calculated by the agent from stockanalysis annual figures: the base year (FY-5) is backed out of the FY-4 value and its stated growth, and the end year is the latest full fiscal year. 'EPS growth this year' uses year-to-date EPS against the prior-year YTD, or company guidance against the prior fiscal year, because Finviz consensus-estimate data was not available. 6-month performance could not be sourced for any name; stockanalysis history pages show only about 50 trading days. The session's web-search limit (200 calls, shared across agents) ran out before more names could be checked, including CAG, KHC, LYB, STZ and DOW as shorts. Names checked that FAILED: EOG (RSI 75.7; 5y EPS base FY2020 was negative), COP (ROE 14.2%, RSI 76.8), RMD as a swing long (RSI 77.2), PAYC (D/E 1.72), AMAT (P/FCF 53), QCOM (D/E 0.55), ADBE (D/E 0.58, current ratio 0.77), CPRT (5y EPS CAGR about 9.8%), GS as a swing long (price below SMA50/200), FANG (ROE 3.5%, TTM EPS depressed).",
+ "date": "2026-10-31",
+ "note": "Pool taken from the LRC Scanner (docs/data/scan/stocks.json, generated 2026-10-31 07:27 SAST, prices to 30 Oct; fresh). Screens: Swing Long = BUY/STRONG BUY with Breakout or Retest; Swing Short = SELL/STRONG SELL with Breakdown or Failed retest; Investment = grade A with positive margin of safety; market cap > $2bn / R2bn; names already on the LRC watchlist lists excluded. Each qualifying number was then checked on StockAnalysis statistics pages, ShareData and company results releases; many StockAnalysis pages were served as cached copies dated 23-27 Oct (US) and 5-26 Oct (JSE statistics), so moving averages, RSI and ratios carry that date (see price_date / unverified). Dropped: NMIH (last sourced close 42.55 below SMA50 42.87; Q3 on 5 Nov), HRMY (already on the US watchlist lists). Not added to the watchlist: a name enters only after the analyst completes a Work-sheet.",
  "candidates": [
   {
    "screen": "Swing Long",
    "market": "US",
-   "ticker": "VLO",
-   "name": "Valero Energy",
-   "sector": "Energy - Oil & Gas Refining",
-   "price": 419.28,
-   "mcap_bn": 120.72,
+   "ticker": "THC",
+   "name": "Tenet Healthcare Corporation",
+   "sector": "Healthcare",
+   "price": 268.95,
+   "price_date": "2026-10-26",
+   "mcap_bn": 21.66,
+   "mcap_ccy": "USD",
    "metrics": {
-    "eps_growth_this_y_ytd_9m": 9.357,
-    "eps_qoq": 5.768,
-    "sales_qoq": 0.433,
-    "q3_2026_diluted_eps": 23.89,
-    "q3_2025_diluted_eps": 3.53,
-    "q3_2026_revenue_mn": 46098,
-    "q3_2025_revenue_mn": 32168,
-    "sma50": 392.41,
-    "sma200": 280.4,
-    "rsi": 51.17,
-    "pct_from_52w_high": -0.0915,
-    "52w_high": 461.52,
-    "52w_low": 159.9,
-    "perf_52w": 1.5902,
-    "avg_volume_20d": 2436542,
-    "short_float": 0.0314,
-    "fwd_pe": 6.8
+    "sma50": 264.9,
+    "sma200": 218.81,
+    "sma_asof": "2026-10-26",
+    "price_vs_sma50": "above",
+    "price_vs_sma200": "above",
+    "rsi": 54.9,
+    "forward_pe": 12.9,
+    "roe_pct": 37.34,
+    "debt_equity": 1.52,
+    "operating_margin_pct": 18.11,
+    "eps_growth_forecast_3y_pct": 11.07,
+    "q3_2026_diluted_eps_yoy": "12.41 vs 3.86 (GAAP, attributable to common)",
+    "q3_2026_revenue_musd": "5631 vs 5289 (+6.5%)",
+    "short_float_pct": 2.29,
+    "change_52w_pct": 27.84
    },
+   "latest_results": "Q3 2026 (reported 2026-10-29, 10-Q): GAAP diluted EPS $12.41 vs $3.86; net operating revenues $5,631m vs $5,289m",
+   "next_earnings": null,
+   "passes": true,
+   "why_passes": "On 26-Oct data price 268.95 > SMA50 264.90 and SMA200 218.81, RSI 54.9; post-Q3 (29 Oct) price reaction not sourced",
+   "scanner_contradictions": [
+    "ROE 37.34% sourced vs 41.7% scanner",
+    "D/E 1.52 sourced vs 1.38 scanner",
+    "Scanner next_earnings null - Q3 was reported 29 Oct 2026; next date not yet published"
+   ],
    "unverified": [
-    "perf_half (6-month performance not sourced; the 52-week change is +159% and SMA200 is far below price)",
-    "EPS growth this year uses 9M YTD EPS ($40.29 vs $3.89), not a consensus estimate for the full year"
+    "Oct-30 close (scanner 273.2)",
+    "RSI as of Oct 30",
+    "adjusted Q3 2026 EPS and reason for GAAP jump",
+    "EPS growth this year (historical)",
+    "next earnings date"
    ],
    "sources": [
-    "stockanalysis.com VLO statistics https://stockanalysis.com/stocks/vlo/statistics/ (close 2026-10-23)",
-    "stockanalysis.com VLO overview https://stockanalysis.com/stocks/vlo/ (close 2026-10-23)",
-    "StockTitan, Valero Q3 2026 results release https://www.stocktitan.net/news/VLO/valero-energy-reports-third-quarter-2026-as0idx8a1twt.html (2026-10-22)"
+    "StockAnalysis THC statistics https://stockanalysis.com/stocks/thc/statistics/ (snapshot close 26 Oct 2026)",
+    "StockAnalysis THC quote https://stockanalysis.com/stocks/thc/ (26 Oct 2026)",
+    "MarketBeat THC https://www.marketbeat.com/stocks/NYSE/THC (close 268.59 on 26 Oct 2026; short 2.30%)",
+    "SEC 10-Q Q3 2026 https://www.sec.gov/Archives/edgar/data/0000070318/000007031826000050/thc-20260930.htm"
    ]
   },
   {
    "screen": "Swing Long",
    "market": "US",
-   "ticker": "MPC",
-   "name": "Marathon Petroleum",
-   "sector": "Energy - Oil & Gas Refining",
-   "price": 457.22,
-   "mcap_bn": 128.4,
+   "ticker": "EHC",
+   "name": "Encompass Health Corporation",
+   "sector": "Healthcare",
+   "price": 124.09,
+   "price_date": "2026-10-23",
+   "mcap_bn": 12.23,
+   "mcap_ccy": "USD",
    "metrics": {
-    "eps_growth_this_y_ytd_6m": 4.245,
-    "eps_qoq": 3.477,
-    "sales_qoq": 0.538,
-    "q2_2026_diluted_eps": 17.73,
-    "q2_2025_diluted_eps": 3.96,
-    "q2_2026_sales_mn": 51994,
-    "q2_2025_sales_mn": 33799,
-    "sma50": 409.3,
-    "sma200": 283.79,
-    "rsi": 59.63,
-    "pct_from_52w_high": -0.0744,
-    "52w_high": 493.98,
-    "52w_low": 161.93,
-    "perf_52w": 1.4251,
-    "avg_volume_20d": 1966502,
-    "short_float": 0.0251,
-    "fwd_pe": 5.78
+    "sma50": 122.36,
+    "sma200": 109.43,
+    "sma_asof": "2026-10-23",
+    "price_vs_sma50": "above",
+    "price_vs_sma200": "above",
+    "rsi": 52.68,
+    "forward_pe": 19.54,
+    "roe_pct": 24.97,
+    "debt_equity": 0.82,
+    "operating_margin_pct": 18.0,
+    "eps_growth_forecast_3y_pct": 10.18,
+    "q3_2026_diluted_eps_cont_ops_yoy": "1.51 vs 1.24 (+21.8%)",
+    "q3_2026_adj_eps_yoy": "1.52 vs 1.23 (+23.6%)",
+    "q3_2026_revenue_musd": "1609.5 vs 1477.5 (+8.9%)",
+    "fy2026_adj_eps_guidance": "raised to 6.23-6.37 from 6.02-6.25",
+    "short_float_pct": 3.57,
+    "change_52w_pct": -1.58
    },
+   "latest_results": "Q3 2026 (released 2026-10-28): adj EPS $1.52 vs $1.23, revenue +8.9% to $1,609.5m; FY guidance raised",
+   "next_earnings": null,
+   "passes": true,
+   "why_passes": "On 23-Oct data price 124.09 > SMA50 122.36 and SMA200 109.43, RSI 52.7; strong Q3 beat + guidance raise supports breakout",
+   "scanner_contradictions": [
+    "Scanner price 135.9 (Oct 30) is ~9.5% above last sourced close 124.09 (Oct 23) - consistent with a post-earnings gap but not verified; RSI 69 vs sourced 52.7 (pre-earnings)",
+    "Scanner next_earnings null - Q3 reported 28 Oct 2026"
+   ],
    "unverified": [
-    "perf_half (not sourced; the 52-week change is +142.5%)",
-    "The latest quarter is Q2 2026; Q3 is due 2026-11-03",
-    "EPS growth this year uses 6M YTD EPS ($19.30 vs $3.68)"
+    "Oct-30 close (scanner 135.9)",
+    "RSI as of Oct 30 (check not >75 after gap)",
+    "next earnings date"
    ],
    "sources": [
-    "stockanalysis.com MPC statistics https://stockanalysis.com/stocks/mpc/statistics/ (close 2026-10-23)",
-    "stockanalysis.com MPC overview https://stockanalysis.com/stocks/mpc/ (close 2026-10-23)",
-    "SEC 8-K, MPC Q2 2026 earnings release https://www.sec.gov/Archives/edgar/data/0001510295/000151029526000060/mpcq22026earningsrelease.htm (2026-08)"
+    "StockAnalysis EHC statistics https://stockanalysis.com/stocks/ehc/statistics/ (snapshot 23 Oct 2026)",
+    "FinancialContent EHC historical https://www.financialcontent.com/quote/NY:EHC/historical (close 124.09 on 23 Oct 2026)",
+    "SEC 8-K Ex.99 Q3 2026 release https://www.sec.gov/Archives/edgar/data/0000785161/000078516126000236/ehcearningsrelease93026.htm (28 Oct 2026)"
+   ]
+  },
+  {
+   "screen": "Swing Long",
+   "market": "JSE",
+   "ticker": "LHC.JO",
+   "name": "Life Healthcare Group Holdings",
+   "sector": "Healthcare",
+   "price": 12.59,
+   "price_date": "2026-10-30",
+   "mcap_bn": 18.25,
+   "mcap_ccy": "ZAR",
+   "metrics": {
+    "sma50_zar": 11.61,
+    "sma200_zar": 11.36,
+    "sma_asof": "2026-10-05",
+    "price_vs_sma50": "above",
+    "price_vs_sma200": "above",
+    "rsi": 50.13,
+    "rsi_asof": "2026-10-05",
+    "forward_pe": 9.09,
+    "roe_pct": 14.29,
+    "debt_equity": 0.4,
+    "operating_margin_pct": 10.29,
+    "eps_growth_forecast_3y_pct": 8.61,
+    "h1_2026_normalised_eps_change_pct": 8.4,
+    "h1_2026_revenue_change_pct": 2.4,
+    "change_52w_pct": -1.26
+   },
+   "latest_results": "H1 FY2026 to 31 Mar 2026 (released 2026-05-28): normalised EPS +8.4% to 53.1c; revenue +2.4% to R12.4bn",
+   "next_earnings": "2026-11-26",
+   "passes": true,
+   "why_passes": "R12.59 (30 Oct) above SMA50 R11.61 and SMA200 R11.36 (5-Oct snapshot); RSI 50 on that snapshot",
+   "scanner_contradictions": [
+    "Forward P/E 9.09 sourced vs 10.63 scanner",
+    "SMA/RSI snapshot is 5 Oct - stale; current RSI unverified"
+   ],
+   "unverified": [
+    "current SMA50/SMA200/RSI (only 5-Oct snapshot)"
+   ],
+   "sources": [
+    "ShareData LHC quote https://www.sharedata.co.za/v2/Scripts/Quote.aspx?c=LHC (last R12.59, 30 Oct; mcap R18.25bn)",
+    "StockAnalysis JSE:LHC statistics https://stockanalysis.com/quote/jse/LHC/statistics/ (snapshot 5 Oct 2026)",
+    "Life Healthcare interim results SENS https://www.lifehealthcare.co.za/media/4329/sens-announcement-interim-results-may-2026-final.pdf (28 May 2026)"
    ]
   },
   {
    "screen": "Swing Short",
    "market": "US",
-   "ticker": "GIS",
-   "name": "General Mills",
-   "sector": "Consumer Staples - Packaged Foods",
-   "price": 34.39,
-   "mcap_bn": 18.39,
+   "ticker": "CARR",
+   "name": "Carrier Global Corporation",
+   "sector": "Industrials",
+   "price": 53.63,
+   "price_date": "2026-10-30",
+   "mcap_bn": 46.6,
+   "mcap_asof": "2026-10-27",
+   "mcap_ccy": "USD",
    "metrics": {
-    "eps_growth_this_y_guided_adj_low": -0.155,
-    "eps_growth_this_y_guided_adj_high": -0.099,
-    "fy27_adj_eps_guidance": "3.00-3.20",
-    "fy26_adj_eps": 3.55,
-    "eps_qoq": -0.667,
-    "eps_qoq_adjusted": -0.128,
-    "sales_qoq": -0.0283,
-    "q1_fy27_net_sales_mn": 4389.5,
-    "q1_fy26_net_sales_mn": 4517.5,
-    "sma50": 35.94,
-    "sma200": 37.77,
-    "rsi": 52.85,
-    "pct_from_52w_low": 0.103,
-    "52w_low": 31.18,
-    "52w_high": 49.59,
-    "perf_52w": -0.3007,
-    "avg_volume_20d": 10549943,
-    "short_float": 0.0773,
-    "fwd_pe": 11.09
+    "sma50": 56.71,
+    "sma200": 61.81,
+    "sma_asof": "2026-10-27",
+    "price_vs_sma50": "below",
+    "price_vs_sma200": "below",
+    "rsi": 52.66,
+    "rsi_asof": "2026-10-27",
+    "forward_pe": 18.47,
+    "roe_pct_pre_q3": 8.97,
+    "debt_equity": 0.92,
+    "operating_margin_pct_pre_q3": 8.19,
+    "eps_growth_forecast_3y_pct": 13.48,
+    "q3_2026_gaap_eps_yoy": "-3.16 vs 0.47 ($3.1bn goodwill impairment)",
+    "q3_2026_adj_eps_yoy": "0.87 vs 0.67 (+30%)",
+    "q3_2026_sales": "$6,263m, +12%; organic +15%",
+    "fy2026_guidance": "sales raised to $23.8-24.0bn; adj EPS $2.85-2.90 vs prior ~2.90",
+    "short_float_pct": 2.78,
+    "change_52w_pct": -2.47
    },
+   "latest_results": "Q3 2026 (released 2026-10-29): GAAP EPS -$3.16 (goodwill impairment), adj EPS $0.87 vs $0.67; sales +12%, organic +15%",
+   "next_earnings": null,
+   "passes": true,
+   "why_passes": "53.63 (30 Oct) below SMA50 56.71 and SMA200 61.81; fell 3 sessions after Q3 (57.83 -> 53.63)",
+   "scanner_contradictions": [
+    "ROE: scanner -13.4% vs StockAnalysis 8.97% (pre-Q3 TTM; impairment likely explains scanner's negative)",
+    "Operating margin 8.19% sourced vs 12.34% scanner",
+    "Forward P/E 18.47 sourced vs 16.56 scanner",
+    "Fundamental caution for a short: adj EPS +30%, organic sales +15%, sales guide raised"
+   ],
    "unverified": [
-    "perf_half (not sourced; the 52-week change is -30% and price is below SMA200)",
-    "EPS growth this year is on an adjusted basis (guidance vs FY26 adjusted EPS). GAAP FY26 EPS was -0.16, so GAAP growth would be positive."
+    "RSI as of Oct 30 (scanner 37.3)",
+    "post-Q3 TTM ROE/margins",
+    "next earnings date"
    ],
    "sources": [
-    "stockanalysis.com GIS statistics https://stockanalysis.com/stocks/gis/statistics/ (close 2026-10-23)",
-    "stockanalysis.com GIS overview https://stockanalysis.com/stocks/gis/ (2026-10-24)",
-    "SEC 8-K, GIS Q1 FY27 release https://www.sec.gov/Archives/edgar/data/0000040704/000162828026063141/a20260923ex99.htm (2026-09-23)",
-    "SEC 8-K, GIS FY26 Q4 release https://www.sec.gov/Archives/edgar/data/0000040704/000162828026046337/a20260701ex99.htm (2026-07-01)"
+    "FinancialContent CARR historical https://www.financialcontent.com/quote/NY:CARR/historical (close 53.63 on 30 Oct 2026)",
+    "StockAnalysis CARR statistics https://stockanalysis.com/stocks/carr/statistics/ (snapshot 27 Oct 2026)",
+    "SEC 8-K Ex.99 Q3 2026 https://www.sec.gov/Archives/edgar/data/0001783180/000178318026000035/a99-q32026earningsexhibit.htm (29 Oct 2026)"
+   ]
+  },
+  {
+   "screen": "Swing Short",
+   "market": "US",
+   "ticker": "RBLX",
+   "name": "Roblox Corporation",
+   "sector": "Communication Services",
+   "price": 43.01,
+   "price_date": "2026-10-30",
+   "mcap_bn": 37.78,
+   "mcap_asof": "2026-10-23 (pre-drop)",
+   "mcap_ccy": "USD",
+   "metrics": {
+    "day_change_oct30": "-9.45 (-18.01%)",
+    "sma50": 45.03,
+    "sma200": 52.99,
+    "sma_asof": "2026-10-23",
+    "price_vs_sma50": "below",
+    "price_vs_sma200": "below",
+    "rsi": 62.77,
+    "rsi_asof": "2026-10-23 (pre-drop)",
+    "forward_pe": "n/a",
+    "roe_pct": -432.27,
+    "debt_equity": 14.23,
+    "operating_margin_pct": -19.12,
+    "short_float_pct": 4.3,
+    "change_52w_pct": -58.68
+   },
+   "latest_results": "Q3 2026 reported 2026-10-29 after close; stock -18.0% to $43.01 on 30 Oct (MarketBeat). Q3 figures not sourced",
+   "next_earnings": null,
+   "passes": true,
+   "why_passes": "43.01 (30 Oct) below SMA50 45.03 and SMA200 52.99 after an 18% post-earnings gap down; loss-making, D/E 14.2",
+   "scanner_contradictions": [
+    "Operating margin -19.12% sourced vs -13.27% scanner",
+    "Scanner mcap 30.7bn not verifiable post-drop (last sourced 37.78bn pre-drop)",
+    "Caution: 18% one-day gap may leave RSI near oversold; scanner stop 50.68 is wide (22.8% risk)"
+   ],
+   "unverified": [
+    "Q3 2026 EPS/bookings/revenue (SEC exhibit fetch failed)",
+    "RSI as of Oct 30",
+    "current mcap",
+    "next earnings date"
+   ],
+   "sources": [
+    "MarketBeat price box on https://www.marketbeat.com/originals/why-roblox-stock-could-soar-75-after-the-q3-dip/ ($43.01, -18.01%, as of 10/30/2026)",
+    "StockAnalysis RBLX statistics https://stockanalysis.com/stocks/rblx/statistics/ (snapshot 23-26 Oct 2026)",
+    "StockAnalysis RBLX history https://stockanalysis.com/stocks/rblx/history/ (through 27 Oct 2026, close 54.47)"
+   ]
+  },
+  {
+   "screen": "Swing Short",
+   "market": "JSE",
+   "ticker": "VAL.JO",
+   "name": "Valterra Platinum Limited",
+   "sector": "Basic Materials",
+   "price": 1080.0,
+   "price_date": "2026-10-30",
+   "mcap_bn": 286.52,
+   "mcap_ccy": "ZAR",
+   "metrics": {
+    "day_change_oct30": "-R66.47 (-5.8%) from R1,146.47",
+    "sma50_zar": 1342.26,
+    "sma200_zar": 1376.7,
+    "sma_asof": "2026-10-23",
+    "price_vs_sma50": "below",
+    "price_vs_sma200": "below",
+    "rsi": 33.02,
+    "rsi_asof": "2026-10-23",
+    "forward_pe": 8.71,
+    "roe_pct": 37.82,
+    "debt_equity": 0.03,
+    "operating_margin_pct": 32.85,
+    "eps_growth_forecast_3y_pct": 26.36,
+    "q3_2026_pgm_production": "804.3koz vs 855.1koz (-6%); refined -41% to 576.9koz",
+    "change_52w_pct": 9.69
+   },
+   "latest_results": "Q3 2026 production report (2026-10-23): total PGM output -6% to 804,300oz, refined -41%; FY guidance unchanged, unit costs near top of range",
+   "next_earnings": null,
+   "passes": true,
+   "why_passes": "R1,080 (30 Oct) well below SMA50 R1,342 and SMA200 R1,377; Q3 output down and costs at top of range",
+   "scanner_contradictions": [
+    "Scanner EPS growth 108.7% not matched; StockAnalysis shows 3Y EPS growth forecast 26.36%",
+    "Operating margin 32.85% sourced vs 36.7% scanner",
+    "Caution: RSI ~33 on 23 Oct and lower since - near oversold; strong balance sheet (D/E 0.03, ROE 37.8%)"
+   ],
+   "unverified": [
+    "RSI as of Oct 30 (scanner 30.15)",
+    "next results date"
+   ],
+   "sources": [
+    "ShareData VAL quote https://sharedata.co.za/v2/Scripts/Quote.aspx?c=VAL (last R1,080.00, 30 Oct; prev R1,146.47; mcap R286.52bn)",
+    "StockAnalysis JSE:VAL statistics https://stockanalysis.com/quote/jse/VAL/statistics/ (snapshot 23 Oct 2026)",
+    "BusinessDay https://www.businessday.co.za/companies/earnings/2026-10-23-valterra-keeps-guidance-unchanged-despite-lower-third-quarter-pgm-output/ (23 Oct 2026)"
    ]
   },
   {
    "screen": "Investment",
-   "market": "US",
-   "ticker": "MU",
-   "name": "Micron Technology",
-   "sector": "Technology - Semiconductors",
-   "price": 877.55,
-   "mcap_bn": 992.88,
+   "market": "JSE",
+   "ticker": "LEW.JO",
+   "name": "Lewis Group Limited",
+   "sector": "Consumer Cyclical",
+   "price": 86.81,
+   "price_date": "2026-10-30",
+   "mcap_bn": 4.53,
+   "mcap_ccy": "ZAR",
    "metrics": {
-    "roe": 0.8826,
-    "roi_roic": 0.9342,
-    "oper_margin": 0.7459,
-    "debt_equity": 0.04,
-    "current_ratio": 3.31,
-    "fwd_pe": 4.97,
-    "pe": 11.81,
-    "p_fcf": 16.84,
-    "eps_growth_past_5y": 0.706,
-    "sales_growth_past_5y": 0.369,
-    "rsi": 38.17,
-    "sma50": 982.73,
-    "sma200": 732.1
+    "roe_pct": 16.16,
+    "debt_equity": 0.43,
+    "operating_margin_pct": 13.33,
+    "trailing_eps_zar": 15.87,
+    "fy2026_headline_earnings_change_pct": 18.4,
+    "fy2026_revenue_change_pct": 11.1,
+    "fy2026_dividend_change_pct": 12.1,
+    "ratios_asof": "2026-08-18",
+    "change_52w_pct": 14.67
    },
+   "latest_results": "FY to Mar 2026 (released 2026-05-28): headline earnings +18.4% to R909.4m; revenue +11.1% to R10.3bn; dividend +12.1% to 897c",
+   "next_earnings": "2026-11-19",
+   "passes": true,
+   "why_passes": "ROE 16.2% > 15%, D/E 0.43, headline earnings +18.4%",
+   "scanner_contradictions": [
+    "Operating margin 13.33% sourced vs 15.22% scanner",
+    "Scanner next_earnings null; StockAnalysis lists interim results 19 Nov 2026"
+   ],
    "unverified": [
-    "5y CAGRs are my own calculation, FY2021 to FY2026 (FY21 EPS 5.14 and revenue $27.7bn backed out of FY22 figures and stated growth). The figures are cyclical-peak driven."
+    "forward P/E (n/a on StockAnalysis; scanner 7.0)",
+    "HEPS per-share growth",
+    "current SMA/RSI (statistics snapshot 18 Aug)"
    ],
    "sources": [
-    "stockanalysis.com MU statistics https://stockanalysis.com/stocks/mu/statistics/ (close 2026-10-23)",
-    "stockanalysis.com MU income statement https://stockanalysis.com/stocks/mu/financials/income-statement/ (2026-10-24)"
+    "ShareData LEW quote https://www.sharedata.co.za/v2/Scripts/Quote.aspx?c=LEW (last R86.81, 30 Oct; mcap R4.53bn)",
+    "StockAnalysis JSE:LEW statistics https://stockanalysis.com/quote/jse/LEW/statistics (snapshot 18 Aug 2026)",
+    "StockAnalysis JSE:LEW quote https://stockanalysis.com/quote/jse/LEW/ (next earnings Nov 19, 2026)",
+    "PersFin https://persfin.co.za/companies/2026-05-28-lewis-group-reports-strong-credit-sales-growth-and-more-than-50-new-store-openings/ (28 May 2026)"
    ]
   },
   {
    "screen": "Investment",
-   "market": "US",
-   "ticker": "RMD",
-   "name": "ResMed",
-   "sector": "Healthcare - Medical Devices",
-   "price": 252.86,
-   "mcap_bn": 35.56,
+   "market": "JSE",
+   "ticker": "AVI.JO",
+   "name": "AVI Limited",
+   "sector": "Consumer Defensive",
+   "price": 82.75,
+   "price_date": "2026-10-30",
+   "mcap_bn": 28.41,
+   "mcap_ccy": "ZAR",
    "metrics": {
-    "roe": 0.2427,
-    "roi_roic": 0.2623,
-    "oper_margin": 0.3396,
-    "debt_equity": 0.13,
-    "current_ratio": 3.1,
-    "fwd_pe": 20.91,
-    "pe": 24.24,
-    "p_fcf": 21.71,
-    "eps_growth_past_5y": 0.263,
-    "sales_growth_past_5y": 0.121,
-    "rsi": 77.19,
-    "sma50": 229.53,
-    "sma200": 225.08
+    "forward_pe": 11.03,
+    "roe_pct": 48.88,
+    "debt_equity": 0.47,
+    "operating_margin_pct": 23.07,
+    "eps_growth_forecast_3y_pct": 8.15,
+    "ratios_asof": "2026-08-06",
+    "fy2026_heps_change_pct": 5.3,
+    "fy2026_heps_cents": 767.9,
+    "fy2026_revenue_change_pct": 1.4,
+    "fy2026_operating_profit_change_pct": 4.4
    },
+   "latest_results": "FY to Jun 2026 (released 2026-09-07): HEPS +5.3% to 767.9c; revenue +1.4% to R16.24bn; operating profit +4.4% (Quartr summary)",
+   "next_earnings": null,
+   "passes": true,
+   "why_passes": "ROE ~49% > 15%, D/E 0.47, HEPS +5.3% (modest positive growth)",
+   "scanner_contradictions": [
+    "D/E 0.47 sourced vs 0.32 scanner",
+    "Forward P/E 11.03 (Aug snapshot) vs 9.89 scanner - consistent with lower price since"
+   ],
    "unverified": [
-    "5y CAGRs are my own calculation, FY2021 to FY2026 (June FY)",
-    "RSI 77 means it is short-term overbought"
+    "current forward P/E/ratios (Aug snapshot)",
+    "results figures from primary SENS (Quartr AI summary used)",
+    "next earnings date"
    ],
    "sources": [
-    "stockanalysis.com RMD statistics https://stockanalysis.com/stocks/rmd/statistics/ (close 2026-10-23)",
-    "stockanalysis.com RMD financials https://stockanalysis.com/stocks/rmd/financials/ (2026-10-24)"
-   ]
-  },
-  {
-   "screen": "Investment",
-   "market": "US",
-   "ticker": "LULU",
-   "name": "lululemon athletica",
-   "sector": "Consumer Discretionary - Apparel",
-   "price": 99.01,
-   "mcap_bn": 10.96,
-   "metrics": {
-    "roe": 0.309,
-    "roi_roic": 0.237,
-    "oper_margin": 0.1662,
-    "debt_equity": 0.45,
-    "current_ratio": 2.19,
-    "fwd_pe": 11.78,
-    "pe": 8.1,
-    "p_fcf": 8.09,
-    "eps_growth_past_5y": 0.241,
-    "sales_growth_past_5y": 0.203,
-    "ttm_eps_growth": -0.1702,
-    "ttm_sales_growth": 0.0174,
-    "rsi": 49.74,
-    "perf_52w": -0.4447
-   },
-   "unverified": [
-    "5y CAGRs are my own calculation, FY2021 (Jan-2021) to FY2026 (Feb-2026)",
-    "Market cap is only just above $10bn",
-    "Fundamentals are deteriorating (TTM EPS -17%), so this is a value-trap risk"
-   ],
-   "sources": [
-    "stockanalysis.com LULU statistics https://stockanalysis.com/stocks/lulu/statistics/ (close 2026-10-23)",
-    "stockanalysis.com LULU income statement https://stockanalysis.com/stocks/lulu/financials/income-statement/ (2026-10-24)"
+    "ShareData AVI quote https://www.sharedata.co.za/v2/Scripts/quote.aspx?c=AVI (last R82.75, 30 Oct; mcap R28.41bn)",
+    "StockAnalysis JSE:AVI statistics https://stockanalysis.com/quote/jse/AVI/statistics/ (snapshot 6 Aug 2026)",
+    "Quartr AVI H2 2026 https://quartr.com/events/avi-limited-avi-h2-2026_F6s4WmNV (7 Sep 2026)"
    ]
   }
- ],
- "status": "For analyst review only — not added to the watchlist or ratings."
+ ]
 }
