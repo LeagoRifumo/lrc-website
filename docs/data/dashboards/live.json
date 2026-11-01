@@ -2,7 +2,7 @@
  "week_ending": "2026-10-30",
  "title": "Live — as of Sun 01 Nov 2026",
  "live": true,
- "generated": "2026-11-01T07:24+02:00",
+ "generated": "2026-11-01T08:19+02:00",
  "agent": "LRC Market Dashboard",
  "groups": [
   {
@@ -177,9 +177,9 @@
      "unit": "$/oz",
      "latest": 3898.9,
      "week_ago": 4007.8999,
-     "year_ago": 4015.8999,
+     "year_ago": 3996.5,
      "as_of": "2026-10-30",
-     "source": "Yahoo Finance GC=F daily close (2026-10-30; week-ago 2026-10-23; year-ago 2025-10-30)",
+     "source": "Yahoo Finance GC=F daily close (2026-10-30; week-ago 2026-10-22; year-ago 2025-10-30)",
      "note": "",
      "carried": false
     },
@@ -188,9 +188,9 @@
      "unit": "$/oz",
      "latest": 1436.0,
      "week_ago": 1554.2,
-     "year_ago": 1608.3,
+     "year_ago": 1569.8,
      "as_of": "2026-10-30",
-     "source": "Yahoo Finance PL=F daily close (2026-10-30; week-ago 2026-10-23; year-ago 2025-10-30)",
+     "source": "Yahoo Finance PL=F daily close (2026-10-30; week-ago 2026-10-22; year-ago 2025-10-30)",
      "note": "",
      "carried": false
     },
@@ -199,9 +199,9 @@
      "unit": "$/bbl",
      "latest": 113.43,
      "week_ago": 116.72,
-     "year_ago": 65.0,
+     "year_ago": 65.07,
      "as_of": "2026-10-30",
-     "source": "Yahoo Finance BZ=F daily close (2026-10-30; week-ago 2026-10-23; year-ago 2025-10-30)",
+     "source": "Yahoo Finance BZ=F daily close (2026-10-30; week-ago 2026-10-22; year-ago 2025-10-30)",
      "note": "",
      "carried": false
     },
@@ -210,9 +210,9 @@
      "unit": "$/t",
      "latest": 14290.3468,
      "week_ago": 14277.1187,
-     "year_ago": 11195.0605,
+     "year_ago": 11167.5021,
      "as_of": "2026-10-30",
-     "source": "Yahoo Finance HG=F daily close (2026-10-30; week-ago 2026-10-23; year-ago 2025-10-30) — converted $/lb × 2,204.62 to $/t",
+     "source": "Yahoo Finance HG=F daily close (2026-10-30; week-ago 2026-10-22; year-ago 2025-10-30) — converted $/lb × 2,204.62 to $/t",
      "note": "",
      "carried": false
     },
