@@ -134,11 +134,12 @@
 "period": null,
 "market_cap_bn": 513.9,
 "eps_actual": 3.82,
-"eps_est": 3.77,
-"surprise": 0.0132,
+"eps_est": 3.74,
+"surprise": 0.021400000000000002,
 "result": "beat",
 "quarter_end": "2026-09-30",
-"result_done": true
+"result_done": true,
+"source": "Nasdaq"
 },
 "ABCB|2026-10-22": {
 "t": "ABCB",
@@ -2050,12 +2051,13 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 5.6,
-"eps_actual": 5.56,
-"eps_est": 5.463,
-"surprise": 0.0178,
-"result": "beat",
+"eps_actual": 5.11,
+"eps_est": 5.2,
+"surprise": -0.0173,
+"result": "miss",
 "quarter_end": "2026-06-30",
-"result_done": true
+"result_done": true,
+"source": "Nasdaq"
 },
 "AON|2026-10-28": {
 "t": "AON",
@@ -3039,6 +3041,22 @@
 "period": null,
 "market_cap_bn": 6.6
 },
+"AUPH|2026-10-30": {
+"t": "AUPH",
+"ticker": "AUPH",
+"name": "Aurinia Pharmaceuticals Inc",
+"m": "US",
+"date": "2026-10-30",
+"eps_forecast": "$0.20",
+"quarter": "Sep/2026",
+"market_cap_bn": 2.3,
+"eps_actual": 0.23,
+"eps_est": 0.2,
+"surprise": 0.15,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
+},
 "AUPH|2026-11-03": {
 "t": "AUPH",
 "ticker": "AUPH",
@@ -3500,12 +3518,13 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 263.8,
-"eps_actual": 1.0,
-"eps_est": 1.146,
-"surprise": -0.1272,
-"result": "miss",
+"eps_actual": 2.79,
+"eps_est": 2.6,
+"surprise": 0.0731,
+"result": "beat",
 "quarter_end": "2026-09-30",
-"result_done": true
+"result_done": true,
+"source": "Nasdaq"
 },
 "AZO|2026-12-08": {
 "t": "AZO",
@@ -4006,12 +4025,13 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 19.3,
-"eps_actual": 0.5723,
-"eps_est": 0.7091,
-"surprise": -0.193,
-"result": "miss",
+"eps_actual": 0.85,
+"eps_est": 0.66,
+"surprise": 0.2879,
+"result": "beat",
 "quarter_end": "2026-09-30",
-"result_done": true
+"result_done": true,
+"source": "Nasdaq"
 },
 "BCO|2026-11-04": {
 "t": "BCO",
@@ -5165,11 +5185,12 @@
 "period": null,
 "market_cap_bn": 129.8,
 "eps_actual": 3.26,
-"eps_est": 2.617,
-"surprise": 0.2457,
+"eps_est": 2.66,
+"surprise": 0.2256,
 "result": "beat",
 "quarter_end": "2026-09-30",
-"result_done": true
+"result_done": true,
+"source": "Nasdaq"
 },
 "BRBR|2026-11-18": {
 "t": "BRBR",
@@ -5363,12 +5384,13 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 14.8,
-"eps_actual": 0.5,
-"eps_est": 0.6965,
-"surprise": -0.2821,
+"eps_actual": 0.52,
+"eps_est": 0.65,
+"surprise": -0.2,
 "result": "miss",
 "quarter_end": "2026-09-30",
-"result_done": true
+"result_done": true,
+"source": "Nasdaq"
 },
 "BSM|2026-11-02": {
 "t": "BSM",
@@ -5485,11 +5507,12 @@
 "period": null,
 "market_cap_bn": 11.9,
 "eps_actual": 0.54,
-"eps_est": 0.4709,
-"surprise": 0.1467,
+"eps_est": 0.45,
+"surprise": 0.2,
 "result": "beat",
 "quarter_end": "2026-09-30",
-"result_done": true
+"result_done": true,
+"source": "Nasdaq"
 },
 "BTU|2026-11-04": {
 "t": "BTU",
@@ -6182,7 +6205,13 @@
 "eps_forecast": "$3.43",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 11.6
+"market_cap_bn": 11.6,
+"eps_actual": 3.63,
+"eps_est": 3.43,
+"surprise": 0.0583,
+"result": "beat",
+"result_done": true,
+"source": "Nasdaq"
 },
 "CBRE|2026-10-22": {
 "t": "CBRE",
@@ -6349,12 +6378,13 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 36.3,
-"eps_actual": 0.18,
-"eps_est": 0.3758,
-"surprise": -0.521,
+"eps_actual": 0.0,
+"eps_est": 0.23,
+"surprise": -1.0,
 "result": "miss",
 "quarter_end": "2026-06-30",
-"result_done": true
+"result_done": true,
+"source": "Nasdaq"
 },
 "CCK|2026-10-19": {
 "t": "CCK",
@@ -6899,12 +6929,13 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 25.1,
-"eps_actual": 0.89,
-"eps_est": 0.8986,
-"surprise": -0.0095,
-"result": "inline",
+"eps_actual": 0.92,
+"eps_est": 0.9,
+"surprise": 0.0222,
+"result": "beat",
 "quarter_end": "2026-06-30",
-"result_done": true
+"result_done": true,
+"source": "Nasdaq"
 },
 "CHEF|2026-10-28": {
 "t": "CHEF",
@@ -7355,11 +7386,12 @@
 "period": null,
 "market_cap_bn": 74.3,
 "eps_actual": 0.97,
-"eps_est": 0.9253,
-"surprise": 0.0483,
+"eps_est": 0.92,
+"surprise": 0.054299999999999994,
 "result": "beat",
 "quarter_end": "2026-09-30",
-"result_done": true
+"result_done": true,
+"source": "Nasdaq"
 },
 "CMBT|2026-11-26": {
 "t": "CMBT",
@@ -7585,12 +7617,13 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 75.0,
-"eps_actual": 2.16,
-"eps_est": 2.083,
-"surprise": 0.0368,
+"eps_actual": 1.54,
+"eps_est": 1.49,
+"surprise": 0.0336,
 "result": "beat",
 "quarter_end": "2026-09-30",
-"result_done": true
+"result_done": true,
+"source": "Nasdaq"
 },
 "CNK|2026-11-03": {
 "t": "CNK",
@@ -8944,11 +8977,12 @@
 "period": null,
 "market_cap_bn": 457.3,
 "eps_actual": 5.28,
-"eps_est": 4.868,
-"surprise": 0.0847,
+"eps_est": 4.78,
+"surprise": 0.10460000000000001,
 "result": "beat",
 "quarter_end": "2026-09-30",
-"result_done": true
+"result_done": true,
+"source": "Nasdaq"
 },
 "CWEN|2026-11-09": {
 "t": "CWEN",
@@ -10380,12 +10414,13 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 57.3,
-"eps_actual": 0.79,
-"eps_est": 0.6741,
-"surprise": 0.172,
+"eps_actual": 1.28,
+"eps_est": 1.2,
+"surprise": 0.0667,
 "result": "beat",
 "quarter_end": "2026-06-30",
-"result_done": true
+"result_done": true,
+"source": "Nasdaq"
 },
 "EAT|2026-10-28": {
 "t": "EAT",
@@ -11758,11 +11793,12 @@
 "period": null,
 "market_cap_bn": 47.4,
 "eps_actual": 0.87,
-"eps_est": 0.7889,
-"surprise": 0.1028,
+"eps_est": 0.8,
+"surprise": 0.0875,
 "result": "beat",
 "quarter_end": "2026-09-30",
-"result_done": true
+"result_done": true,
+"source": "Nasdaq"
 },
 "EXEL|2026-10-29": {
 "t": "EXEL",
@@ -13099,12 +13135,13 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 9.7,
-"eps_actual": 0.97,
-"eps_est": 0.7169,
-"surprise": 0.353,
+"eps_actual": 1.87,
+"eps_est": 1.85,
+"surprise": 0.0108,
 "result": "beat",
 "quarter_end": "2026-06-30",
-"result_done": true
+"result_done": true,
+"source": "Nasdaq"
 },
 "FRVO|2026-11-11": {
 "t": "FRVO",
@@ -13564,11 +13601,12 @@
 "period": null,
 "market_cap_bn": 100.3,
 "eps_actual": 4.49,
-"eps_est": 4.133,
-"surprise": 0.0863,
+"eps_est": 4.14,
+"surprise": 0.08449999999999999,
 "result": "beat",
 "quarter_end": "2026-09-30",
-"result_done": true
+"result_done": true,
+"source": "Nasdaq"
 },
 "GEF.B|2026-11-03": {
 "t": "GEF.B",
@@ -14536,12 +14574,13 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 6.6,
-"eps_actual": 0.47,
-"eps_est": 0.4399,
-"surprise": 0.0685,
+"eps_actual": 0.44,
+"eps_est": 0.42,
+"surprise": 0.047599999999999996,
 "result": "beat",
 "quarter_end": "2026-09-30",
-"result_done": true
+"result_done": true,
+"source": "Nasdaq"
 },
 "GTLB|2026-12-01": {
 "t": "GTLB",
@@ -14899,11 +14938,12 @@
 "quarter": "Sep/2026",
 "market_cap_bn": 4.1,
 "eps_actual": 0.77,
-"eps_est": 0.7051,
-"surprise": 0.0921,
+"eps_est": 0.71,
+"surprise": 0.08449999999999999,
 "result": "beat",
 "quarter_end": "2026-09-30",
-"result_done": true
+"result_done": true,
+"source": "Nasdaq"
 },
 "HESM|2026-11-02": {
 "t": "HESM",
@@ -16347,12 +16387,13 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 63.5,
-"eps_actual": 4.52,
-"eps_est": 4.169,
-"surprise": 0.0841,
+"eps_actual": 3.65,
+"eps_est": 3.43,
+"surprise": 0.0641,
 "result": "beat",
 "quarter_end": "2026-06-30",
-"result_done": true
+"result_done": true,
+"source": "Nasdaq"
 },
 "IMTX|2026-11-17": {
 "t": "IMTX",
@@ -18312,12 +18353,13 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 5.0,
-"eps_actual": 0.0642,
-"eps_est": 0.08,
-"surprise": -0.1975,
-"result": "miss",
+"eps_actual": 0.52,
+"eps_est": 0.52,
+"surprise": 0.0,
+"result": "inline",
 "quarter_end": "2026-09-30",
-"result_done": true
+"result_done": true,
+"source": "Nasdaq"
 },
 "KRMN|2026-11-05": {
 "t": "KRMN",
@@ -18438,12 +18480,13 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 37.6,
-"eps_actual": 0.31,
-"eps_est": 0.319,
-"surprise": -0.0282,
-"result": "miss",
+"eps_actual": 0.29,
+"eps_est": 0.28,
+"surprise": 0.035699999999999996,
+"result": "beat",
 "quarter_end": "2026-06-30",
-"result_done": true
+"result_done": true,
+"source": "Nasdaq"
 },
 "KVYO|2026-11-04": {
 "t": "KVYO",
@@ -18730,11 +18773,12 @@
 "period": null,
 "market_cap_bn": 5.8,
 "eps_actual": 3.71,
-"eps_est": 3.321,
-"surprise": 0.1172,
+"eps_est": 3.32,
+"surprise": 0.1175,
 "result": "beat",
 "quarter_end": "2026-09-30",
-"result_done": true
+"result_done": true,
+"source": "Nasdaq"
 },
 "LECO|2026-10-27": {
 "t": "LECO",
@@ -19755,11 +19799,12 @@
 "period": null,
 "market_cap_bn": 21.1,
 "eps_actual": 2.54,
-"eps_est": 2.55,
-"surprise": -0.0041,
-"result": "inline",
+"eps_est": 2.73,
+"surprise": -0.0696,
+"result": "miss",
 "quarter_end": "2026-09-30",
-"result_done": true
+"result_done": true,
+"source": "Nasdaq"
 },
 "LYFT|2026-11-05": {
 "t": "LYFT",
@@ -20497,11 +20542,12 @@
 "period": null,
 "market_cap_bn": 17.1,
 "eps_actual": 1.83,
-"eps_est": 1.605,
-"surprise": 0.14,
+"eps_est": 1.58,
+"surprise": 0.1582,
 "result": "beat",
 "quarter_end": "2026-09-30",
-"result_done": true
+"result_done": true,
+"source": "Nasdaq"
 },
 "MGEE|2026-11-04": {
 "t": "MGEE",
@@ -21488,12 +21534,13 @@
 "quarter": "Sep/2026",
 "period": "Expected date (market data feed)",
 "market_cap_bn": 7.5,
-"eps_actual": 1.192,
-"eps_est": 0.5276,
-"surprise": 1.26,
+"eps_actual": -0.37,
+"eps_est": -1.18,
+"surprise": 0.6864406779661016,
 "result": "beat",
 "quarter_end": "2026-06-30",
-"result_done": true
+"result_done": true,
+"source": "Nasdaq"
 },
 "MSGK|2026-11-05": {
 "t": "MSGK",
@@ -23372,11 +23419,12 @@
 "period": null,
 "market_cap_bn": 22.4,
 "eps_actual": 1.52,
-"eps_est": 1.395,
-"surprise": 0.0894,
+"eps_est": 1.4,
+"surprise": 0.0857,
 "result": "beat",
 "quarter_end": "2026-09-30",
-"result_done": true
+"result_done": true,
+"source": "Nasdaq"
 },
 "NWBI|2026-10-26": {
 "t": "NWBI",
@@ -23415,16 +23463,17 @@
 "m": "US",
 "date": "2026-10-30",
 "when": "Before open",
-"eps_forecast": "$0.50",
+"eps_forecast": "$0.51",
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 68.5,
-"eps_actual": 0.5109,
-"eps_est": 0.5144,
-"surprise": -0.0069,
-"result": "inline",
+"eps_actual": 0.52,
+"eps_est": 0.51,
+"surprise": 0.0196,
+"result": "beat",
 "quarter_end": "2026-09-30",
-"result_done": true
+"result_done": true,
+"source": "Nasdaq"
 },
 "NWL|2026-10-30": {
 "t": "NWL",
@@ -23438,11 +23487,12 @@
 "period": null,
 "market_cap_bn": 2.2,
 "eps_actual": 0.2,
-"eps_est": 0.1972,
-"surprise": 0.014,
-"result": "beat",
+"eps_est": 0.2,
+"surprise": 0.0,
+"result": "inline",
 "quarter_end": "2026-09-30",
-"result_done": true
+"result_done": true,
+"source": "Nasdaq"
 },
 "NWN|2026-11-05": {
 "t": "NWN",
@@ -23752,6 +23802,22 @@
 "result_done": true,
 "source": "Nasdaq"
 },
+"OGN|2026-10-30": {
+"t": "OGN",
+"ticker": "OGN",
+"name": "Organon & Co.",
+"m": "US",
+"date": "2026-10-30",
+"eps_forecast": "$0.95",
+"quarter": "Sep/2026",
+"market_cap_bn": 3.6,
+"eps_actual": 0.88,
+"eps_est": 0.95,
+"surprise": -0.0737,
+"result": "miss",
+"result_done": true,
+"source": "Nasdaq"
+},
 "OGN|2026-11-09": {
 "t": "OGN",
 "ticker": "OGN",
@@ -24002,10 +24068,11 @@
 "market_cap_bn": 6.8,
 "eps_actual": 1.51,
 "eps_est": 1.56,
-"surprise": -0.0322,
+"surprise": -0.0321,
 "result": "miss",
 "quarter_end": "2026-09-30",
-"result_done": true
+"result_done": true,
+"source": "Nasdaq"
 },
 "OMU.JO|2026-12-03": {
 "t": "OMU.JO",
@@ -25487,12 +25554,13 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 4.9,
-"eps_actual": 1.04,
-"eps_est": 0.882,
-"surprise": 0.1791,
-"result": "beat",
+"eps_actual": 0.87,
+"eps_est": 0.93,
+"surprise": -0.0645,
+"result": "miss",
 "quarter_end": "2026-06-30",
-"result_done": true
+"result_done": true,
+"source": "Nasdaq"
 },
 "PI|2026-10-28": {
 "t": "PI",
@@ -26930,12 +26998,13 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 15.7,
-"eps_actual": 3.88,
-"eps_est": 3.426,
-"surprise": 0.1324,
+"eps_actual": 3.53,
+"eps_est": 3.39,
+"surprise": 0.041299999999999996,
 "result": "beat",
 "quarter_end": "2026-06-30",
-"result_done": true
+"result_done": true,
+"source": "Nasdaq"
 },
 "RBLX|2026-10-29": {
 "t": "RBLX",
@@ -27163,12 +27232,13 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 84.3,
-"eps_actual": 20.07,
-"eps_est": 16.25,
-"surprise": 0.2354,
+"eps_actual": 18.43,
+"eps_est": 13.76,
+"surprise": 0.3394,
 "result": "beat",
 "quarter_end": "2026-09-30",
-"result_done": true
+"result_done": true,
+"source": "Nasdaq"
 },
 "REG|2026-11-05": {
 "t": "REG",
@@ -29806,12 +29876,13 @@
 "quarter": "Sep/2026",
 "period": null,
 "market_cap_bn": 105.2,
-"eps_actual": 1.982,
-"eps_est": 1.51,
-"surprise": 0.3119,
+"eps_actual": 2.04,
+"eps_est": 1.63,
+"surprise": 0.2515,
 "result": "beat",
 "quarter_end": "2026-09-30",
-"result_done": true
+"result_done": true,
+"source": "Nasdaq"
 },
 "SN|2026-11-04": {
 "t": "SN",
@@ -30878,11 +30949,12 @@
 "period": null,
 "market_cap_bn": 5.6,
 "eps_actual": 1.13,
-"eps_est": 1.086,
-"surprise": 0.0403,
+"eps_est": 1.03,
+"surprise": 0.0971,
 "result": "beat",
 "quarter_end": "2026-09-30",
-"result_done": true
+"result_done": true,
+"source": "Nasdaq"
 },
 "SYBT|2026-10-28": {
 "t": "SYBT",
@@ -31545,6 +31617,22 @@
 "quarter": "",
 "period": "Expected date (market data feed)",
 "market_cap_bn": 1.7
+},
+"TGS|2026-10-29": {
+"t": "TGS",
+"ticker": "TGS",
+"name": "Transportadora De Gas Sa Ord B",
+"m": "US",
+"date": "2026-10-29",
+"eps_forecast": "$0.67",
+"quarter": "Sep/2026",
+"market_cap_bn": 3.8,
+"eps_actual": 0.49,
+"eps_est": 0.67,
+"surprise": -0.2687,
+"result": "miss",
+"result_done": true,
+"source": "Nasdaq"
 },
 "TGS|2026-11-02": {
 "t": "TGS",
@@ -32794,7 +32882,8 @@
 "surprise": 0.0626,
 "result": "beat",
 "quarter_end": "2026-09-30",
-"result_done": true
+"result_done": true,
+"source": "Nasdaq"
 },
 "TXN|2026-10-21": {
 "t": "TXN",
@@ -35672,7 +35761,8 @@
 "surprise": 0.0667,
 "result": "beat",
 "quarter_end": "2026-09-30",
-"result_done": true
+"result_done": true,
+"source": "Nasdaq"
 },
 "WULF|2026-11-06": {
 "t": "WULF",
@@ -35880,11 +35970,12 @@
 "period": null,
 "market_cap_bn": 753.7,
 "eps_actual": 4.23,
-"eps_est": 4.036,
-"surprise": 0.0481,
+"eps_est": 3.9,
+"surprise": 0.08460000000000001,
 "result": "beat",
 "quarter_end": "2026-09-30",
-"result_done": true
+"result_done": true,
+"source": "Nasdaq"
 },
 "XPEL|2026-11-04": {
 "t": "XPEL",
