@@ -172,3 +172,10 @@ Give this file (and the zip) to Claude when you next update the website.
 - docs/data/macro.json = macro-economic releases for South Africa (GDP q/q, unemployment QLFS, CPI, core CPI, PPI, repo rate, Absa PMI, S&P Global SA PMI, retail sales, mining, manufacturing, trade balance, RMB/BER business confidence, FNB/BER consumer confidence) and the US (GDP, unemployment, non-farm payrolls, jobless claims, CPI, core CPI, PPI, core PCE, Fed funds, ISM manufacturing & services, retail sales, JOLTS, Conference Board confidence): actual, forecast (consensus), previous, period, release / next release dates, source + URL. Each item carries its scoring rule (better = higher/lower, threshold).
 - Filled by the scheduled task "LRC Macro Desk (economic data)" — weekdays 11:43 and 17:43 SAST — following agents/macro_agent.md. Health check watches macro.json.
 - sectors.html: "Economic data scorecard" (gauge per country = 50 + 50 × sum of +1/0/−1 ÷ items scored; surprise = actual − forecast, or − previous when no forecast) above "Markets this week" (the earlier week-on-week market-moves score).
+
+## 3 Nov 2026 — v14 tidy-up
+- Menu: Research ▾ = Stock Scanner, **Sectors & ETFs** (sectors.html#sectors), Stock Analyzer, Watchlist, Shares A–Z, Track record, Research library. Markets ▾ = Market dashboard, **Macro scores** (sectors.html#macro), Live charts. Calendars ▾, News Desk ▾, Learn ▾, Live Show ▾ unchanged.
+- sectors.html renamed "Sectors, ETFs & the economy"; order Sectors → Index & ETF scores → Macro scores → Economic calendar.
+- Scanner ETFs and Sectors tabs link to the full Sectors & ETFs page.
+- New footer on every page (brand + Research / Markets / Learn & follow / Contact incl. My account). The menu/footer rewrite script lives in the session scratchpad (nav.py); to change them again, regex-replace `<ul class="menu" id="menu">…</ul>` and `<footer>…</footer>` in docs/**/*.html and agents/templates/article.html. Assets ?v=14.0.
+- Checked: 23 pages × 4 screen widths (no errors, no sideways scroll), company clicks open the snapshot on 7 pages, 0 broken internal links across 2,679 pages.

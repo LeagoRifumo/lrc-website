@@ -1631,3 +1631,7 @@ html.sn-lock{overflow:hidden}
 .mc-tbl.eco td.nm small{white-space:nowrap}
 .mc-tbl.eco th:nth-child(5){width:74px}.mc-tbl.eco th:nth-child(2){width:66px}.mc-tbl.eco th:nth-child(3),.mc-tbl.eco th:nth-child(4){width:58px}
 .mc-tbl.eco th:last-child{width:70px}.mc-tbl.eco th:first-child,.mc-tbl.eco td.nm{width:auto}
+/* v14 footer: brand + 4 link columns */
+footer .cols.cols5{grid-template-columns:1.3fr repeat(4,1fr);gap:28px}
+@media (max-width:1050px){footer .cols.cols5{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){footer .cols.cols5{grid-template-columns:1fr}}
