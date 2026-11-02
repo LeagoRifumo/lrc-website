@@ -159,3 +159,5 @@ Give this file (and the zip) to Claude when you next update the website.
 - Engagement (members.js, every page): "Keep exploring — Where to next?" cards before the disclaimer (page-aware next steps, Top Picks first), "Recently viewed" companies (localStorage), a once-per-visit "Today's Top Picks are ready" bar for visitors without an account (after 40 s or 55% scroll; not shown where a Top Picks call-out exists), Top Picks call-out on the Watchlist page (members see "Open my Top Picks").
 - Home hero: "See today's Top Picks — free" + "Open the Stock Scanner".
 - SEO: sharper titles/descriptions (watchlist, academy, contact, show, research); Top Picks page has a visible FAQ + FAQPage JSON-LD; top-picks.html in the sitemap. Assets ?v=12.0 (main.js loads members.js?v=12.2).
+
+- 2 Nov 2026 (23:45) menu revised by Prayer: Top Picks 🔒 · News Desk ▾ (News Desk, Articles) · Research ▾ · Markets ▾ (Market dashboard, Live charts) · Calendars ▾ (Earnings calendar, Dividend calendar) · Learn ▾ · Live Show ▾. Assets ?v=12.1.
