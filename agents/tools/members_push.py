@@ -20,7 +20,7 @@ def api(method, path, body=None, prefer=None):
 
 def main():
     if not URL or not KEY:
-        print('members_push: SUPABASE_URL / SUPABASE_SERVICE_KEY not set — skipped (members area not connected yet).'); return
+        print('::warning::members_push: SUPABASE_URL / SUPABASE_SERVICE_KEY not set — skipped (members area not connected yet).'); return
     out = load(P('agents', 'work', 'private', 'top_picks.json'))
     if not out or not out.get('picks'):
         print('members_push: no picks file — skipped'); return
@@ -46,7 +46,7 @@ def main():
         api('DELETE', f'top_picks?{q}', prefer='return=minimal')
         api('PATCH', f'picks_history?{q}&removed_on=is.null', {'removed_on': today, 'removed_price': (scan.get(ticker) or {}).get('px')}, 'return=minimal')
     api('POST', 'picks_meta?on_conflict=id', [{'id': 1, 'generated': out['generated'], 'scanner_run': out.get('scanner_run'), 'rules': out['rules']}], 'resolution=merge-duplicates,return=minimal')
-    print(f"members_push: {len(rows)} picks live; added {sum(1 for k in new if k not in cur)}, removed {sum(1 for k in cur if k not in new)}")
+    print(f"::notice::members_push: {len(rows)} picks live; added {sum(1 for k in new if k not in cur)}, removed {sum(1 for k in cur if k not in new)}")
 
 
 if __name__ == '__main__':
