@@ -1599,3 +1599,10 @@ html.sn-lock{overflow:hidden}
 .mc-tbl.eco td small{white-space:normal}
 .mc-tbl.eco a{color:#fff}.mc-tbl.eco a:hover{color:var(--gold-2)}
 .mc-tbl .up{color:#5ED39A}.mc-tbl .dn{color:#F08A7E}
+/* v13.4 snapshot opens full page */
+.sn{width:100vw;border-left:0;border-top:2px solid var(--gold)}
+.sn-in{max-width:1280px;margin:0 auto;padding:26px 32px 50px}
+.sn-top{position:sticky;top:0;z-index:2;background:#07080C;padding-top:10px}
+.sn-grid2 .sn-card{padding:18px 22px}
+@media (min-width:1200px){.sn-sum{grid-template-columns:340px 1fr}.sn-facts{grid-template-columns:repeat(6,1fr)}}
+@media (max-width:860px){.sn-in{padding:14px 14px 40px}}
