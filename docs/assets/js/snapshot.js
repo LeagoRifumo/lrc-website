@@ -157,7 +157,7 @@
     // any link to a company opens the snapshot first — except links that ARE the one-page summary button
     const al = e.target.closest('a[href*="stock.html?t="]');
     if (al) {
-      if (al.hasAttribute('data-summary') || al.target === '_blank' || /summary|1-page|one-page|full report|pdf/i.test(al.textContent || '')) return;
+      if (al.hasAttribute('data-summary') || al.target === '_blank' || /summary|1-page|one-page|full report|pdf|statement|thesis/i.test(al.textContent || '')) return;
       const t = decodeURIComponent(((al.getAttribute('href') || '').match(/stock\.html\?t=([^&#]+)/) || [])[1] || '');
       if (t) { e.preventDefault(); e.stopPropagation(); open(t); }
       return;
