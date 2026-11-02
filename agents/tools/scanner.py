@@ -24,6 +24,23 @@ OUT = P('docs', 'data', 'scan')
 FX_SYM = {'USD': 'ZAR=X', 'GBP': 'GBPZAR=X', 'EUR': 'EURZAR=X', 'AUD': 'AUDZAR=X', 'CHF': 'CHFZAR=X'}
 
 
+
+def fix_unit_breaks(bars):
+    """Yahoo sometimes switches a JSE price history between cents and rand part-way through (e.g. Satrix Capped All Share:
+    old bars in cents, new bars in rand), which makes 1-year moves look like +9,000%. A one-day jump of 50x or more is never
+    a real move: rescale everything before the break to the units of the latest bars."""
+    if not bars: return bars
+    for i in range(len(bars) - 1, 0, -1):
+        a, b = bars[i - 1].get('close'), bars[i].get('close')
+        if not a or not b: continue
+        r = a / b
+        if r >= 50 or r <= 1 / 50:
+            f = 0.01 if r >= 50 else 100.0
+            for x in bars[:i]:
+                for k in ('open', 'high', 'low', 'close'):
+                    if x.get(k) is not None: x[k] = x[k] * f
+    return bars
+
 def load(p, d=None):
     try: return json.load(open(p, encoding='utf-8'))
     except Exception: return d
@@ -252,6 +269,7 @@ def main():
             for x in bars:
                 for k in ('open', 'high', 'low', 'close'): x[k] = x[k] / 100.0
         cur = 'ZAR' if meta.get('currency') in ('ZAc', 'ZAR', 'ZAC') else meta.get('currency') or 'USD'
+        fix_unit_breaks(bars)
         t = E.technicals(bars, bmk.get(m))
         if not t: continue
         q = quotes.get(s, {})
@@ -415,6 +433,7 @@ def main():
         if meta.get('currency') in ('ZAc', 'ZAC'):
             for x in bars:
                 for k in ('open', 'high', 'low', 'close'): x[k] = x[k] / 100.0
+        fix_unit_breaks(bars)
         t = E.technicals(bars, bmk.get(m))
         if not t: continue
         sc = E.tech_scores(t); pl = E.plan(bars, t)

@@ -69,15 +69,16 @@ window.LRC_MEMBER_NEWS = [
       watchlist: { u: 'watchlist.html', ic: '⭐', b: 'Watchlist', s: 'Highest and lowest scorers today' },
       news: { u: 'news.html', ic: '📰', b: 'News Desk', s: 'Breaking news and the market brief' },
       dashboard: { u: 'dashboard.html', ic: '🌍', b: 'Market dashboard', s: 'JSE, rand, S&P 500, gold and oil' },
+      sectors: { u: 'sectors.html', ic: '🧭', b: 'Sectors & macro', s: 'SA vs US macro scores, ETF and sector scores' },
       earnings: { u: 'earnings.html', ic: '📅', b: 'Earnings calendar', s: 'Who reports results this week' },
       dividends: { u: 'dividends.html', ic: '💰', b: 'Dividend calendar', s: 'Last day to buy and payment dates' },
       articles: { u: 'articles.html', ic: '✍️', b: 'Articles', s: 'Daily and weekly market notes' },
       track: { u: 'track.html', ic: '📈', b: 'Track record', s: 'How our ratings have performed' },
       academy: { u: 'academy.html', ic: '🎓', b: 'Academy', s: 'Learn to analyse a company' },
       show: { u: 'show.html', ic: '🔴', b: 'Live Show', s: 'Watch us trade US and SA markets live' } };
-    const MAP = { 'watchlist.html': ['picks', 'scanner', 'analyzer', 'track'], 'scanner.html': ['picks', 'analyzer', 'watchlist', 'earnings'],
+    const MAP = { 'watchlist.html': ['picks', 'scanner', 'analyzer', 'track'], 'scanner.html': ['picks', 'sectors', 'watchlist', 'earnings'],
       'stock.html': ['picks', 'analyzer', 'earnings', 'dividends'], 'analyzer.html': ['picks', 'scanner', 'earnings', 'dividends'],
-      'news.html': ['picks', 'dashboard', 'earnings', 'articles'], 'dashboard.html': ['picks', 'news', 'earnings', 'scanner'],
+      'news.html': ['picks', 'sectors', 'earnings', 'articles'], 'dashboard.html': ['picks', 'sectors', 'news', 'earnings'], 'sectors.html': ['picks', 'scanner', 'dashboard', 'earnings'],
       'earnings.html': ['picks', 'dividends', 'news', 'scanner'], 'dividends.html': ['picks', 'earnings', 'scanner', 'watchlist'],
       'articles.html': ['picks', 'news', 'academy', 'show'], 'academy.html': ['picks', 'scanner', 'analyzer', 'articles'],
       'track.html': ['picks', 'watchlist', 'scanner', 'academy'], 'show.html': ['picks', 'news', 'watchlist', 'articles'] };

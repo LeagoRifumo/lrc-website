@@ -21,7 +21,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 from lrcdata import P, now_sast
 
 SITE = 'https://www.leagorifumocapital.co.za/'
-STATIC = ['', 'top-picks.html', 'scanner.html', 'analyzer.html', 'articles.html', 'research.html', 'watchlist.html', 'news.html', 'dashboard.html', 'earnings.html', 'dividends.html', 'track.html', 'markets.html', 'tools.html', 'academy.html', 'show.html', 'contact.html', 'disclaimer.html', 'privacy.html']
+STATIC = ['', 'top-picks.html', 'sectors.html', 'scanner.html', 'analyzer.html', 'articles.html', 'research.html', 'watchlist.html', 'news.html', 'dashboard.html', 'earnings.html', 'dividends.html', 'track.html', 'markets.html', 'tools.html', 'academy.html', 'show.html', 'contact.html', 'disclaimer.html', 'privacy.html']
 BASE_KW = 'Leago Rifumo Capital, market analysis, South Africa, JSE, rand, US stocks, Prayer Nkuna'
 
 def front(txt):
