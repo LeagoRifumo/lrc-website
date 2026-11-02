@@ -3,8 +3,8 @@
    the picks are never in the public website files, and the database only hands them to signed-in members.
    SETUP: paste the project URL and the public "anon" key below (Supabase → Project Settings → API). */
 window.LRC_AUTH = window.LRC_AUTH || {
-  url: '',     // e.g. 'https://abcdefghijkl.supabase.co'
-  anon: ''     // the "anon public" key (safe to publish; the database rules protect the data)
+  url: 'https://wpoknxskdrjurjdpxqav.supabase.co',
+  anon: 'sb_publishable_Y8o5JO6YzNeKfjd8yPUaMw_btEJAYJh'   // publishable key (safe to publish; the database rules protect the data)
 };
 
 /* Member news shown on the Top Picks page and in My account — newest first. Add a line when something changes. */

@@ -1,0 +1,27 @@
+# LRC Top Picks upload — run by hand any time (Actions → "Top Picks upload" → Run workflow).
+# Uses the latest scanner results; also runs automatically inside scanner.yml after every scan.
+name: Top Picks upload
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: lrc-push
+  cancel-in-progress: false
+jobs:
+  picks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - name: Choose the picks and upload them to the members area
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: |
+          python agents/tools/top_picks.py
+          python agents/tools/members_push.py
+      - name: Publish the public teaser
+        run: bash agents/tools/publish.sh "Top Picks teaser"
