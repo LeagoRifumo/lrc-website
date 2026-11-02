@@ -1,0 +1,24 @@
+{
+ "_note": "LRC Top Picks rules (members only). Edit the numbers here; the next scanner run uses them. Value traded = average value traded a day (JSE in rand, New York in US dollars).",
+ "per_market": 5,
+ "max_per_sector": 2,
+ "markets": {
+  "JSE": {"min_value_traded": 20000000, "min_market_cap": 5000000000, "min_price": 2},
+  "US":  {"min_value_traded": 50000000, "min_market_cap": 5000000000, "min_price": 10}
+ },
+ "trading": {
+  "ratings": ["STRONG BUY", "BUY"],
+  "min_trend": 1,
+  "min_extension": 0,
+  "rsi_range": [40, 75],
+  "no_results_within_days": 14
+ },
+ "investment": {
+  "ratings": ["STRONG BUY", "BUY"],
+  "quality_grades": ["A", "B"],
+  "exclude_valuation": ["OVERVALUED"],
+  "min_health_score": 50,
+  "min_margin_of_safety": 0.15,
+  "no_results_within_days": 3
+ }
+}

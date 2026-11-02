@@ -34,5 +34,13 @@ jobs:
       - name: Track record (save today's ratings, measure past ones)
         continue-on-error: true
         run: python agents/tools/track_record.py
+      - name: Top Picks (members only) — choose by the rules, upload to the members area
+        continue-on-error: true
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: |
+          python agents/tools/top_picks.py
+          python agents/tools/members_push.py
       - name: Publish
         run: bash agents/tools/publish.sh "LRC Scanner"

@@ -827,3 +827,9 @@ window.LRCCal = {
   window.addEventListener('lrcmarket', e => { if ($$('dvMkt').value !== e.detail) { $$('dvMkt').value = e.detail; draw(); } });
   fetch((window.LRC_DATA || 'data/') + 'dividends.json?v=' + Math.floor(Date.now() / 6e5)).then(r => r.json()).then(d => { D = d; draw(); }).catch(() => { L.innerHTML = '<p class="muted-load">The dividend calendar is built by the daily scanner run and will appear shortly.</p>'; });
 })();
+
+/* =================== Members (free accounts, Top Picks) — loads members.js on every page =================== */
+(() => {
+  const m = document.querySelector('script[src*="assets/js/main.js"]'); if (!m || document.querySelector('script[src*="members.js"]')) return;
+  const s = document.createElement('script'); s.src = m.src.replace(/main\.js(\?.*)?$/, 'members.js?v=12.0'); document.body.appendChild(s);
+})();
