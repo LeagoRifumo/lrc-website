@@ -42,6 +42,67 @@ window.LRC_MEMBER_NEWS = [
     cta.insertBefore(a, cta.firstChild);
   }
 
+  /* ---------- engagement on every page: Top Picks call-outs, keep exploring, recently viewed, member bar ---------- */
+  (() => {
+    const member = hasSession();
+    const path = location.pathname, inShares = /\/shares\//.test(path), q = new URLSearchParams(location.search);
+    const skip = ['account.html', 'write.html', '404.html'].includes(PAGE);
+    // 1. remember the companies a visitor looks at
+    const RK = 'lrc_recent';
+    const recent = (() => { try { return JSON.parse(localStorage.getItem(RK)) || []; } catch (e) { return []; } })();
+    const t = (PAGE === 'stock.html' || PAGE === 'analyzer.html') ? q.get('t') : null;
+    const h1 = document.querySelector('h1');
+    if (t || (inShares && PAGE !== 'index.html' && PAGE !== '')) {
+      const label = t ? t.replace('.JO', '') : (h1 ? h1.textContent.trim().split(/\s[—(|-]\s?/)[0].slice(0, 40) : document.title.split('|')[0].trim());
+      const url = t ? `${BASE}stock.html?t=${encodeURIComponent(t)}` : location.pathname;
+      const list = [{ l: label, u: url }].concat(recent.filter(r => r.u !== url)).slice(0, 8);
+      try { localStorage.setItem(RK, JSON.stringify(list)); } catch (e) {}
+    }
+    // 2. Top Picks call-out boxes already in the page (e.g. Watchlist) — members get a direct link
+    document.querySelectorAll('.picks-cta').forEach(b => { if (member) { const p = b.querySelector('p'), a = b.querySelector('a.btn'); if (p) p.textContent = 'Your members-only shortlist: the top scorers that also pass our volume, trend and risk checks.'; if (a) a.textContent = 'Open my Top Picks →'; } });
+    if (skip || PAGE === 'top-picks.html') return;
+    // 3. keep exploring — next steps that fit the page the visitor is on
+    const C = {
+      picks: { u: 'top-picks.html', ic: '🔒', b: member ? 'Open my Top Picks' : 'Top Picks — free account', s: member ? 'Your members-only shortlist, updated twice a day' : 'The shortlist that passes our volume, trend and risk checks', gold: 1 },
+      scanner: { u: 'scanner.html', ic: '📊', b: 'Stock Scanner', s: 'Every JSE and New York share scored' },
+      analyzer: { u: 'analyzer.html', ic: '🔍', b: 'Stock Analyzer', s: 'Every ratio and statement explained' },
+      watchlist: { u: 'watchlist.html', ic: '⭐', b: 'Watchlist', s: 'Highest and lowest scorers today' },
+      news: { u: 'news.html', ic: '📰', b: 'News Desk', s: 'Breaking news and the market brief' },
+      dashboard: { u: 'dashboard.html', ic: '🌍', b: 'Market dashboard', s: 'JSE, rand, S&P 500, gold and oil' },
+      earnings: { u: 'earnings.html', ic: '📅', b: 'Earnings calendar', s: 'Who reports results this week' },
+      dividends: { u: 'dividends.html', ic: '💰', b: 'Dividend calendar', s: 'Last day to buy and payment dates' },
+      articles: { u: 'articles.html', ic: '✍️', b: 'Articles', s: 'Daily and weekly market notes' },
+      track: { u: 'track.html', ic: '📈', b: 'Track record', s: 'How our ratings have performed' },
+      academy: { u: 'academy.html', ic: '🎓', b: 'Academy', s: 'Learn to analyse a company' },
+      show: { u: 'show.html', ic: '🔴', b: 'Live Show', s: 'Watch us trade US and SA markets live' } };
+    const MAP = { 'watchlist.html': ['picks', 'scanner', 'analyzer', 'track'], 'scanner.html': ['picks', 'analyzer', 'watchlist', 'earnings'],
+      'stock.html': ['picks', 'analyzer', 'earnings', 'dividends'], 'analyzer.html': ['picks', 'scanner', 'earnings', 'dividends'],
+      'news.html': ['picks', 'dashboard', 'earnings', 'articles'], 'dashboard.html': ['picks', 'news', 'earnings', 'scanner'],
+      'earnings.html': ['picks', 'dividends', 'news', 'scanner'], 'dividends.html': ['picks', 'earnings', 'scanner', 'watchlist'],
+      'articles.html': ['picks', 'news', 'academy', 'show'], 'academy.html': ['picks', 'scanner', 'analyzer', 'articles'],
+      'track.html': ['picks', 'watchlist', 'scanner', 'academy'], 'show.html': ['picks', 'news', 'watchlist', 'articles'] };
+    const keys = (inShares ? ['picks', 'analyzer', 'earnings', 'dividends'] : /\/articles\//.test(path) ? ['picks', 'news', 'scanner', 'show'] : MAP[PAGE] || ['picks', 'scanner', 'news', 'earnings']).filter(k => C[k].u !== PAGE).slice(0, 4);
+    const band = document.querySelector('.disclaimer-band');
+    if (band) {
+      const rec = recent.filter(r => r.u !== location.pathname + location.search).slice(0, 6);
+      const sec = document.createElement('section'); sec.className = 'keep';
+      sec.innerHTML = `<div class="wrap"><span class="eyebrow">Keep exploring</span><h2>Where to <span class="gold">next?</span></h2>
+        <div class="keep-grid">${keys.map(k => { const c = C[k]; return `<a class="keep-card${c.gold ? ' gold' : ''}" href="${BASE}${c.u}"><span class="ic">${c.ic}</span><b>${esc(c.b)}</b><span>${esc(c.s)}</span></a>`; }).join('')}</div>
+        ${rec.length ? `<div class="recent"><span class="lbl">RECENTLY VIEWED</span>${rec.map(r => `<a href="${esc(r.u)}"><b>${esc(r.l)}</b></a>`).join('')}</div>` : ''}</div>`;
+      band.parentNode.insertBefore(sec, band);
+    }
+    // 4. gentle member bar for visitors without an account (once per visit, after reading for a while)
+    if (member || !on || document.querySelector('.picks-cta')) return;
+    let shown = false; try { if (sessionStorage.getItem('lrc_mbar')) return; } catch (e) {}
+    const bar = document.createElement('div'); bar.className = 'mbar';
+    bar.innerHTML = `<span>🔒 <b>Today's Top Picks are ready.</b> Free account, takes 30 seconds.</span><a class="btn btn-gold" href="${BASE}top-picks.html#join">See Top Picks →</a><button aria-label="Close">×</button>`;
+    document.body.appendChild(bar);
+    const open = () => { if (shown) return; shown = true; bar.classList.add('show'); try { sessionStorage.setItem('lrc_mbar', '1'); } catch (e) {} };
+    bar.querySelector('button').onclick = () => bar.classList.remove('show');
+    setTimeout(open, 40000);
+    addEventListener('scroll', () => { if (scrollY > (document.body.scrollHeight - innerHeight) * 0.55) open(); }, { passive: true });
+  })();
+
   if (PAGE !== 'top-picks.html' && PAGE !== 'account.html') return;
 
   /* ---------- shared helpers ---------- */

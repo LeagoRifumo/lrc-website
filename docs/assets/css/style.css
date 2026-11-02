@@ -1437,3 +1437,51 @@ i.p{background:#fff}i.v{background:var(--gold-2)}
 @media (max-width:1400px){.menu a.nav-new:after,.menu .nav-new .new{display:none}.menu li:last-child{display:none}}
 .tp-list>*,.tp-why>*,.acct>*{min-width:0}
 .tp-card,.acct-card,.mnews{overflow-wrap:anywhere}
+
+/* ===== v12 navigation: 6 clear sections with descriptions ===== */
+@media (max-width:1400px){.menu li:last-child{display:list-item}}
+.menu{gap:26px}
+.menu>li>a{font-size:15px}
+@media (max-width:1560px){.menu{gap:22px}.menu>li>a{font-size:14.5px}.brand div{display:flex}}
+@media (max-width:1180px){.menu{gap:16px}.brand div{display:none}}
+.menu .sub.mega{min-width:320px;padding:10px}
+.menu .sub.mega a{display:flex;flex-direction:column;gap:2px;padding:10px 12px;white-space:normal}
+.menu .sub.mega a b{color:#fff;font-size:14.5px;font-weight:600}
+.menu .sub.mega a small{color:var(--muted);font-size:12.5px;line-height:1.35}
+.menu .sub.mega a:hover b,.menu .sub.mega a.active b{color:var(--gold-2)}
+@media (max-width:860px){.menu .sub.mega{min-width:0;padding:0 0 6px 10px}.menu .sub.mega a{padding:8px 4px}.menu .sub.mega a small{display:none}}
+
+/* ===== v12 engagement: Top Picks call-out, keep exploring, recently viewed, member bar ===== */
+.picks-cta{display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between;border:1px solid var(--gold);border-radius:16px;padding:20px 24px;margin-top:22px;background:linear-gradient(135deg,rgba(217,169,62,.16),rgba(217,169,62,.03) 60%),var(--panel)}
+.picks-cta b{display:block;color:#fff;font-size:18px}
+.picks-cta p{color:var(--text);margin-top:4px;max-width:640px}
+.picks-cta .btn{border:0;white-space:nowrap}
+.keep{border-top:1px solid var(--line);background:linear-gradient(180deg,var(--ink),var(--black));padding:56px 0}
+.keep h2{font-size:clamp(26px,3vw,36px)}
+.keep-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:22px}
+.keep-card{border:1px solid var(--line);border-radius:14px;background:var(--panel);padding:18px 20px;transition:border-color .2s,transform .2s;display:flex;flex-direction:column;gap:6px}
+.keep-card:hover{border-color:var(--gold);transform:translateY(-2px)}
+.keep-card .ic{font-size:22px}
+.keep-card b{color:#fff;font-size:16.5px}
+.keep-card span{color:var(--muted);font-size:14px}
+.keep-card.gold{border-color:var(--gold);background:linear-gradient(135deg,rgba(217,169,62,.18),var(--panel) 70%)}
+.recent{margin-top:22px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.recent .lbl{font-size:11.5px;letter-spacing:.18em;color:var(--gold);font-weight:700;margin-right:6px}
+.recent a{border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:13.5px;color:var(--text);background:var(--panel)}
+.recent a:hover{border-color:var(--gold);color:var(--gold-2)}
+.recent a b{color:#fff;margin-right:4px}
+.mbar{position:fixed;left:50%;bottom:18px;transform:translate(-50%,140%);z-index:80;display:flex;gap:14px;align-items:center;border:1px solid var(--gold);border-radius:14px;padding:12px 14px 12px 18px;background:#0B0E16;box-shadow:0 18px 50px rgba(0,0,0,.6);transition:transform .45s ease;max-width:calc(100% - 24px)}
+.mbar.show{transform:translate(-50%,0)}
+.mbar span{color:var(--text);font-size:14.5px}
+.mbar b{color:#fff}
+.mbar .btn{border:0;padding:9px 14px;font-size:14px;white-space:nowrap}
+.mbar button{background:none;border:0;color:var(--muted);font-size:20px;cursor:pointer}
+@media (max-width:1050px){.keep-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.keep-grid{grid-template-columns:1fr}.mbar span{font-size:13px}}
+.faq{display:grid;gap:10px;margin-top:22px;max-width:860px}
+.faq details{border:1px solid rgba(22,34,61,.18);border-radius:12px;padding:14px 18px;background:#fff}
+.faq summary{cursor:pointer;font-weight:700;color:var(--navy);font-size:17px}
+.faq p{color:var(--muted-dark);margin-top:8px;font-size:15.5px}
+/* v12: with 6 menu sections there is room for the company name again */
+@media (min-width:1181px){.site-header .brand div{display:flex!important;flex-direction:column}}
+.menu .sub.mega a{text-align:left}
