@@ -154,9 +154,17 @@
     if (e.defaultPrevented || e.button !== 0 || e.ctrlKey || e.metaKey || e.shiftKey) return;
     if (e.target.closest('.star, th, input, select, label, .sn-wrap')) return;
     const sn = e.target.closest('[data-snap]'); if (sn && !sn.closest('.sn-wrap')) { e.preventDefault(); e.stopPropagation(); open(sn.dataset.snap); return; }
+    // any link to a company opens the snapshot first — except links that ARE the one-page summary button
+    const al = e.target.closest('a[href*="stock.html?t="]');
+    if (al) {
+      if (al.hasAttribute('data-summary') || al.target === '_blank' || /summary|1-page|one-page|full report|pdf/i.test(al.textContent || '')) return;
+      const t = decodeURIComponent(((al.getAttribute('href') || '').match(/stock\.html\?t=([^&#]+)/) || [])[1] || '');
+      if (t) { e.preventDefault(); e.stopPropagation(); open(t); }
+      return;
+    }
     const tr = e.target.closest('tr[data-t], tr[onclick*="stock.html?t="]');
     if (!tr) return;
-    const a = e.target.closest('a'); if (a && !/stock\.html\?t=/.test(a.getAttribute('href') || '')) return;
+    const a = e.target.closest('a'); if (a) return;
     const t = tr.dataset.t || decodeURIComponent(((tr.getAttribute('onclick') || '').match(/stock\.html\?t=([^'"&]+)/) || [])[1] || '');
     if (!t) return;
     e.preventDefault(); e.stopPropagation(); open(t);
