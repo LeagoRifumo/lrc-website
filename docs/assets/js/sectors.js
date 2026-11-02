@@ -52,6 +52,32 @@
     return `<div class="mc-g"><svg viewBox="0 0 120 72" aria-hidden="true">${seg(0, 35, '#B3261E')}${seg(35, 45, '#D9653B')}${seg(45, 55, '#9AA1B2')}${seg(55, 65, '#2FBF71')}${seg(65, 100, '#1E8E5A')}<line x1="60" y1="62" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}" stroke="#fff" stroke-width="3" stroke-linecap="round"/><circle cx="60" cy="62" r="5" fill="#fff"/></svg><b>${esc(label)}</b><span>${esc(sub)}</span></div>`;
   };
 
+  /* ---------- 0. economic data scorecard (data/macro.json, kept current by the LRC Macro Desk) ---------- */
+  get('macro.json').then(M => {
+    const num = (v, u) => !ok(v) ? '—' : u === '%' ? Number(v).toFixed(1) + '%' : u === 'k' ? Math.round(v).toLocaleString('en-ZA') + 'k' : u === 'm' ? Number(v).toFixed(2) + 'm' : u === 'R bn' ? 'R' + Number(v).toFixed(1) + 'bn' : Number(v).toFixed(1);
+    const day = d => { try { return new Date(d + 'T12:00:00').toLocaleDateString('en-ZA', { day: 'numeric', month: 'short' }); } catch (e) { return d; } };
+    const score = it => {
+      if (!ok(it.actual)) return null;
+      const base = ok(it.forecast) ? it.forecast : ok(it.previous) ? it.previous : null; if (base === null) return null;
+      const diff = it.actual - base, s = Math.abs(diff) < it.threshold ? 0 : Math.sign(diff) * (it.better === 'lower' ? -1 : 1);
+      return { diff, s, vs: ok(it.forecast) ? 'forecast' : 'previous', label: s > 0 ? 'Bullish' : s < 0 ? 'Bearish' : 'Neutral' };
+    };
+    const card = (c) => {
+      const C = M.countries[c], its = C.items.map(it => ({ it, k: score(it) })), done = its.filter(x => x.k);
+      const sum = done.reduce((a, x) => a + x.k.s, 0), sc = done.length ? 50 + 50 * sum / done.length : 50;
+      const w = sc >= 65 ? 'Strong data' : sc >= 55 ? 'Better than expected' : sc > 45 ? 'In line / mixed' : sc > 35 ? 'Softer than expected' : 'Weak data';
+      return `<div class="mc-card"><div class="mc-head">${gauge(sc, done.length ? w : 'Waiting for data', `${c === 'SA' ? '🇿🇦' : '🇺🇸'} ${C.name} · economic score ${sum >= 0 ? '+' : ''}${sum} of ${done.length}`)}
+        <p class="mc-sum"><b class="up">${done.filter(x => x.k.s > 0).length} better</b> · <b class="dn">${done.filter(x => x.k.s < 0).length} worse</b> · ${done.filter(x => x.k.s === 0).length} in line</p></div>
+        <div class="tbl-wrap"><table class="mc-tbl eco"><thead><tr><th>Indicator</th><th class="n">Actual</th><th class="n">Forecast</th><th class="n">Previous</th><th class="n">Surprise</th><th>For shares</th></tr></thead><tbody>
+        ${its.map(({ it, k }) => `<tr title="${esc((it.better === 'lower' ? 'Lower' : 'Higher') + ' is better for shares. Surprise counts when it is at least ' + it.threshold + (it.unit === '%' ? ' percentage points' : ' ' + it.unit) + '.')}"><td>${it.url ? `<a href="${esc(it.url)}" target="_blank" rel="noopener">${esc(it.name)}</a>` : esc(it.name)}<small>${esc(it.period || '—')}${it.release_date ? ' · released ' + day(it.release_date) : ''}${it.next_release ? ' · next ' + day(it.next_release) : ''}</small></td>
+          <td class="n"><b>${num(it.actual, it.unit)}</b></td><td class="n">${num(it.forecast, it.unit)}</td><td class="n">${num(it.previous, it.unit)}</td>
+          <td class="n">${k ? `<span class="${k.s > 0 ? 'up' : k.s < 0 ? 'dn' : ''}">${k.diff >= 0 ? '+' : '−'}${num(Math.abs(k.diff), it.unit === '%' ? 'pt' : it.unit)}${it.unit === '%' ? 'pt' : ''}</span><small>vs ${k.vs}</small>` : '—'}</td>
+          <td>${k ? `<span class="mc-i ${k.s > 0 ? 'bull' : k.s < 0 ? 'bear' : 'neu'}">${k.label}</span>` : '<span class="mc-i neu">—</span>'}</td></tr>`).join('')}</tbody></table></div></div>`;
+    };
+    $('secEco').innerHTML = `<div class="mc-grid">${card('SA')}${card('US')}</div>
+      <p class="src-note">${M.generated ? 'Updated ' + new Date(M.generated).toLocaleString('en-ZA', { weekday: 'short', day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }) + ' SAST · ' : ''}${esc(M.note || '')} Figures from Stats SA, SARB, BLS, BEA, ISM and other official releases (tap an indicator for its source); forecasts are the market consensus before the release. ${esc(M.method || '')} Educational, not a forecast.</p>`;
+  }).catch(() => { $('secEco').innerHTML = '<p class="muted-load">Economic data could not be loaded right now.</p>'; });
+
   Promise.all([get('dashboards/live.json').catch(() => null), get('scan/etfs.json').catch(() => null), get('scan/sectors.json').catch(() => null)]).then(([L, E, S]) => {
     /* ---------- 1. country macro scores ---------- */
     const rows = L ? L.groups.flatMap(g => g.rows) : [];

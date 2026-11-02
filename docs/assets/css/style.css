@@ -1595,3 +1595,7 @@ html.sn-lock{overflow:hidden}
 .sec-names a{font-weight:700;margin-right:6px;font-size:13px}
 @media (max-width:1050px){.etf-grid{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:860px){.mc-grid,.sec-two,.etf-grid{grid-template-columns:1fr}.mc-tbl{font-size:13px}.mc-tbl th:nth-child(3),.mc-tbl td:nth-child(3){display:none}}
+.mc-sub{font-size:24px;margin-top:40px;color:#fff}.mc-sub small{font-family:var(--sans);font-size:14px;color:var(--muted);font-weight:500}
+.mc-tbl.eco td small{white-space:normal}
+.mc-tbl.eco a{color:#fff}.mc-tbl.eco a:hover{color:var(--gold-2)}
+.mc-tbl .up{color:#5ED39A}.mc-tbl .dn{color:#F08A7E}
