@@ -46,6 +46,8 @@
     const s = Math.abs(ch) < R.min ? 0 : Math.sign(ch) * R.good;
     return { ...R, ch, s, label: s > 0 ? 'Bullish' : s < 0 ? 'Bearish' : 'Neutral', chTxt: R.kind === 'pct' ? pc(ch) : (ch >= 0 ? '+' : '−') + Math.abs(ch * 100).toFixed(0) + 'bp' };
   };
+  const top = (name, word, score, tally, up, dn, eq, wu, wd, we) => `<div class="mc-top"><div class="mc-t1"><b>${esc(name)}</b><span class="mc-w" style="color:${score >= 55 ? '#5ED39A' : score <= 45 ? '#F08A7E' : '#E9E3D4'}">${esc(word)}</span><span class="mc-tl">score ${esc(tally)}</span></div>
+    <div class="mc-meter"><i style="left:${Math.max(0, Math.min(100, score))}%"></i></div><div class="mc-t2"><span class="up">▲ ${up} ${wu}</span><span class="dn">▼ ${dn} ${wd}</span><span>= ${eq} ${we}</span></div></div>`;
   const gauge = (score, label, sub) => {
     const s = Math.max(0, Math.min(100, score)), a = Math.PI * (1 - s / 100), x = 60 + 46 * Math.cos(a), y = 62 - 46 * Math.sin(a);
     const seg = (f, t, c) => { const a1 = Math.PI * (1 - f / 100), a2 = Math.PI * (1 - t / 100); return `<path d="M${60 + 50 * Math.cos(a1)} ${62 - 50 * Math.sin(a1)} A50 50 0 0 1 ${60 + 50 * Math.cos(a2)} ${62 - 50 * Math.sin(a2)}" stroke="${c}" stroke-width="10" fill="none"/>`; };
@@ -54,7 +56,7 @@
 
   /* ---------- 0. economic data scorecard (data/macro.json, kept current by the LRC Macro Desk) ---------- */
   get('macro.json').then(M => {
-    const num = (v, u) => !ok(v) ? '—' : u === '%' ? Number(v).toFixed(1) + '%' : u === 'k' ? Math.round(v).toLocaleString('en-ZA') + 'k' : u === 'm' ? Number(v).toFixed(2) + 'm' : u === 'R bn' ? 'R' + Number(v).toFixed(1) + 'bn' : Number(v).toFixed(1);
+    const num = (v, u) => !ok(v) ? '—' : u === '%' ? Number(v).toFixed(Math.abs(v * 10 - Math.round(v * 10)) > 1e-6 ? 2 : 1) + '%' : u === 'k' ? Math.round(v).toLocaleString('en-ZA') + 'k' : u === 'm' ? Number(v).toFixed(2) + 'm' : u === 'R bn' ? 'R' + Number(v).toFixed(1) + 'bn' : Number(v).toFixed(1);
     const day = d => { try { return new Date(d + 'T12:00:00').toLocaleDateString('en-ZA', { day: 'numeric', month: 'short' }); } catch (e) { return d; } };
     const score = it => {
       if (!ok(it.actual)) return null;
@@ -66,16 +68,15 @@
       const C = M.countries[c], its = C.items.map(it => ({ it, k: score(it) })), done = its.filter(x => x.k);
       const sum = done.reduce((a, x) => a + x.k.s, 0), sc = done.length ? 50 + 50 * sum / done.length : 50;
       const w = sc >= 65 ? 'Strong data' : sc >= 55 ? 'Better than expected' : sc > 45 ? 'In line / mixed' : sc > 35 ? 'Softer than expected' : 'Weak data';
-      return `<div class="mc-card"><div class="mc-head">${gauge(sc, done.length ? w : 'Waiting for data', `${c === 'SA' ? '🇿🇦' : '🇺🇸'} ${C.name} · economic score ${sum >= 0 ? '+' : ''}${sum} of ${done.length}`)}
-        <p class="mc-sum"><b class="up">${done.filter(x => x.k.s > 0).length} better</b> · <b class="dn">${done.filter(x => x.k.s < 0).length} worse</b> · ${done.filter(x => x.k.s === 0).length} in line</p></div>
-        <div class="tbl-wrap"><table class="mc-tbl eco"><thead><tr><th>Indicator</th><th class="n">Actual</th><th class="n">Forecast</th><th class="n">Previous</th><th class="n">Surprise</th><th>For shares</th></tr></thead><tbody>
-        ${its.map(({ it, k }) => `<tr title="${esc((it.better === 'lower' ? 'Lower' : 'Higher') + ' is better for shares. Surprise counts when it is at least ' + it.threshold + (it.unit === '%' ? ' percentage points' : ' ' + it.unit) + '.')}"><td>${it.url ? `<a href="${esc(it.url)}" target="_blank" rel="noopener">${esc(it.name)}</a>` : esc(it.name)}<small>${esc(it.period || '—')}${it.release_date ? ' · released ' + day(it.release_date) : ''}${it.next_release ? ' · next ' + day(it.next_release) : ''}</small></td>
+      return `<div class="mc-card compact">${top(C.name, done.length ? w : 'Waiting for data', sc, `${sum >= 0 ? '+' : ''}${sum} of ${done.length}`, done.filter(x => x.k.s > 0).length, done.filter(x => x.k.s < 0).length, done.filter(x => x.k.s === 0).length, 'better', 'worse', 'in line')}
+        <div class="tbl-wrap"><table class="mc-tbl eco"><thead><tr><th>Indicator</th><th class="n">Actual</th><th class="n">Fcst</th><th class="n">Prev</th><th class="n">Surprise</th><th>Shares</th></tr></thead><tbody>
+        ${its.map(({ it, k }) => `<tr title="${esc((it.better === 'lower' ? 'Lower' : 'Higher') + ' is better for shares. Surprise counts when it is at least ' + it.threshold + (it.unit === '%' ? ' percentage points' : ' ' + it.unit) + '.')}"><td class="nm" title="${esc(it.name + (it.period ? ' — ' + it.period : '') + (it.release_date ? ' · released ' + day(it.release_date) : '') + (it.next_release ? ' · next release ' + day(it.next_release) : ''))}">${it.url ? `<a href="${esc(it.url)}" target="_blank" rel="noopener">${esc(it.name)}</a>` : esc(it.name)} <small>${esc(it.period || '')}</small></td>
           <td class="n"><b>${num(it.actual, it.unit)}</b></td><td class="n">${num(it.forecast, it.unit)}</td><td class="n">${num(it.previous, it.unit)}</td>
-          <td class="n">${k ? `<span class="${k.s > 0 ? 'up' : k.s < 0 ? 'dn' : ''}">${k.diff >= 0 ? '+' : '−'}${num(Math.abs(k.diff), it.unit === '%' ? 'pt' : it.unit)}${it.unit === '%' ? 'pt' : ''}</span><small>vs ${k.vs}</small>` : '—'}</td>
+          <td class="n">${k ? `<span class="${k.s > 0 ? 'up' : k.s < 0 ? 'dn' : ''}" title="vs ${k.vs}">${k.diff >= 0 ? '+' : '−'}${num(Math.abs(k.diff), it.unit === '%' ? 'pt' : it.unit)}${it.unit === '%' ? 'pt' : ''}${k.vs === 'previous' ? '*' : ''}</span>` : '—'}</td>
           <td>${k ? `<span class="mc-i ${k.s > 0 ? 'bull' : k.s < 0 ? 'bear' : 'neu'}">${k.label}</span>` : '<span class="mc-i neu">—</span>'}</td></tr>`).join('')}</tbody></table></div></div>`;
     };
     $('secEco').innerHTML = `<div class="mc-grid">${card('SA')}${card('US')}</div>
-      <p class="src-note">${M.generated ? 'Updated ' + new Date(M.generated).toLocaleString('en-ZA', { weekday: 'short', day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }) + ' SAST · ' : ''}${esc(M.note || '')} Figures from Stats SA, SARB, BLS, BEA, ISM and other official releases (tap an indicator for its source); forecasts are the market consensus before the release. ${esc(M.method || '')} Educational, not a forecast.</p>`;
+      <p class="src-note">${M.generated ? 'Updated ' + new Date(M.generated).toLocaleString('en-ZA', { weekday: 'short', day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }) + ' SAST · ' : ''}${esc(M.note || '')} Figures from Stats SA, SARB, BLS, BEA, ISM and other official releases (tap an indicator for its source); forecasts are the market consensus before the release. * = compared with the previous figure (no forecast published). ${esc(M.method || '')} Educational, not a forecast.</p>`;
   }).catch(() => { $('secEco').innerHTML = '<p class="muted-load">Economic data could not be loaded right now.</p>'; });
 
   Promise.all([get('dashboards/live.json').catch(() => null), get('scan/etfs.json').catch(() => null), get('scan/sectors.json').catch(() => null)]).then(([L, E, S]) => {
@@ -84,10 +85,9 @@
     const scored = rows.map(r => ({ r, i: impact(r) })).filter(x => x.i);
     const country = c => { const xs = scored.filter(x => x.i.c.includes(c)); const sum = xs.reduce((a, x) => a + x.i.s, 0); return { xs, sum, n: xs.length, score: xs.length ? 50 + 50 * sum / xs.length : 50, bull: xs.filter(x => x.i.s > 0).length, bear: xs.filter(x => x.i.s < 0).length }; };
     const word = sc => sc >= 65 ? 'Supportive' : sc >= 55 ? 'Leaning positive' : sc > 45 ? 'Mixed' : sc > 35 ? 'Leaning negative' : 'Headwind';
-    const card = (c, name, flag) => { const k = country(c); return `<div class="mc-card"><div class="mc-head">${gauge(k.score, word(k.score), `${flag} ${name} · macro score ${k.sum >= 0 ? '+' : ''}${k.sum} of ${k.n}`)}
-        <p class="mc-sum"><b class="up">${k.bull} bullish</b> · <b class="dn">${k.bear} bearish</b> · ${k.n - k.bull - k.bear} neutral this week</p></div>
-      <table class="mc-tbl"><thead><tr><th>Indicator</th><th class="n">Latest</th><th class="n">Week ago</th><th class="n">Change</th><th>For shares</th></tr></thead><tbody>
-      ${k.xs.map(({ r, i }) => `<tr title="${esc(i.why)}"><td>${esc(r.name)}<small>${esc(r.as_of || '')}</small></td><td class="n"><b>${fmtLvl(r.latest, r.unit)}</b></td><td class="n">${fmtLvl(r.week_ago, r.unit)}</td><td class="n">${i.chTxt}</td><td><span class="mc-i ${i.s > 0 ? 'bull' : i.s < 0 ? 'bear' : 'neu'}">${i.label}</span></td></tr>`).join('')}</tbody></table></div>`; };
+    const card = (c, name, flag) => { const k = country(c); return `<div class="mc-card compact">${top(name, word(k.score), k.score, `${k.sum >= 0 ? '+' : ''}${k.sum} of ${k.n}`, k.bull, k.bear, k.n - k.bull - k.bear, 'bullish', 'bearish', 'neutral')}
+      <table class="mc-tbl eco"><thead><tr><th>Indicator</th><th class="n">Latest</th><th class="n">Week ago</th><th class="n">Change</th><th>Shares</th></tr></thead><tbody>
+      ${k.xs.map(({ r, i }) => `<tr title="${esc(i.why)}"><td class="nm">${esc(r.name)} <small>${esc(r.as_of || '')}</small></td><td class="n"><b>${fmtLvl(r.latest, r.unit)}</b></td><td class="n">${fmtLvl(r.week_ago, r.unit)}</td><td class="n">${i.chTxt}</td><td><span class="mc-i ${i.s > 0 ? 'bull' : i.s < 0 ? 'bear' : 'neu'}">${i.label}</span></td></tr>`).join('')}</tbody></table></div>`; };
     $('secMacro').innerHTML = L ? `<div class="mc-grid">${card('SA', 'South Africa', '🇿🇦')}${card('US', 'United States', '🇺🇸')}</div>
       <p class="src-note">Week-on-week moves from the LRC Market Dashboard (updated ${new Date(L.generated).toLocaleString('en-ZA', { weekday: 'short', day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' })}). Each indicator scores +1 (bullish for shares), 0 or −1 by a fixed rule — hover a row for the reason. Rates and inflation only change when a new figure is released. Educational, not a forecast.</p>`
       : '<p class="muted-load">The macro data could not be loaded right now.</p>';
