@@ -4,7 +4,7 @@
    SETUP: paste the project URL and the public "anon" key below (Supabase → Project Settings → API). */
 window.LRC_AUTH = window.LRC_AUTH || {
   url: 'https://wpoknxskdrjurjdpxqav.supabase.co',
-  anon: 'sb_publishable_Y8o5JO6YzNeKfjd8yPUaMw_btEJAYJh'   // publishable key (safe to publish; the database rules protect the data)
+  anon: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Indwb2tueHNrZHJqdXJqZHB4cWF2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTM2NTAyNDYsImV4cCI6MjEwOTIyNjI0Nn0.z8uzgQp7YmJ1NQNAENAV5F9euQERYVGKzenumOaV6Ec'   // anon public key (safe to publish; the database rules protect the data)
 };
 
 /* Member news shown on the Top Picks page and in My account — newest first. Add a line when something changes. */
