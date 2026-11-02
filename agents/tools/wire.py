@@ -47,7 +47,10 @@ def main():
     cover = {t: r['name'] for t, r in ratings.items()}
     al = cfg.get('coverage_aliases', {})
     names = {t: [k.strip() for k in al.get(t, [n])] for t, n in cover.items()}
-    B = cfg['breaking']; words = [w.lower() for w in B['words']]; mwords = [w.lower() for w in B['move_words']]
+    B = cfg['breaking']
+    rx = lambda ws: re.compile(r'(?<![a-z0-9])(' + '|'.join(re.escape(w.lower()) for w in ws) + r')(?![a-z0-9])') if ws else None
+    R_WORDS, R_NEED, R_CTX, R_MOVE = rx(B.get('words', [])), rx(B.get('needs_context', [])), rx(B.get('context', [])), rx(B.get('move_words', []))
+    hit = lambda r, s: bool(r and r.search(s))
     now = now_sast(); keep = now - dt.timedelta(hours=cfg['keep_hours'])
     prev = {i['url']: i for i in load(P('docs', 'data', 'wire.json'), {'items': []}).get('items', [])}
     items, ok, fail = {}, 0, []
@@ -64,7 +67,7 @@ def main():
             low = title.lower()
             tks = [t for t, keys in names.items() if any(re.search(r'(?<![A-Za-z])' + re.escape(k) + r'(?![A-Za-z])', title) for k in keys)]
             age_h = (now - when).total_seconds() / 3600
-            brk = age_h <= B['max_age_hours'] and (f.get('breaking') or any(w in low for w in words) or (tks and any(w in low for w in mwords)))
+            brk = age_h <= B['max_age_hours'] and (hit(R_WORDS, low) or (hit(R_NEED, low) and (hit(R_CTX, low) or bool(tks))) or (bool(tks) and hit(R_MOVE, low)))
             key = re.sub(r'[^a-z0-9]', '', low)[:90]
             if key in items:
                 if f.get('coverage'): items[key]['tickers'] = sorted(set(items[key]['tickers'] + tks))
