@@ -179,3 +179,4 @@ Give this file (and the zip) to Claude when you next update the website.
 - Scanner ETFs and Sectors tabs link to the full Sectors & ETFs page.
 - New footer on every page (brand + Research / Markets / Learn & follow / Contact incl. My account). The menu/footer rewrite script lives in the session scratchpad (nav.py); to change them again, regex-replace `<ul class="menu" id="menu">…</ul>` and `<footer>…</footer>` in docs/**/*.html and agents/templates/article.html. Assets ?v=14.0.
 - Checked: 23 pages × 4 screen widths (no errors, no sideways scroll), company clicks open the snapshot on 7 pages, 0 broken internal links across 2,679 pages.
+- Home: "How to use LRC in 5 minutes" (#start) — 5 linked steps: News Desk → Sectors & ETFs → Stock Scanner → Top Picks → Calendars, plus Live Show / Academy links; hero link "New here? How to use LRC in 5 minutes ↓". style.css ?v=14.1.

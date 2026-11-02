@@ -1635,3 +1635,17 @@ html.sn-lock{overflow:hidden}
 footer .cols.cols5{grid-template-columns:1.3fr repeat(4,1fr);gap:28px}
 @media (max-width:1050px){footer .cols.cols5{grid-template-columns:1fr 1fr}}
 @media (max-width:560px){footer .cols.cols5{grid-template-columns:1fr}}
+/* v14 home: How to use LRC in 5 minutes */
+.btn-link{align-self:center;color:var(--gold-2);font-weight:600;font-size:15px;text-decoration:underline;text-underline-offset:4px}
+.guide{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:linear-gradient(180deg,#0A0D15,var(--black))}
+.guide-steps{list-style:none;display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:26px;counter-reset:none}
+.guide-steps a{position:relative;display:flex;flex-direction:column;gap:8px;height:100%;border:1px solid var(--line);border-radius:16px;background:var(--panel);padding:20px 18px 18px;transition:border-color .2s,transform .2s}
+.guide-steps a:hover{border-color:var(--gold);transform:translateY(-3px)}
+.guide-steps .gn{position:absolute;top:-13px;left:16px;width:28px;height:28px;border-radius:50%;background:linear-gradient(180deg,var(--gold-2),var(--gold));color:#141006;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:14px}
+.guide-steps .gi{font-size:26px}
+.guide-steps b{color:#fff;font-size:17px}
+.guide-steps small{color:var(--muted);font-size:14px;line-height:1.5;flex:1}
+.guide-steps em{font-style:normal;color:var(--gold-2);font-weight:700;font-size:14px}
+.guide-foot{color:var(--muted);margin-top:20px;font-size:15px}.guide-foot a{color:var(--gold-2)}
+@media (max-width:1100px){.guide-steps{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.guide-steps{grid-template-columns:1fr;gap:20px}}
