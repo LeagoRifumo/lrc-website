@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-03T00:19:00+02:00",
+ "generated": "2026-11-03T17:55:00+02:00",
  "agent": "LRC Macro Desk",
  "method": "Surprise = actual minus forecast (consensus). If there is no forecast, actual minus previous. Impact for shares: a surprise in the 'better' direction larger than the threshold = Bullish, the other way = Bearish, otherwise Neutral.",
  "countries": {
@@ -173,14 +173,14 @@
      "better": "higher",
      "threshold": 1.0,
      "frequency": "monthly",
-     "period": null,
-     "release_date": null,
-     "actual": null,
+     "period": "Aug 2026",
+     "release_date": "2026-10-08",
+     "actual": -4.3,
      "forecast": null,
-     "previous": null,
+     "previous": 1.1,
      "next_release": null,
      "source": "Stats SA",
-     "url": null
+     "url": "https://www.cnbcafrica.com/2026/south-africas-august-manufacturing-output-falls-4-3-y-y"
     },
     {
      "key": "trade",
@@ -434,14 +434,14 @@
      "better": "higher",
      "threshold": 0.1,
      "frequency": "monthly",
-     "period": "Aug 2026",
-     "release_date": "2026-09-29",
-     "actual": 7.08,
-     "forecast": null,
-     "previous": 7.34,
-     "next_release": "2026-11-03",
+     "period": "Sep 2026",
+     "release_date": "2026-11-03",
+     "actual": 7.52,
+     "forecast": 7.1,
+     "previous": 7.19,
+     "next_release": "2026-12-01",
      "source": "BLS",
-     "url": "https://www.bls.gov/news.release/archives/jolts_09292026.htm"
+     "url": "https://www.bls.gov/news.release/jolts.nr0.htm"
     },
     {
      "key": "cons_conf",
