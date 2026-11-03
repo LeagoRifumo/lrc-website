@@ -1,6 +1,6 @@
 {
  "note": "JSE company announcements (SENS) recorded by the LRC JSE Announcements job every weekday. results = published results with headline earnings per share (HEPS) vs the same period last year; trading_statements = expected HEPS change ranges; dividends = declared dividends with the JSE dates. Amounts in cents. Every entry carries its source.",
- "updated": "2026-10-30T19:30+02:00",
+ "updated": "2026-11-03T19:30+02:00",
  "results": [
   {
    "t": "CLS.JO",
@@ -44,6 +44,28 @@
    "unit": "c",
    "dps": 28.46216,
    "source": "Adcorp Holdings SENS — Summary of the unaudited interim financial results and declaration of interim cash dividend for the six months ended 31 August 2026 (29 Oct 2026), via ShareData https://www.sharedata.co.za/v2/scripts/SENS.aspx?id=564734 (HEPS 60.5c vs 53.0c; interim dividend 28.46216c gross vs 24.77681c)"
+  },
+  {
+   "t": "RDF.JO",
+   "name": "Redefine Properties",
+   "date": "2026-11-02",
+   "period": "Year to 31 Aug 2026",
+   "heps": 72.97,
+   "heps_prior": 36.74,
+   "unit": "c",
+   "dps": 27.23382,
+   "source": "Redefine Properties SENS — Group annual audited results for the year ended 31 August 2026 and prospects for the year ending 31 August 2027 (2 Nov 2026); figures from ShareData results summary https://www.sharedata.co.za/data/005526/fin_comment.htm (HEPS 72.97c vs 36.74c; distributable income per share 56.08c vs 52.39c; final dividend 27.23382c for the six months to 31 Aug 2026, total for the year 49.06c vs 45.84c; payment 23 Nov 2026)"
+  },
+  {
+   "t": "AEL.JO",
+   "name": "Altron",
+   "date": "2026-11-02",
+   "period": "Six months to 31 Aug 2026",
+   "heps": 109.0,
+   "heps_prior": 96.0,
+   "unit": "c",
+   "dps": 55.0,
+   "source": "Altron SENS — Unaudited consolidated results for the six months ended 31 August 2026 and cash dividend declaration (2 Nov 2026) https://altron-investors.com/pdf/interim-results/2027/fy27-interim-results-sens.pdf (HEPS from continuing operations 109c vs 96c; total-operations HEPS 108c; interim dividend 55.00c gross vs 48.00c)"
   }
  ],
  "trading_statements": [
@@ -134,6 +156,25 @@
    "record": "2026-11-06",
    "pay": "2026-11-20",
    "source": "Bytes Technology Group SENS — Notice of dividend currency exchange rate (30 Oct 2026), via ShareData https://www.sharedata.co.za/v2/scripts/SENS.aspx?id=564905 (interim dividend for the six months ended 31 Aug 2026 of 3.3 pence per share, declared with results on 13 Oct 2026; 73.54677 ZAR cents gross for the South African register at GBP1 = ZAR22.28690; last day to trade and ex-dividend date not stated in this notice)"
+  },
+  {
+   "t": "AEL.JO",
+   "period": "Interim",
+   "declared": "2026-11-02",
+   "amount_c": 55.0,
+   "ldt": "2026-11-17",
+   "ex": "2026-11-18",
+   "record": "2026-11-20",
+   "pay": "2026-11-23",
+   "source": "Altron SENS — Unaudited consolidated results for the six months ended 31 August 2026 and cash dividend declaration (2 Nov 2026) https://altron-investors.com/pdf/interim-results/2027/fy27-interim-results-sens.pdf (HEPS from continuing operations 109c vs 96c; total-operations HEPS 108c; interim dividend 55.00c gross vs 48.00c)"
+  },
+  {
+   "t": "RDF.JO",
+   "period": "Final",
+   "declared": "2026-11-02",
+   "amount_c": 27.23382,
+   "pay": "2026-11-23",
+   "source": "Redefine Properties SENS — Group annual audited results for the year ended 31 August 2026 and prospects for the year ending 31 August 2027 (2 Nov 2026); figures from ShareData results summary https://www.sharedata.co.za/data/005526/fin_comment.htm (HEPS 72.97c vs 36.74c; distributable income per share 56.08c vs 52.39c; final dividend 27.23382c for the six months to 31 Aug 2026, total for the year 49.06c vs 45.84c; payment 23 Nov 2026)"
   }
  ]
 }
