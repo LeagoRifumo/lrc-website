@@ -1,10 +1,10 @@
 {
- "edition": "Morning brief · Tuesday 3 November 2026 06:25",
- "generated": "2026-11-03T06:25:00+02:00",
- "covers": "US session of Monday 2 November 2026 (close and after-hours results) and overnight to 06:25 SAST Tuesday 3 November",
+ "edition": "Morning brief · Tuesday 3 November 2026 07:20",
+ "generated": "2026-11-03T07:20:00+02:00",
+ "covers": "US session of Monday 2 November 2026 (close and after-hours results) and overnight to 07:20 SAST Tuesday 3 November",
  "agent": "LRC News Desk",
- "headline": "Breaking: Apple and Palantir beat forecasts but slip about 3% after hours; US reportedly strikes Iran's Qeshm Island and Brent edges back above $105; Lumentum ends 18.6% lower on the Marvell deal",
- "summary": "On Wall Street on Monday the Dow rose 0.41% to 51,983.98 while the S&P 500 fell 0.51% to 7,541.40 and the Nasdaq 1.07% to 25,164.32, as technology dropped 2.66% and energy 3.97% on the oil slump (Xinhua, 3 Nov). After the close Apple and Palantir both beat estimates but fell about 3% after hours — Apple on a 45%–46% December-quarter gross margin guide hit by memory costs, Palantir on valuation worries (Investing.com, Yahoo Finance, 2 Nov). Brent settled 7.6% lower at $104.77 but was up 0.5% at $105.25 early Tuesday after a WSJ report of US 'defensive' strikes on Qeshm Island; gold held near $3,956 and the rand ended Monday near R16.62 ahead of the US midterms today and SA's local elections tomorrow (Business Recorder/Reuters, Investing.com, Trading Economics, 2–3 Nov).",
+ "headline": "Breaking: Australia's central bank hikes to 4.85%, an 18-year high; Apple and Palantir beat but slip about 3% after hours; oil flat near $105 after a reported US strike on Iran's Qeshm Island",
+ "summary": "On Wall Street on Monday the Dow rose 0.41% to 51,983.98 while the S&P 500 fell 0.51% to 7,541.40 and the Nasdaq 1.07% to 25,164.32, as technology dropped 2.66% and energy 3.97% on the oil slump (Xinhua, 3 Nov). After the close Apple and Palantir both beat estimates but fell about 3% after hours — Apple on a 45%–46% December-quarter gross margin guide hit by memory costs, Palantir on valuation worries (Investing.com, Yahoo Finance, 2 Nov). Brent settled 7.6% lower at $104.77 and was little changed near $104.80 early Tuesday after a WSJ report of US 'defensive' strikes on Qeshm Island, while Australia's central bank raised rates to 4.85%, the highest since 2008; gold held near $3,956 and the rand ended Monday near R16.62 ahead of the US midterms today and SA's local elections tomorrow (Business Recorder/Reuters, HDFC Sky, Domain, Investing.com, Trading Economics, 2–3 Nov).",
  "sections": [
   {
    "name": "Breaking",
@@ -19,9 +19,15 @@
      ]
     },
     {
-     "title": "US reportedly strikes Iran's Qeshm Island; oil rebounds slightly after Monday's 7.6% fall",
-     "summary": "The Wall Street Journal, citing US officials, reported that the US struck Iran's Qeshm Island in what officials called defensive strikes to stop attacks on commercial ships in the Strait of Hormuz (Reuters via Business Recorder, 3 Nov). At 01:04 GMT (03:04 SAST) on Tuesday Brent was up 0.5% at $105.25 and WTI up 0.5% at $96.93, after Brent settled down $8.66 (7.63%) at $104.77 on Monday on peace-talk hopes (Business Recorder, 3 Nov). The report has not been independently confirmed. A renewed escalation would reverse part of Monday's relief for the rand and SA fuel prices.",
-     "source": "Business Recorder (Reuters, citing WSJ), 3 Nov 2026",
+     "title": "Australia's central bank raises rates to 4.85%, the highest since 2008, in a split 6–3 vote",
+     "summary": "The Reserve Bank of Australia raised its cash rate by 0.25 percentage points to 4.85% from 4.60% at 05:30 SAST on Tuesday, its fifth increase this year and the highest level since November 2008; six board members voted to raise and three to hold (Domain; investingLive, 3 Nov). The bank said inflation will stay above target for longer than forecast, partly because of higher global fuel prices linked to the Middle East conflict, and does not expect it back in its 2–3% band until late 2027 (Domain, 3 Nov). Governor Michele Bullock gave no guidance on the next move, and the Australian dollar eased after the widely expected decision (investingLive, 3 Nov). It is another sign that oil-driven inflation is keeping central banks cautious, which matters for the SARB's next steps and for the rand.",
+     "source": "Domain, 3 Nov 2026; investingLive, 3 Nov 2026",
+     "url": "https://www.domain.com.au/news/rba-interest-rates-live-updates-november-2026-decision-1577726/"
+    },
+    {
+     "title": "US reportedly strikes Iran's Qeshm Island; oil steadies near $105 after Monday's 7.6% fall",
+     "summary": "The Wall Street Journal, citing US officials, reported that the US struck Iran's Qeshm Island in what officials called defensive strikes to stop attacks on commercial ships in the Strait of Hormuz (Reuters via Business Recorder, 3 Nov). At 01:04 GMT (03:04 SAST) on Tuesday Brent was up 0.5% at $105.25 and WTI up 0.5% at $96.93, after Brent settled down $8.66 (7.63%) at $104.77 on Monday on peace-talk hopes (Business Recorder, 3 Nov). The report has not been independently confirmed. By 06:04 SAST the gain had faded: Brent was up 0.03% at $104.80 and WTI up 0.18% at $96.63; Tehran said on Monday that contacts with Washington were continuing (HDFC Sky, 3 Nov). A renewed escalation would reverse part of Monday's relief for the rand and SA fuel prices.",
+     "source": "Business Recorder (Reuters, citing WSJ), 3 Nov 2026; HDFC Sky, 3 Nov 2026",
      "url": "https://www.brecorder.com/news/40447167/oil-rises-after-report-of-us-strike-on-irans-qeshm-island"
     },
     {
@@ -133,6 +139,7 @@
  "watch_today": [
   "Apple and Palantir at the US open (15:30 SAST) after their after-hours falls",
   "Oil and the rand after the reported US strike on Qeshm Island — any confirmation or Iranian response",
+  "Australian dollar and global bond yields after the RBA's hike to 4.85%",
   "US midterm elections today; results overnight into SA's Wednesday election holiday",
   "AMD results after the US close tonight (after 23:00 SAST); Qualcomm and Arm on Wednesday",
   "JSE miners and exporters after AGOA news; the JSE is closed Wednesday 4 November",
