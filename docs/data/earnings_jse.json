@@ -237,6 +237,37 @@
    "covered": false
   },
   {
+   "date": "2026-11-03",
+   "ticker": "APH",
+   "name": "Alphamin Resources Corp.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed) — confirm on SENS",
+   "quarter": "",
+   "eps_forecast": "",
+   "market_cap_bn": 20.0,
+   "reported": true,
+   "result": null,
+   "eps_actual": null,
+   "eps_est": null,
+   "surprise": null,
+   "heps": null,
+   "heps_prior": null,
+   "unit": null,
+   "change": null,
+   "measure": null,
+   "dps": null,
+   "source": null,
+   "t": "APH.JO",
+   "lists": [
+    "Investment BUY"
+   ],
+   "idea": "Value & quality",
+   "v": "HOLD",
+   "iv": "STRONG BUY",
+   "lrc_rating": null,
+   "covered": true
+  },
+  {
    "date": "2026-11-04",
    "ticker": "LSK",
    "name": "Lesaka Technologies, Inc.",
@@ -766,6 +797,6 @@
   }
  ],
  "note": "Partial list: no company-published date could be confirmed this week for, among others, AngloGold Ashanti, Life Healthcare, Mr Price, MTN, Pepkor, TFG, Coronation, Redefine, Reinet, Gold Fields and Sibanye-Stillwater; they will be added when dates are published. Several companies (e.g. Mondi, Famous Brands, Clicks) reported before this window.",
- "synced": "2026-11-03T19:06+02:00",
+ "synced": "2026-11-04T06:54+02:00",
  "coverage_note": "Ticked = on the LRC watchlist. Every company the LRC Stock Scanner tracks shows its trading and investment ratings. Updated after every scanner run."
 }
