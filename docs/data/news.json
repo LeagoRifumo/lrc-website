@@ -1,19 +1,25 @@
 {
- "edition": "Midday update · Wednesday 4 November 2026 16:20",
- "generated": "2026-11-04T16:20+02:00",
- "covers": "4 November 2026, 06:00–16:20 SAST (JSE closed for local elections; US pre-market)",
+ "edition": "Evening update · Wednesday 4 November 2026 17:30",
+ "generated": "2026-11-04T17:30+02:00",
+ "covers": "4 November 2026, Wall Street open (16:30 SAST) and US data; JSE closed for local elections",
  "agent": "LRC News Desk",
- "headline": "Dow futures up about 900 points before the open; ADP shows 86,000 US private jobs in October; rand firms to about R16.45/$",
- "summary": "The JSE is closed for local elections, but the rand firmed to about R16.45/$ (−0.89% on the day, Investing.com quotes, 4 Nov) as the dollar index slipped to about 101.20. On Wall Street, Dow e-minis were up 904 points (+1.74%) and S&P 500 e-minis up 0.87% at 14:31 SAST after the Democratic sweep (Reuters via Investing.com, 4 Nov), while ADP said US private employers added 86,000 jobs in October (ADP, 4 Nov). Gold was about $4,050 and Brent fell to about $102 after President Trump said there were no immediate plans for further strikes on Iran (Coinpaper, 4 Nov), which keeps the set-up supportive for JSE gold miners when trading resumes on Thursday.",
+ "headline": "Dow opens about 1,000 points higher (+1.9%) after the Democratic sweep; ISM services 54.5; CVS to split in two",
+ "summary": "Wall Street opened sharply higher: five minutes after the bell the Dow was up 1,009 points (+1.9%) and the S&P 500 and Nasdaq were each up 1.1% (ABC News, 4 Nov), with the 10-year Treasury yield slightly above 4.9% (Epoch Times, 4 Nov). The ISM services index eased to 54.5 in October from 54.9, still well in growth territory, while its prices gauge stayed high at 73.0 (ISM, 4 Nov), ahead of Friday's US jobs report. The JSE is closed for local elections; the rand was about R16.45/$ this afternoon and gold above $4,000 as the dollar weakened, a supportive set-up for local miners when trading resumes on Thursday.",
  "sections": [
   {
    "name": "Breaking",
    "items": [
     {
-     "title": "Dow futures up 904 points (+1.74%), S&P 500 +0.87%, Nasdaq-100 +0.23% at 14:31 SAST",
-     "summary": "US index futures extended gains ahead of the 16:30 SAST open after Democrats won both houses of Congress. Long-dated Treasury yields moved lower and the dollar weakened. Amazon was up 3.7% and McDonald's 2.1% pre-market; SpaceX fell 6.5% and Tesla 4.7%.",
-     "source": "Reuters via Investing.com, 4 Nov 2026",
-     "url": "https://za.investing.com/news/stock-market-news/us-stock-index-futures-steady-as-democrats-seize-congress-4548527"
+     "title": "Dow opens 1,009 points higher (+1.9%); S&P 500 and Nasdaq both +1.1%",
+     "summary": "At about 9:35 a.m. New York time (16:35 SAST) the Dow was up 1,009 points, or 1.9%, and the S&P 500 and Nasdaq were each up 1.1%, as investors welcomed a Democratic Congress as a check on new White House policy (ABC News, 4 Nov). The 10-year Treasury yield was slightly above 4.9% and the 30-year around 5.3%, mostly lower on the day (Epoch Times, 4 Nov).",
+     "source": "ABC News, 4 Nov 2026; Epoch Times, 4 Nov 2026",
+     "url": "https://abcnews.com/Business/dow-surges-1000-points-democrats-control-congress/story?id=137842989"
+    },
+    {
+     "title": "ISM services PMI 54.5 in October (54.9 in September); prices index 73.0",
+     "summary": "Business activity slowed to 53.8 from 56.5 and new orders to 55.9 from 59.8, while employment improved to 51.4 from 50.1. The prices paid index eased one point to 73.0, still a high reading. Any reading above 50 means the services sector is growing.",
+     "source": "ISM via PR Newswire, 4 Nov 2026",
+     "url": "https://www.prnewswire.com/news-releases/services-pmi-at-54-5-october-2026-ism-services-pmi-report-302928112.html"
     },
     {
      "title": "ADP: US private employers added 86,000 jobs in October",
@@ -39,6 +45,18 @@
    "name": "US markets",
    "items": [
     {
+     "title": "CVS Health to split into two listed companies by the first half of 2028",
+     "summary": "One company would hold Aetna, CVS Caremark, CVS Specialty, Oak Street Health and Signify Health under CEO David Joyner; the other, CVS Pharmacy, would hold about 9,000 pharmacies, mail pharmacy and MinuteClinic under CEO Prem Shah. The split is meant to be tax-free and needs final board approval (CVS 8-K, 4 Nov). CVS also raised its 2026 guidance; the shares were down 4.84% pre-market at 9:03 a.m. New York time (Stock Titan, 4 Nov).",
+     "source": "CVS Health (SEC filing), 4 Nov 2026; Stock Titan, 4 Nov 2026",
+     "url": "https://www.sec.gov/Archives/edgar/data/0000064803/000119312526446150/d148827dex991.htm"
+    },
+    {
+     "title": "Pre-market: Tesla −5.52%; AMD and Super Micro near flat at 9:03 a.m. New York time",
+     "summary": "Before the open, Dow futures were up 1,083 points (+2.1%) at 8:45 a.m. New York time and S&P 500 futures 1.1%; Nasdaq-100 futures were up 0.4% at 9:05 a.m. AMD and Super Micro had given back their overnight results gains to trade nearly flat (Stock Titan, citing CNBC, 4 Nov).",
+     "source": "Stock Titan, 4 Nov 2026",
+     "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-4-2026"
+    },
+    {
      "title": "Uber Q3: revenue $14.8bn (+10%), gross bookings $59.8bn (+20%), adjusted EBITDA $3.0bn (+31%)",
      "summary": "Net income was $512m, including a $476m pre-tax loss on equity investments. Uber guided Q4 gross bookings to $63.25bn–$65.25bn (18%–22% growth in constant currency) and adjusted EBITDA to $3.13bn–$3.23bn.",
      "source": "Uber (SEC filing), 4 Nov 2026",
@@ -55,24 +73,6 @@
      "summary": "Revenue rose 1% to $7.16 billion and global comparable sales grew 1.5%, slower than 3.6% a year ago; US comparable sales fell 0.2% against 2.4% growth a year earlier (company release, 4 Nov).",
      "source": "Stock Titan (McDonald's release), 4 Nov 2026",
      "url": "https://www.stocktitan.net/news/MCD/mc-donald-s-reports-third-quarter-2026-b8kqi6hdt183.html"
-    },
-    {
-     "title": "Tesla and SpaceX down about 4.5%–5% in Europe; other Big Tech 0.3%–0.9% lower",
-     "summary": "Reuters reported Tesla and SpaceX shares off about 4.5% to 5% on Tradegate on worries about tighter scrutiny from a Democratic Congress; the US 10-year yield was down 3 basis points at 4.92% after an overnight low of 4.89% (Reuters, 4 Nov).",
-     "source": "Reuters via Investing.com, 4 Nov 2026",
-     "url": "https://za.investing.com/news/economy-news/stocks-rally-dollar-dips-after-democrats-midterm-sweep-4548682"
-    },
-    {
-     "title": "Today: US ISM data, September trade balance and the Treasury refunding plan; McDonald's, Uber, Qualcomm and Arm report",
-     "summary": "Reuters' Morning Bid lists the US ISM survey for October, the September trade balance, euro-area inflation, a Riksbank rate decision and the US Treasury's quarterly refunding announcement for Wednesday. Investing.com lists McDonald's, Arm Holdings, Qualcomm and Uber among today's results, and notes CVS is in focus after reports it plans to split in two by 2028.",
-     "source": "Reuters Morning Bid via Investing.com, 4 Nov 2026; Investing.com, 4 Nov 2026",
-     "url": "https://www.investing.com/news/economy-news/morning-bid-markets-fret-blue-wave-will-drown-data-centres-4997373"
-    },
-    {
-     "title": "Tuesday close: Nasdaq +0.83% to 25,372.01, S&P 500 +0.36% to 7,568.92, Dow −0.38% to 51,786.72",
-     "summary": "Tech led on Tuesday 3 November before the election results: the Nasdaq Composite closed up 0.83% at 25,372.01 and the S&P 500 up 0.36% at 7,568.92, while the Dow fell 0.38% to 51,786.72. The gains were wiped out in overnight futures trade as the midterm results came in.",
-     "source": "Stocktwits via Yahoo Finance, 3 Nov 2026",
-     "url": "https://finance.yahoo.com/markets/stocks/articles/dow-p-500-nasdaq-futures-030931252.html"
     }
    ]
   },
@@ -92,10 +92,10 @@
      "url": "https://stuff.co.za/2026/11/03/november-2026-official-fuel-prices-diesel-r1-20-l-cut/"
     },
     {
-     "title": "US letter gives 60 days' notice: SA's AGOA status to end on 1 January 2027",
-     "summary": "BusinessTech reports that President Trump wrote to President Ramaphosa giving 60 days' notice that South Africa's AGOA trade beneficiary status will end on 1 January 2027, citing slow progress on corruption and trade barriers, and foreign policy concerns. Exporters of vehicles, citrus and other farm goods are the most exposed. On Monday the rand gained about 0.4% to R16.64/$ and traded at R16.62/$ on Tuesday morning; the Top-40 rose about 1% and the 2035 bond yield fell 2.5 basis points to 8.565%. NAAMSA new vehicle sales rose 10.4% year on year in October.",
-     "source": "BusinessTech, 3 Nov 2026",
-     "url": "https://businesstech.co.za/news/5-things/882484/donald-trump-sends-a-message-to-ramaphosa-and-new-tax-on-all-south-african-households-planned/"
+     "title": "US to suspend South Africa from AGOA from 1 January 2027",
+     "summary": "US Trade Representative Jamieson Greer told Congress that South Africa and Rwanda would be suspended from AGOA from 1 January 2027, citing human rights, corruption and threats to US interests. The trade ministry said it would support affected sectors; ETM Analytics said markets had largely priced it in. On 3 November at 08:30 SAST the rand was R16.62/$ and the 2035 bond yield 8.51% (Reuters via CNBC Africa, 3 Nov). Vehicle, citrus and other farm exporters are the most exposed.",
+     "source": "Reuters via CNBC Africa, 3 Nov 2026",
+     "url": "https://www.cnbcafrica.com/2026/south-african-rand-steady-as-investors-weigh-agoa-decision-await-key-election-results"
     }
    ]
   },
@@ -103,22 +103,16 @@
    "name": "Forex & commodities",
    "items": [
     {
-     "title": "Oil slides as Trump signals no immediate new strikes on Iran: Brent −1.44% to $102.11, WTI −0.93% to $95.20",
-     "summary": "Prices fell after President Trump told the Financial Times the US had no immediate plans for further attacks on Iranian targets, following limited US strikes near the Strait of Hormuz. Figures at 13:55 SAST.",
-     "source": "Coinpaper, 4 Nov 2026",
-     "url": "https://coinpaper.com/38328/oil-prices-fall-below-103-as-democrats-win-congress-and-trump-signals-no-new-iran-strikes"
+     "title": "Oil lower: Brent −1.2% to $102.35, WTI −0.8% to $95.31; euro $1.1255",
+     "summary": "Figures at 8:28 a.m. New York time (15:28 SAST), after President Trump said there were no immediate plans for further strikes on Iran. The euro rose to $1.1255 from $1.1194 and the yen was 158.30 per dollar (AP via BNN Bloomberg, 4 Nov). Cheaper oil helps South Africa's import bill and fuel prices.",
+     "source": "AP via BNN Bloomberg, 4 Nov 2026",
+     "url": "https://www.bnnbloomberg.ca/markets/2026/11/04/us-futures-sharply-higher-after-democratic-route-in-midterm-elections/"
     },
     {
      "title": "Dollar index −0.6% to a one-month low of 101.27; euro $1.1258, yen 157.92",
      "summary": "Reuters reported the dollar index down 0.6% at 101.27, a one-month low, on worries a Democratic Congress will add AI regulation; the euro rose 0.6% to $1.1258, sterling 0.3% to $1.3458 and the yen strengthened nearly 0.8% to 157.92 per dollar (Reuters via Investing.com, 4 Nov). A weaker dollar usually supports the rand, which trades offshore today with the JSE closed.",
      "source": "Reuters via Investing.com, 4 Nov 2026",
      "url": "https://za.investing.com/news/economy-news/dollar-slides-to-onemonth-low-as-democratic-gains-stoke-ai-regulation-fears-4548281"
-    },
-    {
-     "title": "Euro up 0.4% at $1.133, pound up 0.5% at $1.348; Brent −0.4% at $103.17",
-     "summary": "The dollar also slipped 0.4% to 158.12 yen and 0.6% to 0.8163 Swiss francs as the Democratic sweep weighed on the greenback (Reuters, 4 Nov).",
-     "source": "Reuters via Investing.com, 4 Nov 2026",
-     "url": "https://za.investing.com/news/economy-news/stocks-rally-dollar-dips-after-democrats-midterm-sweep-4548682"
     },
     {
      "title": "Gold holds above $4,000: about $4,028, up 2.5%; silver futures +4.2% to $51.67",
@@ -132,19 +126,28 @@
    "name": "Our coverage",
    "items": [
     {
-     "title": "AMD (LRC Stock Scanner: HOLD, target $641.00) more than 7% higher in extended trade after its beat",
-     "summary": "AMD closed regular trade on 3 November at $483.90 and finished after-hours trading at $508.20, up 5.0% (FinanceFeeds, 4 Nov); by Wednesday morning Investing.com reported the shares more than 7% higher in extended trade (Investing.com, 4 Nov). Third-quarter revenue rose 45% to $13.38 billion, data centre revenue nearly doubled to $8.55 billion and fourth-quarter guidance of about $17 billion beat consensus of $16.23 billion (AMD; Investing.com, 3 Nov). The price is still well below the scanner's $641.00 target; the HOLD rating is not changed here.",
-     "source": "Investing.com, 4 Nov 2026; FinanceFeeds, 4 Nov 2026; AMD, 3 Nov 2026; LRC Stock Scanner, 3 Nov 2026",
+     "title": "Qualcomm (LRC Stock Scanner: HOLD, target $167.20) picked by SpaceX for Starlink Mobile's US 5G ground network; results tonight",
+     "summary": "SpaceX selected Qualcomm's Dragonwing QRU100 and QDU100 platforms for tens of thousands of ground cell sites to sit alongside Starlink Mobile's satellites, with rollout from 2027 under a multiyear deal; no financial terms were given (Anadolu via A News, 4 Nov). Qualcomm reports results after the US close tonight. The deal adds a new infrastructure customer but its size is unknown; the HOLD rating is not changed here.",
+     "source": "A News, 4 Nov 2026; LRC Stock Scanner, 3 Nov 2026",
+     "url": "https://www.anews.com.tr/world/2026/11/04/spacex-teams-up-with-qualcomm-to-bring-starlink-mobile-coverage-to-the-ground",
+     "tickers": [
+      "QCOM"
+     ]
+    },
+    {
+     "title": "AMD (LRC Stock Scanner: HOLD, target $641.00): overnight results gain faded to near flat before the open",
+     "summary": "AMD closed regular trade on 3 November at $483.90 and finished after-hours at $508.20, up 5.0% (FinanceFeeds, 4 Nov), but by 9:03 a.m. New York time it was nearly flat (Stock Titan, 4 Nov). Third-quarter revenue rose 45% to $13.38 billion and fourth-quarter guidance of about $17 billion beat consensus of $16.23 billion (AMD; Investing.com, 3 Nov). The price remains well below the scanner's $641.00 target; the HOLD rating is not changed here.",
+     "source": "Stock Titan, 4 Nov 2026; FinanceFeeds, 4 Nov 2026; AMD, 3 Nov 2026; LRC Stock Scanner, 3 Nov 2026",
      "url": "https://financefeeds.com/amd-stock-508-wednesday-after-q3-beat-13-38-billion-revenue-17-billion-q4-guide-bull-560-bear-466/",
      "tickers": [
       "AMD"
      ]
     },
     {
-     "title": "Super Micro (LRC Stock Scanner: HOLD, target $62.57) up more than 4% overnight on results",
-     "summary": "Super Micro shares were up more than 4% in overnight trade after first-quarter revenue nearly quadrupled to about $20 billion, per Stocktwits (3 Nov). On 20 October the company had pre-announced revenue of $18.5–19.5 billion and a 12.0–12.5% gross margin, above its earlier guide of $14.5–15.5 billion (Supermicro, 20 Oct). The scanner shows HOLD with a $62.57 target against a last price of $31.29 (3 Nov). The rating is not changed here.",
-     "source": "Stocktwits via Yahoo Finance, 3 Nov 2026; Supermicro, 20 Oct 2026; LRC Stock Scanner, 3 Nov 2026",
-     "url": "https://finance.yahoo.com/markets/stocks/articles/dow-p-500-nasdaq-futures-030931252.html",
+     "title": "Super Micro (LRC Stock Scanner: HOLD, target $62.57): early results gain faded to near flat before the open",
+     "summary": "Super Micro was up more than 4% overnight after first-quarter revenue of about $20 billion (Stocktwits, 3 Nov), but was nearly flat at 9:03 a.m. New York time (Stock Titan, 4 Nov). The scanner shows HOLD with a $62.57 target against a last price of $31.29 (3 Nov). The rating is not changed here.",
+     "source": "Stock Titan, 4 Nov 2026; Stocktwits via Yahoo Finance, 3 Nov 2026; LRC Stock Scanner, 3 Nov 2026",
+     "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-4-2026",
      "tickers": [
       "SMCI"
      ]
@@ -163,14 +166,12 @@
   }
  ],
  "watch_today": [
-  "Wall Street open at 16:30 SAST: whether futures hold their gains (Dow e-minis +1.74%, S&P 500 +0.87% at 14:31 SAST)",
-  "US ISM survey for October and September trade balance; US Treasury quarterly refunding announcement",
-  "US October jobs report Friday 6 November at 15:30 SAST, after ADP showed 86,000 private jobs",
-  "Euro zone inflation at 4.0% (Eurostat flash): markets price a better than 72% chance of an ECB hike on 17 December",
-  "AMD (scanner HOLD, target $641.00) and Super Micro (HOLD, $62.57) in regular trade after their results",
+  "Whether Wall Street holds its opening gains into the 23:00 SAST close (Dow +1.9%, S&P 500 +1.1% at 16:35 SAST)",
   "Qualcomm (scanner HOLD, target $167.20) and Arm (HOLD, $278.60) results after the US close tonight",
+  "US October jobs report Friday 6 November at 15:30 SAST, after ADP 86,000 and ISM services employment 51.4",
+  "US 10-year yield slightly above 4.9% after the Treasury refunding announcement",
+  "JSE reopens Thursday: gold above $4,000 and rand about R16.45/$ set the tone for miners",
   "Oil: Brent about $102 as the US signals no immediate new strikes on Iran",
-  "Whether gold holds above $4,000 ahead of Thursday's JSE reopening; rand about R16.45/$",
   "Final House race calls and South Africa's municipal election results"
  ]
 }
