@@ -131,7 +131,7 @@ if ($('scTbl')) {
           return `<tr style="cursor:pointer" onclick="location.href='stock.html?t=${encodeURIComponent(r.t)}'"><td><span class="tic">${esc(r.t.replace('.JO', ''))}</span><small>${esc(r.n)}</small></td>
           <td>${esc(r.setup)}<small>level ${px(r.lvl, r.cur)}</small></td><td><span class="${sigCls(r.v)}">${esc(r.v)}</span><small>LRC score ${S100(r)}/100</small></td>
           <td class="n">${px(p.entry, r.cur)}</td><td class="n">${px(p.stop, r.cur)}<small style="color:#F08A7E">${chgPct(p.stop, p.entry)}</small></td><td class="n">${px(p.t1, r.cur)}<small style="color:#5ED39A">${chgPct(p.t1, p.entry)}</small></td><td class="n">${px(p.t2, r.cur)}<small style="color:#5ED39A">${chgPct(p.t2, p.entry)}</small></td>
-          <td>${d !== null && d >= 0 && d <= 14 ? `<span class="tag ev">Results in ${d}d</span>` : '—'}</td></tr>`; }).join('')
+          <td>${d !== null && d >= 0 && d <= 5 ? `<span class="tag ev">Results in ${d}d</span>` : '—'}</td></tr>`; }).join('')
           : `<tr><td colspan="8" style="color:var(--muted)">No ${side.toLowerCase()} setups in this market today.</td></tr>`) + '</tbody>';
     };
     tbl('Long', $('stLong')); tbl('Short', $('stShort'));
@@ -212,7 +212,7 @@ if ($('wlTB')) {
   const nm = (t, n, extra = '') => `<a href="${link(t)}"><span class="tic">${esc(t.replace('.JO', ''))}</span>${extra}<small>${esc(n)}</small></a>`;
   const head1 = t => { const x = NEWS && NEWS.companies && NEWS.companies[t]; const h = x && x.news && x.news[0]; return h ? `<a href="${esc(h.url)}" target="_blank" rel="noopener" style="font-size:12.5px;color:#C9CEDA">${esc(h.title.slice(0, 90))}${h.title.length > 90 ? '…' : ''}</a><small>${esc(h.source)}${h.published ? ' · ' + esc(h.published.slice(0, 10)) : ''}</small>` : '<small>—</small>'; };
   const upCell = x => `<td class="n" style="color:${(x ?? 0) >= 0 ? '#5ED39A' : '#F08A7E'}">${pc(x, 0)}</td>`;
-  const resCell = ne => `<td>${ne ? `<span class="tag ${Math.round((new Date(ne) - new Date()) / 864e5) <= 14 ? 'ev' : ''}">${esc(ne)}</span>` : '—'}</td>`;
+  const resCell = ne => `<td>${ne ? `<span class="tag ${Math.round((new Date(ne) - new Date()) / 864e5) <= 5 ? 'ev' : ''}">${esc(ne)}</span>` : '—'}</td>`;
   const covPill = r => r.cov ? ` <span class="pill p-${r.cov.rating.toLowerCase()}">LRC ${esc(r.cov.rating)}</span>` : '';
   const none = (n, what) => `<tr class="empty"><td colspan="${n}" style="color:var(--muted);white-space:normal">${what}</td></tr>`;
   const trade = (rows, side) => `<thead><tr><th>#</th><th>COMPANY</th><th>TRADING RATING</th><th>PRICE · 1D</th><th>UPSIDE TO 6-M TARGET</th><th>VALUATION</th><th>${SAFE ? 'SETUP' : 'SETUP · ENTRY PLAN'}</th><th>RESULTS</th><th>LATEST NEWS</th></tr></thead><tbody>` +
@@ -279,7 +279,7 @@ if ($('riOut')) {
     const spot = (g.quality_value || [])[0] || (g.top_scores || [])[0];
     const bar = (l, v, r) => `<div class="fl-bar"><span>${l}</span><i><b style="width:${v ?? 0}%;background:${(v ?? 0) >= 60 ? '#2FA36B' : (v ?? 0) >= 40 ? '#8A92A6' : '#D9534F'}"></b></i><em>${v ?? '—'}</em><span class="${sigCls(r)}">${esc(r || '—')}</span></div>`;
     const links = x => { const d = x.ne ? Math.round((new Date(x.ne) - new Date()) / 864e5) : null;
-      return (onList[x.t] || []).map(l => `<a class="wtag ${/SELL/.test(l) ? 's' : 'b'}" href="watchlist.html">${esc(l)}</a>`).join('') + (x.ne ? `<a class="tag${d !== null && d <= 14 ? ' ev' : ''}" href="earnings.html#${mkt === 'JSE' ? 'jse' : 'us'}">Results ${esc(x.ne)}</a>` : '') + (arts[x.t] || []).slice(0, 1).map(a => `<a class="tag" href="${esc(a.url)}">Our article</a>`).join(''); };
+      return (onList[x.t] || []).map(l => `<a class="wtag ${/SELL/.test(l) ? 's' : 'b'}" href="watchlist.html">${esc(l)}</a>`).join('') + (x.ne ? `<a class="tag${d !== null && d <= 5 ? ' ev' : ''}" href="earnings.html#${mkt === 'JSE' ? 'jse' : 'us'}">Results ${esc(x.ne)}</a>` : '') + (arts[x.t] || []).slice(0, 1).map(a => `<a class="tag" href="${esc(a.url)}">Our article</a>`).join(''); };
     const head = x => { const h = NEWS && NEWS.companies && NEWS.companies[x.t] && (NEWS.companies[x.t].news || [])[0]; return h; };
     const themeOf = t => (I.groups.find(G => (g[G.key] || []).some(y => y.t === t)) || {}).title || '';
     const spotHtml = spot ? (() => { const h = head(spot); return `<div class="fl-spot"><div class="fl-spot-l"><span class="eyebrow" style="margin:0">Spotlight · ${esc(themeOf(spot.t))}</span>
@@ -445,7 +445,7 @@ if ($('paper')) {
     if (ok(f.rev_growth) && f.rev_growth < 0) risks.push(`Revenue shrinking (${pc(f.rev_growth, 0)} y/y).`);
     if (ok(f.eps_growth) && f.eps_growth < 0) risks.push(`Earnings falling (${pc(f.eps_growth, 0)} y/y last quarter).`);
     if (ok(f.fcf) && f.fcf < 0) risks.push('Negative free cash flow.');
-    if (f.next_earnings && days(f.next_earnings) <= 14) risks.push(`Event risk: results in ${days(f.next_earnings)} days.`);
+    if (f.next_earnings && days(f.next_earnings) <= 5) risks.push(`Event risk: results in ${days(f.next_earnings)} days.`);
     if (ok(f.short_float) && f.short_float > 0.1) risks.push(`High short interest (${pp(f.short_float)} of float).`);
     if (t.sma200 && t.price < t.sma200) risks.push('Below the 200-day average — the long-term trend is against buyers.');
     if (ok(f.beta) && f.beta > 1.5) risks.push(`High beta (${f.beta.toFixed(2)}): moves more than the market.`);
@@ -544,14 +544,14 @@ if ($('paper')) {
     const pickBy = (s_, n) => { const c_ = F.filter(x => x.s === s_).sort((a, b) => b.w - a.w), out = [], used = new Set();
       c_.forEach(x => { if (out.length < n && !used.has(x.a)) { out.push(x); used.add(x.a); } }); return out; };
     const forV = dir === 0 ? pickBy(1, 2) : pickBy(dir, 3), agV = dir === 0 ? pickBy(-1, 2) : pickBy(-dir, 2);
-    if (f.next_earnings && days(f.next_earnings) >= 0 && days(f.next_earnings) <= 14) agV.push({ txt: `results in ${days(f.next_earnings)} days` });
+    if (f.next_earnings && days(f.next_earnings) >= 0 && days(f.next_earnings) <= 5) agV.push({ txt: `results in ${days(f.next_earnings)} days` });
     const list = a => { const v = a.map(x => x.txt); return v.length > 1 ? v.slice(0, -1).join(', ') + ' and ' + v[v.length - 1] : v.join(''); };
     const sizeAdj = X.mkt_rank && X.mkt_n ? (X.mkt_rank <= Math.max(3, X.mkt_n * 0.1) ? 'a leading' : X.mkt_rank <= X.mkt_n * 0.5 ? 'a large' : 'a mid-sized') : 'a';
     const indLbl = (r.ind || r.sec || '').toLowerCase().replace(/&/g, 'and').replace(/\s+-\s+/g, ' ');
     const whoShort = `${esc(r.n)}: ${sizeAdj} ${r.m === 'JSE' ? 'JSE' : 'New York'}-listed ${esc(indLbl)} company${pr.country && !((r.m === 'JSE') === (pr.country === 'South Africa')) ? ` based in ${esc(pr.country)}` : ''}`;
     const trSide = dir > 0 ? 'Why buy' : dir < 0 ? 'Why sell' : 'For / against';
     const strengths = pickBy(1, 3), weaknesses = pickBy(-1, 2);
-    if (f.next_earnings && days(f.next_earnings) >= 0 && days(f.next_earnings) <= 14) weaknesses.push({ txt: `results in ${days(f.next_earnings)} days` });
+    if (f.next_earnings && days(f.next_earnings) >= 0 && days(f.next_earnings) <= 5) weaknesses.push({ txt: `results in ${days(f.next_earnings)} days` });
     const safeBottom = `<b>Thesis:</b> ${T0.summary ? esc(T0.summary) : `${whoShort}. Trading score ${S100(r)}/100 (<b>${esc(r.v)}</b>) · Investment score ${r.iv_score ?? '—'}/100 (<b>${esc(r.iv_v || 'HOLD')}</b>) · valuation <b>${esc((r.val || 'fair value').toLowerCase())}</b> (model estimate).`}` +
       `<br><b>Strengths:</b> ${strengths.length ? cap1(list(strengths)) + '.' : 'no standout strength in the data.'}` +
       `<br><b>Weaknesses:</b> ${weaknesses.length ? cap1(list(weaknesses)) + '.' : 'no major weakness in the data.'}` +
@@ -629,7 +629,7 @@ if ($('paper')) {
     <div class="bar pg2">Technical Picture <small>TREND · SETUP · MAJOR SUPPORT &amp; RESISTANCE</small></div>
     <p>${t.setup ? `<b>${esc(t.setup)}</b> at ${px(t.setup_level, c)}${t.setup_note ? ' — ' + esc(t.setup_note) : ''}. ` : 'No breakout or retest setup today. '}Price is ${t.price > t.sma50 ? 'above' : 'below'} the 50-day average (${px(t.sma50, c)})${t.sma200 ? ` and ${t.price > t.sma200 ? 'above' : 'below'} the 200-day (${px(t.sma200, c)})` : ''}; RSI ${ok(t.rsi) ? t.rsi.toFixed(0) : '—'}.
       Major support: ${(t.supports || []).map(s => px(s.price, c) + ` (${s.touches} touches)`).join(', ') || '—'}. Major resistance: ${(t.resistances || []).map(s => px(s.price, c) + ` (${s.touches} touches)`).join(', ') || '—'}.
-      ${f.next_earnings && days(f.next_earnings) <= 14 ? `<b style="color:#C5221F">Results in ${days(f.next_earnings)} days — expect bigger moves.</b>` : ''} <span style="color:#5C6478">Trade plans with entry levels are on the <a href="scanner.html#setups" style="color:#1F3BB3">scanner's Setups tab</a>.</span></p>
+      ${f.next_earnings && days(f.next_earnings) <= 5 ? `<b style="color:#C5221F">Results in ${days(f.next_earnings)} days — expect bigger moves.</b>` : ''} <span style="color:#5C6478">Trade plans with entry levels are on the <a href="scanner.html#setups" style="color:#1F3BB3">scanner's Setups tab</a>.</span></p>
     ${INTEL && ((INTEL.news || []).length || (INTEL.sec && INTEL.sec.filings || []).length) ? `<div class="bar">Latest News &amp; Filings <small>UPDATED ${esc(when(INTEL.generated))}</small></div>
       <div class="cols"><div><h4>News</h4><ul>${(INTEL.news || []).slice(0, 6).map(n => `<li><a href="${esc(n.url)}" target="_blank" rel="noopener" style="color:#1F3BB3">${esc(n.title)}</a> <span style="color:#7A8296">— ${esc(n.source)}${n.published ? ', ' + esc(n.published.slice(0, 10)) : ''}</span></li>`).join('') || '<li>No recent stories.</li>'}</ul></div>
       <div>${INTEL.sec ? `<h4>SEC filings</h4><ul>${(INTEL.sec.filings || []).slice(0, 5).map(f => `<li><a href="${esc(f.url)}" target="_blank" rel="noopener" style="color:#1F3BB3">${esc(f.form)}</a> ${esc(f.date)} — ${esc(f.desc)}</li>`).join('')}</ul><p style="font-size:11.5px;color:#5C6478">Insider (Form 4) filings in the last 90 days: ${INTEL.sec.insider_filings_90d}</p>` : `<h4>Company announcements</h4><p style="font-size:12px">JSE companies publish results and trading statements on SENS — the news list includes SENS stories carried by South African financial media.</p>`}</div></div>` : ''}

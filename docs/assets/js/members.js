@@ -226,7 +226,7 @@ window.LRC_MEMBER_NEWS = [
                 <div><span>Valuation</span><b>${esc((d.valuation || '—').toLowerCase())}<small> · model est.</small></b></div>
                 <div><span>${kind === 'trading' ? 'Long-term grade' : 'Trading grade'}</span><b>${esc(grade(kind === 'trading' ? d.investment_grade : d.trading_grade))}</b></div>
                 <div><span>Dividend yield</span><b>${d.dividend_yield ? (d.dividend_yield * 100).toFixed(1) + '%' : '—'}</b></div>
-                <div><span>Next results</span><b class="${dn !== null && dn <= 14 ? 'warn' : ''}">${d.results_date ? day(d.results_date) + (dn !== null && dn >= 0 ? ` · in ${dn} d` : '') : 'not announced'}</b></div>
+                <div><span>Next results</span><b class="${dn !== null && dn <= 5 ? 'warn' : ''}">${d.results_date ? day(d.results_date) + (dn !== null && dn >= 0 ? ` · in ${dn} d` : '') : 'not announced'}</b></div>
               </div>
               <div class="tp-why"><div><div class="lbl">WHY IT'S ON THE LIST</div><ul>${(d.why || []).map(w => `<li><b>${esc(w.area)}</b> — ${esc(w.text)} <small>(${w.score})</small></li>`).join('') || '<li>Strong all-round score.</li>'}</ul></div>
                 <div><div class="lbl">WHAT COULD GO WRONG</div><ul>${(d.risks || []).map(w => `<li><b>${esc(w.area)}</b> — ${esc(w.text)} <small>(${w.score})</small></li>`).join('') || '<li>No weak area in our readings — the market as a whole is the main risk.</li>'}${d.note ? `<li>${esc(d.note)}</li>` : ''}</ul></div></div>
@@ -235,8 +235,8 @@ window.LRC_MEMBER_NEWS = [
             </article>`; }).join('')}</div>` : `<p class="muted-load">No company passes every rule in this list right now — we would rather show fewer picks than weaker ones.</p>`}
           <details class="tp-rules"><summary>How Top Picks are chosen</summary>
             <ol><li><b>Enough volume to trade:</b> at least ${big(((R.markets || {}).JSE || {}).min_value_traded, 'ZAR')} a day on the JSE and ${big(((R.markets || {}).US || {}).min_value_traded, 'USD')} in New York, market value of at least R5bn / $5bn, not flagged thin, fresh data.</li>
-            <li><b>Trading picks:</b> the strongest Trading scores (3–12 months) with the price above its averages, not stretched (RSI ${((R.trading || {}).rsi_range || [40, 75]).join('–')}), and no results in the next ${(R.trading || {}).no_results_within_days || 14} days.</li>
-            <li><b>Investment picks:</b> the strongest Investment scores (5–10 years), quality grade A or B, not overvalued, a healthy balance sheet and at least ${Math.round(((R.investment || {}).min_margin_of_safety || .15) * 100)}% below our model value.</li>
+            <li><b>Trading picks:</b> the strongest Trading scores (3–12 months) with the price above its averages, not stretched (RSI ${((R.trading || {}).rsi_range || [40, 75]).join('–')}), and no results in the next ${(R.trading || {}).no_results_within_days || 5} days.</li>
+            <li><b>Investment picks:</b> the strongest Investment scores (5–10 years), quality grade A or B, not overvalued, a healthy balance sheet and at least ${Math.round(((R.investment || {}).min_margin_of_safety || .15) * 100)}% below our model value, and no results in the next ${(R.investment || {}).no_results_within_days || 3} days.</li>
             <li><b>Spread the risk:</b> best score first, at most ${R.max_per_sector || 2} per sector, ${R.per_market || 5} per market. Fewer when fewer qualify.</li>
             <li><b>Always up to date:</b> rebuilt after every LRC Stock Scanner run (twice a day on weekdays). "Since added" shows how each pick has moved since it joined the list.</li></ol></details>
           ${newsHTML()}

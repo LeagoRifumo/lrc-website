@@ -115,7 +115,7 @@
         <div class="sn-about"><div class="lbl">COMPANY SUMMARY</div><p>${esc(summ || 'No company description from our data provider yet.')}</p>
           <div class="sn-facts"><div><span>Market value</span><b>${big(f.mcap || r.mcap, cur)}</b></div><div><span>Size in sector</span><b>${ok(cx.sec_rank) ? '#' + cx.sec_rank + ' of ' + cx.sec_n : '—'}</b></div>
             <div><span>52-week range</span><b>${money(lo, cur)} – ${money(hi, cur)}</b>${ok(pos) ? `<i class="sn-rng"><i style="left:${Math.max(0, Math.min(100, pos * 100))}%"></i></i>` : ''}</div>
-            <div><span>Traded a day</span><b>${big(tech.value_traded, cur)}</b></div><div><span>Next results</span><b class="${dn !== null && dn >= 0 && dn <= 14 ? 'warn' : ''}">${ne ? new Date(ne + 'T12:00:00').toLocaleDateString('en-ZA', { day: 'numeric', month: 'short' }) + (dn !== null && dn >= 0 ? ` · ${dn} d` : '') : '—'}</b></div>
+            <div><span>Traded a day</span><b>${big(tech.value_traded, cur)}</b></div><div><span>Next results</span><b class="${dn !== null && dn >= 0 && dn <= 5 ? 'warn' : ''}">${ne ? new Date(ne + 'T12:00:00').toLocaleDateString('en-ZA', { day: 'numeric', month: 'short' }) + (dn !== null && dn >= 0 ? ` · ${dn} d` : '') : '—'}</b></div>
             <div><span>Employees</span><b>${prof.employees ? Number(prof.employees).toLocaleString('en-ZA') : '—'}</b></div></div></div></div>
       <div class="sn-grid2">
         <div class="sn-card"><div class="lbl">SHARE PRICE · ABOUT 2 YEARS</div>${priceChart(d.history, cur)}

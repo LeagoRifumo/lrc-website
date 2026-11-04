@@ -180,3 +180,7 @@ Give this file (and the zip) to Claude when you next update the website.
 - New footer on every page (brand + Research / Markets / Learn & follow / Contact incl. My account). The menu/footer rewrite script lives in the session scratchpad (nav.py); to change them again, regex-replace `<ul class="menu" id="menu">…</ul>` and `<footer>…</footer>` in docs/**/*.html and agents/templates/article.html. Assets ?v=14.0.
 - Checked: 23 pages × 4 screen widths (no errors, no sideways scroll), company clicks open the snapshot on 7 pages, 0 broken internal links across 2,679 pages.
 - Home: "How to use LRC in 5 minutes" (#start) — 5 linked steps: News Desk → Sectors & ETFs → Stock Scanner → Top Picks → Calendars, plus Live Show / Academy links; hero link "New here? How to use LRC in 5 minutes ↓". style.css ?v=14.1.
+
+## 4 Nov 2026 — event-risk rule changed (owner decision)
+- Trading picks / scanner / watchlist: results within **5 days** = event risk (was 14). Investment picks: 3 days (unchanged).
+- Changed: agents/config/top_picks.json, build_watchlist.py, scan_engine.py, top_picks.py docstring, scanner.js, members.js, snapshot.js, top-picks.html (+FAQ JSON-LD), scanner.html, earnings.html, show.html.

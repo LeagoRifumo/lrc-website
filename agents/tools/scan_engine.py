@@ -13,7 +13,7 @@ FUNDAMENTALS (each -1/0/+1, valuation judged against the median of the same sect
   Fwd P/E, TTM P/E, P/Sales, Revenue growth, EPS growth, Debt/Equity, ROE, P/FCF, Dividend yield
 Major support/resistance = clusters of swing highs/lows (5-bar pivots, last 12 months) touched at least twice.
 Entry plans follow the LRC house rules: risk 1% per trade, stop below the support / breakout level (max 3 ATR), targets 2R and 3R,
-results within 14 days = event risk.
+results within 5 days = event risk.
 """
 import math, datetime as dt
 from statistics import median

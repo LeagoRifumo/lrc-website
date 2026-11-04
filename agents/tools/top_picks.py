@@ -4,7 +4,7 @@
 Picks are chosen by fixed rules from the LRC Stock Scanner (agents/config/top_picks.json):
   * Liquidity first: enough value traded a day, minimum market value and share price, not flagged thin, fresh data.
   * Trading picks (3-12 months): Trading rating STRONG BUY / BUY, price trend up (above its averages), not stretched,
-    RSI in range, no results within 14 days (house event-risk rule).
+    RSI in range, no results within 5 days (house event-risk rule; investment picks 3 days).
   * Investment picks (5-10 years): Investment rating STRONG BUY / BUY, quality grade A or B, not overvalued,
     healthy balance sheet, margin of safety to the model value.
   * Best score first, at most 2 per sector, 5 per market (fewer if fewer qualify — quality over quantity).

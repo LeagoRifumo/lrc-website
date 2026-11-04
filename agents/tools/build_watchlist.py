@@ -13,7 +13,7 @@ House rules (set 5 Oct 2026, unchanged):
                              SELL <= -5% upside OR score < 2.5; otherwise HOLD.
   * Swing watchlist: only BUY (-> Long) or SELL (-> Short) names that pass the technical check.
   * Entry: Long = buy stop just above the 2-session high; Short = sell stop just below the 15-session swing low.
-  * Stop = 2 x ATR(14); Target = 3R; risk 1% of account; max 4 shorts; results within 14 days = event risk.
+  * Stop = 2 x ATR(14); Target = 3R; risk 1% of account; max 4 shorts; results within 5 days = event risk.
   * No edge, no trade: a short whose trigger is below the 6-month value (or a long above it) is skipped.
   * Score /18 and grade (A >= 14, B >= 10, else C) follow the LRC Watchlist workbook formulas.
 
@@ -56,7 +56,7 @@ def score18(x, direction, entry, stop, target, week_end, sp500_half):
     event = 0
     if x.get('next_earnings'):
         d = (dt.date.fromisoformat(x['next_earnings']) - week_end).days
-        if 0 <= d <= 14: event = -2
+        if 0 <= d <= 5: event = -2
     squeeze = -1 if (short and (x.get('short_float') or 0) >= 0.20) else 0
     total = int(trend + mom + rng + liq + fuel + rrp + event + squeeze)
     return total, ('A' if total >= 14 else 'B' if total >= 10 else 'C'), round(rr, 1)
@@ -96,11 +96,11 @@ def main(week_end=None, sp500_half=0.1437):
             skipped.append({'ticker': t, 'why': f"{direction} trigger {entry} is beyond the 6-month value {r['target_6m']}"}); continue
         sc, grade, rr = score18(x, direction, entry, stop, target, week_end, sp500_half)
         cleared = technical_ok(x, direction)
-        ev = x.get('next_earnings') and 0 <= (dt.date.fromisoformat(x['next_earnings']) - week_end).days <= 14
+        ev = x.get('next_earnings') and 0 <= (dt.date.fromisoformat(x['next_earnings']) - week_end).days <= 5
         status = 'Entry setup' if (grade == 'A' and cleared and not ev) else 'Watch'
         row = {'ticker': t, 'name': r['name'], 'direction': direction, 'setup': setup, 'entry': entry, 'stop': stop, 'target': target, 'rr': rr,
                'score': sc, 'grade': grade, 'status': status, 'rating': rating, 'rating_target': r['target_6m'],
-               'tech_clearance': ('CLEARED' if cleared else 'NOT CLEARED') + (' — results within 14 days' if ev else ''),
+               'tech_clearance': ('CLEARED' if cleared else 'NOT CLEARED') + (' — results within 5 days' if ev else ''),
                'note': f"Results {x['next_earnings']}" if ev else ''}
         (longs if direction == 'Long' else shorts).append(row)
     longs.sort(key=lambda z: -z['score']); shorts.sort(key=lambda z: -z['score'])
@@ -110,7 +110,7 @@ def main(week_end=None, sp500_half=0.1437):
            'prices_as_of': max((x.get('as_of', '') for x in snap.values()), default=''), 'agent': 'LRC Watchlist',
            'rules': {'universe': 'Finviz-style presets (Swing Long, Swing Short, Investment) applied to US stocks',
                      'qualify': 'Only names with an LRC BUY or SELL rating AND technical clearance; BUY = Long, SELL = Short',
-                     'stop': '2 × ATR(14)', 'target': '3R', 'risk': '1% of account per trade', 'max_shorts': 4, 'event_risk': 'results within 14 days'},
+                     'stop': '2 × ATR(14)', 'target': '3R', 'risk': '1% of account per trade', 'max_shorts': 4, 'event_risk': 'results within 5 days'},
            'swing': longs + shorts}
     # keep the investment list from the previous file (monthly agent updates it)
     try: out['investment'] = json.load(open(P('docs', 'data', 'watchlist.json'))).get('investment', [])
