@@ -734,7 +734,13 @@
 "eps_forecast": "$0.05",
 "quarter": "Aug/2026",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.8
+"market_cap_bn": 1.8,
+"eps_actual": 0.28,
+"eps_est": 0.1267,
+"surprise": 1.21,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "AEIS|2026-11-02": {
 "t": "AEIS",
@@ -892,6 +898,18 @@
 "result": "miss",
 "quarter_end": "2026-06-30",
 "result_done": true
+},
+"AES|2026-11-04": {
+"t": "AES",
+"ticker": "AES",
+"name": "The AES Corporation",
+"m": "US",
+"date": "2026-11-04",
+"when": "Not stated",
+"eps_forecast": "",
+"quarter": "",
+"period": "Expected date (market data feed)",
+"market_cap_bn": 10.6
 },
 "AFG|2026-11-03": {
 "t": "AFG",
@@ -1198,6 +1216,18 @@
 "result_done": true,
 "source": "Nasdaq",
 "quarter_end": "2026-08-31"
+},
+"AIR|2027-01-05": {
+"t": "AIR",
+"ticker": "AIR",
+"name": "AAR Corp.",
+"m": "US",
+"date": "2027-01-05",
+"when": "Not stated",
+"eps_forecast": "",
+"quarter": "",
+"period": "Expected date (market data feed)",
+"market_cap_bn": 4.5
 },
 "AIT|2026-10-27": {
 "t": "AIT",
@@ -2082,10 +2112,10 @@
 "name": "Alpha Metallurgical Resources, Inc.",
 "m": "US",
 "date": "2026-11-06",
-"when": "Before open",
+"when": "Not stated",
 "eps_forecast": "($0.29)",
 "quarter": "Sep/2026",
-"period": null,
+"period": "Expected date (market data feed)",
 "market_cap_bn": 2.0
 },
 "AMSC|2026-11-04": {
@@ -11104,6 +11134,18 @@
 "quarter_end": "2026-06-30",
 "result_done": true
 },
+"DRVN|2026-11-04": {
+"t": "DRVN",
+"ticker": "DRVN",
+"name": "Driven Brands Holdings Inc.",
+"m": "US",
+"date": "2026-11-04",
+"when": "Not stated",
+"eps_forecast": "",
+"quarter": "",
+"period": "Expected date (market data feed)",
+"market_cap_bn": 1.9
+},
 "DSGR|2026-11-05": {
 "t": "DSGR",
 "ticker": "DSGR",
@@ -11926,6 +11968,18 @@
 "result": "beat",
 "quarter_end": "2026-06-30",
 "result_done": true
+},
+"EMBJ|2026-11-10": {
+"t": "EMBJ",
+"ticker": "EMBJ",
+"name": "Embraer S.A.",
+"m": "US",
+"date": "2026-11-10",
+"when": "Not stated",
+"eps_forecast": "",
+"quarter": "",
+"period": "Expected date (market data feed)",
+"market_cap_bn": 13.4
 },
 "EME|2026-10-29": {
 "t": "EME",
@@ -16205,7 +16259,13 @@
 "eps_forecast": "$0.01",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 5.8
+"market_cap_bn": 5.8,
+"eps_actual": 0.1,
+"eps_est": 0.015,
+"surprise": 5.667,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "HGV|2026-10-29": {
 "t": "HGV",
@@ -17334,6 +17394,18 @@
 "quarter_end": "2026-06-30",
 "result_done": true
 },
+"IBRX|2026-11-04": {
+"t": "IBRX",
+"ticker": "IBRX",
+"name": "ImmunityBio, Inc.",
+"m": "US",
+"date": "2026-11-04",
+"when": "Not stated",
+"eps_forecast": "",
+"quarter": "",
+"period": "Expected date (market data feed)",
+"market_cap_bn": 8.7
+},
 "IBTA|2026-11-02": {
 "t": "IBTA",
 "ticker": "IBTA",
@@ -17893,11 +17965,11 @@
 "name": "Infleqtion, Inc.",
 "m": "US",
 "date": "2026-11-16",
-"when": "After close",
+"when": "Not stated",
 "eps_forecast": "($0.05)",
 "quarter": "Sep/2026",
-"period": null,
-"market_cap_bn": 2.0
+"period": "Expected date (market data feed)",
+"market_cap_bn": 1.9
 },
 "INFY|2026-10-23": {
 "t": "INFY",
@@ -20385,11 +20457,11 @@
 "name": "Centrus Energy Corp.",
 "m": "US",
 "date": "2026-11-04",
-"when": "After close",
+"when": "Not stated",
 "eps_forecast": "($0.36)",
 "quarter": "Sep/2026",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 2.0
+"market_cap_bn": 1.9
 },
 "LEVI|2026-10-07": {
 "t": "LEVI",
@@ -23142,11 +23214,11 @@
 "name": "Maravai LifeSciences Holdings, Inc.",
 "m": "US",
 "date": "2026-11-04",
-"when": "After close",
+"when": "Not stated",
 "eps_forecast": "($0.07)",
 "quarter": "Sep/2026",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 2.0
+"market_cap_bn": 2.8
 },
 "MRVL|2026-12-01": {
 "t": "MRVL",
@@ -26824,6 +26896,18 @@
 "quarter_end": "2026-06-30",
 "result_done": true
 },
+"PAYP|2026-11-04": {
+"t": "PAYP",
+"ticker": "PAYP",
+"name": "PayPay Corporation",
+"m": "US",
+"date": "2026-11-04",
+"when": "Not stated",
+"eps_forecast": "",
+"quarter": "",
+"period": "Expected date (market data feed)",
+"market_cap_bn": 10.0
+},
 "PAYX|2026-12-18": {
 "t": "PAYX",
 "ticker": "PAYX",
@@ -27215,6 +27299,18 @@
 "result_done": true,
 "source": "Nasdaq"
 },
+"PENG|2027-01-05": {
+"t": "PENG",
+"ticker": "PENG",
+"name": "Penguin Solutions, Inc.",
+"m": "US",
+"date": "2027-01-05",
+"when": "Not stated",
+"eps_forecast": "",
+"quarter": "",
+"period": "Expected date (market data feed)",
+"market_cap_bn": 2.7
+},
 "PENN|2026-11-05": {
 "t": "PENN",
 "ticker": "PENN",
@@ -27365,11 +27461,11 @@
 "name": "Precigen, Inc.",
 "m": "US",
 "date": "2026-11-04",
-"when": "After close",
+"when": "Not stated",
 "eps_forecast": "$0.09",
 "quarter": "Sep/2026",
-"period": null,
-"market_cap_bn": 2.5
+"period": "Expected date (market data feed)",
+"market_cap_bn": 1.8
 },
 "PGEN|2026-11-12": {
 "t": "PGEN",
@@ -29387,11 +29483,11 @@
 "name": "Redwire Corporation",
 "m": "US",
 "date": "2026-11-04",
-"when": "After close",
+"when": "Not stated",
 "eps_forecast": "($0.10)",
 "quarter": "Sep/2026",
-"period": null,
-"market_cap_bn": 2.1
+"period": "Expected date (market data feed)",
+"market_cap_bn": 2.0
 },
 "RDY|2026-10-23": {
 "t": "RDY",
@@ -31041,10 +31137,10 @@
 "SDGR|2026-11-04": {
 "t": "SDGR",
 "ticker": "SDGR",
-"name": "Schrodinger, Inc.",
+"name": "Schrödinger, Inc.",
 "m": "US",
 "date": "2026-11-04",
-"when": "After close",
+"when": "Not stated",
 "eps_forecast": "($0.65)",
 "quarter": "Sep/2026",
 "period": "Expected date (market data feed)",
@@ -32448,11 +32544,11 @@
 "name": "SoundHound AI, Inc.",
 "m": "US",
 "date": "2026-11-05",
-"when": "After close",
+"when": "Not stated",
 "eps_forecast": "($0.12)",
 "quarter": "Sep/2026",
-"period": null,
-"market_cap_bn": 2.0
+"period": "Expected date (market data feed)",
+"market_cap_bn": 1.9
 },
 "SO|2026-11-05": {
 "t": "SO",
@@ -34719,6 +34815,18 @@
 "quarter_end": "2026-06-30",
 "result_done": true
 },
+"TNGX|2026-11-04": {
+"t": "TNGX",
+"ticker": "TNGX",
+"name": "Tango Therapeutics, Inc.",
+"m": "US",
+"date": "2026-11-04",
+"when": "Not stated",
+"eps_forecast": "",
+"quarter": "",
+"period": "Expected date (market data feed)",
+"market_cap_bn": 4.0
+},
 "TNK|2026-11-04": {
 "t": "TNK",
 "ticker": "TNK",
@@ -36684,6 +36792,18 @@
 "quarter_end": "2026-06-30",
 "result_done": true
 },
+"VAC|2026-11-04": {
+"t": "VAC",
+"ticker": "VAC",
+"name": "Marriott Vacations Worldwide Corporation",
+"m": "US",
+"date": "2026-11-04",
+"when": "Not stated",
+"eps_forecast": "",
+"quarter": "",
+"period": "Expected date (market data feed)",
+"market_cap_bn": 4.0
+},
 "VALE|2026-10-29": {
 "t": "VALE",
 "ticker": "VALE",
@@ -36852,11 +36972,11 @@
 "name": "Vermilion Energy Inc.",
 "m": "US",
 "date": "2026-11-04",
-"when": "Before open",
+"when": "Not stated",
 "eps_forecast": "",
 "quarter": "Sep/2026",
-"period": null,
-"market_cap_bn": 2.1
+"period": "Expected date (market data feed)",
+"market_cap_bn": 1.9
 },
 "VFC|2026-10-28": {
 "t": "VFC",
@@ -38148,11 +38268,11 @@
 "name": "GeneDx Holdings Corp.",
 "m": "US",
 "date": "2026-11-09",
-"when": "After close",
+"when": "Not stated",
 "eps_forecast": "$0.07",
 "quarter": "Sep/2026",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 2.1
+"market_cap_bn": 2.0
 },
 "WHD|2026-10-28": {
 "t": "WHD",
