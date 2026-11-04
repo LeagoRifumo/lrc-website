@@ -184,3 +184,4 @@ Give this file (and the zip) to Claude when you next update the website.
 ## 4 Nov 2026 — event-risk rule changed (owner decision)
 - Trading picks / scanner / watchlist: results within **5 days** = event risk (was 14). Investment picks: 3 days (unchanged).
 - Changed: agents/config/top_picks.json, build_watchlist.py, scan_engine.py, top_picks.py docstring, scanner.js, members.js, snapshot.js, top-picks.html (+FAQ JSON-LD), scanner.html, earnings.html, show.html.
+- 4 Nov 2026: new page how-to-find-trades.html (daily routine, 5 checks, Top Picks facts, worked example; HowTo JSON-LD) + one-page PDF at docs/assets/docs/LRC_How_To_Find_Trades_1page.pdf. Linked from the Learn menu on all pages, home guide and Top Picks; added to sitemap and build_articles STATIC.
