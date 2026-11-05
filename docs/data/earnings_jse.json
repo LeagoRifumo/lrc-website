@@ -425,7 +425,15 @@
     "miss",
     "miss",
     "beat"
-   ]
+   ],
+   "rev_est": 0,
+   "rev_est_low": 0,
+   "rev_est_high": 0,
+   "eps_est_q": -0.02,
+   "eps_yago": -0.03,
+   "n_est": 1,
+   "rcur": "USD",
+   "qend": "2026-09-30"
   },
   {
    "date": "2026-11-06",
@@ -459,6 +467,13 @@
    "idea": null,
    "v": "HOLD",
    "iv": "SELL",
+   "rev_est": 53904760,
+   "rev_est_low": 52619530,
+   "rev_est_high": 55190000,
+   "rev_yago": 45258000,
+   "n_est": 2,
+   "rcur": "USD",
+   "qend": "2026-09-30",
    "track": null,
    "lrc_rating": null,
    "covered": false
@@ -504,6 +519,13 @@
    "idea": "Value & quality",
    "v": "HOLD",
    "iv": "STRONG BUY",
+   "rev_est": 258542700,
+   "rev_est_low": 258542700,
+   "rev_est_high": 258542700,
+   "rev_yago": 169273960,
+   "n_est": 1,
+   "rcur": "USD",
+   "qend": "2026-09-30",
    "track": null,
    "lrc_rating": null,
    "covered": true
@@ -522,6 +544,13 @@
    "idea": null,
    "v": "HOLD",
    "iv": "SELL",
+   "rev_est": 4514500,
+   "rev_est_low": 4200000,
+   "rev_est_high": 4829000,
+   "rev_yago": 4889530,
+   "n_est": 2,
+   "rcur": "USD",
+   "qend": "2026-09-30",
    "track": null,
    "lrc_rating": null,
    "covered": false
@@ -542,7 +571,14 @@
    "idea": "Earnings watch",
    "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": null,
+   "rev_est": 5890100000,
+   "rev_est_low": 5677000000,
+   "rev_est_high": 6107400000,
+   "rev_yago": 5207000000,
+   "n_est": 4,
+   "rcur": "EUR",
+   "qend": "2026-09-30"
   },
   {
    "date": "2026-11-16",
@@ -892,6 +928,6 @@
   }
  ],
  "note": "Partial list: no company-published date could be confirmed this week for, among others, AngloGold Ashanti, Life Healthcare, Mr Price, MTN, Pepkor, TFG, Coronation, Redefine, Reinet, Gold Fields and Sibanye-Stillwater; they will be added when dates are published. Several companies (e.g. Mondi, Famous Brands, Clicks) reported before this window.",
- "synced": "2026-11-05T20:40+02:00",
+ "synced": "2026-11-05T23:05+02:00",
  "coverage_note": "Ticked = on the LRC watchlist. Every company the LRC Stock Scanner tracks shows its trading and investment ratings. Updated after every scanner run."
 }
