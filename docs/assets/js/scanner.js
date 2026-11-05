@@ -571,12 +571,15 @@ if ($('paper')) {
     const fmtV = (k, v) => ['fpe', 'tpe', 'ps', 'pfcf', 'peg', 'pb'].includes(k) ? (v <= 0 ? 'neg.' : v.toFixed(2)) : k === 'de' ? (v / 100).toFixed(2) + 'x' : k === 'current_ratio' ? v.toFixed(2) : pp(v, 1);
     const tgM = [['Method 1: Discounted cash flow (DCF)', tg.dcf], ['Method 2: Residual income (banks & insurers)', tg.residual_income], ['Method 3: Dividend & buyback model', tg.ddm],
       ['Method 4: EV/EBITDA vs sector peers', tg.ev_ebitda], ['Analyst consensus (median, 3+ analysts)', (f.n_analysts || 0) >= 3 ? tg.analyst_median : null]].filter(x => ok(x[1]));
-    const tgW = tgM.length ? 1 / tgM.length : 0;
+    const RS = tg.research || null;   // a published LRC research report overrides the model target
+    const tgW = RS ? 0 : tgM.length ? 1 / tgM.length : 0;
     if (tgM.length) { tg.low = Math.min(...tgM.map(x => x[1])); tg.high = Math.max(...tgM.map(x => x[1])); }
+    if (RS && ok(RS.low) && ok(RS.high)) { tg.low = RS.low; tg.high = RS.high; }
     const tgTable = tgM.length && !(r.cov || (R && R.target)) ? `<table class="rtab tgt-tbl"><thead><tr><th>Methodology</th><th style="text-align:right">Implied value</th><th style="text-align:right">vs current (${px(t.price, c)})</th><th style="text-align:right">Weight</th></tr></thead><tbody>` +
-      tgM.map(([l, v]) => `<tr><td>${esc(l)}</td><td class="n"><b>${px(v, c)}</b></td><td class="n" style="color:${v >= t.price ? '#0F7B3F' : '#C5221F'}">${pc(v / t.price - 1, 1)}</td><td class="n">${(tgW * 100).toFixed(0)}%</td></tr>`).join('') +
-      `${ok(tg.low) && ok(tg.high) ? `<tr><td>Range (lowest – highest method)</td><td class="n">${px(tg.low, c)} – ${px(tg.high, c)}</td><td class="n">${pc(tg.low / t.price - 1, 0)} to ${pc(tg.high / t.price - 1, 0)}</td><td class="n">—</td></tr>` : ''}` +
-      `<tr class="tgt-final"><td><b>LRC Analyst Target (equal-weight average)</b></td><td class="n"><b>${px(lrcT, c)}</b></td><td class="n"><b>${pc(lrcT / t.price - 1, 1)}</b></td><td class="n"><b>100%</b></td></tr>` +
+      tgM.map(([l, v]) => `<tr><td>${esc(l)}</td><td class="n"><b>${px(v, c)}</b></td><td class="n" style="color:${v >= t.price ? '#0F7B3F' : '#C5221F'}">${pc(v / t.price - 1, 1)}</td><td class="n">${RS ? 'reference' : (tgW * 100).toFixed(0) + '%'}</td></tr>`).join('') +
+      `${RS ? `<tr><td>LRC research report: ${esc(RS.report || '')} (${esc(RS.analyst || '')}, ${esc(RS.date || '')})</td><td class="n"><b>${px(RS.target, c)}</b></td><td class="n" style="color:${RS.target >= t.price ? '#0F7B3F' : '#C5221F'}">${pc(RS.target / t.price - 1, 1)}</td><td class="n">100%</td></tr>` : ''}` +
+      `${ok(tg.low) && ok(tg.high) ? `<tr><td>${RS ? 'Range (research report: bear – bull case)' : 'Range (lowest – highest method)'}</td><td class="n">${px(tg.low, c)} – ${px(tg.high, c)}</td><td class="n">${pc(tg.low / t.price - 1, 0)} to ${pc(tg.high / t.price - 1, 0)}</td><td class="n">—</td></tr>` : ''}` +
+      `<tr class="tgt-final"><td><b>${RS ? 'LRC Analyst Target (from the LRC research report; the model methods above are shown for reference)' : 'LRC Analyst Target (equal-weight average)'}</b></td><td class="n"><b>${px(lrcT, c)}</b></td><td class="n"><b>${pc(lrcT / t.price - 1, 1)}</b></td><td class="n"><b>100%</b></td></tr>` +
       `${ok(tg.implied_growth) ? `<tr><td colspan="4" style="color:#5C6478">Method 5: Reverse DCF — today's price assumes free cash flow grows about <b>${pc(tg.implied_growth, 0)} a year</b> for five years (shown, not averaged).</td></tr>` : ''}</tbody></table>` : '';
     const tgRows = [['Latest share price', t.price, false], ['LRC Analyst Target (average)', lrcT]].filter(x => ok(x[1]));
     const tgRange = '', tgRev = '';

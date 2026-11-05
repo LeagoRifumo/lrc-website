@@ -302,6 +302,16 @@ def sector_medians(rows):
 VAL = {'JSE': {'erp': 0.055, 'g_term': 0.045, 'rf_default': 0.088}, 'US': {'erp': 0.05, 'g_term': 0.025, 'rf_default': 0.045}}
 FIN_SECTORS = {'Financial Services'}
 CYCLICAL_SECTORS = {'Basic Materials', 'Energy'}
+# boom-and-bust industries outside those sectors (owner decision 5 Nov 2026): valued on 5-year (mid-cycle) averages
+CYCLICAL_INDUSTRIES = {'Farm Products', 'Agricultural Inputs', 'Steel', 'Aluminum', 'Copper', 'Gold', 'Silver', 'Other Precious Metals & Mining',
+                       'Other Industrial Metals & Mining', 'Coking Coal', 'Thermal Coal', 'Chemicals', 'Specialty Chemicals', 'Paper & Paper Products',
+                       'Lumber & Wood Production', 'Building Materials', 'Residential Construction', 'Auto Manufacturers', 'Auto Parts',
+                       'Marine Shipping', 'Airlines', 'Oil & Gas E&P', 'Oil & Gas Integrated', 'Oil & Gas Refining & Marketing',
+                       'Oil & Gas Equipment & Services', 'Oil & Gas Drilling', 'Semiconductor Equipment & Materials', 'Uranium'}
+
+
+def is_cyclical(sector, industry=None):
+    return sector in CYCLICAL_SECTORS or (industry in CYCLICAL_INDUSTRIES)
 DDM_SECTORS = {'Real Estate', 'Utilities', 'Financial Services'}   # dividends + buybacks are how these return value
 
 
@@ -328,7 +338,7 @@ def _dcf_per_share(fcf0, g1, gT, r, shares):
     return v / shares
 
 
-def intrinsic(f, fs, med, price, market, sector, rf=None):
+def intrinsic(f, fs, med, price, market, sector, rf=None, industry=None):
     """Returns {'methods': {...per-share values...}, 'target', 'low', 'high', 'implied_growth', 'inputs'} in the trading currency."""
     out = {'methods': {}, 'notes': {}}
     if not price or not f.get('mcap'): return out
@@ -340,17 +350,22 @@ def intrinsic(f, fs, med, price, market, sector, rf=None):
     p = VAL[market]; gT = p['g_term']
     r = cost_of_equity(market, f.get('beta'), rf)
     fin = sector in FIN_SECTORS
+    cyc = is_cyclical(sector, industry)
     # growth for years 1-5: analysts' EPS growth blended with 5-year revenue growth, capped
     rv = hist('rev', 6)
     rev_cagr = (rv[-1] / rv[0]) ** (1 / (len(rv) - 1)) - 1 if len(rv) >= 3 and rv[0] > 0 and rv[-1] > 0 else None
     eg = _avg([f.get('eps_growth_fwd'), f.get('eps_growth_next')])
     g1 = _avg([clamp(eg, -0.10, 0.30) if eg is not None else None, rev_cagr])
     g1 = clamp(g1 if g1 is not None else gT, -0.05, 0.20)
-    out['inputs'] = {'r': round(r, 4), 'g1': round(g1, 4), 'g_term': gT, 'rev_cagr': rev_cagr}
+    if cyc: g1 = min(g1, gT)   # cyclicals: no extra growth on top of a mid-cycle base
+    out['inputs'] = {'r': round(r, 4), 'g1': round(g1, 4), 'g_term': gT, 'rev_cagr': rev_cagr, 'cyclical': cyc}
     # 1. DCF on free cash flow
-    fcfh = hist('fcf', 3)
-    base = _avg([f.get('fcf'), _avg(fcfh)]) if f.get('fcf') is not None or fcfh else None
-    if not fin and base and base > 0 and (not fcfh or sum(1 for x in fcfh if x > 0) >= max(1, len(fcfh) - 1)):
+    fcfh = hist('fcf', 5 if cyc else 3)
+    if cyc:   # mid-cycle free cash flow: the plain average of the last 5 years plus the latest 12 months, bad years included
+        base = _avg(fcfh + ([f['fcf']] if f.get('fcf') is not None else [])) if (fcfh or f.get('fcf') is not None) else None
+    else:
+        base = _avg([f.get('fcf'), _avg(fcfh)]) if f.get('fcf') is not None or fcfh else None
+    if not fin and base and base > 0 and (cyc or not fcfh or sum(1 for x in fcfh if x > 0) >= max(1, len(fcfh) - 1)):
         out['methods']['dcf'] = _dcf_per_share(base, g1, gT, r, shares)
     elif not fin: out['notes']['dcf'] = 'free cash flow negative or unstable'
     # 2. Residual income for financials (2-stage): book value + present value of returns above the cost of equity
@@ -380,7 +395,7 @@ def intrinsic(f, fs, med, price, market, sector, rf=None):
             if r - gd > 0.02: out['methods']['ddm'] = yld * price * (1 + gd) / (r - gd)
     # 4. EV/EBITDA vs sector on 5-year average EBITDA
     # cyclicals (miners, oil, chemicals): 5-year average EBITDA = mid-cycle; everyone else: latest 12 months
-    eb = hist('ebitda', 5) if sector in CYCLICAL_SECTORS else []
+    eb = hist('ebitda', 5) if cyc else []
     eb_avg = _avg(eb + ([f['ebitda']] if f.get('ebitda') else [])) if (eb or f.get('ebitda')) else None
     m_ev = med.get('ev_ebitda')
     if not fin and eb_avg and eb_avg > 0 and m_ev and 0 < m_ev < 40:
@@ -404,13 +419,13 @@ def intrinsic(f, fs, med, price, market, sector, rf=None):
     return out
 
 
-def model_targets(f, med, price, fs=None, market='US', sector=None, rf=None):
+def model_targets(f, med, price, fs=None, market='US', sector=None, rf=None, industry=None):
     """LRC Analyst Target = average of the LRC valuation methods that fit (DCF, residual income, dividend/buyback model,
     EV/EBITDA vs peers) plus the analyst consensus median when 3+ analysts cover the company (owner decision 28 Oct 2026).
     Range = lowest to highest of those values. Reverse DCF (implied growth) is shown, not averaged. No PEG."""
     out = {}
     if f.get('target_median'): out['analyst_median'] = f['target_median']
-    iv = intrinsic(f, fs, med, price, market, sector, rf)
+    iv = intrinsic(f, fs, med, price, market, sector, rf, industry)
     out.update(iv['methods'])
     out['inputs'] = iv.get('inputs'); out['notes'] = iv.get('notes')
     if iv.get('implied_growth') is not None: out['implied_growth'] = iv['implied_growth']
@@ -772,3 +787,124 @@ def analyst_gates(trading, invest, c):
     if invest in ('SELL', 'STRONG SELL') and c.get('verdict') == 'UNDERVALUED':
         invest = 'HOLD'; iv_n.append('held at HOLD: the shares look undervalued')
     return trading, tn, invest, iv_n, flags
+
+
+# ---------------------------------------------------------------------------------------------------------------------
+# LRC Fair Value Model v2 (SHADOW MODE from 5 Nov 2026: computed and stored as targets['v2'], NOT shown and NOT used in
+# ratings until it beats the current model on the track record over 4 weeks).
+# 1 classify the company into one of six types  2 run only the methods that fit that type (eligibility checks)
+# 3 weighted average with a soft trim (a method >50% away from the median of the others gets half its weight)
+# 4 confidence label from the spread of the methods  5 type-specific margin of safety. Loss-makers get no fair value.
+V2_WEIGHTS = {
+    'compounder': {'dcf': 0.50, 'ev_ebitda': 0.25, 'pe': 0.25},
+    'cyclical':   {'dcf': 0.40, 'ev_ebitda': 0.40, 'residual_income': 0.20},
+    'financial':  {'residual_income': 0.60, 'ddm': 0.40},
+    'income':     {'ddm': 0.50, 'dcf': 0.25, 'ev_ebitda': 0.25},
+    'growth':     {'dcf': 0.60, 'ev_ebitda': 0.40},
+}
+V2_MOS = {'compounder': 0.15, 'financial': 0.20, 'income': 0.20, 'cyclical': 0.30, 'growth': 0.30}
+V2_INCOME_SECTORS = {'Real Estate', 'Utilities'}
+V2_TELECOM = {'Communication Services'}
+
+
+def v2_type(f, sector, industry, rev_cagr):
+    ni_neg = f.get('tpe') is not None and f['tpe'] <= 0
+    fcf_neg = f.get('fcf') is not None and f['fcf'] <= 0
+    if ni_neg and fcf_neg: return 'loss'
+    if sector in FIN_SECTORS: return 'financial'
+    if is_cyclical(sector, industry): return 'cyclical'
+    if sector in V2_INCOME_SECTORS or ((f.get('payout') or 0) >= 0.6 and sector not in V2_TELECOM): return 'income'
+    rg = max([x for x in (f.get('rev_growth'), rev_cagr) if x is not None] or [0])
+    if rg >= 0.20: return 'growth'
+    return 'compounder'
+
+
+def model_targets_v2(f, med, price, fs=None, market='US', sector=None, rf=None, industry=None):
+    out = {'model': 'v2', 'methods': {}, 'weights': {}, 'skipped': {}}
+    if not price or not f.get('mcap'): return out
+    shares = f['mcap'] / price
+    fx = f.get('fx_used') or 1.0
+    rows = ((fs or {}).get('annual') or {}).get('rows') or {}
+    hist = lambda k, n=5: [v * fx for v in (rows.get(k) or [])[-n:] if v is not None]
+    p = VAL[market]; gT = p['g_term']; r = cost_of_equity(market, f.get('beta'), rf)
+    rv = hist('rev', 6)
+    rev_cagr = (rv[-1] / rv[0]) ** (1 / (len(rv) - 1)) - 1 if len(rv) >= 3 and rv[0] > 0 and rv[-1] > 0 else None
+    typ = v2_type(f, sector, industry, rev_cagr)
+    out['type'] = typ
+    if typ == 'loss':
+        out['note'] = 'Not valued: profits and cash flow are negative'
+        return out
+    eg = _avg([f.get('eps_growth_fwd'), f.get('eps_growth_next')])
+    g1 = _avg([clamp(eg, -0.10, 0.30) if eg is not None else None, rev_cagr])
+    g1 = clamp(g1 if g1 is not None else gT, -0.05, 0.30 if typ == 'growth' else 0.20)
+    if typ == 'cyclical': g1 = min(g1, gT)
+    net_debt = (f.get('debt') or 0) - (f.get('cash') or 0)
+    m = {}
+    # DCF (eligible: positive free cash flow in at least 3 of the last 5 years; cyclicals on the 5-year average)
+    fh = hist('fcf', 5)
+    if sector not in FIN_SECTORS:
+        if sum(1 for x in fh if x > 0) >= min(3, len(fh)) and fh:
+            base = _avg(fh + ([f['fcf']] if f.get('fcf') is not None else [])) if typ == 'cyclical' else _avg([f.get('fcf'), _avg(fh[-3:])])
+            if base and base > 0: m['dcf'] = _dcf_per_share(base, g1, gT, r, shares)
+            else: out['skipped']['dcf'] = 'average free cash flow not positive'
+        else: out['skipped']['dcf'] = 'free cash flow positive in fewer than 3 of the last 5 years'
+    # EV/EBITDA vs sector peers (cyclicals on 5-year average EBITDA)
+    m_ev = med.get('ev_ebitda')
+    eb = _avg(hist('ebitda', 5) + ([f['ebitda']] if f.get('ebitda') else [])) if typ == 'cyclical' else f.get('ebitda')
+    if sector not in FIN_SECTORS and eb and eb > 0 and m_ev and 0 < m_ev < 40:
+        eq = eb * m_ev - net_debt
+        if eq > 0: m['ev_ebitda'] = eq / shares
+    # normal earnings x sector forward P/E (compounders)
+    m_pe = med.get('fpe')
+    eps = f.get('forward_eps') or f.get('trailing_eps')
+    if eps and eps > 0 and m_pe and 0 < m_pe < 60: m['pe'] = eps * fx * m_pe
+    # residual income (positive book value)
+    if f.get('pb') and f['pb'] > 0:
+        bv = price / f['pb']
+        roes = [n / e for n, e in zip(rows.get('ni') or [], rows.get('eq') or []) if n is not None and e and e > 0][-5:]
+        roe = _avg([f.get('roe'), _avg(roes)]) if typ != 'cyclical' else _avg(roes or [f.get('roe')])
+        if roe is not None:
+            roe = clamp(roe, 0.0, 0.35 if sector in FIN_SECTORS else 0.60)
+            pay = clamp(f.get('payout') if f.get('payout') is not None else 0.5, 0, 1)
+            gb = clamp(roe * (1 - pay), 0.0, 0.15)
+            v, b_ = bv, bv
+            for y in range(1, 6):
+                v += (roe - r) * b_ / (1 + r) ** y; b_ *= 1 + gb
+            ri_t = (roe - r) * b_
+            v += ri_t * (1 + gT) / (r - gT) / (1 + r) ** 5 if ri_t > 0 else ri_t / (1 + r) ** 5
+            if v > 0: m['residual_income'] = v
+    # dividend & buyback model (eligible: pays out 40%+ of profit, or a financial / income company that returns cash)
+    dv, bb = (rows.get('div') or [None])[-1:], (rows.get('buyback') or [None])[-1:]
+    paid = -sum(x for x in (dv + bb) if x is not None and x < 0) * fx
+    yld = max(f.get('div_yield') or 0, paid / f['mcap'] if paid > 0 else 0)
+    if yld > 0 and ((f.get('payout') or 0) >= 0.4 or typ in ('financial', 'income')):
+        m['ddm'] = _dcf_per_share(yld * f['mcap'], min(g1, gT + 0.02), gT, r, shares)
+    # keep only the methods of this type, inside 0.25x-4x the price
+    w = {}
+    for k, wt in V2_WEIGHTS[typ].items():
+        v = m.get(k)
+        if v is None: out['skipped'].setdefault(k, 'not available'); continue
+        if not (0.25 * price < v < 4 * price): out['skipped'][k] = 'outside 0.25x-4x the price'; continue
+        out['methods'][k] = v; w[k] = wt
+    if not w:
+        out['note'] = 'Not valued: no method fits reliably'
+        return out
+    # soft trim: a method more than 50% away from the median of the others gets half its weight
+    if len(w) >= 3:
+        for k in list(w):
+            others = sorted(out['methods'][j] for j in w if j != k)
+            mo = others[len(others) // 2] if len(others) % 2 else (others[len(others) // 2 - 1] + others[len(others) // 2]) / 2
+            if mo > 0 and abs(out['methods'][k] / mo - 1) > 0.5: w[k] *= 0.5; out['skipped'][k + '_halved'] = 'more than 50% from the other methods: half weight'
+    tot = sum(w.values())
+    fair = sum(out['methods'][k] * w[k] for k in w) / tot
+    out['weights'] = {k: round(w[k] / tot, 3) for k in w}
+    vals = list(out['methods'].values())
+    spread = max(abs(v / fair - 1) for v in vals)
+    out['fair'] = clamp(fair, 0.5 * price, 2.0 * price)
+    out['low'], out['high'] = min(vals), max(vals)
+    out['confidence'] = 'High' if spread <= 0.20 and len(vals) >= 2 else 'Medium' if spread <= 0.40 else 'Low'
+    out['mos_required'] = V2_MOS[typ]
+    up = out['fair'] / price - 1
+    out['valuation'] = ('Undervalued' if up >= V2_MOS[typ] else 'Overvalued' if up <= -V2_MOS[typ] else 'Fairly valued') if out['confidence'] != 'Low' else 'Uncertain'
+    out['inputs'] = {'r': round(r, 4), 'g1': round(g1, 4), 'g_term': gT}
+    return out

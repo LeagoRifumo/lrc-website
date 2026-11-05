@@ -371,7 +371,7 @@
   /* ---------- intrinsic value ---------- */
   function secValue(d) {
     const r = d.row, tg = d.targets || {}, c = r.cur, price = (d.tech || {}).price || r.px, inp = tg.inputs || {}, notes = tg.notes || {};
-    const blend = tg.blend;
+    const blend = tg.lrc ?? tg.blend;   // a published LRC research report overrides the model
     const meth = MX.filter(([k]) => ok(tg[k]));
     const skipped = MX.filter(([k]) => !ok(tg[k]) && notes[k]);
     if (!ok(blend)) return `<section class="az-card" id="az-value"><div class="az-st"><h3>What is it worth?</h3></div><p>Not enough reliable data to estimate a value for ${esc(r.n)} yet (for example negative or unstable cash flow and no analyst coverage). We would rather show nothing than a made-up number.</p></section>`;
@@ -388,7 +388,7 @@
         <li><b>Growth after that, forever: ${pp(inp.g_term, 1)} a year.</b> Roughly long-run economic growth plus inflation.</li>
         <li>Methods that give silly answers (below a quarter or above four times the price) are dropped, and the final estimate is kept between half and double the price.</li></ul></details>` :
       `<div class="az-tw"><table class="az-tbl az-inp"><tr><td>Cost of equity (r)</td><td>${pp(inp.r, 2)}</td><td>10y bond + ERP (5.5% JSE / 5% US) ± beta adj. (max ±2%)</td></tr><tr><td>Growth yrs 1–5 (g₁)</td><td>${pp(inp.g1, 2)}</td><td>avg(analyst EPS growth, 5-yr revenue CAGR), capped −5%…20%</td></tr><tr><td>Terminal growth (g∞)</td><td>${pp(inp.g_term, 2)}</td><td>4.5% JSE / 2.5% US</td></tr>${ok(inp.rev_cagr) ? `<tr><td>5-yr revenue CAGR</td><td>${pp(inp.rev_cagr, 2)}</td><td>from annual statements</td></tr>` : ''}<tr><td>Filters</td><td colspan="2">methods outside 0.25x–4x price dropped; final within 0.5x–2x price; equal-weight average</td></tr></table></div>`) : '';
-    return `<section class="az-card" id="az-value"><div class="az-st"><h3>${P() ? 'What is it worth?' : 'Intrinsic value'}</h3><p>${P() ? `The price is what you pay; the value is what you get. We estimate the value of ${esc(r.n)} in up to ${MX.length} different ways and average the ones that suit this kind of company.` : `LRC Analyst Target = equal-weight average of the methods that fit (${esc(tg.basis || '')}).`}</p></div>
+    return `<section class="az-card" id="az-value"><div class="az-st"><h3>${P() ? 'What is it worth?' : 'Intrinsic value'}</h3><p>${P() ? `The price is what you pay; the value is what you get. We estimate the value of ${esc(r.n)} in up to ${MX.length} different ways and average the ones that suit this kind of company.${tg.research ? ' For this company our analyst has written a full research report, so the value shown comes from that report.' : ''}` : `LRC Analyst Target = ${tg.research ? `the LRC research report target (${esc(tg.research.report || '')}, ${esc(tg.research.date || '')}); the model methods below are for reference` : `equal-weight average of the methods that fit (${esc(tg.basis || '')})`}.`}</p></div>
       <div class="az-iv ${verdict[0]}"><div class="az-iv-n"><span>Today's price</span><b>${px(price, c)}</b></div><div class="az-iv-n"><span>${P() ? 'Our model estimate' : 'LRC Analyst Target <small>· model estimate</small>'}</span><b>${px(blend, c)}</b></div><div class="az-iv-n"><span>${P() ? 'Difference' : 'Margin of safety'}</span><b class="${gap >= 0 ? 'up' : 'dn'}">${pc(gap, 0)}</b></div></div>
       <p class="az-lead">${esc(r.n)} ${verdict[1]}.</p>
       <div class="az-meter"><div class="az-meter-bar"><span>Cheap</span><span>Fair</span><span>Expensive</span></div><i style="left:${pos}%"></i></div>
@@ -665,7 +665,7 @@
     return { pts, k, calibrated: okk, g1, gT };
   }
   function ivHistory(d) {
-    const fs = CUR && CUR.fs, tg = d.targets || {}, V = tg.blend, P0 = (d.tech || {}).price || d.row.px, cur = d.row.cur, nm = d.row.n;
+    const fs = CUR && CUR.fs, tg = d.targets || {}, V = tg.lrc ?? tg.blend, P0 = (d.tech || {}).price || d.row.px, cur = d.row.cur, nm = d.row.n;
     if (!ok(V) || !ok(P0)) return '';
     const title = `<h4 class="az-h4">${P() ? 'Price vs value over the years' : 'Intrinsic value vs market price'}</h4>`;
     if (!fs) return title + `<p class="az-note">The value history appears once ${esc(nm)}'s financial statements are loaded (they refresh weekly).</p>`;

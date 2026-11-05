@@ -1,0 +1,15 @@
+{
+  "note": "LRC research targets: a published LRC company report overrides the model's LRC Analyst Target for that share until the report is updated or withdrawn (owner decision 5 Nov 2026). The scanner rating is still the model's; only the target and its range change. Remove an entry to hand the share back to the model.",
+  "targets": {
+    "ARL.JO": {
+      "target": 280.0,
+      "low": 245.0,
+      "high": 310.0,
+      "date": "2026-11-05",
+      "analyst": "Prayer Nkuna, Research Analyst",
+      "report": "LRC Company Analysis: Astral Foods Limited",
+      "method": "Mid-cycle DCF, normal earnings x fair P/E, LRC model DCF and analyst target, averaged",
+      "review_by": "2026-11-23"
+    }
+  }
+}

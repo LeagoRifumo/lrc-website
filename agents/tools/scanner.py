@@ -182,6 +182,7 @@ def main():
     t0 = time.time(); y = Yahoo()
     cfg = load(P('agents', 'config', 'scanner.json'))
     ratings = (load(P('docs', 'data', 'ratings.json'), {}) or {}).get('ratings', {})
+    research = (load(P('agents', 'config', 'research_targets.json'), {}) or {}).get('targets', {})
     research = {f[:-5] for f in os.listdir(P('docs', 'data', 'research'))} if os.path.isdir(P('docs', 'data', 'research')) else set()
     jse_cfg = {s: (n, sec) for s, n, sec in cfg['jse']}
     try:
@@ -357,9 +358,15 @@ def main():
         if dns: cats.append(f"Downgrade: {dns[0]['firm']}")
         if t['price'] >= t['hi52'] * 0.995: cats.append('New 52-week high')
         if t['price'] <= t['lo52'] * 1.005: cats.append('New 52-week low')
-        tg = E.model_targets(f, md, t['price'], load(P('docs', 'data', 'fs', r['t'] + '.json')), r['m'], r['sec'], RF.get(r['m']))
+        fsd = load(P('docs', 'data', 'fs', r['t'] + '.json'))
+        tg = E.model_targets(f, md, t['price'], fsd, r['m'], r['sec'], RF.get(r['m']), r.get('ind'))
+        try: tg['v2'] = E.model_targets_v2(f, md, t['price'], fsd, r['m'], r['sec'], RF.get(r['m']), r.get('ind'))   # shadow only
+        except Exception as e: tg['v2'] = {'error': str(e)[:120]}
         cov = ratings.get(r['t'])
         if cov: tg['lrc'] = cov['target_6m']
+        rs = research.get(r['t'])   # a published LRC research report overrides the model target (owner decision 5 Nov 2026)
+        if rs and rs.get('target'):
+            tg['lrc'] = rs['target']; tg['research'] = rs
         inv = E.investment(f, r['ts'], r['m'], t['price'], tg.get('lrc') or tg.get('blend'))
         tgt_final = tg.get('lrc') or tg.get('blend')
         v_score = E.rating_v7(score)
