@@ -273,7 +273,7 @@ def consistent(rating, upside):
     elif rating == 'STRONG SELL' and upside > -0.05: rating = 'SELL' if upside <= 0 else 'HOLD'
     elif rating == 'SELL' and upside > 0: rating = 'HOLD'
     else: return rating, None
-    return rating, 'Capped by the LRC Analyst Target (%+.0f%% from the price)' % (upside * 100)
+    return rating, 'Capped by the LRC price target range (midpoint %+.0f%% from the price)' % (upside * 100)
 
 
 def sector_medians(rows):

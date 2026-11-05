@@ -91,7 +91,7 @@ if ($('scTbl')) {
         (mode === 'investment' ? `${th('chk', 'QUALITY CHECKS')}${th('up', 'UPSIDE TO LRC TARGET')}` : `<th>SETUP</th>${th('up', 'UPSIDE TO 6-MONTH LRC TARGET')}`) + `<th>EVENTS</th>${th('ne', 'RESULTS')}</tr></thead><tbody>` +
         rows.slice(0, shown).map(r => `<tr data-t="${esc(r.t)}">${left(r)}` + G2.map(([k]) => { const v = (r.grp || {})[k]; return `<td class="${cc(gInt(v))}" style="${WT[k] ? '' : 'opacity:.55'}"><span class="hc">${v ?? '—'}</span></td>`; }).join('') +
           (mode === 'investment' ? `<td class="plain">${r.inv ? `<span class="pill p-${r.inv.g.toLowerCase()}">${r.inv.g}</span> ${r.inv.p}/${r.inv.k}` : '—'}</td>` : `<td class="${cc(r.tp ? r.tp.setup : 0)}"><span class="hc">${esc(r.setup || '—')}</span></td>`) +
-          `<td class="plain" style="color:${r.tgt && r.tgt >= r.px ? '#5ED39A' : '#F08A7E'}">${r.tgt ? pc(r.tgt / r.px - 1, 0) : '—'}</td>
+          `<td class="plain" style="color:${r.tgt && r.tgt >= r.px ? '#5ED39A' : '#F08A7E'}">${r.tgt ? `${pc(r.tgt * 0.92 / r.px - 1, 0)} to ${pc(r.tgt * 1.08 / r.px - 1, 0)}` : '—'}</td>
           <td class="plain" style="text-align:left;white-space:normal;min-width:130px">${(r.cat || []).map(x => `<span class="tag ${/^Results/.test(x) ? 'ev' : ''}">${esc(x)}</span>`).join('')}</td><td class="plain">${esc(r.ne || '—')}</td></tr>`).join('') + '</tbody>';
     } else {
       const defs = (S.readings || []).filter(d => d.g === view);
@@ -211,7 +211,8 @@ if ($('wlTB')) {
   const link = t => `stock.html?t=${encodeURIComponent(t)}`;
   const nm = (t, n, extra = '') => `<a href="${link(t)}"><span class="tic">${esc(t.replace('.JO', ''))}</span>${extra}<small>${esc(n)}</small></a>`;
   const head1 = t => { const x = NEWS && NEWS.companies && NEWS.companies[t]; const h = x && x.news && x.news[0]; return h ? `<a href="${esc(h.url)}" target="_blank" rel="noopener" style="font-size:12.5px;color:#C9CEDA">${esc(h.title.slice(0, 90))}${h.title.length > 90 ? '…' : ''}</a><small>${esc(h.source)}${h.published ? ' · ' + esc(h.published.slice(0, 10)) : ''}</small>` : '<small>—</small>'; };
-  const upCell = x => `<td class="n" style="color:${(x ?? 0) >= 0 ? '#5ED39A' : '#F08A7E'}">${pc(x, 0)}</td>`;
+  // upside shown as a range (target +/- 8%), never one exact number
+  const upCell = x => `<td class="n" style="color:${(x ?? 0) >= 0 ? '#5ED39A' : '#F08A7E'}">${ok(x) ? `${pc((1 + x) * 0.92 - 1, 0)} to ${pc((1 + x) * 1.08 - 1, 0)}` : '—'}</td>`;
   const resCell = ne => `<td>${ne ? `<span class="tag ${Math.round((new Date(ne) - new Date()) / 864e5) <= 5 ? 'ev' : ''}">${esc(ne)}</span>` : '—'}</td>`;
   const covPill = r => r.cov ? ` <span class="pill p-${r.cov.rating.toLowerCase()}">LRC ${esc(r.cov.rating)}</span>` : '';
   const none = (n, what) => `<tr class="empty"><td colspan="${n}" style="color:var(--muted);white-space:normal">${what}</td></tr>`;
@@ -403,11 +404,20 @@ if ($('paper')) {
     // title
     let title, sub = '';
     const lrcT = r.cov ? r.cov.target : (R && R.target) ? R.target : (tg.lrc ?? tg.blend);
+    // LRC reports every target as a RANGE, never one exact number (owner decision 5 Nov 2026):
+    // research report -> its bear-bull range; model -> the target +/- 8%, rounded to a sensible step
+    const tgR = (() => { if (!ok(lrcT)) return null; const RS_ = tg.research;
+      if (RS_ && ok(RS_.low) && ok(RS_.high)) return [RS_.low, RS_.high];
+      if (R && ok(R.target_low) && ok(R.target_high)) return [R.target_low, R.target_high];
+      const st = Math.pow(10, Math.floor(Math.log10(lrcT)) - 1) * (lrcT / Math.pow(10, Math.floor(Math.log10(lrcT))) < 3 ? 1 : 5);
+      return [Math.floor(lrcT * 0.92 / st) * st, Math.ceil(lrcT * 1.08 / st) * st]; })();
+    const pxR = rg => rg ? `${px(rg[0], c)}–${px(rg[1], c)}` : 'n/a';
+    const upR = rg => rg ? `${pc(rg[0] / t.price - 1, 0)} to ${pc(rg[1] / t.price - 1, 0)}` : '';
     const word = r.cov ? r.cov.rating : sigTxt;
     const cap = w => w.split(' ').map(x => x[0] + x.slice(1).toLowerCase()).join(' ');
     if (SAFE) title = `Trading score ${S100(r)}/100 · Investment score ${r.iv_score ?? '—'}/100`;
     else if (R && R.title) title = R.title;
-    else title = `${cap(word)} Idea: LRC Analyst Target ${ok(lrcT) ? px(lrcT, c) + ` (${pc(lrcT / t.price - 1, 0)})` : 'n/a'}`;
+    else title = `${cap(word)} Idea: Price Target ${tgR ? pxR(tgR) : 'n/a'}`;
     const analyst = R ? `${esc(R.analyst || 'Prayer Nkuna')} <span class="badge-an">${esc(R.analyst && /agent|LRC Research/i.test(R.analyst) ? 'LRC RESEARCH' : 'LRC ANALYST VIEW')}</span>` : 'Prayer Nkuna, Analyst · LRC Stock Scanner';
     const updated = R ? R.updated : (d.generated || '').slice(0, 10);
     const ret = (x) => `<span style="color:${(x ?? 0) >= 0 ? '#0F7B3F' : '#C5221F'};font-weight:700">${pc(x)}</span>`;
@@ -478,7 +488,7 @@ if ($('paper')) {
     else if (t.setup === 'Retest') nextBits.push(`holding support at ${px(t.setup_level, c)} keeps the uptrend intact`);
     else if (t.setup === 'Breakdown' || t.setup === 'Failed retest') nextBits.push(`staying below ${px(t.setup_level, c)} keeps the pressure on`);
     else if ((t.supports || [])[0]) nextBits.push(`major support sits at ${px(t.supports[0].price, c)}${(t.resistances || [])[0] ? ` and resistance at ${px(t.resistances[0].price, c)}` : ''}`);
-    if (ok(upT) && !SAFE) nextBits.push(`the LRC Analyst Target of ${px(lrcT, c)} implies ${pc(upT, 0)} over 6 months`);
+    if (ok(upT) && !SAFE) nextBits.push(`the LRC price target range of ${pxR(tgR)} implies ${upR(tgR)} over 6 months`);
     // ---- investment thesis: the company as a whole (business, competitive position, industry, management, balance sheet) + the numbers ----
     const X = d.context || {}, SX = X.sector || null, mktName = r.m === 'JSE' ? 'the JSE' : 'New York';
     const T0 = (R && R.thesis && typeof R.thesis === 'object') ? R.thesis : {};   // research agent / analyst text replaces the automated line when present
@@ -536,7 +546,7 @@ if ($('paper')) {
     if (bsS) add('balance', bsS, 2, bsS > 0 ? (ok(netCash) && netCash > 0 ? 'net cash and positive free cash flow' : 'low debt and positive free cash flow') : (ok(f.fcf) && f.fcf < 0 ? 'negative free cash flow' : `high debt (debt-to-equity ${(f.de / 100).toFixed(1)}x)`));
     if (insS) add('management', 1, 1, `management owns ${pp(f.insiders, 0)} of the shares`);
     if (divS) add('management', divS, 1, divS > 0 ? `a rising dividend (+${(divG * 100).toFixed(0)}%)` : `a dividend cut (${(divG * 100).toFixed(0)}%)`);
-    if (ok(upT) && !SAFE) add('valuation', upT >= 0.05 ? 1 : upT <= -0.03 ? -1 : 0, 3, `${pc(upT, 0)} to the LRC Analyst Target (${px(lrcT, c)})`);
+    if (ok(upT) && !SAFE) add('valuation', upT >= 0.05 ? 1 : upT <= -0.03 ? -1 : 0, 3, `${upR(tgR)} to the LRC price target range (${pxR(tgR)})`);
     else if (ok(f.fpe) && f.fpe > 0 && ok(d.sector_medians?.fpe)) { const rel = f.fpe / d.sector_medians.fpe - 1; add('valuation', rel < -0.15 ? 1 : rel > 0.25 ? -1 : 0, 2, `${rel < 0 ? 'cheaper' : 'dearer'} than peers (${f.fpe.toFixed(1)}x vs ${d.sector_medians.fpe.toFixed(1)}x forward earnings)`); }
     if (t.sma200) add('price', t.price > t.sma200 && t.price > t.sma50 ? 1 : t.price < t.sma200 && t.price < t.sma50 ? -1 : 0, 2, t.price > t.sma200 && t.price > t.sma50 ? 'the share price is in an uptrend' : 'the share price is in a downtrend');
     if (ok(f.rec_mean)) add('sentiment', f.rec_mean <= 2.2 ? 1 : f.rec_mean >= 3.2 ? -1 : 0, 1, `analysts rate it ${recLbl(f.rec_mean).toLowerCase()}`);
@@ -592,14 +602,13 @@ if ($('paper')) {
 
     P.innerHTML = `
     <div class="ph"><div class="tkbox">${esc(r.t.replace('.JO', ''))}<small>${r.m === 'JSE' ? 'JSE' : 'NYSE / NASDAQ'}</small></div>
-      <div><div style="font-size:15px;font-weight:800;color:#16223D">${esc(r.n)}</div><h1>${esc(title)}</h1>${ok(tg.low) && ok(tg.high) && !SAFE ? `<div class="trange"><b>Target range:</b> ${px(tg.low, c)} – ${px(tg.high, c)} <span>(${pc(tg.low / t.price - 1, 0)} to ${pc(tg.high / t.price - 1, 0)})</span>${tg.n_methods ? ` · average of ${tg.n_methods} valuation ${tg.n_methods === 1 ? 'input' : 'inputs'}` : ''} · <a href="#ivchart" class="no-print">see the chart ↓</a></div>` : ''}</div><img src="assets/img/logo-lrc.png" alt="Leago Rifumo Capital"></div>
+      <div><div style="font-size:15px;font-weight:800;color:#16223D">${esc(r.n)}</div><h1>${esc(title)}</h1>${tgR && !SAFE ? `<div class="trange"><b>6-month view:</b> ${upR(tgR)} from ${px(t.price, c)}${tg.research ? ' · from the LRC research report' : ''} · <a href="#valdetail" class="no-print">how we value it ↓</a></div>` : ''}</div><img src="assets/img/logo-lrc.png" alt="Leago Rifumo Capital"></div>
     <div class="pfacts">
-      <div><b>Market cap / Price:</b> ${big(f.mcap, c)} / ${px(t.price, c)}<br><b>52-wk low / high:</b> ${px(t.lo52, c)} / ${px(t.hi52, c)}<br><b>Beta / Yield:</b> ${ok(f.beta) ? f.beta.toFixed(2) : '—'} / ${pp(f.div_yield, 2)}<br><b>Sector:</b> ${esc(r.sec)}${r.ind ? ' · ' + esc(r.ind) : ''}</div>
+      <div><b>Market cap / Price:</b> ${big(f.mcap, c)} / ${px(t.price, c)}<br><b>52-wk low / high:</b> ${px(t.lo52, c)} / ${px(t.hi52, c)}<br><b>Beta / Yield:</b> ${ok(f.beta) ? f.beta.toFixed(2) : '—'} / ${pp(f.div_yield, 2)}<br>${R && R.geo_mix ? `<b>Geo %:</b> ${esc(R.geo_mix)}` : `<b>Sector:</b> ${esc(r.sec)}${r.ind ? ' · ' + esc(r.ind) : ''}`}</div>
       <div>${R && R.guidance ? R.guidance.slice(0, 4).map(g => `<b>${esc(g.split(':')[0])}:</b>${esc(g.split(':').slice(1).join(':'))}`).join('<br>') :
         `<b>Next results:</b> ${esc(f.next_earnings || 'not announced')}<br><b>Analysts:</b> ${recLbl(f.rec_mean)}${f.n_analysts ? ` (${f.n_analysts})` : ''}${ok(f.target_median) ? ` · median target ${px(f.target_median, c)}` : ''}<br><b>EPS growth (this yr / next yr est.):</b> ${pc(f.eps_growth_fwd, 0)} / ${pc(f.eps_growth_next, 0)}<br><b>Fwd P/E vs sector:</b> ${mult(f.fpe)} vs ${mult(d.sector_medians?.fpe)}`}</div>
-      <div><b>Last updated:</b> ${esc(updated)}<br><b>Analyst name:</b> ${analyst}<br><b>Trading (3–12 m):</b> <span class="${sigCls(r.v)}" style="font-size:10px">${esc(r.v)}</span> ${S100(r)}/100${ok(lrcT) && !SAFE ? `<br><b>Target:</b> ${px(lrcT, c)}${ok(tg.low) && ok(tg.high) ? ` <span style="color:#5C6478">(range ${px(tg.low, c)} – ${px(tg.high, c)})</span>` : ''}` : ''}<br><b>Investment (5–10 y):</b> <span class="${sigCls(r.iv_v)}" style="font-size:10px">${esc(r.iv_v || '—')}</span> ${r.iv_score ?? '—'}/100<br><b>Valuation:</b> <span class="${valCls(r.val)}" style="font-size:9.5px">${esc(r.val || '—')}</span>${r.v_note && !SAFE ? `<br><span style="font-size:11px;color:#7A8296">${esc(r.v_note)}</span>` : ''}${r.cov ? `<br><b>LRC analyst rating:</b> ${esc(r.cov.rating)} (${esc(r.cov.rated || '')})` : ''}${R && R.geo_mix ? `<br><b>Geo %:</b> ${esc(R.geo_mix)}` : ''}</div>
+      <div><b>Last updated:</b> ${esc(updated)}<br><b>Analyst name:</b> ${analyst}<br><b>Trading (3–12 m):</b> <span class="${sigCls(r.v)}" style="font-size:10px">${esc(r.v)}</span> ${S100(r)}/100${tgR && !SAFE ? `<br><b>Price target:</b> ${pxR(tgR)}` : ''}<br><b>Investment (5–10 y):</b> <span class="${sigCls(r.iv_v)}" style="font-size:10px">${esc(r.iv_v || '—')}</span> ${r.iv_score ?? '—'}/100<br><b>Valuation:</b> <span class="${valCls(r.val)}" style="font-size:9.5px">${esc(r.val || '—')}</span>${r.v_note && !SAFE ? `<br><span style="font-size:11px;color:#7A8296">${esc(r.v_note)}</span>` : ''}${r.cov ? `<br><b>LRC analyst rating:</b> ${esc(r.cov.rating)} (${esc(r.cov.rated || '')})` : ''}</div>
     </div>
-    <div class="pwhy" id="pWhy"></div>
     <div class="bar">Fundamentals <small>${R ? 'ANALYST VIEW + LIVE DATA' : 'AUTOMATED FROM LIVE DATA'}</small></div>
     <div class="cols"><div>
       <h4>Drivers / <span class="red">Catalysts</span>:</h4>${S('drivers', drivers.length ? drivers : ['No dated catalysts on the data feed.'])}
@@ -609,12 +618,24 @@ if ($('paper')) {
     </div><div>
       <h4>Management:</h4>${S('management', mgmt.length ? mgmt : ['—'])}
       <h4>Risks (to the long thesis):</h4>${S('risks', risks)}
-      <h4>Analyst &amp; News Sentiment:</h4>${S('news_sentiment', sent)}
+      <h4>News Sentiment Analysis:</h4>${S('news_sentiment', sent)}
       <h4>Insider Activity &amp; Institutional Ownership:</h4>${S('ownership', own.length ? own : ['—'])}
       ${chart}
     </div></div>
     <p class="bl"><b class="k">Bottom Line:</b> ${R && R.bottom_line ? esc(R.bottom_line) + '<br>' + autoBottom.replace('<b>Thesis:</b>', '<b>Model check:</b>') : autoBottom}</p>
-    <div class="bar">Valuation <small>VS ${esc(r.sec.toUpperCase())} · ${r.m === 'JSE' ? 'JSE' : 'NEW YORK'} MEDIAN</small></div>
+    <div class="bar">Valuation <small>VS ${r.m === 'JSE' ? 'JSE MARKET MEDIAN' : 'NEW YORK MARKET MEDIAN'}</small></div>
+    <div class="cols vq"><div>
+      <p><b>This Year P/E:</b> ${mult(f.fpe)} vs market ${mult(MM.fpe)}</p>
+      <p><b>Next Year P/E:</b> ${ok(f.fpe) && f.fpe > 0 && ok(f.eps_growth_next) && f.eps_growth_next > -0.9 ? mult(f.fpe / (1 + f.eps_growth_next)) : '—'} vs market ${ok(MM.fpe) && ok(MM.eps_growth_next) ? mult(MM.fpe / (1 + MM.eps_growth_next)) : '—'} <span style="color:#7A8296">(est.)</span></p>
+    </div><div>
+      <p><b>This Year EPS Growth:</b> ${pc(f.eps_growth_fwd, 0)} vs market ${pc(MM.eps_growth_fwd, 0)}</p>
+      <p><b>Next Year EPS Growth:</b> ${pc(f.eps_growth_next, 0)} vs market ${pc(MM.eps_growth_next, 0)}</p>
+    </div></div>
+    <p class="bl"><b class="k">Bottom Line:</b> ${R && R.valuation_bottom_line ? esc(R.valuation_bottom_line) + ' ' : `Against the median ${esc(r.sec)} company in ${r.m === 'JSE' ? 'the JSE' : 'New York'}, the shares look <b>${esc((vv('fpe').verdict || vv('tpe').verdict || 'n/a').toLowerCase())}</b> on earnings and <b>${esc((vv('pfcf').verdict || 'n/a').toLowerCase())}</b> on free cash flow. `}${tgR && !SAFE ? `<b>LRC Research Analysts forecast ${upR(tgR)}</b> over 6 months, targeting <b>${pxR(tgR)}</b>${tg.research ? ` (LRC research report, ${esc(tg.research.date || '')})` : ''}. ` : ''}${R && R.catalysts_to_watch ? `<b style="color:#C5221F">Catalysts to watch:</b> ${esc(R.catalysts_to_watch)}` : f.next_earnings ? `<b style="color:#C5221F">Catalyst to watch:</b> results on ${esc(f.next_earnings)}.` : ''}</p>
+    <div class="appx">
+    <div class="bar pg2">Detailed Analysis <small>APPENDIX · NOT PART OF THE 1-PAGE SUMMARY</small></div>
+    <div class="pwhy" id="pWhy"></div>
+    <div class="bar" id="valdetail">Valuation Detail <small>VS ${esc(r.sec.toUpperCase())} · ${r.m === 'JSE' ? 'JSE' : 'NEW YORK'} MEDIAN</small></div>
     <div class="cols"><div>
       <p style="margin-bottom:6px"><b style="color:#16223D">Valuation verdict:</b> <span class="${valCls(r.val)}" style="font-size:11px">${esc(r.val || '—')}</span></p>
       ${rtab(GRP.slice(0, 3))}
@@ -627,7 +648,7 @@ if ($('paper')) {
     ${ok(lrcT) && !SAFE ? `<div class="bar" id="ivchart">Intrinsic Value vs Market Price <small>LRC VALUE OVER TIME · BUY / HOLD / SELL ZONES</small></div><div id="ivBox">${ivChart(d, lrcT, 760, 300)}</div>` : ''}
     <div class="bar">All Fundamentals <small>37 READINGS · COMPANY vs SECTOR MEDIAN vs MARKET MEDIAN</small></div>
     <div class="cols"><div>${rtab(GRP.slice(3, 5))}</div><div>${rtab(GRP.slice(5))}</div></div>
-    <p class="bl"><b class="k">Bottom Line:</b> ${R && R.valuation_bottom_line ? esc(R.valuation_bottom_line) : `Against the median ${esc(r.sec)} company in ${r.m === 'JSE' ? 'the JSE' : 'New York'}, the shares look <b>${esc((vv('fpe').verdict || vv('tpe').verdict || 'n/a').toLowerCase())}</b> on earnings and <b>${esc((vv('pfcf').verdict || 'n/a').toLowerCase())}</b> on free cash flow. ${ok(lrcT) && !SAFE ? `The LRC Analyst Target is ${px(lrcT, c)} (${pc(lrcT / t.price - 1, 0)} from today).` : ''}`}
+    <p class="bl"><b class="k">Bottom Line:</b> ${R && R.valuation_bottom_line ? esc(R.valuation_bottom_line) : `Against the median ${esc(r.sec)} company in ${r.m === 'JSE' ? 'the JSE' : 'New York'}, the shares look <b>${esc((vv('fpe').verdict || vv('tpe').verdict || 'n/a').toLowerCase())}</b> on earnings and <b>${esc((vv('pfcf').verdict || 'n/a').toLowerCase())}</b> on free cash flow. ${tgR && !SAFE ? `The LRC price target range is ${pxR(tgR)} (${upR(tgR)} from today).` : ''}`}
       ${R && R.catalysts_to_watch ? ` <b style="color:#C5221F">Catalysts to watch:</b> ${esc(R.catalysts_to_watch)}` : f.next_earnings ? ` <b style="color:#C5221F">Catalyst to watch:</b> results on ${esc(f.next_earnings)}.` : ''}</p>
     <div class="bar pg2">Technical Picture <small>TREND · SETUP · MAJOR SUPPORT &amp; RESISTANCE</small></div>
     <p>${t.setup ? `<b>${esc(t.setup)}</b> at ${px(t.setup_level, c)}${t.setup_note ? ' — ' + esc(t.setup_note) : ''}. ` : 'No breakout or retest setup today. '}Price is ${t.price > t.sma50 ? 'above' : 'below'} the 50-day average (${px(t.sma50, c)})${t.sma200 ? ` and ${t.price > t.sma200 ? 'above' : 'below'} the 200-day (${px(t.sma200, c)})` : ''}; RSI ${ok(t.rsi) ? t.rsi.toFixed(0) : '—'}.
@@ -637,27 +658,27 @@ if ($('paper')) {
       <div class="cols"><div><h4>News</h4><ul>${(INTEL.news || []).slice(0, 6).map(n => `<li><a href="${esc(n.url)}" target="_blank" rel="noopener" style="color:#1F3BB3">${esc(n.title)}</a> <span style="color:#7A8296">— ${esc(n.source)}${n.published ? ', ' + esc(n.published.slice(0, 10)) : ''}</span></li>`).join('') || '<li>No recent stories.</li>'}</ul></div>
       <div>${INTEL.sec ? `<h4>SEC filings</h4><ul>${(INTEL.sec.filings || []).slice(0, 5).map(f => `<li><a href="${esc(f.url)}" target="_blank" rel="noopener" style="color:#1F3BB3">${esc(f.form)}</a> ${esc(f.date)} — ${esc(f.desc)}</li>`).join('')}</ul><p style="font-size:11.5px;color:#5C6478">Insider (Form 4) filings in the last 90 days: ${INTEL.sec.insider_filings_90d}</p>` : `<h4>Company announcements</h4><p style="font-size:12px">JSE companies publish results and trading statements on SENS — the news list includes SENS stories carried by South African financial media.</p>`}</div></div>` : ''}
     ${fin ? `<div class="bar">Financials <small>${fin.q ? 'LAST ' + fin.n + ' QUARTERS' : 'ANNUAL'} · REVENUE · NET INCOME · NET MARGIN (${esc(fin.cur)})</small></div>${fin.svg}${!fin.q && r.m === 'JSE' ? '<p style="font-size:11px;color:#5C6478">JSE companies report half-yearly, so the chart shows full financial years.</p>' : ''}` : ''}
-    <p class="src">Sources: ${R ? `LRC analyst research (${esc(R.analyst)}, ${esc(R.updated)}); ` : ''}${esc((d.sources || ['Yahoo Finance prices, fundamentals and analyst data']).concat(INTEL ? INTEL.sources || [] : []).join('; '))}${R && R.sources ? '; ' + esc(R.sources.slice(0, 6).join('; ')) : ''}. Scored by the LRC Stock Scanner (${esc(when(d.generated))}). Valuation verdicts compare each ratio with the median of the same sector in the same market. LRC Analyst Target: the average of the LRC valuation methods that fit the company (1 DCF on free cash flow, 2 residual income for banks and insurers, 3 dividend & buyback model for income sectors, 4 EV/EBITDA against sector peers) and the analyst consensus when three or more analysts cover it; the range is the lowest to the highest of those values. 5 Reverse DCF shows the growth the price already assumes.
-      <b>Educational only — not financial advice.</b> Leago Rifumo Capital · Ermelo, Mpumalanga · leagorifumocapital.co.za</p>`;
+    </div>
+    <p class="src">Sources: ${R ? `LRC analyst research (${esc(R.analyst)}, ${esc(R.updated)}); ` : ''}${esc((d.sources || ['Yahoo Finance prices, fundamentals and analyst data']).concat(INTEL ? INTEL.sources || [] : []).join('; '))}${R && R.sources ? '; ' + esc(R.sources.slice(0, 6).join('; ')) : ''}. Scored by the LRC Stock Scanner (${esc(when(d.generated))}). Valuation verdicts compare each ratio with the median of the same sector in the same market. LRC price target: always shown as a range (the LRC Analyst Target ±8%, or the bear–bull range of an LRC research report when one is published); the target itself averages the LRC valuation methods that fit the company (DCF on free cash flow, residual income, dividend &amp; buyback model, EV/EBITDA against sector peers; boom-and-bust industries on 5-year averages). <b>Educational only — not financial advice.</b> Leago Rifumo Capital · Ermelo, Mpumalanga · leagorifumocapital.co.za</p>`;
     try { const sl = r.t.toLowerCase().replace('.jo', '-jse').replace(/[^a-z0-9-]+/g, '-').replace(/^-+|-+$/g, ''), cu = 'https://www.leagorifumocapital.co.za/shares/' + sl + '.html';
       const cn = document.querySelector('link[rel=canonical]'); if (cn) cn.href = cu;
       const md = document.querySelector('meta[name=description]'); if (md) md.content = `${r.n} (${r.t.replace('.JO', '')}) one-page summary: LRC scores, valuation vs peers, thesis and financial statements.`;
       document.title = `${r.n} (${r.t.replace('.JO', '')}) One-Page Summary, Thesis & Financial Statements | Leago Rifumo Capital`; } catch (e) { }
-    try { renderThesis({ d, r, t, f, pr, c, X, SX, MS, lrcT, upT, what, compTxt, indTxt, mgmtTxt, bsTxt, pickBy, nextBits, recLbl, days, finCo, sizeWord, mktName, cap1 }); } catch (e) { console.error(e); }
+    try { renderThesis({ d, r, t, f, pr, c, X, SX, MS, lrcT, upT, tgR, pxR, upR, what, compTxt, indTxt, mgmtTxt, bsTxt, pickBy, nextBits, recLbl, days, finCo, sizeWord, mktName, cap1 }); } catch (e) { console.error(e); }
     loadStatements(r, c, d, lrcT);
   }
 
   /* ---------- LRC THESIS: why we are looking at this company (automated from the data, refreshed every scanner run) ---------- */
   function renderThesis(o) {
-    const { d, r, t, f, pr, c, X, SX, MS, lrcT, upT, what, compTxt, indTxt, mgmtTxt, bsTxt, pickBy, nextBits, recLbl, days, finCo, sizeWord, mktName, cap1 } = o;
+    const { d, r, t, f, pr, c, X, SX, MS, lrcT, upT, tgR, pxR, upR, what, compTxt, indTxt, mgmtTxt, bsTxt, pickBy, nextBits, recLbl, days, finCo, sizeWord, mktName, cap1 } = o;
     const el = $('thesisSec'); if (!el) return;
     const nm = esc(r.n), tk = esc(r.t.replace('.JO', ''));
     const radar = [];
     if (/STRONG/.test(r.v)) radar.push(`It is rated <b>${esc(r.v)}</b> on our Trading scanner (score ${S100(r)}/100) — one of the ${/BUY/.test(r.v) ? 'strongest' : 'weakest'} readings in ${mktName}.`);
     if (/STRONG/.test(r.iv_v || '')) radar.push(`It is rated <b>${esc(r.iv_v)}</b> on our Investment scanner (score ${r.iv_score}/100) for 5–10 year investors.`);
     if (t.setup) radar.push(`The chart shows a <b>${esc(t.setup.toLowerCase())}</b> at ${px(t.setup_level, c)}${t.setup_note ? ' — ' + esc(t.setup_note) : ''}.`);
-    if (r.val === 'UNDERVALUED') radar.push(`Our valuation models say the shares are <b>undervalued</b>${ok(upT) ? ` (${pc(upT, 0)} to the LRC Analyst Target)` : ''}.`);
-    else if (r.val === 'OVERVALUED') radar.push(`Our valuation models say the shares are <b>overvalued</b>${ok(upT) ? ` (${pc(upT, 0)} to the LRC Analyst Target)` : ''}.`);
+    if (r.val === 'UNDERVALUED') radar.push(`Our valuation models say the shares are <b>undervalued</b>${tgR ? ` (${upR(tgR)} to the LRC price target range of ${pxR(tgR)})` : ''}.`);
+    else if (r.val === 'OVERVALUED') radar.push(`Our valuation models say the shares are <b>overvalued</b>${tgR ? ` (${upR(tgR)} to the LRC price target range of ${pxR(tgR)})` : ''}.`);
     if (ok(t.perf_1m) && Math.abs(t.perf_1m) >= 0.1) radar.push(`The share price has moved <b>${pc(t.perf_1m, 0)}</b> in the past month.`);
     if (f.next_earnings && days(f.next_earnings) >= 0 && days(f.next_earnings) <= 30) radar.push(`Results are due on <b>${esc(f.next_earnings)}</b> (${days(f.next_earnings)} days).`);
     (o.extra || []).forEach(x => radar.push(x));
@@ -675,7 +696,7 @@ if ($('paper')) {
     if (ok(f.target_median)) valBits.push(`The median analyst target is ${px(f.target_median, c)} (${pc(f.target_median / t.price - 1, 0)}).`);
     const tgx = d.targets || {};
     if (ok(tgx.implied_growth)) valBits.push(`<b>Reverse DCF:</b> today's price assumes free cash flow grows about <b>${pc(tgx.implied_growth, 0)} a year</b> for five years${ok((tgx.inputs || {}).g1) ? ` — our base case is ${pc(tgx.inputs.g1, 0)}` : ''}.`);
-    if (ok(lrcT)) valBits.push(`The <b>LRC Analyst Target</b> is <b>${px(lrcT, c)}</b>${ok(tgx.low) && ok(tgx.high) ? ` (range ${px(tgx.low, c)} – ${px(tgx.high, c)})` : ''}, ${pc(upT, 0)} from ${px(t.price, c)}${tgx.basis ? ` — the average of ${esc(tgx.basis)}` : ''}. Valuation verdict: <b>${esc((r.val || 'fair value').toLowerCase())}</b> (model estimate).`);
+    if (ok(lrcT)) valBits.push(`The <b>LRC price target range</b> is <b>${pxR(tgR)}</b>, ${upR(tgR)} from ${px(t.price, c)}${tgx.research ? ' (from the LRC research report)' : tgx.basis ? ` — built from ${esc(tgx.basis)}` : ''}. Valuation verdict: <b>${esc((r.val || 'fair value').toLowerCase())}</b> (model estimate).`);
     const li = a => a.map(x => `<li>${x}</li>`).join('');
     const trWhy = strengths.length || weaknesses.length ? (/BUY/.test(r.v) ? `The case rests on ${strengths.slice(0, 3).map(x => x.txt).join(', ') || 'the overall score'}.` : /SELL/.test(r.v) ? `The case rests on ${weaknesses.slice(0, 3).map(x => x.txt).join(', ') || 'the overall score'}.` : `Strengths (${strengths.slice(0, 2).map(x => x.txt).join(', ') || '—'}) are balanced by weaknesses (${weaknesses.slice(0, 2).map(x => x.txt).join(', ') || '—'}).`) : '';
     el.innerHTML = `<div class="th-head"><div><span class="eyebrow">LRC Thesis</span><h2>Why we're looking at <span class="gold">${nm}</span></h2></div>
