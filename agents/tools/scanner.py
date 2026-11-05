@@ -182,7 +182,7 @@ def main():
     t0 = time.time(); y = Yahoo()
     cfg = load(P('agents', 'config', 'scanner.json'))
     ratings = (load(P('docs', 'data', 'ratings.json'), {}) or {}).get('ratings', {})
-    research = (load(P('agents', 'config', 'research_targets.json'), {}) or {}).get('targets', {})
+    research_tg = (load(P('agents', 'config', 'research_targets.json'), {}) or {}).get('targets', {})
     research = {f[:-5] for f in os.listdir(P('docs', 'data', 'research'))} if os.path.isdir(P('docs', 'data', 'research')) else set()
     jse_cfg = {s: (n, sec) for s, n, sec in cfg['jse']}
     try:
@@ -364,7 +364,7 @@ def main():
         except Exception as e: tg['v2'] = {'error': str(e)[:120]}
         cov = ratings.get(r['t'])
         if cov: tg['lrc'] = cov['target_6m']
-        rs = research.get(r['t'])   # a published LRC research report overrides the model target (owner decision 5 Nov 2026)
+        rs = research_tg.get(r['t'])   # a published LRC research report overrides the model target (owner decision 5 Nov 2026)
         if rs and rs.get('target'):
             tg['lrc'] = rs['target']; tg['research'] = rs
         inv = E.investment(f, r['ts'], r['m'], t['price'], tg.get('lrc') or tg.get('blend'))
