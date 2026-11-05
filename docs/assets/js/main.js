@@ -846,5 +846,5 @@ window.LRCCal = {
 (() => {
   const m = document.querySelector('script[src*="assets/js/main.js"]'); if (!m || document.querySelector('script[src*="members.js"]')) return;
   const s = document.createElement('script'); s.src = m.src.replace(/main\.js(\?.*)?$/, 'members.js?v=13.1'); document.body.appendChild(s);
-  if (!document.querySelector('script[src*="snapshot.js"]')) { const k = document.createElement('script'); k.src = m.src.replace(/main\.js(\?.*)?$/, 'snapshot.js?v=13.4'); document.body.appendChild(k); }
+  if (!document.querySelector('script[src*="snapshot.js"]')) { const k = document.createElement('script'); k.src = m.src.replace(/main\.js(\?.*)?$/, 'snapshot.js?v=15.0'); document.body.appendChild(k); }
 })();

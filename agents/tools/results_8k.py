@@ -141,11 +141,15 @@ def revenue(blocks, est=None, mcap=None):
             ctx = (ctx + ' ' + v)[-600:]; continue
         tab_txt = ' '.join(' '.join(r) for r in v[:6])
         scale = next((s for rx, s in SCALE if rx.search(tab_txt) or rx.search(ctx)), None)
+        years = next(([int(y) for y in re.findall(r'\b(20\d\d)\b', ' '.join(r))] for r in v[:6] if len(re.findall(r'\b20\d\d\b', ' '.join(r))) >= 2), [])
+        ascending = len(years) >= 2 and years[0] < years[1]        # e.g. Amazon: 2025 | 2026 — this year is the 2nd column
         for r in v:
             if not r or not REV_LABEL.match(r[0].strip()): continue
             vals = [x for x in (num(c) for c in r[1:]) if x is not None]
             if len(vals) >= 3 and float(vals[0]).is_integer() and vals[0] <= 40 and vals[1] > 20 * vals[0]:
                 vals = vals[1:]                             # a "Note" column before the numbers
+            if ascending and len(vals) >= 2:
+                vals = [vals[1], vals[0]] + vals[2:]
             if not vals or vals[0] <= 0: continue
             cands = [scale] if scale else [1e6, 1e3, 1, 1e9]
             for s in cands:
@@ -163,8 +167,11 @@ def revenue(blocks, est=None, mcap=None):
 HEAD = re.compile(r'^(\W*)((business|financial|fiscal(\s+year)?(\s+20\d\d)?|full[- ]year(\s+20\d\d)?|20\d\d|q[1-4]|first|second|third|fourth|quarter|quarterly|annual|updated|company|outlook and)\s+)*(outlook|guidance|forecast|expectations)\b.{0,60}$', re.I)
 SAFE = re.compile(r'forward[- ]looking statements|safe harbor|private securities litigation|non-gaap financial measures? (is|are) included|reconciliation of', re.I)
 GUIDE = re.compile(r'\b(expects?|expected|anticipates?|outlook|guidance|reaffirm\w*|reiterat\w*|rais(es|ed|ing)|lower(s|ed|ing)?|narrow\w*|forecasts?|projected|now sees)\b', re.I)
+NOTE = re.compile(r'not able to reconcile|unable to reconcile|without unreasonable effort|cannot be reliably (predicted|forecast)|is outlined in the table below', re.I)
 BOILER = re.compile(r'^\W*(forward[- ]looking statements|safe harbou?r|cautionary (note|statement))|private securities litigation reform', re.I)
 FWD = re.compile(r'\b(fourth|third|second|first|next|coming)\s+quarter|\bfull[- ]year|\bfiscal\s+(year\s+)?20\d\d|\bfiscal\s+20\d\d|\b(fy|q[1-4])\s?20?\d\d\b|\b20(2[6-9]|3\d)\b|\bfor the (year|quarter)', re.I)
+STRONG = re.compile(r'\b(expects?|expected to (be|grow|increase|decline|range)|guidance|outlook|anticipates?|forecasts?|now sees|reaffirm\w*|reiterat\w*)\b', re.I)
+PAST = re.compile(r'\b(nine|six|three) months ended|\bas at\b|\bas of (september|june|march|december)|compared (to|with) .{0,40} (reported|in the same period)', re.I)
 HASNUM = re.compile(r'\$\s?\d|\d+(\.\d+)?\s?(%|percent|billion|million|cents?)|\d+\.\d+')
 STATUS = [('raised', re.compile(r'\b(rais(es|ed|ing)|increas(es|ed|ing)|lift(s|ed)?|boost(s|ed)?)\b[^.]{0,60}\b(guidance|outlook|forecast|expectations)|\b(guidance|outlook)\b[^.]{0,40}\b(raised|increased)', re.I)),
           ('lowered', re.compile(r'\b(lower(s|ed|ing)|reduc(es|ed|ing)|cut(s|ting)?|trim(s|med)?)\b[^.]{0,60}\b(guidance|outlook|forecast|expectations)|\b(guidance|outlook)\b[^.]{0,40}\b(lowered|reduced|cut)', re.I)),
@@ -187,7 +194,7 @@ def guidance(blocks):
             if heading is None: heading = v.strip(' :'); grab = 1; continue
         if grab:
             if kind == 'p':
-                if SAFE.search(v) and not BOILER.search(v) and len(v) < 400:
+                if (SAFE.search(v) and not BOILER.search(v) and not HASNUM.search(v)) or NOTE.search(v):
                     continue                                # "The following forward-looking statements reflect…" intro line
                 if BOILER.search(v) or (len(v) <= 60 and not HASNUM.search(v) and section and not HEAD.match(v)) or sum(len(x) for x in section) > 2400:
                     grab = 0; continue
@@ -201,7 +208,7 @@ def guidance(blocks):
         for kind, v in blocks:
             if kind != 'p' or SAFE.search(v): continue
             for s in sentences(v):
-                if GUIDE.search(s) and FWD.search(s) and HASNUM.search(s) and 25 < len(s) < 420:
+                if STRONG.search(s) and FWD.search(s) and HASNUM.search(s) and 25 < len(s) < 420 and not PAST.search(s):
                     lines.append(s)
             if len(lines) >= 6: break
     alltxt = ' '.join(section + lines) or ' '.join(v for k, v in blocks if k == 'p' and not SAFE.search(v))
