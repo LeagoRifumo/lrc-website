@@ -260,7 +260,7 @@
 "eps_forecast": "($0.14)",
 "quarter": "Sep/2026",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.7
+"market_cap_bn": 1.8
 },
 "ABT|2026-10-21": {
 "t": "ABT",
@@ -425,7 +425,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 6.8
+"market_cap_bn": 6.7
 },
 "ACLS|2026-11-05": {
 "t": "ACLS",
@@ -489,7 +489,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 162.8
+"market_cap_bn": 161.7
 },
 "ACT|2026-11-04": {
 "t": "ACT",
@@ -519,7 +519,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 98.3
+"market_cap_bn": 96.7
 },
 "ADC|2026-10-20": {
 "t": "ADC",
@@ -559,14 +559,14 @@
 "ADIG|2026-11-12": {
 "t": "ADIG",
 "ticker": "ADIG",
-"name": "ADI Global Distribution Inc.",
+"name": "ADI Global Distribution Inc",
 "m": "US",
 "date": "2026-11-12",
 "when": "Not stated",
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.5
+"market_cap_bn": 1.4
 },
 "ADI|2026-11-24": {
 "t": "ADI",
@@ -859,7 +859,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 3.5
+"market_cap_bn": 3.6
 },
 "AEP|2026-10-28": {
 "t": "AEP",
@@ -1300,7 +1300,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 4.3
+"market_cap_bn": 4.4
 },
 "AIT|2026-10-27": {
 "t": "AIT",
@@ -1834,7 +1834,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.6
+"market_cap_bn": 1.7
 },
 "ALV|2026-10-23": {
 "t": "ALV",
@@ -2195,7 +2195,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.2
+"market_cap_bn": 1.1
 },
 "AMRX|2026-11-03": {
 "t": "AMRX",
@@ -2487,8 +2487,17 @@
 "when": "Not stated",
 "eps_forecast": "",
 "quarter": "",
-"period": "Expected date (market data feed) — confirm on SENS",
-"market_cap_bn": 694.9
+"period": "Quarter to 30 Sep 2026",
+"market_cap_bn": 694.9,
+"heps": 155.0,
+"heps_prior": 132.0,
+"unit": "USc",
+"change": 0.1742,
+"result": "up",
+"measure": "HEPS",
+"dps": 71.0,
+"source": "AngloGold Ashanti — Q3 30 September 2026 Earnings Release and Dividend Declaration (5 Nov 2026), via Investing News Network https://investingnews.com/anglogold-ashanti-q3-30-september-2026-earnings-release-and-dividend-declaration/ (reported in US cents: headline earnings per share 155 USc vs 132 USc for Q3 2025; nine months 606 USc vs 346 USc; Q3 2026 interim dividend 71 US cents per share)",
+"result_done": true
 },
 "ANH.JO|2026-10-29": {
 "t": "ANH.JO",
@@ -2512,7 +2521,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.7
+"market_cap_bn": 1.6
 },
 "AN|2026-10-30": {
 "t": "AN",
@@ -2562,7 +2571,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.2
+"market_cap_bn": 1.3
 },
 "AOS|2026-10-29": {
 "t": "AOS",
@@ -2720,7 +2729,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 4.9
+"market_cap_bn": 5.0
 },
 "APLE|2026-11-05": {
 "t": "APLE",
@@ -2809,7 +2818,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.1
+"market_cap_bn": 1.2
 },
 "APP|2026-11-04": {
 "t": "APP",
@@ -2991,7 +3000,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.8
+"market_cap_bn": 1.9
 },
 "ARIS|2026-11-04": {
 "t": "ARIS",
@@ -3255,7 +3264,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 2.6
+"market_cap_bn": 2.7
 },
 "ASAN|2026-12-02": {
 "t": "ASAN",
@@ -3342,7 +3351,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 4.1
+"market_cap_bn": 4.2
 },
 "ASR|2026-10-22": {
 "t": "ASR",
@@ -3527,7 +3536,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.4
+"market_cap_bn": 1.5
 },
 "ATLC|2026-11-09": {
 "t": "ATLC",
@@ -3796,7 +3805,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 5.6
+"market_cap_bn": 5.8
 },
 "AVA|2026-11-03": {
 "t": "AVA",
@@ -3854,7 +3863,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1555.2
+"market_cap_bn": 1553.7
 },
 "AVLN|2026-11-16": {
 "t": "AVLN",
@@ -4251,7 +4260,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 53.6
+"market_cap_bn": 53.5
 },
 "AZTA|2026-11-10": {
 "t": "AZTA",
@@ -4303,7 +4312,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 3.9
+"market_cap_bn": 4.0
 },
 "A|2026-11-23": {
 "t": "A",
@@ -4716,7 +4725,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 4.8
+"market_cap_bn": 5.1
 },
 "BCAX|2026-11-10": {
 "t": "BCAX",
@@ -5577,7 +5586,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 2.0
+"market_cap_bn": 2.1
 },
 "BLCO|2026-10-28": {
 "t": "BLCO",
@@ -5762,7 +5771,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 13.3
+"market_cap_bn": 13.1
 },
 "BMO|2026-12-02": {
 "t": "BMO",
@@ -5774,7 +5783,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 122.1
+"market_cap_bn": 123.4
 },
 "BMRN|2026-10-26": {
 "t": "BMRN",
@@ -5861,7 +5870,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 116.6
+"market_cap_bn": 117.5
 },
 "BNTX|2026-11-03": {
 "t": "BNTX",
@@ -6027,7 +6036,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 6.1
+"market_cap_bn": 6.0
 },
 "BPOP|2026-10-22": {
 "t": "BPOP",
@@ -6098,7 +6107,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1223.9
+"market_cap_bn": 1240.6
 },
 "BRK-B|2026-11-07": {
 "t": "BRK-B",
@@ -6110,7 +6119,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1228.5
+"market_cap_bn": 1239.7
 },
 "BRK.A|2026-11-06": {
 "t": "BRK.A",
@@ -6638,6 +6647,18 @@
 "quarter_end": "2026-09-30",
 "result_done": true
 },
+"BWIN|2026-11-09": {
+"t": "BWIN",
+"ticker": "BWIN",
+"name": "The Baldwin Insurance Group, Inc.",
+"m": "US",
+"date": "2026-11-09",
+"when": "Not stated",
+"eps_forecast": "",
+"quarter": "",
+"period": "Expected date (market data feed)",
+"market_cap_bn": 4.5
+},
 "BWLP|2026-11-23": {
 "t": "BWLP",
 "ticker": "BWLP",
@@ -6883,7 +6904,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 7.4
+"market_cap_bn": 7.3
 },
 "CAH|2026-11-05": {
 "t": "CAH",
@@ -7100,7 +7121,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 24.8
+"market_cap_bn": 24.9
 },
 "CATY|2026-10-21": {
 "t": "CATY",
@@ -7444,7 +7465,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 40.9
+"market_cap_bn": 42.1
 },
 "CCS|2026-10-28": {
 "t": "CCS",
@@ -7892,7 +7913,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 0.9
+"market_cap_bn": 0.8
 },
 "CGNX|2026-11-04": {
 "t": "CGNX",
@@ -7946,7 +7967,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 2.5
+"market_cap_bn": 2.4
 },
 "CHCO|2026-10-26": {
 "t": "CHCO",
@@ -8196,7 +8217,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 9.5
+"market_cap_bn": 9.4
 },
 "CHYM|2026-11-04": {
 "t": "CHYM",
@@ -8250,7 +8271,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 39.2
+"market_cap_bn": 38.6
 },
 "CIFR|2026-11-02": {
 "t": "CIFR",
@@ -8774,7 +8795,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 107.9
+"market_cap_bn": 108.8
 },
 "CNA|2026-11-02": {
 "t": "CNA",
@@ -8904,7 +8925,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 8.9
+"market_cap_bn": 9.0
 },
 "CNO|2026-10-29": {
 "t": "CNO",
@@ -9328,7 +9349,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 465.9
+"market_cap_bn": 463.7
 },
 "COTY|2026-11-04": {
 "t": "COTY",
@@ -9615,7 +9636,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 25.1
+"market_cap_bn": 25.7
 },
 "CRGY|2026-11-02": {
 "t": "CRGY",
@@ -9719,7 +9740,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 187.2
+"market_cap_bn": 186.9
 },
 "CRON|2026-11-05": {
 "t": "CRON",
@@ -9854,7 +9875,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 246.5
+"market_cap_bn": 246.8
 },
 "CRWV|2026-11-09": {
 "t": "CRWV",
@@ -10055,7 +10076,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 91.0
+"market_cap_bn": 90.9
 },
 "CTOS|2026-10-26": {
 "t": "CTOS",
@@ -11119,7 +11140,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 30.6
+"market_cap_bn": 31.2
 },
 "DHC|2026-11-02": {
 "t": "DHC",
@@ -11269,7 +11290,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.4
+"market_cap_bn": 1.3
 },
 "DKL|2026-11-06": {
 "t": "DKL",
@@ -11372,7 +11393,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 27.5
+"market_cap_bn": 27.6
 },
 "DLTR|2026-12-02": {
 "t": "DLTR",
@@ -11596,7 +11617,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 15.3
+"market_cap_bn": 15.0
 },
 "DOC|2026-11-02": {
 "t": "DOC",
@@ -11639,7 +11660,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 4.6
+"market_cap_bn": 4.8
 },
 "DORM|2026-10-26": {
 "t": "DORM",
@@ -11776,7 +11797,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 25.7
+"market_cap_bn": 26.1
 },
 "DRS|2026-10-29": {
 "t": "DRS",
@@ -11915,7 +11936,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 8.0
+"market_cap_bn": 8.1
 },
 "DTE|2026-11-05": {
 "t": "DTE",
@@ -12772,7 +12793,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 13.6
+"market_cap_bn": 14.0
 },
 "EME|2026-10-29": {
 "t": "EME",
@@ -12942,7 +12963,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.8
+"market_cap_bn": 1.7
 },
 "ENSG|2026-10-27": {
 "t": "ENSG",
@@ -14619,7 +14640,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 14.0
+"market_cap_bn": 13.9
 },
 "FIVN|2026-11-05": {
 "t": "FIVN",
@@ -16030,7 +16051,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.3
+"market_cap_bn": 1.4
 },
 "GH|2026-11-05": {
 "t": "GH",
@@ -16127,7 +16148,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 19.5
+"market_cap_bn": 19.2
 },
 "GKOS|2026-10-28": {
 "t": "GKOS",
@@ -16808,7 +16829,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.4
+"market_cap_bn": null
 },
 "GS|2026-10-13": {
 "t": "GS",
@@ -16941,7 +16962,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 13.8
+"market_cap_bn": 14.1
 },
 "GWW|2026-11-04": {
 "t": "GWW",
@@ -17014,7 +17035,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 5.2
+"market_cap_bn": 5.3
 },
 "HALO|2026-11-05": {
 "t": "HALO",
@@ -17238,7 +17259,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 47.0
+"market_cap_bn": 47.2
 },
 "HESM|2026-10-30": {
 "t": "HESM",
@@ -18029,7 +18050,7 @@
 "eps_forecast": "",
 "quarter": "Sep/2026",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 16.5
+"market_cap_bn": 16.4
 },
 "HSBC|2026-10-27": {
 "t": "HSBC",
@@ -18526,7 +18547,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 8.8
+"market_cap_bn": 9.5
 },
 "IBTA|2026-11-02": {
 "t": "IBTA",
@@ -18930,7 +18951,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.7
+"market_cap_bn": 1.6
 },
 "IMNM|2026-11-05": {
 "t": "IMNM",
@@ -19009,7 +19030,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.2
+"market_cap_bn": 1.3
 },
 "INCY|2026-10-29": {
 "t": "INCY",
@@ -19520,7 +19541,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 24.9
+"market_cap_bn": 25.1
 },
 "IOVA|2026-11-05": {
 "t": "IOVA",
@@ -19845,7 +19866,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.0
+"market_cap_bn": 1.1
 },
 "ITT|2026-11-04": {
 "t": "ITT",
@@ -20075,7 +20096,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 26.2
+"market_cap_bn": 26.6
 },
 "JBS|2026-11-09": {
 "t": "JBS",
@@ -20189,7 +20210,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 11.7
+"market_cap_bn": 11.8
 },
 "JHX|2026-11-05": {
 "t": "JHX",
@@ -20455,7 +20476,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.4
+"market_cap_bn": 1.5
 },
 "KARO|2026-10-19": {
 "t": "KARO",
@@ -20599,7 +20620,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 14.6
+"market_cap_bn": 14.5
 },
 "KEX|2026-10-28": {
 "t": "KEX",
@@ -20899,7 +20920,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.9
+"market_cap_bn": 1.8
 },
 "KMT|2026-11-04": {
 "t": "KMT",
@@ -21228,7 +21249,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 40.8
+"market_cap_bn": 40.7
 },
 "KSPI|2026-11-09": {
 "t": "KSPI",
@@ -21716,7 +21737,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 22.3
+"market_cap_bn": 21.9
 },
 "LEU|2026-11-04": {
 "t": "LEU",
@@ -21935,7 +21956,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 4.0
+"market_cap_bn": 3.9
 },
 "LII|2026-10-28": {
 "t": "LII",
@@ -22207,7 +22228,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 10.1
+"market_cap_bn": 10.2
 },
 "LLY|2026-10-29": {
 "t": "LLY",
@@ -22268,7 +22289,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.2
+"market_cap_bn": 1.3
 },
 "LMRI|2026-11-12": {
 "t": "LMRI",
@@ -22401,7 +22422,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.1
+"market_cap_bn": 1.0
 },
 "LOPE|2026-11-04": {
 "t": "LOPE",
@@ -22554,7 +22575,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.4
+"market_cap_bn": 1.5
 },
 "LRCX|2026-10-21": {
 "t": "LRCX",
@@ -22738,7 +22759,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 13.1
+"market_cap_bn": 13.0
 },
 "LUMN|2026-11-04": {
 "t": "LUMN",
@@ -23220,7 +23241,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.8
+"market_cap_bn": 1.9
 },
 "MA|2026-10-29": {
 "t": "MA",
@@ -23251,7 +23272,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.6
+"market_cap_bn": 1.5
 },
 "MBGL|2026-11-12": {
 "t": "MBGL",
@@ -23470,7 +23491,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 26.3
+"market_cap_bn": 26.4
 },
 "MDGL|2026-11-03": {
 "t": "MDGL",
@@ -24220,6 +24241,18 @@
 "period": "Expected date (market data feed)",
 "market_cap_bn": 5.5
 },
+"MMED|2026-11-24": {
+"t": "MMED",
+"ticker": "MMED",
+"name": "MiniMed Group, Inc.",
+"m": "US",
+"date": "2026-11-24",
+"when": "Not stated",
+"eps_forecast": "",
+"quarter": "",
+"period": "Expected date (market data feed)",
+"market_cap_bn": 5.4
+},
 "MMI|2026-11-06": {
 "t": "MMI",
 "ticker": "MMI",
@@ -24725,7 +24758,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 141.5
+"market_cap_bn": 143.8
 },
 "MRX|2026-11-05": {
 "t": "MRX",
@@ -24952,7 +24985,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 6.5
+"market_cap_bn": null
 },
 "MSTR|2026-10-29": {
 "t": "MSTR",
@@ -25130,7 +25163,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 5.7
+"market_cap_bn": 5.8
 },
 "MTRN|2026-11-04": {
 "t": "MTRN",
@@ -25287,7 +25320,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 907.7
+"market_cap_bn": 899.7
 },
 "MWA|2026-11-04": {
 "t": "MWA",
@@ -25497,7 +25530,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 6.8
+"market_cap_bn": 7.0
 },
 "NBIS|2026-11-10": {
 "t": "NBIS",
@@ -25618,7 +25651,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 18.1
+"market_cap_bn": 18.4
 },
 "NEE|2026-10-21": {
 "t": "NEE",
@@ -25851,7 +25884,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 85.6
+"market_cap_bn": 85.7
 },
 "NGL|2026-11-05": {
 "t": "NGL",
@@ -26080,7 +26113,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 60.7
+"market_cap_bn": 60.1
 },
 "NKTR|2026-11-12": {
 "t": "NKTR",
@@ -26260,7 +26293,7 @@
 "eps_forecast": "($0.12)",
 "quarter": "Sep/2026",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.4
+"market_cap_bn": 1.5
 },
 "NOC|2026-10-20": {
 "t": "NOC",
@@ -26606,7 +26639,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 36.7
+"market_cap_bn": 36.9
 },
 "NTB|2026-10-27": {
 "t": "NTB",
@@ -26755,7 +26788,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 9.1
+"market_cap_bn": 9.3
 },
 "NTSK|2026-12-10": {
 "t": "NTSK",
@@ -26856,7 +26889,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.7
+"market_cap_bn": 1.8
 },
 "NVCR|2026-10-29": {
 "t": "NVCR",
@@ -27202,6 +27235,18 @@
 "result": "beat",
 "quarter_end": "2026-06-30",
 "result_done": true
+},
+"NXE|2026-11-09": {
+"t": "NXE",
+"ticker": "NXE",
+"name": "NexGen Energy Ltd.",
+"m": "US",
+"date": "2026-11-09",
+"when": "Not stated",
+"eps_forecast": "",
+"quarter": "",
+"period": "Expected date (market data feed)",
+"market_cap_bn": 5.4
 },
 "NXPI|2026-10-27": {
 "t": "NXPI",
@@ -27622,7 +27667,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 32.4
+"market_cap_bn": 33.4
 },
 "OLED|2026-10-28": {
 "t": "OLED",
@@ -27653,7 +27698,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 5.7
+"market_cap_bn": 5.6
 },
 "OLN|2026-10-29": {
 "t": "OLN",
@@ -27999,7 +28044,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 377.5
+"market_cap_bn": 375.1
 },
 "ORIC|2026-11-12": {
 "t": "ORIC",
@@ -28011,7 +28056,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 0.9
+"market_cap_bn": 1.0
 },
 "ORI|2026-10-22": {
 "t": "ORI",
@@ -28663,7 +28708,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 42.6
+"market_cap_bn": 42.3
 },
 "PAY|2026-11-02": {
 "t": "PAY",
@@ -29967,7 +30012,7 @@
 "eps_forecast": "",
 "quarter": "Sep/2026",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 2.0
+"market_cap_bn": 2.1
 },
 "POOL|2026-10-22": {
 "t": "POOL",
@@ -30337,7 +30382,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.5
+"market_cap_bn": 1.6
 },
 "PRK|2026-10-26": {
 "t": "PRK",
@@ -30765,7 +30810,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 4.4
+"market_cap_bn": 4.5
 },
 "PVLA|2026-11-05": {
 "t": "PVLA",
@@ -31067,7 +31112,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.4
+"market_cap_bn": 1.5
 },
 "QURE|2026-11-04": {
 "t": "QURE",
@@ -31267,7 +31312,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 24.1
+"market_cap_bn": 24.5
 },
 "RCI|2026-10-23": {
 "t": "RCI",
@@ -32799,7 +32844,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 288.5
+"market_cap_bn": 290.4
 },
 "R|2026-10-22": {
 "t": "R",
@@ -32901,7 +32946,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 6.2
+"market_cap_bn": 6.3
 },
 "SAIL|2026-12-15": {
 "t": "SAIL",
@@ -32913,7 +32958,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 11.0
+"market_cap_bn": 11.3
 },
 "SAM|2026-10-22": {
 "t": "SAM",
@@ -33326,7 +33371,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.4
+"market_cap_bn": 1.3
 },
 "SECZ|2026-11-11": {
 "t": "SECZ",
@@ -34321,7 +34366,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.4
+"market_cap_bn": 1.3
 },
 "SMA|2026-11-04": {
 "t": "SMA",
@@ -34623,7 +34668,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 101.2
+"market_cap_bn": 102.5
 },
 "SNPS|2026-12-09": {
 "t": "SNPS",
@@ -34635,7 +34680,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 87.6
+"market_cap_bn": 88.7
 },
 "SNY|2026-10-30": {
 "t": "SNY",
@@ -34916,7 +34961,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.2
+"market_cap_bn": 1.1
 },
 "SPNT|2026-10-29": {
 "t": "SPNT",
@@ -35189,7 +35234,7 @@
 "eps_forecast": "($0.14)",
 "quarter": "Sep/2026",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.7
+"market_cap_bn": 1.8
 },
 "SSNC|2026-10-22": {
 "t": "SSNC",
@@ -35273,7 +35318,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.9
+"market_cap_bn": 2.0
 },
 "STDN|2026-11-16": {
 "t": "STDN",
@@ -35623,7 +35668,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 32.5
+"market_cap_bn": 33.1
 },
 "SUPN|2026-10-29": {
 "t": "SUPN",
@@ -35697,7 +35742,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 0.9
+"market_cap_bn": 1.0
 },
 "SVV|2026-11-05": {
 "t": "SVV",
@@ -35976,7 +36021,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 8.0
+"market_cap_bn": 8.2
 },
 "TAC|2026-11-03": {
 "t": "TAC",
@@ -36274,7 +36319,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 208.4
+"market_cap_bn": 209.4
 },
 "TEAM|2026-11-05": {
 "t": "TEAM",
@@ -36762,7 +36807,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 4.3
+"market_cap_bn": 4.4
 },
 "TH|2026-11-05": {
 "t": "TH",
@@ -37104,7 +37149,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 235.8
+"market_cap_bn": 234.9
 },
 "TNC|2026-11-02": {
 "t": "TNC",
@@ -37810,6 +37855,18 @@
 "quarter_end": "2026-06-30",
 "result_done": true
 },
+"TSHA|2026-11-11": {
+"t": "TSHA",
+"ticker": "TSHA",
+"name": "Taysha Gene Therapies, Inc.",
+"m": "US",
+"date": "2026-11-11",
+"when": "Not stated",
+"eps_forecast": "",
+"quarter": "",
+"period": "Expected date (market data feed)",
+"market_cap_bn": 1.4
+},
 "TSLA|2026-10-21": {
 "t": "TSLA",
 "ticker": "TSLA",
@@ -37918,7 +37975,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 8.4
+"market_cap_bn": 8.5
 },
 "TTC|2026-12-17": {
 "t": "TTC",
@@ -37930,7 +37987,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 10.3
+"market_cap_bn": 10.2
 },
 "TTD|2026-11-05": {
 "t": "TTD",
@@ -38313,6 +38370,18 @@
 "result": "miss",
 "quarter_end": "2026-06-30",
 "result_done": true
+},
+"TYRA|2026-11-05": {
+"t": "TYRA",
+"ticker": "TYRA",
+"name": "Tyra Biosciences, Inc.",
+"m": "US",
+"date": "2026-11-05",
+"when": "Not stated",
+"eps_forecast": "",
+"quarter": "",
+"period": "Expected date (market data feed)",
+"market_cap_bn": 1.5
 },
 "T|2026-10-21": {
 "t": "T",
@@ -38730,7 +38799,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 28.3
+"market_cap_bn": 28.2
 },
 "UMBF|2026-10-27": {
 "t": "UMBF",
@@ -38826,7 +38895,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 4.6
+"market_cap_bn": 4.5
 },
 "UNH|2026-10-13": {
 "t": "UNH",
@@ -40292,7 +40361,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 8.6
+"market_cap_bn": 8.7
 },
 "VTMX|2026-10-22": {
 "t": "VTMX",
@@ -40590,7 +40659,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.4
+"market_cap_bn": 1.3
 },
 "WB|2026-11-17": {
 "t": "WB",
@@ -40743,7 +40812,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.4
+"market_cap_bn": 1.5
 },
 "WEST|2026-11-05": {
 "t": "WEST",
@@ -41321,7 +41390,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 11.1
+"market_cap_bn": 11.2
 },
 "WSFS|2026-10-22": {
 "t": "WSFS",
@@ -41433,7 +41502,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 2.0
+"market_cap_bn": 2.1
 },
 "WTFC|2026-10-19": {
 "t": "WTFC",
@@ -42205,7 +42274,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 2.0
+"market_cap_bn": 1.9
 },
 "ZETA|2026-11-03": {
 "t": "ZETA",
