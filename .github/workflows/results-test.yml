@@ -1,0 +1,17 @@
+name: results-test (temporary)
+on:
+  push:
+    branches: [results-test]
+jobs:
+  t:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - run: python agents/tools/results_8k.py
+      - run: python agents/tools/earnings_sync.py
+      - run: tar czf out.tgz docs/data/results agents/work/8k agents/work/results_queue.json docs/data/earnings_us.json
+      - uses: actions/upload-artifact@v4
+        with: { name: out, path: out.tgz }

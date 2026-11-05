@@ -1,0 +1,30 @@
+# LRC Results — after each US company reports, read its 8-K results filing at the SEC (press release + CFO commentary),
+# pull out revenue and the outlook / guidance, and queue it for the written summary (scheduled task "LRC Results Desk").
+#  * 05:53 SAST Tue–Sat: picks up the after-the-close reports from New York the evening before
+#  * 15:53 SAST Mon–Fri: picks up the before-the-open reports from the same morning in New York
+name: LRC Results (8-K reader)
+on:
+  schedule:
+    - cron: '53 3 * * 2-6'
+    - cron: '53 13 * * 1-5'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: lrc-push
+  cancel-in-progress: false
+jobs:
+  results:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - name: Read 8-K results filings (revenue, outlook, guidance)
+        run: python agents/tools/results_8k.py
+      - name: Earnings calendar — add revenue, guidance and price move to the reported rows
+        continue-on-error: true
+        run: python agents/tools/earnings_sync.py
+      - name: Publish
+        run: bash agents/tools/publish.sh "Results filings"
