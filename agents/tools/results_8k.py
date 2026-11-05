@@ -144,6 +144,8 @@ def revenue(blocks, est=None, mcap=None):
         for r in v:
             if not r or not REV_LABEL.match(r[0].strip()): continue
             vals = [x for x in (num(c) for c in r[1:]) if x is not None]
+            if len(vals) >= 3 and float(vals[0]).is_integer() and vals[0] <= 40 and vals[1] > 20 * vals[0]:
+                vals = vals[1:]                             # a "Note" column before the numbers
             if not vals or vals[0] <= 0: continue
             cands = [scale] if scale else [1e6, 1e3, 1, 1e9]
             for s in cands:
@@ -158,9 +160,10 @@ def revenue(blocks, est=None, mcap=None):
 
 
 # ---------------------------------------------------------------- guidance
-HEAD = re.compile(r'^(\W*)((business|financial|fiscal(\s+year)?(\s+20\d\d)?|full[- ]year(\s+20\d\d)?|20\d\d|q[1-4]|first|second|third|fourth|quarterly|annual|updated|company|outlook and)\s+)*(outlook|guidance|forecast|expectations)\b.{0,60}$', re.I)
+HEAD = re.compile(r'^(\W*)((business|financial|fiscal(\s+year)?(\s+20\d\d)?|full[- ]year(\s+20\d\d)?|20\d\d|q[1-4]|first|second|third|fourth|quarter|quarterly|annual|updated|company|outlook and)\s+)*(outlook|guidance|forecast|expectations)\b.{0,60}$', re.I)
 SAFE = re.compile(r'forward[- ]looking statements|safe harbor|private securities litigation|non-gaap financial measures? (is|are) included|reconciliation of', re.I)
-GUIDE = re.compile(r'\b(expects?|expected|anticipates?|outlook|guidance|reaffirm\w*|reiterat\w*|rais(es|ed|ing)|lower(s|ed|ing)?|narrow\w*|forecasts?|projects?|now sees|targets?)\b', re.I)
+GUIDE = re.compile(r'\b(expects?|expected|anticipates?|outlook|guidance|reaffirm\w*|reiterat\w*|rais(es|ed|ing)|lower(s|ed|ing)?|narrow\w*|forecasts?|projected|now sees)\b', re.I)
+BOILER = re.compile(r'^\W*(forward[- ]looking statements|safe harbou?r|cautionary (note|statement))|private securities litigation reform', re.I)
 FWD = re.compile(r'\b(fourth|third|second|first|next|coming)\s+quarter|\bfull[- ]year|\bfiscal\s+(year\s+)?20\d\d|\bfiscal\s+20\d\d|\b(fy|q[1-4])\s?20?\d\d\b|\b20(2[6-9]|3\d)\b|\bfor the (year|quarter)', re.I)
 HASNUM = re.compile(r'\$\s?\d|\d+(\.\d+)?\s?(%|percent|billion|million|cents?)|\d+\.\d+')
 STATUS = [('raised', re.compile(r'\b(rais(es|ed|ing)|increas(es|ed|ing)|lift(s|ed)?|boost(s|ed)?)\b[^.]{0,60}\b(guidance|outlook|forecast|expectations)|\b(guidance|outlook)\b[^.]{0,40}\b(raised|increased)', re.I)),
@@ -184,7 +187,9 @@ def guidance(blocks):
             if heading is None: heading = v.strip(' :'); grab = 1; continue
         if grab:
             if kind == 'p':
-                if SAFE.search(v) or (len(v) <= 60 and not HASNUM.search(v) and section) or sum(len(x) for x in section) > 2400:
+                if SAFE.search(v) and not BOILER.search(v) and len(v) < 400:
+                    continue                                # "The following forward-looking statements reflect…" intro line
+                if BOILER.search(v) or (len(v) <= 60 and not HASNUM.search(v) and section and not HEAD.match(v)) or sum(len(x) for x in section) > 2400:
                     grab = 0; continue
                 section.append(v)
             else:
@@ -309,7 +314,8 @@ def main():
         rev_est = e.get('rev_est')
         rv = revenue(main_blocks, rev_est, (e.get('market_cap_bn') or 0) * 1e9 or None)
         g = guidance([x for _, b in blocks_all for x in b])
-        title = next((v for k_, v in main_blocks if k_ == 'p' and 20 < len(v) < 220 and not re.match(r'^(exhibit|ex-)', v, re.I)), None)
+        paras = [v for k_, v in main_blocks[:60] if k_ == 'p' and 20 < len(v) < 240 and '@' not in v and not re.match(r'^(exhibit|ex-|for immediate release|contacts?\b|media|investor)', v, re.I)]
+        title = next((v for v in paras if re.search(r'\b(reports?|announces?|results|quarter|earnings)\b', v, re.I)), paras[0] if paras else None)
         rep.update({'filing': {'form': f['form'], 'filed': f['filed'], 'items': f['items'], 'index': index_url,
                                'docs': [{'type': d['type'], 'desc': d['desc'], 'url': d['url']} for d in ex[:4]]},
                     'title': title, 'auto': {'revenue': rv, 'guidance': g}, 'read': now_sast().isoformat(timespec='minutes')})
@@ -319,7 +325,7 @@ def main():
         R['name'] = e.get('name') or R.get('name')
         save(path, R)
         if pri >= 2 and (today - dt.date.fromisoformat(e['date'])).days <= 7:      # text for the Results Desk (tracked companies only)
-            open(os.path.join(TXT, f"{t}_{e['date']}.txt"), 'w', encoding='utf-8').write('\n\n'.join(texts)[:90000])
+            open(os.path.join(TXT, f"{t}_{e['date']}.txt"), 'w', encoding='utf-8').write('\n\n'.join(texts)[:60000])
         print(f"  {t} {e['date']} {f['form']} {len(ex)} exhibit(s) · revenue {'%.3gbn' % (rv['rev'] / 1e9) if rv else '—'} · guidance {g['status']}")
     for p in glob.glob(os.path.join(TXT, '*.txt')):       # keep 10 days of filing text
         m = re.search(r'_(\d{4}-\d{2}-\d{2})\.txt$', p)

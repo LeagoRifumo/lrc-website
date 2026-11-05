@@ -10,13 +10,13 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: '3.12' }
-      - run: RESULTS_BUDGET_MIN=4 python -u agents/tools/results_8k.py
+      - run: RESULTS_BUDGET_MIN=3 python -u agents/tools/results_8k.py
       - run: python agents/tools/earnings_sync.py
       - run: |
-          for t in MSFT AMZN MRK PFE ABBV FSM OGC AMD; do echo "=== $t"; cat docs/data/results/$t.json | head -c 5000; echo; done
+          for t in AMZN AMD OGC FSM KO V; do echo "=== $t"; cat docs/data/results/$t.json | head -c 5000; echo; done
           echo "=== QUEUE"; head -c 3000 agents/work/results_queue.json
           echo "=== TEXT"; ls -la agents/work/8k | head -20; du -sh agents/work/8k docs/data/results; ls agents/work/8k | wc -l
-          echo "=== MSFT TEXT"; head -c 6000 agents/work/8k/MSFT_*.txt
+          echo "=== MSFT TEXT"; head -c 4000 agents/work/8k/AMD_2026-11-03.txt; du -sh agents/work/8k
           python - <<'PY'
           import json
           it=json.load(open('docs/data/earnings_us.json'))['items']
