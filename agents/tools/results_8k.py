@@ -9,7 +9,7 @@ tracked by the LRC Stock Scanner):
      analysts' revenue estimate), the Outlook / Guidance section, and the guidance wording (raised / reaffirmed / lowered / given),
   4. writes docs/data/results/<TICKER>.json (last 8 reports per company; the Results Desk adds its written summary under "desk")
      and docs/data/results/index.json (what the earnings calendar can open),
-  5. saves the plain text of the exhibits to agents/work/8k/<TICKER>_<date>.txt (kept 21 days) and the companies still waiting
+  5. saves the plain text of the exhibits to agents/work/8k/<TICKER>_<date>.txt (tracked companies, kept 10 days) and the companies still waiting
      for a written summary to agents/work/results_queue.json, most important first.
 Nothing here is an opinion: the automatic layer only repeats what the company filed.
 """
@@ -21,7 +21,7 @@ from lrcdata import P, load, now_sast
 UA = 'Leago Rifumo Capital research info@leagorifumocapital.co.za'
 LOOKBACK = 10          # days back to look for results
 MIN_CAP = 2.0          # $bn
-KEEP_TXT_DAYS = 21
+KEEP_TXT_DAYS = 10
 OUT = P('docs', 'data', 'results')
 TXT = P('agents', 'work', '8k')
 _lock = threading.Lock(); _last = [0.0]
@@ -133,7 +133,7 @@ SCALE = [(re.compile(r'in\s+billions', re.I), 1e9), (re.compile(r'in\s+millions|
          (re.compile(r'in\s+thousands|\$\s*thousands|\(thousands\)|thousands of', re.I), 1e3)]
 
 
-def revenue(blocks, est=None):
+def revenue(blocks, est=None, mcap=None):
     """Revenue this quarter and a year ago from the first income-statement-like table. Checked against the estimate."""
     ctx = ''
     for kind, v in blocks:
@@ -148,7 +148,7 @@ def revenue(blocks, est=None):
             cands = [scale] if scale else [1e6, 1e3, 1, 1e9]
             for s in cands:
                 cur = vals[0] * s
-                ok = (0.6 <= cur / est <= 1.6) if est else bool(scale)
+                ok = (0.6 <= cur / est <= 1.6) if est else bool(scale) and (not mcap or mcap / 500 <= cur <= mcap * 2)
                 if ok:
                     prior = vals[1] * s if len(vals) > 1 and vals[1] > 0 else None
                     if prior and not (0.3 <= cur / prior <= 3): prior = None
@@ -287,6 +287,10 @@ def main():
         if not f:
             if rep not in R['reports']: R['reports'].append(rep)
             save(path, R); continue
+        if any((r.get('filing') or {}).get('index', '').endswith(f['acc'] + '-index.htm') for r in R['reports'] if r is not rep):
+            rep['tries'] = 99                               # this filing belongs to another listed date: nothing new
+            if rep not in R['reports']: R['reports'].append(rep)
+            save(path, R); continue
         try:
             index_url, docs, ex = exhibits(cik, f)
         except Exception as ex_:
@@ -303,7 +307,7 @@ def main():
         found += 1
         main_blocks = blocks_all[0][1]
         rev_est = e.get('rev_est')
-        rv = revenue(main_blocks, rev_est)
+        rv = revenue(main_blocks, rev_est, (e.get('market_cap_bn') or 0) * 1e9 or None)
         g = guidance([x for _, b in blocks_all for x in b])
         title = next((v for k_, v in main_blocks if k_ == 'p' and 20 < len(v) < 220 and not re.match(r'^(exhibit|ex-)', v, re.I)), None)
         rep.update({'filing': {'form': f['form'], 'filed': f['filed'], 'items': f['items'], 'index': index_url,
@@ -314,9 +318,10 @@ def main():
         R['reports'] = sorted(R['reports'], key=lambda r: r['date'])[-8:]
         R['name'] = e.get('name') or R.get('name')
         save(path, R)
-        open(os.path.join(TXT, f"{t}_{e['date']}.txt"), 'w', encoding='utf-8').write('\n\n'.join(texts)[:160000])
+        if pri >= 2 and (today - dt.date.fromisoformat(e['date'])).days <= 7:      # text for the Results Desk (tracked companies only)
+            open(os.path.join(TXT, f"{t}_{e['date']}.txt"), 'w', encoding='utf-8').write('\n\n'.join(texts)[:90000])
         print(f"  {t} {e['date']} {f['form']} {len(ex)} exhibit(s) · revenue {'%.3gbn' % (rv['rev'] / 1e9) if rv else '—'} · guidance {g['status']}")
-    for p in glob.glob(os.path.join(TXT, '*.txt')):       # keep 21 days of filing text
+    for p in glob.glob(os.path.join(TXT, '*.txt')):       # keep 10 days of filing text
         m = re.search(r'_(\d{4}-\d{2}-\d{2})\.txt$', p)
         if m and (today - dt.date.fromisoformat(m.group(1))).days > KEEP_TXT_DAYS: os.remove(p)
     index_and_queue(stocks, on_list | covered)
@@ -339,7 +344,7 @@ def index_and_queue(stocks, prio):
         r = reps[-1]; t = R['t']
         g = ((r.get('desk') or {}).get('guidance') or {}).get('status') or ((r.get('auto') or {}).get('guidance') or {}).get('status')
         items[t] = {'date': r['date'], 'g': g, 'desk': bool(r.get('desk')), 'n': len(reps)}
-        if not r.get('desk') and r.get('filing') and (today - dt.date.fromisoformat(r['date'])).days <= 7:
+        if not r.get('desk') and r.get('filing') and (today - dt.date.fromisoformat(r['date'])).days <= 7 and os.path.exists(os.path.join(TXT, f"{t}_{r['date']}.txt")):
             s = stocks.get(t, {})
             queue.append({'t': t, 'name': R.get('name'), 'm': R.get('m', 'US'), 'date': r['date'], 'text': f"agents/work/8k/{t}_{r['date']}.txt",
                           'priority': 3 if t in prio else 2 if s else 1, 'mcap_bn': round((s.get('mcap') or 0) / 1e9, 1)})

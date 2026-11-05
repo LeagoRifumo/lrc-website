@@ -35,6 +35,7 @@ CHECKS = [
     ('Live news wire', 'wire.json', 'generated', 2, 6, 'live-wire.yml (every 15 minutes)'),
     ('News Desk brief', 'news.json', 'generated', 4, 60, 'scheduled task "LRC News Agent" (hourly 06:00–22:00 Mon–Fri)'),
     ('New York earnings calendar', 'earnings_us.json', 'generated', 30, 30, 'daily.yml (06:07 daily)'),
+    ('Results filings (8-K reader)', 'results/index.json', 'updated', 30, 62, 'results.yml (05:53 Tue–Sat, 15:53 Mon–Fri)'),
     ('Economic data (macro)', 'macro.json', 'generated', 30, 80, 'scheduled task "LRC Macro Desk" (11:43 and 17:43 Mon–Fri)'),
 ]
 

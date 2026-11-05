@@ -10,8 +10,17 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: '3.12' }
-      - run: RESULTS_BUDGET_MIN=9 python -u agents/tools/results_8k.py
+      - run: RESULTS_BUDGET_MIN=4 python -u agents/tools/results_8k.py
       - run: python agents/tools/earnings_sync.py
-      - run: tar czf out.tgz docs/data/results agents/work/8k agents/work/results_queue.json docs/data/earnings_us.json
-      - uses: actions/upload-artifact@v4
-        with: { name: out, path: out.tgz }
+      - run: |
+          for t in MSFT AMZN MRK PFE ABBV FSM OGC AMD; do echo "=== $t"; cat docs/data/results/$t.json | head -c 5000; echo; done
+          echo "=== QUEUE"; head -c 3000 agents/work/results_queue.json
+          echo "=== TEXT"; ls -la agents/work/8k | head -20; du -sh agents/work/8k docs/data/results; ls agents/work/8k | wc -l
+          echo "=== MSFT TEXT"; head -c 6000 agents/work/8k/MSFT_*.txt
+          python - <<'PY'
+          import json
+          it=json.load(open('docs/data/earnings_us.json'))['items']
+          r=[x for x in it if x.get('reported') and x.get('rev_actual')]
+          print('rows with revenue', len(r), 'with g', sum(1 for x in it if x.get('g')))
+          for x in r[:5]: print({k:x.get(k) for k in ('ticker','date','rev_actual','rev_prior','rev_yoy','g','px_move')})
+          PY
