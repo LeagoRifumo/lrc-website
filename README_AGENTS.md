@@ -7,6 +7,7 @@ docs/                       the website (GitHub Pages serves this folder)
   data/news.json            AI brief                (Claude News Agent, hourly on weekdays)
   data/watchlist.json       watchlist, house rules  (GitHub Action, daily 06:07 SAST)
   data/earnings_us.json     New York earnings       (GitHub Action, daily)
+  data/results/*.json       results panel per company: 8-K numbers + guidance (Action) and the written summary (Results Desk)
   data/earnings_jse.json    JSE results calendar    (Claude Weekly Research Agent, Saturdays)
   data/dashboards/*.json    weekly market dashboard (Action daily + weekend edition; agent adds movers & view)
   data/ratings.json         analyst-approved ratings (edited by the analyst only)
@@ -28,6 +29,8 @@ agents/
 | Watchlist (house rules), NY earnings, dashboard | every day 06:07 SAST | GitHub Action | free |
 | LRC Scanner (JSE + New York stocks, ETFs, sectors, entry plans) | 06:37 SAST Tue–Sat and 17:47 SAST Mon–Fri | GitHub Action | free |
 | Market dashboard (live) | hourly 06:17–22:17 SAST, weekdays | GitHub Action | free |
+| Results filings: 8-K press release, revenue, outlook / guidance | 05:53 SAST Tue–Sat, 15:53 SAST Mon–Fri | GitHub Action | free |
+| Results Desk: written results, guidance & call summaries | 06:13 SAST Tue–Sat, 16:13 SAST Mon–Fri | Claude scheduled task | Claude plan |
 | Health check (opens a GitHub issue if anything is late) | every 3 hours | GitHub Action | free |
 | Financial statements + company pages (SEO) | daily 05:23 SAST (each company weekly) | GitHub Action | free |
 | Weekly dashboard edition + Excel workbook | Saturdays | GitHub Action | free |

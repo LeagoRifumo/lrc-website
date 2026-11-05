@@ -133,6 +133,11 @@ def norm_fund(s, q, price_major, minor, fx):
     for tr in (s.get('earningsTrend') or {}).get('trend', []):
         if tr.get('period') == '0y': f['eps_growth_fwd'] = raw(tr, 'growth')
         if tr.get('period') == '+1y': f['eps_growth_next'] = raw(tr, 'growth')
+        if tr.get('period') == '0q':   # this quarter's consensus (earnings calendar: EPS + revenue estimate before results)
+            ee, re_ = tr.get('earningsEstimate') or {}, tr.get('revenueEstimate') or {}
+            f['q_est'] = {'end': tr.get('endDate'), 'eps': raw(ee, 'avg'), 'eps_low': raw(ee, 'low'), 'eps_high': raw(ee, 'high'), 'eps_yago': raw(ee, 'yearAgoEps'),
+                          'n_eps': raw(ee, 'numberOfAnalysts'), 'rev': raw(re_, 'avg'), 'rev_low': raw(re_, 'low'), 'rev_high': raw(re_, 'high'),
+                          'rev_yago': raw(re_, 'yearAgoRevenue'), 'n_rev': raw(re_, 'numberOfAnalysts'), 'cur': fd.get('financialCurrency')}
     today = dt.date.today().isoformat()
     ed = [x.get('fmt') for x in (ce.get('earnings') or {}).get('earningsDate', []) if isinstance(x, dict)]
     f['next_earnings'] = next((d for d in ed if d and d >= today), None)

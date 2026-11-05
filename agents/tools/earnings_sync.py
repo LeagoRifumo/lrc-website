@@ -82,10 +82,77 @@ def eps_result(t, date, fallback_est=None):
     return {'eps_actual': act, 'eps_est': est, 'surprise': surp, 'result': res, 'quarter_end': h['q']}
 
 
+_T = {}
+def tfile(full):
+    if full not in _T: _T[full] = load(D('scan', 't', full.replace('^', '_') + '.json'), {})
+    return _T[full]
+
+
+def q_est_for(full, date):
+    """This quarter's consensus (EPS + revenue) from the scanner, when it is for the results on `date`."""
+    q = (tfile(full).get('f') or {}).get('q_est') or {}
+    if not q.get('end'):
+        return {}
+    try:
+        gap = (dt.date.fromisoformat(date) - dt.date.fromisoformat(q['end'])).days
+    except ValueError:
+        return {}
+    if not (0 <= gap <= 110):
+        return {}
+    out = {'rev_est': q.get('rev'), 'rev_est_low': q.get('rev_low'), 'rev_est_high': q.get('rev_high'), 'rev_yago': q.get('rev_yago'),
+           'eps_est_q': q.get('eps'), 'eps_yago': q.get('eps_yago'), 'n_est': q.get('n_rev') or q.get('n_eps'), 'rcur': q.get('cur'), 'qend': q['end']}
+    return {k: v for k, v in out.items() if v is not None}
+
+
+def results_for(full, date):
+    """What the results file (8-K reader + Results Desk) says about the report published on `date`."""
+    R = load(D('results', full + '.json'), {}) or {}
+    rd = dt.date.fromisoformat(date)
+    rep = next((r for r in reversed(R.get('reports', [])) if abs((dt.date.fromisoformat(r['date']) - rd).days) <= 4 and (r.get('filing') or r.get('desk'))), None)
+    if not rep:
+        return {}
+    desk, auto = rep.get('desk') or {}, rep.get('auto') or {}
+    n = desk.get('numbers') or {}
+    rv = auto.get('revenue') or {}
+    out = {'has_res': True, 'desk': bool(desk),
+           'rev_actual': n.get('revenue') if n.get('revenue') is not None else rv.get('rev'),
+           'rev_prior': n.get('revenue_prior') if n.get('revenue_prior') is not None else rv.get('rev_prior'),
+           'g': (desk.get('guidance') or {}).get('status') or (auto.get('guidance') or {}).get('status'),
+           'headline': desk.get('headline')}
+    return {k: v for k, v in out.items() if v is not None}
+
+
+def reaction(full, date, when):
+    """Share-price move around the results: after close = next day vs results day; before open = results day vs the day before."""
+    h = tfile(full).get('history') or {}
+    c, gap = h.get('c') or [], h.get('gap') or ''
+    if not h.get('d0') or len(c) < 3:
+        return None
+    ds = [dt.date.fromisoformat(h['d0'])]
+    for g in gap:
+        try: ds.append(ds[-1] + dt.timedelta(days=int(g, 36)))
+        except ValueError: return None
+    rd = dt.date.fromisoformat(date)
+    i = next((k for k, d in enumerate(ds) if d >= rd), None)
+    if i is None or i == 0:
+        return None
+    same = ds[i] == rd
+    if (when or '').lower().startswith('after'):
+        a, b = (i, i + 1) if same else (i - 1, i)
+    elif (when or '').lower().startswith('before'):
+        a, b = i - 1, i
+    else:
+        a, b = i - 1, (i + 1 if same else i)
+    if b >= len(c) or b >= len(ds) or not c[a]:
+        return None
+    return {'move': round(c[b] / c[a] - 1, 4), 'from': ds[a].isoformat(), 'to': ds[b].isoformat()}
+
+
 def main(window_days=62):
     today = dt.datetime.now(SAST).date()
     end = (today + dt.timedelta(days=window_days)).isoformat()
     rows = load(D('scan', 'stocks.json'), {}).get('rows', [])
+    ridx = load(D('results', 'index.json'), {}).get('items', {})
     scan = {r['t']: r for r in rows}
     lists = load(D('scan', 'lists.json'), {}).get('lists', {})
     on_list = {}
@@ -116,6 +183,7 @@ def main(window_days=62):
             e.update({'t': x['ticker'] + suffix, 'ticker': x['ticker'], 'name': x.get('name'), 'm': mk, 'date': x['date'],
                       'when': x.get('when'), 'eps_forecast': x.get('eps_forecast') or e.get('eps_forecast', ''), 'quarter': x.get('quarter') or e.get('quarter', ''),
                       'period': x.get('period') or e.get('period'), 'market_cap_bn': x.get('market_cap_bn')})
+            e.update(q_est_for(x['ticker'] + suffix, x['date']))   # consensus snapshot before the results (kept after)
             log[k] = e
         if mk == 'JSE':                                     # published JSE results from SENS go straight into the log
             for r_ in sens.get('results', []):
@@ -150,7 +218,18 @@ def main(window_days=62):
                          'market_cap_bn': e.get('market_cap_bn'), 'reported': True, 'result': e.get('result'),
                          'eps_actual': e.get('eps_actual'), 'eps_est': e.get('eps_est'), 'surprise': e.get('surprise'),
                          'heps': e.get('heps'), 'heps_prior': e.get('heps_prior'), 'unit': e.get('unit'), 'change': e.get('change'), 'measure': e.get('measure'),
-                         'dps': e.get('dps'), 'source': e.get('source')})
+                         'dps': e.get('dps'), 'source': e.get('source'),
+                         **{k_: e.get(k_) for k_ in ('rev_est', 'rev_est_low', 'rev_est_high', 'rev_yago', 'n_est', 'rcur') if e.get(k_) is not None}})
+            x_ = past[-1]
+            x_.update(results_for(e['t'], e['date']))
+            if x_.get('rev_actual') and x_.get('rev_est'):
+                x_['rev_surprise'] = round(x_['rev_actual'] / x_['rev_est'] - 1, 4)
+                x_['rev_result'] = 'beat' if x_['rev_surprise'] > 0.005 else 'miss' if x_['rev_surprise'] < -0.005 else 'inline'
+            base = x_.get('rev_prior') or x_.get('rev_yago')
+            if x_.get('rev_actual') and base:
+                x_['rev_yoy'] = round(x_['rev_actual'] / base - 1, 4)
+            rx = reaction(e['t'], e['date'], e.get('when'))
+            if rx: x_['px_move'] = rx
         json.dump(dict(sorted(log.items())), open(LOG, 'w', encoding='utf-8'), ensure_ascii=False, indent=0)
         have = {x['ticker'] for x in items if x.get('date', '') >= today.isoformat()}
         added = 0
@@ -179,6 +258,9 @@ def main(window_days=62):
             if tsl:                                         # latest trading statement before these results
                 z = max(tsl, key=lambda z: z['date'])
                 x['ts'] = {'date': z['date'], 'low': z.get('heps_change_low'), 'high': z.get('heps_change_high'), 'period': z.get('period'), 'source': z.get('source')}
+            if not x.get('reported'):                       # consensus EPS + revenue for this quarter
+                x.update(q_est_for(full, x['date']))
+                if ridx.get(full): x['has_res'] = True          # last report's results panel can be opened
             if s and not x.get('reported'):                 # last 4 quarters: beat / miss / in line (track record dots)
                 h = sorted([h for h in ((load(D('scan', 't', full.replace('^', '_') + '.json'), {}).get('f') or {}).get('eps_hist') or []) if h.get('q') and h.get('surp') is not None], key=lambda h: h['q'])[-4:]
                 x['track'] = ['beat' if h['surp'] > 0.01 else 'miss' if h['surp'] < -0.01 else 'inline' for h in h] or None

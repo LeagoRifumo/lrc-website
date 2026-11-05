@@ -152,7 +152,7 @@
      Ctrl/⌘-click or middle-click still opens the one-page summary in a new tab. */
   document.addEventListener('click', e => {
     if (e.defaultPrevented || e.button !== 0 || e.ctrlKey || e.metaKey || e.shiftKey) return;
-    if (e.target.closest('.star, th, input, select, label, .sn-wrap')) return;
+    if (e.target.closest('.star, th, input, select, label, .sn-wrap, .erow.clk')) return;   // earnings calendar rows open the results panel
     const sn = e.target.closest('[data-snap]'); if (sn && !sn.closest('.sn-wrap')) { e.preventDefault(); e.stopPropagation(); open(sn.dataset.snap); return; }
     // any link to a company opens the snapshot first — except links that ARE the one-page summary button
     const al = e.target.closest('a[href*="stock.html?t="]');
