@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-05T11:45:00+02:00",
+ "generated": "2026-11-05T17:50:00+02:00",
  "agent": "LRC Macro Desk",
  "method": "Surprise = actual minus forecast (consensus). If there is no forecast, actual minus previous. Impact for shares: a surprise in the 'better' direction larger than the threshold = Bullish, the other way = Bearish, otherwise Neutral.",
  "countries": {
@@ -290,14 +290,14 @@
      "better": "lower",
      "threshold": 5,
      "frequency": "weekly",
-     "period": "w/e 24 Oct",
-     "release_date": "2026-10-29",
-     "actual": 194,
-     "forecast": 199,
+     "period": "w/e 31 Oct",
+     "release_date": "2026-11-05",
+     "actual": 189,
+     "forecast": 196,
      "previous": 195,
-     "next_release": "2026-11-05",
+     "next_release": "2026-11-12",
      "source": "US Department of Labor",
-     "url": "https://timesofoman.com/article/178553-us-weekly-unemployment-claims-fall-to-194000-hover-near-57-year-lows"
+     "url": "https://whbl.com/2026/11/05/us-weekly-jobless-claims-at-57-year-lows-amid-low-layoffs/"
     },
     {
      "key": "cpi",
