@@ -22005,7 +22005,13 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.7
+"market_cap_bn": 1.7,
+"eps_actual": -0.42,
+"eps_est": -0.08697,
+"surprise": -3.829,
+"result": "miss",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "LIME|2026-11-03": {
 "t": "LIME",
