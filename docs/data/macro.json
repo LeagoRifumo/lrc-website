@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-04T17:55:00+02:00",
+ "generated": "2026-11-05T11:45:00+02:00",
  "agent": "LRC Macro Desk",
  "method": "Surprise = actual minus forecast (consensus). If there is no forecast, actual minus previous. Impact for shares: a surprise in the 'better' direction larger than the threshold = Bullish, the other way = Bearish, otherwise Neutral.",
  "countries": {
@@ -125,14 +125,14 @@
      "better": "higher",
      "threshold": 0.5,
      "frequency": "monthly",
-     "period": "Sep 2026",
-     "release_date": "2026-10-05",
+     "period": "Oct 2026",
+     "release_date": "2026-11-05",
      "actual": 49.0,
      "forecast": null,
-     "previous": 50.5,
+     "previous": 49.0,
      "next_release": null,
      "source": "S&P Global",
-     "url": "https://tradingeconomics.com/south-africa/composite-pmi/news/589445"
+     "url": "https://www.cnbcafrica.com/2026/south-africas-private-sector-stays-mired-in-contraction-pmi-shows"
     },
     {
      "key": "retail",
