@@ -264,7 +264,10 @@ def main():
         todo.append((pri, e.get('market_cap_bn') or 0, t, e))
     todo.sort(key=lambda x: (-x[0], -x[1]))
     done = found = 0
+    t0 = time.time(); budget = float(os.environ.get('RESULTS_BUDGET_MIN', '18')) * 60
     for pri, cap, t, e in todo:
+        if time.time() - t0 > budget:
+            print('  time budget reached — the rest is picked up next run'); break
         path = os.path.join(OUT, t + '.json')
         R = load(path, {}) or {'t': t, 'name': e.get('name'), 'm': 'US', 'reports': []}
         rep = next((r for r in R['reports'] if r['date'] == e['date']), None)

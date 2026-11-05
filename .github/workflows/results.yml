@@ -22,7 +22,7 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: '3.12' }
       - name: Read 8-K results filings (revenue, outlook, guidance)
-        run: python agents/tools/results_8k.py
+        run: python -u agents/tools/results_8k.py
       - name: Earnings calendar — add revenue, guidance and price move to the reported rows
         continue-on-error: true
         run: python agents/tools/earnings_sync.py
