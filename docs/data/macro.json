@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-05T17:50:00+02:00",
+ "generated": "2026-11-06T17:55:00+02:00",
  "agent": "LRC Macro Desk",
  "method": "Surprise = actual minus forecast (consensus). If there is no forecast, actual minus previous. Impact for shares: a surprise in the 'better' direction larger than the threshold = Bullish, the other way = Bearish, otherwise Neutral.",
  "countries": {
@@ -258,14 +258,14 @@
      "better": "lower",
      "threshold": 0.1,
      "frequency": "monthly",
-     "period": "Sep 2026",
-     "release_date": "2026-10-02",
-     "actual": 4.2,
-     "forecast": 4.1,
-     "previous": 4.1,
-     "next_release": "2026-11-06",
+     "period": "Oct 2026",
+     "release_date": "2026-11-06",
+     "actual": 4.1,
+     "forecast": null,
+     "previous": 4.2,
+     "next_release": "2026-12-04",
      "source": "BLS",
-     "url": "https://www.bls.gov/news.release/empsit.htm"
+     "url": "https://www.bls.gov/news.release/archives/empsit_11062026.htm"
     },
     {
      "key": "nfp",
@@ -274,14 +274,14 @@
      "better": "higher",
      "threshold": 20,
      "frequency": "monthly",
-     "period": "Sep 2026",
-     "release_date": "2026-10-02",
-     "actual": 29,
-     "forecast": 90,
-     "previous": 133,
-     "next_release": "2026-11-06",
+     "period": "Oct 2026",
+     "release_date": "2026-11-06",
+     "actual": 165,
+     "forecast": 65,
+     "previous": 60,
+     "next_release": "2026-12-04",
      "source": "BLS",
-     "url": "https://www.bls.gov/news.release/empsit.htm"
+     "url": "https://www.bls.gov/news.release/archives/empsit_11062026.htm"
     },
     {
      "key": "claims",
