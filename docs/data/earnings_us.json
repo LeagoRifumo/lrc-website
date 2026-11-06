@@ -1927,7 +1927,7 @@
    "lists": [],
    "idea": null,
    "v": "SELL",
-   "iv": "HOLD",
+   "iv": "BUY",
    "lrc_rating": null,
    "covered": false
   },
@@ -2539,7 +2539,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "SELL",
+   "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
   },
@@ -3645,7 +3645,7 @@
    "t": "SYF",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "BUY",
    "lrc_rating": null,
    "covered": false
@@ -5889,7 +5889,7 @@
    "t": "ESI",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "SELL",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -6399,7 +6399,7 @@
    "t": "OII",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "SELL",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -8128,7 +8128,7 @@
    "t": "ORI",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -8638,7 +8638,7 @@
    "t": "MSM",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -11641,48 +11641,6 @@
   },
   {
    "date": "2026-10-27",
-   "ticker": "ENPH",
-   "name": "Enphase Energy, Inc.",
-   "when": "After close",
-   "period": "",
-   "quarter": "Sep/2026",
-   "eps_forecast": "$0.18",
-   "market_cap_bn": 4.2,
-   "reported": true,
-   "result": "beat",
-   "eps_actual": 0.19,
-   "eps_est": 0.18,
-   "surprise": 0.0556,
-   "heps": null,
-   "heps_prior": null,
-   "unit": null,
-   "change": null,
-   "measure": null,
-   "dps": null,
-   "source": "Nasdaq",
-   "has_res": true,
-   "desk": false,
-   "rev_actual": 293329000.0,
-   "rev_prior": 291854000.0,
-   "g": "given",
-   "rev_yoy": 0.0051,
-   "px_move": {
-    "move": -0.1603,
-    "from": "2026-10-27",
-    "to": "2026-10-28"
-   },
-   "t": "ENPH",
-   "lists": [
-    "Trading SELL"
-   ],
-   "idea": null,
-   "v": "STRONG SELL",
-   "iv": "SELL",
-   "lrc_rating": null,
-   "covered": true
-  },
-  {
-   "date": "2026-10-27",
    "ticker": "SLDE",
    "name": "Slide Insurance Holdings, Inc.",
    "when": "After close",
@@ -12266,7 +12224,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "SELL",
    "lrc_rating": null,
    "covered": false
   },
@@ -13705,7 +13663,7 @@
    "lists": [],
    "idea": null,
    "v": "BUY",
-   "iv": "HOLD",
+   "iv": "BUY",
    "lrc_rating": null,
    "covered": false
   },
@@ -15368,6 +15326,46 @@
    "idea": null,
    "v": null,
    "iv": null,
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-10-27",
+   "ticker": "ENPH",
+   "name": "Enphase Energy, Inc.",
+   "when": "After close",
+   "period": "",
+   "quarter": "Sep/2026",
+   "eps_forecast": "$0.18",
+   "market_cap_bn": 4.2,
+   "reported": true,
+   "result": "beat",
+   "eps_actual": 0.19,
+   "eps_est": 0.18,
+   "surprise": 0.0556,
+   "heps": null,
+   "heps_prior": null,
+   "unit": null,
+   "change": null,
+   "measure": null,
+   "dps": null,
+   "source": "Nasdaq",
+   "has_res": true,
+   "desk": false,
+   "rev_actual": 293329000.0,
+   "rev_prior": 291854000.0,
+   "g": "given",
+   "rev_yoy": 0.0051,
+   "px_move": {
+    "move": -0.1603,
+    "from": "2026-10-27",
+    "to": "2026-10-28"
+   },
+   "t": "ENPH",
+   "lists": [],
+   "idea": null,
+   "v": "STRONG SELL",
+   "iv": "SELL",
    "lrc_rating": null,
    "covered": false
   },
@@ -20254,7 +20252,7 @@
    "t": "EDU",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "BUY",
    "lrc_rating": null,
    "covered": false
@@ -22511,7 +22509,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "BUY",
+   "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
   },
@@ -22861,7 +22859,7 @@
    "t": "PBI",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -25357,7 +25355,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "BUY",
    "lrc_rating": null,
    "covered": false
   },
@@ -25474,7 +25472,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "SELL",
    "lrc_rating": null,
    "covered": false
   },
@@ -26688,7 +26686,7 @@
    "t": "THC",
    "lists": [],
    "idea": null,
-   "v": "STRONG BUY",
+   "v": "BUY",
    "iv": "STRONG BUY",
    "lrc_rating": null,
    "covered": false
@@ -28107,7 +28105,7 @@
    "t": "SKM",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "SELL",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -28184,7 +28182,7 @@
    "t": "TLK",
    "lists": [],
    "idea": null,
-   "v": "SELL",
+   "v": "HOLD",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -28693,7 +28691,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "SELL",
    "lrc_rating": null,
    "covered": false
   },
@@ -31632,7 +31630,7 @@
    "t": "SPNT",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -34141,7 +34139,7 @@
    "t": "CVE",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "BUY",
    "lrc_rating": null,
    "covered": false
@@ -34676,7 +34674,7 @@
    "t": "TLK",
    "lists": [],
    "idea": null,
-   "v": "SELL",
+   "v": "HOLD",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -34775,7 +34773,7 @@
    },
    "t": "MSGK",
    "lists": [],
-   "idea": null,
+   "idea": "Earnings watch",
    "v": "HOLD",
    "iv": "SELL",
    "lrc_rating": null,
@@ -35086,7 +35084,7 @@
    "lists": [],
    "idea": null,
    "v": "SELL",
-   "iv": "SELL",
+   "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
   },
@@ -35581,49 +35579,6 @@
    "iv": null,
    "lrc_rating": null,
    "covered": false
-  },
-  {
-   "date": "2026-11-02",
-   "ticker": "FOX",
-   "name": "Fox Corporation",
-   "when": "Before open",
-   "period": "",
-   "quarter": "Sep/2026",
-   "eps_forecast": "$2.12",
-   "market_cap_bn": 26.0,
-   "reported": true,
-   "result": "beat",
-   "eps_actual": 2.54,
-   "eps_est": 2.12,
-   "surprise": 0.1981,
-   "heps": null,
-   "heps_prior": null,
-   "unit": null,
-   "change": null,
-   "measure": null,
-   "dps": null,
-   "source": "Nasdaq",
-   "has_res": true,
-   "desk": true,
-   "rev_actual": 4571000000,
-   "rev_prior": 3738000000,
-   "g": "none",
-   "headline": "Revenue up 22% to a record $4.57bn on World Cup and political ads; adjusted EPS $2.54 beat $2.12 estimate; no formal guidance",
-   "rev_yoy": 0.2228,
-   "px_move": {
-    "move": -0.0043,
-    "from": "2026-10-30",
-    "to": "2026-11-02"
-   },
-   "t": "FOX",
-   "lists": [
-    "Trading BUY"
-   ],
-   "idea": null,
-   "v": "STRONG BUY",
-   "iv": "BUY",
-   "lrc_rating": null,
-   "covered": true
   },
   {
    "date": "2026-11-02",
@@ -36252,6 +36207,47 @@
    "lists": [],
    "idea": null,
    "v": "BUY",
+   "iv": "BUY",
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-02",
+   "ticker": "FOX",
+   "name": "Fox Corporation",
+   "when": "Before open",
+   "period": "",
+   "quarter": "Sep/2026",
+   "eps_forecast": "$2.12",
+   "market_cap_bn": 26.0,
+   "reported": true,
+   "result": "beat",
+   "eps_actual": 2.54,
+   "eps_est": 2.12,
+   "surprise": 0.1981,
+   "heps": null,
+   "heps_prior": null,
+   "unit": null,
+   "change": null,
+   "measure": null,
+   "dps": null,
+   "source": "Nasdaq",
+   "has_res": true,
+   "desk": true,
+   "rev_actual": 4571000000,
+   "rev_prior": 3738000000,
+   "g": "none",
+   "headline": "Revenue up 22% to a record $4.57bn on World Cup and political ads; adjusted EPS $2.54 beat $2.12 estimate; no formal guidance",
+   "rev_yoy": 0.2228,
+   "px_move": {
+    "move": -0.0043,
+    "from": "2026-10-30",
+    "to": "2026-11-02"
+   },
+   "t": "FOX",
+   "lists": [],
+   "idea": null,
+   "v": "STRONG BUY",
    "iv": "BUY",
    "lrc_rating": null,
    "covered": false
@@ -37293,7 +37289,7 @@
    "t": "AMG",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -37407,7 +37403,7 @@
    "t": "TGTX",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -37835,7 +37831,7 @@
    "t": "WAY",
    "lists": [],
    "idea": null,
-   "v": "STRONG BUY",
+   "v": "BUY",
    "iv": "BUY",
    "lrc_rating": null,
    "covered": false
@@ -38313,7 +38309,7 @@
    "t": "KTB",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -39027,7 +39023,7 @@
    "t": "VVX",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -39917,7 +39913,7 @@
    "t": "APPS",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -40558,7 +40554,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "SELL",
    "lrc_rating": null,
    "covered": false
   },
@@ -43085,7 +43081,7 @@
    "t": "IBRX",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "SELL",
    "lrc_rating": null,
    "covered": false
@@ -43880,7 +43876,7 @@
    "t": "XMTR",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "SELL",
    "lrc_rating": null,
    "covered": false
@@ -44965,7 +44961,7 @@
    "t": "CVI",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "BUY",
    "lrc_rating": null,
    "covered": false
@@ -46722,7 +46718,7 @@
    "t": "ADUS",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "BUY",
    "lrc_rating": null,
    "covered": false
@@ -48332,7 +48328,7 @@
    "headline": "Revenue up 7% to $836m on higher gold price; adjusted EPS $0.14 vs $0.07 estimate; 2026 AISC guidance lowered",
    "rev_yoy": 0.0677,
    "px_move": {
-    "move": 0.0333,
+    "move": 0.0313,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -48375,7 +48371,7 @@
    "headline": "Revenue up 46% to $655m, adjusted EPS $0.94 vs $0.40; production on track for 2026 midpoint, costs and capex at the high end",
    "rev_yoy": 0.4602,
    "px_move": {
-    "move": 0.0625,
+    "move": 0.0648,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -48547,7 +48543,7 @@
    "headline": "Sales up 17% to $293.4m; adjusted EPS $0.17 misses $0.29 estimate; production guidance reaffirmed, costs above",
    "rev_yoy": 0.1674,
    "px_move": {
-    "move": -0.0104,
+    "move": -0.0115,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -48590,7 +48586,7 @@
    "headline": "Quarterly sales up 9% to ¥13.4tn and operating profit up 34%; full-year profit forecast raised, revenue forecast trimmed",
    "rev_yoy": 0.0856,
    "px_move": {
-    "move": 0.1337,
+    "move": 0.1301,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -48630,7 +48626,7 @@
    "g": "given",
    "rev_yoy": 0.2714,
    "px_move": {
-    "move": -0.1324,
+    "move": -0.1309,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -48748,7 +48744,7 @@
    "g": "given",
    "rev_yoy": -0.0841,
    "px_move": {
-    "move": -0.0941,
+    "move": -0.0947,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -48828,7 +48824,7 @@
    "g": "raised",
    "rev_yoy": 0.0757,
    "px_move": {
-    "move": 0.0084,
+    "move": 0.0028,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -49022,7 +49018,7 @@
    "desk": false,
    "g": "not found",
    "px_move": {
-    "move": -0.1224,
+    "move": -0.1207,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -49062,7 +49058,7 @@
    "g": "raised",
    "rev_yoy": 0.122,
    "px_move": {
-    "move": 0.0408,
+    "move": 0.0402,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -49102,7 +49098,7 @@
    "g": "not found",
    "rev_yoy": -0.3874,
    "px_move": {
-    "move": -0.0428,
+    "move": -0.0435,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -49136,7 +49132,7 @@
    "dps": null,
    "source": null,
    "px_move": {
-    "move": -0.0947,
+    "move": -0.0942,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -49216,7 +49212,7 @@
    "g": "not found",
    "rev_yoy": 0.0054,
    "px_move": {
-    "move": -0.0059,
+    "move": -0.0089,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -49336,7 +49332,7 @@
    "g": "not found",
    "rev_yoy": 0.1821,
    "px_move": {
-    "move": -0.029,
+    "move": -0.0306,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -49376,7 +49372,7 @@
    "g": "given",
    "rev_yoy": -0.3099,
    "px_move": {
-    "move": 0.0056,
+    "move": 0.0072,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -49410,7 +49406,7 @@
    "dps": null,
    "source": null,
    "px_move": {
-    "move": 0.0699,
+    "move": 0.0702,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -49450,7 +49446,7 @@
    "g": "raised",
    "rev_yoy": 0.1046,
    "px_move": {
-    "move": 0.0134,
+    "move": 0.0144,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -49494,7 +49490,7 @@
    "t": "CVE",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "BUY",
    "lrc_rating": null,
    "covered": false
@@ -49561,7 +49557,7 @@
    "dps": null,
    "source": "Nasdaq",
    "px_move": {
-    "move": 0.0254,
+    "move": 0.024,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -49599,7 +49595,7 @@
    "rev_actual": 3847000000.0,
    "g": "not found",
    "px_move": {
-    "move": -0.1048,
+    "move": -0.1037,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -49753,7 +49749,7 @@
    "g": "given",
    "rev_yoy": 0.1584,
    "px_move": {
-    "move": -0.1333,
+    "move": -0.1297,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -49830,7 +49826,7 @@
    "g": "given",
    "rev_yoy": 0.2145,
    "px_move": {
-    "move": -0.0274,
+    "move": -0.0227,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -49870,7 +49866,7 @@
    "g": "given",
    "rev_yoy": 0.1192,
    "px_move": {
-    "move": -0.1377,
+    "move": -0.1374,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -49907,7 +49903,7 @@
    "desk": false,
    "g": "not found",
    "px_move": {
-    "move": 0.0014,
+    "move": 0.0019,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -50024,7 +50020,7 @@
    "desk": false,
    "g": "given",
    "px_move": {
-    "move": -0.0062,
+    "move": -0.0079,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -50064,7 +50060,7 @@
    "g": "not found",
    "rev_yoy": 0.0417,
    "px_move": {
-    "move": 0.0093,
+    "move": 0.0109,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -50104,7 +50100,7 @@
    "g": "raised",
    "rev_yoy": 0.1786,
    "px_move": {
-    "move": 0.0726,
+    "move": 0.0678,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -50138,7 +50134,7 @@
    "dps": null,
    "source": null,
    "px_move": {
-    "move": 0.0078,
+    "move": 0.0081,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -50175,7 +50171,7 @@
    "desk": false,
    "g": "given",
    "px_move": {
-    "move": 0.0216,
+    "move": 0.0207,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -50295,7 +50291,7 @@
    "g": "given",
    "rev_yoy": 0.0879,
    "px_move": {
-    "move": 0.0262,
+    "move": 0.025,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -50329,7 +50325,7 @@
    "dps": null,
    "source": null,
    "px_move": {
-    "move": 0.0285,
+    "move": 0.0274,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -50409,7 +50405,7 @@
    "g": "given",
    "rev_yoy": 0.0668,
    "px_move": {
-    "move": -0.0505,
+    "move": -0.0548,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -50449,7 +50445,7 @@
    "g": "not found",
    "rev_yoy": -0.2467,
    "px_move": {
-    "move": -0.0026,
+    "move": -0.0031,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -50602,13 +50598,13 @@
    "g": "raised",
    "rev_yoy": 0.8437,
    "px_move": {
-    "move": 0.0597,
+    "move": 0.0618,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
    "t": "RGLD",
    "lists": [],
-   "idea": null,
+   "idea": "Technical setups",
    "v": "HOLD",
    "iv": "HOLD",
    "lrc_rating": null,
@@ -50642,7 +50638,7 @@
    "g": "not found",
    "rev_yoy": 0.1111,
    "px_move": {
-    "move": -0.0431,
+    "move": -0.0535,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -50716,7 +50712,7 @@
    "desk": false,
    "g": "raised",
    "px_move": {
-    "move": -0.0455,
+    "move": -0.0486,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -50756,14 +50752,14 @@
    "g": "given",
    "rev_yoy": 0.4419,
    "px_move": {
-    "move": -0.0249,
+    "move": -0.0254,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
    "t": "ITT",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "SELL",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -50796,7 +50792,7 @@
    "g": "not found",
    "rev_yoy": 0.0639,
    "px_move": {
-    "move": -0.1289,
+    "move": -0.1335,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -50836,7 +50832,7 @@
    "g": "not found",
    "rev_yoy": 0.0639,
    "px_move": {
-    "move": -0.1312,
+    "move": -0.1324,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -50876,7 +50872,7 @@
    "g": "given",
    "rev_yoy": 0.012,
    "px_move": {
-    "move": -0.0563,
+    "move": -0.0567,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -51025,7 +51021,7 @@
    "g": "given",
    "rev_yoy": 0.1766,
    "px_move": {
-    "move": -0.021,
+    "move": -0.0219,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -51062,14 +51058,14 @@
    "desk": false,
    "g": "not found",
    "px_move": {
-    "move": 0.0627,
+    "move": 0.0618,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
    "t": "CF",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "BUY",
    "lrc_rating": null,
    "covered": false
@@ -51142,7 +51138,7 @@
    "g": "raised",
    "rev_yoy": 0.0967,
    "px_move": {
-    "move": -0.0374,
+    "move": -0.0403,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -51182,7 +51178,7 @@
    "g": "raised",
    "rev_yoy": 0.3092,
    "px_move": {
-    "move": -0.0209,
+    "move": -0.0227,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -51299,7 +51295,7 @@
    "desk": false,
    "g": "given",
    "px_move": {
-    "move": -0.0237,
+    "move": -0.023,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -51339,7 +51335,7 @@
    "g": "given",
    "rev_yoy": 0.274,
    "px_move": {
-    "move": 0.011,
+    "move": 0.0091,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -51379,7 +51375,7 @@
    "g": "given",
    "rev_yoy": 0.7737,
    "px_move": {
-    "move": 0.0007,
+    "move": 0.0034,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -51459,7 +51455,7 @@
    "g": "given",
    "rev_yoy": 0.0536,
    "px_move": {
-    "move": 0.0397,
+    "move": 0.0406,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -51499,7 +51495,7 @@
    "g": "given",
    "rev_yoy": 0.1322,
    "px_move": {
-    "move": -0.0903,
+    "move": -0.0929,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -51507,7 +51503,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "BUY",
+   "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
   },
@@ -51536,7 +51532,7 @@
    "desk": false,
    "g": "not found",
    "px_move": {
-    "move": -0.0905,
+    "move": -0.1019,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -51574,7 +51570,7 @@
    "rev_actual": 173831000.0,
    "g": "raised",
    "px_move": {
-    "move": -0.111,
+    "move": -0.1187,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -51648,7 +51644,7 @@
    "dps": null,
    "source": null,
    "px_move": {
-    "move": 0.0031,
+    "move": 0.0034,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -51688,7 +51684,7 @@
    "g": "given",
    "rev_yoy": 0.1024,
    "px_move": {
-    "move": -0.0708,
+    "move": -0.0679,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -51728,7 +51724,7 @@
    "g": "not found",
    "rev_yoy": 0.8971,
    "px_move": {
-    "move": -0.1183,
+    "move": -0.1198,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -51765,14 +51761,14 @@
    "desk": false,
    "g": "not found",
    "px_move": {
-    "move": -0.0331,
+    "move": -0.036,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
    "t": "SKM",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "SELL",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -51805,7 +51801,7 @@
    "g": "given",
    "rev_yoy": 0.4276,
    "px_move": {
-    "move": -0.1649,
+    "move": -0.1667,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -51880,14 +51876,14 @@
    "g": "not found",
    "rev_yoy": 0.0376,
    "px_move": {
-    "move": -0.0405,
+    "move": -0.0316,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
    "t": "UHAL",
    "lists": [],
    "idea": null,
-   "v": "SELL",
+   "v": "HOLD",
    "iv": "SELL",
    "lrc_rating": null,
    "covered": false
@@ -51920,7 +51916,7 @@
    "g": "raised",
    "rev_yoy": 0.1901,
    "px_move": {
-    "move": -0.0161,
+    "move": -0.0164,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -51957,7 +51953,7 @@
    "desk": false,
    "g": "given",
    "px_move": {
-    "move": 0.0138,
+    "move": 0.0141,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -52031,7 +52027,7 @@
    "dps": null,
    "source": "Nasdaq",
    "px_move": {
-    "move": 0.0004,
+    "move": 0.0,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -52071,7 +52067,7 @@
    "g": "raised",
    "rev_yoy": 0.321,
    "px_move": {
-    "move": 0.01,
+    "move": 0.0104,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -52111,7 +52107,7 @@
    "g": "given",
    "rev_yoy": 0.1876,
    "px_move": {
-    "move": 0.0339,
+    "move": 0.0358,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -52151,7 +52147,7 @@
    "g": "given",
    "rev_yoy": 0.1705,
    "px_move": {
-    "move": -0.0545,
+    "move": -0.0536,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -52299,7 +52295,7 @@
    "dps": null,
    "source": "Nasdaq",
    "px_move": {
-    "move": 0.0008,
+    "move": 0.0006,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -52336,7 +52332,7 @@
    "desk": false,
    "g": "not found",
    "px_move": {
-    "move": 0.0217,
+    "move": 0.0183,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -52411,7 +52407,7 @@
    "g": "given",
    "rev_yoy": 0.0052,
    "px_move": {
-    "move": -0.0282,
+    "move": -0.0289,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -52419,7 +52415,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "SELL",
+   "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
   },
@@ -52488,7 +52484,7 @@
    "desk": false,
    "g": "given",
    "px_move": {
-    "move": -0.0068,
+    "move": -0.0116,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -52528,7 +52524,7 @@
    "g": "given",
    "rev_yoy": 0.1431,
    "px_move": {
-    "move": -0.1377,
+    "move": -0.1402,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -52596,7 +52592,7 @@
    "dps": null,
    "source": "Nasdaq",
    "px_move": {
-    "move": 0.0198,
+    "move": 0.0227,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -52676,7 +52672,7 @@
    "g": "raised",
    "rev_yoy": 0.2699,
    "px_move": {
-    "move": -0.211,
+    "move": -0.2164,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -52716,7 +52712,7 @@
    "g": "lowered",
    "rev_yoy": 0.1826,
    "px_move": {
-    "move": 0.0924,
+    "move": 0.0939,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -52796,7 +52792,7 @@
    "g": "raised",
    "rev_yoy": 0.13,
    "px_move": {
-    "move": -0.1076,
+    "move": -0.105,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -52834,7 +52830,7 @@
    "rev_actual": 47557000.0,
    "g": "reaffirmed",
    "px_move": {
-    "move": -0.1237,
+    "move": -0.1266,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -52868,14 +52864,14 @@
    "dps": null,
    "source": null,
    "px_move": {
-    "move": -0.0344,
+    "move": -0.0338,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
    "t": "IBRX",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "SELL",
    "lrc_rating": null,
    "covered": false
@@ -52908,7 +52904,7 @@
    "g": "not found",
    "rev_yoy": 0.0736,
    "px_move": {
-    "move": 0.0116,
+    "move": 0.0158,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -52948,7 +52944,7 @@
    "g": "raised",
    "rev_yoy": 0.3316,
    "px_move": {
-    "move": 0.0147,
+    "move": 0.0128,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -53028,7 +53024,7 @@
    "g": "given",
    "rev_yoy": 0.2272,
    "px_move": {
-    "move": -0.0342,
+    "move": -0.0397,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -53188,7 +53184,7 @@
    "g": "given",
    "rev_yoy": 0.2981,
    "px_move": {
-    "move": -0.2087,
+    "move": -0.2141,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -53228,7 +53224,7 @@
    "g": "given",
    "rev_yoy": -0.0663,
    "px_move": {
-    "move": -0.0955,
+    "move": -0.094,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -53268,7 +53264,7 @@
    "g": "given",
    "rev_yoy": -0.0663,
    "px_move": {
-    "move": -0.1074,
+    "move": -0.1065,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -53302,7 +53298,7 @@
    "dps": null,
    "source": null,
    "px_move": {
-    "move": -0.0645,
+    "move": -0.0638,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -53376,7 +53372,7 @@
    "dps": null,
    "source": "Nasdaq",
    "px_move": {
-    "move": -0.0178,
+    "move": -0.0132,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -53456,7 +53452,7 @@
    "g": "given",
    "rev_yoy": 0.0269,
    "px_move": {
-    "move": -0.0324,
+    "move": -0.034,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -53493,7 +53489,7 @@
    "desk": false,
    "g": "given",
    "px_move": {
-    "move": -0.0297,
+    "move": -0.0336,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -53533,7 +53529,7 @@
    "g": "given",
    "rev_yoy": 0.0591,
    "px_move": {
-    "move": -0.1004,
+    "move": -0.1048,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -53573,7 +53569,7 @@
    "g": "given",
    "rev_yoy": 0.2197,
    "px_move": {
-    "move": -0.0381,
+    "move": -0.0318,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -53613,7 +53609,7 @@
    "g": "given",
    "rev_yoy": 0.3001,
    "px_move": {
-    "move": 0.0015,
+    "move": 0.0008,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -53653,7 +53649,7 @@
    "g": "not found",
    "rev_yoy": -0.0342,
    "px_move": {
-    "move": -0.0687,
+    "move": -0.0717,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -53727,7 +53723,7 @@
    "dps": null,
    "source": null,
    "px_move": {
-    "move": -0.0413,
+    "move": -0.0401,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -53767,7 +53763,7 @@
    "g": "given",
    "rev_yoy": 0.5143,
    "px_move": {
-    "move": -0.0229,
+    "move": -0.0335,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -53844,7 +53840,7 @@
    "g": "raised",
    "rev_yoy": -0.014,
    "px_move": {
-    "move": -0.0087,
+    "move": -0.0097,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -53884,7 +53880,7 @@
    "g": "reaffirmed",
    "rev_yoy": 0.0834,
    "px_move": {
-    "move": 0.0069,
+    "move": 0.0052,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -53924,7 +53920,7 @@
    "g": "not found",
    "rev_yoy": 0.0371,
    "px_move": {
-    "move": -0.1642,
+    "move": -0.1712,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -53964,7 +53960,7 @@
    "g": "raised",
    "rev_yoy": 0.2652,
    "px_move": {
-    "move": 0.0132,
+    "move": 0.0118,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -54004,7 +54000,7 @@
    "g": "given",
    "rev_yoy": 0.5815,
    "px_move": {
-    "move": 0.009,
+    "move": 0.0064,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -54082,14 +54078,14 @@
    "rev_actual": 387200000.0,
    "g": "given",
    "px_move": {
-    "move": -0.0234,
+    "move": -0.0257,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
    "t": "KVYO",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -54159,7 +54155,7 @@
    "g": "not found",
    "rev_yoy": -0.0178,
    "px_move": {
-    "move": 0.0058,
+    "move": 0.0076,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -54197,7 +54193,7 @@
    "rev_actual": 565600000.0,
    "g": "given",
    "px_move": {
-    "move": 0.0848,
+    "move": 0.0863,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -54231,7 +54227,7 @@
    "dps": null,
    "source": null,
    "px_move": {
-    "move": 0.0129,
+    "move": 0.0094,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -54348,7 +54344,7 @@
    "g": "given",
    "rev_yoy": 0.1017,
    "px_move": {
-    "move": -0.0097,
+    "move": -0.0138,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -54428,7 +54424,7 @@
    "g": "raised",
    "rev_yoy": 0.2154,
    "px_move": {
-    "move": -0.2057,
+    "move": -0.2042,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -54468,7 +54464,7 @@
    "g": "raised",
    "rev_yoy": 0.4731,
    "px_move": {
-    "move": -0.0202,
+    "move": -0.0132,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -54505,7 +54501,7 @@
    "desk": false,
    "g": "not found",
    "px_move": {
-    "move": -0.0019,
+    "move": -0.0038,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -54545,7 +54541,7 @@
    "g": "raised",
    "rev_yoy": 0.3946,
    "px_move": {
-    "move": -0.1105,
+    "move": -0.1066,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -54702,7 +54698,7 @@
    "g": "given",
    "rev_yoy": 0.1664,
    "px_move": {
-    "move": 0.0153,
+    "move": 0.0103,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -54776,7 +54772,7 @@
    "dps": null,
    "source": null,
    "px_move": {
-    "move": 0.0125,
+    "move": 0.0175,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -54853,7 +54849,7 @@
    "desk": false,
    "g": "raised",
    "px_move": {
-    "move": 0.0564,
+    "move": 0.0495,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -54893,7 +54889,7 @@
    "g": "given",
    "rev_yoy": 0.0951,
    "px_move": {
-    "move": 0.0015,
+    "move": 0.0002,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -54970,7 +54966,7 @@
    "desk": false,
    "g": "not found",
    "px_move": {
-    "move": 0.0058,
+    "move": 0.0037,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -55010,7 +55006,7 @@
    "g": "given",
    "rev_yoy": 0.0852,
    "px_move": {
-    "move": 0.0175,
+    "move": 0.0194,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -55202,7 +55198,7 @@
    "g": "reaffirmed",
    "rev_yoy": -0.0321,
    "px_move": {
-    "move": -0.1197,
+    "move": -0.1096,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -55242,7 +55238,7 @@
    "g": "raised",
    "rev_yoy": 0.4256,
    "px_move": {
-    "move": 0.1309,
+    "move": 0.1339,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -55282,7 +55278,7 @@
    "g": "given",
    "rev_yoy": 0.9123,
    "px_move": {
-    "move": 0.0006,
+    "move": 0.0043,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -55316,7 +55312,7 @@
    "dps": null,
    "source": null,
    "px_move": {
-    "move": -0.0003,
+    "move": -0.0006,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -55393,7 +55389,7 @@
    "desk": false,
    "g": "not found",
    "px_move": {
-    "move": -0.0245,
+    "move": -0.0266,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -55473,7 +55469,7 @@
    "g": "given",
    "rev_yoy": 0.0322,
    "px_move": {
-    "move": -0.0831,
+    "move": -0.082,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -55513,7 +55509,7 @@
    "g": "raised",
    "rev_yoy": 1.0444,
    "px_move": {
-    "move": -0.1201,
+    "move": -0.123,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -55553,7 +55549,7 @@
    "g": "given",
    "rev_yoy": 0.0862,
    "px_move": {
-    "move": -0.0016,
+    "move": -0.0018,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -55593,14 +55589,14 @@
    "g": "raised",
    "rev_yoy": 0.2154,
    "px_move": {
-    "move": -0.0277,
+    "move": -0.0154,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
    "t": "TPC",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -55633,7 +55629,7 @@
    "g": "given",
    "rev_yoy": -0.1072,
    "px_move": {
-    "move": 0.0075,
+    "move": 0.0045,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -55713,7 +55709,7 @@
    "g": "raised",
    "rev_yoy": 0.311,
    "px_move": {
-    "move": -0.1773,
+    "move": -0.1811,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -55753,7 +55749,7 @@
    "g": "given",
    "rev_yoy": 0.5659,
    "px_move": {
-    "move": -0.0048,
+    "move": -0.0015,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -55793,7 +55789,7 @@
    "g": "given",
    "rev_yoy": 0.1508,
    "px_move": {
-    "move": -0.5436,
+    "move": -0.543,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -55801,7 +55797,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "BUY",
+   "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
   },
@@ -55830,7 +55826,7 @@
    "desk": false,
    "g": "not found",
    "px_move": {
-    "move": 0.0395,
+    "move": 0.0316,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -55838,7 +55834,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "SELL",
+   "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
   },
@@ -55864,7 +55860,7 @@
    "dps": null,
    "source": null,
    "px_move": {
-    "move": -0.1421,
+    "move": -0.1438,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -55904,7 +55900,7 @@
    "g": "not found",
    "rev_yoy": 0.5324,
    "px_move": {
-    "move": -0.0402,
+    "move": -0.0411,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -55944,7 +55940,7 @@
    "g": "raised",
    "rev_yoy": 0.0,
    "px_move": {
-    "move": 0.0963,
+    "move": 0.0947,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -56058,7 +56054,7 @@
    "desk": false,
    "g": "not found",
    "px_move": {
-    "move": 0.0,
+    "move": -0.0045,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -56098,7 +56094,7 @@
    "g": "raised",
    "rev_yoy": -0.0975,
    "px_move": {
-    "move": 0.0327,
+    "move": 0.0306,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -56249,7 +56245,7 @@
    "dps": null,
    "source": null,
    "px_move": {
-    "move": -0.0988,
+    "move": -0.0993,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -56326,7 +56322,7 @@
    "g": "given",
    "rev_yoy": 0.0823,
    "px_move": {
-    "move": -0.0995,
+    "move": -0.0961,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -56366,7 +56362,7 @@
    "g": "initiated",
    "rev_yoy": -0.0113,
    "px_move": {
-    "move": 0.0191,
+    "move": 0.0245,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -56406,7 +56402,7 @@
    "g": "given",
    "rev_yoy": 0.5801,
    "px_move": {
-    "move": 0.0806,
+    "move": 0.0812,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -56443,7 +56439,7 @@
    "desk": false,
    "g": "not found",
    "px_move": {
-    "move": 0.0134,
+    "move": 0.0167,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -56483,7 +56479,7 @@
    "g": "given",
    "rev_yoy": 0.2285,
    "px_move": {
-    "move": -0.0112,
+    "move": -0.0107,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -56603,7 +56599,7 @@
    "g": "given",
    "rev_yoy": 0.0537,
    "px_move": {
-    "move": 0.0044,
+    "move": 0.0026,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -56683,7 +56679,7 @@
    "g": "given",
    "rev_yoy": 0.1168,
    "px_move": {
-    "move": -0.0341,
+    "move": -0.0378,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -56720,7 +56716,7 @@
    "desk": false,
    "g": "not found",
    "px_move": {
-    "move": -0.0371,
+    "move": -0.0382,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -56760,7 +56756,7 @@
    "g": "not found",
    "rev_yoy": -0.0729,
    "px_move": {
-    "move": -0.0299,
+    "move": -0.0305,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -56834,7 +56830,7 @@
    "dps": null,
    "source": null,
    "px_move": {
-    "move": -0.1337,
+    "move": -0.1424,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -56914,7 +56910,7 @@
    "g": "not found",
    "rev_yoy": 0.2021,
    "px_move": {
-    "move": -0.2695,
+    "move": -0.269,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -56954,7 +56950,7 @@
    "g": "raised",
    "rev_yoy": -0.0131,
    "px_move": {
-    "move": -0.0802,
+    "move": -0.0831,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -56991,7 +56987,7 @@
    "desk": false,
    "g": "given",
    "px_move": {
-    "move": -0.0312,
+    "move": -0.028,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -57031,7 +57027,7 @@
    "g": "given",
    "rev_yoy": 0.1376,
    "px_move": {
-    "move": 0.2119,
+    "move": 0.2075,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -57065,7 +57061,7 @@
    "dps": null,
    "source": null,
    "px_move": {
-    "move": -0.0099,
+    "move": -0.0132,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -57182,7 +57178,7 @@
    "g": "narrowed",
    "rev_yoy": 0.1689,
    "px_move": {
-    "move": -0.0753,
+    "move": -0.0803,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -57222,7 +57218,7 @@
    "g": "not found",
    "rev_yoy": 0.316,
    "px_move": {
-    "move": -0.1193,
+    "move": -0.125,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -57300,7 +57296,7 @@
    "rev_actual": 1555200000.0,
    "g": "given",
    "px_move": {
-    "move": 0.1239,
+    "move": 0.1268,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -57334,7 +57330,7 @@
    "dps": null,
    "source": "Nasdaq",
    "px_move": {
-    "move": -0.0232,
+    "move": -0.0243,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -57374,7 +57370,7 @@
    "g": "raised",
    "rev_yoy": 0.0513,
    "px_move": {
-    "move": 0.0831,
+    "move": 0.0788,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -57414,7 +57410,7 @@
    "g": "given",
    "rev_yoy": 0.282,
    "px_move": {
-    "move": -0.0685,
+    "move": -0.075,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -57494,7 +57490,7 @@
    "g": "given",
    "rev_yoy": 0.1716,
    "px_move": {
-    "move": 0.0671,
+    "move": 0.0676,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -57574,7 +57570,7 @@
    "g": "not found",
    "rev_yoy": 0.0838,
    "px_move": {
-    "move": 0.0613,
+    "move": 0.0599,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -57648,7 +57644,7 @@
    "dps": null,
    "source": null,
    "px_move": {
-    "move": 0.0257,
+    "move": 0.0263,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -57685,7 +57681,7 @@
    "desk": false,
    "g": "given",
    "px_move": {
-    "move": -0.0195,
+    "move": -0.0251,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -57725,7 +57721,7 @@
    "g": "given",
    "rev_yoy": 0.9679,
    "px_move": {
-    "move": -0.0741,
+    "move": -0.0767,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -57765,7 +57761,7 @@
    "g": "reaffirmed",
    "rev_yoy": -0.0256,
    "px_move": {
-    "move": -0.1016,
+    "move": -0.0958,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -57848,7 +57844,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "SELL",
+   "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
   },
@@ -57880,7 +57876,7 @@
    "g": "given",
    "rev_yoy": 0.055,
    "px_move": {
-    "move": -0.1754,
+    "move": -0.1701,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -57920,7 +57916,7 @@
    "g": "given",
    "rev_yoy": 0.0568,
    "px_move": {
-    "move": -0.1825,
+    "move": -0.1832,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -57960,7 +57956,7 @@
    "g": "given",
    "rev_yoy": 0.1102,
    "px_move": {
-    "move": 0.1062,
+    "move": 0.1049,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -57997,7 +57993,7 @@
    "desk": false,
    "g": "given",
    "px_move": {
-    "move": 0.111,
+    "move": 0.1113,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -58037,7 +58033,7 @@
    "g": "given",
    "rev_yoy": 0.5287,
    "px_move": {
-    "move": -0.0437,
+    "move": -0.0448,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -58071,7 +58067,7 @@
    "dps": null,
    "source": null,
    "px_move": {
-    "move": -0.0181,
+    "move": -0.0165,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -58111,7 +58107,7 @@
    "g": "not found",
    "rev_yoy": 0.132,
    "px_move": {
-    "move": -0.0553,
+    "move": -0.0519,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -58145,7 +58141,7 @@
    "dps": null,
    "source": "Nasdaq",
    "px_move": {
-    "move": -0.0477,
+    "move": -0.0508,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -58185,7 +58181,7 @@
    "g": "narrowed",
    "rev_yoy": -0.0841,
    "px_move": {
-    "move": -0.1283,
+    "move": -0.1359,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -58254,7 +58250,7 @@
    "g": "given",
    "rev_yoy": -0.6538,
    "px_move": {
-    "move": -0.0813,
+    "move": -0.0839,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -58294,7 +58290,7 @@
    "g": "raised",
    "rev_yoy": 0.4115,
    "px_move": {
-    "move": 0.0267,
+    "move": 0.0244,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -58332,7 +58328,7 @@
    "rev_actual": 18055000.0,
    "g": "reaffirmed",
    "px_move": {
-    "move": -0.0476,
+    "move": -0.0489,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -58366,7 +58362,7 @@
    "dps": null,
    "source": null,
    "px_move": {
-    "move": -0.0121,
+    "move": -0.0097,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -58446,7 +58442,7 @@
    "g": "raised",
    "rev_yoy": 0.0891,
    "px_move": {
-    "move": 0.1512,
+    "move": 0.1419,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -58515,7 +58511,7 @@
    "g": "given",
    "rev_yoy": 0.7113,
    "px_move": {
-    "move": 0.0746,
+    "move": 0.0743,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -58595,14 +58591,14 @@
    "g": "given",
    "rev_yoy": 0.2622,
    "px_move": {
-    "move": -0.0811,
+    "move": -0.0764,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
    "t": "VECO",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "SELL",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -58635,7 +58631,7 @@
    "g": "given",
    "rev_yoy": 0.2483,
    "px_move": {
-    "move": -0.0564,
+    "move": -0.0634,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -58755,7 +58751,7 @@
    "g": "given",
    "rev_yoy": 0.1829,
    "px_move": {
-    "move": 0.2599,
+    "move": 0.2629,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -58795,7 +58791,7 @@
    "g": "given",
    "rev_yoy": 0.0965,
    "px_move": {
-    "move": -0.0083,
+    "move": -0.0109,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -58835,7 +58831,7 @@
    "g": "given",
    "rev_yoy": 0.5175,
    "px_move": {
-    "move": 0.1429,
+    "move": 0.1371,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -58875,7 +58871,7 @@
    "g": "raised",
    "rev_yoy": 0.1872,
    "px_move": {
-    "move": 0.0592,
+    "move": 0.0585,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -58915,7 +58911,7 @@
    "g": "given",
    "rev_yoy": 0.1612,
    "px_move": {
-    "move": 0.0052,
+    "move": 0.0147,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -58955,7 +58951,7 @@
    "g": "given",
    "rev_yoy": -0.0226,
    "px_move": {
-    "move": 0.1128,
+    "move": 0.1232,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -58995,7 +58991,7 @@
    "g": "given",
    "rev_yoy": 0.6007,
    "px_move": {
-    "move": -0.148,
+    "move": -0.1424,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -59066,7 +59062,7 @@
    "dps": null,
    "source": null,
    "px_move": {
-    "move": 0.0468,
+    "move": 0.0462,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -59146,7 +59142,7 @@
    "g": "given",
    "rev_yoy": -0.259,
    "px_move": {
-    "move": -0.07,
+    "move": -0.0694,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -59186,7 +59182,7 @@
    "g": "given",
    "rev_yoy": 0.1134,
    "px_move": {
-    "move": 0.0334,
+    "move": 0.0359,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -59220,7 +59216,7 @@
    "dps": null,
    "source": "Nasdaq",
    "px_move": {
-    "move": -0.0651,
+    "move": -0.0631,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -59260,7 +59256,7 @@
    "g": "reaffirmed",
    "rev_yoy": 0.0542,
    "px_move": {
-    "move": -0.2383,
+    "move": -0.2377,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -59300,7 +59296,7 @@
    "g": "given",
    "rev_yoy": -0.0581,
    "px_move": {
-    "move": -0.2059,
+    "move": -0.2032,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -59337,7 +59333,7 @@
    "desk": false,
    "g": "given",
    "px_move": {
-    "move": -0.0196,
+    "move": -0.0178,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -59377,7 +59373,7 @@
    "g": "given",
    "rev_yoy": -0.0861,
    "px_move": {
-    "move": -0.086,
+    "move": -0.0865,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -59414,7 +59410,7 @@
    "desk": false,
    "g": "given",
    "px_move": {
-    "move": 0.0691,
+    "move": 0.07,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -59452,7 +59448,7 @@
    "rev_actual": 74148000.0,
    "g": "not found",
    "px_move": {
-    "move": -0.2029,
+    "move": -0.1962,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -59492,7 +59488,7 @@
    "g": "given",
    "rev_yoy": 0.074,
    "px_move": {
-    "move": -0.0167,
+    "move": -0.0143,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -59526,7 +59522,7 @@
    "dps": null,
    "source": null,
    "px_move": {
-    "move": -0.0919,
+    "move": -0.0898,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -59563,7 +59559,7 @@
    "desk": false,
    "g": "given",
    "px_move": {
-    "move": -0.1494,
+    "move": -0.1519,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -59603,7 +59599,7 @@
    "g": "raised",
    "rev_yoy": 0.0305,
    "px_move": {
-    "move": 0.3501,
+    "move": 0.3578,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -59643,7 +59639,7 @@
    "g": "not found",
    "rev_yoy": 0.0036,
    "px_move": {
-    "move": 0.034,
+    "move": 0.0277,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -59683,7 +59679,7 @@
    "g": "not found",
    "rev_yoy": 0.0036,
    "px_move": {
-    "move": 0.0246,
+    "move": 0.0206,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -59723,7 +59719,7 @@
    "g": "given",
    "rev_yoy": 0.0,
    "px_move": {
-    "move": -0.0171,
+    "move": -0.0188,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -59763,7 +59759,7 @@
    "g": "not found",
    "rev_yoy": 0.4039,
    "px_move": {
-    "move": -0.1236,
+    "move": -0.1198,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -59841,7 +59837,7 @@
    "rev_actual": 89001000.0,
    "g": "given",
    "px_move": {
-    "move": -0.2485,
+    "move": -0.252,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -59878,7 +59874,7 @@
    "desk": false,
    "g": "raised",
    "px_move": {
-    "move": 0.0188,
+    "move": 0.0275,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -59915,7 +59911,7 @@
    "desk": false,
    "g": "not found",
    "px_move": {
-    "move": -0.0318,
+    "move": -0.0326,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -59955,7 +59951,7 @@
    "g": "not found",
    "rev_yoy": -0.1038,
    "px_move": {
-    "move": 0.0869,
+    "move": 0.0857,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -59993,7 +59989,7 @@
    "rev_actual": 44951000.0,
    "g": "not found",
    "px_move": {
-    "move": -0.0885,
+    "move": -0.1066,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -60033,7 +60029,7 @@
    "g": "not found",
    "rev_yoy": 0.0004,
    "px_move": {
-    "move": -0.0304,
+    "move": -0.0315,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -60073,7 +60069,7 @@
    "g": "given",
    "rev_yoy": 0.0586,
    "px_move": {
-    "move": 0.2769,
+    "move": 0.2963,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -60107,7 +60103,7 @@
    "dps": null,
    "source": null,
    "px_move": {
-    "move": -0.1418,
+    "move": -0.1425,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -60144,7 +60140,7 @@
    "desk": false,
    "g": "not found",
    "px_move": {
-    "move": 0.015,
+    "move": 0.0132,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -60184,7 +60180,7 @@
    "g": "given",
    "rev_yoy": -0.0156,
    "px_move": {
-    "move": -0.0798,
+    "move": -0.0807,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -60218,7 +60214,7 @@
    "dps": null,
    "source": null,
    "px_move": {
-    "move": -0.0587,
+    "move": -0.0572,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -60258,7 +60254,7 @@
    "g": "reaffirmed",
    "rev_yoy": 0.0629,
    "px_move": {
-    "move": -0.0603,
+    "move": -0.0598,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -60298,7 +60294,7 @@
    "g": "reaffirmed",
    "rev_yoy": 0.0436,
    "px_move": {
-    "move": -0.039,
+    "move": -0.0367,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -60335,7 +60331,7 @@
    "desk": false,
    "g": "not found",
    "px_move": {
-    "move": 0.0387,
+    "move": 0.0405,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -60369,7 +60365,7 @@
    "dps": null,
    "source": null,
    "px_move": {
-    "move": -0.0243,
+    "move": -0.0225,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -60406,7 +60402,7 @@
    "desk": false,
    "g": "not found",
    "px_move": {
-    "move": -0.0463,
+    "move": -0.0469,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -60446,7 +60442,7 @@
    "g": "not found",
    "rev_yoy": 0.3196,
    "px_move": {
-    "move": -0.0403,
+    "move": -0.0289,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -60486,7 +60482,7 @@
    "g": "given",
    "rev_yoy": 0.4382,
    "px_move": {
-    "move": 0.0643,
+    "move": 0.062,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -60526,7 +60522,7 @@
    "g": "not found",
    "rev_yoy": 0.8169,
    "px_move": {
-    "move": 0.0106,
+    "move": 0.0089,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -60566,7 +60562,7 @@
    "g": "given",
    "rev_yoy": 0.4278,
    "px_move": {
-    "move": -0.1351,
+    "move": -0.1337,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -60606,7 +60602,7 @@
    "g": "raised",
    "rev_yoy": 0.3016,
    "px_move": {
-    "move": 0.0367,
+    "move": 0.039,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -60646,7 +60642,7 @@
    "g": "not found",
    "rev_yoy": -0.037,
    "px_move": {
-    "move": 0.0056,
+    "move": 0.0023,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -60686,7 +60682,7 @@
    "g": "not found",
    "rev_yoy": 0.2022,
    "px_move": {
-    "move": -0.1015,
+    "move": -0.0937,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -60723,7 +60719,7 @@
    "desk": false,
    "g": "not found",
    "px_move": {
-    "move": 0.0612,
+    "move": 0.0616,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -60757,7 +60753,7 @@
    "dps": null,
    "source": null,
    "px_move": {
-    "move": 0.0012,
+    "move": 0.0,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -60791,7 +60787,7 @@
    "dps": null,
    "source": null,
    "px_move": {
-    "move": 0.1495,
+    "move": 0.147,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -60825,7 +60821,7 @@
    "dps": null,
    "source": null,
    "px_move": {
-    "move": 0.0643,
+    "move": 0.0631,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -60863,7 +60859,7 @@
    "rev_actual": 308800000.0,
    "g": "given",
    "px_move": {
-    "move": -0.1863,
+    "move": -0.1781,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -60903,7 +60899,7 @@
    "g": "not found",
    "rev_yoy": -0.058,
    "px_move": {
-    "move": 0.0009,
+    "move": 0.0015,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -60943,7 +60939,7 @@
    "g": "given",
    "rev_yoy": -0.2124,
    "px_move": {
-    "move": -0.1026,
+    "move": -0.0919,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -60981,7 +60977,7 @@
    "rev_actual": 137809000.0,
    "g": "given",
    "px_move": {
-    "move": -0.0546,
+    "move": -0.0572,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -61021,7 +61017,7 @@
    "g": "given",
    "rev_yoy": 0.9001,
    "px_move": {
-    "move": 0.0161,
+    "move": 0.0194,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -61058,7 +61054,7 @@
    "desk": false,
    "g": "not found",
    "px_move": {
-    "move": -0.0404,
+    "move": -0.0412,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -61095,7 +61091,7 @@
    "desk": false,
    "g": "not found",
    "px_move": {
-    "move": -0.0169,
+    "move": -0.0249,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -61175,7 +61171,7 @@
    "g": "given",
    "rev_yoy": 0.2404,
    "px_move": {
-    "move": 0.0121,
+    "move": 0.008,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -61212,7 +61208,7 @@
    "desk": false,
    "g": "given",
    "px_move": {
-    "move": -0.0174,
+    "move": -0.0181,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -61252,7 +61248,7 @@
    "g": "reaffirmed",
    "rev_yoy": 0.1796,
    "px_move": {
-    "move": 0.0005,
+    "move": 0.005,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -61292,7 +61288,7 @@
    "g": "given",
    "rev_yoy": 0.0254,
    "px_move": {
-    "move": 0.2606,
+    "move": 0.2597,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -61332,7 +61328,7 @@
    "g": "given",
    "rev_yoy": 0.4576,
    "px_move": {
-    "move": 0.1121,
+    "move": 0.111,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -61398,7 +61394,7 @@
    "desk": false,
    "g": "not found",
    "px_move": {
-    "move": 0.0378,
+    "move": 0.0404,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -61438,7 +61434,7 @@
    "g": "not found",
    "rev_yoy": -0.0095,
    "px_move": {
-    "move": 0.0478,
+    "move": 0.0404,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -61472,7 +61468,7 @@
    "dps": null,
    "source": null,
    "px_move": {
-    "move": -0.0598,
+    "move": -0.0624,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -61539,7 +61535,7 @@
    "rev_actual": 108512000.0,
    "g": "reaffirmed",
    "px_move": {
-    "move": -0.0557,
+    "move": -0.0616,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -61579,7 +61575,7 @@
    "g": "given",
    "rev_yoy": 0.2463,
    "px_move": {
-    "move": 0.0129,
+    "move": 0.0087,
     "from": "2026-11-03",
     "to": "2026-11-05"
    },
@@ -61702,11 +61698,51 @@
    "rev_yoy": -0.2582,
    "t": "WTM",
    "lists": [
+    "Trading BUY",
     "Investment BUY"
    ],
    "idea": "Score leaders",
-   "v": "HOLD",
+   "v": "STRONG BUY",
    "iv": "BUY",
+   "lrc_rating": null,
+   "covered": true
+  },
+  {
+   "date": "2026-11-05",
+   "ticker": "PURR",
+   "name": "Hyperliquid Strategies Inc",
+   "when": "After close",
+   "period": "",
+   "quarter": "Sep/2026",
+   "eps_forecast": "$2.10",
+   "market_cap_bn": 2.7,
+   "reported": true,
+   "result": "miss",
+   "eps_actual": -0.8567,
+   "eps_est": 0.7767,
+   "surprise": -2.103,
+   "heps": null,
+   "heps_prior": null,
+   "unit": null,
+   "change": null,
+   "measure": null,
+   "dps": null,
+   "source": null,
+   "rev_est": 11216750,
+   "rev_est_low": 8600000,
+   "rev_est_high": 15067000,
+   "n_est": 4,
+   "rcur": "USD",
+   "has_res": true,
+   "desk": false,
+   "g": "not found",
+   "t": "PURR",
+   "lists": [
+    "Trading BUY"
+   ],
+   "idea": null,
+   "v": "BUY",
+   "iv": "HOLD",
    "lrc_rating": null,
    "covered": true
   },
@@ -61771,14 +61807,14 @@
    "desk": false,
    "g": "given",
    "px_move": {
-    "move": -0.008,
+    "move": -0.0102,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
    "t": "COP",
    "lists": [],
-   "idea": "Earnings watch",
-   "v": "HOLD",
+   "idea": null,
+   "v": "BUY",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -61808,14 +61844,14 @@
    "desk": false,
    "g": "not found",
    "px_move": {
-    "move": 0.0605,
+    "move": 0.0613,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
    "t": "SONY",
    "lists": [],
-   "idea": "Earnings watch",
-   "v": "HOLD",
+   "idea": null,
+   "v": "BUY",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -61857,7 +61893,7 @@
    "rev_yoy": 0.1665,
    "t": "MNST",
    "lists": [],
-   "idea": "Earnings watch",
+   "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
    "lrc_rating": null,
@@ -61891,7 +61927,7 @@
    "g": "raised",
    "rev_yoy": 0.1962,
    "px_move": {
-    "move": -0.0177,
+    "move": -0.0197,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -61931,7 +61967,7 @@
    "g": "not found",
    "rev_yoy": 0.1304,
    "px_move": {
-    "move": 0.0037,
+    "move": 0.0024,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -61975,7 +62011,7 @@
    "g": "given",
    "t": "ABNB",
    "lists": [],
-   "idea": "Earnings watch",
+   "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
    "lrc_rating": null,
@@ -62012,13 +62048,13 @@
    "desk": false,
    "g": "not found",
    "px_move": {
-    "move": -0.0133,
+    "move": -0.0145,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
    "t": "CNQ",
    "lists": [],
-   "idea": "Earnings watch",
+   "idea": null,
    "v": "HOLD",
    "iv": "BUY",
    "lrc_rating": null,
@@ -62052,13 +62088,13 @@
    "g": "narrowed",
    "rev_yoy": 0.0658,
    "px_move": {
-    "move": 0.0062,
+    "move": 0.0039,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
    "t": "DUK",
    "lists": [],
-   "idea": "Earnings watch",
+   "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
    "lrc_rating": null,
@@ -62162,14 +62198,14 @@
    "g": "raised",
    "rev_yoy": 0.0564,
    "px_move": {
-    "move": -0.0102,
+    "move": -0.0128,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
    "t": "CI",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -62313,7 +62349,7 @@
    "g": "given",
    "rev_yoy": 0.1227,
    "px_move": {
-    "move": -0.0241,
+    "move": -0.0295,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -62353,7 +62389,7 @@
    "g": "reaffirmed",
    "rev_yoy": -0.0039,
    "px_move": {
-    "move": 0.0147,
+    "move": 0.0156,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -62393,7 +62429,7 @@
    "g": "given",
    "rev_yoy": 0.1348,
    "px_move": {
-    "move": -0.057,
+    "move": -0.0492,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -62430,7 +62466,7 @@
    "desk": false,
    "g": "given",
    "px_move": {
-    "move": 0.0005,
+    "move": -0.0005,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -62452,10 +62488,10 @@
    "eps_forecast": "$2.81",
    "market_cap_bn": 61.1,
    "reported": true,
-   "result": null,
-   "eps_actual": null,
-   "eps_est": null,
-   "surprise": null,
+   "result": "beat",
+   "eps_actual": 2.961,
+   "eps_est": 2.858,
+   "surprise": 0.036,
    "heps": null,
    "heps_prior": null,
    "unit": null,
@@ -62470,7 +62506,7 @@
    "g": "given",
    "rev_yoy": 0.3487,
    "px_move": {
-    "move": -0.0439,
+    "move": -0.0463,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -62510,14 +62546,14 @@
    "g": "raised",
    "rev_yoy": 0.0547,
    "px_move": {
-    "move": 0.0283,
+    "move": 0.0225,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
    "t": "CAH",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -62585,14 +62621,14 @@
    "g": "given",
    "rev_yoy": 0.0537,
    "px_move": {
-    "move": 0.0182,
+    "move": 0.021,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
    "t": "BDX",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -62635,7 +62671,7 @@
    "t": "NTRA",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -62668,7 +62704,7 @@
    "g": "given",
    "rev_yoy": 0.0127,
    "px_move": {
-    "move": -0.0311,
+    "move": -0.037,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -62705,7 +62741,7 @@
    "desk": false,
    "g": "initiated",
    "px_move": {
-    "move": -0.1462,
+    "move": -0.1415,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -62826,7 +62862,7 @@
    "g": "given",
    "rev_yoy": -0.0176,
    "px_move": {
-    "move": -0.0347,
+    "move": -0.0331,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -62863,7 +62899,7 @@
    "desk": false,
    "g": "not found",
    "px_move": {
-    "move": 0.0105,
+    "move": 0.0074,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -62984,13 +63020,13 @@
    "g": "given",
    "rev_yoy": 0.3381,
    "px_move": {
-    "move": 0.027,
+    "move": 0.0249,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
    "t": "ONC",
    "lists": [],
-   "idea": "Technical setups",
+   "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
    "lrc_rating": null,
@@ -63098,7 +63134,7 @@
    "g": "raised",
    "rev_yoy": -0.0128,
    "px_move": {
-    "move": -0.0799,
+    "move": -0.0795,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -63135,7 +63171,7 @@
    "desk": false,
    "g": "raised",
    "px_move": {
-    "move": -0.107,
+    "move": -0.1112,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -63263,7 +63299,7 @@
    "desk": false,
    "g": "reaffirmed",
    "px_move": {
-    "move": -0.0426,
+    "move": -0.0432,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -63372,7 +63408,7 @@
    "desk": false,
    "g": "reaffirmed",
    "px_move": {
-    "move": -0.0204,
+    "move": -0.0189,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -63455,7 +63491,7 @@
    "g": "given",
    "rev_yoy": 0.0534,
    "px_move": {
-    "move": 0.0723,
+    "move": 0.0693,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -63533,14 +63569,14 @@
    "g": "given",
    "rev_yoy": 0.6372,
    "px_move": {
-    "move": -0.0036,
+    "move": -0.0116,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
    "t": "GPN",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -63573,7 +63609,7 @@
    "g": "raised",
    "rev_yoy": 0.1109,
    "px_move": {
-    "move": 0.075,
+    "move": 0.071,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -63613,7 +63649,7 @@
    "g": "raised",
    "rev_yoy": 0.0908,
    "px_move": {
-    "move": -0.0667,
+    "move": -0.0735,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -63653,7 +63689,7 @@
    "g": "given",
    "rev_yoy": 0.0207,
    "px_move": {
-    "move": -0.0237,
+    "move": -0.0282,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -63701,7 +63737,7 @@
    "rev_result": "miss",
    "rev_yoy": 0.13,
    "px_move": {
-    "move": 0.0932,
+    "move": 0.0955,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -63749,7 +63785,7 @@
    "rev_result": "miss",
    "rev_yoy": 0.13,
    "px_move": {
-    "move": 0.0735,
+    "move": 0.0765,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -63832,7 +63868,7 @@
    "g": "given",
    "rev_yoy": -0.0028,
    "px_move": {
-    "move": -0.014,
+    "move": -0.013,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -63935,7 +63971,7 @@
    "desk": false,
    "g": "reaffirmed",
    "px_move": {
-    "move": 0.0431,
+    "move": 0.0436,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -64012,7 +64048,7 @@
    "rev_result": "beat",
    "rev_yoy": 0.3219,
    "px_move": {
-    "move": 0.1399,
+    "move": 0.1493,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -64121,7 +64157,7 @@
    "t": "CF",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "BUY",
    "lrc_rating": null,
    "covered": false
@@ -64154,7 +64190,7 @@
    "g": "given",
    "rev_yoy": 0.2413,
    "px_move": {
-    "move": -0.1815,
+    "move": -0.1836,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -64219,10 +64255,10 @@
    "eps_forecast": "$0.35",
    "market_cap_bn": 17.1,
    "reported": true,
-   "result": null,
-   "eps_actual": null,
-   "eps_est": null,
-   "surprise": null,
+   "result": "beat",
+   "eps_actual": 0.42,
+   "eps_est": 0.3713,
+   "surprise": 0.1312,
    "heps": null,
    "heps_prior": null,
    "unit": null,
@@ -64315,7 +64351,7 @@
    "g": "raised",
    "rev_yoy": 0.0665,
    "px_move": {
-    "move": -0.0088,
+    "move": -0.0082,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -64358,7 +64394,7 @@
    "desk": false,
    "g": "given",
    "px_move": {
-    "move": -0.066,
+    "move": -0.0653,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -64551,7 +64587,7 @@
    "g": "given",
    "rev_yoy": 0.1224,
    "px_move": {
-    "move": 0.0309,
+    "move": 0.0298,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -64677,7 +64713,7 @@
    "rev_result": "beat",
    "rev_yoy": 0.6085,
    "px_move": {
-    "move": 0.0243,
+    "move": 0.0263,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -64897,7 +64933,7 @@
    "t": "SUZ",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -64972,7 +65008,7 @@
    "t": "SKM",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "SELL",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -65118,14 +65154,14 @@
    "g": "raised",
    "rev_yoy": 0.7211,
    "px_move": {
-    "move": -0.0574,
+    "move": -0.0571,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
    "t": "OSCR",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "STRONG BUY",
    "iv": "BUY",
    "lrc_rating": null,
    "covered": false
@@ -65158,7 +65194,7 @@
    "g": "given",
    "rev_yoy": 0.0459,
    "px_move": {
-    "move": -0.143,
+    "move": -0.1492,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -65282,7 +65318,7 @@
    "rev_result": "beat",
    "rev_yoy": 0.3897,
    "px_move": {
-    "move": -0.1278,
+    "move": -0.1259,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -65443,7 +65479,7 @@
    "rev_result": "beat",
    "rev_yoy": 0.2815,
    "px_move": {
-    "move": -0.0531,
+    "move": -0.0511,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -65488,7 +65524,7 @@
    "t": "PTGX",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -65730,7 +65766,7 @@
    "t": "IBRX",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "SELL",
    "lrc_rating": null,
    "covered": false
@@ -65847,14 +65883,14 @@
    "rev_actual": 986778000.0,
    "g": "not found",
    "px_move": {
-    "move": 0.0153,
+    "move": 0.0173,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
    "t": "VIRT",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "BUY",
    "lrc_rating": null,
    "covered": false
@@ -65897,7 +65933,7 @@
    "t": "DBX",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -65930,7 +65966,7 @@
    "g": "given",
    "rev_yoy": -0.0732,
    "px_move": {
-    "move": -0.19,
+    "move": -0.1907,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -65970,7 +66006,7 @@
    "g": "not found",
    "rev_yoy": -0.0291,
    "px_move": {
-    "move": -0.0563,
+    "move": -0.0587,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -66010,7 +66046,7 @@
    "g": "given",
    "rev_yoy": -0.0158,
    "px_move": {
-    "move": -0.0209,
+    "move": -0.0211,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -66053,7 +66089,7 @@
    "desk": false,
    "g": "not found",
    "px_move": {
-    "move": -0.0237,
+    "move": -0.0231,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -66061,7 +66097,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "BUY",
    "lrc_rating": null,
    "covered": false
   },
@@ -66125,7 +66161,7 @@
    "desk": false,
    "g": "given",
    "px_move": {
-    "move": -0.0331,
+    "move": -0.0325,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -66208,7 +66244,7 @@
    "g": "given",
    "rev_yoy": 0.0311,
    "px_move": {
-    "move": 0.0461,
+    "move": 0.0538,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -66243,7 +66279,7 @@
    "source": null,
    "t": "MSGK",
    "lists": [],
-   "idea": null,
+   "idea": "Earnings watch",
    "v": "HOLD",
    "iv": "SELL",
    "lrc_rating": null,
@@ -66277,14 +66313,14 @@
    "g": "given",
    "rev_yoy": 0.023,
    "px_move": {
-    "move": 0.2132,
+    "move": 0.206,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
    "t": "EPAM",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -66327,7 +66363,7 @@
    "t": "LYFT",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -66370,7 +66406,7 @@
    "t": "G",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "BUY",
    "lrc_rating": null,
    "covered": false
@@ -66403,14 +66439,14 @@
    "g": "not found",
    "rev_yoy": -0.0396,
    "px_move": {
-    "move": -0.0203,
+    "move": -0.0177,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
    "t": "OTEX",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "BUY",
    "lrc_rating": null,
    "covered": false
@@ -66453,7 +66489,7 @@
    "t": "LNTH",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "BUY",
    "lrc_rating": null,
    "covered": false
@@ -66486,7 +66522,7 @@
    "g": "raised",
    "rev_yoy": 0.3899,
    "px_move": {
-    "move": 0.0346,
+    "move": 0.0469,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -66526,7 +66562,7 @@
    "g": "given",
    "rev_yoy": 0.0599,
    "px_move": {
-    "move": 0.0324,
+    "move": 0.0336,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -66609,7 +66645,7 @@
    "g": "raised",
    "rev_yoy": 0.0015,
    "px_move": {
-    "move": 0.018,
+    "move": 0.0153,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -66649,7 +66685,7 @@
    "g": "not found",
    "rev_yoy": 0.011,
    "px_move": {
-    "move": -0.0239,
+    "move": -0.0229,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -66689,7 +66725,7 @@
    "g": "not found",
    "rev_yoy": 0.0388,
    "px_move": {
-    "move": -0.0595,
+    "move": -0.0523,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -66697,7 +66733,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "SELL",
    "lrc_rating": null,
    "covered": false
   },
@@ -66883,7 +66919,7 @@
    "t": "HRB",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -66916,7 +66952,7 @@
    "g": "given",
    "rev_yoy": -0.0132,
    "px_move": {
-    "move": 0.003,
+    "move": 0.0006,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -66956,7 +66992,7 @@
    "g": "given",
    "rev_yoy": -0.1152,
    "px_move": {
-    "move": 0.0049,
+    "move": 0.0056,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -67023,7 +67059,7 @@
    "rev_actual": 357800000.0,
    "g": "given",
    "px_move": {
-    "move": -0.0322,
+    "move": -0.0259,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -67109,7 +67145,7 @@
    "rev_result": "beat",
    "rev_yoy": 0.7805,
    "px_move": {
-    "move": 0.0167,
+    "move": 0.0157,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -67286,7 +67322,7 @@
    "rev_result": "beat",
    "rev_yoy": 0.2532,
    "px_move": {
-    "move": -0.0535,
+    "move": -0.0549,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -67331,7 +67367,7 @@
    "t": "MAIN",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "BUY",
    "lrc_rating": null,
    "covered": false
@@ -67364,7 +67400,7 @@
    "g": "given",
    "rev_yoy": 0.1299,
    "px_move": {
-    "move": -0.0692,
+    "move": -0.0719,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -67450,14 +67486,14 @@
    "desk": false,
    "g": "given",
    "px_move": {
-    "move": -0.0751,
+    "move": -0.0765,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
    "t": "MRX",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -67490,7 +67526,7 @@
    "g": "raised",
    "rev_yoy": 0.2184,
    "px_move": {
-    "move": -0.1321,
+    "move": -0.1304,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -67556,7 +67592,7 @@
    "desk": false,
    "g": "not found",
    "px_move": {
-    "move": -0.0458,
+    "move": -0.0492,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -67564,7 +67600,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "BUY",
+   "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
   },
@@ -67596,7 +67632,7 @@
    "g": "raised",
    "rev_yoy": -0.0207,
    "px_move": {
-    "move": 0.0585,
+    "move": 0.0617,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -67878,7 +67914,7 @@
    "g": "not found",
    "rev_yoy": 0.2359,
    "px_move": {
-    "move": 0.021,
+    "move": 0.0014,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -68084,14 +68120,14 @@
    "rev_result": "miss",
    "rev_yoy": 0.0283,
    "px_move": {
-    "move": -0.0305,
+    "move": -0.0339,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
    "t": "KTB",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -68177,7 +68213,7 @@
    "t": "IRTC",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -68251,7 +68287,7 @@
    "rev_actual": 56000000.0,
    "g": "not found",
    "px_move": {
-    "move": 0.0198,
+    "move": 0.0233,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -68320,7 +68356,7 @@
    "g": "given",
    "rev_yoy": 0.042,
    "px_move": {
-    "move": 0.0395,
+    "move": 0.0408,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -68403,7 +68439,7 @@
    "g": "given",
    "rev_yoy": 0.0897,
    "px_move": {
-    "move": 0.0467,
+    "move": 0.0476,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -68443,7 +68479,7 @@
    "g": "reaffirmed",
    "rev_yoy": 0.1038,
    "px_move": {
-    "move": -0.0631,
+    "move": -0.0651,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -68491,7 +68527,7 @@
    "rev_result": "beat",
    "rev_yoy": 0.4184,
    "px_move": {
-    "move": -0.1042,
+    "move": -0.1082,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -68531,7 +68567,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "SELL",
+   "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
   },
@@ -68633,7 +68669,7 @@
    "g": "given",
    "rev_yoy": 0.6349,
    "px_move": {
-    "move": -0.0706,
+    "move": -0.0625,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -68673,7 +68709,7 @@
    "g": "raised",
    "rev_yoy": 0.1383,
    "px_move": {
-    "move": 0.0276,
+    "move": 0.0294,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -68721,7 +68757,7 @@
    "rev_result": "beat",
    "rev_yoy": 0.8007,
    "px_move": {
-    "move": -0.1144,
+    "move": -0.1103,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -68761,7 +68797,7 @@
    "g": "not found",
    "rev_yoy": 0.045,
    "px_move": {
-    "move": 0.0368,
+    "move": 0.0322,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -68878,7 +68914,7 @@
    "desk": false,
    "g": "not found",
    "px_move": {
-    "move": -0.0599,
+    "move": -0.0605,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -68964,7 +69000,7 @@
    "desk": false,
    "g": "given",
    "px_move": {
-    "move": 0.0305,
+    "move": 0.0657,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -69077,7 +69113,7 @@
    "g": "given",
    "rev_yoy": 0.2547,
    "px_move": {
-    "move": 0.0811,
+    "move": 0.0845,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -69206,14 +69242,14 @@
    "desk": false,
    "g": "raised",
    "px_move": {
-    "move": -0.0865,
+    "move": -0.0857,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
    "t": "GEO",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -69243,7 +69279,7 @@
    "desk": false,
    "g": "given",
    "px_move": {
-    "move": -0.1002,
+    "move": -0.0963,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -69321,7 +69357,7 @@
    "desk": false,
    "g": "lowered",
    "px_move": {
-    "move": -0.0395,
+    "move": -0.0453,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -69555,7 +69591,7 @@
    "g": "given",
    "rev_yoy": 0.1561,
    "px_move": {
-    "move": -0.1718,
+    "move": -0.1701,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -69690,7 +69726,7 @@
    "t": "NMIH",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "BUY",
    "lrc_rating": null,
    "covered": false
@@ -69873,7 +69909,7 @@
    "desk": false,
    "g": "not found",
    "px_move": {
-    "move": 0.0236,
+    "move": 0.0175,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -69923,7 +69959,7 @@
    "t": "TDC",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "BUY",
    "lrc_rating": null,
    "covered": false
@@ -69964,14 +70000,14 @@
    "rev_result": "miss",
    "rev_yoy": -0.0118,
    "px_move": {
-    "move": -0.0536,
+    "move": -0.0518,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
    "t": "AAP",
    "lists": [],
    "idea": null,
-   "v": "SELL",
+   "v": "HOLD",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -70004,7 +70040,7 @@
    "g": "raised",
    "rev_yoy": 0.3661,
    "px_move": {
-    "move": -0.1087,
+    "move": -0.1152,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -70077,7 +70113,7 @@
    "rev_actual": 423273000.0,
    "g": "not found",
    "px_move": {
-    "move": -0.0389,
+    "move": -0.0412,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -70156,7 +70192,7 @@
    "t": "CALY",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -70233,7 +70269,7 @@
    "t": "SPNT",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -70312,7 +70348,7 @@
    "rev_result": "beat",
    "rev_yoy": 0.132,
    "px_move": {
-    "move": 0.0652,
+    "move": 0.0688,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -70352,7 +70388,7 @@
    "g": "given",
    "rev_yoy": 0.1131,
    "px_move": {
-    "move": -0.0348,
+    "move": -0.0232,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -70440,7 +70476,7 @@
    "g": "not found",
    "rev_yoy": 0.143,
    "px_move": {
-    "move": -0.154,
+    "move": -0.161,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -70488,7 +70524,7 @@
    "rev_result": "beat",
    "rev_yoy": 0.6364,
    "px_move": {
-    "move": -0.0674,
+    "move": -0.0701,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -70528,7 +70564,7 @@
    "g": "reaffirmed",
    "rev_yoy": 0.0145,
    "px_move": {
-    "move": -0.1643,
+    "move": -0.1646,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -70577,7 +70613,7 @@
    "t": "SKWD",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -70703,7 +70739,7 @@
    "rev_result": "beat",
    "rev_yoy": 0.5727,
    "px_move": {
-    "move": -0.0198,
+    "move": -0.0154,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -70712,43 +70748,6 @@
    "idea": null,
    "v": "HOLD",
    "iv": "SELL",
-   "lrc_rating": null,
-   "covered": false
-  },
-  {
-   "date": "2026-11-05",
-   "ticker": "PURR",
-   "name": "Hyperliquid Strategies Inc",
-   "when": "After close",
-   "period": "",
-   "quarter": "Sep/2026",
-   "eps_forecast": "$2.10",
-   "market_cap_bn": 2.7,
-   "reported": true,
-   "result": "miss",
-   "eps_actual": -0.8567,
-   "eps_est": 0.7767,
-   "surprise": -2.103,
-   "heps": null,
-   "heps_prior": null,
-   "unit": null,
-   "change": null,
-   "measure": null,
-   "dps": null,
-   "source": null,
-   "rev_est": 11216750,
-   "rev_est_low": 8600000,
-   "rev_est_high": 15067000,
-   "n_est": 4,
-   "rcur": "USD",
-   "has_res": true,
-   "desk": false,
-   "g": "not found",
-   "t": "PURR",
-   "lists": [],
-   "idea": null,
-   "v": "HOLD",
-   "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
   },
@@ -70780,7 +70779,7 @@
    "g": "narrowed",
    "rev_yoy": 0.104,
    "px_move": {
-    "move": 0.2245,
+    "move": 0.225,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -70828,7 +70827,7 @@
    "rev_result": "inline",
    "rev_yoy": -0.0679,
    "px_move": {
-    "move": -0.0083,
+    "move": -0.0088,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -70994,7 +70993,7 @@
    "g": "given",
    "rev_yoy": 0.2269,
    "px_move": {
-    "move": -0.1637,
+    "move": -0.1682,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -71152,7 +71151,7 @@
    "rev_result": "beat",
    "rev_yoy": 0.0588,
    "px_move": {
-    "move": -0.1504,
+    "move": -0.1523,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -71200,7 +71199,7 @@
    "rev_result": "inline",
    "rev_yoy": -0.0553,
    "px_move": {
-    "move": -0.1113,
+    "move": -0.1199,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -71278,14 +71277,14 @@
    "g": "not found",
    "rev_yoy": 0.0225,
    "px_move": {
-    "move": 0.0007,
+    "move": 0.0014,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
    "t": "PAYO",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -71356,7 +71355,7 @@
    "g": "given",
    "rev_yoy": 0.174,
    "px_move": {
-    "move": 0.0302,
+    "move": 0.0366,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -71501,7 +71500,7 @@
    "g": "not found",
    "rev_yoy": 0.0714,
    "px_move": {
-    "move": -0.0046,
+    "move": -0.0057,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -71544,7 +71543,7 @@
    "desk": false,
    "g": "not found",
    "px_move": {
-    "move": -0.0351,
+    "move": -0.0339,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -71584,14 +71583,14 @@
    "g": "given",
    "rev_yoy": 0.3497,
    "px_move": {
-    "move": -0.0973,
+    "move": -0.1009,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
    "t": "TIC",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -71624,14 +71623,14 @@
    "g": "raised",
    "rev_yoy": 0.2647,
    "px_move": {
-    "move": 0.1365,
+    "move": 0.1385,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
    "t": "VCEL",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -71750,7 +71749,7 @@
    "rev_surprise": 0.0214,
    "rev_result": "beat",
    "px_move": {
-    "move": 0.048,
+    "move": 0.0622,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -71830,7 +71829,7 @@
    "desk": false,
    "g": "not found",
    "px_move": {
-    "move": -0.0637,
+    "move": -0.0678,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -71870,7 +71869,7 @@
    "g": "raised",
    "rev_yoy": 0.0804,
    "px_move": {
-    "move": 0.0113,
+    "move": 0.0097,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -71956,7 +71955,7 @@
    "rev_result": "beat",
    "rev_yoy": -0.2014,
    "px_move": {
-    "move": -0.0543,
+    "move": -0.0603,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -72034,7 +72033,7 @@
    "desk": false,
    "g": "given",
    "px_move": {
-    "move": -0.0445,
+    "move": -0.0529,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -72074,7 +72073,7 @@
    "g": "given",
    "rev_yoy": 0.397,
    "px_move": {
-    "move": -0.0979,
+    "move": -0.092,
     "from": "2026-11-04",
     "to": "2026-11-05"
    },
@@ -72556,7 +72555,7 @@
    "t": "ASTH",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -72960,7 +72959,7 @@
    "t": "ICFI",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -73533,7 +73532,7 @@
    "t": "CBL",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -74466,7 +74465,7 @@
    "t": "NUTX",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "BUY",
    "lrc_rating": null,
    "covered": false
@@ -74616,7 +74615,7 @@
    "t": "AMPH",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -75030,7 +75029,7 @@
    "t": "VSTM",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "SELL",
    "lrc_rating": null,
    "covered": false
@@ -75154,7 +75153,7 @@
    "t": "CSTL",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "SELL",
    "lrc_rating": null,
    "covered": false
@@ -75872,7 +75871,7 @@
    "lrc_rating": null,
    "t": "BAM",
    "lists": [],
-   "idea": null,
+   "idea": "Earnings watch",
    "v": "HOLD",
    "iv": "HOLD",
    "rev_est": 1592169690,
@@ -75904,7 +75903,7 @@
    "lrc_rating": null,
    "t": "HUM",
    "lists": [],
-   "idea": null,
+   "idea": "Earnings watch",
    "v": "HOLD",
    "iv": "HOLD",
    "rev_est": 40889933520,
@@ -75938,7 +75937,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "SELL",
+   "iv": "HOLD",
    "rev_est": 5816042211640,
    "rev_est_low": 5430500000000,
    "rev_est_high": 6240237693150,
@@ -75993,7 +75992,7 @@
    "lrc_rating": null,
    "t": "UI",
    "lists": [],
-   "idea": null,
+   "idea": "Earnings watch",
    "v": "HOLD",
    "iv": "HOLD",
    "rev_est": 977448000,
@@ -76210,7 +76209,7 @@
    "lrc_rating": null,
    "t": "CHTR",
    "lists": [],
-   "idea": null,
+   "idea": "Earnings watch",
    "v": "HOLD",
    "iv": "HOLD",
    "rev_est": 14923943680,
@@ -76322,7 +76321,7 @@
    "lrc_rating": null,
    "t": "MSGK",
    "lists": [],
-   "idea": null,
+   "idea": "Earnings watch",
    "v": "HOLD",
    "iv": "SELL",
    "rev_est": 36501180,
@@ -76386,7 +76385,7 @@
    "lrc_rating": null,
    "t": "ESNT",
    "lists": [],
-   "idea": null,
+   "idea": "Earnings watch",
    "v": "HOLD",
    "iv": "BUY",
    "rev_est": 364285250,
@@ -77226,6 +77225,38 @@
   },
   {
    "date": "2026-11-06",
+   "ticker": "GPCR",
+   "name": "Structure Therapeutics Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.4,
+   "auto": true,
+   "t": "GPCR",
+   "lists": [],
+   "idea": null,
+   "v": "SELL",
+   "iv": "SELL",
+   "rev_est": 50000000,
+   "rev_est_low": 0,
+   "rev_est_high": 500000000,
+   "rev_yago": 0,
+   "eps_est_q": -0.241,
+   "eps_yago": -0.37,
+   "n_est": 10,
+   "rcur": "USD",
+   "qend": "2026-09-30",
+   "track": [
+    "inline",
+    "beat",
+    "miss",
+    "miss"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-06",
    "ticker": "GHRS",
    "name": "GH Research PLC",
    "when": "Not stated",
@@ -77385,43 +77416,12 @@
   },
   {
    "date": "2026-11-07",
-   "ticker": "BRK-A",
-   "name": "Berkshire Hathaway Inc.",
-   "when": "Not stated",
-   "period": "Expected date (market data feed)",
-   "eps_forecast": "",
-   "market_cap_bn": 1225.0,
-   "auto": true,
-   "t": "BRK-A",
-   "lists": [],
-   "idea": null,
-   "v": "HOLD",
-   "iv": "HOLD",
-   "rev_est": 0,
-   "rev_est_low": 0,
-   "rev_est_high": 0,
-   "eps_est_q": 9092.0,
-   "eps_yago": 9376.0,
-   "n_est": 3,
-   "rcur": "USD",
-   "qend": "2026-09-30",
-   "track": [
-    "beat",
-    "miss",
-    "miss",
-    "beat"
-   ],
-   "lrc_rating": null,
-   "covered": false
-  },
-  {
-   "date": "2026-11-07",
    "ticker": "BRK-B",
    "name": "Berkshire Hathaway Inc.",
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 1224.3,
+   "market_cap_bn": 1225.2,
    "auto": true,
    "t": "BRK-B",
    "lists": [],
@@ -77446,37 +77446,35 @@
    "covered": false
   },
   {
-   "date": "2026-11-09",
-   "ticker": "KSPI",
-   "name": "Joint Stock Company Kaspi.kz",
-   "when": "Before open",
-   "eps_forecast": "$3.12",
-   "eps_last_year": "$2.72",
-   "quarter": "Sep/2026",
-   "market_cap_bn": 18.1,
-   "covered": true,
-   "lrc_rating": null,
-   "t": "KSPI",
-   "lists": [
-    "Trading BUY"
-   ],
-   "idea": "Score leaders",
-   "v": "BUY",
-   "iv": "BUY",
-   "rev_est": 1215706487620,
-   "rev_est_low": 1183671000000,
-   "rev_est_high": 1234487000000,
-   "rev_yago": 1110174000000,
-   "eps_est_q": 1420.0,
-   "eps_yago": 1458.0,
+   "date": "2026-11-07",
+   "ticker": "BRK-A",
+   "name": "Berkshire Hathaway Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1222.6,
+   "auto": true,
+   "t": "BRK-A",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "rev_est": 0,
+   "rev_est_low": 0,
+   "rev_est_high": 0,
+   "eps_est_q": 9092.0,
+   "eps_yago": 9376.0,
    "n_est": 3,
-   "rcur": "KZT",
+   "rcur": "USD",
    "qend": "2026-09-30",
    "track": [
+    "beat",
     "miss",
     "miss",
     "beat"
-   ]
+   ],
+   "lrc_rating": null,
+   "covered": false
   },
   {
    "date": "2026-11-09",
@@ -77832,6 +77830,37 @@
   },
   {
    "date": "2026-11-09",
+   "ticker": "KSPI",
+   "name": "Joint Stock Company Kaspi.kz",
+   "when": "Before open",
+   "eps_forecast": "$3.12",
+   "eps_last_year": "$2.72",
+   "quarter": "Sep/2026",
+   "market_cap_bn": 18.1,
+   "covered": false,
+   "lrc_rating": null,
+   "t": "KSPI",
+   "lists": [],
+   "idea": "Score leaders",
+   "v": "HOLD",
+   "iv": "BUY",
+   "rev_est": 1215706487620,
+   "rev_est_low": 1183671000000,
+   "rev_est_high": 1234487000000,
+   "rev_yago": 1110174000000,
+   "eps_est_q": 1420.0,
+   "eps_yago": 1458.0,
+   "n_est": 3,
+   "rcur": "KZT",
+   "qend": "2026-09-30",
+   "track": [
+    "miss",
+    "miss",
+    "beat"
+   ]
+  },
+  {
+   "date": "2026-11-09",
    "ticker": "NRG",
    "name": "NRG Energy, Inc.",
    "when": "Before open",
@@ -78099,7 +78128,7 @@
    "t": "TGTX",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "rev_est": 245449410,
    "rev_est_low": 232000000,
@@ -78131,7 +78160,7 @@
    "t": "AMG",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "rev_est": 655079810,
    "rev_est_low": 641181000,
@@ -78419,7 +78448,7 @@
    "t": "HRB",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "rev_est": 212278250,
    "rev_est_low": 210157000,
@@ -78761,7 +78790,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 5.3,
+   "market_cap_bn": 5.2,
    "auto": true,
    "t": "NXE",
    "lists": [],
@@ -79858,6 +79887,37 @@
   },
   {
    "date": "2026-11-09",
+   "ticker": "MAZE",
+   "name": "Maze Therapeutics, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.8,
+   "auto": true,
+   "t": "MAZE",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "SELL",
+   "rev_est": 0,
+   "rev_est_low": 0,
+   "rev_est_high": 0,
+   "rev_yago": 0,
+   "eps_est_q": -0.7518,
+   "eps_yago": -0.66,
+   "n_est": 12,
+   "rcur": "USD",
+   "qend": "2026-09-30",
+   "track": [
+    "beat",
+    "beat",
+    "miss"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-09",
    "ticker": "IMCR",
    "name": "Immunocore Holdings plc",
    "when": "Not stated",
@@ -79915,6 +79975,70 @@
     "miss",
     "beat",
     "miss",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-09",
+   "ticker": "TYRA",
+   "name": "Tyra Biosciences, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.4,
+   "auto": true,
+   "t": "TYRA",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "SELL",
+   "rev_est": 0,
+   "rev_est_low": 0,
+   "rev_est_high": 0,
+   "rev_yago": 0,
+   "eps_est_q": -0.665,
+   "eps_yago": -0.5,
+   "n_est": 12,
+   "rcur": "USD",
+   "qend": "2026-09-30",
+   "track": [
+    "beat",
+    "miss",
+    "miss",
+    "miss"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-09",
+   "ticker": "GSL",
+   "name": "Global Ship Lease, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.4,
+   "auto": true,
+   "t": "GSL",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "STRONG BUY",
+   "rev_est": 189398000,
+   "rev_est_low": 189141000,
+   "rev_est_high": 189655000,
+   "rev_yago": 192668000,
+   "eps_est_q": 2.425,
+   "eps_yago": 2.62,
+   "n_est": 2,
+   "rcur": "USD",
+   "qend": "2026-09-30",
+   "track": [
+    "beat",
+    "miss",
+    "beat",
     "beat"
    ],
    "lrc_rating": null,
@@ -80210,7 +80334,7 @@
    "t": "APPS",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "rev_est": 166748200,
    "rev_est_low": 166192000,
@@ -80340,38 +80464,6 @@
     "miss",
     "miss",
     "miss"
-   ],
-   "lrc_rating": null,
-   "covered": false
-  },
-  {
-   "date": "2026-11-09",
-   "ticker": "GSL",
-   "name": "Global Ship Lease, Inc.",
-   "when": "Not stated",
-   "period": "Expected date (market data feed)",
-   "eps_forecast": "",
-   "market_cap_bn": null,
-   "auto": true,
-   "t": "GSL",
-   "lists": [],
-   "idea": null,
-   "v": "HOLD",
-   "iv": "BUY",
-   "rev_est": 189398000,
-   "rev_est_low": 189141000,
-   "rev_est_high": 189655000,
-   "rev_yago": 192668000,
-   "eps_est_q": 2.425,
-   "eps_yago": 2.62,
-   "n_est": 2,
-   "rcur": "USD",
-   "qend": "2026-09-30",
-   "track": [
-    "beat",
-    "miss",
-    "beat",
-    "beat"
    ],
    "lrc_rating": null,
    "covered": false
@@ -80651,11 +80743,11 @@
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
-   "rev_est": 931055100,
+   "rev_est": 930519920,
    "rev_est_low": 874000000,
    "rev_est_high": 954000000,
    "rev_yago": 794400000,
-   "eps_est_q": 0.3973,
+   "eps_est_q": 0.3991,
    "eps_yago": 0.43,
    "n_est": 21,
    "rcur": "CHF",
@@ -81315,6 +81407,37 @@
   },
   {
    "date": "2026-11-10",
+   "ticker": "IMNM",
+   "name": "Immunome, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 2.1,
+   "auto": true,
+   "t": "IMNM",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "SELL",
+   "rev_est": 133330,
+   "rev_est_low": 0,
+   "rev_est_high": 2000000,
+   "rev_yago": 0,
+   "eps_est_q": -0.5976,
+   "eps_yago": -0.65,
+   "n_est": 15,
+   "rcur": "USD",
+   "qend": "2026-09-30",
+   "track": [
+    "miss",
+    "miss",
+    "miss"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-10",
    "ticker": "SONO",
    "name": "Sonos, Inc.",
    "when": "Not stated",
@@ -81783,7 +81906,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 0.8,
+   "market_cap_bn": 0.9,
    "auto": true,
    "t": "AMBQ",
    "lists": [],
@@ -81871,11 +81994,11 @@
    "idea": null,
    "v": "BUY",
    "iv": "BUY",
-   "rev_est": 4128521280,
+   "rev_est": 4128654620,
    "rev_est_low": 4095900000,
    "rev_est_high": 4172478310,
    "rev_yago": 4013837000,
-   "eps_est_q": 2.302,
+   "eps_est_q": 2.301,
    "eps_yago": 2.13,
    "n_est": 12,
    "rcur": "CAD",
@@ -82323,7 +82446,12 @@
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": [
+    "beat",
+    "miss",
+    "beat",
+    "miss"
+   ]
   },
   {
    "date": "2026-11-11",
@@ -83223,7 +83351,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 14.2,
+   "market_cap_bn": 14.3,
    "auto": true,
    "t": "KEP",
    "lists": [],
@@ -83241,6 +83369,37 @@
     "miss",
     "beat",
     "miss"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-12",
+   "ticker": "QXO",
+   "name": "QXO, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 12.1,
+   "auto": true,
+   "t": "QXO",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "SELL",
+   "rev_est": 4825383730,
+   "rev_est_low": 4596900000,
+   "rev_est_high": 4870000000,
+   "rev_yago": 2728300000,
+   "eps_est_q": 0.1357,
+   "eps_yago": 0.14,
+   "n_est": 15,
+   "rcur": "USD",
+   "qend": "2026-09-30",
+   "track": [
+    "beat",
+    "inline",
+    "beat"
    ],
    "lrc_rating": null,
    "covered": false
@@ -84147,7 +84306,7 @@
    "t": "GLOB",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "rev_est": 610931720,
    "rev_est_low": 607748000,
@@ -84414,7 +84573,7 @@
   {
    "date": "2026-11-12",
    "ticker": "ADIG",
-   "name": "ADI Global Distribution Inc",
+   "name": "ADI Global Distribution Inc.",
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
@@ -84557,6 +84716,34 @@
   },
   {
    "date": "2026-11-12",
+   "ticker": "HAWK",
+   "name": "HawkEye 360, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.3,
+   "auto": true,
+   "t": "HAWK",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "rev_est": 56436720,
+   "rev_est_low": 55000000,
+   "rev_est_high": 57900000,
+   "eps_est_q": 0.01667,
+   "n_est": 9,
+   "rcur": "USD",
+   "qend": "2026-09-30",
+   "track": [
+    "miss",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-12",
    "ticker": "LBRX",
    "name": "LB Pharmaceuticals Inc",
    "when": "Not stated",
@@ -84652,34 +84839,6 @@
   },
   {
    "date": "2026-11-12",
-   "ticker": "HAWK",
-   "name": "HawkEye 360, Inc.",
-   "when": "Not stated",
-   "period": "Expected date (market data feed)",
-   "eps_forecast": "",
-   "market_cap_bn": 1.2,
-   "auto": true,
-   "t": "HAWK",
-   "lists": [],
-   "idea": null,
-   "v": "HOLD",
-   "iv": "HOLD",
-   "rev_est": 56436720,
-   "rev_est_low": 55000000,
-   "rev_est_high": 57900000,
-   "eps_est_q": 0.01667,
-   "n_est": 9,
-   "rcur": "USD",
-   "qend": "2026-09-30",
-   "track": [
-    "miss",
-    "beat"
-   ],
-   "lrc_rating": null,
-   "covered": false
-  },
-  {
-   "date": "2026-11-12",
    "ticker": "JCAP",
    "name": "Jefferson Capital, Inc.",
    "when": "Not stated",
@@ -84706,6 +84865,34 @@
     "beat",
     "beat",
     "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-12",
+   "ticker": "SGP",
+   "name": "SpyGlass Pharma, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 1.1,
+   "auto": true,
+   "t": "SGP",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "SELL",
+   "rev_est": 0,
+   "rev_est_low": 0,
+   "rev_est_high": 0,
+   "eps_est_q": -0.6225,
+   "n_est": 5,
+   "rcur": "USD",
+   "qend": "2026-09-30",
+   "track": [
+    "miss",
+    "miss"
    ],
    "lrc_rating": null,
    "covered": false
@@ -84857,6 +85044,30 @@
    ],
    "lrc_rating": null,
    "covered": false
+  },
+  {
+   "date": "2026-11-13",
+   "ticker": "LPL",
+   "name": "LG Display Co., Ltd.",
+   "when": "Not stated",
+   "eps_forecast": "$0.23",
+   "eps_last_year": "($0.01)",
+   "quarter": "Sep/2026",
+   "market_cap_bn": 2.6,
+   "covered": true,
+   "lrc_rating": null,
+   "t": "LPL",
+   "lists": [
+    "Trading SELL"
+   ],
+   "idea": null,
+   "v": "SELL",
+   "iv": "STRONG SELL",
+   "track": [
+    "miss",
+    "miss",
+    "miss"
+   ]
   },
   {
    "date": "2026-11-13",
@@ -85062,28 +85273,6 @@
    "v": "HOLD",
    "iv": "HOLD",
    "track": null
-  },
-  {
-   "date": "2026-11-13",
-   "ticker": "LPL",
-   "name": "LG Display Co., Ltd.",
-   "when": "Not stated",
-   "eps_forecast": "$0.23",
-   "eps_last_year": "($0.01)",
-   "quarter": "Sep/2026",
-   "market_cap_bn": 2.6,
-   "covered": false,
-   "lrc_rating": null,
-   "t": "LPL",
-   "lists": [],
-   "idea": null,
-   "v": "SELL",
-   "iv": "STRONG SELL",
-   "track": [
-    "miss",
-    "miss",
-    "miss"
-   ]
   },
   {
    "date": "2026-11-13",
@@ -87714,7 +87903,7 @@
    "t": "YMM",
    "lists": [],
    "idea": "Score leaders",
-   "v": "STRONG BUY",
+   "v": "BUY",
    "iv": "BUY",
    "rev_est": 3309154860,
    "rev_est_low": 2972382240,
@@ -90302,7 +90491,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 183.2,
+   "market_cap_bn": 183.0,
    "auto": true,
    "t": "CRM",
    "lists": [],
@@ -90334,7 +90523,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 119.8,
+   "market_cap_bn": 119.9,
    "auto": true,
    "t": "BMO",
    "lists": [],
@@ -90366,7 +90555,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 111.9,
+   "market_cap_bn": 111.7,
    "auto": true,
    "t": "BNS",
    "lists": [],
@@ -90398,12 +90587,12 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 95.0,
+   "market_cap_bn": 95.1,
    "auto": true,
    "t": "SNOW",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "SELL",
    "rev_est": 1654183980,
    "rev_est_low": 1645400000,
@@ -90546,38 +90735,6 @@
     "beat",
     "beat",
     "beat",
-    "beat"
-   ],
-   "lrc_rating": null,
-   "covered": false
-  },
-  {
-   "date": "2026-12-02",
-   "ticker": "PATH",
-   "name": "UiPath, Inc.",
-   "when": "Not stated",
-   "period": "Expected date (market data feed)",
-   "eps_forecast": "",
-   "market_cap_bn": 6.8,
-   "auto": true,
-   "t": "PATH",
-   "lists": [],
-   "idea": null,
-   "v": "HOLD",
-   "iv": "BUY",
-   "rev_est": 443019490,
-   "rev_est_low": 442381000,
-   "rev_est_high": 444500000,
-   "rev_yago": 411113000,
-   "eps_est_q": 0.1916,
-   "eps_yago": 0.16,
-   "n_est": 17,
-   "rcur": "USD",
-   "qend": "2026-10-31",
-   "track": [
-    "beat",
-    "beat",
-    "miss",
     "beat"
    ],
    "lrc_rating": null,
@@ -90782,7 +90939,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 282.3,
+   "market_cap_bn": 282.1,
    "auto": true,
    "t": "RY",
    "lists": [],
@@ -90814,7 +90971,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 201.1,
+   "market_cap_bn": 201.0,
    "auto": true,
    "t": "TD",
    "lists": [],
@@ -90910,7 +91067,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 30.5,
+   "market_cap_bn": 30.4,
    "auto": true,
    "t": "DG",
    "lists": [],
@@ -90974,7 +91131,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 24.0,
+   "market_cap_bn": 24.1,
    "auto": true,
    "t": "IOT",
    "lists": [],
@@ -91006,7 +91163,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 21.7,
+   "market_cap_bn": 21.8,
    "auto": true,
    "t": "RBRK",
    "lists": [],
@@ -91038,7 +91195,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 14.7,
+   "market_cap_bn": 14.8,
    "auto": true,
    "t": "DOCU",
    "lists": [],
@@ -91129,6 +91286,38 @@
   },
   {
    "date": "2026-12-03",
+   "ticker": "COO",
+   "name": "The Cooper Companies, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 12.1,
+   "auto": true,
+   "t": "COO",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "BUY",
+   "rev_est": 1067935900,
+   "rev_est_low": 1061405000,
+   "rev_est_high": 1075000000,
+   "rev_yago": 1065200000,
+   "eps_est_q": 1.068,
+   "eps_yago": 1.15,
+   "n_est": 15,
+   "rcur": "USD",
+   "qend": "2026-10-31",
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-12-03",
    "ticker": "VSXY",
    "name": "Victorias Secret & Co.",
    "when": "Not stated",
@@ -91198,7 +91387,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 7.4,
+   "market_cap_bn": 7.5,
    "auto": true,
    "t": "S",
    "lists": [],
@@ -91218,6 +91407,38 @@
     "beat",
     "beat",
     "beat",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-12-03",
+   "ticker": "PATH",
+   "name": "UiPath, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 6.8,
+   "auto": true,
+   "t": "PATH",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "BUY",
+   "rev_est": 443019490,
+   "rev_est_low": 442381000,
+   "rev_est_high": 444500000,
+   "rev_yago": 411113000,
+   "eps_est_q": 0.1916,
+   "eps_yago": 0.16,
+   "n_est": 17,
+   "rcur": "USD",
+   "qend": "2026-10-31",
+   "track": [
+    "beat",
+    "beat",
+    "miss",
     "beat"
    ],
    "lrc_rating": null,
@@ -91294,7 +91515,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 3.6,
+   "market_cap_bn": 3.7,
    "auto": true,
    "t": "AGX",
    "lists": [],
@@ -91445,7 +91666,44 @@
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
-   "track": null,
+   "track": [
+    "miss",
+    "miss",
+    "miss",
+    "miss"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-12-08",
+   "ticker": "SNPS",
+   "name": "Synopsys, Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 84.4,
+   "auto": true,
+   "t": "SNPS",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "rev_est": 2562189820,
+   "rev_est_low": 2543859000,
+   "rev_est_high": 2610000000,
+   "rev_yago": 2254860000,
+   "eps_est_q": 4.133,
+   "eps_yago": 2.9,
+   "n_est": 16,
+   "rcur": "USD",
+   "qend": "2026-10-31",
+   "track": [
+    "beat",
+    "beat",
+    "beat",
+    "beat"
+   ],
    "lrc_rating": null,
    "covered": false
   },
@@ -91552,7 +91810,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 12.1,
+   "market_cap_bn": 12.2,
    "auto": true,
    "t": "GME",
    "lists": [],
@@ -91866,38 +92124,6 @@
   },
   {
    "date": "2026-12-09",
-   "ticker": "SNPS",
-   "name": "Synopsys, Inc.",
-   "when": "Not stated",
-   "period": "Expected date (market data feed)",
-   "eps_forecast": "",
-   "market_cap_bn": 84.4,
-   "auto": true,
-   "t": "SNPS",
-   "lists": [],
-   "idea": null,
-   "v": "HOLD",
-   "iv": "HOLD",
-   "rev_est": 2562189820,
-   "rev_est_low": 2543859000,
-   "rev_est_high": 2610000000,
-   "rev_yago": 2254860000,
-   "eps_est_q": 4.133,
-   "eps_yago": 2.9,
-   "n_est": 16,
-   "rcur": "USD",
-   "qend": "2026-10-31",
-   "track": [
-    "beat",
-    "beat",
-    "beat",
-    "beat"
-   ],
-   "lrc_rating": null,
-   "covered": false
-  },
-  {
-   "date": "2026-12-09",
    "ticker": "SUNB",
    "name": "Sunbelt Rentals Holdings, Inc.",
    "when": "Not stated",
@@ -91967,7 +92193,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 9.3,
+   "market_cap_bn": 9.2,
    "auto": true,
    "t": "CHWY",
    "lists": [],
@@ -92255,7 +92481,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 32.6,
+   "market_cap_bn": 32.7,
    "auto": true,
    "t": "CIEN",
    "lists": [],
@@ -92301,38 +92527,6 @@
    "eps_est_q": 1.041,
    "eps_yago": 2.59,
    "n_est": 25,
-   "rcur": "USD",
-   "qend": "2026-10-31",
-   "track": [
-    "beat",
-    "beat",
-    "beat",
-    "beat"
-   ],
-   "lrc_rating": null,
-   "covered": false
-  },
-  {
-   "date": "2026-12-10",
-   "ticker": "COO",
-   "name": "The Cooper Companies, Inc.",
-   "when": "Not stated",
-   "period": "Expected date (market data feed)",
-   "eps_forecast": "",
-   "market_cap_bn": 12.1,
-   "auto": true,
-   "t": "COO",
-   "lists": [],
-   "idea": null,
-   "v": "HOLD",
-   "iv": "BUY",
-   "rev_est": 1067935900,
-   "rev_est_low": 1061405000,
-   "rev_est_high": 1075000000,
-   "rev_yago": 1065200000,
-   "eps_est_q": 1.068,
-   "eps_yago": 1.15,
-   "n_est": 15,
    "rcur": "USD",
    "qend": "2026-10-31",
    "track": [
@@ -92541,7 +92735,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 358.3,
+   "market_cap_bn": 359.0,
    "auto": true,
    "t": "ORCL",
    "lists": [],
@@ -92765,7 +92959,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 24.5,
+   "market_cap_bn": 24.3,
    "auto": true,
    "t": "JBL",
    "lists": [],
@@ -92797,7 +92991,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 3.2,
+   "market_cap_bn": 3.1,
    "auto": true,
    "t": "ABM",
    "lists": [],
@@ -92925,7 +93119,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 162.9,
+   "market_cap_bn": 162.3,
    "auto": true,
    "t": "ACN",
    "lists": [],
@@ -92989,7 +93183,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 58.7,
+   "market_cap_bn": 58.8,
    "auto": true,
    "t": "NKE",
    "lists": [],
@@ -93021,7 +93215,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 45.6,
+   "market_cap_bn": 45.7,
    "auto": true,
    "t": "HEI",
    "lists": [],
@@ -93160,7 +93354,7 @@
    "rev_est_low": 6415682000,
    "rev_est_high": 7258700000,
    "rev_yago": 5793946000,
-   "eps_est_q": 0.4216,
+   "eps_est_q": 0.4192,
    "eps_yago": 0.43,
    "n_est": 11,
    "rcur": "USD",
@@ -93309,7 +93503,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 39.7,
+   "market_cap_bn": 39.8,
    "auto": true,
    "t": "CCL",
    "lists": [],
@@ -93341,7 +93535,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 25.8,
+   "market_cap_bn": 25.9,
    "auto": true,
    "t": "DRI",
    "lists": [],
@@ -93405,7 +93599,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 745.3,
+   "market_cap_bn": 742.7,
    "auto": true,
    "t": "MU",
    "lists": [],
@@ -93565,7 +93759,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 6.4,
+   "market_cap_bn": 6.5,
    "auto": true,
    "t": "ACI",
    "lists": [],
@@ -93585,6 +93779,38 @@
     "beat",
     "beat",
     "miss",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2027-01-06",
+   "ticker": "MSM",
+   "name": "MSC Industrial Direct Co., Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 6.2,
+   "auto": true,
+   "t": "MSM",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "rev_est": 1062913120,
+   "rev_est_low": 1061000000,
+   "rev_est_high": 1067000000,
+   "rev_yago": 965684000,
+   "eps_est_q": 1.283,
+   "eps_yago": 0.99,
+   "n_est": 8,
+   "rcur": "USD",
+   "qend": "2026-11-30",
+   "track": [
+    "beat",
+    "miss",
+    "beat",
     "beat"
    ],
    "lrc_rating": null,
@@ -93763,7 +93989,7 @@
    "t": "APOG",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "rev_est": 371305500,
    "rev_est_low": 369211000,
@@ -93777,38 +94003,6 @@
    "track": [
     "inline",
     "beat",
-    "beat",
-    "beat"
-   ],
-   "lrc_rating": null,
-   "covered": false
-  },
-  {
-   "date": "2027-01-06",
-   "ticker": "MSM",
-   "name": "MSC Industrial Direct Co., Inc.",
-   "when": "Not stated",
-   "period": "Expected date (market data feed)",
-   "eps_forecast": "",
-   "market_cap_bn": null,
-   "auto": true,
-   "t": "MSM",
-   "lists": [],
-   "idea": null,
-   "v": "BUY",
-   "iv": "HOLD",
-   "rev_est": 1062913120,
-   "rev_est_low": 1061000000,
-   "rev_est_high": 1067000000,
-   "rev_yago": 965684000,
-   "eps_est_q": 1.283,
-   "eps_yago": 0.99,
-   "n_est": 8,
-   "rcur": "USD",
-   "qend": "2026-11-30",
-   "track": [
-    "beat",
-    "miss",
     "beat",
     "beat"
    ],
@@ -93886,7 +94080,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed)",
    "eps_forecast": "",
-   "market_cap_bn": 13.5,
+   "market_cap_bn": 13.4,
    "auto": true,
    "t": "RPM",
    "lists": [],
@@ -94136,6 +94330,6 @@
    "covered": false
   }
  ],
- "synced": "2026-11-06T06:54+02:00",
+ "synced": "2026-11-06T07:40+02:00",
  "coverage_note": "Ticked = on the LRC watchlist. Every company the LRC Stock Scanner tracks shows its trading and investment ratings. Updated after every scanner run."
 }
