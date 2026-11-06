@@ -1,112 +1,62 @@
 {
-  "edition": "Evening update · Thursday 5 November 2026 18:30",
-  "generated": "2026-11-05T18:30+02:00",
-  "covers": "Wall Street open and first hours of trade on 5 November, the Bank of England decision, AngloGold Ashanti's Q3 results, the rand and SA bonds, election counts and Treasury's GDP-rebasing update",
-  "agent": "LRC News Desk",
-  "headline": "Tech sell-off puts the Nasdaq on course for a correction: down about 3% at the open and 10% below its 6 October record, with Qualcomm −9% and the chip index −7%; Bank of England hikes to 4.00%",
-  "summary": "In South Africa the rand firmed about 0.5% to R16.34/$ in the morning and the 2035 bond yield fell 13.5 basis points to 8.33% on the local election count and the US result (Reuters via CNBC Africa, 5 Nov), while Treasury said GDP rebasing cuts the projected debt peak to 74.6% of GDP (Business Day, 5 Nov). On Wall Street the Nasdaq was down 3.09% at 24,941.44 shortly after the open, with the S&P 500 −1.66% and the Dow −0.66%, as chip and data-centre shares were sold the day after the Democratic midterm sweep (Reuters via Business Day, 5 Nov). Gold held near $4,120 (+1.5%) and the Bank of England raised rates for the first time since 2023, so miners have support while growth and tech shares face a harder week.",
-  "sections": [
-    {
-      "name": "Breaking",
-      "items": [
-        {
-          "title": "Nasdaq on course for a correction as chip stocks slide; Qualcomm −9%, semiconductor index −7.1%",
-          "summary": "At 9:57 a.m. New York time (16:57 SAST) the Nasdaq was down 795.08 points (−3.09%) at 24,941.44, the S&P 500 down 127.74 (−1.66%) at 7,560.88 and the Dow down 351.87 (−0.66%) at 53,004.25. Reuters said a drop to 24,796.06 left the Nasdaq 10% below its record close of 27,599.89 on 6 October, putting it on pace to confirm its second correction this year (a correction is confirmed only on a close). Qualcomm fell 9% after missing handset-chip estimates and the Philadelphia semiconductor index fell 7.1%; Nvidia, AMD, Intel and Marvell weighed heavily. Investors are reassessing the AI data-centre build-out after the Democratic sweep, and energy was the best sector. Yahoo Finance's live blog later reported the Nasdaq down as much as 5%.",
-          "source": "Reuters via Business Day, 5 Nov 2026; Reuters via 93.3 The Drive, 5 Nov 2026; Yahoo Finance live blog, 5 Nov 2026",
-          "url": "https://www.businessday.co.za/markets/2026-11-05-us-stocks-fall-sharply-as-nasdaq-heads-for-correction/"
-        },
-        {
-          "title": "Bank of England raises Bank Rate 25bp to 4.00%, its first hike since August 2023",
-          "summary": "The vote was 8–1, with Catherine Mann wanting a 50bp rise. The Bank expects UK inflation to reach about 5% by mid-2027 (3.5% in September). Governor Andrew Bailey said the move should not be seen as the first in an inevitable long sequence, but that another rise is likely unless the Middle East conflict is resolved. Sterling was little changed at about $1.347 (Reuters, 12:56 UTC).",
-          "source": "MoneyWeek live blog, 5 Nov 2026; Reuters via Devdiscourse and AOL, 5 Nov 2026",
-          "url": "https://www.devdiscourse.com/article/international/4002149-bank-of-england-raises-rates-for-first-time-since-2023-warns-another-move-likely"
-        }
-      ]
-    },
-    {
-      "name": "US markets",
-      "items": [
-        {
-          "title": "Data-centre and growth names hit hardest: Dell −10.5%, Tesla −9.5%, CoreWeave −9.3%, Nebius −13.4%",
-          "summary": "Reuters also reported IREN, Hut 8 and Applied Digital down 6% to 11% and Snap down 12% after its results, while AppLovin was up about 23% before the open after its results (Yahoo Finance). These are intraday moves.",
-          "source": "Reuters via Business Day, 5 Nov 2026; Yahoo Finance, 5 Nov 2026",
-          "url": "https://www.businessday.co.za/markets/2026-11-05-us-stocks-fall-sharply-as-nasdaq-heads-for-correction/"
-        },
-        {
-          "title": "Fed's Barkin: rate path is 'pretty straightforward', the question is pace",
-          "summary": "Richmond Fed President Tom Barkin said further gradual rate hikes are likely, with unemployment close to record lows and inflation too high, but he could not yet say how large or how fast. The US 10-year Treasury yield was about 4.87%, down roughly 2 basis points (Yahoo Finance quote). US October jobs data are due Friday at 15:30 SAST.",
-          "source": "Seeking Alpha, 5 Nov 2026 (10:23 a.m. ET); Yahoo Finance, 5 Nov 2026",
-          "url": "https://seekingalpha.com/news/4666651-rate-path-is-straightforward-the-question-is-timing-richmond-feds-barkin-says"
-        }
-      ]
-    },
-    {
-      "name": "South Africa",
-      "items": [
-        {
-          "title": "Rand firms to about R16.34/$ and the 2035 bond yield drops 13.5bp to 8.33%",
-          "summary": "At 06:20 GMT (08:20 SAST) the rand was 0.5% stronger at R16.3425 per dollar, helped by the local election count and the US midterm result. By Thursday afternoon it was around R16.40/$, with GBP/ZAR at R22.08 and EUR/ZAR at R18.41 (thenational.co.za, 16:00 SAST); analysts warned against reading too much into the local vote.",
-          "source": "Reuters via CNBC Africa, 5 Nov 2026; thenational.co.za, 5 Nov 2026",
-          "url": "https://www.cnbcafrica.com/2026/south-african-rand-gains-on-local-election-results-us-midterms"
-        },
-        {
-          "title": "Treasury: GDP rebasing lowers the projected debt peak to 74.6% of GDP from 78.4%",
-          "summary": "After Stats SA moved the GDP base year to 2022, the 2025 economy is R8.044 trillion, 5.3% larger than before (mining revised up 12.5%). Treasury now sees debt peaking at 74.6% of GDP in 2025/26 and falling below 70% by 2032/33, a year earlier; the 2026/27 main budget deficit becomes 3.5% of GDP (from 3.7%). Treasury called it a mechanical change, with no change to revenue, spending or debt in rand.",
-          "source": "Business Day, 5 Nov 2026",
-          "url": "https://www.businessday.co.za/economy/2026-11-05-national-treasury-adjusts-primary-surplus-estimate-slightly-lower-after-gdp-rebasing/"
-        },
-        {
-          "title": "Municipal count: ANC about 32%, DA about 28% with 28% of votes counted",
-          "summary": "That would leave the ANC roughly 14 points below its 2021 result (45.6%); the CSIR model projects ANC 31.7%, DA 25.7%, MK 9%, EFF 6.1% and ActionSA 5.1%. Final results and seat allocations are expected around the weekend.",
-          "source": "Reuters via CNBC Africa, 5 Nov 2026 (09:22 GMT); CSIR model via Fullview/Moneyweb, 5 Nov 2026",
-          "url": "https://www.cnbcafrica.com/2026/anc-narrowly-leads-da-in-early-south-africa-municipal-election-results"
-        }
-      ]
-    },
-    {
-      "name": "Forex & commodities",
-      "items": [
-        {
-          "title": "Gold about $4,120 (+1.5%) on lower yields; platinum near $1,519",
-          "summary": "Spot gold was $4,119.50, up 1.49%, around 9:02 a.m. New York time, after an intraday high of $4,146.63; platinum was $1,519 (+1.54%) earlier in the day (Kitco). Oil swung on Iran headlines, including more tanker incidents in the Strait of Hormuz: Brent was $96.76 (+2.26%) at 14:11 SAST (thenational.co.za) after this week's steep fall.",
-          "source": "Kitco, 5 Nov 2026; thenational.co.za, 5 Nov 2026",
-          "url": "https://www.kitco.com/news/article/2026-11-05/gold-climbs-above-4100-falling-yields-softer-labor-costs-support-bullion"
-        }
-      ]
-    },
-    {
-      "name": "Our coverage",
-      "items": [
-        {
-          "title": "AngloGold Ashanti (LRC Stock Scanner: HOLD; JSE target R1,259, NYSE target $105.20): Q3 free cash flow $722m, interim dividend 71 US cents",
-          "summary": "Q3 production was 696koz (768koz a year earlier) at all-in sustaining costs of $2,170/oz, with a realised gold price of $4,239/oz. Headline earnings were $790m (155 US cents a share), EBITDA $1.57bn and net cash $1.26bn; full-year production guidance of 2.80–3.17Moz was reaffirmed. Investing.com reported the shares up 3.3% after the release despite EPS below its consensus. The JSE share (R1,374 on 3 Nov, scanner data) is above the R1,259 scanner target; the NYSE share is below its $105.20 target. Ratings unchanged.",
-          "source": "AngloGold Ashanti Q3 release via StockTitan and TipRanks, 5 Nov 2026; Investing.com, 5 Nov 2026",
-          "url": "https://www.stocktitan.net/news/AU/anglo-gold-ashanti-q3-30-september-2026-earnings-release-and-ik9xxdht5lj7.html",
-          "tickers": ["AU", "ANG.JO"]
-        },
-        {
-          "title": "Qualcomm (LRC Stock Scanner: HOLD, target $175.00) down 9% in regular trade",
-          "summary": "From Wednesday's $173.20 close (scanner data), a 9% fall puts the shares near $158, around 10% below the $175 scanner target. The drop follows handset-chip sales of $5.14bn missing estimates. Rating unchanged.",
-          "source": "Reuters via Business Day, 5 Nov 2026",
-          "url": "https://www.businessday.co.za/markets/2026-11-05-us-stocks-fall-sharply-as-nasdaq-heads-for-correction/",
-          "tickers": ["QCOM"]
-        },
-        {
-          "title": "Chip and AI names under pressure: AMD (BUY, $640.50), Nvidia (HOLD, $237.80), Dell (BUY, $411.00), IREN (HOLD, $41.34)",
-          "summary": "Reuters named Nvidia and AMD among the heaviest weights on the Nasdaq, Dell fell 10.5% and IREN was in a data-centre group down 6–11%. IREN reports after the US close today. A sharp fall widens the gap to the scanner targets but does not change the ratings, which update on the scanner's next run.",
-          "source": "Reuters via Business Day, 5 Nov 2026",
-          "url": "https://www.businessday.co.za/markets/2026-11-05-us-stocks-fall-sharply-as-nasdaq-heads-for-correction/",
-          "tickers": ["AMD", "NVDA", "DELL", "IREN"]
-        }
-      ]
-    }
-  ],
-  "watch_today": [
-    "Whether the Nasdaq closes 10% or more below its 6 October record (a confirmed correction)",
-    "Results after the US close: Airbnb, Cloudflare and IREN",
-    "US October jobs report Friday 6 November at 15:30 SAST",
-    "Final municipal results and coalition talks, expected around the weekend",
-    "Gold near $4,120 and the rand near R16.40/$ into Friday",
-    "Oil and Strait of Hormuz tanker incidents"
-  ]
+ "edition": "Morning brief · Friday 6 November 2026 06:20",
+ "generated": "2026-11-06T06:20+02:00",
+ "covers": "Thursday 5 November 2026: JSE close and the full US session (closing prices)",
+ "agent": "LRC News Desk",
+ "headline": "Tech rout on Wall Street: Nasdaq-100 fund −6.3% and chip fund −11.5%, with AMD −17%, Dell −15% and IREN −17%; JSE-listed shares rallied, Satrix 40 +4.5%",
+ "summary": "On the JSE, the Satrix 40 fund rose 4.5% on Thursday, led by Naspers (+10.4%), Prosus (+8.0%), Harmony (+6.4%) and the big banks (LRC price data, 5 Nov). On Wall Street the S&P 500 fund (SPY) fell 4.4%, the Nasdaq-100 fund (QQQ) 6.3% and the chip fund (SMH) 11.5%, with AMD −17.3%, Dell −14.9%, Tesla −10.8% and Nvidia −9.3% (LRC price data, US close 5 Nov). The gold fund (GLD) rose 0.8% and the oil fund (USO) 1.8% while the copper fund fell 3.3%; this edition uses LRC's own closing prices only, and press figures (index points, the rand, the jobs report) will be added once verified.",
+ "sections": [
+  {"name": "Breaking", "items": [
+   {"title": "US tech sell-off: Nasdaq-100 fund −6.3%, chip fund −11.5%",
+    "summary": "At Thursday's close the Invesco QQQ (Nasdaq-100) fell 6.34% to $648.10 and is down 9.4% over a week; the VanEck semiconductor fund (SMH) fell 11.47% to $446.40, down 20.5% over a week. The S&P 500 fund (SPY) lost 4.41% and the Dow fund (DIA) 3.54%.",
+    "source": "LRC Stock Scanner (Yahoo Finance closing prices), 5 Nov 2026",
+    "url": "https://www.leagorifumocapital.co.za/scanner.html"},
+   {"title": "IREN (LRC Stock Scanner: STRONG SELL, target $9.17) −17% into its results",
+    "summary": "IREN closed at $18.03, down 16.95% on Thursday, and was scheduled to report after the US close the same day. The scanner rating moved from HOLD in Thursday's brief to STRONG SELL on its own rules (broken chart, very weak score). Results details will be added once verified.",
+    "source": "LRC Stock Scanner and LRC US earnings calendar, 5 Nov 2026",
+    "url": "https://www.leagorifumocapital.co.za/stock.html?t=IREN",
+    "tickers": ["IREN"]}
+  ]},
+  {"name": "US markets", "items": [
+   {"title": "Chip, AI-hardware and growth names led the fall",
+    "summary": "AMD −17.3% to $404.40, Dell −14.9% to $316.91, Tesla −10.8% to $343.69, Qualcomm −9.5% to $156.75, Nvidia −9.3% to $181.60 and Cloudflare −8.3% to $244.51. Airbnb −3.5% to $170.13. Cloudflare and Airbnb were scheduled to report after the close.",
+    "source": "LRC Stock Scanner (Yahoo Finance closing prices), 5 Nov 2026",
+    "url": "https://www.leagorifumocapital.co.za/scanner.html"}
+  ]},
+  {"name": "South Africa", "items": [
+   {"title": "JSE heavyweights rally: Naspers +10.4%, Prosus +8.0%, Satrix 40 +4.5%",
+    "summary": "Naspers closed at R777.12 (+10.4%) and Prosus at R708.75 (+8.0%). Banks also rose: FirstRand +6.1%, Capitec +6.1%, Standard Bank +4.9%, Nedbank +4.9%. The iShares South Africa fund in New York (EZA) added 2.1%.",
+    "source": "LRC Stock Scanner (Yahoo Finance closing prices), 5 Nov 2026",
+    "url": "https://www.leagorifumocapital.co.za/scanner.html"},
+   {"title": "Gold and PGM miners higher: Harmony +6.4%, Sibanye-Stillwater +4.4%, Impala +3.9%, AngloGold +3.6%, Gold Fields +3.2%",
+    "summary": "Closing prices: Harmony R273.25, Sibanye-Stillwater R38.40, Impala R180.26, AngloGold Ashanti R1,422.89, Gold Fields R606.48.",
+    "source": "LRC Stock Scanner (Yahoo Finance closing prices), 5 Nov 2026",
+    "url": "https://www.leagorifumocapital.co.za/scanner.html"}
+  ]},
+  {"name": "Forex & commodities", "items": [
+   {"title": "Gold fund +0.8%, oil fund +1.8%, copper fund −3.3%",
+    "summary": "SPDR Gold (GLD) closed at $375.30 (+0.77%, +1.8% on the week); US Oil Fund (USO) $148.00 (+1.79%, −12.0% on the week); copper fund (CPER) $37.34 (−3.25%); silver fund (SLV) $46.89 (−0.57%). Spot levels for the rand, gold and Brent will be added once verified.",
+    "source": "LRC Stock Scanner (Yahoo Finance closing prices), 5 Nov 2026",
+    "url": "https://www.leagorifumocapital.co.za/scanner.html"}
+  ]},
+  {"name": "Our coverage", "items": [
+   {"title": "Covered names hit by the tech sell-off: IREN −17.0%, Cipher −14.6%, SK hynix −13.4%, Enphase −8.2%, Telesat −5.8%",
+    "summary": "Scanner ratings are unchanged by this desk: IREN STRONG SELL (target $9.17), Cipher Digital SELL, SK hynix HOLD (target $249.20, US line closed at $123.90), Enphase STRONG SELL (target $22.18, closed $28.97), Telesat STRONG SELL.",
+    "source": "LRC Stock Scanner, 5 Nov 2026",
+    "url": "https://www.leagorifumocapital.co.za/scanner.html",
+    "tickers": ["IREN", "CIFR", "SKHY", "ENPH", "TSAT"]},
+   {"title": "OceanaGold (HOLD, target $25.04) +6.5% to $27.45, now above the scanner target",
+    "summary": "Gold producers held up: OceanaGold +6.5%, B2Gold +3.1%, AngloGold Ashanti's NYSE line +0.7% to $88.56 (HOLD, target $81.33).",
+    "source": "LRC Stock Scanner, 5 Nov 2026",
+    "url": "https://www.leagorifumocapital.co.za/stock.html?t=OGC",
+    "tickers": ["OGC", "BTG", "AU"]}
+  ]}
+ ],
+ "watch_today": [
+  "US October jobs report, Friday 6 November at 15:30 SAST",
+  "Whether the tech sell-off carries into Asia and the JSE open",
+  "IREN, Cloudflare and Airbnb results released after Thursday's US close",
+  "Final municipal election results and coalition talks",
+  "Gold, oil and the rand into the weekly close"
+ ]
 }
