@@ -1,61 +1,99 @@
 {
- "edition": "Morning brief · Friday 6 November 2026 06:20",
- "generated":"2026-11-06T10:18+02:00",
- "covers": "Thursday 5 November 2026: JSE close and the full US session (closing prices)",
+ "edition": "Midday update · Friday 6 November 2026 11:20",
+ "generated": "2026-11-06T11:20+02:00",
+ "covers": "JSE morning session Friday 6 November 2026 (prices to about 10:45 SAST); US figures are Thursday 5 November closes",
  "agent": "LRC News Desk",
- "headline": "Tech rout on Wall Street: Nasdaq-100 fund −6.3% and chip fund −11.5%, with AMD −17%, Dell −15% and IREN −17%; JSE-listed shares rallied, Satrix 40 +4.5%",
- "summary": "On the JSE, the Satrix 40 fund rose 4.5% on Thursday, led by Naspers (+10.4%), Prosus (+8.0%), Harmony (+6.4%) and the big banks (LRC price data, 5 Nov). On Wall Street the S&P 500 fund (SPY) fell 4.4%, the Nasdaq-100 fund (QQQ) 6.3% and the chip fund (SMH) 11.5%, with AMD −17.3%, Dell −14.9%, Tesla −10.8% and Nvidia −9.3% (LRC price data, US close 5 Nov). The gold fund (GLD) rose 0.8% and the oil fund (USO) 1.8% while the copper fund fell 3.3%; this edition uses LRC's own closing prices only, and press figures (index points, the rand, the jobs report) will be added once verified.",
+ "headline": "Sappi (LRC Stock Scanner: SELL) −7.8% on results day; JSE rally cools as Naspers, Prosus and Shoprite slip while gold miners and TFG (+9.7%) rise",
+ "summary": "By mid-morning the JSE All Share stood at 112,845 and the Top 40 at 104,783, up 4.9% and 5.4% on a week ago, but Thursday's leaders gave some back: Naspers −1.7%, Prosus −2.6% and Shoprite −4.4% (LRC prices, 6 Nov 10:43 SAST). In the US the S&P 500 closed Thursday at 7,353.73 and the Nasdaq Composite at 24,315.00, down 3.0% and 4.4% on the week, with the 10-year Treasury yield at 4.84% (LRC Market Dashboard, 5 Nov close). The rand was at R16.50/$, gold at $4,082.80, platinum at $1,537 and Brent at $97.48, down 17.1% on a week ago; press reports on today's results and the election count could not be opened this run, so only LRC's own price data is used.",
  "sections": [
-  {"name": "Breaking", "items": [
-   {"title": "US tech sell-off: Nasdaq-100 fund −6.3%, chip fund −11.5%",
-    "summary": "At Thursday's close the Invesco QQQ (Nasdaq-100) fell 6.34% to $648.10 and is down 9.4% over a week; the VanEck semiconductor fund (SMH) fell 11.47% to $446.40, down 20.5% over a week. The S&P 500 fund (SPY) lost 4.41% and the Dow fund (DIA) 3.54%.",
-    "source": "LRC Stock Scanner (Yahoo Finance closing prices), 5 Nov 2026",
-    "url": "https://www.leagorifumocapital.co.za/scanner.html"},
-   {"title": "IREN (LRC Stock Scanner: STRONG SELL, target $9.17) −17% into its results",
-    "summary": "IREN closed at $18.03, down 16.95% on Thursday, and was scheduled to report after the US close the same day. The scanner rating moved from HOLD in Thursday's brief to STRONG SELL on its own rules (broken chart, very weak score). Results details will be added once verified.",
-    "source": "LRC Stock Scanner and LRC US earnings calendar, 5 Nov 2026",
-    "url": "https://www.leagorifumocapital.co.za/stock.html?t=IREN",
-    "tickers": ["IREN"]}
-  ]},
-  {"name": "US markets", "items": [
-   {"title": "Chip, AI-hardware and growth names led the fall",
-    "summary": "AMD −17.3% to $404.40, Dell −14.9% to $316.91, Tesla −10.8% to $343.69, Qualcomm −9.5% to $156.75, Nvidia −9.3% to $181.60 and Cloudflare −8.3% to $244.51. Airbnb −3.5% to $170.13. Cloudflare and Airbnb were scheduled to report after the close.",
-    "source": "LRC Stock Scanner (Yahoo Finance closing prices), 5 Nov 2026",
-    "url": "https://www.leagorifumocapital.co.za/scanner.html"}
-  ]},
-  {"name": "South Africa", "items": [
-   {"title": "JSE heavyweights rally: Naspers +10.4%, Prosus +8.0%, Satrix 40 +4.5%",
-    "summary": "Naspers closed at R777.12 (+10.4%) and Prosus at R708.75 (+8.0%). Banks also rose: FirstRand +6.1%, Capitec +6.1%, Standard Bank +4.9%, Nedbank +4.9%. The iShares South Africa fund in New York (EZA) added 2.1%.",
-    "source": "LRC Stock Scanner (Yahoo Finance closing prices), 5 Nov 2026",
-    "url": "https://www.leagorifumocapital.co.za/scanner.html"},
-   {"title": "Gold and PGM miners higher: Harmony +6.4%, Sibanye-Stillwater +4.4%, Impala +3.9%, AngloGold +3.6%, Gold Fields +3.2%",
-    "summary": "Closing prices: Harmony R273.25, Sibanye-Stillwater R38.40, Impala R180.26, AngloGold Ashanti R1,422.89, Gold Fields R606.48.",
-    "source": "LRC Stock Scanner (Yahoo Finance closing prices), 5 Nov 2026",
-    "url": "https://www.leagorifumocapital.co.za/scanner.html"}
-  ]},
-  {"name": "Forex & commodities", "items": [
-   {"title": "Gold fund +0.8%, oil fund +1.8%, copper fund −3.3%",
-    "summary": "SPDR Gold (GLD) closed at $375.30 (+0.77%, +1.8% on the week); US Oil Fund (USO) $148.00 (+1.79%, −12.0% on the week); copper fund (CPER) $37.34 (−3.25%); silver fund (SLV) $46.89 (−0.57%). Spot levels for the rand, gold and Brent will be added once verified.",
-    "source": "LRC Stock Scanner (Yahoo Finance closing prices), 5 Nov 2026",
-    "url": "https://www.leagorifumocapital.co.za/scanner.html"}
-  ]},
-  {"name": "Our coverage", "items": [
-   {"title": "Covered names hit by the tech sell-off: IREN −17.0%, Cipher −14.6%, SK hynix −13.4%, Enphase −8.2%, Telesat −5.8%",
-    "summary": "Scanner ratings are unchanged by this desk: IREN STRONG SELL (target $9.17), Cipher Digital SELL, SK hynix HOLD (target $249.20, US line closed at $123.90), Enphase STRONG SELL (target $22.18, closed $28.97), Telesat STRONG SELL.",
-    "source": "LRC Stock Scanner, 5 Nov 2026",
-    "url": "https://www.leagorifumocapital.co.za/scanner.html",
-    "tickers": ["IREN", "CIFR", "SKHY", "ENPH", "TSAT"]},
-   {"title": "OceanaGold (HOLD, target $25.04) +6.5% to $27.45, now above the scanner target",
-    "summary": "Gold producers held up: OceanaGold +6.5%, B2Gold +3.1%, AngloGold Ashanti's NYSE line +0.7% to $88.56 (HOLD, target $81.33).",
-    "source": "LRC Stock Scanner, 5 Nov 2026",
-    "url": "https://www.leagorifumocapital.co.za/stock.html?t=OGC",
-    "tickers": ["OGC", "BTG", "AU"]}
-  ]}
+  {
+   "name": "Breaking",
+   "items": [
+    {
+     "title": "Sappi −7.8% to R12.02 on results day (LRC Stock Scanner: SELL, target R11.22)",
+     "summary": "Sappi was due to release its Q4 and full-year results to 30 September 2026 at 08:00 SAST today, with a call at 15:00 SAST (Sappi investor calendar, compiled by LRC Research 31 Oct). The share traded at R12.02 at 10:42, down 7.75% from Thursday's R13.03 close, and is now about 7% above the scanner's blended target of R11.22. The rating is unchanged by this desk; results figures will be added once the announcement is verified.",
+     "source": "LRC Stock Scanner (Yahoo Finance prices), 6 Nov 2026 10:42–10:43 SAST; LRC JSE results calendar (31 Oct 2026)",
+     "url": "https://www.leagorifumocapital.co.za/stock.html?t=SAP.JO",
+     "tickers": [
+      "SAP.JO"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "US markets",
+   "items": [
+    {
+     "title": "S&P 500 7,353.73, Nasdaq 24,315.00 at Thursday's close",
+     "summary": "The S&P 500 is down 3.0% and the Nasdaq Composite 4.4% against a week ago (30 Oct closes). The US 10-year Treasury yield closed at 4.84%, from 4.93% a week earlier. The US October jobs report is due today at 15:30 SAST.",
+     "source": "LRC Market Dashboard (Yahoo Finance closes), 5 Nov 2026",
+     "url": "https://www.leagorifumocapital.co.za/dashboard.html"
+    }
+   ]
+  },
+  {
+   "name": "South Africa",
+   "items": [
+    {
+     "title": "JSE: Thursday's leaders give back gains",
+     "summary": "Mid-morning moves against Thursday's close: Shoprite −4.4% to R327.58, Glencore −3.4%, British American Tobacco −2.9%, Prosus −2.6% to R690.61, Anglo American −2.3%, Richemont −2.1%, Naspers −1.7% to R764.04. Banks were close to flat: FirstRand −0.1%, Standard Bank −0.7%, Absa +0.1%. The All Share (112,845) and Top 40 (104,783) remain 4.9% and 5.4% above their 30 Oct levels.",
+     "source": "LRC Stock Scanner (Yahoo Finance prices), 6 Nov 2026 10:42–10:43 SAST; LRC Market Dashboard (Yahoo Finance prices), 6 Nov 2026 10:58 SAST",
+     "url": "https://www.leagorifumocapital.co.za/scanner.html"
+    },
+    {
+     "title": "TFG +9.7% to R56.40 on its half-year results day",
+     "summary": "The Foschini Group (LRC Stock Scanner: HOLD, not in LRC coverage) was listed by the market-data feed to report on 6 November. Results figures will be added once the SENS announcement is verified.",
+     "source": "LRC Stock Scanner (Yahoo Finance prices), 6 Nov 2026 10:42–10:43 SAST; LRC JSE results calendar (31 Oct 2026)",
+     "url": "https://www.leagorifumocapital.co.za/stock.html?t=TFG.JO",
+     "tickers": [
+      "TFG.JO"
+     ]
+    },
+    {
+     "title": "Gold miners extend gains: AngloGold +3.7%, Gold Fields +3.2%, Harmony +2.5%",
+     "summary": "AngloGold Ashanti R1,475.50, Gold Fields R626.08, Harmony R279.99; Sibanye-Stillwater flat at R38.44 and Impala −1.6% to R177.45.",
+     "source": "LRC Stock Scanner (Yahoo Finance prices), 6 Nov 2026 10:42–10:43 SAST",
+     "url": "https://www.leagorifumocapital.co.za/scanner.html"
+    }
+   ]
+  },
+  {
+   "name": "Forex & commodities",
+   "items": [
+    {
+     "title": "Rand R16.50/$, a touch firmer than a week ago",
+     "summary": "USD/ZAR 16.4981 (16.6066 on 30 Oct), EUR/ZAR 18.4453, GBP/ZAR 22.1011.",
+     "source": "LRC Market Dashboard (Yahoo Finance prices), 6 Nov 2026 10:58 SAST",
+     "url": "https://www.leagorifumocapital.co.za/dashboard.html"
+    },
+    {
+     "title": "Gold $4,082.80 (+4.7% w/w), platinum $1,537 (+6.9%), Brent $97.48 (−17.1%)",
+     "summary": "Gold futures against $3,898.90 a week ago, platinum against $1,438 and Brent against $117.64. Copper is 3.2% lower than a week ago.",
+     "source": "LRC Market Dashboard (Yahoo Finance prices), 6 Nov 2026 10:58 SAST",
+     "url": "https://www.leagorifumocapital.co.za/dashboard.html"
+    }
+   ]
+  },
+  {
+   "name": "Our coverage",
+   "items": [
+    {
+     "title": "Sappi (SELL) is the covered JSE name moving most today",
+     "summary": "See Breaking. IREN (LRC Stock Scanner: STRONG SELL) reported after Thursday's US close; its results and how they relate to the rating will be covered once the release is verified. Cloudflare and Airbnb (scanner HOLD, not in coverage) also reported. Scanner ratings are unchanged by this desk.",
+     "source": "LRC Stock Scanner (Yahoo Finance prices), 6 Nov 2026 10:42–10:43 SAST",
+     "url": "https://www.leagorifumocapital.co.za/scanner.html",
+     "tickers": [
+      "SAP.JO",
+      "IREN"
+     ]
+    }
+   ]
+  }
  ],
  "watch_today": [
-  "US October jobs report, Friday 6 November at 15:30 SAST",
-  "Whether the tech sell-off carries into Asia and the JSE open",
-  "IREN, Cloudflare and Airbnb results released after Thursday's US close",
+  "US October jobs report at 15:30 SAST",
+  "Sappi results call at 15:00 SAST",
+  "Whether the JSE holds this week's gains into the close",
   "Final municipal election results and coalition talks",
   "Gold, oil and the rand into the weekly close"
  ]
