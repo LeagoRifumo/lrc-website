@@ -2,7 +2,7 @@
  "week_ending": "2026-11-13",
  "title": "Live — as of Fri 06 Nov 2026",
  "live": true,
- "generated": "2026-11-06T06:54+02:00",
+ "generated": "2026-11-06T07:41+02:00",
  "agent": "LRC Market Dashboard",
  "groups": [
   {
@@ -33,7 +33,7 @@
     {
      "name": "USD / ZAR",
      "unit": "rand per $",
-     "latest": 16.5206,
+     "latest": 16.5178,
      "week_ago": 16.6066,
      "year_ago": 17.3998,
      "as_of": "2026-11-06",
@@ -44,7 +44,7 @@
     {
      "name": "EUR / ZAR",
      "unit": "rand per €",
-     "latest": 18.5008,
+     "latest": 18.4956,
      "week_ago": 18.5662,
      "year_ago": 19.991,
      "as_of": "2026-11-06",
@@ -55,7 +55,7 @@
     {
      "name": "GBP / ZAR",
      "unit": "rand per £",
-     "latest": 22.1916,
+     "latest": 22.1768,
      "week_ago": 22.2271,
      "year_ago": 22.6956,
      "as_of": "2026-11-06",
@@ -175,44 +175,44 @@
     {
      "name": "Gold",
      "unit": "$/oz",
-     "latest": 4051.7,
+     "latest": 4052.8,
      "week_ago": 3898.8999,
-     "year_ago": 3992.8999,
-     "as_of": "2026-11-05",
-     "source": "Yahoo Finance GC=F daily close (2026-11-05; week-ago 2026-10-29; year-ago 2025-11-05)",
+     "year_ago": 3991.0,
+     "as_of": "2026-11-06",
+     "source": "Yahoo Finance GC=F daily close (2026-11-06; week-ago 2026-10-29; year-ago 2025-11-06)",
      "note": "",
      "carried": false
     },
     {
      "name": "Platinum",
      "unit": "$/oz",
-     "latest": 1514.3,
+     "latest": 1512.4,
      "week_ago": 1438.0,
-     "year_ago": 1553.5,
-     "as_of": "2026-11-05",
-     "source": "Yahoo Finance PL=F daily close (2026-11-05; week-ago 2026-10-29; year-ago 2025-11-05)",
+     "year_ago": 1528.3,
+     "as_of": "2026-11-06",
+     "source": "Yahoo Finance PL=F daily close (2026-11-06; week-ago 2026-10-29; year-ago 2025-11-06)",
      "note": "",
      "carried": false
     },
     {
      "name": "Brent crude",
      "unit": "$/bbl",
-     "latest": 100.03,
+     "latest": 99.42,
      "week_ago": 117.64,
-     "year_ago": 63.52,
-     "as_of": "2026-11-05",
-     "source": "Yahoo Finance BZ=F daily close (2026-11-05; week-ago 2026-10-29; year-ago 2025-11-05)",
+     "year_ago": 63.38,
+     "as_of": "2026-11-06",
+     "source": "Yahoo Finance BZ=F daily close (2026-11-06; week-ago 2026-10-29; year-ago 2025-11-06)",
      "note": "",
      "carried": false
     },
     {
      "name": "Copper",
      "unit": "$/t",
-     "latest": 13723.7595,
+     "latest": 13710.5318,
      "week_ago": 14238.5381,
-     "year_ago": 10941.5287,
-     "as_of": "2026-11-05",
-     "source": "Yahoo Finance HG=F daily close (2026-11-05; week-ago 2026-10-29; year-ago 2025-11-05) — converted $/lb × 2,204.62 to $/t",
+     "year_ago": 10902.948,
+     "as_of": "2026-11-06",
+     "source": "Yahoo Finance HG=F daily close (2026-11-06; week-ago 2026-10-29; year-ago 2025-11-06) — converted $/lb × 2,204.62 to $/t",
      "note": "",
      "carried": false
     },
@@ -232,6 +232,6 @@
  ],
  "movers": [],
  "market_view": "",
- "auto_view": "The JSE All Share moved +5.3% on the week to 113,286 and the rand firmed 0.5% to R16.52/$. In New York the S&P 500 moved -3.0% and the Nasdaq -4.4%, with the US 10-year at 4.84%. Commodities: gold +3.9%, platinum +5.3%, Brent -15.0%, copper -3.6%.",
+ "auto_view": "The JSE All Share moved +5.3% on the week to 113,286 and the rand firmed 0.5% to R16.52/$. In New York the S&P 500 moved -3.0% and the Nasdaq -4.4%, with the US 10-year at 4.84%. Commodities: gold +3.9%, platinum +5.2%, Brent -15.5%, copper -3.7%.",
  "missing": []
 }
