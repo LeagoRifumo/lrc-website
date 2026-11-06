@@ -385,20 +385,27 @@
    "ticker": "ANG",
    "name": "AngloGold Ashanti",
    "when": "Not stated",
-   "period": "Expected date (market data feed) — confirm on SENS",
+   "period": "Quarter to 30 Sep 2026",
+   "quarter": "",
    "eps_forecast": "",
    "market_cap_bn": 719.7,
-   "auto": true,
+   "reported": true,
+   "result": "up",
+   "eps_actual": null,
+   "eps_est": null,
+   "surprise": null,
+   "heps": 155.0,
+   "heps_prior": 132.0,
+   "unit": "USc",
+   "change": 0.1742,
+   "measure": "HEPS",
+   "dps": 71.0,
+   "source": "AngloGold Ashanti — Q3 30 September 2026 Earnings Release and Dividend Declaration (5 Nov 2026), via Investing News Network https://investingnews.com/anglogold-ashanti-q3-30-september-2026-earnings-release-and-dividend-declaration/ (reported in US cents: headline earnings per share 155 USc vs 132 USc for Q3 2025; nine months 606 USc vs 346 USc; Q3 2026 interim dividend 71 US cents per share)",
    "t": "ANG.JO",
    "lists": [],
    "idea": "Earnings watch",
    "v": "HOLD",
    "iv": "HOLD",
-   "track": [
-    "beat",
-    "beat",
-    "miss"
-   ],
    "lrc_rating": null,
    "covered": false
   },
@@ -928,6 +935,6 @@
   }
  ],
  "note": "Partial list: no company-published date could be confirmed this week for, among others, AngloGold Ashanti, Life Healthcare, Mr Price, MTN, Pepkor, TFG, Coronation, Redefine, Reinet, Gold Fields and Sibanye-Stillwater; they will be added when dates are published. Several companies (e.g. Mondi, Famous Brands, Clicks) reported before this window.",
- "synced": "2026-11-05T23:05+02:00",
+ "synced": "2026-11-06T06:24+02:00",
  "coverage_note": "Ticked = on the LRC watchlist. Every company the LRC Stock Scanner tracks shows its trading and investment ratings. Updated after every scanner run."
 }

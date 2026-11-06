@@ -72,7 +72,13 @@
 "eps_yago": -0.09,
 "n_est": 5,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.06,
+"eps_est": 0.015,
+"surprise": 3.0,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "AAON|2026-11-05": {
 "t": "AAON",
@@ -84,7 +90,13 @@
 "eps_forecast": "$0.56",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 6.2
+"market_cap_bn": 6.2,
+"eps_actual": 0.69,
+"eps_est": 0.494,
+"surprise": 0.3968,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "AAON|2026-11-09": {
 "t": "AAON",
@@ -145,7 +157,13 @@
 "eps_yago": 0.92,
 "n_est": 20,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 1.03,
+"eps_est": 0.8035,
+"surprise": 0.2819,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "AAUC|2026-11-04": {
 "t": "AAUC",
@@ -309,7 +327,13 @@
 "eps_yago": 2.21,
 "n_est": 35,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 1.37,
+"eps_est": 1.251,
+"surprise": 0.0948,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "ABSI|2026-11-12": {
 "t": "ABSI",
@@ -321,7 +345,7 @@
 "eps_forecast": "($0.14)",
 "quarter": "Sep/2026",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.7,
+"market_cap_bn": 1.6,
 "rev_est": 581700,
 "rev_est_low": 0,
 "rev_est_high": 1717000,
@@ -443,7 +467,13 @@
 "eps_forecast": "($0.36)",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 3.0
+"market_cap_bn": 3.0,
+"eps_actual": -0.219,
+"eps_est": -0.2506,
+"surprise": 0.1261,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "ACHR|2026-11-09": {
 "t": "ACHR",
@@ -476,7 +506,13 @@
 "eps_forecast": "$0.50",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 5.9
+"market_cap_bn": 5.9,
+"eps_actual": 0.54,
+"eps_est": 0.605,
+"surprise": -0.1074,
+"result": "miss",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "ACI|2026-10-13": {
 "t": "ACI",
@@ -504,7 +540,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 6.7,
+"market_cap_bn": 6.4,
 "rev_est": 19169495210,
 "rev_est_low": 18961000000,
 "rev_est_high": 19418100000,
@@ -525,7 +561,13 @@
 "eps_forecast": "$0.90",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 3.0
+"market_cap_bn": 3.0,
+"eps_actual": 1.26,
+"eps_est": 1.106,
+"surprise": 0.1392,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "ACMR|2026-11-05": {
 "t": "ACMR",
@@ -537,7 +579,13 @@
 "eps_forecast": "$0.41",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 3.2
+"market_cap_bn": 3.2,
+"eps_actual": 0.55,
+"eps_est": 0.5175,
+"surprise": 0.0628,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "ACM|2026-11-16": {
 "t": "ACM",
@@ -586,7 +634,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 163.1,
+"market_cap_bn": 162.9,
 "rev_est": 19406448890,
 "rev_est_low": 19217000000,
 "rev_est_high": 19632000000,
@@ -625,7 +673,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 96.0,
+"market_cap_bn": 95.9,
 "rev_est": 6830578620,
 "rev_est_low": 6764000000,
 "rev_est_high": 6936000000,
@@ -930,7 +978,13 @@
 "eps_yago": 2.35,
 "n_est": 5,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 1.13,
+"eps_est": 1.085,
+"surprise": 0.0418,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "AEHR|2026-11-02": {
 "t": "AEHR",
@@ -1192,7 +1246,13 @@
 "eps_yago": 0.6081,
 "n_est": 29,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 4.965,
+"eps_est": 0.8469,
+"surprise": 4.862,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "AFYA|2026-11-12": {
 "t": "AFYA",
@@ -1235,7 +1295,13 @@
 "eps_forecast": "($1.34)",
 "quarter": "Sep/2026",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.7
+"market_cap_bn": 1.7,
+"eps_actual": -1.09,
+"eps_est": -1.23,
+"surprise": 0.1138,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "AGI|2026-10-28": {
 "t": "AGI",
@@ -1311,7 +1377,13 @@
 "eps_yago": 4.52,
 "n_est": 2,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 5.4,
+"eps_est": 4.867,
+"surprise": 0.1096,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "AGNC|2026-10-19": {
 "t": "AGNC",
@@ -1348,7 +1420,13 @@
 "eps_yago": 2.57,
 "n_est": 3,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 1.23,
+"eps_est": 1.601,
+"surprise": -0.2317,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "AGRO|2026-11-11": {
 "t": "AGRO",
@@ -1380,7 +1458,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 3.7,
+"market_cap_bn": 3.6,
 "rev_est": 358776330,
 "rev_est_low": 336000000,
 "rev_est_high": 387000000,
@@ -1419,7 +1497,13 @@
 "eps_forecast": "$0.19",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 7.0
+"market_cap_bn": 7.0,
+"eps_actual": 0.19,
+"eps_est": 0.1667,
+"surprise": 0.14,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "AHR|2026-11-05": {
 "t": "AHR",
@@ -1440,7 +1524,13 @@
 "eps_yago": 0.2681,
 "n_est": 6,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.1505,
+"eps_est": 0.135,
+"surprise": 0.1148,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "AIG|2026-11-03": {
 "t": "AIG",
@@ -1627,7 +1717,13 @@
 "eps_yago": 1.86,
 "n_est": 21,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 1.59,
+"eps_est": 1.577,
+"surprise": 0.0083,
+"result": "inline",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "AKO.A|2026-10-27": {
 "t": "AKO.A",
@@ -2085,7 +2181,13 @@
 "eps_yago": 0.76,
 "n_est": 5,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.77,
+"eps_est": 0.6477,
+"surprise": 0.1889,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "ALSN|2026-11-02": {
 "t": "ALSN",
@@ -2235,7 +2337,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 0.9,
+"market_cap_bn": 0.8,
 "rev_est": 36597270,
 "rev_est_low": 36480870,
 "rev_est_high": 37000000,
@@ -2434,7 +2536,13 @@
 "eps_yago": -0.37,
 "n_est": 10,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -0.39,
+"eps_est": -0.3577,
+"surprise": -0.0904,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "AMN|2026-11-05": {
 "t": "AMN",
@@ -2455,7 +2563,13 @@
 "eps_yago": 0.39,
 "n_est": 9,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.77,
+"eps_est": 0.1888,
+"surprise": 3.078,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "AMPH|2026-11-05": {
 "t": "AMPH",
@@ -2476,7 +2590,13 @@
 "eps_yago": 0.93,
 "n_est": 6,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.91,
+"eps_est": 0.6138,
+"surprise": 0.4826,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "AMPL|2026-11-04": {
 "t": "AMPL",
@@ -2506,7 +2626,13 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 2.1
+"market_cap_bn": 2.1,
+"eps_actual": 0.04,
+"eps_est": 0.02935,
+"surprise": 0.3629,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "AMPX|2026-11-10": {
 "t": "AMPX",
@@ -2617,7 +2743,13 @@
 "eps_forecast": "($1.29)",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 2.0
+"market_cap_bn": 2.0,
+"eps_actual": -0.96,
+"eps_est": -0.97,
+"surprise": 0.0103,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "AMR|2026-11-06": {
 "t": "AMR",
@@ -2629,7 +2761,7 @@
 "eps_forecast": "($0.29)",
 "quarter": "Sep/2026",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.9,
+"market_cap_bn": 1.8,
 "rev_est": 562276330,
 "rev_est_low": 562029000,
 "rev_est_high": 562700000,
@@ -2945,7 +3077,13 @@
 "eps_yago": 2.04,
 "n_est": 8,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 2.21,
+"eps_est": 2.042,
+"surprise": 0.0822,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "AN|2026-10-30": {
 "t": "AN",
@@ -3004,7 +3142,13 @@
 "eps_yago": 0.16,
 "n_est": 9,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.13,
+"eps_est": 0.09667,
+"surprise": 0.3448,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "AOS|2026-10-29": {
 "t": "AOS",
@@ -3072,7 +3216,13 @@
 "eps_forecast": "$3.60",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 69.7
+"market_cap_bn": 69.7,
+"eps_actual": 3.61,
+"eps_est": 3.611,
+"surprise": -0.0002,
+"result": "inline",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "APG|2026-10-29": {
 "t": "APG",
@@ -3169,7 +3319,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 4.2,
+"market_cap_bn": 4.3,
 "rev_est": 158353250,
 "rev_est_low": 118750000,
 "rev_est_high": 181600000,
@@ -3199,7 +3349,13 @@
 "eps_yago": 0.1962,
 "n_est": 9,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.2934,
+"eps_est": 0.271,
+"surprise": 0.0828,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "APOG|2027-01-06": {
 "t": "APOG",
@@ -3267,7 +3423,13 @@
 "eps_forecast": "$0.17",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 3.5
+"market_cap_bn": 3.5,
+"eps_actual": 0.51,
+"eps_est": 0.3323,
+"surprise": 0.5349,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "APPS|2026-11-02": {
 "t": "APPS",
@@ -3506,7 +3668,13 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.8
+"market_cap_bn": 1.8,
+"eps_actual": 0.05,
+"eps_est": 0.08507,
+"surprise": -0.4122,
+"result": "miss",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "ARIS|2026-11-04": {
 "t": "ARIS",
@@ -3545,7 +3713,13 @@
 "eps_yago": 0.16,
 "n_est": 7,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.28,
+"eps_est": 0.1957,
+"surprise": 0.4307,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "ARLP|2026-10-26": {
 "t": "ARLP",
@@ -3732,7 +3906,13 @@
 "eps_yago": 2.41,
 "n_est": 4,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 5.45,
+"eps_est": 4.46,
+"surprise": 0.222,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "ARXS|2026-10-28": {
 "t": "ARXS",
@@ -3984,7 +4164,13 @@
 "eps_yago": 0.675,
 "n_est": 10,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.8,
+"eps_est": 0.73,
+"surprise": 0.0959,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "ASTS|2026-11-09": {
 "t": "ASTS",
@@ -4095,7 +4281,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.7,
+"market_cap_bn": 1.6,
 "rev_est": 83871600,
 "rev_est_low": 83160000,
 "rev_est_high": 84800000,
@@ -4104,7 +4290,13 @@
 "eps_yago": 0.23,
 "n_est": 5,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.25,
+"eps_est": 0.24,
+"surprise": 0.0417,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "ATEX|2026-11-10": {
 "t": "ATEX",
@@ -4116,7 +4308,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.4,
+"market_cap_bn": 1.3,
 "rev_est": 1972000,
 "rev_est_low": 1958000,
 "rev_est_high": 2000000,
@@ -4174,7 +4366,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.4,
+"market_cap_bn": 1.5,
 "rev_est": 781294400,
 "rev_est_low": 752300000,
 "rev_est_high": 802900000,
@@ -4183,7 +4375,13 @@
 "eps_yago": 1.21,
 "n_est": 5,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 2.5,
+"eps_est": 2.49,
+"surprise": 0.004,
+"result": "inline",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "ATLC|2026-11-09": {
 "t": "ATLC",
@@ -4365,7 +4563,13 @@
 "eps_est_q": 1.544,
 "n_est": 8,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 1.149,
+"eps_est": 1.229,
+"surprise": -0.0651,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "AUPH|2026-10-30": {
 "t": "AUPH",
@@ -4430,7 +4634,13 @@
 "eps_forecast": "$1.70",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 41.2
+"market_cap_bn": 41.2,
+"eps_actual": 1.55,
+"eps_est": 1.802,
+"surprise": -0.1401,
+"result": "miss",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "AU|2026-11-10": {
 "t": "AU",
@@ -4487,7 +4697,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 5.3,
+"market_cap_bn": 5.2,
 "rev_est": 510431840,
 "rev_est_low": 484100000,
 "rev_est_high": 530586400,
@@ -4542,7 +4752,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 0.7,
+"market_cap_bn": 0.6,
 "rev_est": 150882290,
 "rev_est_low": 141176000,
 "rev_est_high": 157500000,
@@ -4561,7 +4771,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1448.5,
+"market_cap_bn": 1391.7,
 "rev_est": 34906205760,
 "rev_est_low": 34743200000,
 "rev_est_high": 35591502020,
@@ -4649,7 +4859,13 @@
 "eps_yago": 0.1226,
 "n_est": 13,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.1336,
+"eps_est": 0.0826,
+"surprise": 0.6174,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "AVTR|2026-10-28": {
 "t": "AVTR",
@@ -4819,7 +5035,13 @@
 "eps_yago": 1.17,
 "n_est": 15,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 1.88,
+"eps_est": 1.844,
+"surprise": 0.0196,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "AXP|2026-10-23": {
 "t": "AXP",
@@ -5001,7 +5223,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 52.8,
+"market_cap_bn": 53.3,
 "rev_est": 4948250640,
 "rev_est_low": 4881000000,
 "rev_est_high": 5024000000,
@@ -5022,7 +5244,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.7,
+"market_cap_bn": 1.6,
 "rev_est": 160200000,
 "rev_est_low": 158300000,
 "rev_est_high": 161500000,
@@ -5071,7 +5293,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 3.8,
+"market_cap_bn": 3.7,
 "rev_est": 480789110,
 "rev_est_low": 471935000,
 "rev_est_high": 490000000,
@@ -5462,7 +5684,13 @@
 "eps_forecast": "$1.25",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 6.3
+"market_cap_bn": 6.3,
+"eps_actual": 1.357,
+"eps_est": 0.58,
+"surprise": 1.339,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "BBVA|2026-10-28": {
 "t": "BBVA",
@@ -5554,7 +5782,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 4.8,
+"market_cap_bn": 4.9,
 "rev_est": 149347000,
 "rev_est_low": 148200000,
 "rev_est_high": 152000000,
@@ -5606,7 +5834,13 @@
 "eps_forecast": "$0.49",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 19.2
+"market_cap_bn": 19.2,
+"eps_actual": 0.74,
+"eps_est": 0.6959,
+"surprise": 0.0633,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "BCH|2026-10-30": {
 "t": "BCH",
@@ -5743,7 +5977,13 @@
 "eps_forecast": "$4.06",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 54.0
+"market_cap_bn": 54.0,
+"eps_actual": 4.15,
+"eps_est": 4.068,
+"surprise": 0.0202,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "BEAM|2026-11-03": {
 "t": "BEAM",
@@ -5984,7 +6224,13 @@
 "eps_forecast": "$0.34",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 5.2
+"market_cap_bn": 5.2,
+"eps_actual": 0.34,
+"eps_est": 0.335,
+"surprise": 0.0149,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "BGSI|2026-11-11": {
 "t": "BGSI",
@@ -6095,7 +6341,13 @@
 "eps_yago": 4.54,
 "n_est": 3,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 4.45,
+"eps_est": 4.768,
+"surprise": -0.0667,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "BHP|2026-11-17": {
 "t": "BHP",
@@ -6253,7 +6505,13 @@
 "eps_yago": 0.61,
 "n_est": 17,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.84,
+"eps_est": 0.7089,
+"surprise": 0.1849,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "BIO.B|2026-11-04": {
 "t": "BIO.B",
@@ -6295,7 +6553,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 4.6,
+"market_cap_bn": 4.7,
 "rev_est": 0,
 "rev_est_low": 0,
 "rev_est_high": 0,
@@ -6327,7 +6585,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 6.0,
+"market_cap_bn": 6.1,
 "rev_est": 607850940,
 "rev_est_low": 597800000,
 "rev_est_high": 618153000,
@@ -6360,7 +6618,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.3,
+"market_cap_bn": 1.2,
 "rev_est": 346680270,
 "rev_est_low": 341900000,
 "rev_est_high": 351600000,
@@ -6369,7 +6627,13 @@
 "eps_yago": 0.04,
 "n_est": 9,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.94,
+"eps_est": 0.8957,
+"surprise": 0.0495,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "BJ|2026-11-20": {
 "t": "BJ",
@@ -6402,7 +6666,13 @@
 "eps_forecast": "($0.02)",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 2.4
+"market_cap_bn": 2.4,
+"eps_actual": -0.0212,
+"eps_est": -0.04,
+"surprise": 0.47,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "BKD|2026-11-06": {
 "t": "BKD",
@@ -6537,7 +6807,13 @@
 "eps_yago": 0.5,
 "n_est": 2,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.46,
+"eps_est": 0.2423,
+"surprise": 0.8985,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "BLBD|2026-11-25": {
 "t": "BLBD",
@@ -6730,7 +7006,13 @@
 "eps_yago": 0.51,
 "n_est": 11,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.73,
+"eps_est": 0.5737,
+"surprise": 0.2725,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "BMA|2026-11-25": {
 "t": "BMA",
@@ -6800,7 +7082,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 120.9,
+"market_cap_bn": 119.8,
 "rev_est": 9908386060,
 "rev_est_low": 9820000000,
 "rev_est_high": 10042000000,
@@ -6896,7 +7178,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 114.6,
+"market_cap_bn": 111.9,
 "rev_est": 10285597710,
 "rev_est_low": 10031390830,
 "rev_est_high": 10526000000,
@@ -6989,7 +7271,13 @@
 "eps_est_q": 0.2649,
 "n_est": 12,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.2,
+"eps_est": 0.1995,
+"surprise": 0.0023,
+"result": "inline",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "BOH|2026-10-26": {
 "t": "BOH",
@@ -7149,7 +7437,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.2,
+"market_cap_bn": 1.1,
 "rev_est": 656227540,
 "rev_est_low": 638600000,
 "rev_est_high": 670381670,
@@ -7191,7 +7479,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1242.4,
+"market_cap_bn": 1225.0,
 "rev_est": 0,
 "rev_est_low": 0,
 "rev_est_high": 0,
@@ -7211,7 +7499,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1242.6,
+"market_cap_bn": 1224.3,
 "rev_est": 0,
 "rev_est_low": 0,
 "rev_est_high": 0,
@@ -7483,7 +7771,13 @@
 "eps_forecast": "$0.29",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 12.7
+"market_cap_bn": 12.7,
+"eps_actual": 0.36,
+"eps_est": 0.3305,
+"surprise": 0.0892,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "BTDR|2026-11-09": {
 "t": "BTDR",
@@ -7537,7 +7831,13 @@
 "eps_yago": 0.0399,
 "n_est": 1,
 "rcur": "CAD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.234,
+"eps_est": 0.08,
+"surprise": 1.925,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "BTG|2026-11-04": {
 "t": "BTG",
@@ -8131,7 +8431,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 7.2,
+"market_cap_bn": 7.4,
 "rev_est": 2922450290,
 "rev_est_low": 2916000000,
 "rev_est_high": 2932600000,
@@ -8152,7 +8452,13 @@
 "eps_forecast": "$2.92",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 58.6
+"market_cap_bn": 58.6,
+"eps_actual": 3.26,
+"eps_est": 2.939,
+"surprise": 0.1091,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "CAI|2026-11-04": {
 "t": "CAI",
@@ -8267,7 +8573,13 @@
 "eps_yago": -0.05,
 "n_est": 10,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.39,
+"eps_est": 0.3545,
+"surprise": 0.1002,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "CAMT|2026-11-04": {
 "t": "CAMT",
@@ -8306,7 +8618,13 @@
 "eps_yago": 0.57,
 "n_est": 12,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.66,
+"eps_est": 0.6132,
+"surprise": 0.0764,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "CARR|2026-10-29": {
 "t": "CARR",
@@ -8353,7 +8671,13 @@
 "eps_forecast": "$0.64",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 13.9
+"market_cap_bn": 13.9,
+"eps_actual": 0.6,
+"eps_est": 0.626,
+"surprise": -0.0415,
+"result": "miss",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "CAR|2026-11-03": {
 "t": "CAR",
@@ -8384,7 +8708,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 25.4,
+"market_cap_bn": 25.5,
 "rev_est": 5516989310,
 "rev_est_low": 5178000000,
 "rev_est_high": 5771800000,
@@ -8753,7 +9077,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 39.4,
+"market_cap_bn": 39.7,
 "rev_est": 6471560810,
 "rev_est_low": 6411000000,
 "rev_est_high": 6522677770,
@@ -8987,7 +9311,13 @@
 "eps_yago": -0.78,
 "n_est": 10,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -1.07,
+"eps_est": -1.08,
+"surprise": 0.0093,
+"result": "inline",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "CELC|2026-11-11": {
 "t": "CELC",
@@ -9020,7 +9350,13 @@
 "eps_yago": 0.42,
 "n_est": 20,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.36,
+"eps_est": 0.418,
+"surprise": -0.1388,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "CENTA|2026-11-23": {
 "t": "CENTA",
@@ -9107,7 +9443,13 @@
 "eps_yago": 0.56,
 "n_est": 4,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 2.46,
+"eps_est": 2.3,
+"surprise": 0.0696,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "CEPU|2026-11-11": {
 "t": "CEPU",
@@ -9139,7 +9481,13 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.7
+"market_cap_bn": 1.9,
+"eps_actual": 0.09,
+"eps_est": 0.0864,
+"surprise": 0.0417,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "CE|2026-11-02": {
 "t": "CE",
@@ -9260,7 +9608,13 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 18.2
+"market_cap_bn": 18.0,
+"eps_actual": 2.87,
+"eps_est": 3.053,
+"surprise": -0.06,
+"result": "miss",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "CGAU|2026-10-29": {
 "t": "CGAU",
@@ -9351,7 +9705,13 @@
 "eps_yago": 0.96,
 "n_est": 8,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 1.07,
+"eps_est": 0.9069,
+"surprise": 0.1799,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "CHA|2026-11-27": {
 "t": "CHA",
@@ -9363,7 +9723,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 2.4,
+"market_cap_bn": 2.3,
 "rev_est": 3908153040,
 "rev_est_low": 3779000000,
 "rev_est_high": 3974164000,
@@ -9631,7 +9991,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 9.1,
+"market_cap_bn": 9.3,
 "rev_est": 3341460810,
 "rev_est_low": 3329300000,
 "rev_est_high": 3355047680,
@@ -9694,7 +10054,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 33.7,
+"market_cap_bn": 32.6,
 "rev_est": 1759664870,
 "rev_est_low": 1750000000,
 "rev_est_high": 1803467800,
@@ -9783,7 +10143,13 @@
 "eps_forecast": "$7.46",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 78.1
+"market_cap_bn": 78.1,
+"eps_actual": 7.98,
+"eps_est": 7.507,
+"surprise": 0.063,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "CLBK|2026-10-26": {
 "t": "CLBK",
@@ -10175,7 +10541,13 @@
 "eps_forecast": "$8.38",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 68.9
+"market_cap_bn": 68.9,
+"eps_actual": 8.25,
+"eps_est": 8.283,
+"surprise": -0.004,
+"result": "inline",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "CMPR|2026-10-28": {
 "t": "CMPR",
@@ -10272,7 +10644,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 107.3,
+"market_cap_bn": 105.0,
 "rev_est": 8326000000,
 "rev_est_low": 8209000000,
 "rev_est_high": 8414000000,
@@ -10390,7 +10762,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.1,
+"market_cap_bn": 1.2,
 "rev_est": 0,
 "rev_est_low": 0,
 "rev_est_high": 0,
@@ -10429,7 +10801,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 8.6,
+"market_cap_bn": 8.7,
 "rev_est": 2132595000,
 "rev_est_low": 2117700000,
 "rev_est_high": 2151360000,
@@ -10497,7 +10869,13 @@
 "eps_yago": 0.86,
 "n_est": 4,
 "rcur": "CAD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 2.19,
+"eps_est": 2.042,
+"surprise": 0.0723,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "CNR|2026-11-05": {
 "t": "CNR",
@@ -10509,7 +10887,13 @@
 "eps_forecast": "$0.53",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 4.1
+"market_cap_bn": 4.1,
+"eps_actual": 0.18,
+"eps_est": 0.6338,
+"surprise": -0.716,
+"result": "miss",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "CNS|2026-10-15": {
 "t": "CNS",
@@ -10799,7 +11183,13 @@
 "eps_yago": 0.1127,
 "n_est": 10,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.1943,
+"eps_est": 0.2497,
+"surprise": -0.222,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "CON|2026-11-05": {
 "t": "CON",
@@ -10820,7 +11210,13 @@
 "eps_yago": 0.39,
 "n_est": 10,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.52,
+"eps_est": 0.4212,
+"surprise": 0.2345,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "COO|2026-12-10": {
 "t": "COO",
@@ -10832,7 +11228,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 12.0,
+"market_cap_bn": 12.1,
 "rev_est": 1067935900,
 "rev_est_low": 1061405000,
 "rev_est_high": 1075000000,
@@ -10853,7 +11249,13 @@
 "eps_forecast": "$3.06",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 173.5
+"market_cap_bn": 173.5,
+"eps_actual": 3.27,
+"eps_est": 3.047,
+"surprise": 0.0731,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "CORT|2026-11-03": {
 "t": "CORT",
@@ -10893,7 +11295,13 @@
 "eps_yago": -0.198,
 "n_est": 17,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -0.0437,
+"eps_est": -0.06,
+"surprise": 0.2717,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "COR|2026-11-04": {
 "t": "COR",
@@ -10923,7 +11331,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 472.4,
+"market_cap_bn": 472.2,
 "rev_est": 74250913950,
 "rev_est_low": 71201000000,
 "rev_est_high": 75786000000,
@@ -11019,7 +11427,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 6.9,
+"market_cap_bn": 7.0,
 "rev_est": 2556963330,
 "rev_est_low": 2497600000,
 "rev_est_high": 2584400000,
@@ -11049,7 +11457,13 @@
 "eps_yago": 0.82,
 "n_est": 2,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 1.05,
+"eps_est": 1.07,
+"surprise": -0.0189,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "CPNG|2026-11-03": {
 "t": "CPNG",
@@ -11129,7 +11543,13 @@
 "eps_yago": 1.0,
 "n_est": 12,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.18,
+"eps_est": 0.2725,
+"surprise": -0.3395,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "CP|2026-10-28": {
 "t": "CP",
@@ -11178,7 +11598,13 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.3
+"market_cap_bn": 1.3,
+"eps_actual": 2.19,
+"eps_est": 2.073,
+"surprise": 0.0563,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "CRBG|2026-11-02": {
 "t": "CRBG",
@@ -11264,7 +11690,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 22.0,
+"market_cap_bn": 21.1,
 "rev_est": 531946580,
 "rev_est_low": 529800000,
 "rev_est_high": 551000000,
@@ -11377,7 +11803,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 184.0,
+"market_cap_bn": 183.2,
 "rev_est": 11462302380,
 "rev_est_low": 11346000000,
 "rev_est_high": 11512230000,
@@ -11407,7 +11833,13 @@
 "eps_yago": 0.09895,
 "n_est": 4,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.1263,
+"eps_est": 0.014,
+"surprise": 8.021,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "CROX|2026-10-29": {
 "t": "CROX",
@@ -11475,7 +11907,13 @@
 "eps_yago": 0.06,
 "n_est": 8,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.23,
+"eps_est": 0.07021,
+"surprise": 2.276,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "CRS|2026-10-22": {
 "t": "CRS",
@@ -11539,7 +11977,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 224.9,
+"market_cap_bn": 222.4,
 "rev_est": 1528559430,
 "rev_est_low": 1525457000,
 "rev_est_high": 1556000000,
@@ -11690,7 +12128,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.1,
+"market_cap_bn": 1.0,
 "rev_est": 92905330,
 "rev_est_low": 91200000,
 "rev_est_high": 96000000,
@@ -11699,7 +12137,13 @@
 "eps_yago": -0.02,
 "n_est": 9,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -0.07,
+"eps_est": -0.4067,
+"surprise": 0.8279,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "CSTM|2026-10-28": {
 "t": "CSTM",
@@ -11783,7 +12227,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 91.1,
+"market_cap_bn": 89.9,
 "rev_est": 3028590620,
 "rev_est_low": 3010845000,
 "rev_est_high": 3046752630,
@@ -11849,7 +12293,13 @@
 "eps_yago": 0.3317,
 "n_est": 6,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.3936,
+"eps_est": 0.3925,
+"surprise": 0.0028,
+"result": "inline",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "CTRI|2026-11-05": {
 "t": "CTRI",
@@ -11861,7 +12311,13 @@
 "eps_forecast": "$0.23",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 2.2
+"market_cap_bn": 2.2,
+"eps_actual": 0.42,
+"eps_est": 0.2352,
+"surprise": 0.7854,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "CTSH|2026-10-29": {
 "t": "CTSH",
@@ -12606,7 +13062,13 @@
 "eps_yago": 0.74,
 "n_est": 6,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.75,
+"eps_est": 0.7387,
+"surprise": 0.0153,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "DB|2026-10-28": {
 "t": "DB",
@@ -12685,7 +13147,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 9.8,
+"market_cap_bn": 9.6,
 "rev_est": 1015806200,
 "rev_est_low": 1010000000,
 "rev_est_high": 1020100000,
@@ -12727,7 +13189,13 @@
 "eps_yago": 0.99,
 "n_est": 6,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 1.18,
+"eps_est": 0.9817,
+"surprise": 0.202,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "DCP.JO|2026-10-29": {
 "t": "DCP.JO",
@@ -12921,7 +13389,13 @@
 "eps_forecast": "($0.55)",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 5.1
+"market_cap_bn": 5.1,
+"eps_actual": -1.44,
+"eps_est": -0.5491,
+"surprise": -1.623,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "DFTX|2026-11-09": {
 "t": "DFTX",
@@ -12991,7 +13465,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 30.2,
+"market_cap_bn": 30.5,
 "rev_est": 11138537840,
 "rev_est_low": 11085000000,
 "rev_est_high": 11183700000,
@@ -13132,7 +13606,13 @@
 "eps_yago": 0.37,
 "n_est": 4,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.7,
+"eps_est": 0.605,
+"surprise": 0.157,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "DIS|2026-11-17": {
 "t": "DIS",
@@ -13210,7 +13690,13 @@
 "eps_yago": -0.26,
 "n_est": 30,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.09,
+"eps_est": 0.1917,
+"surprise": -0.5306,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "DKS|2026-11-24": {
 "t": "DKS",
@@ -13325,7 +13811,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 26.4,
+"market_cap_bn": 25.9,
 "rev_est": 5038344520,
 "rev_est_low": 4973800000,
 "rev_est_high": 5074700000,
@@ -13394,7 +13880,13 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.3
+"market_cap_bn": 1.3,
+"eps_actual": -0.39,
+"eps_est": -0.37,
+"surprise": -0.0541,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "DNLI|2026-11-03": {
 "t": "DNLI",
@@ -13425,7 +13917,13 @@
 "eps_forecast": "($0.69)",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 3.0
+"market_cap_bn": 3.0,
+"eps_actual": -0.6575,
+"eps_est": -0.3667,
+"surprise": -0.7932,
+"result": "miss",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "DNN|2026-11-03": {
 "t": "DNN",
@@ -13455,7 +13953,7 @@
 "eps_forecast": "($0.01)",
 "quarter": "Sep/2026",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.8,
+"market_cap_bn": 1.9,
 "rev_est": 0,
 "rev_est_low": 0,
 "rev_est_high": 0,
@@ -13463,7 +13961,13 @@
 "eps_yago": -0.01,
 "n_est": 3,
 "rcur": "CAD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.03,
+"eps_est": -0.015,
+"surprise": 3.0,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "DNOW|2026-11-04": {
 "t": "DNOW",
@@ -13502,7 +14006,13 @@
 "eps_yago": 0.26,
 "n_est": 5,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.12,
+"eps_est": 0.085,
+"surprise": 0.4118,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "DNTH|2026-11-04": {
 "t": "DNTH",
@@ -13532,7 +14042,13 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 4.6
+"market_cap_bn": 4.6,
+"eps_actual": -0.9,
+"eps_est": -0.9087,
+"surprise": 0.0096,
+"result": "inline",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "DOCN|2026-11-03": {
 "t": "DOCN",
@@ -13572,7 +14088,13 @@
 "eps_yago": 0.45,
 "n_est": 18,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.29,
+"eps_est": 0.3027,
+"surprise": -0.0419,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "DOCU|2026-12-03": {
 "t": "DOCU",
@@ -13584,7 +14106,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 15.1,
+"market_cap_bn": 14.7,
 "rev_est": 888827390,
 "rev_est_low": 887900000,
 "rev_est_high": 896727440,
@@ -13798,7 +14320,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 25.7,
+"market_cap_bn": 25.8,
 "rev_est": 3272242020,
 "rev_est_low": 3213700000,
 "rev_est_high": 3295500000,
@@ -13931,7 +14453,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.9,
+"market_cap_bn": 2.0,
 "rev_est": 516265980,
 "rev_est_low": 502100000,
 "rev_est_high": 538200000,
@@ -13940,7 +14462,13 @@
 "eps_yago": 0.34,
 "n_est": 9,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.29,
+"eps_est": 0.266,
+"surprise": 0.0902,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "DSGR|2026-11-05": {
 "t": "DSGR",
@@ -13961,7 +14489,13 @@
 "eps_yago": 0.4,
 "n_est": 2,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.47,
+"eps_est": 0.4067,
+"surprise": 0.1557,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "DSGX|2026-12-02": {
 "t": "DSGX",
@@ -13994,7 +14528,13 @@
 "eps_forecast": "$2.22",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 27.9
+"market_cap_bn": 27.9,
+"eps_actual": 2.3,
+"eps_est": 2.146,
+"surprise": 0.0716,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "DTM|2026-10-29": {
 "t": "DTM",
@@ -14044,7 +14584,13 @@
 "eps_forecast": "$1.87",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 98.6
+"market_cap_bn": 98.6,
+"eps_actual": 1.99,
+"eps_est": 1.862,
+"surprise": 0.0686,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "DUOL|2026-11-03": {
 "t": "DUOL",
@@ -14103,7 +14649,13 @@
 "eps_yago": 1.04,
 "n_est": 6,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 1.57,
+"eps_est": 1.411,
+"surprise": 0.1126,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "DV|2026-10-30": {
 "t": "DV",
@@ -14181,7 +14733,13 @@
 "eps_forecast": "",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 2.8
+"market_cap_bn": 2.8,
+"eps_actual": 1.64,
+"eps_est": 1.79,
+"surprise": -0.0838,
+"result": "miss",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "DX|2026-10-19": {
 "t": "DX",
@@ -14228,7 +14786,13 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 3.3
+"market_cap_bn": 3.2,
+"eps_actual": -1.06,
+"eps_est": -0.8819,
+"surprise": -0.202,
+"result": "miss",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "DY|2026-11-18": {
 "t": "DY",
@@ -14365,7 +14929,13 @@
 "eps_forecast": "$0.02",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 29.6
+"market_cap_bn": 29.6,
+"eps_actual": 7.97,
+"eps_est": 0.2431,
+"surprise": 31.78,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "ECL|2026-10-27": {
 "t": "ECL",
@@ -14435,7 +15005,13 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.2
+"market_cap_bn": 1.1,
+"eps_actual": 0.23,
+"eps_est": 0.2111,
+"surprise": 0.0893,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "EC|2026-11-10": {
 "t": "EC",
@@ -14496,7 +15072,13 @@
 "eps_yago": 1.9,
 "n_est": 5,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.83,
+"eps_est": 0.773,
+"surprise": 0.0737,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "EEFT|2026-10-27": {
 "t": "EEFT",
@@ -15084,7 +15666,13 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.6
+"market_cap_bn": 1.6,
+"eps_actual": 0.88,
+"eps_est": 0.7668,
+"surprise": 0.1476,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "ENPH|2026-10-27": {
 "t": "ENPH",
@@ -15236,7 +15824,13 @@
 "eps_yago": 2.71,
 "n_est": 7,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 5.07,
+"eps_est": 4.966,
+"surprise": 0.021,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "EPAC|2026-10-28": {
 "t": "EPAC",
@@ -15288,7 +15882,13 @@
 "eps_forecast": "$2.76",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 7.1
+"market_cap_bn": 7.1,
+"eps_actual": 3.51,
+"eps_est": 3.406,
+"surprise": 0.0307,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "EPC|2026-11-12": {
 "t": "EPC",
@@ -15836,7 +16436,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.4,
+"market_cap_bn": 1.3,
 "rev_est": 42207670,
 "rev_est_low": 40500000,
 "rev_est_high": 43123000,
@@ -15845,7 +16445,13 @@
 "eps_yago": 0.04,
 "n_est": 3,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.43,
+"eps_est": 0.19,
+"surprise": 1.263,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "ETON|2026-11-12": {
 "t": "ETON",
@@ -15928,7 +16534,13 @@
 "eps_forecast": "$2.30",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 19.7
+"market_cap_bn": 19.7,
+"eps_actual": 2.58,
+"eps_est": 2.321,
+"surprise": 0.1118,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "EVR|2026-10-28": {
 "t": "EVR",
@@ -15993,7 +16605,13 @@
 "eps_forecast": "($0.55)",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 4.1
+"market_cap_bn": 4.1,
+"eps_actual": 9.65,
+"eps_est": 2.513,
+"surprise": 2.84,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "EW|2026-11-04": {
 "t": "EW",
@@ -16273,6 +16891,27 @@
 "rcur": "USD",
 "qend": "2026-09-30"
 },
+"EZPW|2026-11-11": {
+"t": "EZPW",
+"ticker": "EZPW",
+"name": "EZCORP, Inc.",
+"m": "US",
+"date": "2026-11-11",
+"when": "Not stated",
+"eps_forecast": "",
+"quarter": "",
+"period": "Expected date (market data feed)",
+"market_cap_bn": 1.8,
+"rev_est": 428154600,
+"rev_est_low": 422185000,
+"rev_est_high": 440200000,
+"rev_yago": 336813000,
+"eps_est_q": 0.43,
+"eps_yago": 0.34,
+"n_est": 5,
+"rcur": "USD",
+"qend": "2026-09-30"
+},
 "EZPW|2026-11-18": {
 "t": "EZPW",
 "ticker": "EZPW",
@@ -16371,7 +17010,13 @@
 "eps_forecast": "$0.32",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 3.7
+"market_cap_bn": 3.7,
+"eps_actual": 0.38,
+"eps_est": 0.3354,
+"surprise": 0.1331,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "FBIN|2026-11-03": {
 "t": "FBIN",
@@ -16574,7 +17219,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 11.9,
+"market_cap_bn": 12.0,
 "rev_est": 643647910,
 "rev_est_low": 639400000,
 "rev_est_high": 647916460,
@@ -16783,7 +17428,13 @@
 "eps_yago": 1.22,
 "n_est": 1,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.65,
+"eps_est": 0.777,
+"surprise": -0.1634,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "FHB|2026-10-23": {
 "t": "FHB",
@@ -16910,7 +17561,13 @@
 "eps_yago": 0.05,
 "n_est": 7,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.1143,
+"eps_est": 0.0685,
+"surprise": 0.6686,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "FIG|2026-11-04": {
 "t": "FIG",
@@ -16993,7 +17650,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 13.4,
+"market_cap_bn": 13.3,
 "rev_est": 1224613200,
 "rev_est_low": 1211778860,
 "rev_est_high": 1253100000,
@@ -17023,7 +17680,13 @@
 "eps_yago": 0.78,
 "n_est": 19,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.7,
+"eps_est": 0.6824,
+"surprise": 0.0258,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "FIX|2026-10-22": {
 "t": "FIX",
@@ -17167,7 +17830,13 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.3
+"market_cap_bn": 1.3,
+"eps_actual": 0.21,
+"eps_est": 0.2228,
+"surprise": -0.0577,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "FLO|2026-11-12": {
 "t": "FLO",
@@ -17398,7 +18067,13 @@
 "eps_yago": 1.63,
 "n_est": 3,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 1.39,
+"eps_est": 1.319,
+"surprise": 0.0539,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "FNV|2026-11-11": {
 "t": "FNV",
@@ -17496,7 +18171,13 @@
 "eps_yago": 1.47,
 "n_est": 15,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 1.32,
+"eps_est": 1.236,
+"surprise": 0.0683,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "FOXA|2026-11-02": {
 "t": "FOXA",
@@ -17613,7 +18294,13 @@
 "eps_yago": 0.22,
 "n_est": 20,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.27,
+"eps_est": 0.2403,
+"surprise": 0.1236,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "FRO|2026-11-20": {
 "t": "FRO",
@@ -17758,7 +18445,13 @@
 "eps_yago": 0.57,
 "n_est": 11,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.44,
+"eps_est": 0.4193,
+"surprise": 0.0494,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "FSLR|2026-10-29": {
 "t": "FSLR",
@@ -17879,7 +18572,13 @@
 "eps_forecast": "$1.76",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 6.1
+"market_cap_bn": 6.1,
+"eps_actual": 1.81,
+"eps_est": 1.774,
+"surprise": 0.0204,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "FTI|2026-10-29": {
 "t": "FTI",
@@ -18031,7 +18730,13 @@
 "eps_est_q": 0.51,
 "n_est": 14,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.02,
+"eps_est": 0.14,
+"surprise": -0.8571,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "FWONK|2026-11-05": {
 "t": "FWONK",
@@ -18052,7 +18757,13 @@
 "eps_yago": 0.2927,
 "n_est": 14,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.02,
+"eps_est": 0.2469,
+"surprise": -0.919,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "F|2026-10-28": {
 "t": "F",
@@ -18199,7 +18910,13 @@
 "eps_forecast": "$1.13",
 "quarter": "Sep/2026",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 2.3
+"market_cap_bn": 2.3,
+"eps_actual": 1.41,
+"eps_est": 1.28,
+"surprise": 0.1016,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "GDDY|2026-10-29": {
 "t": "GDDY",
@@ -18257,7 +18974,13 @@
 "eps_yago": 0.08,
 "n_est": 12,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.08,
+"eps_est": 0.0797,
+"surprise": 0.0038,
+"result": "inline",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "GDS|2026-11-18": {
 "t": "GDS",
@@ -18372,6 +19095,31 @@
 "eps_est_q": -0.545,
 "n_est": 5,
 "rcur": "USD",
+"qend": "2026-09-30",
+"eps_actual": -0.52,
+"eps_est": -0.4925,
+"surprise": -0.0558,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
+},
+"GENB|2026-11-10": {
+"t": "GENB",
+"ticker": "GENB",
+"name": "Generate Biomedicines, Inc.",
+"m": "US",
+"date": "2026-11-10",
+"when": "Not stated",
+"eps_forecast": "",
+"quarter": "",
+"period": "Expected date (market data feed)",
+"market_cap_bn": 1.6,
+"rev_est": 7750000,
+"rev_est_low": 5000000,
+"rev_est_high": 10000000,
+"eps_est_q": -0.545,
+"n_est": 5,
+"rcur": "USD",
 "qend": "2026-09-30"
 },
 "GENI|2026-11-05": {
@@ -18384,7 +19132,13 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.6
+"market_cap_bn": 1.6,
+"eps_actual": 0.139,
+"eps_est": 0.2,
+"surprise": -0.305,
+"result": "miss",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "GEN|2026-10-28": {
 "t": "GEN",
@@ -18424,7 +19178,13 @@
 "eps_yago": 0.25,
 "n_est": 4,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.37,
+"eps_est": 0.2875,
+"surprise": 0.287,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "GEV|2026-10-28": {
 "t": "GEV",
@@ -18666,6 +19426,33 @@
 "eps_yago": -0.23,
 "n_est": 10,
 "rcur": "USD",
+"qend": "2026-09-30",
+"eps_actual": -0.23,
+"eps_est": -0.3033,
+"surprise": 0.2417,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
+},
+"GHRS|2026-11-06": {
+"t": "GHRS",
+"ticker": "GHRS",
+"name": "GH Research PLC",
+"m": "US",
+"date": "2026-11-06",
+"when": "Not stated",
+"eps_forecast": "",
+"quarter": "",
+"period": "Expected date (market data feed)",
+"market_cap_bn": 1.3,
+"rev_est": 0,
+"rev_est_low": 0,
+"rev_est_high": 0,
+"rev_yago": 0,
+"eps_est_q": -0.3022,
+"eps_yago": -0.23,
+"n_est": 10,
+"rcur": "USD",
 "qend": "2026-09-30"
 },
 "GH|2026-11-05": {
@@ -18687,7 +19474,13 @@
 "eps_yago": -0.39,
 "n_est": 22,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -0.42,
+"eps_est": -0.3896,
+"surprise": -0.0781,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "GIB|2026-11-11": {
 "t": "GIB",
@@ -18778,7 +19571,13 @@
 "eps_forecast": "$1.60",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 7.5
+"market_cap_bn": 7.5,
+"eps_actual": 1.54,
+"eps_est": 1.586,
+"surprise": -0.0292,
+"result": "miss",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "GIS|2026-12-23": {
 "t": "GIS",
@@ -18790,7 +19589,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 19.2,
+"market_cap_bn": 19.5,
 "rev_est": 4713355010,
 "rev_est_low": 4623000000,
 "rev_est_high": 4820000000,
@@ -18999,7 +19798,13 @@
 "eps_yago": 0.646,
 "n_est": 10,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.491,
+"eps_est": 0.3329,
+"surprise": 0.475,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "GMED|2026-11-05": {
 "t": "GMED",
@@ -19020,7 +19825,13 @@
 "eps_yago": 1.18,
 "n_est": 14,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 1.34,
+"eps_est": 1.099,
+"surprise": 0.2191,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "GME|2026-12-08": {
 "t": "GME",
@@ -19032,7 +19843,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 12.3,
+"market_cap_bn": 12.1,
 "rev_est": 782325000,
 "rev_est_low": 754000000,
 "rev_est_high": 810650000,
@@ -19262,7 +20073,13 @@
 "eps_yago": -0.37,
 "n_est": 10,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -0.49,
+"eps_est": -0.382,
+"surprise": -0.2827,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "GPC|2026-10-20": {
 "t": "GPC",
@@ -19299,7 +20116,13 @@
 "eps_yago": 0.29,
 "n_est": 1,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.17,
+"eps_est": 0.1435,
+"surprise": 0.1844,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "GPI|2026-10-28": {
 "t": "GPI",
@@ -19349,7 +20172,13 @@
 "eps_forecast": "$3.57",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 25.9
+"market_cap_bn": 25.9,
+"eps_actual": 3.58,
+"eps_est": 3.579,
+"surprise": 0.0004,
+"result": "inline",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "GPOR|2026-11-04": {
 "t": "GPOR",
@@ -19472,7 +20301,13 @@
 "eps_yago": 0.25,
 "n_est": 7,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.29,
+"eps_est": 0.2617,
+"surprise": 0.1083,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "GRMN|2026-10-28": {
 "t": "GRMN",
@@ -19512,7 +20347,13 @@
 "eps_yago": 0.1719,
 "n_est": 3,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.1293,
+"eps_est": 0.15,
+"surprise": -0.138,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "GSAT|2026-11-05": {
 "t": "GSAT",
@@ -19524,7 +20365,13 @@
 "eps_forecast": "($0.12)",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 10.9
+"market_cap_bn": 10.9,
+"eps_actual": -0.1129,
+"eps_est": 0.1,
+"surprise": -2.129,
+"result": "miss",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "GSBD|2026-11-05": {
 "t": "GSBD",
@@ -19545,7 +20392,13 @@
 "eps_yago": 0.4,
 "n_est": 4,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.38,
+"eps_est": 0.31,
+"surprise": 0.2258,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "GSHD|2026-11-09": {
 "t": "GSHD",
@@ -19557,7 +20410,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 2.1,
+"market_cap_bn": 2.0,
 "rev_est": 104781370,
 "rev_est_low": 101000000,
 "rev_est_high": 108551000,
@@ -19653,7 +20506,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 8.3,
+"market_cap_bn": 8.2,
 "rev_est": 282741150,
 "rev_est_low": 282000000,
 "rev_est_high": 294607000,
@@ -19748,7 +20601,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 13.9,
+"market_cap_bn": 13.8,
 "rev_est": 376307180,
 "rev_est_low": 374700000,
 "rev_est_high": 381412000,
@@ -19815,7 +20668,13 @@
 "eps_yago": 0.97,
 "n_est": 11,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 1.0,
+"eps_est": 0.9655,
+"surprise": 0.0358,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "HAE|2026-11-05": {
 "t": "HAE",
@@ -19827,7 +20686,13 @@
 "eps_forecast": "$1.30",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 5.5
+"market_cap_bn": 5.5,
+"eps_actual": 1.35,
+"eps_est": 1.291,
+"surprise": 0.0458,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "HAFN|2026-11-18": {
 "t": "HAFN",
@@ -19839,7 +20704,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 5.2,
+"market_cap_bn": 5.0,
 "rev_est": 297103690,
 "rev_est_low": 271000000,
 "rev_est_high": 316311070,
@@ -19869,7 +20734,13 @@
 "eps_yago": 1.72,
 "n_est": 7,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 2.28,
+"eps_est": 1.816,
+"surprise": 0.2553,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "HAL|2026-10-20": {
 "t": "HAL",
@@ -19924,7 +20795,13 @@
 "eps_yago": 0.8,
 "n_est": 11,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.75,
+"eps_est": 0.7305,
+"surprise": 0.0268,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "HAS|2026-10-20": {
 "t": "HAS",
@@ -19952,7 +20829,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.3,
+"market_cap_bn": 1.2,
 "rev_est": 56436720,
 "rev_est_low": 55000000,
 "rev_est_high": 57900000,
@@ -20115,7 +20992,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 45.9,
+"market_cap_bn": 45.6,
 "rev_est": 1430967560,
 "rev_est_low": 1375000000,
 "rev_est_high": 1462321020,
@@ -20171,7 +21048,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.4,
+"market_cap_bn": 1.5,
 "rev_est": 0,
 "rev_est_low": 0,
 "rev_est_high": 0,
@@ -20256,7 +21133,13 @@
 "eps_est_q": 0.69,
 "n_est": 2,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 2.68,
+"eps_est": 0.9924,
+"surprise": 1.701,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "HIG|2026-10-26": {
 "t": "HIG",
@@ -20336,7 +21219,13 @@
 "eps_yago": 0.006,
 "n_est": 1,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.114,
+"eps_est": 0.12,
+"surprise": -0.05,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "HIPO|2026-10-29": {
 "t": "HIPO",
@@ -20412,7 +21301,13 @@
 "eps_yago": 0.72,
 "n_est": 6,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.88,
+"eps_est": 0.8033,
+"surprise": 0.0955,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "HLIT|2026-11-02": {
 "t": "HLIT",
@@ -20765,14 +21660,19 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.9,
+"market_cap_bn": 1.7,
 "rev_est": 483000000,
 "rev_est_low": 483000000,
 "rev_est_high": 483000000,
 "eps_est_q": 0.27,
 "n_est": 1,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.63,
+"eps_est": null,
+"surprise": null,
+"result": null,
+"quarter_end": "2026-06-30"
 },
 "HPE|2026-11-23": {
 "t": "HPE",
@@ -20859,7 +21759,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 8.8,
+"market_cap_bn": 8.6,
 "rev_est": 347256970,
 "rev_est_low": 344900000,
 "rev_est_high": 350053010,
@@ -20892,7 +21792,13 @@
 "eps_forecast": "($1.39)",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 6.1
+"market_cap_bn": 6.1,
+"eps_actual": 2.38,
+"eps_est": 2.21,
+"surprise": 0.0769,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "HRB|2026-11-09": {
 "t": "HRB",
@@ -21035,7 +21941,7 @@
 "eps_forecast": "",
 "quarter": "Sep/2026",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 15.8,
+"market_cap_bn": 16.1,
 "rev_est": 1037765040,
 "rev_est_low": 980000000,
 "rev_est_high": 1129000000,
@@ -21484,7 +22390,13 @@
 "eps_yago": 0.3,
 "n_est": 4,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.42,
+"eps_est": 0.4402,
+"surprise": -0.046,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "IBKR|2026-10-15": {
 "t": "IBKR",
@@ -21528,7 +22440,13 @@
 "eps_forecast": "$2.74",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 5.6
+"market_cap_bn": 5.6,
+"eps_actual": 2.76,
+"eps_est": 2.83,
+"surprise": -0.0246,
+"result": "miss",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "IBRX|2026-11-03": {
 "t": "IBRX",
@@ -21577,7 +22495,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 9.0,
+"market_cap_bn": 8.5,
 "rev_est": 59225000,
 "rev_est_low": 55600000,
 "rev_est_high": 65900000,
@@ -21586,7 +22504,13 @@
 "eps_yago": -0.07,
 "n_est": 4,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -0.22,
+"eps_est": -0.08,
+"surprise": -1.75,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "IBTA|2026-11-02": {
 "t": "IBTA",
@@ -21644,7 +22568,13 @@
 "eps_yago": 1.67,
 "n_est": 5,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 1.86,
+"eps_est": 1.646,
+"surprise": 0.13,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "ICHR|2026-11-02": {
 "t": "ICHR",
@@ -21722,7 +22652,13 @@
 "eps_yago": 2.03,
 "n_est": 8,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 2.37,
+"eps_est": 1.914,
+"surprise": 0.2381,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "IDA|2026-10-29": {
 "t": "IDA",
@@ -21789,7 +22725,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 2.1,
+"market_cap_bn": 2.0,
 "rev_est": 331000000,
 "rev_est_low": 331000000,
 "rev_est_high": 331000000,
@@ -21926,7 +22862,13 @@
 "eps_yago": -0.13,
 "n_est": 1,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -0.2061,
+"eps_est": -0.15,
+"surprise": -0.374,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "IFF|2026-11-03": {
 "t": "IFF",
@@ -22045,7 +22987,13 @@
 "eps_yago": 0.47,
 "n_est": 11,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.43,
+"eps_est": 0.2707,
+"surprise": 0.5882,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "IMCR|2026-11-05": {
 "t": "IMCR",
@@ -22053,6 +23001,33 @@
 "name": "Immunocore Holdings plc",
 "m": "US",
 "date": "2026-11-05",
+"when": "Not stated",
+"eps_forecast": "",
+"quarter": "",
+"period": "Expected date (market data feed)",
+"market_cap_bn": 1.5,
+"rev_est": 113355910,
+"rev_est_low": 108358000,
+"rev_est_high": 118400000,
+"rev_yago": 103693000,
+"eps_est_q": -0.1305,
+"eps_yago": 0,
+"n_est": 12,
+"rcur": "USD",
+"qend": "2026-09-30",
+"eps_actual": -0.02,
+"eps_est": 0.02091,
+"surprise": -1.956,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
+},
+"IMCR|2026-11-09": {
+"t": "IMCR",
+"ticker": "IMCR",
+"name": "Immunocore Holdings plc",
+"m": "US",
+"date": "2026-11-09",
 "when": "Not stated",
 "eps_forecast": "",
 "quarter": "",
@@ -22099,7 +23074,13 @@
 "eps_yago": -0.65,
 "n_est": 15,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -0.65,
+"eps_est": -0.5048,
+"surprise": -0.2878,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "IMOS|2026-11-10": {
 "t": "IMOS",
@@ -22149,7 +23130,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.0,
+"market_cap_bn": 0.9,
 "rev_est": 12407890,
 "rev_est_low": 7298000,
 "rev_est_high": 16500000,
@@ -22344,7 +23325,13 @@
 "eps_forecast": "$2.55",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 6.1
+"market_cap_bn": 6.1,
+"eps_actual": 2.28,
+"eps_est": 2.596,
+"surprise": -0.1218,
+"result": "miss",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "ING|2026-10-29": {
 "t": "ING",
@@ -22445,7 +23432,13 @@
 "eps_yago": 0.24,
 "n_est": 4,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.41,
+"eps_est": 0.2607,
+"surprise": 0.5729,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "INP.JO|2026-11-19": {
 "t": "INP.JO",
@@ -22506,7 +23499,13 @@
 "eps_forecast": "$4.60",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 5.4
+"market_cap_bn": 5.4,
+"eps_actual": 5.84,
+"eps_est": 5.787,
+"surprise": 0.0092,
+"result": "inline",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "INTA|2026-10-27": {
 "t": "INTA",
@@ -22693,7 +23692,13 @@
 "eps_yago": -3.58,
 "n_est": 11,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -5.08,
+"eps_est": -0.5987,
+"surprise": -7.486,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "IONS|2026-11-04": {
 "t": "IONS",
@@ -22763,7 +23768,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 24.5,
+"market_cap_bn": 24.0,
 "rev_est": 515205290,
 "rev_est_low": 514560000,
 "rev_est_high": 516102000,
@@ -22793,7 +23798,13 @@
 "eps_yago": -0.25,
 "n_est": 7,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -0.11,
+"eps_est": -0.1349,
+"surprise": 0.1843,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "IPAR|2026-11-04": {
 "t": "IPAR",
@@ -22917,7 +23928,13 @@
 "eps_yago": 0.00806,
 "n_est": 13,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -0.2544,
+"eps_est": -0.455,
+"surprise": 0.4409,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "IRMD|2026-10-30": {
 "t": "IRMD",
@@ -22947,7 +23964,13 @@
 "eps_forecast": "$1.35",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 34.7
+"market_cap_bn": 34.7,
+"eps_actual": 0.64,
+"eps_est": 0.6116,
+"surprise": 0.0464,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "IRON|2026-11-05": {
 "t": "IRON",
@@ -22968,7 +23991,13 @@
 "eps_yago": -1.77,
 "n_est": 11,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -1.54,
+"eps_est": -1.769,
+"surprise": 0.1294,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "IRS|2026-11-04": {
 "t": "IRS",
@@ -23001,7 +24030,13 @@
 "eps_yago": -0.06,
 "n_est": 15,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.58,
+"eps_est": 0.04271,
+"surprise": 12.58,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "IRT|2026-11-02": {
 "t": "IRT",
@@ -23306,7 +24341,13 @@
 "eps_yago": -0.39,
 "n_est": 13,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -0.35,
+"eps_est": -0.2894,
+"surprise": -0.2093,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "JAN|2026-11-02": {
 "t": "JAN",
@@ -23388,7 +24429,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 25.0,
+"market_cap_bn": 24.5,
 "rev_est": 11013646260,
 "rev_est_low": 10762380000,
 "rev_est_high": 11192000000,
@@ -23538,7 +24579,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 11.1,
+"market_cap_bn": 11.2,
 "rev_est": 2065386380,
 "rev_est_low": 2057237000,
 "rev_est_high": 2081622150,
@@ -23849,7 +24890,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.4,
+"market_cap_bn": 1.3,
 "rev_est": 0,
 "rev_est_low": 0,
 "rev_est_high": 0,
@@ -24014,7 +25055,13 @@
 "eps_est_q": -0.1225,
 "n_est": 12,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -0.1932,
+"eps_est": -0.07333,
+"surprise": -1.635,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "KEP|2026-11-12": {
 "t": "KEP",
@@ -24329,7 +25376,13 @@
 "eps_forecast": "$1.66",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 64.1
+"market_cap_bn": 64.1,
+"eps_actual": 1.7,
+"eps_est": 1.651,
+"surprise": 0.0298,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "KMI|2026-10-21": {
 "t": "KMI",
@@ -24709,7 +25762,13 @@
 "eps_yago": 0.1,
 "n_est": 13,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.14,
+"eps_est": 0.1311,
+"surprise": 0.0682,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "KRT|2026-11-05": {
 "t": "KRT",
@@ -24730,7 +25789,13 @@
 "eps_yago": 0.37,
 "n_est": 3,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 1.48,
+"eps_est": 0.51,
+"surprise": 1.902,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "KRYS|2026-11-02": {
 "t": "KRYS",
@@ -24761,7 +25826,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 41.1,
+"market_cap_bn": 41.0,
 "rev_est": 34574845040,
 "rev_est_low": 33808807000,
 "rev_est_high": 35108000000,
@@ -24851,7 +25916,13 @@
 "eps_yago": 1.44,
 "n_est": 9,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 1.06,
+"eps_est": 1.038,
+"surprise": 0.0209,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "KTOS|2026-11-05": {
 "t": "KTOS",
@@ -24872,7 +25943,13 @@
 "eps_yago": 0.14,
 "n_est": 20,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.21,
+"eps_est": 0.1518,
+"surprise": 0.3837,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "KT|2026-11-06": {
 "t": "KT",
@@ -25033,7 +26110,13 @@
 "eps_forecast": "$2.23",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 15.9
+"market_cap_bn": 15.9,
+"eps_actual": 1.59,
+"eps_est": 1.647,
+"surprise": -0.0347,
+"result": "miss",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "LASR|2026-11-05": {
 "t": "LASR",
@@ -25054,7 +26137,13 @@
 "eps_yago": 0.08,
 "n_est": 9,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.15,
+"eps_est": 0.1411,
+"surprise": 0.063,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "LAUR|2026-10-29": {
 "t": "LAUR",
@@ -25117,7 +26206,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.3,
+"market_cap_bn": 1.2,
 "rev_est": 0,
 "rev_est_low": 0,
 "rev_est_high": 0,
@@ -25241,7 +26330,13 @@
 "eps_yago": 1.97,
 "n_est": 11,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 2.7,
+"eps_est": 2.558,
+"surprise": 0.0554,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "LCLN|2026-11-05": {
 "t": "LCLN",
@@ -25260,7 +26355,13 @@
 "eps_est_q": 0.3714,
 "n_est": 5,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.26,
+"eps_est": 0.1314,
+"surprise": 0.9782,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "LDOS|2026-11-03": {
 "t": "LDOS",
@@ -25362,7 +26463,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 21.7,
+"market_cap_bn": 21.8,
 "rev_est": 8807713350,
 "rev_est_low": 8686300000,
 "rev_est_high": 8967552000,
@@ -25426,7 +26527,13 @@
 "eps_yago": 0.01444,
 "n_est": 9,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.1092,
+"eps_est": 0.08247,
+"surprise": 0.3241,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "LFTO|2026-11-11": {
 "t": "LFTO",
@@ -25776,7 +26883,13 @@
 "eps_est_q": -0.02261,
 "eps_yago": -0.2,
 "n_est": 10,
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.06,
+"eps_est": -0.004,
+"surprise": 16.0,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "LITE|2026-11-02": {
 "t": "LITE",
@@ -25804,7 +26917,13 @@
 "eps_forecast": "$3.82",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 76.2
+"market_cap_bn": 76.2,
+"eps_actual": 4.57,
+"eps_est": 4.224,
+"surprise": 0.0819,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "LIVN|2026-11-04": {
 "t": "LIVN",
@@ -25944,7 +27063,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 9.9,
+"market_cap_bn": 10.0,
 "rev_est": 75300000,
 "rev_est_low": 75300000,
 "rev_est_high": 75300000,
@@ -25953,7 +27072,13 @@
 "eps_yago": -0.8467,
 "n_est": 1,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -2.92,
+"eps_est": 0.42,
+"surprise": -7.952,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "LLY|2026-10-29": {
 "t": "LLY",
@@ -26002,7 +27127,13 @@
 "eps_forecast": "($0.60)",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 3.2
+"market_cap_bn": 3.2,
+"eps_actual": -0.56,
+"eps_est": -0.5782,
+"surprise": 0.0314,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "LMRI|2026-11-10": {
 "t": "LMRI",
@@ -26061,7 +27192,13 @@
 "eps_forecast": "$1.96",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 8.1
+"market_cap_bn": 8.1,
+"eps_actual": 1.72,
+"eps_est": 1.954,
+"surprise": -0.1196,
+"result": "miss",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "LNG|2026-10-29": {
 "t": "LNG",
@@ -26101,7 +27238,13 @@
 "eps_yago": 1.27,
 "n_est": 7,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 1.55,
+"eps_est": 1.304,
+"surprise": 0.189,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "LNT|2026-10-29": {
 "t": "LNT",
@@ -26132,7 +27275,13 @@
 "eps_forecast": "$0.29",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 6.4
+"market_cap_bn": 6.4,
+"eps_actual": 0.39,
+"eps_est": 0.3287,
+"surprise": 0.1865,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "LOGI|2026-10-27": {
 "t": "LOGI",
@@ -26172,7 +27321,13 @@
 "eps_yago": -0.02439,
 "n_est": 1,
 "rcur": "ARS",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.02795,
+"eps_est": 0.1483,
+"surprise": -0.8115,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "LOPE|2026-11-04": {
 "t": "LOPE",
@@ -26223,7 +27378,13 @@
 "eps_forecast": "",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 2.2
+"market_cap_bn": 2.2,
+"eps_actual": 3.46,
+"eps_est": 2.837,
+"surprise": 0.2194,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "LPLA|2026-10-27": {
 "t": "LPLA",
@@ -26426,7 +27587,13 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.3
+"market_cap_bn": 1.3,
+"eps_actual": 0.17,
+"eps_est": 0.1688,
+"surprise": 0.0073,
+"result": "inline",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "LSTR|2026-10-27": {
 "t": "LSTR",
@@ -26535,7 +27702,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 12.7,
+"market_cap_bn": 12.9,
 "rev_est": 2315297750,
 "rev_est_low": 2253000000,
 "rev_est_high": 2381418150,
@@ -26726,7 +27893,13 @@
 "eps_yago": 0.11,
 "n_est": 35,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.13,
+"eps_est": 0.1409,
+"surprise": -0.0774,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "LYG|2026-10-29": {
 "t": "LYG",
@@ -26784,7 +27957,13 @@
 "eps_yago": 0.73,
 "n_est": 22,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 1.05,
+"eps_est": 0.5741,
+"surprise": 0.8289,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "LZB|2026-11-17": {
 "t": "LZB",
@@ -26899,7 +28078,13 @@
 "eps_yago": 0.97,
 "n_est": 7,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.97,
+"eps_est": 0.9643,
+"surprise": 0.0059,
+"result": "inline",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "MAIR|2026-11-05": {
 "t": "MAIR",
@@ -26918,7 +28103,13 @@
 "eps_est_q": 0.293,
 "n_est": 12,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.31,
+"eps_est": 0.2425,
+"surprise": 0.2784,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "MANE|2026-11-10": {
 "t": "MANE",
@@ -26968,7 +28159,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 3.8,
+"market_cap_bn": 3.9,
 "rev_est": 151000000,
 "rev_est_low": 151000000,
 "rev_est_high": 151000000,
@@ -27109,7 +28300,13 @@
 "eps_yago": 0.89,
 "n_est": 11,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.01,
+"eps_est": 0.04404,
+"surprise": -0.7729,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "MAZE|2026-11-05": {
 "t": "MAZE",
@@ -27130,7 +28327,13 @@
 "eps_yago": -0.66,
 "n_est": 12,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -0.76,
+"eps_est": -0.6961,
+"surprise": -0.0918,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "MA|2026-10-29": {
 "t": "MA",
@@ -27170,7 +28373,13 @@
 "eps_yago": 0.33,
 "n_est": 3,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.05,
+"eps_est": 0.07,
+"surprise": -0.2857,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "MBGL|2026-11-12": {
 "t": "MBGL",
@@ -27248,7 +28457,13 @@
 "eps_yago": -0.63,
 "n_est": 7,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -0.78,
+"eps_est": -0.5857,
+"surprise": -0.3318,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "MCD|2026-11-04": {
 "t": "MCD",
@@ -27306,7 +28521,13 @@
 "eps_yago": 0.35,
 "n_est": 22,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.76,
+"eps_est": 0.6993,
+"surprise": 0.0868,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "MCK|2026-11-04": {
 "t": "MCK",
@@ -27399,7 +28620,13 @@
 "eps_yago": 0.68,
 "n_est": 8,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.63,
+"eps_est": 0.6105,
+"surprise": 0.032,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "MDA|2026-11-05": {
 "t": "MDA",
@@ -27411,7 +28638,13 @@
 "eps_forecast": "$0.20",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 4.4
+"market_cap_bn": 4.4,
+"eps_actual": 0.37,
+"eps_est": 0.2878,
+"surprise": 0.2857,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "MDB|2026-12-01": {
 "t": "MDB",
@@ -27423,7 +28656,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 24.9,
+"market_cap_bn": 24.5,
 "rev_est": 761812730,
 "rev_est_low": 752800000,
 "rev_est_high": 785410480,
@@ -27520,7 +28753,13 @@
 "eps_forecast": "$0.10",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 4.1
+"market_cap_bn": 4.1,
+"eps_actual": 0.08,
+"eps_est": 0.09772,
+"surprise": -0.1813,
+"result": "miss",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "MD|2026-10-29": {
 "t": "MD",
@@ -27863,7 +29102,13 @@
 "eps_yago": 1.4,
 "n_est": 11,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.59,
+"eps_est": 0.477,
+"surprise": 0.2368,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "MIAX|2026-10-29": {
 "t": "MIAX",
@@ -27906,7 +29151,13 @@
 "eps_forecast": "$1.74",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 5.6
+"market_cap_bn": 5.6,
+"eps_actual": 2.07,
+"eps_est": 1.745,
+"surprise": 0.1862,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "MIRM|2026-11-03": {
 "t": "MIRM",
@@ -28120,7 +29371,13 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.4
+"market_cap_bn": 1.4,
+"eps_actual": 0.018,
+"eps_est": -0.01,
+"surprise": 2.8,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "MLI|2026-10-20": {
 "t": "MLI",
@@ -28242,7 +29499,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 5.2,
+"market_cap_bn": 5.1,
 "rev_est": 824436050,
 "rev_est_low": 813923410,
 "rev_est_high": 832000000,
@@ -28416,7 +29673,13 @@
 "eps_yago": 0.07,
 "n_est": 9,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -0.01,
+"eps_est": 0.01667,
+"surprise": -1.6,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "MNSO|2026-11-17": {
 "t": "MNSO",
@@ -28470,7 +29733,13 @@
 "eps_yago": 0.265,
 "n_est": 18,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.295,
+"eps_est": 0.2897,
+"surprise": 0.0184,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "MOD|2026-11-03": {
 "t": "MOD",
@@ -28681,7 +29950,13 @@
 "eps_yago": -0.1,
 "n_est": 11,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -0.01,
+"eps_est": -0.00366,
+"surprise": -1.732,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "MQ|2026-11-03": {
 "t": "MQ",
@@ -28837,7 +30112,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 127.1,
+"market_cap_bn": 120.2,
 "rev_est": 3155914360,
 "rev_est_low": 3110000000,
 "rev_est_high": 3227800000,
@@ -28867,7 +30142,13 @@
 "eps_yago": 0.96,
 "n_est": 6,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 1.64,
+"eps_est": 1.363,
+"surprise": 0.2035,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "MSA|2026-11-02": {
 "t": "MSA",
@@ -28969,7 +30250,13 @@
 "eps_forecast": "($0.06)",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 3.7
+"market_cap_bn": 3.7,
+"eps_actual": 0.4055,
+"eps_est": 0.08,
+"surprise": 4.069,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "MSGK|2026-10-30": {
 "t": "MSGK",
@@ -29000,7 +30287,13 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 7.5
+"market_cap_bn": 7.5,
+"eps_actual": 1.192,
+"eps_est": 0.5276,
+"surprise": 1.26,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "MSGK|2026-11-06": {
 "t": "MSGK",
@@ -29210,7 +30503,13 @@
 "eps_yago": 11.15,
 "n_est": 11,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 11.46,
+"eps_est": 10.8,
+"surprise": 0.0609,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "MTG|2026-11-04": {
 "t": "MTG",
@@ -29287,7 +30586,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 5.6,
+"market_cap_bn": 5.7,
 "rev_est": 275611790,
 "rev_est_low": 254600000,
 "rev_est_high": 301200000,
@@ -29326,7 +30625,13 @@
 "eps_forecast": "$1.68",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 18.0
+"market_cap_bn": 18.0,
+"eps_actual": 2.09,
+"eps_est": 2.0,
+"surprise": 0.0452,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "MTX|2026-10-29": {
 "t": "MTX",
@@ -29376,7 +30681,13 @@
 "eps_forecast": "$0.80",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 46.0
+"market_cap_bn": 46.0,
+"eps_actual": 1.15,
+"eps_est": 0.9367,
+"surprise": 0.2278,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "MUFG|2026-11-13": {
 "t": "MUFG",
@@ -29462,7 +30773,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 793.1,
+"market_cap_bn": 745.3,
 "rev_est": 61832643300,
 "rev_est_low": 58065000000,
 "rev_est_high": 65610000000,
@@ -29501,7 +30812,13 @@
 "eps_forecast": "$0.39",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 3.5
+"market_cap_bn": 3.5,
+"eps_actual": 0.38,
+"eps_est": 0.3762,
+"surprise": 0.0101,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "MWH|2026-11-12": {
 "t": "MWH",
@@ -29604,7 +30921,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 6.5,
+"market_cap_bn": 6.3,
 "rev_est": 4675996950,
 "rev_est_low": 4652000000,
 "rev_est_high": 4733000000,
@@ -29706,7 +31023,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 6.7,
+"market_cap_bn": 6.6,
 "rev_est": 254373360,
 "rev_est_low": 253730000,
 "rev_est_high": 255378770,
@@ -29817,7 +31134,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 2.4,
+"market_cap_bn": 2.5,
 "rev_est": 162604360,
 "rev_est_low": 162000000,
 "rev_est_high": 163333000,
@@ -29854,7 +31171,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 17.9,
+"market_cap_bn": 17.3,
 "rev_est": 828750000,
 "rev_est_low": 825700000,
 "rev_est_high": 833100000,
@@ -29984,7 +31301,13 @@
 "eps_yago": 0.27,
 "n_est": 28,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.29,
+"eps_est": 0.2698,
+"surprise": 0.075,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "NEU|2026-10-28": {
 "t": "NEU",
@@ -30114,7 +31437,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 86.9
+"market_cap_bn": 86.4
 },
 "NGL|2026-11-05": {
 "t": "NGL",
@@ -30378,7 +31701,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 58.4,
+"market_cap_bn": 58.7,
 "rev_est": 11106538070,
 "rev_est_low": 10786000000,
 "rev_est_high": 11968000000,
@@ -30478,7 +31801,13 @@
 "eps_yago": 1.21,
 "n_est": 4,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 1.38,
+"eps_est": 1.282,
+"surprise": 0.0767,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "NMM|2026-11-04": {
 "t": "NMM",
@@ -30561,7 +31890,13 @@
 "eps_yago": 2.95,
 "n_est": 1,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 1.77,
+"eps_est": 2.13,
+"surprise": -0.169,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "NNN|2026-11-04": {
 "t": "NNN",
@@ -30591,7 +31926,13 @@
 "eps_forecast": "($0.12)",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 2.0
+"market_cap_bn": 2.0,
+"eps_actual": -0.3896,
+"eps_est": -0.155,
+"surprise": -1.514,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "NN|2026-11-10": {
 "t": "NN",
@@ -30603,7 +31944,7 @@
 "eps_forecast": "($0.12)",
 "quarter": "Sep/2026",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.3,
+"market_cap_bn": 1.4,
 "rev_est": 986500,
 "rev_est_low": 800000,
 "rev_est_high": 1173000,
@@ -30649,7 +31990,13 @@
 "eps_yago": 1.03,
 "n_est": 7,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 1.13,
+"eps_est": 1.124,
+"surprise": 0.0057,
+"result": "inline",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "NOK|2026-10-22": {
 "t": "NOK",
@@ -30847,7 +32194,13 @@
 "eps_forecast": "$3.33",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 19.7
+"market_cap_bn": 19.7,
+"eps_actual": 1.49,
+"eps_est": 1.74,
+"surprise": -0.1437,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "NRG|2026-11-09": {
 "t": "NRG",
@@ -30936,7 +32289,13 @@
 "eps_forecast": "$2.62",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 4.9
+"market_cap_bn": 4.9,
+"eps_actual": 3.59,
+"eps_est": 2.85,
+"surprise": 0.2595,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "NSP|2026-10-29": {
 "t": "NSP",
@@ -30985,7 +32344,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 34.3,
+"market_cap_bn": 33.3,
 "rev_est": 2102537450,
 "rev_est_low": 2065500000,
 "rev_est_high": 2171709000,
@@ -31037,7 +32396,13 @@
 "eps_forecast": "$0.53",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 2.8
+"market_cap_bn": 2.8,
+"eps_actual": 0.71,
+"eps_est": 0.665,
+"surprise": 0.0677,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "NTES|2026-11-19": {
 "t": "NTES",
@@ -31079,7 +32444,13 @@
 "eps_yago": -0.92,
 "n_est": 15,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -0.8,
+"eps_est": -0.7847,
+"surprise": -0.0195,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "NTNX|2026-11-24": {
 "t": "NTNX",
@@ -31133,7 +32504,13 @@
 "eps_yago": -0.64,
 "n_est": 21,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -0.47,
+"eps_est": -0.534,
+"surprise": 0.1199,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "NTRS|2026-10-21": {
 "t": "NTRS",
@@ -31179,7 +32556,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 9.1,
+"market_cap_bn": 8.9,
 "rev_est": 228315620,
 "rev_est_low": 228000000,
 "rev_est_high": 229000000,
@@ -31256,7 +32633,13 @@
 "eps_yago": 7.76,
 "n_est": 6,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 9.38,
+"eps_est": 4.954,
+"surprise": 0.8934,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "NUVB|2026-11-04": {
 "t": "NUVB",
@@ -31316,7 +32699,13 @@
 "eps_yago": -1.25,
 "n_est": 7,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -0.32,
+"eps_est": -0.3836,
+"surprise": 0.1658,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "NVCR|2026-10-29": {
 "t": "NVCR",
@@ -31406,7 +32795,13 @@
 "eps_yago": 2.16,
 "n_est": 6,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 2.51,
+"eps_est": 2.412,
+"surprise": 0.0407,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "NVO|2026-11-04": {
 "t": "NVO",
@@ -31601,7 +32996,13 @@
 "eps_forecast": "",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 2.1
+"market_cap_bn": 2.1,
+"eps_actual": -0.71,
+"eps_est": -0.8714,
+"surprise": 0.1852,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "NWSA|2026-11-04": {
 "t": "NWSA",
@@ -31631,7 +33032,13 @@
 "eps_forecast": "$0.26",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 18.3
+"market_cap_bn": 18.3,
+"eps_actual": 0.28,
+"eps_est": 0.2599,
+"surprise": 0.0774,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "NWS|2026-11-04": {
 "t": "NWS",
@@ -31661,7 +33068,13 @@
 "eps_forecast": "$0.27",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 18.3
+"market_cap_bn": 18.3,
+"eps_actual": 0.28,
+"eps_est": 0.2599,
+"surprise": 0.0774,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "NXE|2026-11-04": {
 "t": "NXE",
@@ -31691,7 +33104,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 5.2,
+"market_cap_bn": 5.3,
 "rev_est": 0,
 "rev_est_low": 0,
 "rev_est_high": 0,
@@ -31739,7 +33152,13 @@
 "eps_yago": 1.047,
 "n_est": 7,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 4.977,
+"eps_est": 7.47,
+"surprise": -0.3337,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "NXT|2026-10-28": {
 "t": "NXT",
@@ -31897,7 +33316,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.5,
+"market_cap_bn": 1.4,
 "rev_est": 14298320,
 "rev_est_low": 13400000,
 "rev_est_high": 16000000,
@@ -31948,7 +33367,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.0,
+"market_cap_bn": 0.9,
 "rev_est": 140470880,
 "rev_est_low": 140000000,
 "rev_est_high": 141000000,
@@ -32181,7 +33600,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 30.4,
+"market_cap_bn": 29.9,
 "rev_est": 816171110,
 "rev_est_low": 814620000,
 "rev_est_high": 828059000,
@@ -32221,7 +33640,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 5.4,
+"market_cap_bn": 5.5,
 "rev_est": 676110180,
 "rev_est_low": 672493260,
 "rev_est_high": 680200000,
@@ -32339,7 +33758,13 @@
 "eps_yago": 0.0298,
 "n_est": 10,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.196,
+"eps_est": 0.06128,
+"surprise": 2.198,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "OMER|2026-11-12": {
 "t": "OMER",
@@ -32419,7 +33844,13 @@
 "eps_forecast": "$2.34",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 40.4
+"market_cap_bn": 40.4,
+"eps_actual": 3.28,
+"eps_est": 1.882,
+"surprise": 0.7428,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "ONDS|2026-11-12": {
 "t": "ONDS",
@@ -32621,7 +34052,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 357.6,
+"market_cap_bn": 358.3,
 "rev_est": 21325007560,
 "rev_est_low": 21190000000,
 "rev_est_high": 21518000000,
@@ -32730,7 +34161,13 @@
 "eps_forecast": "($0.11)",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 10.0
+"market_cap_bn": 10.0,
+"eps_actual": 0.49,
+"eps_est": -0.1734,
+"surprise": 3.826,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "OSIS|2026-10-29": {
 "t": "OSIS",
@@ -32799,7 +34236,13 @@
 "eps_forecast": "$0.87",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 6.5
+"market_cap_bn": 6.5,
+"eps_actual": 1.05,
+"eps_est": 0.9349,
+"surprise": 0.1232,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "OTF|2026-11-04": {
 "t": "OTF",
@@ -32895,7 +34338,13 @@
 "eps_yago": 0.3004,
 "n_est": 3,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.4461,
+"eps_est": 0.3687,
+"surprise": 0.2101,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "OVV|2026-11-03": {
 "t": "OVV",
@@ -33307,7 +34756,13 @@
 "eps_forecast": "$0.05",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 2.4
+"market_cap_bn": 2.4,
+"eps_actual": 0.0469,
+"eps_est": 0.07883,
+"surprise": -0.405,
+"result": "miss",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "PAYP|2026-11-03": {
 "t": "PAYP",
@@ -33356,7 +34811,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 42.7,
+"market_cap_bn": 42.5,
 "rev_est": 1621582020,
 "rev_est_low": 1617958780,
 "rev_est_high": 1625400000,
@@ -33405,7 +34860,13 @@
 "eps_yago": 0.4704,
 "n_est": 1,
 "rcur": "CAD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.66,
+"eps_est": 0.7468,
+"surprise": -0.1162,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "PBF|2026-10-29": {
 "t": "PBF",
@@ -33436,7 +34897,13 @@
 "eps_forecast": "$1.06",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 2.3
+"market_cap_bn": 2.3,
+"eps_actual": 1.13,
+"eps_est": 1.073,
+"surprise": 0.0533,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "PBI|2026-10-28": {
 "t": "PBI",
@@ -33613,7 +35080,13 @@
 "eps_yago": 0.7,
 "n_est": 8,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.73,
+"eps_est": 0.6472,
+"surprise": 0.1279,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "PCTY|2026-11-05": {
 "t": "PCTY",
@@ -33634,7 +35107,13 @@
 "eps_yago": 1.75,
 "n_est": 20,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 1.84,
+"eps_est": 1.611,
+"surprise": 0.1419,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "PCVX|2026-11-03": {
 "t": "PCVX",
@@ -33716,7 +35195,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.4,
+"market_cap_bn": 1.5,
 "rev_est": 67477860,
 "rev_est_low": 67000000,
 "rev_est_high": 68100000,
@@ -33725,7 +35204,13 @@
 "eps_yago": 0.64,
 "n_est": 7,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.27,
+"eps_est": 0.268,
+"surprise": 0.0075,
+"result": "inline",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "PD|2026-11-24": {
 "t": "PD",
@@ -33846,7 +35331,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 2.0,
+"market_cap_bn": 1.9,
 "rev_est": 569236780,
 "rev_est_low": 525098000,
 "rev_est_high": 606812440,
@@ -33867,7 +35352,13 @@
 "eps_forecast": "$0.21",
 "quarter": "Sep/2026",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 2.3
+"market_cap_bn": 2.3,
+"eps_actual": 0.32,
+"eps_est": 0.1163,
+"surprise": 1.75,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "PEN|2026-10-29": {
 "t": "PEN",
@@ -34209,7 +35700,13 @@
 "eps_forecast": "$8.23",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 119.2
+"market_cap_bn": 119.2,
+"eps_actual": 8.9,
+"eps_est": 8.171,
+"surprise": 0.0892,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "PICS|2026-11-16": {
 "t": "PICS",
@@ -34507,7 +36004,13 @@
 "eps_forecast": "$2.41",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 3.5
+"market_cap_bn": 3.5,
+"eps_actual": 3.01,
+"eps_est": 2.588,
+"surprise": 0.1631,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "PLNT|2026-11-05": {
 "t": "PLNT",
@@ -34519,7 +36022,13 @@
 "eps_forecast": "$0.79",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 4.1
+"market_cap_bn": 4.1,
+"eps_actual": 0.83,
+"eps_est": 0.8066,
+"surprise": 0.029,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "PLPC|2026-10-28": {
 "t": "PLPC",
@@ -34575,7 +36084,13 @@
 "eps_est_q": -0.2875,
 "n_est": 6,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -0.2808,
+"eps_est": -0.285,
+"surprise": 0.0147,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "PLTR|2026-11-02": {
 "t": "PLTR",
@@ -34615,7 +36130,13 @@
 "eps_yago": 1.53,
 "n_est": 2,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 1.28,
+"eps_est": 1.145,
+"surprise": 0.1179,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "PLXS|2026-10-28": {
 "t": "PLXS",
@@ -34646,7 +36167,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 4.2,
+"market_cap_bn": 4.1,
 "rev_est": 104428080,
 "rev_est_low": 102126000,
 "rev_est_high": 106311040,
@@ -35147,7 +36668,13 @@
 "eps_yago": 0.65,
 "n_est": 1,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.8,
+"eps_est": 0.8,
+"surprise": 0,
+"result": "inline",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "PRGO|2026-11-04": {
 "t": "PRGO",
@@ -35232,7 +36759,13 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.6
+"market_cap_bn": 1.7,
+"eps_actual": 1.944,
+"eps_est": 2.043,
+"surprise": -0.0485,
+"result": "miss",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "PRK|2026-10-26": {
 "t": "PRK",
@@ -35280,7 +36813,13 @@
 "eps_forecast": "$0.39",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 7.5
+"market_cap_bn": 7.5,
+"eps_actual": 0.43,
+"eps_est": 0.4168,
+"surprise": 0.0316,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "PRM|2026-10-29": {
 "t": "PRM",
@@ -35310,7 +36849,13 @@
 "eps_forecast": "$0.95",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 4.7
+"market_cap_bn": 4.7,
+"eps_actual": 0.85,
+"eps_est": 0.9556,
+"surprise": -0.1105,
+"result": "miss",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "PRSU|2026-11-04": {
 "t": "PRSU",
@@ -35368,7 +36913,13 @@
 "eps_yago": 0.29,
 "n_est": 14,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.19,
+"eps_est": 0.2443,
+"surprise": -0.2224,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "PRX.JO|2026-11-25": {
 "t": "PRX.JO",
@@ -35633,7 +37184,13 @@
 "eps_yago": -0.62,
 "n_est": 12,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 2.29,
+"eps_est": 1.929,
+"surprise": 0.1872,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "PTON|2026-11-05": {
 "t": "PTON",
@@ -35645,7 +37202,13 @@
 "eps_forecast": "$0.11",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 2.4
+"market_cap_bn": 2.4,
+"eps_actual": 0.19,
+"eps_est": 0.1063,
+"surprise": 0.7876,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "PTRN|2026-11-04": {
 "t": "PTRN",
@@ -35682,7 +37245,13 @@
 "eps_est_q": 0.04,
 "n_est": 4,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -0.8567,
+"eps_est": 0.7767,
+"surprise": -2.103,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "PVH|2026-12-02": {
 "t": "PVH",
@@ -35724,7 +37293,13 @@
 "eps_yago": -1.03,
 "n_est": 15,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -1.52,
+"eps_est": -1.152,
+"surprise": -0.3198,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "PVLA|2026-11-10": {
 "t": "PVLA",
@@ -35837,7 +37412,13 @@
 "eps_forecast": "($0.10)",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 4.4
+"market_cap_bn": 4.4,
+"eps_actual": -0.13,
+"eps_est": -0.09143,
+"surprise": -0.4219,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "QBTS|2026-11-10": {
 "t": "QBTS",
@@ -35970,7 +37551,13 @@
 "eps_est_q": -0.3739,
 "n_est": 12,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -0.28,
+"eps_est": -0.2588,
+"surprise": -0.0821,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "QNT|2026-11-10": {
 "t": "QNT",
@@ -36108,7 +37695,13 @@
 "eps_yago": 0.14,
 "n_est": 15,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.08,
+"eps_est": 0.07898,
+"surprise": 0.0129,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "Q|2026-11-04": {
 "t": "Q",
@@ -36186,7 +37779,13 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.5
+"market_cap_bn": 1.5,
+"eps_actual": -0.84,
+"eps_est": -1.222,
+"surprise": 0.3124,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "RARE|2026-11-03": {
 "t": "RARE",
@@ -36275,7 +37874,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 22.2,
+"market_cap_bn": 21.7,
 "rev_est": 430191250,
 "rev_est_low": 428862190,
 "rev_est_high": 430942410,
@@ -36541,7 +38140,13 @@
 "eps_est_q": 0.1059,
 "n_est": 8,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.2393,
+"eps_est": 0.2228,
+"surprise": 0.074,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "REGN|2026-10-30": {
 "t": "REGN",
@@ -36581,7 +38186,13 @@
 "eps_yago": 0.58,
 "n_est": 4,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.61,
+"eps_est": 0.5888,
+"surprise": 0.0359,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "RELY|2026-11-04": {
 "t": "RELY",
@@ -36757,7 +38368,13 @@
 "eps_yago": 4.66,
 "n_est": 4,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 8.89,
+"eps_est": 6.49,
+"surprise": 0.3699,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "RGC|2026-10-28": {
 "t": "RGC",
@@ -37066,7 +38683,13 @@
 "eps_forecast": "($0.40)",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 3.8
+"market_cap_bn": 3.8,
+"eps_actual": -0.37,
+"eps_est": -0.4012,
+"surprise": 0.0777,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "RLI|2026-10-19": {
 "t": "RLI",
@@ -37124,7 +38747,13 @@
 "eps_forecast": "$4.27",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 23.5
+"market_cap_bn": 23.5,
+"eps_actual": 4.64,
+"eps_est": 4.257,
+"surprise": 0.0901,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "RMBS|2026-10-26": {
 "t": "RMBS",
@@ -37291,7 +38920,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.0,
+"market_cap_bn": 0.9,
 "rev_est": 487575000,
 "rev_est_low": 480000000,
 "rev_est_high": 495400000,
@@ -37300,7 +38929,13 @@
 "eps_yago": 1.14,
 "n_est": 4,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 1.11,
+"eps_est": 1.018,
+"surprise": 0.0909,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "ROG|2026-10-27": {
 "t": "ROG",
@@ -37371,7 +39006,13 @@
 "eps_forecast": "$3.72",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 49.7
+"market_cap_bn": 49.7,
+"eps_actual": 3.88,
+"eps_est": 3.693,
+"surprise": 0.0505,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "ROL|2026-10-21": {
 "t": "ROL",
@@ -37812,7 +39453,13 @@
 "eps_forecast": "$0.08",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 4.6
+"market_cap_bn": 4.6,
+"eps_actual": 0.09,
+"eps_est": 0.075,
+"surprise": 0.2,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "RXRX|2026-11-02": {
 "t": "RXRX",
@@ -37951,7 +39598,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 286.3,
+"market_cap_bn": 282.3,
 "rev_est": 18551732990,
 "rev_est_low": 18223300000,
 "rev_est_high": 18740000000,
@@ -38083,7 +39730,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 10.9,
+"market_cap_bn": 10.5,
 "rev_est": 328419540,
 "rev_est_low": 327696000,
 "rev_est_high": 330000000,
@@ -38205,7 +39852,13 @@
 "eps_yago": 0.2,
 "n_est": 13,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.29,
+"eps_est": 0.2988,
+"surprise": -0.0294,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "SA|2026-11-11": {
 "t": "SA",
@@ -38367,7 +40020,13 @@
 "eps_yago": 0.0685,
 "n_est": 7,
 "rcur": "BRL",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.06384,
+"eps_est": 0.084,
+"surprise": -0.24,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "SBS|2026-11-09": {
 "t": "SBS",
@@ -38479,7 +40138,13 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.0
+"market_cap_bn": 0.9,
+"eps_actual": 0.86,
+"eps_est": 1.118,
+"surprise": -0.2309,
+"result": "miss",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "SDGR|2026-11-04": {
 "t": "SDGR",
@@ -38900,7 +40565,13 @@
 "eps_est_q": -0.6225,
 "n_est": 5,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -0.59,
+"eps_est": -0.5474,
+"surprise": -0.0779,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "SGRY|2026-11-09": {
 "t": "SGRY",
@@ -38933,7 +40604,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.3,
+"market_cap_bn": 1.4,
 "rev_est": 170055650,
 "rev_est_low": 164500000,
 "rev_est_high": 173000000,
@@ -38942,7 +40613,13 @@
 "eps_yago": -0.1798,
 "n_est": 11,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -0.1496,
+"eps_est": -0.12,
+"surprise": -0.2468,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "SHAK|2026-11-05": {
 "t": "SHAK",
@@ -38954,7 +40631,13 @@
 "eps_forecast": "$0.33",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 3.0
+"market_cap_bn": 3.0,
+"eps_actual": 0.4,
+"eps_est": 0.3427,
+"surprise": 0.1672,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "SHAZ|2026-11-05": {
 "t": "SHAZ",
@@ -39062,7 +40745,13 @@
 "eps_forecast": "$0.69",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 3.2
+"market_cap_bn": 3.2,
+"eps_actual": 0.79,
+"eps_est": 0.7515,
+"surprise": 0.0513,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "SHOP|2026-11-03": {
 "t": "SHOP",
@@ -39179,7 +40868,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 4.8,
+"market_cap_bn": 4.7,
 "rev_est": 1401060610,
 "rev_est_low": 1377200000,
 "rev_est_high": 1413007460,
@@ -39445,7 +41134,13 @@
 "eps_yago": 1.05,
 "n_est": 7,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 1.3,
+"eps_est": 1.173,
+"surprise": 0.1085,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "SKYD|2026-11-09": {
 "t": "SKYD",
@@ -39669,6 +41364,33 @@
 "eps_yago": -0.15,
 "n_est": 6,
 "rcur": "USD",
+"qend": "2026-09-30",
+"eps_actual": -0.27,
+"eps_est": -0.11,
+"surprise": -1.454,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
+},
+"SLN|2026-11-09": {
+"t": "SLN",
+"ticker": "SLN",
+"name": "Silence Therapeutics plc",
+"m": "US",
+"date": "2026-11-09",
+"when": "Not stated",
+"eps_forecast": "",
+"quarter": "",
+"period": "Expected date (market data feed)",
+"market_cap_bn": 1.2,
+"rev_est": 20830,
+"rev_est_low": 0,
+"rev_est_high": 125000,
+"rev_yago": 121330,
+"eps_est_q": -0.09,
+"eps_yago": -0.15,
+"n_est": 6,
+"rcur": "USD",
 "qend": "2026-09-30"
 },
 "SLS|2026-11-11": {
@@ -39681,7 +41403,7 @@
 "eps_forecast": "",
 "quarter": "Sep/2026",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.7,
+"market_cap_bn": 1.6,
 "rev_est": 0,
 "rev_est_low": 0,
 "rev_est_high": 0,
@@ -39874,7 +41596,13 @@
 "eps_yago": -1.85,
 "n_est": 11,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -0.13,
+"eps_est": -0.1313,
+"surprise": 0.0095,
+"result": "inline",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "SMTC|2026-11-23": {
 "t": "SMTC",
@@ -39960,7 +41688,13 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.6
+"market_cap_bn": 1.6,
+"eps_actual": -0.4126,
+"eps_est": -0.505,
+"surprise": 0.183,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "SNDK|2026-10-29": {
 "t": "SNDK",
@@ -40048,7 +41782,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 97.5,
+"market_cap_bn": 95.0,
 "rev_est": 1654183980,
 "rev_est_low": 1645400000,
 "rev_est_high": 1701289420,
@@ -40069,7 +41803,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 85.0,
+"market_cap_bn": 84.4,
 "rev_est": 2562189820,
 "rev_est_low": 2543859000,
 "rev_est_high": 2610000000,
@@ -40191,7 +41925,13 @@
 "eps_yago": 1.5,
 "n_est": 11,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 2.55,
+"eps_est": 1.906,
+"surprise": 0.3378,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "SONO|2026-11-10": {
 "t": "SONO",
@@ -40224,7 +41964,13 @@
 "eps_forecast": "$0.38",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 149.7
+"market_cap_bn": 149.7,
+"eps_actual": 0.4848,
+"eps_est": 0.3786,
+"surprise": 0.2806,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "SON|2026-10-21": {
 "t": "SON",
@@ -40261,7 +42007,13 @@
 "eps_yago": -0.03,
 "n_est": 6,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -0.02,
+"eps_est": -0.054,
+"surprise": 0.6296,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "SO|2026-11-05": {
 "t": "SO",
@@ -40273,7 +42025,13 @@
 "eps_forecast": "$1.71",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 107.8
+"market_cap_bn": 107.8,
+"eps_actual": 1.94,
+"eps_est": 1.71,
+"surprise": 0.1344,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "SPB|2026-11-12": {
 "t": "SPB",
@@ -40285,7 +42043,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 2.1,
+"market_cap_bn": 2.0,
 "rev_est": 723882020,
 "rev_est_low": 708102200,
 "rev_est_high": 746400000,
@@ -40362,7 +42120,13 @@
 "eps_yago": 1.597,
 "n_est": 10,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 1.729,
+"eps_est": 1.57,
+"surprise": 0.1011,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "SPHR|2026-11-03": {
 "t": "SPHR",
@@ -40392,7 +42156,13 @@
 "eps_forecast": "($1.79)",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 3.8
+"market_cap_bn": 3.8,
+"eps_actual": -0.9599,
+"eps_est": -1.712,
+"surprise": 0.4395,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "SPH|2026-11-12": {
 "t": "SPH",
@@ -40451,7 +42221,13 @@
 "eps_yago": 0.73,
 "n_est": 3,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.67,
+"eps_est": 0.645,
+"surprise": 0.0388,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "SPOT|2026-10-22": {
 "t": "SPOT",
@@ -40621,7 +42397,13 @@
 "eps_forecast": "$1.18",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 55.8
+"market_cap_bn": 55.8,
+"eps_actual": 1.4,
+"eps_est": 1.212,
+"surprise": 0.1553,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "SRPT|2026-11-05": {
 "t": "SRPT",
@@ -40642,7 +42424,13 @@
 "eps_yago": -0.13,
 "n_est": 19,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.64,
+"eps_est": 0.4861,
+"surprise": 0.3167,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "SRRK|2026-11-10": {
 "t": "SRRK",
@@ -40821,7 +42609,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.9,
+"market_cap_bn": 1.8,
 "rev_est": 5541960,
 "rev_est_low": 4600000,
 "rev_est_high": 6700000,
@@ -40861,7 +42649,13 @@
 "eps_yago": 0.54,
 "n_est": 3,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.48,
+"eps_est": 0.5042,
+"surprise": -0.048,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "STE|2026-11-04": {
 "t": "STE",
@@ -41043,7 +42837,13 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.4
+"market_cap_bn": 1.3,
+"eps_actual": 1.72,
+"eps_est": 1.953,
+"surprise": -0.1195,
+"result": "miss",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "STRL|2026-10-28": {
 "t": "STRL",
@@ -41223,7 +43023,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 31.8,
+"market_cap_bn": 31.2,
 "rev_est": 3238455480,
 "rev_est_low": 3192000000,
 "rev_est_high": 3279291000,
@@ -41301,7 +43101,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.9,
+"market_cap_bn": 1.8,
 "rev_est": 72033330,
 "rev_est_low": 72000000,
 "rev_est_high": 72100000,
@@ -41310,7 +43110,13 @@
 "eps_yago": 0.1,
 "n_est": 3,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.21,
+"eps_est": 0.2333,
+"surprise": -0.1,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "SVRA|2026-11-11": {
 "t": "SVRA",
@@ -41343,7 +43149,13 @@
 "eps_yago": 0.14,
 "n_est": 12,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.14,
+"eps_est": 0.1417,
+"surprise": -0.012,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "SWKS|2026-11-03": {
 "t": "SWKS",
@@ -41578,7 +43390,13 @@
 "eps_yago": 1.09,
 "n_est": 10,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 1.23,
+"eps_est": 1.205,
+"surprise": 0.0205,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "SYRE|2026-11-03": {
 "t": "SYRE",
@@ -41628,7 +43446,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 7.6,
+"market_cap_bn": 7.4,
 "rev_est": 310192610,
 "rev_est_low": 309663000,
 "rev_est_high": 311387000,
@@ -41736,7 +43554,13 @@
 "eps_forecast": "$1.47",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 7.8
+"market_cap_bn": 7.8,
+"eps_actual": 1.46,
+"eps_est": 1.454,
+"surprise": 0.0043,
+"result": "inline",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "TARS|2026-11-03": {
 "t": "TARS",
@@ -41859,7 +43683,13 @@
 "eps_yago": 0.72,
 "n_est": 6,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.69,
+"eps_est": 0.5604,
+"surprise": 0.2313,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "TDG|2026-11-10": {
 "t": "TDG",
@@ -41980,7 +43810,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 205.6,
+"market_cap_bn": 201.1,
 "rev_est": 15523429860,
 "rev_est_low": 15469859720,
 "rev_est_high": 15577000000,
@@ -42010,7 +43840,13 @@
 "eps_yago": 1.04,
 "n_est": 29,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 1.87,
+"eps_est": 1.502,
+"surprise": 0.2452,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "TECH|2026-11-04": {
 "t": "TECH",
@@ -42137,7 +43973,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.4,
+"market_cap_bn": 1.3,
 "rev_est": 233860000,
 "rev_est_low": 233860000,
 "rev_est_high": 233860000,
@@ -42321,7 +44157,13 @@
 "eps_forecast": "$1.92",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 5.9
+"market_cap_bn": 5.9,
+"eps_actual": 2.63,
+"eps_est": 1.891,
+"surprise": 0.391,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "TGB|2026-11-04": {
 "t": "TGB",
@@ -42363,7 +44205,13 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.9
+"market_cap_bn": 2.0,
+"eps_actual": 0.61,
+"eps_est": 0.586,
+"surprise": 0.041,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "TGS|2026-10-29": {
 "t": "TGS",
@@ -42531,7 +44379,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 4.2,
+"market_cap_bn": 4.3,
 "rev_est": 2274084220,
 "rev_est_low": 2110042000,
 "rev_est_high": 2394000000,
@@ -42552,7 +44400,13 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.3
+"market_cap_bn": 1.3,
+"eps_actual": -0.04852,
+"eps_est": -0.1015,
+"surprise": 0.522,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "TH|2026-11-09": {
 "t": "TH",
@@ -42585,7 +44439,13 @@
 "eps_forecast": "$0.15",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 2.3
+"market_cap_bn": 2.3,
+"eps_actual": 0.18,
+"eps_est": 0.1813,
+"surprise": -0.0072,
+"result": "inline",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "TIGO|2026-11-05": {
 "t": "TIGO",
@@ -42606,7 +44466,13 @@
 "eps_yago": 1.17,
 "n_est": 3,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.65,
+"eps_est": 0.5887,
+"surprise": 0.1041,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "TILE|2026-11-06": {
 "t": "TILE",
@@ -42875,7 +44741,13 @@
 "eps_yago": 0.66,
 "n_est": 11,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.44,
+"eps_est": 0.4754,
+"surprise": -0.0744,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "TME|2026-11-17": {
 "t": "TME",
@@ -42961,7 +44833,13 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 259.9
+"market_cap_bn": 257.6,
+"eps_actual": 4.12,
+"eps_est": 2.735,
+"surprise": 0.5063,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "TNC|2026-11-02": {
 "t": "TNC",
@@ -43000,7 +44878,13 @@
 "eps_yago": -0.31,
 "n_est": 22,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -0.31,
+"eps_est": -0.3188,
+"surprise": 0.0275,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "TNET|2026-10-29": {
 "t": "TNET",
@@ -43069,6 +44953,33 @@
 "quarter": "",
 "period": "Expected date (market data feed)",
 "market_cap_bn": 3.6,
+"rev_est": 0,
+"rev_est_low": 0,
+"rev_est_high": 0,
+"rev_yago": 53811000,
+"eps_est_q": -0.3508,
+"eps_yago": 0.13,
+"n_est": 12,
+"rcur": "USD",
+"qend": "2026-09-30",
+"eps_actual": -0.37,
+"eps_est": -0.3239,
+"surprise": -0.1423,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
+},
+"TNGX|2026-11-10": {
+"t": "TNGX",
+"ticker": "TNGX",
+"name": "Tango Therapeutics, Inc.",
+"m": "US",
+"date": "2026-11-10",
+"when": "Not stated",
+"eps_forecast": "",
+"quarter": "",
+"period": "Expected date (market data feed)",
+"market_cap_bn": 3.5,
 "rev_est": 0,
 "rev_est_low": 0,
 "rev_est_high": 0,
@@ -43224,7 +45135,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.4,
+"market_cap_bn": 1.3,
 "rev_est": 147811180,
 "rev_est_low": 147000000,
 "rev_est_high": 149022000,
@@ -43300,7 +45211,13 @@
 "eps_forecast": "$1.56",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 24.2
+"market_cap_bn": 24.2,
+"eps_actual": 1.82,
+"eps_est": 1.563,
+"surprise": 0.1642,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "TRAX|2026-11-05": {
 "t": "TRAX",
@@ -43312,7 +45229,13 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.9
+"market_cap_bn": 1.9,
+"eps_actual": -0.88,
+"eps_est": -0.8812,
+"surprise": 0.0014,
+"result": "inline",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "TREX|2026-11-04": {
 "t": "TREX",
@@ -43372,7 +45295,13 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 0.9
+"market_cap_bn": 0.9,
+"eps_actual": 0.37,
+"eps_est": 0.4529,
+"surprise": -0.183,
+"result": "miss",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "TRI|2026-11-03": {
 "t": "TRI",
@@ -43412,7 +45341,13 @@
 "eps_yago": -0.07,
 "n_est": 3,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.11,
+"eps_est": 0.03,
+"surprise": 2.667,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "TRMB|2026-11-04": {
 "t": "TRMB",
@@ -43535,7 +45470,13 @@
 "eps_forecast": "$0.64",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 63.5
+"market_cap_bn": 63.5,
+"eps_actual": 0.94,
+"eps_est": 0.878,
+"surprise": 0.0706,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "TRS|2026-10-29": {
 "t": "TRS",
@@ -43574,7 +45515,13 @@
 "eps_yago": 0.7669,
 "n_est": 5,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.8591,
+"eps_est": 0.94,
+"surprise": -0.0861,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "TRU|2026-10-27": {
 "t": "TRU",
@@ -43605,7 +45552,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.9,
+"market_cap_bn": 1.8,
 "rev_est": 0,
 "rev_est_low": 0,
 "rev_est_high": 0,
@@ -43761,7 +45708,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.4,
+"market_cap_bn": 1.3,
 "rev_est": 618180,
 "rev_est_low": 0,
 "rev_est_high": 3800000,
@@ -43889,7 +45836,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 8.1,
+"market_cap_bn": 7.9,
 "rev_est": 286520400,
 "rev_est_low": 285000000,
 "rev_est_high": 289839000,
@@ -43910,7 +45857,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 10.1,
+"market_cap_bn": 10.0,
 "rev_est": 1108087670,
 "rev_est_low": 1075300000,
 "rev_est_high": 1117126000,
@@ -43931,7 +45878,13 @@
 "eps_forecast": "$0.08",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 6.0
+"market_cap_bn": 6.0,
+"eps_actual": 0.34,
+"eps_est": 0.3982,
+"surprise": -0.1462,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "TTD|2026-11-09": {
 "t": "TTD",
@@ -44233,7 +46186,13 @@
 "eps_yago": -0.0228,
 "n_est": 16,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.0264,
+"eps_est": -0.01667,
+"surprise": 2.584,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "TXNM|2026-10-30": {
 "t": "TXNM",
@@ -44289,7 +46248,13 @@
 "eps_yago": 1.25,
 "n_est": 26,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 1.85,
+"eps_est": 1.825,
+"surprise": 0.0137,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "TXT|2026-10-29": {
 "t": "TXT",
@@ -44376,7 +46341,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.5,
+"market_cap_bn": 1.4,
 "rev_est": 0,
 "rev_est_low": 0,
 "rev_est_high": 0,
@@ -44385,7 +46350,13 @@
 "eps_yago": -0.5,
 "n_est": 12,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -0.69,
+"eps_est": -0.6447,
+"surprise": -0.0702,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "T|2026-10-21": {
 "t": "T",
@@ -44968,7 +46939,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 4.5,
+"market_cap_bn": 4.4,
 "rev_est": 647846630,
 "rev_est_low": 647279880,
 "rev_est_high": 648260000,
@@ -45005,7 +46976,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.2,
+"market_cap_bn": 1.3,
 "rev_est": 855832200,
 "rev_est_low": 846000000,
 "rev_est_high": 875960000,
@@ -45210,7 +47181,13 @@
 "eps_forecast": "($0.19)",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 3.3
+"market_cap_bn": 3.3,
+"eps_actual": -0.15,
+"eps_est": -0.126,
+"surprise": -0.1905,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "USAR|2026-11-09": {
 "t": "USAR",
@@ -45280,7 +47257,13 @@
 "eps_forecast": "$1.18",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 21.9
+"market_cap_bn": 21.9,
+"eps_actual": 1.26,
+"eps_est": 1.246,
+"surprise": 0.0114,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "USLM|2026-10-30": {
 "t": "USLM",
@@ -45528,7 +47511,13 @@
 "eps_yago": 0.2,
 "n_est": 19,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.28,
+"eps_est": 0.2491,
+"surprise": 0.1241,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "VAC|2026-11-03": {
 "t": "VAC",
@@ -45615,7 +47604,13 @@
 "eps_forecast": "$0.02",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 2.1
+"market_cap_bn": 2.1,
+"eps_actual": 0.27,
+"eps_est": 0.056,
+"surprise": 3.821,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "VCTR|2026-11-04": {
 "t": "VCTR",
@@ -45760,7 +47755,13 @@
 "eps_yago": -1.26,
 "n_est": 12,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -1.52,
+"eps_est": -1.591,
+"surprise": 0.0445,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "VERX|2026-11-04": {
 "t": "VERX",
@@ -46010,7 +48011,13 @@
 "eps_forecast": "$1.32",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 8.3
+"market_cap_bn": 8.3,
+"eps_actual": 1.77,
+"eps_est": 1.525,
+"surprise": 0.1608,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "VIR|2026-11-04": {
 "t": "VIR",
@@ -46040,7 +48047,13 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.2
+"market_cap_bn": 1.2,
+"eps_actual": 0.23,
+"eps_est": 0.1517,
+"surprise": 0.5166,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "VIST|2026-10-28": {
 "t": "VIST",
@@ -46273,7 +48286,13 @@
 "eps_forecast": "$0.86",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 4.9
+"market_cap_bn": 4.9,
+"eps_actual": 0.92,
+"eps_est": 0.8427,
+"surprise": 0.0917,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "VOD.JO|2026-11-10": {
 "t": "VOD.JO",
@@ -46413,7 +48432,13 @@
 "eps_forecast": "$1.92",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 25.6
+"market_cap_bn": 25.6,
+"eps_actual": 1.96,
+"eps_est": 1.922,
+"surprise": 0.0196,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "VRSN|2026-10-22": {
 "t": "VRSN",
@@ -46488,7 +48513,13 @@
 "eps_yago": 0.09,
 "n_est": 8,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.17,
+"eps_est": 0.095,
+"surprise": 0.7895,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "VSAT|2026-11-06": {
 "t": "VSAT",
@@ -46567,7 +48598,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.2,
+"market_cap_bn": 1.1,
 "rev_est": 26082890,
 "rev_est_low": 24000000,
 "rev_est_high": 30000000,
@@ -46576,7 +48607,13 @@
 "eps_yago": -0.54,
 "n_est": 9,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -0.31,
+"eps_est": -0.4467,
+"surprise": 0.306,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "VSTS|2026-11-19": {
 "t": "VSTS",
@@ -46685,7 +48722,13 @@
 "eps_forecast": "$0.64",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 21.7
+"market_cap_bn": 21.7,
+"eps_actual": 0.71,
+"eps_est": 0.638,
+"surprise": 0.1128,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "VTR|2026-10-27": {
 "t": "VTR",
@@ -46780,7 +48823,13 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.4
+"market_cap_bn": 1.4,
+"eps_actual": 0.32,
+"eps_est": 0.276,
+"surprise": 0.1594,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "VZLA|2026-12-04": {
 "t": "VZLA",
@@ -47081,7 +49130,13 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.3
+"market_cap_bn": 1.4,
+"eps_actual": 0.92,
+"eps_est": 0.9267,
+"surprise": -0.0072,
+"result": "inline",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "WEC|2026-10-29": {
 "t": "WEC",
@@ -47131,7 +49186,13 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.5
+"market_cap_bn": 1.5,
+"eps_actual": 0.13,
+"eps_est": 0.09202,
+"surprise": 0.4127,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "WEST|2026-11-05": {
 "t": "WEST",
@@ -47152,7 +49213,13 @@
 "eps_yago": -0.2,
 "n_est": 4,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -0.14,
+"eps_est": -0.085,
+"surprise": -0.6471,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "WES|2026-11-04": {
 "t": "WES",
@@ -47446,7 +49513,13 @@
 "eps_yago": 0.55,
 "n_est": 10,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.77,
+"eps_est": 0.6345,
+"surprise": 0.2135,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "WLDN|2026-11-05": {
 "t": "WLDN",
@@ -47467,7 +49540,13 @@
 "eps_yago": 1.21,
 "n_est": 1,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 2.07,
+"eps_est": 1.215,
+"surprise": 0.7037,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "WLFC|2026-11-03": {
 "t": "WLFC",
@@ -47609,7 +49688,13 @@
 "eps_forecast": "$1.89",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 10.3
+"market_cap_bn": 10.3,
+"eps_actual": 1.88,
+"eps_est": 1.787,
+"surprise": 0.052,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "WMT|2026-11-19": {
 "t": "WMT",
@@ -47679,7 +49764,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 3.1,
+"market_cap_bn": 3.0,
 "rev_est": 355985330,
 "rev_est_low": 347500000,
 "rev_est_high": 365776640,
@@ -47728,7 +49813,13 @@
 "eps_yago": 0.619,
 "n_est": 5,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 1.192,
+"eps_est": 1.158,
+"surprise": 0.0294,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "WRBY|2026-11-05": {
 "t": "WRBY",
@@ -47740,7 +49831,13 @@
 "eps_forecast": "$0.03",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 2.7
+"market_cap_bn": 2.7,
+"eps_actual": 0.1205,
+"eps_est": 0.09255,
+"surprise": 0.302,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "WRB|2026-10-19": {
 "t": "WRB",
@@ -47812,7 +49909,13 @@
 "eps_yago": 0.3,
 "n_est": 8,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.28,
+"eps_est": 0.2488,
+"surprise": 0.1254,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "WSE|2026-11-12": {
 "t": "WSE",
@@ -47945,7 +50048,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.9,
+"market_cap_bn": 1.8,
 "rev_est": 2821300000,
 "rev_est_low": 2821300000,
 "rev_est_high": 2821300000,
@@ -48210,7 +50313,13 @@
 "eps_yago": 0.86,
 "n_est": 15,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 1.24,
+"eps_est": 0.9814,
+"surprise": 0.2635,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "WY|2026-10-29": {
 "t": "WY",
@@ -48318,7 +50427,13 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 2.4
+"market_cap_bn": 2.4,
+"eps_actual": 0.06,
+"eps_est": 0.02667,
+"surprise": 1.25,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "XE|2026-11-12": {
 "t": "XE",
@@ -48529,7 +50644,13 @@
 "eps_yago": 0.37,
 "n_est": 14,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.52,
+"eps_est": 0.3465,
+"surprise": 0.5006,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "XXI|2026-11-13": {
 "t": "XXI",
@@ -48618,7 +50739,13 @@
 "eps_yago": 0.61,
 "n_est": 9,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.57,
+"eps_est": 0.3638,
+"surprise": 0.567,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "YETI|2026-11-12": {
 "t": "YETI",
@@ -48817,7 +50944,13 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.8
+"market_cap_bn": 1.7,
+"eps_actual": -1.231,
+"eps_est": -1.27,
+"surprise": 0.0308,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "ZBIO|2026-11-12": {
 "t": "ZBIO",
@@ -48869,7 +51002,13 @@
 "eps_yago": 1.76,
 "n_est": 6,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 1.03,
+"eps_est": 0.8361,
+"surprise": 0.2319,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "ZETA|2026-11-03": {
 "t": "ZETA",
@@ -49006,7 +51145,13 @@
 "eps_yago": -0.33,
 "n_est": 6,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -0.46,
+"eps_est": -0.6794,
+"surprise": 0.3229,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "ZM|2026-11-23": {
 "t": "ZM",
@@ -49093,7 +51238,13 @@
 "eps_forecast": "$1.51",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 34.3
+"market_cap_bn": 34.3,
+"eps_actual": 1.75,
+"eps_est": 1.511,
+"surprise": 0.1581,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "ZWS|2026-10-27": {
 "t": "ZWS",
@@ -49124,7 +51275,13 @@
 "eps_forecast": "$2.40",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 2.0
+"market_cap_bn": 2.0,
+"eps_actual": -0.62,
+"eps_est": -0.5917,
+"surprise": -0.0479,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "ZYME|2026-11-09": {
 "t": "ZYME",
