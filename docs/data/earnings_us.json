@@ -47140,6 +47140,9 @@
    "measure": null,
    "dps": null,
    "source": "Nasdaq",
+   "has_res": true,
+   "desk": false,
+   "g": "not found",
    "px_move": {
     "move": 0.0886,
     "from": "2026-11-02",
@@ -47174,6 +47177,9 @@
    "measure": null,
    "dps": null,
    "source": "Nasdaq",
+   "has_res": true,
+   "desk": false,
+   "g": "not found",
    "t": "CCU",
    "lists": [],
    "idea": null,
@@ -50147,6 +50153,12 @@
    "measure": null,
    "dps": null,
    "source": null,
+   "has_res": true,
+   "desk": false,
+   "rev_actual": 2497000000.0,
+   "rev_prior": 2239000000.0,
+   "g": "narrowed",
+   "rev_yoy": 0.1152,
    "px_move": {
     "move": 0.0081,
     "from": "2026-11-03",
@@ -52308,6 +52320,12 @@
    "measure": null,
    "dps": null,
    "source": "Nasdaq",
+   "has_res": true,
+   "desk": false,
+   "rev_actual": 547869000.0,
+   "rev_prior": 532583000.0,
+   "g": "given",
+   "rev_yoy": 0.0287,
    "px_move": {
     "move": 0.0006,
     "from": "2026-11-04",
@@ -62628,6 +62646,9 @@
    "rev_yago": 476257000,
    "n_est": 5,
    "rcur": "USD",
+   "has_res": true,
+   "desk": false,
+   "g": "not found",
    "t": "WPM",
    "lists": [],
    "idea": null,
@@ -64358,6 +64379,9 @@
    "rev_yago": 5468000000,
    "n_est": 7,
    "rcur": "BRL",
+   "has_res": true,
+   "desk": false,
+   "g": "not found",
    "t": "SBS",
    "lists": [],
    "idea": null,
@@ -65126,6 +65150,14 @@
    "rev_yago": 1144019000,
    "n_est": 30,
    "rcur": "USD",
+   "has_res": true,
+   "desk": false,
+   "rev_actual": 1329063000.0,
+   "rev_prior": 1144019000.0,
+   "g": "initiated",
+   "rev_surprise": -0.0431,
+   "rev_result": "miss",
+   "rev_yoy": 0.1617,
    "t": "DKNG",
    "lists": [],
    "idea": null,
@@ -66320,6 +66352,12 @@
    "measure": null,
    "dps": null,
    "source": null,
+   "has_res": true,
+   "desk": false,
+   "rev_actual": 45500000.0,
+   "rev_prior": 39500000.0,
+   "g": "not found",
+   "rev_yoy": 0.1519,
    "t": "MSGK",
    "lists": [],
    "idea": "Earnings watch",
@@ -70122,6 +70160,9 @@
    "rev_yago": 872859000,
    "n_est": 1,
    "rcur": "CAD",
+   "has_res": true,
+   "desk": false,
+   "g": "given",
    "t": "BTE",
    "lists": [],
    "idea": null,
@@ -71150,6 +71191,12 @@
    "measure": null,
    "dps": null,
    "source": null,
+   "has_res": true,
+   "desk": false,
+   "rev_actual": 712068000.0,
+   "rev_prior": 813165000.0,
+   "g": "given",
+   "rev_yoy": -0.1243,
    "t": "BKD",
    "lists": [],
    "idea": null,
@@ -72307,6 +72354,12 @@
    "measure": null,
    "dps": null,
    "source": null,
+   "has_res": true,
+   "desk": false,
+   "rev_actual": 562245000.0,
+   "rev_prior": 526778000.0,
+   "g": "given",
+   "rev_yoy": 0.0673,
    "t": "AMR",
    "lists": [],
    "idea": null,
@@ -72696,6 +72749,9 @@
    "measure": null,
    "dps": null,
    "source": null,
+   "has_res": true,
+   "desk": false,
+   "g": "not found",
    "t": "TRAX",
    "lists": [],
    "idea": null,
@@ -72731,6 +72787,14 @@
    "rev_yago": 363711000,
    "n_est": 6,
    "rcur": "USD",
+   "has_res": true,
+   "desk": false,
+   "rev_actual": 289326000.0,
+   "rev_prior": 306532000.0,
+   "g": "not found",
+   "rev_surprise": -0.0203,
+   "rev_result": "miss",
+   "rev_yoy": -0.0561,
    "t": "ZD",
    "lists": [],
    "idea": null,
@@ -73607,6 +73671,14 @@
    "rev_yago": 103693000,
    "n_est": 12,
    "rcur": "USD",
+   "has_res": true,
+   "desk": false,
+   "rev_actual": 102222000.0,
+   "rev_prior": 103693000.0,
+   "g": "given",
+   "rev_surprise": -0.0982,
+   "rev_result": "miss",
+   "rev_yoy": -0.0142,
    "t": "IMCR",
    "lists": [],
    "idea": null,
@@ -75257,6 +75329,9 @@
    "rev_yago": 91596000,
    "n_est": 4,
    "rcur": "USD",
+   "has_res": true,
+   "desk": false,
+   "g": "not found",
    "t": "GSBD",
    "lists": [],
    "idea": null,
@@ -75867,7 +75942,8 @@
     "beat",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-06",
@@ -75899,7 +75975,8 @@
     "beat",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-06",
@@ -75963,7 +76040,8 @@
     "inline",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-06",
@@ -76020,7 +76098,8 @@
     "miss",
     "beat",
     "miss"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-06",
@@ -76052,7 +76131,8 @@
     "beat",
     "miss",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-06",
@@ -76107,7 +76187,8 @@
     "miss",
     "beat",
     "miss"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-06",
@@ -76124,7 +76205,8 @@
    "lists": [],
    "idea": null,
    "v": null,
-   "iv": null
+   "iv": null,
+   "has_res": true
   },
   {
    "date": "2026-11-06",
@@ -76141,7 +76223,8 @@
    "lists": [],
    "idea": null,
    "v": null,
-   "iv": null
+   "iv": null,
+   "has_res": true
   },
   {
    "date": "2026-11-06",
@@ -76173,7 +76256,8 @@
     "beat",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-06",
@@ -76237,7 +76321,8 @@
     "miss",
     "beat",
     "miss"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-06",
@@ -76269,7 +76354,8 @@
     "beat",
     "miss",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-06",
@@ -76301,7 +76387,8 @@
     "beat",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-06",
@@ -76381,7 +76468,8 @@
     "miss",
     "miss",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-06",
@@ -76413,7 +76501,8 @@
     "miss",
     "miss",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-06",
@@ -76445,7 +76534,8 @@
     "miss",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-06",
@@ -76477,7 +76567,8 @@
     "miss",
     "miss",
     "miss"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-06",
@@ -76542,7 +76633,8 @@
     "miss",
     "beat",
     "miss"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-06",
@@ -76559,7 +76651,8 @@
    "lists": [],
    "idea": null,
    "v": null,
-   "iv": null
+   "iv": null,
+   "has_res": true
   },
   {
    "date": "2026-11-06",
@@ -76591,7 +76684,8 @@
     "beat",
     "miss",
     "inline"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-06",
@@ -76615,6 +76709,7 @@
    "n_est": 1,
    "rcur": "USD",
    "qend": "2026-09-30",
+   "has_res": true,
    "track": [
     "beat",
     "miss",
@@ -76653,7 +76748,8 @@
     "beat",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-06",
@@ -76719,7 +76815,8 @@
     "beat",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-06",
@@ -76782,7 +76879,8 @@
     "beat",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-06",
@@ -76814,7 +76912,8 @@
     "beat",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-06",
@@ -76846,7 +76945,8 @@
     "beat",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-06",
@@ -76864,7 +76964,8 @@
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": null,
+   "has_res": true
   },
   {
    "date": "2026-11-06",
@@ -76896,7 +76997,8 @@
     "beat",
     "beat",
     "miss"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-06",
@@ -76913,7 +77015,8 @@
    "lists": [],
    "idea": null,
    "v": null,
-   "iv": null
+   "iv": null,
+   "has_res": true
   },
   {
    "date": "2026-11-06",
@@ -76944,7 +77047,8 @@
     "beat",
     "miss",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-06",
@@ -76961,7 +77065,8 @@
    "lists": [],
    "idea": null,
    "v": null,
-   "iv": null
+   "iv": null,
+   "has_res": true
   },
   {
    "date": "2026-11-06",
@@ -76993,7 +77098,8 @@
     "beat",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-06",
@@ -77018,7 +77124,8 @@
    "n_est": 21,
    "rcur": "USD",
    "qend": "2026-09-30",
-   "track": null
+   "track": null,
+   "has_res": true
   },
   {
    "date": "2026-11-06",
@@ -77050,7 +77157,8 @@
     "beat",
     "miss",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-06",
@@ -77082,7 +77190,8 @@
     "beat",
     "beat",
     "miss"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-06",
@@ -77114,7 +77223,8 @@
     "beat",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-06",
@@ -77146,7 +77256,8 @@
     "beat",
     "beat",
     "miss"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-06",
@@ -77171,6 +77282,7 @@
    "n_est": 3,
    "rcur": "USD",
    "qend": "2026-09-30",
+   "has_res": true,
    "track": [
     "beat",
     "beat",
@@ -77384,6 +77496,7 @@
    "n_est": 4,
    "rcur": "USD",
    "qend": "2026-09-30",
+   "has_res": true,
    "track": [
     "miss",
     "beat",
@@ -77416,6 +77529,7 @@
    "n_est": 9,
    "rcur": "USD",
    "qend": "2026-09-30",
+   "has_res": true,
    "track": [
     "beat",
     "beat",
@@ -77448,6 +77562,7 @@
    "n_est": 2,
    "rcur": "USD",
    "qend": "2026-09-30",
+   "has_res": true,
    "track": [
     "beat",
     "beat",
@@ -79982,6 +80097,7 @@
    "n_est": 12,
    "rcur": "USD",
    "qend": "2026-09-30",
+   "has_res": true,
    "track": [
     "beat",
     "miss",
@@ -94373,6 +94489,6 @@
    "covered": false
   }
  ],
- "synced": "2026-11-06T16:29+02:00",
+ "synced": "2026-11-06T16:41+02:00",
  "coverage_note": "Ticked = on the LRC watchlist. Every company the LRC Stock Scanner tracks shows its trading and investment ratings. Updated after every scanner run."
 }
