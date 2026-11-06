@@ -401,6 +401,11 @@
    "measure": "HEPS",
    "dps": 71.0,
    "source": "AngloGold Ashanti — Q3 30 September 2026 Earnings Release and Dividend Declaration (5 Nov 2026), via Investing News Network https://investingnews.com/anglogold-ashanti-q3-30-september-2026-earnings-release-and-dividend-declaration/ (reported in US cents: headline earnings per share 155 USc vs 132 USc for Q3 2025; nine months 606 USc vs 346 USc; Q3 2026 interim dividend 71 US cents per share)",
+   "px_move": {
+    "move": 0.0866,
+    "from": "2026-11-03",
+    "to": "2026-11-06"
+   },
    "t": "ANG.JO",
    "lists": [],
    "idea": null,
@@ -422,11 +427,10 @@
    "lrc_rating": null,
    "t": "SAP.JO",
    "lists": [
-    "Trading SELL",
     "Investment SELL"
    ],
    "idea": null,
-   "v": "SELL",
+   "v": "HOLD",
    "iv": "STRONG SELL",
    "track": [
     "miss",
@@ -449,7 +453,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed) — confirm on SENS",
    "eps_forecast": "",
-   "market_cap_bn": 16.2,
+   "market_cap_bn": 17.3,
    "auto": true,
    "t": "TFG.JO",
    "lists": [],
@@ -467,7 +471,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed) — confirm on SENS",
    "eps_forecast": "",
-   "market_cap_bn": 6.2,
+   "market_cap_bn": 5.6,
    "auto": true,
    "t": "MKR.JO",
    "lists": [],
@@ -575,7 +579,7 @@
    "lrc_rating": null,
    "t": "CFR.JO",
    "lists": [],
-   "idea": "Earnings watch",
+   "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
    "track": null,
@@ -594,7 +598,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed) — confirm on SENS",
    "eps_forecast": "",
-   "market_cap_bn": 43.3,
+   "market_cap_bn": 42.5,
    "auto": true,
    "t": "N91.JO",
    "lists": [],
@@ -648,7 +652,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed) — confirm on SENS",
    "eps_forecast": "",
-   "market_cap_bn": 84.4,
+   "market_cap_bn": 83.0,
    "auto": true,
    "t": "RNI.JO",
    "lists": [],
@@ -704,14 +708,12 @@
    "eps_forecast": "",
    "market_cap_bn": null,
    "source": "Investec 'Pre-Close Trading Statement' RNS 18 Sep 2026 ('scheduled for release on Thursday, 19 November 2026') https://www.investegate.co.uk/announcement/rns/investec--invp/pre-close-trading-statement/9778512 ; seen 2026-10-31",
-   "covered": true,
+   "covered": false,
    "lrc_rating": null,
    "t": "INP.JO",
-   "lists": [
-    "Trading BUY"
-   ],
-   "idea": "Score leaders",
-   "v": "STRONG BUY",
+   "lists": [],
+   "idea": "Earnings watch",
+   "v": "HOLD",
    "iv": "HOLD",
    "track": null
   },
@@ -729,7 +731,7 @@
    "t": "INL.JO",
    "lists": [],
    "idea": "Earnings watch",
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "track": null
   },
@@ -740,7 +742,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed) — confirm on SENS",
    "eps_forecast": "",
-   "market_cap_bn": 48.2,
+   "market_cap_bn": 49.3,
    "auto": true,
    "t": "MRP.JO",
    "lists": [],
@@ -766,8 +768,8 @@
    "lists": [
     "Trading BUY"
    ],
-   "idea": "Technical setups",
-   "v": "STRONG BUY",
+   "idea": null,
+   "v": "BUY",
    "iv": "HOLD",
    "track": null
   },
@@ -796,7 +798,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed) — confirm on SENS",
    "eps_forecast": "",
-   "market_cap_bn": 71.6,
+   "market_cap_bn": 72.5,
    "auto": true,
    "t": "PPH.JO",
    "lists": [],
@@ -868,7 +870,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed) — confirm on SENS",
    "eps_forecast": "",
-   "market_cap_bn": 18.5,
+   "market_cap_bn": 18.4,
    "auto": true,
    "t": "LHC.JO",
    "lists": [],
@@ -935,6 +937,6 @@
   }
  ],
  "note": "Partial list: no company-published date could be confirmed this week for, among others, AngloGold Ashanti, Life Healthcare, Mr Price, MTN, Pepkor, TFG, Coronation, Redefine, Reinet, Gold Fields and Sibanye-Stillwater; they will be added when dates are published. Several companies (e.g. Mondi, Famous Brands, Clicks) reported before this window.",
- "synced": "2026-11-06T16:41+02:00",
+ "synced": "2026-11-06T18:40+02:00",
  "coverage_note": "Ticked = on the LRC watchlist. Every company the LRC Stock Scanner tracks shows its trading and investment ratings. Updated after every scanner run."
 }
