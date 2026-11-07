@@ -968,7 +968,13 @@
 "eps_est_q": 0.38,
 "n_est": 4,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.7894,
+"eps_est": 0.38,
+"surprise": 1.077,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "AEE|2026-11-05": {
 "t": "AEE",
@@ -2147,7 +2153,13 @@
 "eps_yago": -0.003,
 "n_est": 8,
 "rcur": "CAD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.0468,
+"eps_est": 0.027,
+"surprise": 0.7333,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "ALM|2026-11-09": {
 "t": "ALM",
@@ -2819,7 +2831,13 @@
 "eps_yago": -0.42,
 "n_est": 3,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -0.73,
+"eps_est": -0.4606,
+"surprise": -0.5848,
+"result": "miss",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "AMSC|2026-11-04": {
 "t": "AMSC",
@@ -3577,7 +3595,13 @@
 "eps_yago": 0.09,
 "n_est": 2,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.11,
+"eps_est": 0.09832,
+"surprise": 0.1188,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "ARCB|2026-11-04": {
 "t": "ARCB",
@@ -4491,7 +4515,13 @@
 "eps_yago": 0.69,
 "n_est": 5,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.77,
+"eps_est": 0.731,
+"surprise": 0.0533,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "ATO|2026-11-04": {
 "t": "ATO",
@@ -5530,7 +5560,13 @@
 "eps_yago": 0.41,
 "n_est": 8,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.47,
+"eps_est": 0.4646,
+"surprise": 0.0115,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "BANC|2026-10-27": {
 "t": "BANC",
@@ -6214,7 +6250,13 @@
 "eps_yago": 0.67,
 "n_est": 1,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.94,
+"eps_est": 0.771,
+"surprise": 0.2192,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "BEPC|2026-11-04": {
 "t": "BEPC",
@@ -6706,7 +6748,13 @@
 "eps_yago": 0.1036,
 "n_est": 1,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.2248,
+"eps_est": 0.43,
+"surprise": -0.4772,
+"result": "miss",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "BIP|2026-11-06": {
 "t": "BIP",
@@ -6838,7 +6886,13 @@
 "eps_yago": -0.1976,
 "n_est": 4,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -0.0246,
+"eps_est": -0.02,
+"surprise": -0.23,
+"result": "miss",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "BKE|2026-11-20": {
 "t": "BKE",
@@ -9448,7 +9502,13 @@
 "eps_forecast": "$3.91",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 90.4
+"market_cap_bn": 90.4,
+"eps_actual": 2.55,
+"eps_est": 2.282,
+"surprise": 0.1173,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "CEG|2026-11-09": {
 "t": "CEG",
@@ -10153,7 +10213,13 @@
 "eps_yago": 8.34,
 "n_est": 6,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -20.5,
+"eps_est": 8.933,
+"surprise": -3.295,
+"result": "miss",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "CHT|2026-11-04": {
 "t": "CHT",
@@ -10523,7 +10589,13 @@
 "eps_yago": 0.2048,
 "n_est": 6,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 2.792,
+"eps_est": 1.8,
+"surprise": 0.5513,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "CLOV|2026-11-04": {
 "t": "CLOV",
@@ -11284,7 +11356,13 @@
 "eps_yago": -0.5,
 "n_est": 11,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -0.59,
+"eps_est": -0.5503,
+"surprise": -0.0722,
+"result": "miss",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "COHR|2026-11-04": {
 "t": "COHR",
@@ -13424,7 +13502,13 @@
 "eps_yago": 0.16,
 "n_est": 9,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.22,
+"eps_est": 0.25,
+"surprise": -0.1202,
+"result": "miss",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "DCH|2026-11-09": {
 "t": "DCH",
@@ -14040,7 +14124,13 @@
 "eps_yago": 7.13,
 "n_est": 9,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 13.55,
+"eps_est": 8.119,
+"surprise": 0.669,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "DLB|2026-11-17": {
 "t": "DLB",
@@ -15007,7 +15097,13 @@
 "eps_forecast": "$0.16",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 2.1
+"market_cap_bn": 2.1,
+"eps_actual": 0.25,
+"eps_est": 0.2643,
+"surprise": -0.054,
+"result": "miss",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "DXCM|2026-10-29": {
 "t": "DXCM",
@@ -15272,7 +15368,13 @@
 "eps_forecast": "$0.02",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 28.7
+"market_cap_bn": 28.7,
+"eps_actual": 7.97,
+"eps_est": 0.2431,
+"surprise": 31.78,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "ECL|2026-10-27": {
 "t": "ECL",
@@ -15654,7 +15756,13 @@
 "eps_yago": 0.19,
 "n_est": 10,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.27,
+"eps_est": 0.2033,
+"surprise": 0.3282,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "ELE|2026-11-10": {
 "t": "ELE",
@@ -15818,7 +15926,13 @@
 "eps_yago": 0.6254,
 "n_est": 2,
 "rcur": "CAD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.4951,
+"eps_est": 0.5028,
+"surprise": -0.0155,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "EMBJ|2026-11-03": {
 "t": "EMBJ",
@@ -15936,7 +16050,13 @@
 "eps_yago": 0.46,
 "n_est": 2,
 "rcur": "CAD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.49,
+"eps_est": 0.4936,
+"surprise": -0.0073,
+"result": "inline",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "ENHA|2026-11-12": {
 "t": "ENHA",
@@ -16670,7 +16790,13 @@
 "eps_yago": 1.67,
 "n_est": 4,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 1.82,
+"eps_est": 1.87,
+"surprise": -0.0265,
+"result": "miss",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "ESS|2026-10-27": {
 "t": "ESS",
@@ -17059,7 +17185,13 @@
 "eps_forecast": "$0.09",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 2.3
+"market_cap_bn": 2.3,
+"eps_actual": 0.15,
+"eps_est": 0.1263,
+"surprise": 0.1879,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "EXK|2026-11-10": {
 "t": "EXK",
@@ -18244,7 +18376,13 @@
 "eps_yago": 0.68,
 "n_est": 5,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.77,
+"eps_est": 0.796,
+"surprise": -0.0327,
+"result": "miss",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "FLS|2026-10-28": {
 "t": "FLS",
@@ -19709,7 +19847,13 @@
 "eps_yago": -0.12,
 "n_est": 2,
 "rcur": "CAD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -0.43,
+"eps_est": 0.01,
+"surprise": -44.0,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "GFS|2026-11-04": {
 "t": "GFS",
@@ -19866,7 +20010,13 @@
 "eps_yago": -0.23,
 "n_est": 10,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -0.23,
+"eps_est": -0.3033,
+"surprise": 0.2417,
+"result": "beat",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "GHRS|2026-11-09": {
 "t": "GHRS",
@@ -20545,7 +20695,13 @@
 "eps_yago": -0.37,
 "n_est": 10,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -0.49,
+"eps_est": -0.382,
+"surprise": -0.2827,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "GPC|2026-10-20": {
 "t": "GPC",
@@ -21533,7 +21689,13 @@
 "eps_yago": 0.19,
 "n_est": 1,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.13,
+"eps_est": 0.17,
+"surprise": -0.2353,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "HGTY|2026-11-03": {
 "t": "HGTY",
@@ -22684,7 +22846,13 @@
 "eps_yago": 3.24,
 "n_est": 17,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -0.7,
+"eps_est": -1.005,
+"surprise": 0.3033,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "HUN|2026-11-02": {
 "t": "HUN",
@@ -23551,7 +23719,13 @@
 "eps_yago": 0,
 "n_est": 12,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -0.02,
+"eps_est": 0.02091,
+"surprise": -1.956,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "IMCR|2026-11-09": {
 "t": "IMCR",
@@ -26647,7 +26821,13 @@
 "eps_yago": 13.87,
 "n_est": 4,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 14.55,
+"eps_est": 15.55,
+"surprise": -0.0649,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "KYMR|2026-10-29": {
 "t": "KYMR",
@@ -30039,7 +30219,13 @@
 "eps_forecast": "$1.95",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 5.8
+"market_cap_bn": 5.8,
+"eps_actual": 1.86,
+"eps_est": 1.952,
+"surprise": -0.0469,
+"result": "miss",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "MLCO|2026-11-04": {
 "t": "MLCO",
@@ -30226,7 +30412,13 @@
 "eps_yago": 0.01,
 "n_est": 2,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.03,
+"eps_est": 0.065,
+"surprise": -0.5385,
+"result": "miss",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "MMM|2026-10-20": {
 "t": "MMM",
@@ -30734,7 +30926,13 @@
 "eps_yago": -0.51,
 "n_est": 15,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.38,
+"eps_est": -1.255,
+"surprise": 1.303,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "MRP.JO|2026-11-20": {
 "t": "MRP.JO",
@@ -31015,7 +31213,13 @@
 "eps_yago": -0.37,
 "n_est": 5,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -1.265,
+"eps_est": -0.9667,
+"surprise": -0.309,
+"result": "miss",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "MSGR|2026-11-06": {
 "t": "MSGR",
@@ -34331,7 +34535,13 @@
 "eps_yago": -0.2,
 "n_est": 14,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -0.22,
+"eps_est": -0.2582,
+"surprise": 0.1479,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "OKLO|2026-11-10": {
 "t": "OKLO",
@@ -37354,7 +37564,13 @@
 "eps_yago": 0.48,
 "n_est": 4,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.33,
+"eps_est": 0.3437,
+"surprise": -0.04,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "PPTA|2026-11-13": {
 "t": "PPTA",
@@ -40852,7 +41068,13 @@
 "eps_yago": 0.6656,
 "n_est": 6,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -1.88,
+"eps_est": 0.01333,
+"surprise": -142.0,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "SBH|2026-11-10": {
 "t": "SBH",
@@ -41727,7 +41949,13 @@
 "eps_yago": -0.0179,
 "n_est": 9,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.14,
+"eps_est": 0.82,
+"surprise": -0.8293,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "SHW|2026-10-27": {
 "t": "SHW",
@@ -42379,7 +42607,13 @@
 "eps_yago": 1.44,
 "n_est": 4,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 1.33,
+"eps_est": 1.125,
+"surprise": 0.1822,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "SMA|2026-11-04": {
 "t": "SMA",
@@ -43971,7 +44205,13 @@
 "eps_yago": 0.4,
 "n_est": 4,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.31,
+"eps_est": 0.2921,
+"surprise": 0.0613,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "STX|2026-10-27": {
 "t": "STX",
@@ -44825,7 +45065,13 @@
 "eps_yago": -0.85,
 "n_est": 3,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.25,
+"eps_est": 0.1148,
+"surprise": 1.178,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "TDW|2026-11-09": {
 "t": "TDW",
@@ -45568,7 +45814,13 @@
 "eps_yago": 0.61,
 "n_est": 4,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.68,
+"eps_est": 0.6125,
+"surprise": 0.1102,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "TIMB|2026-11-09": {
 "t": "TIMB",
@@ -47141,7 +47393,13 @@
 "eps_yago": 0.1698,
 "n_est": 10,
 "rcur": "CAD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.1143,
+"eps_est": 0.1212,
+"surprise": -0.0566,
+"result": "miss",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "TVTX|2026-10-29": {
 "t": "TVTX",
@@ -47534,7 +47792,13 @@
 "eps_yago": 0.04,
 "n_est": 21,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0,
+"eps_est": -0.00712,
+"surprise": 1.0,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "UAL|2026-10-20": {
 "t": "UAL",
@@ -47925,7 +48189,13 @@
 "eps_yago": 3.46,
 "n_est": 1,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 5.32,
+"eps_est": 4.253,
+"surprise": 0.2509,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "ULCC|2026-10-28": {
 "t": "ULCC",
@@ -48544,7 +48814,13 @@
 "eps_yago": 0.23,
 "n_est": 8,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.1,
+"eps_est": 0.2261,
+"surprise": -0.5577,
+"result": "miss",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "UUUU|2026-11-02": {
 "t": "UUUU",
@@ -48894,7 +49170,13 @@
 "eps_yago": -0.4666,
 "n_est": 3,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 1.477,
+"eps_est": 1.59,
+"surprise": -0.0713,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "VERA|2026-11-05": {
 "t": "VERA",
@@ -49718,7 +50000,13 @@
 "eps_forecast": "($0.17)",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 10.7
+"market_cap_bn": 10.7,
+"eps_actual": -0.32,
+"eps_est": -0.00667,
+"surprise": -46.98,
+"result": "miss",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "VSEC|2026-11-04": {
 "t": "VSEC",
@@ -51460,7 +51748,13 @@
 "eps_yago": -0.038,
 "n_est": 17,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -0.3337,
+"eps_est": -0.27,
+"surprise": -0.2359,
+"result": "miss",
+"quarter_end": "2026-06-30",
+"result_done": true
 },
 "WU|2026-11-04": {
 "t": "WU",
@@ -52090,7 +52384,13 @@
 "eps_forecast": "$1.92",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 19.1
+"market_cap_bn": 19.1,
+"eps_actual": 2.36,
+"eps_est": 1.82,
+"surprise": 0.2966,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "YSWY|2026-11-12": {
 "t": "YSWY",
