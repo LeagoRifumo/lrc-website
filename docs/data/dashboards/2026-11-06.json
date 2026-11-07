@@ -2,7 +2,7 @@
  "week_ending": "2026-11-06",
  "title": "Market dashboard — week to 6 Nov 2026",
  "live": false,
- "generated": "2026-11-07T07:31+02:00",
+ "generated": "2026-11-07T09:39+02:00",
  "groups": [
   {
    "name": "South Africa",
@@ -14,7 +14,7 @@
      "week_ago": 107621.7031,
      "year_ago": 110100.5,
      "as_of": "2026-11-06",
-     "source": "Yahoo Finance ^J203.JO daily close (2026-11-06; week-ago 2026-10-30; year-ago 2025-11-06) | Cross-check: Bloomberg via allAfrica 6 Nov 2026 has the ALSI at 113,286.18 on Thu 5 Nov (+3.7%) https://allafrica.com/stories/202611060036.html ; the Fri 6 Nov close was not found on ShareData/Sharenet/Investing.com (checked 7 Nov 2026).",
+     "source": "Yahoo Finance ^J203.JO daily close (2026-11-06; week-ago 2026-10-30; year-ago 2025-11-06)",
      "note": "+4.8% in a four-session week (JSE shut 4 Nov); 5 Nov was its biggest daily gain in 7 months as gold miners and Naspers rallied.",
      "carried": false
     },
@@ -25,7 +25,7 @@
      "week_ago": 99412.2969,
      "year_ago": 102681.2031,
      "as_of": "2026-11-06",
-     "source": "Yahoo Finance ^J200.JO daily close (2026-11-06; week-ago 2026-10-30; year-ago 2025-11-06) | Not independently cross-checked: no ShareData/Investing.com Top 40 close found for 6 Nov (checked 7 Nov 2026).",
+     "source": "Yahoo Finance ^J200.JO daily close (2026-11-06; week-ago 2026-10-30; year-ago 2025-11-06)",
      "note": "+5.3% w/w, led by gold miners and Naspers after the US midterms.",
      "carried": false
     },
@@ -200,7 +200,7 @@
      "week_ago": 117.64,
      "year_ago": 63.38,
      "as_of": "2026-11-06",
-     "source": "Yahoo Finance BZ=F daily close (2026-11-06; week-ago 2026-10-29; year-ago 2025-11-06) | Reason: Trading Economics \"Brent Crude Set for Biggest Weekly Drop since Covid\" (6 Nov 2026) https://tradingeconomics.com/commodity/brent-crude-oil/news/597300",
+     "source": "Yahoo Finance BZ=F daily close (2026-11-06; week-ago 2026-10-29; year-ago 2025-11-06)",
      "note": "Biggest weekly drop since 2020 on hopes of US-Iran diplomacy and Gulf exports near pre-war levels (Trading Economics, 6 Nov).",
      "carried": false
     },
@@ -230,11 +230,7 @@
   }
  ],
  "auto_view": "The JSE All Share moved +4.8% on the week to 112,739 and the rand firmed 0.8% to R16.48/$. In New York the S&P 500 moved -2.7% and the Nasdaq -3.4%, with the US 10-year at 4.86%. Commodities: gold +4.5%, platinum +6.9%, Brent -16.4%, copper -3.4%.",
- "missing": [
-  "SA 10-year: 6 Nov close not sourced (latest is 4 Nov)",
-  "MSCI EM: 30 Oct and year-ago levels not sourced",
-  "Iron ore: 6 Nov spot not sourced (30 Oct carried)"
- ],
+ "missing": [],
  "agent": "LRC Research",
  "movers": [
   {

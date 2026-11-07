@@ -2,7 +2,7 @@
  "week_ending": "2026-11-06",
  "title": "Live — as of Sat 07 Nov 2026",
  "live": true,
- "generated": "2026-11-07T07:31+02:00",
+ "generated": "2026-11-07T09:39+02:00",
  "agent": "LRC Market Dashboard",
  "groups": [
   {
@@ -69,20 +69,20 @@
      "latest": 7.25,
      "week_ago": 7.25,
      "year_ago": 7.0,
-     "as_of": "2026-10-30",
-     "source": "global-rates.com SARB repo history (accessed 31 Oct 2026): 7.25% effective 23 Sep 2026; 7.00% from 31 Jul 2025 to 20 Nov 2025 cut to 6.75%. Briefly.co.za 24 Sep 2026 (hike to 7.25%, final 2026 MPC in Nov). Next MPC: SARB, 19 Nov 2026.",
-     "note": "Held at 7.25% since the 23 Sep hike; next MPC 19 Nov 2026.",
+     "as_of": "2026-11-06",
+     "source": "BusinessTech \"Reserve Bank hikes interest rates in South Africa\" (23 Sep 2026): +25bp to 7.25%, prime 10.75% https://businesstech.co.za/news/finance/876840/reserve-bank-hikes-interest-rates-in-south-africa/ ; no change since (checked 7 Nov 2026). Year-ago: 7.00% before the 20 Nov 2025 cut to 6.75% (EWN 20 Nov 2025 https://ewn.co.za/2025/11/20/sarb-mpc-cuts-repo-rate-by-25-basis-points-to-675). Next MPC: November 2026 (19 Nov per global-rates.com/Briefly, seen 31 Oct; not re-confirmed on sarb.co.za).",
+     "note": "Unchanged at 7.25% since the September hike; the next MPC decision is due in November.",
      "carried": true
     },
     {
      "name": "SA 10-year government bond",
      "unit": "%",
-     "latest": 8.73,
-     "week_ago": 8.79,
-     "year_ago": 8.87,
-     "as_of": "2026-10-30",
-     "source": "Trading Economics SA 10Y page (accessed 31 Oct 2026): 8.73% on 30 Oct 2026, prev 8.70, yearly change -0.14pp; Investing.com SA 10Y historical data: 8.790 on 23 Oct 2026. Year-ago 8.87 = 8.73 + 0.14pp (TE's yearly change); TE news 27 Oct 2025 put it at ~8.85%.",
-     "note": "Down 6bp w/w to 8.73%, close to its lowest since early Sep; MTBPS fiscal anchor has helped.",
+     "latest": 8.6,
+     "week_ago": 8.73,
+     "year_ago": 8.79,
+     "as_of": "2026-11-04",
+     "source": "Trading Economics SA 10Y news (4 Nov 2026): yield \"near 8.60%, lowest since mid-August\" https://tradingeconomics.com/south-africa/government-bond-yield/news/593873 (6 Nov close not available; TE data page did not load). Week-ago 8.73% on 30 Oct 2026 (Trading Economics, accessed 31 Oct 2026). Year-ago 8.79% (Sanlam Private Wealth Daily Market Report 6 Nov 2025, prior-session close) https://sanlamprivatewealth.sanlam.com/documents/3189/06_November_2025_Daily_Market_Report.pdf",
+     "note": "Eased to near 8.60% on 4 Nov, lowest since mid-August, on fiscal credibility and calmer global risk.",
      "carried": true
     },
     {
@@ -92,8 +92,8 @@
      "week_ago": 4.5,
      "year_ago": 3.4,
      "as_of": "2026-09",
-     "source": "Trading Economics news 21 Oct 2026 (Sep 2026 4.5%, Aug 4.4%, consensus 4.7%); EWN 22 Oct 2025 (Sep 2025 3.4%). Stats SA P0141 Sep 2026 is the primary source (statssa.gov.za page failed to load). Week-ago = the print prevailing on 23 Oct (no new release this week).",
-     "note": "Sep CPI 4.5% (Aug 4.4%), under the 4.7% consensus; fuel the main driver. Oct CPI due in Nov.",
+     "source": "SAnews \"CPI rises in September\" (21 Oct 2026): 4.5%, up from 4.4% in Aug https://www.sanews.gov.za/node/85109 ; Trading Economics 21 Oct 2026 (4.7% expected). Year-ago: Sep 2025 3.4% (EWN 22 Oct 2025 https://www.ewn.co.za/2025/10/22/annual-consumer-price-inflation-rises-to-34-in-sept). No new print this week (checked 7 Nov 2026).",
+     "note": "Sep CPI 4.5%, above the 3% target; October is expected higher on fuel prices.",
      "carried": true
     }
    ]
@@ -126,12 +126,12 @@
     {
      "name": "MSCI Emerging Markets",
      "unit": "index",
-     "latest": 1578.04,
-     "week_ago": 1620.6,
-     "year_ago": 1381.3,
-     "as_of": "2026-10-23",
-     "source": "MarketScreener MSCI Emerging Markets (USD) quotes: close 23 Oct 1,578.04 (Investing.com showed 1,578.86, prev close 1,575.68). Week-ago: derived from MarketScreener 1-week change of -2.63% (cross-check: 19 Oct close 1,617.86 at -0.17%). Year-ago: derived from MarketScreener 1-year change of +14.24% (Investing.com shows +14.30%). 30 Oct 2026 close checked on Investing.com, MarketScreener and msci.com on 31 Oct and not available, so the 23 Oct figures are carried.",
-     "note": "Last sourced close 1,578 on 23 Oct (-2.6% that week); the 30 Oct close could not be confirmed.",
+     "latest": 1502.29,
+     "week_ago": null,
+     "year_ago": null,
+     "as_of": "2026-11-06",
+     "source": "YCharts MSCI Emerging Markets (^MSEM) https://ycharts.com/indices/%5EMSEM/chart/ : 1,502.29 on 6 Nov 2026 (-2.69% on the day; 1-month -13.71%), seen 7 Nov 2026. The 30 Oct 2026 close and the year-ago level could not be sourced (MarketScreener last updated 22 Oct), so they are left blank.",
+     "note": "Down about 14% over a month in the global AI and chip selloff.",
      "carried": true
     },
     {
@@ -140,9 +140,9 @@
      "latest": 4.0,
      "week_ago": 4.0,
      "year_ago": 4.0,
-     "as_of": "2026-10-28",
-     "source": "federalreserve.gov press release 28 Oct 2026 (target range held at 3.75-4.00%, vote 10-2, Cook and Hammack dissented in favour of a +25bp hike); Admiral Markets 28 Oct 2026; 29 Oct 2025 cut to 3.75-4.00% (5paisa / Bloomberg Law headlines).",
-     "note": "Held at 3.75-4.00% (10-2; two votes for a hike); futures ~85% priced for a 9 Dec hike.",
+     "as_of": "2026-11-06",
+     "source": "StockAnalysis \"Fed holds rates steady at 3.75% to 4.00% in a 10-2 vote\" (28 Oct 2026) https://stockanalysis.com/news/fed-holds-rates-steady-oct-2026/ ; Nation Thailand 28 Oct 2026. Year-ago: 3.75-4.00% after the 29 Oct 2025 cut. Next decision 9 Dec 2026 (fedratecalc.com; checked 7 Nov 2026).",
+     "note": "Held at 3.75-4.00% with two votes for a hike; next decision 9 Dec.",
      "carried": true
     },
     {
@@ -163,8 +163,8 @@
      "week_ago": 3.7,
      "year_ago": 3.0,
      "as_of": "2026-09",
-     "source": "Securities.io on the BLS release of 14 Oct 2026 (Sep 2026 3.7% y/y, Aug 3.4%); BLS CPI schedule (Oct 2026 CPI due 10 Nov 2026); NPR/KPBS 24 Oct 2025 (Sep 2025 3.0%). Week-ago = the print prevailing on 23 Oct (no new release this week).",
-     "note": "Sep CPI 3.7% (Aug 3.4%), driven by gasoline; Oct CPI due 10 Nov.",
+     "source": "BLS CPI release (14 Oct 2026): Sep 2026 3.7% y/y https://www.bls.gov/news.release/cpi.htm ; BLS schedule: Oct 2026 CPI on Tue 10 Nov 2026, 08:30 ET https://www.bls.gov/schedule/news_release/cpi.htm ; year-ago Sep 2025 3.0% (NPR/WUSF 24 Oct 2025). Checked 7 Nov 2026.",
+     "note": "Sep CPI 3.7%, well above the 2% target; October CPI is due 10 Nov.",
      "carried": true
     }
    ]
@@ -223,8 +223,8 @@
      "week_ago": 90.83,
      "year_ago": 105.84,
      "as_of": "2026-10-30",
-     "source": "Trading Economics iron ore 62% Fe CFR (accessed 31 Oct 2026): 90.71 USD/t on 30 Oct 2026, -1.51% m/m, -14.29% y/y. Week-ago 90.83 (TE, 23 Oct; from the brief, not re-checked). Year-ago 105.84 = 90.71/(1-0.1429). Cross-check: SteelOrbis PB fines 62% CFR China $106.3/t on 31 Oct 2025.",
-     "note": "Little changed w/w at ~$90.7/t; down ~14% y/y on soft China demand.",
+     "source": "Trading Economics iron ore 62% Fe CFR (accessed 31 Oct 2026): 90.71 USD/t on 30 Oct 2026, -1.51% m/m, -14.29% y/y. Week-ago 90.83 (TE, 23 Oct; from the brief, not re-checked). Year-ago 105.84 = 90.71/(1-0.1429). Cross-check: SteelOrbis PB fines 62% CFR China $106.3/t on 31 Oct 2025. | 7 Nov 2026: 6 Nov spot not available (Trading Economics page did not load; Mysteel paywalled), so the 30 Oct figure is carried. SGX Dec futures $92.65 on 5 Nov, a one-month high (Business Recorder 5 Nov 2026 https://www.brecorder.com/news/40447552/iron-ore-hits-1-month-high-as-china-stock-rally-lifts-sentiment).",
+     "note": "Last sourced $90.71/t (30 Oct); SGX futures rose to a one-month high of $92.65 on 5 Nov.",
      "carried": true
     }
    ]
