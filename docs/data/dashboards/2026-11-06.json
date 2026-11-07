@@ -14,8 +14,8 @@
      "week_ago": 107621.7031,
      "year_ago": 110100.5,
      "as_of": "2026-11-06",
-     "source": "Yahoo Finance ^J203.JO daily close (2026-11-06; week-ago 2026-10-30; year-ago 2025-11-06)",
-     "note": "",
+     "source": "Yahoo Finance ^J203.JO daily close (2026-11-06; week-ago 2026-10-30; year-ago 2025-11-06) | Cross-check: Bloomberg via allAfrica 6 Nov 2026 has the ALSI at 113,286.18 on Thu 5 Nov (+3.7%) https://allafrica.com/stories/202611060036.html ; the Fri 6 Nov close was not found on ShareData/Sharenet/Investing.com (checked 7 Nov 2026).",
+     "note": "+4.8% in a four-session week (JSE shut 4 Nov); 5 Nov was its biggest daily gain in 7 months as gold miners and Naspers rallied.",
      "carried": false
     },
     {
@@ -25,8 +25,8 @@
      "week_ago": 99412.2969,
      "year_ago": 102681.2031,
      "as_of": "2026-11-06",
-     "source": "Yahoo Finance ^J200.JO daily close (2026-11-06; week-ago 2026-10-30; year-ago 2025-11-06)",
-     "note": "",
+     "source": "Yahoo Finance ^J200.JO daily close (2026-11-06; week-ago 2026-10-30; year-ago 2025-11-06) | Not independently cross-checked: no ShareData/Investing.com Top 40 close found for 6 Nov (checked 7 Nov 2026).",
+     "note": "+5.3% w/w, led by gold miners and Naspers after the US midterms.",
      "carried": false
     },
     {
@@ -37,7 +37,7 @@
      "year_ago": 17.3998,
      "as_of": "2026-11-06",
      "source": "Yahoo Finance ZAR=X daily close (2026-11-06; week-ago 2026-10-30; year-ago 2025-11-06)",
-     "note": "",
+     "note": "Rand firmed 0.8% to R16.48/$ on SA local election results and the US midterms (Reuters via CNBC Africa, 5 Nov).",
      "carried": false
     },
     {
@@ -48,7 +48,7 @@
      "year_ago": 19.991,
      "as_of": "2026-11-06",
      "source": "Yahoo Finance EURZAR=X daily close (2026-11-06; week-ago 2026-10-30; year-ago 2025-11-06)",
-     "note": "",
+     "note": "Rand slightly firmer against the euro; about 7.5% stronger than a year ago.",
      "carried": false
     },
     {
@@ -59,7 +59,7 @@
      "year_ago": 22.6956,
      "as_of": "2026-11-06",
      "source": "Yahoo Finance GBPZAR=X daily close (2026-11-06; week-ago 2026-10-30; year-ago 2025-11-06)",
-     "note": "",
+     "note": "Little changed on the week; rand about 2% firmer than a year ago.",
      "carried": false
     },
     {
@@ -68,21 +68,21 @@
      "latest": 7.25,
      "week_ago": 7.25,
      "year_ago": 7.0,
-     "as_of": "2026-10-30",
-     "source": "global-rates.com SARB repo history (accessed 31 Oct 2026): 7.25% effective 23 Sep 2026; 7.00% from 31 Jul 2025 to 20 Nov 2025 cut to 6.75%. Briefly.co.za 24 Sep 2026 (hike to 7.25%, final 2026 MPC in Nov). Next MPC: SARB, 19 Nov 2026.",
-     "note": "Held at 7.25% since the 23 Sep hike; next MPC 19 Nov 2026.",
-     "carried": true
+     "as_of": "2026-11-06",
+     "source": "BusinessTech \"Reserve Bank hikes interest rates in South Africa\" (23 Sep 2026): +25bp to 7.25%, prime 10.75% https://businesstech.co.za/news/finance/876840/reserve-bank-hikes-interest-rates-in-south-africa/ ; no change since (checked 7 Nov 2026). Year-ago: 7.00% before the 20 Nov 2025 cut to 6.75% (EWN 20 Nov 2025 https://ewn.co.za/2025/11/20/sarb-mpc-cuts-repo-rate-by-25-basis-points-to-675). Next MPC: November 2026 (19 Nov per global-rates.com/Briefly, seen 31 Oct; not re-confirmed on sarb.co.za).",
+     "note": "Unchanged at 7.25% since the September hike; the next MPC decision is due in November.",
+     "carried": false
     },
     {
      "name": "SA 10-year government bond",
      "unit": "%",
-     "latest": 8.73,
-     "week_ago": 8.79,
-     "year_ago": 8.87,
-     "as_of": "2026-10-30",
-     "source": "Trading Economics SA 10Y page (accessed 31 Oct 2026): 8.73% on 30 Oct 2026, prev 8.70, yearly change -0.14pp; Investing.com SA 10Y historical data: 8.790 on 23 Oct 2026. Year-ago 8.87 = 8.73 + 0.14pp (TE's yearly change); TE news 27 Oct 2025 put it at ~8.85%.",
-     "note": "Down 6bp w/w to 8.73%, close to its lowest since early Sep; MTBPS fiscal anchor has helped.",
-     "carried": true
+     "latest": 8.6,
+     "week_ago": 8.73,
+     "year_ago": 8.79,
+     "as_of": "2026-11-04",
+     "source": "Trading Economics SA 10Y news (4 Nov 2026): yield \"near 8.60%, lowest since mid-August\" https://tradingeconomics.com/south-africa/government-bond-yield/news/593873 (6 Nov close not available; TE data page did not load). Week-ago 8.73% on 30 Oct 2026 (Trading Economics, accessed 31 Oct 2026). Year-ago 8.79% (Sanlam Private Wealth Daily Market Report 6 Nov 2025, prior-session close) https://sanlamprivatewealth.sanlam.com/documents/3189/06_November_2025_Daily_Market_Report.pdf",
+     "note": "Eased to near 8.60% on 4 Nov, lowest since mid-August, on fiscal credibility and calmer global risk.",
+     "carried": false
     },
     {
      "name": "SA CPI inflation (y/y)",
@@ -91,9 +91,9 @@
      "week_ago": 4.5,
      "year_ago": 3.4,
      "as_of": "2026-09",
-     "source": "Trading Economics news 21 Oct 2026 (Sep 2026 4.5%, Aug 4.4%, consensus 4.7%); EWN 22 Oct 2025 (Sep 2025 3.4%). Stats SA P0141 Sep 2026 is the primary source (statssa.gov.za page failed to load). Week-ago = the print prevailing on 23 Oct (no new release this week).",
-     "note": "Sep CPI 4.5% (Aug 4.4%), under the 4.7% consensus; fuel the main driver. Oct CPI due in Nov.",
-     "carried": true
+     "source": "SAnews \"CPI rises in September\" (21 Oct 2026): 4.5%, up from 4.4% in Aug https://www.sanews.gov.za/node/85109 ; Trading Economics 21 Oct 2026 (4.7% expected). Year-ago: Sep 2025 3.4% (EWN 22 Oct 2025 https://www.ewn.co.za/2025/10/22/annual-consumer-price-inflation-rises-to-34-in-sept). No new print this week (checked 7 Nov 2026).",
+     "note": "Sep CPI 4.5%, above the 3% target; October is expected higher on fuel prices.",
+     "carried": false
     }
    ]
   },
@@ -108,7 +108,7 @@
      "year_ago": 6720.3198,
      "as_of": "2026-11-06",
      "source": "Yahoo Finance ^GSPC daily close (2026-11-06; week-ago 2026-10-30; year-ago 2025-11-06)",
-     "note": "",
+     "note": "-2.7%, worst week since June; Thu -4.4% on fears a Democratic Congress curbs AI and data-centre spending (Yahoo Finance, 6 Nov).",
      "carried": false
     },
     {
@@ -119,19 +119,19 @@
      "year_ago": 23053.9902,
      "as_of": "2026-11-06",
      "source": "Yahoo Finance ^IXIC daily close (2026-11-06; week-ago 2026-10-30; year-ago 2025-11-06)",
-     "note": "",
+     "note": "-3.4% as chip and storage stocks led the slide (SOX -12% on 5 Nov).",
      "carried": false
     },
     {
      "name": "MSCI Emerging Markets",
      "unit": "index",
-     "latest": 1578.04,
-     "week_ago": 1620.6,
-     "year_ago": 1381.3,
-     "as_of": "2026-10-23",
-     "source": "MarketScreener MSCI Emerging Markets (USD) quotes: close 23 Oct 1,578.04 (Investing.com showed 1,578.86, prev close 1,575.68). Week-ago: derived from MarketScreener 1-week change of -2.63% (cross-check: 19 Oct close 1,617.86 at -0.17%). Year-ago: derived from MarketScreener 1-year change of +14.24% (Investing.com shows +14.30%). 30 Oct 2026 close checked on Investing.com, MarketScreener and msci.com on 31 Oct and not available, so the 23 Oct figures are carried.",
-     "note": "Last sourced close 1,578 on 23 Oct (-2.6% that week); the 30 Oct close could not be confirmed.",
-     "carried": true
+     "latest": 1502.29,
+     "week_ago": null,
+     "year_ago": null,
+     "as_of": "2026-11-06",
+     "source": "YCharts MSCI Emerging Markets (^MSEM) https://ycharts.com/indices/%5EMSEM/chart/ : 1,502.29 on 6 Nov 2026 (-2.69% on the day; 1-month -13.71%), seen 7 Nov 2026. The 30 Oct 2026 close and the year-ago level could not be sourced (MarketScreener last updated 22 Oct), so they are left blank.",
+     "note": "Down about 14% over a month in the global AI and chip selloff.",
+     "carried": false
     },
     {
      "name": "US Fed funds rate (upper)",
@@ -139,10 +139,10 @@
      "latest": 4.0,
      "week_ago": 4.0,
      "year_ago": 4.0,
-     "as_of": "2026-10-28",
-     "source": "federalreserve.gov press release 28 Oct 2026 (target range held at 3.75-4.00%, vote 10-2, Cook and Hammack dissented in favour of a +25bp hike); Admiral Markets 28 Oct 2026; 29 Oct 2025 cut to 3.75-4.00% (5paisa / Bloomberg Law headlines).",
-     "note": "Held at 3.75-4.00% (10-2; two votes for a hike); futures ~85% priced for a 9 Dec hike.",
-     "carried": true
+     "as_of": "2026-11-06",
+     "source": "StockAnalysis \"Fed holds rates steady at 3.75% to 4.00% in a 10-2 vote\" (28 Oct 2026) https://stockanalysis.com/news/fed-holds-rates-steady-oct-2026/ ; Nation Thailand 28 Oct 2026. Year-ago: 3.75-4.00% after the 29 Oct 2025 cut. Next decision 9 Dec 2026 (fedratecalc.com; checked 7 Nov 2026).",
+     "note": "Held at 3.75-4.00% with two votes for a hike; next decision 9 Dec.",
+     "carried": false
     },
     {
      "name": "US 10-year Treasury",
@@ -152,7 +152,7 @@
      "year_ago": 4.093,
      "as_of": "2026-11-06",
      "source": "Yahoo Finance ^TNX daily close (2026-11-06; week-ago 2026-10-30; year-ago 2025-11-06)",
-     "note": "",
+     "note": "Down 7bp w/w to 4.86%, still about 77bp above a year ago.",
      "carried": false
     },
     {
@@ -162,9 +162,9 @@
      "week_ago": 3.7,
      "year_ago": 3.0,
      "as_of": "2026-09",
-     "source": "Securities.io on the BLS release of 14 Oct 2026 (Sep 2026 3.7% y/y, Aug 3.4%); BLS CPI schedule (Oct 2026 CPI due 10 Nov 2026); NPR/KPBS 24 Oct 2025 (Sep 2025 3.0%). Week-ago = the print prevailing on 23 Oct (no new release this week).",
-     "note": "Sep CPI 3.7% (Aug 3.4%), driven by gasoline; Oct CPI due 10 Nov.",
-     "carried": true
+     "source": "BLS CPI release (14 Oct 2026): Sep 2026 3.7% y/y https://www.bls.gov/news.release/cpi.htm ; BLS schedule: Oct 2026 CPI on Tue 10 Nov 2026, 08:30 ET https://www.bls.gov/schedule/news_release/cpi.htm ; year-ago Sep 2025 3.0% (NPR/WUSF 24 Oct 2025). Checked 7 Nov 2026.",
+     "note": "Sep CPI 3.7%, well above the 2% target; October CPI is due 10 Nov.",
+     "carried": false
     }
    ]
   },
@@ -179,7 +179,7 @@
      "year_ago": 3991.0,
      "as_of": "2026-11-06",
      "source": "Yahoo Finance GC=F daily close (2026-11-06; week-ago 2026-10-29; year-ago 2025-11-06)",
-     "note": "",
+     "note": "+4.5% w/w, lifting JSE gold miners.",
      "carried": false
     },
     {
@@ -190,7 +190,7 @@
      "year_ago": 1528.3,
      "as_of": "2026-11-06",
      "source": "Yahoo Finance PL=F daily close (2026-11-06; week-ago 2026-10-29; year-ago 2025-11-06)",
-     "note": "",
+     "note": "+6.9% w/w, back near year-ago levels.",
      "carried": false
     },
     {
@@ -200,8 +200,8 @@
      "week_ago": 117.64,
      "year_ago": 63.38,
      "as_of": "2026-11-06",
-     "source": "Yahoo Finance BZ=F daily close (2026-11-06; week-ago 2026-10-29; year-ago 2025-11-06)",
-     "note": "",
+     "source": "Yahoo Finance BZ=F daily close (2026-11-06; week-ago 2026-10-29; year-ago 2025-11-06) | Reason: Trading Economics \"Brent Crude Set for Biggest Weekly Drop since Covid\" (6 Nov 2026) https://tradingeconomics.com/commodity/brent-crude-oil/news/597300",
+     "note": "Biggest weekly drop since 2020 on hopes of US-Iran diplomacy and Gulf exports near pre-war levels (Trading Economics, 6 Nov).",
      "carried": false
     },
     {
@@ -212,7 +212,7 @@
      "year_ago": 10902.948,
      "as_of": "2026-11-06",
      "source": "Yahoo Finance HG=F daily close (2026-11-06; week-ago 2026-10-29; year-ago 2025-11-06) — converted $/lb × 2,204.62 to $/t",
-     "note": "",
+     "note": "-3.4% w/w but still about 26% above a year ago.",
      "carried": false
     },
     {
@@ -222,16 +222,144 @@
      "week_ago": 90.83,
      "year_ago": 105.84,
      "as_of": "2026-10-30",
-     "source": "Trading Economics iron ore 62% Fe CFR (accessed 31 Oct 2026): 90.71 USD/t on 30 Oct 2026, -1.51% m/m, -14.29% y/y. Week-ago 90.83 (TE, 23 Oct; from the brief, not re-checked). Year-ago 105.84 = 90.71/(1-0.1429). Cross-check: SteelOrbis PB fines 62% CFR China $106.3/t on 31 Oct 2025.",
-     "note": "Little changed w/w at ~$90.7/t; down ~14% y/y on soft China demand.",
+     "source": "Trading Economics iron ore 62% Fe CFR (accessed 31 Oct 2026): 90.71 USD/t on 30 Oct 2026, -1.51% m/m, -14.29% y/y. Week-ago 90.83 (TE, 23 Oct; from the brief, not re-checked). Year-ago 105.84 = 90.71/(1-0.1429). Cross-check: SteelOrbis PB fines 62% CFR China $106.3/t on 31 Oct 2025. | 7 Nov 2026: 6 Nov spot not available (Trading Economics page did not load; Mysteel paywalled), so the 30 Oct figure is carried. SGX Dec futures $92.65 on 5 Nov, a one-month high (Business Recorder 5 Nov 2026 https://www.brecorder.com/news/40447552/iron-ore-hits-1-month-high-as-china-stock-rally-lifts-sentiment).",
+     "note": "Last sourced $90.71/t (30 Oct); SGX futures rose to a one-month high of $92.65 on 5 Nov.",
      "carried": true
     }
    ]
   }
  ],
  "auto_view": "The JSE All Share moved +4.8% on the week to 112,739 and the rand firmed 0.8% to R16.48/$. In New York the S&P 500 moved -2.7% and the Nasdaq -3.4%, with the US 10-year at 4.86%. Commodities: gold +4.5%, platinum +6.9%, Brent -16.4%, copper -3.4%.",
- "missing": [],
- "agent": "LRC Dashboard automation",
- "movers": [],
- "market_view": ""
+ "missing": [
+  "SA 10-year: 6 Nov close not sourced (latest is 4 Nov)",
+  "MSCI EM: 30 Oct and year-ago levels not sourced",
+  "Iron ore: 6 Nov spot not sourced (30 Oct carried)"
+ ],
+ "agent": "LRC Research",
+ "movers": [
+  {
+   "market": "US",
+   "type": "Gainer",
+   "rank": 1,
+   "ticker": "APP",
+   "name": "AppLovin",
+   "price": 391.2,
+   "move": 0.7121,
+   "why": "Q3 beat, Q4 guidance above expectations and buyback raised to $3.6bn (BFM Bourse, 4 Nov)"
+  },
+  {
+   "market": "US",
+   "type": "Gainer",
+   "rank": 2,
+   "ticker": "FISV",
+   "name": "Fiserv",
+   "price": 62.88,
+   "move": 0.2571,
+   "why": "Q3 adjusted EPS beat; savings target doubled to $1bn (Trefis, 4 Nov)"
+  },
+  {
+   "market": "US",
+   "type": "Gainer",
+   "rank": 3,
+   "ticker": "IDXX",
+   "name": "IDEXX Laboratories",
+   "price": 676.0,
+   "move": 0.2265,
+   "why": "—"
+  },
+  {
+   "market": "US",
+   "type": "Loser",
+   "rank": 1,
+   "ticker": "LITE",
+   "name": "Lumentum",
+   "price": 538.6,
+   "move": -0.3594,
+   "why": "All-stock takeover by Marvell announced 2 Nov; data-centre selloff after the midterms (Trefis 3 Nov; TIKR 4 Nov)"
+  },
+  {
+   "market": "US",
+   "type": "Loser",
+   "rank": 2,
+   "ticker": "STX",
+   "name": "Seagate Technology",
+   "price": 461.0,
+   "move": -0.2848,
+   "why": "Data-centre policy and memory-price worries after the election; no company news (TIKR, 4 Nov)"
+  },
+  {
+   "market": "US",
+   "type": "Loser",
+   "rank": 3,
+   "ticker": "MRVL",
+   "name": "Marvell Technology",
+   "price": 141.2,
+   "move": -0.2811,
+   "why": "Shareholder criticism of the Lumentum deal; data-centre selloff (Trefis 3 Nov; TIKR 4 Nov)"
+  },
+  {
+   "market": "SA",
+   "type": "Gainer",
+   "rank": 1,
+   "ticker": "GFI",
+   "name": "Gold Fields",
+   "price": 630.2,
+   "move": 0.1394,
+   "why": "Gold miners rallied with the gold price after the US midterms (Bloomberg via allAfrica, 6 Nov)"
+  },
+  {
+   "market": "SA",
+   "type": "Gainer",
+   "rank": 2,
+   "ticker": "HAR",
+   "name": "Harmony Gold",
+   "price": 277.0,
+   "move": 0.1279,
+   "why": "Gold miners rallied with the gold price after the US midterms (Bloomberg via allAfrica, 6 Nov)"
+  },
+  {
+   "market": "SA",
+   "type": "Gainer",
+   "rank": 3,
+   "ticker": "NPN",
+   "name": "Naspers",
+   "price": 757.2,
+   "move": 0.1158,
+   "why": "+10.4% on 5 Nov on a Tencent rally (Bloomberg via allAfrica, 6 Nov)"
+  },
+  {
+   "market": "SA",
+   "type": "Loser",
+   "rank": 1,
+   "ticker": "SOL",
+   "name": "Sasol",
+   "price": 247.0,
+   "move": -0.1465,
+   "why": "—"
+  },
+  {
+   "market": "SA",
+   "type": "Loser",
+   "rank": 2,
+   "ticker": "TGA",
+   "name": "Thungela Resources",
+   "price": 119.6,
+   "move": -0.1245,
+   "why": "—"
+  },
+  {
+   "market": "SA",
+   "type": "Loser",
+   "rank": 3,
+   "ticker": "SDO",
+   "name": "Stadio Holdings",
+   "price": 14.74,
+   "move": -0.0641,
+   "why": "—"
+  }
+ ],
+ "market_view": "South African shares jumped 4.8% in a four-session week, led by gold miners and Naspers after the US midterms and SA's local elections, while the rand firmed to R16.48/$ and the 10-year yield eased to near 8.60%, with the repo rate at 7.25% ahead of the November MPC. In New York the S&P 500 fell 2.7% and the Nasdaq 3.4% in their worst week since June as fears that a Democratic Congress will curb AI and data-centre spending hit chip and storage stocks, with October CPI on 10 Nov the next test after September's 3.7%. Gold rose 4.5% and platinum 6.9% while Brent fell about 16% to $98 a barrel, so investors should expect choppier markets in which SA resources and rand-hedge shares can cushion the swings while richly valued tech stays vulnerable.",
+ "movers_period": "Week to 6 Nov 2026 (30 Oct close to 6 Nov close; the JSE was closed on 4 Nov)",
+ "movers_sources": "US: ranking and weekly % from tastylive \"The Weekly Recap: The Week That Bit Back\" (7 Nov 2026, 30 Oct-6 Nov) https://tastylive.substack.com/p/the-weekly-recap-the-week-that-bit , Trefis \"S&P 500 Movers\" (7 Nov 2026) and myweeklystock \"Weekly Market Recap (Nov 2-6)\" (6 Nov 2026); 6 Nov closes from Yahoo Finance (weekly % agree to 0.01pp). Reasons: tradingsat.com/BFM Bourse (AppLovin, 4 Nov), trefis.com (Fiserv 4 Nov; Lumentum 3 Nov), tikr.com (Lumentum/Marvell and Seagate, 4 Nov). SA: JSE Top 100 = the 100 largest JSE shares by market capitalisation in the LRC Stock Scanner; weekly move = Yahoo Finance daily close 6 Nov 2026 vs 30 Oct 2026 (Rand). No Sharenet/ShareData weekly ranking was published (Sharenet shows daily moves only). Reasons: Bloomberg via allAfrica \"South African Stocks Jump Most in 7 Months As Gold, Naspers Rally\" (6 Nov 2026) https://allafrica.com/stories/202611060036.html",
+ "updated_by": "Filled 7 Nov 2026 from Trading Economics, SAnews, Sanlam Private Wealth, BusinessTech, EWN, YCharts, StockAnalysis, BLS, Business Recorder, Bloomberg via allAfrica, Reuters via CNBC Africa, tastylive, Trefis, myweeklystock, TIKR and Yahoo Finance (see Source column). Prayer Nkuna, Analyst"
 }
