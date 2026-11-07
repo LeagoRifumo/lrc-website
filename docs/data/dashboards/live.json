@@ -2,7 +2,7 @@
  "week_ending": "2026-11-06",
  "title": "Live — as of Sat 07 Nov 2026",
  "live": true,
- "generated": "2026-11-07T02:58+02:00",
+ "generated": "2026-11-07T07:31+02:00",
  "agent": "LRC Market Dashboard",
  "groups": [
   {
@@ -46,9 +46,9 @@
      "unit": "rand per €",
      "latest": 18.4049,
      "week_ago": 18.5662,
-     "year_ago": 19.991,
-     "as_of": "2026-11-06",
-     "source": "Yahoo Finance EURZAR=X daily close (2026-11-06; week-ago 2026-10-30; year-ago 2025-11-06)",
+     "year_ago": 20.0383,
+     "as_of": "2026-11-07",
+     "source": "Yahoo Finance EURZAR=X daily close (2026-11-07; week-ago 2026-10-30; year-ago 2025-11-07)",
      "note": "",
      "carried": false
     },
@@ -175,7 +175,7 @@
     {
      "name": "Gold",
      "unit": "$/oz",
-     "latest": 4079.5,
+     "latest": 4074.9,
      "week_ago": 3898.8999,
      "year_ago": 3991.0,
      "as_of": "2026-11-06",
@@ -186,7 +186,7 @@
     {
      "name": "Platinum",
      "unit": "$/oz",
-     "latest": 1537.0,
+     "latest": 1536.9,
      "week_ago": 1438.0,
      "year_ago": 1528.3,
      "as_of": "2026-11-06",
@@ -197,7 +197,7 @@
     {
      "name": "Brent crude",
      "unit": "$/bbl",
-     "latest": 97.76,
+     "latest": 98.32,
      "week_ago": 117.64,
      "year_ago": 63.38,
      "as_of": "2026-11-06",
@@ -208,7 +208,7 @@
     {
      "name": "Copper",
      "unit": "$/t",
-     "latest": 13800.9212,
+     "latest": 13752.4196,
      "week_ago": 14238.5381,
      "year_ago": 10902.948,
      "as_of": "2026-11-06",
@@ -232,6 +232,6 @@
  ],
  "movers": [],
  "market_view": "",
- "auto_view": "The JSE All Share moved +4.8% on the week to 112,739 and the rand firmed 0.5% to R16.52/$. In New York the S&P 500 moved -2.7% and the Nasdaq -3.4%, with the US 10-year at 4.86%. Commodities: gold +4.6%, platinum +6.9%, Brent -16.9%, copper -3.1%.",
+ "auto_view": "The JSE All Share moved +4.8% on the week to 112,739 and the rand firmed 0.5% to R16.52/$. In New York the S&P 500 moved -2.7% and the Nasdaq -3.4%, with the US 10-year at 4.86%. Commodities: gold +4.5%, platinum +6.9%, Brent -16.4%, copper -3.4%.",
  "missing": []
 }
