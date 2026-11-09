@@ -2,7 +2,7 @@
  "week_ending": "2026-11-13",
  "title": "Live — as of Mon 09 Nov 2026",
  "live": true,
- "generated": "2026-11-09T16:00+02:00",
+ "generated": "2026-11-09T16:57+02:00",
  "agent": "LRC Market Dashboard",
  "groups": [
   {
@@ -11,7 +11,7 @@
     {
      "name": "JSE All Share (J203)",
      "unit": "index",
-     "latest": 114492.77,
+     "latest": 115076.95,
      "week_ago": 112739.3984,
      "year_ago": 108846.3984,
      "as_of": "2026-11-09",
@@ -22,7 +22,7 @@
     {
      "name": "JSE Top 40 (J200)",
      "unit": "index",
-     "latest": 106542.5,
+     "latest": 107140.65,
      "week_ago": 104714.0,
      "year_ago": 101451.2969,
      "as_of": "2026-11-09",
@@ -33,7 +33,7 @@
     {
      "name": "USD / ZAR",
      "unit": "rand per $",
-     "latest": 16.4235,
+     "latest": 16.4174,
      "week_ago": 16.4804,
      "year_ago": 17.353,
      "as_of": "2026-11-09",
@@ -44,7 +44,7 @@
     {
      "name": "EUR / ZAR",
      "unit": "rand per €",
-     "latest": 18.3967,
+     "latest": 18.3851,
      "week_ago": 18.4883,
      "year_ago": 20.0383,
      "as_of": "2026-11-09",
@@ -55,7 +55,7 @@
     {
      "name": "GBP / ZAR",
      "unit": "rand per £",
-     "latest": 22.0396,
+     "latest": 22.016,
      "week_ago": 22.1754,
      "year_ago": 22.7992,
      "as_of": "2026-11-09",
@@ -104,22 +104,22 @@
     {
      "name": "S&P 500",
      "unit": "index",
-     "latest": 7376.86,
-     "week_ago": 7376.86,
-     "year_ago": 6720.3198,
-     "as_of": "2026-11-06",
-     "source": "Yahoo Finance ^GSPC daily close (2026-11-06; week-ago 2026-11-06; year-ago 2025-11-06)",
+     "latest": 7502.08,
+     "week_ago": 7376.8599,
+     "year_ago": 6728.7998,
+     "as_of": "2026-11-09",
+     "source": "Yahoo Finance ^GSPC daily close (2026-11-09; week-ago 2026-11-06; year-ago 2025-11-07)",
      "note": "",
      "carried": false
     },
     {
      "name": "Nasdaq Composite",
      "unit": "index",
-     "latest": 24579.424,
-     "week_ago": 24579.424,
-     "year_ago": 23053.9902,
-     "as_of": "2026-11-06",
-     "source": "Yahoo Finance ^IXIC daily close (2026-11-06; week-ago 2026-11-06; year-ago 2025-11-06)",
+     "latest": 25121.736,
+     "week_ago": 24579.4297,
+     "year_ago": 23004.5391,
+     "as_of": "2026-11-09",
+     "source": "Yahoo Finance ^IXIC daily close (2026-11-09; week-ago 2026-11-06; year-ago 2025-11-07)",
      "note": "",
      "carried": false
     },
@@ -148,7 +148,7 @@
     {
      "name": "US 10-year Treasury",
      "unit": "%",
-     "latest": 4.841,
+     "latest": 4.843,
      "week_ago": 4.859,
      "year_ago": 4.093,
      "as_of": "2026-11-09",
@@ -175,7 +175,7 @@
     {
      "name": "Gold",
      "unit": "$/oz",
-     "latest": 4133.8,
+     "latest": 4127.5,
      "week_ago": 4074.8999,
      "year_ago": 4009.8,
      "as_of": "2026-11-09",
@@ -186,7 +186,7 @@
     {
      "name": "Platinum",
      "unit": "$/oz",
-     "latest": 1563.6,
+     "latest": 1564.4,
      "week_ago": 1538.2,
      "year_ago": 1539.3,
      "as_of": "2026-11-09",
@@ -197,7 +197,7 @@
     {
      "name": "Brent crude",
      "unit": "$/bbl",
-     "latest": 93.63,
+     "latest": 93.96,
      "week_ago": 98.32,
      "year_ago": 63.63,
      "as_of": "2026-11-09",
@@ -208,7 +208,7 @@
     {
      "name": "Copper",
      "unit": "$/t",
-     "latest": 13956.3469,
+     "latest": 13959.6538,
      "week_ago": 13708.327,
      "year_ago": 10886.414,
      "as_of": "2026-11-09",
@@ -232,6 +232,6 @@
  ],
  "movers": [],
  "market_view": "",
- "auto_view": "The JSE All Share moved +1.6% on the week to 114,493 and the rand firmed 0.3% to R16.42/$. In New York the S&P 500 moved +0.0% and the Nasdaq +0.0%, with the US 10-year at 4.84%. Commodities: gold +1.4%, platinum +1.7%, Brent -4.8%, copper +1.8%.",
+ "auto_view": "The JSE All Share moved +2.1% on the week to 115,077 and the rand firmed 0.4% to R16.42/$. In New York the S&P 500 moved +1.7% and the Nasdaq +2.2%, with the US 10-year at 4.84%. Commodities: gold +1.3%, platinum +1.7%, Brent -4.4%, copper +1.8%.",
  "missing": []
 }
