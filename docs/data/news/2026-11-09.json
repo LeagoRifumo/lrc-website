@@ -1,0 +1,104 @@
+{
+  "edition": "Morning brief · Monday 9 November 2026 06:10",
+  "generated": "2026-11-09T06:30+02:00",
+  "covers": "Friday 6 November closes on the JSE and Wall Street, the week to 6 November, and weekend moves in the rand, gold, platinum, oil and copper to early Monday. This edition is built from closing prices only; weekend news stories could not be checked in time and are left out until they are verified.",
+  "agent": "LRC News Desk",
+  "headline": "JSE ended last week up 4.8% while the S&P 500 fell 2.7%; gold starts Monday near $4,126 and the rand near R16.49/$",
+  "summary": "In South Africa the JSE All Share closed Friday at 112,739 (+4.8% on the week) and the Top 40 at 104,714 (+5.3%), and the rand closed the week at R16.48/$, about 0.8% firmer (Yahoo Finance closes, 6 Nov). On Wall Street the S&P 500 closed Friday at 7,376.86, up 0.3% on the day but down 2.7% on the week, and the Nasdaq at 24,579.42, down 3.4% on the week, while the US 10-year yield eased to 4.86% (Yahoo Finance, 6 Nov). Gold was $4,125.70 early Monday (+1.2% on Friday's close) and Brent $98.22 after falling about 16% last week, which keeps support under JSE miners as US October inflation (Tuesday) and SA jobs data (Tuesday) come into focus.",
+  "sections": [
+    {
+      "name": "US markets",
+      "items": [
+        {
+          "title": "S&P 500 closes Friday at 7,376.86 (+0.3%), down 2.7% on the week; Nasdaq 24,579.42, down 3.4%",
+          "summary": "Friday's S&P 500 close compares with 7,353.73 on Thursday and 7,580.07 on 30 October. The Nasdaq Composite closed at 24,579.42 against 25,437.00 a week earlier, after Thursday's tech sell-off and Friday's partial rebound following the October jobs report. The US 10-year Treasury yield closed at 4.86%, down from 4.93% a week earlier. The Fed funds target range is 3.75%–4.00%.",
+          "source": "Yahoo Finance daily closes (^GSPC, ^IXIC, ^TNX), 6 Nov 2026, via LRC Market Dashboard",
+          "url": "https://finance.yahoo.com/quote/%5EGSPC/"
+        },
+        {
+          "title": "US October CPI due Tuesday 10 November at 15:30 SAST",
+          "summary": "September CPI inflation was 3.7% year on year (BLS, 14 Oct 2026). The BLS schedule lists the October report for Tuesday 10 November at 08:30 New York time.",
+          "source": "US Bureau of Labor Statistics release schedule, checked 7 Nov 2026",
+          "url": "https://www.bls.gov/schedule/news_release/cpi.htm"
+        }
+      ]
+    },
+    {
+      "name": "South Africa",
+      "items": [
+        {
+          "title": "JSE All Share closes the week at 112,739 (+4.8%), Top 40 at 104,714 (+5.3%)",
+          "summary": "The All Share closed Friday 6 November at 112,739.38 against 107,621.70 on 30 October, and the Top 40 at 104,713.98 against 99,412.30, while gold rose 4.5% and platinum 7.0% over the same week. The SA 10-year bond yield was near 8.60% on 4 November, the lowest since mid-August (Trading Economics, 4 Nov).",
+          "source": "Yahoo Finance daily closes (^J203.JO, ^J200.JO), 6 Nov 2026, via LRC Market Dashboard; Trading Economics, 4 Nov 2026",
+          "url": "https://finance.yahoo.com/quote/%5EJ203.JO/"
+        },
+        {
+          "title": "Data week: Q3 jobs survey on Tuesday, CPI on 18 November, SARB decision on 19 November",
+          "summary": "Stats SA's Quarterly Labour Force Survey for Q3 is due Tuesday 10 November; Q2 unemployment was 33.6% (up from 32.7%). October CPI follows on 18 November (September: 4.5%) and the Reserve Bank's MPC decision is scheduled for 19 November, with the repo rate at 7.25% since the 23 September hike.",
+          "source": "Stats SA via SAnews (Q2 QLFS, 11 Aug 2026; CPI, 21 Oct 2026); BusinessTech, 23 Sep 2026; LRC Macro Desk calendar",
+          "url": "https://www.sanews.gov.za/node/83500"
+        }
+      ]
+    },
+    {
+      "name": "Forex & commodities",
+      "items": [
+        {
+          "title": "Rand R16.49/$ early Monday after closing the week 0.8% firmer at R16.48",
+          "summary": "USD/ZAR closed Friday at 16.4804 against 16.6066 on 30 October and was 16.4928 early on 9 November. The rand was R18.38 per euro and R22.04 per pound early Monday.",
+          "source": "Yahoo Finance (ZAR=X, EURZAR=X, GBPZAR=X), 6 and 9 Nov 2026, via LRC Market Dashboard",
+          "url": "https://finance.yahoo.com/quote/ZAR%3DX/"
+        },
+        {
+          "title": "Gold $4,125.70 (+1.2% since Friday), platinum $1,552.20, Brent $98.22, copper about $13,974/t",
+          "summary": "Gold futures closed last week at $4,074.90, up 4.5% on the week, and were $4,125.70 in the latest session (8 Nov). Platinum rose to $1,552.20 from $1,538.20 on Friday. Brent was $98.22 after closing Friday at $98.32, down from $117.64 a week earlier (−16.4%). Copper was about $13,974 a tonne (+1.6% on Friday's $13,751).",
+          "source": "Yahoo Finance futures (GC=F, PL=F, BZ=F, HG=F), 6 and 8 Nov 2026, via LRC Market Dashboard",
+          "url": "https://finance.yahoo.com/quote/GC%3DF/"
+        }
+      ]
+    },
+    {
+      "name": "Our coverage",
+      "items": [
+        {
+          "title": "Chip rebound on Friday: AMD +11.0% to $449.00 (HOLD, target $386.50), Qualcomm +5.5% to $165.40 (HOLD, $160.40), Micron +5.1% to $690.00 (HOLD, $1,226.00)",
+          "summary": "After Thursday's sell-off, AMD and Qualcomm closed Friday above their LRC Stock Scanner targets, while Micron remains well below its target despite falling 22% over the week. Ratings unchanged.",
+          "source": "LRC Stock Scanner, prices as of 6 Nov 2026 close",
+          "url": "https://finance.yahoo.com/quote/AMD/",
+          "tickers": [
+            "AMD",
+            "QCOM",
+            "MU"
+          ]
+        },
+        {
+          "title": "Nvidia (HOLD, target $233.80) closed Friday at $186.60 (+2.8%), below the $191.50 breakdown level",
+          "summary": "Nvidia is down 8.8% over the week and trades below its 200-day average; the scanner notes no BUY below a falling 200-day trend. Ratings unchanged.",
+          "source": "LRC Stock Scanner, prices as of 6 Nov 2026 close",
+          "url": "https://finance.yahoo.com/quote/NVDA/",
+          "tickers": [
+            "NVDA"
+          ]
+        },
+        {
+          "title": "AngloGold Ashanti (HOLD) +5.0% on Friday: JSE R1,493 vs target R973.10; NYSE $92.99 vs target $78.00",
+          "summary": "Both listings closed Friday well above their scanner targets as gold rose 4.5% over the week. IREN (HOLD, target $41.79) added 20.0% to $21.64 on Friday after its results. Ratings unchanged.",
+          "source": "LRC Stock Scanner, prices as of 6 Nov 2026 close",
+          "url": "https://finance.yahoo.com/quote/AU/",
+          "tickers": [
+            "AU",
+            "ANG.JO",
+            "IREN"
+          ]
+        }
+      ]
+    }
+  ],
+  "watch_today": [
+    "Whether gold holds above $4,100 and what it means for JSE miners at the open",
+    "The rand near R16.49/$ ahead of Tuesday's US CPI and SA jobs data",
+    "Brent near $98 after last week's 16% fall",
+    "Whether chip stocks extend Friday's rebound when Wall Street opens at 16:30 SAST",
+    "Final municipal election results and coalition talks"
+  ]
+}
