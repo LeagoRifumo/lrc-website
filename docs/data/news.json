@@ -1,23 +1,46 @@
 {
- "edition": "Midday update · Monday 9 November 2026 15:20",
- "generated": "2026-11-09T15:20+02:00",
- "covers": "The JSE session and markets to 14:44 SAST on Monday 9 November, against Friday 6 November closes. Prices only: news stories from today could not be opened and checked for this edition, so they are left out until they are verified.",
+ "edition": "Evening update · Monday 9 November 2026 17:20",
+ "generated": "2026-11-09T17:20+02:00",
+ "covers": "The JSE session and the first half-hour of Wall Street trade to 16:57 SAST on Monday 9 November, against Friday 6 November closes. Prices only: news stories from today could not be opened and checked for this edition, so they are left out until they are verified.",
  "agent": "LRC News Desk",
- "headline": "JSE All Share up 1.2% to 114,083 by mid-afternoon as Brent drops 3.5% to $94.93 and the rand firms to R16.45/$",
- "summary": "In South Africa the JSE All Share was at 114,082.59 (+1.2% on Friday's close) and the Top 40 at 106,086.48 (+1.3%) at 14:44 SAST, with the rand at R16.45/$, 0.2% firmer (Yahoo Finance via LRC Market Dashboard, 9 Nov). Wall Street opens at 16:30 SAST; the S&P 500's last close was 7,376.86 on Friday, and US October CPI is due on Tuesday at 15:30 SAST (BLS schedule). Brent fell to $94.93, 3.5% below Friday's close, while gold held near $4,124 (+1.2%) and copper rose 1.7%, a mix that helps miners and should ease fuel-price pressure.",
+ "headline": "Wall Street opens higher, S&P 500 up 1.7% to 7,502, as Brent falls 4.4% to $93.96; JSE All Share up 2.1%",
+ "summary": "In South Africa the JSE All Share was at 115,076.95 (+2.1% on Friday's close) and the Top 40 at 107,140.65 (+2.3%) at 16:57 SAST, with the rand firmer at R16.42/$ (-0.4%) (Yahoo Finance via LRC Market Dashboard, 9 Nov). In the US the S&P 500 was at 7,502.08 (+1.7%) and the Nasdaq at 25,121.74 (+2.2%) shortly after the 16:30 SAST open, with the 10-year Treasury yield at 4.84%, ahead of October CPI on Tuesday at 15:30 SAST (BLS schedule). Brent fell to $93.96 (-4.4%) while gold ($4,127.50, +1.3%), platinum (+1.7%) and copper (+1.8%) rose, a mix that helps miners and eases fuel-price pressure.",
  "sections": [
+  {
+   "name": "US markets",
+   "items": [
+    {
+     "title": "S&P 500 7,502.08 (+1.7%), Nasdaq 25,121.74 (+2.2%) at 16:57 SAST",
+     "summary": "Both indices rose after the 16:30 SAST open, against Friday's closes of 7,376.86 and 24,579.43. These are early-session prices and can still change by the close.",
+     "source": "Yahoo Finance prices at 16:57 SAST, 9 Nov 2026, via LRC Market Dashboard",
+     "url": "https://finance.yahoo.com/quote/%5EGSPC/"
+    },
+    {
+     "title": "US 10-year Treasury yield 4.84%, little changed",
+     "summary": "The 10-year yield was 4.843% at 16:57 SAST against 4.859% on Friday. The Fed funds target range is 3.75%–4.00% after the 28 October decision.",
+     "source": "Yahoo Finance prices at 16:57 SAST, 9 Nov 2026, via LRC Market Dashboard; StockAnalysis (28 Oct 2026) for the Fed rate",
+     "url": "https://finance.yahoo.com/quote/%5ETNX/"
+    },
+    {
+     "title": "US October CPI due Tuesday 10 November at 15:30 SAST",
+     "summary": "September CPI was 3.7% year on year (BLS, 14 Oct 2026). Tuesday's print is the main US data point this week.",
+     "source": "US Bureau of Labor Statistics release schedule, checked 7 Nov 2026",
+     "url": "https://www.bls.gov/schedule/news_release/cpi.htm"
+    }
+   ]
+  },
   {
    "name": "South Africa",
    "items": [
     {
-     "title": "JSE All Share 114,082.59 (+1.2%), Top 40 106,086.48 (+1.3%) at 14:44 SAST",
-     "summary": "Both indices extended last week's gains (All Share +4.8% in the week to 6 November). Friday closes were 112,739.40 and 104,714.00. Higher gold and copper prices support the miners in the Top 40.",
-     "source": "Yahoo Finance prices at 14:44 SAST, 9 Nov 2026, via LRC Market Dashboard",
+     "title": "JSE All Share 115,076.95 (+2.1%), Top 40 107,140.65 (+2.3%) at 16:57 SAST",
+     "summary": "The gain widened from +1.2% at 14:44 SAST, near the 17:00 close. Friday's closes were 112,739.40 and 104,714.00.",
+     "source": "Yahoo Finance prices at 16:57 SAST, 9 Nov 2026, via LRC Market Dashboard",
      "url": "https://finance.yahoo.com/quote/%5EJ203.JO/"
     },
     {
      "title": "Data week: Q3 jobs survey on Tuesday, CPI on 18 November, SARB decision on 19 November",
-     "summary": "Stats SA's Q3 Quarterly Labour Force Survey is due Tuesday 10 November (Q2 unemployment was 33.6%). September CPI was 4.5% and the repo rate is 7.25% after the September hike.",
+     "summary": "The repo rate is 7.25% after September's 25bp hike; September CPI was 4.5% (Stats SA via SAnews, 21 Oct 2026).",
      "source": "LRC Macro Desk calendar (Stats SA, SARB), checked 6 Nov 2026",
      "url": "https://www.statssa.gov.za/"
     }
@@ -27,39 +50,22 @@
    "name": "Forex & commodities",
    "items": [
     {
-     "title": "Brent $94.93 (-3.5% on Friday), down from about $98.22 early this morning",
-     "summary": "Brent was 3.5% below Friday's close of $98.32 at 14:44 SAST, after falling about 16% last week. A lower oil price together with a firmer rand eases pressure on South African fuel prices.",
-     "source": "Yahoo Finance prices at 14:44 SAST, 9 Nov 2026, via LRC Market Dashboard",
+     "title": "Brent $93.96 (-4.4% on Friday)",
+     "summary": "Brent extended its fall from $94.93 at 14:44 SAST; Friday's close was $98.32. A sustained lower oil price would ease December fuel-price pressure in South Africa.",
+     "source": "Yahoo Finance prices at 16:57 SAST, 9 Nov 2026, via LRC Market Dashboard",
      "url": "https://finance.yahoo.com/quote/BZ%3DF/"
     },
     {
-     "title": "Rand R16.45/$ (-0.2%), R18.40/€ and R22.07/£",
-     "summary": "USD/ZAR 16.4463 against 16.4804 on Friday; EUR/ZAR 18.4012 (-0.5%); GBP/ZAR 22.0661 (-0.5%). The rand is about 5% stronger than a year ago (R17.35/$ on 7 Nov 2025).",
-     "source": "Yahoo Finance prices at 14:44 SAST, 9 Nov 2026, via LRC Market Dashboard",
+     "title": "Rand R16.42/$ (-0.4%), R18.39/€ and R22.02/£",
+     "summary": "The rand firmed a little further through the afternoon against all three major currencies.",
+     "source": "Yahoo Finance prices at 16:57 SAST, 9 Nov 2026, via LRC Market Dashboard",
      "url": "https://finance.yahoo.com/quote/ZAR%3DX/"
     },
     {
-     "title": "Gold $4,123.80 (+1.2%), platinum $1,551.40 (+0.9%), copper about $13,942/t (+1.7%)",
-     "summary": "Gold is little changed from early Monday ($4,125.70) and holds Friday's gains ahead of Tuesday's US inflation report. Changes are against Friday 6 November closes.",
-     "source": "Yahoo Finance prices at 14:44 SAST, 9 Nov 2026, via LRC Market Dashboard",
+     "title": "Gold $4,127.50 (+1.3%), platinum $1,564.40 (+1.7%), copper about $13,960/t (+1.8%)",
+     "summary": "Metal prices held their gains from the morning, supportive for JSE-listed miners.",
+     "source": "Yahoo Finance prices at 16:57 SAST, 9 Nov 2026, via LRC Market Dashboard",
      "url": "https://finance.yahoo.com/quote/GC%3DF/"
-    }
-   ]
-  },
-  {
-   "name": "US markets",
-   "items": [
-    {
-     "title": "Wall Street opens at 16:30 SAST; S&P 500 last closed at 7,376.86, Nasdaq 24,579.42",
-     "summary": "Friday 6 November closes: S&P 500 +0.3% on the day but -2.7% on the week; Nasdaq -3.4% on the week; US 10-year yield 4.86%. Fed funds target range 3.75%–4.00%.",
-     "source": "Yahoo Finance daily closes, 6 Nov 2026, via LRC Market Dashboard",
-     "url": "https://finance.yahoo.com/quote/%5EGSPC/"
-    },
-    {
-     "title": "US October CPI due Tuesday 10 November at 15:30 SAST",
-     "summary": "September CPI inflation was 3.7% year on year (BLS, 14 Oct 2026). The BLS schedule lists the October report for Tuesday 10 November at 08:30 New York time.",
-     "source": "US Bureau of Labor Statistics release schedule, checked 7 Nov 2026",
-     "url": "https://www.bls.gov/schedule/news_release/cpi.htm"
     }
    ]
   },
@@ -101,10 +107,10 @@
   }
  ],
  "watch_today": [
-  "How chip stocks, especially Nvidia (HOLD, $191.50 breakdown level), trade when Wall Street opens at 16:30 SAST",
-  "Whether Brent stays below $95 and what it means for December fuel prices",
-  "Whether the JSE holds its 1.2% gain into the close",
-  "The rand near R16.45/$ ahead of Tuesday's US CPI and SA jobs data",
+  "Whether the S&P 500 holds its 1.7% gain into the US close (23:00 SAST)",
+  "How Nvidia (HOLD, $191.50 breakdown level) trades in the session; its results are due 17 November after the US close",
+  "Brent below $94 and what it means for December fuel prices",
+  "US October CPI on Tuesday at 15:30 SAST and SA Q3 jobs data on Tuesday",
   "Coalition talks after the municipal elections"
  ]
 }
