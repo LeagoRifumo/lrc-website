@@ -1,6 +1,6 @@
 {
  "note": "JSE company announcements (SENS) recorded by the LRC JSE Announcements job every weekday. results = published results with headline earnings per share (HEPS) vs the same period last year; trading_statements = expected HEPS change ranges; dividends = declared dividends with the JSE dates. Amounts in cents. Every entry carries its source.",
- "updated": "2026-11-06T19:05+02:00",
+ "updated": "2026-11-09T19:40+02:00",
  "results": [
   {
    "t": "CLS.JO",
@@ -108,6 +108,27 @@
    "heps_prior": -5.0,
    "unit": "USc",
    "source": "Lesaka Technologies — Lesaka Delivers Q1 FY2027 Results in Line with Expectations, Reaffirms FY2027 Guidance (4 Nov 2026), via GlobeNewswire https://www.globenewswire.com/news-release/2026/11/04/3395809/0/en/lesaka-delivers-q1-fy2027-results-in-line-with-expectations-reaffirms-fy2027-guidance.html (reported in US dollars: headline loss per share US$(0.05) vs US$(0.05) for Q1 FY2026, prior period revised; net loss per share R(0.81) vs R(0.88); no dividend)"
+  },
+  {
+   "t": "OMN.JO",
+   "name": "Omnia",
+   "date": "2026-11-09",
+   "period": "Six months to 30 Sep 2026",
+   "heps": 399.0,
+   "heps_prior": 320.0,
+   "unit": "c",
+   "source": "Omnia Holdings SENS — Unaudited financial results for the six months ended 30 September 2026 (9 Nov 2026); figures from Omnia's results document https://omnia.co.za/media/omnia-annual-financial-results-long-form-hy2027.pdf (HEPS 399c vs 320c; basic EPS 428c vs 326c; no interim dividend declared — the FY26 ordinary dividend of 470c and special dividend of 280c were paid during the period)"
+  },
+  {
+   "t": "RBX.JO",
+   "name": "Raubex",
+   "date": "2026-11-09",
+   "period": "Six months to 31 Aug 2026",
+   "heps": 254.3,
+   "heps_prior": 243.5,
+   "unit": "c",
+   "dps": 88.0,
+   "source": "Raubex Group — Unaudited interim results for the six months ended 31 August 2026 and interim dividend declaration (9 Nov 2026), results booklet https://raubex.com/wp-content/uploads/2026/11/10181_Raubex-interim-results-booklet_WEB-FA.pdf (HEPS 254.3c vs 243.5c; gross interim dividend 88c vs 81c, net 70.4c after 20% dividends tax)"
   }
  ],
  "trading_statements": [
@@ -250,6 +271,17 @@
    "declared": "2026-11-06",
    "amount_c": 121.0,
    "source": "The Foschini Group SENS — Summary of the unaudited interim condensed consolidated results for the half-year ended 30 September 2026, ordinary and preference dividend declaration, and changes to the board (6 Nov 2026); figures from the TFG media release https://tfglimited.co.za/wp-content/uploads/2026/11/TFG-MEDIA-RELEASE_Half-Year-Financial-Results-6-November-2026.pdf (HEPS down 6.8% to 272.8c; interim dividend 121c; prior-period HEPS 292.6c and interim dividend 130.0c from TFG's interim results announcement of 7 Nov 2025 https://tfglimited.co.za/wp-content/uploads/2025/11/FY26-Interim-Results-Announcement.pdf; dividend dates not stated in the release)"
+  },
+  {
+   "t": "RBX.JO",
+   "period": "Interim",
+   "declared": "2026-11-09",
+   "amount_c": 88.0,
+   "ldt": "2026-11-24",
+   "ex": "2026-11-25",
+   "record": "2026-11-27",
+   "pay": "2026-11-30",
+   "source": "Raubex Group — Unaudited interim results for the six months ended 31 August 2026 and interim dividend declaration (9 Nov 2026), results booklet https://raubex.com/wp-content/uploads/2026/11/10181_Raubex-interim-results-booklet_WEB-FA.pdf (HEPS 254.3c vs 243.5c; gross interim dividend 88c vs 81c, net 70.4c after 20% dividends tax)"
   }
  ]
 }

@@ -35356,14 +35356,23 @@
 "OMN.JO|2026-11-09": {
 "t": "OMN.JO",
 "ticker": "OMN",
-"name": "Omnia Holdings",
+"name": "Omnia",
 "m": "JSE",
 "date": "2026-11-09",
 "when": "Not stated",
 "eps_forecast": "",
 "quarter": "",
-"period": "Interim (HY27) to 30 Sep 2026",
-"market_cap_bn": 19.0
+"period": "Six months to 30 Sep 2026",
+"market_cap_bn": 19.0,
+"heps": 399.0,
+"heps_prior": 320.0,
+"unit": "c",
+"change": 0.2469,
+"result": "up",
+"measure": "HEPS",
+"dps": null,
+"source": "Omnia Holdings SENS — Unaudited financial results for the six months ended 30 September 2026 (9 Nov 2026); figures from Omnia's results document https://omnia.co.za/media/omnia-annual-financial-results-long-form-hy2027.pdf (HEPS 399c vs 320c; basic EPS 428c vs 326c; no interim dividend declared — the FY26 ordinary dividend of 470c and special dividend of 280c were paid during the period)",
+"result_done": true
 },
 "OMU.JO|2026-12-03": {
 "t": "OMU.JO",
@@ -39585,14 +39594,23 @@
 "RBX.JO|2026-11-09": {
 "t": "RBX.JO",
 "ticker": "RBX",
-"name": "Raubex Group",
+"name": "Raubex",
 "m": "JSE",
 "date": "2026-11-09",
 "when": "Not stated",
 "eps_forecast": "",
 "quarter": "",
-"period": "Interim to 31 Aug 2026",
-"market_cap_bn": 8.0
+"period": "Six months to 31 Aug 2026",
+"market_cap_bn": 8.0,
+"heps": 254.3,
+"heps_prior": 243.5,
+"unit": "c",
+"change": 0.0444,
+"result": "up",
+"measure": "HEPS",
+"dps": 88.0,
+"source": "Raubex Group — Unaudited interim results for the six months ended 31 August 2026 and interim dividend declaration (9 Nov 2026), results booklet https://raubex.com/wp-content/uploads/2026/11/10181_Raubex-interim-results-booklet_WEB-FA.pdf (HEPS 254.3c vs 243.5c; gross interim dividend 88c vs 81c, net 70.4c after 20% dividends tax)",
+"result_done": true
 },
 "RCI|2026-10-23": {
 "t": "RCI",
