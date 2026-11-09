@@ -64360,6 +64360,12 @@
    "measure": null,
    "dps": null,
    "source": null,
+   "has_res": true,
+   "desk": false,
+   "rev_actual": 9466000000.0,
+   "rev_prior": 7635000000.0,
+   "g": "reaffirmed",
+   "rev_yoy": 0.2398,
    "px_move": {
     "move": 0.0605,
     "from": "2026-11-04",
@@ -66151,6 +66157,14 @@
    "rev_yago": 32061000,
    "n_est": 4,
    "rcur": "USD",
+   "has_res": true,
+   "desk": false,
+   "rev_actual": 48841000.0,
+   "rev_prior": 32061000.0,
+   "g": "not found",
+   "rev_surprise": -0.1753,
+   "rev_result": "miss",
+   "rev_yoy": 0.5234,
    "px_move": {
     "move": -0.033,
     "from": "2026-11-04",
@@ -70246,6 +70260,9 @@
    "measure": null,
    "dps": null,
    "source": "Nasdaq",
+   "has_res": true,
+   "desk": false,
+   "g": "not found",
    "px_move": {
     "move": 0.0461,
     "from": "2026-11-04",
@@ -72442,6 +72459,9 @@
    "measure": null,
    "dps": null,
    "source": "Nasdaq",
+   "has_res": true,
+   "desk": false,
+   "g": "not found",
    "px_move": {
     "move": -0.002,
     "from": "2026-11-04",
@@ -75936,6 +75956,12 @@
    "measure": null,
    "dps": null,
    "source": null,
+   "has_res": true,
+   "desk": false,
+   "rev_actual": 129063000.0,
+   "rev_prior": 99355000.0,
+   "g": "given",
+   "rev_yoy": 0.299,
    "px_move": {
     "move": 0.0062,
     "from": "2026-11-04",
@@ -77330,6 +77356,9 @@
    "measure": null,
    "dps": null,
    "source": null,
+   "has_res": true,
+   "desk": false,
+   "g": "not found",
    "t": "BRK.A",
    "lists": [],
    "idea": null,
@@ -77359,6 +77388,9 @@
    "measure": null,
    "dps": null,
    "source": null,
+   "has_res": true,
+   "desk": false,
+   "g": "not found",
    "t": "BRK.B",
    "lists": [],
    "idea": null,
@@ -77481,6 +77513,12 @@
    "measure": null,
    "dps": null,
    "source": null,
+   "has_res": true,
+   "desk": false,
+   "rev_actual": 9550000000.0,
+   "rev_prior": 28176000000.0,
+   "g": "narrowed",
+   "rev_yoy": -0.6611,
    "t": "CEG",
    "lists": [],
    "idea": null,
@@ -78402,6 +78440,9 @@
    "measure": null,
    "dps": null,
    "source": "Nasdaq",
+   "has_res": true,
+   "desk": false,
+   "g": "not found",
    "t": "CGON",
    "lists": [],
    "idea": null,
@@ -79250,6 +79291,10 @@
    "measure": null,
    "dps": null,
    "source": "Nasdaq",
+   "has_res": true,
+   "desk": false,
+   "rev_actual": 8397000.0,
+   "g": "not found",
    "t": "ASST",
    "lists": [],
    "idea": null,
@@ -80121,6 +80166,9 @@
    "rev_est_high": 0,
    "n_est": 3,
    "rcur": "USD",
+   "has_res": true,
+   "desk": false,
+   "g": "not found",
    "t": "BRK-A",
    "lists": [],
    "idea": "Earnings watch",
@@ -80155,6 +80203,9 @@
    "rev_est_high": 0,
    "n_est": 2,
    "rcur": "USD",
+   "has_res": true,
+   "desk": false,
+   "g": "not found",
    "t": "BRK-B",
    "lists": [],
    "idea": "Earnings watch",
@@ -80193,7 +80244,8 @@
     "miss",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-09",
@@ -80225,7 +80277,8 @@
     "beat",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-09",
@@ -80318,7 +80371,8 @@
     "inline",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-09",
@@ -80400,7 +80454,8 @@
    "idea": "Earnings watch",
    "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "track": null,
+   "has_res": true
   },
   {
    "date": "2026-11-09",
@@ -80496,7 +80551,8 @@
     "beat",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-09",
@@ -80544,7 +80600,8 @@
     "miss",
     "miss",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-09",
@@ -80576,7 +80633,8 @@
     "beat",
     "beat",
     "inline"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-09",
@@ -80608,7 +80666,8 @@
     "beat",
     "miss",
     "miss"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-09",
@@ -80640,7 +80699,8 @@
     "inline",
     "beat",
     "inline"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-09",
@@ -80845,7 +80905,8 @@
     "beat",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-09",
@@ -80909,7 +80970,8 @@
     "miss",
     "miss",
     "miss"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-09",
@@ -81037,7 +81099,8 @@
     "miss",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-09",
@@ -81165,7 +81228,8 @@
     "beat",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-09",
@@ -81229,7 +81293,8 @@
     "beat",
     "miss",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-09",
@@ -81293,7 +81358,8 @@
     "beat",
     "miss",
     "miss"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-09",
@@ -81628,7 +81694,8 @@
     "beat",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-09",
@@ -81660,7 +81727,8 @@
     "miss",
     "beat",
     "miss"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-09",
@@ -81912,7 +81980,8 @@
     "beat",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-09",
@@ -82030,7 +82099,8 @@
     "miss",
     "miss",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-09",
@@ -82062,7 +82132,8 @@
     "beat",
     "miss",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-09",
@@ -82121,7 +82192,8 @@
    "qend": "2026-09-30",
    "track": [
     "miss"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-09",
@@ -82242,7 +82314,8 @@
     "beat",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-09",
@@ -82428,6 +82501,7 @@
    "n_est": 9,
    "rcur": "USD",
    "qend": "2026-09-30",
+   "has_res": true,
    "track": [
     "beat",
     "beat",
@@ -82614,6 +82688,7 @@
    "n_est": 12,
    "rcur": "USD",
    "qend": "2026-09-30",
+   "has_res": true,
    "track": [
     "miss",
     "beat",
@@ -82710,6 +82785,7 @@
    "n_est": 5,
    "rcur": "USD",
    "qend": "2026-09-30",
+   "has_res": true,
    "track": [
     "beat",
     "beat",
@@ -82742,6 +82818,7 @@
    "n_est": 3,
    "rcur": "USD",
    "qend": "2026-09-30",
+   "has_res": true,
    "track": [
     "miss",
     "miss",
@@ -82774,6 +82851,7 @@
    "n_est": 6,
    "rcur": "USD",
    "qend": "2026-09-30",
+   "has_res": true,
    "track": [
     "beat",
     "miss",
@@ -83043,6 +83121,7 @@
    "n_est": 4,
    "rcur": "USD",
    "qend": "2026-09-30",
+   "has_res": true,
    "track": [
     "beat",
     "miss",
@@ -83550,7 +83629,8 @@
     "beat",
     "miss",
     "miss"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-10",
@@ -85083,6 +85163,7 @@
    "idea": null,
    "v": "HOLD",
    "iv": "SELL",
+   "has_res": true,
    "track": [
     "miss",
     "beat",
@@ -88026,7 +88107,8 @@
     "miss",
     "miss",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-13",
@@ -88276,7 +88358,8 @@
     "miss",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-16",
@@ -97136,6 +97219,6 @@
    "covered": false
   }
  ],
- "synced": "2026-11-09T16:27+02:00",
+ "synced": "2026-11-09T16:43+02:00",
  "coverage_note": "Ticked = on the LRC watchlist. Every company the LRC Stock Scanner tracks shows its trading and investment ratings. Updated after every scanner run."
 }
