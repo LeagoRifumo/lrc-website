@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-10T12:05:00+02:00",
+ "generated": "2026-11-10T18:05:00+02:00",
  "agent": "LRC Macro Desk",
  "method": "Surprise = actual minus forecast (consensus). If there is no forecast, actual minus previous. Impact for shares: a surprise in the 'better' direction larger than the threshold = Bullish, the other way = Bearish, otherwise Neutral.",
  "countries": {
@@ -173,14 +173,14 @@
      "better": "higher",
      "threshold": 1.0,
      "frequency": "monthly",
-     "period": "Aug 2026",
-     "release_date": "2026-10-08",
-     "actual": -4.3,
+     "period": "Sep 2026",
+     "release_date": "2026-11-10",
+     "actual": -3.5,
      "forecast": null,
-     "previous": 1.1,
+     "previous": -4.3,
      "next_release": null,
      "source": "Stats SA",
-     "url": "https://www.cnbcafrica.com/2026/south-africas-august-manufacturing-output-falls-4-3-y-y"
+     "url": "https://www.ewn.co.za/sa-manufacturing-output-drops-35-year-on-year-in-september"
     },
     {
      "key": "trade",
