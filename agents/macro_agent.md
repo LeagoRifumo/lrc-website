@@ -19,9 +19,14 @@ into the "Economic data scorecard" — surprise vs forecast and Bullish / Bearis
 3. Units: % as plain numbers (CPI 3.7 means 3.7%); payrolls and jobless claims in thousands (k); JOLTS in millions;
    SA trade balance in R billion; PMIs and confidence as index points. `previous` = the prior period's figure as now reported
    (use the revised figure if the release revised it).
-4. Never invent or estimate. If you cannot verify a figure, leave the old value and say so in your final note.
-5. Set `generated` (ISO time +02:00), `agent` "LRC Macro Desk", remove `note` once at least half the items are filled.
-6. Validate (`python3 -m json.tool docs/data/macro.json`), then `git add docs/data/macro.json && git commit -m "Macro: <what changed>"`
+4. US CPI exception: if BLS publishes no year-on-year CPI (as with Oct 2026, because Oct 2025 was never collected during
+   the 2025 government shutdown), record the month-on-month figures instead and set `name` to "CPI inflation (m/m)" /
+   "Core CPI inflation (m/m)" and `period` to "<Mon YYYY> · m/m (no y/y published)". As soon as a release has y/y again,
+   switch back: `name` "CPI inflation (y/y)" / "Core CPI inflation (y/y)" and y/y values for actual, forecast and previous.
+   Never mix m/m and y/y numbers in one item.
+5. Never invent or estimate. If you cannot verify a figure, leave the old value and say so in your final note.
+6. Set `generated` (ISO time +02:00), `agent` "LRC Macro Desk", remove `note` once at least half the items are filled.
+7. Validate (`python3 -m json.tool docs/data/macro.json`), then `git add docs/data/macro.json && git commit -m "Macro: <what changed>"`
    `&& git pull --rebase origin main && git push origin main` (end the commit message with your session's attribution lines).
-7. Finish with one line per release recorded: country, indicator, actual vs forecast, Bullish/Bearish for shares (by the rule).
+8. Finish with one line per release recorded: country, indicator, actual vs forecast, Bullish/Bearish for shares (by the rule).
 Never name the tools behind the website in anything written to docs/. Facts only; no buy or sell advice.
