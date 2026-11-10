@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-06T17:55:00+02:00",
+ "generated": "2026-11-10T12:05:00+02:00",
  "agent": "LRC Macro Desk",
  "method": "Surprise = actual minus forecast (consensus). If there is no forecast, actual minus previous. Impact for shares: a surprise in the 'better' direction larger than the threshold = Bullish, the other way = Bearish, otherwise Neutral.",
  "countries": {
@@ -29,14 +29,14 @@
      "better": "lower",
      "threshold": 0.2,
      "frequency": "quarterly",
-     "period": "Q2 2026",
-     "release_date": "2026-08-11",
-     "actual": 33.6,
+     "period": "Q3 2026",
+     "release_date": "2026-11-10",
+     "actual": 33.7,
      "forecast": null,
-     "previous": 32.7,
-     "next_release": "2026-11-10",
+     "previous": 33.6,
+     "next_release": null,
      "source": "Stats SA",
-     "url": "https://www.sanews.gov.za/node/83500"
+     "url": "https://www.enca.com/business-top-stories/unemployment-rate-increases-337"
     },
     {
      "key": "cpi",
