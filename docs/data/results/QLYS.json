@@ -1,1 +1,164 @@
-{"t":"QLYS","name":"Qualys, Inc.","m":"US","reports":[{"date":"2026-11-03","quarter":"Sep/2026","tries":6},{"date":"2026-11-09","quarter":"Sep/2026","filing":{"form":"8-K","filed":"2026-11-09","items":"2.02,9.01","index":"https://www.sec.gov/Archives/edgar/data/1107843/000110784326000043/0001107843-26-000043-index.htm","docs":[{"type":"EX-99.1","desc":"EX-99.1","url":"https://www.sec.gov/Archives/edgar/data/1107843/000110784326000043/qlys-20261109xex991.htm"}]},"title":"Qualys Announces Third Quarter 2026 Financial Results","auto":{"revenue":{"rev":188049000.0,"rev_prior":169882000.0,"label":"Revenues","checked_vs_estimate":true},"guidance":{"heading":null,"section":[],"lines":["Raises 2026 Revenue Guidance to $736.9-$738.9 million","Fourth Quarter 2026 Guidance: Management expects revenues for the fourth quarter of 2026 to be in the range of $191.0 million to $193.0 million, representing 9% to 10% growth over the same quarter in 2025.","Full Year 2026 Guidance: Management now expects revenues for the full year of 2026 to be in the range of $736.9 million to $738.9 million, representing 10% growth over 2025."],"status":"raised"}},"read":"2026-11-10T06:38+02:00"}]}
+{
+ "t": "QLYS",
+ "name": "Qualys, Inc.",
+ "m": "US",
+ "reports": [
+  {
+   "date": "2026-11-03",
+   "quarter": "Sep/2026",
+   "tries": 6
+  },
+  {
+   "date": "2026-11-09",
+   "quarter": "Sep/2026",
+   "filing": {
+    "form": "8-K",
+    "filed": "2026-11-09",
+    "items": "2.02,9.01",
+    "index": "https://www.sec.gov/Archives/edgar/data/1107843/000110784326000043/0001107843-26-000043-index.htm",
+    "docs": [
+     {
+      "type": "EX-99.1",
+      "desc": "EX-99.1",
+      "url": "https://www.sec.gov/Archives/edgar/data/1107843/000110784326000043/qlys-20261109xex991.htm"
+     }
+    ]
+   },
+   "title": "Qualys Announces Third Quarter 2026 Financial Results",
+   "auto": {
+    "revenue": {
+     "rev": 188049000.0,
+     "rev_prior": 169882000.0,
+     "label": "Revenues",
+     "checked_vs_estimate": true
+    },
+    "guidance": {
+     "heading": null,
+     "section": [],
+     "lines": [
+      "Raises 2026 Revenue Guidance to $736.9-$738.9 million",
+      "Fourth Quarter 2026 Guidance: Management expects revenues for the fourth quarter of 2026 to be in the range of $191.0 million to $193.0 million, representing 9% to 10% growth over the same quarter in 2025.",
+      "Full Year 2026 Guidance: Management now expects revenues for the full year of 2026 to be in the range of $736.9 million to $738.9 million, representing 10% growth over 2025."
+     ],
+     "status": "raised"
+    }
+   },
+   "read": "2026-11-10T06:38+02:00",
+   "desk": {
+    "by": "LRC Research",
+    "written": "2026-11-10T16:22+02:00",
+    "period": "Q3 2026 (quarter to 30 Sep 2026)",
+    "headline": "Revenue up 11% to $188.0m, beat; full-year revenue and EPS outlook raised",
+    "numbers": {
+     "currency": "USD",
+     "revenue": 188049000,
+     "revenue_prior": 169882000,
+     "revenue_est": 186606480,
+     "eps": 2.12,
+     "eps_prior": 1.86,
+     "eps_est": 1.956,
+     "eps_basis": "adjusted",
+     "other": [
+      {
+       "label": "GAAP diluted EPS",
+       "value": "$1.62",
+       "change": "vs $1.39 a year ago"
+      },
+      {
+       "label": "Adjusted EBITDA",
+       "value": "$89.9m",
+       "change": "+9% y/y, 48% margin"
+      },
+      {
+       "label": "Calculated current billings",
+       "value": "$211.9m",
+       "change": "+14% y/y"
+      },
+      {
+       "label": "Operating cash flow",
+       "value": "$101.8m",
+       "change": "+13% y/y"
+      },
+      {
+       "label": "Net income",
+       "value": "$57.2m",
+       "change": "+14% y/y"
+      }
+     ]
+    },
+    "results": [
+     "Revenue grew 11% to $188.0m, a little above the $186.6m analysts expected.",
+     "Adjusted EPS rose 14% to $2.12 (GAAP $1.62), beating the $1.96 estimate.",
+     "Adjusted EBITDA rose 9% to $89.9m; the margin eased to 48% from 49% as sales and marketing spend grew.",
+     "Billings grew 14% to $211.9m, helped by a strong federal quarter.",
+     "Operating cash flow rose 13% to $101.8m; $185.6m of shares were bought back in the first nine months."
+    ],
+    "guidance": {
+     "status": "raised",
+     "summary": "Qualys lifted its 2026 revenue range to about 10% growth and raised its full-year EPS ranges. It also set a Q4 revenue range of 9–10% growth.",
+     "items": [
+      {
+       "metric": "Revenue",
+       "period": "Q4 2026",
+       "new": "$191.0–193.0m",
+       "vs_consensus": "n/a"
+      },
+      {
+       "metric": "Non-GAAP diluted EPS",
+       "period": "Q4 2026",
+       "new": "$2.05–2.12",
+       "vs_consensus": "n/a"
+      },
+      {
+       "metric": "Revenue",
+       "period": "FY 2026",
+       "new": "$736.9–738.9m",
+       "prior": "$732.0–738.0m",
+       "vs_consensus": "n/a"
+      },
+      {
+       "metric": "Non-GAAP diluted EPS",
+       "period": "FY 2026",
+       "new": "$8.07–8.14",
+       "prior": "$7.74–7.88",
+       "vs_consensus": "n/a"
+      },
+      {
+       "metric": "GAAP diluted EPS",
+       "period": "FY 2026",
+       "new": "$6.08–6.15",
+       "prior": "$5.76–5.90",
+       "vs_consensus": "n/a"
+      }
+     ]
+    },
+    "call": {
+     "points": [
+      "Federal deals drove the billings beat; management warned that federal timing is lumpy and not a steady trend.",
+      "Partners now bring in 55% of revenue, with channel sales up 24% while direct sales fell 2%.",
+      "Customers are moving from trials to live use of the AI-based Risk Operations Center; newer modules are a growing share of bookings.",
+      "Q4 billings growth base case is about 8%; full-year free cash flow margin is guided in the low 40s.",
+      "No 2027 outlook yet; about $176m of buyback authority remained at quarter end."
+     ],
+     "tone": "steady",
+     "source": "Call transcript: Qualys (QLYS) Q3 2026 Earnings Call Transcript — The Motley Fool, 10 Nov 2026"
+    },
+    "watch": [
+     "Billings growth in Q4 against the roughly 8% base case, after a federal-driven Q3.",
+     "Growth of the partner channel versus the shrinking direct business.",
+     "First 2027 outlook, due with Q4 results."
+    ],
+    "sources": [
+     {
+      "title": "8-K Exhibit 99.1 — press release",
+      "url": "https://www.sec.gov/Archives/edgar/data/1107843/000110784326000043/qlys-20261109xex991.htm"
+     },
+     {
+      "title": "Qualys (QLYS) Q3 2026 Earnings Call Transcript — The Motley Fool, 10 Nov 2026",
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/11/10/qualys-qlys-q3-2026-earnings-call-transcript/"
+     }
+    ]
+   }
+  }
+ ]
+}

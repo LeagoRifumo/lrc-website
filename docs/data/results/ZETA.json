@@ -1,1 +1,173 @@
-{"t":"ZETA","name":"Zeta Global Holdings Corp.","m":"US","reports":[{"date":"2026-11-03","quarter":"Sep/2026","tries":6},{"date":"2026-11-09","quarter":"Sep/2026","filing":{"form":"8-K","filed":"2026-11-09","items":"2.02,9.01","index":"https://www.sec.gov/Archives/edgar/data/1851003/000119312526453558/0001193125-26-453558-index.htm","docs":[{"type":"EX-99.1","desc":"EX-99.1","url":"https://www.sec.gov/Archives/edgar/data/1851003/000119312526453558/zeta-ex99_1.htm"}]},"title":"Zeta Global Reports 21st Consecutive “Beat and Raise” Quarter, Generates Positive GAAP Net Income in 3Q’26 & YTD, and Achieves the Rule of 71","auto":{"revenue":{"rev":492658000.0,"rev_prior":337169000.0,"label":"Revenues","checked_vs_estimate":true},"guidance":{"heading":null,"section":[],"lines":["Increasing full year 2026 revenue guidance by $37 million to $1,855 million at the midpoint, up from prior guidance of $1,818 million, reflecting Y/Y growth of 42%.","Increasing full year 2026 GAAP EPS guidance to $0.23 at the midpoint, up $0.20 or over 600% from our initial guidance of $0.03.","Increasing full year 2026 GAAP EPS guidance to a range of $0.22 to $0.24, up $0.13 at the midpoint from prior guidance of $0.09 to $0.11."],"status":"raised"}},"read":"2026-11-10T06:38+02:00"}]}
+{
+ "t": "ZETA",
+ "name": "Zeta Global Holdings Corp.",
+ "m": "US",
+ "reports": [
+  {
+   "date": "2026-11-03",
+   "quarter": "Sep/2026",
+   "tries": 6
+  },
+  {
+   "date": "2026-11-09",
+   "quarter": "Sep/2026",
+   "filing": {
+    "form": "8-K",
+    "filed": "2026-11-09",
+    "items": "2.02,9.01",
+    "index": "https://www.sec.gov/Archives/edgar/data/1851003/000119312526453558/0001193125-26-453558-index.htm",
+    "docs": [
+     {
+      "type": "EX-99.1",
+      "desc": "EX-99.1",
+      "url": "https://www.sec.gov/Archives/edgar/data/1851003/000119312526453558/zeta-ex99_1.htm"
+     }
+    ]
+   },
+   "title": "Zeta Global Reports 21st Consecutive “Beat and Raise” Quarter, Generates Positive GAAP Net Income in 3Q’26 & YTD, and Achieves the Rule of 71",
+   "auto": {
+    "revenue": {
+     "rev": 492658000.0,
+     "rev_prior": 337169000.0,
+     "label": "Revenues",
+     "checked_vs_estimate": true
+    },
+    "guidance": {
+     "heading": null,
+     "section": [],
+     "lines": [
+      "Increasing full year 2026 revenue guidance by $37 million to $1,855 million at the midpoint, up from prior guidance of $1,818 million, reflecting Y/Y growth of 42%.",
+      "Increasing full year 2026 GAAP EPS guidance to $0.23 at the midpoint, up $0.20 or over 600% from our initial guidance of $0.03.",
+      "Increasing full year 2026 GAAP EPS guidance to a range of $0.22 to $0.24, up $0.13 at the midpoint from prior guidance of $0.09 to $0.11."
+     ],
+     "status": "raised"
+    }
+   },
+   "read": "2026-11-10T06:38+02:00",
+   "desk": {
+    "by": "LRC Research",
+    "written": "2026-11-10T16:23+02:00",
+    "period": "Q3 2026 (quarter to 30 Sep 2026)",
+    "headline": "Revenue up 46% to $493m, beat; full-year revenue, profit and cash outlook raised",
+    "numbers": {
+     "currency": "USD",
+     "revenue": 492658000,
+     "revenue_prior": 337169000,
+     "revenue_est": 471081830,
+     "eps": 0.38,
+     "eps_prior": 0.24,
+     "eps_est": 0.2731,
+     "eps_basis": "adjusted",
+     "other": [
+      {
+       "label": "Diluted EPS (GAAP)",
+       "value": "$0.14",
+       "change": "vs -$0.02 a year ago"
+      },
+      {
+       "label": "Adjusted EBITDA",
+       "value": "$121.0m",
+       "change": "24.6% margin, +140bp y/y"
+      },
+      {
+       "label": "Free cash flow",
+       "value": "$81.5m",
+       "change": "+73% y/y"
+      },
+      {
+       "label": "Super-scaled customers",
+       "value": "212",
+       "change": "+18% y/y"
+      },
+      {
+       "label": "Revenue excl. Marigold and political",
+       "value": "$437m",
+       "change": "+30% y/y"
+      }
+     ]
+    },
+    "results": [
+     "Revenue rose 46% to $493m; stripping out the Marigold deal and political ads, growth was 30%, faster than Q2.",
+     "Zeta made a GAAP profit of $38.3m ($0.14 a share) versus a small loss a year ago; adjusted EPS was $0.38.",
+     "Adjusted EBITDA rose to $121m and the margin widened to 24.6% from 23.2%.",
+     "Free cash flow grew 73% to $81.5m; operating cash flow was $91.3m.",
+     "Customers paying at least $1m a year rose 18% to 212, and average revenue from them grew 22% to $2.0m."
+    ],
+    "guidance": {
+     "status": "raised",
+     "summary": "Zeta raised its Q4 and full-year 2026 outlook for revenue, adjusted EBITDA, free cash flow and GAAP EPS. The EPS guide excludes a possible one-off tax gain.",
+     "items": [
+      {
+       "metric": "Revenue",
+       "period": "Q4 2026",
+       "new": "$521–525m",
+       "prior": "$508m (midpoint)",
+       "vs_consensus": "n/a"
+      },
+      {
+       "metric": "Adjusted EBITDA",
+       "period": "Q4 2026",
+       "new": "$135.2–136.3m",
+       "prior": "$131.9m (midpoint)",
+       "vs_consensus": "n/a"
+      },
+      {
+       "metric": "Revenue",
+       "period": "FY 2026",
+       "new": "$1,853–1,857m",
+       "prior": "$1,818m (midpoint)",
+       "vs_consensus": "n/a"
+      },
+      {
+       "metric": "Adjusted EBITDA",
+       "period": "FY 2026",
+       "new": "$414.1–415.2m",
+       "prior": "$405.2m (midpoint)",
+       "vs_consensus": "n/a"
+      },
+      {
+       "metric": "Free cash flow",
+       "period": "FY 2026",
+       "new": "$270.6–271.6m",
+       "prior": "$255.3m (midpoint)",
+       "vs_consensus": "n/a"
+      },
+      {
+       "metric": "GAAP EPS",
+       "period": "FY 2026",
+       "new": "$0.22–0.24",
+       "prior": "$0.09–0.11",
+       "vs_consensus": "n/a"
+      }
+     ]
+    },
+    "call": {
+     "points": [
+      "Use of its Athena AI tool is spreading: over half of the largest customers now use it monthly, up from just over 40% in Q2.",
+      "The AthenaOS product moves to customer testing this year, with general release expected in Q1 2027.",
+      "Management repeated an organic growth model of \"at least 20%\"; formal 2027 guidance comes in February.",
+      "Partnerships with Palantir and OpenAI were highlighted, though management said they are not yet material to revenue.",
+      "Q4 political ad revenue is now seen at about $13m; stock-based pay fell to 12% of revenue so far this year."
+     ],
+     "tone": "confident",
+     "source": "Call transcript: The Motley Fool, 10 Nov 2026"
+    },
+    "watch": [
+     "The 2027 outlook due in February and how much organic growth it implies.",
+     "Uptake of AthenaOS after its planned Q1 2027 general release.",
+     "Whether the possible one-off tax gain from releasing the valuation allowance is booked."
+    ],
+    "sources": [
+     {
+      "title": "8-K Exhibit 99.1 — press release",
+      "url": "https://www.sec.gov/Archives/edgar/data/1851003/000119312526453558/zeta-ex99_1.htm"
+     },
+     {
+      "title": "Zeta Global (ZETA) Q3 2026 Earnings Call Transcript — The Motley Fool, 10 Nov 2026",
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/11/10/zeta-global-zeta-q3-2026-earnings-call-transcript/"
+     }
+    ]
+   }
+  }
+ ]
+}

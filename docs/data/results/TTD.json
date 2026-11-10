@@ -1,1 +1,143 @@
-{"t":"TTD","name":"The Trade Desk, Inc.","m":"US","reports":[{"date":"2026-11-05","quarter":"Sep/2026","tries":6},{"date":"2026-11-09","quarter":"Sep/2026","filing":{"form":"8-K","filed":"2026-11-09","items":"2.02,8.01,9.01","index":"https://www.sec.gov/Archives/edgar/data/1671933/000167193326000115/0001671933-26-000115-index.htm","docs":[{"type":"EX-99.1","desc":"EX-99.1","url":"https://www.sec.gov/Archives/edgar/data/1671933/000167193326000115/ttd-20261109x8kexx991.htm"}]},"title":"The Trade Desk Reports Third Quarter 2026 Financial Results","auto":{"revenue":{"rev":736000000.0,"rev_prior":739000000.0,"label":"Revenue","checked_vs_estimate":true},"guidance":{"heading":"Financial Guidance","section":["Fourth Quarter 2026 outlook summary:","•Revenue at least $755 million","•Adjusted EBITDA at least $280 million"],"lines":[],"status":"given"}},"read":"2026-11-10T06:38+02:00"}]}
+{
+ "t": "TTD",
+ "name": "The Trade Desk, Inc.",
+ "m": "US",
+ "reports": [
+  {
+   "date": "2026-11-05",
+   "quarter": "Sep/2026",
+   "tries": 6
+  },
+  {
+   "date": "2026-11-09",
+   "quarter": "Sep/2026",
+   "filing": {
+    "form": "8-K",
+    "filed": "2026-11-09",
+    "items": "2.02,8.01,9.01",
+    "index": "https://www.sec.gov/Archives/edgar/data/1671933/000167193326000115/0001671933-26-000115-index.htm",
+    "docs": [
+     {
+      "type": "EX-99.1",
+      "desc": "EX-99.1",
+      "url": "https://www.sec.gov/Archives/edgar/data/1671933/000167193326000115/ttd-20261109x8kexx991.htm"
+     }
+    ]
+   },
+   "title": "The Trade Desk Reports Third Quarter 2026 Financial Results",
+   "auto": {
+    "revenue": {
+     "rev": 736000000.0,
+     "rev_prior": 739000000.0,
+     "label": "Revenue",
+     "checked_vs_estimate": true
+    },
+    "guidance": {
+     "heading": "Financial Guidance",
+     "section": [
+      "Fourth Quarter 2026 outlook summary:",
+      "•Revenue at least $755 million",
+      "•Adjusted EBITDA at least $280 million"
+     ],
+     "lines": [],
+     "status": "given"
+    }
+   },
+   "read": "2026-11-10T06:38+02:00",
+   "desk": {
+    "by": "LRC Research",
+    "written": "2026-11-10T16:22+02:00",
+    "period": "Q3 2026 (quarter to 30 Sep 2026)",
+    "headline": "Revenue flat at $736m, well above estimates; Q4 outlook of at least $755m",
+    "numbers": {
+     "currency": "USD",
+     "revenue": 735965000,
+     "revenue_prior": 739433000,
+     "revenue_est": 651436240,
+     "eps": 0.33,
+     "eps_prior": 0.45,
+     "eps_est": 0.2539,
+     "eps_basis": "adjusted",
+     "other": [
+      {
+       "label": "GAAP diluted EPS",
+       "value": "$0.08",
+       "change": "vs $0.23 a year ago"
+      },
+      {
+       "label": "Adjusted EBITDA",
+       "value": "$266m",
+       "change": "-16% y/y, 36% margin"
+      },
+      {
+       "label": "Net income",
+       "value": "$38m",
+       "change": "vs $116m a year ago"
+      },
+      {
+       "label": "Restructuring charges",
+       "value": "$44m",
+       "change": "new in 2026"
+      },
+      {
+       "label": "Buyback capacity",
+       "value": "$1bn",
+       "change": "after $731m top-up"
+      }
+     ]
+    },
+    "results": [
+     "Revenue slipped 0.5% to $736m but came in well above the $651m analysts expected.",
+     "Adjusted EPS fell to $0.33 from $0.45 (GAAP $0.08 from $0.23) as costs rose and a $44m restructuring charge was booked.",
+     "Adjusted EBITDA dropped 16% to $266m and the margin narrowed to 36% from 43%.",
+     "The board added $731m to the buyback, taking capacity to $1bn; no shares were bought in Q3.",
+     "Cash and short-term investments stood at about $1.65bn, with no debt."
+    ],
+    "guidance": {
+     "status": "given",
+     "summary": "The Trade Desk guided Q4 revenue of at least $755m and adjusted EBITDA of at least $280m. It gives no full-year outlook.",
+     "items": [
+      {
+       "metric": "Revenue",
+       "period": "Q4 2026",
+       "new": "at least $755m",
+       "vs_consensus": "n/a"
+      },
+      {
+       "metric": "Adjusted EBITDA",
+       "period": "Q4 2026",
+       "new": "at least $280m",
+       "vs_consensus": "n/a"
+      }
+     ]
+    },
+    "call": {
+     "points": [
+      "The CEO said Q3 beat the company's August outlook but growth is still well below what it expects of itself.",
+      "About 3 points of Q3 growth came from a strategic partner and is not expected to repeat.",
+      "Q4 guidance assumes no normal seasonal lift because some large global advertisers are spending less; autos and consumer goods are weak.",
+      "About 15% of staff were cut; management expects over $100m of gross savings in 2027, partly reinvested in AI and measurement.",
+      "Management pitched its independence from Amazon and Google, and pointed to the Kokai Zuma upgrade and a deeper Netflix tie-up."
+     ],
+     "tone": "cautious",
+     "source": "Call transcript: The Trade Desk (TTD) Q3 2026 Earnings Call Transcript — The Motley Fool, 10 Nov 2026"
+    },
+    "watch": [
+     "Whether Q4 revenue returns to growth and clears the $755m floor.",
+     "Spending trends among large advertisers, especially autos and consumer goods.",
+     "Delivery of the restructuring savings and use of the enlarged $1bn buyback."
+    ],
+    "sources": [
+     {
+      "title": "8-K Exhibit 99.1 — press release",
+      "url": "https://www.sec.gov/Archives/edgar/data/1671933/000167193326000115/ttd-20261109x8kexx991.htm"
+     },
+     {
+      "title": "The Trade Desk (TTD) Q3 2026 Earnings Call Transcript — The Motley Fool, 10 Nov 2026",
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/11/10/the-trade-desk-ttd-q3-2026-earnings-call-transcript/"
+     }
+    ]
+   }
+  }
+ ]
+}

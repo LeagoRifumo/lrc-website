@@ -1,1 +1,149 @@
-{"t":"CWEN","name":"Clearway Energy, Inc.","m":"US","reports":[{"date":"2026-11-09","quarter":"Sep/2026","filing":{"form":"8-K","filed":"2026-11-09","items":"2.02,9.01","index":"https://www.sec.gov/Archives/edgar/data/1567683/000162828026072177/0001628280-26-072177-index.htm","docs":[{"type":"EX-99.1","desc":"EX-99.1","url":"https://www.sec.gov/Archives/edgar/data/1567683/000162828026072177/exhibit991-clearwayenergyi.htm"}]},"title":"Clearway Energy, Inc. Reports Third Quarter 2026 Financial Results","auto":{"revenue":{"rev":522000000.0,"rev_prior":429000000.0,"label":"Total operating revenues","checked_vs_estimate":true},"guidance":{"heading":"Financial Guidance","section":["The Company is reiterating its 2026 full-year CAFD guidance range of $430 million to $470 million. The midpoint of the 2026 financial guidance range is based on renewable energy production estimates for the remainder of the year, while the range reflects a distribution of potential outcomes on resource and performance. The guidance range also factors in completing committed growth investments on currently forecasted schedules.","The Company is establishing a 2027 full-year CAFD guidance range of $520 million to $590 million. The midpoint of the 2027 financial guidance range is based on median renewable energy production estimates for the full year, while the range reflects a distribution of potential outcomes on resource and performance in the fiscal year. The guidance range also factors in completing committed growth investments on currently forecasted schedules."],"lines":[],"status":"reaffirmed"}},"read":"2026-11-10T06:38+02:00"}]}
+{
+ "t": "CWEN",
+ "name": "Clearway Energy, Inc.",
+ "m": "US",
+ "reports": [
+  {
+   "date": "2026-11-09",
+   "quarter": "Sep/2026",
+   "filing": {
+    "form": "8-K",
+    "filed": "2026-11-09",
+    "items": "2.02,9.01",
+    "index": "https://www.sec.gov/Archives/edgar/data/1567683/000162828026072177/0001628280-26-072177-index.htm",
+    "docs": [
+     {
+      "type": "EX-99.1",
+      "desc": "EX-99.1",
+      "url": "https://www.sec.gov/Archives/edgar/data/1567683/000162828026072177/exhibit991-clearwayenergyi.htm"
+     }
+    ]
+   },
+   "title": "Clearway Energy, Inc. Reports Third Quarter 2026 Financial Results",
+   "auto": {
+    "revenue": {
+     "rev": 522000000.0,
+     "rev_prior": 429000000.0,
+     "label": "Total operating revenues",
+     "checked_vs_estimate": true
+    },
+    "guidance": {
+     "heading": "Financial Guidance",
+     "section": [
+      "The Company is reiterating its 2026 full-year CAFD guidance range of $430 million to $470 million. The midpoint of the 2026 financial guidance range is based on renewable energy production estimates for the remainder of the year, while the range reflects a distribution of potential outcomes on resource and performance. The guidance range also factors in completing committed growth investments on currently forecasted schedules.",
+      "The Company is establishing a 2027 full-year CAFD guidance range of $520 million to $590 million. The midpoint of the 2027 financial guidance range is based on median renewable energy production estimates for the full year, while the range reflects a distribution of potential outcomes on resource and performance in the fiscal year. The guidance range also factors in completing committed growth investments on currently forecasted schedules."
+     ],
+     "lines": [],
+     "status": "reaffirmed"
+    }
+   },
+   "read": "2026-11-10T06:38+02:00",
+   "desk": {
+    "by": "LRC Research",
+    "written": "2026-11-10T16:22+02:00",
+    "period": "Q3 2026 (quarter to 30 Sep 2026)",
+    "headline": "Revenue up 22% to $522m, slight beat; 2026 cash-flow guide reaffirmed, 2027 range of $520–590m set",
+    "numbers": {
+     "currency": "USD",
+     "revenue": 522000000,
+     "revenue_prior": 429000000,
+     "revenue_est": 517720550,
+     "eps": 0.42,
+     "eps_prior": 1.97,
+     "eps_basis": "diluted GAAP",
+     "other": [
+      {
+       "label": "Adjusted EBITDA",
+       "value": "$435m",
+       "change": "+13% y/y"
+      },
+      {
+       "label": "Cash available for distribution (CAFD)",
+       "value": "$173m",
+       "change": "vs $166m a year ago"
+      },
+      {
+       "label": "Net income (total)",
+       "value": "$123m",
+       "change": "vs $60m a year ago"
+      },
+      {
+       "label": "Cash from operations",
+       "value": "$324m",
+       "change": "vs $225m a year ago"
+      },
+      {
+       "label": "Quarterly dividend declared",
+       "value": "$0.4824",
+       "change": "vs $0.4750 paid in Q3"
+      }
+     ]
+    },
+    "results": [
+     "Revenue rose 22% to $522m, just above the $518m expected, as newly bought wind, solar and storage assets added output.",
+     "Adjusted EBITDA grew 13% to $435m; cash available for distribution edged up to $173m from $166m.",
+     "EPS fell to $0.42 from $1.97 because last year's figure was boosted by losses allocated to outside partners; total net income doubled to $123m.",
+     "Renewables output rose 12% and gas fleet availability improved to 93.8%.",
+     "The quarterly dividend was raised to $0.4824 a share; liquidity was $1.1bn."
+    ],
+    "guidance": {
+     "status": "reaffirmed",
+     "summary": "Clearway kept its 2026 CAFD range of $430–470m (already revised last quarter) and set its first 2027 range of $520–590m. It also set a 2031 target of $3.20–3.40 CAFD per share.",
+     "items": [
+      {
+       "metric": "CAFD",
+       "period": "FY 2026",
+       "new": "$430–470m",
+       "prior": "$430–470m",
+       "vs_consensus": "n/a"
+      },
+      {
+       "metric": "CAFD",
+       "period": "FY 2027",
+       "new": "$520–590m",
+       "vs_consensus": "n/a"
+      },
+      {
+       "metric": "Adjusted EBITDA",
+       "period": "FY 2027",
+       "new": "$1,606–1,676m",
+       "vs_consensus": "n/a"
+      },
+      {
+       "metric": "CAFD per share target",
+       "period": "2031",
+       "new": "$3.20–3.40",
+       "vs_consensus": "n/a"
+      }
+     ]
+    },
+    "call": {
+     "points": [
+      "The 2027 CAFD midpoint works out to about $2.70 a share; the 2027 dividend target of about $1.98 was kept.",
+      "Management said it is on track for the top end or better of its 2030 target and aims for a payout ratio below 70% by 2030.",
+      "New long-term contracts for the gas fleet, including up to 500 MW at Walnut Creek, lift earnings visibility.",
+      "A planned Wyoming energy complex for data centres, with a letter of intent from a large cloud company, is treated as upside to targets.",
+      "Plans include $500m–1bn of new equity through 2029, issued only when it adds to per-share cash flow."
+     ],
+     "tone": "confident",
+     "source": "Call transcript: Clearway Energy (CWEN) Q3 2026 Earnings Call Transcript — The Motley Fool, 10 Nov 2026"
+    },
+    "watch": [
+     "Q4 wind output and whether 2026 CAFD lands in the $430–470m range.",
+     "Closing of the Swan Solar and Honeycomb 2 deals and a decision on the Heartland offer.",
+     "Tariff, tax-credit and interest-rate changes that affect the cost of growth."
+    ],
+    "sources": [
+     {
+      "title": "8-K Exhibit 99.1 — press release",
+      "url": "https://www.sec.gov/Archives/edgar/data/1567683/000162828026072177/exhibit991-clearwayenergyi.htm"
+     },
+     {
+      "title": "Clearway Energy (CWEN) Q3 2026 Earnings Call Transcript — The Motley Fool, 10 Nov 2026",
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/11/10/clearway-energy-cwen-q3-2026-earnings-call-transcript/"
+     }
+    ]
+   }
+  }
+ ]
+}

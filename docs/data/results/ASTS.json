@@ -1,1 +1,154 @@
-{"t":"ASTS","name":"AST SpaceMobile, Inc.","m":"US","reports":[{"date":"2026-11-09","quarter":"Sep/2026","filing":{"form":"8-K","filed":"2026-11-09","items":"2.02,7.01,9.01","index":"https://www.sec.gov/Archives/edgar/data/1780312/000119312526453758/0001193125-26-453758-index.htm","docs":[{"type":"EX-99.1","desc":"EX-99.1","url":"https://www.sec.gov/Archives/edgar/data/1780312/000119312526453758/asts-ex99_1.htm"},{"type":"EX-99.2","desc":"EX-99.2","url":"https://www.sec.gov/Archives/edgar/data/1780312/000119312526453758/asts-ex99_2.htm"}]},"title":"AST SpaceMobile Provides Business Update and Third Quarter 2026 Results","auto":{"revenue":{"rev":42321000.0,"rev_prior":14739000.0,"label":"Total revenues","checked_vs_estimate":true},"guidance":{"heading":null,"section":[],"lines":[],"status":"not found"}},"read":"2026-11-10T06:38+02:00"}]}
+{
+ "t": "ASTS",
+ "name": "AST SpaceMobile, Inc.",
+ "m": "US",
+ "reports": [
+  {
+   "date": "2026-11-09",
+   "quarter": "Sep/2026",
+   "filing": {
+    "form": "8-K",
+    "filed": "2026-11-09",
+    "items": "2.02,7.01,9.01",
+    "index": "https://www.sec.gov/Archives/edgar/data/1780312/000119312526453758/0001193125-26-453758-index.htm",
+    "docs": [
+     {
+      "type": "EX-99.1",
+      "desc": "EX-99.1",
+      "url": "https://www.sec.gov/Archives/edgar/data/1780312/000119312526453758/asts-ex99_1.htm"
+     },
+     {
+      "type": "EX-99.2",
+      "desc": "EX-99.2",
+      "url": "https://www.sec.gov/Archives/edgar/data/1780312/000119312526453758/asts-ex99_2.htm"
+     }
+    ]
+   },
+   "title": "AST SpaceMobile Provides Business Update and Third Quarter 2026 Results",
+   "auto": {
+    "revenue": {
+     "rev": 42321000.0,
+     "rev_prior": 14739000.0,
+     "label": "Total revenues",
+     "checked_vs_estimate": true
+    },
+    "guidance": {
+     "heading": null,
+     "section": [],
+     "lines": [],
+     "status": "not found"
+    }
+   },
+   "read": "2026-11-10T06:38+02:00",
+   "desk": {
+    "by": "LRC Research",
+    "written": "2026-11-10T16:29+02:00",
+    "period": "Q3 2026 (quarter to 30 Sep 2026)",
+    "headline": "Revenue nearly tripled to $42.3m but missed; loss per share in line; 2026 revenue goal of $150–200m reaffirmed",
+    "numbers": {
+     "currency": "USD",
+     "revenue": 42321000,
+     "revenue_prior": 14739000,
+     "revenue_est": 46003120,
+     "eps": -0.44,
+     "eps_prior": -0.45,
+     "eps_est": -0.4479,
+     "eps_basis": "diluted GAAP",
+     "other": [
+      {
+       "label": "Net loss to shareholders",
+       "value": "$132.4m",
+       "change": "vs $122.9m loss a year ago"
+      },
+      {
+       "label": "Adjusted operating expenses",
+       "value": "$133.6m",
+       "change": "vs $119.1m in Q2"
+      },
+      {
+       "label": "Cash incl. restricted",
+       "value": "$3.2bn",
+       "change": "at 30 Sep 2026"
+      },
+      {
+       "label": "Long-term debt",
+       "value": "$4.1bn",
+       "change": "vs $2.2bn at end-2025"
+      },
+      {
+       "label": "Capex (property & equipment)",
+       "value": "$1.15bn",
+       "change": "first nine months of 2026"
+      }
+     ]
+    },
+    "results": [
+     "Revenue rose to $42.3m from $14.7m, split roughly evenly between products ($20.6m) and services ($21.8m), driven by gateway deliveries and US government milestones.",
+     "Revenue fell short of the $46.0m estimate; the loss of $0.44 a share was close to the $0.45 expected.",
+     "Adjusted operating costs rose to $133.6m from $119.1m in Q2 as engineering work stepped up; reported costs fell because Q2 carried a $125.9m satellite loss.",
+     "Cash and restricted cash were $3.2bn, while long-term debt grew to $4.1bn after new convertible note issues.",
+     "Japan's J-LEO deal brings about $1.0bn of non-dilutive funding, and a US Space Force contract worth about $100m was won."
+    ],
+    "guidance": {
+     "status": "reaffirmed",
+     "summary": "AST said it remains on track for 2026 revenue of $150–200m, with possible upside from new contracts. On the call it also guided Q4 costs and capex higher.",
+     "items": [
+      {
+       "metric": "Revenue",
+       "period": "FY 2026",
+       "new": "$150–200m",
+       "prior": "$150–200m",
+       "vs_consensus": "n/a"
+      },
+      {
+       "metric": "Adjusted opex excl. cost of revenue",
+       "period": "Q4 2026",
+       "new": "$130–140m",
+       "vs_consensus": "n/a"
+      },
+      {
+       "metric": "Capital expenditure",
+       "period": "Q4 2026",
+       "new": "$400–500m",
+       "vs_consensus": "n/a"
+      }
+     ]
+    },
+    "call": {
+     "points": [
+      "Intermittent nationwide service is due by year-end in the US, Canada, Japan, Saudi Arabia and the UK, with user beta trials in early 2027.",
+      "Factories should build six ASIC satellites a month from December; about 45 BlueBirds are targeted in orbit by mid-2027.",
+      "Launch deals now cover over 100 satellites for 2027–28; the own Blacklift rocket is planned from late 2028 and adds several hundred million dollars of 2027 capex.",
+      "Q4 revenue is expected to be the heaviest of the year; management kept its view of near $1bn revenue in the first year after commercial service starts.",
+      "Q3 capex of about $310m was below the $350–425m guide due to timing of launch payments; each satellite including launch costs about $21–23m."
+     ],
+     "tone": "confident",
+     "source": "Press release and presentation (Exhibits 99.1, 99.2) and Investing.com call transcript, 9 Nov 2026"
+    },
+    "watch": [
+     "Whether intermittent service actually starts by year-end and the timing of the next SpaceX and Blue Origin launches.",
+     "Q4 revenue: about $61–111m is needed to land in the $150–200m range after $88.6m in the first nine months.",
+     "Cash burn as Q4 capex rises to $400–500m and Blacklift spending starts."
+    ],
+    "sources": [
+     {
+      "title": "8-K Exhibit 99.1 — press release",
+      "url": "https://www.sec.gov/Archives/edgar/data/1780312/000119312526453758/asts-ex99_1.htm"
+     },
+     {
+      "title": "8-K Exhibit 99.2 — earnings presentation",
+      "url": "https://www.sec.gov/Archives/edgar/data/1780312/000119312526453758/asts-ex99_2.htm"
+     },
+     {
+      "title": "Earnings call transcript: AST SpaceMobile Q3 2026 misses estimates but stock rises — Investing.com, 9 Nov 2026",
+      "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-ast-spacemobile-q3-2026-misses-estimates-but-stock-rises-93CH-5013695"
+     },
+     {
+      "title": "AST SpaceMobile's Plunge Puts Launch Cadence and Its $150 Million Revenue Floor on Trial — Earnings Whispers, 2 Nov 2026",
+      "url": "https://www.earningswhispers.com/article/ASTS/22609"
+     }
+    ]
+   }
+  }
+ ]
+}

@@ -1,1 +1,166 @@
-{"t":"ONTO","name":"Onto Innovation Inc.","m":"US","reports":[{"date":"2026-11-09","quarter":"Sep/2026","filing":{"form":"8-K","filed":"2026-11-09","items":"2.02,9.01","index":"https://www.sec.gov/Archives/edgar/data/704532/000119312526453582/0001193125-26-453582-index.htm","docs":[{"type":"EX-99.1","desc":"EX-99.1","url":"https://www.sec.gov/Archives/edgar/data/704532/000119312526453582/onto-ex99_1.htm"}]},"title":"Onto Innovation Reports 2026 Third Quarter Results","auto":{"revenue":{"rev":409748000.0,"rev_prior":218193000.0,"label":"Revenue","checked_vs_estimate":true},"guidance":{"heading":"Financial Outlook","section":["For the fourth quarter ending December 31, 2026, the Company expects the following:"],"lines":[],"status":"given"}},"read":"2026-11-10T06:38+02:00"}]}
+{
+ "t": "ONTO",
+ "name": "Onto Innovation Inc.",
+ "m": "US",
+ "reports": [
+  {
+   "date": "2026-11-09",
+   "quarter": "Sep/2026",
+   "filing": {
+    "form": "8-K",
+    "filed": "2026-11-09",
+    "items": "2.02,9.01",
+    "index": "https://www.sec.gov/Archives/edgar/data/704532/000119312526453582/0001193125-26-453582-index.htm",
+    "docs": [
+     {
+      "type": "EX-99.1",
+      "desc": "EX-99.1",
+      "url": "https://www.sec.gov/Archives/edgar/data/704532/000119312526453582/onto-ex99_1.htm"
+     }
+    ]
+   },
+   "title": "Onto Innovation Reports 2026 Third Quarter Results",
+   "auto": {
+    "revenue": {
+     "rev": 409748000.0,
+     "rev_prior": 218193000.0,
+     "label": "Revenue",
+     "checked_vs_estimate": true
+    },
+    "guidance": {
+     "heading": "Financial Outlook",
+     "section": [
+      "For the fourth quarter ending December 31, 2026, the Company expects the following:"
+     ],
+     "lines": [],
+     "status": "given"
+    }
+   },
+   "read": "2026-11-10T06:38+02:00",
+   "desk": {
+    "by": "LRC Research",
+    "written": "2026-11-10T16:23+02:00",
+    "period": "Q3 2026 (quarter to 30 Sep 2026)",
+    "headline": "Revenue up 88% to a record $410m, beat; Q4 outlook above estimates",
+    "numbers": {
+     "currency": "USD",
+     "revenue": 409748000,
+     "revenue_prior": 218193000,
+     "revenue_est": 392041370,
+     "eps": 2.44,
+     "eps_prior": 0.92,
+     "eps_est": 2.302,
+     "eps_basis": "adjusted",
+     "other": [
+      {
+       "label": "Diluted EPS (GAAP)",
+       "value": "$0.95",
+       "change": "vs $0.57 a year ago"
+      },
+      {
+       "label": "Non-GAAP gross margin",
+       "value": "57.6%",
+       "change": "vs 54.0% a year ago"
+      },
+      {
+       "label": "Non-GAAP operating margin",
+       "value": "32.6%",
+       "change": "vs 21.1% a year ago"
+      },
+      {
+       "label": "Backlog",
+       "value": "over $1.3bn",
+       "change": "up in the quarter"
+      },
+      {
+       "label": "Cash and marketable securities",
+       "value": "$1.25bn",
+       "change": "vs $0.64bn at start of year"
+      }
+     ]
+    },
+    "results": [
+     "Record revenue of $410m was up 88% on a year ago and 19% on Q2, above the top of the company's own range.",
+     "Adjusted EPS rose to $2.44 from $0.92; GAAP EPS of $0.95 was held back by a $40.8m paper loss on the Rigaku stake.",
+     "Margins widened: adjusted gross margin 57.6% and adjusted operating margin 32.6%, up from 21.1% a year ago.",
+     "Advanced nodes and advanced packaging both set revenue records, led by the Atlas G6, Dragonfly G5 and Firefly tools.",
+     "Operations brought in about $79m of cash; Onto closed its purchase of a 27% stake in Rigaku in August."
+    ],
+    "guidance": {
+     "status": "given",
+     "summary": "Onto guided Q4 revenue of $430–450m and adjusted EPS of $2.59–2.79, both above analyst estimates, and expects full-year revenue growth above 45%.",
+     "items": [
+      {
+       "metric": "Revenue",
+       "period": "Q4 2026",
+       "new": "$430–450m",
+       "consensus": "$415.6m",
+       "vs_consensus": "above"
+      },
+      {
+       "metric": "Adjusted EPS",
+       "period": "Q4 2026",
+       "new": "$2.59–2.79",
+       "consensus": "$2.48",
+       "vs_consensus": "above"
+      },
+      {
+       "metric": "GAAP EPS",
+       "period": "Q4 2026",
+       "new": "$1.95–2.07",
+       "vs_consensus": "n/a"
+      },
+      {
+       "metric": "Gross margin",
+       "period": "Q4 2026",
+       "new": "57.7–58.3%",
+       "vs_consensus": "n/a"
+      },
+      {
+       "metric": "Adjusted operating margin",
+       "period": "Q4 2026",
+       "new": "33.5–34.5%",
+       "vs_consensus": "n/a"
+      },
+      {
+       "metric": "Revenue growth",
+       "period": "FY 2026",
+       "new": "more than 45%",
+       "vs_consensus": "n/a"
+      }
+     ]
+    },
+    "call": {
+     "points": [
+      "Management said customers have not slowed orders despite questions over data-centre spending, with visibility into 2027 and partly 2028.",
+      "Advanced packaging was just over half of revenue; growth there is split roughly evenly between 2.5D logic and HBM memory.",
+      "Revenue is expected to keep rising quarter by quarter through at least the first half of 2027.",
+      "A rough 2027 margin framework of about 50 basis points of gross-margin gain per quarter was offered, with a full plan due later.",
+      "Higher supply-chain costs, including memory chips, are a pressure; parts are being redesigned to use less."
+     ],
+     "tone": "confident",
+     "source": "Call coverage: MarketBeat via Yahoo Finance, 9 Nov 2026; consensus figures from Investing.com, 9 Nov 2026"
+    },
+    "watch": [
+     "Whether Q4 lands in the $430–450m range and margins move toward 58%.",
+     "Quarterly paper gains or losses on the Rigaku stake, which swing GAAP earnings.",
+     "Any sign of slower chip-equipment orders as AI data-centre spending is questioned."
+    ],
+    "sources": [
+     {
+      "title": "8-K Exhibit 99.1 — press release",
+      "url": "https://www.sec.gov/Archives/edgar/data/704532/000119312526453582/onto-ex99_1.htm"
+     },
+     {
+      "title": "Onto Innovation Q3 Earnings Call Highlights — MarketBeat via Yahoo Finance, 9 Nov 2026",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/onto-innovation-q3-earnings-call-051424002.html"
+     },
+     {
+      "title": "Onto Innovation surges on strong Q3 beat and guidance — Investing.com, 9 Nov 2026",
+      "url": "https://www.investing.com/news/earnings/onto-innovation-surges-on-strong-q3-beat-and-guidance-5013508"
+     }
+    ]
+   }
+  }
+ ]
+}

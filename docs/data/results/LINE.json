@@ -1,1 +1,150 @@
-{"t":"LINE","name":"Lineage, Inc.","m":"US","reports":[{"date":"2026-11-09","quarter":"Sep/2026","filing":{"form":"8-K","filed":"2026-11-09","items":"2.02,7.01,9.01","index":"https://www.sec.gov/Archives/edgar/data/1868159/000186815926000050/0001868159-26-000050-index.htm","docs":[{"type":"EX-99.1","desc":"EX-99.1","url":"https://www.sec.gov/Archives/edgar/data/1868159/000186815926000050/earningsreleaseex991-linea.htm"},{"type":"EX-99.2","desc":"EX-99.2","url":"https://www.sec.gov/Archives/edgar/data/1868159/000186815926000050/final-lineageinc3q26earn.htm"}]},"title":"Lineage, Inc. Reports Third-Quarter 2026 Financial Results","auto":{"revenue":{"rev":1361000000.0,"rev_prior":1377000000.0,"label":"Net revenues","checked_vs_estimate":true},"guidance":{"heading":null,"section":[],"lines":["Lineage expects full-year 2026 adjusted EBITDA of $1.25 to $1.27 billion and Adjusted FFO (\"AFFO\") per share of $2.86 to $2.98.","EBITDA guidance ($1,260M) would adjust to $1,287M, above the midpoint of initial 2026 Adj."],"status":"given"}},"read":"2026-11-10T06:38+02:00"}]}
+{
+ "t": "LINE",
+ "name": "Lineage, Inc.",
+ "m": "US",
+ "reports": [
+  {
+   "date": "2026-11-09",
+   "quarter": "Sep/2026",
+   "filing": {
+    "form": "8-K",
+    "filed": "2026-11-09",
+    "items": "2.02,7.01,9.01",
+    "index": "https://www.sec.gov/Archives/edgar/data/1868159/000186815926000050/0001868159-26-000050-index.htm",
+    "docs": [
+     {
+      "type": "EX-99.1",
+      "desc": "EX-99.1",
+      "url": "https://www.sec.gov/Archives/edgar/data/1868159/000186815926000050/earningsreleaseex991-linea.htm"
+     },
+     {
+      "type": "EX-99.2",
+      "desc": "EX-99.2",
+      "url": "https://www.sec.gov/Archives/edgar/data/1868159/000186815926000050/final-lineageinc3q26earn.htm"
+     }
+    ]
+   },
+   "title": "Lineage, Inc. Reports Third-Quarter 2026 Financial Results",
+   "auto": {
+    "revenue": {
+     "rev": 1361000000.0,
+     "rev_prior": 1377000000.0,
+     "label": "Net revenues",
+     "checked_vs_estimate": true
+    },
+    "guidance": {
+     "heading": null,
+     "section": [],
+     "lines": [
+      "Lineage expects full-year 2026 adjusted EBITDA of $1.25 to $1.27 billion and Adjusted FFO (\"AFFO\") per share of $2.86 to $2.98.",
+      "EBITDA guidance ($1,260M) would adjust to $1,287M, above the midpoint of initial 2026 Adj."
+     ],
+     "status": "given"
+    }
+   },
+   "read": "2026-11-10T06:38+02:00",
+   "desk": {
+    "by": "LRC Research",
+    "written": "2026-11-10T16:29+02:00",
+    "period": "Q3 2026 (quarter to 30 Sep 2026)",
+    "headline": "Revenue down 1% to $1.36bn, slight miss; AFFO/share falls to $0.73; 2026 outlook range narrowed",
+    "numbers": {
+     "currency": "USD",
+     "revenue": 1361000000,
+     "revenue_prior": 1377000000,
+     "revenue_est": 1366092150,
+     "eps": -0.68,
+     "eps_prior": -0.44,
+     "eps_est": -0.2333,
+     "eps_basis": "diluted GAAP",
+     "other": [
+      {
+       "label": "AFFO per share",
+       "value": "$0.73",
+       "change": "-14.1% y/y"
+      },
+      {
+       "label": "Adjusted EBITDA",
+       "value": "$317m",
+       "change": "-7.0% y/y, 23.3% margin"
+      },
+      {
+       "label": "Same-warehouse NOI",
+       "value": "$342m",
+       "change": "-4.2% y/y"
+      },
+      {
+       "label": "Same-warehouse physical occupancy",
+       "value": "76.2%",
+       "change": "+110bp y/y"
+      },
+      {
+       "label": "Global Integrated Solutions NOI",
+       "value": "$56m",
+       "change": "-13.8% y/y"
+      },
+      {
+       "label": "Quarterly dividend",
+       "value": "$0.5325",
+       "change": "$2.13 a year"
+      }
+     ]
+    },
+    "results": [
+     "Revenue slipped 1.2% to $1.36bn, just under the $1.37bn estimate; same-warehouse revenue edged up 0.4%.",
+     "Net loss widened to $173m ($0.68 a share, vs a $0.23 loss expected), mainly due to a $105m loss on destroyed property and higher interest costs ($92m vs $68m).",
+     "Adjusted EBITDA fell 7% to $317m and AFFO per share 14% to $0.73, as power costs jumped 13% at same warehouses.",
+     "Occupancy kept improving: same-warehouse physical occupancy rose to 76.2% from 75.1%, though storage revenue per pallet fell 2.2%.",
+     "The transport-heavy Global Integrated Solutions unit was weakest, with NOI down 14% to $56m; the $0.5325 quarterly dividend was kept."
+    ],
+    "guidance": {
+     "status": "narrowed",
+     "summary": "Lineage now expects 2026 adjusted EBITDA of $1.25–1.27bn and AFFO of $2.86–2.98 a share. The AFFO range was tightened from $2.80–3.05 (August call) around a similar midpoint; it said Q4 pressures were built into the update.",
+     "items": [
+      {
+       "metric": "Adjusted EBITDA",
+       "period": "FY 2026",
+       "new": "$1.25–1.27bn",
+       "vs_consensus": "n/a"
+      },
+      {
+       "metric": "AFFO per share",
+       "period": "FY 2026",
+       "new": "$2.86–2.98",
+       "prior": "$2.80–3.05",
+       "vs_consensus": "n/a"
+      }
+     ]
+    },
+    "call": {
+     "points": [
+      "The CEO said core trends kept stabilising, with occupancy up year on year for a second quarter, a sign customer stock levels have normalised.",
+      "Late in the quarter, much higher oil prices, tight trucking capacity and tariff uncertainty hurt, especially in the integrated solutions business.",
+      "Management expects those pressures to last into Q4 but called them cyclical, not a change in direction."
+     ],
+     "tone": "cautious",
+     "source": "CEO comments in the press release (Exhibit 99.1); no coverage of the 10 Nov call found"
+    },
+    "watch": [
+     "Whether fuel, trucking and tariff headwinds ease in Q4 as management expects.",
+     "Occupancy versus pricing: occupancy is rising but storage revenue per pallet is still falling.",
+     "Debt and interest costs, with long-term debt up to $6.8bn from $6.1bn at end-2025."
+    ],
+    "sources": [
+     {
+      "title": "8-K Exhibit 99.1 — press release",
+      "url": "https://www.sec.gov/Archives/edgar/data/1868159/000186815926000050/earningsreleaseex991-linea.htm"
+     },
+     {
+      "title": "8-K Exhibit 99.2 — earnings presentation",
+      "url": "https://www.sec.gov/Archives/edgar/data/1868159/000186815926000050/final-lineageinc3q26earn.htm"
+     },
+     {
+      "title": "Lineage Q2 2026 earnings call transcript — Lineage investor relations, 5 Aug 2026 (prior AFFO range)",
+      "url": "https://s25.q4cdn.com/159081145/files/doc_financials/2026/q2/LINE-Q2-2026-Transcript.pdf"
+     }
+    ]
+   }
+  }
+ ]
+}

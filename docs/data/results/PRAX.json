@@ -1,1 +1,102 @@
-{"t":"PRAX","name":"Praxis Precision Medicines, Inc.","m":"US","reports":[{"date":"2026-11-04","quarter":"Sep/2026","tries":6},{"date":"2026-11-09","quarter":"Sep/2026","filing":{"form":"8-K","filed":"2026-11-09","items":"2.02,9.01","index":"https://www.sec.gov/Archives/edgar/data/1689548/000168954826000086/0001689548-26-000086-index.htm","docs":[{"type":"EX-99.1","desc":"EX-99.1","url":"https://www.sec.gov/Archives/edgar/data/1689548/000168954826000086/praxisq32026pr.htm"}]},"title":"Praxis Precision Medicines Provides Corporate Update and Reports Third Quarter 2026 Financial Results","auto":{"revenue":null,"guidance":{"heading":null,"section":[],"lines":[],"status":"not found"}},"read":"2026-11-09T16:42+02:00"}]}
+{
+ "t": "PRAX",
+ "name": "Praxis Precision Medicines, Inc.",
+ "m": "US",
+ "reports": [
+  {
+   "date": "2026-11-04",
+   "quarter": "Sep/2026",
+   "tries": 6
+  },
+  {
+   "date": "2026-11-09",
+   "quarter": "Sep/2026",
+   "filing": {
+    "form": "8-K",
+    "filed": "2026-11-09",
+    "items": "2.02,9.01",
+    "index": "https://www.sec.gov/Archives/edgar/data/1689548/000168954826000086/0001689548-26-000086-index.htm",
+    "docs": [
+     {
+      "type": "EX-99.1",
+      "desc": "EX-99.1",
+      "url": "https://www.sec.gov/Archives/edgar/data/1689548/000168954826000086/praxisq32026pr.htm"
+     }
+    ]
+   },
+   "title": "Praxis Precision Medicines Provides Corporate Update and Reports Third Quarter 2026 Financial Results",
+   "auto": {
+    "revenue": null,
+    "guidance": {
+     "heading": null,
+     "section": [],
+     "lines": [],
+     "status": "not found"
+    }
+   },
+   "read": "2026-11-09T16:42+02:00",
+   "desk": {
+    "by": "LRC Research",
+    "written": "2026-11-10T16:23+02:00",
+    "period": "Q3 2026 (quarter to 30 Sep 2026)",
+    "headline": "Loss of $3.23 a share, narrower than expected; two FDA decisions due in Dec and Jan",
+    "numbers": {
+     "currency": "USD",
+     "eps": -3.23,
+     "eps_prior": -3.36,
+     "eps_est": -3.635,
+     "eps_basis": "diluted GAAP",
+     "other": [
+      {
+       "label": "Net loss",
+       "value": "$94.2m",
+       "change": "vs $73.9m a year ago"
+      },
+      {
+       "label": "R&D expenses",
+       "value": "$64.2m",
+       "change": "vs $65.8m a year ago"
+      },
+      {
+       "label": "G&A expenses",
+       "value": "$42.7m",
+       "change": "vs $12.6m a year ago"
+      },
+      {
+       "label": "Cash and investments",
+       "value": "$1.29bn",
+       "change": "vs $926.1m at end-2025"
+      }
+     ]
+    },
+    "results": [
+     "Praxis has no product sales yet; the net loss widened to $94.2m from $73.9m as it prepares for launches.",
+     "Loss per share was $3.23, smaller than a year ago ($3.36) because more shares are in issue after January's share sale.",
+     "Admin costs more than tripled to $42.7m on new staff and launch preparation; research spending was flat at $64.2m.",
+     "Cash and investments of about $1.3bn are expected to fund the company into 2028."
+    ],
+    "guidance": {
+     "status": "none",
+     "summary": "Praxis gives no revenue or earnings guidance. It says its cash lasts into 2028 and lists key dates: FDA decisions on relutrigine (27 Dec 2026) and ulixacaltamide (29 Jan 2027).",
+     "items": []
+    },
+    "call": {
+     "points": [],
+     "tone": "steady",
+     "source": "No call coverage found"
+    },
+    "watch": [
+     "FDA decision on relutrigine for SCN2A and SCN8A epilepsies, due 27 Dec 2026.",
+     "FDA decision on ulixacaltamide for essential tremor, due 29 Jan 2027.",
+     "EMERALD study results in broader epilepsies (Q4 2026) and the Investor Day on 12 Nov."
+    ],
+    "sources": [
+     {
+      "title": "8-K Exhibit 99.1 — press release",
+      "url": "https://www.sec.gov/Archives/edgar/data/1689548/000168954826000086/praxisq32026pr.htm"
+     }
+    ]
+   }
+  }
+ ]
+}

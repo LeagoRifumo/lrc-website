@@ -1,1 +1,160 @@
-{"t":"SANM","name":"Sanmina Corporation","m":"US","reports":[{"date":"2026-11-09","quarter":"Sep/2026","filing":{"form":"8-K","filed":"2026-11-09","items":"2.02,8.01,9.01","index":"https://www.sec.gov/Archives/edgar/data/897723/000089772326000044/0000897723-26-000044-index.htm","docs":[{"type":"EX-99.1","desc":"EX-99.1","url":"https://www.sec.gov/Archives/edgar/data/897723/000089772326000044/sanmina_exx991xoctober32026.htm"}]},"title":"Sanmina Reports Fourth Quarter and Fiscal 2026 Financial Results","auto":{"revenue":{"rev":3858022000.0,"rev_prior":2096392000.0,"label":"Net sales","checked_vs_estimate":true},"guidance":{"heading":null,"section":[],"lines":["At the midpoint of our full-year outlook, revenue is projected to grow about 27% and our non-GAAP diluted earnings per share about 24%."],"status":"given"}},"read":"2026-11-10T06:38+02:00"}]}
+{
+ "t": "SANM",
+ "name": "Sanmina Corporation",
+ "m": "US",
+ "reports": [
+  {
+   "date": "2026-11-09",
+   "quarter": "Sep/2026",
+   "filing": {
+    "form": "8-K",
+    "filed": "2026-11-09",
+    "items": "2.02,8.01,9.01",
+    "index": "https://www.sec.gov/Archives/edgar/data/897723/000089772326000044/0000897723-26-000044-index.htm",
+    "docs": [
+     {
+      "type": "EX-99.1",
+      "desc": "EX-99.1",
+      "url": "https://www.sec.gov/Archives/edgar/data/897723/000089772326000044/sanmina_exx991xoctober32026.htm"
+     }
+    ]
+   },
+   "title": "Sanmina Reports Fourth Quarter and Fiscal 2026 Financial Results",
+   "auto": {
+    "revenue": {
+     "rev": 3858022000.0,
+     "rev_prior": 2096392000.0,
+     "label": "Net sales",
+     "checked_vs_estimate": true
+    },
+    "guidance": {
+     "heading": null,
+     "section": [],
+     "lines": [
+      "At the midpoint of our full-year outlook, revenue is projected to grow about 27% and our non-GAAP diluted earnings per share about 24%."
+     ],
+     "status": "given"
+    }
+   },
+   "read": "2026-11-10T06:38+02:00",
+   "desk": {
+    "by": "LRC Research",
+    "written": "2026-11-10T16:22+02:00",
+    "period": "Q4 fiscal 2026 (quarter to 3 Oct 2026)",
+    "headline": "Revenue up 84% to $3.86bn with ZT Systems, beat; first FY27 outlook points to about 27% growth",
+    "numbers": {
+     "currency": "USD",
+     "revenue": 3858022000,
+     "revenue_prior": 2096392000,
+     "revenue_est": 3482589830,
+     "eps": 4.43,
+     "eps_prior": 1.67,
+     "eps_est": 3.269,
+     "eps_basis": "adjusted",
+     "other": [
+      {
+       "label": "GAAP diluted EPS",
+       "value": "$2.14",
+       "change": "vs $0.88 a year ago"
+      },
+      {
+       "label": "Non-GAAP operating margin",
+       "value": "9.0%",
+       "change": "vs 6.0% a year ago"
+      },
+      {
+       "label": "Free cash flow",
+       "value": "$83m",
+       "change": "vs $137m a year ago"
+      },
+      {
+       "label": "FY26 revenue",
+       "value": "$14.53bn",
+       "change": "+79% y/y"
+      },
+      {
+       "label": "FY26 non-GAAP diluted EPS",
+       "value": "$13.28",
+       "change": "vs $6.04 in FY25"
+      }
+     ]
+    },
+    "results": [
+     "Quarterly sales jumped 84% to $3.86bn, well above the $3.48bn analysts expected, as the ZT Systems purchase added a large cloud and AI business.",
+     "Adjusted EPS more than doubled to $4.43 (GAAP $2.14); the adjusted operating margin rose to 9.0% from 6.0%.",
+     "For the full year, sales rose 79% to $14.53bn and adjusted EPS to $13.28 from $6.04.",
+     "Operating cash flow was $242m in the quarter, but heavier equipment spending cut free cash flow to $83m; $154m of shares were bought back.",
+     "Year-end cash was $1.68bn; total debt rose to about $2.09bn from $0.30bn a year earlier after the ZT purchase."
+    ],
+    "guidance": {
+     "status": "initiated",
+     "summary": "Sanmina set its first fiscal 2027 range, implying about 27% sales growth and about 24% higher adjusted EPS at the midpoint, plus a Q1 outlook. The Q1 margin range is below the 9.0% just reported.",
+     "items": [
+      {
+       "metric": "Revenue",
+       "period": "Q1 FY27",
+       "new": "$3.8–4.1bn",
+       "vs_consensus": "n/a"
+      },
+      {
+       "metric": "Non-GAAP diluted EPS",
+       "period": "Q1 FY27",
+       "new": "$3.50–3.85",
+       "vs_consensus": "n/a"
+      },
+      {
+       "metric": "Non-GAAP operating margin",
+       "period": "Q1 FY27",
+       "new": "7.0–7.5%",
+       "vs_consensus": "n/a"
+      },
+      {
+       "metric": "Revenue",
+       "period": "FY27",
+       "new": "$17.5–19.5bn",
+       "vs_consensus": "n/a"
+      },
+      {
+       "metric": "Non-GAAP diluted EPS",
+       "period": "FY27",
+       "new": "$15.50–17.50",
+       "vs_consensus": "n/a"
+      },
+      {
+       "metric": "Non-GAAP operating margin",
+       "period": "FY27",
+       "new": "7.0–7.5%",
+       "vs_consensus": "n/a"
+      }
+     ]
+    },
+    "call": {
+     "points": [
+      "Q4 sales came in above the top of the company's own outlook; cloud and AI sales were $2.37bn, with ZT contributing $884m.",
+      "About $0.42 of Q4 EPS came from one-off tariff recoveries that management said will not recur.",
+      "AMD's Helios rack has started shipping in small volumes, a second AI platform is in the FY27 plan and a third is under discussion.",
+      "The wide FY27 range reflects new large programmes, component shortages and the timing of customer acceptance of AI racks.",
+      "Capex of about $450m is planned for FY27 (liquid cooling, testing, transformers); about $446m of buyback authority remains."
+     ],
+     "tone": "confident",
+     "source": "Call transcript: Sanmina (SANM) Q4 2026 Earnings Call Transcript — The Motley Fool, 10 Nov 2026"
+    },
+    "watch": [
+     "How fast Helios and other AI rack programmes ramp, and whether margins hold in the 7.0–7.5% range as mix shifts.",
+     "Working capital and inventory build, and its effect on free cash flow and debt.",
+     "Component shortages that could push FY27 sales toward the low end of the range."
+    ],
+    "sources": [
+     {
+      "title": "8-K Exhibit 99.1 — press release",
+      "url": "https://www.sec.gov/Archives/edgar/data/897723/000089772326000044/sanmina_exx991xoctober32026.htm"
+     },
+     {
+      "title": "Sanmina (SANM) Q4 2026 Earnings Call Transcript — The Motley Fool, 10 Nov 2026",
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/11/10/sanmina-sanm-q4-2026-earnings-call-transcript/"
+     }
+    ]
+   }
+  }
+ ]
+}
