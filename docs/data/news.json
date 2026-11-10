@@ -1,121 +1,129 @@
 {
-  "edition": "Evening update · Monday 9 November 2026 19:15",
-  "generated": "2026-11-09T22:11+02:00",
-  "covers": "The JSE close and Wall Street trade to 19:11 SAST on Monday 9 November, against Friday 6 November closes. Prices only: today's news stories could not be opened and checked for this edition, so they are left out until they are verified.",
-  "agent": "LRC News Desk",
-  "headline": "Breaking: AMD up 11.5% and Nvidia down 4.8% as Wall Street extends gains; S&P 500 +2.3% to 7,546",
-  "summary": "In South Africa the JSE All Share closed the session at 115,037.93 (+2.0% on Friday) and the Top 40 at 107,087.60 (+2.3%), with the rand at R16.42/$ (-0.3%) (Yahoo Finance via LRC Market Dashboard, 9 Nov). In the US the S&P 500 was at 7,545.59 (+2.3%) and the Nasdaq at 25,229.36 (+2.6%) at 19:11 SAST, with chip stocks leading but Nvidia falling 4.8% to $177.77, further below its $191.50 breakdown level. Brent was at $93.85 (-4.5%) while gold ($4,119.50, +1.1%), platinum (+1.8%) and copper (+2.1%) held gains, ahead of US October CPI on Tuesday at 15:30 SAST.",
-  "sections": [
+ "edition": "Morning brief · Tuesday 10 November 2026 06:16",
+ "generated": "2026-11-10T06:16+02:00",
+ "covers": "Monday 9 November closes on the JSE and Wall Street, and the rand to early Tuesday. This edition is built from closing prices only; overnight news stories (including reports about Nvidia's chief executive and the oil-price fall) could not be opened and checked in time, so they are left out until verified.",
+ "agent": "LRC News Desk",
+ "headline": "Breaking: AMD closes up 13.3% and Nvidia down 4.3% as the S&P 500 jumps 2.3%; Brent drops 6.7% to $91.71",
+ "summary": "In South Africa the JSE All Share closed Monday at 115,037.93 (+2.0%) and the Top 40 at 107,087.60 (+2.3%), led by miners, and the rand was at R16.37/$ early Tuesday, about 0.6% firmer than Friday (Yahoo Finance, 9–10 Nov). On Wall Street the S&P 500 closed at 7,549.94 (+2.3%) and the Nasdaq at 25,253.14 (+2.7%), with AMD up 13.3% and Nvidia down 4.3%, while the US 10-year yield was 4.86% (Yahoo Finance, 9 Nov). Brent fell 6.7% to $91.71 while gold (+1.2% to $4,122.10), platinum (+2.4%) and copper (+2.3%) rose, which helps the fuel-price outlook and supports JSE miners ahead of US October CPI and SA Q3 jobs data today.",
+ "sections": [
+  {
+   "name": "Breaking",
+   "items": [
     {
-      "name": "Breaking",
-      "items": [
-        {
-          "title": "AMD +11.5% to $500.88 and Nvidia -4.8% to $177.77 at 19:11 SAST",
-          "summary": "Two covered chip stocks are moving more than 5% in opposite directions. AMD extends Friday's 11.0% rebound and is now well above its LRC Stock Scanner target of $386.50; Nvidia is the main laggard in a broad rally and sits 7% below its $191.50 breakdown level and 24% below its $233.80 target. We could not open and verify today's news reports on the reasons, so they are left out for now. Both ratings stay HOLD.",
-          "source": "LRC Stock Scanner, live prices at 19:11 SAST, 9 Nov 2026 (change vs 6 Nov close)",
-          "url": "https://finance.yahoo.com/quote/NVDA/",
-          "tickers": [
-            "AMD",
-            "NVDA"
-          ]
-        }
-      ]
+     "title": "AMD closes +13.3% at $508.58; Nvidia closes -4.3% at $178.67",
+     "summary": "AMD extended its intraday gain into the close on Monday 9 November, while Nvidia (HOLD) fell 4.3% and stays below its $191.50 breakdown level ahead of results on 17 November. The reasons behind Nvidia's fall could not be verified for this edition and are left out.",
+     "source": "Yahoo Finance via LRC Market Dashboard, close 9 Nov 2026",
+     "url": "https://finance.yahoo.com/quote/NVDA/",
+     "tickers": [
+      "AMD",
+      "NVDA"
+     ]
     },
     {
-      "name": "US markets",
-      "items": [
-        {
-          "title": "S&P 500 7,545.59 (+2.3%), Nasdaq 25,229.36 (+2.6%) at 19:11 SAST",
-          "summary": "Gains widened from +1.7% and +2.2% at 16:57 SAST, against Friday's closes of 7,376.86 and 24,579.43. These are intraday prices; the US close is at 23:00 SAST.",
-          "source": "Yahoo Finance prices at 19:11 SAST, 9 Nov 2026, via LRC Market Dashboard",
-          "url": "https://finance.yahoo.com/quote/%5EGSPC/"
-        },
-        {
-          "title": "US 10-year Treasury yield 4.88%",
-          "summary": "The 10-year yield was 4.876% at 19:11 SAST against 4.859% on Friday. The Fed funds target range is 3.75%–4.00% after the 28 October decision.",
-          "source": "Yahoo Finance prices at 19:11 SAST, 9 Nov 2026, via LRC Market Dashboard; StockAnalysis (28 Oct 2026) for the Fed rate",
-          "url": "https://finance.yahoo.com/quote/%5ETNX/"
-        },
-        {
-          "title": "US October CPI due Tuesday 10 November at 15:30 SAST",
-          "summary": "September CPI was 3.7% year on year (BLS, 14 Oct 2026). Tuesday's print is the main US data point this week.",
-          "source": "US Bureau of Labor Statistics release schedule, checked 7 Nov 2026",
-          "url": "https://www.bls.gov/schedule/news_release/cpi.htm"
-        }
-      ]
-    },
-    {
-      "name": "South Africa",
-      "items": [
-        {
-          "title": "JSE All Share 115,037.93 (+2.0%), Top 40 107,087.60 (+2.3%) on 9 November",
-          "summary": "Against Friday's closes of 112,739.40 and 104,714.00, led by miners as metal prices rose.",
-          "source": "Yahoo Finance daily close, 9 Nov 2026, via LRC Market Dashboard",
-          "url": "https://finance.yahoo.com/quote/%5EJ203.JO/"
-        },
-        {
-          "title": "Data week: Q3 jobs survey on Tuesday, CPI on 18 November, SARB decision on 19 November",
-          "summary": "The repo rate is 7.25% after September's 25bp hike; September CPI was 4.5% (Stats SA via SAnews, 21 Oct 2026).",
-          "source": "LRC Macro Desk calendar (Stats SA, SARB), checked 6 Nov 2026",
-          "url": "https://www.statssa.gov.za/"
-        }
-      ]
-    },
-    {
-      "name": "Forex & commodities",
-      "items": [
-        {
-          "title": "Brent $93.85 (-4.5% on Friday)",
-          "summary": "Brent is little changed from $93.96 at 16:57 SAST; Friday's close was $98.32. A sustained lower oil price would ease December fuel-price pressure in South Africa.",
-          "source": "Yahoo Finance prices at 19:11 SAST, 9 Nov 2026, via LRC Market Dashboard",
-          "url": "https://finance.yahoo.com/quote/BZ%3DF/"
-        },
-        {
-          "title": "Rand R16.42/$ (-0.3%), R18.38/€ and R22.04/£",
-          "summary": "The rand held its firmer level against the dollar and euro into the evening.",
-          "source": "Yahoo Finance prices at 19:11 SAST, 9 Nov 2026, via LRC Market Dashboard",
-          "url": "https://finance.yahoo.com/quote/ZAR%3DX/"
-        },
-        {
-          "title": "Gold $4,119.50 (+1.1%), platinum $1,566.30 (+1.8%), copper about $14,000/t (+2.1%)",
-          "summary": "Metals kept their gains through the US open, supportive for JSE-listed miners.",
-          "source": "Yahoo Finance prices at 19:11 SAST, 9 Nov 2026, via LRC Market Dashboard",
-          "url": "https://finance.yahoo.com/quote/GC%3DF/"
-        }
-      ]
-    },
-    {
-      "name": "Our coverage",
-      "items": [
-        {
-          "title": "Qualcomm +5.9% to $175.18 (HOLD, target $160.40), Micron +6.5% to $735.00 (HOLD, target $1,226.00)",
-          "summary": "The chip rebound continues for a second day. Qualcomm is further above its scanner target; Micron is still about 40% below its target. Ratings unchanged.",
-          "source": "LRC Stock Scanner, live prices at 19:11 SAST, 9 Nov 2026 (change vs 6 Nov close)",
-          "url": "https://finance.yahoo.com/quote/MU/",
-          "tickers": [
-            "QCOM",
-            "MU"
-          ]
-        },
-        {
-          "title": "AngloGold Ashanti (HOLD): JSE closed R1,603 (+7.4%), NYSE $97.94 (+5.3%)",
-          "summary": "Both listings are well above their scanner targets (R973.10 and $78.00) as gold rose. IREN (HOLD, target $41.79) was up 2.7% to $22.22. Ratings unchanged.",
-          "source": "LRC Stock Scanner, live prices at 19:11 SAST, 9 Nov 2026 (change vs 6 Nov close); JSE price at 17:06 SAST",
-          "url": "https://finance.yahoo.com/quote/AU/",
-          "tickers": [
-            "AU",
-            "ANG.JO",
-            "IREN"
-          ]
-        }
-      ]
+     "title": "Brent falls 6.7% to $91.71",
+     "summary": "Brent closed Monday 9 November at $91.71 a barrel, down from $98.32 on Friday 6 November. A lower oil price eases pressure on SA fuel prices and on inflation.",
+     "source": "Yahoo Finance via LRC Market Dashboard, close 9 Nov 2026",
+     "url": "https://finance.yahoo.com/quote/BZ%3DF/"
     }
-  ],
-  "watch_today": [
-    "Whether AMD holds its 11.5% gain and Nvidia its 4.8% loss into the US close (23:00 SAST)",
-    "Nvidia (HOLD) below its $191.50 breakdown level; results due 17 November after the US close",
-    "US October CPI on Tuesday at 15:30 SAST and SA Q3 jobs data on Tuesday",
-    "Brent below $94 and what it means for December fuel prices",
-    "Coalition talks after the municipal elections"
-  ]
+   ]
+  },
+  {
+   "name": "US markets",
+   "items": [
+    {
+     "title": "S&P 500 7,549.94 (+2.3%), Nasdaq 25,253.14 (+2.7%) at Monday's close",
+     "summary": "A broad rally on 9 November, led by chip stocks, recovered most of last week's 2.7% S&P 500 fall.",
+     "source": "Yahoo Finance via LRC Market Dashboard, close 9 Nov 2026",
+     "url": "https://finance.yahoo.com/quote/%5EGSPC/"
+    },
+    {
+     "title": "US 10-year Treasury yield 4.86%",
+     "summary": "Little changed on the day at 4.864% (close 9 Nov) versus 4.859% on Friday.",
+     "source": "Yahoo Finance via LRC Market Dashboard, close 9 Nov 2026",
+     "url": "https://finance.yahoo.com/quote/%5ETNX/"
+    },
+    {
+     "title": "US October CPI due today at 15:30 SAST",
+     "summary": "September CPI was 3.7% year on year (BLS, 14 Oct 2026). Today's print is the main test for the rally.",
+     "source": "US Bureau of Labor Statistics",
+     "url": "https://www.bls.gov/schedule/news_release/cpi.htm"
+    }
+   ]
+  },
+  {
+   "name": "South Africa",
+   "items": [
+    {
+     "title": "JSE All Share 115,037.93 (+2.0%), Top 40 107,087.60 (+2.3%) on 9 November",
+     "summary": "Miners led: Gold Fields +6.0% to R668.06, Impala Platinum +6.0% to R185.70, Sibanye-Stillwater +4.7% to R40.36, Anglo American +4.0% to R855.86 and Harmony +3.7% to R287.20 at the close.",
+     "source": "Yahoo Finance via LRC Market Dashboard, close 9 Nov 2026",
+     "url": "https://finance.yahoo.com/quote/%5EJ203.JO/"
+    },
+    {
+     "title": "Stats SA Q3 jobs survey (QLFS) due today",
+     "summary": "Unemployment was 33.6% in Q2 2026, up from 32.7% (Stats SA, 11 Aug 2026). SA CPI follows on 18 November and the SARB rate decision on 19 November (repo 7.25%).",
+     "source": "Stats SA / LRC Macro Desk",
+     "url": "https://www.statssa.gov.za/"
+    }
+   ]
+  },
+  {
+   "name": "Forex & commodities",
+   "items": [
+    {
+     "title": "Rand R16.37/$, R18.36/€, R22.00/£ early Tuesday",
+     "summary": "About 0.6% firmer against the dollar than Friday's R16.48 (Yahoo Finance, 10 Nov).",
+     "source": "Yahoo Finance via LRC Market Dashboard, 10 Nov 2026",
+     "url": "https://finance.yahoo.com/quote/ZAR%3DX/"
+    },
+    {
+     "title": "Gold $4,122.10 (+1.2%), platinum $1,575.80 (+2.4%), copper about $14,024/t (+2.3%)",
+     "summary": "Closing prices on 9 November against Friday's closes; metals rose as oil fell.",
+     "source": "Yahoo Finance via LRC Market Dashboard, close 9 Nov 2026",
+     "url": "https://finance.yahoo.com/quote/GC%3DF/"
+    }
+   ]
+  },
+  {
+   "name": "Our coverage",
+   "items": [
+    {
+     "title": "Nvidia (HOLD) -4.3% to $178.67",
+     "summary": "Further below the $191.50 breakdown level; results due 17 November after the US close. No rating change.",
+     "source": "Yahoo Finance via LRC Market Dashboard, close 9 Nov 2026",
+     "url": "https://finance.yahoo.com/quote/NVDA/",
+     "tickers": [
+      "NVDA"
+     ]
+    },
+    {
+     "title": "Qualcomm (HOLD) +3.7% to $171.47, Micron (HOLD) +6.3% to $733.15",
+     "summary": "Both rose with the chip rally on 9 November. No rating change.",
+     "source": "Yahoo Finance via LRC Market Dashboard, close 9 Nov 2026",
+     "url": "https://finance.yahoo.com/quote/MU/",
+     "tickers": [
+      "QCOM",
+      "MU"
+     ]
+    },
+    {
+     "title": "AngloGold Ashanti (HOLD): JSE R1,603.15 (+7.4%), NYSE $99.37 (+6.9%)",
+     "summary": "Rose with the gold price on 9 November; ex-dividend later this month. No rating change.",
+     "source": "Yahoo Finance via LRC Market Dashboard, close 9 Nov 2026",
+     "url": "https://finance.yahoo.com/quote/AU/",
+     "tickers": [
+      "AU",
+      "ANG.JO"
+     ]
+    }
+   ]
+  }
+ ],
+ "watch_today": [
+  "US October CPI at 15:30 SAST",
+  "Stats SA Q3 jobs survey (QLFS)",
+  "Whether Nvidia steadies after Monday's 4.3% fall, a week before its 17 November results",
+  "Brent near $92 and the outlook for December fuel prices",
+  "Whether the rand holds near R16.37/$ after CPI"
+ ]
 }
