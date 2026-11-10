@@ -517,7 +517,13 @@
 "eps_yago": -0.1155,
 "n_est": 7,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -0.2238,
+"eps_est": -0.245,
+"surprise": 0.0866,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "ACIW|2026-11-05": {
 "t": "ACIW",
@@ -2788,7 +2794,13 @@
 "eps_yago": 0.3519,
 "n_est": 11,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.88,
+"eps_est": 0.5728,
+"surprise": 0.5364,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "AMRX|2026-11-03": {
 "t": "AMRX",
@@ -3594,7 +3606,13 @@
 "eps_yago": 0.15,
 "n_est": 5,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.18,
+"eps_est": 0.17,
+"surprise": 0.0588,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "APP|2026-11-04": {
 "t": "APP",
@@ -4395,7 +4413,13 @@
 "eps_yago": -0.45,
 "n_est": 8,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -0.44,
+"eps_est": -0.4479,
+"surprise": 0.0177,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "ASX|2026-10-29": {
 "t": "ASX",
@@ -5793,7 +5817,13 @@
 "eps_yago": 6.471,
 "n_est": 5,
 "rcur": "PEN",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 7.121,
+"eps_est": 7.384,
+"surprise": -0.0356,
+"result": "miss",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "BATRA|2026-11-04": {
 "t": "BATRA",
@@ -13454,7 +13484,13 @@
 "eps_yago": 0.42,
 "n_est": 9,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.35,
+"eps_est": 0.3799,
+"surprise": -0.0786,
+"result": "miss",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "CWT|2026-10-28": {
 "t": "CWT",
@@ -17082,7 +17118,13 @@
 "eps_yago": 0.19,
 "n_est": 2,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.19,
+"eps_est": 0.178,
+"surprise": 0.0675,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "ERAS|2026-11-11": {
 "t": "ERAS",
@@ -34049,7 +34091,13 @@
 "eps_yago": 0.87,
 "n_est": 3,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 1.05,
+"eps_est": 0.9667,
+"surprise": 0.0862,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "NOV|2026-10-27": {
 "t": "NOV",
@@ -35116,7 +35164,13 @@
 "eps_yago": -0.0619,
 "n_est": 1,
 "rcur": "CAD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -0.0714,
+"eps_est": -0.041,
+"surprise": -0.7415,
+"result": "miss",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "NXPI|2026-10-27": {
 "t": "NXPI",
@@ -42101,7 +42155,13 @@
 "eps_yago": 1.67,
 "n_est": 4,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 4.43,
+"eps_est": 3.269,
+"surprise": 0.3551,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "SAN|2026-10-28": {
 "t": "SAN",
@@ -42701,7 +42761,13 @@
 "eps_yago": -0.0976,
 "n_est": 10,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -0.57,
+"eps_est": -0.3966,
+"surprise": -0.4371,
+"result": "miss",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "SEZL|2026-11-04": {
 "t": "SEZL",
@@ -42968,7 +43034,13 @@
 "eps_yago": 0.13,
 "n_est": 6,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.16,
+"eps_est": 0.1247,
+"surprise": 0.2834,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "SG|2026-11-05": {
 "t": "SG",
@@ -44591,7 +44663,7 @@
 "name": "Spectrum Brands Holdings, Inc.",
 "m": "US",
 "date": "2026-11-12",
-"when": "Before open",
+"when": "Not stated",
 "eps_forecast": "$0.83",
 "quarter": "Sep/2026",
 "period": "Expected date (market data feed)",
@@ -54104,7 +54176,13 @@
 "eps_yago": 0.2707,
 "n_est": 14,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.38,
+"eps_est": 0.2731,
+"surprise": 0.3917,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "ZGN|2026-10-22": {
 "t": "ZGN",
