@@ -1,6 +1,6 @@
 {
  "note": "JSE company announcements (SENS) recorded by the LRC JSE Announcements job every weekday. results = published results with headline earnings per share (HEPS) vs the same period last year; trading_statements = expected HEPS change ranges; dividends = declared dividends with the JSE dates. Amounts in cents. Every entry carries its source.",
- "updated": "2026-11-09T19:40+02:00",
+ "updated": "2026-11-10T19:30+02:00",
  "results": [
   {
    "t": "CLS.JO",
@@ -129,6 +129,17 @@
    "unit": "c",
    "dps": 88.0,
    "source": "Raubex Group — Unaudited interim results for the six months ended 31 August 2026 and interim dividend declaration (9 Nov 2026), results booklet https://raubex.com/wp-content/uploads/2026/11/10181_Raubex-interim-results-booklet_WEB-FA.pdf (HEPS 254.3c vs 243.5c; gross interim dividend 88c vs 81c, net 70.4c after 20% dividends tax)"
+  },
+  {
+   "t": "VOD.JO",
+   "name": "Vodacom Group",
+   "date": "2026-11-10",
+   "period": "Six months to 30 Sep 2026",
+   "heps": 587.0,
+   "heps_prior": 467.0,
+   "unit": "c",
+   "dps": 355.0,
+   "source": "Vodacom Group SENS — Interim results and cash dividend distribution for the six months ended 30 September 2026 (10 Nov 2026), via InsidEntity https://www.insidentity.com/vodacom-group-interim-results-and-cash-dividend-distribution-for-the-six-months-ended-30-september-2026/ (HEPS 587c, up 25.7%; interim dividend 355c, up 7.6%); prior-period HEPS 467c from Inside Politics, 10 Nov 2026 https://insidepolitic.co.za/vodacom-earnings-jump-25-7-despite-court-battle-over-safaricom-deal/ ; dividend dates not confirmed from the announcement text"
   }
  ],
  "trading_statements": [
@@ -282,6 +293,24 @@
    "record": "2026-11-27",
    "pay": "2026-11-30",
    "source": "Raubex Group — Unaudited interim results for the six months ended 31 August 2026 and interim dividend declaration (9 Nov 2026), results booklet https://raubex.com/wp-content/uploads/2026/11/10181_Raubex-interim-results-booklet_WEB-FA.pdf (HEPS 254.3c vs 243.5c; gross interim dividend 88c vs 81c, net 70.4c after 20% dividends tax)"
+  },
+  {
+   "t": "VOD.JO",
+   "period": "Interim",
+   "declared": "2026-11-10",
+   "amount_c": 355.0,
+   "source": "Vodacom Group SENS — Interim results and cash dividend distribution for the six months ended 30 September 2026 (10 Nov 2026), via InsidEntity https://www.insidentity.com/vodacom-group-interim-results-and-cash-dividend-distribution-for-the-six-months-ended-30-september-2026/ (HEPS 587c, up 25.7%; interim dividend 355c, up 7.6%); prior-period HEPS 467c from Inside Politics, 10 Nov 2026 https://insidepolitic.co.za/vodacom-earnings-jump-25-7-despite-court-battle-over-safaricom-deal/ ; dividend dates not confirmed from the announcement text"
+  },
+  {
+   "t": "SSS.JO",
+   "period": "Interim",
+   "declared": "2026-11-10",
+   "amount_c": 62.14,
+   "ldt": "2026-11-24",
+   "ex": "2026-11-25",
+   "record": "2026-11-27",
+   "pay": "2026-11-30",
+   "source": "Stor-Age Property REIT SENS — Condensed unaudited consolidated interim results for the six months ended 30 September 2026 and declaration of a cash dividend (10 Nov 2026), via InsidEntity https://www.insidentity.com/stor-age-property-reit-condensed-unaudited-consolidated-interim-results-for-the-six-months-ended-30-september-2026-and-declaration-of-a-cash-dividend/ (gross dividend number 22 of 62.14c for the six months to 30 Sep 2026; distributable income per share 69.04c, up 4.0%; HEPS not stated in the text read)"
   }
  ]
 }
