@@ -1,25 +1,28 @@
 {
- "edition": "Evening update · Tuesday 10 November 2026 18:20",
- "generated": "2026-11-10T18:20+02:00",
- "covers": "US October CPI, the first hours of the US session, the JSE close and SA manufacturing data, Tuesday 10 November 2026",
+ "edition": "Evening update · Tuesday 10 November 2026 19:15",
+ "generated": "2026-11-10T19:15+02:00",
+ "covers": "The US session after the October CPI report, the JSE close and the rand, Tuesday 10 November 2026",
  "agent": "LRC News Desk",
- "headline": "Wall Street extends losses after the hot US inflation print; the US 10-year yield reaches 4.99% and the Nasdaq slips below 25,000",
- "summary": "The JSE All Share closed at 114,693.44 and the Top 40 at 106,738.05, while the rand weakened to R16.54/$ (Yahoo Finance, 10 Nov 17:51 SAST); Stats SA data showed September manufacturing output down 3.5% year on year (EWN, 10 Nov). In New York the S&P 500 fell to 7,483.24 and the Nasdaq to 24,996.37 by 17:51 SAST, down from 7,523.54 and 25,188.22 an hour earlier, as the US 10-year Treasury yield rose to 4.99% after October consumer prices rose 0.4%, more than expected (CNBC headline, 10 Nov). Gold was at $4,057.40 and Brent at $90.53 (Yahoo Finance, 10 Nov 17:51 SAST); US rates near 5% remain the main pressure on the rand, emerging-market assets and gold.",
+ "headline": "Nvidia falls 5.8% as the US 10-year yield touches 5%; gold slips to $4,032.70 and the rand weakens to R16.59/$",
+ "summary": "The JSE All Share closed at 114,693.44 and the Top 40 at 106,738.05, but gold miners fell, with Harmony down 5.3% and Gold Fields down 4.4%, and the rand weakened to R16.59/$ (LRC Market Dashboard, 10 Nov 18:39 SAST). In New York the S&P 500 was at 7,492.45 and the Nasdaq at 24,978.56 at 18:39 SAST, with the US 10-year Treasury yield at 5.0% after October consumer prices rose more than expected; Nvidia fell 5.8% while AMD rose 1.9%. Gold eased to $4,032.70 and platinum to $1,536.50 while Brent rose to $91.80; US yields at 5% remain the main pressure on the rand, gold and emerging-market shares.",
  "sections": [
   {
    "name": "Breaking",
    "items": [
     {
-     "title": "US October CPI rises 0.4%, more than expected; markets weigh a bigger Fed hike in December",
-     "summary": "CNBC reports US consumer prices rose 0.4% in October, more than expected, complicating the Fed's inflation fight (headline, 10 Nov). A CNBC piece the same day says markets are now weighing whether the Fed needs a larger-than-usual hike in December.",
-     "source": "CNBC / MarketWatch, 10 Nov 2026",
-     "url": "https://www.cnbc.com/2026/11/10/cpi-inflation-report-october-2026.html"
+     "title": "Nvidia down 5.8% at $168.29 as CEO scandal weighs, while other chip stocks rise",
+     "summary": "Nvidia traded at $168.29, down 5.8%, at 18:39 SAST, while AMD was up 1.9%. CNBC headlines today link the pressure to questions over CEO Jensen Huang's alleged affair with a Chinese spy and say it complicates Nvidia's China business. Nvidia reports results on 17 November.",
+     "source": "LRC Market Dashboard (Yahoo Finance), 10 Nov 2026 18:39 SAST; CNBC headline, 10 Nov 2026",
+     "url": "https://finance.yahoo.com/quote/NVDA/",
+     "tickers": [
+      "NVDA"
+     ]
     },
     {
-     "title": "US 10-year Treasury yield rises to 4.99% from 4.86% on Monday",
-     "summary": "The benchmark yield moved further up during the US session and is now just under 5%. Higher US yields tend to pull money out of emerging markets like South Africa and weigh on non-yielding gold.",
-     "source": "Yahoo Finance via LRC Market Dashboard, 10 Nov 2026 17:51 SAST",
-     "url": "https://finance.yahoo.com/quote/%5ETNX/"
+     "title": "US 10-year Treasury yield back at 5.0%",
+     "summary": "The benchmark yield reached 5.0% (4.86% on Monday). A CNBC headline attributes the move to the hot October inflation data and comments from Fed Governor Waller that raised expectations of a rate hike.",
+     "source": "LRC Market Dashboard (Yahoo Finance), 10 Nov 2026 18:39 SAST; CNBC headline, 10 Nov 2026",
+     "url": "https://www.cnbc.com/2026/11/10/us-bonds-treasurys-yields.html"
     }
    ]
   },
@@ -27,16 +30,16 @@
    "name": "US markets",
    "items": [
     {
-     "title": "S&P 500 7,483.24, Nasdaq 24,996.37: losses deepen through the first hours of trade",
-     "summary": "By 17:51 SAST the S&P 500 had fallen to 7,483.24 from 7,523.54 at 16:58 SAST, and the Nasdaq Composite to 24,996.37 from 25,188.22. The Nasdaq has fallen slightly more than the S&P 500 as bond yields rise.",
-     "source": "Yahoo Finance via LRC Market Dashboard, 10 Nov 2026 17:51 SAST",
-     "url": "https://finance.yahoo.com/quote/%5EGSPC/"
+     "title": "S&P 500 7,492.45, Nasdaq 24,978.56 after the inflation surprise",
+     "summary": "At 18:39 SAST the S&P 500 was at 7,492.45 and the Nasdaq Composite at 24,978.56, close to the levels an hour earlier (7,483.24 and 24,996.37 at 17:51 SAST) and still below Monday's close. October consumer prices rose 0.4%, more than expected (CNBC, 10 Nov).",
+     "source": "LRC Market Dashboard (Yahoo Finance), 10 Nov 2026 18:39 SAST; CNBC, 10 Nov 2026",
+     "url": "https://www.cnbc.com/2026/11/10/cpi-inflation-report-october-2026.html"
     },
     {
-     "title": "Chip stocks rally despite the Nvidia scandal",
-     "summary": "CNBC reports chip stocks rallying on Tuesday even as questions about Nvidia CEO Jensen Huang continue (headline, 10 Nov 2026).",
-     "source": "CNBC, 10 Nov 2026",
-     "url": "https://www.cnbc.com/2026/11/10/chip-stocks-rally-nvidia-scandal.html"
+     "title": "Dell down 4.2%; Intuit and Meta little changed",
+     "summary": "Among other names we follow at 18:39 SAST: Dell $331.67 (-4.2%), Deckers $88.66 (-2.0%), Intuit $338.43 (+0.1%), Meta $642.37 (+0.2%).",
+     "source": "LRC Market Dashboard (Yahoo Finance), 10 Nov 2026 18:39 SAST",
+     "url": "https://finance.yahoo.com/quote/DELL/"
     }
    ]
   },
@@ -44,9 +47,9 @@
    "name": "South Africa",
    "items": [
     {
-     "title": "JSE All Share closes at 114,693.44, Top 40 at 106,738.05",
-     "summary": "Final closing levels for 10 November (an earlier print showed 114,551.87). Both indices remain above last week's levels: the All Share closed at 112,739.40 on 6 November.",
-     "source": "Yahoo Finance via LRC Market Dashboard, 10 Nov 2026 close",
+     "title": "JSE All Share closes at 114,693.44; gold miners slide",
+     "summary": "The All Share closed at 114,693.44 and the Top 40 at 106,738.05. Gold shares fell with the gold price: Harmony R272.08 (-5.3%), Gold Fields R638.63 (-4.4%), AngloGold Ashanti R1,570.50 (-2.0%), while Naspers rose 1.4% to R778.00.",
+     "source": "LRC Market Dashboard (Yahoo Finance), 10 Nov 2026 close",
      "url": "https://finance.yahoo.com/quote/%5EJ203.JO/"
     },
     {
@@ -67,15 +70,15 @@
    "name": "Forex & commodities",
    "items": [
     {
-     "title": "Rand R16.54/$, R18.46/€, R22.07/£",
-     "summary": "The rand is weaker against the dollar after the US inflation surprise (R16.37/$ at 11:41 SAST), but steady against the euro and pound.",
-     "source": "Yahoo Finance via LRC Market Dashboard, 10 Nov 2026 17:51 SAST",
+     "title": "Rand R16.59/$, R18.48/€, R22.09/£",
+     "summary": "The rand weakened further against the dollar (R16.54/$ at 17:51 SAST, R16.37/$ at 11:41 SAST) as US yields rose, while staying steady against the euro and pound.",
+     "source": "LRC Market Dashboard (Yahoo Finance), 10 Nov 2026 18:39 SAST",
      "url": "https://finance.yahoo.com/quote/ZAR%3DX/"
     },
     {
-     "title": "Gold $4,057.40, platinum $1,544.80, Brent $90.53, copper about $13,852/t",
-     "summary": "Gold is little changed from an hour ago after its earlier drop on the CPI data; Brent is hovering around $90 a barrel.",
-     "source": "Yahoo Finance via LRC Market Dashboard, 10 Nov 2026 17:51 SAST",
+     "title": "Gold $4,032.70, platinum $1,536.50, Brent $91.80, copper about $13,768/t",
+     "summary": "Gold slipped further from $4,057.40 an hour earlier as yields rose. Brent firmed from $90.53 at 17:51 SAST.",
+     "source": "LRC Market Dashboard (Yahoo Finance), 10 Nov 2026 18:39 SAST",
      "url": "https://finance.yahoo.com/quote/GC%3DF/"
     }
    ]
@@ -84,21 +87,21 @@
    "name": "Our coverage",
    "items": [
     {
-     "title": "Nvidia: US House China committee chair demands answers over CEO's alleged affair with a Chinese spy",
-     "summary": "Adds political pressure a week before Nvidia's 17 November results (CNBC headline, 10 Nov 2026). No change to our rating.",
-     "source": "CNBC, 10 Nov 2026",
-     "url": "https://www.cnbc.com/2026/11/10/moolenaar-nvidia-jensen-huang-affair-chinese-spy.html",
+     "title": "Nvidia: shares at $168.29, further below our $262.56 fair value",
+     "summary": "Today's 5.8% fall is driven by the CEO controversy rather than a change in the business we can verify; results on 17 November are the next test. Our BUY rating is unchanged.",
+     "source": "LRC Market Dashboard (Yahoo Finance), 10 Nov 2026 18:39 SAST; LRC Watchlist",
+     "url": "https://finance.yahoo.com/quote/NVDA/",
      "tickers": [
       "NVDA"
      ]
     },
     {
-     "title": "AngloGold Ashanti: gold at $4,057.40 as US yields near 5%",
-     "summary": "Gold is holding just above $4,000 an ounce. A sustained move higher in US real yields is the main near-term risk to gold-miner earnings; this does not change our rating.",
-     "source": "Yahoo Finance via LRC Market Dashboard, 10 Nov 2026 17:51 SAST",
-     "url": "https://finance.yahoo.com/quote/AU/",
+     "title": "Dell: down 4.2% to $331.67",
+     "summary": "Dell was one of the weaker large US technology shares at 18:39 SAST. Our SELL rating is unchanged.",
+     "source": "LRC Market Dashboard (Yahoo Finance), 10 Nov 2026 18:39 SAST; LRC Watchlist",
+     "url": "https://finance.yahoo.com/quote/DELL/",
      "tickers": [
-      "AU"
+      "DELL"
      ]
     }
    ]
@@ -106,9 +109,9 @@
  ],
  "watch_today": [
   "How Wall Street closes after the inflation surprise (close at 23:00 SAST)",
-  "Whether the US 10-year Treasury yield breaks above 5%",
-  "Whether the rand holds around R16.50/$",
-  "Fed speakers on a possible larger December hike",
-  "SARB MPC decision on 19 November and Nvidia results on 17 November"
+  "Whether the US 10-year yield holds above 5%",
+  "Whether Nvidia's losses deepen before its 17 November results",
+  "Whether the rand holds around R16.60/$",
+  "SARB MPC decision on 19 November"
  ]
 }
