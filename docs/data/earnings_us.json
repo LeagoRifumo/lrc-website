@@ -75476,6 +75476,9 @@
    "rev_yago": 0,
    "n_est": 12,
    "rcur": "USD",
+   "has_res": true,
+   "desk": false,
+   "g": "not found",
    "px_move": {
     "move": -0.0172,
     "from": "2026-11-04",
@@ -78404,6 +78407,9 @@
    "rev_yago": 5109000000000,
    "n_est": 15,
    "rcur": "KRW",
+   "has_res": true,
+   "desk": false,
+   "g": "not found",
    "px_move": {
     "move": 0.043,
     "from": "2026-11-05",
@@ -80146,6 +80152,9 @@
    "rev_est_high": 0,
    "n_est": 2,
    "rcur": "CAD",
+   "has_res": true,
+   "desk": false,
+   "g": "not found",
    "px_move": {
     "move": 0.4106,
     "from": "2026-11-05",
@@ -81905,6 +81914,14 @@
    "rev_yago": 6711000000,
    "n_est": 10,
    "rcur": "BRL",
+   "has_res": true,
+   "desk": false,
+   "rev_actual": 7007333000.0,
+   "rev_prior": 20676398000.0,
+   "g": "not found",
+   "rev_surprise": -0.0071,
+   "rev_result": "miss",
+   "rev_yoy": -0.6611,
    "t": "TIMB",
    "lists": [],
    "idea": null,
@@ -82612,6 +82629,9 @@
    "rev_est_high": 0,
    "n_est": 1,
    "rcur": "CAD",
+   "has_res": true,
+   "desk": false,
+   "g": "not found",
    "t": "NXE",
    "lists": [],
    "idea": null,
@@ -84160,6 +84180,12 @@
    "measure": null,
    "dps": null,
    "source": null,
+   "has_res": true,
+   "desk": false,
+   "rev_actual": 320700000.0,
+   "rev_prior": 228800000.0,
+   "g": "not found",
+   "rev_yoy": 0.4017,
    "t": "BTDR",
    "lists": [],
    "idea": null,
@@ -84421,6 +84447,9 @@
    "measure": null,
    "dps": null,
    "source": null,
+   "has_res": true,
+   "desk": false,
+   "g": "not found",
    "t": "GFR",
    "lists": [],
    "idea": null,
@@ -84778,6 +84807,9 @@
    "rev_yago": 0,
    "n_est": 12,
    "rcur": "USD",
+   "has_res": true,
+   "desk": false,
+   "g": "not found",
    "t": "TYRA",
    "lists": [],
    "idea": null,
@@ -85519,7 +85551,8 @@
     "beat",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-10",
@@ -85692,7 +85725,8 @@
     "beat",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-10",
@@ -85756,7 +85790,8 @@
     "beat",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-10",
@@ -85867,6 +85902,7 @@
    "n_est": 15,
    "rcur": "KRW",
    "qend": "2026-09-30",
+   "has_res": true,
    "track": null,
    "lrc_rating": null,
    "covered": false
@@ -85929,7 +85965,8 @@
    "track": [
     "miss",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-10",
@@ -85961,7 +85998,8 @@
     "inline",
     "miss",
     "inline"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-10",
@@ -85993,7 +86031,8 @@
     "beat",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-10",
@@ -86024,7 +86063,8 @@
     "miss",
     "miss",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-10",
@@ -86056,7 +86096,8 @@
     "beat",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-10",
@@ -86144,7 +86185,8 @@
     "miss",
     "beat",
     "miss"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-10",
@@ -86176,7 +86218,8 @@
     "miss",
     "beat",
     "miss"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-10",
@@ -86313,7 +86356,8 @@
     "beat",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-10",
@@ -86468,7 +86512,8 @@
    "qend": "2026-09-30",
    "track": [
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-10",
@@ -86580,6 +86625,7 @@
    "n_est": 11,
    "rcur": "USD",
    "qend": "2026-09-30",
+   "has_res": true,
    "track": [
     "miss",
     "beat",
@@ -86612,6 +86658,7 @@
    "n_est": 7,
    "rcur": "USD",
    "qend": "2026-09-30",
+   "has_res": true,
    "track": [
     "beat",
     "beat",
@@ -86676,6 +86723,7 @@
    "n_est": 4,
    "rcur": "USD",
    "qend": "2026-09-30",
+   "has_res": true,
    "track": [
     "beat",
     "beat",
@@ -86736,6 +86784,7 @@
    "n_est": 12,
    "rcur": "USD",
    "qend": "2026-09-30",
+   "has_res": true,
    "track": [
     "miss",
     "miss",
@@ -86766,6 +86815,7 @@
    "n_est": 5,
    "rcur": "TWD",
    "qend": "2026-09-30",
+   "has_res": true,
    "track": null,
    "lrc_rating": null,
    "covered": false
@@ -99698,6 +99748,6 @@
    "covered": false
   }
  ],
- "synced": "2026-11-10T16:30+02:00",
+ "synced": "2026-11-10T16:39+02:00",
  "coverage_note": "Ticked = on the LRC watchlist. Every company the LRC Stock Scanner tracks shows its trading and investment ratings. Updated after every scanner run."
 }
