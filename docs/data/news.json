@@ -1,14 +1,23 @@
 {
- "edition": "Morning brief · Tuesday 10 November 2026 06:16",
- "generated": "2026-11-10T07:11+02:00",
- "covers": "Monday 9 November closes on the JSE and Wall Street, and the rand to early Tuesday. This edition is built from closing prices only; overnight news stories (including reports about Nvidia's chief executive and the oil-price fall) could not be opened and checked in time, so they are left out until verified.",
+ "edition": "Morning brief · Tuesday 10 November 2026 08:30",
+ "generated": "2026-11-10T08:30+02:00",
+ "covers": "Monday 9 November closes on the JSE and Wall Street, the rand to early Tuesday, and the overnight Nvidia story (now checked against the original report). Overnight oil, China trade and US futures stories could not be opened and checked, so they are still left out.",
  "agent": "LRC News Desk",
- "headline": "Breaking: AMD closes up 13.3% and Nvidia down 4.3% as the S&P 500 jumps 2.3%; Brent drops 6.7% to $91.71",
+ "headline": "Breaking: Trump says FBI is probing Nvidia CEO's tie to an alleged Chinese agent after Nvidia fell 4.3%; S&P 500 jumped 2.3% and Brent dropped 6.7% to $91.71",
  "summary": "In South Africa the JSE All Share closed Monday at 115,037.93 (+2.0%) and the Top 40 at 107,087.60 (+2.3%), led by miners, and the rand was at R16.37/$ early Tuesday, about 0.6% firmer than Friday (Yahoo Finance, 9–10 Nov). On Wall Street the S&P 500 closed at 7,549.94 (+2.3%) and the Nasdaq at 25,253.14 (+2.7%), with AMD up 13.3% and Nvidia down 4.3%, while the US 10-year yield was 4.86% (Yahoo Finance, 9 Nov). Brent fell 6.7% to $91.71 while gold (+1.2% to $4,122.10), platinum (+2.4%) and copper (+2.3%) rose, which helps the fuel-price outlook and supports JSE miners ahead of US October CPI and SA Q3 jobs data today.",
  "sections": [
   {
    "name": "Breaking",
    "items": [
+    {
+     "title": "Trump says FBI is looking into Nvidia CEO Jensen Huang's relationship with an alleged Chinese agent",
+     "summary": "Speaking at the White House on Monday, President Trump said the FBI is probing Jensen Huang's relationship with Alice Huang, a former executive at Singapore-based Megaspeed whom US officials allege worked for Chinese intelligence; Trump said Huang told him he had no idea and that he believes him. Nvidia's board opened an independent inquiry on Sunday and said it had no reason to believe national security or company secrets were compromised; China's foreign ministry called the reports groundless. This is the background to Monday's 4.27% fall to $178.67, a week before Nvidia's 17 November results; the LRC rating (HOLD) is unchanged (Al Jazeera, 10 Nov 2026).",
+     "source": "Al Jazeera, 10 Nov 2026",
+     "url": "https://www.aljazeera.com/economy/2026/11/10/trump-says-fbi-probing-nvidia-ceos-affair-with-alleged-spy",
+     "tickers": [
+      "NVDA"
+     ]
+    },
     {
      "title": "AMD closes +13.3% at $508.58; Nvidia closes -4.3% at $178.67",
      "summary": "AMD extended its intraday gain into the close on Monday 9 November, while Nvidia (HOLD) fell 4.3% and stays below its $191.50 breakdown level ahead of results on 17 November. The reasons behind Nvidia's fall could not be verified for this edition and are left out.",
@@ -122,7 +131,7 @@
  "watch_today": [
   "US October CPI at 15:30 SAST",
   "Stats SA Q3 jobs survey (QLFS)",
-  "Whether Nvidia steadies after Monday's 4.3% fall, a week before its 17 November results",
+  "Whether Nvidia steadies after Monday's 4.3% fall and the FBI comments on its CEO, a week before its 17 November results",
   "Brent near $92 and the outlook for December fuel prices",
   "Whether the rand holds near R16.37/$ after CPI"
  ]
