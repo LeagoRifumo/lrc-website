@@ -1,10 +1,10 @@
 {
- "edition": "Morning brief · Wednesday 11 November 2026 06:10",
- "generated":"2026-11-11T10:12+02:00",
- "covers": "The US close on Tuesday 10 November after the October inflation report, and overnight moves in the rand, gold and oil to early Wednesday 11 November 2026",
+ "edition": "Midday update · Wednesday 11 November 2026 11:20",
+ "generated": "2026-11-11T11:20+02:00",
+ "covers": "JSE morning session and SA data to 11:20 SAST, Wednesday 11 November 2026",
  "agent": "LRC News Desk",
- "headline": "Wall Street ends lower after hot US inflation; 10-year yield closes at 4.98%, gold $4,055.70, rand R16.52/$",
- "summary": "The rand was at R16.52/$ early on Wednesday, slightly firmer than the R16.59/$ seen on Tuesday evening, after the JSE All Share closed Tuesday at 114,693.44 (LRC Market Dashboard, 11 Nov 05:56 SAST). In New York the S&P 500 closed at 7,520.93 and the Nasdaq at 25,065.88 on Tuesday, with the US 10-year Treasury yield ending at 4.98% after October consumer prices rose 0.4% against 0.3% expected. Gold closed at $4,055.70, platinum at $1,562.50 and Brent at $92.47; higher US rates remain the main pressure on gold, the rand and emerging-market shares.",
+ "headline": "SA unemployment edges up to 33.7% in Q3; JSE All Share a little firmer at 114,846, rand R16.55/$",
+ "summary": "Stats SA's Quarterly Labour Force Survey, released on Tuesday 10 November, showed the official unemployment rate rising to 33.7% in the third quarter from 33.6%, even as employment grew by 101,000 to 16.8 million (SAnews, 10 Nov). The JSE All Share was at 114,846.43 mid-morning on Wednesday, slightly above Tuesday's 114,693.44 close, with the rand at R16.55/$ (LRC Market Dashboard, 11 Nov 10:27 SAST). US stock futures were edging higher after Tuesday's inflation-led fall, while gold held near $4,040 and the US 10-year yield near 5% remains the main pressure on gold, the rand and emerging-market shares.",
  "sections": [
   {
    "name": "Breaking",
@@ -44,9 +44,15 @@
    "name": "South Africa",
    "items": [
     {
-     "title": "JSE All Share closed Tuesday at 114,693.44; Top 40 at 106,738.05",
-     "summary": "The All Share is up 1.7% from last Friday's 112,739.40 despite Tuesday's slide in gold miners. Today's session will take its lead from the weaker US close and the gold price.",
-     "source": "LRC Market Dashboard (Yahoo Finance), 10 Nov 2026 close",
+     "title": "Unemployment rate rises to 33.7% in the third quarter",
+     "summary": "Stats SA's QLFS showed the official unemployment rate up 0.1 percentage point to 33.7% in Q3 2026 from 33.6% in Q2. Employment rose by 101,000 to 16.8 million and formal-sector jobs by 268,000, but the number of unemployed also rose, by 97,000 to 8.6 million, as more people entered the labour force. The expanded (LU3) measure rose to 44.0%; youth unemployment eased to 47.3%. Released Tuesday 10 November (SAnews).",
+     "source": "SAnews (Stats SA QLFS Q3 2026), 10 Nov 2026",
+     "url": "https://www.sanews.gov.za/south-africa/unemployment-marginally-increases-third-quarter"
+    },
+    {
+     "title": "JSE All Share at 114,846 mid-morning; Top 40 at 106,950",
+     "summary": "At 10:27 SAST on Wednesday the JSE All Share stood at 114,846.43 and the Top 40 at 106,950.25, a little above Tuesday's closes of 114,693.44 and 106,738.05 (LRC Market Dashboard from Yahoo Finance data, 11 Nov 2026).",
+     "source": "LRC Market Dashboard (Yahoo Finance), 11 Nov 2026 10:27 SAST",
      "url": "https://finance.yahoo.com/quote/%5EJ203.JO/"
     },
     {
@@ -67,9 +73,9 @@
    "name": "Forex & commodities",
    "items": [
     {
-     "title": "Rand R16.52/$, R18.44/€, R22.02/£ early on Wednesday",
-     "summary": "The rand recovered a little overnight from R16.59/$ on Tuesday evening, but is weaker than R16.48/$ a week ago as US yields rose.",
-     "source": "LRC Market Dashboard (Yahoo Finance), 11 Nov 2026 05:56 SAST",
+     "title": "Rand R16.55/$, R18.44/€, R22.04/£ mid-morning",
+     "summary": "At 10:27 SAST on Wednesday the rand was at R16.55/$, R18.44/€ and R22.04/£, little changed from early trade (LRC Market Dashboard from Yahoo Finance data, 11 Nov 2026).",
+     "source": "LRC Market Dashboard (Yahoo Finance), 11 Nov 2026 10:27 SAST",
      "url": "https://finance.yahoo.com/quote/ZAR%3DX/"
     },
     {
@@ -111,10 +117,10 @@
   }
  ],
  "watch_today": [
-  "How the JSE and gold miners open after the weaker US close",
+  "Whether the JSE holds its small gains into the US open",
   "Whether the US 10-year yield holds near 5%",
-  "New petrol and diesel prices in effect from today",
   "US weekly jobless claims on Thursday 12 November and producer prices on Friday 13 November",
-  "Nvidia results on 17 November; SARB MPC decision on 19 November"
+  "SA CPI for October on 18 November; SARB MPC decision on 19 November",
+  "Nvidia results on 17 November"
  ]
 }
