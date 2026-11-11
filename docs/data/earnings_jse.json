@@ -626,7 +626,7 @@
    "source": "Vodacom Group SENS — Interim results and cash dividend distribution for the six months ended 30 September 2026 (10 Nov 2026), via InsidEntity https://www.insidentity.com/vodacom-group-interim-results-and-cash-dividend-distribution-for-the-six-months-ended-30-september-2026/ (HEPS 587c, up 25.7%; interim dividend 355c, up 7.6%); prior-period HEPS 467c from Inside Politics, 10 Nov 2026 https://insidepolitic.co.za/vodacom-earnings-jump-25-7-despite-court-battle-over-safaricom-deal/ ; dividend dates not confirmed from the announcement text",
    "t": "VOD.JO",
    "lists": [],
-   "idea": "Earnings watch",
+   "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
    "lrc_rating": null,
@@ -900,26 +900,6 @@
   },
   {
    "date": "2026-11-19",
-   "ticker": "INL",
-   "name": "Investec Limited",
-   "when": "Not stated",
-   "period": "Interim results to 30 Sep 2026",
-   "eps_forecast": "",
-   "market_cap_bn": null,
-   "source": "Investec 'Pre-Close Trading Statement' RNS 18 Sep 2026 ('scheduled for release on Thursday, 19 November 2026') https://www.investegate.co.uk/announcement/rns/investec--invp/pre-close-trading-statement/9778512 ; seen 2026-10-31 | Re-confirmed 7 Nov 2026",
-   "covered": true,
-   "lrc_rating": null,
-   "t": "INL.JO",
-   "lists": [
-    "Trading BUY"
-   ],
-   "idea": "Earnings watch",
-   "v": "BUY",
-   "iv": "HOLD",
-   "track": null
-  },
-  {
-   "date": "2026-11-19",
    "ticker": "INP",
    "name": "Investec plc",
    "when": "Not stated",
@@ -935,6 +915,24 @@
    ],
    "idea": "Technical setups",
    "v": "STRONG BUY",
+   "iv": "HOLD",
+   "track": null
+  },
+  {
+   "date": "2026-11-19",
+   "ticker": "INL",
+   "name": "Investec Limited",
+   "when": "Not stated",
+   "period": "Interim results to 30 Sep 2026",
+   "eps_forecast": "",
+   "market_cap_bn": null,
+   "source": "Investec 'Pre-Close Trading Statement' RNS 18 Sep 2026 ('scheduled for release on Thursday, 19 November 2026') https://www.investegate.co.uk/announcement/rns/investec--invp/pre-close-trading-statement/9778512 ; seen 2026-10-31 | Re-confirmed 7 Nov 2026",
+   "covered": false,
+   "lrc_rating": null,
+   "t": "INL.JO",
+   "lists": [],
+   "idea": "Earnings watch",
+   "v": "BUY",
    "iv": "HOLD",
    "track": null
   },
@@ -989,7 +987,7 @@
    "lrc_rating": null,
    "t": "NTC.JO",
    "lists": [],
-   "idea": null,
+   "idea": "Earnings watch",
    "v": "HOLD",
    "iv": "HOLD",
    "track": null
@@ -1050,6 +1048,26 @@
   },
   {
    "date": "2026-11-26",
+   "ticker": "OCE",
+   "name": "Oceana Group",
+   "when": "Not stated",
+   "period": "Annual to 30 Sep 2026",
+   "eps_forecast": "",
+   "market_cap_bn": 8.1,
+   "source": "Oceana shareholder calendar ('26 Nov 2026 – Release of Year-End Results') https://www.oceana.co.za/investors-information-shareholder-calendar ; seen 2026-11-07; market cap R8.1bn = Yahoo Finance close 6 Nov 2026 via the LRC Stock Scanner",
+   "covered": true,
+   "lrc_rating": null,
+   "t": "OCE.JO",
+   "lists": [
+    "Trading BUY"
+   ],
+   "idea": null,
+   "v": "BUY",
+   "iv": "HOLD",
+   "track": null
+  },
+  {
+   "date": "2026-11-26",
    "ticker": "TBS",
    "name": "Tiger Brands",
    "when": "Not stated",
@@ -1082,24 +1100,6 @@
    "idea": null,
    "v": "BUY",
    "iv": "BUY",
-   "track": null
-  },
-  {
-   "date": "2026-11-26",
-   "ticker": "OCE",
-   "name": "Oceana Group",
-   "when": "Not stated",
-   "period": "Annual to 30 Sep 2026",
-   "eps_forecast": "",
-   "market_cap_bn": 8.1,
-   "source": "Oceana shareholder calendar ('26 Nov 2026 – Release of Year-End Results') https://www.oceana.co.za/investors-information-shareholder-calendar ; seen 2026-11-07; market cap R8.1bn = Yahoo Finance close 6 Nov 2026 via the LRC Stock Scanner",
-   "covered": false,
-   "lrc_rating": null,
-   "t": "OCE.JO",
-   "lists": [],
-   "idea": null,
-   "v": "BUY",
-   "iv": "HOLD",
    "track": null
   },
   {
@@ -1212,6 +1212,6 @@
   }
  ],
  "note": "Partial list: no company-published date could be found this week for, among others, MTN, Reinet, Woolworths, Shoprite, Bidvest, Discovery, FirstRand, Sasol, Aspen, Lewis and Cashbuild; they will be added when dates are published. Attacq (pre-close 24 Nov) and Growthpoint (pre-close 26 Nov) appear only on the SA REIT reporting schedule and are not listed until the companies publish them. Standard Bank's pre-close call (14 Dec) falls just after this window.",
- "synced": "2026-11-11T06:59+02:00",
+ "synced": "2026-11-11T07:33+02:00",
  "coverage_note": "Ticked = on the LRC watchlist. Every company the LRC Stock Scanner tracks shows its trading and investment ratings. Updated after every scanner run."
 }
