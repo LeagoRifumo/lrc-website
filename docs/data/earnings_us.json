@@ -1,7 +1,7 @@
 {
- "generated": "2026-11-10T06:49+02:00",
+ "generated": "2026-11-11T06:56+02:00",
  "market": "New York (NYSE & Nasdaq)",
- "source": "Nasdaq earnings calendar (US-listed companies above $2bn market value, plus every company LRC covers)",
+ "source": "Nasdaq calendar unavailable today — LRC coverage dates from our research snapshot",
  "items": [
   {
    "date": "2026-09-28",
@@ -82705,40 +82705,6 @@
   },
   {
    "date": "2026-11-17",
-   "ticker": "PDD",
-   "name": "PDD Holdings Inc.",
-   "when": "Not stated",
-   "eps_forecast": "$2.60",
-   "eps_last_year": "$2.77",
-   "quarter": "Sep/2026",
-   "market_cap_bn": 118.2,
-   "covered": true,
-   "lrc_rating": null,
-   "t": "PDD",
-   "lists": [
-    "Investment BUY"
-   ],
-   "idea": null,
-   "v": "HOLD",
-   "iv": "BUY",
-   "rev_est": 115643262410,
-   "rev_est_low": 107748197330,
-   "rev_est_high": 119104000000,
-   "rev_yago": 108276512000,
-   "eps_est_q": 18.84,
-   "eps_yago": 21.08,
-   "n_est": 12,
-   "rcur": "CNY",
-   "qend": "2026-09-30",
-   "track": [
-    "beat",
-    "miss",
-    "miss",
-    "beat"
-   ]
-  },
-  {
-   "date": "2026-11-17",
    "ticker": "NVDA",
    "name": "NVIDIA Corporation",
    "when": "After close",
@@ -83298,6 +83264,40 @@
     "beat",
     "beat"
    ]
+  },
+  {
+   "date": "2026-11-18",
+   "ticker": "PDD",
+   "name": "PDD Holdings Inc.",
+   "when": "Not stated",
+   "period": "Expected date (market data feed)",
+   "eps_forecast": "",
+   "market_cap_bn": 112.7,
+   "auto": true,
+   "t": "PDD",
+   "lists": [
+    "Investment BUY"
+   ],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "BUY",
+   "rev_est": 115643262410,
+   "rev_est_low": 107748197330,
+   "rev_est_high": 119104000000,
+   "rev_yago": 108276512000,
+   "eps_est_q": 18.84,
+   "eps_yago": 21.08,
+   "n_est": 12,
+   "rcur": "CNY",
+   "qend": "2026-09-30",
+   "track": [
+    "beat",
+    "miss",
+    "miss",
+    "beat"
+   ],
+   "lrc_rating": null,
+   "covered": true
   },
   {
    "date": "2026-11-18",
@@ -87218,6 +87218,6 @@
    "covered": false
   }
  ],
- "synced": "2026-11-11T06:44+02:00",
+ "synced": "2026-11-11T06:59+02:00",
  "coverage_note": "Ticked = on the LRC watchlist. Every company the LRC Stock Scanner tracks shows its trading and investment ratings. Updated after every scanner run."
 }
