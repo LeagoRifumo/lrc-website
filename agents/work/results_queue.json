@@ -1,190 +1,6 @@
 {
-"updated": "2026-11-11T06:44+02:00",
+"updated": "2026-11-11T16:39+02:00",
 "queue": [
-{
-"t": "CRWV",
-"name": "CoreWeave, Inc.",
-"m": "US",
-"date": "2026-11-09",
-"text": "agents/work/8k/CRWV_2026-11-09.txt",
-"priority": 2,
-"mcap_bn": 27.1
-},
-{
-"t": "VOD.JO",
-"name": "Vodacom Group",
-"m": "JSE",
-"date": "2026-11-10",
-"period": "Six months to 30 Sep 2026",
-"source": "Vodacom Group SENS — Interim results and cash dividend distribution for the six months ended 30 September 2026 (10 Nov 2026), via InsidEntity https://www.insidentity.com/vodacom-group-interim-results-and-cash-dividend-distribution-for-the-six-months-ended-30-september-2026/ (HEPS 587c, up 25.7%; interim dividend 355c, up 7.6%); prior-period HEPS 467c from Inside Politics, 10 Nov 2026 https://insidepolitic.co.za/vodacom-earnings-jump-25-7-despite-court-battle-over-safaricom-deal/ ; dividend dates not confirmed from the announcement text",
-"priority": 2,
-"mcap_bn": 19.1
-},
-{
-"t": "OMN.JO",
-"name": "Omnia",
-"m": "JSE",
-"date": "2026-11-09",
-"period": "Six months to 30 Sep 2026",
-"source": "Omnia Holdings SENS — Unaudited financial results for the six months ended 30 September 2026 (9 Nov 2026); figures from Omnia's results document https://omnia.co.za/media/omnia-annual-financial-results-long-form-hy2027.pdf (HEPS 399c vs 320c; basic EPS 428c vs 326c; no interim dividend declared — the FY26 ordinary dividend of 470c and special dividend of 280c were paid during the period)",
-"priority": 2,
-"mcap_bn": 1.1
-},
-{
-"t": "RBX.JO",
-"name": "Raubex",
-"m": "JSE",
-"date": "2026-11-09",
-"period": "Six months to 31 Aug 2026",
-"source": "Raubex Group — Unaudited interim results for the six months ended 31 August 2026 and interim dividend declaration (9 Nov 2026), results booklet https://raubex.com/wp-content/uploads/2026/11/10181_Raubex-interim-results-booklet_WEB-FA.pdf (HEPS 254.3c vs 243.5c; gross interim dividend 88c vs 81c, net 70.4c after 20% dividends tax)",
-"priority": 2,
-"mcap_bn": 0.4
-},
-{
-"t": "ED",
-"name": "Consolidated Edison Inc",
-"m": "US",
-"date": "2026-11-05",
-"text": "agents/work/8k/ED_2026-11-05.txt",
-"priority": 2,
-"mcap_bn": 44.1
-},
-{
-"t": "ANG.JO",
-"name": "AngloGold Ashanti",
-"m": "JSE",
-"date": "2026-11-05",
-"period": "Quarter to 30 Sep 2026",
-"source": "AngloGold Ashanti — Q3 30 September 2026 Earnings Release and Dividend Declaration (5 Nov 2026), via Investing News Network https://investingnews.com/anglogold-ashanti-q3-30-september-2026-earnings-release-and-dividend-declaration/ (reported in US cents: headline earnings per share 155 USc vs 132 USc for Q3 2025; nine months 606 USc vs 346 USc; Q3 2026 interim dividend 71 US cents per share)",
-"priority": 2,
-"mcap_bn": 44.1
-},
-{
-"t": "ROK",
-"name": "Rockwell Automation, Inc.",
-"m": "US",
-"date": "2026-11-05",
-"text": "agents/work/8k/ROK_2026-11-05.txt",
-"priority": 2,
-"mcap_bn": 43.8
-},
-{
-"t": "COHR",
-"name": "Coherent Corp.",
-"m": "US",
-"date": "2026-11-04",
-"text": "agents/work/8k/COHR_2026-11-04.txt",
-"priority": 2,
-"mcap_bn": 43.0
-},
-{
-"t": "LYV",
-"name": "Live Nation Entertainment, Inc.",
-"m": "US",
-"date": "2026-11-05",
-"text": "agents/work/8k/LYV_2026-11-05.txt",
-"priority": 2,
-"mcap_bn": 41.7
-},
-{
-"t": "TKO",
-"name": "TKO Group Holdings, Inc.",
-"m": "US",
-"date": "2026-11-04",
-"text": "agents/work/8k/TKO_2026-11-04.txt",
-"priority": 2,
-"mcap_bn": 37.3
-},
-{
-"t": "MLM",
-"name": "Martin Marietta Materials, Inc.",
-"m": "US",
-"date": "2026-11-04",
-"text": "agents/work/8k/MLM_2026-11-04.txt",
-"priority": 2,
-"mcap_bn": 37.0
-},
-{
-"t": "MTD",
-"name": "Mettler-Toledo International, Inc.",
-"m": "US",
-"date": "2026-11-05",
-"text": "agents/work/8k/MTD_2026-11-05.txt",
-"priority": 2,
-"mcap_bn": 34.8
-},
-{
-"t": "MCHP",
-"name": "Microchip Technology Incorporated",
-"m": "US",
-"date": "2026-11-05",
-"text": "agents/work/8k/MCHP_2026-11-05.txt",
-"priority": 2,
-"mcap_bn": 33.2
-},
-{
-"t": "ZTS",
-"name": "Zoetis Inc.",
-"m": "US",
-"date": "2026-11-05",
-"text": "agents/work/8k/ZTS_2026-11-05.txt",
-"priority": 2,
-"mcap_bn": 33.1
-},
-{
-"t": "IRM",
-"name": "Iron Mountain Incorporated",
-"m": "US",
-"date": "2026-11-05",
-"text": "agents/work/8k/IRM_2026-11-05.txt",
-"priority": 2,
-"mcap_bn": 33.0
-},
-{
-"t": "AEE",
-"name": "Ameren Corporation",
-"m": "US",
-"date": "2026-11-05",
-"text": "agents/work/8k/AEE_2026-11-05.txt",
-"priority": 2,
-"mcap_bn": 31.4
-},
-{
-"t": "EXPE",
-"name": "Expedia Group, Inc.",
-"m": "US",
-"date": "2026-11-04",
-"text": "agents/work/8k/EXPE_2026-11-04.txt",
-"priority": 2,
-"mcap_bn": 30.6
-},
-{
-"t": "ATO",
-"name": "Atmos Energy Corporation",
-"m": "US",
-"date": "2026-11-04",
-"text": "agents/work/8k/ATO_2026-11-04.txt",
-"priority": 2,
-"mcap_bn": 29.5
-},
-{
-"t": "CPAY",
-"name": "Corpay, Inc.",
-"m": "US",
-"date": "2026-11-04",
-"text": "agents/work/8k/CPAY_2026-11-04.txt",
-"priority": 2,
-"mcap_bn": 29.2
-},
-{
-"t": "DTE",
-"name": "DTE Energy Company",
-"m": "US",
-"date": "2026-11-05",
-"text": "agents/work/8k/DTE_2026-11-05.txt",
-"priority": 2,
-"mcap_bn": 28.8
-},
 {
 "t": "KHC",
 "name": "The Kraft Heinz Company",
@@ -201,7 +17,7 @@
 "date": "2026-11-05",
 "text": "agents/work/8k/GPN_2026-11-05.txt",
 "priority": 2,
-"mcap_bn": 27.0
+"mcap_bn": 26.9
 },
 {
 "t": "TPR",
@@ -210,16 +26,7 @@
 "date": "2026-11-05",
 "text": "agents/work/8k/TPR_2026-11-05.txt",
 "priority": 2,
-"mcap_bn": 26.6
-},
-{
-"t": "ES",
-"name": "Eversource Energy",
-"m": "US",
-"date": "2026-11-04",
-"text": "agents/work/8k/ES_2026-11-04.txt",
-"priority": 2,
-"mcap_bn": 26.1
+"mcap_bn": 26.7
 },
 {
 "t": "VRSK",
@@ -228,7 +35,16 @@
 "date": "2026-11-05",
 "text": "agents/work/8k/VRSK_2026-11-05.txt",
 "priority": 2,
-"mcap_bn": 25.8
+"mcap_bn": 26.2
+},
+{
+"t": "ES",
+"name": "Eversource Energy",
+"m": "US",
+"date": "2026-11-04",
+"text": "agents/work/8k/ES_2026-11-04.txt",
+"priority": 2,
+"mcap_bn": 26.2
 },
 {
 "t": "Q",
@@ -237,7 +53,7 @@
 "date": "2026-11-04",
 "text": "agents/work/8k/Q_2026-11-04.txt",
 "priority": 2,
-"mcap_bn": 25.7
+"mcap_bn": 25.8
 },
 {
 "t": "STE",
@@ -246,7 +62,7 @@
 "date": "2026-11-04",
 "text": "agents/work/8k/STE_2026-11-04.txt",
 "priority": 2,
-"mcap_bn": 24.8
+"mcap_bn": 25.0
 },
 {
 "t": "AXON",
@@ -255,7 +71,16 @@
 "date": "2026-11-05",
 "text": "agents/work/8k/AXON_2026-11-05.txt",
 "priority": 2,
-"mcap_bn": 24.3
+"mcap_bn": 24.6
+},
+{
+"t": "VTRS",
+"name": "Viatris Inc.",
+"m": "US",
+"date": "2026-11-05",
+"text": "agents/work/8k/VTRS_2026-11-05.txt",
+"priority": 2,
+"mcap_bn": 23.9
 },
 {
 "t": "RL",
@@ -267,22 +92,13 @@
 "mcap_bn": 23.6
 },
 {
-"t": "VTRS",
-"name": "Viatris Inc.",
-"m": "US",
-"date": "2026-11-05",
-"text": "agents/work/8k/VTRS_2026-11-05.txt",
-"priority": 2,
-"mcap_bn": 23.5
-},
-{
 "t": "PTC",
 "name": "PTC Inc.",
 "m": "US",
 "date": "2026-11-04",
 "text": "agents/work/8k/PTC_2026-11-04.txt",
 "priority": 2,
-"mcap_bn": 21.3
+"mcap_bn": 21.4
 },
 {
 "t": "CDW",
@@ -300,7 +116,7 @@
 "date": "2026-11-04",
 "text": "agents/work/8k/AMCR_2026-11-04.txt",
 "priority": 2,
-"mcap_bn": 20.7
+"mcap_bn": 20.9
 },
 {
 "t": "EVRG",
@@ -309,7 +125,7 @@
 "date": "2026-11-05",
 "text": "agents/work/8k/EVRG_2026-11-05.txt",
 "priority": 2,
-"mcap_bn": 20.6
+"mcap_bn": 20.7
 },
 {
 "t": "ZBH",
@@ -318,7 +134,7 @@
 "date": "2026-11-04",
 "text": "agents/work/8k/ZBH_2026-11-04.txt",
 "priority": 2,
-"mcap_bn": 20.4
+"mcap_bn": 20.3
 },
 {
 "t": "TPL",
@@ -327,16 +143,7 @@
 "date": "2026-11-04",
 "text": "agents/work/8k/TPL_2026-11-04.txt",
 "priority": 2,
-"mcap_bn": 19.3
-},
-{
-"t": "CF",
-"name": "CF Industries Holdings, Inc.",
-"m": "US",
-"date": "2026-11-04",
-"text": "agents/work/8k/CF_2026-11-04.txt",
-"priority": 2,
-"mcap_bn": 17.7
+"mcap_bn": 18.9
 },
 {
 "t": "HST",
@@ -345,7 +152,16 @@
 "date": "2026-11-04",
 "text": "agents/work/8k/HST_2026-11-04.txt",
 "priority": 2,
-"mcap_bn": 17.7
+"mcap_bn": 18.0
+},
+{
+"t": "CF",
+"name": "CF Industries Holdings, Inc.",
+"m": "US",
+"date": "2026-11-04",
+"text": "agents/work/8k/CF_2026-11-04.txt",
+"priority": 2,
+"mcap_bn": 17.9
 },
 {
 "t": "SWK",
@@ -354,7 +170,7 @@
 "date": "2026-11-04",
 "text": "agents/work/8k/SWK_2026-11-04.txt",
 "priority": 2,
-"mcap_bn": 17.2
+"mcap_bn": 17.3
 },
 {
 "t": "CRL",
@@ -372,16 +188,7 @@
 "date": "2026-11-05",
 "text": "agents/work/8k/NWS_2026-11-05.txt",
 "priority": 2,
-"mcap_bn": 15.7
-},
-{
-"t": "APA",
-"name": "APA Corporation",
-"m": "US",
-"date": "2026-11-04",
-"text": "agents/work/8k/APA_2026-11-04.txt",
-"priority": 2,
-"mcap_bn": 15.2
+"mcap_bn": 16.0
 },
 {
 "t": "FICO",
@@ -390,7 +197,7 @@
 "date": "2026-11-04",
 "text": "agents/work/8k/FICO_2026-11-04.txt",
 "priority": 2,
-"mcap_bn": 15.2
+"mcap_bn": 15.6
 },
 {
 "t": "SOLV",
@@ -399,7 +206,16 @@
 "date": "2026-11-05",
 "text": "agents/work/8k/SOLV_2026-11-05.txt",
 "priority": 2,
-"mcap_bn": 15.0
+"mcap_bn": 15.3
+},
+{
+"t": "APA",
+"name": "APA Corporation",
+"m": "US",
+"date": "2026-11-04",
+"text": "agents/work/8k/APA_2026-11-04.txt",
+"priority": 2,
+"mcap_bn": 15.1
 },
 {
 "t": "FIS",
@@ -417,7 +233,7 @@
 "date": "2026-11-05",
 "text": "agents/work/8k/REG_2026-11-05.txt",
 "priority": 2,
-"mcap_bn": 14.2
+"mcap_bn": 14.3
 },
 {
 "t": "NWSA",
@@ -426,7 +242,7 @@
 "date": "2026-11-05",
 "text": "agents/work/8k/NWSA_2026-11-05.txt",
 "priority": 2,
-"mcap_bn": 14.0
+"mcap_bn": 14.3
 },
 {
 "t": "TRMB",
@@ -435,7 +251,7 @@
 "date": "2026-11-04",
 "text": "agents/work/8k/TRMB_2026-11-04.txt",
 "priority": 2,
-"mcap_bn": 12.5
+"mcap_bn": 12.6
 },
 {
 "t": "AKAM",
@@ -444,7 +260,7 @@
 "date": "2026-11-05",
 "text": "agents/work/8k/AKAM_2026-11-05.txt",
 "priority": 2,
-"mcap_bn": 11.9
+"mcap_bn": 12.1
 },
 {
 "t": "ALB",
@@ -462,7 +278,7 @@
 "date": "2026-11-04",
 "text": "agents/work/8k/PODD_2026-11-04.txt",
 "priority": 2,
-"mcap_bn": 10.2
+"mcap_bn": 10.3
 },
 {
 "t": "CPT",
@@ -480,7 +296,7 @@
 "date": "2026-11-05",
 "text": "agents/work/8k/WYNN_2026-11-05.txt",
 "priority": 2,
-"mcap_bn": 8.8
+"mcap_bn": 9.0
 },
 {
 "t": "TFG.JO",
