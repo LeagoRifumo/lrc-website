@@ -1,6 +1,6 @@
 {
  "note": "JSE company announcements (SENS) recorded by the LRC JSE Announcements job every weekday. results = published results with headline earnings per share (HEPS) vs the same period last year; trading_statements = expected HEPS change ranges; dividends = declared dividends with the JSE dates. Amounts in cents. Every entry carries its source.",
- "updated": "2026-11-10T19:30+02:00",
+ "updated": "2026-11-11T19:45+02:00",
  "results": [
   {
    "t": "CLS.JO",
@@ -140,6 +140,17 @@
    "unit": "c",
    "dps": 355.0,
    "source": "Vodacom Group SENS — Interim results and cash dividend distribution for the six months ended 30 September 2026 (10 Nov 2026), via InsidEntity https://www.insidentity.com/vodacom-group-interim-results-and-cash-dividend-distribution-for-the-six-months-ended-30-september-2026/ (HEPS 587c, up 25.7%; interim dividend 355c, up 7.6%); prior-period HEPS 467c from Inside Politics, 10 Nov 2026 https://insidepolitic.co.za/vodacom-earnings-jump-25-7-despite-court-battle-over-safaricom-deal/ ; dividend dates not confirmed from the announcement text"
+  },
+  {
+   "t": "DIB.JO",
+   "name": "Dipula Properties",
+   "date": "2026-11-11",
+   "period": "Year to 31 Aug 2026",
+   "heps": 63.86,
+   "heps_prior": 53.08,
+   "unit": "c",
+   "dps": 55.95655,
+   "source": "Dipula Properties SENS — Audited consolidated financial results for the year ended 31 August 2026 and guidance (11 Nov 2026), via Sharenet https://www.sharenet.co.za/v3/sens_display.php?tdate=20261111080000&seq=17&scode="
   }
  ],
  "trading_statements": [
@@ -311,6 +322,13 @@
    "record": "2026-11-27",
    "pay": "2026-11-30",
    "source": "Stor-Age Property REIT SENS — Condensed unaudited consolidated interim results for the six months ended 30 September 2026 and declaration of a cash dividend (10 Nov 2026), via InsidEntity https://www.insidentity.com/stor-age-property-reit-condensed-unaudited-consolidated-interim-results-for-the-six-months-ended-30-september-2026-and-declaration-of-a-cash-dividend/ (gross dividend number 22 of 62.14c for the six months to 30 Sep 2026; distributable income per share 69.04c, up 4.0%; HEPS not stated in the text read)"
+  },
+  {
+   "t": "DIB.JO",
+   "period": "Final",
+   "declared": "2026-11-11",
+   "amount_c": 28.45381,
+   "source": "Dipula Properties SENS — Audited consolidated financial results for the year ended 31 August 2026 and guidance (11 Nov 2026), via Sharenet https://www.sharenet.co.za/v3/sens_display.php?tdate=20261111080000&seq=17&scode= — dividend number 29 for 1 Mar to 31 Aug 2026; salient dates to follow in a circular"
   }
  ]
 }
