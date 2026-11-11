@@ -1,27 +1,18 @@
 {
- "edition": "Evening update · Tuesday 10 November 2026 19:15",
- "generated": "2026-11-10T22:12+02:00",
- "covers": "The US session after the October CPI report, the JSE close and the rand, Tuesday 10 November 2026",
+ "edition": "Morning brief · Wednesday 11 November 2026 06:10",
+ "generated": "2026-11-11T06:25+02:00",
+ "covers": "The US close on Tuesday 10 November after the October inflation report, and overnight moves in the rand, gold and oil to early Wednesday 11 November 2026",
  "agent": "LRC News Desk",
- "headline": "Nvidia falls 5.8% as the US 10-year yield touches 5%; gold slips to $4,032.70 and the rand weakens to R16.59/$",
- "summary": "The JSE All Share closed at 114,693.44 and the Top 40 at 106,738.05, but gold miners fell, with Harmony down 5.3% and Gold Fields down 4.4%, and the rand weakened to R16.59/$ (LRC Market Dashboard, 10 Nov 18:39 SAST). In New York the S&P 500 was at 7,492.45 and the Nasdaq at 24,978.56 at 18:39 SAST, with the US 10-year Treasury yield at 5.0% after October consumer prices rose more than expected; Nvidia fell 5.8% while AMD rose 1.9%. Gold eased to $4,032.70 and platinum to $1,536.50 while Brent rose to $91.80; US yields at 5% remain the main pressure on the rand, gold and emerging-market shares.",
+ "headline": "Wall Street ends lower after hot US inflation; 10-year yield closes at 4.98%, gold $4,055.70, rand R16.52/$",
+ "summary": "The rand was at R16.52/$ early on Wednesday, slightly firmer than the R16.59/$ seen on Tuesday evening, after the JSE All Share closed Tuesday at 114,693.44 (LRC Market Dashboard, 11 Nov 05:56 SAST). In New York the S&P 500 closed at 7,520.93 and the Nasdaq at 25,065.88 on Tuesday, with the US 10-year Treasury yield ending at 4.98% after October consumer prices rose 0.4% against 0.3% expected. Gold closed at $4,055.70, platinum at $1,562.50 and Brent at $92.47; higher US rates remain the main pressure on gold, the rand and emerging-market shares.",
  "sections": [
   {
    "name": "Breaking",
    "items": [
     {
-     "title": "Nvidia down 5.8% at $168.29 as CEO scandal weighs, while other chip stocks rise",
-     "summary": "Nvidia traded at $168.29, down 5.8%, at 18:39 SAST, while AMD was up 1.9%. CNBC headlines today link the pressure to questions over CEO Jensen Huang's alleged affair with a Chinese spy and say it complicates Nvidia's China business. Nvidia reports results on 17 November.",
-     "source": "LRC Market Dashboard (Yahoo Finance), 10 Nov 2026 18:39 SAST; CNBC headline, 10 Nov 2026",
-     "url": "https://finance.yahoo.com/quote/NVDA/",
-     "tickers": [
-      "NVDA"
-     ]
-    },
-    {
-     "title": "US 10-year Treasury yield back at 5.0%",
-     "summary": "The benchmark yield reached 5.0% (4.86% on Monday). A CNBC headline attributes the move to the hot October inflation data and comments from Fed Governor Waller that raised expectations of a rate hike.",
-     "source": "LRC Market Dashboard (Yahoo Finance), 10 Nov 2026 18:39 SAST; CNBC headline, 10 Nov 2026",
+     "title": "US shares close lower and the 10-year yield ends at 4.98% after the inflation surprise",
+     "summary": "The S&P 500 closed at 7,520.93 and the Nasdaq at 25,065.88 on Tuesday, both lower on the day according to a MarketWatch headline. The US 10-year Treasury yield closed at 4.98%. October consumer prices rose 0.4% (0.3% expected) and core prices 0.3% (0.2% expected), and CNBC headlines say this and comments from Fed Governor Waller have raised expectations of a Fed rate hike.",
+     "source": "LRC Market Dashboard (Yahoo Finance), 10 Nov 2026 close; LRC Macro Desk (BLS), 10 Nov 2026; CNBC and MarketWatch headlines, 10 Nov 2026",
      "url": "https://www.cnbc.com/2026/11/10/us-bonds-treasurys-yields.html"
     }
    ]
@@ -30,16 +21,22 @@
    "name": "US markets",
    "items": [
     {
-     "title": "S&P 500 7,492.45, Nasdaq 24,978.56 after the inflation surprise",
-     "summary": "At 18:39 SAST the S&P 500 was at 7,492.45 and the Nasdaq Composite at 24,978.56, close to the levels an hour earlier (7,483.24 and 24,996.37 at 17:51 SAST) and still below Monday's close. October consumer prices rose 0.4%, more than expected (CNBC, 10 Nov).",
-     "source": "LRC Market Dashboard (Yahoo Finance), 10 Nov 2026 18:39 SAST; CNBC, 10 Nov 2026",
-     "url": "https://www.cnbc.com/2026/11/10/cpi-inflation-report-october-2026.html"
+     "title": "Futures edge higher after the Nvidia-led fall",
+     "summary": "CNBC's live page early on Wednesday was headlined 'Stock futures rise slightly as market tries to recover from Nvidia-led decline'. We could not open the page to confirm the size of the moves, so no figures are given.",
+     "source": "CNBC headline, 11 Nov 2026 04:31 SAST",
+     "url": "https://www.cnbc.com/2026/11/10/stock-market-today-live-updates.html"
     },
     {
-     "title": "Dell down 4.2%; Intuit and Meta little changed",
-     "summary": "Among other names we follow at 18:39 SAST: Dell $331.67 (-4.2%), Deckers $88.66 (-2.0%), Intuit $338.43 (+0.1%), Meta $642.37 (+0.2%).",
-     "source": "LRC Market Dashboard (Yahoo Finance), 10 Nov 2026 18:39 SAST",
-     "url": "https://finance.yahoo.com/quote/DELL/"
+     "title": "CoreWeave beats on revenue and raises guidance",
+     "summary": "CNBC reports the AI cloud company beat revenue forecasts and lifted guidance after Tuesday's close, easing concerns about an AI spending slowdown; MarketWatch says the shares rose after hours. Detailed figures are left out until the report can be checked.",
+     "source": "CNBC and MarketWatch headlines, 10-11 Nov 2026",
+     "url": "https://www.cnbc.com/2026/11/10/coreweave-crwv-q3-earnings-report-2026.html"
+    },
+    {
+     "title": "Alibaba plans to list its T-Head chip unit",
+     "summary": "Alibaba announced plans to list T-Head, which CNBC describes as a rival to Nvidia in chips.",
+     "source": "CNBC headline, 11 Nov 2026",
+     "url": "https://www.cnbc.com/2026/11/11/alibaba-pr.html"
     }
    ]
   },
@@ -47,22 +44,22 @@
    "name": "South Africa",
    "items": [
     {
-     "title": "JSE All Share closes at 114,693.44; gold miners slide",
-     "summary": "The All Share closed at 114,693.44 and the Top 40 at 106,738.05. Gold shares fell with the gold price: Harmony R272.08 (-5.3%), Gold Fields R638.63 (-4.4%), AngloGold Ashanti R1,570.50 (-2.0%), while Naspers rose 1.4% to R778.00.",
+     "title": "JSE All Share closed Tuesday at 114,693.44; Top 40 at 106,738.05",
+     "summary": "The All Share is up 1.7% from last Friday's 112,739.40 despite Tuesday's slide in gold miners. Today's session will take its lead from the weaker US close and the gold price.",
      "source": "LRC Market Dashboard (Yahoo Finance), 10 Nov 2026 close",
      "url": "https://finance.yahoo.com/quote/%5EJ203.JO/"
     },
     {
-     "title": "Manufacturing output falls 3.5% year on year in September",
-     "summary": "Stats SA's September manufacturing production was down 3.5% from a year earlier, a smaller fall than the 4.3% decline in August. Factory output has now contracted for a second month, alongside weak mining data.",
-     "source": "Stats SA via EWN, 10 Nov 2026",
-     "url": "https://www.ewn.co.za/sa-manufacturing-output-drops-35-year-on-year-in-september"
+     "title": "New fuel prices take effect today",
+     "summary": "Adjusted petrol and diesel prices apply from Wednesday 11 November. IOL reports that part of the relief from lower oil prices is taken up by the new 'Slate levy'; we could not open the article to confirm the cents-per-litre changes, so they are left out.",
+     "source": "IOL headline, 11 Nov 2026",
+     "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOOVJxcW5BRi05UkxIZldMX2lYNEl5dUVGQVpmUWpDdkp6UU83RGVlODFVUDJuWFJaQ0kyVS1MWndndE9fdlM0TzJOZ0lXdVI3aWhscWlYT2xEc0NnNGpqYmVtOHItTl9nbVJkWThxN1Utczc3aDNORTZGakQxOTV1alVVbzZPM2I4SmZTUlo4b0w1VVotZE81MkRoVmp5Z2RHd1RTTHZHSE9iek5Obldxcm5GclE0Y3F5NXE0clRTclFUcnQxa1BYSkpPaXRrX21aeEJoMG9Wc19yZw?oc=5"
     },
     {
-     "title": "Unemployment rises to 33.7% in Q3 2026, from 33.6% in Q2",
-     "summary": "Stats SA's Quarterly Labour Force Survey released this morning.",
-     "source": "Stats SA via eNCA, 10 Nov 2026",
-     "url": "https://www.enca.com/business-top-stories/unemployment-rate-increases-337"
+     "title": "Nersa admits electricity tariffs in three metros are unlawful",
+     "summary": "Moneyweb reports the energy regulator has conceded that tariffs in three metros were unlawful. Details to follow once the article can be checked.",
+     "source": "Moneyweb headline, 11 Nov 2026",
+     "url": "https://www.moneyweb.co.za/news/south-africa/electricity-tariffs-in-three-metros-unlawful-nersa-admits"
     }
    ]
   },
@@ -70,16 +67,22 @@
    "name": "Forex & commodities",
    "items": [
     {
-     "title": "Rand R16.59/$, R18.48/€, R22.09/£",
-     "summary": "The rand weakened further against the dollar (R16.54/$ at 17:51 SAST, R16.37/$ at 11:41 SAST) as US yields rose, while staying steady against the euro and pound.",
-     "source": "LRC Market Dashboard (Yahoo Finance), 10 Nov 2026 18:39 SAST",
+     "title": "Rand R16.52/$, R18.44/€, R22.02/£ early on Wednesday",
+     "summary": "The rand recovered a little overnight from R16.59/$ on Tuesday evening, but is weaker than R16.48/$ a week ago as US yields rose.",
+     "source": "LRC Market Dashboard (Yahoo Finance), 11 Nov 2026 05:56 SAST",
      "url": "https://finance.yahoo.com/quote/ZAR%3DX/"
     },
     {
-     "title": "Gold $4,032.70, platinum $1,536.50, Brent $91.80, copper about $13,768/t",
-     "summary": "Gold slipped further from $4,057.40 an hour earlier as yields rose. Brent firmed from $90.53 at 17:51 SAST.",
-     "source": "LRC Market Dashboard (Yahoo Finance), 10 Nov 2026 18:39 SAST",
-     "url": "https://finance.yahoo.com/quote/GC%3DF/"
+     "title": "Gold closed at $4,055.70, platinum $1,562.50",
+     "summary": "Gold fell on Tuesday as yields and the dollar rose after the inflation data. An Investing.com headline early on Wednesday says gold is steadying near $4,035 as bets on a December Fed hike firm.",
+     "source": "LRC Market Dashboard (Yahoo Finance), 10 Nov 2026 close; Investing.com headline, 11 Nov 2026",
+     "url": "https://www.investing.com/news/commodities-news/gold-steadies-near-4035-after-sharp-selloff-as-december-fed-hike-bets-firm"
+    },
+    {
+     "title": "Brent closed at $92.47; copper about $13,916/t",
+     "summary": "Brent dipped briefly below $90 on Tuesday for the first time since August on Iran peace hopes, then rose from that two-month low overnight as attacks on ships near Hormuz offset truce hopes (Investing.com headlines). Brent is down 5.9% on the week.",
+     "source": "LRC Market Dashboard (Yahoo Finance), 10 Nov 2026 close; Investing.com headlines, 10-11 Nov 2026",
+     "url": "https://www.investing.com/news/commodities-news/oil-rises-from-twomonth-low-as-hormuz-shipping-attacks-offset-iran-truce-hopes"
     }
    ]
   },
@@ -87,31 +90,31 @@
    "name": "Our coverage",
    "items": [
     {
-     "title": "Nvidia: shares at $168.29, further below our $262.56 fair value",
-     "summary": "Today's 5.8% fall is driven by the CEO controversy rather than a change in the business we can verify; results on 17 November are the next test. Our BUY rating is unchanged.",
-     "source": "LRC Market Dashboard (Yahoo Finance), 10 Nov 2026 18:39 SAST; LRC Watchlist",
-     "url": "https://finance.yahoo.com/quote/NVDA/",
+     "title": "Nvidia: second day of selling over the CEO controversy",
+     "summary": "CNBC headlines report Nvidia sold off for a second day on Tuesday over the fallout from CEO Jensen Huang's alleged affair with a suspected spy, and MarketWatch reports Congress may make it harder for Nvidia to sell to China. Shares were at $168.29 (-5.8%) at 18:39 SAST on Tuesday, well below our $262.56 fair value. Results on 17 November are the next test. Our BUY rating is unchanged.",
+     "source": "CNBC and MarketWatch headlines, 10-11 Nov 2026; LRC Market Dashboard (Yahoo Finance), 10 Nov 2026 18:39 SAST; LRC Watchlist",
+     "url": "https://www.cnbc.com/2026/11/10/nvidia-nvda-jensen-huang-affair-chinese-spy.html",
      "tickers": [
       "NVDA"
      ]
     },
     {
-     "title": "Dell: down 4.2% to $331.67",
-     "summary": "Dell was one of the weaker large US technology shares at 18:39 SAST. Our SELL rating is unchanged.",
-     "source": "LRC Market Dashboard (Yahoo Finance), 10 Nov 2026 18:39 SAST; LRC Watchlist",
-     "url": "https://finance.yahoo.com/quote/DELL/",
+     "title": "AMD gives back gains",
+     "summary": "MarketWatch reports AMD's shares faded on Tuesday as investors weighed whether Nvidia's troubles will bring lasting gains for AMD. Our SELL rating is unchanged.",
+     "source": "MarketWatch headline, 11 Nov 2026; LRC Watchlist",
+     "url": "https://www.marketwatch.com/story/amds-stock-fades-as-investors-weigh-whether-nvidias-turmoil-will-mean-lasting-wins-1ecfbc5e?mod=mw_rss_topstories",
      "tickers": [
-      "DELL"
+      "AMD"
      ]
     }
    ]
   }
  ],
  "watch_today": [
-  "How Wall Street closes after the inflation surprise (close at 23:00 SAST)",
-  "Whether the US 10-year yield holds above 5%",
-  "Whether Nvidia's losses deepen before its 17 November results",
-  "Whether the rand holds around R16.60/$",
-  "SARB MPC decision on 19 November"
+  "How the JSE and gold miners open after the weaker US close",
+  "Whether the US 10-year yield holds near 5%",
+  "New petrol and diesel prices in effect from today",
+  "US weekly jobless claims on Thursday 12 November and producer prices on Friday 13 November",
+  "Nvidia results on 17 November; SARB MPC decision on 19 November"
  ]
 }
