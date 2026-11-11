@@ -608,25 +608,29 @@
    "ticker": "VOD",
    "name": "Vodacom Group",
    "when": "Not stated",
-   "period": "Interim to 30 Sep 2026 (presentation 15:00 SAST)",
+   "period": "Six months to 30 Sep 2026",
+   "quarter": "",
    "eps_forecast": "",
    "market_cap_bn": null,
-   "source": "Vodacom interim results page ('releasing its interim results … on Tuesday, 10 November 2026') https://www.vodacom.com/interim-results.php ; seen 2026-11-07 | Vodacom Group SENS trading statement for the six months to 30 Sep 2026 (28 Oct 2026), via Sharenet https://www.sharenet.co.za/v3/sens_display.php?tdate=20261028170000&seq=59&scode= (interim results on or about 10 Nov 2026)",
-   "covered": false,
-   "lrc_rating": null,
+   "reported": true,
+   "result": "up",
+   "eps_actual": null,
+   "eps_est": null,
+   "surprise": null,
+   "heps": 587.0,
+   "heps_prior": 467.0,
+   "unit": "c",
+   "change": 0.257,
+   "measure": "HEPS",
+   "dps": 355.0,
+   "source": "Vodacom Group SENS — Interim results and cash dividend distribution for the six months ended 30 September 2026 (10 Nov 2026), via InsidEntity https://www.insidentity.com/vodacom-group-interim-results-and-cash-dividend-distribution-for-the-six-months-ended-30-september-2026/ (HEPS 587c, up 25.7%; interim dividend 355c, up 7.6%); prior-period HEPS 467c from Inside Politics, 10 Nov 2026 https://insidepolitic.co.za/vodacom-earnings-jump-25-7-despite-court-battle-over-safaricom-deal/ ; dividend dates not confirmed from the announcement text",
    "t": "VOD.JO",
    "lists": [],
    "idea": "Earnings watch",
    "v": "HOLD",
    "iv": "HOLD",
-   "ts": {
-    "date": "2026-10-28",
-    "low": 0.22,
-    "high": 0.27,
-    "period": "Six months to 30 Sep 2026",
-    "source": "Vodacom Group SENS — Trading statement for the interim results period ended 30 September 2026 (28 Oct 2026), via Sharenet https://www.sharenet.co.za/v3/sens_display.php?tdate=20261028170000&seq=59&scode= (HEPS expected 570c to 593c vs 467c; EPS 1 756c to 1 789c vs 472c, incl. once-off R23.2bn Safaricom remeasurement gain excluded from HEPS; interim results on or about 10 Nov 2026)"
-   },
-   "track": null
+   "lrc_rating": null,
+   "covered": false
   },
   {
    "date": "2026-11-11",
@@ -1208,6 +1212,6 @@
   }
  ],
  "note": "Partial list: no company-published date could be found this week for, among others, MTN, Reinet, Woolworths, Shoprite, Bidvest, Discovery, FirstRand, Sasol, Aspen, Lewis and Cashbuild; they will be added when dates are published. Attacq (pre-close 24 Nov) and Growthpoint (pre-close 26 Nov) appear only on the SA REIT reporting schedule and are not listed until the companies publish them. Standard Bank's pre-close call (14 Dec) falls just after this window.",
- "synced": "2026-11-10T18:51+02:00",
+ "synced": "2026-11-11T06:18+02:00",
  "coverage_note": "Ticked = on the LRC watchlist. Every company the LRC Stock Scanner tracks shows its trading and investment ratings. Updated after every scanner run."
 }
