@@ -403,6 +403,13 @@
    "measure": "HEPS",
    "dps": 71.0,
    "source": "AngloGold Ashanti — Q3 30 September 2026 Earnings Release and Dividend Declaration (5 Nov 2026), via Investing News Network https://investingnews.com/anglogold-ashanti-q3-30-september-2026-earnings-release-and-dividend-declaration/ (reported in US cents: headline earnings per share 155 USc vs 132 USc for Q3 2025; nine months 606 USc vs 346 USc; Q3 2026 interim dividend 71 US cents per share)",
+   "has_res": true,
+   "desk": true,
+   "rev_actual": 2619000000,
+   "rev_prior": 2417000000,
+   "g": "reaffirmed",
+   "headline": "Headline EPS up to 155 US cents from 132c on higher gold price as output falls 9%; 2026 production guidance reaffirmed",
+   "rev_yoy": 0.0836,
    "px_move": {
     "move": 0.0866,
     "from": "2026-11-03",
@@ -516,6 +523,11 @@
    "measure": "HEPS",
    "dps": null,
    "source": "Omnia Holdings SENS — Unaudited financial results for the six months ended 30 September 2026 (9 Nov 2026); figures from Omnia's results document https://omnia.co.za/media/omnia-annual-financial-results-long-form-hy2027.pdf (HEPS 399c vs 320c; basic EPS 428c vs 326c; no interim dividend declared — the FY26 ordinary dividend of 470c and special dividend of 280c were paid during the period)",
+   "has_res": true,
+   "desk": true,
+   "rev_actual": 11400000000,
+   "g": "given",
+   "headline": "HEPS up 25% to 399c as operating profit rises 26% to R1.1bn; no interim dividend; outlook cautious on farm demand",
    "px_move": {
     "move": -0.0016,
     "from": "2026-11-06",
@@ -550,6 +562,11 @@
    "measure": "HEPS",
    "dps": 88.0,
    "source": "Raubex Group — Unaudited interim results for the six months ended 31 August 2026 and interim dividend declaration (9 Nov 2026), results booklet https://raubex.com/wp-content/uploads/2026/11/10181_Raubex-interim-results-booklet_WEB-FA.pdf (HEPS 254.3c vs 243.5c; gross interim dividend 88c vs 81c, net 70.4c after 20% dividends tax)",
+   "has_res": true,
+   "desk": true,
+   "rev_actual": 12120000000,
+   "g": "given",
+   "headline": "HEPS up 4.4% to 254.3c on revenue up 11.8% to R12.1bn; order book a record R39bn; dividend up 8.6% to 88c",
    "px_move": {
     "move": -0.065,
     "from": "2026-11-06",
@@ -624,6 +641,11 @@
    "measure": "HEPS",
    "dps": 355.0,
    "source": "Vodacom Group SENS — Interim results and cash dividend distribution for the six months ended 30 September 2026 (10 Nov 2026), via InsidEntity https://www.insidentity.com/vodacom-group-interim-results-and-cash-dividend-distribution-for-the-six-months-ended-30-september-2026/ (HEPS 587c, up 25.7%; interim dividend 355c, up 7.6%); prior-period HEPS 467c from Inside Politics, 10 Nov 2026 https://insidepolitic.co.za/vodacom-earnings-jump-25-7-despite-court-battle-over-safaricom-deal/ ; dividend dates not confirmed from the announcement text",
+   "has_res": true,
+   "desk": true,
+   "rev_actual": 102500000000,
+   "g": "reaffirmed",
+   "headline": "HEPS up 25.7% to 587c as Safaricom is consolidated; revenue up 25.6% to R102.5bn; medium-term targets confirmed",
    "t": "VOD.JO",
    "lists": [],
    "idea": null,
@@ -1212,6 +1234,6 @@
   }
  ],
  "note": "Partial list: no company-published date could be found this week for, among others, MTN, Reinet, Woolworths, Shoprite, Bidvest, Discovery, FirstRand, Sasol, Aspen, Lewis and Cashbuild; they will be added when dates are published. Attacq (pre-close 24 Nov) and Growthpoint (pre-close 26 Nov) appear only on the SA REIT reporting schedule and are not listed until the companies publish them. Standard Bank's pre-close call (14 Dec) falls just after this window.",
- "synced": "2026-11-11T07:33+02:00",
+ "synced": "2026-11-11T16:26+02:00",
  "coverage_note": "Ticked = on the LRC watchlist. Every company the LRC Stock Scanner tracks shows its trading and investment ratings. Updated after every scanner run."
 }
