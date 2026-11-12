@@ -1772,3 +1772,4 @@ footer .cols.cols5{grid-template-columns:1.3fr repeat(4,1fr);gap:28px}
 @media (max-width:900px){.pf-kpis{grid-template-columns:1fr 1fr}.pf-kpis>div{border-bottom:1px solid var(--line)}.pf-two{grid-template-columns:1fr}.pf-jform{grid-template-columns:1fr 1fr}.pf-jform textarea,.pf-jform button{grid-column:1/-1}.pf-grid3{grid-template-columns:1fr}}
 .pf-opt{text-transform:none!important;letter-spacing:0!important;font-size:14px!important;justify-content:flex-start}.pf-opt input{width:auto!important;margin:0}
 .pf-kpis .pill{font-family:Inter,sans-serif;font-size:11.5px;letter-spacing:.1em}
+.ev-story{border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:12px;background:#0B0D14;padding:14px 18px}.ev-story p{margin:0;line-height:1.75;font-size:15.5px}.ev-story b{color:#fff}

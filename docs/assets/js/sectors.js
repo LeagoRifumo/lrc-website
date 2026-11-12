@@ -179,6 +179,36 @@
       if (ok(r.fscore) && r.fscore < 45 && (r.tscore ?? 50) >= 60) act += ' Fundamentals are weak, so keep any position small.';
       return { why, fund, outlook, rec, act, change, lt };
     };
+
+    /* plain-English fundamental thesis for retail traders */
+    const story = r => {
+      const nt = r.note || {}, P = r.pil || {}, b = (v, a) => !ok(v) ? null : v >= 70 ? a[0] : v >= 55 ? a[1] : v > 40 ? a[2] : a[3];
+      if (r.kind === 'bond') return `<p>A bond fund has no company profits to analyse. It holds loans to governments or companies and pays out the interest. The one rule to remember: <b>bond prices move opposite to interest rates</b>. When rates rise, the bonds already in the fund become less attractive and the price falls; when rates fall, the price rises. ${nt.drivers ? 'What drives it: ' + esc(nt.drivers) + ' ' : ''}For a trader, this fund is really a bet on where interest rates go next, so watch the inflation numbers and central-bank meetings more than the chart.</p>`;
+      if (r.kind === 'commodity') return `<p>A commodity has no earnings, no dividends and no management team, so there are no company fundamentals to score. Its price is set by <b>supply and demand</b> and by the mood of big investors. ${nt.drivers ? 'What drives it: ' + esc(nt.drivers) + ' ' : ''}For a trader, that means the news flow and the chart matter most: the grade here is based on the price trend only, and moves can be fast in both directions, so keep positions smaller than you would in a share.</p>`;
+      if (!ok(r.fscore)) return `<p>We don't cover enough of the companies inside this fund yet to score their fundamentals, so the grade is based on the chart only. ${nt.drivers ? 'What drives it: ' + esc(nt.drivers) + ' ' : ''}Treat it as a price-trend trade and check the issuer's factsheet for the main companies.</p>`;
+      const parts = [];
+      const g = b(P.growth, ['growing sales and profits quickly', 'growing steadily', 'growing slowly', 'struggling to grow']);
+      const pr = b(P.profitability, ['very profitable, with fat margins', 'solidly profitable', 'only moderately profitable', 'barely profitable']);
+      const h = b(P.health, ['strong balance sheets with little debt', 'healthy balance sheets', 'average levels of debt', 'heavy debt loads']);
+      parts.push(`Think of this fund as owning a slice of every company inside it. ${g ? `Those companies are ${g}` : 'Those companies'}${pr ? `${g ? '; they are' : ' are'} ${pr}` : ''}${h ? `${g || pr ? ', and they have' : ' have'} ${h}` : ''}.`);
+      const v = b(P.valuation, ['The good news on price: the shares look cheap compared with their own sectors, so you are not overpaying.', 'On price, the shares look fairly valued: not a bargain, not a bubble.', 'The catch is price: the shares are a little expensive compared with their sectors.', 'The catch is price: the shares are expensive. Investors are already paying up for that quality, so there is less room for error if results disappoint.']);
+      if (v) parts.push(v);
+      const pe = r.fv && ok(r.fv.pe) && r.fv.pe > 0 ? (r.fv.pe < 1 ? 1 / r.fv.pe : r.fv.pe) : null;
+      if (pe && pe < 200) parts.push(`The fund trades at about <b>${pe.toFixed(0)} times earnings</b>${pe > 28 ? ', well above the long-run market average of roughly 16 to 18 times' : pe < 15 ? ', below the long-run market average of roughly 16 to 18 times' : ', close to the long-run market average'}.`);
+      const inc = b(P.income, ['It also pays a decent dividend.', 'Dividends are modest.', null, 'Dividends are small, so your return depends almost entirely on the share price.']);
+      if (inc) parts.push(inc);
+      const se = b(P.sentiment, ['Professional analysts are mostly positive on the companies inside.', 'Analysts are mildly positive.', null, 'Analysts are cautious on the companies inside.']);
+      if (se) parts.push(se);
+      const f = r.fscore, t = r.tscore ?? r.score, fw = f >= 70 ? 'strong' : f >= 55 ? 'good' : f > 40 ? 'average' : 'weak';
+      parts.push(`Overall, business quality scores <b>${f}/100 (${fw})</b>.`);
+      const what = f >= 60 && t >= 60 ? 'Good businesses and a rising chart: a setup both trend traders and longer-term investors can work with. Add on dips rather than chasing spikes.'
+        : f >= 60 && t < 45 ? 'Good businesses in a falling chart. Fundamentals tell you <i>what</i> to own; the chart tells you <i>when</i>. Traders should wait for the price to recover its 200-day average; longer-term investors can start small and add once the trend turns.'
+        : f < 50 && t >= 60 ? 'The price is running ahead of the businesses. That can work for a short-term trade with a tight stop, but it is not one to hold through bad news.'
+        : f < 50 && t < 45 ? 'Weak businesses and a weak chart: no reason to be involved for now.'
+        : 'A middle-of-the-road picture: no strong case either way on fundamentals, so let the chart and the news decide.';
+      parts.push(`<b>What it means for you:</b> ${what}`);
+      return `<p>${parts.join(' ')}</p>`;
+    };
     let ewrap = null;
     const closeEtf = () => { if (ewrap) { ewrap.classList.remove('open'); document.documentElement.classList.remove('sn-lock'); } };
     const openEtf = (r) => {
@@ -209,6 +239,7 @@
           <div class="ev-out ${A.outlook.cls}"><span>OUTLOOK</span><b>${A.outlook.k}</b><p>${A.outlook.txt}</p></div></div>
         ${planBox}
         <h3 class="ev-h3">What it is</h3><p class="ev-p">${esc(nt.what || r.full || '')}${nt.drivers ? ` <b>What moves it:</b> ${esc(nt.drivers)}` : ''}</p>
+        <h3 class="ev-h3">The fundamental story, in plain English</h3><div class="ev-story">${story(r)}</div>
         <h3 class="ev-h3">Why this grade: the chart</h3>
         <div class="ev-why">${pos.length ? `<div><h4 class="up">▲ Supporting the grade</h4><ul>${pos.map(x => `<li>${x[1]}</li>`).join('')}</ul></div>` : ''}${neg.length ? `<div><h4 class="dn">▼ Holding it back</h4><ul>${neg.map(x => `<li>${x[1]}</li>`).join('')}</ul></div>` : ''}${neu.length ? `<div><h4>= Neutral</h4><ul>${neu.map(x => `<li>${x[1]}</li>`).join('')}</ul></div>` : ''}</div>
         ${A.fund.length ? `<h3 class="ev-h3">Why this grade: the fundamentals</h3>
