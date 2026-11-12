@@ -26,7 +26,7 @@
   const getJ = f => fetch(DATA + f + '?v=' + Math.floor(Date.now() / 3e5)).then(r => r.ok ? r.json() : null).catch(() => null);
   const KINDS = { thesis: 'Thesis', note: 'Note', review: 'Review', trade: 'Trade', risk: 'Risk' };
 
-  let sb = null, user = null, IDX = {}, Q = {}, QGEN = null, NEWS = {}, FX = null, POS = [], JRN = [], PROF = {}, base = store.get('lrc_pf_base', 'ZAR');
+  let STALE = false, SNAP = [], FLOWS = [], sb = null, user = null, IDX = {}, Q = {}, QGEN = null, NEWS = {}, FX = null, POS = [], JRN = [], PROF = {}, base = store.get('lrc_pf_base', 'ZAR');
 
   const client = () => new Promise((res, rej) => {
     if (!CFG.url || !CFG.anon) return rej(new Error('members database not configured'));
@@ -98,6 +98,105 @@
     return out.map(s => `<li>${s}</li>`).join('');
   };
 
+
+  /* ---------- account (cash, deposits) and track record ---------- */
+  const zar = (x, c) => !ok(x) ? 0 : c === 'USD' ? x * (FX || 16.5) : x;
+  const fromZar = x => !ok(x) ? null : base === 'ZAR' ? x : x / (FX || 16.5);
+  const acct = B => {
+    const cash = zar(+PROF.cash_zar || 0, 'ZAR') + zar(+PROF.cash_usd || 0, 'USD'), hasCash = ok(PROF.cash_zar) || ok(PROF.cash_usd);
+    const sum = k => FLOWS.filter(f => f.kind === k).reduce((a, f) => a + zar(+f.amount, f.currency), 0);
+    const dep = sum('deposit'), wd = sum('withdrawal'), divs = sum('dividend'), fees = sum('fee'), intr = sum('interest');
+    const bookZ = B.rows.reduce((a, r) => a + zar(r.val, r.c), 0);
+    return { cash, hasCash, dep, wd, net: dep - wd, divs, fees, intr, bookZ, value: bookZ + cash };
+  };
+  const acctStrip = B => {
+    const A = acct(B), gain = A.net > 0 ? A.value - A.net : null;
+    return `<div class="pf-acct"><div><span>Account value</span><b>${money(fromZar(A.value), base, 0)}</b><small>positions ${money(fromZar(A.bookZ), base, 0)} + cash ${A.hasCash ? money(fromZar(A.cash), base, 0) : '<a href="#" id="pfAcct2">add your cash</a>'}</small></div>
+      <div><span>Net deposited</span><b>${A.net ? money(fromZar(A.net), base, 0) : '—'}</b><small>${A.dep ? `in ${money(fromZar(A.dep), base, 0)} · out ${money(fromZar(A.wd), base, 0)}` : 'record your deposits to see your true gain'}</small></div>
+      <div><span>Total gain on deposits</span><b class="${cls(gain)}">${gain !== null ? money(fromZar(gain), base, 0) : '—'}</b><small class="${cls(gain)}">${gain !== null ? pct(gain / A.net) : 'account value minus money put in'}</small></div>
+      <div><span>Income &amp; costs</span><b>${money(fromZar(A.divs + A.intr), base, 0)}</b><small>dividends and interest · fees ${money(fromZar(A.fees), base, 0)}</small></div>
+      <div class="pf-acct-btn"><button class="btn btn-ghost" id="pfAcct">Cash &amp; deposits</button></div></div>`;
+  };
+  const series = B => {
+    // daily book value (rand) from the Portfolio Desk, with today replaced by the live value
+    const t = new Date().toISOString().slice(0, 10), A = acct(B);
+    const pts = SNAP.filter(r => r.d < t).map(r => ({ d: r.d, b: +r.book || 0, inv: +r.invested || 0, f: +r.flow || 0 }));
+    const todayFlow = POS.reduce((a, p) => { const c = p.currency || 'ZAR', dir = p.side === 'short' ? -1 : 1; let f = 0;
+      if ((p.entry_date || (p.created_at || '').slice(0, 10)) === t) f += zar(p.qty * p.entry_price, c);
+      if (p.closed_on === t) f -= zar(p.qty * p.entry_price + dir * p.qty * ((p.exit_price || p.entry_price) - p.entry_price), c); return a + f; }, 0);
+    const snapAt = SNAP.reduce((a, r) => r.at > a ? r.at : a, ''), changed = POS.reduce((a, p) => { const x = p.updated_at || p.created_at || ''; return x > a ? x : a; }, '');
+    STALE = !!(SNAP.length && changed && snapAt && changed > snapAt);
+    if (!STALE && (B.rows.length || pts.length)) pts.push({ d: t, b: A.bookZ, inv: B.rows.reduce((a, r) => a + zar(r.cost, r.c), 0), f: todayFlow, live: true });
+    let I = 100; const out = [];
+    pts.forEach((p, i) => { const prev = i ? pts[i - 1].b : 0; const r = prev > 0 ? (p.b - p.f) / prev - 1 : 0; I *= 1 + (isFinite(r) && Math.abs(r) < 0.9 ? r : 0); out.push({ ...p, r: i ? r : 0, I }); });
+    return out;
+  };
+  const perfSection = B => {
+    const S = series(B); if (S.length < 2) return S.length ? `<h3 class="pf-h">Performance &amp; track record</h3><p class="muted">Your daily track record starts building tonight: the Portfolio Desk records your book every day from closing prices (and back-fills from your entry dates).</p>` : '';
+    const last = S[S.length - 1], at = d => { let v = null; for (const p of S) { if (p.d <= d) v = p; else break; } return v; };
+    const ret = from => { const p = at(from); return p && p !== last ? last.I / p.I - 1 : null; };
+    const ds = n => { const x = new Date(); x.setDate(x.getDate() - n); return x.toISOString().slice(0, 10); };
+    const y0 = new Date().getFullYear() + '-01-01', m0 = new Date().toISOString().slice(0, 8) + '01';
+    const before = d => { let v = null; for (const p of S) { if (p.d < d) v = p; else break; } return v; };
+    const per = [['Today', last.r], ['1 week', ret(ds(7))], ['This month', before(m0) ? last.I / before(m0).I - 1 : last.I / S[0].I - 1], ['3 months', ret(ds(91))], ['This year', before(y0) ? last.I / before(y0).I - 1 : last.I / S[0].I - 1], ['Since start', last.I / 100 - 1]];
+    // monthly grid
+    const months = {}; S.forEach(p => { const k = p.d.slice(0, 7); months[k] = months[k] || { first: p, last: p }; months[k].last = p; });
+    const keys = Object.keys(months).sort(), mret = {}; keys.forEach((k, i) => { const prevI = i ? months[keys[i - 1]].last.I : 100; mret[k] = months[k].last.I / prevI - 1; });
+    const years = [...new Set(keys.map(k => k.slice(0, 4)))].sort().reverse();
+    const MN = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const ytd = y => keys.filter(k => k.startsWith(y)).reduce((a, k) => a * (1 + mret[k]), 1) - 1;
+    let peak = 0, dd = 0; S.forEach(p => { peak = Math.max(peak, p.I); dd = Math.max(dd, 1 - p.I / peak); });
+    const days = S.slice(1).filter(p => !p.live || true), best = days.reduce((a, p) => !a || p.r > a.r ? p : a, null), worst = days.reduce((a, p) => !a || p.r < a.r ? p : a, null);
+    const up = days.filter(p => p.r > 0).length;
+    // chart
+    const W = 760, H = 200, L = 46, vals = S.map(p => fromZar(p.b)), invs = S.map(p => fromZar(p.inv));
+    const lo = Math.min(...vals, ...invs) * 0.97, hi = Math.max(...vals, ...invs) * 1.03 || 1;
+    const X = i => L + (W - L - 8) * i / Math.max(1, S.length - 1), Y = v => 10 + (H - 34) * (1 - (v - lo) / (hi - lo || 1));
+    const line = arr => arr.map((v, i) => `${X(i).toFixed(1)},${Y(v).toFixed(1)}`).join(' ');
+    const ticks = [0, 0.5, 1].map(f => { const v = lo + (hi - lo) * f; return `<text x="2" y="${Y(v) + 4}" class="ax">${base === 'ZAR' ? 'R' : '$'}${v >= 1e6 ? (v / 1e6).toFixed(1) + 'm' : v >= 1e3 ? Math.round(v / 1e3) + 'k' : Math.round(v)}</text>`; }).join('');
+    const xl = [0, Math.floor((S.length - 1) / 2), S.length - 1].map(i => `<text x="${X(i)}" y="${H - 6}" class="ax" text-anchor="${i === 0 ? 'start' : i === S.length - 1 ? 'end' : 'middle'}">${day(S[i].d)}</text>`).join('');
+    const chart = `<svg viewBox="0 0 ${W} ${H}" class="pf-chart" role="img" aria-label="Book value over time"><polygon points="${X(0)},${Y(lo)} ${line(vals)} ${X(S.length - 1)},${Y(lo)}" fill="rgba(201,162,39,.12)"/><polyline points="${line(invs)}" fill="none" stroke="#7d8597" stroke-width="1.5" stroke-dasharray="5 4"/><polyline points="${line(vals)}" fill="none" stroke="#E2B960" stroke-width="2.4"/>${ticks}${xl}</svg>`;
+    // trading statistics (closed trades)
+    const cl = POS.filter(p => p.closed_on).map(p => { const dir = p.side === 'short' ? -1 : 1, c = p.currency || 'ZAR'; const pl = dir * p.qty * ((p.exit_price || p.entry_price) - p.entry_price);
+      return { p, pl: zar(pl, c), r: pl / (p.qty * p.entry_price), days: p.entry_date ? (new Date(p.closed_on) - new Date(p.entry_date)) / 864e5 : null }; });
+    const wins = cl.filter(x => x.pl > 0), losses = cl.filter(x => x.pl < 0), gw = wins.reduce((a, x) => a + x.pl, 0), gl = -losses.reduce((a, x) => a + x.pl, 0);
+    const avg = xs => xs.length ? xs.reduce((a, x) => a + x, 0) / xs.length : null;
+    const traded = POS.reduce((a, p) => { const c = p.currency || 'ZAR', dir = p.side === 'short' ? -1 : 1; return a + zar(p.qty * p.entry_price, c) + (p.closed_on ? zar(p.qty * (p.exit_price || p.entry_price), c) : 0); }, 0);
+    const bt = cl.slice().sort((a, b) => b.r - a.r);
+    const stat = (k, v, s) => `<div><span>${k}</span><b>${v}</b>${s ? `<small>${s}</small>` : ''}</div>`;
+    return `<h3 class="pf-h">Performance &amp; track record</h3>${STALE ? '<p class="pf-upd">⟳ Updating your track record after your latest changes. The full history refreshes within 30 minutes; figures below are up to the last update.</p>' : ''}
+      <div class="pf-per">${per.map(([k, v]) => `<div><span>${k}</span><b class="${cls(v)}">${pct(v, k === 'Today' ? 2 : 1)}</b></div>`).join('')}</div>
+      <div class="pf-chartbox"><div class="pf-legend"><span><i style="background:#E2B960"></i>Book value</span><span><i class="dash"></i>Money invested</span><span class="muted">Daily since ${day(S[0].d)} · ${S.length} trading days</span></div>${chart}</div>
+      <div class="pf-two"><div><h3 class="pf-h sm">Monthly returns</h3><div class="tbl-wrap"><table class="mc-tbl pf-mtbl"><thead><tr><th>Year</th>${MN.map(m => `<th class="n">${m}</th>`).join('')}<th class="n">Year</th></tr></thead><tbody>
+        ${years.map(y => `<tr><td><b>${y}</b></td>${MN.map((m, i) => { const k = `${y}-${String(i + 1).padStart(2, '0')}`, v = mret[k]; return `<td class="n ${cls(v)}" ${ok(v) ? `style="background:${v > 0 ? `rgba(47,191,113,${Math.min(0.45, Math.abs(v) * 4)})` : `rgba(196,74,61,${Math.min(0.45, Math.abs(v) * 4)})`}"` : ''}>${ok(v) ? (v * 100).toFixed(1) : ''}</td>`; }).join('')}<td class="n ${cls(ytd(y))}"><b>${pct(ytd(y))}</b></td></tr>`).join('')}</tbody></table></div>
+        <div class="pf-stats">${stat('Worst drawdown', dd ? '−' + (dd * 100).toFixed(1) + '%' : '0%', 'largest fall from a high')}${stat('Best day', best ? pct(best.r) : '—', best ? day(best.d) : '')}${stat('Worst day', worst ? pct(worst.r) : '—', worst ? day(worst.d) : '')}${stat('Up days', days.length ? Math.round(up / days.length * 100) + '%' : '—', `${up} of ${days.length}`)}</div></div>
+        <div><h3 class="pf-h sm">Trading record</h3><div class="pf-stats">
+          ${stat('Total traded', money(fromZar(traded), base, 0), `${POS.length} trades · ${cl.length} closed`)}
+          ${stat('Win rate', cl.length ? Math.round(wins.length / cl.length * 100) + '%' : '—', `${wins.length} wins · ${losses.length} losses`)}
+          ${stat('Average win', wins.length ? pct(avg(wins.map(x => x.r))) : '—', wins.length ? money(fromZar(gw / wins.length), base, 0) : '')}
+          ${stat('Average loss', losses.length ? pct(avg(losses.map(x => x.r))) : '—', losses.length ? money(fromZar(-gl / losses.length), base, 0) : '')}
+          ${stat('Profit factor', gl > 0 ? (gw / gl).toFixed(2) : wins.length ? '∞' : '—', 'gross wins ÷ gross losses')}
+          ${stat('Average holding', avg(cl.map(x => x.days).filter(ok)) !== null ? Math.round(avg(cl.map(x => x.days).filter(ok))) + ' days' : '—', '')}
+          ${stat('Best trade', bt[0] ? pct(bt[0].r) : '—', bt[0] ? esc(bt[0].p.ticker.replace('.JO', '')) : '')}
+          ${stat('Worst trade', bt.length ? pct(bt[bt.length - 1].r) : '—', bt.length ? esc(bt[bt.length - 1].p.ticker.replace('.JO', '')) : '')}</div></div></div>
+      <p class="src-note">Returns are time-weighted (money added or taken out does not count as a gain or loss) and measured on your positions in rand, from daily closing prices recorded by the LRC Portfolio Desk; today uses live prices. ${base === 'USD' ? 'Dollar values converted at today\'s rate. ' : ''}Account value adds the cash you enter under Cash &amp; deposits.</p>`;
+  };
+  const acctForm = e => {
+    if (e && e.preventDefault) e.preventDefault();
+    const KF = { deposit: 'Deposit', withdrawal: 'Withdrawal', dividend: 'Dividend received', fee: 'Fee / cost', interest: 'Interest received' };
+    drawer(`<div class="sn-top"><div><span class="pf-kick">ACCOUNT</span><h2>Cash &amp; deposits</h2><small>So we can show your account value and your true gain on the money you put in</small></div><button class="sn-x" aria-label="Close">×</button></div>
+      <h3 class="ev-h3">Cash in your account now</h3><form class="pf-form" id="caF"><div class="pf-grid2"><label>Rand cash (R)<input id="caZ" type="number" step="any" min="0" value="${ok(PROF.cash_zar) ? PROF.cash_zar : ''}"></label><label>Dollar cash ($)<input id="caU" type="number" step="any" min="0" value="${ok(PROF.cash_usd) ? PROF.cash_usd : ''}"></label></div>
+        <p class="pf-err" id="pfErr"></p><button class="btn btn-gold">Save cash</button>${PROF.cash_at ? `<small class="muted">Last updated ${day(PROF.cash_at)}</small>` : ''}</form>
+      <h3 class="ev-h3">Money in and out</h3><form class="pf-form" id="flF"><div class="pf-grid3"><label>Type<select id="flK">${Object.entries(KF).map(([k, l]) => `<option value="${k}">${l}</option>`).join('')}</select></label><label>Amount<input id="flA" type="number" step="any" min="0" required></label><label>Currency<select id="flC"><option>ZAR</option><option>USD</option></select></label></div>
+        <div class="pf-grid2"><label>Date<input id="flD" type="date" value="${new Date().toISOString().slice(0, 10)}"></label><label>Note<input id="flN" maxlength="500" placeholder="optional"></label></div><button class="btn btn-gold">Add</button></form>
+      ${FLOWS.length ? `<div class="tbl-wrap"><table class="mc-tbl pf-tbl"><thead><tr><th>Date</th><th>Type</th><th class="n">Amount</th><th>Note</th><th></th></tr></thead><tbody>${FLOWS.map(f => `<tr><td>${day(f.flow_date)}</td><td>${esc(KF[f.kind] || f.kind)}</td><td class="n ${f.kind === 'withdrawal' || f.kind === 'fee' ? 'dn' : 'up'}">${money(+f.amount, f.currency)}</td><td><small>${esc(f.note || '')}</small></td><td><button class="pf-del" data-f="${f.id}" title="Delete">×</button></td></tr>`).join('')}</tbody></table></div>` : '<p class="muted">No deposits or withdrawals recorded yet. Add your first deposit (the money you funded the account with) to see your true return.</p>'}`);
+    $('caF').onsubmit = async ev => { ev.preventDefault(); const z = $('caZ').value, u = $('caU').value;
+      const { error } = await sb.from('profiles').update({ cash_zar: z === '' ? null : +z, cash_usd: u === '' ? null : +u, cash_at: new Date().toISOString() }).eq('id', user.id); if (error) return err(error.message); close(); await reload(); };
+    $('flF').onsubmit = async ev => { ev.preventDefault(); const a = +$('flA').value; if (!(a > 0)) return;
+      const { error } = await sb.from('portfolio_flows').insert({ kind: $('flK').value, amount: a, currency: $('flC').value, flow_date: $('flD').value || null, note: $('flN').value.trim() || null }); if (error) return alert(error.message); await reload(); acctForm(); };
+    $('pfIn').querySelectorAll('[data-f]').forEach(b => b.onclick = async () => { if (!confirm('Delete this entry?')) return; await sb.from('portfolio_flows').delete().eq('id', b.dataset.f); await reload(); acctForm(); });
+  };
+
   /* ---------- render ---------- */
   const render = () => {
     const B = book(), R = B.rows, name = (PROF.full_name || '').split(' ')[0];
@@ -111,14 +210,16 @@
       <div class="pf-mast"><div><span class="pf-kick">PORTFOLIO JOURNAL · PRIVATE</span><h2>${name ? esc(name) + '’s' : 'My'} book</h2><small>${esc(today)} · prices ${QGEN ? 'as at ' + new Date(QGEN).toLocaleTimeString('en-ZA', { hour: '2-digit', minute: '2-digit' }) + ' SAST, refreshed every 15 min' : 'from the last close'}</small></div>
         <div class="pf-tools"><div class="seg" id="pfBase"><button data-v="ZAR" class="${base === 'ZAR' ? 'on' : ''}">Rand</button><button data-v="USD" class="${base === 'USD' ? 'on' : ''}">Dollar</button></div>
         <button class="btn btn-gold" id="pfAddBtn">+ Add position</button><button class="btn btn-ghost" id="pfImp" title="Upload your trades from a spreadsheet or broker export">Import trades</button><button class="btn btn-ghost" id="pfCsv" title="Download your positions as a spreadsheet">Export</button></div></div>
+      ${acctStrip(B)}
       <div class="pf-kpis">
-        <div><span>Book value</span><b>${money(B.tv, base, 0)}</b><small>${R.length} open position${R.length === 1 ? '' : 's'}${FX ? ` · $1 = R${num(FX, 2)}` : ''}</small></div>
+        <div><span>Positions value</span><b>${money(B.tv, base, 0)}</b><small>${R.length} open position${R.length === 1 ? '' : 's'}${FX ? ` · $1 = R${num(FX, 2)}` : ''}</small></div>
         <div><span>Invested</span><b>${money(B.tc, base, 0)}</b><small>at your entry prices</small></div>
         <div><span>Unrealised P/L</span><b class="${cls(B.pl)}">${money(B.pl, base, 0)}</b><small class="${cls(B.plp)}">${pct(B.plp)}</small></div>
         <div><span>Today</span><b class="${cls(B.td)}">${money(B.td, base, 0)}</b><small class="${cls(B.dayp)}">${pct(B.dayp, 2)}</small></div>
         <div><span>Realised P/L</span><b class="${cls(B.real.reduce((a, r) => a + (r.bpl || 0), 0))}">${money(B.real.reduce((a, r) => a + (r.bpl || 0), 0), base, 0)}</b><small>${B.real.length} closed</small></div>
       </div>
       ${R.length ? `<div class="pf-desk"><span class="pf-kick">DESK NOTE</span><ul>${deskNote(B)}</ul></div>` : `<div class="pf-empty"><h3>Start your book</h3><p>Add the shares you own: the company, your entry price and either the number of shares or the rand/dollar value of the position. Write one line on why you bought it. That is your thesis, and the journal keeps you honest.</p><div class="pf-lock-btns"><button class="btn btn-gold" id="pfAdd2">+ Add your first position</button><button class="btn btn-ghost" id="pfImp2">Import all my trades (CSV)</button></div></div>`}
+      ${perfSection(B)}
       ${R.length ? `<h3 class="pf-h">Positions ledger</h3>
       <div class="tbl-wrap"><table class="mc-tbl pf-tbl"><thead><tr><th>Company</th><th class="n">Shares</th><th class="n">Entry</th><th class="n">Last</th><th class="n">Today</th><th class="n">Value (${base === 'ZAR' ? 'R' : '$'})</th><th class="n">Weight</th><th class="n">P/L</th><th class="n">P/L %</th><th>LRC grade</th><th>Next results</th></tr></thead><tbody>
       ${R.map(r => `<tr class="clk" data-id="${r.p.id}"><td><b>${esc(r.p.ticker.replace('.JO', ''))}</b>${r.p.side === 'short' ? ' <span class="pf-short">SHORT</span>' : ''} <small>${esc(r.p.name || r.i.n || '')}</small>${(NEWS[r.p.ticker] || {}).alerts && NEWS[r.p.ticker].alerts.some(a => (Date.now() - new Date(a.at)) < 864e5) ? ' <span class="pf-flag" title="Market-moving news in the last 24 hours">NEWS</span>' : ''}</td>
@@ -256,50 +357,97 @@
     const hit = IDX[s] || IDX[s + '.JO'] || IDX[s.replace('.', '-')];
     return hit ? { t: hit.t, i: hit } : { t: s, i: ANAME[s] ? { t: s, n: ANAME[s], m: s.endsWith('.JO') ? 'JSE' : 'US', cur: s.endsWith('.JO') ? 'ZAR' : 'USD' } : null };
   };
+  const loadXLSX = () => window.XLSX ? Promise.resolve(window.XLSX) : new Promise((res, rej) => { const sc = document.createElement('script'); sc.src = 'https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js'; sc.onload = () => res(window.XLSX); sc.onerror = rej; document.head.appendChild(sc); });
+  const CASH = /(deposit|withdraw|dividend|fee|commission|interest|charge|transfer in|transfer out|funding)/i;
   const importForm = () => {
-    drawer(`<div class="sn-top"><div><span class="pf-kick">IMPORT TRADES</span><h2>Upload your trades</h2><small>From Excel, Google Sheets or your broker's export, saved as a CSV file</small></div><button class="sn-x" aria-label="Close">×</button></div>
-      <div class="pf-p"><ol class="ev-ul"><li>Download the <a href="#" id="imTpl">LRC template</a>, or use your broker's trade export as it is.</li>
-        <li>One row per trade. Columns we read (any order, any of these names): <b>Ticker</b> / Symbol, <b>Side</b> / Direction / Type (long, buy, short, sell), <b>Shares</b> / Qty / Quantity / Units / Lots, <b>Entry price</b> / Open price / Price, <b>Entry date</b> / Open date / Date, <b>Value</b> (if you don't have the number of shares), <b>Thesis</b> / Notes.</li>
-        <li>JSE shares: use the JSE code with or without <b>.JO</b> (NPN or NPN.JO). CFD names like XAUUSD, NAS100 or US30 are recognised too.</li>
-        <li>In Excel: <i>File → Save As → CSV (comma delimited)</i>. Then choose the file below, check the preview and click Import.</li></ol></div>
-      <label class="pf-drop"><input type="file" id="imF" accept=".csv,.txt,text/csv"><span>Choose a CSV file</span></label>
-      <details class="pf-paste"><summary>…or paste the rows here</summary><textarea id="imT" rows="6" placeholder="Ticker,Side,Shares,Entry price,Entry date"></textarea><button class="btn btn-ghost" type="button" id="imGo">Preview</button></details>
+    drawer(`<div class="sn-top"><div><span class="pf-kick">IMPORT</span><h2>Upload trades or a full statement</h2><small>Excel or CSV: your broker's statement, an open-trades export, or the LRC template</small></div><button class="sn-x" aria-label="Close">×</button></div>
+      <div class="pf-p"><ol class="ev-ul"><li><b>Full history:</b> upload your broker's <b>account statement / trade history</b> (closed trades) and your <b>open trades</b> export. Upload one, then the other: trades already in your book are skipped, so nothing is counted twice.</li>
+        <li>We read these columns (any order, any of these names): <b>Symbol</b>/Ticker, <b>Direction</b>/Side/Type (buy, long, sell, short), <b>Qty</b>/Shares/Units/Lots, <b>Open price</b>/Entry price, <b>Open date</b>/Entry date, <b>Close price</b>/Exit price and <b>Close date</b>/Exit date (for closed trades), <b>Trade ID</b>, <b>Value</b>, <b>Notes</b>.</li>
+        <li><b>Cash lines</b> on the statement (deposits, withdrawals, dividends, fees, interest) are picked up too when they have an amount, so your account value and true return are right.</li>
+        <li>JSE codes with or without .JO; CFD names like XAUUSD, NAS100, US30 and US2000 are recognised. Only have a PDF statement? Most brokers let you download Excel/CSV; if not, send it to us.</li></ol>
+        <p>Or start from the <a href="#" id="imTpl">LRC template</a>.</p></div>
+      <label class="pf-drop"><input type="file" id="imF" accept=".csv,.txt,.xlsx,.xls,text/csv"><span>Choose an Excel or CSV file</span></label>
+      <details class="pf-paste"><summary>…or paste the rows here</summary><textarea id="imT" rows="6" placeholder="Symbol,Direction,Qty,Open price,Open date,Close price,Close date"></textarea><button class="btn btn-ghost" type="button" id="imGo">Preview</button></details>
       <div id="imPrev"></div>`);
     $('imTpl').onclick = e => { e.preventDefault(); const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([TEMPLATE], { type: 'text/csv' })); a.download = 'LRC_portfolio_template.csv'; a.click(); };
+    let cashCur = store.get('lrc_pf_cashcur', 'USD'), lastTxt = '';
     const preview = txt => {
-      const P_ = parseCSV(txt); if (!P_.rows || P_.rows.length < 2) { $('imPrev').innerHTML = '<p class="pf-err">No rows found. The first line must be the column names.</p>'; return; }
-      const H = P_.rows[0].map(h => h.trim().toLowerCase().replace(/[^a-z/% ]/g, ''));
-      const col = (...names) => H.findIndex(h => names.some(n => h === n || h.startsWith(n)));
-      const cT = col('ticker', 'symbol', 'instrument', 'code', 'share', 'stock'), cS = col('side', 'direction', 'type', 'action', 'buysell', 'buy/sell'),
-        cQ = col('shares', 'qty', 'quantity', 'units', 'volume', 'lots', 'amount'), cE = col('entry price', 'entry', 'open price', 'avg price', 'average price', 'price', 'cost per'),
-        cD = col('entry date', 'open date', 'date', 'open time', 'opened', 'trade date', 'time'), cV = col('value', 'invested', 'cost', 'total', 'exposure'),
-        cN = col('thesis', 'notes', 'note', 'comment', 'reason'), cId = col('trade id', 'id', 'position id', 'order');
-      if (cT < 0 || cE < 0) { $('imPrev').innerHTML = `<p class="pf-err">We need at least a Ticker/Symbol column and an Entry price/Open price column. Found: ${esc(P_.rows[0].join(', '))}</p>`; return; }
-      const out = P_.rows.slice(1).map((r, n) => {
-        const R = resolve(r[cT]); const e = numv(r[cE], P_.d); let q = cQ >= 0 ? Math.abs(numv(r[cQ], P_.d)) : NaN; const v = cV >= 0 ? Math.abs(numv(r[cV], P_.d)) : NaN;
+      lastTxt = txt;
+      const P_ = parseCSV(txt); if (!P_.rows || P_.rows.length < 2) { $('imPrev').innerHTML = '<p class="pf-err">No rows found.</p>'; return; }
+      const norm = h => String(h || '').trim().toLowerCase().replace(/[^a-z/% ]/g, '').replace(/\s+/g, ' ');
+      const finder = H => (...names) => H.findIndex(h => names.some(n => h === n || h.startsWith(n)));
+      // statements often have a title block: find the header row (first row with a symbol column and a price column)
+      let hr = 0;
+      for (let i = 0; i < Math.min(40, P_.rows.length); i++) { const f = finder(P_.rows[i].map(norm)); if (f('ticker', 'symbol', 'instrument', 'code', 'stock', 'security') >= 0 && f('open price', 'entry price', 'price', 'avg price', 'average price', 'entry', 'amount') >= 0) { hr = i; break; } }
+      const H = P_.rows[hr].map(norm), col = finder(H), colP = (...names) => { for (const n of names) { const i = H.findIndex(h => h === n || h.startsWith(n)); if (i >= 0) return i; } return -1; };
+      const cT = col('ticker', 'symbol', 'instrument', 'code', 'stock', 'security', 'share'), cS = col('side', 'direction', 'buy/sell', 'buysell', 'action', 'type', 'transaction'),
+        cQ = col('shares', 'qty', 'quantity', 'units', 'volume', 'lots', 'size', 'amount of shares'),
+        cE = col('open price', 'entry price', 'opening price', 'avg price', 'average price', 'buy price', 'price', 'entry', 'cost per'),
+        cD = col('open date', 'open time', 'entry date', 'opened', 'opening date', 'trade date', 'date', 'time'),
+        cX = col('close price', 'exit price', 'closing price', 'sell price', 'close rate'), cXD = col('close date', 'close time', 'exit date', 'closed', 'closing date'),
+        cV = col('value', 'invested', 'cost', 'total', 'exposure', 'consideration'), cN = col('thesis', 'notes', 'note', 'comment', 'reason'),
+        cId = col('trade id', 'position id', 'ticket', 'deal id', 'order id', 'id'), cA = col('amount', 'net amount', 'credit', 'cash', 'profit', 'pl', 'p/l'),
+        cDesc = colP('description', 'details', 'narrative', 'comment', 'transaction', 'type');
+      if (cT < 0 && cA < 0) { $('imPrev').innerHTML = `<p class="pf-err">We could not find a Symbol/Ticker column. Found: ${esc(P_.rows[hr].join(', '))}</p>`; return; }
+      const have = new Set(POS.map(p => p.ext_id).filter(Boolean)), seen = new Set(), flows = [];
+      const out = P_.rows.slice(hr + 1).map((r, n) => {
+        const desc = [...new Set([cS >= 0 ? r[cS] : '', cDesc >= 0 ? r[cDesc] : '', cT >= 0 ? r[cT] : ''].map(x => String(x || '').trim()).filter(Boolean))].join(' · ');
+        const tk = cT >= 0 ? String(r[cT] || '').trim() : '';
+        // cash line: no tradable symbol, but a deposit / withdrawal / dividend / fee / interest description and an amount
+        if ((!tk || CASH.test(tk)) && CASH.test(desc)) {
+          const amt = numv(cA >= 0 ? r[cA] : cV >= 0 ? r[cV] : '', P_.d); if (!(Math.abs(amt) > 0)) return { n: n + hr + 2, skip: 'cash line without amount' };
+          const kind = /withdraw|transfer out/i.test(desc) ? 'withdrawal' : /dividend/i.test(desc) ? (amt < 0 ? 'fee' : 'dividend') : /interest/i.test(desc) ? (amt < 0 ? 'fee' : 'interest') : /fee|commission|charge/i.test(desc) ? 'fee' : amt < 0 ? 'withdrawal' : 'deposit';
+          flows.push({ kind, amount: Math.abs(amt), currency: cashCur, flow_date: cD >= 0 ? datev(r[cD]) || new Date().toISOString().slice(0, 10) : new Date().toISOString().slice(0, 10), note: String(desc).trim().slice(0, 200) });
+          return { n: n + hr + 2, cash: flows[flows.length - 1] };
+        }
+        if (!tk) return null;
+        const R = resolve(tk), e = numv(r[cE], P_.d); let q = cQ >= 0 ? Math.abs(numv(r[cQ], P_.d)) : NaN; const v = cV >= 0 ? Math.abs(numv(r[cV], P_.d)) : NaN;
         if (!(q > 0) && v > 0 && e > 0) q = v / e;
-        const sd = String(cS >= 0 ? r[cS] : '').trim().toLowerCase(); const side = /^(short|sell|s|sold)/.test(sd) || (cQ >= 0 && numv(r[cQ], P_.d) < 0) ? 'short' : 'long';
+        const sd = String(cS >= 0 ? r[cS] : '').trim().toLowerCase(), side = /^(short|sell|s\b|sold)/.test(sd) || (cQ >= 0 && numv(r[cQ], P_.d) < 0) ? 'short' : 'long';
+        const xp = cX >= 0 ? numv(r[cX], P_.d) : NaN, xd = cXD >= 0 ? datev(r[cXD]) : null;
+        const id = cId >= 0 && String(r[cId] || '').trim() ? String(r[cId]).trim().slice(0, 60) : null;
         const i = R && R.i, m = i ? i.m : (R && R.t.endsWith('.JO') ? 'JSE' : 'US');
-        const note = [cN >= 0 ? String(r[cN] || '').trim() : '', cId >= 0 && r[cId] ? 'Trade ID ' + String(r[cId]).trim() : ''].filter(Boolean).join(' · ');
         const okRow = R && /^[A-Z0-9.\-^=]{1,20}$/.test(R.t) && e > 0 && q > 0;
-        return { n: n + 2, ok: okRow, known: !!(i && IDX[i.t]), raw: r[cT], row: okRow ? { side, ticker: R.t, name: i ? i.n : null, market: m, currency: i && i.cur ? i.cur : (m === 'US' ? 'USD' : 'ZAR'), qty: q, entry_price: e, entry_date: cD >= 0 ? datev(r[cD]) : null, thesis: note || null } : null,
-          why: !R ? 'no ticker' : !(e > 0) ? 'no entry price' : !(q > 0) ? 'no shares or value' : '' };
-      });
-      const good = out.filter(x => x.ok), bad = out.filter(x => !x.ok);
-      $('imPrev').innerHTML = `<h3 class="ev-h3">Preview: ${good.length} trade${good.length === 1 ? '' : 's'} ready${bad.length ? `, ${bad.length} skipped` : ''}</h3>
-        <div class="tbl-wrap"><table class="mc-tbl pf-tbl"><thead><tr><th>Row</th><th>Ticker</th><th>Side</th><th class="n">Shares</th><th class="n">Entry</th><th>Date</th><th>Status</th></tr></thead><tbody>
-        ${out.map(x => `<tr><td>${x.n}</td><td><b>${esc(x.row ? x.row.ticker.replace('.JO', '') : x.raw || '—')}</b> <small>${esc(x.row && x.row.name || '')}</small></td><td>${x.row ? (x.row.side === 'short' ? '<span class="pf-short">SHORT</span>' : 'Long') : ''}</td>
+        const dup = id && (have.has(id) || seen.has(id)); if (id) seen.add(id);
+        const closed = xp > 0 && !!xd;
+        return { n: n + hr + 2, ok: okRow && !dup, dup, known: !!(i && IDX[i.t]), raw: tk, closed,
+          row: okRow ? { side, ticker: R.t, name: i ? i.n : null, market: m, currency: i && i.cur ? i.cur : (m === 'US' ? 'USD' : 'ZAR'), qty: q, entry_price: e, entry_date: cD >= 0 ? datev(r[cD]) : null,
+            exit_price: closed ? xp : null, closed_on: closed ? xd : null, ext_id: id, thesis: [cN >= 0 ? String(r[cN] || '').trim() : '', id ? 'Trade ID ' + id : ''].filter(Boolean).join(' · ') || null } : null,
+          why: dup ? 'already in your book' : !R ? 'no ticker' : !(e > 0) ? 'no entry price' : !(q > 0) ? 'no shares or value' : '' };
+      }).filter(Boolean);
+      const trades = out.filter(x => !x.cash && !x.skip), good = trades.filter(x => x.ok), bad = trades.filter(x => !x.ok), nOpen = good.filter(x => !x.closed).length, nClosed = good.length - nOpen;
+      const first = good.map(x => x.row.entry_date).filter(Boolean).sort()[0];
+      $('imPrev').innerHTML = `<h3 class="ev-h3">Preview: ${nOpen} open and ${nClosed} closed trade${good.length === 1 ? '' : 's'}${flows.length ? `, ${flows.length} cash line${flows.length === 1 ? '' : 's'}` : ''}${bad.length ? ` · ${bad.length} skipped` : ''}</h3>
+        ${first ? `<p class="muted">History from ${day(first)}. Your daily track record will be rebuilt from that date (up to 2 years back) within 30 minutes of importing.</p>` : ''}
+        <div class="tbl-wrap"><table class="mc-tbl pf-tbl"><thead><tr><th>Row</th><th>Ticker</th><th>Side</th><th class="n">Shares</th><th class="n">Entry</th><th>Opened</th><th class="n">Exit</th><th>Closed</th><th>Status</th></tr></thead><tbody>
+        ${trades.map(x => `<tr><td>${x.n}</td><td><b>${esc(x.row ? x.row.ticker.replace('.JO', '') : x.raw || '—')}</b> <small>${esc(x.row && x.row.name || '')}</small></td><td>${x.row ? (x.row.side === 'short' ? '<span class="pf-short">SHORT</span>' : 'Long') : ''}</td>
           <td class="n">${x.row ? num(x.row.qty, x.row.qty % 1 ? 4 : 0) : ''}</td><td class="n">${x.row ? money(x.row.entry_price, x.row.currency) : ''}</td><td>${x.row && x.row.entry_date ? day(x.row.entry_date) : '—'}</td>
-          <td>${!x.ok ? `<span class="dn">Skipped: ${x.why}</span>` : x.known ? '<span class="up">✓ matched</span>' : '<span class="muted">✓ not in the LRC scanner: price and news come from the Portfolio Desk</span>'}</td></tr>`).join('')}</tbody></table></div>
-        <p class="pf-err" id="pfErr"></p>${good.length ? `<button class="btn btn-gold" id="imDo">Import ${good.length} trade${good.length === 1 ? '' : 's'}</button>` : ''}`;
-      if (good.length) $('imDo').onclick = async () => {
+          <td class="n">${x.row && x.row.exit_price ? money(x.row.exit_price, x.row.currency) : ''}</td><td>${x.row && x.row.closed_on ? day(x.row.closed_on) : x.row ? '<span class="up">open</span>' : ''}</td>
+          <td>${!x.ok ? `<span class="${x.dup ? 'muted' : 'dn'}">Skipped: ${x.why}</span>` : x.known ? '<span class="up">✓ matched</span>' : '<span class="muted">✓ priced by the Portfolio Desk</span>'}</td></tr>`).join('')}</tbody></table></div>
+        ${flows.length ? `<h3 class="ev-h3">Cash lines</h3><div class="pf-cur">Cash amounts on this statement are in <div class="seg" id="imCur"><button data-v="USD" class="${cashCur === 'USD' ? 'on' : ''}">Dollars</button><button data-v="ZAR" class="${cashCur === 'ZAR' ? 'on' : ''}">Rand</button></div></div><div class="tbl-wrap"><table class="mc-tbl pf-tbl"><thead><tr><th>Date</th><th>Type</th><th class="n">Amount</th><th>Description</th></tr></thead><tbody>${flows.map(f => `<tr><td>${day(f.flow_date)}</td><td>${esc(f.kind)}</td><td class="n">${money(f.amount, f.currency)}</td><td><small>${esc(f.note)}</small></td></tr>`).join('')}</tbody></table></div>` : ''}
+        <p class="pf-err" id="pfErr"></p>${good.length || flows.length ? `<button class="btn btn-gold" id="imDo">Import ${good.length} trade${good.length === 1 ? '' : 's'}${flows.length ? ` and ${flows.length} cash line${flows.length === 1 ? '' : 's'}` : ''}</button>` : ''}`;
+      if ($('imCur')) $('imCur').querySelectorAll('button').forEach(b => b.onclick = () => { cashCur = b.dataset.v; store.set('lrc_pf_cashcur', cashCur); preview(lastTxt); });
+      if (good.length || flows.length) $('imDo').onclick = async () => {
         $('imDo').disabled = true; $('imDo').textContent = 'Importing…';
-        for (let k = 0; k < good.length; k += 100) { const { error } = await sb.from('portfolio_positions').insert(good.slice(k, k + 100).map(x => x.row)); if (error) { $('imDo').disabled = false; $('imDo').textContent = 'Try again'; return err(error.message); } }
-        await sb.from('portfolio_journal').insert({ kind: 'trade', body: `Imported ${good.length} trade${good.length === 1 ? '' : 's'} from a spreadsheet: ${[...new Set(good.map(x => x.row.ticker.replace('.JO', '')))].slice(0, 20).join(', ')}.` });
+        const fail = m => { $('imDo').disabled = false; $('imDo').textContent = 'Try again'; err(m); };
+        for (let k = 0; k < good.length; k += 100) { const { error } = await sb.from('portfolio_positions').insert(good.slice(k, k + 100).map(x => x.row)); if (error) return fail(error.message); }
+        for (let k = 0; k < flows.length; k += 100) { const { error } = await sb.from('portfolio_flows').insert(flows.slice(k, k + 100)); if (error) return fail(error.message); }
+        await sb.from('portfolio_journal').insert({ kind: 'trade', body: `Imported ${nOpen} open and ${nClosed} closed trade${good.length === 1 ? '' : 's'}${flows.length ? ` and ${flows.length} cash line${flows.length === 1 ? '' : 's'}` : ''}${first ? ' (history from ' + first + ')' : ''}: ${[...new Set(good.map(x => x.row.ticker.replace('.JO', '')))].slice(0, 20).join(', ')}.` });
         close(); await reload();
       };
     };
-    $('imF').onchange = e => { const f = e.target.files[0]; if (!f) return; if (f.size > 2e6) { $('imPrev').innerHTML = '<p class="pf-err">That file is too large (max 2 MB).</p>'; return; } const r = new FileReader(); r.onload = () => preview(String(r.result)); r.readAsText(f); };
+    $('imF').onchange = async e => {
+      const f = e.target.files[0]; if (!f) return; if (f.size > 5e6) { $('imPrev').innerHTML = '<p class="pf-err">That file is too large (max 5 MB).</p>'; return; }
+      if (/\.xlsx?$/i.test(f.name)) {
+        $('imPrev').innerHTML = '<p class="muted">Reading the spreadsheet…</p>';
+        try { const X = await loadXLSX(), wb = X.read(await f.arrayBuffer(), { type: 'array', cellDates: true });
+          const best = wb.SheetNames.map(n => X.utils.sheet_to_csv(wb.Sheets[n], { dateNF: 'yyyy-mm-dd' })).sort((a, b) => b.length - a.length);
+          preview(best[0]); } catch (x) { $('imPrev').innerHTML = '<p class="pf-err">Could not read that Excel file. Save it as CSV and try again.</p>'; }
+        return;
+      }
+      if (/\.pdf$/i.test(f.name)) { $('imPrev').innerHTML = '<p class="pf-err">PDF statements can\'t be read here. Download the Excel or CSV version from your broker.</p>'; return; }
+      const r = new FileReader(); r.onload = () => preview(String(r.result)); r.readAsText(f);
+    };
     $('imGo').onclick = () => preview($('imT').value);
   };
 
@@ -316,6 +464,8 @@
     if ($('pfCsv')) $('pfCsv').onclick = csv;
     root.querySelectorAll('#pfBase button').forEach(b => b.onclick = () => { base = b.dataset.v; store.set('lrc_pf_base', base); render(); });
     root.querySelectorAll('tr.clk').forEach(tr => tr.onclick = () => posView(tr.dataset.id));
+    if ($('pfAcct')) $('pfAcct').onclick = acctForm;
+    if ($('pfAcct2')) $('pfAcct2').onclick = acctForm;
     if ($('pfMail')) $('pfMail').onchange = async e => { PROF.portfolio_alerts = e.target.checked; await sb.from('profiles').update({ portfolio_alerts: e.target.checked }).eq('id', user.id); };
     if ($('pfJ')) $('pfJ').onsubmit = async ev => { ev.preventDefault(); const body = $('pfJb').value.trim(); if (!body) return; const { error } = await sb.from('portfolio_journal').insert({ ticker: $('pfJt').value || null, kind: $('pfJk').value, body }); if (!error) { await reloadJ(); render(); } };
     root.querySelectorAll('.pf-del').forEach(b => b.onclick = async () => { if (!confirm('Delete this journal entry?')) return; await sb.from('portfolio_journal').delete().eq('id', b.dataset.j); await reloadJ(); render(); });
@@ -323,7 +473,9 @@
 
   const reloadJ = async () => { const { data } = await sb.from('portfolio_journal').select('*').order('created_at', { ascending: false }).limit(300); JRN = data || []; };
   const reload = async () => {
-    const [{ data: pos, error }, , { data: prof }] = await Promise.all([sb.from('portfolio_positions').select('*').order('created_at'), reloadJ(), sb.from('profiles').select('full_name,portfolio_alerts').eq('id', user.id).maybeSingle()]);
+    const [{ data: pos, error }, , { data: prof }] = await Promise.all([sb.from('portfolio_positions').select('*').order('created_at'), reloadJ(), sb.from('profiles').select('*').eq('id', user.id).maybeSingle()]);
+    const [{ data: sn }, { data: fl }] = await Promise.all([sb.from('portfolio_snapshots').select('d,book,invested,flow,n,at').order('d').limit(1000), sb.from('portfolio_flows').select('*').order('flow_date', { ascending: false }).limit(500)]);
+    SNAP = sn || []; FLOWS = fl || [];
     if (error) { root.innerHTML = `<div class="pf-lock"><h2>Portfolio not available yet</h2><p class="muted">${/relation|does not exist|schema cache/i.test(error.message) ? 'The portfolio database is being set up. Please check back shortly.' : esc(error.message)}</p></div>`; return; }
     POS = pos || []; PROF = prof || {};
     await loadNews(); render();

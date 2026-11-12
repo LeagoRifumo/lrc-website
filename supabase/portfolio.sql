@@ -88,3 +88,44 @@ begin
 end $$;
 drop trigger if exists portfolio_touch on public.portfolio_positions;
 create trigger portfolio_touch before insert or update on public.portfolio_positions for each row execute function public.portfolio_touch();
+
+-- ===== v1.2 Account & track record =====
+-- 6. Money in and out of the account (deposits, withdrawals, dividends received, fees, interest)
+create table if not exists public.portfolio_flows (
+  id         bigserial primary key,
+  user_id    uuid not null default auth.uid() references auth.users(id) on delete cascade,
+  kind       text not null check (kind in ('deposit', 'withdrawal', 'dividend', 'fee', 'interest')),
+  amount     numeric not null check (amount > 0),
+  currency   text not null default 'ZAR' check (currency in ('ZAR', 'USD')),
+  flow_date  date not null default current_date,
+  note       text check (char_length(note) <= 500),
+  created_at timestamptz not null default now()
+);
+create index if not exists portfolio_flows_user on public.portfolio_flows (user_id, flow_date);
+alter table public.portfolio_flows enable row level security;
+drop policy if exists "own flows" on public.portfolio_flows;
+create policy "own flows" on public.portfolio_flows for all to authenticated using (auth.uid() = user_id) with check (auth.uid() = user_id);
+
+-- 7. Cash currently in the account (entered by the member)
+alter table public.profiles add column if not exists cash_zar numeric;
+alter table public.profiles add column if not exists cash_usd numeric;
+alter table public.profiles add column if not exists cash_at timestamptz;
+
+-- 8. Daily track record (written by the Portfolio Desk from closing prices; members can only read their own)
+create table if not exists public.portfolio_snapshots (
+  user_id   uuid not null references auth.users(id) on delete cascade,
+  d         date not null,
+  book      numeric,          -- value of open positions in rand (cost + profit/loss)
+  invested  numeric,          -- cost of open positions in rand
+  flow      numeric,          -- money put into (+) or taken out of (-) positions that day, in rand
+  n         int,              -- open positions
+  at        timestamptz not null default now(),
+  primary key (user_id, d)
+);
+alter table public.portfolio_snapshots enable row level security;
+drop policy if exists "own snapshots" on public.portfolio_snapshots;
+create policy "own snapshots" on public.portfolio_snapshots for select to authenticated using (auth.uid() = user_id);
+
+-- 9. Broker trade ID (so the same trade is never imported twice)
+alter table public.portfolio_positions add column if not exists ext_id text;
+create unique index if not exists portfolio_positions_ext on public.portfolio_positions (user_id, ext_id) where ext_id is not null;

@@ -82,7 +82,7 @@ def main():
     print(f'portfolio_desk: {len(pos)} open positions, {len(tickers)} companies')
 
     # prices
-    q = Yahoo().quotes(tickers)
+    q = Yahoo().quotes(tickers + ['ZAR=X'])
     quotes = {}
     for s, x in q.items():
         px, ch = x.get('regularMarketPrice'), x.get('regularMarketChangePercent')
@@ -128,9 +128,76 @@ def main():
                      'alerts': sorted(al.values(), key=lambda a: a.get('at') or '', reverse=True)[:20], 'updated_at': now.isoformat()})
     for i in range(0, len(rows), 200):
         api('POST', 'portfolio_news?on_conflict=ticker', rows[i:i + 200], 'resolution=merge-duplicates,return=minimal')
+    try: track_record(quotes, now)
+    except Exception as e: print('::warning::portfolio_desk: track record failed:', repr(e)[:200])
     n_new = sum(len(v) for v in fresh.values())
     print(f'::notice::portfolio_desk: {len(rows)} companies refreshed, {len(quotes)} prices, {n_new} new market-moving alerts')
     if n_new: send_alerts(pos, fresh)
+
+
+def track_record(quotes, now):
+    """Daily book value per member (rand), rebuilt from closing prices since each trade's entry date.
+    Full rebuild for members whose positions changed since their last snapshot (and once a day after the US close);
+    otherwise only today's row is refreshed from the latest prices."""
+    allp = api('GET', 'portfolio_positions?select=user_id,ticker,currency,qty,entry_price,entry_date,side,exit_price,closed_on,updated_at,created_at&limit=50000') or []
+    if not allp: return
+    today = now.date()
+    last = {}
+    for r in api('GET', 'portfolio_snapshots?select=user_id,at&d=eq.' + (today - dt.timedelta(days=1)).isoformat() + '&limit=50000') or []: last[r['user_id']] = r['at']
+    users = {}
+    for p in allp: users.setdefault(p['user_id'], []).append(p)
+    full = {u for u, ps in users.items() if u not in last or now.hour == 23 or any((p.get('updated_at') or '') > last[u] for p in ps)}
+    y = Yahoo(); start = (today - dt.timedelta(days=730)).isoformat()
+    tick = sorted({p['ticker'] for u in full for p in users[u]})
+    def hist(t):
+        try:
+            bars, meta = y.bars(t, '2y'); k = 100.0 if (meta.get('currency') or '') in ('ZAc', 'ZAC', 'GBp', 'GBX') else 1.0
+            return t, {b['date']: b['close'] / k for b in bars}
+        except Exception as e:
+            print('  bars', t, repr(e)[:60]); return t, {}
+    with ThreadPoolExecutor(6) as ex: H = dict(ex.map(hist, tick + ['ZAR=X'])) if full else {}
+    fxl = (load(P('docs', 'data', 'dashboards', 'live.json')) or {}).get('groups') or []
+    fx_now = next((r['latest'] for g in fxl for r in g['rows'] if r['name'] == 'USD / ZAR'), None) or 16.5
+    def series(dates, m):
+        out, lastv = {}, None
+        keys = sorted(m)
+        j = 0
+        for d in dates:
+            while j < len(keys) and keys[j] <= d: lastv = m[keys[j]]; j += 1
+            out[d] = lastv
+        return out
+    rows = []
+    for u, ps in users.items():
+        ent = lambda p: (p.get('entry_date') or (p.get('created_at') or today.isoformat())[:10])
+        if u in full:
+            first = max(min(ent(p) for p in ps), start)
+            dates = sorted({d for t in {p['ticker'] for p in ps} for d in H.get(t, {}) if d >= first} | set(d for d in H.get('ZAR=X', {}) if d >= first))
+            dates = [d for d in dates if d < today.isoformat()] + [today.isoformat()]
+            fx = series(dates, H.get('ZAR=X', {}))
+            px = {t: series(dates, H.get(t, {})) for t in {p['ticker'] for p in ps}}
+        else:
+            dates = [today.isoformat()]; fx = {}; px = {}
+        for d in dates:
+            f = (quotes.get('ZAR=X') or {}).get('px') if d == today.isoformat() else None
+            f = f or fx.get(d) or fx_now
+            book = inv = flow = 0.0; n = 0
+            for p in ps:
+                e, c = ent(p), (p.get('currency') or ('ZAR' if p['ticker'].endswith('.JO') else 'USD'))
+                k = f if c == 'USD' else 1.0
+                dirn = -1 if p.get('side') == 'short' else 1
+                q, ep = float(p['qty']), float(p['entry_price'])
+                cost = q * ep * k
+                if e == d: flow += cost
+                if p.get('closed_on') and p['closed_on'] == d:
+                    xp = float(p.get('exit_price') or ep); flow -= cost + dirn * q * (xp - ep) * k
+                if e <= d and (not p.get('closed_on') or p['closed_on'] > d):
+                    live = (quotes.get(p['ticker']) or {}).get('px') if d == today.isoformat() else None
+                    pr = live or (px.get(p['ticker']) or {}).get(d) or ep
+                    book += cost + dirn * q * (pr - ep) * k; inv += cost; n += 1
+            rows.append({'user_id': u, 'd': d, 'book': round(book, 2), 'invested': round(inv, 2), 'flow': round(flow, 2), 'n': n, 'at': now.isoformat()})
+    for i in range(0, len(rows), 500):
+        api('POST', 'portfolio_snapshots?on_conflict=user_id,d', rows[i:i + 500], 'resolution=merge-duplicates,return=minimal')
+    print(f'::notice::portfolio_desk: track record {len(rows)} daily rows ({len(full)} members rebuilt in full)')
 
 
 def send_alerts(pos, fresh):
