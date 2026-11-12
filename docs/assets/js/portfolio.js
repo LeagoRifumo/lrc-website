@@ -448,7 +448,7 @@
     root.innerHTML = `
       <div class="pf-mast"><div><span class="pf-kick">PORTFOLIO JOURNAL · PRIVATE</span><h2>${name ? esc(name) + '’s' : 'My'} book</h2><small>${esc(today)} · prices ${QGEN ? 'as at ' + new Date(QGEN).toLocaleTimeString('en-ZA', { hour: '2-digit', minute: '2-digit' }) + ' SAST, refreshed every 15 min' : 'from the last close'}</small></div>
         <div class="pf-tools"><div class="seg" id="pfBase"><button data-v="ZAR" class="${base === 'ZAR' ? 'on' : ''}">Rand</button><button data-v="USD" class="${base === 'USD' ? 'on' : ''}">Dollar</button></div>
-        <button class="btn btn-gold" id="pfAddBtn">+ Add position</button><button class="btn btn-ghost" id="pfImp" title="Upload your trades from a spreadsheet or broker export">Import trades</button><button class="btn btn-ghost" id="pfCsv" title="Download your positions as a spreadsheet">Export</button></div></div>
+        <button class="btn btn-gold" id="pfAddBtn">+ Add position</button><button class="btn btn-ghost" id="pfImp" title="Upload your trades from a spreadsheet or broker export">Import trades</button><button class="btn btn-ghost" id="pfCsv" title="Download your positions as a spreadsheet">Export</button><button class="btn btn-ghost pf-reset" id="pfReset" title="Delete everything in your portfolio and start again">Reset</button></div></div>
       ${acctStrip(B)}
       <div class="pf-kpis">
         <div><span>Positions value</span><b>${money(B.tv, base, 0)}</b><small>${R.length} open position${R.length === 1 ? '' : 's'}${FX ? ` · $1 = R${num(FX, 2)}` : ''}</small></div>
@@ -597,6 +597,23 @@
     return hit ? { t: hit.t, i: hit } : { t: s, i: ANAME[s] ? { t: s, n: ANAME[s], m: s.endsWith('.JO') ? 'JSE' : 'US', cur: s.endsWith('.JO') ? 'ZAR' : 'USD' } : null };
   };
   const loadXLSX = () => window.XLSX ? Promise.resolve(window.XLSX) : new Promise((res, rej) => { const sc = document.createElement('script'); sc.src = 'https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js'; sc.onload = () => res(window.XLSX); sc.onerror = rej; document.head.appendChild(sc); });
+  const resetForm = () => {
+    drawer(`<div class="sn-top"><div><span class="pf-kick">RESET</span><h2>Start your portfolio again</h2><small>Deletes all your positions, deposits and withdrawals, cash, journal and track record. This cannot be undone.</small></div><button class="sn-x" aria-label="Close">×</button></div>
+      <div class="pf-p"><p>Tip: click <b>Export</b> first to keep a copy. After the reset, import your statements again and your track record is rebuilt within 30 minutes.</p>
+      <div class="pf-form"><label>Type RESET to confirm<input id="rsT" autocomplete="off"></label><p class="pf-err" id="rsE"></p>
+      <button class="btn btn-gold" id="rsGo" type="button" disabled>Delete everything and start again</button></div></div>`);
+    $('rsT').oninput = () => { $('rsGo').disabled = $('rsT').value.trim().toUpperCase() !== 'RESET'; };
+    $('rsGo').onclick = async () => {
+      $('rsGo').disabled = true; $('rsGo').textContent = 'Resetting…';
+      const r = await Promise.all([
+        sb.from('portfolio_positions').delete().eq('user_id', user.id), sb.from('portfolio_flows').delete().eq('user_id', user.id),
+        sb.from('portfolio_journal').delete().eq('user_id', user.id), sb.from('portfolio_snapshots').delete().eq('user_id', user.id),
+        sb.from('profiles').update({ cash_zar: null, cash_usd: null, cash_at: null }).eq('id', user.id)]);
+      const bad = r.find(x => x && x.error);
+      if (bad) { $('rsE').textContent = bad.error.message; $('rsGo').textContent = 'Delete everything and start again'; return; }
+      close(); await reload();
+    };
+  };
   const CASH = /(deposit|withdraw|dividend|fee|commission|interest|charge|transfer in|transfer out|funding)/i;
   const importForm = () => {
     drawer(`<div class="sn-top"><div><span class="pf-kick">IMPORT</span><h2>Upload trades or a full statement</h2><small>Excel or CSV: your broker's statement, an open-trades export, or the LRC template</small></div><button class="sn-x" aria-label="Close">×</button></div>
@@ -711,6 +728,7 @@
     [$('pfAddBtn'), $('pfAdd2')].forEach(b => b && (b.onclick = () => addForm()));
     [$('pfImp'), $('pfImp2')].forEach(b => b && (b.onclick = importForm));
     if ($('pfCsv')) $('pfCsv').onclick = csv;
+    if ($('pfReset')) $('pfReset').onclick = resetForm;
     root.querySelectorAll('#pfBase button').forEach(b => b.onclick = () => { base = b.dataset.v; store.set('lrc_pf_base', base); render(); });
     root.querySelectorAll('tr.clk').forEach(tr => tr.onclick = () => posView(tr.dataset.id));
     if ($('pfAcct')) $('pfAcct').onclick = acctForm;

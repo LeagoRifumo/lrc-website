@@ -148,3 +148,15 @@ alter table public.portfolio_snapshots add column if not exists flow_jse numeric
 alter table public.portfolio_snapshots add column if not exists book_us  numeric;
 alter table public.portfolio_snapshots add column if not exists inv_us   numeric;
 alter table public.portfolio_snapshots add column if not exists flow_us  numeric;
+
+-- 12. Reset: a member can wipe their own track record, and deleting any position clears the
+--     track record so the Portfolio Desk rebuilds it from the positions that are left (no phantom losses).
+drop policy if exists "own snapshots delete" on public.portfolio_snapshots;
+create policy "own snapshots delete" on public.portfolio_snapshots for delete to authenticated using (auth.uid() = user_id);
+create or replace function public.portfolio_after_delete() returns trigger language plpgsql security definer set search_path = public as $$
+begin
+  delete from public.portfolio_snapshots where user_id = old.user_id;
+  return null;
+end $$;
+drop trigger if exists portfolio_after_delete on public.portfolio_positions;
+create trigger portfolio_after_delete after delete on public.portfolio_positions for each row execute function public.portfolio_after_delete();
