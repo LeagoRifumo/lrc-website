@@ -16,7 +16,7 @@ from concurrent.futures import ThreadPoolExecutor
 CFG = os.path.join(os.path.dirname(__file__), '..', 'config', 'etf_notes.json')
 
 # JSE ETFs without usable Yahoo holdings: follow a US ETF on the same index, or build a proxy from the scanner
-MIRROR = {'STX500.JO': 'SPY', 'STXNDQ.JO': 'QQQ', 'STXEMG.JO': 'EEM', 'STXCHN.JO': 'FXI'}
+MIRROR = {'STXWDM.JO': 'URTH', 'STX500.JO': 'SPY', 'STXNDQ.JO': 'QQQ', 'STXEMG.JO': 'EEM', 'STXCHN.JO': 'FXI'}
 RESI = {'Basic Materials', 'Energy'}
 FIN = {'Financial Services'}
 PROP = {'Real Estate'}
@@ -48,7 +48,8 @@ def _yahoo_top(y, sym):
 def _match(rows_by, s, m):
     if not s: return None
     s = s.strip().upper().replace('.', '-') if '.' in s and not s.endswith('.JO') else s.strip().upper()
-    for k in (s, s + '.JO', s.replace('-', '.'), s.split('.')[0] + '.JO'):
+    base = s.split('.')[0]
+    for k in (s, s + '.JO', s.replace('-', '.'), base + '.JO', base):
         if k in rows_by: return rows_by[k]
     return None
 
