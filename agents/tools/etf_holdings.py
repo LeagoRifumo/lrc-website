@@ -12,6 +12,11 @@ score: the weighted average LRC score of the holdings we cover.
 """
 import json, os, urllib.parse
 from concurrent.futures import ThreadPoolExecutor
+from scan_engine import INVEST_W, rating_v7 as rating
+
+PILLARS = ('valuation', 'growth', 'profitability', 'health', 'income', 'sentiment')
+TECH_W = 0.6        # ETF score = 60% technical + 40% fundamentals (LRC trading horizon, 3-12 months)
+MIN_N, MIN_COV = 3, 0.5   # need 3+ graded holdings covering half the listed top-holding weight, else technical only
 
 CFG = os.path.join(os.path.dirname(__file__), '..', 'config', 'etf_notes.json')
 
@@ -42,7 +47,10 @@ def _yahoo_top(y, sym):
             v = raw(v)
             if v: sw.append({'k': k, 'w': v})
     sw.sort(key=lambda x: -x['w'])
-    return {'hold': hold, 'sw': sw[:4]}
+    eq = th.get('equityHoldings') or {}
+    fv = {k: raw(eq.get(y_)) for k, y_ in (('pe', 'priceToEarnings'), ('pb', 'priceToBook'), ('ps', 'priceToSales'), ('pcf', 'priceToCashflow'), ('g3', 'threeYearEarningsGrowth'))}
+    fv = {k: v for k, v in fv.items() if isinstance(v, (int, float)) and v}
+    return {'hold': hold, 'sw': sw[:4], 'fv': fv}
 
 
 def _match(rows_by, s, m):
@@ -87,9 +95,11 @@ def build(y, etf_rows, out_rows, workers=6, top=8):
         for h in hold[:top]:
             r = _match(rows_by, h.get('s'), e['m'])
             out.append({'s': (r or {}).get('t') or h.get('s'), 'n': h.get('n') or (r or {}).get('n'), 'w': h.get('w'),
-                        'v': (r or {}).get('v'), 'sc': (r or {}).get('score'), 'iv': (r or {}).get('iv_v'), 'in': bool(r)})
+                        'v': (r or {}).get('v'), 'sc': (r or {}).get('score'), 'iv': (r or {}).get('iv_v'), 'fs': (r or {}).get('iv_score'), 'in': bool(r),
+                        '_g': (r or {}).get('grp') or {}})
         if not out: continue
         e['hold'], e['hsrc'], e['sw'] = out, src, g.get('sw') or []
+        if g.get('fv'): e['fv'] = g['fv']
         cov = [h for h in out if h['in'] and h['sc'] is not None]
         if cov:
             ws = [(h['w'] or 1.0) for h in cov]
@@ -97,4 +107,32 @@ def build(y, etf_rows, out_rows, workers=6, top=8):
             e['lt_strong'] = round(sum(w for h, w in zip(cov, ws) if h['v'] in ('BUY', 'STRONG BUY')) / sum(ws), 3)
             e['lt_weak'] = round(sum(w for h, w in zip(cov, ws) if h['v'] in ('SELL', 'STRONG SELL')) / sum(ws), 3)
             e['lt_n'] = len(cov)
+            # fundamentals look-through: weighted average of each pillar across the covered holdings
+            pil = {}
+            for p in PILLARS:
+                xs = [(h['_g'].get(p), w) for h, w in zip(cov, ws) if h['_g'].get(p) is not None]
+                if xs: pil[p] = round(sum(a * w for a, w in xs) / sum(w for _, w in xs))
+            fw = {p: INVEST_W[p] for p in pil if p in INVEST_W}
+            listed_w = sum(h['w'] for h in out if h['w']) or 0
+            e['cov'] = round(sum(h['w'] for h in cov if h['w']) / listed_w, 3) if listed_w else round(len(cov) / len(out), 3)
+            if fw and len(cov) >= MIN_N and e['cov'] >= MIN_COV:
+                e['pil'] = pil
+                e['fscore'] = round(sum(pil[p] * w for p, w in fw.items()) / sum(fw.values()))
+        for h in out: h.pop('_g', None)
+    # ---------- blended ETF score: 60% technical (trend, momentum, setup, stretch, volume) + 40% fundamentals of the holdings ----------
+    for e in etf_rows:
+        e['tscore'] = e['score']
+        if e.get('fscore') is not None:
+            e['score'] = round(TECH_W * e['tscore'] + (1 - TECH_W) * e['fscore']); e['smode'] = 'blend'
+        else:
+            e['smode'] = 'technical'
+        v = rating(e['score']); gate = None
+        if v in ('BUY', 'STRONG BUY') and e.get('sma200') and e['px'] < e['sma200']:
+            v, gate = 'HOLD', 'Capped at HOLD: price is below its 200-day average'
+        elif v == 'STRONG BUY' and not (e.get('sma50') and e['px'] > e['sma50'] and (e.get('rsi') or 50) < 75):
+            v, gate = 'BUY', 'Capped at BUY: STRONG BUY needs price above the 50-day average and RSI below 75'
+        e['v'] = v
+        if gate: e['gate'] = gate
+        else: e.pop('gate', None)
+    etf_rows.sort(key=lambda e: -e['score'])
     return etf_rows

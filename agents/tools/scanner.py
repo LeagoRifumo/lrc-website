@@ -484,10 +484,10 @@ def main():
             et = cfg['sector_etf'][m].get(sec)
             e = etf_by.get(et)
             # sector score 0-100: average LRC score of its companies (70%) + its sector ETF score (30%)
-            score = round(0.7 * avg + 0.3 * e['score']) if e else round(avg)
+            score = round(0.7 * avg + 0.3 * e.get('tscore', e['score'])) if e else round(avg)   # ETF technical score (its fundamentals are already in the company average)
             top = sorted(rs, key=lambda x: -x['score'])
             sectors.append({'m': m, 'sec': sec, 'n': len(rs), 'score': score, 'v': E.rating_v7(score), 'avg': round(avg), 'bull': bull, 'bear': bear, 'above50': above50,
-                            'setups': setups, 'etf': et, 'etf_name': (e or {}).get('n'), 'etf_score': (e or {}).get('score'), 'etf_v': (e or {}).get('v'),
+                            'setups': setups, 'etf': et, 'etf_name': (e or {}).get('n'), 'etf_score': (e or {}).get('tscore', (e or {}).get('score')), 'etf_v': (e or {}).get('v'),
                             'etf_p1m': (e or {}).get('p1m'), 'top': [x['t'] for x in top[:3]], 'bottom': [x['t'] for x in top[-3:]]})
     sectors.sort(key=lambda x: (x['m'], -x['score']))
 
