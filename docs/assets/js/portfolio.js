@@ -260,6 +260,37 @@
       <p class="pf-note">New York results are measured in rand, so they include the effect of the rand/dollar exchange rate.</p>`;
   };
 
+
+  /* ---------- daily P/L calendar (month view, like a trading journal) ---------- */
+  let CALM = null;
+  const calendar = S0 => {
+    const pts = S0.slice(1); if (!pts.length) return '';
+    const months = [...new Set(pts.map(p => p.d.slice(0, 7)))].sort(); if (!CALM || !months.includes(CALM)) CALM = months[months.length - 1];
+    const byD = {}; pts.forEach(p => byD[p.d] = p);
+    const [y, m] = CALM.split('-').map(Number), first = new Date(Date.UTC(y, m - 1, 1)), daysIn = new Date(Date.UTC(y, m, 0)).getUTCDate();
+    const mx = Math.max(1, ...pts.filter(p => p.d.startsWith(CALM)).map(p => Math.abs(p.pl)));
+    const cell = d => { const k = `${CALM}-${String(d).padStart(2, '0')}`, p = byD[k];
+      if (!p) return `<td class="cal-e"><span>${d}</span></td>`;
+      const v = fromZar(p.pl), a = Math.min(0.55, 0.12 + Math.abs(p.pl) / mx * 0.43);
+      return `<td style="background:${p.pl >= 0 ? `rgba(61,220,151,${a})` : `rgba(224,90,79,${a})`}" title="${day(k)}: ${p.pl >= 0 ? '+' : '−'}${money(Math.abs(v), base, 0)} (${pct(p.r, 2)})"><span>${d}</span><b>${p.pl >= 0 ? '+' : '−'}${money(Math.abs(v), base, 0)}</b><small>${pct(p.r, 2)}</small></td>`; };
+    // rows of Monday-Friday with a week total
+    let html = '', d = 1; const dow = (first.getUTCDay() + 6) % 7; let row = '', col = 0, wk = 0, wkn = 0;
+    const flush = () => { html += `<tr>${row}<td class="cal-w"><span>Week</span><b class="${cls(wk)}">${wkn ? (wk >= 0 ? '+' : '−') + money(Math.abs(fromZar(wk)), base, 0) : '—'}</b></td></tr>`; row = ''; col = 0; wk = 0; wkn = 0; };
+    for (let i = 0; i < Math.min(dow, 5); i++) { row += '<td class="cal-x"></td>'; col++; }
+    for (; d <= daysIn; d++) {
+      const wd = (new Date(Date.UTC(y, m - 1, d)).getUTCDay() + 6) % 7; if (wd > 4) { if (wd === 6 && col) flush(); continue; }
+      const k = `${CALM}-${String(d).padStart(2, '0')}`; if (byD[k]) { wk += byD[k].pl; wkn++; }
+      row += cell(d); col++; if (col === 5 && wd === 4) { flush(); }
+    }
+    if (col) { while (col < 5) { row += '<td class="cal-x"></td>'; col++; } flush(); }
+    const mp = pts.filter(p => p.d.startsWith(CALM)), mt = mp.reduce((a, p) => a + p.pl, 0), up = mp.filter(p => p.pl > 0).length;
+    const i = months.indexOf(CALM), mname = first.toLocaleDateString('en-ZA', { month: 'long', year: 'numeric', timeZone: 'UTC' });
+    return `<div class="pf-chartbox pf-cal"><div class="pf-ch-h"><div class="cal-nav"><button id="calPrev" ${i <= 0 ? 'disabled' : ''} aria-label="Previous month">‹</button><b>${mname}</b><button id="calNext" ${i >= months.length - 1 ? 'disabled' : ''} aria-label="Next month">›</button></div>
+      <span class="cal-sum">Month <b class="${cls(mt)}">${mt >= 0 ? '+' : '−'}${money(Math.abs(fromZar(mt)), base, 0)}</b> · ${up} green of ${mp.length} days</span></div>
+      <div class="tbl-wrap"><table class="cal-t"><thead><tr><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Week</th></tr></thead><tbody>${html}</tbody></table></div>
+      <p class="pf-note">Each trading day's profit or loss on your positions (deposits and withdrawals excluded). Hover a day for details.</p></div>`;
+  };
+
   let RNG = store.get('lrc_pf_rng', 'ALL');
   const perfSection = B => {
     const S0 = series(B);
@@ -308,7 +339,7 @@
     const pf = v => ok(v) ? pct(v) : '—', nf = (v, d = 2) => ok(v) ? v.toFixed(d) : '—';
     const row = (k, a, b, c, good) => `<tr><td>${k}</td><td class="n"><b class="${good ? cls(a) : ''}">${a === null || a === undefined ? '—' : typeof a === 'number' ? (good === 'x' ? nf(a) : pct(a)) : a}</b></td><td class="n">${b === null || b === undefined ? '—' : typeof b === 'number' ? (good === 'x' ? nf(b) : pct(b)) : b}</td><td class="n">${c === null || c === undefined ? '—' : typeof c === 'number' ? (good === 'x' ? nf(c) : pct(c)) : c}</td></tr>`;
     const rngBtns = `<div class="seg pf-rng" id="pfRng">${Object.keys(RS).map(k => `<button data-v="${k}" class="${k === RNG ? 'on' : ''}">${k === 'ALL' ? 'All' : k}</button>`).join('')}</div>`;
-    return `<h3 class="pf-h">Performance &amp; track record</h3>${mktSel}${pnlHero(S0, RS)}${STALE ? '<p class="pf-upd">⟳ Updating your track record after your latest changes. The full history refreshes within 30 minutes; figures below are up to the last update.</p>' : ''}
+    return `<h3 class="pf-h">Performance &amp; track record</h3>${mktSel}${pnlHero(S0, RS)}<h3 class="pf-h sm">P/L calendar</h3>${calendar(S0)}${STALE ? '<p class="pf-upd">⟳ Updating your track record after your latest changes. The full history refreshes within 30 minutes; figures below are up to the last update.</p>' : ''}
       <div class="pf-per">${per.map(([k, v]) => `<div><span>${k}</span><b class="${cls(v)}">${pct(v, k === 'Today' ? 2 : 1)}</b></div>`).join('')}</div>
       <div class="pf-chartbox"><div class="pf-ch-h"><b>Growth of 100 vs the market</b>${rngBtns}</div>${legend([[COL.p, 'My portfolio ' + pf(pI[pI.length - 1] / 100 - 1)], ...(hasB ? [[COL.spx, 'S&amp;P 500 (in rand) ' + pf(ok(spI[spI.length - 1]) ? spI[spI.length - 1] / 100 - 1 : null)], [COL.j200, 'SA Top 40 ' + pf(ok(jI[jI.length - 1]) ? jI[jI.length - 1] / 100 - 1 : null)]] : [])])}
         ${lineChart(dates, [{ v: spI, c: COL.spx, w: 1.6 }, { v: jI, c: COL.j200, w: 1.6 }, { v: pI, c: COL.p, w: 2.6 }], { baseLine: 100, fmt: v => v.toFixed(0) })}
@@ -683,6 +714,8 @@
     root.querySelectorAll('#pfBase button').forEach(b => b.onclick = () => { base = b.dataset.v; store.set('lrc_pf_base', base); render(); });
     root.querySelectorAll('tr.clk').forEach(tr => tr.onclick = () => posView(tr.dataset.id));
     if ($('pfAcct')) $('pfAcct').onclick = acctForm;
+    if ($('calPrev')) $('calPrev').onclick = () => { const ms = [...new Set(series(book()).slice(1).map(p => p.d.slice(0, 7)))].sort(), i = ms.indexOf(CALM); if (i > 0) { CALM = ms[i - 1]; render(); } };
+    if ($('calNext')) $('calNext').onclick = () => { const ms = [...new Set(series(book()).slice(1).map(p => p.d.slice(0, 7)))].sort(), i = ms.indexOf(CALM); if (i < ms.length - 1) { CALM = ms[i + 1]; render(); } };
     root.querySelectorAll('#pfMkt button').forEach(b => b.onclick = () => { MKT = b.dataset.v; store.set('lrc_pf_mkt', MKT); render(); });
     if ($('pfRngSel')) $('pfRngSel').onchange = e => { RNG = e.target.value; store.set('lrc_pf_rng', RNG); render(); };
     if ($('pfHero') && HERO) { const box = $('pfHero'), tip = $('pfTip'), H_ = HERO;
