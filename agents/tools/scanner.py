@@ -16,6 +16,7 @@ import sec_quarters as SECQ
 import watchlist_lists as WL
 import peers as PEERS
 import research_ideas as IDEAS
+import etf_holdings as EH
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 P = lambda *a: os.path.join(ROOT, *a)
@@ -454,12 +455,17 @@ def main():
                          'p6m': t['perf_6m'], 'ytd': t['perf_ytd'], 'rs': t['rs_6m'], 'rsi': t['rsi'], 'tp': sc, 'p1y': t['perf_1y'],
                          'setup': t.get('setup'), 'lvl': t.get('setup_level'),
                          'plan': {k: pl[k] for k in ('side', 'entry', 'stop', 't1', 't2', 'risk_pct')} if pl else None,
-                         'sma50': t['sma50'], 'sma200': t['sma200']})
+                         'sma50': t['sma50'], 'sma200': t['sma200'], 'sma20': t['sma20'], 'hi52': t['hi52'], 'lo52': t['lo52'], 'atr': t['atr'],
+                         'sup': next((l['price'] for l in t.get('supports', []) if l['price'] < t['price']), None),
+                         'res': next((l['price'] for l in t.get('resistances', []) if l['price'] > t['price']), None)})
     # ETF score: same points method as stocks (trend, momentum, setup ±2; stretch, volume ±1; max 8)
     for e in etf_rows:
         p_ = sum(e['tp'].values()); e['pts'] = p_; e['max'] = 8
         e['score'] = round(50 + 50 * p_ / 8); e['v'] = E.rating_v7(e['score'])
     etf_rows.sort(key=lambda e: -e['score'])
+    # top holdings + LRC look-through score for the ETF analyst view (Sectors & ETFs page)
+    try: EH.build(y, etf_rows, out_rows)
+    except Exception as ex: print('  ETF holdings failed:', repr(ex)[:160])
 
     # ---------- sectors ----------
     etf_by = {e['t']: e for e in etf_rows}

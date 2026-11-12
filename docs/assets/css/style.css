@@ -1697,3 +1697,27 @@ footer .cols.cols5{grid-template-columns:1.3fr repeat(4,1fr);gap:28px}
 @media (max-width:860px){.res-more{justify-content:flex-start}.rs-kv{grid-template-columns:1fr}.rs-kv b{font-size:19px}.sn.rs .sn-in{padding:16px 16px 40px}.sn-top h2{font-size:24px}}
 .sn-top + .rs-sec{border-top:0;margin-top:0}
 @media (min-width:861px){.erow:not(.rep){grid-template-columns:80px 1fr 110px 170px}}
+
+/* ===== v14.2 ETF analyst view (Sectors & ETFs: click an ETF card) ===== */
+.etf-c.clk{cursor:pointer;transition:border-color .2s,transform .2s}
+.etf-c.clk:hover,.etf-c.clk:focus{border-color:var(--gold);transform:translateY(-2px);outline:none}
+.etf-more{display:inline-block;margin-top:10px;font-size:12.5px;font-weight:700;color:var(--gold-2);letter-spacing:.02em}
+.ev-head{display:grid;grid-template-columns:170px 1fr 1fr;gap:14px;margin-top:18px}
+.ev-score,.ev-rec,.ev-out{border:1px solid var(--line);border-radius:14px;background:var(--panel);padding:14px 16px}
+.ev-score{text-align:center}.ev-score b{display:block;font-family:var(--serif);font-size:44px;line-height:1.05;margin-top:8px}.ev-score small{color:var(--muted);font-size:12px}
+.ev-rec span,.ev-out span{font-size:11px;font-weight:800;letter-spacing:.14em;color:var(--muted)}
+.ev-rec b,.ev-out b{display:block;font-size:20px;color:#fff;margin:4px 0 6px}
+.ev-rec p,.ev-out p{font-size:14px;color:var(--text);margin:0;line-height:1.5}
+.ev-rec.up,.ev-out.up{border-left:4px solid #2FBF71}.ev-rec.dn,.ev-out.dn{border-left:4px solid #D9653B}.ev-rec.mid,.ev-out.mid{border-left:4px solid #C9A227}
+.ev-out.up b{color:#5ED39A}.ev-out.dn b{color:#F08A7E}.ev-out.mid b{color:#E9D58A}
+.ev-plan{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;margin-top:12px;border:1px dashed var(--gold);border-radius:12px;padding:10px 14px}
+.ev-plan span{font-size:11px;font-weight:800;letter-spacing:.12em;color:var(--gold-2)}.ev-plan b{color:#fff}.ev-plan small{color:var(--muted);width:100%}
+.ev-h3{font-size:19px;color:#fff;margin:24px 0 8px;border-bottom:1px solid var(--line);padding-bottom:6px}
+.ev-p{color:var(--text);line-height:1.6;margin:0 0 6px}.ev-p b{color:#fff}
+.ev-lt{border-left:3px solid var(--gold);padding-left:12px;margin-top:12px}
+.ev-why{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.ev-why h4{font-size:13px;letter-spacing:.06em;margin:0 0 6px;color:var(--muted)}.ev-why h4.up{color:#5ED39A}.ev-why h4.dn{color:#F08A7E}
+.ev-why ul,.ev-ul{margin:0;padding-left:18px}.ev-why li,.ev-ul li{margin:0 0 7px;line-height:1.5;color:var(--text)}.ev-why li b,.ev-ul li b{color:#fff}
+.ev-h td small{color:var(--muted);margin-left:4px}
+.ev-sw{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px;color:var(--muted)}.ev-sw b{color:#fff}
+@media (max-width:760px){.ev-head{grid-template-columns:1fr}.sn-top h2{font-size:26px}}

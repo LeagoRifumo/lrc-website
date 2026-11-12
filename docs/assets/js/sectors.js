@@ -101,13 +101,107 @@
       const TR = { 2: 'Strong up', 1: 'Up', 0: 'Flat', '-1': 'Down', '-2': 'Strong down' };
       $('secEtf').innerHTML = `<div class="sec-sw"><div class="seg" id="etfM"><button data-v="JSE" class="${mkt === 'JSE' ? 'on' : ''}">JSE ETFs</button><button data-v="US" class="${mkt === 'US' ? 'on' : ''}">New York ETFs</button></div>
         <div class="filters" id="etfG" style="margin:0">${GROUPS.filter(g => E.rows.some(r => r.m === mkt && r.g === g)).map(g => `<button class="chip-btn ${g === grp ? 'on' : ''}" data-g="${esc(g)}">${esc(g === 'Broad market' ? 'Market indices' : g)}</button>`).join('')}</div></div>
-        <div class="etf-grid">${list.map(r => `<div class="etf-c"><div class="etf-h"><div><b>${esc(r.n)}</b><small>${esc(r.t.replace('.JO', ''))} · ${esc(r.full || '')}</small></div><span class="pill ${gcls(r.v)}">${esc(grade(r.v))}</span></div>
+        <div class="etf-grid">${list.map(r => `<div class="etf-c clk" data-etf="${esc(r.t)}" role="button" tabindex="0" title="Open the LRC analyst view"><div class="etf-h"><div><b>${esc(r.n)}</b><small>${esc(r.t.replace('.JO', ''))} · ${esc(r.full || '')}</small></div><span class="pill ${gcls(r.v)}">${esc(grade(r.v))}</span></div>
           <div class="etf-s"><i><i style="width:${r.score ?? 0}%;background:${gcol(r.score)}"></i></i><b>${r.score ?? '—'}</b></div>
           <div class="etf-p">${[['1 month', r.p1m], ['3 months', r.p3m], ['This year', r.ytd], ['1 year', r.p1y]].map(([k, v]) => `<span>${k}<b class="${(v ?? 0) >= 0 ? 'up' : 'dn'}">${pc(v)}</b></span>`).join('')}</div>
-          <p class="etf-n">Trend: <b>${TR[(r.tp || {}).trend] || '—'}</b> · ${r.setup ? 'Chart: <b>' + esc(r.setup) + '</b> · ' : ''}RSI ${ok(r.rsi) ? Math.round(r.rsi) : '—'}</p></div>`).join('') || '<p class="muted-load">No ETFs in this group for this market.</p>'}</div>
-        <p class="src-note">Scored 0–100 on price trend, momentum against the market, chart setup and stretch — the same technical rules as the LRC Stock Scanner. ETFs let you trade a whole index, sector or commodity in one share. Not a recommendation.</p>`;
+          <p class="etf-n">Trend: <b>${TR[(r.tp || {}).trend] || '—'}</b> · ${r.setup ? 'Chart: <b>' + esc(r.setup) + '</b> · ' : ''}RSI ${ok(r.rsi) ? Math.round(r.rsi) : '—'}</p><span class="etf-more">${r.hold && r.hold.length ? 'Top holdings · ' : ''}Analyst view ›</span></div>`).join('') || '<p class="muted-load">No ETFs in this group for this market.</p>'}</div>
+        <p class="src-note">Scored 0–100 on price trend, momentum against the market, chart setup and stretch — the same technical rules as the LRC Stock Scanner. <b>Tap any ETF</b> for its top holdings and the LRC analyst view: why it has this grade, the outlook and what we would do. ETFs let you trade a whole index, sector or commodity in one share. Educational, not personal advice.</p>`;
       $('secEtf').querySelectorAll('#etfM button').forEach(b => b.onclick = () => { mkt = b.dataset.v; store.set('lrc_mkt', mkt); grp = 'Broad market'; etf(); sec(); });
       $('secEtf').querySelectorAll('#etfG button').forEach(b => b.onclick = () => { grp = b.dataset.g; etf(); });
+      $('secEtf').querySelectorAll('[data-etf]').forEach(c => { const go = () => openEtf(E.rows.find(x => x.t === c.dataset.etf), E); c.onclick = go; c.onkeydown = ev => { if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); go(); } }; });
+    };
+
+
+    /* ---------- 2b. ETF analyst view (click a card): top holdings, why the grade, outlook, LRC view ---------- */
+    const SAFE = window.LRC_SAFE === true;
+    const CUR = c => c === 'ZAR' ? 'R' : '$';
+    const px = (v, c) => ok(v) ? CUR(c) + Number(v).toLocaleString('en-ZA', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) : '—';
+    const dist = (a, b) => ok(a) && ok(b) && b ? pc(a / b - 1) : '—';
+    const SW = { technology: 'Technology', financial_services: 'Financials', healthcare: 'Health care', consumer_cyclical: 'Consumer discretionary', consumer_defensive: 'Consumer staples', communication_services: 'Communication', industrials: 'Industrials', energy: 'Energy', basic_materials: 'Materials', realestate: 'Real estate', utilities: 'Utilities' };
+    const analyse = r => {
+      const tp = r.tp || {}, c = r.cur, p = r.px, rsi = ok(r.rsi) ? Math.round(r.rsi) : null;
+      const why = [];
+      const T = { 2: [1, `<b>Strong uptrend.</b> Price ${px(p, c)} is above its 50-day (${px(r.sma50, c)}) and 200-day (${px(r.sma200, c)}) averages, and the 200-day is rising.`],
+        1: [1, `<b>Long-term trend up.</b> Price is above its 200-day average (${px(r.sma200, c)}), but the short-term trend is not fully lined up.`],
+        '-1': [-1, `<b>Long-term trend down.</b> Price is below its 200-day average (${px(r.sma200, c)}).`],
+        '-2': [-1, `<b>Strong downtrend.</b> Price is below both averages (50-day ${px(r.sma50, c)}, 200-day ${px(r.sma200, c)}) and the 200-day is falling.`] };
+      if (T[tp.trend]) why.push(T[tp.trend]);
+      const M = { 2: [1, `<b>Beating the market</b> by a wide margin over 6 months (${pc(r.rs)} relative).`], 1: [1, `<b>Slightly ahead of the market</b> over 6 months (${pc(r.rs)}).`],
+        '-1': [-1, `<b>Lagging the market</b> over 6 months (${pc(r.rs)}).`], '-2': [-1, `<b>Lagging the market badly</b> over 6 months (${pc(r.rs)}).`] };
+      if (M[tp.momentum]) why.push(M[tp.momentum]);
+      const S = { Breakout: [1, `<b>Breakout:</b> price has just cleared resistance${ok(r.lvl) ? ' at ' + px(r.lvl, c) : ''}.`], Retest: [1, `<b>Retest:</b> pulling back to support${ok(r.lvl) ? ' near ' + px(r.lvl, c) : ''} and holding, a classic entry area.`],
+        'Near breakout': [1, `<b>Near a breakout:</b> pressing against resistance${ok(r.lvl) ? ' at ' + px(r.lvl, c) : ''}.`], Breakdown: [-1, `<b>Breakdown:</b> price has fallen through support${ok(r.lvl) ? ' at ' + px(r.lvl, c) : ''}.`],
+        'Failed retest': [-1, `<b>Failed retest:</b> bounced into old support (now resistance)${ok(r.lvl) ? ' near ' + px(r.lvl, c) : ''} and was rejected.`] };
+      why.push(S[r.setup] || [0, '<b>No clear chart setup</b> right now: no breakout or retest to act on.']);
+      why.push(tp.extension < 0 ? [-1, `<b>Stretched:</b> RSI ${rsi ?? '—'} and well above its short-term average. Due a pause or pullback.`] : tp.extension > 0 ? [1, `<b>Oversold:</b> RSI ${rsi ?? '—'}. Room for a bounce.`] : [0, `<b>Not stretched:</b> RSI ${rsi ?? '—'}.`]);
+      if (tp.volume) why.push(tp.volume > 0 ? [1, '<b>Buyers in control:</b> more volume on up days than down days.'] : [-1, '<b>Sellers in control:</b> more volume on down days than up days.']);
+      const up = (tp.trend ?? 0) >= 1 && r.score >= 55, dn = (tp.trend ?? 0) <= -1 && r.score < 45;
+      const lvlUp = [r.res, r.hi52].filter(ok), lvlDn = [r.sup, r.lo52].filter(ok);
+      const outlook = up ? { k: 'Upside', cls: 'up', txt: `The trend and momentum point higher. Next resistance ${px(r.res ?? r.hi52, c)} (${dist(r.res ?? r.hi52, p)}), 52-week high ${px(r.hi52, c)} (${dist(r.hi52, p)}).` }
+        : dn ? { k: 'Downside', cls: 'dn', txt: `The trend points lower. Next support ${px(r.sup ?? r.lo52, c)} (${dist(r.sup ?? r.lo52, p)}), 52-week low ${px(r.lo52, c)} (${dist(r.lo52, p)}).` }
+        : { k: 'Range-bound', cls: 'mid', txt: `No clear direction. Expect trading between support ${px(r.sup ?? r.lo52, c)} and resistance ${px(r.res ?? r.hi52, c)} until one breaks.` };
+      // what we would do
+      const v = r.v, ext = tp.extension < 0;
+      let rec, act;
+      if (v === 'STRONG BUY' || v === 'BUY') {
+        if (ext) { rec = SAFE ? 'Positive, but wait for a dip' : 'BUY ON A PULLBACK'; act = `The trend is strong but the price is stretched. Better to wait for a pullback toward the 20-day (${px(r.sma20, c)}) or 50-day average (${px(r.sma50, c)}) than to chase it.`; }
+        else if (v === 'STRONG BUY') { rec = SAFE ? 'Positive: top scoring' : 'BUY'; act = `Trend, momentum and setup all line up. ${r.setup === 'Retest' ? 'The retest gives a sensible entry area near support.' : r.setup === 'Breakout' ? 'Breakouts are best bought on a small pullback that holds the breakout level.' : 'Add on dips toward the 50-day average.'}`; }
+        else { rec = SAFE ? 'Positive' : 'ACCUMULATE'; act = 'The picture is positive but not perfect. Build a position gradually rather than all at once.'; }
+      } else if (v === 'HOLD') {
+        if ((tp.trend ?? 0) >= 1) { rec = SAFE ? 'Neutral: wait for a breakout' : 'HOLD'; act = `Long-term trend still up, but no edge right now. If you own it, keep it; for new money wait for a break above ${px(r.res ?? r.hi52, c)}.`; }
+        else { rec = SAFE ? 'Neutral to cautious' : 'HOLD (no new money)'; act = `Below its 200-day average. Wait until it reclaims ${px(r.sma200, c)} before adding.`; }
+      } else { rec = SAFE ? 'Negative: weak trend' : 'AVOID / REDUCE'; act = `Downtrend and weak momentum. Avoid new positions; holders should consider reducing. Revisit only if it climbs back above the 200-day (${px(r.sma200, c)}).`; }
+      const change = up ? `A close below the 200-day average (${px(r.sma200, c)}) would break the uptrend and change our view.` : dn ? `A close back above the 200-day average (${px(r.sma200, c)}) would end the downtrend.` : `A break above ${px(r.res ?? r.hi52, c)} turns us positive; a break below ${px(r.sup ?? r.lo52, c)} turns us negative.`;
+      // look-through: what the companies inside say
+      let lt = null;
+      if (ok(r.lt)) {
+        const w = r.lt >= 60 ? 'strong' : r.lt >= 45 ? 'average' : 'weak';
+        const agree = r.score >= 60 && r.lt >= 60 ? 'The chart and the companies inside agree: a well-supported rating.'
+          : r.score >= 60 && r.lt < 50 ? 'The chart is ahead of the companies inside: the rally may be fragile.'
+          : r.score < 40 && r.lt >= 60 ? 'Good companies in a weak chart: watch for the trend to turn.'
+          : r.score < 40 && r.lt < 45 ? 'Weak chart and weak companies: no reason to step in yet.' : 'The companies inside are a mixed picture.';
+        lt = `Its top ${r.lt_n} holdings we cover average an LRC company score of <b>${r.lt}</b> (${w})${ok(r.lt_strong) ? `; ${Math.round(r.lt_strong * 100)}% of that weight is in companies graded ${grade('BUY')} or better` : ''}${ok(r.lt_weak) && r.lt_weak > 0 ? `, ${Math.round(r.lt_weak * 100)}% in ${grade('SELL')} or worse` : ''}. ${agree}`;
+      }
+      return { why, outlook, rec, act, change, lt };
+    };
+    let ewrap = null;
+    const closeEtf = () => { if (ewrap) { ewrap.classList.remove('open'); document.documentElement.classList.remove('sn-lock'); } };
+    const openEtf = (r) => {
+      if (!r) return;
+      if (!ewrap) {
+        ewrap = document.createElement('div'); ewrap.className = 'sn-wrap etf-wrap';
+        ewrap.innerHTML = '<div class="sn-back"></div><aside class="sn" role="dialog" aria-modal="true" aria-label="ETF analyst view"><div class="sn-in" id="etfIn"></div></aside>';
+        document.body.appendChild(ewrap);
+        ewrap.querySelector('.sn-back').onclick = closeEtf;
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeEtf(); });
+      }
+      const A = analyse(r), c = r.cur, nt = r.note || {}, pl = r.plan;
+      const pos = A.why.filter(x => x[0] > 0), neg = A.why.filter(x => x[0] < 0), neu = A.why.filter(x => x[0] === 0);
+      const holdTbl = r.hold && r.hold.length ? `<div class="tbl-wrap"><table class="mc-tbl ev-h"><thead><tr><th>Company</th>${r.hold.some(h => ok(h.w)) ? '<th class="n">Weight</th>' : ''}<th>LRC grade</th><th class="n">Score</th></tr></thead><tbody>
+        ${r.hold.map(h => `<tr><td>${h.in ? `<a href="stock.html?t=${encodeURIComponent(h.s)}" data-snap="${esc(h.s)}">${esc(h.n || h.s)}</a>` : esc(h.n || h.s)} <small>${esc(String(h.s || '').replace('.JO', ''))}</small></td>${r.hold.some(x => ok(x.w)) ? `<td class="n">${ok(h.w) ? (h.w * 100).toFixed(1) + '%' : '—'}</td>` : ''}
+          <td>${h.v ? `<span class="pill ${gcls(h.v)}">${esc(grade(h.v))}</span>` : '<span class="muted">not covered</span>'}</td><td class="n">${ok(h.sc) ? `<b style="color:${gcol(h.sc)}">${h.sc}</b>` : '—'}</td></tr>`).join('')}</tbody></table></div>
+        <p class="src-note">${r.hsrc === 'proxy' ? `${esc(r.hlabel || '')}: an LRC estimate from our scanner, ranked by market value, not the ETF's official list. Check the issuer factsheet for exact holdings and weights.` : String(r.hsrc || '').startsWith('mirror:') ? `This ETF tracks the same index as ${esc(r.hsrc.slice(7))}; holdings and weights shown are that index's.` : 'Top holdings and weights from the fund issuer (via Yahoo Finance).'} Tap a company for its snapshot.</p>
+        ${r.sw && r.sw.length ? `<p class="ev-sw">Biggest sectors: ${r.sw.map(x => `<span>${esc(SW[x.k] || x.k)} <b>${(x.w * 100).toFixed(0)}%</b></span>`).join('')}</p>` : ''}`
+        : r.kind === 'commodity' || r.kind === 'bond' ? `<p class="ev-p">${r.kind === 'bond' ? 'A bond ETF: it holds government or corporate bonds, not company shares.' : 'A commodity ETF: it holds the metal or futures contracts, not company shares.'} ${esc(nt.what || '')}</p>`
+        : '<p class="ev-p muted">Holdings are not available for this ETF yet. Check the issuer factsheet.</p>';
+      const planBox = !SAFE && pl ? `<div class="ev-plan"><span>Trade plan (${esc(pl.side)})</span><b>Entry ${px(pl.entry, c)}</b><b>Stop ${px(pl.stop, c)}</b><b>Target range ${px(pl.t1, c)}–${px(pl.t2, c)}</b><small>Risk ${pc(pl.risk_pct)} to the stop · size so this risk is at most 1% of your account</small></div>` : '';
+      $('etfIn').innerHTML = `<div class="sn-top"><div><span class="sn-tk">${esc(r.t.replace('.JO', ''))}</span><span class="sn-mk">${r.m === 'JSE' ? 'JSE' : 'New York'} · ${esc(r.g === 'Broad market' ? 'Market index' : r.g)}</span>
+          <h2>${esc(r.n)}</h2><small>${esc(r.full || '')}</small></div>
+          <div class="sn-px"><b>${px(r.px, c)}</b><span class="${(r.chg ?? 0) >= 0 ? 'up' : 'dn'}">${pc(r.chg)} today</span><small>1 month ${pc(r.p1m)} · this year ${pc(r.ytd)}</small></div><button class="sn-x" aria-label="Close">×</button></div>
+        <div class="ev-head"><div class="ev-score"><span class="pill ${gcls(r.v)}">${esc(grade(r.v))}</span><b style="color:${gcol(r.score)}">${r.score}</b><small>LRC ETF score / 100</small></div>
+          <div class="ev-rec ${A.outlook.cls}"><span>LRC VIEW</span><b>${esc(A.rec)}</b><p>${A.act}</p></div>
+          <div class="ev-out ${A.outlook.cls}"><span>OUTLOOK</span><b>${A.outlook.k}</b><p>${A.outlook.txt}</p></div></div>
+        ${planBox}
+        <h3 class="ev-h3">What it is</h3><p class="ev-p">${esc(nt.what || r.full || '')}${nt.drivers ? ` <b>What moves it:</b> ${esc(nt.drivers)}` : ''}</p>
+        <h3 class="ev-h3">Why this grade</h3>
+        <div class="ev-why">${pos.length ? `<div><h4 class="up">▲ Supporting the grade</h4><ul>${pos.map(x => `<li>${x[1]}</li>`).join('')}</ul></div>` : ''}${neg.length ? `<div><h4 class="dn">▼ Holding it back</h4><ul>${neg.map(x => `<li>${x[1]}</li>`).join('')}</ul></div>` : ''}${neu.length ? `<div><h4>= Neutral</h4><ul>${neu.map(x => `<li>${x[1]}</li>`).join('')}</ul></div>` : ''}</div>
+        ${A.lt ? `<p class="ev-p ev-lt"><b>Look-through:</b> ${A.lt}</p>` : ''}
+        <h3 class="ev-h3">${r.kind === 'equity' ? 'Major companies in this ETF' : 'What it holds'}</h3>${holdTbl}
+        <h3 class="ev-h3">Risks and what would change our view</h3><ul class="ev-ul">${nt.risk ? `<li><b>Key risk:</b> ${esc(nt.risk)}</li>` : ''}<li>${A.change}</li></ul>
+        <p class="src-note">LRC analyst view, built from the ETF's price trend, momentum against the market, chart setup and stretch (the LRC Scanner rules) and the LRC scores of its top holdings. Updated twice a day with the scanner. ${SAFE ? 'Shown as grades, without entry, stop or target prices. ' : ''}Educational research, not personal financial advice. ETFs can fall in value; never risk money you cannot afford to lose.</p>`;
+      $('etfIn').querySelector('.sn-x').onclick = closeEtf;
+      ewrap.querySelector('.sn').scrollTop = 0;
+      document.documentElement.classList.add('sn-lock'); requestAnimationFrame(() => ewrap.classList.add('open'));
     };
 
     /* ---------- 3. strongest and weakest sectors ---------- */

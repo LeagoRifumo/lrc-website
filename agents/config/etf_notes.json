@@ -1,0 +1,362 @@
+{
+ "SPY": {
+  "kind": "equity",
+  "what": "The 500 largest US companies, weighted by size. Tech giants make up roughly a third.",
+  "drivers": "US earnings growth, Fed interest rates and the big tech names (Nvidia, Microsoft, Apple).",
+  "risk": "Heavy weight in a few mega-caps; higher rates pressure valuations."
+ },
+ "QQQ": {
+  "kind": "equity",
+  "what": "The 100 largest non-financial Nasdaq companies: mostly technology and AI leaders.",
+  "drivers": "AI spending, tech earnings and long-term interest rates (growth shares are rate-sensitive).",
+  "risk": "Very concentrated in a handful of tech names; falls hardest when yields jump."
+ },
+ "DIA": {
+  "kind": "equity",
+  "what": "The 30 Dow Jones blue chips, weighted by share price, not size.",
+  "drivers": "Industrial, financial and health-care earnings; less tech-heavy than the S&P 500.",
+  "risk": "Price-weighting means a few high-priced shares (e.g. Goldman Sachs, UnitedHealth) move it a lot."
+ },
+ "IWM": {
+  "kind": "equity",
+  "what": "About 2,000 smaller US companies (Russell 2000).",
+  "drivers": "The US domestic economy, bank lending and interest rates: small caps carry more floating-rate debt.",
+  "risk": "Higher-for-longer rates raise borrowing costs; many members are loss-making."
+ },
+ "RSP": {
+  "kind": "equity",
+  "what": "The S&P 500 with every company given the same weight.",
+  "drivers": "Breadth of the US market: does well when the average company, not just mega-cap tech, is rising.",
+  "risk": "Lags when a few giant tech shares lead the market."
+ },
+ "XLK": {
+  "kind": "equity",
+  "what": "US technology shares from the S&P 500: chips, software and hardware.",
+  "drivers": "AI and cloud spending, chip demand and interest rates.",
+  "risk": "Very concentrated in Nvidia, Apple and Microsoft; high valuations."
+ },
+ "XLF": {
+  "kind": "equity",
+  "what": "US banks, insurers, payment companies and asset managers.",
+  "drivers": "Interest rates and the yield curve (bank margins), credit quality and deal-making.",
+  "risk": "Recession and loan losses; a flat or inverted yield curve squeezes margins."
+ },
+ "XLV": {
+  "kind": "equity",
+  "what": "US health care: drug makers, insurers, medical devices.",
+  "drivers": "Drug pipelines, an ageing population and US health policy.",
+  "risk": "Drug-pricing reform and insurer regulation."
+ },
+ "XLE": {
+  "kind": "equity",
+  "what": "US oil and gas producers, refiners and services (Exxon, Chevron).",
+  "drivers": "The oil price first: geopolitics (Middle East, Russia), OPEC+ supply and global demand.",
+  "risk": "Moves with oil; falls fast when the geopolitical risk premium unwinds."
+ },
+ "XLY": {
+  "kind": "equity",
+  "what": "US consumer discretionary: Amazon, Tesla, retailers, restaurants, autos.",
+  "drivers": "Consumer spending, jobs and wage growth, credit costs.",
+  "risk": "Very top-heavy (Amazon and Tesla); a slowing consumer hits it first."
+ },
+ "XLP": {
+  "kind": "equity",
+  "what": "US consumer staples: food, drinks, household goods, supermarkets.",
+  "drivers": "Defensive demand; tends to hold up when the economy slows.",
+  "risk": "Lags in strong bull markets; input-cost and margin pressure."
+ },
+ "XLI": {
+  "kind": "equity",
+  "what": "US industrials: aerospace, machinery, railroads, defence, transport.",
+  "drivers": "Factory activity (ISM), infrastructure and defence spending, global trade.",
+  "risk": "Cyclical: hit by slowdowns and tariffs."
+ },
+ "XLB": {
+  "kind": "equity",
+  "what": "US materials: chemicals, metals, mining, packaging.",
+  "drivers": "Commodity prices, China and global growth, the dollar.",
+  "risk": "Cyclical; a strong dollar and weak China demand hurt."
+ },
+ "XLU": {
+  "kind": "equity",
+  "what": "US utilities: electricity and gas companies.",
+  "drivers": "Interest rates (bond-like dividends) and AI data-centre power demand.",
+  "risk": "Rising bond yields make its dividends less attractive."
+ },
+ "XLRE": {
+  "kind": "equity",
+  "what": "US real estate: REITs (data centres, towers, warehouses, offices).",
+  "drivers": "Interest rates above all; also occupancy and rents.",
+  "risk": "Very rate-sensitive: falls when long yields rise."
+ },
+ "XLC": {
+  "kind": "equity",
+  "what": "US communication services: Meta, Alphabet, Netflix, telecoms.",
+  "drivers": "Digital advertising, streaming growth and AI.",
+  "risk": "Concentrated in Meta and Alphabet; regulation of big tech."
+ },
+ "SMH": {
+  "kind": "equity",
+  "what": "The largest chip companies worldwide (Nvidia, TSMC, Broadcom, AMD).",
+  "drivers": "AI data-centre spending, the chip cycle and US–China export rules.",
+  "risk": "Extremely volatile; concentrated in Nvidia and TSMC."
+ },
+ "IGV": {
+  "kind": "equity",
+  "what": "US software companies (Microsoft, Oracle, Salesforce, Adobe).",
+  "drivers": "Enterprise IT budgets, cloud and AI adoption, interest rates.",
+  "risk": "High valuations; AI may disrupt some software models."
+ },
+ "XBI": {
+  "kind": "equity",
+  "what": "US biotech companies, equal-weighted (many small and mid-size).",
+  "drivers": "Drug trial results, FDA approvals, takeovers and interest rates.",
+  "risk": "Many loss-making companies; very rate- and funding-sensitive."
+ },
+ "KRE": {
+  "kind": "equity",
+  "what": "US regional banks, equal-weighted.",
+  "drivers": "Interest rates, deposit costs, commercial property loans.",
+  "risk": "Deposit flight and commercial property losses."
+ },
+ "ITB": {
+  "kind": "equity",
+  "what": "US homebuilders and building suppliers.",
+  "drivers": "Mortgage rates and housing demand.",
+  "risk": "Rising mortgage rates slow sales quickly."
+ },
+ "JETS": {
+  "kind": "equity",
+  "what": "US and global airlines and airports.",
+  "drivers": "Travel demand and jet fuel prices.",
+  "risk": "Oil spikes, recessions and strikes."
+ },
+ "ITA": {
+  "kind": "equity",
+  "what": "US aerospace and defence (RTX, Boeing, Lockheed Martin).",
+  "drivers": "Defence budgets, geopolitics and commercial aircraft orders.",
+  "risk": "Budget cuts and Boeing production problems."
+ },
+ "CIBR": {
+  "kind": "equity",
+  "what": "Global cybersecurity companies.",
+  "drivers": "Cyber attacks, IT security budgets and AI.",
+  "risk": "High valuations; tech sell-offs."
+ },
+ "ARKK": {
+  "kind": "equity",
+  "what": "ARK's actively managed disruptive-innovation fund (Tesla, Roku, Coinbase and others).",
+  "drivers": "Risk appetite, interest rates and a few big positions.",
+  "risk": "Very volatile; concentrated in loss-making growth companies."
+ },
+ "TAN": {
+  "kind": "equity",
+  "what": "Global solar energy companies.",
+  "drivers": "Clean-energy policy, interest rates (projects are debt-funded) and panel prices.",
+  "risk": "Policy changes and Chinese competition."
+ },
+ "BOTZ": {
+  "kind": "equity",
+  "what": "Robotics and artificial-intelligence companies worldwide.",
+  "drivers": "AI and automation spending, factory investment.",
+  "risk": "Concentrated in a few names; tech sell-offs."
+ },
+ "URA": {
+  "kind": "equity",
+  "what": "Uranium miners and nuclear-fuel companies.",
+  "drivers": "The uranium price and new nuclear power plans (including for AI data centres).",
+  "risk": "Very volatile commodity cycle."
+ },
+ "GDX": {
+  "kind": "equity",
+  "what": "Large gold-mining companies worldwide (Newmont, Agnico Eagle, Barrick).",
+  "drivers": "The gold price (miners move roughly 2–3× gold), costs and the dollar.",
+  "risk": "Falls harder than gold when gold drops; mining-cost inflation."
+ },
+ "EFA": {
+  "kind": "equity",
+  "what": "Large companies in developed markets outside the US and Canada (Europe, Japan, Australia).",
+  "drivers": "European and Japanese growth, and the dollar: a weaker dollar helps.",
+  "risk": "A strong dollar and weak European growth."
+ },
+ "EEM": {
+  "kind": "equity",
+  "what": "Emerging-market companies (TSMC, Tencent, Samsung, India, Brazil, South Africa).",
+  "drivers": "China and Taiwan tech, the dollar and commodity prices.",
+  "risk": "A strong dollar, China risk and Taiwan geopolitics."
+ },
+ "INDA": {
+  "kind": "equity",
+  "what": "Large Indian companies (banks, IT services, Reliance).",
+  "drivers": "India's growth, domestic investment flows and the rupee.",
+  "risk": "Rich valuations; oil price (India imports oil)."
+ },
+ "EWJ": {
+  "kind": "equity",
+  "what": "Large Japanese companies (Toyota, Sony, banks).",
+  "drivers": "Corporate reform, the yen and Bank of Japan policy.",
+  "risk": "A sharp yen rally hurts exporters."
+ },
+ "EWZ": {
+  "kind": "equity",
+  "what": "Large Brazilian companies (Petrobras, Vale, Itaú).",
+  "drivers": "Commodities, Brazil's interest rates and politics.",
+  "risk": "Political and currency risk."
+ },
+ "FXI": {
+  "kind": "equity",
+  "what": "The 50 largest Chinese companies listed in Hong Kong (Tencent, Alibaba, banks).",
+  "drivers": "Chinese stimulus, property and tech regulation, US–China relations.",
+  "risk": "Policy and geopolitical risk."
+ },
+ "EZA": {
+  "kind": "equity",
+  "what": "South African shares, US-listed and priced in dollars (Naspers, Gold Fields, FirstRand).",
+  "drivers": "The JSE plus the rand: a stronger rand lifts it in dollar terms.",
+  "risk": "Rand weakness, load-shedding, politics."
+ },
+ "STX40.JO": {
+  "kind": "equity",
+  "what": "The 40 largest JSE companies (Satrix 40), weighted by free-float market value.",
+  "drivers": "Global miners, Naspers/Prosus (Tencent), banks and the rand.",
+  "risk": "Heavy in a few names (Naspers/Prosus, miners); commodity swings."
+ },
+ "STXCAP.JO": {
+  "kind": "equity",
+  "what": "The JSE All Share with each company capped at 10%.",
+  "drivers": "The whole JSE: miners, banks, retailers and industrials.",
+  "risk": "Same JSE risks with less single-stock concentration."
+ },
+ "STXRES.JO": {
+  "kind": "equity",
+  "what": "JSE resources companies (Satrix RESI): gold, PGM, coal, iron ore and diversified miners.",
+  "drivers": "Metal prices (gold, platinum, iron ore, coal) and the rand: a weaker rand helps miners' rand earnings.",
+  "risk": "Very cyclical; commodity price falls and mining costs."
+ },
+ "STXFIN.JO": {
+  "kind": "equity",
+  "what": "JSE financial companies (Satrix FINI): banks and insurers.",
+  "drivers": "SA interest rates, credit growth and the SA economy.",
+  "risk": "Bad debts in a weak economy; SA politics."
+ },
+ "STXIND.JO": {
+  "kind": "equity",
+  "what": "JSE industrial companies (Satrix INDI): Naspers/Prosus, retailers, telecoms, consumer brands.",
+  "drivers": "Tencent (via Naspers/Prosus), SA consumer spending and offshore earnings.",
+  "risk": "Heavy weight in Naspers/Prosus, so Chinese tech moves it."
+ },
+ "STXPRO.JO": {
+  "kind": "equity",
+  "what": "JSE-listed property companies (REITs).",
+  "drivers": "SA interest rates, office/retail occupancy and the bond yield.",
+  "risk": "Rising rates and weak SA growth."
+ },
+ "STXDIV.JO": {
+  "kind": "equity",
+  "what": "JSE shares with high expected dividend yields (Satrix Dividend Plus).",
+  "drivers": "Dividends from banks, miners and other cash-generative companies.",
+  "risk": "Dividend cuts; value traps."
+ },
+ "STXQUA.JO": {
+  "kind": "equity",
+  "what": "JSE companies with high profitability, low debt and stable earnings (Satrix Quality).",
+  "drivers": "Quality companies outperform when the economy slows.",
+  "risk": "Can lag sharp cyclical rallies."
+ },
+ "STXMMT.JO": {
+  "kind": "equity",
+  "what": "JSE shares with the strongest recent price momentum (Satrix Momentum).",
+  "drivers": "Whatever is trending on the JSE.",
+  "risk": "Sharp reversals when the trend turns."
+ },
+ "STX500.JO": {
+  "kind": "equity",
+  "what": "The S&P 500 in rand (Satrix S&P 500).",
+  "drivers": "The S&P 500 plus the rand: a weaker rand adds to returns.",
+  "risk": "US market falls and a stronger rand."
+ },
+ "STXNDQ.JO": {
+  "kind": "equity",
+  "what": "The Nasdaq-100 in rand (Satrix Nasdaq-100).",
+  "drivers": "US tech and AI, plus the rand.",
+  "risk": "Tech concentration and a stronger rand."
+ },
+ "STXWDM.JO": {
+  "kind": "equity",
+  "what": "Developed-world shares in rand (Satrix MSCI World): about 70% US.",
+  "drivers": "Global shares, mostly the US, plus the rand.",
+  "risk": "Global sell-offs and a stronger rand."
+ },
+ "STXEMG.JO": {
+  "kind": "equity",
+  "what": "Emerging-market shares in rand (Satrix MSCI Emerging Markets).",
+  "drivers": "China, Taiwan and India tech, plus the rand.",
+  "risk": "China and Taiwan risk."
+ },
+ "STXCHN.JO": {
+  "kind": "equity",
+  "what": "Chinese shares in rand (Satrix MSCI China).",
+  "drivers": "Chinese stimulus and tech regulation, plus the rand.",
+  "risk": "Policy and geopolitical risk."
+ },
+ "GLD": {
+  "kind": "commodity",
+  "what": "Physical gold held in vaults; tracks the gold price in dollars.",
+  "drivers": "Real interest rates (gold pays no interest), the dollar, central-bank buying and safe-haven demand.",
+  "risk": "Rising real yields and a strong dollar."
+ },
+ "GLD.JO": {
+  "kind": "commodity",
+  "what": "Physical gold in rand (NewGold).",
+  "drivers": "The gold price in dollars plus the rand: a weaker rand lifts it.",
+  "risk": "Falling gold and a stronger rand."
+ },
+ "SLV": {
+  "kind": "commodity",
+  "what": "Physical silver; tracks the silver price.",
+  "drivers": "Gold's direction plus industrial demand (solar panels, electronics).",
+  "risk": "More volatile than gold."
+ },
+ "NGPLT.JO": {
+  "kind": "commodity",
+  "what": "Physical platinum in rand (NewGold Platinum).",
+  "drivers": "Platinum supply from SA mines, car-catalyst demand and the rand.",
+  "risk": "Weak auto demand and EV substitution."
+ },
+ "USO": {
+  "kind": "commodity",
+  "what": "Oil futures (WTI crude).",
+  "drivers": "OPEC+ supply, geopolitics and global demand.",
+  "risk": "Futures roll costs can make it lag the spot price over time."
+ },
+ "CPER": {
+  "kind": "commodity",
+  "what": "Copper futures.",
+  "drivers": "Global growth, China construction, electrification and AI data centres.",
+  "risk": "China slowdown."
+ },
+ "TLT": {
+  "kind": "bond",
+  "what": "US government bonds maturing in 20+ years.",
+  "drivers": "Long-term interest rates: when yields rise, TLT falls (and vice versa). Inflation and Fed expectations drive yields.",
+  "risk": "Hot inflation data and Fed hikes push yields up and TLT down."
+ },
+ "IEF": {
+  "kind": "bond",
+  "what": "US government bonds maturing in 7–10 years.",
+  "drivers": "Medium-term interest rates and the Fed outlook.",
+  "risk": "Rising yields."
+ },
+ "HYG": {
+  "kind": "bond",
+  "what": "US high-yield (\"junk\") corporate bonds.",
+  "drivers": "Credit risk appetite and the economy; also interest rates.",
+  "risk": "Recession and defaults widen spreads."
+ },
+ "STXGOV.JO": {
+  "kind": "bond",
+  "what": "South African government bonds (rand).",
+  "drivers": "SA inflation, SARB rates, the budget and the rand.",
+  "risk": "Fiscal slippage and rand weakness push yields up."
+ }
+}
