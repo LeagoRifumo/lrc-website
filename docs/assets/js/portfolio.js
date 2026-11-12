@@ -500,7 +500,7 @@
   const CASH = /(deposit|withdraw|dividend|fee|commission|interest|charge|transfer in|transfer out|funding)/i;
   const importForm = () => {
     drawer(`<div class="sn-top"><div><span class="pf-kick">IMPORT</span><h2>Upload trades or a full statement</h2><small>Excel or CSV: your broker's statement, an open-trades export, or the LRC template</small></div><button class="sn-x" aria-label="Close">×</button></div>
-      <div class="pf-p"><ol class="ev-ul"><li><b>Full history:</b> upload your broker's <b>account statement / trade history</b> (closed trades) and your <b>open trades</b> export. Upload one, then the other: trades already in your book are skipped, so nothing is counted twice.</li>
+      <div class="pf-p"><ol class="ev-ul"><li><b>Full history:</b> upload your broker's <b>account statement / trade history</b> (closed trades) and your <b>open trades</b> export. Upload one, then the other, in any order: trades already in your book are skipped (matched by trade ID, or by ticker, side, size, price and date), and a trade that was open before but is <b>closed</b> on a newer statement closes your existing position. After that, keep adding trades by hand, or upload the next statement any time.</li>
         <li>We read these columns (any order, any of these names): <b>Symbol</b>/Ticker, <b>Direction</b>/Side/Type (buy, long, sell, short), <b>Qty</b>/Shares/Units/Lots, <b>Open price</b>/Entry price, <b>Open date</b>/Entry date, <b>Close price</b>/Exit price and <b>Close date</b>/Exit date (for closed trades), <b>Trade ID</b>, <b>Value</b>, <b>Notes</b>.</li>
         <li><b>Cash lines</b> on the statement (deposits, withdrawals, dividends, fees, interest) are picked up too when they have an amount, so your account value and true return are right.</li>
         <li>JSE codes with or without .JO; CFD names like XAUUSD, NAS100, US30 and US2000 are recognised. Only have a PDF statement? Most brokers let you download Excel/CSV; if not, send it to us.</li></ol>
@@ -528,7 +528,10 @@
         cId = col('trade id', 'position id', 'ticket', 'deal id', 'order id', 'id'), cA = col('amount', 'net amount', 'credit', 'cash', 'profit', 'pl', 'p/l'),
         cDesc = colP('description', 'details', 'narrative', 'comment', 'transaction', 'type');
       if (cT < 0 && cA < 0) { $('imPrev').innerHTML = `<p class="pf-err">We could not find a Symbol/Ticker column. Found: ${esc(P_.rows[hr].join(', '))}</p>`; return; }
-      const have = new Set(POS.map(p => p.ext_id).filter(Boolean)), seen = new Set(), flows = [];
+      const byId = {}, byFp = {}, seen = new Set(), flows = [];
+      const fp = (t, sd, q, e, d) => [t, sd, (+q).toFixed(4), (+e).toFixed(4), d || ''].join('|');
+      POS.forEach(p => { if (p.ext_id) byId[p.ext_id] = p; byFp[fp(p.ticker, p.side || 'long', p.qty, p.entry_price, p.entry_date)] = p; });
+      const haveFlow = new Set(FLOWS.map(f => [f.kind, (+f.amount).toFixed(2), f.flow_date].join('|')));
       const out = P_.rows.slice(hr + 1).map((r, n) => {
         const desc = [...new Set([cS >= 0 ? r[cS] : '', cDesc >= 0 ? r[cDesc] : '', cT >= 0 ? r[cT] : ''].map(x => String(x || '').trim()).filter(Boolean))].join(' · ');
         const tk = cT >= 0 ? String(r[cT] || '').trim() : '';
@@ -536,6 +539,8 @@
         if ((!tk || CASH.test(tk)) && CASH.test(desc)) {
           const amt = numv(cA >= 0 ? r[cA] : cV >= 0 ? r[cV] : '', P_.d); if (!(Math.abs(amt) > 0)) return { n: n + hr + 2, skip: 'cash line without amount' };
           const kind = /withdraw|transfer out/i.test(desc) ? 'withdrawal' : /dividend/i.test(desc) ? (amt < 0 ? 'fee' : 'dividend') : /interest/i.test(desc) ? (amt < 0 ? 'fee' : 'interest') : /fee|commission|charge/i.test(desc) ? 'fee' : amt < 0 ? 'withdrawal' : 'deposit';
+          const fd = cD >= 0 ? datev(r[cD]) || new Date().toISOString().slice(0, 10) : new Date().toISOString().slice(0, 10);
+          if (haveFlow.has([kind, Math.abs(amt).toFixed(2), fd].join('|'))) return { n: n + hr + 2, skip: 'cash line already recorded' };
           flows.push({ kind, amount: Math.abs(amt), currency: cashCur, flow_date: cD >= 0 ? datev(r[cD]) || new Date().toISOString().slice(0, 10) : new Date().toISOString().slice(0, 10), note: String(desc).trim().slice(0, 200) });
           return { n: n + hr + 2, cash: flows[flows.length - 1] };
         }
@@ -547,31 +552,36 @@
         const id = cId >= 0 && String(r[cId] || '').trim() ? String(r[cId]).trim().slice(0, 60) : null;
         const i = R && R.i, m = i ? i.m : (R && R.t.endsWith('.JO') ? 'JSE' : 'US');
         const okRow = R && /^[A-Z0-9.\-^=]{1,20}$/.test(R.t) && e > 0 && q > 0;
-        const dup = id && (have.has(id) || seen.has(id)); if (id) seen.add(id);
         const closed = xp > 0 && !!xd;
-        return { n: n + hr + 2, ok: okRow && !dup, dup, known: !!(i && IDX[i.t]), raw: tk, closed,
+        const key = okRow ? fp(R.t, side, q, e, cD >= 0 ? datev(r[cD]) : null) : null;
+        const ex = (id && byId[id]) || (key && byFp[key]) || null;   // already in the book (same broker ID, or same ticker/side/size/price/date)
+        const inFile = (id && seen.has(id)) || (key && seen.has(key)); if (id) seen.add(id); if (key) seen.add(key);
+        const upd = !!(ex && closed && !ex.closed_on);                    // was open, now closed on this statement -> close it
+        const dup = inFile || (ex && !upd);
+        return { n: n + hr + 2, ok: okRow && !dup, dup, upd, exId: upd ? ex.id : null, known: !!(i && IDX[i.t]), raw: tk, closed,
           row: okRow ? { side, ticker: R.t, name: i ? i.n : null, market: m, currency: i && i.cur ? i.cur : (m === 'US' ? 'USD' : 'ZAR'), qty: q, entry_price: e, entry_date: cD >= 0 ? datev(r[cD]) : null,
             exit_price: closed ? xp : null, closed_on: closed ? xd : null, ext_id: id, thesis: [cN >= 0 ? String(r[cN] || '').trim() : '', id ? 'Trade ID ' + id : ''].filter(Boolean).join(' · ') || null } : null,
-          why: dup ? 'already in your book' : !R ? 'no ticker' : !(e > 0) ? 'no entry price' : !(q > 0) ? 'no shares or value' : '' };
+          why: inFile ? 'repeated in this file' : dup ? 'already in your book' : !R ? 'no ticker' : !(e > 0) ? 'no entry price' : !(q > 0) ? 'no shares or value' : '' };
       }).filter(Boolean);
-      const trades = out.filter(x => !x.cash && !x.skip), good = trades.filter(x => x.ok), bad = trades.filter(x => !x.ok), nOpen = good.filter(x => !x.closed).length, nClosed = good.length - nOpen;
+      const trades = out.filter(x => !x.cash && !x.skip), okAll = trades.filter(x => x.ok), ups = okAll.filter(x => x.upd), good = okAll.filter(x => !x.upd), bad = trades.filter(x => !x.ok), nOpen = good.filter(x => !x.closed).length, nClosed = good.length - nOpen;
       const first = good.map(x => x.row.entry_date).filter(Boolean).sort()[0];
-      $('imPrev').innerHTML = `<h3 class="ev-h3">Preview: ${nOpen} open and ${nClosed} closed trade${good.length === 1 ? '' : 's'}${flows.length ? `, ${flows.length} cash line${flows.length === 1 ? '' : 's'}` : ''}${bad.length ? ` · ${bad.length} skipped` : ''}</h3>
+      $('imPrev').innerHTML = `<h3 class="ev-h3">Preview: ${nOpen} new open and ${nClosed} new closed trade${good.length === 1 ? '' : 's'}${ups.length ? `, ${ups.length} open position${ups.length === 1 ? '' : 's'} to close` : ''}${flows.length ? `, ${flows.length} cash line${flows.length === 1 ? '' : 's'}` : ''}${bad.length ? ` · ${bad.length} skipped` : ''}</h3>
         ${first ? `<p class="muted">History from ${day(first)}. Your daily track record will be rebuilt from that date (up to 2 years back) within 30 minutes of importing.</p>` : ''}
         <div class="tbl-wrap"><table class="mc-tbl pf-tbl"><thead><tr><th>Row</th><th>Ticker</th><th>Side</th><th class="n">Shares</th><th class="n">Entry</th><th>Opened</th><th class="n">Exit</th><th>Closed</th><th>Status</th></tr></thead><tbody>
         ${trades.map(x => `<tr><td>${x.n}</td><td><b>${esc(x.row ? x.row.ticker.replace('.JO', '') : x.raw || '—')}</b> <small>${esc(x.row && x.row.name || '')}</small></td><td>${x.row ? (x.row.side === 'short' ? '<span class="pf-short">SHORT</span>' : 'Long') : ''}</td>
           <td class="n">${x.row ? num(x.row.qty, x.row.qty % 1 ? 4 : 0) : ''}</td><td class="n">${x.row ? money(x.row.entry_price, x.row.currency) : ''}</td><td>${x.row && x.row.entry_date ? day(x.row.entry_date) : '—'}</td>
           <td class="n">${x.row && x.row.exit_price ? money(x.row.exit_price, x.row.currency) : ''}</td><td>${x.row && x.row.closed_on ? day(x.row.closed_on) : x.row ? '<span class="up">open</span>' : ''}</td>
-          <td>${!x.ok ? `<span class="${x.dup ? 'muted' : 'dn'}">Skipped: ${x.why}</span>` : x.known ? '<span class="up">✓ matched</span>' : '<span class="muted">✓ priced by the Portfolio Desk</span>'}</td></tr>`).join('')}</tbody></table></div>
+          <td>${!x.ok ? `<span class="${x.dup ? 'muted' : 'dn'}">Skipped: ${x.why}</span>` : x.upd ? '<span class="pf-updt">↻ closes your open position</span>' : x.known ? '<span class="up">✓ matched</span>' : '<span class="muted">✓ priced by the Portfolio Desk</span>'}</td></tr>`).join('')}</tbody></table></div>
         ${flows.length ? `<h3 class="ev-h3">Cash lines</h3><div class="pf-cur">Cash amounts on this statement are in <div class="seg" id="imCur"><button data-v="USD" class="${cashCur === 'USD' ? 'on' : ''}">Dollars</button><button data-v="ZAR" class="${cashCur === 'ZAR' ? 'on' : ''}">Rand</button></div></div><div class="tbl-wrap"><table class="mc-tbl pf-tbl"><thead><tr><th>Date</th><th>Type</th><th class="n">Amount</th><th>Description</th></tr></thead><tbody>${flows.map(f => `<tr><td>${day(f.flow_date)}</td><td>${esc(f.kind)}</td><td class="n">${money(f.amount, f.currency)}</td><td><small>${esc(f.note)}</small></td></tr>`).join('')}</tbody></table></div>` : ''}
-        <p class="pf-err" id="pfErr"></p>${good.length || flows.length ? `<button class="btn btn-gold" id="imDo">Import ${good.length} trade${good.length === 1 ? '' : 's'}${flows.length ? ` and ${flows.length} cash line${flows.length === 1 ? '' : 's'}` : ''}</button>` : ''}`;
+        <p class="pf-err" id="pfErr"></p>${good.length || flows.length || ups.length ? `<button class="btn btn-gold" id="imDo">Import${good.length ? ` ${good.length} trade${good.length === 1 ? '' : 's'}` : ''}${ups.length ? `${good.length ? ',' : ''} close ${ups.length}` : ''}${flows.length ? ` and ${flows.length} cash line${flows.length === 1 ? '' : 's'}` : ''}</button>` : '<p class="muted">Nothing new in this file: everything is already in your book.</p>'}`;
       if ($('imCur')) $('imCur').querySelectorAll('button').forEach(b => b.onclick = () => { cashCur = b.dataset.v; store.set('lrc_pf_cashcur', cashCur); preview(lastTxt); });
-      if (good.length || flows.length) $('imDo').onclick = async () => {
+      if (good.length || flows.length || ups.length) $('imDo').onclick = async () => {
         $('imDo').disabled = true; $('imDo').textContent = 'Importing…';
         const fail = m => { $('imDo').disabled = false; $('imDo').textContent = 'Try again'; err(m); };
         for (let k = 0; k < good.length; k += 100) { const { error } = await sb.from('portfolio_positions').insert(good.slice(k, k + 100).map(x => x.row)); if (error) return fail(error.message); }
+        for (const x of ups) { const { error } = await sb.from('portfolio_positions').update({ exit_price: x.row.exit_price, closed_on: x.row.closed_on }).eq('id', x.exId); if (error) return fail(error.message); }
         for (let k = 0; k < flows.length; k += 100) { const { error } = await sb.from('portfolio_flows').insert(flows.slice(k, k + 100)); if (error) return fail(error.message); }
-        await sb.from('portfolio_journal').insert({ kind: 'trade', body: `Imported ${nOpen} open and ${nClosed} closed trade${good.length === 1 ? '' : 's'}${flows.length ? ` and ${flows.length} cash line${flows.length === 1 ? '' : 's'}` : ''}${first ? ' (history from ' + first + ')' : ''}: ${[...new Set(good.map(x => x.row.ticker.replace('.JO', '')))].slice(0, 20).join(', ')}.` });
+        await sb.from('portfolio_journal').insert({ kind: 'trade', body: `Imported ${nOpen} open and ${nClosed} closed trade${good.length === 1 ? '' : 's'}${ups.length ? `, closed ${ups.length} existing position${ups.length === 1 ? '' : 's'} (${ups.map(x => x.row.ticker.replace('.JO', '')).join(', ')})` : ''}${flows.length ? ` and ${flows.length} cash line${flows.length === 1 ? '' : 's'}` : ''}${first ? ' (history from ' + first + ')' : ''}: ${[...new Set(good.map(x => x.row.ticker.replace('.JO', '')))].slice(0, 20).join(', ')}.` });
         close(); await reload();
       };
     };
