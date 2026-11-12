@@ -666,18 +666,34 @@
    "ticker": "DIB",
    "name": "Dipula Properties",
    "when": "Before open",
-   "period": "Annual to 31 Aug 2026",
+   "period": "Year to 31 Aug 2026",
+   "quarter": "",
    "eps_forecast": "",
    "market_cap_bn": 8.6,
-   "source": "Dipula investor calendar ('11 Nov 2026: Year-end results on SENS'; presentation 12 Nov) http://dipula.co.za/investor-calendar/ ; seen 2026-11-07; market cap R8.6bn = Yahoo Finance close 6 Nov 2026 via the LRC Stock Scanner",
-   "covered": false,
-   "lrc_rating": null,
+   "reported": true,
+   "result": "up",
+   "eps_actual": null,
+   "eps_est": null,
+   "surprise": null,
+   "heps": 63.86,
+   "heps_prior": 53.08,
+   "unit": "c",
+   "change": 0.2031,
+   "measure": "HEPS",
+   "dps": 55.95655,
+   "source": "Dipula Properties SENS — Audited consolidated financial results for the year ended 31 August 2026 and guidance (11 Nov 2026), via Sharenet https://www.sharenet.co.za/v3/sens_display.php?tdate=20261111080000&seq=17&scode=",
+   "px_move": {
+    "move": 0.0278,
+    "from": "2026-11-10",
+    "to": "2026-11-11"
+   },
    "t": "DIB.JO",
    "lists": [],
    "idea": null,
    "v": "BUY",
    "iv": "HOLD",
-   "track": null
+   "lrc_rating": null,
+   "covered": false
   },
   {
    "date": "2026-11-12",
@@ -1243,6 +1259,6 @@
   }
  ],
  "note": "Partial list: no company-published date could be found this week for, among others, MTN, Reinet, Woolworths, Shoprite, Bidvest, Discovery, FirstRand, Sasol, Aspen, Lewis and Cashbuild; they will be added when dates are published. Attacq (pre-close 24 Nov) and Growthpoint (pre-close 26 Nov) appear only on the SA REIT reporting schedule and are not listed until the companies publish them. Standard Bank's pre-close call (14 Dec) falls just after this window.",
- "synced": "2026-11-11T18:50+02:00",
+ "synced": "2026-11-12T06:18+02:00",
  "coverage_note": "Ticked = on the LRC watchlist. Every company the LRC Stock Scanner tracks shows its trading and investment ratings. Updated after every scanner run."
 }

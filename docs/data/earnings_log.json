@@ -12870,7 +12870,13 @@
 "eps_yago": 1.0,
 "n_est": 22,
 "rcur": "USD",
-"qend": "2026-10-31"
+"qend": "2026-10-31",
+"eps_actual": 1.22,
+"eps_est": 1.169,
+"surprise": 0.0438,
+"result": "beat",
+"quarter_end": "2026-07-31",
+"result_done": true
 },
 "CSCO|2026-11-12": {
 "t": "CSCO",
@@ -46518,7 +46524,13 @@
 "eps_forecast": "$11.43",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 63.4
+"market_cap_bn": 63.4,
+"eps_actual": 12.44,
+"eps_est": 12.21,
+"surprise": 0.0189,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "TDOC|2026-10-28": {
 "t": "TDOC",
@@ -46708,7 +46720,13 @@
 "eps_forecast": "$0.40",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 11.4
+"market_cap_bn": 11.4,
+"eps_actual": 0.44,
+"eps_est": 0.4476,
+"surprise": -0.0171,
+"result": "miss",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "TECK|2026-10-29": {
 "t": "TECK",
