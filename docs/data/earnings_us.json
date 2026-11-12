@@ -73327,12 +73327,11 @@
    "dps": null,
    "source": null,
    "has_res": true,
-   "desk": true,
-   "rev_actual": 1673875000000,
-   "rev_prior": 1527599000000,
-   "g": "reaffirmed",
-   "headline": "H1 revenue up 10% to ¥1.67trn; net income more than triples to ¥856bn on Kioxia-linked gains; full-year forecast left at ¥530bn",
-   "rev_yoy": 0.0958,
+   "desk": false,
+   "rev_actual": 28465000000.0,
+   "rev_prior": 36899000000.0,
+   "g": "not found",
+   "rev_yoy": -0.2286,
    "t": "IX",
    "lists": [],
    "idea": null,
@@ -74760,6 +74759,9 @@
    "rev_yago": 0,
    "n_est": 8,
    "rcur": "USD",
+   "has_res": true,
+   "desk": false,
+   "g": "not found",
    "t": "BLTE",
    "lists": [],
    "idea": null,
@@ -75945,6 +75947,10 @@
    "measure": null,
    "dps": null,
    "source": null,
+   "has_res": true,
+   "desk": false,
+   "rev_actual": 96577752.0,
+   "g": "given",
    "t": "RUM",
    "lists": [],
    "idea": null,
@@ -77897,6 +77903,9 @@
    "measure": null,
    "dps": null,
    "source": null,
+   "has_res": true,
+   "desk": false,
+   "g": "not found",
    "t": "PBR.A",
    "lists": [],
    "idea": null,
@@ -77932,6 +77941,9 @@
    "rev_yago": 125742812000,
    "n_est": 9,
    "rcur": "BRL",
+   "has_res": true,
+   "desk": false,
+   "g": "not found",
    "t": "PBR",
    "lists": [],
    "idea": null,
@@ -78010,6 +78022,10 @@
    "measure": null,
    "dps": null,
    "source": null,
+   "has_res": true,
+   "desk": false,
+   "rev_actual": 980800000.0,
+   "g": "given",
    "px_move": {
     "move": 0.0941,
     "from": "2026-11-09",
@@ -78603,6 +78619,12 @@
    "measure": null,
    "dps": null,
    "source": null,
+   "has_res": true,
+   "desk": false,
+   "rev_actual": 1204700000.0,
+   "rev_prior": 1236600000.0,
+   "g": "raised",
+   "rev_yoy": -0.0258,
    "t": "CAE",
    "lists": [],
    "idea": null,
@@ -79107,6 +79129,9 @@
    "measure": null,
    "dps": null,
    "source": null,
+   "has_res": true,
+   "desk": false,
+   "g": "not found",
    "t": "PHI",
    "lists": [],
    "idea": null,
@@ -80440,6 +80465,14 @@
    "rev_yago": 487700000,
    "n_est": 5,
    "rcur": "USD",
+   "has_res": true,
+   "desk": false,
+   "rev_actual": 549300000.0,
+   "rev_prior": 487700000.0,
+   "g": "narrowed",
+   "rev_surprise": -0.0055,
+   "rev_result": "miss",
+   "rev_yoy": 0.1263,
    "t": "FNV",
    "lists": [],
    "idea": null,
@@ -80469,6 +80502,9 @@
    "measure": null,
    "dps": null,
    "source": null,
+   "has_res": true,
+   "desk": false,
+   "g": "reaffirmed",
    "t": "VYLR",
    "lists": [],
    "idea": null,
@@ -80499,12 +80535,11 @@
    "dps": null,
    "source": null,
    "has_res": true,
-   "desk": true,
-   "rev_actual": 1673875000000,
-   "rev_prior": 1527599000000,
-   "g": "reaffirmed",
-   "headline": "H1 revenue up 10% to ¥1.67trn; net income more than triples to ¥856bn on Kioxia-linked gains; full-year forecast left at ¥530bn",
-   "rev_yoy": 0.0958,
+   "desk": false,
+   "rev_actual": 28465000000.0,
+   "rev_prior": 36899000000.0,
+   "g": "not found",
+   "rev_yoy": -0.2286,
    "t": "IX",
    "lists": [],
    "idea": null,
@@ -80576,6 +80611,14 @@
    "rev_yago": 4013837000,
    "n_est": 12,
    "rcur": "CAD",
+   "has_res": true,
+   "desk": false,
+   "rev_actual": 4146100000.0000005,
+   "rev_prior": 4193000000.0,
+   "g": "given",
+   "rev_surprise": 0.0042,
+   "rev_result": "inline",
+   "rev_yoy": -0.0112,
    "t": "GIB",
    "lists": [],
    "idea": null,
@@ -80611,6 +80654,14 @@
    "rev_yago": 213634000,
    "n_est": 18,
    "rcur": "EUR",
+   "has_res": true,
+   "desk": false,
+   "rev_actual": 369657000.0,
+   "rev_prior": 213634000.0,
+   "g": "not found",
+   "rev_surprise": 0.0135,
+   "rev_result": "beat",
+   "rev_yoy": 0.7303,
    "t": "ASND",
    "lists": [],
    "idea": null,
@@ -80675,6 +80726,14 @@
    "rev_yago": 1163309000,
    "n_est": 6,
    "rcur": "USD",
+   "has_res": true,
+   "desk": false,
+   "rev_actual": 1337362000.0,
+   "rev_prior": 1330100000.0,
+   "g": "given",
+   "rev_surprise": 0.1622,
+   "rev_result": "beat",
+   "rev_yoy": 0.0055,
    "t": "TTEK",
    "lists": [],
    "idea": null,
@@ -80710,6 +80769,14 @@
    "rev_yago": 1236600000,
    "n_est": 10,
    "rcur": "CAD",
+   "has_res": true,
+   "desk": false,
+   "rev_actual": 1204700000.0,
+   "rev_prior": 1236600000.0,
+   "g": "raised",
+   "rev_surprise": -0.0351,
+   "rev_result": "miss",
+   "rev_yoy": -0.0258,
    "t": "CAE",
    "lists": [],
    "idea": null,
@@ -80744,6 +80811,9 @@
    "rev_est_high": 1813209090,
    "n_est": 6,
    "rcur": "USD",
+   "has_res": true,
+   "desk": false,
+   "g": "given",
    "t": "CTVA",
    "lists": [],
    "idea": null,
@@ -80842,6 +80912,14 @@
    "rev_est_high": 90200000,
    "n_est": 2,
    "rcur": "USD",
+   "has_res": true,
+   "desk": false,
+   "rev_actual": 90205000.0,
+   "rev_prior": 71625000.0,
+   "g": "raised",
+   "rev_surprise": 0.0012,
+   "rev_result": "inline",
+   "rev_yoy": 0.2594,
    "t": "OR",
    "lists": [],
    "idea": null,
@@ -80914,6 +80992,14 @@
    "rev_yago": 37088000000,
    "n_est": 8,
    "rcur": "BRL",
+   "has_res": true,
+   "desk": false,
+   "rev_actual": 44432000000.0,
+   "rev_prior": 37088000000.0,
+   "g": "not found",
+   "rev_surprise": -0.0182,
+   "rev_result": "miss",
+   "rev_yoy": 0.198,
    "t": "UGP",
    "lists": [],
    "idea": null,
@@ -80949,6 +81035,14 @@
    "rev_yago": 951300000,
    "n_est": 4,
    "rcur": "USD",
+   "has_res": true,
+   "desk": false,
+   "rev_actual": 949900000.0,
+   "rev_prior": 951300000.0,
+   "g": "given",
+   "rev_surprise": -0.0173,
+   "rev_result": "miss",
+   "rev_yoy": -0.0015,
    "t": "ENS",
    "lists": [],
    "idea": null,
@@ -81013,6 +81107,12 @@
    "measure": null,
    "dps": null,
    "source": null,
+   "has_res": true,
+   "desk": false,
+   "rev_actual": 278600000.0,
+   "rev_prior": 267399999.99999997,
+   "g": "none",
+   "rev_yoy": 0.0419,
    "t": "ARX",
    "lists": [],
    "idea": null,
@@ -81148,6 +81248,9 @@
    "measure": null,
    "dps": null,
    "source": null,
+   "has_res": true,
+   "desk": false,
+   "g": "raised",
    "t": "AYA",
    "lists": [],
    "idea": null,
@@ -81212,6 +81315,9 @@
    "rev_yago": 59946400,
    "n_est": 4,
    "rcur": "USD",
+   "has_res": true,
+   "desk": false,
+   "g": "not found",
    "t": "ECO",
    "lists": [],
    "idea": null,
@@ -81479,6 +81585,14 @@
    "rev_yago": 790210000,
    "n_est": 14,
    "rcur": "USD",
+   "has_res": true,
+   "desk": false,
+   "rev_actual": 1012719000.0,
+   "rev_prior": 790210000.0,
+   "g": "given",
+   "rev_surprise": -0.0076,
+   "rev_result": "miss",
+   "rev_yoy": 0.2816,
    "t": "BGSI",
    "lists": [],
    "idea": null,
@@ -81514,6 +81628,14 @@
    "rev_yago": 114338000,
    "n_est": 5,
    "rcur": "USD",
+   "has_res": true,
+   "desk": false,
+   "rev_actual": 143319000.0,
+   "rev_prior": 114338000.0,
+   "g": "given",
+   "rev_surprise": 0.0218,
+   "rev_result": "beat",
+   "rev_yoy": 0.2535,
    "t": "DGII",
    "lists": [],
    "idea": null,
@@ -81578,6 +81700,9 @@
    "rev_yago": 0,
    "n_est": 9,
    "rcur": "EUR",
+   "has_res": true,
+   "desk": false,
+   "g": "not found",
    "t": "PHVS",
    "lists": [],
    "idea": null,
@@ -81613,6 +81738,14 @@
    "rev_yago": 651900000,
    "n_est": 1,
    "rcur": "USD",
+   "has_res": true,
+   "desk": false,
+   "rev_actual": 800900000.0,
+   "rev_prior": 651900000.0,
+   "g": "not found",
+   "rev_surprise": 0.1312,
+   "rev_result": "beat",
+   "rev_yoy": 0.2286,
    "t": "PLGO",
    "lists": [],
    "idea": null,
@@ -81648,6 +81781,13 @@
    "rev_yago": 24762450,
    "n_est": 3,
    "rcur": "USD",
+   "has_res": true,
+   "desk": false,
+   "rev_actual": 96577752.0,
+   "g": "given",
+   "rev_surprise": 0.0892,
+   "rev_result": "beat",
+   "rev_yoy": 2.9002,
    "t": "RUM",
    "lists": [],
    "idea": null,
@@ -81683,6 +81823,13 @@
    "rev_yago": 71161000,
    "n_est": 2,
    "rcur": "EUR",
+   "has_res": true,
+   "desk": false,
+   "rev_actual": 26100000.0,
+   "g": "given",
+   "rev_surprise": -0.3661,
+   "rev_result": "miss",
+   "rev_yoy": -0.6332,
    "t": "LKFT",
    "lists": [],
    "idea": null,
@@ -82450,7 +82597,8 @@
    "n_est": 1,
    "rcur": "USD",
    "qend": "2026-09-30",
-   "track": null
+   "track": null,
+   "has_res": true
   },
   {
    "date": "2026-11-12",
@@ -82514,7 +82662,8 @@
     "miss",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-12",
@@ -82571,7 +82720,8 @@
    "track": [
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-12",
@@ -82588,7 +82738,8 @@
    "lists": [],
    "idea": null,
    "v": null,
-   "iv": null
+   "iv": null,
+   "has_res": true
   },
   {
    "date": "2026-11-12",
@@ -82716,7 +82867,8 @@
     "beat",
     "miss",
     "miss"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-12",
@@ -82838,7 +82990,8 @@
     "miss",
     "miss",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-12",
@@ -82869,7 +83022,8 @@
     "miss",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-12",
@@ -82896,7 +83050,8 @@
    "qend": "2026-09-30",
    "track": [
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-12",
@@ -82923,7 +83078,8 @@
    "qend": "2026-09-30",
    "track": [
     "inline"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-12",
@@ -82951,7 +83107,8 @@
    "track": [
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-12",
@@ -82978,7 +83135,8 @@
    "qend": "2026-09-30",
    "track": [
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-12",
@@ -82995,7 +83153,8 @@
    "lists": [],
    "idea": null,
    "v": null,
-   "iv": null
+   "iv": null,
+   "has_res": true
   },
   {
    "date": "2026-11-12",
@@ -83027,7 +83186,8 @@
     "miss",
     "miss",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-12",
@@ -83091,7 +83251,8 @@
     "beat",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-12",
@@ -83118,7 +83279,8 @@
    "qend": "2026-09-30",
    "track": [
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-12",
@@ -83145,7 +83307,8 @@
    "qend": "2026-09-30",
    "track": [
     "miss"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-12",
@@ -83222,7 +83385,8 @@
    "qend": "2026-09-30",
    "track": [
     "miss"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-12",
@@ -83271,7 +83435,8 @@
     "beat",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-12",
@@ -83303,7 +83468,8 @@
     "inline",
     "beat",
     "miss"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-12",
@@ -83335,7 +83501,8 @@
     "beat",
     "miss",
     "miss"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-12",
@@ -83394,7 +83561,8 @@
     "beat",
     "beat",
     "miss"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-12",
@@ -83426,7 +83594,8 @@
     "beat",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-12",
@@ -83475,7 +83644,8 @@
     "beat",
     "beat",
     "miss"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-13",
@@ -84291,7 +84461,8 @@
     "miss",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-17",
@@ -88685,6 +88856,6 @@
    "covered": false
   }
  ],
- "synced": "2026-11-12T16:25+02:00",
+ "synced": "2026-11-12T16:41+02:00",
  "coverage_note": "Ticked = on the LRC watchlist. Every company the LRC Stock Scanner tracks shows its trading and investment ratings. Updated after every scanner run."
 }

@@ -1,151 +1,14 @@
 {
-"updated": "2026-11-12T06:44+02:00",
+"updated": "2026-11-12T16:41+02:00",
 "queue": [
 {
-"t": "DIB.JO",
-"name": "Dipula Properties",
-"m": "JSE",
-"date": "2026-11-11",
-"period": "Year to 31 Aug 2026",
-"source": "Dipula Properties SENS — Audited consolidated financial results for the year ended 31 August 2026 and guidance (11 Nov 2026), via Sharenet https://www.sharenet.co.za/v3/sens_display.php?tdate=20261111080000&seq=17&scode=",
-"priority": 2,
-"mcap_bn": 0.5
-},
-{
-"t": "NWS",
-"name": "News Corporation",
-"m": "US",
-"date": "2026-11-05",
-"text": "agents/work/8k/NWS_2026-11-05.txt",
-"priority": 2,
-"mcap_bn": 16.1
-},
-{
-"t": "SOLV",
-"name": "Solventum Corporation",
-"m": "US",
-"date": "2026-11-05",
-"text": "agents/work/8k/SOLV_2026-11-05.txt",
-"priority": 2,
-"mcap_bn": 15.1
-},
-{
-"t": "NWSA",
-"name": "News Corporation",
-"m": "US",
-"date": "2026-11-05",
-"text": "agents/work/8k/NWSA_2026-11-05.txt",
-"priority": 2,
-"mcap_bn": 14.3
-},
-{
-"t": "REG",
-"name": "Regency Centers Corporation",
-"m": "US",
-"date": "2026-11-05",
-"text": "agents/work/8k/REG_2026-11-05.txt",
-"priority": 2,
-"mcap_bn": 14.1
-},
-{
-"t": "AKAM",
-"name": "Akamai Technologies, Inc.",
-"m": "US",
-"date": "2026-11-05",
-"text": "agents/work/8k/AKAM_2026-11-05.txt",
-"priority": 2,
-"mcap_bn": 12.7
-},
-{
-"t": "CPT",
-"name": "Camden Property Trust",
-"m": "US",
-"date": "2026-11-05",
-"text": "agents/work/8k/CPT_2026-11-05.txt",
-"priority": 2,
-"mcap_bn": 9.8
-},
-{
-"t": "WYNN",
-"name": "Wynn Resorts, Limited",
-"m": "US",
-"date": "2026-11-05",
-"text": "agents/work/8k/WYNN_2026-11-05.txt",
-"priority": 2,
-"mcap_bn": 8.8
-},
-{
-"t": "TFG.JO",
-"name": "The Foschini Group",
-"m": "JSE",
-"date": "2026-11-06",
-"period": "Six months to 30 Sep 2026",
-"source": "The Foschini Group SENS — Summary of the unaudited interim condensed consolidated results for the half-year ended 30 September 2026, ordinary and preference dividend declaration, and changes to the board (6 Nov 2026); figures from the TFG media release https://tfglimited.co.za/wp-content/uploads/2026/11/TFG-MEDIA-RELEASE_Half-Year-Financial-Results-6-November-2026.pdf (HEPS down 6.8% to 272.8c; interim dividend 121c; prior-period HEPS 292.6c and interim dividend 130.0c from TFG's interim results announcement of 7 Nov 2025 https://tfglimited.co.za/wp-content/uploads/2025/11/FY26-Interim-Results-Announcement.pdf; dividend dates not stated in the release)",
-"priority": 2,
-"mcap_bn": 1.0
-},
-{
-"t": "HROW",
-"name": "Harrow, Inc.",
-"m": "US",
-"date": "2026-11-09",
-"text": "agents/work/8k/HROW_2026-11-09.txt",
-"priority": 1,
-"mcap_bn": 0.0
-},
-{
-"t": "COAG",
-"name": "Hemab Therapeutics Holdings, Inc.",
+"t": "NBIS",
+"name": "Nebius Group N.V.",
 "m": "US",
 "date": "2026-11-10",
-"text": "agents/work/8k/COAG_2026-11-10.txt",
-"priority": 1,
-"mcap_bn": 0.0
-},
-{
-"t": "MARA",
-"name": "MARA Holdings, Inc.",
-"m": "US",
-"date": "2026-11-09",
-"text": "agents/work/8k/MARA_2026-11-09.txt",
-"priority": 1,
-"mcap_bn": 0.0
-},
-{
-"t": "LIF",
-"name": "Life360, Inc.",
-"m": "US",
-"date": "2026-11-09",
-"text": "agents/work/8k/LIF_2026-11-09.txt",
-"priority": 1,
-"mcap_bn": 0.0
-},
-{
-"t": "TYRA",
-"name": "Tyra Biosciences, Inc.",
-"m": "US",
-"date": "2026-11-09",
-"text": "agents/work/8k/TYRA_2026-11-09.txt",
-"priority": 1,
-"mcap_bn": 0.0
-},
-{
-"t": "ABCL",
-"name": "AbCellera Biologics Inc.",
-"m": "US",
-"date": "2026-11-09",
-"text": "agents/work/8k/ABCL_2026-11-09.txt",
-"priority": 1,
-"mcap_bn": 0.0
-},
-{
-"t": "LEGN",
-"name": "Legend Biotech Corporation",
-"m": "US",
-"date": "2026-11-10",
-"text": "agents/work/8k/LEGN_2026-11-10.txt",
-"priority": 1,
-"mcap_bn": 0.0
+"text": "agents/work/8k/NBIS_2026-11-10.txt",
+"priority": 2,
+"mcap_bn": 42.1
 },
 {
 "t": "BEKE",
@@ -153,33 +16,6 @@
 "m": "US",
 "date": "2026-11-09",
 "text": "agents/work/8k/BEKE_2026-11-09.txt",
-"priority": 1,
-"mcap_bn": 0.0
-},
-{
-"t": "XENE",
-"name": "Xenon Pharmaceuticals Inc.",
-"m": "US",
-"date": "2026-11-09",
-"text": "agents/work/8k/XENE_2026-11-09.txt",
-"priority": 1,
-"mcap_bn": 0.0
-},
-{
-"t": "GSHD",
-"name": "Goosehead Insurance, Inc.",
-"m": "US",
-"date": "2026-11-09",
-"text": "agents/work/8k/GSHD_2026-11-09.txt",
-"priority": 1,
-"mcap_bn": 0.0
-},
-{
-"t": "MBX",
-"name": "MBX Biosciences, Inc.",
-"m": "US",
-"date": "2026-11-09",
-"text": "agents/work/8k/MBX_2026-11-09.txt",
 "priority": 1,
 "mcap_bn": 0.0
 },
