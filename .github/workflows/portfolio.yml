@@ -1,0 +1,31 @@
+# LRC Portfolio Desk — every 30 minutes: prices, news and next results for every company members hold,
+# market-moving alerts on their Portfolio Journal, and alert emails (one per member per run, each story once).
+# Writes only to the members database (Supabase); nothing is published to the public website.
+name: Portfolio Desk (every 30 min)
+on:
+  schedule:
+    - cron: '11,41 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: lrc-portfolio
+  cancel-in-progress: true
+jobs:
+  desk:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - name: Refresh holdings news and prices, send alerts
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          SMTP_FROM: ${{ secrets.SMTP_FROM }}
+        run: python agents/tools/portfolio_desk.py

@@ -50,6 +50,8 @@ def _yahoo_top(y, sym):
     eq = th.get('equityHoldings') or {}
     fv = {k: raw(eq.get(y_)) for k, y_ in (('pe', 'priceToEarnings'), ('pb', 'priceToBook'), ('ps', 'priceToSales'), ('pcf', 'priceToCashflow'), ('g3', 'threeYearEarningsGrowth'))}
     fv = {k: v for k, v in fv.items() if isinstance(v, (int, float)) and v}
+    # Yahoo reports fund multiples as yields (earnings / price): turn them into P/E, P/B, P/S and P/CF
+    fv = {k: (round(1 / v, 2) if k != 'g3' and 0 < v < 1 else v) for k, v in fv.items()}
     return {'hold': hold, 'sw': sw[:4], 'fv': fv}
 
 

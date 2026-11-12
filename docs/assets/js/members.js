@@ -32,6 +32,11 @@ window.LRC_MEMBER_NEWS = [
     li.innerHTML = `<a href="${BASE}top-picks.html" class="nav-picks${PAGE === 'top-picks.html' ? ' active' : ''}">Top Picks <span class="lock" aria-hidden="true">🔒</span></a>`;
     menu.insertBefore(li, menu.firstChild);
   }
+  if (menu && !menu.querySelector('.nav-pf')) {
+    const lp = document.createElement('li'), tp = menu.querySelector('.nav-picks');
+    lp.innerHTML = `<a href="${BASE}portfolio.html" class="nav-picks nav-pf${PAGE === 'portfolio.html' ? ' active' : ''}">My Portfolio <span class="lock" aria-hidden="true">🔒</span></a>`;
+    menu.insertBefore(lp, tp ? tp.parentElement.nextSibling : menu.firstChild);
+  }
   const cta = document.querySelector('.nav-cta');
   if (cta && !cta.querySelector('.btn-acct')) {
     const a = document.createElement('a');
