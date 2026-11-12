@@ -129,3 +129,14 @@ create policy "own snapshots" on public.portfolio_snapshots for select to authen
 -- 9. Broker trade ID (so the same trade is never imported twice)
 alter table public.portfolio_positions add column if not exists ext_id text;
 create unique index if not exists portfolio_positions_ext on public.portfolio_positions (user_id, ext_id) where ext_id is not null;
+
+-- 10. Benchmarks for the performance charts (public market data, written by the Portfolio Desk)
+create table if not exists public.portfolio_bench (
+  d       date primary key,
+  spx     numeric,   -- S&P 500 index (USD)
+  j200    numeric,   -- JSE Top 40 (Satrix 40 ETF, rand)
+  usdzar  numeric    -- rand per dollar
+);
+alter table public.portfolio_bench enable row level security;
+drop policy if exists "members read bench" on public.portfolio_bench;
+create policy "members read bench" on public.portfolio_bench for select to authenticated using (true);

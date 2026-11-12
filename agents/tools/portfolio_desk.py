@@ -128,11 +128,25 @@ def main():
                      'alerts': sorted(al.values(), key=lambda a: a.get('at') or '', reverse=True)[:20], 'updated_at': now.isoformat()})
     for i in range(0, len(rows), 200):
         api('POST', 'portfolio_news?on_conflict=ticker', rows[i:i + 200], 'resolution=merge-duplicates,return=minimal')
+    try: benchmarks()
+    except Exception as e: print('::warning::portfolio_desk: benchmarks failed:', repr(e)[:200])
     try: track_record(quotes, now)
     except Exception as e: print('::warning::portfolio_desk: track record failed:', repr(e)[:200])
     n_new = sum(len(v) for v in fresh.values())
     print(f'::notice::portfolio_desk: {len(rows)} companies refreshed, {len(quotes)} prices, {n_new} new market-moving alerts')
     if n_new: send_alerts(pos, fresh)
+
+
+def benchmarks():
+    """S&P 500, JSE Top 40 (Satrix 40) and USD/ZAR daily closes for the last 2 years -> portfolio_bench."""
+    y = Yahoo(); H = {}
+    for k, sym in (('spx', '^GSPC'), ('j200', 'STX40.JO'), ('usdzar', 'ZAR=X')):
+        bars, meta = y.bars(sym, '2y'); f = 100.0 if (meta.get('currency') or '') in ('ZAc', 'ZAC') else 1.0
+        for b in bars: H.setdefault(b['date'], {})[k] = round(b['close'] / f, 4)
+    rows = [{'d': d, 'spx': v.get('spx'), 'j200': v.get('j200'), 'usdzar': v.get('usdzar')} for d, v in sorted(H.items())]
+    for i in range(0, len(rows), 500):
+        api('POST', 'portfolio_bench?on_conflict=d', rows[i:i + 500], 'resolution=merge-duplicates,return=minimal')
+    print(f'portfolio_desk: benchmarks {len(rows)} days')
 
 
 def track_record(quotes, now):

@@ -26,7 +26,7 @@
   const getJ = f => fetch(DATA + f + '?v=' + Math.floor(Date.now() / 3e5)).then(r => r.ok ? r.json() : null).catch(() => null);
   const KINDS = { thesis: 'Thesis', note: 'Note', review: 'Review', trade: 'Trade', risk: 'Risk' };
 
-  let STALE = false, SNAP = [], FLOWS = [], sb = null, user = null, IDX = {}, Q = {}, QGEN = null, NEWS = {}, FX = null, POS = [], JRN = [], PROF = {}, base = store.get('lrc_pf_base', 'ZAR');
+  let BENCH = [], STALE = false, SNAP = [], FLOWS = [], sb = null, user = null, IDX = {}, Q = {}, QGEN = null, NEWS = {}, FX = null, POS = [], JRN = [], PROF = {}, base = store.get('lrc_pf_base', 'ZAR');
 
   const client = () => new Promise((res, rej) => {
     if (!CFG.url || !CFG.anon) return rej(new Error('members database not configured'));
@@ -115,7 +115,7 @@
       <div><span>Net deposited</span><b>${A.net ? money(fromZar(A.net), base, 0) : '—'}</b><small>${A.dep ? `in ${money(fromZar(A.dep), base, 0)} · out ${money(fromZar(A.wd), base, 0)}` : 'record your deposits to see your true gain'}</small></div>
       <div><span>Total gain on deposits</span><b class="${cls(gain)}">${gain !== null ? money(fromZar(gain), base, 0) : '—'}</b><small class="${cls(gain)}">${gain !== null ? pct(gain / A.net) : 'account value minus money put in'}</small></div>
       <div><span>Income &amp; costs</span><b>${money(fromZar(A.divs + A.intr), base, 0)}</b><small>dividends and interest · fees ${money(fromZar(A.fees), base, 0)}</small></div>
-      <div class="pf-acct-btn"><button class="btn btn-ghost" id="pfAcct">Cash &amp; deposits</button></div></div>`;
+      <div class="pf-acct-btn"><button class="btn btn-gold" data-flow="deposit">+ Deposit</button><button class="btn btn-ghost" data-flow="withdrawal">− Withdrawal</button><button class="btn btn-ghost" id="pfAcct">Cash &amp; history</button></div></div>`;
   };
   const series = B => {
     // daily book value (rand) from the Portfolio Desk, with today replaced by the live value
@@ -131,65 +131,204 @@
     pts.forEach((p, i) => { const prev = i ? pts[i - 1].b : 0; const r = prev > 0 ? (p.b - p.f) / prev - 1 : 0; I *= 1 + (isFinite(r) && Math.abs(r) < 0.9 ? r : 0); out.push({ ...p, r: i ? r : 0, I }); });
     return out;
   };
+  /* ---------- charts (plain SVG) ---------- */
+  const COL = { p: '#E2B960', spx: '#5B9BFF', j200: '#2FBF71', inv: '#7d8597', dep: '#9b8cff' };
+  const lineChart = (dates, lines, o = {}) => {
+    const W = 760, H = o.h || 230, L = 52, R = 10, T = 12, Bm = 26, all = lines.flatMap(l => l.v.filter(ok));
+    if (!all.length || dates.length < 2) return '<p class="muted">Not enough history yet.</p>';
+    let lo = Math.min(...all, o.zero ? 0 : Infinity), hi = Math.max(...all, o.zero ? 0 : -Infinity); const pad = (hi - lo) * 0.06 || 1; lo -= pad; hi += pad;
+    const X = i => L + (W - L - R) * i / (dates.length - 1), Y = v => T + (H - T - Bm) * (1 - (v - lo) / (hi - lo));
+    const path = v => { let d = '', pen = false; v.forEach((x, i) => { if (!ok(x)) { pen = false; return; } d += (pen ? 'L' : 'M') + X(i).toFixed(1) + ',' + Y(x).toFixed(1); pen = true; }); return d; };
+    const fmt = o.fmt || (v => v.toFixed(0));
+    const yt = [0, 0.25, 0.5, 0.75, 1].map(f => { const v = lo + (hi - lo) * f; return `<line x1="${L}" x2="${W - R}" y1="${Y(v)}" y2="${Y(v)}" class="gl"/><text x="${L - 6}" y="${Y(v) + 4}" class="ax" text-anchor="end">${fmt(v)}</text>`; }).join('');
+    const xi = [0, Math.round((dates.length - 1) / 3), Math.round(2 * (dates.length - 1) / 3), dates.length - 1];
+    const xt = xi.map((i, k) => `<text x="${X(i)}" y="${H - 8}" class="ax" text-anchor="${k === 0 ? 'start' : k === 3 ? 'end' : 'middle'}">${new Date(dates[i] + 'T12:00:00').toLocaleDateString('en-ZA', { day: 'numeric', month: 'short', year: '2-digit' })}</text>`).join('');
+    const base = o.baseLine !== undefined ? `<line x1="${L}" x2="${W - R}" y1="${Y(o.baseLine)}" y2="${Y(o.baseLine)}" stroke="#4a5060" stroke-width="1"/>` : '';
+    const ls = lines.map(l => (l.area ? `<path d="${path(l.v)}L${X(dates.length - 1)},${Y(o.zero ? 0 : lo)}L${X(0)},${Y(o.zero ? 0 : lo)}Z" fill="${l.area}"/>` : '') + `<path d="${path(l.v)}" fill="none" stroke="${l.c}" stroke-width="${l.w || 2}" ${l.dash ? 'stroke-dasharray="5 4"' : ''}/>`).join('');
+    const mk = (o.marks || []).map(m => { const i = dates.findIndex(d => d >= m.d); if (i < 0) return ''; const up = m.k === 'deposit'; return `<g><title>${esc(m.t)}</title><path d="M${X(i)},${H - Bm - 14} l-6,10 h12z" transform="${up ? '' : `rotate(180 ${X(i)} ${H - Bm - 9})`}" fill="${up ? '#2FBF71' : '#E05A4F'}"/></g>`; }).join('');
+    return `<svg viewBox="0 0 ${W} ${H}" class="pf-chart">${yt}${base}${ls}${mk}${xt}</svg>`;
+  };
+  const barChart = (labels, sets) => {
+    const W = 760, H = 210, L = 46, Bm = 26, T = 10, all = sets.flatMap(s => s.v.filter(ok)); if (!all.length) return '';
+    const hi = Math.max(0.01, ...all), lo = Math.min(-0.01, ...all), Y = v => T + (H - T - Bm) * (hi - v) / (hi - lo);
+    const gw = (W - L - 8) / labels.length, bw = Math.max(2, gw / (sets.length + 1));
+    const bars = labels.map((lb, i) => sets.map((s, k) => { const v = s.v[i]; if (!ok(v)) return ''; const x = L + i * gw + bw * (k + 0.5), y = Y(Math.max(0, v)), h = Math.abs(Y(v) - Y(0));
+      return `<rect x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${(bw * 0.9).toFixed(1)}" height="${Math.max(1, h).toFixed(1)}" fill="${s.c}"><title>${esc(s.n)} ${esc(lb)}: ${pct(v)}</title></rect>`; }).join('') + `<text x="${L + i * gw + gw / 2}" y="${H - 8}" class="ax" text-anchor="middle">${esc(lb)}</text>`).join('');
+    const yt = [hi, 0, lo].map(v => `<text x="${L - 6}" y="${Y(v) + 4}" class="ax" text-anchor="end">${(v * 100).toFixed(0)}%</text>`).join('');
+    return `<svg viewBox="0 0 ${W} ${H}" class="pf-chart"><line x1="${L}" x2="${W - 8}" y1="${Y(0)}" y2="${Y(0)}" stroke="#4a5060"/>${yt}${bars}</svg>`;
+  };
+  const legend = items => `<div class="pf-legend">${items.map(([c, t, dash]) => `<span><i ${dash ? 'class="dash"' : `style="background:${c}"`}></i>${t}</span>`).join('')}</div>`;
+
+
+  /* value vs money put in: blue when above (in profit), red when below (in a drawdown on your money) */
+  const pnlChart = (dates, val, bse, marks, fmt) => {
+    const W = 760, H = 260, L = 56, R = 10, T = 12, Bm = 26, all = [...val, ...bse].filter(ok);
+    if (all.length < 2) return '<p class="muted">Not enough history yet.</p>';
+    let lo = Math.min(...all), hi = Math.max(...all); const pad = (hi - lo) * 0.08 || 1; lo -= pad; hi += pad;
+    const X = i => L + (W - L - R) * i / (dates.length - 1), Y = v => T + (H - T - Bm) * (1 - (v - lo) / (hi - lo));
+    const UP = '#3B82F6', DN = '#E05A4F'; let fills = '', segs = '';
+    for (let i = 1; i < dates.length; i++) {
+      const a0 = val[i - 1], a1 = val[i], b0 = bse[i - 1], b1 = bse[i]; if (![a0, a1, b0, b1].every(ok)) continue;
+      const d0 = a0 - b0, d1 = a1 - b1, x0 = X(i - 1), x1 = X(i);
+      const piece = (xa, va, ba, xb, vb, bb, up) => { fills += `<polygon points="${xa},${Y(va)} ${xb},${Y(vb)} ${xb},${Y(bb)} ${xa},${Y(ba)}" fill="${up ? 'rgba(59,130,246,.22)' : 'rgba(224,90,79,.22)'}"/>`; segs += `<line x1="${xa}" y1="${Y(va)}" x2="${xb}" y2="${Y(vb)}" stroke="${up ? UP : DN}" stroke-width="2.6" stroke-linecap="round"/>`; };
+      if ((d0 >= 0) === (d1 >= 0)) piece(x0, a0, b0, x1, a1, b1, d0 + d1 >= 0);
+      else { const t = d0 / (d0 - d1), xm = x0 + (x1 - x0) * t, vm = a0 + (a1 - a0) * t, bm = b0 + (b1 - b0) * t; piece(x0, a0, b0, xm, vm, bm, d0 >= 0); piece(xm, vm, bm, x1, a1, b1, d1 >= 0); }
+    }
+    const bl = bse.map((v, i) => ok(v) ? `${X(i).toFixed(1)},${Y(v).toFixed(1)}` : null).filter(Boolean).join(' ');
+    const yt = [0, 0.25, 0.5, 0.75, 1].map(f => { const v = lo + (hi - lo) * f; return `<line x1="${L}" x2="${W - R}" y1="${Y(v)}" y2="${Y(v)}" class="gl"/><text x="${L - 6}" y="${Y(v) + 4}" class="ax" text-anchor="end">${fmt(v)}</text>`; }).join('');
+    const xi = [0, Math.round((dates.length - 1) / 3), Math.round(2 * (dates.length - 1) / 3), dates.length - 1];
+    const xt = xi.map((i, k) => `<text x="${X(i)}" y="${H - 8}" class="ax" text-anchor="${k === 0 ? 'start' : k === 3 ? 'end' : 'middle'}">${new Date(dates[i] + 'T12:00:00').toLocaleDateString('en-ZA', { day: 'numeric', month: 'short', year: '2-digit' })}</text>`).join('');
+    const mk = (marks || []).map(m => { const i = dates.findIndex(d => d >= m.d); if (i < 0) return ''; const up = m.k === 'deposit'; return `<g><title>${esc(m.t)}</title><path d="M${X(i)},${H - Bm - 14} l-6,10 h12z" transform="${up ? '' : `rotate(180 ${X(i)} ${H - Bm - 9})`}" fill="${up ? '#2FBF71' : '#E05A4F'}"/></g>`; }).join('');
+    return `<svg viewBox="0 0 ${W} ${H}" class="pf-chart">${yt}${fills}<polyline points="${bl}" fill="none" stroke="#c9ccd6" stroke-width="1.6" stroke-dasharray="6 4"/>${segs}${mk}${xt}</svg>`;
+  };
+
+  /* ---------- analytics maths ---------- */
+  const stats = (rs, I0, dates) => {
+    const n = rs.length; if (n < 2) return null;
+    const mean = rs.reduce((a, x) => a + x, 0) / n, sd = Math.sqrt(rs.reduce((a, x) => a + (x - mean) ** 2, 0) / (n - 1));
+    const tot = I0[I0.length - 1] / I0[0] - 1, yrs = (new Date(dates[dates.length - 1]) - new Date(dates[0])) / 3.156e10;
+    let pk = -Infinity, dd = 0; I0.forEach(v => { pk = Math.max(pk, v); dd = Math.max(dd, 1 - v / pk); });
+    const cagr = yrs >= 0.25 ? Math.pow(1 + tot, 1 / yrs) - 1 : null, vol = sd * Math.sqrt(252);
+    return { tot, cagr, vol, dd, sharpe: cagr !== null && vol ? (cagr - RF) / vol : null };
+  };
+  const RF = 0.07; // South African cash / T-bill rate used for the Sharpe ratio
+  const reg = (y, x) => { const n = Math.min(y.length, x.length); if (n < 20) return {}; const my = y.reduce((a, v) => a + v, 0) / n, mx = x.reduce((a, v) => a + v, 0) / n;
+    let c = 0, vx = 0, vy = 0; for (let i = 0; i < n; i++) { c += (y[i] - my) * (x[i] - mx); vx += (x[i] - mx) ** 2; vy += (y[i] - my) ** 2; } return { beta: vx ? c / vx : null, corr: vx && vy ? c / Math.sqrt(vx * vy) : null }; };
+
+  let RNG = store.get('lrc_pf_rng', 'ALL');
   const perfSection = B => {
-    const S = series(B); if (S.length < 2) return S.length ? `<h3 class="pf-h">Performance &amp; track record</h3><p class="muted">Your daily track record starts building tonight: the Portfolio Desk records your book every day from closing prices (and back-fills from your entry dates).</p>` : '';
-    const last = S[S.length - 1], at = d => { let v = null; for (const p of S) { if (p.d <= d) v = p; else break; } return v; };
-    const ret = from => { const p = at(from); return p && p !== last ? last.I / p.I - 1 : null; };
+    const S0 = series(B);
+    if (S0.length < 2) return S0.length ? `<h3 class="pf-h">Performance &amp; track record</h3><p class="muted">Your daily track record starts building tonight: the Portfolio Desk records your book every day from closing prices (and back-fills from your entry dates).</p>` : '';
+    const last0 = S0[S0.length - 1], before = d => { let v = null; for (const p of S0) { if (p.d < d) v = p; else break; } return v; }, at = d => { let v = null; for (const p of S0) { if (p.d <= d) v = p; else break; } return v; };
     const ds = n => { const x = new Date(); x.setDate(x.getDate() - n); return x.toISOString().slice(0, 10); };
     const y0 = new Date().getFullYear() + '-01-01', m0 = new Date().toISOString().slice(0, 8) + '01';
-    const before = d => { let v = null; for (const p of S) { if (p.d < d) v = p; else break; } return v; };
-    const per = [['Today', last.r], ['1 week', ret(ds(7))], ['This month', before(m0) ? last.I / before(m0).I - 1 : last.I / S[0].I - 1], ['3 months', ret(ds(91))], ['This year', before(y0) ? last.I / before(y0).I - 1 : last.I / S[0].I - 1], ['Since start', last.I / 100 - 1]];
-    // monthly grid
-    const months = {}; S.forEach(p => { const k = p.d.slice(0, 7); months[k] = months[k] || { first: p, last: p }; months[k].last = p; });
-    const keys = Object.keys(months).sort(), mret = {}; keys.forEach((k, i) => { const prevI = i ? months[keys[i - 1]].last.I : 100; mret[k] = months[k].last.I / prevI - 1; });
-    const years = [...new Set(keys.map(k => k.slice(0, 4)))].sort().reverse();
-    const MN = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-    const ytd = y => keys.filter(k => k.startsWith(y)).reduce((a, k) => a * (1 + mret[k]), 1) - 1;
-    let peak = 0, dd = 0; S.forEach(p => { peak = Math.max(peak, p.I); dd = Math.max(dd, 1 - p.I / peak); });
-    const days = S.slice(1).filter(p => !p.live || true), best = days.reduce((a, p) => !a || p.r > a.r ? p : a, null), worst = days.reduce((a, p) => !a || p.r < a.r ? p : a, null);
-    const up = days.filter(p => p.r > 0).length;
-    // chart
-    const W = 760, H = 200, L = 46, vals = S.map(p => fromZar(p.b)), invs = S.map(p => fromZar(p.inv));
-    const lo = Math.min(...vals, ...invs) * 0.97, hi = Math.max(...vals, ...invs) * 1.03 || 1;
-    const X = i => L + (W - L - 8) * i / Math.max(1, S.length - 1), Y = v => 10 + (H - 34) * (1 - (v - lo) / (hi - lo || 1));
-    const line = arr => arr.map((v, i) => `${X(i).toFixed(1)},${Y(v).toFixed(1)}`).join(' ');
-    const ticks = [0, 0.5, 1].map(f => { const v = lo + (hi - lo) * f; return `<text x="2" y="${Y(v) + 4}" class="ax">${base === 'ZAR' ? 'R' : '$'}${v >= 1e6 ? (v / 1e6).toFixed(1) + 'm' : v >= 1e3 ? Math.round(v / 1e3) + 'k' : Math.round(v)}</text>`; }).join('');
-    const xl = [0, Math.floor((S.length - 1) / 2), S.length - 1].map(i => `<text x="${X(i)}" y="${H - 6}" class="ax" text-anchor="${i === 0 ? 'start' : i === S.length - 1 ? 'end' : 'middle'}">${day(S[i].d)}</text>`).join('');
-    const chart = `<svg viewBox="0 0 ${W} ${H}" class="pf-chart" role="img" aria-label="Book value over time"><polygon points="${X(0)},${Y(lo)} ${line(vals)} ${X(S.length - 1)},${Y(lo)}" fill="rgba(201,162,39,.12)"/><polyline points="${line(invs)}" fill="none" stroke="#7d8597" stroke-width="1.5" stroke-dasharray="5 4"/><polyline points="${line(vals)}" fill="none" stroke="#E2B960" stroke-width="2.4"/>${ticks}${xl}</svg>`;
-    // trading statistics (closed trades)
+    const ret = p => p && p !== last0 ? last0.I / p.I - 1 : null;
+    const per = [['Today', last0.r], ['1 week', ret(at(ds(7)))], ['This month', ret(before(m0)) ?? last0.I / S0[0].I - 1], ['3 months', ret(at(ds(91)))], ['This year', ret(before(y0)) ?? last0.I / S0[0].I - 1], ['Since start', last0.I / 100 - 1]];
+    // range for the charts
+    const RS = { '1M': ds(31), '3M': ds(92), '6M': ds(183), 'YTD': y0, '1Y': ds(366), 'ALL': '0000' };
+    const S = S0.filter(p => p.d >= RS[RNG]); if (S.length < 2) S.unshift(...S0.slice(-2, -1));
+    const dates = S.map(p => p.d);
+    // benchmarks aligned to our dates (forward-filled), S&P 500 in rand so it compares like with like
+    const bmap = {}; BENCH.forEach(r => bmap[r.d] = r); let lb = {};
+    const BA = dates.map(d => { const r = bmap[d]; if (r) lb = { spx: r.spx ?? lb.spx, j200: r.j200 ?? lb.j200, fx: r.usdzar ?? lb.fx }; return { ...lb }; });
+    const reb = arr => { const f = arr.find(ok); return arr.map(v => ok(v) && f ? v / f * 100 : null); };
+    const pI = reb(S.map(p => p.I)), spI = reb(BA.map(b => ok(b.spx) && ok(b.fx) ? b.spx * b.fx : null)), jI = reb(BA.map(b => b.j200));
+    const hasB = spI.some(ok) || jI.some(ok);
+    const dr = arr => arr.slice(1).map((v, i) => ok(v) && ok(arr[i]) ? v / arr[i] - 1 : 0);
+    const rp = dr(pI), rs = dr(spI), rj = dr(jI);
+    const stP = stats(rp, pI, dates), stS = spI.some(ok) ? stats(rs, spI.map((v, i) => v ?? spI.find(ok)), dates) : null, stJ = jI.some(ok) ? stats(rj, jI.map(v => v ?? jI.find(ok)), dates) : null;
+    const bS = reg(rp, rs), bJ = reg(rp, rj);
+    const alpha = (st, bt, sb) => st && sb && ok(bt.beta) && st.cagr !== null && sb.cagr !== null ? st.cagr - (RF + bt.beta * (sb.cagr - RF)) : null;
+    // drawdown series
+    let pk = -Infinity; const ddv = pI.map(v => { pk = Math.max(pk, v); return v / pk - 1; });
+    let pk2 = -Infinity; const ddS = spI.map(v => { if (!ok(v)) return null; pk2 = Math.max(pk2, v); return v / pk2 - 1; });
+    let pk3 = -Infinity; const ddJ = jI.map(v => { if (!ok(v)) return null; pk3 = Math.max(pk3, v); return v / pk3 - 1; });
+    // money: book value, invested, cumulative net deposits, markers
+    const fl = FLOWS.filter(f => f.kind === 'deposit' || f.kind === 'withdrawal').slice().sort((a, b) => a.flow_date.localeCompare(b.flow_date));
+    const cum = dates.map(d => fl.filter(f => f.flow_date <= d).reduce((a, f) => a + (f.kind === 'deposit' ? 1 : -1) * zar(+f.amount, f.currency), 0));
+    const marks = fl.filter(f => f.flow_date >= dates[0]).map(f => ({ d: f.flow_date, k: f.kind, t: `${f.kind === 'deposit' ? 'Deposit' : 'Withdrawal'} ${money(+f.amount, f.currency)} on ${day(f.flow_date)}` }));
+    const mfmt = v => (base === 'ZAR' ? 'R' : '$') + (Math.abs(v) >= 1e6 ? (v / 1e6).toFixed(1) + 'm' : Math.abs(v) >= 1e3 ? Math.round(v / 1e3) + 'k' : Math.round(v));
+    // monthly
+    const months = {}; S0.forEach(p => { const k = p.d.slice(0, 7); months[k] = months[k] || {}; months[k].last = p; });
+    const keys = Object.keys(months).sort(), mret = {}; keys.forEach((k, i) => { mret[k] = months[k].last.I / (i ? months[keys[i - 1]].last.I : 100) - 1; });
+    const mb = (field) => { const out = {}; let prev = null; const mm = {}; BENCH.forEach(r => { const v = field(r); if (ok(v)) mm[r.d.slice(0, 7)] = v; }); Object.keys(mm).sort().forEach(k => { if (prev !== null) out[k] = mm[k] / prev - 1; prev = mm[k]; }); return out; };
+    const mS = mb(r => ok(r.spx) && ok(r.usdzar) ? r.spx * r.usdzar : null), mJ = mb(r => r.j200);
+    const lastK = keys.slice(-12), MN = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const years = [...new Set(keys.map(k => k.slice(0, 4)))].sort().reverse(), ytd = y => keys.filter(k => k.startsWith(y)).reduce((a, k) => a * (1 + mret[k]), 1) - 1;
+    const posM = keys.length ? keys.filter(k => mret[k] > 0).length / keys.length : null;
+    const bestM = keys.reduce((a, k) => !a || mret[k] > mret[a] ? k : a, null), worstM = keys.reduce((a, k) => !a || mret[k] < mret[a] ? k : a, null);
+    const ml = k => MN[+k.slice(5) - 1] + ' ' + k.slice(2, 4);
+    const pf = v => ok(v) ? pct(v) : '—', nf = (v, d = 2) => ok(v) ? v.toFixed(d) : '—';
+    const row = (k, a, b, c, good) => `<tr><td>${k}</td><td class="n"><b class="${good ? cls(a) : ''}">${a === null || a === undefined ? '—' : typeof a === 'number' ? (good === 'x' ? nf(a) : pct(a)) : a}</b></td><td class="n">${b === null || b === undefined ? '—' : typeof b === 'number' ? (good === 'x' ? nf(b) : pct(b)) : b}</td><td class="n">${c === null || c === undefined ? '—' : typeof c === 'number' ? (good === 'x' ? nf(c) : pct(c)) : c}</td></tr>`;
+    const rngBtns = `<div class="seg pf-rng" id="pfRng">${Object.keys(RS).map(k => `<button data-v="${k}" class="${k === RNG ? 'on' : ''}">${k === 'ALL' ? 'All' : k}</button>`).join('')}</div>`;
+    return `<h3 class="pf-h">Performance &amp; track record</h3>${STALE ? '<p class="pf-upd">⟳ Updating your track record after your latest changes. The full history refreshes within 30 minutes; figures below are up to the last update.</p>' : ''}
+      <div class="pf-per">${per.map(([k, v]) => `<div><span>${k}</span><b class="${cls(v)}">${pct(v, k === 'Today' ? 2 : 1)}</b></div>`).join('')}</div>
+      <div class="pf-chartbox"><div class="pf-ch-h"><b>Growth of 100 vs the market</b>${rngBtns}</div>${legend([[COL.p, 'My portfolio ' + pf(pI[pI.length - 1] / 100 - 1)], ...(hasB ? [[COL.spx, 'S&amp;P 500 (in rand) ' + pf(ok(spI[spI.length - 1]) ? spI[spI.length - 1] / 100 - 1 : null)], [COL.j200, 'SA Top 40 ' + pf(ok(jI[jI.length - 1]) ? jI[jI.length - 1] / 100 - 1 : null)]] : [])])}
+        ${lineChart(dates, [{ v: spI, c: COL.spx, w: 1.6 }, { v: jI, c: COL.j200, w: 1.6 }, { v: pI, c: COL.p, w: 2.6 }], { baseLine: 100, fmt: v => v.toFixed(0) })}
+        ${hasB ? '' : '<p class="muted">Benchmark lines appear after the Portfolio Desk\'s next run.</p>'}</div>
+      ${(() => { const useDep = fl.length > 0, bse = useDep ? cum : S.map(p => p.inv), val = S.map(p => p.b), lv = val[val.length - 1], lb = bse[bse.length - 1], gap = lv - lb, up = gap >= 0;
+        return `<div class="pf-chartbox pf-main"><div class="pf-ch-h"><b>My performance: value vs ${useDep ? 'money deposited' : 'money invested'}</b><span class="pf-gap ${up ? 'blue' : 'red'}">${up ? 'Above' : 'Below'} ${useDep ? 'deposits' : 'invested'} by ${money(fromZar(Math.abs(gap)), base, 0)} (${pct(lb ? gap / lb : null)})</span></div>
+          ${legend([['#3B82F6', 'Value above what you put in'], ['#E05A4F', 'Value below what you put in (drawdown)'], ['#c9ccd6', useDep ? 'Net deposits' : 'Money invested', 1]])}
+          ${pnlChart(dates, val.map(fromZar), bse.map(fromZar), marks, mfmt)}
+          <p class="pf-note">${useDep ? 'Book value of your positions against the money you have deposited (deposits minus withdrawals). ▲ deposit · ▼ withdrawal (hover for the amount).' : 'Book value of your positions against the money you put into them. Add your deposits and withdrawals (buttons at the top) to measure against your deposits instead.'}</p></div>`; })()}
+      <div class="pf-chartbox"><div class="pf-ch-h"><b>Drawdown: fall from the last high</b></div>${legend([['#E05A4F', 'My portfolio'], ...(hasB ? [[COL.spx, 'S&amp;P 500'], [COL.j200, 'SA Top 40']] : [])])}
+        ${lineChart(dates, [{ v: ddS, c: COL.spx, w: 1.2 }, { v: ddJ, c: COL.j200, w: 1.2 }, { v: ddv, c: '#E05A4F', w: 2, area: 'rgba(224,90,79,.15)' }], { zero: true, fmt: v => (v * 100).toFixed(0) + '%', h: 190 })}
+        <p class="pf-note">How far each was below its previous peak. Shallower is better.</p></div>
+      <div class="pf-chartbox"><div class="pf-ch-h"><b>Monthly returns vs the market (last 12 months)</b></div>${legend([[COL.p, 'My portfolio'], [COL.spx, 'S&amp;P 500 (rand)'], [COL.j200, 'SA Top 40']])}
+        ${barChart(lastK.map(ml), [{ n: 'Portfolio', c: COL.p, v: lastK.map(k => mret[k]) }, { n: 'S&P 500', c: COL.spx, v: lastK.map(k => mS[k]) }, { n: 'SA Top 40', c: COL.j200, v: lastK.map(k => mJ[k]) }])}</div>
+      <h3 class="pf-h">Portfolio analytics <small class="muted">(${RNG === 'ALL' ? 'since start' : RNG} · ${dates.length} trading days)</small></h3>
+      <div class="pf-two"><div class="tbl-wrap"><table class="mc-tbl pf-an"><thead><tr><th>Risk and return</th><th class="n">My portfolio</th><th class="n">S&amp;P 500 (R)</th><th class="n">SA Top 40</th></tr></thead><tbody>
+        ${row('Total return', stP && stP.tot, stS && stS.tot, stJ && stJ.tot, 1)}
+        ${row('Annualised return', stP && stP.cagr, stS && stS.cagr, stJ && stJ.cagr, 1)}
+        ${row('Volatility (a year)', stP && (stP.vol * 100).toFixed(1) + '%', stS && (stS.vol * 100).toFixed(1) + '%', stJ && (stJ.vol * 100).toFixed(1) + '%')}
+        ${row('Worst drawdown', stP && -stP.dd, stS && -stS.dd, stJ && -stJ.dd)}
+        ${row('Sharpe ratio', stP && stP.sharpe, stS && stS.sharpe, stJ && stJ.sharpe, 'x')}
+        ${row('Beta to the index', null, bS.beta, bJ.beta, 'x')}
+        ${row('Correlation', null, bS.corr, bJ.corr, 'x')}
+        ${row('Alpha (a year)', null, alpha(stP, bS, stS), alpha(stP, bJ, stJ))}</tbody></table>
+        <p class="pf-note"><b>Sharpe</b> = return above cash (7%) per unit of risk; above 1 is good. <b>Beta</b> 1 = moves like the index, below 1 = calmer. <b>Alpha</b> = return beyond what the market explains. Annualised figures need at least 3 months of history.</p></div>
+        <div><div class="pf-stats">
+          ${['Positive months', 'Best month', 'Worst month', 'Months tracked'].map((k, i) => `<div><span>${k}</span><b>${[posM !== null ? Math.round(posM * 100) + '%' : '—', bestM ? pct(mret[bestM]) : '—', worstM ? pct(mret[worstM]) : '—', keys.length][i]}</b><small>${['', bestM ? ml(bestM) : '', worstM ? ml(worstM) : '', ''][i]}</small></div>`).join('')}</div>
+          ${exposure(B)}</div></div>
+      <div class="pf-two"><div><h3 class="pf-h sm">Monthly returns</h3><div class="tbl-wrap"><table class="mc-tbl pf-mtbl"><thead><tr><th>Year</th>${MN.map(m => `<th class="n">${m}</th>`).join('')}<th class="n">Year</th></tr></thead><tbody>
+        ${years.map(y => `<tr><td><b>${y}</b></td>${MN.map((m, i) => { const k = `${y}-${String(i + 1).padStart(2, '0')}`, v = mret[k]; return `<td class="n ${cls(v)}" ${ok(v) ? `style="background:${v > 0 ? `rgba(47,191,113,${Math.min(0.45, Math.abs(v) * 4)})` : `rgba(196,74,61,${Math.min(0.45, Math.abs(v) * 4)})`}"` : ''}>${ok(v) ? (v * 100).toFixed(1) : ''}</td>`; }).join('')}<td class="n ${cls(ytd(y))}"><b>${pct(ytd(y))}</b></td></tr>`).join('')}</tbody></table></div>
+        ${contrib(B)}</div>
+        <div><h3 class="pf-h sm">Trading record</h3>${tradeRecord()}</div></div>
+      <p class="src-note">Returns are time-weighted (deposits, withdrawals and new money into positions do not count as gains or losses) and measured in rand from daily closing prices recorded by the LRC Portfolio Desk; today uses live prices. The S&amp;P 500 is converted to rand so it compares like with like; the SA Top 40 uses the Satrix 40 ETF (price only, before dividends). Educational analytics, not advice.</p>`;
+  };
+  const exposure = B => {
+    const R = B.rows, tot = R.reduce((a, r) => a + zar(r.p.qty * r.px, r.c), 0) || 1, A = acct(B);
+    const lng = R.filter(r => r.p.side !== 'short').reduce((a, r) => a + zar(r.p.qty * r.px, r.c), 0), sh = R.filter(r => r.p.side === 'short').reduce((a, r) => a + zar(r.p.qty * r.px, r.c), 0);
+    const usd = R.filter(r => r.c === 'USD').reduce((a, r) => a + zar(r.p.qty * r.px, r.c), 0);
+    const kind = r => r.p.ticker.includes('=F') ? 'Commodities' : r.p.ticker.startsWith('^') ? 'Indices' : (r.i.sec === 'ETFs' ? 'ETFs' : 'Shares');
+    const k = {}; R.forEach(r => { const x = kind(r); k[x] = (k[x] || 0) + zar(r.p.qty * r.px, r.c); });
+    const top5 = R.slice().sort((a, b) => b.w - a.w).slice(0, 5).reduce((a, r) => a + r.w, 0);
+    const eq = A.value || 1;
+    return `<h3 class="pf-h sm">Exposure</h3><div class="pf-stats">
+      <div><span>Long exposure</span><b>${money(fromZar(lng), base, 0)}</b><small>${pct(lng / eq).replace('+', '')} of account</small></div>
+      <div><span>Short exposure</span><b>${money(fromZar(sh), base, 0)}</b><small>${pct(sh / eq).replace('+', '')} of account</small></div>
+      <div><span>Gross / net</span><b>${((lng + sh) / eq * 100).toFixed(0)}% / ${((lng - sh) / eq * 100).toFixed(0)}%</b><small>gross over 100% means leverage</small></div>
+      <div><span>Dollar exposure</span><b>${(usd / tot * 100).toFixed(0)}%</b><small>rand hedge: ${(usd / tot * 100).toFixed(0)}% of positions in USD</small></div>
+      <div><span>Top 5 holdings</span><b>${(top5 * 100).toFixed(0)}%</b><small>of the book (concentration)</small></div>
+      <div><span>Asset mix</span><b class="sm">${Object.entries(k).sort((a, b) => b[1] - a[1]).map(([n, v]) => `${n} ${(v / tot * 100).toFixed(0)}%`).join(' · ') || '—'}</b></div></div>`;
+  };
+  const contrib = B => {
+    const m = {}; B.rows.forEach(r => { m[r.p.ticker] = (m[r.p.ticker] || 0) + zar(r.pl, r.c); });
+    POS.filter(p => p.closed_on).forEach(p => { const c = p.currency || 'ZAR', dir = p.side === 'short' ? -1 : 1; m[p.ticker] = (m[p.ticker] || 0) + zar(dir * p.qty * ((p.exit_price || p.entry_price) - p.entry_price), c); });
+    const L = Object.entries(m).sort((a, b) => b[1] - a[1]); if (!L.length) return '';
+    const mx = Math.max(...L.map(x => Math.abs(x[1]))) || 1, top = L.slice(0, 5), bot = L.slice(-5).reverse().filter(x => x[1] < 0 && !top.includes(x));
+    const bar = ([t, v]) => `<div class="pf-cbar"><span>${esc(t.replace('.JO', ''))}</span><i><i class="${v >= 0 ? 'p' : 'n'}" style="width:${(Math.abs(v) / mx * 100).toFixed(1)}%"></i></i><b class="${cls(v)}">${money(fromZar(v), base, 0)}</b></div>`;
+    return `<h3 class="pf-h sm">What made and lost money</h3>${top.map(bar).join('')}${bot.length ? bot.map(bar).join('') : ''}<p class="pf-note">Open and closed profit/loss per company since you started.</p>`;
+  };
+  const tradeRecord = () => {
     const cl = POS.filter(p => p.closed_on).map(p => { const dir = p.side === 'short' ? -1 : 1, c = p.currency || 'ZAR'; const pl = dir * p.qty * ((p.exit_price || p.entry_price) - p.entry_price);
       return { p, pl: zar(pl, c), r: pl / (p.qty * p.entry_price), days: p.entry_date ? (new Date(p.closed_on) - new Date(p.entry_date)) / 864e5 : null }; });
     const wins = cl.filter(x => x.pl > 0), losses = cl.filter(x => x.pl < 0), gw = wins.reduce((a, x) => a + x.pl, 0), gl = -losses.reduce((a, x) => a + x.pl, 0);
     const avg = xs => xs.length ? xs.reduce((a, x) => a + x, 0) / xs.length : null;
-    const traded = POS.reduce((a, p) => { const c = p.currency || 'ZAR', dir = p.side === 'short' ? -1 : 1; return a + zar(p.qty * p.entry_price, c) + (p.closed_on ? zar(p.qty * (p.exit_price || p.entry_price), c) : 0); }, 0);
-    const bt = cl.slice().sort((a, b) => b.r - a.r);
-    const stat = (k, v, s) => `<div><span>${k}</span><b>${v}</b>${s ? `<small>${s}</small>` : ''}</div>`;
-    return `<h3 class="pf-h">Performance &amp; track record</h3>${STALE ? '<p class="pf-upd">⟳ Updating your track record after your latest changes. The full history refreshes within 30 minutes; figures below are up to the last update.</p>' : ''}
-      <div class="pf-per">${per.map(([k, v]) => `<div><span>${k}</span><b class="${cls(v)}">${pct(v, k === 'Today' ? 2 : 1)}</b></div>`).join('')}</div>
-      <div class="pf-chartbox"><div class="pf-legend"><span><i style="background:#E2B960"></i>Book value</span><span><i class="dash"></i>Money invested</span><span class="muted">Daily since ${day(S[0].d)} · ${S.length} trading days</span></div>${chart}</div>
-      <div class="pf-two"><div><h3 class="pf-h sm">Monthly returns</h3><div class="tbl-wrap"><table class="mc-tbl pf-mtbl"><thead><tr><th>Year</th>${MN.map(m => `<th class="n">${m}</th>`).join('')}<th class="n">Year</th></tr></thead><tbody>
-        ${years.map(y => `<tr><td><b>${y}</b></td>${MN.map((m, i) => { const k = `${y}-${String(i + 1).padStart(2, '0')}`, v = mret[k]; return `<td class="n ${cls(v)}" ${ok(v) ? `style="background:${v > 0 ? `rgba(47,191,113,${Math.min(0.45, Math.abs(v) * 4)})` : `rgba(196,74,61,${Math.min(0.45, Math.abs(v) * 4)})`}"` : ''}>${ok(v) ? (v * 100).toFixed(1) : ''}</td>`; }).join('')}<td class="n ${cls(ytd(y))}"><b>${pct(ytd(y))}</b></td></tr>`).join('')}</tbody></table></div>
-        <div class="pf-stats">${stat('Worst drawdown', dd ? '−' + (dd * 100).toFixed(1) + '%' : '0%', 'largest fall from a high')}${stat('Best day', best ? pct(best.r) : '—', best ? day(best.d) : '')}${stat('Worst day', worst ? pct(worst.r) : '—', worst ? day(worst.d) : '')}${stat('Up days', days.length ? Math.round(up / days.length * 100) + '%' : '—', `${up} of ${days.length}`)}</div></div>
-        <div><h3 class="pf-h sm">Trading record</h3><div class="pf-stats">
-          ${stat('Total traded', money(fromZar(traded), base, 0), `${POS.length} trades · ${cl.length} closed`)}
-          ${stat('Win rate', cl.length ? Math.round(wins.length / cl.length * 100) + '%' : '—', `${wins.length} wins · ${losses.length} losses`)}
-          ${stat('Average win', wins.length ? pct(avg(wins.map(x => x.r))) : '—', wins.length ? money(fromZar(gw / wins.length), base, 0) : '')}
-          ${stat('Average loss', losses.length ? pct(avg(losses.map(x => x.r))) : '—', losses.length ? money(fromZar(-gl / losses.length), base, 0) : '')}
-          ${stat('Profit factor', gl > 0 ? (gw / gl).toFixed(2) : wins.length ? '∞' : '—', 'gross wins ÷ gross losses')}
-          ${stat('Average holding', avg(cl.map(x => x.days).filter(ok)) !== null ? Math.round(avg(cl.map(x => x.days).filter(ok))) + ' days' : '—', '')}
-          ${stat('Best trade', bt[0] ? pct(bt[0].r) : '—', bt[0] ? esc(bt[0].p.ticker.replace('.JO', '')) : '')}
-          ${stat('Worst trade', bt.length ? pct(bt[bt.length - 1].r) : '—', bt.length ? esc(bt[bt.length - 1].p.ticker.replace('.JO', '')) : '')}</div></div></div>
-      <p class="src-note">Returns are time-weighted (money added or taken out does not count as a gain or loss) and measured on your positions in rand, from daily closing prices recorded by the LRC Portfolio Desk; today uses live prices. ${base === 'USD' ? 'Dollar values converted at today\'s rate. ' : ''}Account value adds the cash you enter under Cash &amp; deposits.</p>`;
+    const traded = POS.reduce((a, p) => { const c = p.currency || 'ZAR'; return a + zar(p.qty * p.entry_price, c) + (p.closed_on ? zar(p.qty * (p.exit_price || p.entry_price), c) : 0); }, 0);
+    const bt = cl.slice().sort((a, b) => b.r - a.r), stat = (k, v, s) => `<div><span>${k}</span><b>${v}</b>${s ? `<small>${s}</small>` : ''}</div>`;
+    const hold = avg(cl.map(x => x.days).filter(ok)), exp = cl.length ? (gw - gl) / cl.length : null;
+    return `<div class="pf-stats">${stat('Total traded', money(fromZar(traded), base, 0), `${POS.length} trades · ${cl.length} closed`)}
+      ${stat('Win rate', cl.length ? Math.round(wins.length / cl.length * 100) + '%' : '—', `${wins.length} wins · ${losses.length} losses`)}
+      ${stat('Average win', wins.length ? pct(avg(wins.map(x => x.r))) : '—', wins.length ? money(fromZar(gw / wins.length), base, 0) : '')}
+      ${stat('Average loss', losses.length ? pct(avg(losses.map(x => x.r))) : '—', losses.length ? money(fromZar(-gl / losses.length), base, 0) : '')}
+      ${stat('Profit factor', gl > 0 ? (gw / gl).toFixed(2) : wins.length ? '∞' : '—', 'gross wins ÷ gross losses')}
+      ${stat('Expectancy', exp !== null ? money(fromZar(exp), base, 0) : '—', 'average profit per closed trade')}
+      ${stat('Average holding', hold !== null ? Math.round(hold) + ' days' : '—', '')}
+      ${stat('Realised profit', money(fromZar(gw - gl), base, 0), 'closed trades')}
+      ${stat('Best trade', bt[0] ? pct(bt[0].r) : '—', bt[0] ? esc(bt[0].p.ticker.replace('.JO', '')) : '')}
+      ${stat('Worst trade', bt.length ? pct(bt[bt.length - 1].r) : '—', bt.length ? esc(bt[bt.length - 1].p.ticker.replace('.JO', '')) : '')}</div>`;
   };
-  const acctForm = e => {
+  const acctForm = (e, pre) => {
     if (e && e.preventDefault) e.preventDefault();
     const KF = { deposit: 'Deposit', withdrawal: 'Withdrawal', dividend: 'Dividend received', fee: 'Fee / cost', interest: 'Interest received' };
     drawer(`<div class="sn-top"><div><span class="pf-kick">ACCOUNT</span><h2>Cash &amp; deposits</h2><small>So we can show your account value and your true gain on the money you put in</small></div><button class="sn-x" aria-label="Close">×</button></div>
       <h3 class="ev-h3">Cash in your account now</h3><form class="pf-form" id="caF"><div class="pf-grid2"><label>Rand cash (R)<input id="caZ" type="number" step="any" min="0" value="${ok(PROF.cash_zar) ? PROF.cash_zar : ''}"></label><label>Dollar cash ($)<input id="caU" type="number" step="any" min="0" value="${ok(PROF.cash_usd) ? PROF.cash_usd : ''}"></label></div>
         <p class="pf-err" id="pfErr"></p><button class="btn btn-gold">Save cash</button>${PROF.cash_at ? `<small class="muted">Last updated ${day(PROF.cash_at)}</small>` : ''}</form>
-      <h3 class="ev-h3">Money in and out</h3><form class="pf-form" id="flF"><div class="pf-grid3"><label>Type<select id="flK">${Object.entries(KF).map(([k, l]) => `<option value="${k}">${l}</option>`).join('')}</select></label><label>Amount<input id="flA" type="number" step="any" min="0" required></label><label>Currency<select id="flC"><option>ZAR</option><option>USD</option></select></label></div>
+      <h3 class="ev-h3">Money in and out</h3><form class="pf-form" id="flF"><div class="pf-grid3"><label>Type<select id="flK">${Object.entries(KF).map(([k, l]) => `<option value="${k}" ${k === pre ? 'selected' : ''}>${l}</option>`).join('')}</select></label><label>Amount<input id="flA" type="number" step="any" min="0" required></label><label>Currency<select id="flC"><option>ZAR</option><option>USD</option></select></label></div>
         <div class="pf-grid2"><label>Date<input id="flD" type="date" value="${new Date().toISOString().slice(0, 10)}"></label><label>Note<input id="flN" maxlength="500" placeholder="optional"></label></div><button class="btn btn-gold">Add</button></form>
       ${FLOWS.length ? `<div class="tbl-wrap"><table class="mc-tbl pf-tbl"><thead><tr><th>Date</th><th>Type</th><th class="n">Amount</th><th>Note</th><th></th></tr></thead><tbody>${FLOWS.map(f => `<tr><td>${day(f.flow_date)}</td><td>${esc(KF[f.kind] || f.kind)}</td><td class="n ${f.kind === 'withdrawal' || f.kind === 'fee' ? 'dn' : 'up'}">${money(+f.amount, f.currency)}</td><td><small>${esc(f.note || '')}</small></td><td><button class="pf-del" data-f="${f.id}" title="Delete">×</button></td></tr>`).join('')}</tbody></table></div>` : '<p class="muted">No deposits or withdrawals recorded yet. Add your first deposit (the money you funded the account with) to see your true return.</p>'}`);
+    if (pre) setTimeout(() => { const a = $('flA'); if (a) { a.scrollIntoView({ block: 'center' }); a.focus(); } }, 350);
     $('caF').onsubmit = async ev => { ev.preventDefault(); const z = $('caZ').value, u = $('caU').value;
       const { error } = await sb.from('profiles').update({ cash_zar: z === '' ? null : +z, cash_usd: u === '' ? null : +u, cash_at: new Date().toISOString() }).eq('id', user.id); if (error) return err(error.message); close(); await reload(); };
     $('flF').onsubmit = async ev => { ev.preventDefault(); const a = +$('flA').value; if (!(a > 0)) return;
@@ -465,6 +604,8 @@
     root.querySelectorAll('#pfBase button').forEach(b => b.onclick = () => { base = b.dataset.v; store.set('lrc_pf_base', base); render(); });
     root.querySelectorAll('tr.clk').forEach(tr => tr.onclick = () => posView(tr.dataset.id));
     if ($('pfAcct')) $('pfAcct').onclick = acctForm;
+    root.querySelectorAll('#pfRng button').forEach(b => b.onclick = () => { RNG = b.dataset.v; store.set('lrc_pf_rng', RNG); render(); });
+    root.querySelectorAll('[data-flow]').forEach(b => b.onclick = () => acctForm(null, b.dataset.flow));
     if ($('pfAcct2')) $('pfAcct2').onclick = acctForm;
     if ($('pfMail')) $('pfMail').onchange = async e => { PROF.portfolio_alerts = e.target.checked; await sb.from('profiles').update({ portfolio_alerts: e.target.checked }).eq('id', user.id); };
     if ($('pfJ')) $('pfJ').onsubmit = async ev => { ev.preventDefault(); const body = $('pfJb').value.trim(); if (!body) return; const { error } = await sb.from('portfolio_journal').insert({ ticker: $('pfJt').value || null, kind: $('pfJk').value, body }); if (!error) { await reloadJ(); render(); } };
@@ -476,6 +617,7 @@
     const [{ data: pos, error }, , { data: prof }] = await Promise.all([sb.from('portfolio_positions').select('*').order('created_at'), reloadJ(), sb.from('profiles').select('*').eq('id', user.id).maybeSingle()]);
     const [{ data: sn }, { data: fl }] = await Promise.all([sb.from('portfolio_snapshots').select('d,book,invested,flow,n,at').order('d').limit(1000), sb.from('portfolio_flows').select('*').order('flow_date', { ascending: false }).limit(500)]);
     SNAP = sn || []; FLOWS = fl || [];
+    if (!BENCH.length && SNAP.length) { const { data: bm } = await sb.from('portfolio_bench').select('d,spx,j200,usdzar').gte('d', SNAP[0].d).order('d').limit(1000); BENCH = bm || []; }
     if (error) { root.innerHTML = `<div class="pf-lock"><h2>Portfolio not available yet</h2><p class="muted">${/relation|does not exist|schema cache/i.test(error.message) ? 'The portfolio database is being set up. Please check back shortly.' : esc(error.message)}</p></div>`; return; }
     POS = pos || []; PROF = prof || {};
     await loadNews(); render();
