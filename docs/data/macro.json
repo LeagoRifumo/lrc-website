@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-10T20:50:00+02:00",
+  "generated": "2026-11-12T18:00:00+02:00",
   "agent": "LRC Macro Desk",
   "method": "Surprise = actual minus forecast (consensus). If there is no forecast, actual minus previous. Impact for shares: a surprise in the 'better' direction larger than the threshold = Bullish, the other way = Bearish, otherwise Neutral.",
   "countries": {
@@ -157,14 +157,14 @@
           "better": "higher",
           "threshold": 1.0,
           "frequency": "monthly",
-          "period": "Aug 2026",
-          "release_date": "2026-10-13",
-          "actual": -12.7,
+          "period": "Sep 2026",
+          "release_date": "2026-11-12",
+          "actual": -10.7,
           "forecast": null,
-          "previous": -7.0,
+          "previous": -12.7,
           "next_release": null,
           "source": "Stats SA",
-          "url": "https://tradingeconomics.com/south-africa/mining-production/news/591490"
+          "url": "https://www.riotimesonline.com/south-africa-mining-output-falls-september-2026/"
         },
         {
           "key": "manufacturing",
@@ -290,14 +290,14 @@
           "better": "lower",
           "threshold": 5,
           "frequency": "weekly",
-          "period": "w/e 31 Oct",
-          "release_date": "2026-11-05",
-          "actual": 189,
-          "forecast": 196,
-          "previous": 195,
-          "next_release": "2026-11-12",
+          "period": "w/e 7 Nov",
+          "release_date": "2026-11-12",
+          "actual": 200,
+          "forecast": null,
+          "previous": 191,
+          "next_release": "2026-11-19",
           "source": "US Department of Labor",
-          "url": "https://whbl.com/2026/11/05/us-weekly-jobless-claims-at-57-year-lows-amid-low-layoffs/"
+          "url": "https://www.aninews.in/news/business/us-initial-jobless-claims-climb-to-200000-four-week-average-remains-unchanged20261112194746/"
         },
         {
           "key": "cpi",
