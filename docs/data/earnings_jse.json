@@ -343,7 +343,7 @@
     "Trading SELL"
    ],
    "idea": null,
-   "v": "STRONG SELL",
+   "v": "SELL",
    "iv": "SELL",
    "lrc_rating": null,
    "covered": true
@@ -464,7 +464,7 @@
    ],
    "idea": null,
    "v": "HOLD",
-   "iv": "SELL",
+   "iv": "STRONG SELL",
    "lrc_rating": null,
    "covered": true
   },
@@ -544,7 +544,7 @@
     "Trading SELL"
    ],
    "idea": null,
-   "v": "STRONG SELL",
+   "v": "SELL",
    "iv": "SELL",
    "lrc_rating": null,
    "covered": true
@@ -662,7 +662,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "BUY",
    "lrc_rating": null,
    "covered": false
   },
@@ -699,7 +699,7 @@
    "t": "DIB.JO",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -788,14 +788,14 @@
    "when": "Not stated",
    "period": "Expected date (market data feed) — confirm on SENS",
    "eps_forecast": "",
-   "market_cap_bn": 2.9,
+   "market_cap_bn": 2.6,
    "auto": true,
    "t": "MKR.JO",
    "lists": [
     "Trading SELL"
    ],
    "idea": null,
-   "v": "STRONG SELL",
+   "v": "SELL",
    "iv": "SELL",
    "rev_est": 53904760,
    "rev_est_low": 52619530,
@@ -815,7 +815,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed) — confirm on SENS",
    "eps_forecast": "",
-   "market_cap_bn": 43.4,
+   "market_cap_bn": 43.6,
    "auto": true,
    "t": "N91.JO",
    "lists": [],
@@ -1183,7 +1183,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed) — confirm on SENS",
    "eps_forecast": "",
-   "market_cap_bn": 6.9,
+   "market_cap_bn": 7.1,
    "auto": true,
    "t": "THA.JO",
    "lists": [],
@@ -1243,7 +1243,7 @@
    "lrc_rating": null,
    "t": "OMU.JO",
    "lists": [],
-   "idea": null,
+   "idea": "Score leaders",
    "v": "BUY",
    "iv": "HOLD",
    "track": null
@@ -1268,6 +1268,6 @@
   }
  ],
  "note": "Partial list: no company-published date could be found this week for, among others, MTN, Reinet, Woolworths, Shoprite, Bidvest, Discovery, FirstRand, Sasol, Aspen, Lewis and Cashbuild; they will be added when dates are published. Attacq (pre-close 24 Nov) and Growthpoint (pre-close 26 Nov) appear only on the SA REIT reporting schedule and are not listed until the companies publish them. Standard Bank's pre-close call (14 Dec) falls just after this window.",
- "synced": "2026-11-12T16:41+02:00",
+ "synced": "2026-11-12T18:51+02:00",
  "coverage_note": "Ticked = on the LRC watchlist. Every company the LRC Stock Scanner tracks shows its trading and investment ratings. Updated after every scanner run."
 }
