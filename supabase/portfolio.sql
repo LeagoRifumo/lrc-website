@@ -140,3 +140,11 @@ create table if not exists public.portfolio_bench (
 alter table public.portfolio_bench enable row level security;
 drop policy if exists "members read bench" on public.portfolio_bench;
 create policy "members read bench" on public.portfolio_bench for select to authenticated using (true);
+
+-- 11. Track record split by market (JSE vs New York), written by the Portfolio Desk
+alter table public.portfolio_snapshots add column if not exists book_jse numeric;
+alter table public.portfolio_snapshots add column if not exists inv_jse  numeric;
+alter table public.portfolio_snapshots add column if not exists flow_jse numeric;
+alter table public.portfolio_snapshots add column if not exists book_us  numeric;
+alter table public.portfolio_snapshots add column if not exists inv_us   numeric;
+alter table public.portfolio_snapshots add column if not exists flow_us  numeric;

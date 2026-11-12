@@ -117,18 +117,23 @@
       <div><span>Income &amp; costs</span><b>${money(fromZar(A.divs + A.intr), base, 0)}</b><small>dividends and interest · fees ${money(fromZar(A.fees), base, 0)}</small></div>
       <div class="pf-acct-btn"><button class="btn btn-gold" data-flow="deposit">+ Deposit</button><button class="btn btn-ghost" data-flow="withdrawal">− Withdrawal</button><button class="btn btn-ghost" id="pfAcct">Cash &amp; history</button></div></div>`;
   };
-  const series = B => {
-    // daily book value (rand) from the Portfolio Desk, with today replaced by the live value
-    const t = new Date().toISOString().slice(0, 10), A = acct(B);
-    const pts = SNAP.filter(r => r.d < t).map(r => ({ d: r.d, b: +r.book || 0, inv: +r.invested || 0, f: +r.flow || 0 }));
-    const todayFlow = POS.reduce((a, p) => { const c = p.currency || 'ZAR', dir = p.side === 'short' ? -1 : 1; let f = 0;
+  let MKT = store.get('lrc_pf_mkt', 'ALL');
+  const inM = (p, m = MKT) => m === 'ALL' || (m === 'JSE') === String(p.ticker || '').endsWith('.JO');
+  const F = { ALL: ['book', 'invested', 'flow'], JSE: ['book_jse', 'inv_jse', 'flow_jse'], US: ['book_us', 'inv_us', 'flow_us'] };
+  const series = (B, m = MKT) => {
+    // daily book value (rand) from the Portfolio Desk, with today replaced by the live value; m = ALL / JSE / US
+    const t = new Date().toISOString().slice(0, 10), [fb, fi, ff] = F[m];
+    const pts = SNAP.filter(r => r.d < t && (m === 'ALL' || r[fb] !== null && r[fb] !== undefined)).map(r => ({ d: r.d, b: +r[fb] || 0, inv: +r[fi] || 0, f: +r[ff] || 0 }));
+    const todayFlow = POS.filter(p => inM(p, m)).reduce((a, p) => { const c = p.currency || 'ZAR', dir = p.side === 'short' ? -1 : 1; let f = 0;
       if ((p.entry_date || (p.created_at || '').slice(0, 10)) === t) f += zar(p.qty * p.entry_price, c);
       if (p.closed_on === t) f -= zar(p.qty * p.entry_price + dir * p.qty * ((p.exit_price || p.entry_price) - p.entry_price), c); return a + f; }, 0);
     const snapAt = SNAP.reduce((a, r) => r.at > a ? r.at : a, ''), changed = POS.reduce((a, p) => { const x = p.updated_at || p.created_at || ''; return x > a ? x : a; }, '');
     STALE = !!(SNAP.length && changed && snapAt && changed > snapAt);
-    if (!STALE && (B.rows.length || pts.length)) pts.push({ d: t, b: A.bookZ, inv: B.rows.reduce((a, r) => a + zar(r.cost, r.c), 0), f: todayFlow, live: true });
-    let I = 100; const out = [];
-    pts.forEach((p, i) => { const prev = i ? pts[i - 1].b : 0; const r = prev > 0 ? (p.b - p.f) / prev - 1 : 0; I *= 1 + (isFinite(r) && Math.abs(r) < 0.9 ? r : 0); out.push({ ...p, r: i ? r : 0, I }); });
+    const rows = B.rows.filter(r => inM(r.p, m)), bk = rows.reduce((a, r) => a + zar(r.val, r.c), 0);
+    if (!STALE && (rows.length || pts.length)) pts.push({ d: t, b: bk, inv: rows.reduce((a, r) => a + zar(r.cost, r.c), 0), f: todayFlow, live: true });
+    let I = 100, cum = 0; const out = [];
+    pts.forEach((p, i) => { const prev = i ? pts[i - 1].b : 0; const r = prev > 0 ? (p.b - p.f) / prev - 1 : 0; const pl = i ? (p.b - p.f) - prev : p.b - p.f - p.f * 0;
+      const day = i ? pl : 0; cum += day; I *= 1 + (isFinite(r) && Math.abs(r) < 0.9 ? r : 0); out.push({ ...p, r: i ? r : 0, I, pl: day, cum }); });
     return out;
   };
   /* ---------- charts (plain SVG) ---------- */
@@ -195,9 +200,71 @@
   const reg = (y, x) => { const n = Math.min(y.length, x.length); if (n < 20) return {}; const my = y.reduce((a, v) => a + v, 0) / n, mx = x.reduce((a, v) => a + v, 0) / n;
     let c = 0, vx = 0, vy = 0; for (let i = 0; i < n; i++) { c += (y[i] - my) * (x[i] - mx); vx += (x[i] - mx) ** 2; vy += (y[i] - my) ** 2; } return { beta: vx ? c / vx : null, corr: vx && vy ? c / Math.sqrt(vx * vy) : null }; };
 
+
+  /* ---------- "My P/L": profit and loss in money, alone (cumulative line + every session as a bar, hover to trace) ---------- */
+  let HERO = null;
+  const pnlHero = (S0, RS) => {
+    const S = S0.filter(p => p.d >= RS[RNG]); if (S.length < 2) return '';
+    const first = S[0], pts = S.slice(1), base0 = first.cum, cum = pts.map(p => fromZar(p.cum - base0)), dv = pts.map(p => fromZar(p.pl)), dates = pts.map(p => p.d);
+    const tot = cum[cum.length - 1], lastD = pts[pts.length - 1];
+    const fees = FLOWS.filter(f => f.kind === 'fee' && f.flow_date >= first.d).reduce((a, f) => a + zar(+f.amount, f.currency), 0);
+    const trades = POS.filter(p => inM(p) && ((p.entry_date || '') >= first.d || (p.closed_on || '') >= first.d)).length;
+    const best = pts.reduce((a, p, i) => !a || p.pl > a.p.pl ? { p, i } : a, null), worst = pts.reduce((a, p, i) => !a || p.pl < a.p.pl ? { p, i } : a, null);
+    const W = 760, H = 230, L = 8, R = 8, T = 10, lo = Math.min(0, ...cum), hi = Math.max(0, ...cum), pad = (hi - lo) * 0.08 || 1;
+    const X = i => L + (W - L - R) * (dates.length < 2 ? 0.5 : i / (dates.length - 1)), Y = v => T + (H - T - 8) * (1 - (v - (lo - pad)) / ((hi + pad) - (lo - pad)));
+    const line = cum.map((v, i) => `${X(i).toFixed(1)},${Y(v).toFixed(1)}`).join(' ');
+    const z = Y(0);
+    const area = `<clipPath id="hcU"><rect x="0" y="0" width="${W}" height="${z}"/></clipPath><clipPath id="hcD"><rect x="0" y="${z}" width="${W}" height="${H - z}"/></clipPath>
+      <polygon points="${X(0)},${z} ${line} ${X(cum.length - 1)},${z}" fill="url(#hgU)" clip-path="url(#hcU)"/><polygon points="${X(0)},${z} ${line} ${X(cum.length - 1)},${z}" fill="url(#hgD)" clip-path="url(#hcD)"/>
+      <polyline points="${line}" fill="none" stroke="#3ddc97" stroke-width="2" clip-path="url(#hcU)"/><polyline points="${line}" fill="none" stroke="#E05A4F" stroke-width="2" clip-path="url(#hcD)"/>`;
+    const grad = `<defs><linearGradient id="hgU" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3ddc97" stop-opacity=".45"/><stop offset="1" stop-color="#3ddc97" stop-opacity=".03"/></linearGradient><linearGradient id="hgD" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E05A4F" stop-opacity=".03"/><stop offset="1" stop-color="#E05A4F" stop-opacity=".45"/></linearGradient></defs>`;
+    const BH = 70, bm = Math.max(...dv.map(Math.abs)) || 1, bw = Math.max(1.5, (W - L - R) / dates.length * 0.7);
+    const bars = dv.map((v, i) => { const h = Math.abs(v) / bm * (BH / 2 - 4); return `<rect x="${(X(i) - bw / 2).toFixed(1)}" y="${(v >= 0 ? BH / 2 - h : BH / 2).toFixed(1)}" width="${bw.toFixed(1)}" height="${Math.max(1, h).toFixed(1)}" fill="${v >= 0 ? '#3ddc97' : '#E05A4F'}" opacity=".85"/>`; }).join('');
+    const ann = (o, up) => o ? `<text x="${X(o.i) > W - 110 ? X(o.i) - 4 : Math.max(4, X(o.i) + 4)}" text-anchor="${X(o.i) > W - 110 ? 'end' : 'start'}" y="${up ? 9 : BH - 1}" class="ax hl">${up ? 'BEST' : 'WORST'} ${new Date(o.p.d + 'T12:00:00').toLocaleDateString('en-ZA', { day: 'numeric', month: 'short' }).toUpperCase()}</text>` : '';
+    HERO = { dates, cum, day: dv, X, W };
+    const rlabel = { '1M': 'Last month', '3M': 'Last 3 months', '6M': 'Last 6 months', 'YTD': 'This year', '1Y': 'Last 12 months', 'ALL': 'All time' };
+    return `<div class="pf-hero"><div class="pf-hero-top"><div><span class="pf-kick">${MKT === 'ALL' ? 'ALL MARKETS' : MKT === 'JSE' ? 'JSE' : 'NEW YORK'} · ${day0(first.d)} TO ${day0(lastD.d)}</span>
+        <div class="pf-hero-big ${tot >= 0 ? 'up' : 'dn'}">${tot >= 0 ? '+' : '−'}${base === 'ZAR' ? 'R' : '$'}${num(Math.abs(tot), 0)}</div>
+        <p>${pts.length} sessions, ${trades} trades. ${fees && tot > 0 ? `You kept <b>${money(tot, base, 0)}</b> of <b>${money(tot + fromZar(fees), base, 0)}</b> gross; fees took <b>${money(fromZar(fees), base, 0)}</b>.` : fees ? `Fees took <b>${money(fromZar(fees), base, 0)}</b>.` : 'Profit and loss on your positions, in money.'}</p></div>
+        <div class="pf-hero-r"><select id="pfRngSel">${Object.keys(RS).map(k => `<option value="${k}" ${k === RNG ? 'selected' : ''}>${rlabel[k]}</option>`).join('')}</select>
+          <span class="pf-kick">LAST SESSION</span><b class="${lastD.pl >= 0 ? 'up' : 'dn'}">${lastD.pl >= 0 ? '+' : '−'}${money(Math.abs(fromZar(lastD.pl)), base, 0)}</b><small>${day(lastD.d)}</small></div></div>
+      <div class="pf-hero-ch" id="pfHero"><svg viewBox="0 0 ${W} ${H}" class="pf-chart">${grad}<line x1="0" x2="${W}" y1="${z}" y2="${z}" stroke="#3a4050" stroke-dasharray="3 4"/>${area}<line id="pfHx" x1="0" x2="0" y1="0" y2="${H}" stroke="#fff" stroke-opacity="0" stroke-width="1"/></svg>
+        <div class="pf-hero-lbl"><span>EVERY SESSION IN THIS RANGE</span><span>HOVER TO TRACE</span></div>
+        <svg viewBox="0 0 ${W} ${BH}" class="pf-chart">${bars}${ann(best, true)}${ann(worst, false)}<line id="pfHx2" x1="0" x2="0" y1="0" y2="${BH}" stroke="#fff" stroke-opacity="0"/></svg>
+        <div class="pf-tip" id="pfTip" hidden></div></div></div>`;
+  };
+  const day0 = d => new Date(d + 'T12:00:00').toLocaleDateString('en-ZA', { day: 'numeric', month: 'short', year: 'numeric' }).toUpperCase();
+
+  /* ---------- JSE vs New York, side by side ---------- */
+  const compare = (B, RS) => {
+    const SJ = series(B, 'JSE').filter(p => p.d >= RS[RNG]), SU = series(B, 'US').filter(p => p.d >= RS[RNG]);
+    const has = S => S.length > 1 && S.some(p => p.b > 0);
+    if (!has(SJ) || !has(SU)) return '';
+    const dates = [...new Set([...SJ, ...SU].map(p => p.d))].sort();
+    const mapOf = (S, f) => { const m = {}; S.forEach(p => m[p.d] = f(p)); let last = null; return dates.map(d => { if (m[d] !== undefined) last = m[d]; return last; }); };
+    const gJ = mapOf(SJ, p => p.I), gU = mapOf(SU, p => p.I), rb = a => { const f = a.find(ok); return a.map(v => ok(v) && f ? v / f * 100 : null); };
+    const cJ0 = SJ[0].cum, cU0 = SU[0].cum, pJ = mapOf(SJ, p => fromZar(p.cum - cJ0)), pU = mapOf(SU, p => fromZar(p.cum - cU0));
+    const row = (S, m) => { const last = S[S.length - 1], first = S[0], cl = POS.filter(p => p.closed_on && inM(p, m)), w = cl.filter(p => (p.side === 'short' ? -1 : 1) * (p.exit_price - p.entry_price) > 0).length;
+      let pk = 0, dd = 0; S.forEach(p => { pk = Math.max(pk, p.I); dd = Math.max(dd, 1 - p.I / pk); });
+      const m0 = new Date().toISOString().slice(0, 8) + '01', bm = S.filter(p => p.d < m0).pop();
+      return { val: fromZar(last.b), pl: fromZar(last.cum - first.cum), ret: last.I / first.I - 1, mtd: bm ? last.I / bm.I - 1 : null, win: cl.length ? w / cl.length : null, n: B.rows.filter(r => inM(r.p, m)).length, dd }; };
+    const J = row(SJ, 'JSE'), U = row(SU, 'US');
+    const tr = (k, a, b, f) => `<tr><td>${k}</td><td class="n">${f(a)}</td><td class="n">${f(b)}</td></tr>`;
+    const lead = J.ret === U.ret ? '' : `<p class="pf-p"><b>${J.ret > U.ret ? 'JSE' : 'New York'}</b> is ahead over this period by <b>${((Math.abs(J.ret - U.ret)) * 100).toFixed(1)} percentage points</b>.</p>`;
+    return `<h3 class="pf-h">JSE vs New York</h3>${lead}
+      <div class="pf-two"><div class="pf-chartbox"><div class="pf-ch-h"><b>Growth of 100</b></div>${legend([['#2FBF71', 'JSE'], ['#5B9BFF', 'New York']])}${lineChart(dates, [{ v: rb(gJ), c: '#2FBF71', w: 2.2 }, { v: rb(gU), c: '#5B9BFF', w: 2.2 }], { baseLine: 100, fmt: v => v.toFixed(0), h: 210 })}</div>
+        <div class="pf-chartbox"><div class="pf-ch-h"><b>Profit and loss (money)</b></div>${legend([['#2FBF71', 'JSE'], ['#5B9BFF', 'New York']])}${lineChart(dates, [{ v: pJ, c: '#2FBF71', w: 2.2 }, { v: pU, c: '#5B9BFF', w: 2.2 }], { baseLine: 0, zero: true, fmt: v => (base === 'ZAR' ? 'R' : '$') + (Math.abs(v) >= 1e3 ? Math.round(v / 1e3) + 'k' : Math.round(v)), h: 210 })}</div></div>
+      <div class="tbl-wrap"><table class="mc-tbl pf-an"><thead><tr><th></th><th class="n">JSE</th><th class="n">New York</th></tr></thead><tbody>
+        ${tr('Value now', J.val, U.val, v => money(v, base, 0))}${tr('Profit / loss in this range', J.pl, U.pl, v => `<b class="${cls(v)}">${money(v, base, 0)}</b>`)}${tr('Return (time-weighted)', J.ret, U.ret, v => `<b class="${cls(v)}">${pct(v)}</b>`)}
+        ${tr('This month', J.mtd, U.mtd, v => `<span class="${cls(v)}">${pct(v)}</span>`)}${tr('Worst drawdown', J.dd, U.dd, v => '−' + (v * 100).toFixed(1) + '%')}${tr('Win rate (closed trades)', J.win, U.win, v => ok(v) ? Math.round(v * 100) + '%' : '—')}${tr('Open positions', J.n, U.n, v => v)}</tbody></table></div>
+      <p class="pf-note">New York results are measured in rand, so they include the effect of the rand/dollar exchange rate.</p>`;
+  };
+
   let RNG = store.get('lrc_pf_rng', 'ALL');
   const perfSection = B => {
     const S0 = series(B);
+    const mktSel = `<div class="pf-mkt"><div class="seg" id="pfMkt">${[['ALL', 'All markets'], ['JSE', 'JSE'], ['US', 'New York']].map(([k, l]) => `<button data-v="${k}" class="${k === MKT ? 'on' : ''}">${l}</button>`).join('')}</div><small class="muted">Filters the performance, charts and analytics below</small></div>`;
+    if (S0.length < 2 && MKT !== 'ALL') return `<h3 class="pf-h">Performance &amp; track record</h3>${mktSel}<p class="muted">No ${MKT === 'JSE' ? 'JSE' : 'New York'} history yet.</p>`;
     if (S0.length < 2) return S0.length ? `<h3 class="pf-h">Performance &amp; track record</h3><p class="muted">Your daily track record starts building tonight: the Portfolio Desk records your book every day from closing prices (and back-fills from your entry dates).</p>` : '';
     const last0 = S0[S0.length - 1], before = d => { let v = null; for (const p of S0) { if (p.d < d) v = p; else break; } return v; }, at = d => { let v = null; for (const p of S0) { if (p.d <= d) v = p; else break; } return v; };
     const ds = n => { const x = new Date(); x.setDate(x.getDate() - n); return x.toISOString().slice(0, 10); };
@@ -241,7 +308,7 @@
     const pf = v => ok(v) ? pct(v) : '—', nf = (v, d = 2) => ok(v) ? v.toFixed(d) : '—';
     const row = (k, a, b, c, good) => `<tr><td>${k}</td><td class="n"><b class="${good ? cls(a) : ''}">${a === null || a === undefined ? '—' : typeof a === 'number' ? (good === 'x' ? nf(a) : pct(a)) : a}</b></td><td class="n">${b === null || b === undefined ? '—' : typeof b === 'number' ? (good === 'x' ? nf(b) : pct(b)) : b}</td><td class="n">${c === null || c === undefined ? '—' : typeof c === 'number' ? (good === 'x' ? nf(c) : pct(c)) : c}</td></tr>`;
     const rngBtns = `<div class="seg pf-rng" id="pfRng">${Object.keys(RS).map(k => `<button data-v="${k}" class="${k === RNG ? 'on' : ''}">${k === 'ALL' ? 'All' : k}</button>`).join('')}</div>`;
-    return `<h3 class="pf-h">Performance &amp; track record</h3>${STALE ? '<p class="pf-upd">⟳ Updating your track record after your latest changes. The full history refreshes within 30 minutes; figures below are up to the last update.</p>' : ''}
+    return `<h3 class="pf-h">Performance &amp; track record</h3>${mktSel}${pnlHero(S0, RS)}${STALE ? '<p class="pf-upd">⟳ Updating your track record after your latest changes. The full history refreshes within 30 minutes; figures below are up to the last update.</p>' : ''}
       <div class="pf-per">${per.map(([k, v]) => `<div><span>${k}</span><b class="${cls(v)}">${pct(v, k === 'Today' ? 2 : 1)}</b></div>`).join('')}</div>
       <div class="pf-chartbox"><div class="pf-ch-h"><b>Growth of 100 vs the market</b>${rngBtns}</div>${legend([[COL.p, 'My portfolio ' + pf(pI[pI.length - 1] / 100 - 1)], ...(hasB ? [[COL.spx, 'S&amp;P 500 (in rand) ' + pf(ok(spI[spI.length - 1]) ? spI[spI.length - 1] / 100 - 1 : null)], [COL.j200, 'SA Top 40 ' + pf(ok(jI[jI.length - 1]) ? jI[jI.length - 1] / 100 - 1 : null)]] : [])])}
         ${lineChart(dates, [{ v: spI, c: COL.spx, w: 1.6 }, { v: jI, c: COL.j200, w: 1.6 }, { v: pI, c: COL.p, w: 2.6 }], { baseLine: 100, fmt: v => v.toFixed(0) })}
@@ -256,6 +323,7 @@
         <p class="pf-note">How far each was below its previous peak. Shallower is better.</p></div>
       <div class="pf-chartbox"><div class="pf-ch-h"><b>Monthly returns vs the market (last 12 months)</b></div>${legend([[COL.p, 'My portfolio'], [COL.spx, 'S&amp;P 500 (rand)'], [COL.j200, 'SA Top 40']])}
         ${barChart(lastK.map(ml), [{ n: 'Portfolio', c: COL.p, v: lastK.map(k => mret[k]) }, { n: 'S&P 500', c: COL.spx, v: lastK.map(k => mS[k]) }, { n: 'SA Top 40', c: COL.j200, v: lastK.map(k => mJ[k]) }])}</div>
+      ${MKT === 'ALL' ? compare(B, RS) : ''}
       <h3 class="pf-h">Portfolio analytics <small class="muted">(${RNG === 'ALL' ? 'since start' : RNG} · ${dates.length} trading days)</small></h3>
       <div class="pf-two"><div class="tbl-wrap"><table class="mc-tbl pf-an"><thead><tr><th>Risk and return</th><th class="n">My portfolio</th><th class="n">S&amp;P 500 (R)</th><th class="n">SA Top 40</th></tr></thead><tbody>
         ${row('Total return', stP && stP.tot, stS && stS.tot, stJ && stJ.tot, 1)}
@@ -277,7 +345,7 @@
       <p class="src-note">Returns are time-weighted (deposits, withdrawals and new money into positions do not count as gains or losses) and measured in rand from daily closing prices recorded by the LRC Portfolio Desk; today uses live prices. The S&amp;P 500 is converted to rand so it compares like with like; the SA Top 40 uses the Satrix 40 ETF (price only, before dividends). Educational analytics, not advice.</p>`;
   };
   const exposure = B => {
-    const R = B.rows, tot = R.reduce((a, r) => a + zar(r.p.qty * r.px, r.c), 0) || 1, A = acct(B);
+    const R = B.rows.filter(r => inM(r.p)), tot = R.reduce((a, r) => a + zar(r.p.qty * r.px, r.c), 0) || 1, A = acct(B);
     const lng = R.filter(r => r.p.side !== 'short').reduce((a, r) => a + zar(r.p.qty * r.px, r.c), 0), sh = R.filter(r => r.p.side === 'short').reduce((a, r) => a + zar(r.p.qty * r.px, r.c), 0);
     const usd = R.filter(r => r.c === 'USD').reduce((a, r) => a + zar(r.p.qty * r.px, r.c), 0);
     const kind = r => r.p.ticker.includes('=F') ? 'Commodities' : r.p.ticker.startsWith('^') ? 'Indices' : (r.i.sec === 'ETFs' ? 'ETFs' : 'Shares');
@@ -293,22 +361,23 @@
       <div><span>Asset mix</span><b class="sm">${Object.entries(k).sort((a, b) => b[1] - a[1]).map(([n, v]) => `${n} ${(v / tot * 100).toFixed(0)}%`).join(' · ') || '—'}</b></div></div>`;
   };
   const contrib = B => {
-    const m = {}; B.rows.forEach(r => { m[r.p.ticker] = (m[r.p.ticker] || 0) + zar(r.pl, r.c); });
-    POS.filter(p => p.closed_on).forEach(p => { const c = p.currency || 'ZAR', dir = p.side === 'short' ? -1 : 1; m[p.ticker] = (m[p.ticker] || 0) + zar(dir * p.qty * ((p.exit_price || p.entry_price) - p.entry_price), c); });
+    const m = {}; B.rows.filter(r => inM(r.p)).forEach(r => { m[r.p.ticker] = (m[r.p.ticker] || 0) + zar(r.pl, r.c); });
+    POS.filter(p => p.closed_on && inM(p)).forEach(p => { const c = p.currency || 'ZAR', dir = p.side === 'short' ? -1 : 1; m[p.ticker] = (m[p.ticker] || 0) + zar(dir * p.qty * ((p.exit_price || p.entry_price) - p.entry_price), c); });
     const L = Object.entries(m).sort((a, b) => b[1] - a[1]); if (!L.length) return '';
     const mx = Math.max(...L.map(x => Math.abs(x[1]))) || 1, top = L.slice(0, 5), bot = L.slice(-5).reverse().filter(x => x[1] < 0 && !top.includes(x));
     const bar = ([t, v]) => `<div class="pf-cbar"><span>${esc(t.replace('.JO', ''))}</span><i><i class="${v >= 0 ? 'p' : 'n'}" style="width:${(Math.abs(v) / mx * 100).toFixed(1)}%"></i></i><b class="${cls(v)}">${money(fromZar(v), base, 0)}</b></div>`;
     return `<h3 class="pf-h sm">What made and lost money</h3>${top.map(bar).join('')}${bot.length ? bot.map(bar).join('') : ''}<p class="pf-note">Open and closed profit/loss per company since you started.</p>`;
   };
   const tradeRecord = () => {
-    const cl = POS.filter(p => p.closed_on).map(p => { const dir = p.side === 'short' ? -1 : 1, c = p.currency || 'ZAR'; const pl = dir * p.qty * ((p.exit_price || p.entry_price) - p.entry_price);
+    const PM = POS.filter(p => inM(p));
+    const cl = PM.filter(p => p.closed_on).map(p => { const dir = p.side === 'short' ? -1 : 1, c = p.currency || 'ZAR'; const pl = dir * p.qty * ((p.exit_price || p.entry_price) - p.entry_price);
       return { p, pl: zar(pl, c), r: pl / (p.qty * p.entry_price), days: p.entry_date ? (new Date(p.closed_on) - new Date(p.entry_date)) / 864e5 : null }; });
     const wins = cl.filter(x => x.pl > 0), losses = cl.filter(x => x.pl < 0), gw = wins.reduce((a, x) => a + x.pl, 0), gl = -losses.reduce((a, x) => a + x.pl, 0);
     const avg = xs => xs.length ? xs.reduce((a, x) => a + x, 0) / xs.length : null;
-    const traded = POS.reduce((a, p) => { const c = p.currency || 'ZAR'; return a + zar(p.qty * p.entry_price, c) + (p.closed_on ? zar(p.qty * (p.exit_price || p.entry_price), c) : 0); }, 0);
+    const traded = PM.reduce((a, p) => { const c = p.currency || 'ZAR'; return a + zar(p.qty * p.entry_price, c) + (p.closed_on ? zar(p.qty * (p.exit_price || p.entry_price), c) : 0); }, 0);
     const bt = cl.slice().sort((a, b) => b.r - a.r), stat = (k, v, s) => `<div><span>${k}</span><b>${v}</b>${s ? `<small>${s}</small>` : ''}</div>`;
     const hold = avg(cl.map(x => x.days).filter(ok)), exp = cl.length ? (gw - gl) / cl.length : null;
-    return `<div class="pf-stats">${stat('Total traded', money(fromZar(traded), base, 0), `${POS.length} trades · ${cl.length} closed`)}
+    return `<div class="pf-stats">${stat('Total traded', money(fromZar(traded), base, 0), `${PM.length} trades · ${cl.length} closed`)}
       ${stat('Win rate', cl.length ? Math.round(wins.length / cl.length * 100) + '%' : '—', `${wins.length} wins · ${losses.length} losses`)}
       ${stat('Average win', wins.length ? pct(avg(wins.map(x => x.r))) : '—', wins.length ? money(fromZar(gw / wins.length), base, 0) : '')}
       ${stat('Average loss', losses.length ? pct(avg(losses.map(x => x.r))) : '—', losses.length ? money(fromZar(-gl / losses.length), base, 0) : '')}
@@ -614,6 +683,16 @@
     root.querySelectorAll('#pfBase button').forEach(b => b.onclick = () => { base = b.dataset.v; store.set('lrc_pf_base', base); render(); });
     root.querySelectorAll('tr.clk').forEach(tr => tr.onclick = () => posView(tr.dataset.id));
     if ($('pfAcct')) $('pfAcct').onclick = acctForm;
+    root.querySelectorAll('#pfMkt button').forEach(b => b.onclick = () => { MKT = b.dataset.v; store.set('lrc_pf_mkt', MKT); render(); });
+    if ($('pfRngSel')) $('pfRngSel').onchange = e => { RNG = e.target.value; store.set('lrc_pf_rng', RNG); render(); };
+    if ($('pfHero') && HERO) { const box = $('pfHero'), tip = $('pfTip'), H_ = HERO;
+      const move = ev => { const svg = box.querySelector('svg'), rc = svg.getBoundingClientRect(), x = (ev.clientX - rc.left) / rc.width * H_.W;
+        let i = 0, bd = 1e9; H_.dates.forEach((_, k) => { const d = Math.abs(H_.X(k) - x); if (d < bd) { bd = d; i = k; } });
+        ['pfHx', 'pfHx2'].forEach(id => { const l = $(id); l.setAttribute('x1', H_.X(i)); l.setAttribute('x2', H_.X(i)); l.setAttribute('stroke-opacity', '.6'); });
+        tip.hidden = false; tip.innerHTML = `<b>${day(H_.dates[i])}</b><span>Day <b class="${cls(H_.day[i])}">${H_.day[i] >= 0 ? '+' : '−'}${money(Math.abs(H_.day[i]), base, 0)}</b></span><span>Total <b class="${cls(H_.cum[i])}">${H_.cum[i] >= 0 ? '+' : '−'}${money(Math.abs(H_.cum[i]), base, 0)}</b></span>`;
+        const px = H_.X(i) / H_.W * rc.width; tip.style.left = Math.min(rc.width - 170, Math.max(0, px + 12)) + 'px'; };
+      box.onmousemove = move; box.onmouseleave = () => { tip.hidden = true; ['pfHx', 'pfHx2'].forEach(id => $(id).setAttribute('stroke-opacity', '0')); };
+      box.ontouchmove = ev => { if (ev.touches[0]) move(ev.touches[0]); }; }
     root.querySelectorAll('#pfRng button').forEach(b => b.onclick = () => { RNG = b.dataset.v; store.set('lrc_pf_rng', RNG); render(); });
     root.querySelectorAll('[data-flow]').forEach(b => b.onclick = () => acctForm(null, b.dataset.flow));
     if ($('pfAcct2')) $('pfAcct2').onclick = acctForm;
@@ -625,7 +704,7 @@
   const reloadJ = async () => { const { data } = await sb.from('portfolio_journal').select('*').order('created_at', { ascending: false }).limit(300); JRN = data || []; };
   const reload = async () => {
     const [{ data: pos, error }, , { data: prof }] = await Promise.all([sb.from('portfolio_positions').select('*').order('created_at'), reloadJ(), sb.from('profiles').select('*').eq('id', user.id).maybeSingle()]);
-    const [{ data: sn }, { data: fl }] = await Promise.all([sb.from('portfolio_snapshots').select('d,book,invested,flow,n,at').order('d').limit(1000), sb.from('portfolio_flows').select('*').order('flow_date', { ascending: false }).limit(500)]);
+    const [{ data: sn }, { data: fl }] = await Promise.all([sb.from('portfolio_snapshots').select('d,book,invested,flow,n,at,book_jse,inv_jse,flow_jse,book_us,inv_us,flow_us').order('d').limit(1000), sb.from('portfolio_flows').select('*').order('flow_date', { ascending: false }).limit(500)]);
     SNAP = sn || []; FLOWS = fl || [];
     if (!BENCH.length && SNAP.length) { const { data: bm } = await sb.from('portfolio_bench').select('d,spx,j200,usdzar').gte('d', SNAP[0].d).order('d').limit(1000); BENCH = bm || []; }
     if (error) { root.innerHTML = `<div class="pf-lock"><h2>Portfolio not available yet</h2><p class="muted">${/relation|does not exist|schema cache/i.test(error.message) ? 'The portfolio database is being set up. Please check back shortly.' : esc(error.message)}</p></div>`; return; }

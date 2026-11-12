@@ -194,21 +194,24 @@ def track_record(quotes, now):
         for d in dates:
             f = (quotes.get('ZAR=X') or {}).get('px') if d == today.isoformat() else None
             f = f or fx.get(d) or fx_now
-            book = inv = flow = 0.0; n = 0
+            book = inv = flow = 0.0; n = 0; M = {'jse': [0.0, 0.0, 0.0], 'us': [0.0, 0.0, 0.0]}
             for p in ps:
                 e, c = ent(p), (p.get('currency') or ('ZAR' if p['ticker'].endswith('.JO') else 'USD'))
                 k = f if c == 'USD' else 1.0
                 dirn = -1 if p.get('side') == 'short' else 1
                 q, ep = float(p['qty']), float(p['entry_price'])
                 cost = q * ep * k
-                if e == d: flow += cost
+                mk = M['jse' if p['ticker'].endswith('.JO') else 'us']
+                if e == d: flow += cost; mk[2] += cost
                 if p.get('closed_on') and p['closed_on'] == d:
-                    xp = float(p.get('exit_price') or ep); flow -= cost + dirn * q * (xp - ep) * k
+                    xp = float(p.get('exit_price') or ep); out_ = cost + dirn * q * (xp - ep) * k; flow -= out_; mk[2] -= out_
                 if e <= d and (not p.get('closed_on') or p['closed_on'] > d):
                     live = (quotes.get(p['ticker']) or {}).get('px') if d == today.isoformat() else None
                     pr = live or (px.get(p['ticker']) or {}).get(d) or ep
-                    book += cost + dirn * q * (pr - ep) * k; inv += cost; n += 1
-            rows.append({'user_id': u, 'd': d, 'book': round(book, 2), 'invested': round(inv, 2), 'flow': round(flow, 2), 'n': n, 'at': now.isoformat()})
+                    v_ = cost + dirn * q * (pr - ep) * k; book += v_; inv += cost; n += 1; mk[0] += v_; mk[1] += cost
+            rows.append({'user_id': u, 'd': d, 'book': round(book, 2), 'invested': round(inv, 2), 'flow': round(flow, 2), 'n': n, 'at': now.isoformat(),
+                         'book_jse': round(M['jse'][0], 2), 'inv_jse': round(M['jse'][1], 2), 'flow_jse': round(M['jse'][2], 2),
+                         'book_us': round(M['us'][0], 2), 'inv_us': round(M['us'][1], 2), 'flow_us': round(M['us'][2], 2)})
     for i in range(0, len(rows), 500):
         api('POST', 'portfolio_snapshots?on_conflict=user_id,d', rows[i:i + 500], 'resolution=merge-duplicates,return=minimal')
     print(f'::notice::portfolio_desk: track record {len(rows)} daily rows ({len(full)} members rebuilt in full)')
