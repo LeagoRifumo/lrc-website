@@ -67,14 +67,14 @@
     const open = POS.filter(p => !p.closed_on), closed = POS.filter(p => p.closed_on);
     const rows = open.map(p => {
       const i = IDX[p.ticker] || {}, pr = price(p), c = p.currency || i.cur || (p.market === 'US' ? 'USD' : 'ZAR');
-      const px = pr.px ?? p.entry_price, val = p.qty * px, cost = p.qty * p.entry_price;
-      const dayAmt = ok(pr.chg) ? val - val / (1 + pr.chg) : null;
-      return { p, i, pr, c, px, val, cost, pl: val - cost, plp: val / cost - 1, dayAmt, bval: toBase(val, c), bcost: toBase(cost, c), bpl: toBase(val - cost, c), bday: toBase(dayAmt, c) };
+      const dir = p.side === 'short' ? -1 : 1, px = pr.px ?? p.entry_price, cost = p.qty * p.entry_price, pl = dir * p.qty * (px - p.entry_price), val = cost + pl;
+      const dayAmt = ok(pr.chg) ? dir * (p.qty * px - p.qty * px / (1 + pr.chg)) : null;
+      return { p, i, pr, c, px, val, cost, pl, plp: pl / cost, dayAmt, dir, bval: toBase(val, c), bcost: toBase(cost, c), bpl: toBase(pl, c), bday: toBase(dayAmt, c) };
     });
     const tv = rows.reduce((a, r) => a + (r.bval || 0), 0), tc = rows.reduce((a, r) => a + (r.bcost || 0), 0), td = rows.reduce((a, r) => a + (r.bday || 0), 0);
     rows.forEach(r => r.w = tv ? (r.bval || 0) / tv : 0);
     rows.sort((a, b) => b.w - a.w);
-    const real = closed.map(p => { const c = p.currency || (p.market === 'US' ? 'USD' : 'ZAR'); const pl = p.qty * ((p.exit_price || p.entry_price) - p.entry_price); return { p, c, pl, plp: (p.exit_price || p.entry_price) / p.entry_price - 1, bpl: toBase(pl, c) }; });
+    const real = closed.map(p => { const c = p.currency || (p.market === 'US' ? 'USD' : 'ZAR'); const pl = (p.side === 'short' ? -1 : 1) * p.qty * ((p.exit_price || p.entry_price) - p.entry_price); return { p, c, pl, plp: pl / (p.qty * p.entry_price), bpl: toBase(pl, c) }; });
     return { rows, tv, tc, td, pl: tv - tc, plp: tc ? tv / tc - 1 : null, dayp: tv - td ? td / (tv - td) : null, real };
   };
 
@@ -110,7 +110,7 @@
     root.innerHTML = `
       <div class="pf-mast"><div><span class="pf-kick">PORTFOLIO JOURNAL · PRIVATE</span><h2>${name ? esc(name) + '’s' : 'My'} book</h2><small>${esc(today)} · prices ${QGEN ? 'as at ' + new Date(QGEN).toLocaleTimeString('en-ZA', { hour: '2-digit', minute: '2-digit' }) + ' SAST, refreshed every 15 min' : 'from the last close'}</small></div>
         <div class="pf-tools"><div class="seg" id="pfBase"><button data-v="ZAR" class="${base === 'ZAR' ? 'on' : ''}">Rand</button><button data-v="USD" class="${base === 'USD' ? 'on' : ''}">Dollar</button></div>
-        <button class="btn btn-gold" id="pfAddBtn">+ Add position</button><button class="btn btn-ghost" id="pfCsv" title="Download your positions as a spreadsheet">Export</button></div></div>
+        <button class="btn btn-gold" id="pfAddBtn">+ Add position</button><button class="btn btn-ghost" id="pfImp" title="Upload your trades from a spreadsheet or broker export">Import trades</button><button class="btn btn-ghost" id="pfCsv" title="Download your positions as a spreadsheet">Export</button></div></div>
       <div class="pf-kpis">
         <div><span>Book value</span><b>${money(B.tv, base, 0)}</b><small>${R.length} open position${R.length === 1 ? '' : 's'}${FX ? ` · $1 = R${num(FX, 2)}` : ''}</small></div>
         <div><span>Invested</span><b>${money(B.tc, base, 0)}</b><small>at your entry prices</small></div>
@@ -118,10 +118,10 @@
         <div><span>Today</span><b class="${cls(B.td)}">${money(B.td, base, 0)}</b><small class="${cls(B.dayp)}">${pct(B.dayp, 2)}</small></div>
         <div><span>Realised P/L</span><b class="${cls(B.real.reduce((a, r) => a + (r.bpl || 0), 0))}">${money(B.real.reduce((a, r) => a + (r.bpl || 0), 0), base, 0)}</b><small>${B.real.length} closed</small></div>
       </div>
-      ${R.length ? `<div class="pf-desk"><span class="pf-kick">DESK NOTE</span><ul>${deskNote(B)}</ul></div>` : `<div class="pf-empty"><h3>Start your book</h3><p>Add the shares you own: the company, your entry price and either the number of shares or the rand/dollar value of the position. Write one line on why you bought it. That is your thesis, and the journal keeps you honest.</p><button class="btn btn-gold" id="pfAdd2">+ Add your first position</button></div>`}
+      ${R.length ? `<div class="pf-desk"><span class="pf-kick">DESK NOTE</span><ul>${deskNote(B)}</ul></div>` : `<div class="pf-empty"><h3>Start your book</h3><p>Add the shares you own: the company, your entry price and either the number of shares or the rand/dollar value of the position. Write one line on why you bought it. That is your thesis, and the journal keeps you honest.</p><div class="pf-lock-btns"><button class="btn btn-gold" id="pfAdd2">+ Add your first position</button><button class="btn btn-ghost" id="pfImp2">Import all my trades (CSV)</button></div></div>`}
       ${R.length ? `<h3 class="pf-h">Positions ledger</h3>
       <div class="tbl-wrap"><table class="mc-tbl pf-tbl"><thead><tr><th>Company</th><th class="n">Shares</th><th class="n">Entry</th><th class="n">Last</th><th class="n">Today</th><th class="n">Value (${base === 'ZAR' ? 'R' : '$'})</th><th class="n">Weight</th><th class="n">P/L</th><th class="n">P/L %</th><th>LRC grade</th><th>Next results</th></tr></thead><tbody>
-      ${R.map(r => `<tr class="clk" data-id="${r.p.id}"><td><b>${esc(r.p.ticker.replace('.JO', ''))}</b> <small>${esc(r.p.name || r.i.n || '')}</small>${(NEWS[r.p.ticker] || {}).alerts && NEWS[r.p.ticker].alerts.some(a => (Date.now() - new Date(a.at)) < 864e5) ? ' <span class="pf-flag" title="Market-moving news in the last 24 hours">NEWS</span>' : ''}</td>
+      ${R.map(r => `<tr class="clk" data-id="${r.p.id}"><td><b>${esc(r.p.ticker.replace('.JO', ''))}</b>${r.p.side === 'short' ? ' <span class="pf-short">SHORT</span>' : ''} <small>${esc(r.p.name || r.i.n || '')}</small>${(NEWS[r.p.ticker] || {}).alerts && NEWS[r.p.ticker].alerts.some(a => (Date.now() - new Date(a.at)) < 864e5) ? ' <span class="pf-flag" title="Market-moving news in the last 24 hours">NEWS</span>' : ''}</td>
         <td class="n">${num(r.p.qty, r.p.qty % 1 ? 4 : 0)}</td><td class="n">${money(r.p.entry_price, r.c)}</td><td class="n">${money(r.px, r.c)}${r.pr.src === 'none' ? ' <small title="No live price yet; the Portfolio Desk adds it within 30 minutes">*</small>' : ''}</td>
         <td class="n ${cls(r.pr.chg)}">${pct(r.pr.chg)}</td><td class="n">${money(r.bval, base, 0)}</td><td class="n">${(r.w * 100).toFixed(1)}%</td>
         <td class="n ${cls(r.bpl)}">${money(r.bpl, base, 0)}</td><td class="n ${cls(r.plp)}"><b>${pct(r.plp)}</b></td>
@@ -138,7 +138,7 @@
         <textarea id="pfJb" maxlength="4000" rows="2" placeholder="What changed? e.g. 'Results beat; margins up. Thesis intact, holding.' or 'Trimmed 20%: position above 25% of the book.'"></textarea><button class="btn btn-gold">Add entry</button></form>
       ${JRN.length ? `<div class="pf-jrn">${JRN.slice(0, 60).map(j => `<div class="pf-je"><div class="pf-jd">${day(j.created_at)}<small>${new Date(j.created_at).toLocaleTimeString('en-ZA', { hour: '2-digit', minute: '2-digit' })}</small></div><div><span class="pf-kind k-${esc(j.kind)}">${esc(KINDS[j.kind] || j.kind)}</span>${j.ticker ? `<span class="pf-tk">${esc(j.ticker.replace('.JO', ''))}</span>` : ''}<p>${esc(j.body)}</p></div><button class="pf-del" data-j="${j.id}" title="Delete entry">×</button></div>`).join('')}</div>` : '<p class="muted">Your journal is empty. Analysts write down the thesis when they buy, review it at every result, and note why they sell.</p>'}
       ${B.real.length ? `<h3 class="pf-h">Closed positions</h3><div class="tbl-wrap"><table class="mc-tbl pf-tbl"><thead><tr><th>Company</th><th class="n">Shares</th><th class="n">Entry</th><th class="n">Exit</th><th>Held</th><th class="n">P/L</th><th class="n">P/L %</th></tr></thead><tbody>
-        ${B.real.map(r => `<tr class="clk" data-id="${r.p.id}"><td><b>${esc(r.p.ticker.replace('.JO', ''))}</b> <small>${esc(r.p.name || '')}</small></td><td class="n">${num(r.p.qty, r.p.qty % 1 ? 4 : 0)}</td><td class="n">${money(r.p.entry_price, r.c)}</td><td class="n">${money(r.p.exit_price, r.c)}</td><td>${r.p.entry_date ? day(r.p.entry_date) : '—'} → ${day(r.p.closed_on)}</td><td class="n ${cls(r.bpl)}">${money(r.bpl, base, 0)}</td><td class="n ${cls(r.plp)}">${pct(r.plp)}</td></tr>`).join('')}</tbody></table></div>` : ''}
+        ${B.real.map(r => `<tr class="clk" data-id="${r.p.id}"><td><b>${esc(r.p.ticker.replace('.JO', ''))}</b>${r.p.side === 'short' ? ' <span class="pf-short">SHORT</span>' : ''} <small>${esc(r.p.name || '')}</small></td><td class="n">${num(r.p.qty, r.p.qty % 1 ? 4 : 0)}</td><td class="n">${money(r.p.entry_price, r.c)}</td><td class="n">${money(r.p.exit_price, r.c)}</td><td>${r.p.entry_date ? day(r.p.entry_date) : '—'} → ${day(r.p.closed_on)}</td><td class="n ${cls(r.bpl)}">${money(r.bpl, base, 0)}</td><td class="n ${cls(r.plp)}">${pct(r.plp)}</td></tr>`).join('')}</tbody></table></div>` : ''}
       <p class="src-note">Private to your account: positions and journal are stored in the LRC members database and only you can read them (POPIA). Values in other currencies are converted at the latest USD/ZAR rate. Educational tool, not financial advice.</p>`;
     wire();
   };
@@ -160,6 +160,7 @@
         <label>Company<input id="fT" list="pfList" placeholder="Type a name or ticker, e.g. Naspers or AAPL" value="${edit ? esc(p.ticker) : ''}" ${edit ? 'readonly' : ''} required autocomplete="off"></label><datalist id="pfList"></datalist>
         <p class="pf-pick" id="fInfo"></p>
         <div class="pf-grid2"><label>Entry price (per share)<input id="fE" type="number" step="any" min="0" required value="${edit ? p.entry_price : ''}"></label><label>Entry date<input id="fD" type="date" value="${edit ? (p.entry_date || '') : new Date().toISOString().slice(0, 10)}"></label></div>
+        <div class="seg pf-mode" id="fSd"><button type="button" data-v="long" class="${!edit || p.side !== 'short' ? 'on' : ''}">Long (bought)</button><button type="button" data-v="short" class="${edit && p.side === 'short' ? 'on' : ''}">Short (sold first)</button></div>
         <div class="seg pf-mode" id="fM"><button type="button" data-v="q" class="on">Number of shares</button><button type="button" data-v="v">Position value</button></div>
         <label id="fQl">Number of shares<input id="fQ" type="number" step="any" min="0" value="${edit ? p.qty : ''}"></label>
         <label id="fVl" hidden>Value invested (in the share's currency)<input id="fV" type="number" step="any" min="0"></label>
@@ -179,19 +180,21 @@
       if (picked && (!$('fE').value || autoE)) { const lp = (Q[picked.t] || [])[0] ?? picked.px; if (ok(lp)) { $('fE').value = lp; autoE = true; } }
     };
     $('fE').oninput = () => { autoE = false; };
+    let side = edit && p.side === 'short' ? 'short' : 'long';
+    $('fSd').querySelectorAll('button').forEach(b => b.onclick = () => { side = b.dataset.v; $('fSd').querySelectorAll('button').forEach(x => x.classList.toggle('on', x === b)); });
     $('fM').querySelectorAll('button').forEach(b => b.onclick = () => { mode = b.dataset.v; $('fM').querySelectorAll('button').forEach(x => x.classList.toggle('on', x === b)); $('fQl').hidden = mode !== 'q'; $('fVl').hidden = mode !== 'v'; });
     $('pfF').onsubmit = async ev => {
       ev.preventDefault(); err('');
-      const raw = $('fT').value.trim().toUpperCase(), i = picked || IDX[raw] || IDX[raw + '.JO'];
-      const t = i ? i.t : raw; if (!/^[A-Z0-9.\-^=]{1,20}$/.test(t)) return err('Enter a valid ticker.');
+      const raw = $('fT').value.trim().toUpperCase(), R0 = resolve(raw), i = picked || (R0 && R0.i);
+      const t = i ? i.t : (R0 ? R0.t : raw); if (!/^[A-Z0-9.\-^=]{1,20}$/.test(t)) return err('Enter a valid ticker.');
       const e = +$('fE').value; if (!(e > 0)) return err('Enter your entry price.');
       const qty = mode === 'q' ? +$('fQ').value : +$('fV').value / e; if (!(qty > 0)) return err(mode === 'q' ? 'Enter the number of shares.' : 'Enter the value invested.');
       const m = i ? i.m : (t.endsWith('.JO') ? 'JSE' : 'US');
-      const row = { ticker: t, name: i ? i.n : null, market: m, currency: i && i.cur ? i.cur : (m === 'US' ? 'USD' : 'ZAR'), qty, entry_price: e, entry_date: $('fD').value || null,
+      const row = { side, ticker: t, name: i ? i.n : null, market: m, currency: i && i.cur ? i.cur : (m === 'US' ? 'USD' : 'ZAR'), qty, entry_price: e, entry_date: $('fD').value || null,
         thesis: $('fTh').value.trim() || null, target_low: ok($('fTl').value) && $('fTl').value !== '' ? +$('fTl').value : null, target_high: $('fTh2').value !== '' ? +$('fTh2').value : null, stop: $('fS').value !== '' ? +$('fS').value : null };
       const q = edit ? sb.from('portfolio_positions').update(row).eq('id', p.id) : sb.from('portfolio_positions').insert(row);
       const { error } = await q; if (error) return err(error.message);
-      if (!edit) await sb.from('portfolio_journal').insert({ ticker: t, kind: 'trade', body: `Bought ${num(qty, qty % 1 ? 4 : 0)} × ${t.replace('.JO', '')} at ${money(e, row.currency)} (${money(qty * e, row.currency)}).${row.thesis ? ' Thesis: ' + row.thesis : ''}`.slice(0, 4000) });
+      if (!edit) await sb.from('portfolio_journal').insert({ ticker: t, kind: 'trade', body: `${side === 'short' ? 'Shorted' : 'Bought'} ${num(qty, qty % 1 ? 4 : 0)} × ${t.replace('.JO', '')} at ${money(e, row.currency)} (${money(qty * e, row.currency)}).${row.thesis ? ' Thesis: ' + row.thesis : ''}`.slice(0, 4000) });
       close(); await reload();
     };
   };
@@ -199,11 +202,11 @@
   const posView = id => {
     const p = POS.find(x => x.id === id); if (!p) return;
     const i = IDX[p.ticker] || {}, pr = price(p), c = p.currency || i.cur || 'ZAR', n = NEWS[p.ticker] || {};
-    const px = p.closed_on ? p.exit_price : (pr.px ?? p.entry_price), plp = px / p.entry_price - 1;
+    const dir = p.side === 'short' ? -1 : 1, px = p.closed_on ? p.exit_price : (pr.px ?? p.entry_price), plp = dir * (px / p.entry_price - 1);
     const jr = JRN.filter(j => j.ticker === p.ticker);
-    drawer(`<div class="sn-top"><div><span class="sn-tk">${esc(p.ticker.replace('.JO', ''))}</span><span class="sn-mk">${p.market === 'US' ? 'New York' : 'JSE'}${p.closed_on ? ' · closed' : ''}</span><h2>${esc(p.name || i.n || p.ticker)}</h2><small>${num(p.qty, p.qty % 1 ? 4 : 0)} shares · entry ${money(p.entry_price, c)}${p.entry_date ? ' on ' + day(p.entry_date) : ''}</small></div>
+    drawer(`<div class="sn-top"><div><span class="sn-tk">${esc(p.ticker.replace('.JO', ''))}</span><span class="sn-mk">${p.market === 'US' ? 'New York' : 'JSE'}${p.closed_on ? ' · closed' : ''}</span><h2>${esc(p.name || i.n || p.ticker)}</h2><small>${p.side === 'short' ? '<span class="pf-short">SHORT</span> ' : ''}${num(p.qty, p.qty % 1 ? 4 : 0)} shares · entry ${money(p.entry_price, c)}${p.entry_date ? ' on ' + day(p.entry_date) : ''}</small></div>
         <div class="sn-px"><b>${money(px, c)}</b><span class="${cls(plp)}">${pct(plp)} since entry</span><small>${p.closed_on ? 'exit ' + day(p.closed_on) : 'today ' + pct(pr.chg)}</small></div><button class="sn-x" aria-label="Close">×</button></div>
-      <div class="pf-kpis sm"><div><span>Value</span><b>${money(p.qty * px, c, 0)}</b></div><div><span>P/L</span><b class="${cls(plp)}">${money(p.qty * (px - p.entry_price), c, 0)}</b></div>
+      <div class="pf-kpis sm"><div><span>Value</span><b>${money(p.qty * px, c, 0)}</b></div><div><span>P/L</span><b class="${cls(plp)}">${money(dir * p.qty * (px - p.entry_price), c, 0)}</b></div>
         <div><span>LRC grade</span><b>${i.v ? `<span class="pill ${gcls(i.v)}">${esc(grade(i.v))}</span>` : '—'}</b><small>${i.score ? 'score ' + i.score : ''}</small></div><div><span>Next results</span><b>${n.next_results ? day(n.next_results) : '—'}</b></div></div>
       ${ok(p.target_low) || ok(p.stop) ? `<p class="pf-p">${ok(p.target_low) ? `Your target range: <b>${money(p.target_low, c)}${ok(p.target_high) ? '–' + money(p.target_high, c) : ''}</b> (${pct(p.target_low / px - 1)} to the low end). ` : ''}${ok(p.stop) ? `Review level: <b>${money(p.stop, c)}</b> (${pct(p.stop / px - 1)}).` : ''}</p>` : ''}
       <h3 class="ev-h3">Thesis</h3><p class="pf-p">${p.thesis ? esc(p.thesis) : '<span class="muted">No thesis written yet. Edit the position to add one.</span>'}</p>
@@ -216,21 +219,100 @@
     if ($('pvCF')) $('pvCF').onsubmit = async ev => {
       ev.preventDefault(); const e = +$('cE').value; if (!(e > 0)) return err('Enter the exit price.');
       const { error } = await sb.from('portfolio_positions').update({ exit_price: e, closed_on: $('cD').value || new Date().toISOString().slice(0, 10) }).eq('id', p.id); if (error) return err(error.message);
-      await sb.from('portfolio_journal').insert({ ticker: p.ticker, kind: 'trade', body: `Sold ${num(p.qty, p.qty % 1 ? 4 : 0)} × ${p.ticker.replace('.JO', '')} at ${money(e, c)} (${pct(e / p.entry_price - 1)} on entry ${money(p.entry_price, c)}).${$('cW').value.trim() ? ' Reason: ' + $('cW').value.trim() : ''}`.slice(0, 4000) });
+      await sb.from('portfolio_journal').insert({ ticker: p.ticker, kind: 'trade', body: `${dir < 0 ? 'Covered short' : 'Sold'} ${num(p.qty, p.qty % 1 ? 4 : 0)} × ${p.ticker.replace('.JO', '')} at ${money(e, c)} (${pct(dir * (e / p.entry_price - 1))} on entry ${money(p.entry_price, c)}).${$('cW').value.trim() ? ' Reason: ' + $('cW').value.trim() : ''}`.slice(0, 4000) });
       close(); await reload();
     };
     $('pvDel').onclick = async () => { if (!confirm(`Delete ${p.ticker.replace('.JO', '')} from your book? This cannot be undone.`)) return; await sb.from('portfolio_positions').delete().eq('id', p.id); close(); await reload(); };
   };
 
+
+  /* ---------- import trades (CSV from Excel, Google Sheets or a broker export) ---------- */
+  const TEMPLATE = 'Ticker,Side,Shares,Entry price,Entry date,Value,Thesis\nNPN.JO,long,150,610,2026-05-12,,Tencent discount narrowing via buybacks\nIWM,long,60,236,2026-11-03,,Strong US economy helps small caps\nTLT,short,40,88.50,2026-11-03,,Hot inflation keeps long yields rising\nMRP.JO,long,,205,2026-09-01,61500,Best SA value retailer\n';
+  const ALIAS = { XAUUSD: 'GC=F', GOLD: 'GC=F', XAGUSD: 'SI=F', SILVER: 'SI=F', USOIL: 'CL=F', WTI: 'CL=F', UKOIL: 'BZ=F', BRENT: 'BZ=F', XPTUSD: 'PL=F',
+    US500: '^GSPC', SPX500: '^GSPC', SPX: '^GSPC', NAS100: '^NDX', US100: '^NDX', USTEC: '^NDX', US30: '^DJI', DJ30: '^DJI', US2000: '^RUT', RUSSELL2000: '^RUT', SA40: '^J200.JO' };
+  const ANAME = { 'GC=F': 'Gold (XAUUSD)', 'SI=F': 'Silver (XAGUSD)', 'CL=F': 'WTI crude oil', 'BZ=F': 'Brent crude oil', 'PL=F': 'Platinum (XPTUSD)', '^GSPC': 'S&P 500 index (US500)',
+    '^NDX': 'Nasdaq-100 index (NAS100)', '^DJI': 'Dow Jones 30 (US30)', '^RUT': 'Russell 2000 index (US2000)', '^J200.JO': 'JSE Top 40 index (SA40)' };
+  const parseCSV = txt => {
+    txt = txt.replace(/^﻿/, '').trim(); if (!txt) return [];
+    const first = txt.split(/\r?\n/)[0], d = (first.match(/;/g) || []).length > (first.match(/,/g) || []).length ? ';' : (first.match(/\t/g) || []).length > (first.match(/,/g) || []).length ? '\t' : ',';
+    const rows = []; let row = [], f = '', q = false;
+    for (let i = 0; i < txt.length; i++) { const ch = txt[i];
+      if (q) { if (ch === '"' && txt[i + 1] === '"') { f += '"'; i++; } else if (ch === '"') q = false; else f += ch; }
+      else if (ch === '"') q = true; else if (ch === d) { row.push(f); f = ''; } else if (ch === '\n' || ch === '\r') { if (ch === '\r' && txt[i + 1] === '\n') i++; row.push(f); rows.push(row); row = []; f = ''; } else f += ch; }
+    row.push(f); rows.push(row);
+    return { rows: rows.filter(r => r.some(x => x.trim() !== '')), d };
+  };
+  const numv = (v, d) => { if (v === undefined || v === null) return NaN; let s = String(v).trim().replace(/[R$€£\s ]/g, ''); if (!s) return NaN;
+    if (d === ';' || /^-?\d{1,3}(\.\d{3})+(,\d+)?$/.test(s)) s = s.replace(/\./g, '').replace(',', '.'); else s = s.replace(/,/g, ''); return parseFloat(s); };
+  const datev = v => { const s = String(v || '').trim(); if (!s) return null; let m;
+    if ((m = s.match(/^(\d{4})[-/.](\d{1,2})[-/.](\d{1,2})/))) return `${m[1]}-${m[2].padStart(2, '0')}-${m[3].padStart(2, '0')}`;
+    if ((m = s.match(/^(\d{1,2})[-/.](\d{1,2})[-/.](\d{4})/))) return `${m[3]}-${m[2].padStart(2, '0')}-${m[1].padStart(2, '0')}`;
+    if (/^\d{10}$/.test(s)) return new Date(+s * 1000).toISOString().slice(0, 10);
+    const t = Date.parse(s); return isNaN(t) ? null : new Date(t).toISOString().slice(0, 10); };
+  const resolve = raw => {
+    let s = String(raw || '').trim().toUpperCase().replace(/\s+/g, ''); if (!s) return null;
+    s = s.replace(/^(NASDAQ|NYSE|AMEX|ARCA|JSE|BATS):/, '').replace(/\.(US|O|N|K|OQ)$/, '').replace(/\.J$/, '.JO').replace(/\.SJ$/, '.JO');
+    if (ALIAS[s]) s = ALIAS[s];
+    const hit = IDX[s] || IDX[s + '.JO'] || IDX[s.replace('.', '-')];
+    return hit ? { t: hit.t, i: hit } : { t: s, i: ANAME[s] ? { t: s, n: ANAME[s], m: s.endsWith('.JO') ? 'JSE' : 'US', cur: s.endsWith('.JO') ? 'ZAR' : 'USD' } : null };
+  };
+  const importForm = () => {
+    drawer(`<div class="sn-top"><div><span class="pf-kick">IMPORT TRADES</span><h2>Upload your trades</h2><small>From Excel, Google Sheets or your broker's export, saved as a CSV file</small></div><button class="sn-x" aria-label="Close">×</button></div>
+      <div class="pf-p"><ol class="ev-ul"><li>Download the <a href="#" id="imTpl">LRC template</a>, or use your broker's trade export as it is.</li>
+        <li>One row per trade. Columns we read (any order, any of these names): <b>Ticker</b> / Symbol, <b>Side</b> / Direction / Type (long, buy, short, sell), <b>Shares</b> / Qty / Quantity / Units / Lots, <b>Entry price</b> / Open price / Price, <b>Entry date</b> / Open date / Date, <b>Value</b> (if you don't have the number of shares), <b>Thesis</b> / Notes.</li>
+        <li>JSE shares: use the JSE code with or without <b>.JO</b> (NPN or NPN.JO). CFD names like XAUUSD, NAS100 or US30 are recognised too.</li>
+        <li>In Excel: <i>File → Save As → CSV (comma delimited)</i>. Then choose the file below, check the preview and click Import.</li></ol></div>
+      <label class="pf-drop"><input type="file" id="imF" accept=".csv,.txt,text/csv"><span>Choose a CSV file</span></label>
+      <details class="pf-paste"><summary>…or paste the rows here</summary><textarea id="imT" rows="6" placeholder="Ticker,Side,Shares,Entry price,Entry date"></textarea><button class="btn btn-ghost" type="button" id="imGo">Preview</button></details>
+      <div id="imPrev"></div>`);
+    $('imTpl').onclick = e => { e.preventDefault(); const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([TEMPLATE], { type: 'text/csv' })); a.download = 'LRC_portfolio_template.csv'; a.click(); };
+    const preview = txt => {
+      const P_ = parseCSV(txt); if (!P_.rows || P_.rows.length < 2) { $('imPrev').innerHTML = '<p class="pf-err">No rows found. The first line must be the column names.</p>'; return; }
+      const H = P_.rows[0].map(h => h.trim().toLowerCase().replace(/[^a-z/% ]/g, ''));
+      const col = (...names) => H.findIndex(h => names.some(n => h === n || h.startsWith(n)));
+      const cT = col('ticker', 'symbol', 'instrument', 'code', 'share', 'stock'), cS = col('side', 'direction', 'type', 'action', 'buysell', 'buy/sell'),
+        cQ = col('shares', 'qty', 'quantity', 'units', 'volume', 'lots', 'amount'), cE = col('entry price', 'entry', 'open price', 'avg price', 'average price', 'price', 'cost per'),
+        cD = col('entry date', 'open date', 'date', 'open time', 'opened', 'trade date', 'time'), cV = col('value', 'invested', 'cost', 'total', 'exposure'),
+        cN = col('thesis', 'notes', 'note', 'comment', 'reason'), cId = col('trade id', 'id', 'position id', 'order');
+      if (cT < 0 || cE < 0) { $('imPrev').innerHTML = `<p class="pf-err">We need at least a Ticker/Symbol column and an Entry price/Open price column. Found: ${esc(P_.rows[0].join(', '))}</p>`; return; }
+      const out = P_.rows.slice(1).map((r, n) => {
+        const R = resolve(r[cT]); const e = numv(r[cE], P_.d); let q = cQ >= 0 ? Math.abs(numv(r[cQ], P_.d)) : NaN; const v = cV >= 0 ? Math.abs(numv(r[cV], P_.d)) : NaN;
+        if (!(q > 0) && v > 0 && e > 0) q = v / e;
+        const sd = String(cS >= 0 ? r[cS] : '').trim().toLowerCase(); const side = /^(short|sell|s|sold)/.test(sd) || (cQ >= 0 && numv(r[cQ], P_.d) < 0) ? 'short' : 'long';
+        const i = R && R.i, m = i ? i.m : (R && R.t.endsWith('.JO') ? 'JSE' : 'US');
+        const note = [cN >= 0 ? String(r[cN] || '').trim() : '', cId >= 0 && r[cId] ? 'Trade ID ' + String(r[cId]).trim() : ''].filter(Boolean).join(' · ');
+        const okRow = R && /^[A-Z0-9.\-^=]{1,20}$/.test(R.t) && e > 0 && q > 0;
+        return { n: n + 2, ok: okRow, known: !!(i && IDX[i.t]), raw: r[cT], row: okRow ? { side, ticker: R.t, name: i ? i.n : null, market: m, currency: i && i.cur ? i.cur : (m === 'US' ? 'USD' : 'ZAR'), qty: q, entry_price: e, entry_date: cD >= 0 ? datev(r[cD]) : null, thesis: note || null } : null,
+          why: !R ? 'no ticker' : !(e > 0) ? 'no entry price' : !(q > 0) ? 'no shares or value' : '' };
+      });
+      const good = out.filter(x => x.ok), bad = out.filter(x => !x.ok);
+      $('imPrev').innerHTML = `<h3 class="ev-h3">Preview: ${good.length} trade${good.length === 1 ? '' : 's'} ready${bad.length ? `, ${bad.length} skipped` : ''}</h3>
+        <div class="tbl-wrap"><table class="mc-tbl pf-tbl"><thead><tr><th>Row</th><th>Ticker</th><th>Side</th><th class="n">Shares</th><th class="n">Entry</th><th>Date</th><th>Status</th></tr></thead><tbody>
+        ${out.map(x => `<tr><td>${x.n}</td><td><b>${esc(x.row ? x.row.ticker.replace('.JO', '') : x.raw || '—')}</b> <small>${esc(x.row && x.row.name || '')}</small></td><td>${x.row ? (x.row.side === 'short' ? '<span class="pf-short">SHORT</span>' : 'Long') : ''}</td>
+          <td class="n">${x.row ? num(x.row.qty, x.row.qty % 1 ? 4 : 0) : ''}</td><td class="n">${x.row ? money(x.row.entry_price, x.row.currency) : ''}</td><td>${x.row && x.row.entry_date ? day(x.row.entry_date) : '—'}</td>
+          <td>${!x.ok ? `<span class="dn">Skipped: ${x.why}</span>` : x.known ? '<span class="up">✓ matched</span>' : '<span class="muted">✓ not in the LRC scanner: price and news come from the Portfolio Desk</span>'}</td></tr>`).join('')}</tbody></table></div>
+        <p class="pf-err" id="pfErr"></p>${good.length ? `<button class="btn btn-gold" id="imDo">Import ${good.length} trade${good.length === 1 ? '' : 's'}</button>` : ''}`;
+      if (good.length) $('imDo').onclick = async () => {
+        $('imDo').disabled = true; $('imDo').textContent = 'Importing…';
+        for (let k = 0; k < good.length; k += 100) { const { error } = await sb.from('portfolio_positions').insert(good.slice(k, k + 100).map(x => x.row)); if (error) { $('imDo').disabled = false; $('imDo').textContent = 'Try again'; return err(error.message); } }
+        await sb.from('portfolio_journal').insert({ kind: 'trade', body: `Imported ${good.length} trade${good.length === 1 ? '' : 's'} from a spreadsheet: ${[...new Set(good.map(x => x.row.ticker.replace('.JO', '')))].slice(0, 20).join(', ')}.` });
+        close(); await reload();
+      };
+    };
+    $('imF').onchange = e => { const f = e.target.files[0]; if (!f) return; if (f.size > 2e6) { $('imPrev').innerHTML = '<p class="pf-err">That file is too large (max 2 MB).</p>'; return; } const r = new FileReader(); r.onload = () => preview(String(r.result)); r.readAsText(f); };
+    $('imGo').onclick = () => preview($('imT').value);
+  };
+
   const csv = () => {
-    const B = book(), lines = [['Ticker', 'Company', 'Market', 'Currency', 'Shares', 'Entry price', 'Entry date', 'Last price', 'Value', 'P/L', 'P/L %', 'Status', 'Exit price', 'Closed on', 'Thesis']];
-    POS.forEach(p => { const r = B.rows.find(x => x.p.id === p.id); lines.push([p.ticker, p.name || '', p.market, p.currency, p.qty, p.entry_price, p.entry_date || '', r ? r.px : '', r ? r.val.toFixed(2) : '', r ? r.pl.toFixed(2) : '', r ? (r.plp * 100).toFixed(2) : '', p.closed_on ? 'Closed' : 'Open', p.exit_price || '', p.closed_on || '', p.thesis || '']); });
+    const B = book(), lines = [['Ticker', 'Side', 'Company', 'Market', 'Currency', 'Shares', 'Entry price', 'Entry date', 'Last price', 'Value', 'P/L', 'P/L %', 'Status', 'Exit price', 'Closed on', 'Thesis']];
+    POS.forEach(p => { const r = B.rows.find(x => x.p.id === p.id); lines.push([p.ticker, p.side || 'long', p.name || '', p.market, p.currency, p.qty, p.entry_price, p.entry_date || '', r ? r.px : '', r ? r.val.toFixed(2) : '', r ? r.pl.toFixed(2) : '', r ? (r.plp * 100).toFixed(2) : '', p.closed_on ? 'Closed' : 'Open', p.exit_price || '', p.closed_on || '', p.thesis || '']); });
     const s = lines.map(l => l.map(v => `"${String(v).replace(/"/g, '""')}"`).join(',')).join('\n');
     const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([s], { type: 'text/csv' })); a.download = 'LRC_portfolio_' + new Date().toISOString().slice(0, 10) + '.csv'; a.click();
   };
 
   const wire = () => {
     [$('pfAddBtn'), $('pfAdd2')].forEach(b => b && (b.onclick = () => addForm()));
+    [$('pfImp'), $('pfImp2')].forEach(b => b && (b.onclick = importForm));
     if ($('pfCsv')) $('pfCsv').onclick = csv;
     root.querySelectorAll('#pfBase button').forEach(b => b.onclick = () => { base = b.dataset.v; store.set('lrc_pf_base', base); render(); });
     root.querySelectorAll('tr.clk').forEach(tr => tr.onclick = () => posView(tr.dataset.id));

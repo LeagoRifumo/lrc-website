@@ -56,6 +56,9 @@ create table if not exists public.alert_log (
   primary key (user_id, k)
 );
 
+-- 4b. Long or short (short = sold first; profit when the price falls)
+alter table public.portfolio_positions add column if not exists side text not null default 'long' check (side in ('long', 'short'));
+
 -- 5. Email preference: market-moving news on my holdings
 alter table public.profiles add column if not exists portfolio_alerts boolean not null default true;
 
