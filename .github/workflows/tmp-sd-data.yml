@@ -1,0 +1,15 @@
+name: tmp-sd-data
+on: { push: { branches: [tmp-sd-data] } }
+jobs:
+  get:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          mkdir out
+          for s in GC%3DF %5ENDX EURUSD%3DX NPN.JO; do
+            curl -s -A "Mozilla/5.0" "https://query1.finance.yahoo.com/v8/finance/chart/$s?range=5y&interval=1d" -o "out/d_$s.json"
+            curl -s -A "Mozilla/5.0" "https://query1.finance.yahoo.com/v8/finance/chart/$s?range=720d&interval=1h" -o "out/h_$s.json"
+          done
+          ls -la out
+      - uses: actions/upload-artifact@v4
+        with: { name: bars, path: out }
