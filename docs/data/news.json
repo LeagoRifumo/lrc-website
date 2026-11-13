@@ -1,141 +1,135 @@
 {
-  "edition": "Evening update · Thursday 12 November 2026 19:15",
-  "generated": "2026-11-12T22:11+02:00",
-  "covers": "Wall Street's first two hours and the JSE close on Thursday 12 November 2026 (to 18:52 SAST)",
-  "agent": "LRC News Desk",
-  "headline": "Wall Street turns positive as chip rivals rally; Nvidia stays down about 5% after Huang's resignation; gold near a $3,870 low",
-  "summary": "The S&P 500 (7,633.97) and Nasdaq (25,501.04) were 0.2% and 0.1% above Wednesday's closes at 18:52 SAST as AMD and Broadcom rose 5.8%, while Nvidia stayed down 5.4% at $164.40 (LRC Market Dashboard and LRC Stock Scanner (Yahoo Finance), 12 Nov 2026 18:52 SAST). The JSE All Share ended at 112,894.87 and the Top 40 at 104,981.31, with gold miners down 3-4%, and the rand was at R16.78/$ (LRC Market Dashboard (Yahoo Finance), 12 Nov 2026). Gold was at $3,872.30, 3.0% below Wednesday's $3,992.20, and the US 10-year yield rose to 5.09% from 5.00% (LRC Market Dashboard (Yahoo Finance), 12 Nov 2026 18:52 SAST).",
-  "sections": [
+ "edition": "Morning brief · Friday 13 November 2026 06:15",
+ "generated": "2026-11-13T06:15+02:00",
+ "covers": "The US session on Thursday 12 November 2026 and SA overnight to 06:15 SAST Friday 13 November",
+ "agent": "LRC News Desk",
+ "headline": "Wall Street slips 0.4% as Nvidia closes 4.3% lower after Huang's exit; US yields jump and gold ends near a 13-month low",
+ "summary": "The S&P 500 closed Thursday at 7,592.40 and the Nasdaq at 25,366.09, both 0.4% below Wednesday, after Nvidia fell 4.3% to $166.19 on CEO Jensen Huang's resignation, while AMD and Broadcom rose more than 5% (LRC Market Dashboard and LRC Stock Scanner (Yahoo Finance), 11-12 Nov 2026 closes). The JSE All Share had closed Thursday 0.5% lower at 112,894.87 and the Top 40 0.6% lower at 104,981.31, and the rand was at R16.75/$ early on Friday, 1.6% weaker than a week ago (LRC Market Dashboard (Yahoo Finance), 12-13 Nov 2026). Gold settled at $3,920.60, 3.8% lower on the week, and Brent at $95.54 as the US 10-year yield rose to 5.10%, so a strong dollar, higher US yields and weak gold shares are the main risks for the JSE and the rand today (LRC Market Dashboard (Yahoo Finance), 12 Nov 2026 close; MarketWatch and Investing.com headlines, 13 Nov 2026).",
+ "sections": [
+  {
+   "name": "Breaking",
+   "items": [
     {
-      "name": "Breaking",
-      "items": [
-        {
-          "title": "Nvidia: Huang resigns, Kress interim CEO; Trump says Tim Cook should take over",
-          "summary": "Jensen Huang has resigned as Nvidia CEO and Colette Kress is interim chief. CNBC's live coverage reports President Trump saying Apple's Tim Cook should replace Huang. Nvidia was at $164.70 at 17:43 SAST, down 5.2% from Wednesday's $173.70 close, recovering from $159.28 (-8.3%) at 16:40 SAST.",
-          "source": "CNBC headlines, 12 Nov 2026 16:39 and 17:40 SAST; LRC Stock Scanner quotes (Yahoo Finance NVDA), 12 Nov 2026 16:40 and 17:43 SAST, and 11 Nov 2026 close",
-          "url": "https://www.cnbc.com/2026/11/12/nvidia-jensen-huang-ceo-live-updates.html"
-        },
-        {
-          "title": "US existing-home sales fall to the lowest since 2010",
-          "summary": "MarketWatch reports existing-home sales dropped to their lowest level since the Great Recession. The US 10-year Treasury yield was 5.07% at 17:43 SAST, up from 5.03% at 16:40 SAST.",
-          "source": "MarketWatch headlines, 12 Nov 2026 17:01-17:08 SAST; LRC Market Dashboard (Yahoo Finance), 12 Nov 2026 17:43 SAST (^TNX)",
-          "url": "https://www.marketwatch.com/story/home-sales-plummet-to-lowest-level-since-the-great-recession-as-buyers-flee-the-market-624e6270"
-        }
-      ]
+     "title": "Nvidia closes 4.3% lower after CEO Jensen Huang resigns",
+     "summary": "Nvidia ended Thursday at $166.19, down 4.3% from Wednesday's $173.70 close, trimming a deeper intraday fall. Colette Kress is interim CEO. CNBC's live coverage reports President Trump calling the episode a 'horrible thing'. Results are still scheduled for 17 November.",
+     "source": "CNBC and MarketWatch headlines, 12-13 Nov 2026 (to 04:32 SAST); LRC Stock Scanner quotes (Yahoo Finance NVDA), 11-12 Nov 2026 closes",
+     "url": "https://www.cnbc.com/2026/11/12/nvidia-jensen-huang-ceo-live-updates.html"
     },
     {
-      "name": "US markets",
-      "items": [
-        {
-          "title": "S&P 500 and Nasdaq turn positive",
-          "summary": "The S&P 500 was at 7,633.97 (+0.2%) and the Nasdaq Composite at 25,501.04 (+0.1%) at 18:52 SAST, against Wednesday's closes of 7,619.38 and 25,466.19, recovering from early losses after Nvidia's CEO news.",
-          "source": "CNBC headline, 12 Nov 2026 18:33 SAST; LRC Market Dashboard (Yahoo Finance), 12 Nov 2026 18:52 SAST (^GSPC, ^IXIC) and 11 Nov 2026 close",
-          "url": "https://www.cnbc.com/2026/11/11/stock-market-today-live-updates.html"
-        },
-        {
-          "title": "Chip rivals extend gains: AMD +5.8%, Broadcom +5.8%",
-          "summary": "AMD was at $584.70 and Broadcom at $365.10 at 18:51 SAST, up from +2.9% and +4.6% an hour earlier.",
-          "source": "LRC Stock Scanner quotes (Yahoo Finance AMD, AVGO), 12 Nov 2026 18:51 SAST",
-          "url": "https://www.cnbc.com/2026/11/12/stocks-moving-the-most-today-live-updates.html"
-        },
-        {
-          "title": "Nebius down 18% on a weak outlook and higher spending plans",
-          "summary": "Nebius was at $126.67 at 17:43 SAST, down 18.1%. CNBC reports the company expects higher 2026 capital spending and gave a weak outlook.",
-          "source": "CNBC headline, 12 Nov 2026 17:27 SAST; LRC Stock Scanner quotes (Yahoo Finance NBIS), 12 Nov 2026 17:43 SAST",
-          "url": "https://www.cnbc.com/2026/11/12/nebius-q3-earnings-report-2026.html"
-        },
-        {
-          "title": "Weekly jobless claims rise to 200,000",
-          "summary": "US initial jobless claims rose to 200,000 last week, according to Kitco's report on the data released at 15:30 SAST. The US 10-year Treasury yield was 5.09% at 18:52 SAST, up from 5.00% on Wednesday.",
-          "source": "Kitco headline, 12 Nov 2026 15:31 SAST; LRC Market Dashboard (Yahoo Finance ^TNX), 12 Nov 2026 18:52 SAST and 11 Nov 2026 close",
-          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOY2J2bElPMzYyNl9ZeUlBd3Y3QkR5amJPS01TS0RxbkE3VEJKNS14OU9IVWVsLUpEMlk"
-        }
-      ]
-    },
-    {
-      "name": "South Africa",
-      "items": [
-        {
-          "title": "JSE closes lower; gold miners and Naspers weigh",
-          "summary": "The All Share closed at 112,894.87 and the Top 40 at 104,981.31. AngloGold Ashanti fell 3.8%, Harmony 2.9% and Gold Fields 2.7%; Naspers was down 2.5% and Prosus 1.8%.",
-          "source": "LRC Market Dashboard (Yahoo Finance ^J203.JO, ^J200.JO), 12 Nov 2026; LRC Stock Scanner quotes (Yahoo Finance), 12 Nov 2026 17:00-17:09 SAST",
-          "url": "https://finance.yahoo.com/quote/%5EJ203.JO/"
-        },
-        {
-          "title": "Woolworths ends down 4.2% after its trading update",
-          "summary": "Woolworths was at R36.20 late in the session, having fallen as much as 8.5% earlier in the day according to IOL.",
-          "source": "IOL Business headline, 12 Nov 2026 14:36 SAST; LRC Stock Scanner quotes (Yahoo Finance WHL.JO), 12 Nov 2026 17:06 SAST",
-          "url": "https://iol.co.za/business-report/2026-11-12-woolworths-shares-plunge-85-as-weak-sales-growth-rattles-investors/"
-        },
-        {
-          "title": "Aspen up 3.6% after announcing a R4.4 billion return to shareholders",
-          "summary": "Aspen was at R178.58 late in the session.",
-          "source": "African Insider headline, 12 Nov 2026; LRC Stock Scanner quotes (Yahoo Finance APN.JO), 12 Nov 2026 17:00 SAST",
-          "url": "https://finance.yahoo.com/quote/APN.JO/"
-        }
-      ]
-    },
-    {
-      "name": "Forex & commodities",
-      "items": [
-        {
-          "title": "Rand at R16.78/$; R18.55/€, R22.21/£",
-          "summary": "The rand gave back its afternoon gain, from R16.68/$ at 16:40 SAST.",
-          "source": "LRC Market Dashboard (Yahoo Finance), 12 Nov 2026 18:52 SAST (ZAR=X, EURZAR=X, GBPZAR=X)",
-          "url": "https://finance.yahoo.com/quote/ZAR%3DX/"
-        },
-        {
-          "title": "Gold down 3.0% at $3,872.30; platinum $1,521.40",
-          "summary": "Gold stayed well below $4,000, down from Wednesday's $3,992.20; Investing.com links the pressure to bets on further Fed tightening.",
-          "source": "LRC Market Dashboard (Yahoo Finance), 12 Nov 2026 18:52 SAST and 11 Nov 2026 close (GC=F, PL=F); Investing.com headline, 12 Nov 2026 16:29 SAST",
-          "url": "https://www.investing.com/news/commodities-news/gold-clings-below-4000-as-inflation-fears-fuel-bets-on-bigger-fed-hikes-5020139"
-        },
-        {
-          "title": "Brent $93.76; copper about $13,616/t",
-          "summary": "Oil stayed mixed after Trump said the US does not need a deal with Iran.",
-          "source": "CNBC headline, 12 Nov 2026 17:08 SAST; LRC Market Dashboard (Yahoo Finance), 12 Nov 2026 18:52 SAST (BZ=F, HG=F)",
-          "url": "https://www.cnbc.com/2026/11/12/oil-prices-jump-after-trump-says-no-iran-deal-needed-weve-got-their-strait.html"
-        }
-      ]
-    },
-    {
-      "name": "Our coverage",
-      "items": [
-        {
-          "title": "Nvidia: down 5.4% after the CEO resignation, while rivals rally",
-          "summary": "The LRC Stock Scanner rated Nvidia HOLD (fair value) at Wednesday's $173.70 close; at $164.40 (18:51 SAST) the shares remain below the $210.96 price used in the LRC Watchlist investment list (23 Oct 2026), and did not join the wider market's recovery. The rating is unchanged here and is reassessed by the scanner on its next run. Results are still expected on 17 November.",
-          "source": "CNBC headlines, 12 Nov 2026; LRC Stock Scanner (Yahoo Finance), 11 Nov 2026 close and 12 Nov 2026 18:51 SAST; LRC Watchlist, 7 Nov 2026",
-          "url": "https://www.cnbc.com/2026/11/12/nvidia-jensen-huang-ceo-live-updates.html",
-          "tickers": [
-            "NVDA"
-          ]
-        },
-        {
-          "title": "AMD: up 5.8% at $584.70",
-          "summary": "The LRC Stock Scanner rated AMD STRONG BUY at Wednesday's $552.90 close; CNBC reported an analyst upgrade tied to Nvidia's leadership change.",
-          "source": "CNBC headline, 12 Nov 2026 16:31 SAST; LRC Stock Scanner (Yahoo Finance), 11 Nov 2026 close and 12 Nov 2026 18:51 SAST",
-          "url": "https://www.cnbc.com/2026/11/12/amd-upgraded-because-it-will-benefit-from-nvidias-leadership-vacuum.html",
-          "tickers": [
-            "AMD"
-          ]
-        },
-        {
-          "title": "Meta: down 0.7% at $624.50",
-          "summary": "Slightly lower after news that its head of infrastructure is leaving; the scanner rates it HOLD (overvalued).",
-          "source": "CNBC headline, 12 Nov 2026; LRC Stock Scanner (Yahoo Finance), 12 Nov 2026 18:51 SAST",
-          "url": "https://www.cnbc.com/2026/11/11/meta-infrastructure-departure-aws-cloud.html",
-          "tickers": [
-            "META"
-          ]
-        }
-      ]
+     "title": "US bond yields post their biggest surge since 2022 on Fed rate-hike fears",
+     "summary": "MarketWatch reports the sharpest jump in Treasury yields since 2022 as markets price more Fed rate hikes. The US 10-year yield closed at 5.10%, up from 4.86% a week earlier.",
+     "source": "MarketWatch headline, 13 Nov 2026 00:16 SAST; LRC Market Dashboard (Yahoo Finance ^TNX), 12 Nov 2026 close and 6 Nov 2026 close",
+     "url": "https://www.marketwatch.com/story/bond-yields-just-saw-their-biggest-surge-since-2022-as-expectations-grow-for-more-fed-rate-hikes"
     }
-  ],
-  "watch_today": [
-    "Nvidia: board statements on the CEO change, any reaction to Trump's comments, whether the 17 November results date or guidance changes, and the US close",
-    "Whether the Nvidia sell-off spreads to other AI and chip stocks, and to Naspers and Prosus on Friday",
-    "Gold near $3,870 and the rand near R16.78/$ with the US 10-year yield above 5%",
-    "US producer prices on Friday 13 November",
-    "SA CPI for October on 18 November; SARB MPC decision on 19 November"
-  ]
+   ]
+  },
+  {
+   "name": "US markets",
+   "items": [
+    {
+     "title": "S&P 500 and Nasdaq close 0.4% lower; futures rise overnight",
+     "summary": "The S&P 500 closed at 7,592.40 (-0.4%) and the Nasdaq at 25,366.09 (-0.4%), giving up an early recovery in the final hour. CNBC reports stock futures rising early on Friday.",
+     "source": "LRC Market Dashboard (Yahoo Finance ^GSPC, ^IXIC), 11-12 Nov 2026 closes; MarketWatch headline, 12 Nov 2026 22:25 SAST; CNBC headline, 13 Nov 2026 04:29 SAST",
+     "url": "https://www.cnbc.com/2026/11/12/stock-market-today-live-updates.html"
+    },
+    {
+     "title": "Chip rivals hold gains: AMD +5.9%, Broadcom +5.5%; Applied Materials -3.6%",
+     "summary": "AMD closed at $585.30 and Broadcom at $364.36, while Applied Materials fell to $380.95.",
+     "source": "LRC Stock Scanner quotes (Yahoo Finance), 12 Nov 2026 close (AMD, AVGO, AMAT)",
+     "url": "https://www.cnbc.com/2026/11/12/stocks-moving-the-most-today-live-updates.html"
+    },
+    {
+     "title": "Cisco beats and says AI infrastructure revenue will double this year",
+     "summary": "Cisco reported after the close; CNBC reports an earnings beat and a forecast that AI infrastructure revenue will double in fiscal 2027. The shares had closed 1.2% higher at $102.01 before the release.",
+     "source": "CNBC headline, 12 Nov 2026 23:20 SAST; LRC Stock Scanner quotes (Yahoo Finance), 12 Nov 2026 close (CSCO)",
+     "url": "https://www.cnbc.com/2026/11/12/cisco-csco-q1-2027-earnings.html"
+    },
+    {
+     "title": "Cerebras jumps after hours on a revenue beat and a Microsoft deal",
+     "summary": "CNBC reports Cerebras up 17% after hours after beating on quarterly revenue and announcing a deal with Microsoft. The shares had closed 3.3% lower at $97.75.",
+     "source": "CNBC headline, 13 Nov 2026 04:43 SAST; LRC Stock Scanner quotes (Yahoo Finance), 12 Nov 2026 close (CBRS)",
+     "url": "https://www.cnbc.com/2026/11/12/cerebras-systems-cbrs-q3-earnings-report-2026.html"
+    }
+   ]
+  },
+  {
+   "name": "South Africa",
+   "items": [
+    {
+     "title": "JSE closed lower on Thursday; gold miners and Naspers weighed",
+     "summary": "The All Share fell 0.5% to 112,894.87 and the Top 40 0.6% to 104,981.31. AngloGold Ashanti fell 3.8%, Harmony 2.9%, Gold Fields 2.7% and Naspers 2.5%; Aspen rose 3.6%.",
+     "source": "LRC Market Dashboard (Yahoo Finance ^J203.JO, ^J200.JO), 11-12 Nov 2026 closes; LRC Stock Scanner quotes (Yahoo Finance), 12 Nov 2026 close",
+     "url": "https://finance.yahoo.com/quote/%5EJ203.JO/"
+    },
+    {
+     "title": "SPAR's appointment of Phil Roux falls apart",
+     "summary": "News24 reports that SPAR's planned hire of Phil Roux has fallen through. SPAR shares closed 0.6% lower at R48.85 on Thursday, before the report.",
+     "source": "News24 headline, 13 Nov 2026 03:45 SAST; LRC Stock Scanner quotes (Yahoo Finance SPP.JO), 12 Nov 2026 close",
+     "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPTzZhc0RPbFpNNjRnQjBEa190YWFSYVMyejdfZDQ4b2NKblpqQkdEY1NPU"
+    }
+   ]
+  },
+  {
+   "name": "Forex & commodities",
+   "items": [
+    {
+     "title": "Rand at R16.75/$; R18.52/€, R22.14/£",
+     "summary": "The rand is 1.6% weaker against the dollar than a week ago (R16.48/$ on 6 Nov). Investing.com reports the dollar at a fresh 19-month high, with the yen at 160.",
+     "source": "LRC Market Dashboard (Yahoo Finance ZAR=X, EURZAR=X, GBPZAR=X), 13 Nov 2026 and 6 Nov 2026; Investing.com headline, 12 Nov 2026 22:53 SAST",
+     "url": "https://finance.yahoo.com/quote/ZAR%3DX/"
+    },
+    {
+     "title": "Gold settles at $3,920.60, near a 13-month low; platinum $1,538",
+     "summary": "Gold is 3.8% lower than a week ago ($4,074.90). Investing.com links the fall to bets on bigger Fed rate hikes as oil rises.",
+     "source": "LRC Market Dashboard (Yahoo Finance GC=F, PL=F), 12 Nov 2026 and 6 Nov 2026 closes; Investing.com headline, 13 Nov 2026 03:03 SAST",
+     "url": "https://www.investing.com/news/commodities-news/gold-languishes-near-13month-low-as-96-oil-fuels-bets-on-bigge"
+    },
+    {
+     "title": "Brent settles at $95.54 after Trump says the US does not need an Iran deal",
+     "summary": "Investing.com reports oil settled about $3 higher on attacks on Saudi energy sites and Strait of Hormuz disruptions. Copper was about $13,697/t.",
+     "source": "LRC Market Dashboard (Yahoo Finance BZ=F, HG=F), 12 Nov 2026 close; Investing.com headline, 12 Nov 2026 22:55 SAST; CNBC headline, 12 Nov 2026 22:34 SAST",
+     "url": "https://www.cnbc.com/2026/11/12/trump-iran-deal-hormuz-strait.html"
+    }
+   ]
+  },
+  {
+   "name": "Our coverage",
+   "items": [
+    {
+     "title": "Nvidia: closed at $166.19 (-4.3%)",
+     "summary": "The LRC Stock Scanner rates Nvidia HOLD; the close is well below the $210.96 price used in the LRC Watchlist investment list (23 Oct 2026). The rating is unchanged here and is reassessed by the scanner on its next run. Results are expected on 17 November.",
+     "source": "LRC Stock Scanner (Yahoo Finance), 12 Nov 2026 close; LRC Watchlist, 7 Nov 2026; CNBC headlines, 12-13 Nov 2026",
+     "url": "https://www.cnbc.com/2026/11/12/nvidia-jensen-huang-ceo-live-updates.html",
+     "tickers": [
+      "NVDA"
+     ]
+    },
+    {
+     "title": "AMD: closed at $585.30 (+5.9%)",
+     "summary": "The LRC Stock Scanner rates AMD BUY; the shares closed above the scanner's $568.20 level.",
+     "source": "LRC Stock Scanner (Yahoo Finance), 11-12 Nov 2026 closes",
+     "url": "https://www.cnbc.com/2026/11/12/stocks-moving-the-most-today-live-updates.html",
+     "tickers": [
+      "AMD"
+     ]
+    },
+    {
+     "title": "Meta: closed at $623.61 (-0.8%)",
+     "summary": "No new company news overnight; the scanner rates it HOLD.",
+     "source": "LRC Stock Scanner (Yahoo Finance), 12 Nov 2026 close",
+     "url": "https://finance.yahoo.com/quote/META/",
+     "tickers": [
+      "META"
+     ]
+    }
+   ]
+  }
+ ],
+ "watch_today": [
+  "US producer prices (PPI) for October on Friday 13 November, after this week's jump in bond yields",
+  "Whether Friday's firmer US futures hold, and how Naspers, Prosus and gold miners open on the JSE",
+  "Nvidia: further board statements and any change to the 17 November results date",
+  "Gold near $3,920 and the rand near R16.75/$ with the US 10-year yield above 5%",
+  "SA CPI for October on 18 November; SARB MPC decision on 19 November"
+ ]
 }
