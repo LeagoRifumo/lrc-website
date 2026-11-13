@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-12T18:00:00+02:00",
+  "generated": "2026-11-13T17:55:00+02:00",
   "agent": "LRC Macro Desk",
   "method": "Surprise = actual minus forecast (consensus). If there is no forecast, actual minus previous. Impact for shares: a surprise in the 'better' direction larger than the threshold = Bullish, the other way = Bearish, otherwise Neutral.",
   "countries": {
@@ -338,14 +338,14 @@
           "better": "lower",
           "threshold": 0.1,
           "frequency": "monthly",
-          "period": "Sep 2026",
-          "release_date": "2026-10-15",
-          "actual": 6.3,
-          "forecast": 5.3,
-          "previous": 5.6,
-          "next_release": "2026-11-13",
+          "period": "Oct 2026",
+          "release_date": "2026-11-13",
+          "actual": 6.5,
+          "forecast": null,
+          "previous": 6.3,
+          "next_release": null,
           "source": "BLS",
-          "url": "https://www.bls.gov/news.release/archives/ppi_10152026.htm"
+          "url": "https://www.stocktitan.net/articles/october-2026-ppi-report"
         },
         {
           "key": "core_pce",
