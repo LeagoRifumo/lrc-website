@@ -81262,9 +81262,8 @@
    "n_est": 3,
    "rcur": "KZT",
    "has_res": true,
-   "desk": true,
-   "g": "lowered",
-   "headline": "Revenue up 18% in constant currency to KZT1.1tn but adjusted EBITDA only +1%; Marketplace GMV guidance cut to ~12%, EBITDA growth target of ~5% kept",
+   "desk": false,
+   "g": "not found",
    "px_move": {
     "move": -0.0241,
     "from": "2026-11-06",
@@ -84377,6 +84376,9 @@
    "rev_yago": 8695000,
    "n_est": 8,
    "rcur": "CAD",
+   "has_res": true,
+   "desk": false,
+   "g": "not found",
    "px_move": {
     "move": 0.0025,
     "from": "2026-11-06",
@@ -85577,6 +85579,9 @@
    "rev_yago": 0,
    "n_est": 10,
    "rcur": "USD",
+   "has_res": true,
+   "desk": false,
+   "g": "not found",
    "px_move": {
     "move": 0.051,
     "from": "2026-11-06",
@@ -86644,7 +86649,12 @@
    "rcur": "COP",
    "has_res": true,
    "desk": false,
+   "rev_actual": 35064000000000.0,
+   "rev_prior": 29840000000000.0,
    "g": "not found",
+   "rev_surprise": 0.0127,
+   "rev_result": "beat",
+   "rev_yoy": 0.1751,
    "px_move": {
     "move": 0.0026,
     "from": "2026-11-10",
@@ -89487,9 +89497,8 @@
    "dps": null,
    "source": "Nasdaq",
    "has_res": true,
-   "desk": true,
-   "g": "lowered",
-   "headline": "Revenue up 18% in constant currency to KZT1.1tn but adjusted EBITDA only +1%; Marketplace GMV guidance cut to ~12%, EBITDA growth target of ~5% kept",
+   "desk": false,
+   "g": "not found",
    "px_move": {
     "move": 0.0084,
     "from": "2026-11-10",
@@ -90550,6 +90559,9 @@
    "rev_yago": 0,
    "n_est": 1,
    "rcur": "CAD",
+   "has_res": true,
+   "desk": false,
+   "g": "given",
    "px_move": {
     "move": -0.0565,
     "from": "2026-11-10",
@@ -92036,7 +92048,12 @@
    "rcur": "COP",
    "has_res": true,
    "desk": false,
+   "rev_actual": 35064000000000.0,
+   "rev_prior": 29840000000000.0,
    "g": "not found",
+   "rev_surprise": 0.0193,
+   "rev_result": "beat",
+   "rev_yoy": 0.1751,
    "t": "EC",
    "lists": [],
    "idea": null,
@@ -92311,6 +92328,12 @@
    "measure": null,
    "dps": null,
    "source": null,
+   "has_res": true,
+   "desk": false,
+   "rev_actual": 1453100000.0,
+   "rev_prior": 1183800000.0,
+   "g": "given",
+   "rev_yoy": 0.2275,
    "t": "WSE",
    "lists": [],
    "idea": null,
@@ -92428,6 +92451,9 @@
    "rev_yago": 6811177000,
    "n_est": 6,
    "rcur": "BRL",
+   "has_res": true,
+   "desk": false,
+   "g": "not found",
    "t": "ELPC",
    "lists": [],
    "idea": null,
@@ -92784,6 +92810,9 @@
    "measure": null,
    "dps": null,
    "source": null,
+   "has_res": true,
+   "desk": false,
+   "g": "not found",
    "t": "BILI",
    "lists": [],
    "idea": null,
@@ -93879,6 +93908,9 @@
    "rev_yago": 0,
    "n_est": 1,
    "rcur": "CAD",
+   "has_res": true,
+   "desk": false,
+   "g": "given",
    "t": "SA",
    "lists": [],
    "idea": null,
@@ -95052,6 +95084,9 @@
    "rev_yago": 0,
    "n_est": 10,
    "rcur": "USD",
+   "has_res": true,
+   "desk": false,
+   "g": "not found",
    "t": "GHRS",
    "lists": [],
    "idea": null,
@@ -95518,6 +95553,9 @@
    "rev_yago": 0,
    "n_est": 8,
    "rcur": "USD",
+   "has_res": true,
+   "desk": false,
+   "g": "not found",
    "t": "JBIO",
    "lists": [],
    "idea": null,
@@ -96016,7 +96054,8 @@
     "miss",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-13",
@@ -96048,7 +96087,8 @@
     "beat",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-13",
@@ -96080,7 +96120,8 @@
     "beat",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-13",
@@ -96301,6 +96342,7 @@
    "n_est": 10,
    "rcur": "USD",
    "qend": "2026-09-30",
+   "has_res": true,
    "track": [
     "miss",
     "beat",
@@ -96356,6 +96398,7 @@
    "n_est": 2,
    "rcur": "USD",
    "qend": "2026-09-30",
+   "has_res": true,
    "track": [
     "beat",
     "miss",
@@ -96830,7 +96873,8 @@
     "miss",
     "miss",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-16",
@@ -97037,6 +97081,7 @@
    "n_est": 8,
    "rcur": "USD",
    "qend": "2026-09-30",
+   "has_res": true,
    "track": [
     "beat",
     "miss",
@@ -100658,7 +100703,8 @@
     "beat",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-24",
@@ -106101,6 +106147,6 @@
    "covered": false
   }
  ],
- "synced": "2026-11-13T07:41+02:00",
+ "synced": "2026-11-13T16:39+02:00",
  "coverage_note": "Ticked = on the LRC watchlist. Every company the LRC Stock Scanner tracks shows its trading and investment ratings. Updated after every scanner run."
 }

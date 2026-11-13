@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-13T06:43+02:00",
+"updated": "2026-11-13T16:39+02:00",
 "queue": [
 {
 "t": "CSCO",
@@ -20,13 +20,40 @@
 "mcap_bn": 302.3
 },
 {
+"t": "MUFG",
+"name": "Mitsubishi UFJ Financial Group Inc",
+"m": "US",
+"date": "2026-11-13",
+"text": "agents/work/8k/MUFG_2026-11-13.txt",
+"priority": 2,
+"mcap_bn": 244.8
+},
+{
+"t": "SMFG",
+"name": "Sumitomo Mitsui Financial Group Inc",
+"m": "US",
+"date": "2026-11-13",
+"text": "agents/work/8k/SMFG_2026-11-13.txt",
+"priority": 2,
+"mcap_bn": 152.9
+},
+{
+"t": "MFG",
+"name": "Mizuho Financial Group, Inc.",
+"m": "US",
+"date": "2026-11-13",
+"text": "agents/work/8k/MFG_2026-11-13.txt",
+"priority": 2,
+"mcap_bn": 122.2
+},
+{
 "t": "NU",
 "name": "Nu Holdings Ltd.",
 "m": "US",
 "date": "2026-11-12",
 "text": "agents/work/8k/NU_2026-11-12.txt",
 "priority": 2,
-"mcap_bn": 57.0
+"mcap_bn": 57.1
 },
 {
 "t": "KB",
@@ -41,10 +68,19 @@
 "t": "EC",
 "name": "Ecopetrol S.A.",
 "m": "US",
-"date": "2026-11-10",
-"text": "agents/work/8k/EC_2026-11-10.txt",
+"date": "2026-11-12",
+"text": "agents/work/8k/EC_2026-11-12.txt",
 "priority": 2,
 "mcap_bn": 31.5
+},
+{
+"t": "SHG",
+"name": "Shinhan Financial Group Co Ltd",
+"m": "US",
+"date": "2026-11-13",
+"text": "agents/work/8k/SHG_2026-11-13.txt",
+"priority": 2,
+"mcap_bn": 29.5
 },
 {
 "t": "CBRS",
@@ -56,6 +92,15 @@
 "mcap_bn": 23.2
 },
 {
+"t": "KSPI",
+"name": "Joint Stock Company Kaspi.kz",
+"m": "US",
+"date": "2026-11-11",
+"text": "agents/work/8k/KSPI_2026-11-11.txt",
+"priority": 2,
+"mcap_bn": 16.8
+},
+{
 "t": "QXO",
 "name": "QXO, Inc.",
 "m": "US",
@@ -65,13 +110,31 @@
 "mcap_bn": 13.3
 },
 {
+"t": "WSE",
+"name": "Wise Group plc",
+"m": "US",
+"date": "2026-11-12",
+"text": "agents/work/8k/WSE_2026-11-12.txt",
+"priority": 2,
+"mcap_bn": 10.5
+},
+{
 "t": "STN",
 "name": "Stantec Inc",
 "m": "US",
 "date": "2026-11-12",
 "text": "agents/work/8k/STN_2026-11-12.txt",
 "priority": 2,
-"mcap_bn": 8.5
+"mcap_bn": 8.4
+},
+{
+"t": "ELPC",
+"name": "Companhia Paranaense de Energia (COPEL)",
+"m": "US",
+"date": "2026-11-12",
+"text": "agents/work/8k/ELPC_2026-11-12.txt",
+"priority": 2,
+"mcap_bn": 7.9
 },
 {
 "t": "KOD",
@@ -89,7 +152,7 @@
 "date": "2026-11-12",
 "text": "agents/work/8k/ARWR_2026-11-12.txt",
 "priority": 2,
-"mcap_bn": 6.7
+"mcap_bn": 6.6
 },
 {
 "t": "ERAS",
@@ -99,6 +162,15 @@
 "text": "agents/work/8k/ERAS_2026-11-12.txt",
 "priority": 2,
 "mcap_bn": 5.5
+},
+{
+"t": "BILI",
+"name": "Bilibili Inc.",
+"m": "US",
+"date": "2026-11-12",
+"text": "agents/work/8k/BILI_2026-11-12.txt",
+"priority": 2,
+"mcap_bn": 5.4
 },
 {
 "t": "HTFL",
@@ -137,6 +209,15 @@
 "mcap_bn": 4.7
 },
 {
+"t": "TEO",
+"name": "Telecom Argentina S.A.",
+"m": "US",
+"date": "2026-11-10",
+"text": "agents/work/8k/TEO_2026-11-10.txt",
+"priority": 2,
+"mcap_bn": 4.5
+},
+{
 "t": "TNGX",
 "name": "Tango Therapeutics, Inc.",
 "m": "US",
@@ -153,6 +234,15 @@
 "text": "agents/work/8k/DLO_2026-11-12.txt",
 "priority": 2,
 "mcap_bn": 3.9
+},
+{
+"t": "WIX",
+"name": "Wix.com Ltd.",
+"m": "US",
+"date": "2026-11-10",
+"text": "agents/work/8k/WIX_2026-11-10.txt",
+"priority": 2,
+"mcap_bn": 3.8
 },
 {
 "t": "LFTO",
@@ -173,13 +263,22 @@
 "mcap_bn": 3.1
 },
 {
-"t": "WIX",
-"name": "Wix.com Ltd.",
+"t": "SA",
+"name": "Seabridge Gold, Inc.",
 "m": "US",
-"date": "2026-11-10",
-"text": "agents/work/8k/WIX_2026-11-10.txt",
+"date": "2026-11-11",
+"text": "agents/work/8k/SA_2026-11-11.txt",
 "priority": 2,
-"mcap_bn": 2.8
+"mcap_bn": 2.7
+},
+{
+"t": "ALM",
+"name": "Almonty Industries Inc.",
+"m": "US",
+"date": "2026-11-13",
+"text": "agents/work/8k/ALM_2026-11-13.txt",
+"priority": 2,
+"mcap_bn": 2.2
 },
 {
 "t": "IMNM",
@@ -452,6 +551,15 @@
 "mcap_bn": 1.3
 },
 {
+"t": "GHRS",
+"name": "GH Research PLC",
+"m": "US",
+"date": "2026-11-12",
+"text": "agents/work/8k/GHRS_2026-11-12.txt",
+"priority": 2,
+"mcap_bn": 1.3
+},
+{
 "t": "SPH",
 "name": "Suburban Propane Partners, L.P.",
 "m": "US",
@@ -551,6 +659,15 @@
 "mcap_bn": 1.1
 },
 {
+"t": "JBIO",
+"name": "Jade Biosciences, Inc.",
+"m": "US",
+"date": "2026-11-12",
+"text": "agents/work/8k/JBIO_2026-11-12.txt",
+"priority": 2,
+"mcap_bn": 1.0
+},
+{
 "t": "TMC",
 "name": "TMC the metals company Inc.",
 "m": "US",
@@ -574,6 +691,15 @@
 "m": "US",
 "date": "2026-11-13",
 "text": "agents/work/8k/NMAX_2026-11-13.txt",
+"priority": 2,
+"mcap_bn": 0.9
+},
+{
+"t": "USAS",
+"name": "Americas Gold and Silver Corporation",
+"m": "US",
+"date": "2026-11-13",
+"text": "agents/work/8k/USAS_2026-11-13.txt",
 "priority": 2,
 "mcap_bn": 0.9
 },
@@ -623,15 +749,6 @@
 "mcap_bn": 0.7
 },
 {
-"t": "TEO",
-"name": "Telecom Argentina S.A.",
-"m": "US",
-"date": "2026-11-10",
-"text": "agents/work/8k/TEO_2026-11-10.txt",
-"priority": 2,
-"mcap_bn": 0.0
-},
-{
 "t": "HMC",
 "name": "Honda Motor Company, Ltd.",
 "m": "US",
@@ -656,7 +773,7 @@
 "date": "2026-11-06",
 "text": "agents/work/8k/TU_2026-11-06.txt",
 "priority": 2,
-"mcap_bn": 13.6
+"mcap_bn": 13.5
 },
 {
 "t": "VSAT",
@@ -947,15 +1064,6 @@
 "mcap_bn": 2.1
 },
 {
-"t": "UTZ",
-"name": "Utz Brands Inc ",
-"m": "US",
-"date": "2026-11-06",
-"text": "agents/work/8k/UTZ_2026-11-06.txt",
-"priority": 2,
-"mcap_bn": 2.1
-},
-{
 "t": "UA",
 "name": "Under Armour, Inc.",
 "m": "US",
@@ -1060,6 +1168,15 @@
 "m": "US",
 "date": "2026-11-09",
 "text": "agents/work/8k/DOLE_2026-11-09.txt",
+"priority": 2,
+"mcap_bn": 1.3
+},
+{
+"t": "UTZ",
+"name": "Utz Brands Inc ",
+"m": "US",
+"date": "2026-11-06",
+"text": "agents/work/8k/UTZ_2026-11-06.txt",
 "priority": 2,
 "mcap_bn": 1.3
 },
