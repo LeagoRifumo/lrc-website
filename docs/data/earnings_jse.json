@@ -705,6 +705,40 @@
    "covered": false
   },
   {
+   "date": "2026-11-11",
+   "ticker": "PPE",
+   "name": "Purple Group",
+   "when": "Not stated",
+   "period": "Year to 31 Aug 2026",
+   "quarter": "",
+   "eps_forecast": "",
+   "market_cap_bn": null,
+   "reported": true,
+   "result": "up",
+   "eps_actual": null,
+   "eps_est": null,
+   "surprise": null,
+   "heps": 5.47,
+   "heps_prior": 4.3,
+   "unit": "c",
+   "change": 0.2721,
+   "measure": "HEPS",
+   "dps": null,
+   "source": "Purple Group SENS — Audited consolidated results for the year ended 31 August 2026 and distribution of annual report and notice of AGM (11 Nov 2026); figures from Purple Group Annual Report 2026 https://www.purplegroup.co.za/results/full_results/2026/31%20August%202026%20Full%20Results.pdf (HEPS 5.47c vs 4.30c; basic EPS 5.58c vs 4.30c; no dividend declaration found)",
+   "px_move": {
+    "move": -0.0272,
+    "from": "2026-11-10",
+    "to": "2026-11-12"
+   },
+   "t": "PPE.JO",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "SELL",
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
    "date": "2026-11-12",
    "ticker": "APH",
    "name": "Alphamin Resources Corp.",
@@ -1218,7 +1252,14 @@
    "idea": null,
    "v": "BUY",
    "iv": "BUY",
-   "track": null
+   "track": null,
+   "ts": {
+    "date": "2026-11-12",
+    "low": -0.06,
+    "high": -0.01,
+    "period": "Year to 30 Sep 2026",
+    "source": "Life Healthcare SENS — Trading statement for the year ended 30 September 2026 (12 Nov 2026), via ShareData https://sharedata.co.za/sens.asp?id=566166 (continuing operations: HEPS expected 100.7c to 106.0c vs 107.1c pro forma for 2025 (93.9c loss as reported), 1%-6% lower; normalised EPS 106.3c to 111.3c vs 100.3c, 6%-11% higher; total operations HEPS 96.0c to 100.5c vs 88.9c pro forma, 8%-13% higher; results expected on or about 26 Nov 2026)"
+   }
   },
   {
    "date": "2026-11-26",
@@ -1348,6 +1389,6 @@
   }
  ],
  "note": "Partial list: no company-published date could be found this week for, among others, MTN, Reinet, Woolworths, Shoprite, Bidvest, Discovery, FirstRand, Sasol, Aspen, Lewis and Cashbuild; they will be added when dates are published. Attacq (pre-close 24 Nov) and Growthpoint (pre-close 26 Nov) appear only on the SA REIT reporting schedule and are not listed until the companies publish them. Standard Bank's pre-close call (14 Dec) falls just after this window.",
- "synced": "2026-11-13T18:44+02:00",
+ "synced": "2026-11-13T18:59+02:00",
  "coverage_note": "Ticked = on the LRC watchlist. Every company the LRC Stock Scanner tracks shows its trading and investment ratings. Updated after every scanner run."
 }

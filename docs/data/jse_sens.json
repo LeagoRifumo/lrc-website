@@ -1,6 +1,6 @@
 {
  "note": "JSE company announcements (SENS) recorded by the LRC JSE Announcements job every weekday. results = published results with headline earnings per share (HEPS) vs the same period last year; trading_statements = expected HEPS change ranges; dividends = declared dividends with the JSE dates. Amounts in cents. Every entry carries its source.",
- "updated": "2026-11-11T19:45+02:00",
+ "updated": "2026-11-13T19:30+02:00",
  "results": [
   {
    "t": "CLS.JO",
@@ -151,6 +151,26 @@
    "unit": "c",
    "dps": 55.95655,
    "source": "Dipula Properties SENS — Audited consolidated financial results for the year ended 31 August 2026 and guidance (11 Nov 2026), via Sharenet https://www.sharenet.co.za/v3/sens_display.php?tdate=20261111080000&seq=17&scode="
+  },
+  {
+   "t": "PPE.JO",
+   "name": "Purple Group",
+   "date": "2026-11-11",
+   "period": "Year to 31 Aug 2026",
+   "heps": 5.47,
+   "heps_prior": 4.3,
+   "unit": "c",
+   "source": "Purple Group SENS — Audited consolidated results for the year ended 31 August 2026 and distribution of annual report and notice of AGM (11 Nov 2026); figures from Purple Group Annual Report 2026 https://www.purplegroup.co.za/results/full_results/2026/31%20August%202026%20Full%20Results.pdf (HEPS 5.47c vs 4.30c; basic EPS 5.58c vs 4.30c; no dividend declaration found)"
+  },
+  {
+   "t": "CFR.JO",
+   "name": "Richemont",
+   "date": "2026-11-13",
+   "period": "Six months to 30 Sep 2026",
+   "heps": 427.0,
+   "heps_prior": 301.0,
+   "unit": "EURc",
+   "source": "Richemont SENS / press release — Richemont posts strong results for the six-month period ended 30 September 2026 driven by sustained double-digit sales growth (13 Nov 2026) https://www.richemont.com/news-media/press-releases-news/richemont-posts-strong-results-for-the-six-month-period-ended-30-september-2026-driven-by-sustained-double-digit-sales-growth/ (figures in euro: basic HEPS €4.27 vs €3.01; diluted HEPS €4.26 vs €3.00; headline earnings €2 512m vs €1 768m; no interim dividend — Richemont pays an annual dividend)"
   }
  ],
  "trading_statements": [
@@ -193,6 +213,14 @@
    "heps_change_low": 0.223,
    "heps_change_high": 0.323,
    "source": "Purple Group SENS — Trading statement for the year ended 31 August 2026 (6 Nov 2026), via Sharetrack SENS feed https://www.sharetrackinnow.co.za/newsfeed_sens.php (HEPS expected 5.26c to 5.69c vs 4.30c, 22.3%-32.3% higher; EPS 5.37c to 5.80c vs 4.30c; results on or about 11 Nov 2026)"
+  },
+  {
+   "t": "LHC.JO",
+   "date": "2026-11-12",
+   "period": "Year to 30 Sep 2026",
+   "heps_change_low": -0.06,
+   "heps_change_high": -0.01,
+   "source": "Life Healthcare SENS — Trading statement for the year ended 30 September 2026 (12 Nov 2026), via ShareData https://sharedata.co.za/sens.asp?id=566166 (continuing operations: HEPS expected 100.7c to 106.0c vs 107.1c pro forma for 2025 (93.9c loss as reported), 1%-6% lower; normalised EPS 106.3c to 111.3c vs 100.3c, 6%-11% higher; total operations HEPS 96.0c to 100.5c vs 88.9c pro forma, 8%-13% higher; results expected on or about 26 Nov 2026)"
   }
  ],
  "dividends": [
