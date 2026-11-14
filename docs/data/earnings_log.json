@@ -10784,7 +10784,13 @@
 "eps_yago": -0.57,
 "n_est": 12,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -0.64,
+"eps_est": -0.8097,
+"surprise": 0.2095,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "CG|2026-11-04": {
 "t": "CG",
@@ -27490,7 +27496,13 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.0
+"market_cap_bn": 1.0,
+"eps_actual": -0.42,
+"eps_est": -0.7864,
+"surprise": 0.4659,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "JBIO|2026-11-16": {
 "t": "JBIO",
@@ -28193,7 +28205,13 @@
 "eps_forecast": "$3.94",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 40.4
+"market_cap_bn": 40.4,
+"eps_actual": 5314.0,
+"eps_est": 5001.0,
+"surprise": 0.0626,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "KC|2026-11-18": {
 "t": "KC",
@@ -31183,7 +31201,13 @@
 "eps_forecast": "$1.07",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 12.7
+"market_cap_bn": 12.7,
+"eps_actual": 1.439,
+"eps_est": 1.236,
+"surprise": 0.1638,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "LULU|2026-12-10": {
 "t": "LULU",
@@ -32567,7 +32591,13 @@
 "eps_yago": 0.2077,
 "n_est": 2,
 "rcur": "JPY",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.2442,
+"eps_est": 0.2092,
+"surprise": 0.1671,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "MFP|2026-11-12": {
 "t": "MFP",
@@ -34487,7 +34517,13 @@
 "eps_yago": 0.4245,
 "n_est": 2,
 "rcur": "JPY",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.4561,
+"eps_est": 0.4467,
+"surprise": 0.021,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "MUR|2026-11-04": {
 "t": "MUR",
@@ -35215,7 +35251,13 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 0.9
+"market_cap_bn": 0.9,
+"eps_actual": -0.01078,
+"eps_est": -0.007,
+"surprise": -0.54,
+"result": "miss",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "NEXA|2026-10-29": {
 "t": "NEXA",
@@ -45545,7 +45587,13 @@
 "eps_forecast": "$2.52",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 31.0
+"market_cap_bn": 31.0,
+"eps_actual": 2.483,
+"eps_est": 2.326,
+"surprise": 0.0675,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "SHLS|2026-11-04": {
 "t": "SHLS",
@@ -46478,7 +46526,13 @@
 "eps_yago": 0.5612,
 "n_est": 2,
 "rcur": "JPY",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.2483,
+"eps_est": 0.2448,
+"surprise": 0.0145,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "SMG|2026-11-04": {
 "t": "SMG",
@@ -47159,7 +47213,13 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 1.8
+"market_cap_bn": 1.8,
+"eps_actual": 1.39,
+"eps_est": 0.9042,
+"surprise": 0.5373,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "SPCX|2026-10-20": {
 "t": "SPCX",
@@ -51817,7 +51877,13 @@
 "eps_forecast": "($0.44)",
 "quarter": "Sep/2026",
 "period": null,
-"market_cap_bn": 9.3
+"market_cap_bn": 9.3,
+"eps_actual": -0.3186,
+"eps_est": -0.203,
+"surprise": -0.5695,
+"result": "miss",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "TW|2026-10-29": {
 "t": "TW",
