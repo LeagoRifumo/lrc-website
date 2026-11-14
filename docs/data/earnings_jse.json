@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-07T11:30+02:00",
+ "generated": "2026-11-14T13:30+02:00",
  "market": "JSE",
- "window": "2026-11-09 to 2026-12-11",
- "source": "Compiled 7 Nov 2026 by LRC Research from company investor-relations financial calendars and SENS/RNS announcements (via ShareData, Listcorp and company sites); each item names its source. Only company-confirmed or company-published expected dates are listed; expected dates are marked in 'period'. Market caps in Rand bn from Yahoo Finance closes on 6 Nov 2026 where shown, otherwise null. Dates marked \"expected (market data feed)\" are added automatically for every JSE company the LRC Stock Scanner tracks.",
+ "window": "2026-11-16 to 2026-12-18",
+ "source": "Compiled 14 Nov 2026 by LRC Research from company investor-relations financial calendars and SENS announcements (Ninety One, Telkom, NEPI Rockcastle, Sanlam, Mr Price, Pepkor, Naspers, Tiger Brands, Life Healthcare, Oceana, Vukile, Exxaro, Hyprop, Old Mutual, Standard Bank, Nampak, Astral and Netcare SENS via ShareData/Listcorp, Montauk via GlobeNewswire); Sirius Real Estate and Investec dates from Hargreaves Lansdown/MarketScreener calendars (company pages did not load). Only company-confirmed or company-published expected dates are listed; expected dates are marked in 'period'. Market caps in Rand bn from the LRC Stock Scanner (Yahoo Finance closes 13 Nov 2026) where shown, otherwise null. Dates marked \"expected (market data feed)\" are added automatically for every JSE company the LRC Stock Scanner tracks.",
  "items": [
   {
    "date": "2026-10-22",
@@ -890,12 +890,13 @@
   {
    "date": "2026-11-16",
    "ticker": "MKR",
-   "name": "Montauk Renewables, Inc.",
+   "name": "Montauk Renewables",
    "when": "Not stated",
-   "period": "Expected date (market data feed) — confirm on SENS",
+   "period": "Q3 2026 results to 30 Sep 2026 (released before the US open; call 15:30 SAST; rescheduled per company release 12 Nov)",
    "eps_forecast": "",
    "market_cap_bn": 2.8,
-   "auto": true,
+   "covered": true,
+   "lrc_rating": null,
    "t": "MKR.JO",
    "lists": [
     "Trading SELL"
@@ -910,9 +911,7 @@
    "n_est": 2,
    "rcur": "USD",
    "qend": "2026-09-30",
-   "track": null,
-   "lrc_rating": null,
-   "covered": true
+   "track": null
   },
   {
    "date": "2026-11-16",
@@ -1013,24 +1012,6 @@
   },
   {
    "date": "2026-11-17",
-   "ticker": "CML",
-   "name": "Coronation Fund Managers",
-   "when": "Not stated",
-   "period": "Annual to 30 Sep 2026 (expected)",
-   "eps_forecast": "",
-   "market_cap_bn": 13.7,
-   "source": "Coronation SENS trading statement 27 Oct 2026 (results 'on or about 17 November 2026'), via ShareData https://www.sharedata.co.za/Data/007073/news.htm ; seen 2026-11-07; market cap R13.7bn = Yahoo Finance close 6 Nov 2026 via the LRC Stock Scanner",
-   "covered": false,
-   "lrc_rating": null,
-   "t": "CML.JO",
-   "lists": [],
-   "idea": null,
-   "v": "HOLD",
-   "iv": "HOLD",
-   "track": null
-  },
-  {
-   "date": "2026-11-17",
    "ticker": "TKG",
    "name": "Telkom SA SOC",
    "when": "Not stated",
@@ -1107,6 +1088,24 @@
   },
   {
    "date": "2026-11-19",
+   "ticker": "SPP",
+   "name": "Spar",
+   "when": "Not stated",
+   "period": "Expected date (market data feed) — confirm on SENS",
+   "eps_forecast": "",
+   "market_cap_bn": 9.0,
+   "auto": true,
+   "t": "SPP.JO",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "SELL",
+   "track": null,
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
+   "date": "2026-11-19",
    "ticker": "INL",
    "name": "Investec Limited",
    "when": "Not stated",
@@ -1128,7 +1127,7 @@
    "ticker": "MRP",
    "name": "Mr Price Group",
    "when": "Before open",
-   "period": "Interim to Sep 2026 (expected)",
+   "period": "Interim to Sep 2026 (expected: open period from 20 Nov 07:05 per company IR calendar)",
    "eps_forecast": "",
    "market_cap_bn": 49.3,
    "source": "Mr Price investor relations ('Open period: 20 November 2026 from 07h05' and results webcast link dated 20 Nov 2026) https://www.mrpricegroup.com/investor-relations ; seen 2026-11-07; market cap R49.3bn = Yahoo Finance close 6 Nov 2026 via the LRC Stock Scanner",
@@ -1143,22 +1142,28 @@
   },
   {
    "date": "2026-11-23",
-   "ticker": "MTM",
-   "name": "Momentum Group",
+   "ticker": "ARL",
+   "name": "Astral Foods",
    "when": "Not stated",
-   "period": "Operating update for three months to 30 Sep 2026",
+   "period": "Annual to 30 Sep 2026 (expected: SENS on 23 Nov per trading statement 29 Oct 2026)",
    "eps_forecast": "",
-   "market_cap_bn": null,
-   "source": "Momentum Group investor relations shareholder diary https://wwpre.momentumgroupltd.co.za/investor-relations (company domain, 'wwpre' host; AGM 26 Nov 2026); seen 2026-10-31 | Not re-confirmed 7 Nov 2026 (shareholder diary did not load)",
+   "market_cap_bn": 7.4,
    "covered": true,
    "lrc_rating": null,
-   "t": "MTM.JO",
+   "t": "ARL.JO",
    "lists": [
-    "Trading BUY"
+    "Investment BUY"
    ],
-   "idea": "Technical setups",
-   "v": "STRONG BUY",
-   "iv": "HOLD",
+   "idea": null,
+   "v": "HOLD",
+   "iv": "BUY",
+   "ts": {
+    "date": "2026-10-29",
+    "low": 0.95,
+    "high": 1.05,
+    "period": "Year to 30 Sep 2026",
+    "source": "Astral Foods SENS — Trading statement and operational update (29 Oct 2026) https://www.astralfoods.com/wp-content/uploads/2026/10/Trading-Statement-and-Operational-Update-29-October-2026.pdf (HEPS expected 4 277c to 4 496c vs 2 193c; EPS up 90%-100% to 4 324c-4 552c vs 2 276c; results on SENS on 23 Nov 2026)"
+   },
    "track": null
   },
   {
@@ -1166,7 +1171,7 @@
    "ticker": "NTC",
    "name": "Netcare",
    "when": "Not stated",
-   "period": "Annual results to 30 Sep 2026 (webcast 09:00 SAST)",
+   "period": "Annual results to 30 Sep 2026 (expected: \"on or about 23 November\", SENS 30 Sep 2026; webcast 09:00 SAST)",
    "eps_forecast": "",
    "market_cap_bn": null,
    "source": "Netcare 'Key date calendar' https://netcare.co.za/Netcare-Investor-Relations/News/Key-date-calendar (Mon 23 Nov 2026, webcast 09:00; note webcast link slug looks stale); corroborated by Business Day 30 Sep 2026; seen 2026-10-31 | Re-confirmed 7 Nov 2026",
@@ -1299,7 +1304,7 @@
    "ticker": "VKE",
    "name": "Vukile Property Fund",
    "when": "Not stated",
-   "period": "Interim to 30 Sep 2026",
+   "period": "Interim to 30 Sep 2026 (results presentation 12:30 SAST)",
    "eps_forecast": "",
    "market_cap_bn": 38.1,
    "source": "Vukile investor calendar ('30 Nov 2026: Interim Results Presentation') https://www.vukile.co.za/investor-calendar/ ; seen 2026-11-07; market cap R38.1bn = Yahoo Finance close 6 Nov 2026 via the LRC Stock Scanner",
@@ -1367,11 +1372,30 @@
    "track": null
   },
   {
+   "date": "2026-12-02",
+   "ticker": "NPK",
+   "name": "Nampak",
+   "when": "Not stated",
+   "period": "Annual to 30 Sep 2026 (webcast 10:00 SAST)",
+   "eps_forecast": "",
+   "market_cap_bn": 4.5,
+   "covered": true,
+   "lrc_rating": null,
+   "t": "NPK.JO",
+   "lists": [
+    "Trading BUY"
+   ],
+   "idea": null,
+   "v": "BUY",
+   "iv": "HOLD",
+   "track": null
+  },
+  {
    "date": "2026-12-03",
    "ticker": "OMU",
    "name": "Old Mutual",
    "when": "Not stated",
-   "period": "Q3 2026 voluntary operating update (update call 16:00 SAST)",
+   "period": "Q3 2026 voluntary operating update and pre-close call 16:00 SAST (provisional per company diary)",
    "eps_forecast": "",
    "market_cap_bn": null,
    "source": "Old Mutual 'Investor relations' shareholder diary https://www.oldmutual.com/investor-relations (dates provisional); seen 2026-10-31 | Re-confirmed 7 Nov 2026",
@@ -1385,25 +1409,24 @@
    "track": null
   },
   {
-   "date": "2026-12-04",
-   "ticker": "SPP",
-   "name": "The SPAR Group",
+   "date": "2026-12-14",
+   "ticker": "SBK",
+   "name": "Standard Bank Group",
    "when": "Not stated",
-   "period": "Annual results FY2026 to Sep 2026 (expected)",
+   "period": "FY2026 pre-close call",
    "eps_forecast": "",
-   "market_cap_bn": null,
-   "source": "SPAR SENS update 28 Sep 2026 (FY2026 results expected 'on or about 4 December 2026'), as shown on ShareData SPAR news page https://sharedata.co.za/Data/002201/news.htm ; seen 2026-10-31 | Not re-confirmed 7 Nov 2026 (SPAR investors page shows no annual date)",
+   "market_cap_bn": 494.2,
    "covered": false,
    "lrc_rating": null,
-   "t": "SPP.JO",
+   "t": "SBK.JO",
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "SELL",
+   "iv": "BUY",
    "track": null
   }
  ],
- "note": "Partial list: no company-published date could be found this week for, among others, MTN, Reinet, Woolworths, Shoprite, Bidvest, Discovery, FirstRand, Sasol, Aspen, Lewis and Cashbuild; they will be added when dates are published. Attacq (pre-close 24 Nov) and Growthpoint (pre-close 26 Nov) appear only on the SA REIT reporting schedule and are not listed until the companies publish them. Standard Bank's pre-close call (14 Dec) falls just after this window.",
- "synced": "2026-11-14T07:31+02:00",
+ "note": "Partial list. Removed this week because no company source could be found: Coronation (17 Nov) and SPAR (4 Dec). Momentum's operating update is not listed: its diary could not be opened and MarketScreener now shows 25 Nov instead of 23 Nov. Reinet (30 Nov) and Nutun (1 Dec) appear only on third-party calendars and are not listed. No published date in the window was found for MTN, Shoprite, Bidvest, Discovery, FirstRand, Sasol, Aspen, Lewis, Nedbank, Absa, Growthpoint, Attacq, Italtile, Super Group, Remgro, Motus or Sun International.",
+ "synced": "2026-11-14T08:54+02:00",
  "coverage_note": "Ticked = on the LRC watchlist. Every company the LRC Stock Scanner tracks shows its trading and investment ratings. Updated after every scanner run."
 }

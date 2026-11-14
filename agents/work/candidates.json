@@ -1,354 +1,393 @@
 {
- "date": "2026-11-07",
- "note": "Pool taken from the LRC Scanner (docs/data/scan/stocks.json, generated 2026-11-07 07:30 SAST, prices to 6 Nov; fresh). Screens: Swing Long = BUY/STRONG BUY with Breakout or Retest; Swing Short = SELL/STRONG SELL with Breakdown or Failed retest; Investment = grade A with positive margin of safety; market cap > $2bn / R2bn; names on the LRC watchlist lists and last week's candidates excluded. The strongest names per screen and market were checked on StockAnalysis, ShareData, company releases and SEC filings; many StockAnalysis pages were cached copies dated 5-27 Oct, so moving averages carry that date (sma_asof). 5 of 10 pass (CHE, AMRX, MRP, PIK, MU); no Swing Short passed. Not added to the watchlist: a name enters only after the analyst completes a Work-sheet.",
+ "date": "2026-11-14",
+ "note": "Pool taken from the LRC Scanner (docs/data/scan/stocks.json, generated 2026-11-14 07:31 SAST, prices to 13 Nov; fresh). Screens: Swing Long = BUY/STRONG BUY with Breakout or Retest; Swing Short = SELL/STRONG SELL with Breakdown or Failed retest; Investment = grade A with positive margin of safety; market cap > $2bn / R2bn; names on the LRC watchlist lists and last week's candidates excluded. Strongest names per screen and market (only one JSE name qualified per screen) checked on company releases, StockAnalysis, Yahoo Finance and ShareData; many StockAnalysis pages were cached copies, so moving averages and RSI carry their own dates. 10 listed; the three shorts pass on technicals only (consensus targets sit above the price), and LHC passes with only ~5% consensus upside and results on 26 Nov. Not added to the watchlist: a name enters only after the analyst completes a Work-sheet.",
  "candidates": [
   {
    "screen": "Swing Long",
    "market": "US",
-   "ticker": "CHE",
-   "name": "Chemed Corporation",
-   "sector": "Healthcare",
-   "price": 528.05,
-   "price_date": "2026-11-06",
-   "mcap_bn": 6.93,
+   "ticker": "HURN",
+   "name": "Huron Consulting Group",
+   "sector": "Industrials",
+   "price": 169.64,
+   "price_date": "2026-11-13",
+   "mcap_bn": 2.96,
    "mcap_ccy": "USD",
    "metrics": {
-    "sma50": 514.57,
-    "sma200": 464.9,
-    "sma_asof": "2026-11-06",
-    "rsi": 52.96,
-    "forward_pe": 19.51,
-    "roe_pct": 29.14,
-    "eps_growth_fy26_pct": 18.3,
-    "target_avg": 571.6,
-    "setup": "Retest of 518.9 (just above SMA50)"
+    "sma50": 162.94,
+    "sma200": 138.05,
+    "sma_asof": "2026-10-26",
+    "rsi": null,
+    "forward_pe": 20.63,
+    "roe_pct": 26.88,
+    "eps_growth_fy26_pct": 17.5,
+    "target_avg": 190.75,
+    "setup": "Retest of 169.1 after a ~15% pullback from the late-October high"
    },
-   "latest_results": "Q3 2026 (27 Oct): revenue $690.9m +10.6%; GAAP EPS $5.45 +22.2%; adjusted EPS $6.75 +28.1%; FY guidance at or slightly above high end",
+   "latest_results": "Q3 2026 (3 Nov): revenue before reimbursables $482.5m +11.6%; GAAP EPS $1.75; adjusted EPS $2.62 +24.8%; FY26 guidance raised (adj. EPS $9.20-9.40)",
    "next_earnings": null,
    "passes": true,
-   "why_passes": "Price 528.05 > SMA50 514.57 and SMA200 464.90 on 6 Nov data; RSI 53; Retest holds above SMA50",
-   "scanner_contradictions": [],
+   "why_passes": "Close 169.64 on 13 Nov sits on the 169.1 retest level and above SMA50/SMA200; results beat and guidance raised; ROE 27%, EPS growth +17.5%",
+   "scanner_contradictions": [
+    "Scanner target 198.2 vs StockAnalysis consensus 190.75 (dated 29 Jul)"
+   ],
+   "unverified": [
+    "current RSI",
+    "next earnings date"
+   ],
+   "sources": [
+    "Equibles HURN price https://equibles.com/stocks/hurn/price (13 Nov 2026)",
+    "StockAnalysis HURN statistics (cached 27 Oct 2026) and forecast (29 Jul 2026)",
+    "Huron Q3 2026 release https://www.sec.gov/Archives/edgar/data/0001289848/000162828026069509/hurn2026930exh991.htm (3 Nov 2026)"
+   ]
+  },
+  {
+   "screen": "Swing Long",
+   "market": "US",
+   "ticker": "ADUS",
+   "name": "Addus HomeCare",
+   "sector": "Healthcare",
+   "price": 126.29,
+   "price_date": "2026-11-10",
+   "mcap_bn": 2.35,
+   "mcap_ccy": "USD",
+   "metrics": {
+    "sma50": 117.6,
+    "sma200": 106.78,
+    "sma_asof": "2026-11-06",
+    "rsi": null,
+    "forward_pe": 16.36,
+    "roe_pct": 9.96,
+    "eps_growth_fy26_pct": 13.1,
+    "target_avg": 134.08,
+    "setup": "Retest of 121.5"
+   },
+   "latest_results": "Q3 2026 (3 Nov): revenue $387.7m +7.0%; adjusted EPS $1.83 +17.3%; adj. EBITDA $51.2m +13.5%; AccentCare personal-care deal (~$275m) pending",
+   "next_earnings": null,
+   "passes": true,
+   "why_passes": "Above SMA50 and SMA200 (Yahoo, 6 Nov); fundamentals match the scanner (ROE 10%, FY26 EPS +13%)",
+   "scanner_contradictions": [
+    "Scanner target 139.6 vs consensus 134.08 (StockAnalysis, 7 Oct) / 140.92 (Yahoo)"
+   ],
+   "unverified": [
+    "13 Nov close (scanner 123.00; last sourced 126.29 on 10 Nov)",
+    "current RSI",
+    "next earnings date"
+   ],
+   "sources": [
+    "Yahoo Finance ADUS quote and key statistics (10 Nov / 6 Nov 2026)",
+    "StockAnalysis ADUS forecast (cached 7 Oct 2026)",
+    "Addus Q3 2026 release https://www.sec.gov/Archives/edgar/data/0001468328/000143774926034669/ex_1037131.htm (3 Nov 2026)"
+   ]
+  },
+  {
+   "screen": "Swing Long",
+   "market": "US",
+   "ticker": "INCY",
+   "name": "Incyte",
+   "sector": "Healthcare",
+   "price": 120.97,
+   "price_date": "2026-11-13",
+   "mcap_bn": 24.66,
+   "mcap_ccy": "USD",
+   "metrics": {
+    "sma50": 121.26,
+    "sma200": 107.78,
+    "sma_asof": "2026-10-26",
+    "rsi": 47.82,
+    "rsi_asof": "2026-10-26",
+    "forward_pe": 15.35,
+    "roe_pct": 30.67,
+    "eps_growth_fy26_pct": -49.1,
+    "target_avg": 131.5,
+    "setup": "Retest of 120.0"
+   },
+   "latest_results": "Q3 2026 (29 Oct): revenue $1.56bn +14% (Jakafi $827m +4%, Opzelura $255m +36%); GAAP EPS -$3.86 on a $1.23bn IPR&D charge (Vega Therapeutics); FY26 net sales guidance raised to $5.21-5.30bn",
+   "next_earnings": null,
+   "passes": true,
+   "why_passes": "Close 120.97 at the 120.0 retest level, above SMA200; sales guidance raised; 2026 EPS distorted by a one-off charge",
+   "scanner_contradictions": [
+    "Consensus target 131.5 (28 analysts), not 142.3: upside about 9%"
+   ],
+   "unverified": [
+    "current SMA50/RSI",
+    "next earnings date"
+   ],
+   "sources": [
+    "StockAnalysis INCY overview https://stockanalysis.com/stocks/incy/ (13 Nov close, seen 14 Nov 2026)",
+    "StockAnalysis INCY statistics (cached 26 Oct) and forecast (6 Nov 2026)",
+    "Incyte Q3 2026 release https://www.sec.gov/Archives/edgar/data/0000879169/000087916926000063/incy-q32026xexx991.htm (29 Oct 2026)"
+   ]
+  },
+  {
+   "screen": "Swing Long",
+   "market": "JSE",
+   "ticker": "LHC",
+   "name": "Life Healthcare",
+   "sector": "Healthcare",
+   "price": 12.44,
+   "price_date": "2026-11-13",
+   "mcap_bn": 18.2,
+   "mcap_ccy": "ZAR",
+   "metrics": {
+    "sma50": 11.61,
+    "sma200": 11.36,
+    "sma_asof": "2026-10-05",
+    "rsi": 50.13,
+    "rsi_asof": "2026-10-05",
+    "forward_pe": 9.84,
+    "roe_pct": 14.29,
+    "eps_growth_fy26_pct": 11.86,
+    "target_avg": 13.01,
+    "setup": "Retest of R12.40"
+   },
+   "latest_results": "Interims to 31 Mar 2026 (28 May): revenue R12.4bn +2.4%; normalised EPS 53.1c +8.4%; trading update 11 Sep: 11-month revenue +1.7%, normalised EBITDA +5.7%; trading statement 12 Nov 2026",
+   "next_earnings": "2026-11-26",
+   "passes": true,
+   "why_passes": "Close R12.44 holds the R12.40 retest above SMA50/SMA200; ROE 14%, EPS growth +11.9%; but consensus upside only ~5% and results on 26 Nov are event risk",
+   "scanner_contradictions": [
+    "Consensus target R13.01 (4 analysts), not R15.36",
+    "Forward P/E 9.1-9.8, not 10.5"
+   ],
+   "unverified": [
+    "current SMA/RSI (pages cached 5 Oct)"
+   ],
+   "sources": [
+    "ShareData LHC quote https://sharedata.co.za/v2/scripts/Quote_Other.aspx?c=LHC (13 Nov 2026)",
+    "StockAnalysis LHC statistics (cached 5 Oct 2026) and forecast",
+    "Life Healthcare interim results https://www.lifehealthcare.co.za/news-and-info-hub/life-healthcare-2026-unaudited-group-interim-results/ (28 May 2026)",
+    "Life Healthcare IR calendar https://www.lifehealthcare.co.za/investor-relations/investor-relations-calendar-of-finance-events/ (14 Nov 2026)"
+   ]
+  },
+  {
+   "screen": "Swing Short",
+   "market": "US",
+   "ticker": "CARR",
+   "name": "Carrier Global",
+   "sector": "Industrials",
+   "price": 54.2,
+   "price_date": "2026-11-13",
+   "mcap_bn": 44.48,
+   "mcap_ccy": "USD",
+   "metrics": {
+    "sma50": 55.56,
+    "sma200": 61.69,
+    "sma_asof": "2026-11-13",
+    "rsi": 37.33,
+    "rsi_asof": "2026-10-31",
+    "forward_pe": 16.99,
+    "roe_pct": -13.44,
+    "eps_growth_fy26_pct": 11.2,
+    "target_avg": 73.44,
+    "setup": "Failed retest of 54.54"
+   },
+   "latest_results": "Q3 2026 (29 Oct): sales $6.263bn +12% (organic +15%); GAAP EPS -$3.16 on goodwill impairment; adjusted EPS $0.87 +30%; FY26 guide adj. EPS $2.85-2.90",
+   "next_earnings": null,
+   "passes": true,
+   "why_passes": "Close 54.20 below SMA50 55.56 and SMA200 61.69 after failing at 54.54 (technical pass only)",
+   "scanner_contradictions": [
+    "Consensus target $73.44 (26 analysts, Buy) is ~35% above the price; scanner 47.11 is its own value",
+    "Negative ROE comes from a one-off impairment"
+   ],
    "unverified": [
     "next earnings date"
    ],
    "sources": [
-    "StockAnalysis CHE statistics https://stockanalysis.com/stocks/CHE/statistics/ (7 Nov 2026)",
-    "StockAnalysis CHE forecast https://stockanalysis.com/stocks/che/forecast/ (22 Oct 2026)",
-    "Chemed Q3 2026 release https://www.sec.gov/Archives/edgar/data/0000019584/000001958426000022/che-20261027xex99.htm (27 Oct 2026)"
+    "Yahoo Finance CARR key statistics https://finance.yahoo.com/quote/carr/key-statistics (13 Nov 2026)",
+    "StockAnalysis CARR statistics (cached 31 Oct) and forecast (cached 20 Oct 2026)",
+    "Carrier Q3 2026 results https://finviz.com/news/411135/carrier-reports-third-quarter-2026-results (29 Oct 2026)"
    ]
   },
   {
-   "screen": "Swing Long",
+   "screen": "Swing Short",
    "market": "US",
-   "ticker": "AMRX",
-   "name": "Amneal Pharmaceuticals, Inc.",
-   "sector": "Healthcare",
-   "price": 20.14,
-   "price_date": "2026-11-06",
-   "mcap_bn": 7.04,
+   "ticker": "MC",
+   "name": "Moelis & Company",
+   "sector": "Financial Services",
+   "price": 56.0,
+   "price_date": "2026-11-13",
+   "mcap_bn": 4.53,
    "mcap_ccy": "USD",
    "metrics": {
-    "sma50": 18.69,
-    "sma200": 15.46,
-    "sma_asof": "2026-10-22",
-    "rsi": 59.75,
-    "forward_pe": 20.13,
-    "eps_growth_fy26_pct": 23.4,
-    "target_avg": 22.71,
-    "setup": "Retest of 18.56 (about at SMA50)"
+    "sma50": 61.22,
+    "sma200": 64.4,
+    "sma_asof": "2026-10-25",
+    "rsi": 39.47,
+    "rsi_asof": "2026-10-25",
+    "forward_pe": 15.79,
+    "roe_pct": 41.45,
+    "eps_growth_fy26_pct": 2.8,
+    "target_avg": 65.7,
+    "setup": "Failed retest of 57.59"
    },
-   "latest_results": "Q3 2026 (3 Nov): revenue $863m +10%; GAAP loss/share $(0.06) on Kashiv deal costs; adjusted EPS $0.26 +53%; FY26 adj. EPS guidance raised to $1.04-1.08",
+   "latest_results": "Q3 2026 (5 Nov): revenue $425.6m +19%; adjusted EPS $0.75 +10%; dividend $0.65; \"record pipeline\"",
    "next_earnings": null,
    "passes": true,
-   "why_passes": "On 22-Oct SMAs price is above SMA50 18.69 and SMA200 15.46; FY26 guidance raised",
+   "why_passes": "Close 56.00 below the 57.59 failed-retest level and both moving averages (technical pass only)",
    "scanner_contradictions": [
-    "ROE 613% on StockAnalysis is distorted by $117m book equity"
+    "EPS growth +2.8%, not -0.4%",
+    "Market cap $4.53bn, not $4.1bn",
+    "Consensus target $65.70 is ~17% above the price"
    ],
    "unverified": [
-    "SMA/RSI as of 6 Nov",
-    "6 Nov close (Yahoo via LRC Scanner only)"
+    "current SMA/RSI",
+    "next earnings date"
    ],
    "sources": [
-    "StockAnalysis AMRX statistics https://stockanalysis.com/stocks/amrx/statistics/ (22 Oct 2026)",
-    "StockAnalysis AMRX forecast https://stockanalysis.com/stocks/amrx/forecast/ (21 Oct 2026)",
-    "Amneal Q3 2026 release https://www.sec.gov/Archives/edgar/data/0001723128/000172312826000035/amrx-q32026ex991.htm (3 Nov 2026)"
+    "StockAnalysis MC overview https://www.stockanalysis.com/stocks/mc/ (13 Nov close, seen 14 Nov 2026)",
+    "StockAnalysis MC statistics (cached 25 Oct) and forecast (cached 20 Aug 2026)",
+    "Moelis Q3 2026 release https://last10k.com/sec-filings/mc/0001193125-26-449895.htm (5 Nov 2026)"
    ]
   },
   {
-   "screen": "Swing Long",
+   "screen": "Swing Short",
    "market": "JSE",
-   "ticker": "MRP",
-   "name": "Mr Price Group",
-   "sector": "Consumer Cyclical",
-   "price": 191.76,
-   "price_date": "2026-11-06",
-   "mcap_bn": 50.31,
-   "mcap_ccy": "ZAR",
-   "metrics": {
-    "sma50": 166.22,
-    "sma200": 166.48,
-    "sma_asof": "2026-10-14",
-    "rsi": 56.66,
-    "pe": 13.19,
-    "forward_pe": 11.12,
-    "roe_pct": 25.88,
-    "div_yield_pct": 4.78,
-    "target_avg": 194.59,
-    "setup": "Breakout above R177.70"
-   },
-   "latest_results": "FY26 (5 Jun 2026): revenue +4.2%, normalised HEPS +8%; interim results 20 Nov 2026 (open period from 07h05)",
-   "next_earnings": "2026-11-20",
-   "passes": true,
-   "why_passes": "Price about 15% above the October SMA50/SMA200; breakout above R177.70; already close to the R194.59 average target; results in 2 weeks = event risk",
-   "scanner_contradictions": [],
-   "unverified": [
-    "SMA/RSI as of 6 Nov"
-   ],
-   "sources": [
-    "ShareData MRP quote https://www.sharedata.co.za/v2/Scripts/Quote.aspx?c=MRP (6 Nov 2026)",
-    "StockAnalysis MRP statistics https://stockanalysis.com/quote/jse/MRP/statistics (14 Oct 2026)",
-    "StockAnalysis MRP forecast https://stockanalysis.com/quote/jse/MRP/forecast/ (8 Oct 2026)",
-    "Mr Price investor relations https://www.mrpricegroup.com/investor-relations (7 Nov 2026)"
-   ]
-  },
-  {
-   "screen": "Swing Long",
-   "market": "JSE",
-   "ticker": "PIK",
-   "name": "Pick n Pay Stores",
-   "sector": "Consumer Defensive",
-   "price": 25.19,
-   "price_date": "2026-11-06",
-   "mcap_bn": 18.78,
-   "mcap_ccy": "ZAR",
-   "metrics": {
-    "sma50": 18.91,
-    "sma200": 20.51,
-    "sma_asof": "2026-10-05",
-    "rsi": 56.9,
-    "roe_pct": -1.78,
-    "setup": "Retest of R24.22 after the post-results gap"
-   },
-   "latest_results": "H1 FY27 (26 Oct): turnover R60.5bn +2.4%; Boxer +6.3%; headline loss/share 40.71c vs 59.77c; no interim dividend",
-   "next_earnings": null,
-   "passes": true,
-   "why_passes": "Price far above the October SMAs after the results gap; still loss-making (turnaround)",
-   "scanner_contradictions": [
-    "Scanner sector Consumer Cyclical; PIK is a food retailer"
-   ],
-   "unverified": [
-    "SMA/RSI as of 6 Nov",
-    "next results date"
-   ],
-   "sources": [
-    "ShareData PIK summary https://www.sharedata.co.za/v2/Scripts/Summary.aspx?c=PIK (6 Nov 2026)",
-    "StockAnalysis PIK statistics https://stockanalysis.com/quote/jse/PIK/statistics (5 Oct 2026)",
-    "Business Day 26 Oct 2026 https://www.businessday.co.za/companies/earnings/2026-10-26-pick-n-pay-narrows-loss-as-turnaround-strategy-bears-fruit/"
-   ]
-  },
-  {
-   "screen": "Investment",
-   "market": "US",
-   "ticker": "MU",
-   "name": "Micron Technology, Inc.",
-   "sector": "Technology",
-   "price": 690.0,
-   "price_date": "2026-11-06",
-   "mcap_bn": 780.7,
-   "mcap_ccy": "USD",
-   "metrics": {
-    "sma50": 961.64,
-    "sma200": 756.73,
-    "sma_asof": "2026-11-06",
-    "rsi": 31.27,
-    "forward_pe": 3.91,
-    "pe": 9.28,
-    "roe_pct": 88.26,
-    "roic_pct": 93.4,
-    "target_avg": 1561.91,
-    "margin_of_safety_pct": 55.8
-   },
-   "latest_results": "FY26 (to Sep 2026): revenue $133.19bn +256%, EPS $74.33 +879%",
-   "next_earnings": "2026-12-16",
-   "passes": true,
-   "why_passes": "Quality and value pass (ROE 88%, forward P/E 3.9, margin of safety 56% vs $1,561.91 average target); price below SMA50 and SMA200 after the 4-5 Nov selloff; earnings at a cyclical peak",
-   "scanner_contradictions": [
-    "Scanner margin of safety ~78% vs 55.8% on the sourced target",
-    "Scanner next earnings 23 Dec vs 16 Dec (after close) on StockAnalysis"
-   ],
-   "unverified": [],
-   "sources": [
-    "StockAnalysis MU statistics https://stockanalysis.com/stocks/mu/statistics/ (7 Nov 2026)",
-    "StockAnalysis MU quote https://stockanalysis.com/stocks/mu/ (5 Nov 2026)",
-    "TIKR 4 Nov 2026 https://www.tikr.com/blog/micron-sinks-6-as-democratic-sweep-stokes-fears-of-an-ai-slowdown-in-build"
-   ]
-  },
-  {
-   "screen": "Investment",
-   "market": "JSE",
-   "ticker": "KIO",
-   "name": "Kumba Iron Ore",
+   "ticker": "VAL",
+   "name": "Valterra Platinum",
    "sector": "Basic Materials",
-   "price": 225.72,
-   "price_date": "2026-11-06",
-   "mcap_bn": 72.7,
+   "price": 1143.55,
+   "price_date": "2026-11-13",
+   "mcap_bn": 296.97,
    "mcap_ccy": "ZAR",
    "metrics": {
-    "sma50": 231.63,
-    "sma200": 296.57,
-    "sma_asof": "2026-10-24",
-    "rsi": 43.22,
-    "pe": 6.11,
-    "forward_pe": 9.4,
-    "roe_pct": 21.71,
-    "div_yield_pct": 10.34,
-    "target_avg": 283.0,
-    "target_date": "2026-09-02",
-    "margin_of_safety_pct": 20.2,
-    "eps_growth_3y_fcst_pct": -15.6
+    "sma50": 1342.26,
+    "sma200": 1376.7,
+    "sma_asof": "2026-10-23",
+    "rsi": 33.02,
+    "rsi_asof": "2026-10-23",
+    "forward_pe": 8.71,
+    "roe_pct": 37.82,
+    "target_avg": 1415.75,
+    "beta": 3.2,
+    "setup": "Failed retest of R1,208"
    },
-   "latest_results": "H1 2026 (28 Jul): HEPS R13.24 -41%; revenue R30.88bn -11%; interim dividend R7.90. Q3 update (20 Oct): production 7.5Mt -19% q/q, FY guidance unchanged",
+   "latest_results": "H1 2026 (29 Jul): revenue R81.8bn +93%; HEPS R82.02 +1,634%; interim dividend R57.00; FY guidance 3.0-3.4m PGM oz unchanged",
    "next_earnings": null,
-   "passes": false,
-   "why_passes": "Borderline: cheap (P/E 6.1, yield 10.3%, ROE 21.7%) with a positive ~20% margin of safety, but analyst consensus is Sell, EPS and dividends are falling and the price is below SMA200",
+   "passes": true,
+   "why_passes": "Close R1,143.55 below the R1,208 failed retest and well below SMA50/SMA200 (technical pass only); YTD -21%",
    "scanner_contradictions": [
-    "Scanner margin of safety ~90% vs ~20% on the sourced R283 target"
+    "Consensus target R1,415.75 (13 analysts, Hold) is well above the price",
+    "Very high beta (3.2): squeeze risk"
    ],
    "unverified": [
-    "next results date",
-    "analyst target after 2 Sep"
-   ],
-   "sources": [
-    "ShareData KIO quote https://www.sharedata.co.za/v2/Scripts/Quote.aspx?c=KIO (6 Nov 2026)",
-    "StockAnalysis KIO statistics https://stockanalysis.com/quote/jse/KIO/statistics/ (24 Oct 2026)",
-    "StockAnalysis KIO quote https://stockanalysis.com/quote/jse/KIO/ (2 Sep 2026)",
-    "EWN 28 Jul 2026; Business Day 20 Oct 2026"
-   ]
-  },
-  {
-   "screen": "Swing Long",
-   "market": "US",
-   "ticker": "DLO",
-   "name": "DLocal Limited",
-   "sector": "Technology",
-   "price": 13.95,
-   "price_date": "2026-11-06",
-   "mcap_bn": 4.02,
-   "mcap_ccy": "USD",
-   "metrics": {
-    "sma50": 14.66,
-    "sma200": 13.56,
-    "sma_asof": "2026-10-26",
-    "rsi": 45.49,
-    "forward_pe": 13.88,
-    "roe_pct": 41.29,
-    "target_avg": 18.6
-   },
-   "latest_results": "Q2 2026 (13 Aug): diluted EPS $0.18 vs $0.19 est.; revenue $399.7m vs $366.8m est.; TPV ~$18bn +92%",
-   "next_earnings": "2026-11-12",
-   "passes": false,
-   "why_passes": "Fails trend test on 26-Oct SMAs (price below SMA50 14.66); results 12 Nov = event risk",
-   "scanner_contradictions": [],
-   "unverified": [
-    "SMA/RSI as of 6 Nov"
-   ],
-   "sources": [
-    "StockAnalysis DLO https://stockanalysis.com/stocks/DLO (6 Nov 2026)",
-    "StockAnalysis DLO statistics https://stockanalysis.com/stocks/dlo/statistics (26 Oct 2026)"
-   ]
-  },
-  {
-   "screen": "Swing Short",
-   "market": "US",
-   "ticker": "WSO",
-   "name": "Watsco, Inc.",
-   "sector": "Industrials",
-   "price": 304.3,
-   "price_date": "2026-11-06",
-   "mcap_bn": 11.78,
-   "mcap_ccy": "USD",
-   "metrics": {
-    "sma50": 306.95,
-    "sma200": 367.65,
-    "sma_asof": "2026-10-27",
-    "rsi": 50.58,
-    "forward_pe": 24.59,
-    "roe_pct": 16.74,
-    "target_avg": 349.9
-   },
-   "latest_results": "Q3 2026 (27 Oct): EPS $3.77 vs $4.09 est.; revenue $2.22bn vs $2.21bn est.; same-store sales +4%",
-   "next_earnings": null,
-   "passes": false,
-   "why_passes": "Not confirmed: well below SMA200 after the earnings miss, but price is at the 27-Oct SMA50",
-   "scanner_contradictions": [],
-   "unverified": [
-    "SMA/RSI as of 6 Nov",
-    "6 Nov close (Yahoo via LRC Scanner only)"
-   ],
-   "sources": [
-    "StockAnalysis WSO statistics https://stockanalysis.com/stocks/wso/statistics/ (27 Oct 2026)",
-    "StockAnalysis WSO https://stockanalysis.com/stocks/wso/ (27 Oct 2026)"
-   ]
-  },
-  {
-   "screen": "Swing Short",
-   "market": "US",
-   "ticker": "TXNM",
-   "name": "TXNM Energy, Inc.",
-   "sector": "Utilities",
-   "price": 58.22,
-   "price_date": "2026-11-06",
-   "mcap_bn": 6.44,
-   "mcap_ccy": "USD",
-   "metrics": {
-    "sma50": 58.04,
-    "sma200": 58.42,
-    "sma_asof": "2026-10-20",
-    "rsi": 54.75,
-    "deal_price": 61.25
-   },
-   "latest_results": "Q3 2026 (30 Oct): GAAP EPS $1.50 vs $1.22; ongoing EPS $1.62 vs $1.33",
-   "next_earnings": null,
-   "passes": false,
-   "why_passes": "Fails: trades on the $61.25 cash deal spread (Blackstone Infrastructure; only NMPRC approval pending, hearings 19 Jan-1 Feb 2027, outside date 31 May 2027)",
-   "scanner_contradictions": [],
-   "unverified": [],
-   "sources": [
-    "TXNM Q3 release https://www.sec.gov/Archives/edgar/data/0001108426/000110842626000068/ex99110302026earningsrelea.htm (30 Oct 2026)",
-    "Albuquerque Journal 17 Jul 2026 https://www.abqjournal.com/business/txnm-blackstone-extend-115-billion-sale-deadline-after-regulatory-setback/3084994",
-    "StockAnalysis TXNM statistics (20 Oct 2026)"
-   ]
-  },
-  {
-   "screen": "Swing Short",
-   "market": "JSE",
-   "ticker": "MSP",
-   "name": "MAS P.L.C.",
-   "sector": "Real Estate",
-   "price": 20.5,
-   "price_date": "2026-11-06",
-   "mcap_bn": 14.68,
-   "mcap_ccy": "ZAR",
-   "metrics": {
-    "pe": 10.25,
-    "range_12m": "R18.00-R24.44",
-    "ltv_pct": 22.2
-   },
-   "latest_results": "FY to Jun 2026 (30 Sep): earnings EUR25.3m -79%; IFRS EPS 4.46 euro cents vs 19.79; no dividend",
-   "next_earnings": null,
-   "passes": false,
-   "why_passes": "Not confirmed: no source for SMA50/SMA200/RSI; price range-bound R20.50-R21.27 since September",
-   "scanner_contradictions": [],
-   "unverified": [
-    "SMA50",
-    "SMA200",
-    "RSI",
+    "current SMA/RSI (pages cached 23-26 Oct)",
     "next results date"
    ],
    "sources": [
-    "ShareData MSP quote https://www.sharedata.co.za/v2/scripts/Quote.aspx?c=MSP (6 Nov 2026)",
-    "StockAnalysis MSP history https://stockanalysis.com/quote/jse/MSP/history/ (21 Oct 2026)",
-    "Business Day 30 Sep 2026"
+    "ShareData VAL quote https://sharedata.co.za/v2/scripts/Quote_Other.aspx?c=VAL (13 Nov 2026)",
+    "StockAnalysis VAL statistics (cached 26 Oct 2026)",
+    "Valterra H1 2026 results https://www.valterraplatinum.com/wp-content/uploads/2026/07/Valterra_Platinum_H1-2026-_short-form-announcement.pdf (29 Jul 2026)"
+   ]
+  },
+  {
+   "screen": "Investment",
+   "market": "US",
+   "ticker": "ZTO",
+   "name": "ZTO Express (ADR)",
+   "sector": "Industrials",
+   "price": null,
+   "price_date": null,
+   "mcap_bn": 14.9,
+   "mcap_ccy": "USD",
+   "metrics": {
+    "sma50": 20.44,
+    "sma200": 22.9,
+    "sma_asof": "2026-10-27",
+    "rsi": 46.34,
+    "forward_pe": 9.73,
+    "roe_pct": 16.28,
+    "eps_growth_fy26_pct": 16.36,
+    "target_avg": 27.66,
+    "margin_of_safety_scanner": 0.389
+   },
+   "latest_results": "Q2 2026 (19 Aug): revenue RMB14.55bn +23.0%; parcels 10.49bn +6.5%; adjusted EPS per ADS $0.56 +52.8%; FY26 volume guide 40.8-42.4bn (+6-10%)",
+   "next_earnings": "2026-11-17",
+   "passes": true,
+   "why_passes": "Grade A on the scanner; forward P/E ~9.7, ROE 16%, consensus target ~$27.6 vs ~$20 price; Q3 results 17 Nov after the US close",
+   "scanner_contradictions": [
+    "Scanner target 28.23 slightly above consensus 27.58-27.66"
+   ],
+   "unverified": [
+    "13 Nov close (scanner 20.32)"
+   ],
+   "sources": [
+    "StockAnalysis ZTO statistics (cached 27 Oct) and forecast (cached 28 Sep 2026)",
+    "ZTO Q2 2026 release https://www.sec.gov/Archives/edgar/data/0001677250/000110465926098506/tm2623526d1_ex99-1.htm (19 Aug 2026)",
+    "ZTO results-date release https://finviz.com/news/403454/zto-to-announce-third-quarter-financial-results-of-2026-on-november-17-2026-us-eastern-time (16 Oct 2026)"
+   ]
+  },
+  {
+   "screen": "Investment",
+   "market": "US",
+   "ticker": "PDD",
+   "name": "PDD Holdings (ADR)",
+   "sector": "Consumer Cyclical",
+   "price": null,
+   "price_date": null,
+   "mcap_bn": 111.89,
+   "mcap_ccy": "USD",
+   "metrics": {
+    "sma50": 80.3,
+    "sma200": 91.06,
+    "sma_asof": "2026-10-30",
+    "rsi": 46.14,
+    "forward_pe": 6.84,
+    "roe_pct": 22.74,
+    "eps_growth_fy26_pct": -5.3,
+    "target_avg": 114.92,
+    "margin_of_safety_scanner": 0.423
+   },
+   "latest_results": "Q2 2026 (24 Aug): revenue RMB112.4bn +8%; net income RMB27.2bn -12%; non-GAAP EPS per ADS $2.85; no guidance",
+   "next_earnings": null,
+   "passes": true,
+   "why_passes": "Grade A on the scanner; forward P/E 6.8, ROE 23%, consensus target $114.92 (36 analysts) vs ~$79 price; EPS expected -5% this year",
+   "scanner_contradictions": [],
+   "unverified": [
+    "13 Nov close (scanner 78.97)",
+    "Q3 results date (third-party estimates 17-23 Nov; not announced by the company)"
+   ],
+   "sources": [
+    "StockAnalysis PDD statistics (cached 1 Nov) and forecast (cached 10 Sep 2026)",
+    "PDD Q2 2026 release https://finviz.com/news/384666/pdd-holdings-announces-second-quarter-2026-unaudited-financial-results (24 Aug 2026)"
+   ]
+  },
+  {
+   "screen": "Investment",
+   "market": "JSE",
+   "ticker": "AVI",
+   "name": "AVI Limited",
+   "sector": "Consumer Defensive",
+   "price": 83.33,
+   "price_date": "2026-11-13",
+   "mcap_bn": 27.61,
+   "mcap_ccy": "ZAR",
+   "metrics": {
+    "sma50": 83.63,
+    "sma200": 95.91,
+    "sma_asof": "2026-11-04",
+    "rsi": 47.28,
+    "forward_pe": 10.5,
+    "roe_pct": 45.73,
+    "eps_growth_fy27_pct": 4.17,
+    "target_avg": 108.25,
+    "dividend_yield_pct": 8.0,
+    "margin_of_safety_scanner": 0.164
+   },
+   "latest_results": "FY to Jun 2026 (7 Sep): revenue R16.24bn +1.4%; operating profit R3.72bn +4.4%; HEPS 767.9c +5.3%; final plus special dividend (Quartr summary; company release not opened)",
+   "next_earnings": null,
+   "passes": true,
+   "why_passes": "Grade A on the scanner; ROE 46%, forward P/E 10.5, 8% dividend yield; consensus target R108.25 vs R83.33",
+   "scanner_contradictions": [
+    "Consensus target R108.25 is above the scanner target R96.97 (margin of safety understated)"
+   ],
+   "unverified": [
+    "FY26 figures from a secondary summary",
+    "next results date"
+   ],
+   "sources": [
+    "ShareData AVI quote https://www.sharedata.co.za/v2/scripts/Quote_Other.aspx?c=AVI (13 Nov 2026)",
+    "StockAnalysis AVI statistics (cached 4 Nov 2026) and forecast",
+    "Quartr AVI FY26 summary https://quartr.com/events/avi-limited-avi-h2-2026_F6s4WmNV",
+    "AVI H1 SENS https://sharedata.co.za/v2/scripts/SENS.aspx?id=541234 (9 Mar 2026)"
    ]
   }
  ]
