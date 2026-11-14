@@ -1,167 +1,24 @@
 {
-"updated": "2026-11-13T16:39+02:00",
+"updated": "2026-11-14T06:38+02:00",
 "queue": [
 {
-"t": "CSCO",
-"name": "Cisco Systems, Inc.",
-"m": "US",
-"date": "2026-11-11",
-"text": "agents/work/8k/CSCO_2026-11-11.txt",
-"priority": 2,
-"mcap_bn": 402.2
-},
-{
-"t": "AMAT",
-"name": "Applied Materials, Inc.",
-"m": "US",
-"date": "2026-11-12",
-"text": "agents/work/8k/AMAT_2026-11-12.txt",
-"priority": 2,
-"mcap_bn": 302.3
-},
-{
-"t": "MUFG",
-"name": "Mitsubishi UFJ Financial Group Inc",
-"m": "US",
+"t": "CFR.JO",
+"name": "Richemont",
+"m": "JSE",
 "date": "2026-11-13",
-"text": "agents/work/8k/MUFG_2026-11-13.txt",
+"period": "Six months to 30 Sep 2026",
+"source": "Richemont SENS / press release — Richemont posts strong results for the six-month period ended 30 September 2026 driven by sustained double-digit sales growth (13 Nov 2026) https://www.richemont.com/news-media/press-releases-news/richemont-posts-strong-results-for-the-six-month-period-ended-30-september-2026-driven-by-sustained-double-digit-sales-growth/ (figures in euro: basic HEPS €4.27 vs €3.01; diluted HEPS €4.26 vs €3.00; headline earnings €2 512m vs €1 768m; no interim dividend — Richemont pays an annual dividend)",
 "priority": 2,
-"mcap_bn": 244.8
+"mcap_bn": 112.0
 },
 {
-"t": "SMFG",
-"name": "Sumitomo Mitsui Financial Group Inc",
-"m": "US",
-"date": "2026-11-13",
-"text": "agents/work/8k/SMFG_2026-11-13.txt",
-"priority": 2,
-"mcap_bn": 152.9
-},
-{
-"t": "MFG",
-"name": "Mizuho Financial Group, Inc.",
-"m": "US",
-"date": "2026-11-13",
-"text": "agents/work/8k/MFG_2026-11-13.txt",
-"priority": 2,
-"mcap_bn": 122.2
-},
-{
-"t": "NU",
-"name": "Nu Holdings Ltd.",
+"t": "HBM",
+"name": "Hudbay Minerals Inc.",
 "m": "US",
 "date": "2026-11-12",
-"text": "agents/work/8k/NU_2026-11-12.txt",
+"text": "agents/work/8k/HBM_2026-11-12.txt",
 "priority": 2,
-"mcap_bn": 57.1
-},
-{
-"t": "KB",
-"name": "KB Financial Group Inc",
-"m": "US",
-"date": "2026-11-13",
-"text": "agents/work/8k/KB_2026-11-13.txt",
-"priority": 2,
-"mcap_bn": 39.4
-},
-{
-"t": "EC",
-"name": "Ecopetrol S.A.",
-"m": "US",
-"date": "2026-11-12",
-"text": "agents/work/8k/EC_2026-11-12.txt",
-"priority": 2,
-"mcap_bn": 31.5
-},
-{
-"t": "SHG",
-"name": "Shinhan Financial Group Co Ltd",
-"m": "US",
-"date": "2026-11-13",
-"text": "agents/work/8k/SHG_2026-11-13.txt",
-"priority": 2,
-"mcap_bn": 29.5
-},
-{
-"t": "CBRS",
-"name": "Cerebras Systems Inc.",
-"m": "US",
-"date": "2026-11-12",
-"text": "agents/work/8k/CBRS_2026-11-12.txt",
-"priority": 2,
-"mcap_bn": 23.2
-},
-{
-"t": "KSPI",
-"name": "Joint Stock Company Kaspi.kz",
-"m": "US",
-"date": "2026-11-11",
-"text": "agents/work/8k/KSPI_2026-11-11.txt",
-"priority": 2,
-"mcap_bn": 16.8
-},
-{
-"t": "QXO",
-"name": "QXO, Inc.",
-"m": "US",
-"date": "2026-11-12",
-"text": "agents/work/8k/QXO_2026-11-12.txt",
-"priority": 2,
-"mcap_bn": 13.3
-},
-{
-"t": "WSE",
-"name": "Wise Group plc",
-"m": "US",
-"date": "2026-11-12",
-"text": "agents/work/8k/WSE_2026-11-12.txt",
-"priority": 2,
-"mcap_bn": 10.5
-},
-{
-"t": "STN",
-"name": "Stantec Inc",
-"m": "US",
-"date": "2026-11-12",
-"text": "agents/work/8k/STN_2026-11-12.txt",
-"priority": 2,
-"mcap_bn": 8.4
-},
-{
-"t": "ELPC",
-"name": "Companhia Paranaense de Energia (COPEL)",
-"m": "US",
-"date": "2026-11-12",
-"text": "agents/work/8k/ELPC_2026-11-12.txt",
-"priority": 2,
-"mcap_bn": 7.9
-},
-{
-"t": "KOD",
-"name": "Kodiak Sciences Inc",
-"m": "US",
-"date": "2026-11-12",
-"text": "agents/work/8k/KOD_2026-11-12.txt",
-"priority": 2,
-"mcap_bn": 6.8
-},
-{
-"t": "ARWR",
-"name": "Arrowhead Pharmaceuticals, Inc.",
-"m": "US",
-"date": "2026-11-12",
-"text": "agents/work/8k/ARWR_2026-11-12.txt",
-"priority": 2,
-"mcap_bn": 6.6
-},
-{
-"t": "ERAS",
-"name": "Erasca, Inc.",
-"m": "US",
-"date": "2026-11-12",
-"text": "agents/work/8k/ERAS_2026-11-12.txt",
-"priority": 2,
-"mcap_bn": 5.5
+"mcap_bn": 9.5
 },
 {
 "t": "BILI",
@@ -170,185 +27,32 @@
 "date": "2026-11-12",
 "text": "agents/work/8k/BILI_2026-11-12.txt",
 "priority": 2,
-"mcap_bn": 5.4
+"mcap_bn": 5.3
 },
 {
-"t": "HTFL",
-"name": "Heartflow, Inc.",
+"t": "BULL",
+"name": "Webull Corporation",
 "m": "US",
 "date": "2026-11-12",
-"text": "agents/work/8k/HTFL_2026-11-12.txt",
+"text": "agents/work/8k/BULL_2026-11-12.txt",
 "priority": 2,
-"mcap_bn": 5.2
+"mcap_bn": 2.8
 },
 {
-"t": "LQDA",
-"name": "Liquidia Corporation",
-"m": "US",
-"date": "2026-11-10",
-"text": "agents/work/8k/LQDA_2026-11-10.txt",
-"priority": 2,
-"mcap_bn": 5.2
-},
-{
-"t": "ATAT",
-"name": "Atour Lifestyle Holdings Limited",
-"m": "US",
-"date": "2026-11-10",
-"text": "agents/work/8k/ATAT_2026-11-10.txt",
-"priority": 2,
-"mcap_bn": 5.1
-},
-{
-"t": "ALH",
-"name": "Alliance Laundry Holdings Inc.",
-"m": "US",
-"date": "2026-11-10",
-"text": "agents/work/8k/ALH_2026-11-10.txt",
-"priority": 2,
-"mcap_bn": 4.7
-},
-{
-"t": "TEO",
-"name": "Telecom Argentina S.A.",
-"m": "US",
-"date": "2026-11-10",
-"text": "agents/work/8k/TEO_2026-11-10.txt",
-"priority": 2,
-"mcap_bn": 4.5
-},
-{
-"t": "TNGX",
-"name": "Tango Therapeutics, Inc.",
-"m": "US",
-"date": "2026-11-10",
-"text": "agents/work/8k/TNGX_2026-11-10.txt",
-"priority": 2,
-"mcap_bn": 4.2
-},
-{
-"t": "DLO",
-"name": "DLocal Limited",
-"m": "US",
-"date": "2026-11-12",
-"text": "agents/work/8k/DLO_2026-11-12.txt",
-"priority": 2,
-"mcap_bn": 3.9
-},
-{
-"t": "WIX",
-"name": "Wix.com Ltd.",
-"m": "US",
-"date": "2026-11-10",
-"text": "agents/work/8k/WIX_2026-11-10.txt",
-"priority": 2,
-"mcap_bn": 3.8
-},
-{
-"t": "LFTO",
-"name": "Liftoff Mobile, Inc.",
-"m": "US",
-"date": "2026-11-12",
-"text": "agents/work/8k/LFTO_2026-11-12.txt",
-"priority": 2,
-"mcap_bn": 3.2
-},
-{
-"t": "TNK",
-"name": "Teekay Tankers Ltd.",
+"t": "SLS",
+"name": "SELLAS Life Sciences Group, Inc.",
 "m": "US",
 "date": "2026-11-11",
-"text": "agents/work/8k/TNK_2026-11-11.txt",
+"text": "agents/work/8k/SLS_2026-11-11.txt",
 "priority": 2,
-"mcap_bn": 3.1
+"mcap_bn": 1.7
 },
 {
-"t": "SA",
-"name": "Seabridge Gold, Inc.",
-"m": "US",
-"date": "2026-11-11",
-"text": "agents/work/8k/SA_2026-11-11.txt",
-"priority": 2,
-"mcap_bn": 2.7
-},
-{
-"t": "ALM",
-"name": "Almonty Industries Inc.",
-"m": "US",
-"date": "2026-11-13",
-"text": "agents/work/8k/ALM_2026-11-13.txt",
-"priority": 2,
-"mcap_bn": 2.2
-},
-{
-"t": "IMNM",
-"name": "Immunome, Inc.",
-"m": "US",
-"date": "2026-11-10",
-"text": "agents/work/8k/IMNM_2026-11-10.txt",
-"priority": 2,
-"mcap_bn": 2.2
-},
-{
-"t": "WWW",
-"name": "Wolverine World Wide, Inc.",
+"t": "HAWK",
+"name": "HawkEye 360, Inc.",
 "m": "US",
 "date": "2026-11-12",
-"text": "agents/work/8k/WWW_2026-11-12.txt",
-"priority": 2,
-"mcap_bn": 1.9
-},
-{
-"t": "STNE",
-"name": "StoneCo Ltd.",
-"m": "US",
-"date": "2026-11-12",
-"text": "agents/work/8k/STNE_2026-11-12.txt",
-"priority": 2,
-"mcap_bn": 1.8
-},
-{
-"t": "IMOS",
-"name": "ChipMOS TECHNOLOGIES INC.",
-"m": "US",
-"date": "2026-11-10",
-"text": "agents/work/8k/IMOS_2026-11-10.txt",
-"priority": 2,
-"mcap_bn": 1.8
-},
-{
-"t": "AZTA",
-"name": "Azenta, Inc.",
-"m": "US",
-"date": "2026-11-10",
-"text": "agents/work/8k/AZTA_2026-11-10.txt",
-"priority": 2,
-"mcap_bn": 1.8
-},
-{
-"t": "INTR",
-"name": "Inter & Co, Inc.",
-"m": "US",
-"date": "2026-11-12",
-"text": "agents/work/8k/INTR_2026-11-12.txt",
-"priority": 2,
-"mcap_bn": 1.8
-},
-{
-"t": "BRSL",
-"name": "Brightstar Lottery PLC",
-"m": "US",
-"date": "2026-11-10",
-"text": "agents/work/8k/BRSL_2026-11-10.txt",
-"priority": 2,
-"mcap_bn": 1.8
-},
-{
-"t": "ALVO",
-"name": "Alvotech",
-"m": "US",
-"date": "2026-11-11",
-"text": "agents/work/8k/ALVO_2026-11-11.txt",
+"text": "agents/work/8k/HAWK_2026-11-12.txt",
 "priority": 2,
 "mcap_bn": 1.7
 },
@@ -362,65 +66,20 @@
 "mcap_bn": 1.7
 },
 {
-"t": "ABSI",
-"name": "Absci Corporation",
-"m": "US",
-"date": "2026-11-12",
-"text": "agents/work/8k/ABSI_2026-11-12.txt",
-"priority": 2,
-"mcap_bn": 1.6
-},
-{
-"t": "SLS",
-"name": "SELLAS Life Sciences Group, Inc.",
-"m": "US",
-"date": "2026-11-11",
-"text": "agents/work/8k/SLS_2026-11-11.txt",
-"priority": 2,
-"mcap_bn": 1.6
-},
-{
-"t": "ATEX",
-"name": "Anterix Inc.",
-"m": "US",
-"date": "2026-11-10",
-"text": "agents/work/8k/ATEX_2026-11-10.txt",
-"priority": 2,
-"mcap_bn": 1.6
-},
-{
-"t": "GENB",
-"name": "Generate Biomedicines, Inc.",
-"m": "US",
-"date": "2026-11-10",
-"text": "agents/work/8k/GENB_2026-11-10.txt",
-"priority": 2,
-"mcap_bn": 1.6
-},
-{
 "t": "CEPU",
 "name": "Central Puerto S.A.",
 "m": "US",
 "date": "2026-11-11",
 "text": "agents/work/8k/CEPU_2026-11-11.txt",
 "priority": 2,
-"mcap_bn": 1.5
+"mcap_bn": 1.6
 },
 {
-"t": "EYE",
-"name": "National Vision Holdings, Inc.",
+"t": "ALVO",
+"name": "Alvotech",
 "m": "US",
-"date": "2026-11-12",
-"text": "agents/work/8k/EYE_2026-11-12.txt",
-"priority": 2,
-"mcap_bn": 1.5
-},
-{
-"t": "NN",
-"name": "NextNav Inc.",
-"m": "US",
-"date": "2026-11-10",
-"text": "agents/work/8k/NN_2026-11-10.txt",
+"date": "2026-11-11",
+"text": "agents/work/8k/ALVO_2026-11-11.txt",
 "priority": 2,
 "mcap_bn": 1.5
 },
@@ -443,11 +102,20 @@
 "mcap_bn": 1.5
 },
 {
-"t": "LMRI",
-"name": "Lumexa Imaging Holdings, Inc.",
+"t": "EYE",
+"name": "National Vision Holdings, Inc.",
 "m": "US",
-"date": "2026-11-10",
-"text": "agents/work/8k/LMRI_2026-11-10.txt",
+"date": "2026-11-12",
+"text": "agents/work/8k/EYE_2026-11-12.txt",
+"priority": 2,
+"mcap_bn": 1.4
+},
+{
+"t": "ABSI",
+"name": "Absci Corporation",
+"m": "US",
+"date": "2026-11-12",
+"text": "agents/work/8k/ABSI_2026-11-12.txt",
 "priority": 2,
 "mcap_bn": 1.4
 },
@@ -468,69 +136,6 @@
 "text": "agents/work/8k/ANAB_2026-11-11.txt",
 "priority": 2,
 "mcap_bn": 1.4
-},
-{
-"t": "HAWK",
-"name": "HawkEye 360, Inc.",
-"m": "US",
-"date": "2026-11-12",
-"text": "agents/work/8k/HAWK_2026-11-12.txt",
-"priority": 2,
-"mcap_bn": 1.4
-},
-{
-"t": "AVLN",
-"name": "Avalyn Pharma Inc.",
-"m": "US",
-"date": "2026-11-12",
-"text": "agents/work/8k/AVLN_2026-11-12.txt",
-"priority": 2,
-"mcap_bn": 1.4
-},
-{
-"t": "TSHA",
-"name": "Taysha Gene Therapies, Inc.",
-"m": "US",
-"date": "2026-11-11",
-"text": "agents/work/8k/TSHA_2026-11-11.txt",
-"priority": 2,
-"mcap_bn": 1.4
-},
-{
-"t": "SECZ",
-"name": "Securitize Corp.",
-"m": "US",
-"date": "2026-11-11",
-"text": "agents/work/8k/SECZ_2026-11-11.txt",
-"priority": 2,
-"mcap_bn": 1.4
-},
-{
-"t": "ANDG",
-"name": "Andersen Group Inc.",
-"m": "US",
-"date": "2026-11-12",
-"text": "agents/work/8k/ANDG_2026-11-12.txt",
-"priority": 2,
-"mcap_bn": 1.3
-},
-{
-"t": "FLO",
-"name": "Flowers Foods, Inc.",
-"m": "US",
-"date": "2026-11-12",
-"text": "agents/work/8k/FLO_2026-11-12.txt",
-"priority": 2,
-"mcap_bn": 1.3
-},
-{
-"t": "GO",
-"name": "Grocery Outlet Holding Corp.",
-"m": "US",
-"date": "2026-11-10",
-"text": "agents/work/8k/GO_2026-11-10.txt",
-"priority": 2,
-"mcap_bn": 1.3
 },
 {
 "t": "EPC",
@@ -560,11 +165,65 @@
 "mcap_bn": 1.3
 },
 {
+"t": "AVLN",
+"name": "Avalyn Pharma Inc.",
+"m": "US",
+"date": "2026-11-12",
+"text": "agents/work/8k/AVLN_2026-11-12.txt",
+"priority": 2,
+"mcap_bn": 1.3
+},
+{
+"t": "AGRO",
+"name": "Adecoagro S.A.",
+"m": "US",
+"date": "2026-11-11",
+"text": "agents/work/8k/AGRO_2026-11-11.txt",
+"priority": 2,
+"mcap_bn": 1.3
+},
+{
+"t": "TSHA",
+"name": "Taysha Gene Therapies, Inc.",
+"m": "US",
+"date": "2026-11-11",
+"text": "agents/work/8k/TSHA_2026-11-11.txt",
+"priority": 2,
+"mcap_bn": 1.3
+},
+{
+"t": "SECZ",
+"name": "Securitize Corp.",
+"m": "US",
+"date": "2026-11-11",
+"text": "agents/work/8k/SECZ_2026-11-11.txt",
+"priority": 2,
+"mcap_bn": 1.3
+},
+{
+"t": "FRMI",
+"name": "Fermi Inc.",
+"m": "US",
+"date": "2026-11-12",
+"text": "agents/work/8k/FRMI_2026-11-12.txt",
+"priority": 2,
+"mcap_bn": 1.3
+},
+{
 "t": "SPH",
 "name": "Suburban Propane Partners, L.P.",
 "m": "US",
 "date": "2026-11-12",
 "text": "agents/work/8k/SPH_2026-11-12.txt",
+"priority": 2,
+"mcap_bn": 1.2
+},
+{
+"t": "ANDG",
+"name": "Andersen Group Inc.",
+"m": "US",
+"date": "2026-11-12",
+"text": "agents/work/8k/ANDG_2026-11-12.txt",
 "priority": 2,
 "mcap_bn": 1.2
 },
@@ -596,6 +255,15 @@
 "mcap_bn": 1.2
 },
 {
+"t": "INBX",
+"name": "Inhibrx Biosciences, Inc.",
+"m": "US",
+"date": "2026-11-13",
+"text": "agents/work/8k/INBX_2026-11-13.txt",
+"priority": 2,
+"mcap_bn": 1.2
+},
+{
 "t": "TK",
 "name": "Teekay Corporation Ltd.",
 "m": "US",
@@ -605,31 +273,22 @@
 "mcap_bn": 1.2
 },
 {
-"t": "AGRO",
-"name": "Adecoagro S.A.",
+"t": "JCAP",
+"name": "Jefferson Capital, Inc.",
 "m": "US",
-"date": "2026-11-11",
-"text": "agents/work/8k/AGRO_2026-11-11.txt",
+"date": "2026-11-12",
+"text": "agents/work/8k/JCAP_2026-11-12.txt",
 "priority": 2,
 "mcap_bn": 1.2
 },
 {
-"t": "AMPX",
-"name": "Amprius Technologies, Inc.",
+"t": "FLO",
+"name": "Flowers Foods, Inc.",
 "m": "US",
-"date": "2026-11-10",
-"text": "agents/work/8k/AMPX_2026-11-10.txt",
+"date": "2026-11-12",
+"text": "agents/work/8k/FLO_2026-11-12.txt",
 "priority": 2,
-"mcap_bn": 1.2
-},
-{
-"t": "AMBQ",
-"name": "Ambiq Micro, Inc.",
-"m": "US",
-"date": "2026-11-10",
-"text": "agents/work/8k/AMBQ_2026-11-10.txt",
-"priority": 2,
-"mcap_bn": 1.2
+"mcap_bn": 1.1
 },
 {
 "t": "SGP",
@@ -637,24 +296,6 @@
 "m": "US",
 "date": "2026-11-12",
 "text": "agents/work/8k/SGP_2026-11-12.txt",
-"priority": 2,
-"mcap_bn": 1.1
-},
-{
-"t": "ELE",
-"name": "Elemental Royalty Corporation",
-"m": "US",
-"date": "2026-11-10",
-"text": "agents/work/8k/ELE_2026-11-10.txt",
-"priority": 2,
-"mcap_bn": 1.1
-},
-{
-"t": "JCAP",
-"name": "Jefferson Capital, Inc.",
-"m": "US",
-"date": "2026-11-12",
-"text": "agents/work/8k/JCAP_2026-11-12.txt",
 "priority": 2,
 "mcap_bn": 1.1
 },
@@ -686,29 +327,11 @@
 "mcap_bn": 1.0
 },
 {
-"t": "NMAX",
-"name": "Newsmax, Inc.",
+"t": "AVEX",
+"name": "AEVEX Corp.",
 "m": "US",
-"date": "2026-11-13",
-"text": "agents/work/8k/NMAX_2026-11-13.txt",
-"priority": 2,
-"mcap_bn": 0.9
-},
-{
-"t": "USAS",
-"name": "Americas Gold and Silver Corporation",
-"m": "US",
-"date": "2026-11-13",
-"text": "agents/work/8k/USAS_2026-11-13.txt",
-"priority": 2,
-"mcap_bn": 0.9
-},
-{
-"t": "YSS",
-"name": "York Space Systems, Inc.",
-"m": "US",
-"date": "2026-11-12",
-"text": "agents/work/8k/YSS_2026-11-12.txt",
+"date": "2026-11-11",
+"text": "agents/work/8k/AVEX_2026-11-11.txt",
 "priority": 2,
 "mcap_bn": 0.9
 },
@@ -731,31 +354,14 @@
 "mcap_bn": 0.8
 },
 {
-"t": "ODD",
-"name": "Oddity Tech Ltd.",
-"m": "US",
+"t": "PPE.JO",
+"name": "Purple Group",
+"m": "JSE",
 "date": "2026-11-11",
-"text": "agents/work/8k/ODD_2026-11-11.txt",
+"period": "Year to 31 Aug 2026",
+"source": "Purple Group SENS — Audited consolidated results for the year ended 31 August 2026 and distribution of annual report and notice of AGM (11 Nov 2026); figures from Purple Group Annual Report 2026 https://www.purplegroup.co.za/results/full_results/2026/31%20August%202026%20Full%20Results.pdf (HEPS 5.47c vs 4.30c; basic EPS 5.58c vs 4.30c; no dividend declaration found)",
 "priority": 2,
-"mcap_bn": 0.8
-},
-{
-"t": "ADIG",
-"name": "ADI Global Distribution Inc",
-"m": "US",
-"date": "2026-11-12",
-"text": "agents/work/8k/ADIG_2026-11-12.txt",
-"priority": 2,
-"mcap_bn": 0.7
-},
-{
-"t": "HMC",
-"name": "Honda Motor Company, Ltd.",
-"m": "US",
-"date": "2026-11-06",
-"text": "agents/work/8k/HMC_2026-11-06.txt",
-"priority": 2,
-"mcap_bn": 43.5
+"mcap_bn": 0.1
 },
 {
 "t": "BEKE",
@@ -764,115 +370,7 @@
 "date": "2026-11-09",
 "text": "agents/work/8k/BEKE_2026-11-09.txt",
 "priority": 2,
-"mcap_bn": 19.3
-},
-{
-"t": "TU",
-"name": "TELUS Corporation",
-"m": "US",
-"date": "2026-11-06",
-"text": "agents/work/8k/TU_2026-11-06.txt",
-"priority": 2,
-"mcap_bn": 13.5
-},
-{
-"t": "VSAT",
-"name": "ViaSat, Inc.",
-"m": "US",
-"date": "2026-11-06",
-"text": "agents/work/8k/VSAT_2026-11-06.txt",
-"priority": 2,
-"mcap_bn": 9.9
-},
-{
-"t": "WULF",
-"name": "TeraWulf Inc.",
-"m": "US",
-"date": "2026-11-06",
-"text": "agents/work/8k/WULF_2026-11-06.txt",
-"priority": 2,
-"mcap_bn": 6.5
-},
-{
-"t": "FLR",
-"name": "Fluor Corporation",
-"m": "US",
-"date": "2026-11-06",
-"text": "agents/work/8k/FLR_2026-11-06.txt",
-"priority": 2,
-"mcap_bn": 6.3
-},
-{
-"t": "CGON",
-"name": "CG Oncology, Inc.",
-"m": "US",
-"date": "2026-11-06",
-"text": "agents/work/8k/CGON_2026-11-06.txt",
-"priority": 2,
-"mcap_bn": 6.3
-},
-{
-"t": "ESNT",
-"name": "Essent Group Ltd.",
-"m": "US",
-"date": "2026-11-06",
-"text": "agents/work/8k/ESNT_2026-11-06.txt",
-"priority": 2,
-"mcap_bn": 5.7
-},
-{
-"t": "VEON",
-"name": "VEON Ltd.",
-"m": "US",
-"date": "2026-11-06",
-"text": "agents/work/8k/VEON_2026-11-06.txt",
-"priority": 2,
-"mcap_bn": 5.2
-},
-{
-"t": "COGT",
-"name": "Cogent Biosciences, Inc.",
-"m": "US",
-"date": "2026-11-06",
-"text": "agents/work/8k/COGT_2026-11-06.txt",
-"priority": 2,
-"mcap_bn": 5.1
-},
-{
-"t": "BIPC",
-"name": "Brookfield Infrastructure Corporation",
-"m": "US",
-"date": "2026-11-06",
-"text": "agents/work/8k/BIPC_2026-11-06.txt",
-"priority": 2,
-"mcap_bn": 4.8
-},
-{
-"t": "ATMU",
-"name": "Atmus Filtration Technologies Inc.",
-"m": "US",
-"date": "2026-11-06",
-"text": "agents/work/8k/ATMU_2026-11-06.txt",
-"priority": 2,
-"mcap_bn": 4.5
-},
-{
-"t": "STWD",
-"name": "STARWOOD PROPERTY TRUST, INC.",
-"m": "US",
-"date": "2026-11-06",
-"text": "agents/work/8k/STWD_2026-11-06.txt",
-"priority": 2,
-"mcap_bn": 4.3
-},
-{
-"t": "AQN",
-"name": "Algonquin Power & Utilities Corp.",
-"m": "US",
-"date": "2026-11-06",
-"text": "agents/work/8k/AQN_2026-11-06.txt",
-"priority": 2,
-"mcap_bn": 4.3
+"mcap_bn": 19.5
 },
 {
 "t": "TKC",
@@ -882,15 +380,6 @@
 "text": "agents/work/8k/TKC_2026-11-09.txt",
 "priority": 2,
 "mcap_bn": 4.2
-},
-{
-"t": "DK",
-"name": "Delek US Holdings, Inc.",
-"m": "US",
-"date": "2026-11-06",
-"text": "agents/work/8k/DK_2026-11-06.txt",
-"priority": 2,
-"mcap_bn": 4.1
 },
 {
 "t": "TDW",
@@ -908,7 +397,7 @@
 "date": "2026-11-09",
 "text": "agents/work/8k/EQPT_2026-11-09.txt",
 "priority": 2,
-"mcap_bn": 3.9
+"mcap_bn": 3.8
 },
 {
 "t": "DHT",
@@ -929,22 +418,13 @@
 "mcap_bn": 3.5
 },
 {
-"t": "TDS",
-"name": "Telephone and Data Systems, Inc.",
-"m": "US",
-"date": "2026-11-06",
-"text": "agents/work/8k/TDS_2026-11-06.txt",
-"priority": 2,
-"mcap_bn": 3.4
-},
-{
 "t": "FRVO",
 "name": "Fervo Energy Company",
 "m": "US",
 "date": "2026-11-09",
 "text": "agents/work/8k/FRVO_2026-11-09.txt",
 "priority": 2,
-"mcap_bn": 3.4
+"mcap_bn": 3.3
 },
 {
 "t": "ACHR",
@@ -953,16 +433,7 @@
 "date": "2026-11-09",
 "text": "agents/work/8k/ACHR_2026-11-09.txt",
 "priority": 2,
-"mcap_bn": 3.4
-},
-{
-"t": "NHC",
-"name": "National HealthCare Corporation",
-"m": "US",
-"date": "2026-11-06",
-"text": "agents/work/8k/NHC_2026-11-06.txt",
-"priority": 2,
-"mcap_bn": 3.3
+"mcap_bn": 3.2
 },
 {
 "t": "MNDY",
@@ -971,7 +442,7 @@
 "date": "2026-11-09",
 "text": "agents/work/8k/MNDY_2026-11-09.txt",
 "priority": 2,
-"mcap_bn": 3.3
+"mcap_bn": 3.2
 },
 {
 "t": "NHI",
@@ -980,61 +451,7 @@
 "date": "2026-11-09",
 "text": "agents/work/8k/NHI_2026-11-09.txt",
 "priority": 2,
-"mcap_bn": 3.2
-},
-{
-"t": "CLMT",
-"name": "Calumet, Inc",
-"m": "US",
-"date": "2026-11-06",
-"text": "agents/work/8k/CLMT_2026-11-06.txt",
-"priority": 2,
-"mcap_bn": 3.2
-},
-{
-"t": "KYIV",
-"name": "Kyivstar Group Ltd.",
-"m": "US",
-"date": "2026-11-06",
-"text": "agents/work/8k/KYIV_2026-11-06.txt",
-"priority": 2,
-"mcap_bn": 3.0
-},
-{
-"t": "ASST",
-"name": "Strive, Inc.",
-"m": "US",
-"date": "2026-11-06",
-"text": "agents/work/8k/ASST_2026-11-06.txt",
-"priority": 2,
-"mcap_bn": 2.8
-},
-{
-"t": "AD",
-"name": "Array Digital Infrastructure, Inc.",
-"m": "US",
-"date": "2026-11-06",
-"text": "agents/work/8k/AD_2026-11-06.txt",
-"priority": 2,
-"mcap_bn": 2.4
-},
-{
-"t": "EXK",
-"name": "Endeavour Silver Corporation",
-"m": "US",
-"date": "2026-11-06",
-"text": "agents/work/8k/EXK_2026-11-06.txt",
-"priority": 2,
-"mcap_bn": 2.3
-},
-{
-"t": "SHO",
-"name": "Sunstone Hotel Investors, Inc.",
-"m": "US",
-"date": "2026-11-06",
-"text": "agents/work/8k/SHO_2026-11-06.txt",
-"priority": 2,
-"mcap_bn": 2.2
+"mcap_bn": 3.1
 },
 {
 "t": "NESR",
@@ -1043,34 +460,7 @@
 "date": "2026-11-09",
 "text": "agents/work/8k/NESR_2026-11-09.txt",
 "priority": 2,
-"mcap_bn": 2.2
-},
-{
-"t": "UAA",
-"name": "Under Armour, Inc.",
-"m": "US",
-"date": "2026-11-06",
-"text": "agents/work/8k/UAA_2026-11-06.txt",
-"priority": 2,
 "mcap_bn": 2.1
-},
-{
-"t": "BKD",
-"name": "Brookdale Senior Living Inc.",
-"m": "US",
-"date": "2026-11-06",
-"text": "agents/work/8k/BKD_2026-11-06.txt",
-"priority": 2,
-"mcap_bn": 2.1
-},
-{
-"t": "UA",
-"name": "Under Armour, Inc.",
-"m": "US",
-"date": "2026-11-06",
-"text": "agents/work/8k/UA_2026-11-06.txt",
-"priority": 2,
-"mcap_bn": 2.0
 },
 {
 "t": "TRVI",
@@ -1082,22 +472,13 @@
 "mcap_bn": 1.9
 },
 {
-"t": "TILE",
-"name": "Interface, Inc.",
+"t": "ATEX",
+"name": "Anterix Inc.",
 "m": "US",
-"date": "2026-11-06",
-"text": "agents/work/8k/TILE_2026-11-06.txt",
+"date": "2026-11-10",
+"text": "agents/work/8k/ATEX_2026-11-10.txt",
 "priority": 2,
-"mcap_bn": 1.8
-},
-{
-"t": "BTDR",
-"name": "Bitdeer Technologies Group",
-"m": "US",
-"date": "2026-11-09",
-"text": "agents/work/8k/BTDR_2026-11-09.txt",
-"priority": 2,
-"mcap_bn": 1.7
+"mcap_bn": 1.6
 },
 {
 "t": "GSL",
@@ -1106,59 +487,50 @@
 "date": "2026-11-09",
 "text": "agents/work/8k/GSL_2026-11-09.txt",
 "priority": 2,
-"mcap_bn": 1.6
+"mcap_bn": 1.5
 },
 {
-"t": "HE",
-"name": "Hawaiian Electric Industries, Inc.",
+"t": "BTDR",
+"name": "Bitdeer Technologies Group",
 "m": "US",
-"date": "2026-11-06",
-"text": "agents/work/8k/HE_2026-11-06.txt",
+"date": "2026-11-09",
+"text": "agents/work/8k/BTDR_2026-11-09.txt",
 "priority": 2,
 "mcap_bn": 1.5
 },
 {
-"t": "SLVM",
-"name": "Sylvamo Corporation",
+"t": "GENB",
+"name": "Generate Biomedicines, Inc.",
 "m": "US",
-"date": "2026-11-06",
-"text": "agents/work/8k/SLVM_2026-11-06.txt",
+"date": "2026-11-10",
+"text": "agents/work/8k/GENB_2026-11-10.txt",
 "priority": 2,
 "mcap_bn": 1.5
 },
 {
-"t": "DJT",
-"name": "Trump Media & Technology Group Corp.",
+"t": "LMRI",
+"name": "Lumexa Imaging Holdings, Inc.",
 "m": "US",
-"date": "2026-11-06",
-"text": "agents/work/8k/DJT_2026-11-06.txt",
+"date": "2026-11-10",
+"text": "agents/work/8k/LMRI_2026-11-10.txt",
 "priority": 2,
 "mcap_bn": 1.4
 },
 {
-"t": "SBET",
-"name": "Sharplink, Inc.",
+"t": "NN",
+"name": "NextNav Inc.",
 "m": "US",
-"date": "2026-11-06",
-"text": "agents/work/8k/SBET_2026-11-06.txt",
+"date": "2026-11-10",
+"text": "agents/work/8k/NN_2026-11-10.txt",
 "priority": 2,
-"mcap_bn": 1.3
+"mcap_bn": 1.4
 },
 {
-"t": "KARD",
-"name": "Kardigan, Inc.",
+"t": "GO",
+"name": "Grocery Outlet Holding Corp.",
 "m": "US",
-"date": "2026-11-09",
-"text": "agents/work/8k/KARD_2026-11-09.txt",
-"priority": 2,
-"mcap_bn": 1.3
-},
-{
-"t": "LCID",
-"name": "Lucid Group, Inc.",
-"m": "US",
-"date": "2026-11-09",
-"text": "agents/work/8k/LCID_2026-11-09.txt",
+"date": "2026-11-10",
+"text": "agents/work/8k/GO_2026-11-10.txt",
 "priority": 2,
 "mcap_bn": 1.3
 },
@@ -1172,24 +544,6 @@
 "mcap_bn": 1.3
 },
 {
-"t": "UTZ",
-"name": "Utz Brands Inc ",
-"m": "US",
-"date": "2026-11-06",
-"text": "agents/work/8k/UTZ_2026-11-06.txt",
-"priority": 2,
-"mcap_bn": 1.3
-},
-{
-"t": "QUBT",
-"name": "Quantum Computing Inc.",
-"m": "US",
-"date": "2026-11-09",
-"text": "agents/work/8k/QUBT_2026-11-09.txt",
-"priority": 2,
-"mcap_bn": 1.3
-},
-{
 "t": "SLN",
 "name": "Silence Therapeutics plc",
 "m": "US",
@@ -1199,22 +553,49 @@
 "mcap_bn": 1.2
 },
 {
-"t": "TH",
-"name": "Target Hospitality Corp.",
+"t": "KARD",
+"name": "Kardigan, Inc.",
 "m": "US",
 "date": "2026-11-09",
-"text": "agents/work/8k/TH_2026-11-09.txt",
+"text": "agents/work/8k/KARD_2026-11-09.txt",
 "priority": 2,
 "mcap_bn": 1.2
 },
 {
-"t": "DCH",
-"name": "Dauch Corporation",
+"t": "LCID",
+"name": "Lucid Group, Inc.",
 "m": "US",
-"date": "2026-11-06",
-"text": "agents/work/8k/DCH_2026-11-06.txt",
+"date": "2026-11-09",
+"text": "agents/work/8k/LCID_2026-11-09.txt",
 "priority": 2,
-"mcap_bn": 1.1
+"mcap_bn": 1.2
+},
+{
+"t": "AMPX",
+"name": "Amprius Technologies, Inc.",
+"m": "US",
+"date": "2026-11-10",
+"text": "agents/work/8k/AMPX_2026-11-10.txt",
+"priority": 2,
+"mcap_bn": 1.2
+},
+{
+"t": "AMBQ",
+"name": "Ambiq Micro, Inc.",
+"m": "US",
+"date": "2026-11-10",
+"text": "agents/work/8k/AMBQ_2026-11-10.txt",
+"priority": 2,
+"mcap_bn": 1.2
+},
+{
+"t": "QUBT",
+"name": "Quantum Computing Inc.",
+"m": "US",
+"date": "2026-11-09",
+"text": "agents/work/8k/QUBT_2026-11-09.txt",
+"priority": 2,
+"mcap_bn": 1.2
 },
 {
 "t": "TPB",
@@ -1226,11 +607,38 @@
 "mcap_bn": 1.1
 },
 {
+"t": "ELE",
+"name": "Elemental Royalty Corporation",
+"m": "US",
+"date": "2026-11-10",
+"text": "agents/work/8k/ELE_2026-11-10.txt",
+"priority": 2,
+"mcap_bn": 1.1
+},
+{
 "t": "UNIT",
 "name": "Uniti Group Inc.",
 "m": "US",
 "date": "2026-11-09",
 "text": "agents/work/8k/UNIT_2026-11-09.txt",
+"priority": 2,
+"mcap_bn": 1.1
+},
+{
+"t": "TH",
+"name": "Target Hospitality Corp.",
+"m": "US",
+"date": "2026-11-09",
+"text": "agents/work/8k/TH_2026-11-09.txt",
+"priority": 2,
+"mcap_bn": 1.1
+},
+{
+"t": "HPK",
+"name": "HighPeak Energy, Inc.",
+"m": "US",
+"date": "2026-11-09",
+"text": "agents/work/8k/HPK_2026-11-09.txt",
 "priority": 2,
 "mcap_bn": 1.0
 },
@@ -1244,11 +652,47 @@
 "mcap_bn": 0.8
 },
 {
-"t": "MMI",
-"name": "Marcus & Millichap, Inc.",
+"t": "ODD",
+"name": "Oddity Tech Ltd.",
 "m": "US",
-"date": "2026-11-06",
-"text": "agents/work/8k/MMI_2026-11-06.txt",
+"date": "2026-11-11",
+"text": "agents/work/8k/ODD_2026-11-11.txt",
+"priority": 1,
+"mcap_bn": 0.0
+},
+{
+"t": "ADIG",
+"name": "ADI Global Distribution Inc",
+"m": "US",
+"date": "2026-11-12",
+"text": "agents/work/8k/ADIG_2026-11-12.txt",
+"priority": 1,
+"mcap_bn": 0.0
+},
+{
+"t": "NMAX",
+"name": "Newsmax, Inc.",
+"m": "US",
+"date": "2026-11-13",
+"text": "agents/work/8k/NMAX_2026-11-13.txt",
+"priority": 1,
+"mcap_bn": 0.0
+},
+{
+"t": "USAS",
+"name": "Americas Gold and Silver Corporation",
+"m": "US",
+"date": "2026-11-13",
+"text": "agents/work/8k/USAS_2026-11-13.txt",
+"priority": 1,
+"mcap_bn": 0.0
+},
+{
+"t": "YSS",
+"name": "York Space Systems, Inc.",
+"m": "US",
+"date": "2026-11-12",
+"text": "agents/work/8k/YSS_2026-11-12.txt",
 "priority": 1,
 "mcap_bn": 0.0
 },

@@ -61214,6 +61214,12 @@
    "measure": null,
    "dps": null,
    "source": null,
+   "has_res": true,
+   "desk": false,
+   "rev_actual": 201203000.0,
+   "rev_prior": 106852000.0,
+   "g": "given",
+   "rev_yoy": 0.883,
    "px_move": {
     "move": -0.1451,
     "from": "2026-11-03",
@@ -85951,6 +85957,12 @@
    "measure": null,
    "dps": null,
    "source": null,
+   "has_res": true,
+   "desk": false,
+   "rev_actual": 256820000.0,
+   "rev_prior": 208737000.0,
+   "g": "not found",
+   "rev_yoy": 0.2304,
    "px_move": {
     "move": -0.0448,
     "from": "2026-11-06",
@@ -91627,6 +91639,14 @@
    "rev_est_high": 157500000,
    "n_est": 7,
    "rcur": "USD",
+   "has_res": true,
+   "desk": false,
+   "rev_actual": 189697000.0,
+   "rev_prior": 121235000.0,
+   "g": "given",
+   "rev_surprise": 0.2573,
+   "rev_result": "beat",
+   "rev_yoy": 0.5647,
    "px_move": {
     "move": 0.1862,
     "from": "2026-11-10",
@@ -92354,6 +92374,14 @@
    "rev_yago": 346800000,
    "n_est": 8,
    "rcur": "USD",
+   "has_res": true,
+   "desk": false,
+   "rev_actual": 765900000.0,
+   "rev_prior": 346800000.0,
+   "g": "given",
+   "rev_surprise": 0.04,
+   "rev_result": "beat",
+   "rev_yoy": 1.2085,
    "px_move": {
     "move": -0.0146,
     "from": "2026-11-11",
@@ -93736,6 +93764,9 @@
    "measure": null,
    "dps": null,
    "source": null,
+   "has_res": true,
+   "desk": false,
+   "g": "not found",
    "px_move": {
     "move": 0.0231,
     "from": "2026-11-11",
@@ -95515,6 +95546,9 @@
    "measure": null,
    "dps": null,
    "source": null,
+   "has_res": true,
+   "desk": false,
+   "g": "not found",
    "px_move": {
     "move": 0.0912,
     "from": "2026-11-11",
@@ -97126,6 +97160,9 @@
    "rev_yago": 0,
    "n_est": 3,
    "rcur": "USD",
+   "has_res": true,
+   "desk": false,
+   "g": "not found",
    "t": "INBX",
    "lists": [],
    "idea": null,
@@ -100345,7 +100382,8 @@
     "miss",
     "miss",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-19",
@@ -107300,6 +107338,6 @@
    "covered": false
   }
  ],
- "synced": "2026-11-14T06:24+02:00",
+ "synced": "2026-11-14T06:38+02:00",
  "coverage_note": "Ticked = on the LRC watchlist. Every company the LRC Stock Scanner tracks shows its trading and investment ratings. Updated after every scanner run."
 }
