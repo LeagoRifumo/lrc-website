@@ -1,9 +1,54 @@
 {
- "generated": "2026-11-16T00:24+02:00",
+ "generated": "2026-11-16T01:17+02:00",
  "agent": "LRC Live Wire",
  "sources_ok": 15,
  "sources_failed": [],
  "items": [
+  {
+   "title": "Stock futures tick higher as traders brace for Nvidia earnings, Anthropic IPO this week: Live updates",
+   "url": "https://www.cnbc.com/2026/11/15/stock-market-today-live-updates.html",
+   "source": "CNBC",
+   "region": "US",
+   "published": "2026-11-16T01:15+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Should a widow leave her late partner’s home to her stepkids — or cut off contact with them?",
+   "url": "https://www.marketwatch.com/story/she-can-always-change-her-mind-should-a-widow-leave-the-family-home-to-her-stepchildren-649b06af?mod=mw_rss_topstories",
+   "source": "MarketWatch",
+   "region": "US",
+   "published": "2026-11-16T01:00+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "R1.27 trillion investment gap threatens South Africa’s growth ambitions",
+   "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOSzQ3Uk0teV9FSmFwYjAtemtLemhVXzkyUUZCd1hZN1lqRkNSRndBckhtcHVxeWNLYVJ4N0IwaDM1MERsM0JhYzlFZHF0NGJId2RMLXBvODRmaGx0V3lYOF9HeTIwTEkxNk5MTTNQUy1Sd0VSNUJ5ZW5Jb0VrSVJJRzFiVDZQWVhTZkxZZFM1OWN3Vzl3RlNUbko0UXduMGVra1pJVm5QUnBva3FSS25rQg?oc=5",
+   "source": "African Insider",
+   "region": "SA",
+   "published": "2026-11-16T01:00+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "'We slept here': Flight delays linger but schedule is back on track for Monday",
+   "url": "https://www.cnbc.com/2026/11/15/flight-delays-ground-faa-stop.html",
+   "source": "CNBC",
+   "region": "US",
+   "published": "2026-11-16T00:33+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "South African Rand Falls: USD/ZAR Heads Towards R17 Ahead of SARB Rate Decision",
+   "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNYXRjQndQaDhwalFLRXJMVGV5cFhESkVxM2NKYVFRMkxsVnE3LXJpTjF0WnpqTVBOb19KQlFIRjRSMzhJQ2VOMjJfNGVVMVhXQ20xS1JHVmRSNVVqOVItZjUtRm1JX2dyQUVJYkNVc3VDcjQtbUZRTk16OGRIazd0MlpHVmVJdmJjOFp0ZEFyRUYxbFZXbk0xc1VWSU1ONlVBZzhLcDhCYXowZWg4Y1k1OE14anpGdU5Cc0h2ZVNR?oc=5",
+   "source": "FXLeaders",
+   "region": "SA",
+   "published": "2026-11-16T00:25+02:00",
+   "breaking": true,
+   "tickers": []
+  },
   {
    "title": "“Very salient”: UN climate chief backs PM Modi’s remarks on clean energy cushioning India against oil price shock",
    "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQSkt6dnJ1cWlqd1QyWGZSNmtjOWNMWkdHVFJWLTFvNVBUXy1HUUhGMDN1VF9oM0FSR3d5OTdVbDYtSTdLVXlPWGRSbno5bVRqcU5yanpIZ3lkVjFHMmRSRWl4bVF4d25KLXMtdFNjbzgxSkV5UlFFc1FYQ1NqS3VDeGp2YW52QUtueGJYQ3RZcW41QVA3OHZhVVdDNENMWmZzcWh5LXZjbVRuUUdwcFJlUE9CZzBWU2NUZVFPY1lmY2JYbFVfLVBKUDlkTDBzZklt?oc=5",
@@ -68,15 +113,6 @@
    "tickers": []
   },
   {
-   "title": "'We slept here': Flight delays linger but schedule is back on track for Monday",
-   "url": "https://www.cnbc.com/2026/11/15/flight-delays-ground-faa-stop.html",
-   "source": "CNBC",
-   "region": "US",
-   "published": "2026-11-15T23:48+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
    "title": "Nvidia is gearing up for one of Wall Street’s most anticipated earnings calls in years",
    "url": "https://www.marketwatch.com/story/nvidia-is-gearing-up-for-one-of-wall-streets-most-anticipated-earnings-calls-in-years-91855b1e?mod=mw_rss_topstories",
    "source": "MarketWatch",
@@ -105,10 +141,10 @@
   },
   {
    "title": "ANC rules out national stability pact with DA",
-   "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQQTRFWGVHWXFDbVh6MGhJQU01S0FiWEJaMGo2Mzc3dVFjbjNpNmwtTGJqM3pxeFB4bG9nYzB3N0pUbnFoX0xlbEZrSUs4QmNKS25tb3JrZTVNRzdVRmpENk1TQ1dqbjJCNXFPc0kzd3pLTmVmeUEtNFJiNnZJSGsxRENsTi1DbXpBUElyMV83eE9DMEVvY3hyTTBjVEE1RzNTdERpa2ZRYzZfbHdNOEVUb3pnQWE0RFNLVGlWQmMycnpWME9sUmNaWmJVY0FFamw3SDdQOU9zM1lrUDFYMThMdk1oU3g0WnZS?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxQam40a2tpOEEycDRhS3VwVURhSnRjVElqMGQ3eUxxLVRkRlB6czl0WU1TSmVmVWx5amNXZDBtdWtxWTRfQURCcE51Z0lBUFhpX0lIZXJQRmMwU3VrYU1vMVNJbUlQUEFDZDlDd0dqMlpZWXlKYXA2NUZFTnJnRU0tU3hwaHdSdzlSUmo1U0VLa3d1WWVzU0F2RWxCdTF5NUFmMzVLc3A2MjdZMDFxaS1EZmZybnhrVExVVlZDQmhjS2RkWXl5VDZQRFZYYXRTUjhDNHBqT1JCeEM0N3phNmJHM0x0UmpCVjd2cVlVX1c5Y3FwMDFYckF3MVVla2pNd0xaR281UjctZlU?oc=5",
    "source": "Daily Maverick",
    "region": "SA",
-   "published": "2026-11-15T23:02+02:00",
+   "published": "2026-11-15T23:03+02:00",
    "breaking": false,
    "tickers": []
   },
@@ -172,15 +208,6 @@
    "source": "Daily Maverick",
    "region": "SA",
    "published": "2026-11-15T21:57+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Gold Price Today in Kolkata – 18K, 22K & 24K Rate | 16 November 2026",
-   "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOY3dsNXhXVTFSRkRiR2lQbTFnVUFHWFlTN3B6bDMtUlNSQThnVXRQWFU5b09BeWh6eXlkVFdXUFUxUmREcHRiN2paR3VjX2hjeWViQmpKVHhRVUFiX3lxdXdCSDFPUmVvMlZPbW56WnJla1J1c2xLUXhlSUt0OHJORDlxRmpBSk9nclln?oc=5",
-   "source": "The Times of India",
-   "region": "FX",
-   "published": "2026-11-15T21:50+02:00",
    "breaking": false,
    "tickers": []
   },
@@ -590,15 +617,6 @@
    "tickers": []
   },
   {
-   "title": "‘The thought of living to 100 terrifies me’: Is Social Security a giant Ponzi scheme?",
-   "url": "https://www.marketwatch.com/story/the-thought-of-living-to-100-terrifies-me-is-social-security-a-giant-ponzi-scheme-84a64e7e?mod=mw_rss_topstories",
-   "source": "MarketWatch",
-   "region": "US",
-   "published": "2026-11-15T16:00+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
    "title": "Titan shifts focus to buyer growth as gold-price gains become less reliable",
    "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQM2NNN3hKZXUwZ2VpXzBYaEIxZWZWdERZM2lROE1KVFQ5a3l0c0dHZVZEdVBIOW9JMkh2N1daOVo2c055bnJxckF1N1RBLVNQdEhIYXcxYlRZM3ZiY1FwUmRxQnA5RGdNencwbFBPd1dta0Qwakp6VEZjTVR5dFI1S2s3ZkEwTjI0OXJMV3dZTjBaODdHdE5EYU81Zy12c1lGTG1UMl82c0ZqandlUFNJbjNCdkd5dDZpV3pIU25GdG1FNk90WjdoMHBKS04?oc=5",
    "source": "TradingView",
@@ -703,15 +721,6 @@
    "source": "Daily Maverick",
    "region": "SA",
    "published": "2026-11-15T13:12+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Infrastructure Investment Could Be Key to Tackling South Africa’s Unemployment Crisis, Expert Says",
-   "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQdkhXM1RpRTBmbllCd0FYSWNBcGtFcXdDVjRXcmUycTJaZjQyZk5jYk9RUmd6Q0Z6eXFPVkJ1cnp5Z3BnTmF1Z2FXTUxfc2kzU3ZVWmJuT2FDc2swVGRfdUp5c1dKWjJkVU9OOGF3YTdXVkQ2TER2ODRnT2c2TzdMSGZqekpjT2g2THBibzNkNndfcjUtdmhOamFEckxveWZKM3NvcVRieENuSlNfbnkySVRmcWhOTFdIMUhhVGk4aTA?oc=5",
-   "source": "Central News South Africa",
-   "region": "SA",
-   "published": "2026-11-15T13:07+02:00",
    "breaking": false,
    "tickers": []
   },
@@ -883,6 +892,15 @@
    "source": "newsnote",
    "region": "SA",
    "published": "2026-11-15T10:57+02:00",
+   "breaking": false,
+   "tickers": []
+  },
+  {
+   "title": "Alphamin Resources Corp. (APH.JO) Stock Price, News, Quote & History",
+   "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5JaXFEUjRVcEg2dW5nUDNFWXU0UFJnQ3ZzcVFXbzZGcG5GWjlSUEZPTnBoU2tteG9haElKZFRiMVpMMTlReVJBajJ4VkNKSzItUC0ycA?oc=5",
+   "source": "Yahoo! Finance Canada",
+   "region": "SA",
+   "published": "2026-11-15T10:22+02:00",
    "breaking": false,
    "tickers": []
   },
@@ -1063,24 +1081,6 @@
    "source": "Times Bull",
    "region": "FX",
    "published": "2026-11-15T07:18+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "The town that handles 50% of all cargo in South Africa and has the biggest aluminium smelter in the Southern Hemisphere",
-   "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxNYkcya3JMaXI2ak5kUUVEYU1uRjVDUERuVDFlSEV1bi1Odzc2ckItbFF4U0lsWlhWdHBBck9DbjBsTnRxSExsUlpPSlpKdndmZ01qSEFVMHJpYk1ZbGFDZFZrQXNrREdBTEJOV0w5YWNiNmZkTm9NMG9LM3Y1eDd1REx3OUZVbDFqTjRkWEFfWFdLYU5mT2g2LTJsT1pHcDJubTBFSVY4R2lJd0hfeFdFMkVKcGpzVlpFalpwaDBzOHhfSkhzdFd5QkppZGgyWGVmNklRTUVwSlFTcmJMblc2WkkxZDBGQVhhZnMwNDJKSTJMdF9mT2RQcA?oc=5",
-   "source": "Daily Investor",
-   "region": "SA",
-   "published": "2026-11-15T07:00+02:00",
-   "breaking": false,
-   "tickers": []
-  },
-  {
-   "title": "Why Nigeria needs South Africa's institutions and South Africa needs Nigeria's enterprise",
-   "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPZ25NQktyaER6YVByWXpNMmZ0MG1ubGwtRTV1WldJS1pjekRxLXRMQWt3VFRBN0ZXV2RIZ1pXNGVRVnlQQkdBS1F1TGpkeV9NYUdVMnFZRDRkNEd5b3NFMGNOekhnS3EzS3BMQ2VKMnlGakN6bnJzSzQtUmVHQ1lXbFV3QU9GbzBhX1lPZkswMzItSzlZQTF3UFhCZVJ3ZEVuU1JsOEQtNFVNVUVSWlVyckExV2VVYnhuVkhVYVhnalc4TTlyaWNEWTlQM3FLX0NnTlB3VS1fVThVTm5I?oc=5",
-   "source": "IOL",
-   "region": "SA",
-   "published": "2026-11-15T06:40+02:00",
    "breaking": false,
    "tickers": []
   }
