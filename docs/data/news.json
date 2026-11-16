@@ -1,60 +1,31 @@
 {
- "edition": "Evening update · Friday 13 November 2026 21:20",
- "generated":"2026-11-13T22:12+02:00",
- "covers": "Friday 13 November 2026: JSE close and the US session to about 20:25 SAST",
+ "edition": "Morning brief · Monday 16 November 2026 06:10",
+ "generated": "2026-11-16T06:25+02:00",
+ "covers": "Friday 13 November 2026 US close, the weekend and early Asian trade on Monday 16 November",
  "agent": "LRC News Desk",
- "headline": "Chip selloff deepens (AMD -10.5%, Cisco -6.2%) as HSBC downgrades Nvidia; Nasdaq -1.2%, 10-year yield 5.14%",
- "summary": "The JSE All Share closed at 112,387.86 (-0.4%) and the Top 40 at 104,486.62 (-0.5%), with SPAR down 4.4% and Standard Bank 2.1% lower after a reported R17 million fine (LRC Market Dashboard and LRC Stock Scanner (Yahoo Finance), 13 Nov 2026; Daily Investor headline). In New York the Nasdaq was 1.2% lower and the S&P 500 0.7% lower at about 20:25 SAST, but both remain about 2% up on the week; AMD fell 10.5%, Broadcom 5.2% and Nvidia 3.1% as CNBC reported an HSBC downgrade of Nvidia, with the US 10-year yield at 5.14% (LRC Market Dashboard and LRC Stock Scanner (Yahoo Finance), 12-13 Nov 2026; CNBC headline, 13 Nov 2026 18:24 SAST). The rand closed at R16.91/$, 2.6% weaker on the week, gold at $3,887.80 (-4.6% on the week) and Brent at $96.01 (LRC Market Dashboard (Yahoo Finance), 6-13 Nov 2026).",
+ "headline": "Wall Street ends a 2.5% up week despite Friday's chip selloff; rand near R16.95/$ and gold below $3,900 into an SA CPI and SARB week",
+ "summary": "The S&P 500 closed Friday at 7,561.67 and the Nasdaq at 25,136.27, about 2.5% and 2.3% higher on the week, even after AMD fell 8.8%, Broadcom 4.8% and Nvidia 2.0% on the day; the US 10-year yield ended the week at 5.15%, up from 4.86% (LRC Market Dashboard and LRC Stock Scanner (Yahoo Finance), 6-13 Nov 2026). The JSE All Share closed Friday at 112,387.86 and the Top 40 at 104,486.62, both slightly lower on the week, and the rand traded at R16.95/$ early on Monday from R16.76/$ at Friday's close (LRC Market Dashboard (Yahoo Finance), 13-16 Nov 2026). In early trade gold was at $3,868.10 (-0.5%), Brent at $94.84 (-1.0%) and copper 1.0% lower; this week brings Nvidia's results, SA October CPI on 18 November and the SARB rate decision on 19 November (LRC Market Dashboard, 15-16 Nov 2026).",
  "sections": [
-  {
-   "name": "Breaking",
-   "items": [
-    {
-     "title": "HSBC downgrades Nvidia, saying the stock will struggle until a new CEO is named",
-     "summary": "CNBC reported the downgrade at 18:24 SAST, following Jensen Huang's departure as chief executive reported earlier on Friday. Nvidia was at $161.06 (-3.1%) at 20:25 SAST; MarketWatch reports it has shed $657 billion of market value this week. We could not open the article, so the new rating and price target are not given here.",
-     "source": "CNBC headline, 13 Nov 2026 18:24 SAST; MarketWatch headline, 13 Nov 2026; LRC Stock Scanner quotes (Yahoo Finance NVDA), 13 Nov 2026 20:25 SAST",
-     "url": "https://www.cnbc.com/2026/11/13/hsbc-downgrades-nvidia-says-stock-to-struggle-until-new-ceo-named.html"
-    },
-    {
-     "title": "Chip selloff deepens: AMD -10.5%, Cisco -6.2%, Broadcom -5.2%, Applied Materials -4.8%",
-     "summary": "At 20:25 SAST AMD was at $523.79, Cisco at $95.64, Broadcom at $345.36 and Applied Materials at $362.81. CNBC also reports Treasury Secretary Bessent criticising Nvidia chip 'leakage' to China.",
-     "source": "LRC Stock Scanner quotes (Yahoo Finance AMD, CSCO, AVGO, AMAT), 13 Nov 2026 20:25 SAST; CNBC headlines, 13 Nov 2026 19:06 and 19:48 SAST",
-     "url": "https://www.cnbc.com/2026/11/13/stocks-moving-the-most-today-live-updates.html"
-    },
-    {
-     "title": "Nasdaq down 1.2%, S&P 500 down 0.7% on Friday, both still about 2% up on the week",
-     "summary": "At 20:25 SAST the S&P 500 was at 7,539.58 and the Nasdaq Composite at 25,062.98, against Thursday closes of 7,592.40 and 25,366.09 and 6 November closes of 7,376.86 and 24,579.43. CNBC's live blog says major averages are up for the week.",
-     "source": "LRC Market Dashboard (Yahoo Finance ^GSPC, ^IXIC), 6, 12 and 13 Nov 2026; CNBC headline, 13 Nov 2026 19:36 SAST",
-     "url": "https://www.cnbc.com/2026/11/12/stock-market-today-live-updates.html"
-    }
-   ]
-  },
   {
    "name": "US markets",
    "items": [
     {
-     "title": "US 10-year Treasury yield at 5.14% after the producer price report",
-     "summary": "The 10-year yield was 5.141% at 20:25 SAST, up from 5.103% on Thursday and 4.859% a week ago; CNBC's headline put it at 5.17% earlier in the session.",
-     "source": "LRC Market Dashboard (Yahoo Finance ^TNX), 6, 12 and 13 Nov 2026; CNBC headline, 13 Nov 2026 19:39 SAST",
-     "url": "https://www.cnbc.com/2026/11/13/treasury-yields-fed-rates.html"
+     "title": "S&P 500 closes the week at 7,561.67 (+2.5% on the week), Nasdaq at 25,136.27 (+2.3%)",
+     "summary": "Both indices ended Friday off their weekly highs after a chip-led selloff, but still held most of the week's gain: the S&P 500 rose from 7,376.86 on 6 November and the Nasdaq from 24,579.43.",
+     "source": "LRC Market Dashboard (Yahoo Finance ^GSPC, ^IXIC daily closes), 6 and 13 Nov 2026",
+     "url": "https://finance.yahoo.com/quote/%5EGSPC/"
     },
     {
-     "title": "US home sales at the lowest level since the Great Recession as prices hit a record",
-     "summary": "MarketWatch reports home sales falling to their lowest level since the 'Great Recession' while prices reach an all-time high.",
-     "source": "MarketWatch headline, 13 Nov 2026 17:08 SAST",
-     "url": "https://www.marketwatch.com/story/home-sales-plummet-to-lowest-level-since-the-great-recession-as-buyers-flee-the-market-624e6270"
+     "title": "Chip stocks close Friday lower: AMD -8.8%, Cisco -6.2%, Broadcom -4.8%, Nvidia -2.0%",
+     "summary": "Losses narrowed slightly into the close from the afternoon (AMD had been down 10.5% at 20:25 SAST). Apple (+0.4%) and Microsoft (+0.2%) were steady.",
+     "source": "LRC Stock Scanner quotes (Yahoo Finance AMD, CSCO, AVGO, NVDA, AAPL, MSFT), close 13 Nov 2026",
+     "url": "https://finance.yahoo.com/quote/AMD/"
     },
     {
-     "title": "Microsoft 0.2% higher as it apologises for the Outlook and 365 outage",
-     "summary": "Microsoft was at $524.14 at 20:25 SAST. CNBC reports the company apologised for the outage that took down Outlook and other 365 services.",
-     "source": "LRC Stock Scanner quotes (Yahoo Finance MSFT), 13 Nov 2026 20:25 SAST; CNBC headline, 13 Nov 2026 20:18 SAST",
-     "url": "https://www.cnbc.com/2026/11/12/microsoft-outage-outlook-aws-google.html"
-    },
-    {
-     "title": "Dollar heads for its biggest weekly gain since September",
-     "summary": "Investing.com reports the dollar on course for its biggest weekly gain since September as inflation lifts Fed rate-hike expectations.",
-     "source": "Investing.com headline, 13 Nov 2026 15:45 SAST",
-     "url": "https://www.investing.com/news/forex-news/asia-fx-yen-intervention-in-focus-as-rate-hike-bets-put-dollar-near-19mth-high-5024024"
+     "title": "US 10-year Treasury yield ends the week at 5.15%, up from 4.86%",
+     "summary": "A rise of about 0.3 percentage points in a week, after hotter US inflation data; higher US yields tend to weigh on emerging-market currencies such as the rand.",
+     "source": "LRC Market Dashboard (Yahoo Finance ^TNX), 6 and 13 Nov 2026",
+     "url": "https://finance.yahoo.com/quote/%5ETNX/"
     }
    ]
   },
@@ -62,22 +33,16 @@
    "name": "South Africa",
    "items": [
     {
-     "title": "JSE ends the week lower: All Share -0.4% on the day at 112,387.86, Top 40 -0.5% at 104,486.62",
-     "summary": "Against Thursday's closes of 112,894.87 and 104,981.31, the All Share finished 0.4% lower and the Top 40 0.5% lower; on the week the All Share is down 0.3% and the Top 40 0.2%. Naspers ended 1.4% lower at R725.37 and Prosus 0.2% lower at R670.40; gold miners were mixed (Gold Fields +0.1%, AngloGold Ashanti -0.1%, Harmony -0.2%). Vodacom gained 1.1% to R179.93.",
-     "source": "LRC Market Dashboard (Yahoo Finance ^J203.JO, ^J200.JO), 6, 12 and 13 Nov 2026; LRC Stock Scanner quotes (Yahoo Finance NPN.JO, PRX.JO, GFI.JO, ANG.JO, HAR.JO, VOD.JO), 13 Nov 2026 17:00 SAST",
+     "title": "JSE ends the week slightly lower: All Share 112,387.86, Top 40 104,486.62",
+     "summary": "The All Share slipped 0.3% on the week from 112,739.40 and the Top 40 0.2% from 104,714.00. Friday's laggards included SPAR (-4.4%), Nedbank (-2.7%) and Standard Bank (-2.1%).",
+     "source": "LRC Market Dashboard (Yahoo Finance ^J203.JO, ^J200.JO), 6 and 13 Nov 2026; LRC Stock Scanner quotes (Yahoo Finance SPP.JO, NED.JO, SBK.JO), 13 Nov 2026 17:00-17:09 SAST",
      "url": "https://finance.yahoo.com/quote/%5EJ203.JO/"
     },
     {
-     "title": "Standard Bank 2.1% lower; Daily Investor reports a R17 million fine and administrative sanctions",
-     "summary": "Standard Bank was at R305.20 at 17:07 SAST, down 2.1%. Daily Investor reports the bank has been hit with a R17 million fine and administrative sanctions; the regulator's statement had not been verified at the time of writing.",
-     "source": "LRC Stock Scanner quotes (Yahoo Finance SBK.JO), 13 Nov 2026 17:07 SAST; Daily Investor headline, 13 Nov 2026 17:12 SAST",
-     "url": "https://dailyinvestor.com/banking/75697/standard-bank-hit-with-sanctions/"
-    },
-    {
-     "title": "SPAR closes 4.4% lower at R46.70 after Phil Roux turns down board role",
-     "summary": "Moneyweb reports Phil Roux has turned down a role on SPAR's board, following News24's overnight report that his appointment had fallen apart.",
-     "source": "LRC Stock Scanner quotes (Yahoo Finance SPP.JO), 13 Nov 2026 17:00 SAST; Moneyweb headline, 13 Nov 2026 11:37 SAST",
-     "url": "https://www.moneyweb.co.za/news/companies-and-deals/phil-roux-turns-down-role-on-spar-board/"
+     "title": "Big week for SA data: October CPI on 18 November, SARB rate decision on 19 November",
+     "summary": "Repo is 7.25% after September's hike; September CPI was 4.5% and core 4.0%. The SA 10-year bond yield ended last week at 8.73%, its highest this month.",
+     "source": "LRC Macro Desk (Stats SA, SARB), 13 Nov 2026; LRC Market Dashboard (Trading Economics SA 10Y), 13 Nov 2026",
+     "url": "https://www.resbank.co.za/MonetaryPolicy/Monetary%20Policy%20Committee/Pages/Dates.aspx"
     }
    ]
   },
@@ -85,22 +50,22 @@
    "name": "Forex & commodities",
    "items": [
     {
-     "title": "Rand closes at R16.91/$, 2.6% weaker on the week; R18.66/€, R22.35/£",
-     "summary": "USD/ZAR closed at 16.9147 against 16.4804 a week ago. Moneyweb's evening radio slot reports the dollar continuing to gain against the rand.",
-     "source": "LRC Market Dashboard (Yahoo Finance ZAR=X, EURZAR=X, GBPZAR=X), 6 and 13 Nov 2026; Moneyweb headline, 13 Nov 2026 19:16 SAST",
-     "url": "https://www.moneyweb.co.za/moneyweb-radio/rsg-geldsake/die-dollar-hou-aan-om-veld-te-wen-teen-die-rand/"
+     "title": "Rand at R16.95/$ early Monday, from R16.76/$ at Friday's close; R18.68/€, R22.38/£",
+     "summary": "The rand is about 1.1% weaker against the dollar since Friday's close as the dollar stays firm on higher US yields.",
+     "source": "LRC Market Dashboard (Yahoo Finance ZAR=X, EURZAR=X, GBPZAR=X), 13 and 16 Nov 2026 05:51 SAST",
+     "url": "https://finance.yahoo.com/quote/ZAR=X/"
     },
     {
-     "title": "Gold $3,887.80 (-4.6% on the week); platinum $1,491.00; copper $13,413/t",
-     "summary": "Gold was at $3,887.80 against $4,074.90 a week ago; platinum at $1,491.00 against $1,538.20; copper at $13,413 against $13,708.",
-     "source": "LRC Market Dashboard (Yahoo Finance GC=F, PL=F, HG=F), 6 and 13 Nov 2026",
+     "title": "Gold $3,868.10 (-0.5%), platinum $1,474.90 (-0.9%), copper $13,272/t (-1.0%) in early trade",
+     "summary": "Metals extend last week's decline; gold is below $3,900 after a 4.6% weekly fall.",
+     "source": "LRC Market Dashboard (Yahoo Finance GC=F, PL=F, HG=F), 13 and 15-16 Nov 2026",
      "url": "https://finance.yahoo.com/quote/GC=F/"
     },
     {
-     "title": "Brent at $96.01, 2.3% lower on the week",
-     "summary": "Brent was at $96.01 against $98.32 a week ago. OilPrice.com headlines say Brent climbed back above $96 as Iran tensions escalated, and that Iraq's output is at a 2019 high as Hormuz flows surge.",
-     "source": "LRC Market Dashboard (Yahoo Finance BZ=F), 6 and 13 Nov 2026; OilPrice.com headlines, 13 Nov 2026 19:30 SAST",
-     "url": "https://oilprice.com/Energy/Energy-General/Brent-Crude-Climbs-Back-Above-96-as-Iran-Tensions-Escalate.html"
+     "title": "Brent at $94.84, 1.0% lower in early trade",
+     "summary": "Down from $95.84 at Friday's close.",
+     "source": "LRC Market Dashboard (Yahoo Finance BZ=F), 13 and 15-16 Nov 2026",
+     "url": "https://finance.yahoo.com/quote/BZ=F/"
     }
    ]
   },
@@ -108,29 +73,31 @@
    "name": "Our coverage",
    "items": [
     {
-     "title": "Nvidia: $161.06 (-3.1%); HSBC downgrade after the CEO's exit",
-     "summary": "The LRC Stock Scanner rates Nvidia HOLD; the price is well below the $210.96 used in the LRC Watchlist investment list (23 Oct 2026). CNBC reports HSBC downgraded the stock after Jensen Huang's departure. The LRC rating is unchanged here and is reassessed by the scanner on its next run. Results are expected on 17 November.",
-     "source": "LRC Stock Scanner quotes (Yahoo Finance NVDA), 13 Nov 2026 20:25 SAST; CNBC headline, 13 Nov 2026 18:24 SAST; LRC Watchlist, 7 Nov 2026",
-     "url": "https://www.cnbc.com/2026/11/13/hsbc-downgrades-nvidia-says-stock-to-struggle-until-new-ceo-named.html",
+     "title": "Nvidia closes Friday at $162.85 (-2.0%) ahead of this week's results",
+     "summary": "The shares fell 12.8% over the week. Results this week are the key event; the LRC Stock Scanner rating is unchanged here.",
+     "source": "LRC Stock Scanner quotes (Yahoo Finance NVDA), close 13 Nov 2026; LRC Stock Scanner, 13 Nov 2026",
+     "url": "https://finance.yahoo.com/quote/NVDA/",
      "tickers": [
       "NVDA"
      ]
     },
     {
-     "title": "AMD: $523.79 (-10.5%), below the scanner's $568.20 level",
-     "summary": "The LRC Stock Scanner rates AMD BUY; Friday's fall takes the shares further below the $568.20 level noted in earlier editions. The rating is unchanged here and is reassessed by the scanner on its next run.",
-     "source": "LRC Stock Scanner quotes (Yahoo Finance AMD), 13 Nov 2026 20:25 SAST",
-     "url": "https://www.cnbc.com/2026/11/13/stocks-moving-the-most-today-live-updates.html",
+     "title": "AMD closes at $534.06 (-8.8%)",
+     "summary": "The shares remain 18.9% higher over the week despite Friday's fall; rating unchanged.",
+     "source": "LRC Stock Scanner quotes (Yahoo Finance AMD), close 13 Nov 2026",
+     "url": "https://finance.yahoo.com/quote/AMD/",
      "tickers": [
       "AMD"
      ]
     },
     {
-     "title": "Meta: $636.05 (+2.0%)",
-     "summary": "No new company news today; the scanner rates it HOLD.",
-     "source": "LRC Stock Scanner quotes (Yahoo Finance META), 13 Nov 2026 20:25 SAST",
-     "url": "https://finance.yahoo.com/quote/META/",
+     "title": "Intuit $341.70 (+0.5%), Deckers $86.82 (+2.7%), Meta $641.69 (+2.9%)",
+     "summary": "No new company news over the weekend; ratings unchanged.",
+     "source": "LRC Stock Scanner quotes (Yahoo Finance INTU, DECK, META), close 13 Nov 2026",
+     "url": "https://finance.yahoo.com/quote/INTU/",
      "tickers": [
+      "INTU",
+      "DECK",
       "META"
      ]
     }
@@ -138,11 +105,10 @@
   }
  ],
  "watch_today": [
-  "Whether the chip selloff deepens into the US close",
-  "Nvidia: HSBC downgrade, CEO succession and 17 November results",
+  "JSE open: whether Friday's bank and SPAR weakness carries into Monday",
+  "Rand near R17/$ ahead of SA CPI (18 Nov) and the SARB decision (19 Nov)",
+  "Nvidia results this week and whether the chip selloff resumes",
   "US 10-year yield above 5.1%",
-  "Stats SA labour force data and union reaction",
-  "Standard Bank: details of the reported sanction",
-  "SA CPI for October on 18 November; SARB MPC decision on 19 November"
+  "Gold below $3,900 and platinum below $1,500"
  ]
 }
