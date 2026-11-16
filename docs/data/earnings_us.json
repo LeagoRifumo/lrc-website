@@ -96510,6 +96510,9 @@
    "measure": null,
    "dps": null,
    "source": "Nasdaq",
+   "has_res": true,
+   "desk": false,
+   "g": "not found",
    "t": "WF",
    "lists": [],
    "idea": null,
@@ -96835,6 +96838,10 @@
    "measure": null,
    "dps": null,
    "source": "Nasdaq",
+   "has_res": true,
+   "desk": false,
+   "rev_actual": 1725000000.0,
+   "g": "not found",
    "t": "LPL",
    "lists": [],
    "idea": null,
@@ -97230,14 +97237,8 @@
    "n_est": 2,
    "rcur": "ARS",
    "has_res": true,
-   "desk": true,
-   "rev_actual": 2697343000000,
-   "rev_prior": 2761562000000,
-   "g": "none",
-   "headline": "Revenue down 2% in real terms to P$2.70trn (US$1.78bn); EBITDA up 13% real; P$56.6bn net loss on impairments; no guidance",
-   "rev_surprise": 1551.824,
-   "rev_result": "beat",
-   "rev_yoy": -0.0233,
+   "desk": false,
+   "g": "not found",
    "t": "TEO",
    "lists": [],
    "idea": null,
@@ -97337,7 +97338,8 @@
     "beat",
     "beat",
     "miss"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-16",
@@ -97369,7 +97371,8 @@
     "beat",
     "beat",
     "inline"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-16",
@@ -97434,7 +97437,8 @@
     "beat",
     "miss",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-16",
@@ -97466,7 +97470,8 @@
     "inline",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-16",
@@ -97521,7 +97526,8 @@
     "beat",
     "miss",
     "miss"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-16",
@@ -97864,6 +97870,7 @@
    "n_est": 4,
    "rcur": "USD",
    "qend": "2026-09-30",
+   "has_res": true,
    "track": [
     "beat"
    ],
@@ -107240,6 +107247,6 @@
    "covered": false
   }
  ],
- "synced": "2026-11-16T16:38+02:00",
+ "synced": "2026-11-16T18:02+02:00",
  "coverage_note": "Ticked = on the LRC watchlist. Every company the LRC Stock Scanner tracks shows its trading and investment ratings. Updated after every scanner run."
 }
