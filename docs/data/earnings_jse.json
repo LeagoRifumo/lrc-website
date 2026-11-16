@@ -847,6 +847,10 @@
    "rev_yago": 5207000000,
    "n_est": 4,
    "rcur": "EUR",
+   "has_res": true,
+   "desk": true,
+   "g": "given",
+   "headline": "HEPS up 42% to €4.27 (from €3.01) on strong jewellery demand; no numeric outlook",
    "px_move": {
     "move": -0.0313,
     "from": "2026-11-12",
@@ -1427,6 +1431,6 @@
   }
  ],
  "note": "Partial list. Removed this week because no company source could be found: Coronation (17 Nov) and SPAR (4 Dec). Momentum's operating update is not listed: its diary could not be opened and MarketScreener now shows 25 Nov instead of 23 Nov. Reinet (30 Nov) and Nutun (1 Dec) appear only on third-party calendars and are not listed. No published date in the window was found for MTN, Shoprite, Bidvest, Discovery, FirstRand, Sasol, Aspen, Lewis, Nedbank, Absa, Growthpoint, Attacq, Italtile, Super Group, Remgro, Motus or Sun International.",
- "synced": "2026-11-16T07:31+02:00",
+ "synced": "2026-11-16T16:38+02:00",
  "coverage_note": "Ticked = on the LRC watchlist. Every company the LRC Stock Scanner tracks shows its trading and investment ratings. Updated after every scanner run."
 }

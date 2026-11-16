@@ -23801,6 +23801,27 @@
 "result_done": true,
 "source": "Nasdaq"
 },
+"HDB|2027-01-16": {
+"t": "HDB",
+"ticker": "HDB",
+"name": "HDFC Bank Limited",
+"m": "US",
+"date": "2027-01-16",
+"when": "Not stated",
+"eps_forecast": "",
+"quarter": "",
+"period": "Expected date (market data feed)",
+"market_cap_bn": 132.9,
+"rev_est": 495461127500,
+"rev_est_low": 495300000000,
+"rev_est_high": 495622255000,
+"rev_yago": 458688400000,
+"eps_est_q": 0.411,
+"eps_yago": 0.3994,
+"n_est": 2,
+"rcur": "INR",
+"qend": "2026-12-31"
+},
 "HD|2026-11-17": {
 "t": "HD",
 "ticker": "HD",
