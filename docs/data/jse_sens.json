@@ -1,6 +1,6 @@
 {
  "note": "JSE company announcements (SENS) recorded by the LRC JSE Announcements job every weekday. results = published results with headline earnings per share (HEPS) vs the same period last year; trading_statements = expected HEPS change ranges; dividends = declared dividends with the JSE dates. Amounts in cents. Every entry carries its source.",
- "updated": "2026-11-13T19:30+02:00",
+ "updated": "2026-11-16T19:30+02:00",
  "results": [
   {
    "t": "CLS.JO",
@@ -357,6 +357,17 @@
    "declared": "2026-11-11",
    "amount_c": 28.45381,
    "source": "Dipula Properties SENS — Audited consolidated financial results for the year ended 31 August 2026 and guidance (11 Nov 2026), via Sharenet https://www.sharenet.co.za/v3/sens_display.php?tdate=20261111080000&seq=17&scode= — dividend number 29 for 1 Mar to 31 Aug 2026; salient dates to follow in a circular"
+  },
+  {
+   "t": "SRE.JO",
+   "period": "Interim",
+   "declared": "2026-11-16",
+   "amount_c": 62.61683,
+   "ldt": "2026-12-08",
+   "ex": "2026-12-09",
+   "record": "2026-12-11",
+   "pay": "2027-01-21",
+   "source": "Sirius Real Estate SENS — Cash dividend and offer of Dividend Reinvestment Plan (16 Nov 2026), via Sharenet https://www.sharenet.co.za/v3/sens_display.php?tdate=20261116160000&seq=84&scode= (dividend of 3.35 euro cents per share for the six months to 30 Sep 2026; SA gross 62.61683 ZAR cents at 18.69159 ZAR/EUR; 46.1% PID / 53.9% non-PID; SA register dates shown)"
   }
  ]
 }
