@@ -1,24 +1,24 @@
 {
-  "edition": "Evening update · Tuesday 17 November 2026 17:20",
-  "generated": "2026-11-17T17:20+02:00",
-  "covers": "Tuesday 17 November 2026 from 13:15 to 17:20 SAST: the end of the JSE session and the first minutes of Wall Street trade (market levels as of 16:45 SAST), with Monday's closes for reference",
+  "edition": "Evening update · Tuesday 17 November 2026 18:15",
+  "generated": "2026-11-17T18:15+02:00",
+  "covers": "Tuesday 17 November 2026 from 17:20 to 18:15 SAST: the JSE close and the first hour of Wall Street trade (market levels as of 17:39 SAST), with Monday's closes for reference",
   "agent": "LRC News Desk",
-  "headline": "JSE ends the day about 1.1% lower; Wall Street opens flat ahead of Nvidia's results tonight",
-  "summary": "Late in the session the JSE All Share was 1.1% lower at 110,350 and the Top 40 1.1% lower at 102,466, with the rand at R16.93/$, about 1.0% weaker than Friday (LRC Market Dashboard (Yahoo Finance), 17 Nov 2026 16:45 SAST). Shortly after the New York open the S&P 500 was at 7,406 and the Nasdaq at 24,493, both within 0.2% of Monday's close, as investors waited for Nvidia's results later today (same source). Platinum was 2.6% lower on the day at $1,436, a drag on JSE miners, while Brent firmed to $93.93; SA CPI on Wednesday and the SARB decision on Thursday remain the main local tests.",
+  "headline": "Wall Street slips about 0.9% in early trade ahead of Nvidia's results; JSE closes 0.8% lower",
+  "summary": "The JSE All Share closed 0.8% lower at 110,616 and the Top 40 0.9% lower at 102,752, with the rand at R16.92/$, about 1.0% weaker than Friday (LRC Market Dashboard (Yahoo Finance), 17 Nov 2026 17:39 SAST). After a flat start, the S&P 500 had slipped to 7,354 (-0.8%) and the Nasdaq to 24,273 (-1.0%) by 17:39 SAST as investors waited for Nvidia's results later today (same source). Platinum was 2.8% lower on the day at $1,433, a drag on JSE miners, while Brent was 1.4% higher at $93.02; SA CPI on Wednesday and the SARB decision on Thursday remain the main local tests.",
   "sections": [
     {
       "name": "US markets",
       "items": [
         {
-          "title": "S&P 500 and Nasdaq flat at the open: 7,406 and 24,493",
-          "summary": "At 16:45 SAST (09:45 New York) the S&P 500 was at 7,406.42 against Monday's close of 7,416.59 (-0.1%) and the Nasdaq Composite at 24,492.62 against 24,509.76 (-0.1%). Both are about 2-3% below Friday 13 November (S&P 7,561.67; Nasdaq 25,136.27) after Monday's chip-led sell-off.",
-          "source": "LRC Market Dashboard (Yahoo Finance), 17 Nov 2026 16:45 SAST; Monday close 16 Nov 2026",
+          "title": "S&P 500 -0.8% and Nasdaq -1.0% in early trade: 7,354 and 24,273",
+          "summary": "At 17:39 SAST (10:39 New York) the S&P 500 was at 7,354.36 against Monday's close of 7,416.59 (-0.8%) and the Nasdaq Composite at 24,272.64 against 24,509.76 (-1.0%), after both opened roughly flat. Both are about 3% below Friday 13 November (S&P 7,561.67; Nasdaq 25,136.27).",
+          "source": "LRC Market Dashboard (Yahoo Finance), 17 Nov 2026 17:39 SAST; Monday close 16 Nov 2026",
           "url": "https://finance.yahoo.com/quote/%5EGSPC/"
         },
         {
           "title": "US 10-year yield 5.14%",
-          "summary": "The 10-year Treasury yield was 5.141% at 16:45 SAST, up from Monday's close of 5.121% and just below Friday's 5.154%. The October FOMC minutes are due on Wednesday.",
-          "source": "LRC Market Dashboard (Yahoo Finance), 17 Nov 2026 16:45 SAST; Monday close 16 Nov 2026",
+          "summary": "The 10-year Treasury yield was 5.141% at 17:39 SAST, up from Monday's close of 5.121% and just below Friday's 5.154%. The October FOMC minutes are due on Wednesday.",
+          "source": "LRC Market Dashboard (Yahoo Finance), 17 Nov 2026 17:39 SAST; Monday close 16 Nov 2026",
           "url": "https://finance.yahoo.com/quote/%5ETNX/"
         }
       ]
@@ -27,9 +27,9 @@
       "name": "South Africa",
       "items": [
         {
-          "title": "JSE All Share about 1.1% lower at 110,350 late in the session",
-          "summary": "At 16:45 SAST, shortly before the 17:00 close, the All Share was at 110,350.05 against Monday's close of 111,525.58 (-1.1%) and the Top 40 at 102,465.82 against 103,628.96 (-1.1%). That is a small recovery from the midday low of 110,164 reported in the Midday update, but the index is about 1.8% down on Friday's close of 112,388.",
-          "source": "LRC Market Dashboard (Yahoo Finance), 17 Nov 2026 16:45 SAST; Monday close 16 Nov 2026; Friday close 13 Nov 2026",
+          "title": "JSE All Share closes 0.8% lower at 110,616",
+          "summary": "The All Share closed at 110,616.44 against Monday's close of 111,525.58 (-0.8%) and the Top 40 at 102,752.15 against 103,628.96 (-0.8%). The index finished above the midday low of 110,164 reported in the Midday update, but is about 1.6% down on Friday's close of 112,388.",
+          "source": "LRC Market Dashboard (Yahoo Finance), JSE close 17 Nov 2026 (read 17:39 SAST); Monday close 16 Nov 2026; Friday close 13 Nov 2026",
           "url": "https://finance.yahoo.com/quote/%5EJ203.JO/"
         },
         {
@@ -53,15 +53,15 @@
       "name": "Forex & commodities",
       "items": [
         {
-          "title": "Rand at R16.93/$, about 1.0% weaker than Friday",
-          "summary": "USD/ZAR was at 16.9337 at 16:45 SAST against 16.7584 at Friday's close. EUR/ZAR was at 18.61 and GBP/ZAR at 22.35.",
-          "source": "LRC Market Dashboard (Yahoo Finance ZAR=X, EURZAR=X, GBPZAR=X), 17 Nov 2026 16:45 SAST",
+          "title": "Rand at R16.92/$, about 1.0% weaker than Friday",
+          "summary": "USD/ZAR was at 16.9238 at 17:39 SAST against 16.7584 at Friday's close. EUR/ZAR was at 18.62 and GBP/ZAR at 22.34.",
+          "source": "LRC Market Dashboard (Yahoo Finance ZAR=X, EURZAR=X, GBPZAR=X), 17 Nov 2026 17:39 SAST",
           "url": "https://finance.yahoo.com/quote/ZAR%3DX/"
         },
         {
-          "title": "Platinum -2.6% to $1,436; gold $3,867; Brent $93.93",
-          "summary": "At 16:45 SAST: platinum $1,436.10 (Monday close $1,474.20, -2.6%); gold futures $3,867.40 (Monday $3,878.60, -0.3%); Brent $93.93 (Monday $91.71, +2.4%); copper about $13,214/t (Monday about $13,222/t). Weaker platinum weighed on PGM miners on the JSE today.",
-          "source": "LRC Market Dashboard (Yahoo Finance PL=F, GC=F, BZ=F, HG=F), 17 Nov 2026 16:45 SAST; Monday close 16 Nov 2026",
+          "title": "Platinum -2.8% to $1,433; gold $3,873; Brent $93.02",
+          "summary": "At 17:39 SAST: platinum $1,433.40 (Monday close $1,474.20, -2.8%); gold futures $3,872.70 (Monday $3,878.60, -0.2%); Brent $93.02 (Monday $91.71, +1.4%); copper about $13,217/t (Monday about $13,222/t). Weaker platinum weighed on PGM miners on the JSE today.",
+          "source": "LRC Market Dashboard (Yahoo Finance PL=F, GC=F, BZ=F, HG=F), 17 Nov 2026 17:39 SAST; Monday close 16 Nov 2026",
           "url": "https://finance.yahoo.com/quote/PL%3DF/"
         }
       ]
@@ -92,7 +92,7 @@
   ],
   "watch_today": [
     "Nvidia results later today and the reaction in chip stocks, including AMD",
-    "How Wall Street closes after a flat open",
+    "How Wall Street closes after slipping in the first hour",
     "SA October CPI on Wednesday 18 November (Reuters poll: 5.1%; September 4.5%)",
     "The SARB decision on Thursday 19 November with the repo rate at 7.25%",
     "October FOMC minutes on Wednesday"
