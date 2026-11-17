@@ -2,7 +2,7 @@
  "week_ending": "2026-11-20",
  "title": "Live — as of Tue 17 Nov 2026",
  "live": true,
- "generated": "2026-11-17T01:28+02:00",
+ "generated": "2026-11-17T02:20+02:00",
  "agent": "LRC Market Dashboard",
  "groups": [
   {
@@ -33,33 +33,33 @@
     {
      "name": "USD / ZAR",
      "unit": "rand per $",
-     "latest": 16.9632,
+     "latest": 16.9724,
      "week_ago": 16.7584,
-     "year_ago": 17.0386,
-     "as_of": "2026-11-16",
-     "source": "Yahoo Finance ZAR=X daily close (2026-11-16; week-ago 2026-11-13; year-ago 2025-11-14)",
+     "year_ago": 17.0822,
+     "as_of": "2026-11-17",
+     "source": "Yahoo Finance ZAR=X daily close (2026-11-17; week-ago 2026-11-13; year-ago 2025-11-17)",
      "note": "",
      "carried": false
     },
     {
      "name": "EUR / ZAR",
      "unit": "rand per €",
-     "latest": 18.6558,
+     "latest": 18.6676,
      "week_ago": 18.5103,
-     "year_ago": 19.8105,
-     "as_of": "2026-11-16",
-     "source": "Yahoo Finance EURZAR=X daily close (2026-11-16; week-ago 2026-11-13; year-ago 2025-11-14)",
+     "year_ago": 19.8352,
+     "as_of": "2026-11-17",
+     "source": "Yahoo Finance EURZAR=X daily close (2026-11-17; week-ago 2026-11-13; year-ago 2025-11-17)",
      "note": "",
      "carried": false
     },
     {
      "name": "GBP / ZAR",
      "unit": "rand per £",
-     "latest": 22.3637,
+     "latest": 22.3629,
      "week_ago": 22.1705,
-     "year_ago": 22.4021,
-     "as_of": "2026-11-16",
-     "source": "Yahoo Finance GBPZAR=X daily close (2026-11-16; week-ago 2026-11-13; year-ago 2025-11-14)",
+     "year_ago": 22.4716,
+     "as_of": "2026-11-17",
+     "source": "Yahoo Finance GBPZAR=X daily close (2026-11-17; week-ago 2026-11-13; year-ago 2025-11-17)",
      "note": "",
      "carried": false
     },
@@ -175,7 +175,7 @@
     {
      "name": "Gold",
      "unit": "$/oz",
-     "latest": 3857.0,
+     "latest": 3861.9,
      "week_ago": 3886.3,
      "year_ago": 4094.2,
      "as_of": "2026-11-16",
@@ -186,7 +186,7 @@
     {
      "name": "Platinum",
      "unit": "$/oz",
-     "latest": 1448.2,
+     "latest": 1446.7,
      "week_ago": 1488.5,
      "year_ago": 1555.2,
      "as_of": "2026-11-16",
@@ -197,7 +197,7 @@
     {
      "name": "Brent crude",
      "unit": "$/bbl",
-     "latest": 92.21,
+     "latest": 92.13,
      "week_ago": 95.84,
      "year_ago": 64.39,
      "as_of": "2026-11-16",
@@ -208,7 +208,7 @@
     {
      "name": "Copper",
      "unit": "$/t",
-     "latest": 13200.1622,
+     "latest": 13206.7761,
      "week_ago": 13402.9877,
      "year_ago": 11132.2287,
      "as_of": "2026-11-16",
@@ -232,6 +232,6 @@
  ],
  "movers": [],
  "market_view": "",
- "auto_view": "The JSE All Share moved -0.8% on the week to 111,526 and the rand weakened 1.2% to R16.96/$. In New York the S&P 500 moved -1.9% and the Nasdaq -2.5%, with the US 10-year at 5.12%. Commodities: gold -0.8%, platinum -2.7%, Brent -3.8%, copper -1.5%.",
+ "auto_view": "The JSE All Share moved -0.8% on the week to 111,526 and the rand weakened 1.3% to R16.97/$. In New York the S&P 500 moved -1.9% and the Nasdaq -2.5%, with the US 10-year at 5.12%. Commodities: gold -0.6%, platinum -2.8%, Brent -3.9%, copper -1.5%.",
  "missing": []
 }
