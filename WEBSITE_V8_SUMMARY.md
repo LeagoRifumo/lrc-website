@@ -224,3 +224,10 @@ Give this file (and the zip) to Claude when you next update the website.
 ### Portfolio v1.8: Reset (13 Nov 2026)
 - "Reset" button on My Portfolio (type RESET to confirm): deletes the member's own positions, cash flows, journal, track record and cash.
 - SQL step 12: members may delete their own snapshots; deleting any position clears that member's track record so the Portfolio Desk rebuilds it from what is left (fixes the phantom "loss" after deleting positions).
+
+## 17 Nov 2026 — LRC Trading Desk (private staff page)
+- docs/desk.html + docs/assets/js/desk.js, database in supabase/desk.sql. Not in any menu, noindex. Address: www.leagorifumocapital.co.za/desk.html
+- Two desks (Forex, Equity), each with a Fundamental and a Technical sign-in = four desk accounts in Supabase Auth (forex.fundamental@ / forex.technical@ / equity.fundamental@ / equity.technical@leagorifumocapital.co.za). Passwords are set in Supabase → Authentication → Users, or changed on the page ("Change desk password"). Analysts type their name at sign-in; it is recorded on every action.
+- Flow: fundamental hands over (asset, Buy/Sell, High/Medium/Low, desk-specific fields, mini thesis, what would change the bias, expiry) → technical reviews (bias, Supply zone / Demand zone / Break and retest / No setup yet, timeframe, pro/counter-trend, confidence, entry/stop/target, execution thesis) → approved / waiting / no trade → filled → closed in R.
+- Rules (enforced in the database functions, owner decisions 17 Nov 2026): desks disagree on direction or setup conflicts with bias = NO TRADE; Low confidence on either desk = no trade; Low fundamental can't be handed over (watchlist); R:R below desk_settings.min_rr (1.5) = no trade; Full size only when both High + pro-trend, otherwise Reduced size; bias expires after 7 days (Forex) / 14 days (Equity) unless renewed. Change the numbers with: update public.desk_settings set min_rr = 2 where id = 1;
+- Trade log & review tab: win rate and average R by confidence, trend alignment, setup and size; no-trade reasons; CSV download.
