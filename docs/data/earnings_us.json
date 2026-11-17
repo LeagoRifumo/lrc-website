@@ -93963,12 +93963,8 @@
    "dps": null,
    "source": "Nasdaq",
    "has_res": true,
-   "desk": true,
-   "rev_actual": 41889000,
-   "rev_prior": 8695000,
-   "g": "none",
-   "headline": "Revenue up 382% to C$41.9m on tungsten prices but below estimates; Sangdong starts producing; no financial guidance",
-   "rev_yoy": 3.8176,
+   "desk": false,
+   "g": "not found",
    "px_move": {
     "move": 0.0074,
     "from": "2026-11-11",
@@ -97020,14 +97016,8 @@
    "n_est": 8,
    "rcur": "CAD",
    "has_res": true,
-   "desk": true,
-   "rev_actual": 41889000,
-   "rev_prior": 8695000,
-   "g": "none",
-   "headline": "Revenue up 382% to C$41.9m on tungsten prices but below estimates; Sangdong starts producing; no financial guidance",
-   "rev_surprise": -0.4017,
-   "rev_result": "miss",
-   "rev_yoy": 3.8176,
+   "desk": false,
+   "g": "not found",
    "px_move": {
     "move": 0.0682,
     "from": "2026-11-12",
@@ -98238,14 +98228,8 @@
    "n_est": 8,
    "rcur": "CAD",
    "has_res": true,
-   "desk": true,
-   "rev_actual": 41889000,
-   "rev_prior": 8695000,
-   "g": "none",
-   "headline": "Revenue up 382% to C$41.9m on tungsten prices but below estimates; Sangdong starts producing; no financial guidance",
-   "rev_surprise": -0.3985,
-   "rev_result": "miss",
-   "rev_yoy": 3.8176,
+   "desk": false,
+   "g": "not found",
    "t": "ALM",
    "lists": [],
    "idea": null,
@@ -98792,6 +98776,14 @@
    "rev_est_high": 4805000000,
    "n_est": 4,
    "rcur": "BRL",
+   "has_res": true,
+   "desk": false,
+   "rev_actual": 4727300000.0,
+   "rev_prior": 2731200000.0,
+   "g": "given",
+   "rev_surprise": 0.0359,
+   "rev_result": "beat",
+   "rev_yoy": 0.7309,
    "t": "PICS",
    "lists": [],
    "idea": null,
@@ -98894,7 +98886,8 @@
     "beat",
     "inline",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-17",
@@ -98926,7 +98919,8 @@
     "beat",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-17",
@@ -98976,7 +98970,8 @@
     "beat",
     "miss",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-17",
@@ -99041,7 +99036,8 @@
     "beat",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-17",
@@ -99073,7 +99069,8 @@
     "beat",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-17",
@@ -99170,7 +99167,8 @@
     "inline",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-17",
@@ -99202,7 +99200,8 @@
     "beat",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-17",
@@ -99266,7 +99265,8 @@
     "beat",
     "inline",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-17",
@@ -99298,7 +99298,8 @@
     "beat",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-17",
@@ -99452,7 +99453,8 @@
    "n_est": 5,
    "rcur": "USD",
    "qend": "2026-09-30",
-   "track": null
+   "track": null,
+   "has_res": true
   },
   {
    "date": "2026-11-17",
@@ -99477,6 +99479,7 @@
    "n_est": 3,
    "rcur": "USD",
    "qend": "2026-09-30",
+   "has_res": true,
    "track": [
     "miss",
     "beat",
@@ -99509,6 +99512,7 @@
    "n_est": 8,
    "rcur": "USD",
    "qend": "2026-09-30",
+   "has_res": true,
    "track": [
     "beat",
     "miss",
@@ -99532,6 +99536,7 @@
    "idea": null,
    "v": "HOLD",
    "iv": "BUY",
+   "has_res": true,
    "track": [
     "miss",
     "beat",
@@ -99595,6 +99600,7 @@
    "n_est": 6,
    "rcur": "USD",
    "qend": "2026-09-30",
+   "has_res": true,
    "track": [
     "beat",
     "beat",
@@ -108384,6 +108390,6 @@
    "covered": false
   }
  ],
- "synced": "2026-11-17T16:24+02:00",
+ "synced": "2026-11-17T16:44+02:00",
  "coverage_note": "Ticked = on the LRC watchlist. Every company the LRC Stock Scanner tracks shows its trading and investment ratings. Updated after every scanner run."
 }
