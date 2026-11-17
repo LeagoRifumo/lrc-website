@@ -1,40 +1,25 @@
 {
- "edition": "Evening update · Monday 16 November 2026 17:15",
- "generated": "2026-11-16T20:15+02:00",
- "covers": "The Wall Street open and the JSE afternoon session, Monday 16 November 2026",
+ "edition": "Morning brief · Tuesday 17 November 2026 06:15",
+ "generated": "2026-11-17T06:15+02:00",
+ "covers": "The US session on Monday 16 November 2026 and the SA overnight to 06:00 on Tuesday 17 November",
  "agent": "LRC News Desk",
- "headline": "Nasdaq opens 2.1% lower as chip stocks slide; Nvidia down 2.7% to $158.70 a day before results",
- "summary": "On the JSE, Telkom was up 15.1% at R71.35 and MTN down 2.3% at R229.16 just before 15:00 after the two confirmed early takeover talks, while the All Share closed 0.8% lower at 111,526 and the rand was near R17/$ (TechCentral, 16 Nov 2026; LRC Market Dashboard (Yahoo Finance), 16 Nov 2026). Wall Street opened mixed, with the Nasdaq down 2.1%, the S&P 500 down 0.8% and the Dow down 0.2%, as Nvidia fell 2.7% to $158.70 and AMD 5.1% after Jensen Huang's resignation as CEO last week (City AM, 16 Nov 2026 14:38 GMT). Gold traded around $3,869 near a one-year low and Brent around $95 as the dollar stayed strong and markets priced a December Fed hike, which keeps pressure on the rand ahead of SA CPI on Wednesday and the SARB decision on Thursday (Yahoo Finance, 16 Nov 2026; Reuters via CNBC Africa, 16 Nov 2026).",
+ "headline": "Wall Street closed lower on Monday: Nasdaq -2.5%, S&P 500 -1.9%; Nvidia reports today",
+ "summary": "The JSE All Share closed 0.8% lower at 111,526 on Monday and the rand was at R16.96/$ early on Tuesday, weaker than Friday's R16.76/$, ahead of SA CPI on Wednesday and the SARB decision on Thursday (LRC Market Dashboard (Yahoo Finance), 16-17 Nov 2026). In New York the S&P 500 closed 1.9% lower at 7,416.59 and the Nasdaq Composite 2.5% lower at 24,509.76, with the US 10-year yield at 5.12% (LRC Market Dashboard (Yahoo Finance), close 16 Nov 2026). Brent fell 4.3% to $91.71 while gold slipped 0.2% to $3,878.60 and platinum 1.0% to $1,474.20; Nvidia's results later today are the main event for tech shares (LRC Market Dashboard (Yahoo Finance), close 16 Nov 2026).",
  "sections": [
-  {
-   "name": "Breaking",
-   "items": [
-    {
-     "title": "Nasdaq opens 2.1% lower; Nvidia -2.7% to $158.70, AMD -5.1%, Intel -5.7%",
-     "summary": "US markets opened mixed: the S&P 500 fell 0.8%, the Dow 0.2% and the Nasdaq Composite 2.1%. Nvidia slipped to $158.70 in early trade, from Friday's $162.80, and is 32% below its October peak; AMD fell 5.1% and Broadcom 4.2%, reversing last week's gains. City AM links the pressure to fallout from Jensen Huang's resignation as CEO last Thursday and reports that he is weighing a comeback; interim CEO Colette Kress presents results on Tuesday 17 November.",
-     "source": "City AM, 16 Nov 2026 14:38 GMT; Yahoo Finance live blog, 16 Nov 2026 06:25 PST",
-     "url": "https://www.cityam.com/nvidia-shares-continue-slide-as-investors-grapple-with-latest-in-huang-saga/",
-     "tickers": [
-      "NVDA",
-      "AMD"
-     ]
-    }
-   ]
-  },
   {
    "name": "US markets",
    "items": [
     {
-     "title": "Futures pointed lower before the open; Asia fell overnight",
-     "summary": "Before the open, S&P 500 futures were down 0.7% and Nasdaq-100 futures down 1.5%, with crypto-linked shares 5-8% lower in pre-market trade as bitcoin fell to about $64,000. Japan's Nikkei 225 fell 2.4% to 59,662.02 and Korea's Kospi 3.6%. Last week the three main US indices each gained more than 2%.",
-     "source": "Yahoo Finance live blog, 16 Nov 2026 06:25 PST; AP via BNN Bloomberg, 16 Nov 2026 06:48 EST; TipRanks, 16 Nov 2026",
-     "url": "https://finance.yahoo.com/markets/live/stock-market-today-monday-november-16-dow-sp-500-nasdaq-nvidia-oil-091631084.html"
+     "title": "S&P 500 closes 1.9% lower at 7,416.59; Nasdaq -2.5% at 24,509.76",
+     "summary": "Monday's closes, against Friday 13 November: S&P 500 7,416.59 (Friday 7,561.67, -1.9%); Nasdaq Composite 24,509.76 (Friday 25,136.27, -2.5%). The fall built on the weak open reported in last night's update, when chip stocks led the market down.",
+     "source": "LRC Market Dashboard (Yahoo Finance ^GSPC, ^IXIC daily close), 16 Nov 2026",
+     "url": "https://finance.yahoo.com/quote/%5EGSPC/"
     },
     {
-     "title": "Big week for US data and the Fed",
-     "summary": "Fed Chair Kevin Warsh was due to speak on Monday and the October FOMC minutes come out on Wednesday. Yahoo Finance's quote bar showed the US 10-year yield at 5.13% before the open (5.15% at Friday's close).",
-     "source": "Reuters via CNBC Africa, 16 Nov 2026 08:56 GMT; Yahoo Finance live blog, 16 Nov 2026 06:25 PST; LRC Market Dashboard (Yahoo Finance ^TNX), close 13 Nov 2026",
-     "url": "https://www.cnbcafrica.com/2026/south-african-rand-slips-as-stronger-dollar-weighs"
+     "title": "US 10-year yield 5.12%",
+     "summary": "The 10-year Treasury yield closed at 5.121% on Monday, slightly below Friday's 5.154%. The October FOMC minutes are due on Wednesday.",
+     "source": "LRC Market Dashboard (Yahoo Finance ^TNX daily close), 16 Nov 2026",
+     "url": "https://finance.yahoo.com/quote/%5ETNX/"
     }
    ]
   },
@@ -42,20 +27,14 @@
    "name": "South Africa",
    "items": [
     {
-     "title": "Telkom +15.1% at R71.35, MTN -2.3% at R229.16 on takeover talks",
-     "summary": "Quotes at 14:54-14:56 SAST. Telkom touched R73.30, a 52-week high, and was valued at about R36.5bn. The state owns 40.5% of Telkom, so selling its stake would need political backing, and any deal would need approval from the competition authorities and Icasa. Talks are at an early stage and a deal is not certain. Telkom reports interim results on Tuesday.",
-     "source": "TechCentral, 16 Nov 2026 15:24 SAST",
-     "url": "https://techcentral.co.za/telkom-shares-jump-mtn-talks/288465/"
-    },
-    {
-     "title": "JSE All Share closes 0.8% lower at 111,526",
-     "summary": "The All Share closed at 111,525.58, down 0.8% from Friday's 112,387.90, and the Top 40 at 103,628.96, also down 0.8% (Friday 104,486.60), held back by miners.",
+     "title": "JSE All Share closed 0.8% lower at 111,526; Top 40 at 103,629",
+     "summary": "The All Share closed at 111,525.58 on Monday (Friday 112,387.90) and the Top 40 at 103,628.96 (Friday 104,486.60). Given the weaker US close, the JSE may open under pressure today.",
      "source": "LRC Market Dashboard (Yahoo Finance ^J203.JO, ^J200.JO daily close), 16 Nov 2026",
      "url": "https://finance.yahoo.com/quote/%5EJ203.JO/"
     },
     {
      "title": "CPI on Wednesday, SARB on Thursday",
-     "summary": "A Reuters poll expects October CPI at 5.1%, up from 4.5% in September; the repo rate is 7.25%. The 2035 government bond yield rose 1.5 basis points to 8.545% in early trade.",
+     "summary": "October CPI is due on Wednesday 18 November (September: 4.5%) and the SARB announces its decision on Thursday 19 November with the repo rate at 7.25%. A Reuters poll quoted on Monday expected October CPI at 5.1%.",
      "source": "Reuters via CNBC Africa, 16 Nov 2026 08:56 GMT; LRC Market Dashboard, 13 Nov 2026",
      "url": "https://www.cnbcafrica.com/2026/south-african-rand-slips-as-stronger-dollar-weighs"
     }
@@ -65,16 +44,16 @@
    "name": "Forex & commodities",
    "items": [
     {
-     "title": "Rand near R17/$ as the dollar rises for a fifth day",
-     "summary": "The rand was at R16.99/$ at 08:33 SAST and R16.94/$ at 14:15 SAST, against R16.76/$ at Friday's close. The euro was at $1.1014, from $1.1029.",
-     "source": "Reuters via CNBC Africa, 16 Nov 2026 08:56 GMT; LRC Market Dashboard (Yahoo Finance ZAR=X), 13 and 16 Nov 2026; AP via BNN Bloomberg, 16 Nov 2026",
-     "url": "https://www.cnbcafrica.com/2026/south-african-rand-slips-as-stronger-dollar-weighs"
+     "title": "Rand at R16.96/$, weaker than Friday",
+     "summary": "USD/ZAR was at 16.9607 early on Tuesday, against 16.7584 at Friday's close (rand about 1.2% weaker). EUR/ZAR was at 18.67 and GBP/ZAR at 22.38.",
+     "source": "LRC Market Dashboard (Yahoo Finance ZAR=X, EURZAR=X, GBPZAR=X), 17 Nov 2026",
+     "url": "https://finance.yahoo.com/quote/ZAR%3DX/"
     },
     {
-     "title": "Gold about $3,869, Brent about $95",
-     "summary": "Gold was at $3,869.00 (-0.45%) on Yahoo Finance's quote bar around the US pre-open, near its lowest since October 2025. Brent was at $95.55 (-0.3%) in the morning; reports point to shipping through the Strait of Hormuz nearing pre-war levels, against new attacks in the region.",
-     "source": "Yahoo Finance live blog, 16 Nov 2026 06:25 PST; AP via BNN Bloomberg, 16 Nov 2026 06:48 EST",
-     "url": "https://finance.yahoo.com/markets/live/stock-market-today-monday-november-16-dow-sp-500-nasdaq-nvidia-oil-091631084.html"
+     "title": "Brent -4.3% to $91.71; gold $3,878.60, platinum $1,474.20, copper lower",
+     "summary": "Monday's closes against Friday: Brent $91.71 (from $95.84); gold futures $3,878.60 (from $3,886.30); platinum $1,474.20 (from $1,488.50); copper about $13,222/t (from about $13,403/t). Lower oil helps the fuel-price outlook for South Africa; softer platinum and copper are a drag on JSE miners.",
+     "source": "LRC Market Dashboard (Yahoo Finance BZ=F, GC=F, PL=F, HG=F daily close), 16 Nov 2026",
+     "url": "https://finance.yahoo.com/quote/BZ%3DF/"
     }
    ]
   },
@@ -82,31 +61,27 @@
    "name": "Our coverage",
    "items": [
     {
-     "title": "Nvidia: $158.70 in early trade, well below our $262.56 fair value",
-     "summary": "The fall is about the leadership change and talk of Huang's return, not new business figures; Tuesday's results are the next real test (analysts expect revenue up 91% to $108.93bn, per TipRanks). CLSA cut its target to $225 from $425. Our BUY rating is unchanged.",
-     "source": "City AM, 16 Nov 2026 14:38 GMT; TipRanks, 16 Nov 2026; LRC Watchlist",
+     "title": "Nvidia reports today under interim CEO Colette Kress",
+     "summary": "Nvidia reports quarterly results on Tuesday 17 November, its first since Jensen Huang's resignation as CEO last week. Analysts expect revenue up 91% to $108.93bn (TipRanks, 16 Nov 2026). The shares were at $158.70 in early trade on Monday, below our $262.56 fair value. Our BUY rating is unchanged; the results, not the leadership news, are the real test of it.",
+     "source": "City AM, 16 Nov 2026 14:38 GMT; TipRanks, 16 Nov 2026",
      "url": "https://www.cityam.com/nvidia-shares-continue-slide-as-investors-grapple-with-latest-in-huang-saga/",
-     "tickers": [
-      "NVDA"
-     ]
+     "tickers": ["NVDA"]
     },
     {
-     "title": "AMD down 5.1% at the open after an 8.8% fall on Friday",
-     "summary": "AMD is falling with the chip group. Our SELL rating is unchanged.",
-     "source": "City AM, 16 Nov 2026 14:38 GMT; AP via BNN Bloomberg, 16 Nov 2026",
+     "title": "AMD fell with the chip group on Monday",
+     "summary": "AMD was down 5.1% at Monday's open after an 8.8% fall on Friday. Our SELL rating is unchanged.",
+     "source": "City AM, 16 Nov 2026 14:38 GMT",
      "url": "https://www.cityam.com/nvidia-shares-continue-slide-as-investors-grapple-with-latest-in-huang-saga/",
-     "tickers": [
-      "AMD"
-     ]
+     "tickers": ["AMD"]
     }
    ]
   }
  ],
  "watch_today": [
-  "Nvidia results on Tuesday 17 November and any news on Jensen Huang's future",
-  "Telkom interim results on Tuesday and further MTN/Telkom SENS",
-  "Whether chip stocks steady through the US session",
-  "Fed Chair Warsh's comments and Wednesday's FOMC minutes",
-  "SA October CPI (Wed 18 Nov) and the SARB decision (Thu 19 Nov), with the rand near R17/$"
+  "Nvidia results today (Tuesday 17 November) and the reaction in chip stocks",
+  "Telkom interim results today and any further MTN/Telkom announcements",
+  "Whether the JSE follows Wall Street lower at the open",
+  "The rand near R17/$ ahead of SA CPI (Wed 18 Nov) and the SARB decision (Thu 19 Nov)",
+  "October FOMC minutes on Wednesday"
  ]
 }
