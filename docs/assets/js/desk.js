@@ -2,18 +2,18 @@
    Data and rules live in the members database (Supabase): see supabase/desk.sql. Every change goes through a database
    function that checks the signed-in desk, so the technical desk can't act before a handover and a "no trade" can't be overridden.
    Sign-in uses four desk accounts (one per desk); their passwords are set in Supabase → Authentication → Users,
-   changed on the page (Change desk password) or reset with "Forgot password?" (link emailed to info@). */
+   changed on the page (Change desk password) or reset with "Forgot password?" (link emailed to the desk address, forwarded to info@). */
 (() => {
 "use strict";
 const CFG = window.LRC_AUTH || {
   url: 'https://wpoknxskdrjurjdpxqav.supabase.co',
   anon: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Indwb2tueHNrZHJqdXJqZHB4cWF2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTM2NTAyNDYsImV4cCI6MjEwOTIyNjI0Nn0.z8uzgQp7YmJ1NQNAENAV5F9euQERYVGKzenumOaV6Ec'
 };
-/* Desk accounts use "plus" addresses of info@, so password-reset links land in the info@leagorifumocapital.co.za inbox. */
 const DESK_EMAIL = {
-  fx_fund: 'info+forex-fundamental@leagorifumocapital.co.za', fx_tech: 'info+forex-technical@leagorifumocapital.co.za',
-  eq_fund: 'info+equity-fundamental@leagorifumocapital.co.za', eq_tech: 'info+equity-technical@leagorifumocapital.co.za'
+  fx_fund: 'forex.fundamental@leagorifumocapital.co.za', fx_tech: 'forex.technical@leagorifumocapital.co.za',
+  eq_fund: 'equity.fundamental@leagorifumocapital.co.za', eq_tech: 'equity.technical@leagorifumocapital.co.za'
 };
+/* Reset links go to the desk's address; the mail host forwards those four addresses to the master inbox below. */
 const RESET_INBOX = 'info@leagorifumocapital.co.za';
 
 /* ---------- helpers ---------- */

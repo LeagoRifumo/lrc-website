@@ -1,11 +1,10 @@
 -- LRC Trading Desk (private staff page: /desk.html) — run once in Supabase: SQL Editor → New query → paste all → Run.
 -- BEFORE running: create the four desk accounts in Supabase → Authentication → Users → Add user → "Create new user",
 -- tick "Auto Confirm User", and give each the password you choose for that desk:
---   info+forex-fundamental@leagorifumocapital.co.za    info+forex-technical@leagorifumocapital.co.za
---   info+equity-fundamental@leagorifumocapital.co.za   info+equity-technical@leagorifumocapital.co.za
--- These are "plus" addresses of info@: password-reset links ("Forgot password?" on the desk page) arrive in the info@ inbox.
+--   forex.fundamental@leagorifumocapital.co.za   forex.technical@leagorifumocapital.co.za
+--   equity.fundamental@leagorifumocapital.co.za  equity.technical@leagorifumocapital.co.za
+-- "Forgot password?" on the desk page emails a reset link to these addresses: forward all four to info@ at your mail host.
 -- Run this file AFTER creating them (the last block links them to their desks). Running it again is safe.
--- Already created the older forex.fundamental@… style accounts? Keep them: this file renames them to the new addresses.
 -- Every change goes through the functions below, so the rules hold even if someone edits the page in their browser:
 -- the technical desk can't act until a handover, disagreement = no trade, Low confidence can't be handed over, etc.
 
@@ -288,21 +287,11 @@ begin
   end loop;
 end $$;
 
--- Rename desk accounts created with the earlier addresses (forex.fundamental@… → info+forex-fundamental@…), keeping their passwords.
-with m(old_email, new_email) as (values
-  ('forex.fundamental@leagorifumocapital.co.za','info+forex-fundamental@leagorifumocapital.co.za'), ('forex.technical@leagorifumocapital.co.za','info+forex-technical@leagorifumocapital.co.za'),
-  ('equity.fundamental@leagorifumocapital.co.za','info+equity-fundamental@leagorifumocapital.co.za'), ('equity.technical@leagorifumocapital.co.za','info+equity-technical@leagorifumocapital.co.za'))
-update auth.users u set email = m.new_email, updated_at = now()
-from m where lower(u.email) = m.old_email and not exists (select 1 from auth.users x where lower(x.email) = m.new_email);
-update auth.identities i set identity_data = i.identity_data || jsonb_build_object('email', u.email)
-from auth.users u where i.user_id = u.id and i.provider = 'email' and u.email like 'info+%-%@leagorifumocapital.co.za'
-  and coalesce(i.identity_data->>'email', '') <> u.email;
-
 -- Link the four desk accounts (created above in Authentication → Users) to their desks.
 insert into public.desk_accounts (user_id, desk, role)
 select u.id, m.desk, m.role from auth.users u
-join (values ('info+forex-fundamental@leagorifumocapital.co.za','fx','fund'), ('info+forex-technical@leagorifumocapital.co.za','fx','tech'),
-             ('info+equity-fundamental@leagorifumocapital.co.za','eq','fund'), ('info+equity-technical@leagorifumocapital.co.za','eq','tech')) as m(email, desk, role)
+join (values ('forex.fundamental@leagorifumocapital.co.za','fx','fund'), ('forex.technical@leagorifumocapital.co.za','fx','tech'),
+             ('equity.fundamental@leagorifumocapital.co.za','eq','fund'), ('equity.technical@leagorifumocapital.co.za','eq','tech')) as m(email, desk, role)
   on lower(u.email) = m.email
 on conflict (user_id) do update set desk = excluded.desk, role = excluded.role;
 
