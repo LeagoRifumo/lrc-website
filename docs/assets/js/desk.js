@@ -1,17 +1,20 @@
 /* LRC Trading Desk — private staff page (desk.html). Not linked from the public menus; noindex.
    Data and rules live in the members database (Supabase): see supabase/desk.sql. Every change goes through a database
    function that checks the signed-in desk, so the technical desk can't act before a handover and a "no trade" can't be overridden.
-   Sign-in uses four desk accounts (one per desk); their passwords are set in Supabase → Authentication → Users. */
+   Sign-in uses four desk accounts (one per desk); their passwords are set in Supabase → Authentication → Users,
+   changed on the page (Change desk password) or reset with "Forgot password?" (link emailed to info@). */
 (() => {
 "use strict";
 const CFG = window.LRC_AUTH || {
   url: 'https://wpoknxskdrjurjdpxqav.supabase.co',
   anon: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Indwb2tueHNrZHJqdXJqZHB4cWF2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTM2NTAyNDYsImV4cCI6MjEwOTIyNjI0Nn0.z8uzgQp7YmJ1NQNAENAV5F9euQERYVGKzenumOaV6Ec'
 };
+/* Desk accounts use "plus" addresses of info@, so password-reset links land in the info@leagorifumocapital.co.za inbox. */
 const DESK_EMAIL = {
-  fx_fund: 'forex.fundamental@leagorifumocapital.co.za', fx_tech: 'forex.technical@leagorifumocapital.co.za',
-  eq_fund: 'equity.fundamental@leagorifumocapital.co.za', eq_tech: 'equity.technical@leagorifumocapital.co.za'
+  fx_fund: 'info+forex-fundamental@leagorifumocapital.co.za', fx_tech: 'info+forex-technical@leagorifumocapital.co.za',
+  eq_fund: 'info+equity-fundamental@leagorifumocapital.co.za', eq_tech: 'info+equity-technical@leagorifumocapital.co.za'
 };
+const RESET_INBOX = 'info@leagorifumocapital.co.za';
 
 /* ---------- helpers ---------- */
 const $ = (s, r = document) => r.querySelector(s);
@@ -93,8 +96,16 @@ const effStatus = i => (["handed_over", "waiting"].includes(i.status) && i.expir
 /* ---------- data ---------- */
 async function boot() {
   if (!window.supabase || !CFG.url || !CFG.anon) { S.err = "The desk can't reach the members database. Reload the page; if it keeps happening, check the site's Supabase settings."; render(true); return; }
+  const recovering = /type=recovery/.test(location.hash);
   S.sb = window.supabase.createClient(CFG.url, CFG.anon, { auth: { storageKey: "lrc-desk-auth", persistSession: true, autoRefreshToken: true } });
+  S.sb.auth.onAuthStateChange(ev => { if (ev === "PASSWORD_RECOVERY" && !S.recoveryShown) setTimeout(recoveryForm, 0); });
+  if (/error_description=/.test(location.hash)) {
+    const msg = decodeURIComponent((location.hash.match(/error_description=([^&]*)/) || [])[1] || "").replace(/\+/g, " ");
+    S.err = /expired|invalid/i.test(msg) ? "That reset link has expired or was already used. Ask for a new one with \"Forgot password?\"." : msg;
+    history.replaceState(null, "", location.pathname);
+  }
   await whoAmI();
+  if (recovering && S.me && !S.recoveryShown) setTimeout(recoveryForm, 0);
   if (S.me) await load();
   render(true);
   setInterval(() => { if (S.me && document.visibilityState === "visible" && !$("#modal").innerHTML) load().then(() => render()); }, 30000);
@@ -160,7 +171,9 @@ function signInView(desk) {
       <div class="field"><label for="s-name">Your name</label><input type="text" id="s-name" name="name" required maxlength="60" autocomplete="name" value="${esc(myName())}"><p class="hint">Recorded next to every action you take.</p></div>
       <div class="field"><label for="s-pw">Desk password</label><input type="password" id="s-pw" name="pw" required autocomplete="current-password"></div>
       <p class="note bad form-error" id="signin-err"></p>
-      <button class="btn primary" type="submit">Sign in</button>
+      <p class="note form-error" id="signin-ok"></p>
+      <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap"><button class="btn primary" type="submit">Sign in</button>
+        <button class="btn ghost sm" type="button" data-act="forgot">Forgot password?</button></div>
     </form></div>`;
 }
 
@@ -477,6 +490,34 @@ function confirmForm(i, kind) {
       return (await rpc("desk_not_filled", { p_id: i.id, p_reason: why, p_name: myName() }, "Marked as not filled.")).error;
     } });
 }
+async function sendReset() {
+  const f = $("form[data-form=signin]"), err = $("#signin-err"), ok = $("#signin-ok");
+  err.textContent = ""; ok.textContent = "";
+  const desk = f.desk.value, role = f.role.value;
+  const btn = f.querySelector("[data-act=forgot]"); btn.disabled = true;
+  const { error } = await S.sb.auth.resetPasswordForEmail(DESK_EMAIL[desk + "_" + role], { redirectTo: location.origin + location.pathname });
+  btn.disabled = false;
+  if (error) { err.textContent = /rate|seconds|too many/i.test(error.message) ? "A reset link was sent a moment ago. Wait a minute before asking again." : errText(error); return; }
+  ok.textContent = `A reset link for the ${DESKS[desk].short} ${ROLE_NAME[role].toLowerCase()} desk was sent to ${RESET_INBOX}. Whoever manages that inbox opens it and sets the new password. It works once and expires after an hour.`;
+}
+function recoveryForm() {
+  S.recoveryShown = true;
+  history.replaceState(null, "", location.pathname + (S.me ? "#" + HASH[S.me.desk] : ""));
+  if (!S.me) { S.err = "This reset link isn't for a desk account."; render(true); return; }
+  openModal({ title: `Set a new password: ${DESKS[S.me.desk].short} ${ROLE_NAME[S.me.role].toLowerCase()} desk`,
+    body: `<p class="subtle" style="margin:0">This replaces the desk's password for everyone on it. Share the new one with the desk in person.</p>
+      ${fld("np1", "New password", `<input type="password" id="np1" name="np1" minlength="10" required autocomplete="new-password">`, "At least 10 characters. Don't reuse a password from email or banking.")}
+      ${fld("np2", "Confirm new password", `<input type="password" id="np2" name="np2" required autocomplete="new-password">`)}
+      ${fld("rname", "Your name", inp("rname", myName(), `required maxlength="60" autocomplete="name"`))}`,
+    buttons: `<button class="btn primary" type="submit">Save new password</button>`,
+    onSubmit: async form => {
+      if (form.np1.value !== form.np2.value) return "The two passwords don't match.";
+      const { error } = await S.sb.auth.updateUser({ password: form.np1.value });
+      if (error) return /same|different/i.test(error.message) ? "Choose a password different from the old one." : error.message;
+      setName(form.rname.value.trim()); S.tab = S.me.desk; await load(); render(true);
+      toast("New desk password saved. You're signed in.");
+    } });
+}
 function passwordForm() {
   openModal({ title: `Change the ${DESKS[S.me.desk].short} ${ROLE_NAME[S.me.role].toLowerCase()} desk password`,
     body: `<p class="subtle" style="margin:0">This changes the password for everyone on this desk. Tell them the new one in person, not by email or WhatsApp group.</p>
@@ -501,6 +542,7 @@ document.addEventListener("click", async e => {
   if (act === "logdesk") { S.logDesk = b.dataset.f; render(true); return; }
   if (act === "signout") { await S.sb.auth.signOut(); S.me = null; S.ideas = []; S.loaded = false; render(true); return; }
   if (act === "pw") { passwordForm(); return; }
+  if (act === "forgot") { sendReset(); return; }
   if (act === "new") { fundForm(b.dataset.desk); return; }
   if (act === "csv") { downloadCSV(); return; }
   if (!i) return;
@@ -518,7 +560,7 @@ document.addEventListener("click", async e => {
 document.addEventListener("submit", async e => {
   const f = e.target; if (!f.dataset || f.dataset.form !== "signin") return;
   e.preventDefault();
-  const err = $("#signin-err"), btn = f.querySelector("button[type=submit]"); err.textContent = ""; btn.disabled = true;
+  const err = $("#signin-err"), btn = f.querySelector("button[type=submit]"); err.textContent = ""; $("#signin-ok").textContent = ""; btn.disabled = true;
   const desk = f.desk.value, role = f.role.value, name = f.name.value.trim();
   setName(name);
   const { error } = await S.sb.auth.signInWithPassword({ email: DESK_EMAIL[desk + "_" + role], password: f.pw.value });
