@@ -1,10 +1,10 @@
 {
- "edition": "Morning brief · Tuesday 17 November 2026 06:15",
- "generated": "2026-11-17T09:16+02:00",
- "covers": "The US session on Monday 16 November 2026 and the SA overnight to 06:00 on Tuesday 17 November",
+ "edition": "Midday update · Tuesday 17 November 2026 10:16",
+ "generated": "2026-11-17T10:16+02:00",
+ "covers": "Tuesday 17 November 2026 from 06:00 to 10:16 SAST (JSE morning session), with Monday's closes for reference",
  "agent": "LRC News Desk",
- "headline": "Wall Street closed lower on Monday: Nasdaq -2.5%, S&P 500 -1.9%; Nvidia reports today",
- "summary": "The JSE All Share closed 0.8% lower at 111,526 on Monday and the rand was at R16.96/$ early on Tuesday, weaker than Friday's R16.76/$, ahead of SA CPI on Wednesday and the SARB decision on Thursday (LRC Market Dashboard (Yahoo Finance), 16-17 Nov 2026). In New York the S&P 500 closed 1.9% lower at 7,416.59 and the Nasdaq Composite 2.5% lower at 24,509.76, with the US 10-year yield at 5.12% (LRC Market Dashboard (Yahoo Finance), close 16 Nov 2026). Brent fell 4.3% to $91.71 while gold slipped 0.2% to $3,878.60 and platinum 1.0% to $1,474.20; Nvidia's results later today are the main event for tech shares (LRC Market Dashboard (Yahoo Finance), close 16 Nov 2026).",
+ "headline": "Telkom lifts interim HEPS 9.3% to 334.1c as MTN approach hangs over the stock; Nvidia reports tonight",
+ "summary": "Telkom reported revenue up 2.0% to R22.5bn and HEPS up 9.3% to 334.1c for the six months to 30 September 2026, with no interim dividend, a day after confirming an early-stage takeover approach from MTN (Telkom SENS via InsidEntity; TechCentral, 17 Nov 2026). For reference, the JSE All Share closed 0.8% lower at 111,526 on Monday and the rand was at R16.96/$ early on Tuesday, ahead of SA CPI on Wednesday and the SARB decision on Thursday (LRC Market Dashboard (Yahoo Finance), 16-17 Nov 2026). On Wall Street the S&P 500 closed 1.9% lower and the Nasdaq 2.5% lower on Monday, while Brent fell 4.3% to $91.71; Nvidia's results later today remain the main event for tech shares (LRC Market Dashboard (Yahoo Finance), close 16 Nov 2026).",
  "sections": [
   {
    "name": "US markets",
@@ -26,6 +26,15 @@
   {
    "name": "South Africa",
    "items": [
+    {
+     "title": "Telkom interim: revenue +2.0% to R22.5bn, HEPS +9.3% to 334.1c, no interim dividend",
+     "summary": "For the six months to 30 September 2026 Telkom's group revenue rose 2.0% to R22,537m and EBITDA 5.8% to R6,375m (margin 28.3%); HEPS rose 9.3% to 334.1c and free cash flow 37.8% to R998m. No interim dividend was declared, in line with its annual payout policy. Mobile service revenue grew 4% to R11.5bn and fibre homes connected rose 15.1% to 870,856, while BCX revenue fell 8.2%. On MTN, the results repeat Monday's cautionary: talks are at an early stage and there is no certainty a deal will happen. Telkom is not on the LRC coverage list.",
+     "source": "Telkom SENS via InsidEntity, 17 Nov 2026 09:01; TechCentral, 17 Nov 2026 07:39",
+     "url": "https://www.insidentity.com/telkom-sa-soc-group-interim-results-for-the-six-months-ended-30-september-2026/",
+     "tickers": [
+      "TKG.JO"
+     ]
+    },
     {
      "title": "JSE All Share closed 0.8% lower at 111,526; Top 40 at 103,629",
      "summary": "The All Share closed at 111,525.58 on Monday (Friday 112,387.90) and the Top 40 at 103,628.96 (Friday 104,486.60). Given the weaker US close, the JSE may open under pressure today.",
@@ -83,8 +92,8 @@
  ],
  "watch_today": [
   "Nvidia results today (Tuesday 17 November) and the reaction in chip stocks",
-  "Telkom interim results today and any further MTN/Telkom announcements",
-  "Whether the JSE follows Wall Street lower at the open",
+  "Telkom share reaction to its interim results and any further MTN/Telkom announcements",
+  "Whether the JSE follows Wall Street lower through the session",
   "The rand near R17/$ ahead of SA CPI (Wed 18 Nov) and the SARB decision (Thu 19 Nov)",
   "October FOMC minutes on Wednesday"
  ]
