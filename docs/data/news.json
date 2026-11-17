@@ -1,24 +1,24 @@
 {
-  "edition": "Evening update · Tuesday 17 November 2026 18:15",
-  "generated": "2026-11-17T18:15+02:00",
-  "covers": "Tuesday 17 November 2026 from 17:20 to 18:15 SAST: the JSE close and the first hour of Wall Street trade (market levels as of 17:39 SAST), with Monday's closes for reference",
+  "edition": "Evening update · Tuesday 17 November 2026 19:15",
+  "generated": "2026-11-17T19:15+02:00",
+  "covers": "Tuesday 17 November 2026 from 17:20 to 19:15 SAST: the JSE close and the first two hours of Wall Street trade (US levels as of 18:57 SAST), with Monday's closes for reference",
   "agent": "LRC News Desk",
-  "headline": "Wall Street slips about 0.9% in early trade ahead of Nvidia's results; JSE closes 0.8% lower",
-  "summary": "The JSE All Share closed 0.8% lower at 110,616 and the Top 40 0.9% lower at 102,752, with the rand at R16.92/$, about 1.0% weaker than Friday (LRC Market Dashboard (Yahoo Finance), 17 Nov 2026 17:39 SAST). After a flat start, the S&P 500 had slipped to 7,354 (-0.8%) and the Nasdaq to 24,273 (-1.0%) by 17:39 SAST as investors waited for Nvidia's results later today (same source). Platinum was 2.8% lower on the day at $1,433, a drag on JSE miners, while Brent was 1.4% higher at $93.02; SA CPI on Wednesday and the SARB decision on Thursday remain the main local tests.",
+  "headline": "Wall Street losses deepen to about 1.5% ahead of Nvidia's results; JSE closed 0.8% lower",
+  "summary": "The JSE All Share closed 0.8% lower at 110,616 and the Top 40 0.9% lower at 102,752, with the rand at R16.92/$, about 1.0% weaker than Friday (LRC Market Dashboard (Yahoo Finance), 17 Nov 2026 17:39 SAST). After a flat start, the selling deepened: by 18:57 SAST the S&P 500 was at 7,311 (-1.4%) and the Nasdaq at 24,129 (-1.6%) against Monday's close, as investors waited for Nvidia's results later today (LRC Market Dashboard (Yahoo Finance), 17 Nov 2026 18:57 SAST). Platinum was 2.8% lower on the day at $1,433, a drag on JSE miners, while Brent was 1.4% higher at $93.02; SA CPI on Wednesday and the SARB decision on Thursday remain the main local tests.",
   "sections": [
     {
       "name": "US markets",
       "items": [
         {
-          "title": "S&P 500 -0.8% and Nasdaq -1.0% in early trade: 7,354 and 24,273",
-          "summary": "At 17:39 SAST (10:39 New York) the S&P 500 was at 7,354.36 against Monday's close of 7,416.59 (-0.8%) and the Nasdaq Composite at 24,272.64 against 24,509.76 (-1.0%), after both opened roughly flat. Both are about 3% below Friday 13 November (S&P 7,561.67; Nasdaq 25,136.27).",
-          "source": "LRC Market Dashboard (Yahoo Finance), 17 Nov 2026 17:39 SAST; Monday close 16 Nov 2026",
+          "title": "S&P 500 -1.4% and Nasdaq -1.6% two hours into trade: 7,311 and 24,129",
+          "summary": "At 18:57 SAST (11:57 New York) the S&P 500 was at 7,310.56 against Monday's close of 7,416.59 (-1.4%) and the Nasdaq Composite at 24,129.09 against 24,509.76 (-1.6%), down from 7,354 and 24,273 at 17:39 SAST. Both are about 3-4% below Friday 13 November (S&P 7,561.67; Nasdaq 25,136.27).",
+          "source": "LRC Market Dashboard (Yahoo Finance), 17 Nov 2026 18:57 SAST; Monday close 16 Nov 2026",
           "url": "https://finance.yahoo.com/quote/%5EGSPC/"
         },
         {
-          "title": "US 10-year yield 5.14%",
-          "summary": "The 10-year Treasury yield was 5.141% at 17:39 SAST, up from Monday's close of 5.121% and just below Friday's 5.154%. The October FOMC minutes are due on Wednesday.",
-          "source": "LRC Market Dashboard (Yahoo Finance), 17 Nov 2026 17:39 SAST; Monday close 16 Nov 2026",
+          "title": "US 10-year yield eases to 5.10%",
+          "summary": "The 10-year Treasury yield was 5.099% at 18:57 SAST, down from 5.141% at 17:39 SAST, Monday's close of 5.121% and Friday's 5.154%. The October FOMC minutes are due on Wednesday.",
+          "source": "LRC Market Dashboard (Yahoo Finance), 17 Nov 2026 18:57 SAST; Monday close 16 Nov 2026",
           "url": "https://finance.yahoo.com/quote/%5ETNX/"
         }
       ]
@@ -92,7 +92,7 @@
   ],
   "watch_today": [
     "Nvidia results later today and the reaction in chip stocks, including AMD",
-    "How Wall Street closes after slipping in the first hour",
+    "How Wall Street closes after losses deepened to about 1.5% by midday New York time",
     "SA October CPI on Wednesday 18 November (Reuters poll: 5.1%; September 4.5%)",
     "The SARB decision on Thursday 19 November with the repo rate at 7.25%",
     "October FOMC minutes on Wednesday"
