@@ -234,6 +234,24 @@ begin
     history = history || jsonb_build_array(public.desk_hist(r.desk, 'tech', p_name, 'Not filled: ' || p_reason)) where id = p_id;
 end $$;
 
+create or replace function public.desk_trail(p_id uuid, p_stop numeric, p_name text) returns void
+language plpgsql security definer set search_path = public as $$
+declare r public.desk_ideas; cur numeric; buy boolean; trail jsonb;
+begin
+  r := public.desk_get(p_id); perform public.desk_require(r.desk, 'tech');
+  if r.status <> 'executed' then raise exception 'You can only trail the stop on a live trade.'; end if;
+  buy := r.fund->>'bias' = 'Buy';
+  cur := coalesce((r.exec->>'stop')::numeric, (r.tech->>'stop')::numeric);
+  if p_stop is null or p_stop <= 0 then raise exception 'Enter the new stop price.'; end if;
+  if (buy and p_stop <= cur) or (not buy and p_stop >= cur) then
+    raise exception 'A trailing stop can only move in your favour: % than the current stop of %.', case when buy then 'higher' else 'lower' end, cur;
+  end if;
+  trail := coalesce(r.exec->'trail', '[]'::jsonb) || jsonb_build_array(jsonb_build_object('from', cur, 'to', p_stop, 'at', now(), 'by', nullif(trim(p_name), '')));
+  update public.desk_ideas set exec = r.exec || jsonb_build_object('stop', p_stop, 'trail', trail), updated_at = now(),
+    history = history || jsonb_build_array(public.desk_hist(r.desk, 'tech', p_name, format('Stop trailed from %s to %s', cur, p_stop))) where id = p_id;
+end $$;
+
+-- R is always measured against the ORIGINAL stop (the risk taken at entry), so trailing never inflates the result.
 create or replace function public.desk_close(p_id uuid, p_exit numeric, p_date date, p_notes text, p_name text) returns numeric
 language plpgsql security definer set search_path = public as $$
 declare r public.desk_ideas; e numeric; s numeric; risk numeric; rm numeric; res text; buy boolean;
@@ -259,7 +277,7 @@ begin
   foreach fn in array array[
     'desk_save_fund(uuid,text,jsonb,date,boolean,text)', 'desk_handover(uuid,text)', 'desk_extend(uuid,date,text)', 'desk_withdraw(uuid,text,text)',
     'desk_delete(uuid)', 'desk_review(uuid,jsonb,text)', 'desk_fill(uuid,numeric,date,text)', 'desk_not_filled(uuid,text,text)',
-    'desk_close(uuid,numeric,date,text,text)'] loop
+    'desk_close(uuid,numeric,date,text,text)', 'desk_trail(uuid,numeric,text)'] loop
     execute format('revoke all on function public.%s from public, anon', fn);
     execute format('grant execute on function public.%s to authenticated', fn);
   end loop;

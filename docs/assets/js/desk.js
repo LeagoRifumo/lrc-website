@@ -86,6 +86,7 @@ function rMultiple(i, exit) {
   if (!(risk > 0)) return null;
   return (f.bias === "Buy" ? exit - e : e - exit) / risk;
 }
+const lockedR = i => (i.exec && i.exec.stop != null) ? rMultiple(i, num(i.exec.stop)) : null;
 const isOpen = s => ["draft", "watchlist", "handed_over", "waiting"].includes(s);
 const effStatus = i => (["handed_over", "waiting"].includes(i.status) && i.expiry && daysUntil(i.expiry) < 0) ? "expired" : i.status;
 
@@ -225,7 +226,7 @@ function card(i, role) {
     techHalf = `<div class="half"><h3>Technical execution</h3>
       ${kv([["Technical bias", biasPill(t.bias)], ["Setup", esc(t.setup)], ["Timeframe", esc(t.timeframe)], ["Trend", esc(t.trend)], ["Confidence", esc(t.conf)],
             [desk === "fx" ? "Session" : "Volume confirms", esc(desk === "fx" ? t.session : t.volume)]])}
-      <div class="levels"><div><span>Entry</span><b>${fmtP(t.entry)}</b></div><div><span>Stop</span><b>${fmtP(t.stop)}</b></div>
+      <div class="levels"><div><span>Entry</span><b>${fmtP(t.entry)}</b></div><div><span>${i.exec && i.exec.stop != null ? "Stop (trailed)" : "Stop"}</span><b>${i.exec && i.exec.stop != null ? fmtP(i.exec.stop) : fmtP(t.stop)}</b></div>
         <div><span>Target</span><b>${fmtP(t.target)}</b></div><div><span>R:R</span><b>${t.rr ? "1 : " + Number(t.rr).toFixed(2) : "—"}</b></div></div>
       ${t.invalidation ? `<div><div class="subtle">Setup invalid if</div><p class="thesis">${esc(t.invalidation)}</p></div>` : ""}
       ${t.thesis ? `<div><div class="subtle">Execution thesis</div><p class="thesis">${esc(t.thesis)}</p></div>` : ""}
@@ -233,6 +234,7 @@ function card(i, role) {
   }
   let outcome = "";
   if (i.exec) outcome += `<span>Filled at <b class="mono">${fmtP(i.exec.fill)}</b> on ${fmtDate(i.exec.date)}</span>`;
+  if (i.exec && (i.exec.trail || []).length) outcome += `<span>Stop trailed ${i.exec.trail.length}× · original <b class="mono">${fmtP(t.stop)}</b> → now <b class="mono">${fmtP(i.exec.stop)}</b>${st === "executed" && lockedR(i) != null ? ` · locks in <b class="mono ${lockedR(i) > 0 ? "pos" : lockedR(i) < 0 ? "neg" : ""}">${fmtR(lockedR(i))}</b>` : ""}</span>`;
   if (i.close) outcome += `<span>Closed at <b class="mono">${fmtP(i.close.exit)}</b> on ${fmtDate(i.close.date)}</span><span class="mono ${i.close.r > 0 ? "pos" : i.close.r < 0 ? "neg" : ""}">${fmtR(i.close.r)} · ${esc(i.close.result)}</span>${i.close.notes ? `<span>${esc(i.close.notes)}</span>` : ""}`;
   if (i.cancel_note) outcome += `<span>${esc(i.cancel_note)}</span>`;
   const acts = [];
@@ -243,7 +245,7 @@ function card(i, role) {
   } else if (role === "tech") {
     if (st === "handed_over" || st === "waiting") B("review", st === "waiting" ? "Review setup again" : "Review setup", "primary");
     if (st === "approved") { B("exec", "Mark as filled", "primary"); B("cancel", "Not filled"); }
-    if (st === "executed") B("close", "Close trade", "primary");
+    if (st === "executed") { B("trail", "Trail stop"); B("close", "Close trade", "primary"); }
   }
   const hist = (i.history || []).slice().reverse().map(h => `<li>${fmtDT(h.at)} · ${esc(h.action)} · ${esc(h.by)}${h.role ? ` (${esc(h.role)})` : ""}</li>`).join("");
   const showSize = i.verdict && i.verdict.size && ["approved", "executed", "closed", "cancelled"].includes(st);
@@ -441,6 +443,20 @@ function closeForm(i) {
       if (r.error) return r.error; toast(`Trade closed: ${fmtR(r.data)}.`);
     } });
 }
+function trailForm(i) {
+  const buy = i.fund.bias === "Buy", cur = num(i.exec && i.exec.stop) ?? num(i.tech.stop);
+  openModal({ title: `Trail the stop on ${esc(i.fund.asset)}`,
+    body: `<div class="handover-sum"><div>${biasPill(i.fund.bias)} Filled at <b class="mono">${fmtP(i.exec.fill)}</b> · original stop <b class="mono">${fmtP(i.tech.stop)}</b> · current stop <b class="mono">${fmtP(cur)}</b></div></div>
+      ${fld("nstop", "New stop", numIn("nstop", "", "required"), `Must be ${buy ? "higher" : "lower"} than ${fmtP(cur)}. A trailing stop only moves in your favour.`)}
+      <div id="lockprev" class="note">Enter the new stop to see what it locks in.</div>
+      <p class="subtle" style="margin:0">The final result is still measured in R against the original stop of ${fmtP(i.tech.stop)}.</p>`,
+    buttons: `<button class="btn primary" type="submit">Move stop</button>`,
+    onInput: form => { const n = num(form.nstop.value); const el = $("#lockprev");
+      if (n == null) { el.className = "note"; el.textContent = "Enter the new stop to see what it locks in."; return; }
+      if (buy ? n <= cur : n >= cur) { el.className = "note bad"; el.textContent = `That would widen the stop. Enter a price ${buy ? "above" : "below"} ${fmtP(cur)}.`; return; }
+      const r = rMultiple(i, n); el.className = "note"; el.textContent = r == null ? "" : r >= 0 ? `If stopped out here: ${fmtR(r)}${r > 0.05 ? " locked in" : " (breakeven)"}.` : `If stopped out here: ${fmtR(r)} (risk reduced from -1.00R).`; },
+    onSubmit: async form => (await rpc("desk_trail", { p_id: i.id, p_stop: num(form.nstop.value), p_name: myName() }, "Stop moved.")).error });
+}
 function extendForm(i) {
   const def = addDays(today(), i.desk === "fx" ? S.settings.fx_expiry : S.settings.eq_expiry);
   openModal({ title: effStatus(i) === "expired" ? "Renew fundamental bias" : "Change bias expiry",
@@ -493,6 +509,7 @@ document.addEventListener("click", async e => {
   else if (act === "review") techForm(i);
   else if (act === "exec") execForm(i);
   else if (act === "close") closeForm(i);
+  else if (act === "trail") trailForm(i);
   else if (act === "extend") extendForm(i);
   else if (act === "withdraw") confirmForm(i, "withdraw");
   else if (act === "cancel") confirmForm(i, "cancel");
