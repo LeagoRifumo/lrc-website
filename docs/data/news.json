@@ -1,11 +1,25 @@
 {
- "edition": "Morning brief · Wednesday 18 November 2026 06:30",
- "generated": "2026-11-18T06:30+02:00",
+ "edition": "Morning brief · Wednesday 18 November 2026 07:20",
+ "generated": "2026-11-18T07:20+02:00",
  "covers": "Tuesday 17 November 2026 US session close and SA overnight, to 06:00 SAST Wednesday",
  "agent": "LRC News Desk",
- "headline": "Wall Street closed about 1% lower before Nvidia's results; SA October CPI out this morning, SARB decides on Thursday",
- "summary": "The JSE All Share closed 0.8% lower at 110,616 on Tuesday and the rand was at R16.95/$ early on Wednesday, about 1.2% weaker than Friday (LRC Market Dashboard (Yahoo Finance), 17-18 Nov 2026). In New York the S&P 500 closed 1.0% lower at 7,341 and the Nasdaq 0.7% lower at 24,328, with Nvidia reporting after the bell; the LRC News Desk will publish its figures once checked against the company release. Gold closed 2.1% lower at $3,797 and platinum 4.4% lower at $1,410, a drag on JSE miners, while today's October CPI and Thursday's SARB decision (repo 7.25%) are the main local tests.",
+ "headline": "Nvidia beats with $115.8bn revenue and guides to $130bn after Wall Street's 1% fall; SA October CPI this morning, SARB on Thursday",
+ "summary": "Nvidia reported quarterly revenue of $115.8bn after Tuesday's US close, about 6.5% above the $108.7bn consensus, and guided to $130bn for the current quarter (company release, 17 Nov 2026). On Tuesday the S&P 500 closed 1.0% lower at 7,341, the JSE All Share 0.8% lower at 110,616, and the rand was at R16.95/$ early on Wednesday (LRC Market Dashboard (Yahoo Finance), 17-18 Nov 2026). Gold closed 2.1% lower at $3,797 and platinum 4.4% lower at $1,410, while today's October CPI and Thursday's SARB decision (repo 7.25%) are the main local tests.",
  "sections": [
+  {
+   "name": "Breaking",
+   "items": [
+    {
+     "title": "Nvidia quarterly revenue $115.8bn, ahead of the $108.7bn consensus; guides to $130bn",
+     "summary": "Nvidia reported third-quarter fiscal 2027 revenue of $115.8bn for the quarter to October, up 20% from $96.2bn in the previous quarter and about 103% from $57.0bn a year earlier. That is about 6.5% above the average analyst estimate of $108.7bn. For the fourth quarter, which includes an extra week, the company expects revenue of $130.0bn plus or minus 3% and gross margins of 71%-72%, and assumes no Data Center compute revenue from China.",
+     "source": "NVIDIA Form 8-K, Exhibit 99.1 (SEC EDGAR), filed 17 Nov 2026, read by LRC Research 18 Nov 2026 06:47 SAST; consensus from LRC Earnings Calendar (market data feed, 42 estimates), 17 Nov 2026",
+     "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000088/q3fy27pr.htm",
+     "tickers": [
+      "NVDA"
+     ]
+    }
+   ]
+  },
   {
    "name": "US markets",
    "items": [
@@ -61,10 +75,10 @@
    "name": "Our coverage",
    "items": [
     {
-     "title": "Nvidia reported after Tuesday's close",
-     "summary": "Nvidia released quarterly results after the US close on Tuesday 17 November, its first under interim CEO Colette Kress. Analysts had expected revenue up 91% to $108.93bn (TipRanks, 16 Nov 2026). The LRC News Desk has not yet checked the reported figures against the company release, so none are given here; they will follow in the Midday update. Our BUY rating (fair value $262.56) is unchanged.",
-     "source": "TipRanks, 16 Nov 2026; City AM, 16 Nov 2026 14:38 GMT",
-     "url": "https://www.cityam.com/nvidia-shares-continue-slide-as-investors-grapple-with-latest-in-huang-saga/",
+     "title": "Nvidia results above estimates; our rating unchanged",
+     "summary": "Revenue of $115.8bn beat the $108.7bn consensus and the $130bn fourth-quarter outlook is a further step up (company release, 17 Nov 2026). Our BUY rating and $262.56 fair value are unchanged; the LRC Stock Scanner will reassess after the share price reaction. Earnings per share and the share price move are not shown because the LRC News Desk could not verify them against the original sources this morning.",
+     "source": "NVIDIA Form 8-K, Exhibit 99.1 (SEC EDGAR), filed 17 Nov 2026, read by LRC Research 18 Nov 2026 06:47 SAST; consensus from LRC Earnings Calendar (market data feed, 42 estimates), 17 Nov 2026",
+     "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000088/q3fy27pr.htm",
      "tickers": [
       "NVDA"
      ]
@@ -74,7 +88,7 @@
  ],
  "watch_today": [
   "SA October CPI this morning (Reuters poll: 5.1%; September 4.5%)",
-  "Nvidia's results and the reaction in chip stocks, including AMD, at the US open",
+  "How Nvidia shares and chip stocks, including AMD, trade at the US open after the results",
   "October FOMC minutes on Wednesday evening (SAST)",
   "Whether platinum and gold recover after Tuesday's falls",
   "The SARB decision on Thursday 19 November with the repo rate at 7.25%"
