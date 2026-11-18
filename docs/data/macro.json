@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-18T11:55:00+02:00",
+  "generated": "2026-11-18T18:00:00+02:00",
   "agent": "LRC Macro Desk",
   "method": "Surprise = actual minus forecast (consensus). If there is no forecast, actual minus previous. Impact for shares: a surprise in the 'better' direction larger than the threshold = Bullish, the other way = Bearish, otherwise Neutral.",
   "countries": {
@@ -61,14 +61,14 @@
           "better": "lower",
           "threshold": 0.1,
           "frequency": "monthly",
-          "period": "Sep 2026",
-          "release_date": "2026-10-21",
-          "actual": 4.0,
+          "period": "Oct 2026",
+          "release_date": "2026-11-18",
+          "actual": 4.2,
           "forecast": null,
-          "previous": 4.1,
-          "next_release": "2026-11-18",
+          "previous": 4.0,
+          "next_release": null,
           "source": "Stats SA",
-          "url": "https://tradingeconomics.com/south-africa/inflation-cpi/news/593759"
+          "url": "https://www.fx.co/en/forex-news/3298493"
         },
         {
           "key": "ppi",
@@ -141,14 +141,14 @@
           "better": "higher",
           "threshold": 0.5,
           "frequency": "monthly",
-          "period": "Aug 2026",
-          "release_date": "2026-10-21",
-          "actual": 3.3,
-          "forecast": 3.0,
-          "previous": 3.4,
+          "period": "Sep 2026",
+          "release_date": "2026-11-18",
+          "actual": 2.4,
+          "forecast": null,
+          "previous": 3.2,
           "next_release": null,
           "source": "Stats SA",
-          "url": "https://tradingeconomics.com/south-africa/retail-sales-annual/news/576488"
+          "url": "https://www.ewn.co.za/sa-retail-sales-up-24-year-on-year-in-september"
         },
         {
           "key": "mining",
