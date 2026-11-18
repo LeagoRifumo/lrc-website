@@ -1,10 +1,10 @@
 {
- "edition": "Midday update · Wednesday 18 November 2026 13:15",
- "generated": "2026-11-18T13:15+02:00",
- "covers": "JSE session to 12:00 SAST after the October CPI release, Wednesday 18 November 2026; US and commodity items from the Morning brief and Tuesday's after-hours trade",
+ "edition": "Midday update · Wednesday 18 November 2026 14:15",
+ "generated": "2026-11-18T14:15+02:00",
+ "covers": "JSE session to 14:00 SAST after the October CPI and September retail sales releases, Wednesday 18 November 2026; US and commodity items from the Morning brief and Tuesday's after-hours trade",
  "agent": "LRC News Desk",
- "headline": "Rand weakens past R17/$ after October CPI; core inflation 4.2%, a day before the SARB decision",
- "summary": "The rand weakened 0.8% to R17.07 per dollar at 12:00 SAST on Wednesday, after Stats SA reported October inflation of 5.2% (September 4.5%) and core inflation of 4.2% (September 4.0%) (Bloomberg via BusinessTech, 18 Nov 2026). In the US, Nvidia shares rose 4.1% to $161.90 in after-hours trade on Tuesday after its results beat estimates, following a 1.0% fall in the S&P 500 (Yahoo Finance, 17 Nov 2026). Gold slipped below $3,800 an ounce after Federal Reserve officials argued for further rate hikes, which Bloomberg named as the main pressure on the rand; the SARB announces its decision on Thursday with the repo rate at 7.25%.",
+ "headline": "Rand past R17/$ after October CPI of 5.2%; September retail sales growth slows to 2.4%",
+ "summary": "The rand weakened 0.8% to R17.07 per dollar at 12:00 SAST on Wednesday, after Stats SA reported October inflation of 5.2% (September 4.5%) and core inflation of 4.2% (September 4.0%) (Bloomberg via BusinessTech, 18 Nov 2026); Stats SA also reported September retail sales up 2.4% year on year, slower than August's 3.2% (EWN, 18 Nov 2026). In the US, Nvidia shares rose 4.1% to $161.90 in after-hours trade on Tuesday after its results beat estimates, following a 1.0% fall in the S&P 500 (Yahoo Finance, 17 Nov 2026). Gold slipped below $3,800 an ounce after Federal Reserve officials argued for further rate hikes, which Bloomberg named as the main pressure on the rand; the SARB announces its decision on Thursday with the repo rate at 7.25%.",
  "sections": [
   {
    "name": "Breaking",
@@ -47,8 +47,14 @@
      "url": "https://businesstech.co.za/news/finance/884941/rand-breaks-r17-to-the-dollar/"
     },
     {
+     "title": "September retail sales up 2.4% year on year, slower than August's 3.2%",
+     "summary": "Stats SA said retail trade sales grew 2.4% year on year in September 2026, down from 3.2% in August, and fell 0.3% on the month (seasonally adjusted), the second monthly decline in a row. General dealers were the biggest contributor to annual growth; hardware, paint and glass retailers fell 1.5% year on year. Slower spending growth sits alongside higher inflation ahead of Thursday's SARB decision.",
+     "source": "Stats SA September 2026 retail trade sales via EWN (Anelitha Fandese), 18 Nov 2026 12:08 SAST",
+     "url": "https://www.ewn.co.za/sa-retail-sales-up-24-year-on-year-in-september"
+    },
+    {
      "title": "SARB decides on Thursday; markets expect no change",
-     "summary": "The SARB announces its decision on Thursday 19 November with the repo rate at 7.25% after September's 25bp hike. Most economists expect the rate to be left unchanged (Bloomberg; Reuters). The benchmark 2035 government bond yield was 8.625% early on Wednesday. September retail sales were due at about 13:00 SAST; the LRC News Desk has not yet verified the figure.",
+     "summary": "The SARB announces its decision on Thursday 19 November with the repo rate at 7.25% after September's 25bp hike. Most economists expect the rate to be left unchanged (Bloomberg; Reuters). The benchmark 2035 government bond yield was 8.625% early on Wednesday.",
      "source": "Reuters via CNBC Africa, 18 Nov 2026 08:53 GMT; LRC Macro Desk (SARB), 17 Nov 2026",
      "url": "https://www.cnbcafrica.com/2026/south-african-rand-softens-as-focus-turns-to-inflation-data"
     },
@@ -94,7 +100,6 @@
  ],
  "watch_today": [
   "Whether the rand holds beyond R17/$ into the SARB decision",
-  "SA September retail sales (due about 13:00 SAST; Reuters poll 3.4% year on year)",
   "How Nvidia and chip stocks trade at the US open after the results",
   "October FOMC minutes on Wednesday evening (SAST)",
   "The SARB decision on Thursday 19 November with the repo rate at 7.25%"
