@@ -96613,9 +96613,8 @@
    "dps": null,
    "source": "Nasdaq",
    "has_res": true,
-   "desk": true,
-   "g": "none",
-   "headline": "Q3 profit up 13% to ₩1.91tn (reported 29 Oct); KB Securities hit with ₩332bn bond-auction fine; no guidance",
+   "desk": false,
+   "g": "not found",
    "px_move": {
     "move": 0.0379,
     "from": "2026-11-12",
@@ -97559,9 +97558,8 @@
    "dps": null,
    "source": "Nasdaq",
    "has_res": true,
-   "desk": true,
-   "g": "none",
-   "headline": "Q3 profit up 13% to ₩1.91tn (reported 29 Oct); KB Securities hit with ₩332bn bond-auction fine; no guidance",
+   "desk": false,
+   "g": "not found",
    "px_move": {
     "move": -0.0136,
     "from": "2026-11-13",
@@ -100145,6 +100143,14 @@
    "rev_yago": 5796645000,
    "n_est": 4,
    "rcur": "CNY",
+   "has_res": true,
+   "desk": false,
+   "rev_actual": 6625298000.0,
+   "rev_prior": 5796645000.0,
+   "g": "not found",
+   "rev_surprise": 0.0247,
+   "rev_result": "beat",
+   "rev_yoy": 0.143,
    "px_move": {
     "move": 0.0836,
     "from": "2026-11-16",
@@ -100379,6 +100385,12 @@
    "measure": null,
    "dps": null,
    "source": null,
+   "has_res": true,
+   "desk": false,
+   "rev_actual": 406017000.0,
+   "rev_prior": 410243000.0,
+   "g": "not found",
+   "rev_yoy": -0.0103,
    "t": "JJSF",
    "lists": [],
    "idea": null,
@@ -100652,7 +100664,8 @@
     "beat",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-18",
@@ -100684,7 +100697,8 @@
     "beat",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-18",
@@ -100716,7 +100730,8 @@
     "beat",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-18",
@@ -100844,7 +100859,8 @@
     "beat",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-18",
@@ -100971,7 +100987,8 @@
     "beat",
     "beat",
     "miss"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-18",
@@ -101003,7 +101020,8 @@
     "miss",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-18",
@@ -101098,7 +101116,8 @@
     "miss",
     "beat",
     "miss"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-18",
@@ -101162,7 +101181,8 @@
     "beat",
     "miss",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-18",
@@ -101283,6 +101303,7 @@
    "n_est": 2,
    "rcur": "USD",
    "qend": "2026-09-30",
+   "has_res": true,
    "track": [
     "beat",
     "beat"
@@ -101313,6 +101334,7 @@
    "n_est": 4,
    "rcur": "USD",
    "qend": "2026-09-30",
+   "has_res": true,
    "track": [
     "beat",
     "miss",
@@ -101345,6 +101367,7 @@
    "n_est": 13,
    "rcur": "USD",
    "qend": "2026-09-30",
+   "has_res": true,
    "track": [
     "miss",
     "beat",
@@ -110012,6 +110035,6 @@
    "covered": false
   }
  ],
- "synced": "2026-11-18T16:21+02:00",
+ "synced": "2026-11-18T16:41+02:00",
  "coverage_note": "Ticked = on the LRC watchlist. Every company the LRC Stock Scanner tracks shows its trading and investment ratings. Updated after every scanner run."
 }

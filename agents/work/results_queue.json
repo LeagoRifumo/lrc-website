@@ -1,176 +1,122 @@
 {
-"updated": "2026-11-18T06:47+02:00",
+"updated": "2026-11-18T16:41+02:00",
 "queue": [
 {
-"t": "NVDA",
-"name": "NVIDIA Corporation",
+"t": "TJX",
+"name": "TJX Companies, Inc. (The)",
 "m": "US",
 "date": "2026-11-18",
-"text": "agents/work/8k/NVDA_2026-11-18.txt",
+"text": "agents/work/8k/TJX_2026-11-18.txt",
 "priority": 2,
-"mcap_bn": 3711.4
+"mcap_bn": 142.8
 },
 {
-"t": "DLB",
-"name": "Dolby Laboratories",
+"t": "LOW",
+"name": "Lowe's Companies, Inc.",
+"m": "US",
+"date": "2026-11-18",
+"text": "agents/work/8k/LOW_2026-11-18.txt",
+"priority": 2,
+"mcap_bn": 123.7
+},
+{
+"t": "TGT",
+"name": "Target Corporation",
+"m": "US",
+"date": "2026-11-18",
+"text": "agents/work/8k/TGT_2026-11-18.txt",
+"priority": 2,
+"mcap_bn": 72.5
+},
+{
+"t": "KB",
+"name": "KB Financial Group Inc",
+"m": "US",
+"date": "2026-11-16",
+"text": "agents/work/8k/KB_2026-11-16.txt",
+"priority": 2,
+"mcap_bn": 40.2
+},
+{
+"t": "GLBE",
+"name": "Global-E Online Ltd.",
+"m": "US",
+"date": "2026-11-18",
+"text": "agents/work/8k/GLBE_2026-11-18.txt",
+"priority": 2,
+"mcap_bn": 6.7
+},
+{
+"t": "HAFN",
+"name": "Hafnia Limited",
+"m": "US",
+"date": "2026-11-18",
+"text": "agents/work/8k/HAFN_2026-11-18.txt",
+"priority": 2,
+"mcap_bn": 5.0
+},
+{
+"t": "GLNG",
+"name": "Golar LNG Limited",
+"m": "US",
+"date": "2026-11-18",
+"text": "agents/work/8k/GLNG_2026-11-18.txt",
+"priority": 2,
+"mcap_bn": 4.3
+},
+{
+"t": "MNSO",
+"name": "MINISO Group Holding Limited",
 "m": "US",
 "date": "2026-11-17",
-"text": "agents/work/8k/DLB_2026-11-17.txt",
+"text": "agents/work/8k/MNSO_2026-11-17.txt",
 "priority": 2,
-"mcap_bn": 5.6
+"mcap_bn": 3.6
 },
 {
-"t": "GBDC",
-"name": "Golub Capital BDC, Inc.",
+"t": "ZIM",
+"name": "ZIM Integrated Shipping Services Ltd.",
 "m": "US",
-"date": "2026-11-17",
-"text": "agents/work/8k/GBDC_2026-11-17.txt",
+"date": "2026-11-18",
+"text": "agents/work/8k/ZIM_2026-11-18.txt",
 "priority": 2,
-"mcap_bn": 3.2
+"mcap_bn": 3.6
 },
 {
-"t": "LZB",
-"name": "La-Z-Boy Incorporated",
+"t": "BLSH",
+"name": "Bullish",
 "m": "US",
-"date": "2026-11-17",
-"text": "agents/work/8k/LZB_2026-11-17.txt",
+"date": "2026-11-18",
+"text": "agents/work/8k/BLSH_2026-11-18.txt",
 "priority": 2,
-"mcap_bn": 1.2
+"mcap_bn": 2.9
 },
 {
-"t": "TK",
-"name": "Teekay Corporation Ltd.",
+"t": "JJSF",
+"name": "J&J Snack Foods Corp.",
 "m": "US",
-"date": "2026-11-11",
-"text": "agents/work/8k/TK_2026-11-11.txt",
+"date": "2026-11-18",
+"text": "agents/work/8k/JJSF_2026-11-18.txt",
 "priority": 2,
-"mcap_bn": 1.2
+"mcap_bn": 1.7
 },
 {
-"t": "JCAP",
-"name": "Jefferson Capital, Inc.",
+"t": "PONY",
+"name": "Pony AI Inc.",
 "m": "US",
-"date": "2026-11-12",
-"text": "agents/work/8k/JCAP_2026-11-12.txt",
+"date": "2026-11-18",
+"text": "agents/work/8k/PONY_2026-11-18.txt",
 "priority": 2,
-"mcap_bn": 1.2
+"mcap_bn": 1.7
 },
 {
-"t": "SPH",
-"name": "Suburban Propane Partners, L.P.",
+"t": "BRBR",
+"name": "BellRing Brands, Inc.",
 "m": "US",
-"date": "2026-11-12",
-"text": "agents/work/8k/SPH_2026-11-12.txt",
+"date": "2026-11-18",
+"text": "agents/work/8k/BRBR_2026-11-18.txt",
 "priority": 2,
-"mcap_bn": 1.1
-},
-{
-"t": "FLO",
-"name": "Flowers Foods, Inc.",
-"m": "US",
-"date": "2026-11-12",
-"text": "agents/work/8k/FLO_2026-11-12.txt",
-"priority": 2,
-"mcap_bn": 1.1
-},
-{
-"t": "TMC",
-"name": "TMC the metals company Inc.",
-"m": "US",
-"date": "2026-11-12",
-"text": "agents/work/8k/TMC_2026-11-12.txt",
-"priority": 2,
-"mcap_bn": 1.1
-},
-{
-"t": "CNL",
-"name": "Collective Mining Ltd.",
-"m": "US",
-"date": "2026-11-11",
-"text": "agents/work/8k/CNL_2026-11-11.txt",
-"priority": 2,
-"mcap_bn": 1.1
-},
-{
-"t": "NMAX",
-"name": "Newsmax, Inc.",
-"m": "US",
-"date": "2026-11-13",
-"text": "agents/work/8k/NMAX_2026-11-13.txt",
-"priority": 2,
-"mcap_bn": 1.1
-},
-{
-"t": "SECZ",
-"name": "Securitize Corp.",
-"m": "US",
-"date": "2026-11-11",
-"text": "agents/work/8k/SECZ_2026-11-11.txt",
-"priority": 2,
-"mcap_bn": 1.1
-},
-{
-"t": "JBIO",
-"name": "Jade Biosciences, Inc.",
-"m": "US",
-"date": "2026-11-12",
-"text": "agents/work/8k/JBIO_2026-11-12.txt",
-"priority": 2,
-"mcap_bn": 1.0
-},
-{
-"t": "ANRO",
-"name": "Alto Neuroscience, Inc.",
-"m": "US",
-"date": "2026-11-11",
-"text": "agents/work/8k/ANRO_2026-11-11.txt",
-"priority": 2,
-"mcap_bn": 1.0
-},
-{
-"t": "SGP",
-"name": "SpyGlass Pharma, Inc.",
-"m": "US",
-"date": "2026-11-12",
-"text": "agents/work/8k/SGP_2026-11-12.txt",
-"priority": 2,
-"mcap_bn": 1.0
-},
-{
-"t": "AVEX",
-"name": "AEVEX Corp.",
-"m": "US",
-"date": "2026-11-11",
-"text": "agents/work/8k/AVEX_2026-11-11.txt",
-"priority": 2,
-"mcap_bn": 0.9
-},
-{
-"t": "TBN",
-"name": "Tamboran Resources Corporation",
-"m": "US",
-"date": "2026-11-12",
-"text": "agents/work/8k/TBN_2026-11-12.txt",
-"priority": 2,
-"mcap_bn": 0.9
-},
-{
-"t": "AFYA",
-"name": "Afya Limited",
-"m": "US",
-"date": "2026-11-12",
-"text": "agents/work/8k/AFYA_2026-11-12.txt",
-"priority": 2,
-"mcap_bn": 0.9
-},
-{
-"t": "YSWY",
-"name": "Yesway, Inc.",
-"m": "US",
-"date": "2026-11-12",
-"text": "agents/work/8k/YSWY_2026-11-12.txt",
-"priority": 2,
-"mcap_bn": 0.8
+"mcap_bn": 1.3
 },
 {
 "t": "PPE.JO",
@@ -181,6 +127,24 @@
 "source": "Purple Group SENS — Audited consolidated results for the year ended 31 August 2026 and distribution of annual report and notice of AGM (11 Nov 2026); figures from Purple Group Annual Report 2026 https://www.purplegroup.co.za/results/full_results/2026/31%20August%202026%20Full%20Results.pdf (HEPS 5.47c vs 4.30c; basic EPS 5.58c vs 4.30c; no dividend declaration found)",
 "priority": 2,
 "mcap_bn": 0.1
+},
+{
+"t": "YSS",
+"name": "York Space Systems, Inc.",
+"m": "US",
+"date": "2026-11-12",
+"text": "agents/work/8k/YSS_2026-11-12.txt",
+"priority": 1,
+"mcap_bn": 0.0
+},
+{
+"t": "USAS",
+"name": "Americas Gold and Silver Corporation",
+"m": "US",
+"date": "2026-11-13",
+"text": "agents/work/8k/USAS_2026-11-13.txt",
+"priority": 1,
+"mcap_bn": 0.0
 },
 {
 "t": "ODD",
@@ -197,24 +161,6 @@
 "m": "US",
 "date": "2026-11-12",
 "text": "agents/work/8k/ADIG_2026-11-12.txt",
-"priority": 1,
-"mcap_bn": 0.0
-},
-{
-"t": "USAS",
-"name": "Americas Gold and Silver Corporation",
-"m": "US",
-"date": "2026-11-13",
-"text": "agents/work/8k/USAS_2026-11-13.txt",
-"priority": 1,
-"mcap_bn": 0.0
-},
-{
-"t": "YSS",
-"name": "York Space Systems, Inc.",
-"m": "US",
-"date": "2026-11-12",
-"text": "agents/work/8k/YSS_2026-11-12.txt",
 "priority": 1,
 "mcap_bn": 0.0
 }
