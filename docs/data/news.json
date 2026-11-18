@@ -1,22 +1,19 @@
 {
-  "edition": "Midday update · Wednesday 18 November 2026 14:15",
-  "generated": "2026-11-18T16:20+02:00",
-  "covers": "JSE session to 14:00 SAST after the October CPI and September retail sales releases, Wednesday 18 November 2026; US and commodity items from the Morning brief and Tuesday's after-hours trade",
+  "edition": "Evening update · Wednesday 18 November 2026 18:20",
+  "generated": "2026-11-18T18:20+02:00",
+  "covers": "JSE close and rand on Wednesday 18 November 2026, plus the first 90 minutes of Wall Street trade to 18:02 SAST; compared with Tuesday's closes in the Midday update",
   "agent": "LRC News Desk",
-  "headline": "Rand past R17/$ after October CPI of 5.2%; September retail sales growth slows to 2.4%",
-  "summary": "The rand weakened 0.8% to R17.07 per dollar at 12:00 SAST on Wednesday, after Stats SA reported October inflation of 5.2% (September 4.5%) and core inflation of 4.2% (September 4.0%) (Bloomberg via BusinessTech, 18 Nov 2026); Stats SA also reported September retail sales up 2.4% year on year, slower than August's 3.2% (EWN, 18 Nov 2026). In the US, Nvidia shares rose 4.1% to $161.90 in after-hours trade on Tuesday after its results beat estimates, following a 1.0% fall in the S&P 500 (Yahoo Finance, 17 Nov 2026). Gold slipped below $3,800 an ounce after Federal Reserve officials argued for further rate hikes, which Bloomberg named as the main pressure on the rand; the SARB announces its decision on Thursday with the repo rate at 7.25%.",
+  "headline": "JSE All Share falls 3.7% and the rand weakens to R17.24/$; miners and banks lead the slide",
+  "summary": "The JSE All Share fell 3.7% to 106,572 and the Top 40 3.9% to 98,733 on Wednesday, with miners down 5%-7% and the big banks down about 4%, while the rand weakened to R17.24 per dollar by 18:02 SAST from R16.76 on Friday (LRC Market Dashboard, 18 Nov 2026). On Wall Street, the S&P 500 was 0.3% lower at 7,316 and the Nasdaq 0.2% higher at 24,375 at 18:02 SAST, with Nvidia down 1.9% at $152.57 after its after-hours gain on Tuesday faded. Gold fell to $3,754 an ounce, platinum to $1,361 and Brent to $89.44, a day before the SARB decision with the repo rate at 7.25%.",
   "sections": [
     {
       "name": "Breaking",
       "items": [
         {
-          "title": "Nvidia quarterly revenue $115.8bn, ahead of the $108.7bn consensus; guides to $130bn",
-          "summary": "Nvidia reported third-quarter fiscal 2027 revenue of $115.8bn for the quarter to October, up 20% from $96.2bn in the previous quarter and about 103% from $57.0bn a year earlier. That is about 6.5% above the average analyst estimate of $108.7bn. For the fourth quarter, which includes an extra week, the company expects revenue of $130.0bn plus or minus 3% and gross margins of 71%-72%, and assumes no Data Center compute revenue from China.",
-          "source": "NVIDIA Form 8-K, Exhibit 99.1 (SEC EDGAR), filed 17 Nov 2026, read by LRC Research 18 Nov 2026 06:47 SAST; consensus from LRC Earnings Calendar (market data feed, 42 estimates), 17 Nov 2026",
-          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000088/q3fy27pr.htm",
-          "tickers": [
-            "NVDA"
-          ]
+          "title": "JSE All Share down 3.7%, Top 40 down 3.9% in a broad sell-off",
+          "summary": "The All Share ended Wednesday at 106,571.70 against Tuesday's 110,616.44 (-3.7%) and is 5.2% below Friday's 112,387.90. The Top 40 ended at 98,732.67 against 102,752.15 (-3.9%). The fall came on the day October CPI rose to 5.2% and as gold, platinum and copper fell. Large losers included Harmony (-7.2%), Sibanye-Stillwater (-7.2%), AngloGold Ashanti (-6.8%), Anglo American (-6.0%), Capitec (-6.0%), Naspers (-5.8%), Impala Platinum (-5.9%), Gold Fields (-5.5%) and Absa (-6.1%); Standard Bank fell 4.1% and FirstRand 3.7%.",
+          "source": "LRC Market Dashboard (Yahoo Finance), J203/J200 and JSE share quotes, 18 Nov 2026 17:00-17:15 SAST; Tuesday close 17 Nov 2026; Friday close 13 Nov 2026",
+          "url": "https://finance.yahoo.com/quote/%5EJ203.JO/"
         }
       ]
     },
@@ -24,15 +21,15 @@
       "name": "US markets",
       "items": [
         {
-          "title": "S&P 500 closes 1.0% lower at 7,341; Nasdaq -0.7% at 24,328",
-          "summary": "The S&P 500 closed at 7,340.53 against Monday's 7,416.59 (-1.0%) and the Nasdaq Composite at 24,328.38 against 24,509.76 (-0.7%). Both finished above their 20:41 SAST levels in the Evening update but remain about 3% below Friday 13 November (S&P 7,561.67; Nasdaq 25,136.27).",
-          "source": "LRC Market Dashboard (Yahoo Finance), closes 17 Nov 2026 (read 18 Nov 2026 05:58 SAST); Monday close 16 Nov 2026; Friday close 13 Nov 2026",
+          "title": "S&P 500 -0.3% at 7,316, Nasdaq +0.2% at 24,375 early in the session",
+          "summary": "At 18:02 SAST the S&P 500 was at 7,316.21 against Tuesday's close of 7,340.53 (-0.3%) and the Nasdaq Composite at 24,375.29 against 24,328.38 (+0.2%). Both remain about 3% below Friday 13 November (S&P 7,561.67; Nasdaq 25,136.27). Chip stocks were mixed: Broadcom +3.7% and AMD +1.2%, Micron -1.6%. UnitedHealth was down 6.4%.",
+          "source": "LRC Market Dashboard (Yahoo Finance), quotes at 18:02 SAST, 18 Nov 2026; Tuesday close 17 Nov 2026; Friday close 13 Nov 2026",
           "url": "https://finance.yahoo.com/quote/%5EGSPC/"
         },
         {
-          "title": "US 10-year yield at 5.10%",
-          "summary": "The 10-year Treasury yield closed at 5.103% on Tuesday, against 5.121% on Monday and 5.154% on Friday. The October FOMC minutes are due on Wednesday.",
-          "source": "LRC Market Dashboard (Yahoo Finance), closes 17 Nov 2026 (read 18 Nov 2026 05:58 SAST); Monday close 16 Nov 2026",
+          "title": "US 10-year yield eases to 5.07%",
+          "summary": "The 10-year Treasury yield was 5.07% at 18:02 SAST, against 5.103% at Tuesday's close and 5.154% on Friday. The October FOMC minutes are due later on Wednesday.",
+          "source": "LRC Market Dashboard (Yahoo Finance), ^TNX at 18:02 SAST, 18 Nov 2026; closes 17 and 13 Nov 2026",
           "url": "https://finance.yahoo.com/quote/%5ETNX/"
         }
       ]
@@ -41,28 +38,16 @@
       "name": "South Africa",
       "items": [
         {
-          "title": "October CPI 5.2% year on year, up from 4.5%; core inflation 4.2%",
-          "summary": "Stats SA's consumer price index rose 5.2% year on year in October against 4.5% in September, and 0.7% on the month. Core inflation, which excludes food and energy, rose to 4.2% from 4.0%, below the roughly 4.5% Nedbank had expected before the release. The headline figure matched the median of 15 economists in a Bloomberg survey and the 5.2% Reuters poll.",
-          "source": "Stats SA October 2026 CPI via Bloomberg (BusinessTech), 18 Nov 2026; InstaForex, 18 Nov 2026 10:00 SAST; Nedbank via CNBC Africa (Reuters), 18 Nov 2026",
-          "url": "https://businesstech.co.za/news/finance/884941/rand-breaks-r17-to-the-dollar/"
+          "title": "October CPI 5.2%, core 4.2%; SARB decides on Thursday",
+          "summary": "Stats SA reported October inflation of 5.2% year on year (September 4.5%) and core inflation of 4.2% (September 4.0%). The SARB announces its decision on Thursday 19 November with the repo rate at 7.25% after September's 25bp hike; most economists polled before the release expected no change (Reuters).",
+          "source": "Stats SA October 2026 CPI via LRC Macro Desk, 18 Nov 2026; Reuters via CNBC Africa, 18 Nov 2026",
+          "url": "https://www.statssa.gov.za/?p=20108"
         },
         {
-          "title": "September retail sales up 2.4% year on year, slower than August's 3.2%",
-          "summary": "Stats SA said retail trade sales grew 2.4% year on year in September 2026, down from 3.2% in August, and fell 0.3% on the month (seasonally adjusted), the second monthly decline in a row. General dealers were the biggest contributor to annual growth; hardware, paint and glass retailers fell 1.5% year on year. Slower spending growth sits alongside higher inflation ahead of Thursday's SARB decision.",
-          "source": "Stats SA September 2026 retail trade sales via EWN (Anelitha Fandese), 18 Nov 2026 12:08 SAST",
-          "url": "https://www.ewn.co.za/sa-retail-sales-up-24-year-on-year-in-september"
-        },
-        {
-          "title": "SARB decides on Thursday; markets expect no change",
-          "summary": "The SARB announces its decision on Thursday 19 November with the repo rate at 7.25% after September's 25bp hike. Most economists expect the rate to be left unchanged (Bloomberg; Reuters). The benchmark 2035 government bond yield was 8.625% early on Wednesday.",
-          "source": "Reuters via CNBC Africa, 18 Nov 2026 08:53 GMT; LRC Macro Desk (SARB), 17 Nov 2026",
-          "url": "https://www.cnbcafrica.com/2026/south-african-rand-softens-as-focus-turns-to-inflation-data"
-        },
-        {
-          "title": "JSE All Share closed 0.8% lower at 110,616",
-          "summary": "The All Share closed at 110,616.44 (Monday 111,525.58, -0.8%) and the Top 40 at 102,752.15 (Monday 103,628.96, -0.8%). The All Share is about 1.6% below Friday's close of 112,387.90.",
-          "source": "LRC Market Dashboard (Yahoo Finance), JSE close 17 Nov 2026; Monday close 16 Nov 2026; Friday close 13 Nov 2026",
-          "url": "https://finance.yahoo.com/quote/%5EJ203.JO/"
+          "title": "Banks and retailers fall with the market",
+          "summary": "Among rate-sensitive shares, Capitec fell 6.0% to R4,468.10, Nedbank 4.6% to R271.48, Standard Bank 4.1% to R282.65 and FirstRand 3.7% to R88.89 on Wednesday, ahead of Thursday's rate decision.",
+          "source": "LRC Market Dashboard (Yahoo Finance), JSE quotes 18 Nov 2026 17:05-17:10 SAST",
+          "url": "https://finance.yahoo.com/quote/CPI.JO/"
         }
       ]
     },
@@ -70,16 +55,16 @@
       "name": "Forex & commodities",
       "items": [
         {
-          "title": "Rand weakens 0.8% to R17.07/$, past the R17 mark",
-          "summary": "The rand traded at R17.07 per dollar at 12:00 SAST on Wednesday, 0.8% weaker on the day and the second-worst performer among currencies Bloomberg tracks. It was at R16.98 at 07:05 SAST and R16.76 at Friday's close. Bloomberg linked the move mainly to gold falling below $3,800 an ounce after Federal Reserve officials argued for more rate hikes; TP ICAP's Devon Pearman said inflation running above some expectations 'may partially' explain it. On Tuesday TreasuryONE's Wichard Cilliers called R17 the rand's weakest level since April.",
-          "source": "Bloomberg via BusinessTech, 18 Nov 2026 (12:00 SAST level); Reuters via CNBC Africa, 17-18 Nov 2026; LRC Market Dashboard (Yahoo Finance ZAR=X), Friday close 13 Nov 2026",
-          "url": "https://businesstech.co.za/news/finance/884941/rand-breaks-r17-to-the-dollar/"
+          "title": "Rand at R17.24/$, weaker than the R17.07 reported at midday",
+          "summary": "USD/ZAR was 17.2397 at 18:02 SAST, against R17.07 at 12:00 SAST (Bloomberg) and 16.7584 at Friday's close (-2.8% for the rand over the period). EUR/ZAR was 18.90 and GBP/ZAR 22.66.",
+          "source": "LRC Market Dashboard (Yahoo Finance) ZAR=X, EURZAR=X, GBPZAR=X at 18:02 SAST, 18 Nov 2026; Friday close 13 Nov 2026; Bloomberg via BusinessTech, 18 Nov 2026",
+          "url": "https://finance.yahoo.com/quote/ZAR%3DX/"
         },
         {
-          "title": "Platinum -4.4% to $1,410; gold -2.1% to $3,797; Brent $92.57",
-          "summary": "Tuesday closes: platinum $1,410.00 (Monday $1,474.20, -4.4%); gold futures $3,797.00 (Monday $3,878.60, -2.1%); Brent $92.57 (Monday $91.71, +0.9%); copper about $13,001/t (Friday about $13,403/t, -3.0%). Lower platinum and gold weigh on JSE PGM and gold miners.",
-          "source": "LRC Market Dashboard (Yahoo Finance PL=F, GC=F, BZ=F, HG=F), closes 17 Nov 2026; Monday close 16 Nov 2026; Friday close 13 Nov 2026",
-          "url": "https://finance.yahoo.com/quote/PL%3DF/"
+          "title": "Gold $3,754 (-1.1%), platinum $1,361 (-3.5%), Brent $89.44 (-3.4%), copper -4.3%",
+          "summary": "At 18:02 SAST gold futures were at $3,754.40 (Tuesday $3,797.00), platinum at $1,360.90 (Tuesday $1,410.00), Brent at $89.44 (Tuesday $92.57) and copper about $12,447/t (Tuesday about $13,001/t). Platinum is 8.6% and copper 7.1% below Friday's close. Weaker metal prices weigh directly on JSE gold, PGM and diversified miners.",
+          "source": "LRC Market Dashboard (Yahoo Finance) GC=F, PL=F, BZ=F, HG=F at 18:02 SAST, 18 Nov 2026; closes 17 and 13 Nov 2026",
+          "url": "https://finance.yahoo.com/quote/GC%3DF/"
         }
       ]
     },
@@ -87,21 +72,31 @@
       "name": "Our coverage",
       "items": [
         {
-          "title": "Nvidia results above estimates; shares +4.1% after hours; our rating unchanged",
-          "summary": "Nvidia closed Tuesday at $155.46 (-0.4%) and traded at $161.90 (+4.1%) after hours following results that beat estimates. AMD and Broadcom rose more than 1% after hours. Morningstar's Brian Colello described the quarter as 'business as usual' with an encouraging forecast. Nvidia is on the LRC Investment watchlist (grade A); the scanner rating is not changed by this note.",
-          "source": "Yahoo Finance (Ines Ferré), 17 Nov 2026 14:25 PST; Nvidia quote at 19:44 EST, 17 Nov 2026; LRC Watchlist, 14 Nov 2026",
-          "url": "https://finance.yahoo.com/markets/stocks/article/amd-broadcom-tsmc-stocks-rise-on-nvidia-earnings-coreweave-nebius-shares-also-rally-220159436.html",
+          "title": "Nvidia -1.9% at $152.57; after-hours gain from results has faded; our rating unchanged",
+          "summary": "Nvidia traded at $152.57 at 18:02 SAST, 1.9% below Tuesday's close of $155.46, after trading at $161.90 after hours on Tuesday following results above estimates (revenue $115.8bn against $108.7bn consensus). Nvidia is on the LRC Investment watchlist (grade A, fair value $262.56); this note does not change the scanner rating.",
+          "source": "LRC Market Dashboard (Yahoo Finance), NVDA at 18:02 SAST, 18 Nov 2026; NVIDIA Form 8-K, 17 Nov 2026; LRC Watchlist, 14 Nov 2026",
+          "url": "https://finance.yahoo.com/quote/NVDA/",
           "tickers": [
             "NVDA"
+          ]
+        },
+        {
+          "title": "Intuit -1.8%, Deckers +1.5%",
+          "summary": "Intuit traded at $314.89 (-1.8%) and Deckers Outdoor at $82.69 (+1.5%) at 18:01 SAST. Both are on the LRC Investment watchlist (grade A, fair values $426.00 and $103.00); ratings unchanged.",
+          "source": "LRC Market Dashboard (Yahoo Finance), quotes at 18:01 SAST, 18 Nov 2026; LRC Watchlist, 14 Nov 2026",
+          "url": "https://finance.yahoo.com/quote/INTU/",
+          "tickers": [
+            "INTU",
+            "DECK"
           ]
         }
       ]
     }
   ],
   "watch_today": [
-    "Whether the rand holds beyond R17/$ into the SARB decision",
-    "How Nvidia and chip stocks trade at the US open after the results",
-    "October FOMC minutes on Wednesday evening (SAST)",
-    "The SARB decision on Thursday 19 November with the repo rate at 7.25%"
+    "October FOMC minutes later on Wednesday (SAST evening)",
+    "Whether the rand holds near R17.24/$ into the SARB decision",
+    "The SARB decision on Thursday 19 November with the repo rate at 7.25%",
+    "Whether JSE miners steady with gold near $3,750 and platinum near $1,360"
   ]
 }
