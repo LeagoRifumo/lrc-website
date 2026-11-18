@@ -1,10 +1,10 @@
 {
- "edition": "Morning brief · Wednesday 18 November 2026 07:20",
- "generated": "2026-11-18T09:11+02:00",
- "covers": "Tuesday 17 November 2026 US session close and SA overnight, to 06:00 SAST Wednesday",
+ "edition": "Midday update · Wednesday 18 November 2026 10:25",
+ "generated": "2026-11-18T10:25+02:00",
+ "covers": "SA October CPI release (10:00 SAST) and the JSE morning, Wednesday 18 November 2026; US and commodity items from the Morning brief",
  "agent": "LRC News Desk",
- "headline": "Nvidia beats with $115.8bn revenue and guides to $130bn after Wall Street's 1% fall; SA October CPI this morning, SARB on Thursday",
- "summary": "Nvidia reported quarterly revenue of $115.8bn after Tuesday's US close, about 6.5% above the $108.7bn consensus, and guided to $130bn for the current quarter (company release, 17 Nov 2026). On Tuesday the S&P 500 closed 1.0% lower at 7,341, the JSE All Share 0.8% lower at 110,616, and the rand was at R16.95/$ early on Wednesday (LRC Market Dashboard (Yahoo Finance), 17-18 Nov 2026). Gold closed 2.1% lower at $3,797 and platinum 4.4% lower at $1,410, while today's October CPI and Thursday's SARB decision (repo 7.25%) are the main local tests.",
+ "headline": "SA October CPI rises to 5.2% from 4.5%, in line with the Reuters poll, a day before the SARB decision",
+ "summary": "South Africa's annual consumer inflation rose to 5.2% in October from 4.5% in September, with prices up 0.7% on the month, in line with the 5.2% Reuters poll (Stats SA release via InstaForex, 18 Nov 2026 10:00 SAST). Before the release the rand was at R16.98/$, near a seven-month low, and the 2035 government bond yield was 8.625% (Reuters via CNBC Africa, 18 Nov 2026). Overnight, Nvidia beat estimates with $115.8bn revenue, while gold and platinum fell on Tuesday; the SARB announces its rate decision on Thursday with the repo rate at 7.25%.",
  "sections": [
   {
    "name": "Breaking",
@@ -41,16 +41,22 @@
    "name": "South Africa",
    "items": [
     {
+     "title": "October CPI 5.2% year on year, up from 4.5%; 0.7% month on month",
+     "summary": "Stats SA's consumer price index rose 5.2% year on year in October against 4.5% in September, and 0.7% on the month against 0.4% in September. The result matched the 5.2% expected by economists polled by Reuters. Before the release, Nedbank expected higher fuel costs to feed through to other goods and services and core inflation to rise to about 4.5% (September: 4.0%); the actual core figure is not shown because the LRC News Desk has not yet verified it.",
+     "source": "Stats SA October 2026 CPI, as reported by InstaForex, 18 Nov 2026 08:00 UTC (10:00 SAST); Reuters poll and Nedbank via CNBC Africa, 18 Nov 2026 08:53 GMT",
+     "url": "https://www.instaforex.com/forex-news/3298425"
+    },
+    {
+     "title": "SARB decides on Thursday; markets expect no change",
+     "summary": "The SARB announces its decision on Thursday 19 November with the repo rate at 7.25% after September's 25bp hike. Reuters reported on Wednesday that the bank is widely expected to leave rates unchanged. The benchmark 2035 government bond yield was 8.625% early on Wednesday. September retail sales are due at about 13:00 SAST (Reuters poll: 3.4% year on year).",
+     "source": "Reuters via CNBC Africa, 18 Nov 2026 08:53 GMT; LRC Macro Desk (SARB), 17 Nov 2026",
+     "url": "https://www.cnbcafrica.com/2026/south-african-rand-softens-as-focus-turns-to-inflation-data"
+    },
+    {
      "title": "JSE All Share closed 0.8% lower at 110,616",
      "summary": "The All Share closed at 110,616.44 (Monday 111,525.58, -0.8%) and the Top 40 at 102,752.15 (Monday 103,628.96, -0.8%). The All Share is about 1.6% below Friday's close of 112,387.90.",
      "source": "LRC Market Dashboard (Yahoo Finance), JSE close 17 Nov 2026; Monday close 16 Nov 2026; Friday close 13 Nov 2026",
      "url": "https://finance.yahoo.com/quote/%5EJ203.JO/"
-    },
-    {
-     "title": "October CPI today, SARB on Thursday",
-     "summary": "Stats SA publishes October CPI on Wednesday 18 November (September: 4.5%; core 4.0%). The SARB announces its decision on Thursday 19 November with the repo rate at 7.25% after September's 25bp hike. A Reuters poll quoted on Monday expected October CPI at 5.1%.",
-     "source": "LRC Macro Desk (Stats SA, SARB), 17 Nov 2026; Reuters via CNBC Africa, 16 Nov 2026 08:56 GMT",
-     "url": "https://www.cnbcafrica.com/2026/south-african-rand-slips-as-stronger-dollar-weighs"
     }
    ]
   },
@@ -58,10 +64,10 @@
    "name": "Forex & commodities",
    "items": [
     {
-     "title": "Rand at R16.95/$, about 1.2% weaker than Friday",
-     "summary": "USD/ZAR was at 16.9519 early on Wednesday against 16.7584 at Friday's close. EUR/ZAR was at 18.63 and GBP/ZAR at 22.37.",
-     "source": "LRC Market Dashboard (Yahoo Finance ZAR=X, EURZAR=X, GBPZAR=X), 18 Nov 2026 05:58 SAST",
-     "url": "https://finance.yahoo.com/quote/ZAR%3DX/"
+     "title": "Rand at R16.98/$ before the CPI release, near a seven-month low",
+     "summary": "The rand traded at 16.9775 per dollar at 07:05 SAST, about 0.3% weaker than its previous close, according to Reuters. It was at 16.7584 at Friday's close.",
+     "source": "Reuters via CNBC Africa, 18 Nov 2026 08:53 GMT; LRC Market Dashboard (Yahoo Finance ZAR=X), Friday close 13 Nov 2026",
+     "url": "https://www.cnbcafrica.com/2026/south-african-rand-softens-as-focus-turns-to-inflation-data"
     },
     {
      "title": "Platinum -4.4% to $1,410; gold -2.1% to $3,797; Brent $92.57",
@@ -87,10 +93,10 @@
   }
  ],
  "watch_today": [
-  "SA October CPI this morning (Reuters poll: 5.1%; September 4.5%)",
+  "How the rand and SA bonds react to the 5.2% October CPI",
+  "SA September retail sales at about 13:00 SAST (Reuters poll: 3.4%)",
   "How Nvidia shares and chip stocks, including AMD, trade at the US open after the results",
   "October FOMC minutes on Wednesday evening (SAST)",
-  "Whether platinum and gold recover after Tuesday's falls",
   "The SARB decision on Thursday 19 November with the repo rate at 7.25%"
  ]
 }
