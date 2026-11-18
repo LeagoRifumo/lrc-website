@@ -1,0 +1,82 @@
+{
+ "edition": "Morning brief · Wednesday 18 November 2026 06:30",
+ "generated": "2026-11-18T06:30+02:00",
+ "covers": "Tuesday 17 November 2026 US session close and SA overnight, to 06:00 SAST Wednesday",
+ "agent": "LRC News Desk",
+ "headline": "Wall Street closed about 1% lower before Nvidia's results; SA October CPI out this morning, SARB decides on Thursday",
+ "summary": "The JSE All Share closed 0.8% lower at 110,616 on Tuesday and the rand was at R16.95/$ early on Wednesday, about 1.2% weaker than Friday (LRC Market Dashboard (Yahoo Finance), 17-18 Nov 2026). In New York the S&P 500 closed 1.0% lower at 7,341 and the Nasdaq 0.7% lower at 24,328, with Nvidia reporting after the bell; the LRC News Desk will publish its figures once checked against the company release. Gold closed 2.1% lower at $3,797 and platinum 4.4% lower at $1,410, a drag on JSE miners, while today's October CPI and Thursday's SARB decision (repo 7.25%) are the main local tests.",
+ "sections": [
+  {
+   "name": "US markets",
+   "items": [
+    {
+     "title": "S&P 500 closes 1.0% lower at 7,341; Nasdaq -0.7% at 24,328",
+     "summary": "The S&P 500 closed at 7,340.53 against Monday's 7,416.59 (-1.0%) and the Nasdaq Composite at 24,328.38 against 24,509.76 (-0.7%). Both finished above their 20:41 SAST levels in the Evening update but remain about 3% below Friday 13 November (S&P 7,561.67; Nasdaq 25,136.27).",
+     "source": "LRC Market Dashboard (Yahoo Finance), closes 17 Nov 2026 (read 18 Nov 2026 05:58 SAST); Monday close 16 Nov 2026; Friday close 13 Nov 2026",
+     "url": "https://finance.yahoo.com/quote/%5EGSPC/"
+    },
+    {
+     "title": "US 10-year yield at 5.10%",
+     "summary": "The 10-year Treasury yield closed at 5.103% on Tuesday, against 5.121% on Monday and 5.154% on Friday. The October FOMC minutes are due on Wednesday.",
+     "source": "LRC Market Dashboard (Yahoo Finance), closes 17 Nov 2026 (read 18 Nov 2026 05:58 SAST); Monday close 16 Nov 2026",
+     "url": "https://finance.yahoo.com/quote/%5ETNX/"
+    }
+   ]
+  },
+  {
+   "name": "South Africa",
+   "items": [
+    {
+     "title": "JSE All Share closed 0.8% lower at 110,616",
+     "summary": "The All Share closed at 110,616.44 (Monday 111,525.58, -0.8%) and the Top 40 at 102,752.15 (Monday 103,628.96, -0.8%). The All Share is about 1.6% below Friday's close of 112,387.90.",
+     "source": "LRC Market Dashboard (Yahoo Finance), JSE close 17 Nov 2026; Monday close 16 Nov 2026; Friday close 13 Nov 2026",
+     "url": "https://finance.yahoo.com/quote/%5EJ203.JO/"
+    },
+    {
+     "title": "October CPI today, SARB on Thursday",
+     "summary": "Stats SA publishes October CPI on Wednesday 18 November (September: 4.5%; core 4.0%). The SARB announces its decision on Thursday 19 November with the repo rate at 7.25% after September's 25bp hike. A Reuters poll quoted on Monday expected October CPI at 5.1%.",
+     "source": "LRC Macro Desk (Stats SA, SARB), 17 Nov 2026; Reuters via CNBC Africa, 16 Nov 2026 08:56 GMT",
+     "url": "https://www.cnbcafrica.com/2026/south-african-rand-slips-as-stronger-dollar-weighs"
+    }
+   ]
+  },
+  {
+   "name": "Forex & commodities",
+   "items": [
+    {
+     "title": "Rand at R16.95/$, about 1.2% weaker than Friday",
+     "summary": "USD/ZAR was at 16.9519 early on Wednesday against 16.7584 at Friday's close. EUR/ZAR was at 18.63 and GBP/ZAR at 22.37.",
+     "source": "LRC Market Dashboard (Yahoo Finance ZAR=X, EURZAR=X, GBPZAR=X), 18 Nov 2026 05:58 SAST",
+     "url": "https://finance.yahoo.com/quote/ZAR%3DX/"
+    },
+    {
+     "title": "Platinum -4.4% to $1,410; gold -2.1% to $3,797; Brent $92.57",
+     "summary": "Tuesday closes: platinum $1,410.00 (Monday $1,474.20, -4.4%); gold futures $3,797.00 (Monday $3,878.60, -2.1%); Brent $92.57 (Monday $91.71, +0.9%); copper about $13,001/t (Friday about $13,403/t, -3.0%). Lower platinum and gold weigh on JSE PGM and gold miners.",
+     "source": "LRC Market Dashboard (Yahoo Finance PL=F, GC=F, BZ=F, HG=F), closes 17 Nov 2026; Monday close 16 Nov 2026; Friday close 13 Nov 2026",
+     "url": "https://finance.yahoo.com/quote/PL%3DF/"
+    }
+   ]
+  },
+  {
+   "name": "Our coverage",
+   "items": [
+    {
+     "title": "Nvidia reported after Tuesday's close",
+     "summary": "Nvidia released quarterly results after the US close on Tuesday 17 November, its first under interim CEO Colette Kress. Analysts had expected revenue up 91% to $108.93bn (TipRanks, 16 Nov 2026). The LRC News Desk has not yet checked the reported figures against the company release, so none are given here; they will follow in the Midday update. Our BUY rating (fair value $262.56) is unchanged.",
+     "source": "TipRanks, 16 Nov 2026; City AM, 16 Nov 2026 14:38 GMT",
+     "url": "https://www.cityam.com/nvidia-shares-continue-slide-as-investors-grapple-with-latest-in-huang-saga/",
+     "tickers": [
+      "NVDA"
+     ]
+    }
+   ]
+  }
+ ],
+ "watch_today": [
+  "SA October CPI this morning (Reuters poll: 5.1%; September 4.5%)",
+  "Nvidia's results and the reaction in chip stocks, including AMD, at the US open",
+  "October FOMC minutes on Wednesday evening (SAST)",
+  "Whether platinum and gold recover after Tuesday's falls",
+  "The SARB decision on Thursday 19 November with the repo rate at 7.25%"
+ ]
+}
