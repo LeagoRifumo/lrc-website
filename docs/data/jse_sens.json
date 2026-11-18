@@ -1,6 +1,6 @@
 {
  "note": "JSE company announcements (SENS) recorded by the LRC JSE Announcements job every weekday. results = published results with headline earnings per share (HEPS) vs the same period last year; trading_statements = expected HEPS change ranges; dividends = declared dividends with the JSE dates. Amounts in cents. Every entry carries its source.",
- "updated": "2026-11-16T19:30+02:00",
+ "updated": "2026-11-18T18:52+02:00",
  "results": [
   {
    "t": "CLS.JO",
@@ -171,6 +171,26 @@
    "heps_prior": 301.0,
    "unit": "EURc",
    "source": "Richemont SENS / press release — Richemont posts strong results for the six-month period ended 30 September 2026 driven by sustained double-digit sales growth (13 Nov 2026) https://www.richemont.com/news-media/press-releases-news/richemont-posts-strong-results-for-the-six-month-period-ended-30-september-2026-driven-by-sustained-double-digit-sales-growth/ (figures in euro: basic HEPS €4.27 vs €3.01; diluted HEPS €4.26 vs €3.00; headline earnings €2 512m vs €1 768m; no interim dividend — Richemont pays an annual dividend)"
+  },
+  {
+   "t": "CML.JO",
+   "name": "Coronation Fund Managers",
+   "date": "2026-11-17",
+   "period": "Year to 30 Sep 2026",
+   "heps": 406.8,
+   "heps_prior": 474.3,
+   "unit": "c",
+   "dps": 210.0,
+   "source": "Coronation Fund Managers SENS — Reviewed condensed consolidated financial results for the year ended 30 September 2026 and cash dividend declaration (17 Nov 2026), via InsidEntity https://www.insidentity.com/coronation-fund-managers-reviewed-condensed-consolidated-financial-results-for-the-year-ended-30-september-2026-and-cash-dividend/ (HEPS 406.8c vs 474.3c, down 14%; fund management EPS 413.7c vs 452.2c; final gross dividend 210.0c vs 254.0c; total gross dividends for the year 413.0c vs 454.0c)"
+  },
+  {
+   "t": "TKG.JO",
+   "name": "Telkom",
+   "date": "2026-11-17",
+   "period": "Six months to 30 Sep 2026",
+   "heps": 334.1,
+   "unit": "c",
+   "source": "Telkom SA SOC SENS — Group interim results for the six months ended 30 September 2026 (17 Nov 2026), via InsidEntity https://www.insidentity.com/telkom-sa-soc-group-interim-results-for-the-six-months-ended-30-september-2026/ (HEPS up 9.3% to 334.1c; basic EPS up 10.4% to 359.6c; prior-period HEPS value not shown in the source read; no interim dividend declared — Telkom pays an annual dividend)"
   }
  ],
  "trading_statements": [
@@ -221,6 +241,14 @@
    "heps_change_low": -0.06,
    "heps_change_high": -0.01,
    "source": "Life Healthcare SENS — Trading statement for the year ended 30 September 2026 (12 Nov 2026), via ShareData https://sharedata.co.za/sens.asp?id=566166 (continuing operations: HEPS expected 100.7c to 106.0c vs 107.1c pro forma for 2025 (93.9c loss as reported), 1%-6% lower; normalised EPS 106.3c to 111.3c vs 100.3c, 6%-11% higher; total operations HEPS 96.0c to 100.5c vs 88.9c pro forma, 8%-13% higher; results expected on or about 26 Nov 2026)"
+  },
+  {
+   "t": "ZZD.JO",
+   "date": "2026-11-17",
+   "period": "Year to 30 Sep 2026",
+   "heps_change_low": -0.2,
+   "heps_change_high": -0.16,
+   "source": "Zeda Limited SENS — Trading statement for the year ended 30 September 2026 (17 Nov 2026), via Sharenet https://www.sharenet.co.za/v3/sens_display.php?tdate=20261117173300&seq=70&scode= (HEPS expected 288.6c to 303.1c vs 360.8c, 16% to 20% lower; basic EPS expected 288.3c to 302.7c vs 360.4c; results expected on or about 24 Nov 2026)"
   }
  ],
  "dividends": [
@@ -368,6 +396,17 @@
    "record": "2026-12-11",
    "pay": "2027-01-21",
    "source": "Sirius Real Estate SENS — Cash dividend and offer of Dividend Reinvestment Plan (16 Nov 2026), via Sharenet https://www.sharenet.co.za/v3/sens_display.php?tdate=20261116160000&seq=84&scode= (dividend of 3.35 euro cents per share for the six months to 30 Sep 2026; SA gross 62.61683 ZAR cents at 18.69159 ZAR/EUR; 46.1% PID / 53.9% non-PID; SA register dates shown)"
+  },
+  {
+   "t": "CML.JO",
+   "period": "Final",
+   "declared": "2026-11-17",
+   "amount_c": 210.0,
+   "ldt": "2026-12-01",
+   "ex": "2026-12-02",
+   "record": "2026-12-04",
+   "pay": "2026-12-07",
+   "source": "Coronation Fund Managers SENS — Reviewed condensed consolidated financial results for the year ended 30 September 2026 and cash dividend declaration (17 Nov 2026), via InsidEntity https://www.insidentity.com/coronation-fund-managers-reviewed-condensed-consolidated-financial-results-for-the-year-ended-30-september-2026-and-cash-dividend/ (final gross dividend 210.0c per share from income reserves; 168.0c net of 20% dividend tax)"
   }
  ]
 }

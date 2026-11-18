@@ -12145,8 +12145,17 @@
 "when": "Not stated",
 "eps_forecast": "",
 "quarter": "",
-"period": "Annual to 30 Sep 2026 (expected)",
-"market_cap_bn": 13.7
+"period": "Year to 30 Sep 2026",
+"market_cap_bn": 13.7,
+"heps": 406.8,
+"heps_prior": 474.3,
+"unit": "c",
+"change": -0.1423,
+"result": "down",
+"measure": "HEPS",
+"dps": 210.0,
+"source": "Coronation Fund Managers SENS — Reviewed condensed consolidated financial results for the year ended 30 September 2026 and cash dividend declaration (17 Nov 2026), via InsidEntity https://www.insidentity.com/coronation-fund-managers-reviewed-condensed-consolidated-financial-results-for-the-year-ended-30-september-2026-and-cash-dividend/ (HEPS 406.8c vs 474.3c, down 14%; fund management EPS 413.7c vs 452.2c; final gross dividend 210.0c vs 254.0c; total gross dividends for the year 413.0c vs 454.0c)",
+"result_done": true
 },
 "CMPR|2026-10-28": {
 "t": "CMPR",
@@ -51743,14 +51752,23 @@
 "TKG.JO|2026-11-17": {
 "t": "TKG.JO",
 "ticker": "TKG",
-"name": "Telkom SA SOC",
+"name": "Telkom",
 "m": "JSE",
 "date": "2026-11-17",
 "when": "Not stated",
 "eps_forecast": "",
 "quarter": "",
-"period": "FY2027 interim results to 30 Sep 2026",
-"market_cap_bn": null
+"period": "Six months to 30 Sep 2026",
+"market_cap_bn": null,
+"heps": 334.1,
+"heps_prior": null,
+"unit": "c",
+"change": null,
+"result": null,
+"measure": "HEPS",
+"dps": null,
+"source": "Telkom SA SOC SENS — Group interim results for the six months ended 30 September 2026 (17 Nov 2026), via InsidEntity https://www.insidentity.com/telkom-sa-soc-group-interim-results-for-the-six-months-ended-30-september-2026/ (HEPS up 9.3% to 334.1c; basic EPS up 10.4% to 359.6c; prior-period HEPS value not shown in the source read; no interim dividend declared — Telkom pays an annual dividend)",
+"result_done": false
 },
 "TKO|2026-11-04": {
 "t": "TKO",
