@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-17T17:45:39+02:00",
+  "generated": "2026-11-18T11:55:00+02:00",
   "agent": "LRC Macro Desk",
   "method": "Surprise = actual minus forecast (consensus). If there is no forecast, actual minus previous. Impact for shares: a surprise in the 'better' direction larger than the threshold = Bullish, the other way = Bearish, otherwise Neutral.",
   "countries": {
@@ -45,14 +45,14 @@
           "better": "lower",
           "threshold": 0.1,
           "frequency": "monthly",
-          "period": "Sep 2026",
-          "release_date": "2026-10-21",
-          "actual": 4.5,
-          "forecast": 4.7,
-          "previous": 4.4,
-          "next_release": "2026-11-18",
+          "period": "Oct 2026",
+          "release_date": "2026-11-18",
+          "actual": 5.2,
+          "forecast": null,
+          "previous": 4.5,
+          "next_release": null,
           "source": "Stats SA",
-          "url": "https://tradingeconomics.com/south-africa/inflation-cpi"
+          "url": "https://www.statssa.gov.za/?p=20108"
         },
         {
           "key": "core_cpi",
