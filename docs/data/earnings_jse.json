@@ -1155,6 +1155,13 @@
    "measure": "HEPS",
    "dps": 210.0,
    "source": "Coronation Fund Managers SENS — Reviewed condensed consolidated financial results for the year ended 30 September 2026 and cash dividend declaration (17 Nov 2026), via InsidEntity https://www.insidentity.com/coronation-fund-managers-reviewed-condensed-consolidated-financial-results-for-the-year-ended-30-september-2026-and-cash-dividend/ (HEPS 406.8c vs 474.3c, down 14%; fund management EPS 413.7c vs 452.2c; final gross dividend 210.0c vs 254.0c; total gross dividends for the year 413.0c vs 454.0c)",
+   "has_res": true,
+   "desk": true,
+   "rev_actual": 4290000000,
+   "rev_prior": 4290000000,
+   "g": "given",
+   "headline": "HEPS down 14% to 406.8c on flat revenue of R4.29bn; dividend cut 9% to 413c; sees strong stock-picking opportunities",
+   "rev_yoy": 0.0,
    "px_move": {
     "move": 0.0063,
     "from": "2026-11-16",
@@ -1225,6 +1232,13 @@
    "measure": "HEPS",
    "dps": null,
    "source": "Telkom SA SOC SENS — Group interim results for the six months ended 30 September 2026 (17 Nov 2026), via InsidEntity https://www.insidentity.com/telkom-sa-soc-group-interim-results-for-the-six-months-ended-30-september-2026/ (HEPS up 9.3% to 334.1c; basic EPS up 10.4% to 359.6c; prior-period HEPS value not shown in the source read; no interim dividend declared — Telkom pays an annual dividend)",
+   "has_res": true,
+   "desk": true,
+   "rev_actual": 22540000000,
+   "rev_prior": 22100000000,
+   "g": "given",
+   "headline": "HEPS up 9.3% to 334.1c on revenue up 2% to R22.5bn; EBITDA margin above target but revenue growth short of it; MTN takeover talks under way",
+   "rev_yoy": 0.0199,
    "px_move": {
     "move": -0.0386,
     "from": "2026-11-16",
@@ -1700,6 +1714,6 @@
   }
  ],
  "note": "Partial list. Removed this week because no company source could be found: Coronation (17 Nov) and SPAR (4 Dec). Momentum's operating update is not listed: its diary could not be opened and MarketScreener now shows 25 Nov instead of 23 Nov. Reinet (30 Nov) and Nutun (1 Dec) appear only on third-party calendars and are not listed. No published date in the window was found for MTN, Shoprite, Bidvest, Discovery, FirstRand, Sasol, Aspen, Lewis, Nedbank, Absa, Growthpoint, Attacq, Italtile, Super Group, Remgro, Motus or Sun International.",
- "synced": "2026-11-19T07:45+02:00",
+ "synced": "2026-11-19T16:23+02:00",
  "coverage_note": "Ticked = on the LRC watchlist. Every company the LRC Stock Scanner tracks shows its trading and investment ratings. Updated after every scanner run."
 }
