@@ -1,18 +1,28 @@
 {
- "edition": "Midday update · Thursday 19 November 2026 10:15",
- "generated": "2026-11-19T10:15+02:00",
- "covers": "JSE opening session on Thursday 19 November 2026, up to about 09:50 SAST, ahead of the SARB rate decision",
+ "edition": "Midday update · Thursday 19 November 2026 11:15",
+ "generated": "2026-11-19T11:15+02:00",
+ "covers": "JSE morning session on Thursday 19 November 2026, up to about 10:48 SAST, ahead of the SARB rate decision",
  "agent": "LRC News Desk",
- "headline": "Pick n Pay jumps 7.1% and Investec falls 3.4% on results day; the JSE edges up and the rand firms to R17.27/$ before SARB",
- "summary": "The JSE All Share was at 106,768.8 early on Thursday, up 0.2% from Wednesday's 106,571.7 close, and the rand had firmed to R17.27 per dollar from R17.35 earlier in the morning, ahead of today's SARB decision with the repo rate at 7.25% (LRC Market Dashboard, 19 Nov 2026 09:48 SAST). Pick n Pay rose 7.1% to R26.60 and Investec Ltd fell 3.4% to R128.96 on its interim results day (JSE quotes 09:32 SAST). Gold was at $3,733 and platinum at $1,369, slightly above Wednesday's closes; US markets have not yet opened, so Wednesday's mixed close (S&P 500 -0.2%, Nasdaq +0.4%) is the latest US read.",
+ "headline": "Investec falls 6.5% after interim results despite an 8.4% rise in headline earnings; the rand holds near R17.25/$ before SARB",
+ "summary": "Investec Ltd fell 6.5% to R124.75 and Investec plc 6.8% to R126.65 by 10:33 SAST after reporting an 8.4% rise in half-year headline earnings per share to 39.8p and an 18.5p interim dividend (Reuters via CNBC Africa; LRC Stock Scanner, 19 Nov 2026). The JSE All Share was at 106,475.4 at 10:48 SAST, about flat on Wednesday's 106,571.7 close, and the rand was at R17.25 per dollar ahead of today's SARB decision with the repo rate at 7.25% (LRC Market Dashboard). Gold was at $3,736 and platinum at $1,373; US markets open at 16:30 SAST, so Wednesday's mixed close (S&P 500 -0.2%, Nasdaq +0.4%) is still the latest US read.",
  "sections": [
   {
    "name": "Breaking",
    "items": [
     {
-     "title": "Pick n Pay +7.1% to R26.60 in early trade; rating unchanged",
-     "summary": "Pick n Pay traded at R26.60 at 09:32 SAST on 19 Nov 2026, up 7.1% on the day (LRC Stock Scanner quotes). We could not yet confirm a company announcement behind the move, so treat it as unexplained for now. The LRC Stock Scanner rates Pick n Pay BUY (score 66, valuation 'fair value'); the rating is unchanged. Its last results (26 weeks to 30 Aug 2026, published 26 Oct 2026) showed a headline loss of 40.71c per share, narrower than 59.77c a year earlier.",
-     "source": "LRC Stock Scanner, 19 Nov 2026 09:32 SAST; Pick n Pay SENS 26 Oct 2026",
+     "title": "Investec Ltd -6.5% and Investec plc -6.8% after interim results; ratings unchanged",
+     "summary": "Investec reported headline earnings per share of 39.8 pence for the six months to 30 Sep 2026, up 8.4% from 36.7 pence, and declared an interim dividend of 18.5 pence, citing more client activity and a larger average loan book (Reuters via CNBC Africa, 19 Nov 2026). The shares fell anyway: Investec Ltd was at R124.75 (-6.5%) and Investec plc at R126.65 (-6.8%) at 10:33 SAST (LRC Stock Scanner), deeper than the -3.4% seen at 09:32. Both are rated HOLD by the LRC Stock Scanner (scores 67 and 62, valuation 'undervalued'); this note does not change either rating.",
+     "source": "Reuters via CNBC Africa, 19 Nov 2026; LRC Stock Scanner quotes, 19 Nov 2026 10:33 SAST",
+     "url": "https://www.cnbcafrica.com/2026/south-africas-investec-reports-8-4-rise-in-half-year-earnings",
+     "tickers": [
+      "INL.JO",
+      "INP.JO"
+     ]
+    },
+    {
+     "title": "Pick n Pay +5.9% to R26.29; rating unchanged",
+     "summary": "Pick n Pay traded at R26.29 at 10:33 SAST on 19 Nov 2026, up 5.9% on the day, having been up 7.1% at 09:32 (LRC Stock Scanner quotes). We have still not found a company announcement behind the move, so treat it as unexplained for now. The LRC Stock Scanner rates Pick n Pay BUY (score 66, valuation 'fair value'); the rating is unchanged. Its last results (26 weeks to 30 Aug 2026, published 26 Oct 2026) showed a headline loss of 40.71c per share, narrower than 59.77c a year earlier.",
+     "source": "LRC Stock Scanner, 19 Nov 2026 10:33 SAST; Pick n Pay SENS 26 Oct 2026",
      "url": "https://finance.yahoo.com/quote/PIK.JO/",
      "tickers": [
       "PIK.JO"
@@ -41,8 +51,8 @@
    "name": "South Africa",
    "items": [
     {
-     "title": "JSE All Share +0.2% early, after Wednesday's 3.7% fall",
-     "summary": "The All Share was at 106,768.8 and the Top 40 at 98,848.07 early on Thursday 19 Nov 2026, against Wednesday closes of 106,571.7 and 98,732.67 (LRC Market Dashboard, 09:48 SAST). Gold miners were firmer, with AngloGold Ashanti up 2.1% at 09:32 SAST.",
+     "title": "JSE All Share flat by mid-morning, after Wednesday's 3.7% fall",
+     "summary": "The All Share was at 106,475.4 and the Top 40 at 98,638.9 at 10:48 SAST on Thursday 19 Nov 2026, against Wednesday closes of 106,571.7 and 98,732.7 (LRC Market Dashboard). Investec was the main faller among large banks after its results.",
      "source": "LRC Market Dashboard (Yahoo Finance ^J203.JO, ^J200.JO), 19 Nov 2026",
      "url": "https://finance.yahoo.com/quote/%5EJ203.JO/"
     },
@@ -58,14 +68,14 @@
    "name": "Forex & commodities",
    "items": [
     {
-     "title": "Rand firms to R17.27/$ before the SARB decision",
-     "summary": "USD/ZAR was at 17.27 at 09:48 SAST on 19 Nov 2026, from 17.35 earlier in the morning and still 3.0% weaker than 16.76 on Friday 13 Nov. EUR/ZAR was 18.95 and GBP/ZAR 22.70 (LRC Market Dashboard).",
+     "title": "Rand at R17.25/$ before the SARB decision",
+     "summary": "USD/ZAR was at 17.25 at 10:48 SAST on 19 Nov 2026, from 17.35 earlier in the morning and still 2.9% weaker than 16.76 on Friday 13 Nov. EUR/ZAR was 18.95 and GBP/ZAR 22.69 (LRC Market Dashboard).",
      "source": "LRC Market Dashboard (Yahoo Finance ZAR=X), 19 Nov 2026",
      "url": "https://finance.yahoo.com/quote/ZAR%3DX/"
     },
     {
-     "title": "Gold $3,733, platinum $1,369, Brent $89.55 in early trade",
-     "summary": "At 09:48 SAST on 19 Nov 2026 gold was at $3,733 (Wednesday close $3,717.90), platinum at $1,369.20 ($1,356.90), Brent at $89.55 ($89.17) and copper at $12,499 a tonne (LRC Market Dashboard). Small gains after Wednesday's sharp falls.",
+     "title": "Gold $3,736, platinum $1,373, Brent $89.61",
+     "summary": "At 10:48 SAST on 19 Nov 2026 gold was at $3,736 (Wednesday close $3,717.90), platinum at $1,373.40 ($1,356.90), Brent at $89.61 ($89.17) and copper at $12,497 a tonne (LRC Market Dashboard). Small gains after Wednesday's sharp falls.",
      "source": "LRC Market Dashboard (Yahoo Finance futures), 19 Nov 2026",
      "url": "https://finance.yahoo.com/quote/GC%3DF/"
     }
@@ -74,16 +84,6 @@
   {
    "name": "Our coverage",
    "items": [
-    {
-     "title": "Investec Ltd -3.4% and Investec plc -3.1% on interim results day; ratings unchanged",
-     "summary": "Investec Ltd traded at R128.96 (-3.4%) and Investec plc at R131.67 (-3.1%) at 09:32 SAST on 19 Nov 2026, the day of its results for the six months to 30 Sep 2026 (LRC Stock Scanner; LRC JSE results calendar). Both are rated HOLD by the LRC Stock Scanner (scores 67 and 62, valuation 'undervalued'); ratings unchanged. We will add the reported figures once we have read the announcement.",
-     "source": "LRC Stock Scanner, 19 Nov 2026 09:32 SAST",
-     "url": "https://finance.yahoo.com/quote/INL.JO/",
-     "tickers": [
-      "INL.JO",
-      "INP.JO"
-     ]
-    },
     {
      "title": "Nvidia -2.9% to $150.96; rating unchanged",
      "summary": "Nvidia closed Wednesday at $150.96, down 2.9%, and has given back its after-hours gain on Tuesday's results. It is on the LRC Investment watchlist (BUY, grade A, fair value $262.56). This note does not change the scanner rating.",
@@ -112,9 +112,9 @@
  ],
  "watch_today": [
   "SARB rate decision (repo rate 7.25%) and the governor's statement this afternoon",
-  "Whether Pick n Pay holds its 7.1% gain, and any announcement explaining it",
-  "Investec's interim figures and the share reaction",
-  "Rand after the decision; it was R17.27/$ at 09:48 SAST",
+  "Whether Investec's shares steady after the 6.5% fall on results day",
+  "Pick n Pay (+5.9% at 10:33) and any announcement explaining the move",
+  "Rand after the decision; it was R17.25/$ at 10:48 SAST",
   "Wall Street open at 16:30 SAST, with the US 10-year yield at 5.07%"
  ]
 }
