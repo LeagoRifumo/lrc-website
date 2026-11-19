@@ -1148,7 +1148,7 @@
 "quarter": "Oct/2026",
 "period": "Expected date (market data feed)",
 "market_cap_bn": 3.5,
-"rev_est": 1451011980,
+"rev_est": 1451244880,
 "rev_est_low": 1426100000,
 "rev_est_high": 1468000000,
 "rev_yago": 1362701000,
@@ -7649,13 +7649,13 @@
 "quarter": "Oct/2026",
 "period": "Expected date (market data feed)",
 "market_cap_bn": 14.1,
-"rev_est": 5962797410,
+"rev_est": 5972864220,
 "rev_est_low": 5619000000,
 "rev_est_high": 6344862120,
 "rev_yago": 5348163000,
 "eps_est_q": 1.257,
 "eps_yago": 1.16,
-"n_est": 17,
+"n_est": 18,
 "rcur": "USD",
 "qend": "2026-10-31"
 },
@@ -8516,7 +8516,13 @@
 "eps_yago": 0.0898,
 "n_est": 7,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -0.1263,
+"eps_est": -0.09184,
+"surprise": -0.3752,
+"result": "miss",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "BOW|2026-11-03": {
 "t": "BOW",
@@ -8611,7 +8617,13 @@
 "eps_yago": 0.51,
 "n_est": 13,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.22,
+"eps_est": 0.2291,
+"surprise": -0.0398,
+"result": "miss",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "BRC|2026-11-16": {
 "t": "BRC",
@@ -13364,7 +13376,13 @@
 "eps_yago": 4.2,
 "n_est": 8,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 4.29,
+"eps_est": 3.76,
+"surprise": 0.1409,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "CPB|2026-12-08": {
 "t": "CPB",
@@ -13821,7 +13839,7 @@
 "quarter": "Oct/2026",
 "period": "Expected date (market data feed)",
 "market_cap_bn": 160.1,
-"rev_est": 11462294880,
+"rev_est": 11462305880,
 "rev_est_low": 11346000000,
 "rev_est_high": 11512230000,
 "rev_yago": 10259000000,
@@ -16058,11 +16076,11 @@
 "quarter": "Oct/2026",
 "period": "Expected date (market data feed)",
 "market_cap_bn": 12.5,
-"rev_est": 5082242020,
+"rev_est": 5083412390,
 "rev_est_low": 4904800000,
 "rev_est_high": 5226500000,
 "rev_yago": 4167773000,
-"eps_est_q": 1.409,
+"eps_est_q": 1.414,
 "eps_yago": 2.78,
 "n_est": 19,
 "rcur": "USD",
@@ -24290,7 +24308,7 @@
 "quarter": "Oct/2026",
 "period": "Expected date (market data feed)",
 "market_cap_bn": 7.4,
-"rev_est": 282741150,
+"rev_est": 282813150,
 "rev_est_low": 282000000,
 "rev_est_high": 294607000,
 "rev_yago": 244353000,
@@ -25722,7 +25740,13 @@
 "eps_yago": -0.01,
 "n_est": 12,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.36,
+"eps_est": 0.2258,
+"surprise": 0.594,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "HQY|2026-12-01": {
 "t": "HQY",
@@ -26890,7 +26914,7 @@
 "eps_forecast": "$0.94",
 "quarter": "Oct/2026",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 2.0,
+"market_cap_bn": 1.9,
 "rev_est": 331000000,
 "rev_est_low": 331000000,
 "rev_est_high": 331000000,
@@ -29322,7 +29346,13 @@
 "eps_yago": 1.36,
 "n_est": 8,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 1.36,
+"eps_est": 1.332,
+"surprise": 0.0214,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "JPM|2026-10-13": {
 "t": "JPM",
@@ -29656,11 +29686,11 @@
 "name": "Kingsoft Cloud Holdings Limited",
 "m": "US",
 "date": "2026-11-24",
-"when": "Before open",
+"when": "Not stated",
 "eps_forecast": "($0.08)",
 "quarter": "Sep/2026",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 2.1,
+"market_cap_bn": 1.9,
 "rev_est": 3330338040,
 "rev_est_low": 3261000000,
 "rev_est_high": 3386923340,
@@ -37420,7 +37450,13 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 5.4
+"market_cap_bn": 5.4,
+"eps_actual": 0.11,
+"eps_est": 0.1308,
+"surprise": -0.1591,
+"result": "miss",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "NJR|2026-11-18": {
 "t": "NJR",
@@ -37441,7 +37477,13 @@
 "eps_yago": 0.16,
 "n_est": 3,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.11,
+"eps_est": 0.1308,
+"surprise": -0.1591,
+"result": "miss",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "NKE|2026-10-01": {
 "t": "NKE",
@@ -37470,11 +37512,11 @@
 "quarter": "",
 "period": "Expected date (market data feed)",
 "market_cap_bn": 54.3,
-"rev_est": 11107038070,
+"rev_est": 11098704740,
 "rev_est_low": 10786000000,
 "rev_est_high": 11968000000,
 "rev_yago": 12427000000,
-"eps_est_q": 0.3681,
+"eps_est_q": 0.3698,
 "eps_yago": 0.53,
 "n_est": 27,
 "rcur": "USD",
@@ -46991,7 +47033,13 @@
 "eps_yago": 0.29,
 "n_est": 3,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 1.28,
+"eps_est": 1.265,
+"surprise": 0.0118,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "SBLK|2026-11-18": {
 "t": "SBLK",
@@ -47012,7 +47060,13 @@
 "eps_yago": 0.29,
 "n_est": 4,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 1.28,
+"eps_est": 1.265,
+"surprise": 0.0118,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "SBRA|2026-11-02": {
 "t": "SBRA",
@@ -49155,7 +49209,13 @@
 "eps_yago": 0.7172,
 "n_est": 1,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.6802,
+"eps_est": 0.92,
+"surprise": -0.2607,
+"result": "miss",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "SNEX|2026-11-23": {
 "t": "SNEX",
@@ -55127,7 +55187,13 @@
 "eps_yago": -0.23,
 "n_est": 1,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -0.17,
+"eps_est": -0.9067,
+"surprise": 0.8125,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "UGP|2026-11-11": {
 "t": "UGP",
@@ -55911,7 +55977,13 @@
 "eps_yago": 0.34,
 "n_est": 6,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.32,
+"eps_est": 0.325,
+"surprise": -0.0154,
+"result": "miss",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "UTL|2026-11-02": {
 "t": "UTL",
@@ -59389,7 +59461,13 @@
 "eps_yago": 2.09,
 "n_est": 13,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 2.83,
+"eps_est": 2.521,
+"surprise": 0.1228,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "WWD|2026-11-23": {
 "t": "WWD",
@@ -60320,7 +60398,13 @@
 "eps_yago": 1.027,
 "n_est": 3,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 5.94,
+"eps_est": 5.11,
+"surprise": 0.1625,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "ZIM|2026-11-19": {
 "t": "ZIM",
