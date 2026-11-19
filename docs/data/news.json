@@ -1,38 +1,28 @@
 {
- "edition": "Midday update · Thursday 19 November 2026 15:15",
- "generated": "2026-11-19T16:15+02:00",
- "covers": "JSE session to mid-afternoon and the SARB rate decision, Thursday 19 November 2026",
+ "edition": "Evening update · Thursday 19 November 2026 17:15",
+ "generated": "2026-11-19T17:16+02:00",
+ "covers": "JSE close, the rand after the SARB hold, and the first 30 minutes of Wall Street, Thursday 19 November 2026",
  "agent": "LRC News Desk",
- "headline": "SARB holds the repo rate at 7.25% on a 4–3 vote, with three members wanting a hike; Investec down 6.5% on results day",
- "summary": "The SARB left the repo rate unchanged at 7.25% on Thursday 19 November 2026, with four MPC members voting to hold and three for a 25bp hike; Governor Kganyago said the committee would \"not hesitate to raise rates if needed\" (BusinessTech, 19 Nov 2026). Just before the decision, at 14:49 SAST, the JSE All Share was at 106,342.8 and the rand at R17.22 per dollar, while Investec Ltd was down 6.5% after interim results (LRC Market Dashboard; Reuters via CNBC Africa, 19 Nov 2026). Wall Street opens at 16:30 SAST; Wednesday's close was mixed (S&P 500 -0.2%, Nasdaq +0.4%), and gold was at $3,736 this morning.",
+ "headline": "Wall Street opens higher (Nasdaq +1.5%) as the rand weakens to R17.31/$ after the SARB's 4–3 hold; Dell +6.4%",
+ "summary": "The JSE All Share was at 106,287.6 at 17:02 SAST on 19 Nov 2026, down 0.3% on the day and 5.4% on the week, and the rand weakened to R17.31 per dollar from R17.22 just before the SARB held the repo rate at 7.25% on a 4–3 vote (LRC Market Dashboard; BusinessTech, 19 Nov 2026). In New York, about half an hour after the open, the S&P 500 was up 0.7% at 7,378.18 and the Nasdaq up 1.5% at 24,802.73, with Dell up 6.4% and Palo Alto Networks up 7.4% (LRC Market Dashboard and Stock Scanner quotes, 17:02 SAST). Gold was at $3,708, down 4.6% on the week, while Brent rose 1.7% to $90.68 and the US 10-year yield was 5.09%.",
  "sections": [
   {
    "name": "Breaking",
    "items": [
     {
+     "title": "Dell +6.4% to $333.09 at the US open; rating unchanged",
+     "summary": "Dell traded at $333.09 at 17:02 SAST on 19 Nov 2026, up 6.4% on the day, after falling 3.0% to $313.11 on Wednesday. We have not yet verified a news item behind the move, so treat it as unexplained for now; chip and hardware shares were broadly higher in early trade (Nvidia +2.9%, Arista +1.3%). Dell is rated SELL on the LRC Watchlist (fair value $404.70; status 'Rejected (avoid)') and HOLD by the LRC Stock Scanner. Results are due on 24 Nov 2026. This note does not change either rating.",
+     "source": "LRC Stock Scanner quotes (Yahoo Finance), 19 Nov 2026 17:02 SAST; LRC Watchlist; LRC Stock Scanner, 19 Nov 2026",
+     "url": "https://finance.yahoo.com/quote/DELL/",
+     "tickers": [
+      "DELL"
+     ]
+    },
+    {
      "title": "SARB holds repo rate at 7.25%; MPC split 4–3, with three votes for a hike",
      "summary": "The Reserve Bank kept the repo rate at 7.25% on 19 Nov 2026. Four members voted to hold and three for a 25bp increase. Kganyago said near-term inflation is above 5%, in line with this week's 5.2% CPI reading, and that high prints are expected to last into early next year before easing. He said the committee is pausing \"for now\" and \"will not hesitate to raise rates if needed\" to bring inflation back to the 3% target. The close vote keeps a further hike on the table at the next meeting.",
      "source": "BusinessTech, 19 Nov 2026",
      "url": "https://businesstech.co.za/news/finance/885187/reserve-bank-holds-interest-rates-2/"
-    },
-    {
-     "title": "Investec Ltd -6.5% and Investec plc -6.8% after interim results; ratings unchanged",
-     "summary": "Investec reported headline earnings per share of 39.8 pence for the six months to 30 Sep 2026, up 8.4% from 36.7 pence, and declared an interim dividend of 18.5 pence, citing more client activity and a larger average loan book (Reuters via CNBC Africa, 19 Nov 2026). The shares fell anyway: Investec Ltd was at R124.75 (-6.5%) and Investec plc at R126.65 (-6.8%) at 10:33 SAST (LRC Stock Scanner), deeper than the -3.4% seen at 09:32. Both are rated HOLD by the LRC Stock Scanner (scores 67 and 62, valuation 'undervalued'); this note does not change either rating.",
-     "source": "Reuters via CNBC Africa, 19 Nov 2026; LRC Stock Scanner quotes, 19 Nov 2026 10:33 SAST",
-     "url": "https://www.cnbcafrica.com/2026/south-africas-investec-reports-8-4-rise-in-half-year-earnings",
-     "tickers": [
-      "INL.JO",
-      "INP.JO"
-     ]
-    },
-    {
-     "title": "Pick n Pay +5.9% to R26.29; rating unchanged",
-     "summary": "Pick n Pay traded at R26.29 at 10:33 SAST on 19 Nov 2026, up 5.9% on the day, having been up 7.1% at 09:32 (LRC Stock Scanner quotes). We have still not found a company announcement behind the move, so treat it as unexplained for now. The LRC Stock Scanner rates Pick n Pay BUY (score 66, valuation 'fair value'); the rating is unchanged. Its last results (26 weeks to 30 Aug 2026, published 26 Oct 2026) showed a headline loss of 40.71c per share, narrower than 59.77c a year earlier.",
-     "source": "LRC Stock Scanner, 19 Nov 2026 10:33 SAST; Pick n Pay SENS 26 Oct 2026",
-     "url": "https://finance.yahoo.com/quote/PIK.JO/",
-     "tickers": [
-      "PIK.JO"
-     ]
     }
    ]
   },
@@ -40,15 +30,25 @@
    "name": "US markets",
    "items": [
     {
-     "title": "S&P 500 -0.2% at 7,323.63; Nasdaq +0.4% at 24,429.89",
-     "summary": "The S&P 500 closed Wednesday at 7,323.63 against Tuesday's 7,340.53 (-0.2%), and the Nasdaq Composite at 24,429.89 against 24,328.38 (+0.4%). Both are about 3% below Friday 13 November (S&P 7,561.67; Nasdaq 25,136.27). Big single-share moves at the close included Palo Alto Networks +9.9%, UnitedHealth -10.2%, Take-Two +6.2% and Broadcom +3.6%.",
-     "source": "LRC Market Dashboard (Yahoo Finance) daily closes, 18 Nov 2026, published 05:59 SAST 19 Nov 2026; LRC Stock Scanner quotes (Yahoo Finance), US close 18 Nov 2026 (23:00 SAST)",
+     "title": "S&P 500 +0.7% and Nasdaq +1.5% half an hour after the open",
+     "summary": "At 17:02 SAST on 19 Nov 2026 the S&P 500 was at 7,378.18 (Wednesday close 7,323.63) and the Nasdaq Composite at 24,802.73 (24,429.89). Both remain below Friday 13 November (S&P 7,561.67; Nasdaq 25,136.27). Early moves are not a close and can reverse.",
+     "source": "LRC Market Dashboard (Yahoo Finance), 19 Nov 2026 17:02 SAST",
      "url": "https://finance.yahoo.com/quote/%5EGSPC/"
     },
     {
-     "title": "US 10-year yield closes at 5.07%",
-     "summary": "The 10-year Treasury yield closed at 5.066% on Wednesday, against 5.103% on Tuesday and 5.154% on Friday 13 November.",
-     "source": "LRC Market Dashboard (Yahoo Finance) daily closes, 18 Nov 2026, published 05:59 SAST 19 Nov 2026",
+     "title": "Palo Alto Networks +7.4%, Walmart -1.5% on results day",
+     "summary": "Palo Alto Networks was at $364.92 (+7.4%) at 17:02 SAST, adding to Wednesday's 9.9% gain. Walmart, which reported quarterly results on 19 Nov 2026, was at $125.43 (-1.5%). The LRC Stock Scanner rates both HOLD (valuation 'overvalued'). We could not open the results coverage in this run, so no result figures are quoted here.",
+     "source": "LRC Stock Scanner quotes (Yahoo Finance), 19 Nov 2026 17:02 SAST; LRC Stock Scanner, 19 Nov 2026",
+     "url": "https://finance.yahoo.com/quote/PANW/",
+     "tickers": [
+      "PANW",
+      "WMT"
+     ]
+    },
+    {
+     "title": "US 10-year yield at 5.09%",
+     "summary": "The 10-year Treasury yield was 5.093% at 17:02 SAST on 19 Nov 2026, against 5.066% at Wednesday's close and 5.154% on Friday 13 November.",
+     "source": "LRC Market Dashboard (Yahoo Finance), 19 Nov 2026 17:02 SAST",
      "url": "https://finance.yahoo.com/quote/%5ETNX/"
     }
    ]
@@ -57,10 +57,21 @@
    "name": "South Africa",
    "items": [
     {
-     "title": "JSE All Share at 106,342.8 just before the SARB decision",
-     "summary": "The All Share was at 106,342.8 at 14:49 SAST on 19 Nov 2026, slightly below Wednesday's 106,571.7 close, after a 3.7% fall on Wednesday (LRC Market Dashboard, Yahoo Finance data).",
-     "source": "LRC Market Dashboard (Yahoo Finance ^J203.JO, ^J200.JO), 19 Nov 2026",
+     "title": "JSE All Share 106,287.6 at the close, down 5.4% on the week",
+     "summary": "The All Share was at 106,287.58 and the Top 40 at 98,464.0 at 17:02 SAST on 19 Nov 2026, against 112,387.90 and 104,486.60 on Friday 13 November (-5.4% and -5.8%). The All Share was 0.3% below Wednesday's close of 106,571.7.",
+     "source": "LRC Market Dashboard (Yahoo Finance), 19 Nov 2026 17:02 SAST",
      "url": "https://finance.yahoo.com/quote/%5EJ203.JO/"
+    },
+    {
+     "title": "Investec still down about 5% at the close; Pick n Pay +5.6%",
+     "summary": "Late in the session (16:47 SAST) Investec Ltd was at R126.55 (-5.2%) and Investec plc at R129.48 (-4.7%), a smaller fall than the 6.5% seen in the morning after interim results. Pick n Pay was at R26.21 (+5.6%, 16:46 SAST); we have still not found an announcement behind that move. Ratings unchanged (Investec Ltd and plc HOLD, Pick n Pay BUY on the LRC Stock Scanner).",
+     "source": "LRC Stock Scanner quotes (Yahoo Finance), 19 Nov 2026 16:46–16:47 SAST",
+     "url": "https://finance.yahoo.com/quote/INL.JO/",
+     "tickers": [
+      "INL.JO",
+      "INP.JO",
+      "PIK.JO"
+     ]
     }
    ]
   },
@@ -68,15 +79,15 @@
    "name": "Forex & commodities",
    "items": [
     {
-     "title": "Rand at R17.22/$ going into the SARB decision",
-     "summary": "USD/ZAR was at 17.22 at 14:49 SAST on 19 Nov 2026, against 16.76 a week earlier (LRC Market Dashboard, Yahoo Finance data). The reaction to the 4–3 hold will show in the afternoon session.",
-     "source": "LRC Market Dashboard (Yahoo Finance ZAR=X), 19 Nov 2026",
+     "title": "Rand R17.31/$ after the SARB hold, 3.3% weaker on the week",
+     "summary": "USD/ZAR was 17.31 at 17:02 SAST on 19 Nov 2026, against 17.22 at 14:49 SAST before the decision and 16.76 on 13 November. EUR/ZAR was 19.03 and GBP/ZAR 22.74.",
+     "source": "LRC Market Dashboard (Yahoo Finance), 19 Nov 2026 17:02 SAST",
      "url": "https://finance.yahoo.com/quote/ZAR%3DX/"
     },
     {
-     "title": "Gold $3,736, platinum $1,373, Brent $89.61",
-     "summary": "At 10:48 SAST on 19 Nov 2026 gold was at $3,736 (Wednesday close $3,717.90), platinum at $1,373.40 ($1,356.90), Brent at $89.61 ($89.17) and copper at $12,497 a tonne (LRC Market Dashboard). Small gains after Wednesday's sharp falls.",
-     "source": "LRC Market Dashboard (Yahoo Finance futures), 19 Nov 2026",
+     "title": "Gold $3,708 (-4.6% on the week); Brent $90.68 (+1.7%)",
+     "summary": "At 17:02 SAST on 19 Nov 2026 gold was at $3,708.30 (Wednesday close $3,717.90; 13 Nov $3,886.30), platinum at $1,365.30 (+0.6%), Brent at $90.68 (+1.7% from $89.17) and copper at $12,467 a tonne.",
+     "source": "LRC Market Dashboard (Yahoo Finance), 19 Nov 2026 17:02 SAST",
      "url": "https://finance.yahoo.com/quote/GC%3DF/"
     }
    ]
@@ -85,36 +96,37 @@
    "name": "Our coverage",
    "items": [
     {
-     "title": "Nvidia -2.9% to $150.96; rating unchanged",
-     "summary": "Nvidia closed Wednesday at $150.96, down 2.9%, and has given back its after-hours gain on Tuesday's results. It is on the LRC Investment watchlist (BUY, grade A, fair value $262.56). This note does not change the scanner rating.",
-     "source": "LRC Stock Scanner quotes (Yahoo Finance), US close 18 Nov 2026 (23:00 SAST); LRC Watchlist",
+     "title": "Nvidia +2.9% to $155.38; Meta +1.7%; ratings unchanged",
+     "summary": "At 17:02 SAST on 19 Nov 2026: Nvidia $155.38 (+2.9%; Watchlist BUY, fair value $262.56), Meta $626.66 (+1.7%; SELL, fair value $677.14), Arista $196.48 (+1.3%; SELL, $144.61), Intuit $314.70 (+0.5%; BUY, $426.00), Deckers $82.53 (-1.3%; BUY, $103.00), Paylocity $173.05 (-1.1%; HOLD, $157.05). No ratings are changed.",
+     "source": "LRC Stock Scanner quotes (Yahoo Finance), 19 Nov 2026 17:02 SAST; LRC Watchlist",
      "url": "https://finance.yahoo.com/quote/NVDA/",
      "tickers": [
-      "NVDA"
+      "NVDA",
+      "META",
+      "ANET",
+      "INTU",
+      "DECK",
+      "PCTY"
      ]
     },
     {
-     "title": "Arista +4.0%, Deckers +2.6%; Dell -3.0%, Intuit -2.4%",
-     "summary": "Other watchlist moves at Wednesday's close: Arista $193.94 (+4.0%, SELL, fair value $144.61), Deckers $83.60 (+2.6%, BUY, fair value $103.00), Dell $313.11 (-3.0%, SELL, fair value $404.70), Intuit $313.24 (-2.4%, BUY, fair value $426.00), Paylocity $174.97 (-1.4%), Meta $616.38 (-0.4%). No ratings are changed.",
-     "source": "LRC Stock Scanner quotes (Yahoo Finance), US close 18 Nov 2026 (23:00 SAST); LRC Watchlist",
-     "url": "https://finance.yahoo.com/quote/ANET/",
+     "title": "MTN -0.7%, Telkom +1.2% as takeover talks continue",
+     "summary": "MTN was at R223.99 (-0.7%) and Telkom at R67.15 (+1.2%) at 16:46–16:47 SAST on 19 Nov 2026. Both are rated HOLD by the LRC Stock Scanner (valuation 'fair value'); ratings unchanged.",
+     "source": "LRC Stock Scanner quotes (Yahoo Finance), 19 Nov 2026",
+     "url": "https://finance.yahoo.com/quote/TKG.JO/",
      "tickers": [
-      "ANET",
-      "DECK",
-      "DELL",
-      "INTU",
-      "PCTY",
-      "META"
+      "MTN.JO",
+      "TKG.JO"
      ]
     }
    ]
   }
  ],
  "watch_today": [
-  "Rand reaction to the 4–3 SARB hold; it was R17.22/$ at 14:49 SAST",
-  "Bond yields and bank shares after three MPC members voted for a hike",
-  "Whether Investec's shares steady after the 6.5% fall on results day",
-  "Wall Street open at 16:30 SAST, with the US 10-year yield at 5.07%",
-  "Pick n Pay (+5.9% this morning) and any announcement explaining the move"
+  "Whether Wall Street holds its opening gains into the 23:00 SAST close (Nasdaq +1.5% at 17:02 SAST)",
+  "Dell (+6.4%) ahead of its results on 24 Nov 2026",
+  "Rand at R17.31/$ overnight after the 4–3 SARB hold",
+  "Gold near $3,708 with US yields above 5%",
+  "Brent at $90.68 and Middle East shipping risk"
  ]
 }
