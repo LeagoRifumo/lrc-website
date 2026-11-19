@@ -1,22 +1,19 @@
 {
- "edition": "Evening update · Thursday 19 November 2026 17:15",
- "generated": "2026-11-19T17:16+02:00",
- "covers": "JSE close, the rand after the SARB hold, and the first 30 minutes of Wall Street, Thursday 19 November 2026",
+ "edition": "Evening update · Thursday 19 November 2026 18:15",
+ "generated": "2026-11-19T18:15+02:00",
+ "covers": "JSE close and the first 90 minutes of the US session, 19 Nov 2026",
  "agent": "LRC News Desk",
- "headline": "Wall Street opens higher (Nasdaq +1.5%) as the rand weakens to R17.31/$ after the SARB's 4–3 hold; Dell +6.4%",
- "summary": "The JSE All Share was at 106,287.6 at 17:02 SAST on 19 Nov 2026, down 0.3% on the day and 5.4% on the week, and the rand weakened to R17.31 per dollar from R17.22 just before the SARB held the repo rate at 7.25% on a 4–3 vote (LRC Market Dashboard; BusinessTech, 19 Nov 2026). In New York, about half an hour after the open, the S&P 500 was up 0.7% at 7,378.18 and the Nasdaq up 1.5% at 24,802.73, with Dell up 6.4% and Palo Alto Networks up 7.4% (LRC Market Dashboard and Stock Scanner quotes, 17:02 SAST). Gold was at $3,708, down 4.6% on the week, while Brent rose 1.7% to $90.68 and the US 10-year yield was 5.09%.",
+ "headline": "Wall Street gives back its opening gains: S&P 500 slips to 7,309.85 as AMD falls 7.7%; rand weaker at R17.44/$ after the SARB's 4–3 hold",
+ "summary": "The JSE All Share closed at 106,216.5 on 19 Nov 2026, 5.5% lower on the week, and the rand weakened further to R17.44 per dollar by 18:02 SAST after the SARB held the repo rate at 7.25% on a 4–3 vote (LRC Market Dashboard; BusinessTech, 19 Nov 2026). In New York the early rally faded: at 18:02 SAST the S&P 500 was at 7,309.85, down from 7,378.18 at 17:02, and the Nasdaq at 24,501.91 from 24,802.73, with AMD down 7.7% while Intel (+4.8%) and Palo Alto Networks (+5.0%) held gains (LRC Market Dashboard and Stock Scanner quotes, 18:02 SAST). Gold was at $3,684.50 and Brent at $89.62, while the US 10-year yield eased to 5.06%; the turn lower keeps pressure on risk assets and the rand into the US close.",
  "sections": [
   {
    "name": "Breaking",
    "items": [
     {
-     "title": "Dell +6.4% to $333.09 at the US open; rating unchanged",
-     "summary": "Dell traded at $333.09 at 17:02 SAST on 19 Nov 2026, up 6.4% on the day, after falling 3.0% to $313.11 on Wednesday. We have not yet verified a news item behind the move, so treat it as unexplained for now; chip and hardware shares were broadly higher in early trade (Nvidia +2.9%, Arista +1.3%). Dell is rated SELL on the LRC Watchlist (fair value $404.70; status 'Rejected (avoid)') and HOLD by the LRC Stock Scanner. Results are due on 24 Nov 2026. This note does not change either rating.",
-     "source": "LRC Stock Scanner quotes (Yahoo Finance), 19 Nov 2026 17:02 SAST; LRC Watchlist; LRC Stock Scanner, 19 Nov 2026",
-     "url": "https://finance.yahoo.com/quote/DELL/",
-     "tickers": [
-      "DELL"
-     ]
+     "title": "US stocks reverse early gains; S&P 500 at 7,309.85 and Nasdaq at 24,501.91 at 18:02 SAST",
+     "summary": "An hour earlier (17:02 SAST) the S&P 500 was at 7,378.18 and the Nasdaq at 24,802.73. AMD was down 7.7% to $489.34 at 18:02 SAST, the biggest drag among large chip names; Dell's opening gain narrowed to +3.2% ($323.19). Ratings unchanged (LRC Market Dashboard and Stock Scanner quotes, 19 Nov 2026).",
+     "source": "LRC Market Dashboard / Yahoo Finance, 19 Nov 2026 18:02 SAST",
+     "url": "https://finance.yahoo.com/quote/%5EGSPC/"
     },
     {
      "title": "SARB holds repo rate at 7.25%; MPC split 4–3, with three votes for a hike",
@@ -30,25 +27,21 @@
    "name": "US markets",
    "items": [
     {
-     "title": "S&P 500 +0.7% and Nasdaq +1.5% half an hour after the open",
-     "summary": "At 17:02 SAST on 19 Nov 2026 the S&P 500 was at 7,378.18 (Wednesday close 7,323.63) and the Nasdaq Composite at 24,802.73 (24,429.89). Both remain below Friday 13 November (S&P 7,561.67; Nasdaq 25,136.27). Early moves are not a close and can reverse.",
-     "source": "LRC Market Dashboard (Yahoo Finance), 19 Nov 2026 17:02 SAST",
+     "title": "S&P 500 at 7,309.85, Nasdaq at 24,501.91 at 18:02 SAST",
+     "summary": "Both indices gave back their opening gains within the first 90 minutes. On the week the S&P 500 is 3.3% lower (7,561.67 on 13 Nov) and the Nasdaq 2.5% lower (25,136.27) (LRC Market Dashboard, 19 Nov 2026).",
+     "source": "Yahoo Finance via LRC Market Dashboard, 19 Nov 2026",
      "url": "https://finance.yahoo.com/quote/%5EGSPC/"
     },
     {
-     "title": "Palo Alto Networks +7.4%, Walmart -1.5% on results day",
-     "summary": "Palo Alto Networks was at $364.92 (+7.4%) at 17:02 SAST, adding to Wednesday's 9.9% gain. Walmart, which reported quarterly results on 19 Nov 2026, was at $125.43 (-1.5%). The LRC Stock Scanner rates both HOLD (valuation 'overvalued'). We could not open the results coverage in this run, so no result figures are quoted here.",
-     "source": "LRC Stock Scanner quotes (Yahoo Finance), 19 Nov 2026 17:02 SAST; LRC Stock Scanner, 19 Nov 2026",
-     "url": "https://finance.yahoo.com/quote/PANW/",
-     "tickers": [
-      "PANW",
-      "WMT"
-     ]
+     "title": "AMD -7.7%; Intel +4.8%, Micron +2.8%, Palo Alto Networks +5.0%",
+     "summary": "Moves at 18:02 SAST on 19 Nov 2026: AMD $489.34 (-7.7%), Intel $57.30 (+4.8%), Micron $725.18 (+2.8%), Palo Alto Networks $356.98 (+5.0%, results day), Walmart $125.72 (-1.3%, results day) (LRC Stock Scanner quotes).",
+     "source": "Yahoo Finance via LRC Stock Scanner, 19 Nov 2026 18:02 SAST",
+     "url": "https://finance.yahoo.com/quote/AMD/"
     },
     {
-     "title": "US 10-year yield at 5.09%",
-     "summary": "The 10-year Treasury yield was 5.093% at 17:02 SAST on 19 Nov 2026, against 5.066% at Wednesday's close and 5.154% on Friday 13 November.",
-     "source": "LRC Market Dashboard (Yahoo Finance), 19 Nov 2026 17:02 SAST",
+     "title": "US 10-year yield eases to 5.06%",
+     "summary": "The 10-year Treasury yield was 5.06% at 18:02 SAST on 19 Nov 2026, from 5.09% at 17:02 and 5.15% a week earlier (LRC Market Dashboard).",
+     "source": "Yahoo Finance ^TNX via LRC Market Dashboard, 19 Nov 2026",
      "url": "https://finance.yahoo.com/quote/%5ETNX/"
     }
    ]
@@ -57,8 +50,8 @@
    "name": "South Africa",
    "items": [
     {
-     "title": "JSE All Share 106,287.6 at the close, down 5.4% on the week",
-     "summary": "The All Share was at 106,287.58 and the Top 40 at 98,464.0 at 17:02 SAST on 19 Nov 2026, against 112,387.90 and 104,486.60 on Friday 13 November (-5.4% and -5.8%). The All Share was 0.3% below Wednesday's close of 106,571.7.",
+     "title": "JSE All Share closes at 106,216.5, down 5.5% on the week",
+     "summary": "The All Share closed at 106,216.49 on 19 Nov 2026 against 112,387.90 on 13 Nov; the Top 40 closed at 98,385.12 (LRC Market Dashboard, Yahoo Finance daily close).",
      "source": "LRC Market Dashboard (Yahoo Finance), 19 Nov 2026 17:02 SAST",
      "url": "https://finance.yahoo.com/quote/%5EJ203.JO/"
     },
@@ -79,15 +72,15 @@
    "name": "Forex & commodities",
    "items": [
     {
-     "title": "Rand R17.31/$ after the SARB hold, 3.3% weaker on the week",
-     "summary": "USD/ZAR was 17.31 at 17:02 SAST on 19 Nov 2026, against 17.22 at 14:49 SAST before the decision and 16.76 on 13 November. EUR/ZAR was 19.03 and GBP/ZAR 22.74.",
-     "source": "LRC Market Dashboard (Yahoo Finance), 19 Nov 2026 17:02 SAST",
+     "title": "Rand R17.44/$ after the SARB hold, 4.1% weaker on the week",
+     "summary": "USD/ZAR was 17.438 at 18:02 SAST on 19 Nov 2026, from 17.31 at 17:02 and 16.76 on 13 Nov; EUR/ZAR 19.15, GBP/ZAR 22.87 (LRC Market Dashboard). The SARB held the repo rate at 7.25% on a 4–3 vote (BusinessTech, 19 Nov 2026).",
+     "source": "Yahoo Finance via LRC Market Dashboard; BusinessTech, 19 Nov 2026",
      "url": "https://finance.yahoo.com/quote/ZAR%3DX/"
     },
     {
-     "title": "Gold $3,708 (-4.6% on the week); Brent $90.68 (+1.7%)",
-     "summary": "At 17:02 SAST on 19 Nov 2026 gold was at $3,708.30 (Wednesday close $3,717.90; 13 Nov $3,886.30), platinum at $1,365.30 (+0.6%), Brent at $90.68 (+1.7% from $89.17) and copper at $12,467 a tonne.",
-     "source": "LRC Market Dashboard (Yahoo Finance), 19 Nov 2026 17:02 SAST",
+     "title": "Gold $3,684.50 (-5.2% on the week); Brent $89.62; platinum $1,354.40",
+     "summary": "At 18:02 SAST on 19 Nov 2026: gold $3,684.50 vs $3,886.30 on 13 Nov; Brent $89.62 vs $95.84; platinum $1,354.40 vs $1,488.50; copper 12,424 vs 13,403 (LRC Market Dashboard, Yahoo Finance futures).",
+     "source": "Yahoo Finance via LRC Market Dashboard, 19 Nov 2026",
      "url": "https://finance.yahoo.com/quote/GC%3DF/"
     }
    ]
@@ -96,17 +89,14 @@
    "name": "Our coverage",
    "items": [
     {
-     "title": "Nvidia +2.9% to $155.38; Meta +1.7%; ratings unchanged",
-     "summary": "At 17:02 SAST on 19 Nov 2026: Nvidia $155.38 (+2.9%; Watchlist BUY, fair value $262.56), Meta $626.66 (+1.7%; SELL, fair value $677.14), Arista $196.48 (+1.3%; SELL, $144.61), Intuit $314.70 (+0.5%; BUY, $426.00), Deckers $82.53 (-1.3%; BUY, $103.00), Paylocity $173.05 (-1.1%; HOLD, $157.05). No ratings are changed.",
-     "source": "LRC Stock Scanner quotes (Yahoo Finance), 19 Nov 2026 17:02 SAST; LRC Watchlist",
+     "title": "Nvidia +1.5% to $153.28; Meta +0.3%; ratings unchanged",
+     "summary": "At 18:02 SAST on 19 Nov 2026 Nvidia was at $153.28 (+1.5%, from +2.9% an hour earlier), Meta $617.98 (+0.3%) and Intuit $312.00 (-0.4%) (LRC Stock Scanner quotes). No rating changes.",
+     "source": "Yahoo Finance via LRC Stock Scanner, 19 Nov 2026",
      "url": "https://finance.yahoo.com/quote/NVDA/",
      "tickers": [
       "NVDA",
       "META",
-      "ANET",
-      "INTU",
-      "DECK",
-      "PCTY"
+      "INTU"
      ]
     },
     {
@@ -123,10 +113,10 @@
   }
  ],
  "watch_today": [
-  "Whether Wall Street holds its opening gains into the 23:00 SAST close (Nasdaq +1.5% at 17:02 SAST)",
-  "Dell (+6.4%) ahead of its results on 24 Nov 2026",
-  "Rand at R17.31/$ overnight after the 4–3 SARB hold",
-  "Gold near $3,708 with US yields above 5%",
-  "Brent at $90.68 and Middle East shipping risk"
+  "Whether the S&P 500 (7,309.85 at 18:02 SAST) recovers or extends losses into the 23:00 SAST close",
+  "AMD (-7.7%) and the wider chip group",
+  "Rand at R17.44/$ overnight after the 4–3 SARB hold",
+  "Gold near $3,685 with the US 10-year at 5.06%",
+  "Dell (+3.2%) ahead of its results on 24 Nov 2026"
  ]
 }
