@@ -96991,10 +96991,8 @@
    "dps": null,
    "source": "Nasdaq",
    "has_res": true,
-   "desk": true,
-   "rev_actual": 6277000000000,
-   "g": "given",
-   "headline": "Q3 revenue down 10% to ₩6.28tn, operating profit down 42% to ₩250.6bn (reported 22 Oct); Q4 shipments seen up about 10%",
+   "desk": false,
+   "g": "not found",
    "px_move": {
     "move": -0.0233,
     "from": "2026-11-12",
@@ -97656,6 +97654,9 @@
    "rev_yago": 18338000000,
    "n_est": 16,
    "rcur": "CNY",
+   "has_res": true,
+   "desk": false,
+   "g": "not found",
    "px_move": {
     "move": 0.0005,
     "from": "2026-11-13",
@@ -98437,10 +98438,8 @@
    "dps": null,
    "source": "Nasdaq",
    "has_res": true,
-   "desk": true,
-   "rev_actual": 6277000000000,
-   "g": "given",
-   "headline": "Q3 revenue down 10% to ₩6.28tn, operating profit down 42% to ₩250.6bn (reported 22 Oct); Q4 shipments seen up about 10%",
+   "desk": false,
+   "g": "not found",
    "px_move": {
     "move": -0.0197,
     "from": "2026-11-13",
@@ -99838,6 +99837,13 @@
    "rev_yago": 6402900000,
    "n_est": 1,
    "rcur": "HKD",
+   "has_res": true,
+   "desk": false,
+   "rev_actual": 6690600000.0,
+   "g": "not found",
+   "rev_surprise": 0.0013,
+   "rev_result": "inline",
+   "rev_yoy": 0.0449,
    "px_move": {
     "move": -0.0919,
     "from": "2026-11-16",
@@ -101187,6 +101193,13 @@
    "rev_yago": 1882814000,
    "n_est": 18,
    "rcur": "USD",
+   "has_res": true,
+   "desk": false,
+   "rev_actual": 1991175000.0,
+   "g": "reaffirmed",
+   "rev_surprise": -0.0039,
+   "rev_result": "inline",
+   "rev_yoy": 0.0576,
    "t": "WSM",
    "lists": [],
    "idea": null,
@@ -101295,6 +101308,14 @@
    "rev_yago": 1197000000,
    "n_est": 1,
    "rcur": "USD",
+   "has_res": true,
+   "desk": false,
+   "rev_actual": 2010000000.0,
+   "rev_prior": 1761000000.0,
+   "g": "given",
+   "rev_surprise": 0.4306,
+   "rev_result": "beat",
+   "rev_yoy": 0.1414,
    "t": "UGI",
    "lists": [],
    "idea": null,
@@ -101734,6 +101755,10 @@
    "measure": null,
    "dps": null,
    "source": null,
+   "has_res": true,
+   "desk": false,
+   "rev_actual": 554100000.0,
+   "g": "given",
    "t": "VVV",
    "lists": [],
    "idea": null,
@@ -101769,6 +101794,14 @@
    "rev_yago": 540221000,
    "n_est": 8,
    "rcur": "USD",
+   "has_res": true,
+   "desk": false,
+   "rev_actual": 590754000.0,
+   "rev_prior": 540221000.0,
+   "g": "given",
+   "rev_surprise": -0.037,
+   "rev_result": "miss",
+   "rev_yoy": 0.0935,
    "t": "JOYY",
    "lists": [],
    "idea": null,
@@ -102439,7 +102472,8 @@
     "beat",
     "inline",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-19",
@@ -102567,7 +102601,8 @@
     "miss",
     "beat",
     "miss"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-19",
@@ -102663,7 +102698,8 @@
     "beat",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-19",
@@ -102695,7 +102731,8 @@
     "beat",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-19",
@@ -102727,7 +102764,8 @@
     "beat",
     "miss",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-19",
@@ -102855,7 +102893,8 @@
     "beat",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-19",
@@ -102887,7 +102926,8 @@
     "beat",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-19",
@@ -102919,7 +102959,8 @@
     "miss",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-19",
@@ -102951,7 +102992,8 @@
     "beat",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-19",
@@ -103015,7 +103057,8 @@
     "beat",
     "beat",
     "inline"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-19",
@@ -103065,7 +103108,8 @@
    "lists": [],
    "idea": null,
    "v": null,
-   "iv": null
+   "iv": null,
+   "has_res": true
   },
   {
    "date": "2026-11-19",
@@ -103121,6 +103165,7 @@
    "n_est": 2,
    "rcur": "USD",
    "qend": "2026-09-30",
+   "has_res": true,
    "track": [
     "beat",
     "beat",
@@ -104729,6 +104774,7 @@
    "n_est": 16,
    "rcur": "CNY",
    "qend": "2026-09-30",
+   "has_res": true,
    "track": [
     "beat",
     "beat",
@@ -111936,6 +111982,6 @@
    "covered": false
   }
  ],
- "synced": "2026-11-19T16:23+02:00",
+ "synced": "2026-11-19T16:40+02:00",
  "coverage_note": "Ticked = on the LRC watchlist. Every company the LRC Stock Scanner tracks shows its trading and investment ratings. Updated after every scanner run."
 }

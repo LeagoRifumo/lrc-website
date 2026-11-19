@@ -1,124 +1,140 @@
 {
-"updated": "2026-11-19T06:50+02:00",
+"updated": "2026-11-19T16:40+02:00",
 "queue": [
 {
-"t": "PANW",
-"name": "Palo Alto Networks, Inc.",
+"t": "WMT",
+"name": "Walmart Inc.",
 "m": "US",
 "date": "2026-11-19",
-"text": "agents/work/8k/PANW_2026-11-19.txt",
+"text": "agents/work/8k/WMT_2026-11-19.txt",
 "priority": 2,
-"mcap_bn": 266.6
+"mcap_bn": 1010.4
 },
 {
-"t": "P",
-"name": "Everpure, Inc.",
+"t": "NTES",
+"name": "NetEase, Inc.",
+"m": "US",
+"date": "2026-11-19",
+"text": "agents/work/8k/NTES_2026-11-19.txt",
+"priority": 2,
+"mcap_bn": 75.8
+},
+{
+"t": "WSM",
+"name": "Williams-Sonoma, Inc.",
 "m": "US",
 "date": "2026-11-18",
-"text": "agents/work/8k/P_2026-11-18.txt",
+"text": "agents/work/8k/WSM_2026-11-18.txt",
 "priority": 2,
-"mcap_bn": 33.0
+"mcap_bn": 30.6
 },
 {
-"t": "WWD",
-"name": "Woodward, Inc.",
+"t": "TCOM",
+"name": "Trip.com Group Limited",
 "m": "US",
-"date": "2026-11-18",
-"text": "agents/work/8k/WWD_2026-11-18.txt",
+"date": "2026-11-19",
+"text": "agents/work/8k/TCOM_2026-11-19.txt",
 "priority": 2,
-"mcap_bn": 18.5
+"mcap_bn": 27.1
 },
 {
-"t": "SQM",
-"name": "Sociedad Quimica y Minera S.A.",
+"t": "WMG",
+"name": "Warner Music Group Corp.",
+"m": "US",
+"date": "2026-11-19",
+"text": "agents/work/8k/WMG_2026-11-19.txt",
+"priority": 2,
+"mcap_bn": 17.2
+},
+{
+"t": "FUTU",
+"name": "Futu Holdings Limited",
 "m": "US",
 "date": "2026-11-17",
-"text": "agents/work/8k/SQM_2026-11-17.txt",
+"text": "agents/work/8k/FUTU_2026-11-17.txt",
 "priority": 2,
-"mcap_bn": 13.9
+"mcap_bn": 11.7
 },
 {
-"t": "SNEX",
-"name": "StoneX Group Inc.",
+"t": "UGI",
+"name": "UGI Corporation",
 "m": "US",
 "date": "2026-11-18",
-"text": "agents/work/8k/SNEX_2026-11-18.txt",
+"text": "agents/work/8k/UGI_2026-11-18.txt",
 "priority": 2,
-"mcap_bn": 6.6
+"mcap_bn": 8.2
 },
 {
-"t": "NJR",
-"name": "NewJersey Resources Corporation",
+"t": "ROAD",
+"name": "Construction Partners, Inc.",
 "m": "US",
-"date": "2026-11-18",
-"text": "agents/work/8k/NJR_2026-11-18.txt",
+"date": "2026-11-19",
+"text": "agents/work/8k/ROAD_2026-11-19.txt",
 "priority": 2,
-"mcap_bn": 5.6
+"mcap_bn": 4.4
 },
 {
-"t": "HP",
-"name": "Helmerich & Payne, Inc.",
+"t": "VVV",
+"name": "Valvoline Inc.",
 "m": "US",
-"date": "2026-11-18",
-"text": "agents/work/8k/HP_2026-11-18.txt",
+"date": "2026-11-19",
+"text": "agents/work/8k/VVV_2026-11-19.txt",
 "priority": 2,
-"mcap_bn": 3.5
+"mcap_bn": 4.3
 },
 {
-"t": "KLIC",
-"name": "Kulicke and Soffa Industries, Inc.",
+"t": "BBWI",
+"name": "Bath & Body Works, Inc.",
+"m": "US",
+"date": "2026-11-19",
+"text": "agents/work/8k/BBWI_2026-11-19.txt",
+"priority": 2,
+"mcap_bn": 3.8
+},
+{
+"t": "MANU",
+"name": "Manchester United Ltd.",
+"m": "US",
+"date": "2026-11-19",
+"text": "agents/work/8k/MANU_2026-11-19.txt",
+"priority": 2,
+"mcap_bn": 3.8
+},
+{
+"t": "JOYY",
+"name": "JOYY Inc.",
 "m": "US",
 "date": "2026-11-18",
-"text": "agents/work/8k/KLIC_2026-11-18.txt",
+"text": "agents/work/8k/JOYY_2026-11-18.txt",
+"priority": 2,
+"mcap_bn": 3.8
+},
+{
+"t": "MMS",
+"name": "Maximus, Inc.",
+"m": "US",
+"date": "2026-11-19",
+"text": "agents/work/8k/MMS_2026-11-19.txt",
 "priority": 2,
 "mcap_bn": 3.4
 },
 {
-"t": "SBLK",
-"name": "Star Bulk Carriers Corp.",
+"t": "LPL",
+"name": "LG Display Co., Ltd.",
 "m": "US",
-"date": "2026-11-18",
-"text": "agents/work/8k/SBLK_2026-11-18.txt",
+"date": "2026-11-16",
+"text": "agents/work/8k/LPL_2026-11-16.txt",
 "priority": 2,
-"mcap_bn": 3.1
+"mcap_bn": 2.5
 },
 {
-"t": "TKG.JO",
-"name": "Telkom",
-"m": "JSE",
-"date": "2026-11-17",
-"period": "Six months to 30 Sep 2026",
-"source": "Telkom SA SOC SENS — Group interim results for the six months ended 30 September 2026 (17 Nov 2026), via InsidEntity https://www.insidentity.com/telkom-sa-soc-group-interim-results-for-the-six-months-ended-30-september-2026/ (HEPS up 9.3% to 334.1c; basic EPS up 10.4% to 359.6c; prior-period HEPS value not shown in the source read; no interim dividend declared — Telkom pays an annual dividend)",
-"priority": 2,
-"mcap_bn": 1.8
-},
-{
-"t": "UTI",
-"name": "Universal Technical Institute, Inc.",
+"t": "LQDT",
+"name": "Liquidity Services, Inc.",
 "m": "US",
-"date": "2026-11-18",
-"text": "agents/work/8k/UTI_2026-11-18.txt",
+"date": "2026-11-19",
+"text": "agents/work/8k/LQDT_2026-11-19.txt",
 "priority": 2,
-"mcap_bn": 1.2
-},
-{
-"t": "BORR",
-"name": "Borr Drilling Limited",
-"m": "US",
-"date": "2026-11-18",
-"text": "agents/work/8k/BORR_2026-11-18.txt",
-"priority": 2,
-"mcap_bn": 1.0
-},
-{
-"t": "CML.JO",
-"name": "Coronation Fund Managers",
-"m": "JSE",
-"date": "2026-11-17",
-"period": "Year to 30 Sep 2026",
-"source": "Coronation Fund Managers SENS — Reviewed condensed consolidated financial results for the year ended 30 September 2026 and cash dividend declaration (17 Nov 2026), via InsidEntity https://www.insidentity.com/coronation-fund-managers-reviewed-condensed-consolidated-financial-results-for-the-year-ended-30-september-2026-and-cash-dividend/ (HEPS 406.8c vs 474.3c, down 14%; fund management EPS 413.7c vs 452.2c; final gross dividend 210.0c vs 254.0c; total gross dividends for the year 413.0c vs 454.0c)",
-"priority": 2,
-"mcap_bn": 0.7
+"mcap_bn": 1.4
 }
 ]
 }
