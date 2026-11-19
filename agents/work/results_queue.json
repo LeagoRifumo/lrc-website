@@ -1,168 +1,124 @@
 {
-"updated": "2026-11-18T16:41+02:00",
+"updated": "2026-11-19T06:50+02:00",
 "queue": [
 {
-"t": "TJX",
-"name": "TJX Companies, Inc. (The)",
+"t": "PANW",
+"name": "Palo Alto Networks, Inc.",
+"m": "US",
+"date": "2026-11-19",
+"text": "agents/work/8k/PANW_2026-11-19.txt",
+"priority": 2,
+"mcap_bn": 266.6
+},
+{
+"t": "P",
+"name": "Everpure, Inc.",
 "m": "US",
 "date": "2026-11-18",
-"text": "agents/work/8k/TJX_2026-11-18.txt",
+"text": "agents/work/8k/P_2026-11-18.txt",
 "priority": 2,
-"mcap_bn": 142.8
+"mcap_bn": 33.0
 },
 {
-"t": "LOW",
-"name": "Lowe's Companies, Inc.",
+"t": "WWD",
+"name": "Woodward, Inc.",
 "m": "US",
 "date": "2026-11-18",
-"text": "agents/work/8k/LOW_2026-11-18.txt",
+"text": "agents/work/8k/WWD_2026-11-18.txt",
 "priority": 2,
-"mcap_bn": 123.7
+"mcap_bn": 18.5
 },
 {
-"t": "TGT",
-"name": "Target Corporation",
-"m": "US",
-"date": "2026-11-18",
-"text": "agents/work/8k/TGT_2026-11-18.txt",
-"priority": 2,
-"mcap_bn": 72.5
-},
-{
-"t": "KB",
-"name": "KB Financial Group Inc",
-"m": "US",
-"date": "2026-11-16",
-"text": "agents/work/8k/KB_2026-11-16.txt",
-"priority": 2,
-"mcap_bn": 40.2
-},
-{
-"t": "GLBE",
-"name": "Global-E Online Ltd.",
-"m": "US",
-"date": "2026-11-18",
-"text": "agents/work/8k/GLBE_2026-11-18.txt",
-"priority": 2,
-"mcap_bn": 6.7
-},
-{
-"t": "HAFN",
-"name": "Hafnia Limited",
-"m": "US",
-"date": "2026-11-18",
-"text": "agents/work/8k/HAFN_2026-11-18.txt",
-"priority": 2,
-"mcap_bn": 5.0
-},
-{
-"t": "GLNG",
-"name": "Golar LNG Limited",
-"m": "US",
-"date": "2026-11-18",
-"text": "agents/work/8k/GLNG_2026-11-18.txt",
-"priority": 2,
-"mcap_bn": 4.3
-},
-{
-"t": "MNSO",
-"name": "MINISO Group Holding Limited",
+"t": "SQM",
+"name": "Sociedad Quimica y Minera S.A.",
 "m": "US",
 "date": "2026-11-17",
-"text": "agents/work/8k/MNSO_2026-11-17.txt",
+"text": "agents/work/8k/SQM_2026-11-17.txt",
 "priority": 2,
-"mcap_bn": 3.6
+"mcap_bn": 13.9
 },
 {
-"t": "ZIM",
-"name": "ZIM Integrated Shipping Services Ltd.",
+"t": "SNEX",
+"name": "StoneX Group Inc.",
 "m": "US",
 "date": "2026-11-18",
-"text": "agents/work/8k/ZIM_2026-11-18.txt",
+"text": "agents/work/8k/SNEX_2026-11-18.txt",
 "priority": 2,
-"mcap_bn": 3.6
+"mcap_bn": 6.6
 },
 {
-"t": "BLSH",
-"name": "Bullish",
+"t": "NJR",
+"name": "NewJersey Resources Corporation",
 "m": "US",
 "date": "2026-11-18",
-"text": "agents/work/8k/BLSH_2026-11-18.txt",
+"text": "agents/work/8k/NJR_2026-11-18.txt",
 "priority": 2,
-"mcap_bn": 2.9
+"mcap_bn": 5.6
 },
 {
-"t": "JJSF",
-"name": "J&J Snack Foods Corp.",
+"t": "HP",
+"name": "Helmerich & Payne, Inc.",
 "m": "US",
 "date": "2026-11-18",
-"text": "agents/work/8k/JJSF_2026-11-18.txt",
+"text": "agents/work/8k/HP_2026-11-18.txt",
 "priority": 2,
-"mcap_bn": 1.7
+"mcap_bn": 3.5
 },
 {
-"t": "PONY",
-"name": "Pony AI Inc.",
+"t": "KLIC",
+"name": "Kulicke and Soffa Industries, Inc.",
 "m": "US",
 "date": "2026-11-18",
-"text": "agents/work/8k/PONY_2026-11-18.txt",
+"text": "agents/work/8k/KLIC_2026-11-18.txt",
 "priority": 2,
-"mcap_bn": 1.7
+"mcap_bn": 3.4
 },
 {
-"t": "BRBR",
-"name": "BellRing Brands, Inc.",
+"t": "SBLK",
+"name": "Star Bulk Carriers Corp.",
 "m": "US",
 "date": "2026-11-18",
-"text": "agents/work/8k/BRBR_2026-11-18.txt",
+"text": "agents/work/8k/SBLK_2026-11-18.txt",
 "priority": 2,
-"mcap_bn": 1.3
+"mcap_bn": 3.1
 },
 {
-"t": "PPE.JO",
-"name": "Purple Group",
+"t": "TKG.JO",
+"name": "Telkom",
 "m": "JSE",
-"date": "2026-11-11",
-"period": "Year to 31 Aug 2026",
-"source": "Purple Group SENS — Audited consolidated results for the year ended 31 August 2026 and distribution of annual report and notice of AGM (11 Nov 2026); figures from Purple Group Annual Report 2026 https://www.purplegroup.co.za/results/full_results/2026/31%20August%202026%20Full%20Results.pdf (HEPS 5.47c vs 4.30c; basic EPS 5.58c vs 4.30c; no dividend declaration found)",
+"date": "2026-11-17",
+"period": "Six months to 30 Sep 2026",
+"source": "Telkom SA SOC SENS — Group interim results for the six months ended 30 September 2026 (17 Nov 2026), via InsidEntity https://www.insidentity.com/telkom-sa-soc-group-interim-results-for-the-six-months-ended-30-september-2026/ (HEPS up 9.3% to 334.1c; basic EPS up 10.4% to 359.6c; prior-period HEPS value not shown in the source read; no interim dividend declared — Telkom pays an annual dividend)",
 "priority": 2,
-"mcap_bn": 0.1
+"mcap_bn": 1.8
 },
 {
-"t": "YSS",
-"name": "York Space Systems, Inc.",
+"t": "UTI",
+"name": "Universal Technical Institute, Inc.",
 "m": "US",
-"date": "2026-11-12",
-"text": "agents/work/8k/YSS_2026-11-12.txt",
-"priority": 1,
-"mcap_bn": 0.0
+"date": "2026-11-18",
+"text": "agents/work/8k/UTI_2026-11-18.txt",
+"priority": 2,
+"mcap_bn": 1.2
 },
 {
-"t": "USAS",
-"name": "Americas Gold and Silver Corporation",
+"t": "BORR",
+"name": "Borr Drilling Limited",
 "m": "US",
-"date": "2026-11-13",
-"text": "agents/work/8k/USAS_2026-11-13.txt",
-"priority": 1,
-"mcap_bn": 0.0
+"date": "2026-11-18",
+"text": "agents/work/8k/BORR_2026-11-18.txt",
+"priority": 2,
+"mcap_bn": 1.0
 },
 {
-"t": "ODD",
-"name": "Oddity Tech Ltd.",
-"m": "US",
-"date": "2026-11-11",
-"text": "agents/work/8k/ODD_2026-11-11.txt",
-"priority": 1,
-"mcap_bn": 0.0
-},
-{
-"t": "ADIG",
-"name": "ADI Global Distribution Inc",
-"m": "US",
-"date": "2026-11-12",
-"text": "agents/work/8k/ADIG_2026-11-12.txt",
-"priority": 1,
-"mcap_bn": 0.0
+"t": "CML.JO",
+"name": "Coronation Fund Managers",
+"m": "JSE",
+"date": "2026-11-17",
+"period": "Year to 30 Sep 2026",
+"source": "Coronation Fund Managers SENS — Reviewed condensed consolidated financial results for the year ended 30 September 2026 and cash dividend declaration (17 Nov 2026), via InsidEntity https://www.insidentity.com/coronation-fund-managers-reviewed-condensed-consolidated-financial-results-for-the-year-ended-30-september-2026-and-cash-dividend/ (HEPS 406.8c vs 474.3c, down 14%; fund management EPS 413.7c vs 452.2c; final gross dividend 210.0c vs 254.0c; total gross dividends for the year 413.0c vs 454.0c)",
+"priority": 2,
+"mcap_bn": 0.7
 }
 ]
 }
