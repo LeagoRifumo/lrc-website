@@ -1,6 +1,6 @@
 {
  "note": "JSE company announcements (SENS) recorded by the LRC JSE Announcements job every weekday. results = published results with headline earnings per share (HEPS) vs the same period last year; trading_statements = expected HEPS change ranges; dividends = declared dividends with the JSE dates. Amounts in cents. Every entry carries its source.",
- "updated": "2026-11-18T18:52+02:00",
+ "updated": "2026-11-19T19:30+02:00",
  "results": [
   {
    "t": "CLS.JO",
@@ -191,6 +191,38 @@
    "heps": 334.1,
    "unit": "c",
    "source": "Telkom SA SOC SENS — Group interim results for the six months ended 30 September 2026 (17 Nov 2026), via InsidEntity https://www.insidentity.com/telkom-sa-soc-group-interim-results-for-the-six-months-ended-30-september-2026/ (HEPS up 9.3% to 334.1c; basic EPS up 10.4% to 359.6c; prior-period HEPS value not shown in the source read; no interim dividend declared — Telkom pays an annual dividend)"
+  },
+  {
+   "t": "LEW.JO",
+   "name": "Lewis Group",
+   "date": "2026-11-19",
+   "period": "Six months to 30 Sep 2026",
+   "heps": 720.0,
+   "unit": "c",
+   "dps": 375.0,
+   "source": "Lewis Group SENS — Summary unaudited financial statements for the six months ended 30 September 2026 and cash dividend declaration (19 Nov 2026), via InsidEntity https://www.insidentity.com/lewis-group-summary-unaudited-financial-statements-for-the-six-months-ended-30-september-2026-and-cash-dividend-declaration/ (HEPS up 11.2% to 720c; EPS up 11.0% to 687c; interim dividend up 11.3% to 375c; prior-period HEPS value not shown in the source read)"
+  },
+  {
+   "t": "INP.JO",
+   "name": "Investec plc",
+   "date": "2026-11-19",
+   "period": "Six months to 30 Sep 2026",
+   "heps": 39.8,
+   "heps_prior": 36.7,
+   "unit": "GBp",
+   "dps": 18.5,
+   "source": "Investec half-year results for the six months ended 30 September 2026 (19 Nov 2026), as reported by Reuters via CNBC Africa https://www.cnbcafrica.com/2026/south-africas-investec-reports-8-4-rise-in-half-year-earnings (figures in pence: HEPS 39.8p vs 36.7p; interim dividend 18.5p per share)"
+  },
+  {
+   "t": "INL.JO",
+   "name": "Investec Limited",
+   "date": "2026-11-19",
+   "period": "Six months to 30 Sep 2026",
+   "heps": 39.8,
+   "heps_prior": 36.7,
+   "unit": "GBp",
+   "dps": 417.0,
+   "source": "Investec half-year results for the six months ended 30 September 2026 (19 Nov 2026), as reported by Reuters via CNBC Africa https://www.cnbcafrica.com/2026/south-africas-investec-reports-8-4-rise-in-half-year-earnings (group figures in pence: HEPS 39.8p vs 36.7p); Investec Limited gross interim dividend 417c (2025: 396c) per Investec dividend declaration (19 Nov 2026), via MarketScreener https://www.marketscreener.com/news/investec-group-declares-an-interim-dividend-for-the-period-1-april-2026-to-30-september-2026-payabl-ce785ed2d888ff2c"
   }
  ],
  "trading_statements": [
@@ -407,6 +439,39 @@
    "record": "2026-12-04",
    "pay": "2026-12-07",
    "source": "Coronation Fund Managers SENS — Reviewed condensed consolidated financial results for the year ended 30 September 2026 and cash dividend declaration (17 Nov 2026), via InsidEntity https://www.insidentity.com/coronation-fund-managers-reviewed-condensed-consolidated-financial-results-for-the-year-ended-30-september-2026-and-cash-dividend/ (final gross dividend 210.0c per share from income reserves; 168.0c net of 20% dividend tax)"
+  },
+  {
+   "t": "LEW.JO",
+   "period": "Interim",
+   "declared": "2026-11-19",
+   "amount_c": 375.0,
+   "ldt": "2027-01-19",
+   "ex": "2027-01-20",
+   "record": "2027-01-22",
+   "pay": "2027-01-25",
+   "source": "Lewis Group SENS — Summary unaudited financial statements for the six months ended 30 September 2026 and cash dividend declaration (19 Nov 2026), via InsidEntity https://www.insidentity.com/lewis-group-summary-unaudited-financial-statements-for-the-six-months-ended-30-september-2026-and-cash-dividend-declaration/"
+  },
+  {
+   "t": "ART.JO",
+   "period": "Interim",
+   "declared": "2026-11-18",
+   "amount_c": 75.0,
+   "ldt": "2026-12-14",
+   "ex": "2026-12-15",
+   "record": "2026-12-18",
+   "pay": "2026-12-21",
+   "source": "Argent Industrial SENS — Unaudited and unreviewed interim consolidated results for the 6 months ended 30 September 2026 and dividend declaration (18 Nov 2026), via InsidEntity https://www.insidentity.com/argent-industrial-unaudited-and-unreviewed-interim-consolidated-results-for-the-6-months-ended-30-september-2026-and-dividend-declaration/ (gross 75c; net 60c after dividends tax)"
+  },
+  {
+   "t": "INL.JO",
+   "period": "Interim",
+   "declared": "2026-11-19",
+   "amount_c": 417.0,
+   "ldt": "2026-12-08",
+   "ex": "2026-12-09",
+   "record": "2026-12-11",
+   "pay": "2026-12-31",
+   "source": "Investec — Interim dividend for the period 1 April 2026 to 30 September 2026, payable on 31 December 2026 (19 Nov 2026), via MarketScreener https://www.marketscreener.com/news/investec-group-declares-an-interim-dividend-for-the-period-1-april-2026-to-30-september-2026-payabl-ce785ed2d888ff2c (Investec Limited gross dividend no. 141 of 417c vs 396c; Investec plc 18.5p)"
   }
  ]
 }
