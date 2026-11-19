@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-18T18:00:00+02:00",
+  "generated": "2026-11-19T17:55:00+02:00",
   "agent": "LRC Macro Desk",
   "method": "Surprise = actual minus forecast (consensus). If there is no forecast, actual minus previous. Impact for shares: a surprise in the 'better' direction larger than the threshold = Bullish, the other way = Bearish, otherwise Neutral.",
   "countries": {
@@ -93,14 +93,14 @@
           "better": "lower",
           "threshold": 0.01,
           "frequency": "MPC meetings",
-          "period": "Sep 2026 MPC",
-          "release_date": "2026-09-23",
+          "period": "Nov 2026 MPC",
+          "release_date": "2026-11-19",
           "actual": 7.25,
-          "forecast": null,
-          "previous": 7.0,
-          "next_release": "2026-11-19",
+          "forecast": 7.25,
+          "previous": 7.25,
+          "next_release": null,
           "source": "SARB",
-          "url": "https://www.enca.com/business-top-stories/reserve-bank-hikes-interest-rates-25-basis-points"
+          "url": "https://www.sanews.gov.za/south-africa/interest-rate-stays-unchanged-725"
         },
         {
           "key": "absa_pmi",
@@ -290,14 +290,14 @@
           "better": "lower",
           "threshold": 5,
           "frequency": "weekly",
-          "period": "w/e 7 Nov",
-          "release_date": "2026-11-12",
-          "actual": 200,
+          "period": "w/e 14 Nov",
+          "release_date": "2026-11-19",
+          "actual": 203,
           "forecast": null,
-          "previous": 191,
-          "next_release": "2026-11-19",
+          "previous": 202,
+          "next_release": null,
           "source": "US Department of Labor",
-          "url": "https://www.aninews.in/news/business/us-initial-jobless-claims-climb-to-200000-four-week-average-remains-unchanged20261112194746/"
+          "url": "https://www.investing.com/news/economy-news/us-weekly-jobless-claims-increase-slightly-5039110"
         },
         {
           "key": "cpi",
