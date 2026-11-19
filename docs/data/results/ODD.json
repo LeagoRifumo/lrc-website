@@ -1,1 +1,153 @@
-{"t":"ODD","name":"Oddity Tech Ltd.","m":"US","reports":[{"date":"2026-11-11","quarter":"","filing":{"form":"6-K","filed":"2026-11-12","items":"","index":"https://www.sec.gov/Archives/edgar/data/1907085/000110465926125812/0001104659-26-125812-index.htm","docs":[{"type":"EX-99.1","desc":"EXHIBIT 99.1","url":"https://www.sec.gov/Archives/edgar/data/1907085/000110465926125812/tm2629351d1_ex99-1.htm"}]},"title":"ODDITY TECH REPORTS THIRD QUARTER 2026 RESULTS AHEAD OF PLAN, RAISES FULL YEAR NET REVENUE AND ADJUSTED EBITDA OUTLOOK","auto":{"revenue":{"rev":144981000.0,"rev_prior":147902000.0,"label":"Net revenue","checked_vs_estimate":true},"guidance":{"heading":"Financial Outlook","section":["ODDITY is raising net revenue and adjusted EBITDA guidance for the full year ending December 31, 2026:","· | Net revenue to decrease by approximately 18.5% year-over-year\n· | Adjusted EBITDA between $32 million and $34 million","Current FY2026 Outlook | Prior FY2026 Outlook\nNet Revenue | -18.5% | -19.0%\nAdjusted EBITDA | $32 to $34 million | $30 to $32 million","ODDITY is providing the following guidance for the fourth quarter ending December 31, 2026:","· | Net revenue to decrease by between 10% and 11% year-over-year\n· | Adjusted EBITDA between $4 million and $6 million"],"lines":[],"status":"raised"}},"read":"2026-11-13T06:43+02:00"}]}
+{
+ "t": "ODD",
+ "name": "Oddity Tech Ltd.",
+ "m": "US",
+ "reports": [
+  {
+   "date": "2026-11-11",
+   "quarter": "",
+   "filing": {
+    "form": "6-K",
+    "filed": "2026-11-12",
+    "items": "",
+    "index": "https://www.sec.gov/Archives/edgar/data/1907085/000110465926125812/0001104659-26-125812-index.htm",
+    "docs": [
+     {
+      "type": "EX-99.1",
+      "desc": "EXHIBIT 99.1",
+      "url": "https://www.sec.gov/Archives/edgar/data/1907085/000110465926125812/tm2629351d1_ex99-1.htm"
+     }
+    ]
+   },
+   "title": "ODDITY TECH REPORTS THIRD QUARTER 2026 RESULTS AHEAD OF PLAN, RAISES FULL YEAR NET REVENUE AND ADJUSTED EBITDA OUTLOOK",
+   "auto": {
+    "revenue": {
+     "rev": 144981000.0,
+     "rev_prior": 147902000.0,
+     "label": "Net revenue",
+     "checked_vs_estimate": true
+    },
+    "guidance": {
+     "heading": "Financial Outlook",
+     "section": [
+      "ODDITY is raising net revenue and adjusted EBITDA guidance for the full year ending December 31, 2026:",
+      "· | Net revenue to decrease by approximately 18.5% year-over-year\n· | Adjusted EBITDA between $32 million and $34 million",
+      "Current FY2026 Outlook | Prior FY2026 Outlook\nNet Revenue | -18.5% | -19.0%\nAdjusted EBITDA | $32 to $34 million | $30 to $32 million",
+      "ODDITY is providing the following guidance for the fourth quarter ending December 31, 2026:",
+      "· | Net revenue to decrease by between 10% and 11% year-over-year\n· | Adjusted EBITDA between $4 million and $6 million"
+     ],
+     "lines": [],
+     "status": "raised"
+    }
+   },
+   "read": "2026-11-13T06:43+02:00",
+   "desk": {
+    "by": "LRC Research",
+    "written": "2026-11-19T06:15+02:00",
+    "period": "Q3 2026 (quarter to 30 Sep 2026)",
+    "headline": "Revenue down 2% to $145.0m, beat; full-year revenue and EBITDA outlook raised",
+    "numbers": {
+     "currency": "USD",
+     "revenue": 144981000,
+     "revenue_prior": 147902000,
+     "revenue_est": 140470880,
+     "eps": 0.37,
+     "eps_prior": 0.4,
+     "eps_est": 0.3001,
+     "eps_basis": "adjusted",
+     "other": [
+      {
+       "label": "Diluted EPS (GAAP)",
+       "value": "$0.23",
+       "change": "vs $0.28 a year ago"
+      },
+      {
+       "label": "Adjusted EBITDA",
+       "value": "$22.0m",
+       "change": "vs $28.9m a year ago"
+      },
+      {
+       "label": "Gross margin",
+       "value": "67.4%",
+       "change": "vs 71.6% a year ago"
+      },
+      {
+       "label": "Cash and investments",
+       "value": "$561m",
+       "change": "at 30 Sep 2026"
+      }
+     ]
+    },
+    "results": [
+     "Net revenue slipped 2% to $145.0m, better than the company's forecast of a 5% fall and a big improvement on Q2.",
+     "Adjusted EBITDA of $22.0m beat its $18–20m outlook but was down from $28.9m a year ago.",
+     "Gross margin fell to 67.4% from 71.6%; net income dropped to $11.2m from $17.7m.",
+     "SpoiledChild grew strongly and is on track for at least 35% growth this year; newer brand METHODIQ kept growing.",
+     "Cash and investments stood at $561m; about $86m is left under the $200m buyback plan."
+    ],
+    "guidance": {
+     "status": "raised",
+     "summary": "ODDITY now expects 2026 revenue to fall about 18.5% (was 19%) and adjusted EBITDA of $32–34m (was $30–32m). For Q4 it sees revenue down 10–11% and adjusted EBITDA of $4–6m.",
+     "items": [
+      {
+       "metric": "Net revenue",
+       "period": "FY 2026",
+       "new": "about -18.5% y/y",
+       "prior": "-19.0% y/y",
+       "consensus": "n/a",
+       "vs_consensus": "n/a"
+      },
+      {
+       "metric": "Adjusted EBITDA",
+       "period": "FY 2026",
+       "new": "$32–34m",
+       "prior": "$30–32m",
+       "consensus": "n/a",
+       "vs_consensus": "n/a"
+      },
+      {
+       "metric": "Net revenue",
+       "period": "Q4 2026",
+       "new": "-10% to -11% y/y",
+       "consensus": "n/a",
+       "vs_consensus": "n/a"
+      },
+      {
+       "metric": "Adjusted EBITDA",
+       "period": "Q4 2026",
+       "new": "$4–6m",
+       "consensus": "n/a",
+       "vs_consensus": "n/a"
+      }
+     ]
+    },
+    "call": {
+     "points": [
+      "The IL MAKIAGE slump stems from an algorithm problem at its biggest ad partner, which is still not fixed.",
+      "Customer acquisition costs improved in September but weakened again in October; management called the trend very volatile.",
+      "Lower order values drove the gross margin drop; pressure is expected to ease in 2027, but no figure was given.",
+      "METHODIQ plans to add prescription injectable and peptide therapies in 2027, alongside a fourth brand launch.",
+      "Buybacks have cut shares outstanding by about 20% this year; no 2027 guidance was given, but the aim is growth across all brands."
+     ],
+     "tone": "cautious",
+     "source": "Q3 2026 call transcript — Nasdaq (Motley Fool), 11 Nov 2026"
+    },
+    "watch": [
+     "Whether the advertising problem at IL MAKIAGE is resolved and new-customer costs settle.",
+     "Gross margin and the run-down of excess IL MAKIAGE inventory.",
+     "Early take-up of METHODIQ's peptide therapies and the new brand in 2027."
+    ],
+    "sources": [
+     {
+      "title": "6-K Exhibit 99.1 — press release",
+      "url": "https://www.sec.gov/Archives/edgar/data/1907085/000110465926125812/tm2629351d1_ex99-1.htm"
+     },
+     {
+      "title": "Oddity Tech (ODD) Q3 2026 earnings call transcript — Nasdaq, 11 Nov 2026",
+      "url": "https://www.nasdaq.com/articles/oddity-tech-odd-q3-2026-earnings-call-transcript"
+     }
+    ]
+   }
+  }
+ ]
+}

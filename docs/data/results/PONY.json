@@ -1,1 +1,142 @@
-{"t":"PONY","name":"Pony AI Inc.","m":"US","reports":[{"date":"2026-11-18","quarter":"Sep/2026","filing":{"form":"6-K","filed":"2026-11-18","items":"","index":"https://www.sec.gov/Archives/edgar/data/1969302/000110465926129308/0001104659-26-129308-index.htm","docs":[{"type":"EX-99.1","desc":"EXHIBIT 99.1","url":"https://www.sec.gov/Archives/edgar/data/1969302/000110465926129308/tm2629888d1_ex99-1.htm"}]},"title":"Pony AI Inc. Reports Third Quarter 2026 Financial Results:","auto":{"revenue":{"rev":44574000.0,"rev_prior":25442000.0,"label":"Total revenues","checked_vs_estimate":true},"guidance":{"heading":null,"section":[],"lines":[],"status":"not found"}},"read":"2026-11-18T16:41+02:00"}]}
+{
+ "t": "PONY",
+ "name": "Pony AI Inc.",
+ "m": "US",
+ "reports": [
+  {
+   "date": "2026-11-18",
+   "quarter": "Sep/2026",
+   "filing": {
+    "form": "6-K",
+    "filed": "2026-11-18",
+    "items": "",
+    "index": "https://www.sec.gov/Archives/edgar/data/1969302/000110465926129308/0001104659-26-129308-index.htm",
+    "docs": [
+     {
+      "type": "EX-99.1",
+      "desc": "EXHIBIT 99.1",
+      "url": "https://www.sec.gov/Archives/edgar/data/1969302/000110465926129308/tm2629888d1_ex99-1.htm"
+     }
+    ]
+   },
+   "title": "Pony AI Inc. Reports Third Quarter 2026 Financial Results:",
+   "auto": {
+    "revenue": {
+     "rev": 44574000.0,
+     "rev_prior": 25442000.0,
+     "label": "Total revenues",
+     "checked_vs_estimate": true
+    },
+    "guidance": {
+     "heading": null,
+     "section": [],
+     "lines": [],
+     "status": "not found"
+    }
+   },
+   "read": "2026-11-18T16:41+02:00",
+   "desk": {
+    "by": "LRC Research",
+    "written": "2026-11-19T06:15+02:00",
+    "period": "Q3 2026 (quarter to 30 Sep 2026)",
+    "headline": "Revenue up 75% to $44.6m, beat; 2026 robotaxi fleet and revenue targets reaffirmed",
+    "numbers": {
+     "currency": "USD",
+     "revenue": 44574000,
+     "revenue_prior": 25442000,
+     "revenue_est": 39119100,
+     "eps": -0.24,
+     "eps_prior": -0.16,
+     "eps_basis": "diluted GAAP",
+     "other": [
+      {
+       "label": "Robotaxi services revenue",
+       "value": "$17.8m",
+       "change": "+165% y/y"
+      },
+      {
+       "label": "Robotruck services revenue",
+       "value": "$18.0m",
+       "change": "+76% y/y"
+      },
+      {
+       "label": "Non-GAAP loss per share",
+       "value": "-$0.11",
+       "change": "vs -$0.15 a year ago"
+      },
+      {
+       "label": "Gross margin",
+       "value": "17.8%",
+       "change": "vs 18.4% a year ago"
+      },
+      {
+       "label": "Free cash flow",
+       "value": "-$78.2m",
+       "change": "vs -$79.6m a year ago"
+      },
+      {
+       "label": "Robotaxi fleet",
+       "value": "2,768 vehicles",
+       "change": "at 30 Sep 2026"
+      }
+     ]
+    },
+    "results": [
+     "Revenue rose 75% to $44.6m; robotaxi revenue jumped 165% to $17.8m and is now about 40% of the total, with paid-ride fares up nearly 400%.",
+     "Robotruck revenue grew 76% to $18.0m on freight work; intelligent solutions were roughly flat at $8.9m.",
+     "Operating loss edged down to $68.7m, and the non-GAAP operating loss fell 8% to $58.3m as costs held flat.",
+     "Net loss widened to $136.3m ($0.24 a share) due to a $77.0m fair-value loss on trading securities.",
+     "Cash and investments were $1.15bn at quarter-end, down from $1.21bn in June."
+    ],
+    "guidance": {
+     "status": "reaffirmed",
+     "summary": "No revenue or earnings range is given. Management said it remains on track for its 2026 goals: 3,500 robotaxis in 20 cities by year-end and robotaxi revenue of 3.5 times the 2025 level.",
+     "items": [
+      {
+       "metric": "Robotaxi fleet",
+       "period": "End 2026",
+       "new": "3,500 vehicles",
+       "prior": "3,500 vehicles",
+       "consensus": "n/a",
+       "vs_consensus": "n/a"
+      },
+      {
+       "metric": "Robotaxi services revenue",
+       "period": "FY 2026",
+       "new": "3.5x 2025 level",
+       "prior": "3.5x 2025 level",
+       "consensus": "n/a",
+       "vs_consensus": "n/a"
+      }
+     ]
+    },
+    "call": {
+     "points": [
+      "Fleets in Guangzhou and Shenzhen are already making a positive margin per vehicle, though no figure was given.",
+      "Insurance on Gen-7 robotaxis has fallen to about 40% of a human-driven taxi's, down from about 50% in 2025.",
+      "Overseas expansion uses partners to supply depots and maintenance; Zagreb is driverless and Manchester road tests have begun.",
+      "Robotrucks are in service at two Guangdong ports, with hundreds of vehicles targeted across ports next year.",
+      "Management said it is not short of computing power despite chip export limits and will keep spending tight."
+     ],
+     "tone": "confident",
+     "source": "Q3 2026 call transcript — The Motley Fool, 18 Nov 2026"
+    },
+    "watch": [
+     "Whether the fleet reaches 3,500 vehicles in 20 cities by year-end.",
+     "Progress on European launches, including London and Manchester.",
+     "Cash burn against the $1.15bn of cash and investments."
+    ],
+    "sources": [
+     {
+      "title": "6-K Exhibit 99.1 — press release",
+      "url": "https://www.sec.gov/Archives/edgar/data/1969302/000110465926129308/tm2629888d1_ex99-1.htm"
+     },
+     {
+      "title": "Pony AI (PONY) Q3 2026 earnings call transcript — The Motley Fool, 18 Nov 2026",
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/11/18/pony-ai-pony-q3-2026-earnings-call-transcript/"
+     }
+    ]
+   }
+  }
+ ]
+}

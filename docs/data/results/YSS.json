@@ -1,1 +1,136 @@
-{"t":"YSS","name":"York Space Systems, Inc.","m":"US","reports":[{"date":"2026-11-12","quarter":"","filing":{"form":"8-K","filed":"2026-11-12","items":"2.02,9.01","index":"https://www.sec.gov/Archives/edgar/data/2086587/000162828026073422/0001628280-26-073422-index.htm","docs":[{"type":"EX-99.1","desc":"EX-99.1","url":"https://www.sec.gov/Archives/edgar/data/2086587/000162828026073422/pressreleaseq32026.htm"}]},"title":"York Space Systems Reports Third Quarter 2026 Results","auto":{"revenue":{"rev":84171000.0,"rev_prior":90763000.0,"label":"Revenue","checked_vs_estimate":true},"guidance":{"heading":"Business Outlook as of November 12, 2026","section":["York Space Systems narrowed its guidance range for the full year 2026 to be in the range of $380 million to $400 million.","We are working on a pipeline of government opportunities worth $14.9 billion, an increase of $3 billion as compared to June 30, 2026. This analysis considers the next two years, and we only included opportunities from potential customers we have spoken to directly."],"lines":[],"status":"narrowed"}},"read":"2026-11-13T06:43+02:00"}]}
+{
+ "t": "YSS",
+ "name": "York Space Systems, Inc.",
+ "m": "US",
+ "reports": [
+  {
+   "date": "2026-11-12",
+   "quarter": "",
+   "filing": {
+    "form": "8-K",
+    "filed": "2026-11-12",
+    "items": "2.02,9.01",
+    "index": "https://www.sec.gov/Archives/edgar/data/2086587/000162828026073422/0001628280-26-073422-index.htm",
+    "docs": [
+     {
+      "type": "EX-99.1",
+      "desc": "EX-99.1",
+      "url": "https://www.sec.gov/Archives/edgar/data/2086587/000162828026073422/pressreleaseq32026.htm"
+     }
+    ]
+   },
+   "title": "York Space Systems Reports Third Quarter 2026 Results",
+   "auto": {
+    "revenue": {
+     "rev": 84171000.0,
+     "rev_prior": 90763000.0,
+     "label": "Revenue",
+     "checked_vs_estimate": true
+    },
+    "guidance": {
+     "heading": "Business Outlook as of November 12, 2026",
+     "section": [
+      "York Space Systems narrowed its guidance range for the full year 2026 to be in the range of $380 million to $400 million.",
+      "We are working on a pipeline of government opportunities worth $14.9 billion, an increase of $3 billion as compared to June 30, 2026. This analysis considers the next two years, and we only included opportunities from potential customers we have spoken to directly."
+     ],
+     "lines": [],
+     "status": "narrowed"
+    }
+   },
+   "read": "2026-11-13T06:43+02:00",
+   "desk": {
+    "by": "LRC Research",
+    "written": "2026-11-19T06:15+02:00",
+    "period": "Q3 2026 (quarter to 30 Sep 2026)",
+    "headline": "Revenue down 7% to $84.2m, miss, with $750m goodwill write-down; 2026 revenue range narrowed to $380–400m",
+    "numbers": {
+     "currency": "USD",
+     "revenue": 84171000,
+     "revenue_prior": 90763000,
+     "revenue_est": 90033270,
+     "eps": -5.99,
+     "eps_prior": -0.21,
+     "eps_basis": "diluted GAAP",
+     "other": [
+      {
+       "label": "Goodwill impairment",
+       "value": "$749.7m",
+       "change": "non-cash"
+      },
+      {
+       "label": "Adjusted EBITDA",
+       "value": "-$27.6m",
+       "change": "vs -$3.4m a year ago"
+      },
+      {
+       "label": "Gross margin",
+       "value": "18%",
+       "change": "vs 22% a year ago"
+      },
+      {
+       "label": "Contribution margin",
+       "value": "40%",
+       "change": "vs 35% a year ago"
+      },
+      {
+       "label": "Backlog",
+       "value": "$581.0m",
+       "change": "at 30 Sep 2026"
+      }
+     ]
+    },
+    "results": [
+     "Revenue fell 7% to $84.2m and gross margin slipped to 18% from 22%.",
+     "A $749.7m non-cash goodwill write-down, tied to uncertain timing of contract awards beyond 2026, drove a net loss of $807.4m ($5.99 a share).",
+     "Adjusted EBITDA loss widened to $27.6m as spending rose after acquisitions and the IPO.",
+     "Backlog was $581.0m; the identified government pipeline grew to $14.9bn from about $11.9bn in June.",
+     "Liquidity stood at $459m: $309m cash plus an undrawn $150m credit line. A deal to buy Outlook Industries was announced."
+    ],
+    "guidance": {
+     "status": "narrowed",
+     "summary": "York tightened its 2026 revenue range to $380–400m from $375–405m, keeping the $390m midpoint. It gives no profit guidance.",
+     "items": [
+      {
+       "metric": "Revenue",
+       "period": "FY 2026",
+       "new": "$380–400m",
+       "prior": "$375–405m",
+       "consensus": "n/a",
+       "vs_consensus": "n/a"
+      }
+     ]
+    },
+    "call": {
+     "points": [
+      "Large government awards have slipped later; management sees constellation decisions around mid-2027.",
+      "The impairment followed the August guidance cut and a share price below book value; no repeat is expected.",
+      "Q4 revenue should rise from Q3, but the adjusted EBITDA loss is seen slightly larger than Q3's.",
+      "Full-year gross margin is expected in the low 20s, with mid-20s a longer-term aim.",
+      "Subsidiaries are expected to exceed 20% of revenue in 2027; Outlook Industries was called a small deal."
+     ],
+     "tone": "cautious",
+     "source": "Q3 2026 call transcript — Earnings Whispers, 12 Nov 2026; prior outlook from the Q2 2026 release (13 Aug 2026)"
+    },
+    "watch": [
+     "Timing of large Space Force awards and the 2027 defence budget.",
+     "Whether Q4 revenue lands within the $380–400m full-year range.",
+     "Cash burn and closing of the Outlook Industries acquisition."
+    ],
+    "sources": [
+     {
+      "title": "8-K Exhibit 99.1 — press release",
+      "url": "https://www.sec.gov/Archives/edgar/data/2086587/000162828026073422/pressreleaseq32026.htm"
+     },
+     {
+      "title": "YSS Q3 2026 earnings call transcript — Earnings Whispers, 12 Nov 2026",
+      "url": "https://www.earningswhispers.com/transcript/YSS/Q32026"
+     },
+     {
+      "title": "8-K Exhibit 99.1 — Q2 2026 press release (prior outlook), 13 Aug 2026",
+      "url": "https://www.sec.gov/Archives/edgar/data/0002086587/000162828026056704/pressreleaseq22026.htm"
+     }
+    ]
+   }
+  }
+ ]
+}

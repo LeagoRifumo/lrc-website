@@ -1,1 +1,187 @@
-{"t":"TJX","name":"TJX Companies, Inc. (The)","m":"US","reports":[{"date":"2026-11-18","quarter":"Oct/2026","filing":{"form":"8-K","filed":"2026-11-18","items":"2.02,9.01","index":"https://www.sec.gov/Archives/edgar/data/109198/000010919826000058/0000109198-26-000058-index.htm","docs":[{"type":"EX-99.1","desc":"EX-99.1","url":"https://www.sec.gov/Archives/edgar/data/109198/000010919826000058/tjxq3fy27earningspressrele.htm"}]},"title":"THE TJX COMPANIES, INC. REPORTS Q3 FY27 RESULTS; COMP SALES GROWTH OF 4%, PRETAX PROFIT MARGIN, AND DILUTED EARNINGS PER SHARE ALL ABOVE PLAN","auto":{"revenue":{"rev":15952000000.0,"rev_prior":15117000000.0,"label":"Net sales","checked_vs_estimate":true},"guidance":{"heading":null,"section":[],"lines":["The Company now expects to repurchase approximately $3.0 billion of TJX stock during Fiscal 2027.","For the full year Fiscal 2027, the Company now expects consolidated comparable sales to be up 4%.","The Company expects its full-year pretax profit margin to be 12.4%.","Excluding an expected net benefit of 0.3 to 0.4 percentage points from tariff refunds, the Company continues to expect its full-year adjusted pretax profit margin to be in the range of 12.0% to 12.1%.","The Company expects its full-year diluted earnings per share outlook to be in the range of $5.33 to $5.36.","Excluding an expected net benefit of $.16 from tariff refunds, the Company expects its full year outlook for adjusted diluted earnings per share to be in the range of $5.17 to $5.20."],"status":"given"}},"read":"2026-11-18T16:40+02:00"}]}
+{
+ "t": "TJX",
+ "name": "TJX Companies, Inc. (The)",
+ "m": "US",
+ "reports": [
+  {
+   "date": "2026-11-18",
+   "quarter": "Oct/2026",
+   "filing": {
+    "form": "8-K",
+    "filed": "2026-11-18",
+    "items": "2.02,9.01",
+    "index": "https://www.sec.gov/Archives/edgar/data/109198/000010919826000058/0000109198-26-000058-index.htm",
+    "docs": [
+     {
+      "type": "EX-99.1",
+      "desc": "EX-99.1",
+      "url": "https://www.sec.gov/Archives/edgar/data/109198/000010919826000058/tjxq3fy27earningspressrele.htm"
+     }
+    ]
+   },
+   "title": "THE TJX COMPANIES, INC. REPORTS Q3 FY27 RESULTS; COMP SALES GROWTH OF 4%, PRETAX PROFIT MARGIN, AND DILUTED EARNINGS PER SHARE ALL ABOVE PLAN",
+   "auto": {
+    "revenue": {
+     "rev": 15952000000.0,
+     "rev_prior": 15117000000.0,
+     "label": "Net sales",
+     "checked_vs_estimate": true
+    },
+    "guidance": {
+     "heading": null,
+     "section": [],
+     "lines": [
+      "The Company now expects to repurchase approximately $3.0 billion of TJX stock during Fiscal 2027.",
+      "For the full year Fiscal 2027, the Company now expects consolidated comparable sales to be up 4%.",
+      "The Company expects its full-year pretax profit margin to be 12.4%.",
+      "Excluding an expected net benefit of 0.3 to 0.4 percentage points from tariff refunds, the Company continues to expect its full-year adjusted pretax profit margin to be in the range of 12.0% to 12.1%.",
+      "The Company expects its full-year diluted earnings per share outlook to be in the range of $5.33 to $5.36.",
+      "Excluding an expected net benefit of $.16 from tariff refunds, the Company expects its full year outlook for adjusted diluted earnings per share to be in the range of $5.17 to $5.20."
+     ],
+     "status": "given"
+    }
+   },
+   "read": "2026-11-18T16:40+02:00",
+   "desk": {
+    "by": "LRC Research",
+    "written": "2026-11-19T06:15+02:00",
+    "period": "Q3 fiscal 2027 (quarter to 31 Oct 2026)",
+    "headline": "Sales up 6% to $16.0bn, beat; full-year EPS range tightened upward, Q4 margin trimmed for fuel",
+    "numbers": {
+     "currency": "USD",
+     "revenue": 15952000000,
+     "revenue_prior": 15117000000,
+     "revenue_est": 15850127850,
+     "eps": 1.34,
+     "eps_prior": 1.28,
+     "eps_est": 1.341,
+     "eps_basis": "adjusted",
+     "other": [
+      {
+       "label": "Diluted EPS (GAAP)",
+       "value": "$1.39",
+       "change": "+9% y/y"
+      },
+      {
+       "label": "Comparable sales",
+       "value": "+4%",
+       "change": "vs +5% a year ago"
+      },
+      {
+       "label": "Adjusted pretax margin",
+       "value": "12.5%",
+       "change": "-0.2 pts y/y"
+      },
+      {
+       "label": "Marmaxx comparable sales",
+       "value": "+2%",
+       "change": "vs +6% a year ago"
+      },
+      {
+       "label": "Returned to shareholders",
+       "value": "$1.5bn",
+       "change": "Q3 buybacks and dividends"
+      }
+     ]
+    },
+    "results": [
+     "Net sales rose 6% to $16.0bn and comparable sales grew 4%, ahead of the company's own plan.",
+     "Growth was led by TJX International (comps +8%), TJX Canada (+6%) and HomeGoods (+5%); the main Marmaxx chain improved to +2%.",
+     "Adjusted EPS rose 5% to $1.34; reported EPS of $1.39 includes a $0.05 net gain from US tariff refunds.",
+     "Adjusted gross margin fell 0.5 points to 32.1% on higher freight and fuel costs, partly offset by lower SG&A.",
+     "Store count rose by 64 to 5,349; the company repaid a $1.0bn note and returned $1.5bn to shareholders."
+    ],
+    "guidance": {
+     "status": "narrowed",
+     "summary": "Full-year comp growth is now 4% (was 3–4%) and the adjusted EPS range moved up at the low end to $5.17–5.20. Q4 calls for comps of 2–3% and adjusted EPS of $1.42–1.45, with extra fuel costs now assumed.",
+     "items": [
+      {
+       "metric": "Comparable sales",
+       "period": "FY 2027",
+       "new": "+4%",
+       "prior": "+3–4%",
+       "consensus": "n/a",
+       "vs_consensus": "n/a"
+      },
+      {
+       "metric": "Adjusted diluted EPS",
+       "period": "FY 2027",
+       "new": "$5.17–5.20",
+       "prior": "$5.15–5.20",
+       "consensus": "n/a",
+       "vs_consensus": "n/a"
+      },
+      {
+       "metric": "Diluted EPS (GAAP)",
+       "period": "FY 2027",
+       "new": "$5.33–5.36",
+       "prior": "$5.31–5.36",
+       "consensus": "n/a",
+       "vs_consensus": "n/a"
+      },
+      {
+       "metric": "Adjusted pretax margin",
+       "period": "FY 2027",
+       "new": "12.0–12.1%",
+       "prior": "12.0–12.1%",
+       "consensus": "n/a",
+       "vs_consensus": "n/a"
+      },
+      {
+       "metric": "Comparable sales",
+       "period": "Q4 FY27",
+       "new": "+2–3%",
+       "consensus": "n/a",
+       "vs_consensus": "n/a"
+      },
+      {
+       "metric": "Adjusted diluted EPS",
+       "period": "Q4 FY27",
+       "new": "$1.42–1.45",
+       "consensus": "n/a",
+       "vs_consensus": "n/a"
+      },
+      {
+       "metric": "Share buybacks",
+       "period": "FY 2027",
+       "new": "about $3.0bn",
+       "prior": "$2.75–3.0bn",
+       "consensus": "n/a",
+       "vs_consensus": "n/a"
+      }
+     ]
+    },
+    "call": {
+     "points": [
+      "Marmaxx improved through the quarter in both apparel and home; management sees its few execution issues largely fixed by year-end.",
+      "Unusually warm weather in the US and Canada has held back some categories early in Q4, but holiday sales are expected to build.",
+      "Freight and fuel are the biggest margin headwind; Q4 adjusted gross margin is guided down 0.5–0.6 points.",
+      "Q4 guidance assumes no further tariff refunds; full-year adjusted pretax margin target was kept despite the fuel pressure.",
+      "Long-term goal remains 7,500 stores, with store growth planned to speed up to about 4% a year from next year."
+     ],
+     "tone": "steady",
+     "source": "Q3 FY27 call transcript — The Motley Fool, 18 Nov 2026; prior outlook from the Q2 FY27 release (19 Aug 2026)"
+    },
+    "watch": [
+     "Whether Marmaxx comps keep improving through the holiday season.",
+     "Freight and fuel costs versus the lower Q4 gross margin plan.",
+     "First fiscal 2028 outlook, including margin guidance, due with Q4 results in February."
+    ],
+    "sources": [
+     {
+      "title": "8-K Exhibit 99.1 — press release",
+      "url": "https://www.sec.gov/Archives/edgar/data/109198/000010919826000058/tjxq3fy27earningspressrele.htm"
+     },
+     {
+      "title": "TJX (TJX) Q3 2027 earnings call transcript — The Motley Fool, 18 Nov 2026",
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/11/18/tjx-tjx-q3-2027-earnings-call-transcript/"
+     },
+     {
+      "title": "TJX Q2 FY27 results release (prior outlook) — Business Wire via Finviz, 19 Aug 2026",
+      "url": "https://finviz.com/news/383612/tjx-reports-q2-fy27-results-above-plan-comp-sales-growth-of-4-pretax-profit-margin-and-diluted-eps-both-well-above-plan-increases-full-year-fy27-pretax-profit-margin-and-eps-guidance"
+     }
+    ]
+   }
+  }
+ ]
+}

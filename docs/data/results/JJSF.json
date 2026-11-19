@@ -1,1 +1,142 @@
-{"t":"JJSF","name":"J&J Snack Foods Corp.","m":"US","reports":[{"date":"2026-11-17","quarter":"","tries":99},{"date":"2026-11-18","quarter":"","filing":{"form":"8-K","filed":"2026-11-18","items":"2.02,9.01","index":"https://www.sec.gov/Archives/edgar/data/785956/000143774926037473/0001437749-26-037473-index.htm","docs":[{"type":"EX-99.1","desc":"EXHIBIT 99.1","url":"https://www.sec.gov/Archives/edgar/data/785956/000143774926037473/ex_1047530.htm"}]},"title":"J & J Snack Foods Reports Fiscal 2026 Fourth Quarter Results","auto":{"revenue":{"rev":406017000.0,"rev_prior":410243000.0,"label":"Net sales","checked_vs_estimate":true},"guidance":{"heading":null,"section":[],"lines":[],"status":"not found"}},"read":"2026-11-18T16:41+02:00"}]}
+{
+ "t": "JJSF",
+ "name": "J&J Snack Foods Corp.",
+ "m": "US",
+ "reports": [
+  {
+   "date": "2026-11-17",
+   "quarter": "",
+   "tries": 99
+  },
+  {
+   "date": "2026-11-18",
+   "quarter": "",
+   "filing": {
+    "form": "8-K",
+    "filed": "2026-11-18",
+    "items": "2.02,9.01",
+    "index": "https://www.sec.gov/Archives/edgar/data/785956/000143774926037473/0001437749-26-037473-index.htm",
+    "docs": [
+     {
+      "type": "EX-99.1",
+      "desc": "EXHIBIT 99.1",
+      "url": "https://www.sec.gov/Archives/edgar/data/785956/000143774926037473/ex_1047530.htm"
+     }
+    ]
+   },
+   "title": "J & J Snack Foods Reports Fiscal 2026 Fourth Quarter Results",
+   "auto": {
+    "revenue": {
+     "rev": 406017000.0,
+     "rev_prior": 410243000.0,
+     "label": "Net sales",
+     "checked_vs_estimate": true
+    },
+    "guidance": {
+     "heading": null,
+     "section": [],
+     "lines": [],
+     "status": "not found"
+    }
+   },
+   "read": "2026-11-18T16:41+02:00",
+   "desk": {
+    "by": "LRC Research",
+    "written": "2026-11-19T06:15+02:00",
+    "period": "Q4 fiscal 2026 (quarter to 26 Sep 2026)",
+    "headline": "Sales down 1% to $406.0m, above estimates; adjusted EPS down 12% on freight costs; growth expected in fiscal 2027",
+    "numbers": {
+     "currency": "USD",
+     "revenue": 406017000,
+     "revenue_prior": 410243000,
+     "revenue_est": 398825000,
+     "eps": 1.39,
+     "eps_prior": 1.58,
+     "eps_basis": "adjusted",
+     "other": [
+      {
+       "label": "Diluted EPS (GAAP)",
+       "value": "$1.80",
+       "change": "vs $0.58 a year ago"
+      },
+      {
+       "label": "Gross margin",
+       "value": "33.7%",
+       "change": "vs 31.7% a year ago"
+      },
+      {
+       "label": "Adjusted EBITDA",
+       "value": "$53.3m",
+       "change": "-7% y/y"
+      },
+      {
+       "label": "Distribution expenses",
+       "value": "$51.3m",
+       "change": "+21.6% y/y"
+      },
+      {
+       "label": "FY 2026 net sales",
+       "value": "$1.52bn",
+       "change": "-4% y/y"
+      }
+     ]
+    },
+    "results": [
+     "Sales slipped 1% to $406.0m: Food Service fell 7.4% as planned bakery cuts outweighed churro and pretzel growth, while Retail rose 17.1% and Frozen Beverages 6.1%.",
+     "Gross margin widened to 33.7% from 31.7% on Project Apollo plant savings, mix and cheaper raw materials.",
+     "Freight and fuel pushed distribution costs up 21.6%, so adjusted EPS fell to $1.39 from $1.58; GAAP EPS of $1.80 was lifted by a $16m insurance gain from the Holly Ridge fire.",
+     "For the full year, sales fell 4% to $1.52bn and adjusted EPS to $4.04 from $4.27.",
+     "Year-end cash was $90.3m with no long-term debt; the company bought back $74.7m of shares in fiscal 2026."
+    ],
+    "guidance": {
+     "status": "given",
+     "summary": "No numeric forecast in the release; the company expects sales to grow again in fiscal 2027 and a new phase of Project Apollo to add about $5m of yearly savings. On the call, management pointed to low-to-mid single-digit sales growth.",
+     "items": [
+      {
+       "metric": "Net sales growth",
+       "period": "FY 2027",
+       "new": "low-to-mid single digits (call)",
+       "prior": "n/a",
+       "consensus": "n/a",
+       "vs_consensus": "n/a"
+      },
+      {
+       "metric": "Extra Project Apollo savings",
+       "period": "FY 2027",
+       "new": "~$5m annualised",
+       "prior": "n/a",
+       "consensus": "n/a",
+       "vs_consensus": "n/a"
+      }
+     ]
+    },
+    "call": {
+     "points": [
+      "Price increases averaging about 2.5% take effect in January, about 3% for ICEE and Dippin' Dots.",
+      "Freight costs are expected to stay high, with pressure in the first half before easing once the increase is lapped around mid-2027.",
+      "The bakery exits cost about 3 points of full-year sales growth; management said further product cuts are not planned for 2027.",
+      "Management hopes to hold gross margin around 32% or higher in fiscal 2027, with ingredient inflation building in Q2 and Q3.",
+      "Retail Dippin' Dots sales were up more than 90% in tracked channels, and frozen beverage sales rose about 19% on cinema demand."
+     ],
+     "tone": "steady",
+     "source": "Q4 2026 call transcript — The Motley Fool, 18 Nov 2026"
+    },
+    "watch": [
+     "Whether sales return to growth as the January price increases take hold.",
+     "Freight and fuel costs, and whether distribution expenses ease in the second half.",
+     "Gross margin holding near 32% as ingredient costs rise."
+    ],
+    "sources": [
+     {
+      "title": "8-K Exhibit 99.1 — press release",
+      "url": "https://www.sec.gov/Archives/edgar/data/785956/000143774926037473/ex_1047530.htm"
+     },
+     {
+      "title": "J&J Snacks (JJSF) Q4 2026 Earnings Call Transcript — The Motley Fool, 18 Nov 2026",
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/11/18/jj-snacks-jjsf-q4-2026-earnings-call-transcript/"
+     }
+    ]
+   }
+  }
+ ]
+}

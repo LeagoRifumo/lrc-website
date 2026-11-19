@@ -1,1 +1,138 @@
-{"t":"MNSO","name":"MINISO Group Holding Limited","m":"US","reports":[{"date":"2026-11-17","quarter":"Sep/2026","filing":{"form":"6-K","filed":"2026-11-18","items":"","index":"https://www.sec.gov/Archives/edgar/data/1815846/000110465926129370/0001104659-26-129370-index.htm","docs":[{"type":"EX-99.1","desc":"EXHIBIT 99.1","url":"https://www.sec.gov/Archives/edgar/data/1815846/000110465926129370/tm2630025d1_ex99-1.htm"},{"type":"EX-99.2","desc":"EXHIBIT 99.2","url":"https://www.sec.gov/Archives/edgar/data/1815846/000110465926129370/tm2630025d1_ex99-2.htm"},{"type":"EX-99.3","desc":"EXHIBIT 99.3","url":"https://www.sec.gov/Archives/edgar/data/1815846/000110465926129370/tm2630025d1_ex99-3.htm"}]},"title":"MINISO Group Announces 2026 September Quarter and Nine-Month Unaudited Financial Results","auto":{"revenue":{"rev":6625298000.0,"rev_prior":5796645000.0,"label":"Revenue","checked_vs_estimate":true},"guidance":{"heading":null,"section":[],"lines":[],"status":"not found"}},"read":"2026-11-18T16:41+02:00"}]}
+{
+ "t": "MNSO",
+ "name": "MINISO Group Holding Limited",
+ "m": "US",
+ "reports": [
+  {
+   "date": "2026-11-17",
+   "quarter": "Sep/2026",
+   "filing": {
+    "form": "6-K",
+    "filed": "2026-11-18",
+    "items": "",
+    "index": "https://www.sec.gov/Archives/edgar/data/1815846/000110465926129370/0001104659-26-129370-index.htm",
+    "docs": [
+     {
+      "type": "EX-99.1",
+      "desc": "EXHIBIT 99.1",
+      "url": "https://www.sec.gov/Archives/edgar/data/1815846/000110465926129370/tm2630025d1_ex99-1.htm"
+     },
+     {
+      "type": "EX-99.2",
+      "desc": "EXHIBIT 99.2",
+      "url": "https://www.sec.gov/Archives/edgar/data/1815846/000110465926129370/tm2630025d1_ex99-2.htm"
+     },
+     {
+      "type": "EX-99.3",
+      "desc": "EXHIBIT 99.3",
+      "url": "https://www.sec.gov/Archives/edgar/data/1815846/000110465926129370/tm2630025d1_ex99-3.htm"
+     }
+    ]
+   },
+   "title": "MINISO Group Announces 2026 September Quarter and Nine-Month Unaudited Financial Results",
+   "auto": {
+    "revenue": {
+     "rev": 6625298000.0,
+     "rev_prior": 5796645000.0,
+     "label": "Revenue",
+     "checked_vs_estimate": true
+    },
+    "guidance": {
+     "heading": null,
+     "section": [],
+     "lines": [],
+     "status": "not found"
+    }
+   },
+   "read": "2026-11-18T16:41+02:00",
+   "desk": {
+    "by": "LRC Research",
+    "written": "2026-11-19T06:15+02:00",
+    "period": "Q3 2026 (quarter to 30 Sep 2026)",
+    "headline": "Revenue up 14.3% to RMB6.63bn, beat; adjusted EPS per ADS RMB2.36 vs RMB2.44, beat; no formal guidance",
+    "numbers": {
+     "currency": "CNY",
+     "revenue": 6625298000,
+     "revenue_prior": 5796645000,
+     "revenue_est": 6465450340,
+     "eps": 2.36,
+     "eps_prior": 2.44,
+     "eps_est": 2.144,
+     "eps_basis": "non-IFRS (adjusted) diluted per ADS (RMB; about US$0.35); IFRS diluted RMB0.96 vs RMB1.44",
+     "other": [
+      {
+       "label": "MINISO brand, mainland China revenue",
+       "value": "RMB3.77bn",
+       "change": "+29.6% y/y"
+      },
+      {
+       "label": "MINISO brand, overseas revenue",
+       "value": "RMB2.35bn",
+       "change": "+1.7% y/y"
+      },
+      {
+       "label": "TOP TOY revenue",
+       "value": "RMB502.5m",
+       "change": "-12.5% y/y"
+      },
+      {
+       "label": "Gross margin",
+       "value": "45.3%",
+       "change": "vs 44.7% a year ago"
+      },
+      {
+       "label": "Adjusted operating margin (ex-FX)",
+       "value": "15.1%",
+       "change": "vs 17.7% a year ago"
+      },
+      {
+       "label": "Profit for the period (IFRS)",
+       "value": "RMB290.6m",
+       "change": "vs RMB443.2m a year ago"
+      },
+      {
+       "label": "Store count",
+       "value": "8,665",
+       "change": "+527 y/y"
+      }
+     ]
+    },
+    "results": [
+     "Revenue rose 14.3% to RMB6.63bn (about US$988m). MINISO stores in mainland China grew 29.6% on high single-digit same-store growth, the sixth positive quarter in a row.",
+     "Overseas MINISO revenue was almost flat (+1.7%) and TOP TOY revenue fell 12.5% to RMB502.5m.",
+     "Gross margin improved to 45.3%, but selling costs (ex share-based pay) rose to 25.9% of revenue from 23.0% as directly run stores expanded; adjusted operating margin ex-FX fell to 15.1% from 17.7%.",
+     "IFRS profit fell to RMB290.6m from RMB443.2m, hit by a RMB192.1m paper loss on a pre-IPO fund investment and a RMB155.1m derivative loss; adjusted net profit was RMB715.4m vs RMB741.4m.",
+     "Free cash flow was RMB463.2m; buybacks passed RMB1.0bn this year to 10 Nov, about 4.5% of shares. North America stores rose by 144 to 565."
+    ],
+    "guidance": {
+     "status": "none",
+     "summary": "MINISO gives no numeric outlook. The CEO said he has \"full confidence\" in meeting full-year targets for the domestic business, but the release does not state those targets.",
+     "items": []
+    },
+    "call": {
+     "points": [],
+     "source": "No call coverage found"
+    },
+    "watch": [
+     "Whether overseas sales pick up after a near-flat quarter, and whether costs of directly run stores keep squeezing margins.",
+     "Mainland China momentum into Q4: a preliminary October update showed China GMV up 20–25% in 1–7 October.",
+     "Large non-cash swings from the pre-IPO fund investment and equity-linked derivatives, which keep IFRS and adjusted profit far apart."
+    ],
+    "sources": [
+     {
+      "title": "6-K Exhibit 99.1 — press release",
+      "url": "https://www.sec.gov/Archives/edgar/data/1815846/000110465926129370/tm2630025d1_ex99-1.htm"
+     },
+     {
+      "title": "Miniso beats Q3 estimates with revenue up 14% YoY — Investing.com, 17 Nov 2026",
+      "url": "https://www.investing.com/news/earnings/miniso-beats-q3-estimates-with-revenue-up-14-yoy-93CH-5032725"
+     },
+     {
+      "title": "MINISO China GMV rises 25%-30% in Q3 — Grafa, 9 Oct 2026",
+      "url": "https://grafa.com/en/news/united-states/miniso-q3-2026-china-gmv-growth"
+     }
+    ]
+   }
+  }
+ ]
+}

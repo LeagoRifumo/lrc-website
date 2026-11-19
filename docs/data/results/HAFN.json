@@ -1,1 +1,161 @@
-{"t":"HAFN","name":"Hafnia Limited","m":"US","reports":[{"date":"2026-11-18","quarter":"Sep/2026","filing":{"form":"6-K","filed":"2026-11-18","items":"","index":"https://www.sec.gov/Archives/edgar/data/1815779/000114036126044586/0001140361-26-044586-index.htm","docs":[{"type":"EX-99.1","desc":"EXHIBIT 99.1","url":"https://www.sec.gov/Archives/edgar/data/1815779/000114036126044586/ef20085731_ex99-1.htm"},{"type":"EX-99.2","desc":"EXHIBIT 99.2","url":"https://www.sec.gov/Archives/edgar/data/1815779/000114036126044586/ef20085731_ex99-2.htm"},{"type":"EX-99.3","desc":"EXHIBIT 99.3","url":"https://www.sec.gov/Archives/edgar/data/1815779/000114036126044586/ef20085731_ex99-3.htm"}]},"title":"Disclaimer regarding forward-looking statements in the quarterly report","auto":{"revenue":null,"guidance":{"heading":null,"section":[],"lines":["The IEA now forecasts global oil demand to fall by 2.7 mb/d in 2026 and recover by 2.0 mb/d in 2027, leaving consumption 0.6% below 2025 levels.","For 2027, the IEA expects global oil supply to rise by 6.6 mb/d, well ahead of demand, as OPEC+ production recovers and non-OPEC+ output keeps growing."],"status":"given"}},"read":"2026-11-18T16:41+02:00"}]}
+{
+ "t": "HAFN",
+ "name": "Hafnia Limited",
+ "m": "US",
+ "reports": [
+  {
+   "date": "2026-11-18",
+   "quarter": "Sep/2026",
+   "filing": {
+    "form": "6-K",
+    "filed": "2026-11-18",
+    "items": "",
+    "index": "https://www.sec.gov/Archives/edgar/data/1815779/000114036126044586/0001140361-26-044586-index.htm",
+    "docs": [
+     {
+      "type": "EX-99.1",
+      "desc": "EXHIBIT 99.1",
+      "url": "https://www.sec.gov/Archives/edgar/data/1815779/000114036126044586/ef20085731_ex99-1.htm"
+     },
+     {
+      "type": "EX-99.2",
+      "desc": "EXHIBIT 99.2",
+      "url": "https://www.sec.gov/Archives/edgar/data/1815779/000114036126044586/ef20085731_ex99-2.htm"
+     },
+     {
+      "type": "EX-99.3",
+      "desc": "EXHIBIT 99.3",
+      "url": "https://www.sec.gov/Archives/edgar/data/1815779/000114036126044586/ef20085731_ex99-3.htm"
+     }
+    ]
+   },
+   "title": "Disclaimer regarding forward-looking statements in the quarterly report",
+   "auto": {
+    "revenue": null,
+    "guidance": {
+     "heading": null,
+     "section": [],
+     "lines": [
+      "The IEA now forecasts global oil demand to fall by 2.7 mb/d in 2026 and recover by 2.0 mb/d in 2027, leaving consumption 0.6% below 2025 levels.",
+      "For 2027, the IEA expects global oil supply to rise by 6.6 mb/d, well ahead of demand, as OPEC+ production recovers and non-OPEC+ output keeps growing."
+     ],
+     "status": "given"
+    }
+   },
+   "read": "2026-11-18T16:41+02:00",
+   "desk": {
+    "by": "LRC Research",
+    "written": "2026-11-19T06:15+02:00",
+    "period": "Q3 2026 (quarter to 30 Sep 2026)",
+    "headline": "Profit nearly doubles to $170.8m; Q4 74% booked at $55,148/day; plans to hand TORM stake to shareholders",
+    "numbers": {
+     "currency": "USD",
+     "revenue": 417361000,
+     "revenue_prior": 366505000,
+     "eps": 0.34,
+     "eps_prior": 0.18,
+     "eps_basis": "diluted IFRS",
+     "other": [
+      {
+       "label": "Net profit",
+       "value": "$170.8m",
+       "change": "vs $91.5m a year ago"
+      },
+      {
+       "label": "TCE income",
+       "value": "$277.5m",
+       "change": "vs $247.0m a year ago"
+      },
+      {
+       "label": "Adjusted EBITDA",
+       "value": "$209.7m",
+       "change": "vs $150.5m a year ago"
+      },
+      {
+       "label": "Average fleet TCE",
+       "value": "$32,708/day",
+       "change": "Q2 2026 rates were higher across all segments"
+      },
+      {
+       "label": "Net loan-to-value",
+       "value": "11.9%",
+       "change": "vs 13.0% at end-Q2"
+      },
+      {
+       "label": "Net asset value",
+       "value": "$5.2bn ($9.80/share)",
+       "change": "+$0.8bn vs Q2"
+      }
+     ]
+    },
+    "results": [
+     "Net profit rose to $170.8m ($0.34 a share) from $91.5m a year earlier, taking the nine-month total to $628.3m.",
+     "Vessel revenue rose 14% to $417.4m and TCE income to $277.5m, though average rates of $32,708/day were below Q2's war-driven peak.",
+     "About 259 off-hire days for scheduled drydockings weighed on earnings; the fee-based business made $6.3m.",
+     "Net asset value climbed $0.8bn to about $5.2bn ($9.80 a share) on higher ship values and the TORM stake.",
+     "A September share sale raised $289.1m net; net loan-to-value fell to 11.9% and cash reached $299.5m."
+    ],
+    "guidance": {
+     "status": "given",
+     "summary": "Hafnia gives no profit guidance. It reports 74% of Q4 earning days already booked at an average $55,148/day, about 9,561 earning days in Q4, and plans to replace Q3 and Q4 cash dividends with a payout of its TORM shares.",
+     "items": [
+      {
+       "metric": "Q4 earning days covered",
+       "period": "Q4 2026",
+       "new": "74% at $55,148/day",
+       "consensus": "n/a",
+       "vs_consensus": "n/a"
+      },
+      {
+       "metric": "Estimated earning days",
+       "period": "Q4 2026",
+       "new": "9,561 (after 99 drydock days)",
+       "consensus": "n/a",
+       "vs_consensus": "n/a"
+      },
+      {
+       "metric": "2027 earning days covered",
+       "period": "FY 2027",
+       "new": "20% at $27,436/day",
+       "consensus": "n/a",
+       "vs_consensus": "n/a"
+      },
+      {
+       "metric": "Dividend",
+       "period": "Q3–Q4 2026",
+       "new": "TORM shares as special dividend (~$686.6m, ~$1.28/share at 17 Nov price); fallback cash payout of 90% of Q3 profit",
+       "consensus": "n/a",
+       "vs_consensus": "n/a"
+      }
+     ]
+    },
+    "call": {
+     "points": [
+      "Management sees product tanker fundamentals as strong into winter, helped by low diesel stocks and LR2s switching to crude trades, which shrinks the clean fleet.",
+      "It warned that a reopened Strait of Hormuz or Red Sea could unwind the shipping inefficiencies now propping up rates.",
+      "Hafnia dropped its pursuit of TORM; handing out the 19.8% stake depends on share-transfer arrangements with third parties, with a decision due by 25 Nov.",
+      "Eight purchase options worth about $235m will be exercised, below market value; ten MR newbuilds are due in 2028–29.",
+      "From 2027 dividends rise to 100% of profit when net loan-to-value is under 10%, though including newbuild commitments may lift the ratio."
+     ],
+     "tone": "confident",
+     "source": "Q3 2026 earnings call transcript — The Motley Fool, 18 Nov 2026; CEO letter in Exhibit 99.1"
+    },
+    "watch": [
+     "Whether the TORM share distribution goes ahead or Hafnia falls back to a cash dividend (announcement by 25 Nov).",
+     "Q4 spot rates on the uncovered 26% of days, and any change in Gulf and Red Sea shipping routes.",
+     "Use of cash for growth deals, purchase options and newbuild payments."
+    ],
+    "sources": [
+     {
+      "title": "6-K Exhibit 99.1 — Q3 2026 quarterly financial information",
+      "url": "https://www.sec.gov/Archives/edgar/data/1815779/000114036126044586/ef20085731_ex99-1.htm"
+     },
+     {
+      "title": "Hafnia (HAFN) Q3 2026 earnings call transcript — The Motley Fool, 18 Nov 2026",
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/11/18/hafnia-hafn-q3-2026-earnings-call-transcript/"
+     }
+    ]
+   }
+  }
+ ]
+}

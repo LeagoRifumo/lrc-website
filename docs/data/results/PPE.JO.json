@@ -1,0 +1,111 @@
+{
+ "t": "PPE.JO",
+ "name": "Purple Group",
+ "m": "JSE",
+ "reports": [
+  {
+   "date": "2026-11-11",
+   "desk": {
+    "by": "LRC Research",
+    "written": "2026-11-19T06:15+02:00",
+    "period": "Year to 31 Aug 2026 (FY2026)",
+    "headline": "HEPS up 27% to 5.47c on 10% revenue growth and record profit; CEO targets about 1.5m clients",
+    "numbers": {
+     "currency": "ZAR",
+     "revenue": 534200000,
+     "revenue_prior": 486700000,
+     "heps": 5.47,
+     "heps_prior": 4.3,
+     "unit": "c",
+     "other": [
+      {
+       "label": "Basic EPS",
+       "value": "5.58c",
+       "change": "+29.9% y/y"
+      },
+      {
+       "label": "Profit before tax",
+       "value": "R150.2m",
+       "change": "vs R110.4m"
+      },
+      {
+       "label": "Headline earnings",
+       "value": "R78.2m",
+       "change": "+28% y/y"
+      },
+      {
+       "label": "Easy Group revenue",
+       "value": "R515.9m",
+       "change": "+14.6% y/y"
+      },
+      {
+       "label": "Active clients",
+       "value": "1,316,123",
+       "change": "+14.8% y/y"
+      },
+      {
+       "label": "Client assets",
+       "value": "R107.2bn",
+       "change": "+32.8% y/y"
+      }
+     ]
+    },
+    "results": [
+     "Group revenue rose 9.8% to R534.2m and profit before tax rose 36% to R150.2m, the group's best year so far.",
+     "Headline earnings per share rose 27% to 5.47c from 4.30c; basic EPS was 5.58c.",
+     "The Easy Group (EasyEquities and related platforms) grew revenue 14.6% to R515.9m and pre-tax profit 49% to R160.5m.",
+     "Active clients rose 14.8% to about 1.32m and client assets rose a third to R107.2bn; client deposits were R16.8bn, up 51%.",
+     "The EasyTrader hedge book lost R22.6m against a R7.9m profit a year earlier; most of the loss came in the first half before hedging changes."
+    ],
+    "guidance": {
+     "status": "given",
+     "summary": "No financial forecast was found in the coverage reviewed. CEO Charles Savage said he expects about 1.5m clients next year and plans wider use of artificial intelligence across products and client service.",
+     "items": [
+      {
+       "metric": "Active clients",
+       "period": "FY 2027",
+       "new": "about 1.5m",
+       "prior": "n/a",
+       "consensus": "n/a",
+       "vs_consensus": "n/a"
+      }
+     ]
+    },
+    "call": {
+     "points": [
+      "Savage called FY2026 the best year in the group's history, achieved with fewer market tailwinds than the year before.",
+      "Crypto income weakened, but he said the wider product range (offshore shares, bonds, retirement, insurance, credit) carried the year.",
+      "He said the hedge book loss was the group's own to manage; it changed its model and hedging policy, cutting losses in the second half.",
+      "Artificial intelligence is to be central to operations; the Telescope AI purchase (up to $10.75m) was approved in September and may add revenue from serving other brokers.",
+      "Management admitted institutional revenue lagged asset growth and that cost growth missed its own target relative to revenue."
+     ],
+     "tone": "confident",
+     "source": "Results coverage — Business Day (13 Nov 2026), EWN and BusinessTech (12 Nov 2026)"
+    },
+    "watch": [
+     "Progress toward about 1.5m active clients and growth in revenue per client.",
+     "Whether the new hedging approach keeps EasyTrader losses contained.",
+     "Revenue from the Telescope AI deal and any expansion into Kenya."
+    ],
+    "sources": [
+     {
+      "title": "Purple Group bets on AI to fuel fintech business — Business Day, 13 Nov 2026",
+      "url": "https://www.businessday.co.za/companies/2026-11-13-purple-group-bets-on-ai-to-fuel-fintech-business/"
+     },
+     {
+      "title": "EasyEquities helps power Purple Group to record full-year results — EWN, 12 Nov 2026",
+      "url": "https://www.ewn.co.za/2026/11/12/easyequities-helps-power-purple-group-to-record-full-year-results"
+     },
+     {
+      "title": "Big win for company that went from earning R2 per customer to R146 per customer in 3 years — BusinessTech, 12 Nov 2026",
+      "url": "https://businesstech.co.za/news/?p=883883"
+     },
+     {
+      "title": "South African entrepreneur Charles Savage lifts Purple Group profit 36% to R150 million — Billionaires.Africa, 12 Nov 2026",
+      "url": "https://www.billionaires.africa/2026/11/12/south-african-entrepreneur-charles-savage-lifts-purple-group-profit-36-to-r150-million/"
+     }
+    ]
+   }
+  }
+ ]
+}

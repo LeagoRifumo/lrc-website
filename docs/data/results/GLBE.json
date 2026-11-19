@@ -1,1 +1,166 @@
-{"t":"GLBE","name":"Global-E Online Ltd.","m":"US","reports":[{"date":"2026-11-18","quarter":"Sep/2026","filing":{"form":"6-K","filed":"2026-11-18","items":"","index":"https://www.sec.gov/Archives/edgar/data/1835963/000117891326005272/0001178913-26-005272-index.htm","docs":[{"type":"EX-99.1","desc":"EXHIBIT 99.1","url":"https://www.sec.gov/Archives/edgar/data/1835963/000117891326005272/exhibit_99-1.htm"}]},"title":"Quarter of 2026; Raises Outlook for the Year","auto":{"revenue":{"rev":314073000.0,"rev_prior":220779000.0,"label":"Revenue","checked_vs_estimate":true},"guidance":{"heading":null,"section":[],"lines":[],"status":"raised"}},"read":"2026-11-18T16:41+02:00"}]}
+{
+ "t": "GLBE",
+ "name": "Global-E Online Ltd.",
+ "m": "US",
+ "reports": [
+  {
+   "date": "2026-11-18",
+   "quarter": "Sep/2026",
+   "filing": {
+    "form": "6-K",
+    "filed": "2026-11-18",
+    "items": "",
+    "index": "https://www.sec.gov/Archives/edgar/data/1835963/000117891326005272/0001178913-26-005272-index.htm",
+    "docs": [
+     {
+      "type": "EX-99.1",
+      "desc": "EXHIBIT 99.1",
+      "url": "https://www.sec.gov/Archives/edgar/data/1835963/000117891326005272/exhibit_99-1.htm"
+     }
+    ]
+   },
+   "title": "Quarter of 2026; Raises Outlook for the Year",
+   "auto": {
+    "revenue": {
+     "rev": 314073000.0,
+     "rev_prior": 220779000.0,
+     "label": "Revenue",
+     "checked_vs_estimate": true
+    },
+    "guidance": {
+     "heading": null,
+     "section": [],
+     "lines": [],
+     "status": "raised"
+    }
+   },
+   "read": "2026-11-18T16:41+02:00",
+   "desk": {
+    "by": "LRC Research",
+    "written": "2026-11-19T06:15+02:00",
+    "period": "Q3 2026 (quarter to 30 Sep 2026)",
+    "headline": "Revenue up 42% to $314.1m, beat; full-year outlook raised and Q4 guidance set",
+    "numbers": {
+     "currency": "USD",
+     "revenue": 314073000,
+     "revenue_prior": 220779000,
+     "revenue_est": 312577490,
+     "eps": 0.37,
+     "eps_prior": 0.21,
+     "eps_basis": "adjusted (non-GAAP diluted)",
+     "other": [
+      {
+       "label": "GMV",
+       "value": "$2.04bn",
+       "change": "+35% y/y"
+      },
+      {
+       "label": "Adjusted EBITDA",
+       "value": "$63.7m",
+       "change": "+54% y/y; margin 20.3%"
+      },
+      {
+       "label": "Non-GAAP gross margin",
+       "value": "44.8%",
+       "change": "vs 46.3% a year ago"
+      },
+      {
+       "label": "GAAP diluted EPS",
+       "value": "$0.47",
+       "change": "vs $0.07 a year ago"
+      },
+      {
+       "label": "Free cash flow",
+       "value": "$66.4m",
+       "change": "vs $73.6m a year ago"
+      }
+     ]
+    },
+    "results": [
+     "Revenue rose 42% to $314.1m, slightly ahead of the $312.6m estimate; merchandise volume (GMV) grew 35% to $2.04bn.",
+     "Fulfilment revenue jumped 54% to $180.1m and service fees rose about 30% to $134.0m; the acquired Passport business added to both.",
+     "Adjusted EBITDA rose 54% to $63.7m and the margin widened by about 1.6 points to 20.3%, though gross margin slipped to 44.8%.",
+     "GAAP profit of $81.1m ($0.47 a share) was lifted by a $49.0m one-off tax benefit; adjusted profit was $63.0m ($0.37 a share).",
+     "Free cash flow was $66.4m; the company bought back $53m of shares, leaving $447m under its $500m plan."
+    ],
+    "guidance": {
+     "status": "raised",
+     "summary": "Global-e again raised its 2026 targets, lifting the low end of all three ranges, and gave its first Q4 outlook of $464–488m in revenue. The top of the revenue range edged down slightly as the range was tightened.",
+     "items": [
+      {
+       "metric": "GMV",
+       "period": "FY 2026",
+       "new": "$8.96–9.12bn",
+       "prior": "$8.81–9.11bn",
+       "consensus": "n/a",
+       "vs_consensus": "n/a"
+      },
+      {
+       "metric": "Revenue",
+       "period": "FY 2026",
+       "new": "$1,329–1,353m",
+       "prior": "$1,305–1,355m",
+       "consensus": "n/a",
+       "vs_consensus": "n/a"
+      },
+      {
+       "metric": "Adjusted EBITDA",
+       "period": "FY 2026",
+       "new": "$290–300m",
+       "prior": "$278–300m",
+       "consensus": "n/a",
+       "vs_consensus": "n/a"
+      },
+      {
+       "metric": "Revenue",
+       "period": "Q4 2026",
+       "new": "$464–488m",
+       "consensus": "n/a",
+       "vs_consensus": "n/a"
+      },
+      {
+       "metric": "GMV",
+       "period": "Q4 2026",
+       "new": "$3.09–3.25bn",
+       "consensus": "n/a",
+       "vs_consensus": "n/a"
+      },
+      {
+       "metric": "Adjusted EBITDA",
+       "period": "Q4 2026",
+       "new": "$113.5–123.5m",
+       "consensus": "n/a",
+       "vs_consensus": "n/a"
+      }
+     ]
+    },
+    "call": {
+     "points": [
+      "Same-store sales stayed solid but slowed from the first half, and the Q4 range allows for that; the CFO said the main holiday peak is still ahead.",
+      "Shopify Managed Markets volumes picked up through the quarter; merchants using the new guaranteed-shipping pricing saw conversion rise about 50%.",
+      "Passport's first integration phase is done and it remains on track for its 2026 targets, with margin and cash flow gains expected in 2027.",
+      "Service-fee take rates are expected to hold fairly steady; Passport's lower margins and paused fuel surcharges weighed on gross margin.",
+      "No formal 2027 guidance, but management expects another year of strong growth and profitability, and will keep buying back shares."
+     ],
+     "tone": "confident",
+     "source": "Q3 2026 earnings call transcript — The Motley Fool, 18 Nov 2026"
+    },
+    "watch": [
+     "Peak-season volumes against the Q4 revenue range of $464–488m.",
+     "Whether gross margin stabilises as Passport synergies come through in 2027.",
+     "Pace of US duty-drawback uptake and further share buybacks."
+    ],
+    "sources": [
+     {
+      "title": "6-K Exhibit 99.1 — press release",
+      "url": "https://www.sec.gov/Archives/edgar/data/1835963/000117891326005272/exhibit_99-1.htm"
+     },
+     {
+      "title": "Global-E (GLBE) Q3 2026 earnings call transcript — The Motley Fool, 18 Nov 2026",
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/11/18/global-e-glbe-q3-2026-earnings-call-transcript/"
+     }
+    ]
+   }
+  }
+ ]
+}

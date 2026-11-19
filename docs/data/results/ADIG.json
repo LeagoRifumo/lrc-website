@@ -1,1 +1,161 @@
-{"t":"ADIG","name":"ADI Global Distribution Inc","m":"US","reports":[{"date":"2026-11-12","quarter":"","filing":{"form":"8-K","filed":"2026-11-12","items":"2.02,9.01","index":"https://www.sec.gov/Archives/edgar/data/2105139/000162828026073099/0001628280-26-073099-index.htm","docs":[{"type":"EX-99.1","desc":"EX-99.1","url":"https://www.sec.gov/Archives/edgar/data/2105139/000162828026073099/adi-1032026erexhibit991.htm"}]},"title":"ADI Announces Third Quarter 2026 Financial Results and Updates Full-Year Outlook","auto":{"revenue":{"rev":1306000000.0,"rev_prior":1203000000.0,"label":"Net revenue","checked_vs_estimate":true},"guidance":{"heading":"Outlook","section":["The Company is lowering its full-year 2026 outlook to reflect third-quarter performance and further weakness in Exclusive","Brands in October. The revised outlook assumes these demand and mix pressures persist through the remainder of the year.","($ in millions) | Nine Months Ended (1) | Q4 2026 | Full Year 2026\nNet revenue | $3,798 | $1,112 - 1,132 | $4,910 - $4,930\nNon-GAAP Adjusted Standalone EBITDA (Estimate) | $202 | $28 - $38 | $230 - $240","(1) Nine Months Ended 2026 represents results for the nine months ended October 3, 2026, as presented below."],"lines":[],"status":"lowered"}},"read":"2026-11-13T06:43+02:00"}]}
+{
+ "t": "ADIG",
+ "name": "ADI Global Distribution Inc",
+ "m": "US",
+ "reports": [
+  {
+   "date": "2026-11-12",
+   "quarter": "",
+   "filing": {
+    "form": "8-K",
+    "filed": "2026-11-12",
+    "items": "2.02,9.01",
+    "index": "https://www.sec.gov/Archives/edgar/data/2105139/000162828026073099/0001628280-26-073099-index.htm",
+    "docs": [
+     {
+      "type": "EX-99.1",
+      "desc": "EX-99.1",
+      "url": "https://www.sec.gov/Archives/edgar/data/2105139/000162828026073099/adi-1032026erexhibit991.htm"
+     }
+    ]
+   },
+   "title": "ADI Announces Third Quarter 2026 Financial Results and Updates Full-Year Outlook",
+   "auto": {
+    "revenue": {
+     "rev": 1306000000.0,
+     "rev_prior": 1203000000.0,
+     "label": "Net revenue",
+     "checked_vs_estimate": true
+    },
+    "guidance": {
+     "heading": "Outlook",
+     "section": [
+      "The Company is lowering its full-year 2026 outlook to reflect third-quarter performance and further weakness in Exclusive",
+      "Brands in October. The revised outlook assumes these demand and mix pressures persist through the remainder of the year.",
+      "($ in millions) | Nine Months Ended (1) | Q4 2026 | Full Year 2026\nNet revenue | $3,798 | $1,112 - 1,132 | $4,910 - $4,930\nNon-GAAP Adjusted Standalone EBITDA (Estimate) | $202 | $28 - $38 | $230 - $240",
+      "(1) Nine Months Ended 2026 represents results for the nine months ended October 3, 2026, as presented below."
+     ],
+     "lines": [],
+     "status": "lowered"
+    }
+   },
+   "read": "2026-11-13T06:43+02:00",
+   "desk": {
+    "by": "LRC Research",
+    "written": "2026-11-19T06:15+02:00",
+    "period": "Q3 2026 (quarter to 3 Oct 2026)",
+    "headline": "Revenue up 9% to $1.31bn, beat; $659m goodwill write-down and full-year EBITDA outlook cut to $230–240m",
+    "numbers": {
+     "currency": "USD",
+     "revenue": 1306000000,
+     "revenue_prior": 1203000000,
+     "revenue_est": 1271840000,
+     "eps": -8.65,
+     "eps_prior": 0.34,
+     "eps_basis": "diluted GAAP",
+     "other": [
+      {
+       "label": "Adjusted Standalone EBITDA",
+       "value": "$66m",
+       "change": "-13% y/y"
+      },
+      {
+       "label": "Adjusted Standalone EBITDA margin",
+       "value": "5.1%",
+       "change": "vs 6.3% a year ago"
+      },
+      {
+       "label": "Gross margin",
+       "value": "20.9%",
+       "change": "-170bp y/y"
+      },
+      {
+       "label": "Goodwill impairment",
+       "value": "$659m",
+       "change": "non-cash"
+      },
+      {
+       "label": "Operating cash flow",
+       "value": "$64m",
+       "change": "Q3"
+      }
+     ]
+    },
+    "results": [
+     "Revenue rose 8.6% to $1.31bn, but average daily sales grew only 5%; two extra selling days and an easy comparison after last year's systems changeover did the rest.",
+     "Security, pro audio-visual, fire and data-communications sales grew, while residential audio-visual fell with the weak US housing market.",
+     "Gross margin fell to 20.9% from 22.6% on weaker mix and inventory charges; without tariff refunds and a spin-off inventory gain it was 20.0%.",
+     "A $659m goodwill write-down, triggered by residential weakness and the lower share price, produced a $655m net loss ($8.65 a share).",
+     "Cash was $208m at quarter-end, with a $500m revolving credit line undrawn; long-term debt stood at $980m."
+    ],
+    "guidance": {
+     "status": "lowered",
+     "summary": "ADI cut its 2026 outlook for the first time as a standalone company: revenue to $4,910–4,930m from $4,950–5,000m and Adjusted Standalone EBITDA to $230–240m from $275–295m, implying a weak Q4.",
+     "items": [
+      {
+       "metric": "Net revenue",
+       "period": "FY 2026",
+       "new": "$4,910–4,930m",
+       "prior": "$4,950–5,000m",
+       "consensus": "n/a",
+       "vs_consensus": "n/a"
+      },
+      {
+       "metric": "Adjusted Standalone EBITDA",
+       "period": "FY 2026",
+       "new": "$230–240m",
+       "prior": "$275–295m",
+       "consensus": "n/a",
+       "vs_consensus": "n/a"
+      },
+      {
+       "metric": "Net revenue",
+       "period": "Q4 2026",
+       "new": "$1,112–1,132m",
+       "prior": "n/a",
+       "consensus": "n/a",
+       "vs_consensus": "n/a"
+      },
+      {
+       "metric": "Adjusted Standalone EBITDA",
+       "period": "Q4 2026",
+       "new": "$28–38m",
+       "prior": "n/a",
+       "consensus": "n/a",
+       "vs_consensus": "n/a"
+      }
+     ]
+    },
+    "call": {
+     "points": [
+      "Exclusive Brands daily sales fell 2% in Q3 and by high single digits in October; a mid-single-digit Q4 decline is now assumed, versus slight growth earlier.",
+      "Mix was the biggest drag on gross margin (about 140bp), followed by lapping last year's tariff benefit and freight and inventory charges; no quick recovery is expected.",
+      "For 2027, growth in third-party brands is expected to be largely offset by Exclusive Brands, and inflation plus the loss of about $24m of tariff refunds should absorb most of the $80m savings plan.",
+      "Further cost cuts are being prepared; net leverage is about 2.9 times against a 2.0 times target, and capital spending plans were reduced by $20m."
+     ],
+     "tone": "cautious",
+     "source": "Earnings Whispers results and call summary (via Finviz), 12 Nov 2026; prior outlook from the Q2 2026 release (13 Aug 2026)"
+    },
+    "watch": [
+     "Exclusive Brands sales and whether the residential slowdown deepens.",
+     "Delivery of Q4 EBITDA within the $28–38m range and progress on extra cost cuts.",
+     "Gross margin trend and debt reduction towards the 2.0 times leverage target."
+    ],
+    "sources": [
+     {
+      "title": "8-K Exhibit 99.1 — press release",
+      "url": "https://www.sec.gov/Archives/edgar/data/2105139/000162828026073099/adi-1032026erexhibit991.htm"
+     },
+     {
+      "title": "ADI Global's First Post-Spin Quarter: Revenue Beat Masks A Deep Earnings Miss, A Sharp Guidance Cut And A $659 Million Write-Down — Earnings Whispers via Finviz, 12 Nov 2026",
+      "url": "https://finviz.com/news/421895/adi-globals-first-post-spin-quarter-revenue-beat-masks-a-deep-earnings-miss-a-sharp-guidance-cut-and-a-659-million-write-down"
+     },
+     {
+      "title": "ADI Announces Second Quarter 2026 Financial Results (prior outlook) — ADI, 13 Aug 2026",
+      "url": "https://s25.q4cdn.com/125328972/files/doc_news/ADI-Announces-Second-Quarter-2026-Financial-Results-2026.pdf"
+     }
+    ]
+   }
+  }
+ ]
+}

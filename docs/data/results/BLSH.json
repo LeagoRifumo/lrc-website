@@ -1,1 +1,167 @@
-{"t":"BLSH","name":"Bullish","m":"US","reports":[{"date":"2026-11-18","quarter":"Sep/2026","filing":{"form":"6-K","filed":"2026-11-18","items":"","index":"https://www.sec.gov/Archives/edgar/data/1872195/000143774926037471/0001437749-26-037471-index.htm","docs":[{"type":"EX-99.1","desc":"EXHIBIT 99.1","url":"https://www.sec.gov/Archives/edgar/data/1872195/000143774926037471/ex_1007396.htm"},{"type":"EX-99.2","desc":"EXHIBIT 99.2","url":"https://www.sec.gov/Archives/edgar/data/1872195/000143774926037471/ex_1007397.htm"},{"type":"EX-99.3","desc":"EXHIBIT 99.3","url":"https://www.sec.gov/Archives/edgar/data/1872195/000143774926037471/ex_1047770.htm"}]},"title":"Bullish Reports Third Quarter 2026 Results","auto":{"revenue":null,"guidance":{"heading":null,"section":[],"lines":[],"status":"not found"}},"read":"2026-11-18T16:41+02:00"}]}
+{
+ "t": "BLSH",
+ "name": "Bullish",
+ "m": "US",
+ "reports": [
+  {
+   "date": "2026-11-18",
+   "quarter": "Sep/2026",
+   "filing": {
+    "form": "6-K",
+    "filed": "2026-11-18",
+    "items": "",
+    "index": "https://www.sec.gov/Archives/edgar/data/1872195/000143774926037471/0001437749-26-037471-index.htm",
+    "docs": [
+     {
+      "type": "EX-99.1",
+      "desc": "EXHIBIT 99.1",
+      "url": "https://www.sec.gov/Archives/edgar/data/1872195/000143774926037471/ex_1007396.htm"
+     },
+     {
+      "type": "EX-99.2",
+      "desc": "EXHIBIT 99.2",
+      "url": "https://www.sec.gov/Archives/edgar/data/1872195/000143774926037471/ex_1007397.htm"
+     },
+     {
+      "type": "EX-99.3",
+      "desc": "EXHIBIT 99.3",
+      "url": "https://www.sec.gov/Archives/edgar/data/1872195/000143774926037471/ex_1047770.htm"
+     }
+    ]
+   },
+   "title": "Bullish Reports Third Quarter 2026 Results",
+   "auto": {
+    "revenue": null,
+    "guidance": {
+     "heading": null,
+     "section": [],
+     "lines": [],
+     "status": "not found"
+    }
+   },
+   "read": "2026-11-18T16:41+02:00",
+   "desk": {
+    "by": "LRC Research",
+    "written": "2026-11-19T06:15+02:00",
+    "period": "Q3 2026 (quarter to 30 Sep 2026)",
+    "headline": "Adjusted revenue up 10% to $84.4m, beat; 2026 services revenue range trimmed at the top, $300m buyback",
+    "numbers": {
+     "currency": "USD",
+     "revenue": 84400000,
+     "revenue_prior": 76500000,
+     "revenue_est": 80208640,
+     "eps": 3.57,
+     "eps_prior": 0.1,
+     "eps_basis": "diluted IFRS",
+     "other": [
+      {
+       "label": "Subscription, services & other revenue",
+       "value": "$56.3m",
+       "change": "+13% y/y"
+      },
+      {
+       "label": "Adjusted transaction revenue",
+       "value": "$28.0m",
+       "change": "vs $26.7m a year ago"
+      },
+      {
+       "label": "Adjusted EBITDA",
+       "value": "$35.6m",
+       "change": "+24% y/y; 42% margin"
+      },
+      {
+       "label": "Adjusted net income",
+       "value": "$18.7m",
+       "change": "vs $13.8m a year ago"
+      },
+      {
+       "label": "Net income (IFRS)",
+       "value": "$576.3m",
+       "change": "vs $18.5m a year ago"
+      },
+      {
+       "label": "Digital asset sales",
+       "value": "$32.1bn",
+       "change": "vs $41.6bn a year ago"
+      }
+     ]
+    },
+    "results": [
+     "Adjusted revenue, Bullish's main revenue measure, rose 10% to $84.4m, above the $80.2m analysts expected.",
+     "Subscription, services and other revenue grew 13% to $56.3m, while trading-related (adjusted transaction) revenue rose about 5% to $28.0m.",
+     "Adjusted EBITDA rose 24% to $35.6m, a 42% margin; adjusted net income was $18.7m against $13.8m.",
+     "Reported net income jumped to $576.3m ($3.57 a diluted share) mainly on a $598.4m gain in the value of digital assets held; the nine months still show a $308.6m loss.",
+     "Digital asset sales fell to $32.1bn from $41.6bn; the board approved a share buyback of up to $300m."
+    ],
+    "guidance": {
+     "status": "lowered",
+     "summary": "Bullish cut the top of its 2026 subscription, services and other revenue range to $225–235m (was $225–245m). It now sees lower adjusted operating costs of $220–225m but higher finance expense of $60–65m.",
+     "items": [
+      {
+       "metric": "Subscription, services & other revenue",
+       "period": "FY 2026",
+       "new": "$225–235m",
+       "prior": "$225–245m",
+       "consensus": "n/a",
+       "vs_consensus": "n/a"
+      },
+      {
+       "metric": "Adjusted operating expenses",
+       "period": "FY 2026",
+       "new": "$220–225m",
+       "prior": "$225–230m",
+       "consensus": "n/a",
+       "vs_consensus": "n/a"
+      },
+      {
+       "metric": "Finance expense",
+       "period": "FY 2026",
+       "new": "$60–65m",
+       "prior": "$52–60m",
+       "consensus": "n/a",
+       "vs_consensus": "n/a"
+      }
+     ]
+    },
+    "call": {
+     "points": [
+      "CEO Tom Farley described a deep crypto bear market and said US growth since the IPO has been weaker than he expected.",
+      "The Equiniti purchase has antitrust clearance and is expected to close in early January 2027; targeted medium-term net cost savings were raised to $75–100m from $25–50m.",
+      "Bullish began booking tokenization revenue from several customers in Q4, mostly equities, but management called the pace of issuer adoption the biggest open question.",
+      "Management said it sees the shares as undervalued; buybacks will start only after extra financial filings with the SEC in the week of 30 Nov.",
+      "A US derivatives launch is expected within the next several months, depending on regulators."
+     ],
+     "tone": "mixed",
+     "source": "Call coverage — MarketBeat (via Yahoo Finance) and The Block, 18 Nov 2026; prior outlook from the Q2 2026 release (13 Aug 2026)"
+    },
+    "watch": [
+     "Closing of the Equiniti deal in January and how quickly issuers adopt tokenized shares.",
+     "Whether trading volumes and transaction revenue recover from the weak crypto market in Q4.",
+     "Timing and size of buybacks under the new $300m authorisation."
+    ],
+    "sources": [
+     {
+      "title": "6-K Exhibit 99.1 — press release",
+      "url": "https://www.sec.gov/Archives/edgar/data/1872195/000143774926037471/ex_1007396.htm"
+     },
+     {
+      "title": "What Bullish (BLSH) said on its Q3 earnings call — MarketBeat via Yahoo Finance, 18 Nov 2026",
+      "url": "https://finance.yahoo.com/markets/crypto/articles/bullish-blsh-said-q3-earnings-171721700.html"
+     },
+     {
+      "title": "Bullish's Q3 adjusted profit rises 35%, digital asset sales fall 23% — The Block, 18 Nov 2026",
+      "url": "https://www.theblock.co/news/business/2026-11-18-bullishs-q3-adjusted-profit-rises-35-digital-asset-sales-fall-23-443456"
+     },
+     {
+      "title": "Bullish beats revenue estimates as institutional services offset sluggish spot crypto volumes — CoinDesk, 18 Nov 2026",
+      "url": "https://www.coindesk.com/markets/2026/11/18/bullish-beats-revenue-estimates-as-institutional-services-offset-sluggish-spot-crypto-volumes"
+     },
+     {
+      "title": "Bullish reports second quarter 2026 results (prior outlook), 13 Aug 2026",
+      "url": "https://www.bullish.com/news-insights/bullish-reports-second-quarter-2026-results"
+     }
+    ]
+   }
+  }
+ ]
+}
