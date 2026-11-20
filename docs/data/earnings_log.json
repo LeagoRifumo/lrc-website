@@ -23959,12 +23959,13 @@
 "n_est": 5,
 "rcur": "USD",
 "qend": "2026-09-30",
-"eps_actual": 0.22,
-"eps_est": null,
-"surprise": null,
-"result": null,
-"result_done": false,
-"source": "Nasdaq"
+"eps_actual": 0.0335,
+"eps_est": 0.03326,
+"surprise": 0.0072,
+"result": "inline",
+"result_done": true,
+"source": "Nasdaq",
+"quarter_end": "2026-09-30"
 },
 "GLOB|2026-11-12": {
 "t": "GLOB",
@@ -53263,7 +53264,13 @@
 "eps_yago": -0.3324,
 "n_est": 2,
 "rcur": "ARS",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -0.09934,
+"eps_est": 0.3078,
+"surprise": -1.323,
+"result": "miss",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "TEO|2026-11-10": {
 "t": "TEO",
@@ -53284,7 +53291,13 @@
 "eps_yago": -0.3324,
 "n_est": 2,
 "rcur": "ARS",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -0.09934,
+"eps_est": 0.3078,
+"surprise": -1.323,
+"result": "miss",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "TEO|2026-11-12": {
 "t": "TEO",
@@ -53321,7 +53334,13 @@
 "eps_yago": -0.3324,
 "n_est": 2,
 "rcur": "ARS",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -0.09934,
+"eps_est": 0.3078,
+"surprise": -1.323,
+"result": "miss",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "TEO|2026-11-16": {
 "t": "TEO",
@@ -53342,7 +53361,13 @@
 "eps_yago": -0.3324,
 "n_est": 2,
 "rcur": "ARS",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -0.09934,
+"eps_est": 0.3078,
+"surprise": -1.323,
+"result": "miss",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "TEO|2026-11-23": {
 "t": "TEO",

@@ -203,7 +203,7 @@
    "t": "GLN.JO",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "SELL",
    "iv": "SELL",
    "lrc_rating": null,
    "covered": false
@@ -344,7 +344,7 @@
     "Investment SELL"
    ],
    "idea": null,
-   "v": "STRONG SELL",
+   "v": "SELL",
    "iv": "STRONG SELL",
    "lrc_rating": null,
    "covered": true
@@ -544,7 +544,7 @@
     "Investment SELL"
    ],
    "idea": null,
-   "v": "STRONG SELL",
+   "v": "SELL",
    "iv": "STRONG SELL",
    "lrc_rating": null,
    "covered": true
@@ -740,7 +740,7 @@
    "t": "PPE.JO",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "SELL",
    "iv": "SELL",
    "lrc_rating": null,
    "covered": false
@@ -951,7 +951,7 @@
     "Investment SELL"
    ],
    "idea": null,
-   "v": "STRONG SELL",
+   "v": "SELL",
    "iv": "STRONG SELL",
    "lrc_rating": null,
    "covered": true
@@ -1205,7 +1205,7 @@
    "lists": [],
    "idea": null,
    "v": "SELL",
-   "iv": "SELL",
+   "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
   },
@@ -1339,6 +1339,11 @@
    "measure": null,
    "dps": null,
    "source": null,
+   "px_move": {
+    "move": -0.0967,
+    "from": "2026-11-18",
+    "to": "2026-11-20"
+   },
    "t": "SLM.JO",
    "lists": [
     "Investment BUY"
@@ -1375,13 +1380,18 @@
    "rev_actual": 5197000000,
    "g": "given",
    "headline": "HEPS up 11% to 720c and interim dividend up 11% to 375c; spending seen staying constrained",
+   "px_move": {
+    "move": -0.0035,
+    "from": "2026-11-18",
+    "to": "2026-11-20"
+   },
    "t": "LEW.JO",
    "lists": [
     "Trading BUY"
    ],
-   "idea": "Value & quality",
+   "idea": "Score leaders",
    "v": "STRONG BUY",
-   "iv": "STRONG BUY",
+   "iv": "BUY",
    "lrc_rating": null,
    "covered": true
   },
@@ -1406,6 +1416,11 @@
    "measure": null,
    "dps": null,
    "source": null,
+   "px_move": {
+    "move": 0.0702,
+    "from": "2026-11-18",
+    "to": "2026-11-20"
+   },
    "t": "SPP.JO",
    "lists": [],
    "idea": null,
@@ -1440,6 +1455,11 @@
    "rev_actual": 1169800000,
    "g": "reaffirmed",
    "headline": "Group HEPS up 8.4% to 39.8p; Investec Limited interim dividend 417c (from 396c); ROE target kept",
+   "px_move": {
+    "move": -0.0802,
+    "from": "2026-11-18",
+    "to": "2026-11-20"
+   },
    "t": "INL.JO",
    "lists": [],
    "idea": null,
@@ -1503,6 +1523,11 @@
    "rev_actual": 1169800000,
    "g": "reaffirmed",
    "headline": "HEPS up 8.4% to 39.8p; interim dividend 18.5p (from 17.5p); full-year ROE target of 13–14% kept",
+   "px_move": {
+    "move": -0.0743,
+    "from": "2026-11-18",
+    "to": "2026-11-20"
+   },
    "t": "INP.JO",
    "lists": [],
    "idea": null,
@@ -1596,7 +1621,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed) — confirm on SENS",
    "eps_forecast": "",
-   "market_cap_bn": 10.6,
+   "market_cap_bn": 11.1,
    "auto": true,
    "t": "SPP.JO",
    "lists": [],
@@ -1719,7 +1744,7 @@
    "lrc_rating": null,
    "t": "VKE.JO",
    "lists": [],
-   "idea": "Technical setups",
+   "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
    "track": null
@@ -1731,7 +1756,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed) — confirm on SENS",
    "eps_forecast": "",
-   "market_cap_bn": 6.8,
+   "market_cap_bn": 6.4,
    "auto": true,
    "t": "THA.JO",
    "lists": [],
@@ -1757,7 +1782,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "BUY",
    "track": null
   },
   {
@@ -1786,10 +1811,12 @@
    "period": "Annual to 30 Sep 2026 (webcast 10:00 SAST)",
    "eps_forecast": "",
    "market_cap_bn": 4.5,
-   "covered": false,
+   "covered": true,
    "lrc_rating": null,
    "t": "NPK.JO",
-   "lists": [],
+   "lists": [
+    "Trading BUY"
+   ],
    "idea": null,
    "v": "BUY",
    "iv": "HOLD",
@@ -1804,13 +1831,11 @@
    "eps_forecast": "",
    "market_cap_bn": null,
    "source": "Old Mutual 'Investor relations' shareholder diary https://www.oldmutual.com/investor-relations (dates provisional); seen 2026-10-31 | Re-confirmed 7 Nov 2026",
-   "covered": true,
+   "covered": false,
    "lrc_rating": null,
    "t": "OMU.JO",
-   "lists": [
-    "Trading BUY"
-   ],
-   "idea": "Score leaders",
+   "lists": [],
+   "idea": null,
    "v": "BUY",
    "iv": "HOLD",
    "track": null
@@ -1839,7 +1864,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed) — confirm on SENS",
    "eps_forecast": "",
-   "market_cap_bn": 33.8,
+   "market_cap_bn": 33.2,
    "auto": true,
    "t": "KRO.JO",
    "lists": [],
