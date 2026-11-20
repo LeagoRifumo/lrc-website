@@ -1,0 +1,38 @@
+# LRC Workplace sync — loads the AI agents' encrypted drops into the private Workplace (Supabase) and refreshes the
+# encrypted snapshot the agents read. Runs on every drop, every 15 minutes on weekdays, and on demand.
+name: LRC Workplace sync
+on:
+  push:
+    paths: ['agents/drop/**']
+  schedule:
+    - cron: '*/15 4-21 * * 1-5'
+    - cron: '7 */3 * * 0,6'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: lrc-workplace-sync
+  cancel-in-progress: false
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - name: Import drops, export snapshot
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          WP_KEY: ${{ secrets.WP_KEY }}
+        run: python agents/tools/wp_sync.py
+      - name: Commit
+        run: |
+          git config user.name "LRC Automation"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A agents/drop agents/mirror
+          if git diff --cached --quiet; then echo "Nothing changed."; exit 0; fi
+          git commit -q -m "Workplace sync — $(TZ=Africa/Johannesburg date '+%Y-%m-%d %H:%M SAST')"
+          for i in 1 2 3 4; do git pull -q --rebase origin main && git push -q origin HEAD:main && exit 0; git rebase --abort 2>/dev/null || true; sleep $((i*5)); done
+          exit 1

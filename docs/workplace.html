@@ -1,0 +1,1385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>LRC Workplace | Leago Rifumo Capital</title>
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800;900&family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* VOICE: a private trading-floor workplace, calm and exact.
+   IDEA: the desk's morning sheet: one board per job, red when news hits a live trade.
+   PICTURE: the Today board (countdown to the US open, red flags, live trades) is the first screen.
+   COLOUR and TYPE: LRC green and brass on paper white; red reserved for market-moving news. Archivo + IBM Plex.
+   LAYOUT: left menu (top bar on phones), one working board at a time. */
+:root{
+  --bg:#f6f3ea; --surface:#ffffff; --surface-2:#efe9da; --ink:#17140c; --muted:#6b6455; --line:#e2d9c3;
+  --accent:#9a7417; --accent-ink:#ffffff; --brass:#b8891f;
+  --buy:#17734a; --buy-bg:#e0f1e6; --sell:#b3302a; --sell-bg:#f8e1dc;
+  --warn:#8d6100; --warn-bg:#f6ebcb; --live:#22539f; --live-bg:#e0e8f7;
+  --red:#c42b1c; --red-bg:#fde4e0;
+  --font-display:"Cormorant Garamond",Georgia,serif;
+  --font-body:"Inter",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  --font-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  --radius:12px; color-scheme:light;
+}
+:root[data-theme="dark"]{--bg:#07080C;--surface:#121622;--surface-2:#181D2B;--ink:#E9E3D4;--muted:#9AA1B2;--line:#262c3d;--accent:#D9A93E;--accent-ink:#141006;--brass:#D9A93E;
+  --buy:#3BB97A;--buy-bg:rgba(47,163,107,.16);--sell:#F0645E;--sell-bg:rgba(227,38,43,.15);--warn:#E8B64C;--warn-bg:rgba(232,182,76,.14);--live:#7EA7F2;--live-bg:rgba(126,167,242,.15);--red:#ff5b4f;--red-bg:#3a1210;color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:15px/1.5 var(--font-body);-webkit-font-smoothing:antialiased;overflow-x:clip}
+h1,h2,h3{font-family:var(--font-display);text-wrap:balance;margin:0;line-height:1.2}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--brass);outline-offset:2px}
+.mono{font-family:var(--font-mono);font-variant-numeric:tabular-nums}
+
+/* Shell */
+.shell{display:grid;grid-template-columns:232px minmax(0,1fr);min-height:100vh}
+.side{background:var(--surface);border-right:1px solid var(--line);padding:18px 12px;display:flex;flex-direction:column;gap:18px;position:sticky;top:0;height:100vh}
+.brand{display:flex;align-items:center;gap:10px;padding:0 6px}
+.mark{width:38px;height:38px;border-radius:8px;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font:800 14px var(--font-display);letter-spacing:.04em;flex:none}
+.brand b{font:800 16px var(--font-display);display:block}
+.brand span{font-size:12.5px;color:var(--muted)}
+.nav{display:flex;flex-direction:column;gap:2px}
+.nav button{border:0;background:none;text-align:left;padding:10px 12px;border-radius:8px;cursor:pointer;color:var(--muted);font-weight:600;display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:40px}
+.nav button:hover{background:var(--surface-2);color:var(--ink)}
+.nav button[aria-current="page"]{background:color-mix(in srgb,var(--accent) 12%,var(--surface));color:var(--ink)}
+.nav .soon{font-size:11px;font-weight:600;color:var(--muted);border:1px solid var(--line);border-radius:99px;padding:0 7px}
+.count{background:var(--brass);color:#fff;border-radius:99px;font-size:11px;padding:1px 7px;font-family:var(--font-mono)}
+.count.red{background:var(--red)}
+.me{margin-top:auto;border-top:1px solid var(--line);padding:12px 6px 0;font-size:13px;color:var(--muted);display:flex;flex-direction:column;gap:6px}
+.me b{color:var(--ink)}
+main{padding:24px clamp(16px,3vw,36px) 60px;max-width:1240px;width:100%}
+.stack{display:flex;flex-direction:column;gap:16px}
+@media (max-width:860px){
+  .shell{grid-template-columns:1fr}
+  .side{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line);padding:12px;gap:10px}
+  .nav{flex-direction:row;overflow-x:auto;scrollbar-width:none}
+  .nav button{white-space:nowrap;flex:none;min-width:max-content}
+  .me{margin:0;border:0;padding:0 6px;flex-direction:row;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+}
+
+/* Controls */
+.btn{border:1px solid var(--line);background:var(--surface);padding:8px 14px;border-radius:8px;cursor:pointer;font-weight:600;font-size:14px;display:inline-flex;align-items:center;gap:6px;min-height:38px}
+.btn:hover{border-color:var(--muted)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn.danger{color:var(--sell)}
+.btn.ghost{border-color:transparent;background:none;color:var(--muted)}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.btn.sm{padding:5px 10px;font-size:13px;min-height:32px}
+.field{display:flex;flex-direction:column;gap:5px}
+.field>label,.field>.lbl{font-size:13px;font-weight:600}
+.hint{margin:0;font-size:12.5px;color:var(--muted)}
+input[type=text],input[type=password],input[type=number],input[type=date],select,textarea{width:100%;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:9px 11px;font-size:16px}
+textarea{min-height:86px;resize:vertical}
+input:focus,select:focus,textarea:focus{border-color:var(--accent);outline:none;box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 22%,transparent)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.row3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media (max-width:620px){.row2,.row3{grid-template-columns:1fr}}
+.seg{display:flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--surface)}
+.seg label{flex:1;text-align:center;padding:8px 6px;cursor:pointer;font-weight:600;font-size:14px;border-right:1px solid var(--line);color:var(--muted)}
+.seg label:last-child{border-right:0}
+.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg label:has(input:checked){background:var(--surface-2);color:var(--ink)}
+.seg label:has(input[value="Buy"]:checked){background:var(--buy-bg);color:var(--buy)}
+.seg label:has(input[value="Sell"]:checked){background:var(--sell-bg);color:var(--sell)}
+.checks{display:flex;flex-wrap:wrap;gap:6px}
+.checks label{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:99px;padding:4px 10px;font-size:13px;cursor:pointer;background:var(--surface)}
+.checks label:has(input:checked){border-color:var(--accent);background:color-mix(in srgb,var(--accent) 12%,var(--surface))}
+.pill{display:inline-flex;align-items:center;gap:5px;border-radius:99px;padding:2px 9px;font-size:12px;font-weight:600;white-space:nowrap;background:var(--surface-2);color:var(--muted)}
+.pill.buy{background:var(--buy-bg);color:var(--buy)} .pill.sell{background:var(--sell-bg);color:var(--sell)}
+.pill.warn{background:var(--warn-bg);color:var(--warn)} .pill.live{background:var(--live-bg);color:var(--live)}
+.pill.red{background:var(--red);color:#fff}
+.pill.accent{background:color-mix(in srgb,var(--brass) 18%,var(--surface));color:var(--brass)}
+.pill.outline{background:none;border:1px solid var(--line)}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.note{border-radius:8px;padding:10px 14px;font-size:14px;background:var(--surface-2)}
+.note.warn{background:var(--warn-bg);color:var(--warn)} .note.bad{background:var(--sell-bg);color:var(--sell)} .note.good{background:var(--buy-bg);color:var(--buy)}
+.subtle{color:var(--muted);font-size:13px}
+.empty{text-align:center;padding:32px 16px;color:var(--muted);background:var(--surface);border:1px dashed var(--line);border-radius:var(--radius)}
+.pagehead{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.pagehead h1{font-size:clamp(26px,3.2vw,34px);font-weight:800;line-height:1.05}
+.pagehead p{margin:4px 0 0;color:var(--muted)}
+.filters{display:flex;gap:6px;flex-wrap:wrap}
+.chip{border:1px solid var(--line);background:var(--surface);border-radius:99px;padding:5px 12px;font-size:13px;font-weight:600;cursor:pointer;color:var(--muted);min-height:32px}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.group-h{font-size:13px;color:var(--muted);font-family:var(--font-body);font-weight:600;margin-top:6px}
+
+/* Sign in */
+.gate{min-height:100vh;display:grid;place-items:center;padding:20px}
+.gate .panel{width:min(440px,100%);display:flex;flex-direction:column;gap:14px}
+.gate h1{font-size:24px}
+.gate form{display:flex;flex-direction:column;gap:14px}
+
+/* Today */
+.hero{display:grid;grid-template-columns:1.2fr 1fr;gap:16px}
+@media (max-width:980px){.hero{grid-template-columns:1fr}}
+.clock{background:var(--accent);color:var(--accent-ink);border-radius:var(--radius);padding:22px;display:flex;flex-direction:column;gap:14px}
+.clock .lab{font-size:13px;opacity:.85}
+.clock .big{font:500 clamp(40px,6vw,64px)/1 var(--font-mono);letter-spacing:-.02em}
+.clock .times{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;border-top:1px solid color-mix(in srgb,var(--accent-ink) 25%,transparent);padding-top:12px}
+.clock .times span{display:block;font-size:12px;opacity:.85}
+.clock .times b{font:500 18px var(--font-mono)}
+.redbox{border-radius:var(--radius);border:2px solid var(--red);background:var(--red-bg);padding:16px 18px;display:flex;flex-direction:column;gap:10px}
+.redbox h2{color:var(--red);font-size:18px}
+.calm{border-radius:var(--radius);border:1px solid var(--line);background:var(--surface);padding:16px 18px}
+.flag{background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--red);border-radius:8px;padding:12px 14px;display:flex;flex-direction:column;gap:6px}
+.flag.amber{border-left-color:var(--warn)}
+.flag.cleared{border-left-color:var(--line);opacity:.75}
+.flag-h{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.flag-h b{font-family:var(--font-mono)}
+.flag p{margin:0}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+@media (max-width:760px){.tiles{grid-template-columns:repeat(2,1fr)}}
+.tile{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:14px;text-align:left}
+button.tile{cursor:pointer}
+button.tile:hover{border-color:var(--muted)}
+.tile span{font-size:12.5px;color:var(--muted);display:block}
+.tile b{display:block;font:500 26px var(--font-mono);margin-top:2px}
+.tile small{color:var(--muted);font-size:12.5px}
+
+/* Desk */
+.deskbar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.who{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.pipeline{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}
+.stage{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:10px 12px;border-top:3px solid var(--line)}
+.stage b{display:block;font:500 22px var(--font-mono)}
+.stage span{font-size:12.5px;color:var(--muted)}
+.stage.accent{border-top-color:var(--brass)} .stage.warn{border-top-color:var(--warn)} .stage.buy{border-top-color:var(--buy)} .stage.live{border-top-color:var(--live)} .stage.sell{border-top-color:var(--sell)}
+@media (max-width:820px){.pipeline{grid-template-columns:repeat(3,1fr)}}
+.idea{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;border-left:4px solid var(--line)}
+.idea.t-accent{border-left-color:var(--brass)} .idea.t-warn{border-left-color:var(--warn)} .idea.t-buy{border-left-color:var(--buy)} .idea.t-live{border-left-color:var(--live)} .idea.t-sell{border-left-color:var(--sell)}
+.idea.hot{border-left-color:var(--red);box-shadow:0 0 0 2px var(--red)}
+.idea-h{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:14px 16px 4px}
+.idea-h .asset{font:500 18px var(--font-mono);margin-right:4px}
+.idea-meta{padding:0 16px 10px;color:var(--muted);font-size:13px;display:flex;gap:6px 14px;flex-wrap:wrap}
+.halves{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}
+.half{padding:14px 16px;display:flex;flex-direction:column;gap:10px}
+.half+.half{border-left:1px solid var(--line)}
+@media (max-width:760px){.halves{grid-template-columns:1fr}.half+.half{border-left:0;border-top:1px solid var(--line)}}
+.half h3{font:600 12.5px var(--font-body);color:var(--muted)}
+.thesis{margin:0;white-space:pre-wrap;overflow-wrap:anywhere}
+.kv{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:8px 14px;margin:0}
+.kv dt{font-size:12px;color:var(--muted)}
+.kv dd{margin:0;font-weight:500;overflow-wrap:anywhere}
+.levels{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.levels div{padding:7px 10px;border-right:1px solid var(--line)}
+.levels div:last-child{border-right:0}
+.levels span{display:block;font-size:12px;color:var(--muted)}
+.levels b{font:500 14px var(--font-mono);white-space:nowrap}
+.locked{color:var(--muted);font-size:14px;background:var(--surface-2);border-radius:8px;padding:14px;border:1px dashed var(--line)}
+.verdict{border-radius:8px;padding:10px 12px;font-size:14px}
+.verdict.ok{background:var(--buy-bg);color:var(--buy)} .verdict.no{background:var(--sell-bg);color:var(--sell)} .verdict.wait{background:var(--warn-bg);color:var(--warn)}
+.verdict ul{margin:6px 0 0;padding-left:18px}
+.outcome{padding:10px 16px;border-top:1px solid var(--line);background:var(--surface-2);font-size:14px;display:flex;gap:6px 16px;flex-wrap:wrap}
+.idea-f{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:10px 16px;border-top:1px solid var(--line)}
+.idea-f .acts{display:flex;gap:6px;flex-wrap:wrap}
+details.hist summary{cursor:pointer;color:var(--muted);font-size:13px}
+details.hist ol{margin:8px 0 0;padding-left:18px;font-size:13px;color:var(--muted)}
+
+/* Active trades */
+.meter{position:relative;height:10px;border-radius:99px;background:linear-gradient(90deg,var(--sell-bg),var(--surface-2) 33%,var(--buy-bg));margin:18px 0 6px}
+.meter i{position:absolute;top:-5px;width:4px;height:20px;border-radius:2px;background:var(--ink);transform:translateX(-2px)}
+.meter em{position:absolute;top:-5px;width:2px;height:20px;background:var(--muted);opacity:.6}
+.meterlab{display:flex;justify-content:space-between;font-size:12px;color:var(--muted)}
+
+/* Tables */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:860px){.grid2{grid-template-columns:1fr}}
+.tblwrap{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius)}
+table{border-collapse:collapse;width:100%;font-size:13.5px}
+th,td{text-align:left;padding:8px 12px;border-bottom:1px solid var(--line);white-space:nowrap}
+th{font-size:12px;color:var(--muted);font-weight:600;background:var(--surface-2)}
+td.num,th.num{text-align:right;font-family:var(--font-mono);font-variant-numeric:tabular-nums}
+tr:last-child td{border-bottom:0}
+.tbl-title{padding:12px 14px 4px;font:600 15px var(--font-display)}
+.pos{color:var(--buy)} .neg{color:var(--sell)}
+.coming{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.coming .panel h3{font-size:16px;margin-bottom:6px}
+.coming ul{margin:0;padding-left:18px;color:var(--muted);font-size:14px}
+
+/* Modal */
+#modal:empty{display:none}
+.scrim{position:fixed;inset:0;background:rgba(8,12,10,.55);z-index:20}
+.dialog{position:fixed;z-index:21;left:50%;top:4vh;transform:translateX(-50%);width:min(640px,calc(100% - 24px));max-height:92vh;display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,.3)}
+.dialog.wide{width:min(820px,calc(100% - 24px))}
+.dialog header{padding:16px 20px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:10px}
+.dialog header h2{font-size:19px}
+.dialog .body{padding:18px 20px;overflow:auto;display:flex;flex-direction:column;gap:14px}
+.dialog footer{padding:12px 20px;border-top:1px solid var(--line);display:flex;gap:8px;justify-content:flex-end;flex-wrap:wrap}
+.form-error:empty{display:none}
+.handover-sum{background:var(--surface-2);border-radius:8px;padding:12px 14px;display:flex;flex-direction:column;gap:6px}
+#stage{position:fixed;inset:0;z-index:50;background:#050807;color:#f4f6f5;display:flex;flex-direction:column}
+.stage-bar{display:flex;gap:8px;align-items:center;padding:10px 16px;background:#0e1412;flex-wrap:wrap}
+.stage-bar .btn{background:#1c2622;color:#e5ebe7;border-color:#2a3631}.stage-bar .btn.primary{background:#5cb391;color:#0a120f}
+.prompter{flex:1;overflow-y:auto;padding:8vh 8vw;font:600 clamp(28px,4.4vw,56px)/1.35 var(--font-body)}
+.prompter h2{font:800 clamp(20px,2.4vw,30px) var(--font-display);color:#d6a447;margin:1.2em 0 .4em}
+.prompter p{margin:0 0 .8em}
+.slide{flex:1;display:flex;flex-direction:column;background:linear-gradient(135deg,#07100d,#13241d);padding:clamp(16px,3vw,40px)}
+.slide-top,.slide-foot{display:flex;gap:12px;align-items:center;color:#97a59e;font-size:16px;flex-wrap:wrap}
+.slide-mark{background:#1d5a48;color:#fff;font:800 16px var(--font-display);padding:6px 10px;border-radius:6px}
+.slide-body{flex:1;display:flex;flex-direction:column;justify-content:center;gap:24px;max-width:1200px;width:100%;margin:0 auto;font-size:clamp(18px,2.4vw,32px)}
+.slide-body h2{font:900 clamp(30px,5vw,64px)/1.05 var(--font-display);color:#ffd23f}
+.slide-body .tblwrap,.slide-body table{background:transparent;border-color:#2a3631;color:#f4f6f5;font-size:clamp(14px,1.8vw,24px)}
+.slide-body th{background:#1c2622;color:#97a59e}.slide-body td{border-color:#2a3631}
+.slide-body .levels{border-color:#2a3631}.slide-body .levels div{border-color:#2a3631;padding:14px}.slide-body .levels b{font-size:clamp(20px,3vw,40px)}.slide-body .levels span{color:#97a59e;font-size:clamp(12px,1.3vw,18px)}
+.slide-foot .btn{background:#1c2622;color:#e5ebe7;border-color:#2a3631}.slide-foot .btn.primary{background:#5cb391;color:#0a120f}
+.cal{display:grid;grid-template-columns:repeat(7,minmax(0,1fr)) minmax(0,1.1fr);gap:4px}
+.cal-h{font-size:12px;color:var(--muted);font-weight:600;text-align:center;padding:2px 0}
+.cal-c{min-height:72px;border:1px solid var(--line);border-radius:6px;padding:5px 6px;display:flex;flex-direction:column;gap:2px;background:var(--surface)}
+.cal-c b{font-size:15px}.cal-d{font-size:12px;color:var(--muted)}.cal-n{font-size:11px;color:var(--muted)}
+.cal-empty{background:transparent;border-style:dashed;opacity:.4}.cal-wk{background:var(--surface-2)}
+@media (max-width:600px){.cal-c{min-height:54px;padding:3px}.cal-c b{font-size:12px}.cal-n{display:none}}
+.theme-seg{display:flex;width:100%}
+.theme-seg button{flex:1;border:0;border-right:1px solid var(--line);background:none;padding:6px 4px;font-size:12.5px;font-weight:600;color:var(--muted);cursor:pointer;min-height:32px}
+.theme-seg button:last-child{border-right:0}
+.theme-seg button[aria-checked="true"]{background:var(--surface-2);color:var(--ink)}
+@media (max-width:860px){.me .theme-seg{width:auto;flex:none}}
+:root[data-theme="dark"] .clock{background:linear-gradient(135deg,#1a1f2e,#0b0d14);color:#E9E3D4;border:1px solid #3a3220}
+.clock{background:linear-gradient(135deg,#1b1810,#3a2e12);color:#f6f3ea}
+h1,.pagehead h1{font-family:var(--font-display);font-weight:700}
+.btn.primary{background:linear-gradient(180deg,#F2CE72,#D9A93E);border-color:#D9A93E;color:#141006}
+.mark{background:none!important;width:42px;height:42px}.mark img{width:42px;height:42px;display:block}
+#toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:8px;font-size:14px;z-index:40;max-width:calc(100% - 32px)}
+#toast:empty{display:none}
+.foot{color:var(--muted);font-size:12.5px;border-top:1px solid var(--line);padding-top:14px;margin-top:10px}
+@media (prefers-reduced-motion: no-preference){.redbox{animation:pulse 2.4s ease-in-out 3}@keyframes pulse{50%{box-shadow:0 0 0 6px color-mix(in srgb,var(--red) 25%,transparent)}}}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<div id="modal"></div>
+<div id="toast" role="status" aria-live="polite"></div>
+<datalist id="pairs"><option value="EUR/USD"></option><option value="GBP/USD"></option><option value="USD/JPY"></option><option value="USD/ZAR"></option><option value="EUR/ZAR"></option><option value="GBP/ZAR"></option><option value="AUD/USD"></option><option value="USD/CAD"></option><option value="USD/CHF"></option><option value="NZD/USD"></option><option value="EUR/GBP"></option><option value="EUR/JPY"></option><option value="GBP/JPY"></option></datalist>
+<datalist id="commods"><option value="XAU/USD">Gold</option><option value="XAG/USD">Silver</option><option value="XPT/USD">Platinum</option><option value="XPD/USD">Palladium</option><option value="COPPER">Copper</option><option value="BRENT">Brent crude</option><option value="WTI">WTI crude</option><option value="NATGAS">Natural gas</option><option value="IRONORE">Iron ore</option><option value="COAL">Coal (Richards Bay)</option><option value="WHEAT">Wheat</option><option value="CORN">Corn</option><option value="SOYBEANS">Soybeans</option><option value="COFFEE">Coffee</option><option value="SUGAR">Sugar</option><option value="COCOA">Cocoa</option></datalist>
+<script src="assets/vendor/supabase.js"></script>
+<script>
+{
+"use strict";
+const SB_URL = "https://wpoknxskdrjurjdpxqav.supabase.co";
+const SB_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Indwb2tueHNrZHJqdXJqZHB4cWF2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTM2NTAyNDYsImV4cCI6MjEwOTIyNjI0Nn0.z8uzgQp7YmJ1NQNAENAV5F9euQERYVGKzenumOaV6Ec";
+const STAFF_DOMAIN = "@leagorifumocapital.co.za";
+/* ---------- helpers ---------- */
+const $ = (s, r = document) => r.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const pad = n => String(n).padStart(2, "0");
+const today = () => { const d = new Date(); return `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`; };
+const addDays = (ymd, n) => { const [y,m,d] = ymd.split("-").map(Number); const x = new Date(y, m-1, d+n); return `${x.getFullYear()}-${pad(x.getMonth()+1)}-${pad(x.getDate())}`; };
+const daysUntil = ymd => { const [y,m,d] = ymd.split("-").map(Number); const t = new Date(); return Math.round((new Date(y,m-1,d) - new Date(t.getFullYear(), t.getMonth(), t.getDate())) / 86400000); };
+const SA = "Africa/Johannesburg";
+const fmtDate = s => { if (!s) return "—"; const d = s.length === 10 ? new Date(s + "T12:00:00") : new Date(s); return d.toLocaleDateString("en-ZA", {day:"numeric", month:"short", year:"numeric"}); };
+const fmtDT = s => s ? new Date(s).toLocaleString("en-ZA", {day:"numeric", month:"short", hour:"2-digit", minute:"2-digit", timeZone: SA}) : "—";
+const fmtT = d => d.toLocaleTimeString("en-ZA", {hour:"2-digit", minute:"2-digit", timeZone: SA, hourCycle:"h23"});
+const fmtP = n => (n == null || n === "" || isNaN(n)) ? "—" : String(+Number(n).toFixed(5));
+const fmtR = r => (r == null || isNaN(r)) ? "—" : (r > 0 ? "+" : "") + r.toFixed(2) + "R";
+const num = v => { const n = parseFloat(String(v).replace(",", ".")); return isFinite(n) ? n : null; };
+const keyOf = name => String(name || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+const ago = s => { const m = Math.round((Date.now() - new Date(s)) / 60000); return m < 60 ? `${Math.max(m,0)} min ago` : m < 1440 ? `${Math.round(m/60)} h ago` : fmtDate(s); };
+
+const DESKS = { eq: { name: "Equity desk", short: "Equity" }, fx: { name: "Forex desk", short: "Forex" }, cm: { name: "Commodities desk", short: "Commodities" } };
+const DESK_KEYS = ["eq_fund", "eq_tech", "fx_fund", "fx_tech", "cm_fund", "cm_tech"];
+const DESK_LABEL = { eq_fund: "Equity fundamental", eq_tech: "Equity technical", fx_fund: "Forex fundamental", fx_tech: "Forex technical", cm_fund: "Commodities fundamental", cm_tech: "Commodities technical" };
+const EXPIRY_DEF = { eq: 14, fx: 7, cm: 10 };
+const expiryDays = d => parseInt(cfg()[d + "Expiry"]) || EXPIRY_DEF[d];
+const ROLE_NAME = { fund: "Fundamental", tech: "Technical" };
+const STATUS = {
+  draft:{label:"Draft",tone:""}, watchlist:{label:"Watchlist · Low",tone:""}, handed_over:{label:"Awaiting technical",tone:"accent"},
+  waiting:{label:"Waiting for setup",tone:"warn"}, approved:{label:"Approved",tone:"buy"}, executed:{label:"Active trade",tone:"live"},
+  closed:{label:"Closed",tone:""}, no_trade:{label:"No trade",tone:"sell"}, withdrawn:{label:"Withdrawn",tone:""}, cancelled:{label:"Not filled",tone:""}, expired:{label:"Expired",tone:""}
+};
+const SETUPS = ["Supply zone", "Demand zone", "Break and retest", "No setup yet – wait"];
+const WAIT = "No setup yet – wait";
+const CM_DRIVERS = ["Supply / OPEC+", "Inventories", "China demand", "US dollar", "Real yields", "Weather / harvest", "Geopolitics", "Positioning (COT)", "Mine output / strikes"];
+const FX_DRIVERS = ["Interest rate differential", "Central bank policy", "Inflation", "Growth / PMI", "Risk sentiment", "Commodity link", "Positioning (COT)", "Politics / fiscal"];
+const EQ_DRIVERS = ["Earnings growth", "Margins", "Balance sheet", "Dividend / buybacks", "Management", "Sector tailwind", "Macro / rates", "Corporate action"];
+const REASON_LABEL = { direction:"Desks disagree on direction", setup_conflict:"Setup conflicts with bias", tech_low:"Low technical confidence", fund_low:"Low fundamental confidence", rr_low:"Risk-to-reward below minimum", levels:"Invalid levels" };
+const VIEWS = [["today","Today"],["desk","Handover desk"],["trades","Active trades"],["journal","Trade journal"],["log","Trade log"],["picks","Top picks"],["show","Live show"],["forecast","Weekly forecast"],["help","Handbook"],["team","Team & settings"]];
+const SOON = {};
+
+/* ---------- state ---------- */
+const S = { db:null, user:null, me:null, owner:false, readOnly:false, noDb:false, loadNote:null, pending:false,
+  staff:{}, staffLoaded:false, claims:{}, claimsLoaded:false, auth:undefined, sessionName:null,
+  config:null, configLoaded:false, ideas:[], ideasLoaded:false, flags:[], marks:{}, edition:null, picks:{}, pickhist:[], picksTab:"JSE", calMonth:null, jOpen:null, jDesk:"all", shows:{}, showId:null, showFilter:"all", forecasts:{}, fcId:null,
+  view:"today", desk:"eq", role:{ eq:null, fx:null, cm:null }, filter:{ eq:"active", fx:"active", cm:"active" }, logDesk:"all", flagFilter:"open", gateMode:null };
+try { const s = JSON.parse(sessionStorage.getItem("lrc-ws") || "{}"); S.sessionName = s.name || null; S.role = Object.assign(S.role, s.role || {}); } catch (e) {}
+const saveSession = () => { try { sessionStorage.setItem("lrc-ws", JSON.stringify({ name: S.sessionName, role: S.role })); } catch (e) {} };
+const THEMES = [["auto", "Auto"], ["light", "Light"], ["dark", "Dark"]];
+let THEME = "auto"; try { THEME = localStorage.getItem("lrc-theme") || "auto"; } catch (e) {}
+function applyTheme() { const r = document.documentElement; if (THEME === "auto") { const dark = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches; r.setAttribute("data-theme", dark ? "dark" : "light"); } else r.setAttribute("data-theme", THEME); }
+applyTheme(); try { matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => { if (THEME === "auto") applyTheme(); }); } catch (e) {}
+const themeSwitch = () => `<div class="seg theme-seg" role="radiogroup" aria-label="Colour mode">${THEMES.map(([k, l]) => `<button type="button" role="radio" aria-checked="${THEME === k}" data-act="theme" data-t="${k}">${l}</button>`).join("")}</div>`;
+const fromHash = () => { const h = location.hash.slice(1); if (VIEWS.some(v => v[0] === h)) S.view = h; };
+fromHash();
+window.addEventListener("hashchange", () => { fromHash(); render(true); });
+const cfg = () => S.config || {};
+const minRR = () => num(cfg().minRR) ?? 1.5;
+const LIM = () => ({ maxTrades: num(cfg().maxTrades) ?? 8, maxShorts: num(cfg().maxShorts) ?? 4, maxPerSector: num(cfg().maxPerSector) ?? 2, riskPct: num(cfg().riskPct) ?? 1, eventDays: num(cfg().eventDays) ?? 14, requireWS: cfg().requireWS !== false });
+const EQ_SECTORS = ["Financials", "Basic Materials", "Energy", "Technology", "Communication Services", "Consumer Cyclical", "Consumer Defensive", "Healthcare", "Industrials", "Real Estate", "Utilities", "ETF / index"];
+const CM_GROUP = a => /XAU|XAG|XPT|XPD/.test(a) ? "Precious metals" : /BRENT|WTI|NATGAS|COAL/.test(a) ? "Energy" : /COPPER|IRON/.test(a) ? "Industrial metals" : "Agriculture";
+function sectorOf(i) { const f = i.fund || {}, a = String(f.asset || "").toUpperCase();
+  if (i.desk === "eq") return "Equity · " + (f.sector || "Unclassified");
+  if (i.desk === "cm") return "Commodities · " + CM_GROUP(a);
+  const ccy = a.split("/").find(c => c && c !== "USD") || a; return "Forex · " + ccy; }
+function eventSoon(i) { const f = i.fund || {}, d = f.catalystDate || f.eventDate; if (!d) return null; const n = daysUntil(d); return n >= 0 && n <= LIM().eventDays ? { days: n, what: f.catalyst || f.eventRisk || "Event", date: d } : null; }
+function limitCheck(i, riskPct) {
+  const L = LIM(), open = S.ideas.filter(x => x.status === "executed" && x.id !== i.id), hard = [], warn = [];
+  if (open.length >= L.maxTrades) hard.push(`${open.length} trades are already open; the limit is ${L.maxTrades}.`);
+  if (i.fund.bias === "Sell" && open.filter(x => x.fund.bias === "Sell").length >= L.maxShorts) hard.push(`${L.maxShorts} shorts are already open; that's the limit.`);
+  const sec = sectorOf(i), inSec = open.filter(x => sectorOf(x) === sec).length;
+  if (inSec >= L.maxPerSector) hard.push(`${inSec} trades are already open in ${sec}; the limit is ${L.maxPerSector} per sector.`);
+  if (riskPct != null && riskPct > L.riskPct + 1e-9) hard.push(`Risk of ${riskPct}% is above the ${L.riskPct}% house rule.`);
+  const ev = eventSoon(i); if (ev) warn.push(`Event risk: ${ev.what} on ${fmtDate(ev.date)} (${ev.days} days). Consider a smaller size or waiting.`);
+  if (i.desk === "eq" && i.fund.sector == null) warn.push("No sector on this handover, so the sector limit can't be checked properly.");
+  return { hard, warn, sec };
+}
+const myStaff = () => S.sessionName ? S.staff[S.sessionName] : null;
+const isAdmin = () => !!S.owner;
+const myName = () => (myStaff() && myStaff().name) || "A team member";
+function can(desk, role) { const s = myStaff(); return !!(s && s.desks && s.desks[desk + "_" + role]); }
+
+function toast(msg) { const t = $("#toast"); t.textContent = msg; clearTimeout(toast.t); toast.t = setTimeout(() => t.textContent = "", 4200); }
+function writeErr(e) {
+  if (e && (e.code === "42501" || /row-level security|permission/i.test(String(e.message || "")))) return "You don't have permission to change this. Ask the admin.";
+  if (e && e.message && !/fetch|network/i.test(e.message)) return "That didn't save: " + e.message;
+  if (e && e.code === "invalid_argument" && !/permission|level|rule|denied|not allowed to write/i.test(String(e.message || ""))) return "That didn't save: " + String(e.message || "the database refused it") + ". Tell Prayer what this says.";
+  if (e && e.code === "invalid_argument") { S.readOnly = true; return "This change wasn't saved: your claude.ai access to the Workplace is view-only. Ask the admin to share it with you as Contributor or Editor."; }
+  if (e && e.code === "quota_exceeded") return "The Workplace database is full. Ask the admin to clear old drafts.";
+  return "That didn't save" + (e && e.message ? ` (${String(e.message).slice(0, 160)})` : " because the connection dropped") + ". Try again in a moment.";
+}
+
+/* ---------- passwords (PBKDF2) ---------- */
+const b64 = buf => btoa(String.fromCharCode(...new Uint8Array(buf)));
+const unb64 = s => Uint8Array.from(atob(s), c => c.charCodeAt(0));
+async function hashPw(pw, salt) {
+  const key = await crypto.subtle.importKey("raw", new TextEncoder().encode(pw), "PBKDF2", false, ["deriveBits"]);
+  return b64(await crypto.subtle.deriveBits({ name: "PBKDF2", salt: unb64(salt), iterations: 150000, hash: "SHA-256" }, key, 256));
+}
+const newSalt = () => b64(crypto.getRandomValues(new Uint8Array(16)));
+
+/* ---------- US market clock ---------- */
+function nyOffsetMin(d) {
+  const p = Object.fromEntries(new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", hourCycle: "h23", year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", second: "2-digit" }).formatToParts(d).map(x => [x.type, x.value]));
+  return (Date.UTC(+p.year, p.month - 1, +p.day, +p.hour, +p.minute, +p.second) - d.getTime()) / 60000;
+}
+function nyAt(y, m, d, hh, mm) { const guess = new Date(Date.UTC(y, m, d, hh, mm)); return new Date(guess.getTime() - nyOffsetMin(guess) * 60000); }
+function marketClock() {
+  const now = new Date();
+  const p = Object.fromEntries(new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", year: "numeric", month: "2-digit", day: "2-digit" }).formatToParts(now).map(x => [x.type, x.value]));
+  for (let k = 0; k < 8; k++) {
+    const base = new Date(Date.UTC(+p.year, p.month - 1, +p.day + k));
+    const wd = base.getUTCDay(); if (wd === 0 || wd === 6) continue;
+    const open = nyAt(base.getUTCFullYear(), base.getUTCMonth(), base.getUTCDate(), 9, 30);
+    const close = nyAt(base.getUTCFullYear(), base.getUTCMonth(), base.getUTCDate(), 16, 0);
+    if (now < close) { const sd = new Date(open.getTime() + 2 * 3600000); const live = new Date(Date.UTC(sd.getUTCFullYear(), sd.getUTCMonth(), sd.getUTCDate(), 18, 30));
+      return { open, close, live, ready: new Date(live - 30 * 60000), isOpen: now >= open }; }
+  }
+}
+const dur = ms => { const m = Math.max(0, Math.round(ms / 60000)); const h = Math.floor(m / 60); return h >= 24 ? `${Math.floor(h/24)}d ${h%24}h` : `${h}h ${pad(m % 60)}m`; };
+
+/* ---------- trade logic ---------- */
+function rrOf(bias, entry, stop, target) {
+  if ([entry, stop, target].some(v => v == null || v <= 0)) return null;
+  if (bias === "Buy" && stop < entry && target > entry) return (target - entry) / (entry - stop);
+  if (bias === "Sell" && stop > entry && target < entry) return (entry - target) / (stop - entry);
+  return null;
+}
+function verdictOf(f, t) {
+  if (t.setup === WAIT) return { status: "waiting", reasons: ["The technical desk sees no valid setup yet. The idea stays open until its expiry date."], codes: [] };
+  const reasons = [], codes = []; const add = (c, r) => { codes.push(c); reasons.push(r); };
+  if (t.bias !== f.bias) add("direction", `The desks disagree on direction: fundamental says ${f.bias}, technical says ${t.bias}.`);
+  if (t.setup === "Supply zone" && f.bias === "Buy") add("setup_conflict", "A supply zone is a sell setup, but the fundamental bias is Buy.");
+  if (t.setup === "Demand zone" && f.bias === "Sell") add("setup_conflict", "A demand zone is a buy setup, but the fundamental bias is Sell.");
+  if (f.conf === "Low") add("fund_low", "Fundamental confidence is Low.");
+  if (t.conf === "Low") add("tech_low", "Technical confidence is Low.");
+  const rr = rrOf(f.bias, t.entry, t.stop, t.target);
+  if (rr == null) add("levels", `Entry, stop and target don't fit a ${f.bias} trade (${f.bias === "Buy" ? "stop below entry, target above" : "stop above entry, target below"}).`);
+  else if (rr < minRR() - 1e-9) add("rr_low", `Risk-to-reward of 1 : ${rr.toFixed(2)} is below the 1 : ${minRR()} minimum.`);
+  if (codes.length) return { status: "no_trade", reasons, codes, rr };
+  const full = f.conf === "High" && t.conf === "High" && t.trend === "Pro-trend";
+  const why = full ? ["Both desks rate it High and the setup is pro-trend."] : [t.trend === "Counter-trend" ? "Counter-trend setup, so size is reduced." : null,
+    (f.conf !== "High" || t.conf !== "High") ? `Confidence is ${f.conf} fundamental / ${t.conf} technical, so size is reduced.` : null].filter(Boolean);
+  return { status: "approved", size: full ? "Full size" : "Reduced size", reasons: why, codes: [], rr };
+}
+function rMultiple(i, price) {
+  const f = i.fund || {}, t = i.tech || {}; const e = num(i.exec && i.exec.fill) ?? t.entry;
+  if (e == null || t.stop == null || price == null) return null;
+  const risk = f.bias === "Buy" ? e - t.stop : t.stop - e; if (!(risk > 0)) return null;
+  return (f.bias === "Buy" ? price - e : e - price) / risk;
+}
+const isActiveStatus = s => ["draft", "watchlist", "handed_over", "waiting"].includes(s);
+const effStatus = i => (["handed_over", "waiting"].includes(i.status) && i.expiry && daysUntil(i.expiry) < 0) ? "expired" : i.status;
+const histEntry = (desk, role, action) => ({ at: new Date().toISOString(), by: S.me || null, byName: myName(), role: role ? `${DESKS[desk].short} ${ROLE_NAME[role].toLowerCase()}` : "", action });
+const liveTrades = () => S.ideas.filter(i => i.status === "executed");
+const assetKey = a => String(a || "").toUpperCase().replace(/\s+/g, "");
+const openFlags = () => S.flags.filter(f => !f.cleared);
+const flagsFor = i => openFlags().filter(f => (f.ideaIds || []).includes(i.id) || (f.assets || []).map(assetKey).includes(assetKey(i.fund && i.fund.asset)));
+
+/* ---------- data ---------- */
+/* ---------- database (Supabase) ---------- */
+function mkDb(sb) {
+  const subs = {}, timers = {};
+  const fetchColl = async c => { const { data, error } = await sb.from("wp_docs").select("id,data").eq("coll", c); if (error) throw error; return { metadata: {}, docs: (data || []).map(r => ({ id: r.id, data: () => r.data })) }; };
+  const refresh = c => { clearTimeout(timers[c]); timers[c] = setTimeout(() => (subs[c] || []).forEach(f => f()), 250); };
+  const watch = (c, cb, err) => { const run = async () => { try { cb(await fetchColl(c)); } catch (e) { err && err(e); } }; (subs[c] = subs[c] || []).push(run); run(); return () => {}; };
+  try { sb.channel("wp-docs").on("postgres_changes", { event: "*", schema: "public", table: "wp_docs" }, p => { const path = (p.new && p.new.path) || (p.old && p.old.path) || ""; refresh((p.new && p.new.coll) || path.replace(/\/[^/]+$/, "")); }).subscribe(); } catch (e) {}
+  setInterval(() => Object.keys(subs).forEach(refresh), 60000);
+  const collOf = path => path.replace(/\/[^/]+$/, "");
+  const ok = r => { if (r.error) throw r.error; };
+  const doc = path => ({
+    set: async d => { ok(await sb.from("wp_docs").upsert({ path, coll: collOf(path), id: path.split("/").pop(), data: d })); refresh(collOf(path)); },
+    update: async patch => { ok(await sb.rpc("wp_merge", { p_path: path, p_patch: patch })); refresh(collOf(path)); },
+    delete: async () => { ok(await sb.from("wp_docs").delete().eq("path", path)); refresh(collOf(path)); },
+    onSnapshot: (cb, err) => watch(collOf(path), snap => { const d = snap.docs.find(x => x.id === path.split("/").pop()); cb({ exists: !!d, data: () => d && d.data(), metadata: {} }); }, err)
+  });
+  return { doc, collection: c => ({ onSnapshot: (cb, err) => watch(c, cb, err), doc: id => doc(c + "/" + (id || (crypto.randomUUID ? crypto.randomUUID() : Date.now().toString(36) + Math.random().toString(36).slice(2)))) }) };
+}
+const userEmail = u => String(u || "").trim().toLowerCase().replace(/\s+/g, ".") + STAFF_DOMAIN;
+async function loadStaff() {
+  const { data, error } = await S.sb.from("wp_staff").select("*"); if (error) throw error;
+  S.staff = {}; (data || []).forEach(r => S.staff[r.username] = r); S.staffLoaded = true;
+}
+async function init() {
+  render();
+  if (!window.supabase) { S.phase = "error"; S.loadNote = "The sign-in service didn't load. Check your connection and reload."; render(); return; }
+  S.sb = window.supabase.createClient(SB_URL, SB_ANON, { auth: { storageKey: "lrc-workplace-auth", persistSession: true, autoRefreshToken: true } });
+  const { data } = await S.sb.auth.getSession();
+  if (data && data.session) await afterSignIn(); else { S.phase = "signin"; render(); }
+}
+async function afterSignIn() {
+  S.phase = "loading"; render();
+  try {
+    const { data: me, error } = await S.sb.rpc("wp_me"); if (error) throw error;
+    const row = (me || [])[0];
+    if (!row) { S.phase = "notstaff"; render(); return; }
+    S.me = row.uid; S.sessionName = row.username; S.owner = !!row.admin; saveSession();
+    await loadStaff();
+  } catch (e) { S.phase = "error"; S.loadNote = "The Workplace couldn't load: " + ((e && e.message) || "connection problem") + ". Reload the page."; render(); return; }
+  const db = mkDb(S.sb); S.db = db; S.phase = "ready";
+  const live = (q, fn, what) => q.onSnapshot(fn, () => { S.loadNote = `The ${what} couldn't be loaded. Reload the page later.`; render(); });
+  live(db.doc("config/desks"), snap => { S.config = snap.exists ? snap.data() : null; S.configLoaded = true; render(); }, "settings");
+  live(db.collection("ideas"), snap => { S.ideas = snap.docs.map(d => Object.assign({ id: d.id }, d.data())); S.ideasLoaded = true; render(); }, "handover board");
+  live(db.collection("flags"), snap => { S.flags = snap.docs.map(d => Object.assign({ id: d.id }, d.data())).sort((a, b) => (b.at || "").localeCompare(a.at || "")); render(); }, "news flags");
+  live(db.collection("picks"), snap => { S.picks = {}; S.edition = null; snap.docs.forEach(d => { if (d.id === "edition") S.edition = d.data(); else S.picks[d.id] = d.data(); }); render(); }, "top picks");
+  live(db.collection("shows"), snap => { S.shows = {}; snap.docs.forEach(d => S.shows[d.id] = d.data()); render(); }, "shows");
+  live(db.collection("forecasts"), snap => { S.forecasts = {}; snap.docs.forEach(d => S.forecasts[d.id] = d.data()); render(); }, "forecasts");
+  live(db.collection("pickhist"), snap => { S.pickhist = snap.docs.map(d => d.data()).sort((a, b) => (b.exitOn || "").localeCompare(a.exitOn || "")); render(); }, "picks history");
+  live(db.collection("marks"), snap => { S.marks = {}; snap.docs.forEach(d => S.marks[d.id] = d.data()); render(); }, "latest prices");
+  render(true);
+}
+const ideaRef = id => S.db.doc("ideas/" + id);
+async function patchIdea(i, data, action, role) {
+  const hist = (i.history || []).map(h => Object.assign({}, h)); hist.push(histEntry(i.desk, role, action));
+  await ideaRef(i.id).update(Object.assign({}, data, { history: hist, updatedAt: new Date().toISOString() }));
+}
+
+/* ---------- render ---------- */
+function render(force) {
+  const a = document.activeElement;
+  if (!force && a && $("#root").contains(a) && /INPUT|TEXTAREA|SELECT/.test(a.tagName)) { S.pending = true; return; }
+  S.pending = false;
+  if (S.phase !== "ready") { $("#root").innerHTML = gateView(); return; }
+  const flagsOpen = openFlags().filter(f => f.level !== "amber").length;
+  const awaiting = S.ideas.filter(i => effStatus(i) === "handed_over").length;
+  const nav = VIEWS.filter(v => v[0] !== "team" || isAdmin()).map(([k, l]) => {
+    let badge = "";
+    if (k === "today" && flagsOpen) badge = `<span class="count red" title="Market-moving news">${flagsOpen}</span>`;
+    if (k === "desk" && awaiting) badge = `<span class="count" title="Awaiting technical review">${awaiting}</span>`;
+    if (k === "trades" && liveTrades().length) badge = `<span class="count">${liveTrades().length}</span>`;
+    if (SOON[k]) badge = `<span class="soon">${SOON[k]}</span>`;
+    return `<button data-act="view" data-v="${k}" ${S.view === k ? 'aria-current="page"' : ""}>${l}${badge}</button>`;
+  }).join("");
+  let body = S.loadNote ? `<div class="note warn">${esc(S.loadNote)}</div>` : "";
+  body += ({ today: viewToday, desk: viewDesk, trades: viewTrades, journal: viewJournal, log: viewLog, picks: viewPicks, show: viewShow, forecast: viewForecast, help: viewHelp, team: viewTeam }[S.view] || viewToday)();
+  body += `<p class="foot">Private to Leago Rifumo Capital staff. Every action is recorded with your name. Research and trading notes, not financial advice.</p>`;
+  $("#root").innerHTML = `<div class="shell"><aside class="side"><div class="brand"><div class="mark" aria-hidden="true"><img src="assets/img/monogram.png" alt=""></div><div><b>LRC Workplace</b><span>Leago Rifumo Capital</span></div></div>
+    <nav class="nav" aria-label="Workplace">${nav}</nav>
+    <div class="me">${themeSwitch()}<span>Signed in as <b>${esc(myName())}</b>${isAdmin() ? " · admin" : ""}</span><div style="display:flex;gap:4px;flex-wrap:wrap"><button class="btn ghost sm" data-act="chpw">Change password</button><button class="btn ghost sm" data-act="signout">Sign out</button></div></div></aside>
+    <main><div class="stack">${body}</div></main></div>`;
+  if (S.view === "show" && S._thumb) { drawThumb($("#thumbprev"), S._thumb); if (document.fonts && !S._fontsOk) document.fonts.ready.then(() => { S._fontsOk = true; if (S.view === "show") drawThumb($("#thumbprev"), S._thumb); }); }
+}
+document.addEventListener("focusout", () => setTimeout(() => { if (S.pending && !$("#modal").innerHTML) render(); }, 0));
+
+/* ---------- sign in ---------- */
+const gateWrap = inner => `<div class="gate"><div class="panel"><div class="brand" style="padding:0"><div class="mark" aria-hidden="true"><img src="assets/img/monogram.png" alt=""></div><div><b>LRC Workplace</b><span>Leago Rifumo Capital · staff only</span></div></div>${inner}</div></div>`;
+function gateView() {
+  if (S.phase === "loading" || !S.phase) return gateWrap(`<p class="subtle">Opening the Workplace…</p>`);
+  if (S.phase === "error") return gateWrap(`<h1>Can't open the Workplace</h1><p class="subtle">${esc(S.loadNote || "")}</p><button class="btn" data-act="signout">Sign out</button>`);
+  if (S.phase === "notstaff") return gateWrap(`<h1>Not on the staff list</h1><p class="subtle">You're signed in, but this account isn't on the LRC staff list yet. Ask the admin to add you on the Team page.</p><button class="btn" data-act="signout">Sign out</button>`);
+  return gateWrap(`<h1>Sign in</h1><p class="subtle">Use the username and password the admin gave you, e.g. <span class="mono">prayer.nkuna</span>.</p>
+    <form data-form="signin"><div class="field"><label for="g-name">Username</label><input type="text" id="g-name" name="name" required autocomplete="username" autocapitalize="none" value="${esc(S.sessionName || "")}"></div>
+    <div class="field"><label for="g-pw">Password</label><input type="password" id="g-pw" name="pw" required autocomplete="current-password"></div>
+    <p class="note bad form-error" id="g-err"></p><button class="btn primary" type="submit">Sign in</button></form>
+    <p class="subtle" style="margin:0">Forgotten your password? Ask the admin to set a temporary one.</p>`);
+}
+async function onGate(f) {
+  const err = $("#g-err"); err.textContent = "";
+  try {
+    const { error } = await S.sb.auth.signInWithPassword({ email: userEmail(f.name.value), password: f.pw.value });
+    if (error) { err.textContent = /invalid/i.test(error.message) ? "That username and password don't match. Check both and try again." : error.message; f.pw.value = ""; f.pw.focus(); return; }
+    await afterSignIn();
+  } catch (e) { err.textContent = "Couldn't reach the sign-in service. Check your connection."; }
+}
+function pwForm() {
+  openModal({ title: "Change your password", body: `${fld("np", "New password", `<input type="password" id="np" name="np" minlength="8" required autocomplete="new-password">`, "At least 8 characters, not used anywhere else.")}${fld("np2", "Confirm", `<input type="password" id="np2" name="np2" required autocomplete="new-password">`)}`,
+    buttons: `<button class="btn primary" type="submit">Change password</button>`,
+    onSubmit: async form => { if (form.np.value.length < 8) return "Use at least 8 characters."; if (form.np.value !== form.np2.value) return "The passwords don't match.";
+      const { error } = await S.sb.auth.updateUser({ password: form.np.value }); if (error) return error.message; toast("Password changed."); } });
+}
+
+/* ---------- Today ---------- */
+function viewToday() {
+  const mc = marketClock(), now = new Date();
+  let headline = "", sub = "";
+  if (mc.isOpen) { headline = dur(mc.close - now); sub = `US market open · closes ${fmtT(mc.close)} SA time`; }
+  else { headline = dur(mc.open - now); sub = `to the US open · ${mc.open.toLocaleDateString("en-ZA", { weekday: "long", day: "numeric", month: "short", timeZone: SA })}`; }
+  const flags = openFlags(), red = flags.filter(f => f.level !== "amber"), amber = flags.filter(f => f.level === "amber");
+  const lt = liveTrades(), hot = lt.filter(i => flagsFor(i).some(f => f.level !== "amber"));
+  const newsBox = red.length
+    ? `<div class="redbox"><h2>Market-moving news · ${red.length}</h2>${red.slice(0, 4).map(flagCard).join("")}${red.length > 4 ? `<button class="btn sm" data-act="view" data-v="trades">See all ${red.length}</button>` : ""}</div>`
+    : `<div class="calm"><h2 style="font-size:18px">No market-moving news flagged</h2><p class="subtle" style="margin:6px 0 0">The news scan marks anything that hits an active trade or the US and SA markets here, in red.${amber.length ? ` ${amber.length} lower-priority item${amber.length > 1 ? "s" : ""} on Active trades.` : ""}</p></div>`;
+  const awaiting = S.ideas.filter(i => effStatus(i) === "handed_over").length;
+  const approved = S.ideas.filter(i => i.status === "approved").length;
+  return `<div class="pagehead"><div><h1>${now.toLocaleDateString("en-ZA", { weekday: "long", day: "numeric", month: "long", timeZone: SA })}</h1><p>Good ${now.getHours() < 12 ? "morning" : now.getHours() < 17 ? "afternoon" : "evening"}, ${esc(myName().split(" ")[0])}. Here's the desk.</p></div></div>
+  <div class="hero">
+    <div class="clock"><div class="lab">US PM session</div><div class="big" id="cd">${headline}</div><div class="lab">${sub}</div>
+      <div class="times"><div><span>US open</span><b>${fmtT(mc.open)}</b></div><div><span>Show ready</span><b>${fmtT(mc.ready)}</b></div><div><span>Leago Rifumo Show</span><b>${fmtT(mc.live)}</b></div></div>
+      <div class="lab">SA time. Moves with US daylight saving; US holidays aren't counted.</div></div>
+    ${newsBox}
+  </div>
+  <div class="tiles">
+    <button class="tile" data-act="view" data-v="trades"><span>Active trades</span><b>${lt.length}</b><small>${hot.length ? `<span class="neg">${hot.length} hit by news</span>` : "none hit by news"}</small></button>
+    <button class="tile" data-act="view" data-v="desk"><span>Awaiting technical</span><b>${awaiting}</b><small>handovers to review</small></button>
+    <button class="tile" data-act="view" data-v="desk"><span>Approved, not filled</span><b>${approved}</b><small>ready for the trader</small></button>
+    <button class="tile" data-act="view" data-v="picks"><span>Top picks</span><b>${S.edition ? Object.keys(S.picks).length : "—"}</b><small>${S.edition ? "edition " + fmtDate(S.edition.date) : "first edition 12:47"}</small></button>
+  </div>
+  ${lt.length ? `<h2 style="font-size:19px">Active trades</h2><div class="tblwrap">${tradesTable(lt)}</div>` : ""}`;
+}
+function flagCard(f) {
+  return `<div class="flag ${f.level === "amber" ? "amber" : ""} ${f.cleared ? "cleared" : ""}"><div class="flag-h">${f.level === "amber" ? `<span class="pill warn">Watch</span>` : `<span class="pill red">Market-moving</span>`}
+    ${(f.assets || []).map(a => `<b>${esc(a)}</b>`).join(" ")}<span class="subtle">${ago(f.at)}</span></div>
+    <p><strong>${esc(f.headline)}</strong></p>${f.detail ? `<p>${esc(f.detail)}</p>` : ""}
+    ${f.action ? `<p><span class="subtle">Suggested action:</span> ${esc(f.action)}</p>` : ""}
+    <div class="flag-h">${f.url ? `<a href="${esc(f.url)}" target="_blank" rel="noopener" class="subtle">${esc(f.source || "Source")}</a>` : `<span class="subtle">${esc(f.source || "")}</span>`}
+    ${f.cleared ? `<span class="subtle">Reviewed by ${esc(f.cleared.byName)} · ${fmtDT(f.cleared.at)}</span>` : `<button class="btn sm" data-act="clearflag" data-id="${f.id}" ${S.readOnly ? "disabled" : ""}>Mark as reviewed</button>`}</div></div>`;
+}
+function tradesTable(list) {
+  return `<table><thead><tr><th>Asset</th><th>Desk</th><th>Side</th><th class="num">Entry</th><th class="num">Stop</th><th class="num">Target</th><th class="num">Last</th><th class="num">Open R</th><th>News</th></tr></thead><tbody>
+  ${list.map(i => { const m = S.marks[i.id], r = m ? rMultiple(i, num(m.price)) : null, fl = flagsFor(i), redF = fl.some(f => f.level !== "amber");
+    return `<tr><td class="mono"><b>${esc(i.fund.asset)}</b></td><td>${DESKS[i.desk].short}</td><td>${biasPill(i.fund.bias)}</td><td class="num">${fmtP(i.exec ? i.exec.fill : i.tech.entry)}</td><td class="num">${fmtP(i.tech.stop)}</td><td class="num">${fmtP(i.tech.target)}</td>
+      <td class="num">${m ? fmtP(m.price) : "—"}</td><td class="num ${r > 0 ? "pos" : r < 0 ? "neg" : ""}">${fmtR(r)}</td><td>${redF ? `<span class="pill red">Market-moving</span>` : fl.length ? `<span class="pill warn">Watch</span>` : `<span class="subtle">Clear</span>`}</td></tr>`; }).join("")}</tbody></table>`;
+}
+
+/* ---------- Active trades ---------- */
+function viewTrades() {
+  const lt = liveTrades().slice().sort((a, b) => flagsFor(b).length - flagsFor(a).length);
+  const ff = S.flagFilter, fl = ff === "open" ? openFlags() : S.flags.slice(0, 60);
+  const cards = lt.map(i => {
+    const m = S.marks[i.id], price = m ? num(m.price) : null, r = price != null ? rMultiple(i, price) : null;
+    const tr = rMultiple(i, i.tech.target), fls = flagsFor(i), redF = fls.some(f => f.level !== "amber");
+    const lo = -1, hi = Math.max(tr || 2, 1), pos = r == null ? null : Math.min(100, Math.max(0, (r - lo) / (hi - lo) * 100)), zero = (0 - lo) / (hi - lo) * 100;
+    return `<article class="idea t-live ${redF ? "hot" : ""}"><div class="idea-h"><span class="asset">${esc(i.fund.asset)}</span>${biasPill(i.fund.bias)}<span class="pill outline">${DESKS[i.desk].short}</span>
+      ${i.verdict && i.verdict.size ? `<span class="pill ${i.verdict.size === "Full size" ? "buy" : "warn"}">${esc(i.verdict.size)}</span>` : ""}${redF ? `<span class="pill red">Market-moving news</span>` : ""}</div>
+      <div class="idea-meta"><span>Filled at <b class="mono">${fmtP(i.exec && i.exec.fill)}</b> on ${fmtDate(i.exec && i.exec.date)}</span>${m ? `<span>Last <b class="mono">${fmtP(m.price)}</b> · ${ago(m.at)}${m.source ? " · " + esc(m.source) : ""}</span>` : `<span>No price update yet</span>`}</div>
+      <div style="padding:0 16px 12px"><div class="levels"><div><span>Stop</span><b>${fmtP(i.tech.stop)}</b></div><div><span>Entry</span><b>${fmtP(i.exec ? i.exec.fill : i.tech.entry)}</b></div><div><span>Target</span><b>${fmtP(i.tech.target)}</b></div><div><span>Open result</span><b class="${r > 0 ? "pos" : r < 0 ? "neg" : ""}">${fmtR(r)}</b></div></div>
+      ${pos != null ? `<div class="meter" aria-label="Open result ${fmtR(r)} between stop at -1R and target at ${fmtR(tr)}"><em style="left:${zero}%"></em><i style="left:${pos}%"></i></div><div class="meterlab"><span>Stop −1R</span><span>Entry</span><span>Target ${fmtR(tr)}</span></div>` : ""}</div>
+      ${fls.length ? `<div style="padding:0 16px 14px" class="stack">${fls.map(flagCard).join("")}</div>` : ""}
+      <div class="idea-f"><span class="subtle">Setup invalid if: ${esc(i.tech.invalidation || "—")}</span><div class="acts">${S.role[i.desk] === "tech" ? `<button class="btn sm primary" data-act="close" data-id="${i.id}" ${S.readOnly ? "disabled" : ""}>Close trade</button>` : ""}<button class="btn sm" data-act="jnote" data-id="${i.id}" ${S.readOnly ? "disabled" : ""}>Journal note</button><button class="btn sm" data-act="mark" data-id="${i.id}" ${S.readOnly ? "disabled" : ""}>Update price</button></div></div></article>`;
+  }).join("");
+  const L = LIM(), shorts = lt.filter(x => x.fund.bias === "Sell").length, secs = {}; lt.forEach(x => { const k = sectorOf(x); secs[k] = (secs[k] || 0) + 1; });
+  const meter = (label, n, max) => `<div class="tile"><span>${label}</span><b class="${n >= max ? "neg" : ""}">${n} / ${max}</b><div style="height:6px;border-radius:3px;background:var(--surface-2);margin-top:6px"><div style="height:100%;border-radius:3px;width:${Math.min(100, n / max * 100)}%;background:${n >= max ? "var(--sell)" : n >= max - 1 ? "var(--warn)" : "var(--buy)"}"></div></div></div>`;
+  const riskPanel = `<div class="tiles">${meter("Open trades", lt.length, L.maxTrades)}${meter("Open shorts", shorts, L.maxShorts)}<div class="tile" style="grid-column:span 2"><span>By sector (limit ${L.maxPerSector} each)</span><div class="checks" style="margin-top:6px">${Object.keys(secs).length ? Object.entries(secs).map(([k, n]) => `<span class="pill ${n >= L.maxPerSector ? "sell" : "outline"}">${esc(k)} · ${n}</span>`).join("") : `<span class="subtle">No open trades.</span>`}</div></div></div>
+  ${lt.filter(eventSoon).map(x => { const e = eventSoon(x); return `<div class="note warn"><b>${esc(x.fund.asset)}</b>: ${esc(e.what)} on ${fmtDate(e.date)}, in ${e.days} days. Event risk on an open trade.</div>`; }).join("")}`;
+  return `<div class="pagehead"><div><h1>Active trades</h1><p>Every handover marked as filled lands here. The news scan checks them hourly from 06:00 to 22:00 and turns a trade red when market-moving news hits it.</p></div></div>
+  ${riskPanel}
+  ${lt.length ? `<div class="stack">${cards}</div>` : `<div class="empty">No active trades. A trade appears here as soon as the technical desk marks an approved handover as filled.</div>`}
+  <div class="deskbar"><h2 style="font-size:19px">News flags</h2><div class="filters">${[["open", "Open"], ["all", "All recent"]].map(([k, l]) => `<button class="chip" aria-pressed="${ff === k}" data-act="flagfilter" data-f="${k}">${l}</button>`).join("")}</div></div>
+  ${fl.length ? `<div class="stack">${fl.map(flagCard).join("")}</div>` : `<div class="empty">${ff === "open" ? "No open news flags." : "No news flags yet."}</div>`}`;
+}
+
+/* ---------- Handover desk ---------- */
+function viewDesk() {
+  const desk = S.desk;
+  const deskTabs = `<div class="filters" role="group" aria-label="Desk">${Object.keys(DESKS).map(k => `<button class="chip" aria-pressed="${desk === k}" data-act="desk" data-d="${k}">${DESKS[k].name}</button>`).join("")}</div>`;
+  const head = `<div class="pagehead"><div><h1>Handover desk</h1><p>The fundamental desk hands an idea over; the technical desk approves the setup, waits, or rejects it under LRC rules.</p></div>${deskTabs}</div>`;
+  const roles = ["fund", "tech"].filter(r => can(desk, r));
+  if (!roles.length) return head + `<div class="empty">You don't have access to the ${DESKS[desk].name}. Ask the admin to add it to your account.</div>`;
+  if (!roles.includes(S.role[desk])) S.role[desk] = roles[0];
+  const role = S.role[desk];
+  const ideas = S.ideas.filter(i => i.desk === desk);
+  const cnt = s => ideas.filter(i => effStatus(i) === s).length;
+  const stages = [["handed_over", "Awaiting technical", "accent"], ["waiting", "Waiting for setup", "warn"], ["approved", "Approved", "buy"], ["executed", "Active", "live"], ["closed", "Closed", ""], ["no_trade", "No trade", "sell"]];
+  const f = S.filter[desk];
+  const groups = { active: ["handed_over", "waiting", "approved", "executed", "draft", "watchlist"], closed: ["closed"], dead: ["no_trade", "expired", "withdrawn", "cancelled"],
+    all: ["handed_over", "waiting", "approved", "executed", "draft", "watchlist", "closed", "no_trade", "expired", "withdrawn", "cancelled"] }[f];
+  let list = "";
+  groups.forEach(s => { const items = ideas.filter(i => effStatus(i) === s).sort((a, b) => (b.updatedAt || "").localeCompare(a.updatedAt || ""));
+    if (items.length) list += `<h3 class="group-h">${STATUS[s].label} · ${items.length}</h3>` + items.map(i => card(i, role)).join(""); });
+  if (!list) list = `<div class="empty">${!S.ideasLoaded ? "Loading handovers…" : f === "active" ? (role === "fund" ? "No open ideas. Start one with <b>New handover</b>." : "Nothing has been handed over yet.") : "Nothing here yet."}</div>`;
+  return head + `<div class="deskbar"><div class="who"><span class="subtle">Acting as</span>${roles.length > 1 ? `<div class="filters">${roles.map(r => `<button class="chip" aria-pressed="${role === r}" data-act="role" data-r="${r}">${ROLE_NAME[r]}</button>`).join("")}</div>` : `<span class="pill accent">${ROLE_NAME[role]}</span>`}</div>
+    ${role === "fund" ? `<button class="btn primary" data-act="new" ${S.readOnly ? "disabled" : ""}>New handover</button>` : ""}</div>
+  <div class="pipeline">${stages.map(([s, l, t]) => `<div class="stage ${t}"><b>${cnt(s)}</b><span>${l}</span></div>`).join("")}</div>
+  <div class="filters" role="group" aria-label="Filter ideas">${[["active", "Open"], ["closed", "Closed trades"], ["dead", "No trade & expired"], ["all", "All"]].map(([k, l]) => `<button class="chip" aria-pressed="${f === k}" data-act="filter" data-f="${k}">${l}</button>`).join("")}</div>
+  <div class="stack">${list}</div>`;
+}
+function kv(pairs) { return `<dl class="kv">${pairs.filter(p => p[1] != null && p[1] !== "").map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${v}</dd></div>`).join("")}</dl>`; }
+function biasPill(b) { return b ? `<span class="pill ${b === "Buy" ? "buy" : b === "Sell" ? "sell" : ""}">${esc(b)}</span>` : ""; }
+function confPill(c, who) { return c ? `<span class="pill outline">${who} ${esc(c)}</span>` : ""; }
+function verdictBox(v) {
+  if (!v) return "";
+  const cls = v.status === "approved" ? "ok" : v.status === "waiting" ? "wait" : "no";
+  const head = v.status === "approved" ? `Approved · ${esc(v.size)}` : v.status === "waiting" ? "Waiting for a setup" : "No trade";
+  return `<div class="verdict ${cls}"><strong>${head}</strong>${v.reasons && v.reasons.length ? `<ul>${v.reasons.map(r => `<li>${esc(r)}</li>`).join("")}</ul>` : ""}</div>`;
+}
+function card(i, role) {
+  const st = effStatus(i), meta = STATUS[st], f = i.fund || {}, t = i.tech, desk = i.desk;
+  let expTxt = "";
+  if (i.expiry && isActiveStatus(i.status)) { const d = daysUntil(i.expiry); expTxt = d < 0 ? `Bias expired ${fmtDate(i.expiry)}` : d === 0 ? "Bias expires today" : `Bias expires in ${d} day${d === 1 ? "" : "s"}`; }
+  const fundExtra = desk !== "eq" ? kv([["Horizon", esc(f.horizon)], ["Event risk", f.eventRisk ? esc(f.eventRisk) + (f.eventDate ? ` · ${fmtDate(f.eventDate)}` : "") : ""]])
+    : kv([["Company", esc([f.company, f.exchange].filter(Boolean).join(" · "))], ["Sector", esc(f.sector)], ["Work-sheet", f.wsRating ? esc(f.wsRating) + (f.wsScore != null ? ` · score ${f.wsScore}` : "") + (f.wsClear ? ` · ${esc(f.wsClear)}` : "") + (f.wsLink ? ` · <a href="${esc(f.wsLink)}" target="_blank" rel="noopener">open</a>` : "") : ""], ["Valuation", esc(f.valuation)],
+      ["Fair value vs price", f.fairValue && f.price ? `<span class="mono">${fmtP(f.fairValue)} / ${fmtP(f.price)}</span> (${((f.fairValue / f.price - 1) * 100).toFixed(1)}%)` : ""],
+      ["Catalyst", f.catalyst ? esc(f.catalyst) + (f.catalystDate ? ` · ${fmtDate(f.catalystDate)}` : "") : ""], ["Horizon", esc(f.horizon)]]);
+  const drivers = (f.drivers || []).length ? `<div class="checks">${f.drivers.map(d => `<span class="pill outline">${esc(d)}</span>`).join("")}</div>` : "";
+  const fundHalf = `<div class="half"><h3>Fundamental handover</h3><p class="thesis">${esc(f.thesis)}</p>${drivers}${fundExtra}${f.invalidation ? `<div><div class="subtle">Bias changes if</div><p class="thesis">${esc(f.invalidation)}</p></div>` : ""}</div>`;
+  let techHalf;
+  if (!t) {
+    const msg = { draft: "Locked. The technical desk opens once this idea is handed over.", watchlist: "Locked. Low-confidence ideas stay on the watchlist and can't be handed over.",
+      handed_over: "Handed over. Waiting for the technical desk to review the setup.", expired: "The bias expired before a technical review. The fundamental desk can renew it or withdraw it.", withdrawn: "Withdrawn before a technical review." }[st] || "No technical review.";
+    techHalf = `<div class="half"><h3>Technical execution</h3><div class="locked">${msg}</div></div>`;
+  } else if (t.setup === WAIT) {
+    techHalf = `<div class="half"><h3>Technical execution</h3>${verdictBox(i.verdict)}${kv([["Timeframe", esc(t.timeframe)], ["Reviewed", fmtDT(t.at)]])}${t.thesis ? `<p class="thesis">${esc(t.thesis)}</p>` : ""}</div>`;
+  } else {
+    techHalf = `<div class="half"><h3>Technical execution</h3>${kv([["Technical bias", biasPill(t.bias)], ["Setup", esc(t.setup)], ["Timeframe", esc(t.timeframe)], ["Trend", esc(t.trend)], ["Confidence", esc(t.conf)], [desk !== "eq" ? "Session" : "Volume confirms", esc(desk !== "eq" ? t.session : t.volume)]])}
+      <div class="levels"><div><span>Entry</span><b>${fmtP(t.entry)}</b></div><div><span>Stop</span><b>${fmtP(t.stop)}</b></div><div><span>Target</span><b>${fmtP(t.target)}</b></div><div><span>R:R</span><b>${t.rr ? "1 : " + t.rr.toFixed(2) : "—"}</b></div></div>
+      ${t.invalidation ? `<div><div class="subtle">Setup invalid if</div><p class="thesis">${esc(t.invalidation)}</p></div>` : ""}${t.thesis ? `<div><div class="subtle">Execution thesis</div><p class="thesis">${esc(t.thesis)}</p></div>` : ""}${verdictBox(i.verdict)}</div>`;
+  }
+  let outcome = "";
+  if (i.exec) outcome += `<span>Filled at <b class="mono">${fmtP(i.exec.fill)}</b> on ${fmtDate(i.exec.date)}</span>`;
+  if (i.close) outcome += `<span>Closed at <b class="mono">${fmtP(i.close.exit)}</b> on ${fmtDate(i.close.date)}</span><span class="mono ${i.close.r > 0 ? "pos" : i.close.r < 0 ? "neg" : ""}">${fmtR(i.close.r)} · ${esc(i.close.result)}</span>${i.close.notes ? `<span>${esc(i.close.notes)}</span>` : ""}`;
+  if (i.cancelNote) outcome += `<span>${esc(i.cancelNote)}</span>`;
+  const acts = [], ro = S.readOnly ? "disabled" : "";
+  const B = (act, label, cls = "") => acts.push(`<button class="btn sm ${cls}" data-act="${act}" data-id="${i.id}" ${ro}>${label}</button>`);
+  if (role === "fund") {
+    if (st === "draft" || st === "watchlist") { B("edit", "Edit"); if (st === "draft") B("handover", "Hand over to technical", "primary"); B("delete", "Delete", "danger"); }
+    if (st === "handed_over" || st === "waiting" || st === "expired") { B("extend", st === "expired" ? "Renew bias" : "Change expiry"); B("withdraw", "Withdraw", "danger"); }
+  } else {
+    if (st === "handed_over" || st === "waiting") B("review", st === "waiting" ? "Review setup again" : "Review setup", "primary");
+    if (st === "approved") { B("exec", "Mark as filled", "primary"); B("cancel", "Not filled"); }
+    if (st === "executed") B("close", "Close trade", "primary");
+  }
+  const hist = (i.history || []).slice().reverse().map(h => `<li>${fmtDT(h.at)} · ${esc(h.action)} · ${esc(h.byName || "A team member")}${h.role ? ` (${esc(h.role)})` : ""}</li>`).join("");
+  const hot = st === "executed" && flagsFor(i).some(x => x.level !== "amber");
+  return `<article class="idea t-${meta.tone || "none"} ${hot ? "hot" : ""}"><div class="idea-h"><span class="asset">${esc(f.asset || "—")}</span>${biasPill(f.bias)}<span class="pill ${meta.tone}">${meta.label}</span>
+      ${i.verdict && i.verdict.size && ["approved", "executed", "closed", "cancelled"].includes(st) ? `<span class="pill ${i.verdict.size === "Full size" ? "buy" : "warn"}">${i.verdict.size}</span>` : ""}
+      ${confPill(f.conf, "Fund.")}${t && t.conf && t.setup !== WAIT ? confPill(t.conf, "Tech.") : ""}${hot ? `<span class="pill red">Market-moving news</span>` : ""}</div>
+    <div class="idea-meta"><span>Opened ${fmtDate(i.createdAt)} by ${esc(i.createdByName || "A team member")}</span>${i.handedOverAt ? `<span>Handed over ${fmtDT(i.handedOverAt)}</span>` : ""}${expTxt ? `<span>${expTxt}</span>` : ""}</div>
+    <div class="halves">${fundHalf}${techHalf}</div>${outcome ? `<div class="outcome">${outcome}</div>` : ""}
+    <div class="idea-f"><details class="hist"><summary>Audit trail (${(i.history || []).length})</summary><ol>${hist}</ol></details><div class="acts">${acts.join("")}</div></div></article>`;
+}
+
+/* ---------- Trade journal ---------- */
+function journalStats(list) {
+  const rs = list.map(i => i.close.r), n = rs.length, wins = rs.filter(r => r > 0.05), losses = rs.filter(r => r < -0.05);
+  const sum = a => a.reduce((x, y) => x + y, 0), avg = a => a.length ? sum(a) / a.length : null;
+  let peak = 0, cum = 0, dd = 0; const curve = [];
+  list.forEach(i => { cum += i.close.r; peak = Math.max(peak, cum); dd = Math.min(dd, cum - peak); curve.push({ r: cum, i }); });
+  let streak = 0, type = ""; for (let k = n - 1; k >= 0; k--) { const t = rs[k] > 0.05 ? "W" : rs[k] < -0.05 ? "L" : "B"; if (!type) type = t; if (t !== type) break; streak++; }
+  const gw = sum(wins), gl = -sum(losses), wr = n ? wins.length / n : null, aw = avg(wins), al = avg(losses);
+  const planned = list.map(i => i.tech && i.tech.rr).filter(Boolean);
+  return { n, total: sum(rs), wr, aw, al, exp: n ? sum(rs) / n : null, pf: gl > 0 ? gw / gl : (gw > 0 ? Infinity : null), dd, best: n ? Math.max(...rs) : null, worst: n ? Math.min(...rs) : null,
+    streak: streak ? `${streak} ${type === "W" ? "win" : type === "L" ? "loss" : "flat"}${streak > 1 ? (type === "L" ? "es" : "s") : ""}` : "—", curve, plannedRR: avg(planned) };
+}
+function equitySvg(curve) {
+  if (curve.length < 2) return `<div class="empty" style="padding:20px">The equity curve appears after two closed trades.</div>`;
+  const pts = [{ r: 0, i: null }].concat(curve), W = 800, H = 260, P = 40;
+  let pk = 0; pts.forEach(p => { pk = Math.max(pk, p.r); p.peak = pk; p.dd = p.r - pk; });
+  const ys = pts.map(p => p.r).concat(pts.map(p => p.peak)), mx = Math.max(...ys), mn = Math.min(...ys, 0), rng = (mx - mn) || 1;
+  const X = k => P + k * (W - 2 * P) / (pts.length - 1), Y = v => H - P - (v - mn) / rng * (H - 2 * P);
+  const segs = pts.slice(1).map((p, k) => { const a = pts[k], down = p.dd < -1e-9; return `<line x1="${X(k).toFixed(1)}" y1="${Y(a.r).toFixed(1)}" x2="${X(k + 1).toFixed(1)}" y2="${Y(p.r).toFixed(1)}" stroke="${down ? "var(--sell)" : "var(--buy)"}" stroke-width="3.5" stroke-linecap="round"/>`; }).join("");
+  const under = pts.map((p, k) => `${k ? "L" : "M"}${X(k).toFixed(1)},${Y(p.peak).toFixed(1)}`).join(" ") + " " + pts.slice().reverse().map((p, k) => `L${X(pts.length - 1 - k).toFixed(1)},${Y(p.r).toFixed(1)}`).join(" ") + " Z";
+  const profit = pts.map((p, k) => `${k ? "L" : "M"}${X(k).toFixed(1)},${Y(Math.max(p.r, 0)).toFixed(1)}`).join(" ") + ` L${X(pts.length - 1).toFixed(1)},${Y(0).toFixed(1)} L${X(0).toFixed(1)},${Y(0).toFixed(1)} Z`;
+  const last = pts[pts.length - 1], maxDD = Math.min(...pts.map(p => p.dd));
+  return `<svg viewBox="0 0 ${W} ${H}" style="width:100%;height:auto;display:block" role="img" aria-label="Cumulative R ${fmtR(last.r)}; worst drawdown ${fmtR(maxDD)}">
+    <line x1="${P}" x2="${W - P}" y1="${Y(0)}" y2="${Y(0)}" stroke="var(--muted)" stroke-dasharray="4 4" opacity=".6"/>
+    <text x="${P - 6}" y="${Y(0) + 4}" text-anchor="end" font-size="12" fill="var(--muted)">0R</text>
+    <text x="${P - 6}" y="${Y(mx) + 4}" text-anchor="end" font-size="12" fill="var(--muted)">${fmtR(mx)}</text>
+    ${mn < 0 ? `<text x="${P - 6}" y="${Y(mn) + 4}" text-anchor="end" font-size="12" fill="var(--muted)">${fmtR(mn)}</text>` : ""}
+    <path d="${profit}" fill="var(--buy)" opacity=".12"/>
+    <path d="${under}" fill="var(--sell)" opacity=".22"/>
+    ${segs}
+    ${pts.slice(1).map((p, k) => `<circle cx="${X(k + 1)}" cy="${Y(p.r)}" r="4.5" fill="${p.i.close.r > 0.05 ? "var(--buy)" : p.i.close.r < -0.05 ? "var(--sell)" : "var(--muted)"}" stroke="var(--surface)" stroke-width="1.5"><title>${esc(p.i.fund.asset)} ${fmtR(p.i.close.r)} · total ${fmtR(p.r)}${p.dd < 0 ? " · drawdown " + fmtR(p.dd) : " · at the high"}</title></circle>`).join("")}
+  </svg>
+  <div class="flag-h" style="margin-top:6px"><span class="pill buy">Green: at a new high</span><span class="pill sell">Red: in drawdown from the high</span><span class="subtle">Now ${fmtR(last.r)}${last.dd < 0 ? ` · ${fmtR(last.dd)} below the high` : " · at the high"}</span></div>`;
+}
+function pnlCalendar(closed) {
+  const byDay = {}; closed.forEach(i => { const d = (i.close.date || "").slice(0, 10); if (!d) return; (byDay[d] = byDay[d] || { r: 0, n: 0, w: 0 }); byDay[d].r += i.close.r; byDay[d].n++; if (i.close.r > 0.05) byDay[d].w++; });
+  const lastDay = Object.keys(byDay).sort().pop(); const base = S.calMonth || (lastDay ? lastDay.slice(0, 7) : today().slice(0, 7));
+  const [y, m] = base.split("-").map(Number), first = new Date(y, m - 1, 1), days = new Date(y, m, 0).getDate(), lead = (first.getDay() + 6) % 7;
+  const monthKeys = Object.keys(byDay).filter(k => k.startsWith(base)), mTot = monthKeys.reduce((a, k) => a + byDay[k].r, 0), mN = monthKeys.reduce((a, k) => a + byDay[k].n, 0), mW = monthKeys.reduce((a, k) => a + byDay[k].w, 0);
+  const maxAbs = Math.max(0.5, ...monthKeys.map(k => Math.abs(byDay[k].r)));
+  const cells = []; for (let k = 0; k < lead; k++) cells.push(null); for (let d = 1; d <= days; d++) cells.push(d); while (cells.length % 7) cells.push(null);
+  const weeks = []; for (let k = 0; k < cells.length; k += 7) weeks.push(cells.slice(k, k + 7));
+  const key = d => `${y}-${pad(m)}-${pad(d)}`, isToday = d => key(d) === today();
+  const cell = d => { if (!d) return `<div class="cal-c cal-empty"></div>`; const v = byDay[key(d)]; const a = v ? Math.min(1, Math.abs(v.r) / maxAbs) : 0;
+    const bg = !v ? "" : v.r > 0.05 ? `background:color-mix(in srgb,var(--buy) ${Math.round(18 + a * 55)}%,var(--surface))` : v.r < -0.05 ? `background:color-mix(in srgb,var(--sell) ${Math.round(18 + a * 55)}%,var(--surface))` : "background:var(--surface-2)";
+    return `<div class="cal-c" style="${bg}${isToday(d) ? ";outline:2px solid var(--brass)" : ""}"><span class="cal-d">${d}</span>${v ? `<b class="mono">${fmtR(v.r)}</b><span class="cal-n">${v.n} trade${v.n > 1 ? "s" : ""}</span>` : ""}</div>`; };
+  const wk = w => { const ks = w.filter(Boolean).map(key).filter(k => byDay[k]); const t = ks.reduce((a, k) => a + byDay[k].r, 0), n = ks.reduce((a, k) => a + byDay[k].n, 0);
+    return `<div class="cal-c cal-wk ${t > 0.05 ? "pos" : t < -0.05 ? "neg" : ""}"><span class="cal-d">Week</span>${n ? `<b class="mono">${fmtR(t)}</b><span class="cal-n">${n} trade${n > 1 ? "s" : ""}</span>` : `<span class="cal-n">—</span>`}</div>`; };
+  const prev = new Date(y, m - 2, 1), next = new Date(y, m, 1), mk = d => `${d.getFullYear()}-${pad(d.getMonth() + 1)}`;
+  return `<div class="tblwrap" style="padding:12px 14px"><div class="deskbar" style="margin-bottom:10px"><div><div class="tbl-title" style="padding:0">${first.toLocaleDateString("en-ZA", { month: "long", year: "numeric" })}</div>
+      <span class="subtle">Month: <b class="mono ${mTot > 0.05 ? "pos" : mTot < -0.05 ? "neg" : ""}">${fmtR(mTot)}</b> · ${mN} trades · ${mN ? Math.round(mW / mN * 100) + "% winners" : "no trades"} · ${monthKeys.length} trading day${monthKeys.length === 1 ? "" : "s"}</span></div>
+    <div class="filters"><button class="chip" data-act="calm" data-m="${mk(prev)}">‹ ${prev.toLocaleDateString("en-ZA", { month: "short" })}</button><button class="chip" data-act="calm" data-m="${today().slice(0, 7)}">This month</button><button class="chip" data-act="calm" data-m="${mk(next)}">${next.toLocaleDateString("en-ZA", { month: "short" })} ›</button></div></div>
+    <div class="cal"><div class="cal-h">Mon</div><div class="cal-h">Tue</div><div class="cal-h">Wed</div><div class="cal-h">Thu</div><div class="cal-h">Fri</div><div class="cal-h">Sat</div><div class="cal-h">Sun</div><div class="cal-h">Total</div>
+      ${weeks.map(w => w.map(cell).join("") + wk(w)).join("")}</div>
+    <p class="subtle" style="margin:8px 0 0">Each day shows the R from trades closed that day: green for a profitable day, red for a losing day, stronger colour for a bigger result.</p></div>`;
+}
+function viewJournal() {
+  const d = S.jDesk;
+  const all = S.ideas.filter(i => (d === "all" || i.desk === d) && (i.status === "executed" || i.status === "closed"));
+  const closed = all.filter(i => i.status === "closed" && i.close && typeof i.close.r === "number").sort((a, b) => (a.close.date || "").localeCompare(b.close.date || "") || (a.updatedAt || "").localeCompare(b.updatedAt || ""));
+  const st = journalStats(closed);
+  const tiles = [["Closed trades", st.n], ["Total", fmtR(st.total)], ["Win rate", st.wr == null ? "—" : Math.round(st.wr * 100) + "%"], ["Expectancy", st.exp == null ? "—" : fmtR(st.exp) + " / trade"],
+    ["Average win", fmtR(st.aw)], ["Average loss", fmtR(st.al)], ["Profit factor", st.pf == null ? "—" : st.pf === Infinity ? "No losses" : st.pf.toFixed(2)], ["Max drawdown", st.n ? fmtR(st.dd) : "—"],
+    ["Best trade", fmtR(st.best)], ["Worst trade", fmtR(st.worst)], ["Current streak", st.streak], ["Planned R:R (avg)", st.plannedRR ? "1 : " + st.plannedRR.toFixed(2) : "—"]];
+  // R distribution
+  const B = [["−1R or worse", r => r <= -0.95], ["−1R to 0", r => r > -0.95 && r < -0.05], ["Breakeven", r => Math.abs(r) <= 0.05], ["0 to 1R", r => r > 0.05 && r < 1], ["1R to 2R", r => r >= 1 && r < 2], ["2R to 3R", r => r >= 2 && r < 3], ["3R +", r => r >= 3]];
+  const counts = B.map(([l, f]) => [l, closed.filter(i => f(i.close.r)).length]), maxC = Math.max(1, ...counts.map(c => c[1]));
+  const dist = `<div class="tblwrap" style="padding:12px 14px"><div class="tbl-title" style="padding:0 0 8px">How results spread, in R</div>${counts.map(([l, c], k) => `<div style="display:grid;grid-template-columns:110px 1fr 30px;gap:8px;align-items:center;margin:4px 0"><span class="subtle">${l}</span><div style="background:var(--surface-2);border-radius:4px;height:16px"><div style="height:100%;width:${c / maxC * 100}%;border-radius:4px;background:${k < 2 ? "var(--sell)" : k === 2 ? "var(--muted)" : "var(--buy)"}"></div></div><b class="mono" style="text-align:right">${c}</b></div>`).join("")}</div>`;
+  const by = (title, keyFn, order) => { const m = {}; closed.forEach(i => { const ks = [].concat(keyFn(i) || "—"); ks.forEach(k => { (m[k] = m[k] || []).push(i.close.r); }); });
+    const keys = (order || Object.keys(m)).filter(k => m[k]); const pct = (a, b) => b ? Math.round(a / b * 100) + "%" : "—";
+    return `<div class="tblwrap"><div class="tbl-title">${title}</div><table><thead><tr><th></th><th class="num">Trades</th><th class="num">Win rate</th><th class="num">Avg R</th><th class="num">Total R</th></tr></thead><tbody>
+      ${keys.length ? keys.map(k => { const a = m[k], t = a.reduce((x, y) => x + y, 0); return `<tr><td style="white-space:normal">${esc(k)}</td><td class="num">${a.length}</td><td class="num">${pct(a.filter(r => r > 0.05).length, a.length)}</td><td class="num ${t > 0 ? "pos" : t < 0 ? "neg" : ""}">${fmtR(t / a.length)}</td><td class="num ${t > 0 ? "pos" : t < 0 ? "neg" : ""}">${fmtR(t)}</td></tr>`; }).join("") : `<tr><td colspan="5" class="subtle">No closed trades yet.</td></tr>`}</tbody></table></div>`; };
+  const rv = i => (i.close && i.close.review) || {};
+  const noReview = closed.filter(i => !i.close.review).length;
+  const cards = all.slice().sort((a, b) => ((b.close && b.close.date) || (b.exec && b.exec.date) || "").localeCompare((a.close && a.close.date) || (a.exec && a.exec.date) || "")).map(i => {
+    const open = S.jOpen === i.id, j = i.journal || {}, o = j.opened || {}, r = i.close ? i.close.r : (S.marks[i.id] ? rMultiple(i, num(S.marks[i.id].price)) : null), R = rv(i);
+    const head = `<button class="idea-h" style="width:100%;border:0;background:none;text-align:left;cursor:pointer" data-act="jopen" data-id="${i.id}" aria-expanded="${open}"><span class="asset">${esc(i.fund.asset)}</span>${biasPill(i.fund.bias)}<span class="pill outline">${DESKS[i.desk].short}</span>
+      <span class="pill ${i.status === "closed" ? "" : "live"}">${i.status === "closed" ? "Closed " + fmtDate(i.close.date) : "Open since " + fmtDate(i.exec && i.exec.date)}</span>
+      <b class="mono ${r > 0.05 ? "pos" : r < -0.05 ? "neg" : ""}">${fmtR(r)}${i.status === "closed" ? "" : " open"}</b>${R.grade ? `<span class="pill ${/^A|^B/.test(R.grade) ? "buy" : "warn"}">Grade ${esc(R.grade[0])}</span>` : i.status === "closed" ? `<span class="pill warn">Needs review</span>` : ""}<span class="subtle" style="margin-left:auto">${open ? "Hide" : "Open journal"}</span></button>`;
+    if (!open) return `<article class="idea">${head}</article>`;
+    const t = i.tech || {}, f = i.fund || {};
+    const timeline = [];
+    if (i.handedOverAt) timeline.push([i.handedOverAt, `Handed over (${esc(f.conf)} fundamental confidence): ${esc((f.thesis || "").slice(0, 220))}${(f.thesis || "").length > 220 ? "…" : ""}`]);
+    if (t.at) timeline.push([t.at, `Technical approved: ${esc(t.setup)} · entry ${fmtP(t.entry)}, stop ${fmtP(t.stop)}, target ${fmtP(t.target)} · planned 1 : ${t.rr ? t.rr.toFixed(2) : "—"}`]);
+    if (o.at) timeline.push([o.at, `Filled at ${fmtP(i.exec && i.exec.fill)} · risk ${o.risk ?? "—"}% · feeling ${esc(o.emotion || "—")}${o.why ? " · " + esc(o.why) : ""}${(o.missed || []).length ? ` <span class="neg">· skipped: ${o.missed.map(esc).join(", ")}</span>` : ` <span class="pos">· checklist complete</span>`}`]);
+    (j.notes || []).forEach(nn => timeline.push([nn.at, `${esc(nn.text)} <span class="subtle">(${esc(nn.emotion || "")}${nn.openR != null ? " · " + fmtR(nn.openR) + " open" : ""} · ${esc(nn.byName || "")})</span>`]));
+    if (i.close) timeline.push([i.close.date + "T23:00:00", `Closed at ${fmtP(i.close.exit)} · <b>${fmtR(i.close.r)}</b> (${esc(i.close.result)})${i.close.exitReason ? " · " + esc(i.close.exitReason) : ""}${i.close.notes ? " · " + esc(i.close.notes) : ""}`]);
+    timeline.sort((a, b) => String(a[0]).localeCompare(String(b[0])));
+    const captured = i.close && t.rr ? Math.round(i.close.r / t.rr * 100) : null;
+    return `<article class="idea ${r > 0.05 ? "t-buy" : r < -0.05 ? "t-sell" : ""}">${head}
+      <div class="halves"><div class="half"><h3>Timeline</h3><ol style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px">${timeline.map(([at, txt]) => `<li><span class="subtle">${fmtDT(at)}</span><br>${txt}</li>`).join("")}</ol></div>
+      <div class="half"><h3>Review</h3>${i.close ? (R.grade ? `${kv([["Followed plan", esc(R.followedPlan)], ["Grade", esc(R.grade)], ["Emotion", esc(R.emotion)], ["R captured", captured != null ? captured + "% of plan" : "—"]])}
+        ${(R.mistakes || []).length ? `<div class="checks">${R.mistakes.map(m => `<span class="pill sell">${esc(m)}</span>`).join("")}</div>` : `<span class="pill buy">No mistakes ticked</span>`}${R.lesson ? `<div><div class="subtle">Lesson</div><p class="thesis">${esc(R.lesson)}</p></div>` : ""}` : `<div class="locked">Not reviewed yet. Reviewing every trade is how the dashboard learns what works.</div>`) : `<div class="locked">Trade still open. Add notes as it develops; the review opens when it closes.</div>`}
+      <div class="acts" style="display:flex;gap:6px;flex-wrap:wrap"><button class="btn sm" data-act="jnote" data-id="${i.id}" ${S.readOnly ? "disabled" : ""}>Add note</button>${i.close ? `<button class="btn sm ${R.grade ? "" : "primary"}" data-act="jreview" data-id="${i.id}" ${S.readOnly ? "disabled" : ""}>${R.grade ? "Edit review" : "Write review"}</button>` : ""}</div></div></div></article>`;
+  }).join("");
+  return `<div class="pagehead"><div><h1>Trade journal</h1><p>Every trade taken from a handover, from the plan to the review, measured in R. One R is the amount risked on the trade.</p></div>
+    <div class="filters">${[["all", "All desks"], ["eq", "Equity"], ["fx", "Forex"], ["cm", "Commodities"]].map(([k, l]) => `<button class="chip" aria-pressed="${d === k}" data-act="jfilter" data-f="${k}">${l}</button>`).join("")}</div></div>
+  ${noReview ? `<div class="note warn">${noReview} closed trade${noReview > 1 ? "s need" : " needs"} a review. Open ${noReview > 1 ? "them" : "it"} below and write the review.</div>` : ""}
+  <div class="tiles">${tiles.map(([l, v]) => `<div class="tile"><span>${l}</span><b style="font-size:22px">${v}</b></div>`).join("")}</div>
+  <div class="tblwrap" style="padding:12px 14px"><div class="tbl-title" style="padding:0 0 8px">Equity curve, cumulative R</div>${equitySvg(st.curve)}</div>
+  ${pnlCalendar(closed)}
+  ${dist}
+  <div class="grid2">${by("By plan discipline", i => rv(i).followedPlan || "Not reviewed", ["Yes", "Partly", "No", "Not reviewed"])}${by("Cost of mistakes", i => (rv(i).mistakes || []).length ? rv(i).mistakes : "No mistakes")}
+    ${by("By setup", i => i.tech && i.tech.setup)}${by("By desk and side", i => `${DESKS[i.desk].short} · ${i.fund.bias === "Buy" ? "Long" : "Short"}`)}
+    ${by("By emotion going in", i => (i.journal && i.journal.opened && i.journal.opened.emotion) || "Not recorded")}${by("By exit reason", i => i.close.exitReason || "Not recorded")}</div>
+  <p class="subtle">Expectancy = average R per trade: above 0 means the process makes money over time. Profit factor = total won ÷ total lost in R. Read the tables as a guide only after about 20 trades per row.</p>
+  <h2 style="font-size:19px">Journal entries</h2>${cards ? `<div class="stack">${cards}</div>` : `<div class="empty">No trades taken yet. A journal opens automatically when the technical desk marks a handover as filled.</div>`}`;
+}
+
+/* ---------- Trade log ---------- */
+function viewLog() {
+  const d = S.logDesk, ideas = S.ideas.filter(i => d === "all" || i.desk === d);
+  const reviewed = ideas.filter(i => i.verdict && i.verdict.status !== "waiting"), approved = reviewed.filter(i => i.verdict.status === "approved");
+  const closed = ideas.filter(i => i.status === "closed" && i.close && typeof i.close.r === "number"), wins = closed.filter(i => i.close.r > 0.05);
+  const totalR = closed.reduce((s, i) => s + i.close.r, 0), pct = (a, b) => b ? Math.round(a / b * 100) + "%" : "—";
+  const tiles = [["Ideas logged", ideas.length], ["Handed over", ideas.filter(i => i.handedOverAt).length], ["Approved of reviewed", pct(approved.length, reviewed.length)], ["No trade of reviewed", pct(reviewed.length - approved.length, reviewed.length)],
+    ["Closed trades", closed.length], ["Win rate", pct(wins.length, closed.length)], ["Average R", closed.length ? fmtR(totalR / closed.length) : "—"], ["Total R", closed.length ? fmtR(totalR) : "—"]];
+  const breakdown = (title, keyFn, order) => { const m = {};
+    closed.forEach(i => { const k = keyFn(i) || "—"; (m[k] = m[k] || { n: 0, w: 0, r: 0 }); m[k].n++; if (i.close.r > 0.05) m[k].w++; m[k].r += i.close.r; });
+    const keys = (order || Object.keys(m)).filter(k => m[k]);
+    return `<div class="tblwrap"><div class="tbl-title">${title}</div><table><thead><tr><th></th><th class="num">Trades</th><th class="num">Win rate</th><th class="num">Avg R</th><th class="num">Total R</th></tr></thead><tbody>
+      ${keys.length ? keys.map(k => `<tr><td>${esc(k)}</td><td class="num">${m[k].n}</td><td class="num">${pct(m[k].w, m[k].n)}</td><td class="num">${fmtR(m[k].r / m[k].n)}</td><td class="num">${fmtR(m[k].r)}</td></tr>`).join("") : `<tr><td colspan="5" class="subtle">No closed trades yet.</td></tr>`}</tbody></table></div>`; };
+  const rc = {}; reviewed.filter(i => i.verdict.status === "no_trade").forEach(i => (i.verdict.codes || []).forEach(c => rc[c] = (rc[c] || 0) + 1));
+  const rows = ideas.slice().sort((a, b) => (b.createdAt || "").localeCompare(a.createdAt || ""));
+  return `<div class="pagehead"><div><h1>Trade log</h1><p>Whether confidence ratings and setups actually pay. Read the tables as a guide only after about 20 closed trades per row.</p></div>
+    <div class="filters">${[["all", "All desks"], ["eq", "Equity"], ["fx", "Forex"], ["cm", "Commodities"]].map(([k, l]) => `<button class="chip" aria-pressed="${d === k}" data-act="logdesk" data-f="${k}">${l}</button>`).join("")}</div></div>
+  <div class="tiles">${tiles.map(([l, v]) => `<div class="tile"><span>${l}</span><b>${v}</b></div>`).join("")}</div>
+  <div class="grid2">${breakdown("By fundamental confidence", i => i.fund.conf, ["High", "Medium", "Low"])}${breakdown("By technical confidence", i => i.tech.conf, ["High", "Medium", "Low"])}
+    ${breakdown("By trend alignment", i => i.tech.trend, ["Pro-trend", "Counter-trend"])}${breakdown("By setup type", i => i.tech.setup, SETUPS)}${breakdown("By position size", i => i.verdict.size, ["Full size", "Reduced size"])}
+    <div class="tblwrap"><div class="tbl-title">Why ideas became no trade</div><table><thead><tr><th>Reason</th><th class="num">Ideas</th></tr></thead><tbody>
+      ${Object.keys(rc).length ? Object.keys(rc).sort((a, b) => rc[b] - rc[a]).map(k => `<tr><td>${esc(REASON_LABEL[k] || k)}</td><td class="num">${rc[k]}</td></tr>`).join("") : `<tr><td colspan="2" class="subtle">No rejected ideas yet.</td></tr>`}</tbody></table></div></div>
+  <div class="deskbar"><h2 style="font-size:19px">Full log</h2><button class="btn" data-act="csv">Copy log as CSV</button></div>
+  <div class="tblwrap"><table><thead><tr><th>Opened</th><th>Desk</th><th>Asset</th><th>Bias</th><th>Fund.</th><th>Setup</th><th>Trend</th><th>Tech.</th><th>Status</th><th>Size</th><th class="num">R:R</th><th class="num">Result</th></tr></thead><tbody>
+    ${rows.length ? rows.map(i => { const t = i.tech || {}, st = effStatus(i); return `<tr><td>${fmtDate(i.createdAt)}</td><td>${DESKS[i.desk].short}</td><td class="mono">${esc(i.fund.asset)}</td><td>${biasPill(i.fund.bias)}</td><td>${esc(i.fund.conf)}</td><td>${esc(t.setup || "—")}</td><td>${esc(t.trend || "—")}</td><td>${esc(t.conf || "—")}</td><td><span class="pill ${STATUS[st].tone}">${STATUS[st].label}</span></td><td>${esc(i.verdict && i.verdict.size || "—")}</td><td class="num">${t.rr ? t.rr.toFixed(2) : "—"}</td><td class="num ${i.close ? (i.close.r > 0 ? "pos" : i.close.r < 0 ? "neg" : "") : ""}">${i.close ? fmtR(i.close.r) : "—"}</td></tr>`; }).join("")
+      : `<tr><td colspan="12" class="subtle">No ideas logged yet.</td></tr>`}</tbody></table></div>`;
+}
+function csvText() {
+  const cols = ["opened", "desk", "asset", "fund_bias", "fund_confidence", "status", "tech_bias", "setup", "timeframe", "trend", "tech_confidence", "entry", "stop", "target", "rr", "size", "fill", "exit", "r_multiple", "result", "no_trade_reasons"];
+  const q = v => { const s = String(v ?? ""); return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s; };
+  return [cols.join(",")].concat(S.ideas.filter(i => S.logDesk === "all" || i.desk === S.logDesk).map(i => { const t = i.tech || {}, v = i.verdict || {};
+    return [i.createdAt && i.createdAt.slice(0, 10), DESKS[i.desk].short, i.fund.asset, i.fund.bias, i.fund.conf, STATUS[effStatus(i)].label, t.bias, t.setup, t.timeframe, t.trend, t.conf, t.entry, t.stop, t.target, t.rr && t.rr.toFixed(2), v.size,
+      i.exec && i.exec.fill, i.close && i.close.exit, i.close && i.close.r.toFixed(2), i.close && i.close.result, (v.codes || []).map(c => REASON_LABEL[c]).join("; ")].map(q).join(","); })).join("\n");
+}
+
+/* ---------- Coming phases ---------- */
+const comingPage = (title, intro, blocks) => `<div class="pagehead"><div><h1>${title}</h1><p>${intro}</p></div><span class="pill accent">Being built</span></div>
+  <div class="coming">${blocks.map(([h, items]) => `<div class="panel"><h3>${h}</h3><ul>${items.map(x => `<li>${x}</li>`).join("")}</ul></div>`).join("")}</div>`;
+/* ---------- Top picks ---------- */
+const pct = (x, d = 1) => (x == null || isNaN(x)) ? "—" : (x > 0 ? "+" : "") + (x * 100).toFixed(d) + "%";
+const slug = t => String(t || "").toUpperCase().replace(/[^A-Z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+const pickRet = p => (p && p.listedPx && p.price) ? (p.side === "Bear" ? -1 : 1) * (p.price / p.listedPx - 1) : null;
+const ratingPill = v => v ? `<span class="pill ${/BUY/.test(v) ? "buy" : /SELL/.test(v) ? "sell" : ""}">${esc(v)}</span>` : "";
+const pickFlags = p => openFlags().filter(f => (f.assets || []).map(assetKey).some(a => a === assetKey(p.ticker) || a === assetKey(String(p.ticker).replace(/\.JO$/, ""))));
+function viewPicks() {
+  const ed = S.edition, tab = S.picksTab;
+  const tabs = `<div class="filters" role="group" aria-label="Picks">${[["JSE", "JSE"], ["US", "US"], ["fx", "Forex"], ["cm", "Commodities"], ["stats", "Analytics"]].map(([k, l]) => `<button class="chip" aria-pressed="${tab === k}" data-act="ptab" data-f="${k}">${l}</button>`).join("")}</div>`;
+  const head = `<div class="pagehead"><div><h1>Top picks</h1><p>Screen picks chosen by fixed rules every weekday before the US PM session. They're candidates, not LRC ratings: a name becomes a trade only through the Work-sheet and the handover desk.</p></div>${tabs}</div>`;
+  if (!ed) return head + `<div class="empty">The first edition arrives after the Screening Analyst's next run (weekdays 12:47 SA time).</div>`;
+  const meta = `<p class="subtle" style="margin:0">Edition ${fmtDate(ed.date)} · built ${fmtDT(ed.generated)}${ed.dataAsOf ? ` · prices from the scan of ${esc(ed.dataAsOf)}` : ""}. ${esc(ed.note || "")}</p>
+    ${(ed.shortfalls || []).length ? `<div class="note warn">${ed.shortfalls.map(esc).join("<br>")}</div>` : ""}`;
+  if (tab === "fx" || tab === "cm") return head + meta + scoreboard(tab);
+  if (tab === "stats") return head + picksStats();
+  const L = (ed.lists || {})[tab] || {};
+  const col = (side, ids) => `<div class="tblwrap"><div class="tbl-title">${side === "Bull" ? "Bullish" : "Bearish"} · ${ids.length}</div><table><thead><tr><th>#</th><th>Name</th><th>Rating</th><th class="num">Score</th><th class="num">Since listed</th><th></th></tr></thead><tbody>
+    ${ids.length ? ids.map((id, n) => { const p = S.picks[id]; if (!p) return `<tr><td>${n + 1}</td><td colspan="5" class="subtle">${esc(id)} loading…</td></tr>`;
+      const r = pickRet(p), fl = pickFlags(p);
+      return `<tr style="cursor:pointer" data-act="openpick" data-id="${esc(id)}"><td>${n + 1}</td><td><b class="mono">${esc(String(p.ticker).replace(/\.JO$/, ""))}</b> ${p.kind === "etf" ? `<span class="pill outline">ETF</span>` : ""}<div class="subtle" style="white-space:normal">${esc(p.name)}</div></td>
+        <td>${ratingPill(p.rating)}${p.tier === "Trend pick" ? `<div class="subtle">trend pick</div>` : ""}</td><td class="num">${p.score ?? "—"}</td><td class="num ${r > 0 ? "pos" : r < 0 ? "neg" : ""}">${pct(r)}</td>
+        <td>${fl.some(f => f.level !== "amber") ? `<span class="pill red">News</span>` : ""}${p.eventRisk ? `<span class="pill warn" title="${esc(p.eventRisk)}">Results</span>` : ""}${p.isNew ? ` <span class="pill accent">New</span>` : ""}</td></tr>`; }).join("")
+      : `<tr><td colspan="6" class="subtle">No names pass the rules today.</td></tr>`}</tbody></table></div>`;
+  return head + meta + `<div class="grid2">${col("Bull", L.bull || [])}${col("Bear", L.bear || [])}</div>
+    <p class="subtle">Rating and score come from the LRC Scanner. "Trend pick" means the scanner rates it HOLD but its trend and momentum pass the rules. Tap a name for the full fundamental and technical thesis.</p>`;
+}
+function scoreboard(cls) {
+  const rows = (S.edition[cls] || []);
+  if (!rows.length) return `<div class="empty">No ${cls === "fx" ? "forex" : "commodities"} scoreboard in this edition.</div>`;
+  return `<div class="tblwrap"><table><thead><tr><th>#</th><th>Instrument</th><th class="num">Price</th><th class="num">1 week</th><th class="num">1 month</th><th class="num">RSI</th><th>Setup</th><th class="num">Score</th><th>Bias</th><th>Desk note</th></tr></thead><tbody>
+  ${rows.map(r => `<tr style="cursor:pointer" data-act="openboard" data-cls="${cls}" data-code="${esc(r.code)}"><td>${r.rank}</td><td><b class="mono">${esc(r.code)}</b><div class="subtle">${esc(r.n)}</div></td><td class="num">${fmtP(r.px)}</td>
+    <td class="num ${r.p1w > 0 ? "pos" : r.p1w < 0 ? "neg" : ""}">${pct(r.p1w)}</td><td class="num ${r.p1m > 0 ? "pos" : r.p1m < 0 ? "neg" : ""}">${pct(r.p1m)}</td><td class="num">${r.rsi != null ? Math.round(r.rsi) : "—"}</td>
+    <td>${esc(r.setup || "—")}</td><td class="num">${r.score}</td><td><span class="pill ${r.bias === "Bull" ? "buy" : r.bias === "Bear" ? "sell" : ""}">${esc(r.bias)}</span></td><td style="white-space:normal;min-width:220px">${esc(r.note || "")}</td></tr>`).join("")}</tbody></table></div>
+  <p class="subtle">Ranked strongest bull to strongest bear on the LRC technical score (trend, momentum, setup, stretch, volume). Bull 60+, Bear 40 or less. Tap a row for the levels.</p>`;
+}
+function picksStats() {
+  const open = Object.values(S.picks).filter(p => p && p.ticker), hist = S.pickhist;
+  const agg = (list, retFn) => { const rs = list.map(retFn).filter(x => x != null); return { n: rs.length, hit: rs.length ? rs.filter(x => x > 0).length / rs.length : null, avg: rs.length ? rs.reduce((a, b) => a + b, 0) / rs.length : null }; };
+  const row = (label, a) => `<tr><td>${label}</td><td class="num">${a.n}</td><td class="num">${a.hit == null ? "—" : Math.round(a.hit * 100) + "%"}</td><td class="num ${a.avg > 0 ? "pos" : a.avg < 0 ? "neg" : ""}">${pct(a.avg, 2)}</td></tr>`;
+  const groups = (list, fn) => { const m = {}; list.forEach(x => { const k = fn(x); (m[k] = m[k] || []).push(x); }); return m; };
+  const table = (title, list, retFn) => { const by = [["All", list]].concat(Object.entries(groups(list, x => `${x.market} ${x.side === "Bull" ? "bullish" : "bearish"}`))).concat(Object.entries(groups(list, x => x.kind === "etf" ? "ETFs" : "Stocks")));
+    return `<div class="tblwrap"><div class="tbl-title">${title}</div><table><thead><tr><th></th><th class="num">Picks</th><th class="num">Working</th><th class="num">Avg return</th></tr></thead><tbody>${list.length ? by.map(([k, v]) => row(esc(k), agg(v, retFn))).join("") : `<tr><td colspan="4" class="subtle">Nothing yet.</td></tr>`}</tbody></table></div>`; };
+  const recent = hist.slice(0, 30);
+  return `<div class="grid2">${table("Open picks, since listed", open, pickRet)}${table("Closed picks (left the list)", hist, h => h.ret)}</div>
+  <p class="subtle">"Working" = the share of picks moving the right way (up for bullish, down for bearish). Returns are price only, before costs. Read the numbers as a guide only after about 30 closed picks per row.</p>
+  <div class="tblwrap"><div class="tbl-title">Recently closed</div><table><thead><tr><th>Name</th><th>Side</th><th>Listed</th><th>Left</th><th class="num">Return</th><th>Why it left</th></tr></thead><tbody>
+  ${recent.length ? recent.map(h => `<tr><td class="mono"><b>${esc(h.ticker)}</b></td><td>${h.side === "Bull" ? `<span class="pill buy">Bull</span>` : `<span class="pill sell">Bear</span>`}</td><td>${fmtDate(h.listedOn)}</td><td>${fmtDate(h.exitOn)}</td><td class="num ${h.ret > 0 ? "pos" : h.ret < 0 ? "neg" : ""}">${pct(h.ret)}</td><td style="white-space:normal">${esc(h.reason || "")}</td></tr>`).join("") : `<tr><td colspan="6" class="subtle">No picks have left the lists yet.</td></tr>`}</tbody></table></div>`;
+}
+function pickModal(id) {
+  const p = S.picks[id]; if (!p) return;
+  const f = p.fund || {}, t = p.tech || {}, desk = "eq", canHand = can(desk, "fund") && !S.readOnly;
+  const src = (f.sources || []).filter(x => x && x.url).map(x => `<li><a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title || x.url)}</a></li>`).join("");
+  const body = `<div class="idea-h" style="padding:0"><span class="asset">${esc(p.ticker)}</span><span class="pill ${p.side === "Bull" ? "buy" : "sell"}">${p.side === "Bull" ? "Bullish" : "Bearish"}</span>${ratingPill(p.rating)}<span class="pill outline">Score ${p.score ?? "—"}</span>${p.kind === "etf" ? `<span class="pill outline">ETF</span>` : ""}</div>
+    <div class="subtle">${esc(p.name)} · ${esc(p.market)} · ${esc(p.sector || "")} · listed ${fmtDate(p.listedOn)} at ${fmtP(p.listedPx)} · now ${fmtP(p.price)} (${pct(pickRet(p))} for the call)</div>
+    ${p.eventRisk ? `<div class="note warn">Event risk: ${esc(p.eventRisk)}</div>` : ""}${p.today ? `<div class="note">${esc(p.today)}</div>` : ""}
+    ${pickFlags(p).map(flagCard).join("")}
+    <div class="halves" style="border:1px solid var(--line);border-radius:8px">
+      <div class="half"><h3>${p.side === "Bull" ? "Bull case" : "Bear case"} · fundamental</h3><p class="thesis">${esc(f.case || "—")}</p>
+        ${(f.drivers || []).length ? `<div class="checks">${f.drivers.map(d => `<span class="pill outline">${esc(d)}</span>`).join("")}</div>` : ""}
+        ${kv([["Valuation", esc(f.valuation)], ["6-month target", f.target6m ? `<span class="mono">${fmtP(f.target6m)}</span>` : ""], ["Catalyst", f.catalyst ? esc(f.catalyst) + (f.catalystDate ? ` · ${fmtDate(f.catalystDate)}` : "") : ""]])}
+        ${f.changesIf ? `<div><div class="subtle">Case changes if</div><p class="thesis">${esc(f.changesIf)}</p></div>` : ""}
+        ${f.otherSide ? `<div><div class="subtle">What the other side says</div><p class="thesis">${esc(f.otherSide)}</p></div>` : ""}</div>
+      <div class="half"><h3>Technical</h3>${kv([["Trend", esc(t.trend)], ["Setup", esc(t.setup)], ["Timeframe", esc(t.timeframe || "Daily")]])}
+        <div class="levels"><div><span>Entry</span><b>${fmtP(t.entry)}</b></div><div><span>Stop</span><b>${fmtP(t.stop)}</b></div><div><span>Target</span><b>${fmtP(t.target)}</b></div><div><span>R:R</span><b>${t.rr ? "1 : " + Number(t.rr).toFixed(1) : "—"}</b></div></div>
+        ${t.invalidIf ? `<div><div class="subtle">Setup invalid if</div><p class="thesis">${esc(t.invalidIf)}</p></div>` : ""}${t.thesis ? `<p class="thesis">${esc(t.thesis)}</p>` : ""}</div></div>
+    ${src ? `<div><div class="subtle">Sources</div><ul style="margin:4px 0 0;padding-left:18px">${src}</ul></div>` : ""}
+    <p class="subtle" style="margin:0">Written by the Screening Analyst ${fmtDT(p.updated)}. A screen pick, not an LRC rating.</p>`;
+  openModal({ title: `${esc(p.name)}`, wide: true, body,
+    buttons: canHand ? `<button class="btn primary" type="submit">Send to handover</button>` : "",
+    onSubmit: async () => { try { await sendToHandover(desk, { asset: String(p.ticker).replace(/\.JO$/, ""), company: p.name, exchange: p.market === "JSE" ? "JSE" : "", bias: p.side === "Bull" ? "Buy" : "Sell",
+      thesis: f.case || "", invalidation: f.changesIf || "", catalyst: f.catalyst || "", catalystDate: f.catalystDate || "", fairValue: num(f.target6m), price: num(p.price),
+      valuation: /under/i.test(f.valuation || "") ? "Undervalued" : /over/i.test(f.valuation || "") ? "Overvalued" : f.valuation ? "Fair value" : "", drivers: [] }, `From Top picks (${p.market} ${p.side.toLowerCase()} #${p.rank})`); } catch (e) { return writeErr(e); } } });
+}
+function boardModal(cls, code) {
+  const r = (S.edition[cls] || []).find(x => x.code === code); if (!r) return;
+  const desk = cls, pl = r.plan, canHand = can(desk, "fund") && !S.readOnly && r.bias !== "Neutral";
+  const body = `<div class="idea-h" style="padding:0"><span class="asset">${esc(r.code)}</span><span class="pill ${r.bias === "Bull" ? "buy" : r.bias === "Bear" ? "sell" : ""}">${esc(r.bias)}</span><span class="pill outline">Score ${r.score} · #${r.rank}</span></div>
+    <div class="subtle">${esc(r.n)} · ${esc(r.unit)} · price ${fmtP(r.px)} on ${fmtDate(r.date)}</div>${r.note ? `<p class="thesis">${esc(r.note)}</p>` : ""}
+    ${kv([["1 day", pct(r.chg)], ["1 week", pct(r.p1w)], ["1 month", pct(r.p1m)], ["Year to date", pct(r.ytd)], ["RSI", r.rsi != null ? Math.round(r.rsi) : ""], ["50-day avg", fmtP(r.sma50)], ["200-day avg", fmtP(r.sma200)], ["Support", fmtP(r.sup)], ["Resistance", fmtP(r.res)]])}
+    ${pl ? `<div><div class="subtle">${esc(r.setup)} setup · ${esc(pl.side)} · ${esc(pl.how || "")}</div><div class="levels" style="margin-top:6px"><div><span>Entry</span><b>${fmtP(pl.entry)}</b></div><div><span>Stop</span><b>${fmtP(pl.stop)}</b></div><div><span>Target (3R)</span><b>${fmtP(pl.t2)}</b></div><div><span>First (2R)</span><b>${fmtP(pl.t1)}</b></div></div></div>` : `<div class="note">No valid setup today. Wait for one before any trade.</div>`}`;
+  openModal({ title: esc(r.n), wide: true, body, buttons: canHand ? `<button class="btn primary" type="submit">Send to handover</button>` : "",
+    onSubmit: async () => { try { await sendToHandover(desk, { asset: r.code, bias: r.bias === "Bull" ? "Buy" : "Sell", thesis: r.note || "", invalidation: "", drivers: [] }, `From the ${cls === "fx" ? "Forex" : "Commodities"} scoreboard (#${r.rank})`); } catch (e) { return writeErr(e); } } });
+}
+async function sendToHandover(desk, fund, source) {
+  const now = new Date().toISOString();
+  await S.db.collection("ideas").doc().set({ desk, status: "draft", fund: Object.assign({ conf: "Medium", horizon: "" }, fund), expiry: addDays(today(), expiryDays(desk)), tech: null, verdict: null, exec: null, close: null,
+    createdAt: now, updatedAt: now, createdBy: S.me, createdByName: myName(), handedOverAt: null, source, history: [histEntry(desk, "fund", `Draft created ${source}`)] });
+  S.desk = desk; S.role[desk] = "fund"; S.view = "desk"; S.filter[desk] = "active"; history.replaceState(null, "", "#desk");
+  toast(`Draft created on the ${DESKS[desk].name}. Finish the Work-sheet and check the confidence before handing it over.`); render(true);
+}
+/* ---------- Live show ---------- */
+const SHOW_TYPES = { daily: "Leago Rifumo Show", weekly: "Weekly Forecast", scorecard: "Friday Scorecard" };
+const showsSorted = () => Object.entries(S.shows).map(([id, d]) => Object.assign({ id }, d)).sort((a, b) => (b.date || "").localeCompare(a.date || "") || (b.generated || "").localeCompare(a.generated || ""));
+function viewShow() {
+  const list = showsSorted(), f = S.showFilter;
+  const shown = list.filter(x => f === "all" || x.type === f);
+  const cur = S.shows[S.showId] ? Object.assign({ id: S.showId }, S.shows[S.showId]) : shown[0];
+  const mc = marketClock();
+  const head = `<div class="pagehead"><div><h1>Live show</h1><p>The Leago Rifumo Show, live at 20:30 SA time in the US afternoon session: a 45-minute script written just before air and updated minutes before going live, then a run-sheet for an hour of live trading. The thumbnail is drawn automatically for every show.</p></div>
+    <div class="filters">${[["all", "All"], ["daily", "Daily"], ["weekly", "Weekly"], ["scorecard", "Scorecard"]].map(([k, l]) => `<button class="chip" aria-pressed="${f === k}" data-act="showfilter" data-f="${k}">${l}</button>`).join("")}</div></div>`;
+  S._thumb = null;
+  if (!cur) return head + `<div class="empty">No show yet. Today's Daily PM Show is written from ${fmtT(new Date(mc.live - 59 * 60000))} and updated at ${fmtT(new Date(mc.live - 14 * 60000))} SA time, before going live at ${fmtT(mc.live)}.</div>`;
+  S._thumb = cur;
+  const segs = cur.segments || [], total = segs.reduce((a, x) => a + (x.minutes || 0), 0);
+  const picker = shown.length > 1 ? `<div class="field" style="max-width:420px"><label for="showpick">Show</label><select id="showpick" data-act="showpick">${shown.slice(0, 30).map(x => `<option value="${esc(x.id)}" ${x.id === cur.id ? "selected" : ""}>${fmtDate(x.date)} · ${esc(SHOW_TYPES[x.type] || x.type)}</option>`).join("")}</select></div>` : "";
+  return head + picker + `<div class="hero">
+    <div class="panel stack" style="gap:10px"><div class="flag-h"><span class="pill ${cur.status === "updated" ? "live" : "accent"}">${cur.status === "updated" ? "Updated before air" : "Ready"}</span><span class="pill outline">${esc(SHOW_TYPES[cur.type] || cur.type)}</span>${cur.liveAt ? `<span class="subtle">Live ${fmtDT(cur.liveAt)}</span>` : ""}</div>
+      <h2 style="font-size:24px">${esc(cur.title || "")}</h2><p class="subtle" style="margin:0">${segs.length} segments · ${total} minutes · written ${fmtDT(cur.generated)}${cur.updatedAt ? ` · last update ${fmtDT(cur.updatedAt)}` : ""}</p>
+      ${cur.liveUpdate && cur.liveUpdate.notes ? `<div class="note warn"><b>Late update ${cur.liveUpdate.at ? fmtT(new Date(cur.liveUpdate.at)) : ""}:</b> ${esc(cur.liveUpdate.notes)}</div>` : ""}
+      <div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn primary" data-act="prompter" data-id="${esc(cur.id)}">Teleprompter</button><button class="btn" data-act="stream" data-id="${esc(cur.id)}">Stream cards</button><button class="btn" data-act="thumb" data-id="${esc(cur.id)}">Thumbnail</button></div></div>
+    <div class="panel" style="padding:10px"><canvas id="thumbprev" width="1280" height="720" style="width:100%;height:auto;border-radius:8px;display:block" aria-label="Show thumbnail"></canvas></div></div>
+  <div class="stack">${segs.map((x, i) => `<article class="idea"><div class="idea-h"><span class="asset">${esc(x.start || "")}</span><b style="font-family:var(--font-display);font-size:17px">${esc(x.title)}</b><span class="pill outline">${x.minutes || 0} min</span>${x.updated ? `<span class="pill live">Updated</span>` : ""}</div>
+    <div class="halves"><div class="half"><h3>Script</h3><p class="thesis">${esc(x.script || "")}</p></div><div class="half"><h3>On screen</h3>${(x.cards || []).map(cardHtml).join("") || `<span class="subtle">Presenter on camera.</span>`}
+    ${(x.sources || []).length ? `<div class="subtle">Sources: ${x.sources.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title || "link")}</a>`).join(" · ")}</div>` : ""}</div></div></article>`).join("")}</div>
+  <p class="subtle">${esc(cur.disclaimer || "Research and education, not financial advice.")}</p>`;
+}
+function cardHtml(c) {
+  if (!c) return "";
+  let inner = "";
+  if (c.kind === "table") inner = `<div class="tblwrap"><table><thead><tr>${(c.cols || []).map(h => `<th>${esc(h)}</th>`).join("")}</tr></thead><tbody>${(c.rows || []).map(r => `<tr>${r.map(v => `<td>${esc(v)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`;
+  else if (c.kind === "stat" || c.kind === "levels") inner = `<div class="levels" style="grid-template-columns:repeat(${Math.min((c.stats || []).length || 1, 4)},1fr)">${(c.stats || []).map(x => `<div><span>${esc(x.label)}</span><b>${esc(x.value)}</b>${x.chg ? `<span class="${/^-|−/.test(x.chg) ? "neg" : "pos"}">${esc(x.chg)}</span>` : ""}</div>`).join("")}</div>`;
+  else inner = `<ul style="margin:0;padding-left:18px">${(c.bullets || []).map(b => `<li>${esc(b)}</li>`).join("")}</ul>`;
+  return `<div><div class="subtle" style="font-weight:600;color:var(--ink)">${esc(c.title || "")}</div>${inner}</div>`;
+}
+const BRAND = { logo: null, photo: null, mono: null, tried: false };
+function loadBrand() {
+  if (BRAND.tried) return; BRAND.tried = true;
+  const ld = (src, k) => { const im = new Image(); im.onload = () => { BRAND[k] = im; if (S.view === "show" && S._thumb) drawThumb($("#thumbprev"), S._thumb); }; im.onerror = () => {}; im.src = src; };
+  ld("assets/img/workplace/host.png", "photo"); ld("assets/img/monogram.png", "mono");
+}
+function seeded(str) { let h = 2166136261; for (const c of String(str)) { h ^= c.charCodeAt(0); h = Math.imul(h, 16777619); } return () => { h ^= h << 13; h ^= h >>> 17; h ^= h << 5; return ((h >>> 0) % 10000) / 10000; }; }
+function drawCandles(g, W, H, mood, seed) {
+  const rnd = seeded(seed), n = 46, cw = W / n, drift = mood === "bear" ? -1 : mood === "bull" ? 1 : 0;
+  let p = 0, pts = []; for (let i = 0; i < n; i++) { const o = p, c = o + (rnd() - 0.5 + drift * 0.22) * 18, hi = Math.max(o, c) + rnd() * 9, lo = Math.min(o, c) - rnd() * 9; pts.push([o, c, hi, lo]); p = c; }
+  const all = pts.flat(), mx = Math.max(...all), mn = Math.min(...all), y = v => H * 0.12 + (mx - v) / (mx - mn || 1) * H * 0.76;
+  g.save(); g.globalAlpha = .16; g.strokeStyle = "#ffffff"; g.lineWidth = 1;
+  for (let k = 1; k < 6; k++) { g.beginPath(); g.moveTo(0, H * k / 6); g.lineTo(W, H * k / 6); g.stroke(); }
+  g.globalAlpha = .34;
+  pts.forEach(([o, c, hi, lo], i) => { const x = i * cw + cw / 2, up = c >= o; g.strokeStyle = g.fillStyle = up ? "#1fc97a" : "#e5392a"; g.lineWidth = 2;
+    g.beginPath(); g.moveTo(x, y(hi)); g.lineTo(x, y(lo)); g.stroke(); g.fillRect(x - cw * 0.32, Math.min(y(o), y(c)), cw * 0.64, Math.max(2, Math.abs(y(o) - y(c)))); });
+  g.globalAlpha = .45; g.strokeStyle = "#ffd23f"; g.lineWidth = 3; g.beginPath();
+  pts.forEach((q, i) => { const avg = pts.slice(Math.max(0, i - 8), i + 1).reduce((a, r) => a + r[1], 0) / Math.min(i + 1, 9); const X = i * cw + cw / 2; i ? g.lineTo(X, y(avg)) : g.moveTo(X, y(avg)); }); g.stroke();
+  g.restore();
+}
+function rr(g, x, y, w, h, r) { g.beginPath(); g.moveTo(x + r, y); g.arcTo(x + w, y, x + w, y + h, r); g.arcTo(x + w, y + h, x, y + h, r); g.arcTo(x, y + h, x, y, r); g.arcTo(x, y, x + w, y, r); g.closePath(); }
+function fitFont(g, text, maxW, size, weight, fam) { do { g.font = `${weight} ${size}px ${fam}`; if (g.measureText(text).width <= maxW) break; size -= 4; } while (size > 24); return size; }
+function drawThumb(cv, show) {
+  if (!cv || !show) return; loadBrand();
+  const t = show.thumbnail || {}, g = cv.getContext("2d"), W = 1280, H = 720;
+  if (!g) return;
+  const HEAD = "Archivo, Impact, 'Arial Black', Arial, sans-serif";
+  const mood = t.mood === "bear" ? "bear" : t.mood === "bull" ? "bull" : "mixed";
+  // words: big gold keyword + white second line (falls back to splitting the headline)
+  let big = t.big, line2 = t.line2;
+  if (!big) { const w = String(t.headline || show.title || "").split(/\s+/).filter(Boolean); const k = w.length > 3 ? 2 : 1; big = w.slice(0, k).join(" "); line2 = w.slice(k).join(" "); }
+  big = String(big || "").toUpperCase(); line2 = String(line2 || "").toUpperCase();
+  // navy background + chart
+  const bg = g.createLinearGradient(0, 0, W, H); bg.addColorStop(0, "#030915"); bg.addColorStop(0.55, "#071a3d"); bg.addColorStop(1, "#0b2a63"); g.fillStyle = bg; g.fillRect(0, 0, W, H);
+  const rnd = seeded((show.date || "") + big), n = 40, x0 = 430, cw = (W - x0) / n, drift = mood === "bear" ? -1 : 1;
+  let p = 0; const pts = []; for (let i = 0; i < n; i++) { const o = p, c = o + (rnd() - 0.42 + drift * 0.18) * 16 * drift * drift + (rnd() - 0.5) * 6, hi = Math.max(o, c) + rnd() * 7, lo = Math.min(o, c) - rnd() * 7; pts.push([o, c, hi, lo]); p = c; }
+  const all = pts.flat(), mx = Math.max(...all), mn = Math.min(...all), Y = v => 70 + (mx - v) / (mx - mn || 1) * 520;
+  g.save(); g.globalAlpha = .22; g.strokeStyle = "#3d6bd8"; g.lineWidth = 1;
+  for (let k = 1; k < 8; k++) { g.beginPath(); g.moveTo(0, H * k / 8); g.lineTo(W, H * k / 8); g.stroke(); g.beginPath(); g.moveTo(W * k / 8, 0); g.lineTo(W * k / 8, H); g.stroke(); }
+  g.globalAlpha = .95;
+  pts.forEach(([o, c, hi, lo], i) => { const x = x0 + i * cw + cw / 2, up = c >= o; g.strokeStyle = g.fillStyle = up ? "#22e07a" : "#ff3b3b"; g.lineWidth = 3; g.shadowColor = g.fillStyle; g.shadowBlur = 10;
+    g.beginPath(); g.moveTo(x, Y(hi)); g.lineTo(x, Y(lo)); g.stroke(); g.fillRect(x - cw * 0.3, Math.min(Y(o), Y(c)), cw * 0.6, Math.max(3, Math.abs(Y(o) - Y(c)))); });
+  g.shadowBlur = 18; g.shadowColor = "#4aa3ff"; g.strokeStyle = "#4aa3ff"; g.lineWidth = 4; g.beginPath();
+  pts.forEach((q, i) => { const avg = pts.slice(Math.max(0, i - 6), i + 1).reduce((a, r) => a + r[1], 0) / Math.min(i + 1, 7); const X = x0 + i * cw + cw / 2; i ? g.lineTo(X, Y(avg) + 30) : g.moveTo(X, Y(avg) + 30); }); g.stroke();
+  g.restore();
+  // host photo (right)
+  if (BRAND.photo) { const im = BRAND.photo, ph = 640, pw = im.width * ph / im.height, px = W - pw - 10, py = H - 78 - ph + 20;
+    g.save(); g.shadowColor = "rgba(0,0,0,.85)"; g.shadowBlur = 50; g.drawImage(im, px, py, pw, ph); g.restore(); }
+  // shade under the words
+  const sh = g.createLinearGradient(0, 0, 760, 0); sh.addColorStop(0, "rgba(2,6,16,.92)"); sh.addColorStop(0.75, "rgba(2,6,16,.55)"); sh.addColorStop(1, "rgba(2,6,16,0)"); g.fillStyle = sh; g.fillRect(0, 0, 760, H - 78);
+  g.textBaseline = "alphabetic";
+  // ● LIVE  TRADING
+  g.font = `900 52px ${HEAD}`; const lw = g.measureText("LIVE").width + 92;
+  g.fillStyle = "#e3141b"; rr(g, 40, 30, lw, 78, 18); g.fill(); g.strokeStyle = "#fff"; g.lineWidth = 4; g.stroke();
+  g.fillStyle = "#fff"; g.beginPath(); g.arc(78, 69, 13, 0, 7); g.fill(); g.fillText("LIVE", 100, 89);
+  const kicker = String(t.kicker || "TRADING").toUpperCase(); g.font = `900 64px ${HEAD}`; g.lineWidth = 10; g.strokeStyle = "#000"; g.strokeText(kicker, 60 + lw, 94); g.fillStyle = "#fff"; g.fillText(kicker, 60 + lw, 94);
+  // big gold keyword
+  const bs = fitFont(g, big, 700, 210, 900, HEAD); g.font = `900 ${bs}px ${HEAD}`;
+  const gold = g.createLinearGradient(0, 300 - bs, 0, 300); gold.addColorStop(0, "#fff36b"); gold.addColorStop(0.5, "#ffc400"); gold.addColorStop(1, "#ff8a00");
+  g.lineJoin = "round"; g.lineWidth = 18; g.strokeStyle = "#1a0f00"; g.strokeText(big, 40, 132 + bs * 0.86); g.fillStyle = gold; g.fillText(big, 40, 132 + bs * 0.86);
+  let yy = 132 + bs * 0.86;
+  if (line2) { const em = t.emoji === undefined ? "🔥" : t.emoji; const l2s = fitFont(g, line2 + (em ? " " + em : ""), 700, 150, 900, HEAD); g.font = `900 ${l2s}px ${HEAD}`; yy += l2s * 0.98;
+    g.lineWidth = 16; g.strokeStyle = "#000"; g.strokeText(line2, 40, yy); g.fillStyle = "#fff"; g.fillText(line2, 40, yy);
+    if (em) g.fillText(em, 40 + g.measureText(line2 + " ").width, yy); }
+  // topic chips
+  const ICON = { GOLD: ["#f5b400", "▬"], NASDAQ: ["#14a05a", "↗"], FOREX: ["#2f6fdb", "$"], STOCKS: ["#d72d2d", "▮"], OIL: ["#222", "●"], RAND: ["#0a7a3e", "R"], JSE: ["#0a7a3e", "▲"], CRYPTO: ["#f7931a", "₿"], "S&P 500": ["#1d4ed8", "↗"] };
+  let cx = 40; const cy = Math.min(yy + 30, 556); g.font = `800 26px ${HEAD}`;
+  (t.chips || ["GOLD", "NASDAQ", "FOREX", "STOCKS"]).slice(0, 4).forEach(c => { c = String(c).toUpperCase(); const ic = ICON[c] || ["#444", "•"]; const w = g.measureText(c).width + 66;
+    if (cx + w > 760) return; g.fillStyle = "#fff"; rr(g, cx, cy, w, 52, 10); g.fill(); g.strokeStyle = "#c9ced8"; g.lineWidth = 2; g.stroke();
+    g.fillStyle = ic[0]; g.fillText(ic[1], cx + 14, cy + 36); g.fillStyle = "#111"; g.fillText(c, cx + 46, cy + 36); cx += w + 12; });
+  // callout box
+  if (t.callout) { g.save(); g.translate(1010, 560); g.rotate(-0.05); g.font = `900 46px ${HEAD}`; const txt = String(t.callout).toUpperCase(); const w = Math.min(g.measureText(txt).width + 40, 440);
+    g.fillStyle = "#ffd400"; g.shadowColor = "rgba(0,0,0,.6)"; g.shadowBlur = 16; g.fillRect(-w / 2, -40, w, 76); g.shadowBlur = 0; g.lineWidth = 4; g.strokeStyle = "#000"; g.strokeRect(-w / 2, -40, w, 76);
+    g.fillStyle = "#000"; fitFont(g, txt, w - 30, 46, 900, HEAD); g.textAlign = "center"; g.fillText(txt, 0, 14); g.restore(); }
+  // footer bar
+  g.fillStyle = "#05070c"; g.fillRect(0, H - 78, W, 78); g.fillStyle = "#c9a227"; g.fillRect(0, H - 80, W, 3);
+  let fx = 34;
+  if (BRAND.logo) { const lh = 54, lw2 = Math.min(BRAND.logo.width * lh / BRAND.logo.height, 260); g.drawImage(BRAND.logo, fx, H - 66, lw2, lh); fx += lw2 + 20; }
+  else if (BRAND.mono) { const mh = 58, mw = BRAND.mono.width * mh / BRAND.mono.height; g.drawImage(BRAND.mono, fx, H - 68, mw, mh);
+    g.font = `800 21px ${HEAD}`; g.fillStyle = "#f4f1e6"; g.fillText("LEAGO RIFUMO", fx + mw + 14, H - 44); g.fillStyle = "#d4a73a"; g.fillText("CAPITAL", fx + mw + 14, H - 20); fx += mw + 190; }
+  else { const lg = g.createLinearGradient(0, H - 70, 0, H - 14); lg.addColorStop(0, "#fbe7a1"); lg.addColorStop(0.5, "#d4a73a"); lg.addColorStop(1, "#9a7215");
+    g.fillStyle = lg; g.font = `700 50px "Cinzel", "Trajan Pro", Georgia, "Times New Roman", serif`; g.fillText("L", fx, H - 20); g.fillText("R", fx + 22, H - 26);
+    g.fillRect(fx + 2, H - 70, 50, 2); g.fillRect(fx + 2, H - 15, 50, 2);
+    g.font = `800 21px ${HEAD}`; g.fillStyle = "#f4f1e6"; g.fillText("LEAGO RIFUMO", fx + 70, H - 44); g.fillStyle = "#d4a73a"; g.fillText("CAPITAL", fx + 70, H - 20); fx += 240; }
+  g.fillStyle = "#c9a227"; g.fillRect(fx, H - 62, 3, 46); g.font = `900 34px ${HEAD}`; g.fillStyle = "#f2d06b"; g.fillText("LEAGO RIFUMO SHOW", fx + 22, H - 26);
+  const when = t.when || (() => { const d = show.liveAt ? new Date(show.liveAt) : new Date(show.date + "T12:00:00"); return d.toLocaleDateString("en-ZA", { weekday: "short", day: "numeric", month: "short", timeZone: SA }).toUpperCase().replace(",", "") + (show.liveAt ? " · " + fmtT(d) + " SAST" : ""); })();
+  g.font = `800 26px ${HEAD}`; const ww = g.measureText(when).width; g.fillStyle = "#fff"; g.fillText(when, W - 34 - ww, H - 28);
+  g.fillStyle = "#e3141b"; g.beginPath(); g.arc(W - 52 - ww, H - 37, 9, 0, 7); g.fill();
+}
+async function thumbModal(id) {
+  const show = S.shows[id]; if (!show) return;
+  openModal({ title: "Thumbnail", wide: true, body: `<canvas id="thumbbig" width="1280" height="720" style="width:100%;height:auto;border-radius:8px"></canvas><p class="subtle" style="margin:0">1280 × 720 PNG, generated from today's show. Bold, but every claim on it is in the show.</p>`,
+    buttons: `<button class="btn primary" type="submit">Download PNG</button>`,
+    onSubmit: async () => {
+      const blob = await new Promise(r => $("#thumbbig").toBlob(r, "image/png"));
+      const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = `LRC-${show.type}-${show.date}.png`; document.body.appendChild(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 1000); toast("Thumbnail downloaded."); } });
+  await (document.fonts ? document.fonts.ready : Promise.resolve()); drawThumb($("#thumbbig"), show);
+}
+/* full-screen teleprompter and stream cards */
+const ST = { mode: null, id: null, i: 0, speed: 1.2, run: false, raf: 0, t0: 0 };
+function openStage(mode, id) {
+  ST.mode = mode; ST.id = id; ST.i = 0; ST.run = false; ST.t0 = Date.now();
+  let el = $("#stage"); if (!el) { el = document.createElement("div"); el.id = "stage"; document.body.appendChild(el); }
+  el.setAttribute("role", "dialog"); el.setAttribute("aria-modal", "true"); stageRender();
+  try { el.requestFullscreen && el.requestFullscreen().catch(() => {}); } catch (e) {}
+}
+function closeStage() { cancelAnimationFrame(ST.raf); ST.run = false; const el = $("#stage"); if (el) el.remove(); try { document.fullscreenElement && document.exitFullscreen(); } catch (e) {} ST.mode = null; }
+function stageRender() {
+  const show = S.shows[ST.id], el = $("#stage"); if (!show || !el) return;
+  const segs = show.segments || [];
+  if (ST.mode === "prompter") {
+    el.innerHTML = `<div class="stage-bar"><b>${esc(SHOW_TYPES[show.type] || "")}</b><span id="stclock" class="mono"></span><span style="flex:1"></span>
+      <button class="btn sm" data-act="st-slower">Slower</button><button class="btn sm primary" data-act="st-play">${ST.run ? "Pause" : "Start scroll"}</button><button class="btn sm" data-act="st-faster">Faster</button><button class="btn sm" data-act="st-close">Close</button></div>
+      <div class="prompter" id="prompter">${segs.map(x => `<section><h2>${esc(x.start || "")} · ${esc(x.title)}</h2>${String(x.script || "").split(/\n+/).map(pp => `<p>${esc(pp)}</p>`).join("")}</section>`).join("")}<section><p>${esc(show.disclaimer || "Research and education, not financial advice.")}</p></section><div style="height:70vh"></div></div>`;
+  } else {
+    const cards = []; segs.forEach(x => (x.cards && x.cards.length ? x.cards : [{ title: x.title, kind: "bullets", bullets: [] }]).forEach(c => cards.push({ seg: x, c })));
+    ST.i = Math.max(0, Math.min(ST.i, cards.length - 1)); const cur = cards[ST.i] || { seg: {}, c: {} };
+    el.innerHTML = `<div class="slide"><div class="slide-top"><span class="slide-mark">LRC</span><span>${esc(cur.seg.title || "")}</span><span style="flex:1"></span><span class="mono">${ST.i + 1} / ${cards.length}</span></div>
+      <div class="slide-body"><h2>${esc(cur.c.title || cur.seg.title || "")}</h2>${cardHtml(Object.assign({}, cur.c, { title: "" }))}</div>
+      <div class="slide-foot"><span>${esc(fmtDate(show.date))} · Research, not financial advice</span><span style="flex:1"></span><button class="btn sm" data-act="st-prev">Back</button><button class="btn sm primary" data-act="st-next">Next</button><button class="btn sm" data-act="st-close">Close</button></div></div>`;
+  }
+}
+function stageTick() {
+  const pr = $("#prompter"); if (!pr || !ST.run) return;
+  pr.scrollTop += ST.speed; const c = $("#stclock"); if (c) { const s = Math.floor((Date.now() - ST.t0) / 1000); c.textContent = `${Math.floor(s / 60)}:${pad(s % 60)}`; }
+  ST.raf = requestAnimationFrame(stageTick);
+}
+document.addEventListener("keydown", e => {
+  if (!ST.mode) return;
+  if (e.key === "Escape") closeStage();
+  if (ST.mode === "stream" && (e.key === "ArrowRight" || e.key === " ")) { ST.i++; stageRender(); }
+  if (ST.mode === "stream" && e.key === "ArrowLeft") { ST.i--; stageRender(); }
+  if (ST.mode === "prompter" && e.key === " ") { e.preventDefault(); ST.run = !ST.run; stageRender(); if (ST.run) stageTick(); }
+});
+
+/* ---------- Weekly forecast ---------- */
+function viewForecast() {
+  const list = Object.entries(S.forecasts).map(([id, d]) => Object.assign({ id }, d)).sort((a, b) => (b.weekOf || "").localeCompare(a.weekOf || ""));
+  const head = `<div class="pagehead"><div><h1>Weekly forecast</h1><p>Written by the Strategist every Sunday at 17:47 SA time, then scored against what happened the following Sunday.</p></div></div>`;
+  if (!list.length) return head + `<div class="empty">The first forecast arrives on Sunday at 17:47.</div>`;
+  const fc = list.find(x => x.id === S.fcId) || list[0];
+  const picker = list.length > 1 ? `<div class="field" style="max-width:320px"><label for="fcpick">Week</label><select id="fcpick" data-act="fcpick">${list.map(x => `<option value="${esc(x.id)}" ${x.id === fc.id ? "selected" : ""}>Week of ${fmtDate(x.weekOf)}</option>`).join("")}</select></div>` : "";
+  const sc = fc.scoreLast;
+  return head + picker + `<div class="panel stack" style="gap:8px"><h2 style="font-size:24px">${esc(fc.title || "Week of " + fmtDate(fc.weekOf))}</h2><p class="thesis">${esc(fc.summary || "")}</p><span class="subtle">Written ${fmtDT(fc.generated)}</span></div>
+  <div class="tblwrap"><div class="tbl-title">The calls</div><table><thead><tr><th>Market</th><th class="num">Now</th><th>View</th><th>Expected range</th><th>Levels</th><th>Why</th></tr></thead><tbody>
+  ${(fc.calls || []).map(c => `<tr><td><b>${esc(c.asset)}</b></td><td class="num">${esc(c.now)}</td><td><span class="pill ${c.view === "Bull" ? "buy" : c.view === "Bear" ? "sell" : ""}">${esc(c.view)}</span></td><td class="mono">${esc((c.range || []).join(" – "))}</td><td style="white-space:normal">${esc(c.levels || "")}</td><td style="white-space:normal;min-width:240px">${esc(c.why || "")}</td></tr>`).join("")}</tbody></table></div>
+  <div class="tblwrap"><div class="tbl-title">This week's events (SA time)</div><table><thead><tr><th>When</th><th>Event</th><th>Why it matters</th></tr></thead><tbody>
+  ${(fc.events || []).map(e => `<tr><td class="mono">${esc(e.when)}</td><td style="white-space:normal">${esc(e.what)}</td><td style="white-space:normal">${esc(e.why || "")}</td></tr>`).join("") || `<tr><td colspan="3" class="subtle">No events listed.</td></tr>`}</tbody></table></div>
+  ${sc ? `<div class="tblwrap"><div class="tbl-title">How last week's forecast did: ${sc.hits ?? "—"} of ${sc.total ?? "—"} right</div><p class="subtle" style="padding:0 14px">${esc(sc.text || "")}</p><table><thead><tr><th>Market</th><th>Call</th><th>What happened</th><th>Result</th></tr></thead><tbody>
+    ${(sc.rows || []).map(r => `<tr><td>${esc(r.asset)}</td><td>${esc(r.call)}</td><td style="white-space:normal">${esc(r.result)}</td><td>${r.hit ? `<span class="pill buy">Right</span>` : `<span class="pill sell">Wrong</span>`}</td></tr>`).join("")}</tbody></table></div>` : ""}
+  ${(fc.sources || []).length ? `<p class="subtle">Sources: ${fc.sources.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title || "link")}</a>`).join(" · ")}</p>` : ""}`;
+}
+
+/* ---------- Handbook ---------- */
+function viewHelp() {
+  const L = LIM(), mc = marketClock();
+  const sec = (h, items) => `<div class="panel"><h2 style="font-size:19px;margin-bottom:8px">${h}</h2><ol style="margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px">${items.map(x => `<li>${x}</li>`).join("")}</ol></div>`;
+  const day = [["06:00–22:00", "News & Risk Agent", "Hourly: prices on active trades, red flags for market-moving news."], ["06:57 / 11:47", "Forex & Commodities scan", "Scores every pair and commodity."], ["12:47", "Screening Analyst", "Top picks: 10 bull and 10 bear on the JSE and the US, plus the forex and commodities scoreboards."],
+    ["19:31", "Show Producer", "Writes tonight's Leago Rifumo Show and thumbnail."], ["20:16", "Pre-air update", "Refreshes numbers, setups and the late-update note."], [fmtT(mc.live), "Leago Rifumo Show live", "45 minutes scripted, then an hour of live trading."],
+    ["Fri 23:23", "Performance Analyst", "Friday Scorecard: picks and trades in R."], ["Sun 17:47", "Strategist", "Weekly Forecast and its stream script."]];
+  return `<div class="pagehead"><div><h1>Handbook</h1><p>How the LRC Workplace runs, who does what, and the rules everyone follows. Read it once; come back when unsure.</p></div></div>
+  <div class="tblwrap"><div class="tbl-title">The day at LRC (SA time, US trading days)</div><table><thead><tr><th>When</th><th>Who</th><th>What</th></tr></thead><tbody>${day.map(r => `<tr><td class="mono">${r[0]}</td><td><b>${r[1]}</b></td><td style="white-space:normal">${r[2]}</td></tr>`).join("")}</tbody></table></div>
+  <div class="grid2">
+  ${sec("Fundamental desk", ["Start from a Top pick (<b>Send to handover</b>) or your own idea. For equities, finish the <b>LRC Work-sheet</b> first.", "Fill in the handover: bias, confidence, sector, Work-sheet rating and Step 7 clearance, catalyst, mini thesis and what would change the bias.", "Equity handovers need a Work-sheet <b>BUY</b> (long) or <b>SELL</b> (short) that matches the bias and is <b>CLEARED</b>. HOLD stays a draft.", "Low confidence goes to the watchlist. Renew or withdraw a bias before it expires."])}
+  ${sec("Technical desk", ["Open <b>Awaiting technical</b> and review the setup: bias, setup type, trend, confidence, entry, stop, target.", "The page decides under LRC rules: approved (full or reduced size), waiting for a setup, or no trade, with the reasons.", "When the order fills, <b>Mark as filled</b>: risk %, the pre-trade checklist, mood and why now. A fill that breaks the risk limits is blocked.", "Manage the trade on <b>Active trades</b>: journal notes, price updates, red flags. Close it with the exit reason and the review."])}
+  ${sec("Presenters: the Leago Rifumo Show", ["Open <b>Live show</b> from about 20:00. Read the <b>Late update</b> note first.", "Use <b>Teleprompter</b> for the 45-minute script and <b>Stream cards</b> for the screen share (arrow keys or Next).", "After the script, run the <b>Live trading desk</b> run-sheet: call triggers, stops and targets, and give results in R only.", "Download the <b>Thumbnail</b> PNG for the stream. Never mention account size or rand amounts on air. Close with: research and education, not financial advice."])}
+  ${sec("House risk rules", [`Risk ${L.riskPct}% of the account per trade; results in R.`, `Max ${L.maxTrades} open trades, max ${L.maxShorts} shorts, max ${L.maxPerSector} per sector.`, `Results or a big event within ${L.eventDays} days = event risk: smaller size or wait.`, `Minimum risk-to-reward 1 : ${minRR()}. Never short strength: short only on a breakdown trigger.`, "Every number has a source and a date. Screen picks are candidates, not LRC ratings."])}
+  </div>
+  ${sec("When something goes wrong", ["Forgot your password: ask the admin to reset it in Team & settings.", "Can't change something: your account may not have that desk; ask the admin to tick it on the Team page.", "No show or no picks by their time: tell the admin; the agent run may have failed and can be re-run.", "A number looks wrong: don't use it on air; flag it to the analyst."])}`;
+}
+
+/* ---------- Team & settings ---------- */
+function viewTeam() {
+  if (!isAdmin()) return `<div class="empty">Only the admin can manage the team.</div>`;
+  const keys = Object.keys(S.staff).sort((a, b) => S.staff[a].name.localeCompare(S.staff[b].name));
+  const deskBoxes = (k, s) => DESK_KEYS.map(d => `<label><input type="checkbox" data-act="deskperm" data-k="${esc(k)}" data-d="${d}" ${s.desks && s.desks[d] ? "checked" : ""} ${S.readOnly ? "disabled" : ""}>${DESK_LABEL[d]}</label>`).join("");
+  return `<div class="pagehead"><div><h1>Team & settings</h1><p>Add each person with a username and their desks. They sign in with the username and change the temporary password themselves.</p></div></div>
+  <div class="note"><b>Adding someone takes two steps.</b> 1) In Supabase → Authentication → Users → Add user, create <span class="mono">username@leagorifumocapital.co.za</span> with a temporary password and tick Auto Confirm. 2) Add them below with the same username. Give them the username and temporary password; they change it under Change password.</div>
+  <div class="panel"><form data-form="addstaff" class="stack"><h2 style="font-size:19px">Add a staff member</h2>
+    <div class="row3"><div class="field"><label for="s-user">Username</label><input type="text" id="s-user" name="user" required autocapitalize="none" placeholder="e.g. thabo.mokoena"></div><div class="field"><label for="s-name">Full name</label><input type="text" id="s-name" name="name" required placeholder="e.g. Thabo Mokoena"></div>
+    <div class="field"><span class="lbl">Desk access</span><div class="checks">${DESK_KEYS.map(d => `<label><input type="checkbox" name="desks" value="${d}">${DESK_LABEL[d]}</label>`).join("")}</div></div></div>
+    <p class="note bad form-error" id="s-err"></p><div><button class="btn primary" type="submit" ${S.readOnly ? "disabled" : ""}>Add to team</button></div></form></div>
+  <div class="tblwrap"><table><thead><tr><th>Name</th><th>Username</th><th>Desk access</th><th></th></tr></thead><tbody>
+    ${keys.map(k => { const s = S.staff[k]; return `<tr><td><b>${esc(s.name)}</b>${s.admin ? ` <span class="pill accent">Admin</span>` : ""}</td><td><span class="mono">${esc(s.username)}</span></td>
+      <td><div class="checks">${deskBoxes(k, s)}</div></td><td><button class="btn sm" data-act="reset" data-k="${esc(k)}">Reset password</button> ${s.admin ? "" : `<button class="btn sm danger" data-act="remove" data-k="${esc(k)}">Remove</button>`}</td></tr>`; }).join("")}</tbody></table></div>
+  <div class="panel"><form data-form="rules" class="stack"><h2 style="font-size:19px">Trading rules</h2>
+    <div class="row3"><div class="field"><label for="minRR">Minimum risk-to-reward (1 : x)</label><input type="number" id="minRR" name="minRR" step="0.1" min="0.5" value="${minRR()}" required><p class="hint">Below this, the trade becomes no trade.</p></div>
+</div><div class="row3">${Object.keys(DESKS).map(d => `<div class="field"><label for="${d}Expiry">${DESKS[d].short} bias expiry (days)</label><input type="number" id="${d}Expiry" name="${d}Expiry" min="1" max="180" value="${expiryDays(d)}" required></div>`).join("")}</div>
+    <div class="row3"><div class="field"><label for="riskPct">Risk per trade (% of account)</label><input type="number" id="riskPct" name="riskPct" step="0.1" min="0.1" max="5" value="${LIM().riskPct}" required></div>
+      <div class="field"><label for="maxTrades">Max open trades</label><input type="number" id="maxTrades" name="maxTrades" min="1" max="50" value="${LIM().maxTrades}" required></div>
+      <div class="field"><label for="maxShorts">Max open shorts</label><input type="number" id="maxShorts" name="maxShorts" min="0" max="50" value="${LIM().maxShorts}" required></div></div>
+    <div class="row3"><div class="field"><label for="maxPerSector">Max open trades per sector</label><input type="number" id="maxPerSector" name="maxPerSector" min="1" max="20" value="${LIM().maxPerSector}" required></div>
+      <div class="field"><label for="eventDays">Event-risk window (days)</label><input type="number" id="eventDays" name="eventDays" min="0" max="60" value="${LIM().eventDays}" required><p class="hint">Results or a big event within this many days is flagged.</p></div>
+      <div class="field"><span class="lbl">Equity handovers</span><div class="checks"><label><input type="checkbox" name="requireWS" ${LIM().requireWS ? "checked" : ""}>Require a Work-sheet BUY/SELL with technical clearance</label></div></div></div>
+    <div class="note"><b>Rules in force.</b> If the desks disagree on direction, or the setup conflicts with the bias, it's no trade. Low confidence on either desk is no trade. Low fundamental ideas can't be handed over. Equity handovers need a Work-sheet BUY or SELL that matches the bias, with Step 7 technical clearance. Full size only when both desks rate it High and the setup is pro-trend; otherwise reduced size. A fill is blocked when it would break the risk limits above; event risk is flagged.</div>
+    <p class="note bad form-error" id="r-err"></p><div><button class="btn primary" type="submit">Save rules</button></div></form></div>`;
+}
+
+/* ---------- modal + forms ---------- */
+function openModal({ title, body, buttons, onSubmit, onInput, wide }) {
+  const m = $("#modal");
+  m.innerHTML = `<div class="scrim" data-close></div><div class="dialog ${wide ? "wide" : ""}" role="dialog" aria-modal="true" aria-labelledby="mtitle"><form id="mform"><header><h2 id="mtitle">${title}</h2><button type="button" class="btn ghost sm" data-close>Close</button></header>
+    <div class="body">${body}<p class="note bad form-error" id="merr"></p></div><footer><button type="button" class="btn" data-close>Cancel</button>${buttons}</footer></form></div>`;
+  const form = $("#mform");
+  form.addEventListener("submit", async e => { e.preventDefault(); const btns = form.querySelectorAll("footer button"); btns.forEach(b => b.disabled = true); $("#merr").textContent = "";
+    const res = await onSubmit(form, e.submitter ? e.submitter.value : ""); if (res) { $("#merr").textContent = res; btns.forEach(b => b.disabled = false); if (onInput) onInput(form); } else closeModal(); });
+  if (onInput) { form.addEventListener("input", () => onInput(form)); form.addEventListener("change", () => onInput(form)); onInput(form); }
+  const first = form.querySelector(".body input:not([type=hidden]), .body select, .body textarea"); if (first) first.focus();
+}
+function closeModal() { $("#modal").innerHTML = ""; if (S.pending) render(true); }
+document.addEventListener("keydown", e => { if (e.key === "Escape" && $("#modal").innerHTML) closeModal(); });
+const fld = (id, label, control, hint) => `<div class="field"><label for="${id}">${label}</label>${control}${hint ? `<p class="hint">${hint}</p>` : ""}</div>`;
+const sel = (id, opts, val) => `<select id="${id}" name="${id}" required><option value="">Select…</option>${opts.map(o => `<option ${o === val ? "selected" : ""}>${esc(o)}</option>`).join("")}</select>`;
+const seg = (name, label, opts, val) => `<div class="field"><span class="lbl">${label}</span><div class="seg" role="radiogroup">${opts.map((o, k) => `<label><input type="radio" name="${name}" value="${o}" ${o === val ? "checked" : ""} ${k === 0 ? "required" : ""}><span>${o}</span></label>`).join("")}</div></div>`;
+const inp = (id, val, attrs = "") => `<input type="text" id="${id}" name="${id}" value="${esc(val ?? "")}" ${attrs}>`;
+const area = (id, val, attrs = "") => `<textarea id="${id}" name="${id}" ${attrs}>${esc(val ?? "")}</textarea>`;
+const checks = (name, opts, vals = []) => `<div class="checks">${opts.map(o => `<label><input type="checkbox" name="${name}" value="${esc(o)}" ${vals.includes(o) ? "checked" : ""}>${esc(o)}</label>`).join("")}</div>`;
+
+function wsBlock(form) {
+  if (!LIM().requireWS) return null;
+  const r = form.wsRating.value, c = form.wsClear.value, b = form.bias.value;
+  if (!r || r === "Not rated yet") return "Equity handovers need a completed LRC Work-sheet first: add its rating.";
+  if (r === "HOLD") return "The Work-sheet rates it HOLD, so it stays a draft. Only BUY or SELL names are handed over.";
+  if (b && ((r === "BUY" && b !== "Buy") || (r === "SELL" && b !== "Sell"))) return `The Work-sheet says ${r} but the bias is ${b}. They must agree.`;
+  if (!/^CLEARED/.test(c)) return "Step 7 technical clearance isn't CLEARED yet, so it can't be handed over.";
+  return null;
+}
+function fundForm(desk, idea) {
+  const f = idea ? idea.fund : {}, fx = desk !== "eq", cm = desk === "cm";
+  const exp = idea && idea.expiry || addDays(today(), expiryDays(desk));
+  const body = (cm ? fld("asset", "Commodity", inp("asset", f.asset, `list="commods" required autocomplete="off" placeholder="e.g. XAU/USD (gold)"`)) : fx ? fld("asset", "Currency pair", inp("asset", f.asset, `list="pairs" required autocomplete="off" placeholder="e.g. USD/ZAR"`))
+    : `<div class="row3">${fld("asset", "Ticker", inp("asset", f.asset, `required autocomplete="off" placeholder="e.g. NPN"`))}${fld("company", "Company", inp("company", f.company, `required placeholder="e.g. Naspers"`))}${fld("exchange", "Exchange", sel("exchange", ["JSE", "NYSE", "NASDAQ", "LSE", "Other"], f.exchange))}</div>`)
+    + `<div class="row2">${seg("bias", "Fundamental bias", ["Buy", "Sell"], f.bias)}${fld("conf", "Confidence", sel("conf", ["High", "Medium", "Low"], f.conf))}</div><div id="lowhint"></div>`
+    + (fx ? `<div class="row3">${fld("horizon", "Horizon", sel("horizon", ["Intraday", "Swing (days)", "Position (weeks)"], f.horizon))}${fld("eventRisk", "Key event risk", inp("eventRisk", f.eventRisk, `placeholder="${cm ? "e.g. OPEC+, EIA inventories, China data" : "e.g. FOMC, SARB MPC"}"`))}${fld("eventDate", "Event date", `<input type="date" id="eventDate" name="eventDate" value="${esc(f.eventDate || "")}">`)}</div>`
+      : `<div class="row3">${fld("valuation", "Valuation view", sel("valuation", ["Undervalued", "Fair value", "Overvalued"], f.valuation))}${fld("fairValue", "Fair value (6-month target)", `<input type="number" step="any" min="0" id="fairValue" name="fairValue" value="${esc(f.fairValue ?? "")}">`)}${fld("price", "Current price", `<input type="number" step="any" min="0" id="price" name="price" value="${esc(f.price ?? "")}">`, `<span id="upside"></span>`)}</div>
+         <div class="row3">${fld("sector", "Sector", sel("sector", EQ_SECTORS, f.sector))}${fld("wsRating", "Work-sheet rating (6-month)", sel("wsRating", ["BUY", "SELL", "HOLD", "Not rated yet"], f.wsRating))}${fld("wsClear", "Step 7 technical clearance", sel("wsClear", ["CLEARED — FULL POSITION", "CLEARED — STAGED ENTRY", "NOT CLEARED", "Not done yet"], f.wsClear))}</div>
+         <div class="row2">${fld("wsScore", "Work-sheet score (0–5)", `<input type="number" step="0.1" min="0" max="5" id="wsScore" name="wsScore" value="${esc(f.wsScore ?? "")}">`)}${fld("wsLink", "Link to the Work-sheet file (optional)", inp("wsLink", f.wsLink, `placeholder="LRC_Work-sheet_TICKER.xlsx link"`))}</div><div id="wshint"></div>
+         <div class="row3">${fld("catalyst", "Catalyst", inp("catalyst", f.catalyst, `placeholder="e.g. FY results"`))}${fld("catalystDate", "Catalyst date", `<input type="date" id="catalystDate" name="catalystDate" value="${esc(f.catalystDate || "")}">`)}${fld("horizon", "Horizon", sel("horizon", ["Swing (weeks)", "Position (months)", "Long-term (1 year+)"], f.horizon))}</div>`)
+    + `<div class="field"><span class="lbl">Main drivers</span>${checks("drivers", cm ? CM_DRIVERS : fx ? FX_DRIVERS : EQ_DRIVERS, f.drivers)}</div>`
+    + fld("thesis", "Fundamental mini thesis", area("thesis", f.thesis, `required maxlength="1500" placeholder="Why this direction, in a few sentences."`))
+    + fld("invalidation", "What would change the bias", area("invalidation", f.invalidation, `required maxlength="600" style="min-height:60px"`))
+    + fld("expiry", "Bias valid until", `<input type="date" id="expiry" name="expiry" value="${exp}" min="${today()}" required>`, "After this date the technical desk can't act on it unless you renew it.");
+  openModal({ title: `${idea ? "Edit" : "New"} ${DESKS[desk].short.toLowerCase()} handover`, wide: true, body,
+    buttons: `<button class="btn" type="submit" value="draft" id="b-draft">Save draft</button><button class="btn primary" type="submit" value="handover" id="b-hand">Hand over to technical</button>`,
+    onInput: form => { const low = form.conf.value === "Low"; const wsBad = !fx && wsBlock(form); $("#b-hand").disabled = low || !!wsBad; $("#b-draft").textContent = low ? "Save to watchlist" : "Save draft";
+      $("#lowhint").innerHTML = low ? `<div class="note warn">Low-confidence ideas can't be handed over. They're saved to the watchlist until the case is stronger.</div>` : "";
+      if (!fx) $("#wshint").innerHTML = wsBad ? `<div class="note warn">${esc(wsBad)}</div>` : form.wsRating.value ? `<div class="note good">Work-sheet supports the handover.</div>` : "";
+      if (!fx) { const fv = num(form.fairValue.value), p = num(form.price.value); $("#upside").textContent = fv && p ? `Upside to target: ${((fv / p - 1) * 100).toFixed(1)}%` : ""; } },
+    onSubmit: async (form, action) => {
+      const g = n => form[n] ? form[n].value.trim() : "";
+      const fund = { asset: g("asset").toUpperCase(), bias: form.bias.value, conf: g("conf"), horizon: g("horizon"), drivers: [...form.querySelectorAll("input[name=drivers]:checked")].map(x => x.value), thesis: g("thesis"), invalidation: g("invalidation") };
+      if (fx) Object.assign(fund, { eventRisk: g("eventRisk"), eventDate: g("eventDate") });
+      else Object.assign(fund, { sector: g("sector") || null, wsRating: g("wsRating"), wsClear: g("wsClear"), wsScore: num(g("wsScore")), wsLink: g("wsLink"), company: g("company"), exchange: g("exchange"), valuation: g("valuation"), fairValue: num(g("fairValue")), price: num(g("price")), catalyst: g("catalyst"), catalystDate: g("catalystDate") });
+      if (action === "handover" && !fx && wsBlock(form)) return wsBlock(form);
+      const hand = action === "handover" && fund.conf !== "Low", status = hand ? "handed_over" : fund.conf === "Low" ? "watchlist" : "draft", now = new Date().toISOString(), expiry = g("expiry");
+      try {
+        if (idea) await patchIdea(idea, Object.assign({ fund, status, expiry }, hand ? { handedOverAt: now } : {}), hand ? "Edited and handed over to technical" : "Edited", "fund");
+        else await S.db.collection("ideas").doc().set({ desk, status, fund, expiry, tech: null, verdict: null, exec: null, close: null, createdAt: now, updatedAt: now, createdBy: S.me, createdByName: myName(),
+          handedOverAt: hand ? now : null, history: [histEntry(desk, "fund", hand ? "Created and handed over to technical" : status === "watchlist" ? "Saved to watchlist" : "Saved as draft")] });
+        toast(hand ? `${fund.asset} handed over to the technical desk.` : "Saved.");
+      } catch (e) { return writeErr(e); } } });
+}
+function techForm(i) {
+  const f = i.fund, fx = i.desk !== "eq", t = i.tech || {};
+  const body = `<div class="handover-sum"><div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><b class="mono" style="font-size:17px">${esc(f.asset)}</b>${biasPill(f.bias)}<span class="pill outline">Fund. ${esc(f.conf)}</span><span class="subtle">Valid until ${fmtDate(i.expiry)}</span></div><p class="thesis">${esc(f.thesis)}</p><div class="subtle">Bias changes if: ${esc(f.invalidation)}</div></div>`
+    + `<div class="row2">${seg("bias", "Technical bias", ["Buy", "Sell", "Neutral"], t.bias)}${fld("setup", "Setup", sel("setup", SETUPS, t.setup))}</div>`
+    + `<div id="techmain"><div class="row3">${fld("timeframe", "Timeframe", sel("timeframe", fx ? ["Weekly", "Daily", "4H", "1H", "15m"] : ["Weekly", "Daily", "4H"], t.timeframe))}${fld("trend", "Trend alignment", sel("trend", ["Pro-trend", "Counter-trend"], t.trend))}${fld("tconf", "Confidence", sel("tconf", ["High", "Medium", "Low"], t.conf))}</div>
+      <div class="row3">${fx ? fld("session", "Execution session", sel("session", ["London", "New York", "London–NY overlap", "Asia", "Any"], t.session)) : fld("volume", "Volume confirms the setup", sel("volume", ["Yes", "No", "Unclear"], t.volume))}</div>
+      <div class="row3">${["entry", "stop", "target"].map(k => fld(k, { entry: "Entry", stop: "Stop loss", target: "Target" }[k], `<input type="number" step="any" min="0" id="${k}" name="${k}" value="${esc(t[k] ?? "")}" class="mono">`)).join("")}</div>
+      ${fld("tinv", "Setup is invalid if", inp("tinv", t.invalidation, `placeholder="e.g. Daily close below 18.20"`))}</div>`
+    + fld("tthesis", "Execution mini thesis", area("tthesis", t.thesis, `maxlength="1500"`)) + `<div id="vbox"></div>`;
+  const collect = form => ({ bias: form.bias.value, setup: form.setup.value, timeframe: form.timeframe.value, trend: form.trend.value, conf: form.tconf.value, session: fx ? form.session.value : undefined, volume: fx ? undefined : form.volume.value,
+    entry: num(form.entry.value), stop: num(form.stop.value), target: num(form.target.value), invalidation: form.tinv.value.trim(), thesis: form.tthesis.value.trim() });
+  openModal({ title: "Technical review", wide: true, body, buttons: `<button class="btn primary" type="submit" id="b-sub">Submit review</button>`,
+    onInput: form => { const wait = form.setup.value === WAIT; $("#techmain").style.display = wait ? "none" : "";
+      $("#techmain").querySelectorAll("select,input").forEach(el => { if (["timeframe", "trend", "tconf", "session", "volume", "entry", "stop", "target"].includes(el.name)) el.required = !wait; }); form.tthesis.required = !wait;
+      const t2 = collect(form), ready = t2.setup && (wait || (t2.bias && t2.conf && t2.trend && t2.entry != null && t2.stop != null && t2.target != null));
+      if (!ready) { $("#vbox").innerHTML = `<div class="note">The decision appears here once the setup, bias, confidence, trend and levels are filled in.</div>`; return; }
+      const v = verdictOf(f, t2); $("#vbox").innerHTML = `<div class="lbl" style="font-size:13px;font-weight:600;margin-bottom:5px">Decision under LRC rules</div>` + verdictBox(v);
+      $("#b-sub").textContent = v.status === "approved" ? "Approve trade" : v.status === "waiting" ? "Mark as waiting" : "Record as no trade"; },
+    onSubmit: async form => {
+      if (effStatus(i) === "expired") return "This bias has expired. The fundamental desk must renew it first.";
+      const t2 = collect(form), v = verdictOf(f, t2), tech = Object.assign({}, t2, { rr: v.rr ?? null, at: new Date().toISOString(), by: S.me, byName: myName() });
+      Object.keys(tech).forEach(k => tech[k] === undefined && delete tech[k]);
+      const action = v.status === "approved" ? `Technical approved · ${v.size}` : v.status === "waiting" ? "Technical: no setup yet, waiting" : "Technical review: no trade";
+      try { await patchIdea(i, { tech, verdict: { status: v.status, size: v.size || null, reasons: v.reasons, codes: v.codes }, status: v.status }, action, "tech"); toast(action + "."); } catch (e) { return writeErr(e); } } });
+}
+const EMOTIONS = ["Calm", "Confident", "Patient", "Anxious", "Fearful", "Greedy", "FOMO", "Frustrated", "Tired"];
+const MISTAKES = ["Entered early", "Chased the entry", "No stop / moved stop", "Size too big", "Exited too early", "Held past the stop", "Ignored news / event risk", "Revenge trade", "Off-plan trade"];
+const PRECHECK = ["Entry on the planned trigger", "Stop in place at entry", "Size = 1% risk", "No results or big event within 14 days", "Sector limit (max 2) respected"];
+function execForm(i) {
+  openModal({ title: `Mark ${esc(i.fund.asset)} as filled`, wide: true, body: `<p class="subtle" style="margin:0">The trade moves to Active trades, the news scan starts watching it, and its journal opens.</p><div class="row3">${fld("fill", "Fill price", `<input type="number" step="any" min="0" id="fill" name="fill" class="mono" value="${esc(i.tech.entry)}" required>`)}${fld("fdate", "Fill date", `<input type="date" id="fdate" name="fdate" value="${today()}" required>`)}${fld("risk", "Risk on this trade (% of account)", `<input type="number" step="0.1" min="0" max="5" id="risk" name="risk" value="1" required>`, "House rule: 1%.")}</div>
+    <div class="field"><span class="lbl">Pre-trade checklist</span>${checks("pre", PRECHECK, [])}</div>
+    <div class="row2">${fld("emo", "How do you feel going in?", sel("emo", EMOTIONS, "Calm"))}${fld("why", "Why now (one or two lines)", inp("why", "", `maxlength="300" placeholder="e.g. Retest held at 412 on volume; trigger hit at the open."`))}</div><div id="limbox"></div>`,
+    onInput: form => { const lc = limitCheck(i, num(form.risk.value)); $("#limbox").innerHTML = (lc.hard.length ? `<div class="note bad"><b>Blocked by LRC risk rules:</b><br>${lc.hard.map(esc).join("<br>")}</div>` : `<div class="note good">Within LRC risk limits (${esc(lc.sec)}).</div>`) + (lc.warn.length ? `<div class="note warn" style="margin-top:6px">${lc.warn.map(esc).join("<br>")}</div>` : ""); },
+    buttons: `<button class="btn primary" type="submit">Mark as filled</button>`,
+    onSubmit: async form => { const lc = limitCheck(i, num(form.risk.value)); if (lc.hard.length) return "Blocked by LRC risk rules: " + lc.hard.join(" ");
+      const pre = [...form.querySelectorAll("input[name=pre]:checked")].map(x => x.value);
+      const journal = Object.assign({}, i.journal || {}, { opened: { at: new Date().toISOString(), byName: myName(), risk: num(form.risk.value), checklist: pre, missed: PRECHECK.filter(x => !pre.includes(x)), emotion: form.emo.value, why: form.why.value.trim() }, notes: (i.journal && i.journal.notes) || [] });
+      try { await patchIdea(i, { status: "executed", exec: { fill: num(form.fill.value), date: form.fdate.value }, journal }, `Filled at ${form.fill.value}`, "tech"); toast(`${i.fund.asset} is now an active trade. Its journal is open.`); } catch (e) { return writeErr(e); } } });
+}
+function noteForm(i) {
+  openModal({ title: `Journal note · ${esc(i.fund.asset)}`, body: `${fld("jn", "What happened / what you're thinking", area("jn", "", `required maxlength="800" placeholder="e.g. Moved stop to breakeven after 1R as per plan. Volume fading into lunch."`))}${fld("jemo", "Mood right now", sel("jemo", EMOTIONS, "Calm"))}`,
+    buttons: `<button class="btn primary" type="submit">Add note</button>`,
+    onSubmit: async form => { const m = i.status === "executed" && S.marks[i.id] ? num(S.marks[i.id].price) : null; const j = Object.assign({}, i.journal || {}); j.notes = (j.notes || []).concat([{ at: new Date().toISOString(), byName: myName(), text: form.jn.value.trim(), emotion: form.jemo.value, openR: m != null ? Math.round(rMultiple(i, m) * 100) / 100 : null }]);
+      try { await patchIdea(i, { journal: j }, "Journal note added", i.status === "executed" ? "tech" : ""); toast("Note added to the journal."); } catch (e) { return writeErr(e); } } });
+}
+const reviewFields = (rv = {}) => `<div class="row3">${fld("fp", "Did you follow the plan?", sel("fp", ["Yes", "Partly", "No"], rv.followedPlan))}${fld("remo", "Main emotion during the trade", sel("remo", EMOTIONS, rv.emotion))}${fld("grade", "Grade the execution", sel("grade", ["A – textbook", "B – good", "C – sloppy", "D – broke the rules"], rv.grade))}</div>
+  <div class="field"><span class="lbl">Mistakes (tick any)</span>${checks("mist", MISTAKES, rv.mistakes || [])}</div>
+  ${fld("lesson", "Lesson to repeat or fix", area("lesson", rv.lesson || "", `maxlength="600" style="min-height:60px" placeholder="One concrete lesson."`))}`;
+const readReview = form => ({ followedPlan: form.fp.value, emotion: form.remo.value, grade: form.grade.value, mistakes: [...form.querySelectorAll("input[name=mist]:checked")].map(x => x.value), lesson: form.lesson.value.trim(), at: new Date().toISOString(), byName: myName() });
+function reviewForm(i) {
+  openModal({ title: `Review · ${esc(i.fund.asset)} (${fmtR(i.close && i.close.r)})`, wide: true, body: reviewFields((i.close && i.close.review) || {}), buttons: `<button class="btn primary" type="submit">Save review</button>`,
+    onSubmit: async form => { try { await patchIdea(i, { close: Object.assign({}, i.close, { review: readReview(form) }) }, "Trade review saved", ""); toast("Review saved."); } catch (e) { return writeErr(e); } } });
+}
+function markForm(i) {
+  openModal({ title: `Update ${esc(i.fund.asset)} price`, body: `<p class="subtle" style="margin:0">The news scan updates prices hourly. Use this to put in a fresher price from your broker.</p><div class="row2">${fld("mp", "Last price", `<input type="number" step="any" min="0" id="mp" name="mp" class="mono" required>`)}${fld("ms", "Source", inp("ms", "Broker", `required`))}</div>`,
+    buttons: `<button class="btn primary" type="submit">Save price</button>`,
+    onSubmit: async form => { try { await S.db.doc("marks/" + i.id).set({ asset: i.fund.asset, price: num(form.mp.value), source: form.ms.value.trim() + " · " + myName(), at: new Date().toISOString() }); toast("Price updated."); } catch (e) { return writeErr(e); } } });
+}
+function closeForm(i) {
+  openModal({ title: `Close ${esc(i.fund.asset)} trade`, body: `<div class="row2">${fld("exit", "Exit price", `<input type="number" step="any" min="0" id="exit" name="exit" class="mono" required>`)}${fld("xdate", "Exit date", `<input type="date" id="xdate" name="xdate" value="${today()}" required>`)}</div>
+      <div class="row2">${fld("xwhy", "Why did you exit?", sel("xwhy", ["Target hit", "Stop hit", "Trailing stop", "Setup invalidated", "News / event", "Time stop", "Discretionary"], ""))}<div id="rprev" class="note" style="align-self:end">Enter the exit price to see the result in R.</div></div>
+      ${reviewFields({})}${fld("cnotes", "Notes", area("cnotes", "", `maxlength="800" style="min-height:60px" placeholder="What worked, what didn't."`))}`, wide: true,
+    buttons: `<button class="btn primary" type="submit">Close trade</button>`,
+    onInput: form => { const r = rMultiple(i, num(form.exit.value)); $("#rprev").textContent = r == null ? "Enter the exit price to see the result in R." : `Result: ${fmtR(r)} (${r > 0.05 ? "Win" : r < -0.05 ? "Loss" : "Breakeven"})`; },
+    onSubmit: async form => { const exit = num(form.exit.value), r = rMultiple(i, exit); if (r == null) return "The result can't be worked out from these prices. Check the exit price.";
+      const result = r > 0.05 ? "Win" : r < -0.05 ? "Loss" : "Breakeven";
+      try { await patchIdea(i, { status: "closed", close: { exit, date: form.xdate.value, r: Math.round(r * 100) / 100, result, notes: form.cnotes.value.trim(), exitReason: form.xwhy.value, review: readReview(form) } }, `Closed ${fmtR(r)} (${result})`, "tech"); toast(`Trade closed: ${fmtR(r)}.`); } catch (e) { return writeErr(e); } } });
+}
+function extendForm(i) {
+  const def = addDays(today(), expiryDays(i.desk));
+  openModal({ title: effStatus(i) === "expired" ? "Renew fundamental bias" : "Change bias expiry", body: `<p class="subtle" style="margin:0">Only renew if the fundamental case still stands today.</p>${fld("nexp", "Bias valid until", `<input type="date" id="nexp" name="nexp" min="${today()}" value="${def}" required>`)}`,
+    buttons: `<button class="btn primary" type="submit">Save expiry</button>`, onSubmit: async form => { try { await patchIdea(i, { expiry: form.nexp.value }, `Bias valid until ${form.nexp.value}`, "fund"); toast("Expiry updated."); } catch (e) { return writeErr(e); } } });
+}
+function confirmForm(i, kind) {
+  const c = { withdraw: ["Withdraw this handover?", "The technical desk will no longer be able to act on it. Say why for the record.", "Withdraw", "withdrawn", "Withdrawn by fundamental", "fund"],
+    cancel: ["Mark as not filled?", "Use this when the entry was never reached or the order was cancelled.", "Mark as not filled", "cancelled", "Not filled", "tech"],
+    delete: ["Delete this draft?", "Drafts and watchlist ideas can be deleted. This can't be undone.", "Delete", null, null, "fund"] }[kind];
+  openModal({ title: c[0], body: `<p style="margin:0">${c[1]}</p>${kind !== "delete" ? fld("why", "Reason", inp("why", "", `required maxlength="300"`)) : ""}`, buttons: `<button class="btn primary" type="submit">${c[2]}</button>`,
+    onSubmit: async form => { try { if (kind === "delete") { await ideaRef(i.id).delete(); toast("Draft deleted."); return; } const why = form.why.value.trim();
+      await patchIdea(i, { status: c[3], cancelNote: `${c[4]}: ${why}` }, `${c[4]}: ${why}`, c[5]); toast(c[4] + "."); } catch (e) { return writeErr(e); } } });
+}
+function confirmSimple(title, text, label, fn) {
+  openModal({ title, body: `<p style="margin:0">${text}</p>`, buttons: `<button class="btn primary" type="submit">${label}</button>`, onSubmit: async () => { try { await fn(); } catch (e) { return writeErr(e); } } });
+}
+
+/* ---------- events ---------- */
+document.addEventListener("click", async e => {
+  if (e.target.closest("[data-close]")) { closeModal(); return; }
+  const b = e.target.closest("[data-act]"); if (!b || b.disabled) return;
+  const act = b.dataset.act, i = b.dataset.id ? S.ideas.find(x => x.id === b.dataset.id) : null;
+  if (act === "view") { S.view = b.dataset.v; history.replaceState(null, "", "#" + S.view); render(true); window.scrollTo(0, 0); return; }
+  if (act === "theme") { THEME = b.dataset.t; try { localStorage.setItem("lrc-theme", THEME); } catch (e) {} applyTheme(); render(true); if (S.view === "show" && S._thumb) drawThumb($("#thumbprev"), S._thumb); return; }
+  if (act === "signout") { try { await S.sb.auth.signOut(); } catch (e) {} S.phase = "signin"; S.role = { eq: null, fx: null, cm: null }; saveSession(); location.hash = ""; location.reload(); return; }
+  if (act === "gateback") { S.gateMode = null; render(true); return; }
+  if (act === "desk") { S.desk = b.dataset.d; render(true); return; }
+  if (act === "role") { S.role[S.desk] = b.dataset.r; saveSession(); render(true); return; }
+  if (act === "filter") { S.filter[S.desk] = b.dataset.f; render(true); return; }
+  if (act === "logdesk") { S.logDesk = b.dataset.f; render(true); return; }
+  if (act === "showfilter") { S.showFilter = b.dataset.f; S.showId = null; render(true); return; }
+  if (act === "prompter" || act === "stream") { openStage(act, b.dataset.id); return; }
+  if (act === "thumb") { thumbModal(b.dataset.id); return; }
+  if (act === "st-close") { closeStage(); return; }
+  if (act === "st-play") { ST.run = !ST.run; if (ST.run) ST.t0 = ST.t0 || Date.now(); stageRender(); if (ST.run) stageTick(); return; }
+  if (act === "st-faster") { ST.speed = Math.min(6, ST.speed + 0.4); return; }
+  if (act === "st-slower") { ST.speed = Math.max(0.2, ST.speed - 0.4); return; }
+  if (act === "st-next") { ST.i++; stageRender(); return; }
+  if (act === "st-prev") { ST.i--; stageRender(); return; }
+  if (act === "ptab") { S.picksTab = b.dataset.f; render(true); return; }
+  if (act === "openpick") { pickModal(b.dataset.id); return; }
+  if (act === "openboard") { boardModal(b.dataset.cls, b.dataset.code); return; }
+  if (act === "flagfilter") { S.flagFilter = b.dataset.f; render(true); return; }
+  if (act === "new") { fundForm(S.desk); return; }
+  if (act === "clearflag") { try { await S.db.doc("flags/" + b.dataset.id).update({ cleared: { by: S.me, byName: myName(), at: new Date().toISOString() } }); toast("Marked as reviewed."); } catch (err) { toast(writeErr(err)); } return; }
+  if (act === "csv") { const txt = csvText(); try { await navigator.clipboard.writeText(txt); toast("Log copied. Paste it into Excel or Google Sheets."); }
+    catch (err) { openModal({ title: "Copy the log", body: `<textarea style="min-height:240px" class="mono" readonly>${esc(txt)}</textarea>`, buttons: "", onSubmit: async () => {} }); } return; }
+  if (act === "deskperm" && isAdmin()) { const st = S.staff[b.dataset.k]; const desks = Object.assign({}, st.desks || {}, { [b.dataset.d]: b.checked });
+    try { const { error } = await S.sb.rpc("wp_set_desks", { p_uid: st.uid, p_desks: desks }); if (error) throw error; await loadStaff(); toast("Desk access updated."); render(true); } catch (err) { toast(writeErr(err)); } return; }
+  if (act === "reset" && isAdmin()) { const st = S.staff[b.dataset.k];
+    openModal({ title: `Temporary password for ${esc(st.name)}`, body: `${fld("tp", "Temporary password", `<input type="text" id="tp" name="tp" minlength="8" required autocomplete="off">`, "Give it to them in person or by phone. They change it after signing in.")}`, buttons: `<button class="btn primary" type="submit">Set password</button>`,
+      onSubmit: async form => { const { error } = await S.sb.rpc("wp_reset_password", { p_uid: st.uid, p_password: form.tp.value }); if (error) return writeErr(error); toast("Temporary password set."); } }); return; }
+  if (act === "remove" && isAdmin()) { const st = S.staff[b.dataset.k];
+    confirmSimple(`Remove ${esc(st.name)}?`, "They will no longer be able to open the Workplace. Their past work stays in the log. You can also delete their sign-in in Supabase → Authentication.", "Remove", async () => { const { error } = await S.sb.rpc("wp_remove_staff", { p_uid: st.uid }); if (error) throw error; await loadStaff(); toast("Removed from the team."); render(true); }); return; }
+  if (act === "chpw") { pwForm(); return; }
+  if (act === "mark" && i) { markForm(i); return; }
+  if (act === "jnote" && i) { noteForm(i); return; }
+  if (act === "jreview" && i) { reviewForm(i); return; }
+  if (act === "jopen") { S.jOpen = S.jOpen === b.dataset.id ? null : b.dataset.id; render(true); return; }
+  if (act === "calm") { S.calMonth = b.dataset.m; render(true); return; }
+  if (act === "jfilter") { S.jDesk = b.dataset.f; render(true); return; }
+  if (!i) return;
+  const role = S.role[i.desk];
+  if (act === "edit" && role === "fund") fundForm(i.desk, i);
+  else if (act === "handover" && role === "fund") { if (i.fund.conf === "Low") { toast("Low-confidence ideas can't be handed over."); return; }
+    try { await patchIdea(i, { status: "handed_over", handedOverAt: new Date().toISOString() }, "Handed over to technical", "fund"); toast(`${i.fund.asset} handed over to the technical desk.`); } catch (err) { toast(writeErr(err)); } }
+  else if (act === "review" && role === "tech") techForm(i);
+  else if (act === "exec" && role === "tech") execForm(i);
+  else if (act === "close" && role === "tech") closeForm(i);
+  else if (act === "extend" && role === "fund") extendForm(i);
+  else if (act === "withdraw" && role === "fund") confirmForm(i, "withdraw");
+  else if (act === "cancel" && role === "tech") confirmForm(i, "cancel");
+  else if (act === "delete" && role === "fund") confirmForm(i, "delete");
+});
+document.addEventListener("change", e => {
+  const el = e.target;
+  if (el.dataset && el.dataset.act === "showpick") { S.showId = el.value; render(true); }
+  if (el.dataset && el.dataset.act === "fcpick") { S.fcId = el.value; render(true); }
+});
+document.addEventListener("submit", async e => {
+  const f = e.target; if (!f.dataset || !f.dataset.form) return; e.preventDefault();
+  if (f.dataset.form === "signin") return onGate(f);
+  if (f.dataset.form === "addstaff" && isAdmin()) {
+    const err = $("#s-err"); err.textContent = ""; const user = f.user.value.trim().toLowerCase().replace(/\s+/g, "."), name = f.name.value.trim().replace(/\s+/g, " ");
+    if (!/^[a-z0-9._-]{3,}$/.test(user)) { err.textContent = "Usernames use letters, numbers and dots only, e.g. thabo.mokoena."; return; }
+    if (name.length < 3) { err.textContent = "Enter the person's full name."; return; }
+    const desks = {}; f.querySelectorAll("input[name=desks]:checked").forEach(x => desks[x.value] = true);
+    const { error } = await S.sb.rpc("wp_add_staff", { p_username: user, p_name: name, p_desks: desks, p_admin: false });
+    if (error) { err.textContent = error.message; return; }
+    await loadStaff(); f.reset(); toast(`${name} added. They sign in as ${user}.`); render(true);
+  }
+  if (f.dataset.form === "rules" && isAdmin()) {
+    const err = $("#r-err"); err.textContent = "";
+    const next = Object.assign({}, S.config || {}, { minRR: num(f.minRR.value) || 1.5, eqExpiry: parseInt(f.eqExpiry.value) || 14, fxExpiry: parseInt(f.fxExpiry.value) || 7, cmExpiry: parseInt(f.cmExpiry.value) || 10, riskPct: num(f.riskPct.value) || 1, maxTrades: parseInt(f.maxTrades.value) || 8, maxShorts: parseInt(f.maxShorts.value) || 0, maxPerSector: parseInt(f.maxPerSector.value) || 2, eventDays: parseInt(f.eventDays.value) || 0, requireWS: !!f.requireWS.checked, updatedAt: new Date().toISOString() });
+    try { await S.db.doc("config/desks").set(next); toast("Rules saved."); render(true); } catch (x) { err.textContent = writeErr(x); }
+  }
+});
+setInterval(() => { const el = $("#cd"); if (!el || S.view !== "today") return; const mc = marketClock(); el.textContent = dur((mc.isOpen ? mc.close : mc.open) - new Date()); }, 30000);
+init();
+}
+</script>
+</body>
+</html>
