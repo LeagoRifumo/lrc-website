@@ -1,19 +1,31 @@
 {
- "edition": "Morning brief · Friday 20 November 2026 06:30",
- "generated": "2026-11-20T09:20+02:00",
- "covers": "US close on Thursday 19 Nov 2026, JSE close 19 Nov and the rand overnight to 20 Nov 2026",
+ "edition": "Midday update · Friday 20 November 2026 10:15",
+ "generated": "2026-11-20T10:15+02:00",
+ "covers": "JSE session to 09:49 SAST on 20 Nov 2026, with Thursday's US close for reference",
  "agent": "LRC News Desk",
- "headline": "Wall Street closes at the day's lows: S&P 500 7,175.83 (-5.1% on the week), Nasdaq 23,879.20; rand R17.54/$ this morning",
- "summary": "The JSE All Share closed at 106,216.49 on 19 Nov 2026 (-5.5% on the week) and the Top 40 at 98,385.12 (-5.8%), and the rand was at R17.54 per dollar early on 20 Nov, 4.5% weaker than a week ago (LRC Market Dashboard, Yahoo Finance). In New York the sell-off deepened into the close: the S&P 500 finished at 7,175.83, below its 19:09 SAST level of 7,220.89 and 5.1% lower on the week, and the Nasdaq at 23,879.20 (-5.0% on the week), with AMD -7.7%, Amazon -3.9%, Nvidia -3.3% and Meta -3.3%, while Palo Alto Networks gained 6.4% (LRC Stock Scanner quotes, 19 Nov close). Commodities fell with shares, with gold closing at $3,526.30 (-9.3% on the week), platinum at $1,296.00 and Brent at $89.79, and the US 10-year yield at 5.05%; the JSE is set to open under pressure from the US close and a weaker rand.",
+ "headline": "JSE extends the sell-off: All Share 104,265 (-1.8%), Top 40 96,398 (-2.0%); gold miners down 4–6% while the rand firms to R17.49/$",
+ "summary": "The JSE All Share was at 104,265.03 and the Top 40 at 96,398.30 shortly before 10:00 SAST on 20 Nov 2026, 1.8% and 2.0% below Thursday's closes of 106,216.49 and 98,385.12 (LRC Market Dashboard, Yahoo Finance). Wall Street's last close was the S&P 500 at 7,175.83 and the Nasdaq at 23,879.20 on 19 Nov, and that tech-led weakness is feeding into Johannesburg, with miners leading the losses. Gold steadied at $3,573.40 (about 1.3% above Thursday's $3,526.30 close) and the rand firmed to R17.49 per dollar from R17.54 earlier this morning, but both remain sharply weaker on the week.",
  "sections": [
   {
-   "name": "Breaking",
+   "name": "South Africa",
    "items": [
     {
-     "title": "US sell-off deepens into the close: S&P 500 7,175.83, Nasdaq 23,879.20",
-     "summary": "Both indices closed below their 19:09 SAST levels (7,220.89 and 24,118.04). On the week the S&P 500 is down 5.1% (from 7,561.67 on 13 Nov) and the Nasdaq 5.0% (from 25,136.27). Chip and big-tech shares led the fall (LRC Market Dashboard, Yahoo Finance daily close, 19 Nov 2026).",
-     "source": "LRC Market Dashboard / Yahoo Finance, 19 Nov 2026 close",
-     "url": "https://finance.yahoo.com/quote/%5EGSPC/"
+     "title": "All Share 104,265.03 (-1.8%), Top 40 96,398.30 (-2.0%) in early trade",
+     "summary": "Both indices fell further on Friday morning (20 Nov 2026, quotes to about 09:49 SAST) after Thursday's -5.5% and -5.8% weekly declines. The All Share is now 7.2% below its 13 Nov level of 112,387.90 (LRC Market Dashboard, Yahoo Finance).",
+     "source": "LRC Market Dashboard / Yahoo Finance",
+     "url": "https://finance.yahoo.com/quote/%5EJ203.JO/"
+    },
+    {
+     "title": "Miners lead the fall: Sibanye-Stillwater -5.8%, Impala -5.6%, AngloGold -5.1%, Harmony -4.4%, Gold Fields -4.4%",
+     "summary": "Precious-metal miners gave back gains despite steadier metal prices this morning; Anglo American was 3.3% lower at R748.58 and BHP 2.9% lower at R593.33 (LRC Stock Scanner quotes, 20 Nov 2026 ~09:49 SAST). Impala had gained 5.2% on Thursday.",
+     "source": "LRC Stock Scanner / Yahoo Finance",
+     "url": "https://finance.yahoo.com/quote/SSW.JO/"
+    },
+    {
+     "title": "Banks lower; Mr Price +3.1% and BAT +0.8% buck the trend",
+     "summary": "Standard Bank -1.4% to R280.37, FirstRand -1.3% to R87.23 and Absa -1.6% to R205.59, while Mr Price rose 3.1% to R183.50; Naspers (-0.4%) and Prosus (-0.7%) held up better than the index (LRC Stock Scanner quotes, 20 Nov 2026 ~09:49 SAST).",
+     "source": "LRC Stock Scanner / Yahoo Finance",
+     "url": "https://finance.yahoo.com/quote/MRP.JO/"
     }
    ]
   },
@@ -21,46 +33,10 @@
    "name": "US markets",
    "items": [
     {
-     "title": "S&P 500 closes at 7,175.83; Nasdaq at 23,879.20",
-     "summary": "Week-on-week the S&P 500 is 5.1% lower and the Nasdaq 5.0% lower, after both were still above these levels at 19:09 SAST (LRC Market Dashboard, Yahoo Finance ^GSPC and ^IXIC daily close, 19 Nov 2026).",
-     "source": "Yahoo Finance via LRC Market Dashboard, 19 Nov 2026",
-     "url": "https://finance.yahoo.com/quote/%5EIXIC/"
-    },
-    {
-     "title": "Closing moves: AMD -7.7%, Gap -5.3%, Amazon -3.9%, Alphabet -3.5%; Palo Alto +6.4%, Intel +1.9%",
-     "summary": "At the 19 Nov close AMD was at $489.19 (-7.7%), Amazon $257.37 (-3.9%), Alphabet $272.66 (-3.5%), Ross Stores $219.88 (-3.4%), Microsoft $498.30 (-1.8%), Walmart $126.04 (-1.0%) and Apple $349.21 (-0.9%). Palo Alto Networks closed at $361.73 (+6.4%) and Intel at $55.72 (+1.9%) (LRC Stock Scanner quotes, Yahoo Finance, 19 Nov 2026 23:00 SAST).",
-     "source": "Yahoo Finance via LRC Stock Scanner, 19 Nov 2026 close",
-     "url": "https://finance.yahoo.com/quote/AMD/"
-    },
-    {
-     "title": "US 10-year yield closes at 5.05%",
-     "summary": "The 10-year Treasury yield closed at 5.05% on 19 Nov 2026, down from 5.15% a week earlier (Yahoo Finance ^TNX via LRC Market Dashboard).",
-     "source": "Yahoo Finance ^TNX via LRC Market Dashboard, 19 Nov 2026",
-     "url": "https://finance.yahoo.com/quote/%5ETNX/"
-    }
-   ]
-  },
-  {
-   "name": "South Africa",
-   "items": [
-    {
-     "title": "JSE All Share 106,216.49 and Top 40 98,385.12 at Thursday's close",
-     "summary": "The All Share closed 5.5% lower on the week (112,387.90 on 13 Nov) and the Top 40 5.8% lower (104,486.60), on the day the SARB held the repo rate at 7.25% on a 4–3 vote (LRC Market Dashboard, Yahoo Finance daily close, 19 Nov 2026).",
-     "source": "LRC Market Dashboard (Yahoo Finance), 19 Nov 2026",
-     "url": "https://finance.yahoo.com/quote/%5EJ203.JO/"
-    },
-    {
-     "title": "JSE movers: Pick n Pay +5.9%, Impala +5.2%, Anglo American +2.7%; Investec -5.7%, Naspers -2.6%",
-     "summary": "Closing quotes on 19 Nov 2026: Pick n Pay R26.30 (+5.9%), Impala Platinum R173.81 (+5.2%), Richemont R3,700 (+3.5%), Anglo American R774.24 (+2.7%), Spar R54.85 (+2.2%); Investec R125.84 (-5.7%), Naspers R658.00 (-2.6%), Growthpoint R15.24 (-1.4%) (LRC Stock Scanner quotes, Yahoo Finance).",
-     "source": "LRC Stock Scanner quotes (Yahoo Finance), 19 Nov 2026",
-     "url": "https://finance.yahoo.com/quote/PIK.JO/",
-     "tickers": [
-      "PIK.JO",
-      "IMP.JO",
-      "AGL.JO",
-      "INL.JO",
-      "NPN.JO"
-     ]
+     "title": "Last close: S&P 500 7,175.83, Nasdaq 23,879.20 (19 Nov)",
+     "summary": "Wall Street is closed until 16:30 SAST. Thursday's close left the S&P 500 5.1% lower on the week and the Nasdaq 5.0% lower; the US 10-year yield closed at 5.05% (LRC Market Dashboard, Yahoo Finance, 19 Nov 2026).",
+     "source": "LRC Market Dashboard / Yahoo Finance",
+     "url": "https://finance.yahoo.com/quote/%5EGSPC/"
     }
    ]
   },
@@ -68,15 +44,15 @@
    "name": "Forex & commodities",
    "items": [
     {
-     "title": "Rand at R17.54/$ this morning, 4.5% weaker on the week",
-     "summary": "USD/ZAR was 17.5413 on 20 Nov 2026 against 16.7584 a week earlier; the euro bought R19.25 and the pound R22.98 (Yahoo Finance via LRC Market Dashboard).",
-     "source": "Yahoo Finance ZAR=X via LRC Market Dashboard, 20 Nov 2026",
+     "title": "Rand firms to R17.49/$ but is 4.4% weaker on the week",
+     "summary": "USD/ZAR at 17.4919 on the morning of 20 Nov 2026 vs 16.7584 on 13 Nov; the euro is at R19.20 and the pound at R22.93 (LRC Market Dashboard, Yahoo Finance).",
+     "source": "LRC Market Dashboard / Yahoo Finance",
      "url": "https://finance.yahoo.com/quote/ZAR%3DX/"
     },
     {
-     "title": "Gold closes at $3,526.30 (-9.3% on the week); platinum $1,296.00; Brent $89.79; copper $12,166/t",
-     "summary": "Daily closes on 19 Nov 2026 versus 13 Nov: gold $3,526.30 (from $3,886.30), platinum $1,296.00 (from $1,488.50, -12.9%), Brent crude $89.79 (from $95.84, -6.3%) and copper about $12,166 a tonne (from $13,403, -9.2%) (Yahoo Finance futures via LRC Market Dashboard).",
-     "source": "Yahoo Finance GC=F, PL=F, BZ=F, HG=F via LRC Market Dashboard, 19 Nov 2026",
+     "title": "Gold steadies at $3,573.40; platinum $1,308.70; Brent $89.57; copper $12,243/t",
+     "summary": "Gold futures are about 1.3% above Thursday's close of $3,526.30 but still 8.1% below the 13 Nov level of $3,886.30; platinum is 12.1% lower on the week and Brent 6.5% lower (LRC Market Dashboard, Yahoo Finance, 20 Nov 2026 morning).",
+     "source": "LRC Market Dashboard / Yahoo Finance",
      "url": "https://finance.yahoo.com/quote/GC%3DF/"
     }
    ]
@@ -85,43 +61,35 @@
    "name": "Our coverage",
    "items": [
     {
-     "title": "Nvidia -3.3% to $145.98, Meta -3.3% to $596.22; ratings unchanged",
-     "summary": "Both fell further after 19:09 SAST (Nvidia was $149.00 then). Nvidia's LRC Stock Scanner rating stays HOLD, with the intrinsic-value model at BUY; Meta stays HOLD, with the shares flagged as overvalued (Yahoo Finance close via LRC Stock Scanner, 19 Nov 2026).",
-     "source": "Yahoo Finance via LRC Stock Scanner, 19 Nov 2026 close",
-     "url": "https://finance.yahoo.com/quote/NVDA/",
-     "tickers": [
-      "NVDA",
-      "META"
-     ]
-    },
-    {
-     "title": "Intuit -1.0% to $310.02, Deckers -5.6% to $78.95; ratings unchanged",
-     "summary": "Both remain rated HOLD by the LRC Stock Scanner, with the valuation model showing the shares as undervalued but the price trend still negative (Yahoo Finance close via LRC Stock Scanner, 19 Nov 2026).",
-     "source": "Yahoo Finance via LRC Stock Scanner, 19 Nov 2026 close",
-     "url": "https://finance.yahoo.com/quote/INTU/",
-     "tickers": [
-      "INTU",
-      "DECK"
-     ]
-    },
-    {
-     "title": "MTN -0.4% to R224.61, Telkom +1.0% to R67.02",
-     "summary": "Closing quotes on 19 Nov 2026; both stay rated HOLD by the LRC Stock Scanner (Yahoo Finance via LRC Stock Scanner).",
-     "source": "LRC Stock Scanner quotes (Yahoo Finance), 19 Nov 2026",
+     "title": "MTN -1.1% to R222.08, Telkom +0.3% to R67.24",
+     "summary": "Both are moving less than the Top 40 this morning (LRC Stock Scanner quotes, 20 Nov 2026 ~09:49 SAST). No company news; ratings unchanged.",
+     "source": "LRC Stock Scanner / Yahoo Finance",
      "url": "https://finance.yahoo.com/quote/MTN.JO/",
      "tickers": [
       "MTN.JO",
       "TKG.JO"
+     ]
+    },
+    {
+     "title": "US names unchanged since Thursday's close: Nvidia $145.98, Meta $596.22, Intuit $310.02, Deckers $78.95",
+     "summary": "No new US trading until 16:30 SAST; Thursday's moves were Nvidia -3.3%, Meta -3.3%, Intuit -1.0% and Deckers -5.6% (LRC Stock Scanner, 19 Nov 2026 close). Ratings unchanged.",
+     "source": "LRC Stock Scanner / Yahoo Finance",
+     "url": "https://finance.yahoo.com/quote/NVDA/",
+     "tickers": [
+      "NVDA",
+      "META",
+      "INTU",
+      "DECK"
      ]
     }
    ]
   }
  ],
  "watch_today": [
-  "JSE open after the US close at the day's lows (S&P 500 7,175.83)",
-  "Rand near R17.54/$ after the 4–3 SARB hold",
-  "Gold at $3,526.30 and platinum at $1,296.00 after a heavy week for miners' prices",
-  "Whether US chip and big-tech shares steady on Friday after AMD -7.7% and Nvidia -3.3%",
+  "Whether the JSE holds above 104,000 on the All Share after a 7% fall since 13 Nov",
+  "Precious-metal miners vs a steadier gold price ($3,573)",
+  "Rand near R17.49/$ after the 4–3 SARB hold",
+  "Wall Street open at 16:30 SAST after the S&P 500 closed at 7,175.83",
   "Dell results on 24 Nov 2026"
  ]
 }
