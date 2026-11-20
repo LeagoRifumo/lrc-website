@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-19T17:55:00+02:00",
+  "generated": "2026-11-20T17:50:00+02:00",
   "agent": "LRC Macro Desk",
   "method": "Surprise = actual minus forecast (consensus). If there is no forecast, actual minus previous. Impact for shares: a surprise in the 'better' direction larger than the threshold = Bullish, the other way = Bearish, otherwise Neutral.",
   "countries": {
@@ -311,7 +311,7 @@
           "actual": 0.4,
           "forecast": 0.3,
           "previous": 0.6,
-          "next_release": null,
+          "next_release": "2026-12-10",
           "source": "BLS",
           "url": "https://www.investing.com/news/economy-news/reaction-roundup-experts-analysts-weigh-in-on-october-cpi-report-5016277"
         },
@@ -327,7 +327,7 @@
           "actual": 0.3,
           "forecast": 0.2,
           "previous": 0.3,
-          "next_release": null,
+          "next_release": "2026-12-10",
           "source": "BLS",
           "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-10-2026"
         },
@@ -343,7 +343,7 @@
           "actual": 6.5,
           "forecast": null,
           "previous": 6.3,
-          "next_release": null,
+          "next_release": "2026-12-15",
           "source": "BLS",
           "url": "https://www.stocktitan.net/articles/october-2026-ppi-report"
         },
