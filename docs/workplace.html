@@ -302,7 +302,7 @@ const SOON = {};
 /* ---------- state ---------- */
 const S = { db:null, user:null, me:null, owner:false, readOnly:false, noDb:false, loadNote:null, pending:false,
   staff:{}, staffLoaded:false, claims:{}, claimsLoaded:false, auth:undefined, sessionName:null,
-  config:null, configLoaded:false, ideas:[], ideasLoaded:false, flags:[], marks:{}, edition:null, picks:{}, pickhist:[], picksTab:"JSE", calMonth:null, jOpen:null, jDesk:"all", shows:{}, showId:null, showFilter:"all", forecasts:{}, fcId:null,
+  config:null, configLoaded:false, ideas:[], ideasLoaded:false, flags:[], marks:{}, edition:null, picks:{}, pickhist:[], picksTab:"site", site:null, siteMeta:null, siteErr:"", calMonth:null, jOpen:null, jDesk:"all", shows:{}, showId:null, showFilter:"all", forecasts:{}, fcId:null,
   view:"today", desk:"eq", role:{ eq:null, fx:null, cm:null }, filter:{ eq:"active", fx:"active", cm:"active" }, logDesk:"all", flagFilter:"open", gateMode:null };
 try { const s = JSON.parse(sessionStorage.getItem("lrc-ws") || "{}"); S.sessionName = s.name || null; S.role = Object.assign(S.role, s.role || {}); } catch (e) {}
 const saveSession = () => { try { sessionStorage.setItem("lrc-ws", JSON.stringify({ name: S.sessionName, role: S.role })); } catch (e) {} };
@@ -376,6 +376,12 @@ function marketClock() {
     if (now < close) { const sd = new Date(open.getTime() + 2 * 3600000); const live = new Date(Date.UTC(sd.getUTCFullYear(), sd.getUTCMonth(), sd.getUTCDate(), 18, 30));
       return { open, close, live, ready: new Date(live - 30 * 60000), isOpen: now >= open }; }
   }
+}
+function clockTarget(mc, now = new Date()) {
+  const day = d => d.toLocaleDateString("en-ZA", { weekday: "long", day: "numeric", month: "short", timeZone: SA });
+  if (now < mc.open) return { at: mc.open, sub: `to the US open · ${day(mc.open)}` };
+  if (now < mc.live) return { at: mc.live, sub: `to the Leago Rifumo Show · live ${fmtT(mc.live)} SA time` };
+  return { at: mc.close, sub: `to the US close · ${fmtT(mc.close)} SA time` };
 }
 const dur = ms => { const m = Math.max(0, Math.round(ms / 60000)); const h = Math.floor(m / 60); return h >= 24 ? `${Math.floor(h/24)}d ${h%24}h` : `${h}h ${pad(m % 60)}m`; };
 
@@ -462,6 +468,7 @@ async function afterSignIn() {
   live(db.doc("config/desks"), snap => { S.config = snap.exists ? snap.data() : null; S.configLoaded = true; render(); }, "settings");
   live(db.collection("ideas"), snap => { S.ideas = snap.docs.map(d => Object.assign({ id: d.id }, d.data())); S.ideasLoaded = true; render(); }, "handover board");
   live(db.collection("flags"), snap => { S.flags = snap.docs.map(d => Object.assign({ id: d.id }, d.data())).sort((a, b) => (b.at || "").localeCompare(a.at || "")); render(); }, "news flags");
+  loadSitePicks();
   live(db.collection("picks"), snap => { S.picks = {}; S.edition = null; snap.docs.forEach(d => { if (d.id === "edition") S.edition = d.data(); else S.picks[d.id] = d.data(); }); render(); }, "top picks");
   live(db.collection("shows"), snap => { S.shows = {}; snap.docs.forEach(d => S.shows[d.id] = d.data()); render(); }, "shows");
   live(db.collection("forecasts"), snap => { S.forecasts = {}; snap.docs.forEach(d => S.forecasts[d.id] = d.data()); render(); }, "forecasts");
@@ -533,8 +540,7 @@ function pwForm() {
 function viewToday() {
   const mc = marketClock(), now = new Date();
   let headline = "", sub = "";
-  if (mc.isOpen) { headline = dur(mc.close - now); sub = `US market open · closes ${fmtT(mc.close)} SA time`; }
-  else { headline = dur(mc.open - now); sub = `to the US open · ${mc.open.toLocaleDateString("en-ZA", { weekday: "long", day: "numeric", month: "short", timeZone: SA })}`; }
+  const ct = clockTarget(mc, now); headline = dur(ct.at - now); sub = ct.sub;
   const flags = openFlags(), red = flags.filter(f => f.level !== "amber"), amber = flags.filter(f => f.level === "amber");
   const lt = liveTrades(), hot = lt.filter(i => flagsFor(i).some(f => f.level !== "amber"));
   const newsBox = red.length
@@ -544,7 +550,7 @@ function viewToday() {
   const approved = S.ideas.filter(i => i.status === "approved").length;
   return `<div class="pagehead"><div><h1>${now.toLocaleDateString("en-ZA", { weekday: "long", day: "numeric", month: "long", timeZone: SA })}</h1><p>Good ${now.getHours() < 12 ? "morning" : now.getHours() < 17 ? "afternoon" : "evening"}, ${esc(myName().split(" ")[0])}. Here's the desk.</p></div></div>
   <div class="hero">
-    <div class="clock"><div class="lab">US PM session</div><div class="big" id="cd">${headline}</div><div class="lab">${sub}</div>
+    <div class="clock"><div class="lab">US PM session</div><div class="big" id="cd">${headline}</div><div class="lab" id="cdsub">${sub}</div>
       <div class="times"><div><span>US open</span><b>${fmtT(mc.open)}</b></div><div><span>Show ready</span><b>${fmtT(mc.ready)}</b></div><div><span>Leago Rifumo Show</span><b>${fmtT(mc.live)}</b></div></div>
       <div class="lab">SA time. Moves with US daylight saving; US holidays aren't counted.</div></div>
     ${newsBox}
@@ -553,7 +559,7 @@ function viewToday() {
     <button class="tile" data-act="view" data-v="trades"><span>Active trades</span><b>${lt.length}</b><small>${hot.length ? `<span class="neg">${hot.length} hit by news</span>` : "none hit by news"}</small></button>
     <button class="tile" data-act="view" data-v="desk"><span>Awaiting technical</span><b>${awaiting}</b><small>handovers to review</small></button>
     <button class="tile" data-act="view" data-v="desk"><span>Approved, not filled</span><b>${approved}</b><small>ready for the trader</small></button>
-    <button class="tile" data-act="view" data-v="picks"><span>Top picks</span><b>${S.edition ? Object.keys(S.picks).length : "—"}</b><small>${S.edition ? "edition " + fmtDate(S.edition.date) : "first edition 12:47"}</small></button>
+    <button class="tile" data-act="view" data-v="picks"><span>Top picks</span><b>${((S.site || []).length + (S.edition ? Object.keys(S.picks).length : 0)) || "—"}</b><small>${(S.site || []).length} website${S.edition ? " · " + Object.keys(S.picks).length + " screen, " + fmtDate(S.edition.date) : " · screen edition 12:47"}</small></button>
   </div>
   ${lt.length ? `<h2 style="font-size:19px">Active trades</h2><div class="tblwrap">${tradesTable(lt)}</div>` : ""}`;
 }
@@ -832,10 +838,33 @@ const slug = t => String(t || "").toUpperCase().replace(/[^A-Z0-9]+/g, "-").repl
 const pickRet = p => (p && p.listedPx && p.price) ? (p.side === "Bear" ? -1 : 1) * (p.price / p.listedPx - 1) : null;
 const ratingPill = v => v ? `<span class="pill ${/BUY/.test(v) ? "buy" : /SELL/.test(v) ? "sell" : ""}">${esc(v)}</span>` : "";
 const pickFlags = p => openFlags().filter(f => (f.assets || []).map(assetKey).some(a => a === assetKey(p.ticker) || a === assetKey(String(p.ticker).replace(/\.JO$/, ""))));
+async function loadSitePicks() {
+  try {
+    const [{ data: rows, error }, { data: meta }] = await Promise.all([S.sb.from("top_picks").select("*").order("rank"), S.sb.from("picks_meta").select("*").maybeSingle()]);
+    if (error) throw error; S.site = rows || []; S.siteMeta = meta || null; S.siteErr = "";
+  } catch (e) { S.site = S.site || []; S.siteErr = (e && e.message) || "connection problem"; }
+  render();
+}
+setInterval(() => { if (S.phase === "ready") loadSitePicks(); }, 15 * 60000);
+function sitePicksView() {
+  if (S.site === null) return `<div class="empty">Loading the website's Top Picks…</div>`;
+  if (S.siteErr && !S.site.length) return `<div class="empty">The website's Top Picks couldn't be loaded (${esc(S.siteErr)}). Reload the page.</div>`;
+  const m = S.siteMeta;
+  const block = (mkt, kind) => { const list = S.site.filter(r => r.market === mkt && r.kind === kind).sort((a, b) => a.rank - b.rank);
+    return `<div class="tblwrap"><div class="tbl-title">${mkt === "JSE" ? "JSE" : "New York"} · ${kind === "trading" ? "Trading (3–12 months)" : "Investment (5–10 years)"} · ${list.length}</div><table><thead><tr><th>#</th><th>Name</th><th>Sector</th><th class="num">Score</th><th class="num">Since added</th><th>Why it's on the list</th></tr></thead><tbody>
+    ${list.length ? list.map(r => { const d = r.data || {}, since = r.added_price && d.price ? d.price / r.added_price - 1 : null;
+      return `<tr><td>${r.rank}</td><td><a class="mono" href="stock.html?t=${encodeURIComponent(r.ticker)}" target="_blank" rel="noopener"><b>${esc(String(r.ticker).replace(/\.JO$/, ""))}</b></a><div class="subtle" style="white-space:normal">${esc(d.name || "")}</div></td>
+        <td style="white-space:normal">${esc(d.sector || "")}</td><td class="num">${d.score ?? "—"}</td><td class="num ${since > 0 ? "pos" : since < 0 ? "neg" : ""}">${pct(since)}<div class="subtle">${r.added_on ? fmtDate(r.added_on) : ""}</div></td>
+        <td style="white-space:normal;min-width:220px">${(d.why || []).slice(0, 2).map(w => `<b>${esc(w.area)}</b> — ${esc(w.text)}`).join("<br>") || "Strong all-round score."}</td></tr>`; }).join("")
+      : `<tr><td colspan="6" class="subtle">No company passes every rule in this list right now.</td></tr>`}</tbody></table></div>`; };
+  return `<p class="subtle" style="margin:0">The same Top Picks members see on the website, rebuilt after every LRC Stock Scanner run${m && m.generated ? ` · last built ${fmtDT(m.generated)}` : ""}. "Since added" uses the price at the last scanner run.</p>
+    <div class="grid2">${block("JSE", "trading")}${block("US", "trading")}</div><div class="grid2">${block("JSE", "investment")}${block("US", "investment")}</div>`;
+}
 function viewPicks() {
   const ed = S.edition, tab = S.picksTab;
-  const tabs = `<div class="filters" role="group" aria-label="Picks">${[["JSE", "JSE"], ["US", "US"], ["fx", "Forex"], ["cm", "Commodities"], ["stats", "Analytics"]].map(([k, l]) => `<button class="chip" aria-pressed="${tab === k}" data-act="ptab" data-f="${k}">${l}</button>`).join("")}</div>`;
-  const head = `<div class="pagehead"><div><h1>Top picks</h1><p>Screen picks chosen by fixed rules every weekday before the US PM session. They're candidates, not LRC ratings: a name becomes a trade only through the Work-sheet and the handover desk.</p></div>${tabs}</div>`;
+  const tabs = `<div class="filters" role="group" aria-label="Picks">${[["site", "Website picks"], ["JSE", "JSE screen"], ["US", "US screen"], ["fx", "Forex"], ["cm", "Commodities"], ["stats", "Analytics"]].map(([k, l]) => `<button class="chip" aria-pressed="${tab === k}" data-act="ptab" data-f="${k}">${l}</button>`).join("")}</div>`;
+  const head = `<div class="pagehead"><div><h1>Top picks</h1><p>The website's Top Picks, plus the Workplace screen picks (bullish and bearish, with full theses) chosen by fixed rules every weekday before the US PM session. They're candidates, not LRC ratings: a name becomes a trade only through the Work-sheet and the handover desk.</p></div>${tabs}</div>`;
+  if (tab === "site") return head + sitePicksView();
   if (!ed) return head + `<div class="empty">The first edition arrives after the Screening Analyst's next run (weekdays 12:47 SA time).</div>`;
   const meta = `<p class="subtle" style="margin:0">Edition ${fmtDate(ed.date)} · built ${fmtDT(ed.generated)}${ed.dataAsOf ? ` · prices from the scan of ${esc(ed.dataAsOf)}` : ""}. ${esc(ed.note || "")}</p>
     ${(ed.shortfalls || []).length ? `<div class="note warn">${ed.shortfalls.map(esc).join("<br>")}</div>` : ""}`;
@@ -1377,7 +1406,7 @@ document.addEventListener("submit", async e => {
     try { await S.db.doc("config/desks").set(next); toast("Rules saved."); render(true); } catch (x) { err.textContent = writeErr(x); }
   }
 });
-setInterval(() => { const el = $("#cd"); if (!el || S.view !== "today") return; const mc = marketClock(); el.textContent = dur((mc.isOpen ? mc.close : mc.open) - new Date()); }, 30000);
+setInterval(() => { const el = $("#cd"); if (!el || S.view !== "today") return; const mc = marketClock(); const ct = clockTarget(mc); el.textContent = dur(ct.at - new Date()); const sb = $("#cdsub"); if (sb) sb.textContent = ct.sub; }, 30000);
 init();
 }
 </script>
