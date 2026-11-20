@@ -31,7 +31,7 @@ jobs:
         run: |
           git config user.name "LRC Automation"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A agents/drop agents/mirror
+          mkdir -p agents/drop; git add -A agents/mirror agents/drop
           if git diff --cached --quiet; then echo "Nothing changed."; exit 0; fi
           git commit -q -m "Workplace sync — $(TZ=Africa/Johannesburg date '+%Y-%m-%d %H:%M SAST')"
           for i in 1 2 3 4; do git pull -q --rebase origin main && git push -q origin HEAD:main && exit 0; git rebase --abort 2>/dev/null || true; sleep $((i*5)); done
