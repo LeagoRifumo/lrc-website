@@ -36442,8 +36442,17 @@
 "when": "Before open",
 "eps_forecast": "",
 "quarter": "",
-"period": "Interim to Sep 2026 (expected: open period from 20 Nov 07:05 per company IR calendar)",
-"market_cap_bn": 49.3
+"period": "26 weeks to 26 Sep 2026",
+"market_cap_bn": 49.3,
+"heps": 523.0,
+"heps_prior": null,
+"unit": "c",
+"change": null,
+"result": null,
+"measure": "HEPS",
+"dps": 329.5,
+"source": "Mr Price Group SENS — Interim results for the 26 weeks ended 26 September 2026 and cash dividend declaration (20 Nov 2026), via InsidEntity https://www.insidentity.com/mr-price-interim-results-for-the-26-weeks-ended-26-september-2026-and-cash-dividend-declaration/ (HEPS up 2.0% to 523.0c; diluted HEPS up 2.2% to 508.6c; basic EPS up 0.2% to 513.6c; interim dividend up 2.0% to 329.5c; prior-period HEPS value not shown in the source read)",
+"result_done": false
 },
 "MRP|2026-10-27": {
 "t": "MRP",

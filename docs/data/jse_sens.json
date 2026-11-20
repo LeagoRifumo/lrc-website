@@ -1,6 +1,6 @@
 {
  "note": "JSE company announcements (SENS) recorded by the LRC JSE Announcements job every weekday. results = published results with headline earnings per share (HEPS) vs the same period last year; trading_statements = expected HEPS change ranges; dividends = declared dividends with the JSE dates. Amounts in cents. Every entry carries its source.",
- "updated": "2026-11-19T19:30+02:00",
+ "updated": "2026-11-20T19:00+02:00",
  "results": [
   {
    "t": "CLS.JO",
@@ -223,6 +223,16 @@
    "unit": "GBp",
    "dps": 417.0,
    "source": "Investec half-year results for the six months ended 30 September 2026 (19 Nov 2026), as reported by Reuters via CNBC Africa https://www.cnbcafrica.com/2026/south-africas-investec-reports-8-4-rise-in-half-year-earnings (group figures in pence: HEPS 39.8p vs 36.7p); Investec Limited gross interim dividend 417c (2025: 396c) per Investec dividend declaration (19 Nov 2026), via MarketScreener https://www.marketscreener.com/news/investec-group-declares-an-interim-dividend-for-the-period-1-april-2026-to-30-september-2026-payabl-ce785ed2d888ff2c"
+  },
+  {
+   "t": "MRP.JO",
+   "name": "Mr Price Group",
+   "date": "2026-11-20",
+   "period": "26 weeks to 26 Sep 2026",
+   "heps": 523.0,
+   "unit": "c",
+   "dps": 329.5,
+   "source": "Mr Price Group SENS — Interim results for the 26 weeks ended 26 September 2026 and cash dividend declaration (20 Nov 2026), via InsidEntity https://www.insidentity.com/mr-price-interim-results-for-the-26-weeks-ended-26-september-2026-and-cash-dividend-declaration/ (HEPS up 2.0% to 523.0c; diluted HEPS up 2.2% to 508.6c; basic EPS up 0.2% to 513.6c; interim dividend up 2.0% to 329.5c; prior-period HEPS value not shown in the source read)"
   }
  ],
  "trading_statements": [
@@ -472,6 +482,17 @@
    "record": "2026-12-11",
    "pay": "2026-12-31",
    "source": "Investec — Interim dividend for the period 1 April 2026 to 30 September 2026, payable on 31 December 2026 (19 Nov 2026), via MarketScreener https://www.marketscreener.com/news/investec-group-declares-an-interim-dividend-for-the-period-1-april-2026-to-30-september-2026-payabl-ce785ed2d888ff2c (Investec Limited gross dividend no. 141 of 417c vs 396c; Investec plc 18.5p)"
+  },
+  {
+   "t": "MRP.JO",
+   "period": "Interim",
+   "declared": "2026-11-20",
+   "amount_c": 329.5,
+   "ldt": "2026-12-08",
+   "ex": "2026-12-09",
+   "record": "2026-12-11",
+   "pay": "2026-12-14",
+   "source": "Mr Price Group SENS — Interim results for the 26 weeks ended 26 September 2026 and cash dividend declaration (20 Nov 2026), via InsidEntity https://www.insidentity.com/mr-price-interim-results-for-the-26-weeks-ended-26-september-2026-and-cash-dividend-declaration/ (gross 329.50c; net 263.60c after 20% dividends tax)"
   }
  ]
 }
