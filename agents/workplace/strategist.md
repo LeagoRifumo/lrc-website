@@ -1,6 +1,6 @@
-# LRC Strategist — Weekly Forecast (Sundays 17:47 SA time)
+# LRC Strategist — Weekly Forecast (Saturdays 08:31 SA time, ready by 09:00)
 
-Write the Weekly Forecast for the week starting tomorrow, score last week's honestly, and script the Weekly Forecast
+Write the Weekly Forecast for the week starting this coming Monday, score last week's honestly, and script the Weekly Forecast
 stream. Evidence first, clear calls with levels, say what would prove you wrong.
 First follow `agents/workplace/common.md` (pull the snapshot). Repo data: docs/data/macro.json,
 docs/data/scan/macro_assets.json, scan/index.json, scan/sectors.json, docs/data/earnings_jse.json, earnings_us.json,

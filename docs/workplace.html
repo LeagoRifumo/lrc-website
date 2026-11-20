@@ -1088,8 +1088,8 @@ document.addEventListener("keydown", e => {
 /* ---------- Weekly forecast ---------- */
 function viewForecast() {
   const list = Object.entries(S.forecasts).map(([id, d]) => Object.assign({ id }, d)).sort((a, b) => (b.weekOf || "").localeCompare(a.weekOf || ""));
-  const head = `<div class="pagehead"><div><h1>Weekly forecast</h1><p>Written by the Strategist every Sunday at 17:47 SA time, then scored against what happened the following Sunday.</p></div></div>`;
-  if (!list.length) return head + `<div class="empty">The first forecast arrives on Sunday at 17:47.</div>`;
+  const head = `<div class="pagehead"><div><h1>Weekly forecast</h1><p>Written by the Strategist every Saturday morning (ready by 09:00 SA time), then scored against what happened the following week.</p></div></div>`;
+  if (!list.length) return head + `<div class="empty">The first forecast arrives on Saturday by 09:00.</div>`;
   const fc = list.find(x => x.id === S.fcId) || list[0];
   const picker = list.length > 1 ? `<div class="field" style="max-width:320px"><label for="fcpick">Week</label><select id="fcpick" data-act="fcpick">${list.map(x => `<option value="${esc(x.id)}" ${x.id === fc.id ? "selected" : ""}>Week of ${fmtDate(x.weekOf)}</option>`).join("")}</select></div>` : "";
   const sc = fc.scoreLast;
@@ -1109,7 +1109,7 @@ function viewHelp() {
   const sec = (h, items) => `<div class="panel"><h2 style="font-size:19px;margin-bottom:8px">${h}</h2><ol style="margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px">${items.map(x => `<li>${x}</li>`).join("")}</ol></div>`;
   const day = [["06:00–22:00", "News & Risk Agent", "Hourly: prices on active trades, red flags for market-moving news."], ["06:57 / 11:47", "Forex & Commodities scan", "Scores every pair and commodity."], ["12:47", "Screening Analyst", "Top picks: 10 bull and 10 bear on the JSE and the US, plus the forex and commodities scoreboards."],
     ["19:31", "Show Producer", "Writes tonight's Leago Rifumo Show and thumbnail."], ["20:16", "Pre-air update", "Refreshes numbers, setups and the late-update note."], [fmtT(mc.live), "Leago Rifumo Show live", "45 minutes scripted, then an hour of live trading."],
-    ["Fri 23:23", "Performance Analyst", "Friday Scorecard: picks and trades in R."], ["Sun 17:47", "Strategist", "Weekly Forecast and its stream script."]];
+    ["Fri 23:23", "Performance Analyst", "Friday Scorecard: picks and trades in R."], ["Sat 08:31", "Strategist", "Weekly Forecast and its stream script."]];
   return `<div class="pagehead"><div><h1>Handbook</h1><p>How the LRC Workplace runs, who does what, and the rules everyone follows. Read it once; come back when unsure.</p></div></div>
   <div class="tblwrap"><div class="tbl-title">The day at LRC (SA time, US trading days)</div><table><thead><tr><th>When</th><th>Who</th><th>What</th></tr></thead><tbody>${day.map(r => `<tr><td class="mono">${r[0]}</td><td><b>${r[1]}</b></td><td style="white-space:normal">${r[2]}</td></tr>`).join("")}</tbody></table></div>
   <div class="grid2">
