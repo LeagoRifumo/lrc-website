@@ -1,0 +1,28 @@
+# LRC Forex & Commodities scan — scores the currency pairs and commodities for the Workplace scoreboards.
+#  * 06:57 SAST Mon–Fri: after the Asian session
+#  * 11:47 SAST Mon–Fri: fresh for the Screening Analyst (12:47) and the Daily PM Show
+#  * 15:47 SAST Sunday: for the Weekly Forecast
+name: LRC Forex & Commodities scan
+on:
+  schedule:
+    - cron: '57 4 * * 1-5'
+    - cron: '47 9 * * 1-5'
+    - cron: '47 13 * * 0'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: lrc-push
+  cancel-in-progress: false
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - name: Score forex pairs and commodities
+        run: python agents/tools/macro_scan.py
+      - name: Publish
+        run: bash agents/tools/publish.sh "Forex & Commodities scan"

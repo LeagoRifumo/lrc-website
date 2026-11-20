@@ -1,0 +1,26 @@
+{
+ "_note": "LRC Workplace screen picks (private Workplace only, never published). Edit the numbers here; the Screening Analyst uses them on its next run. Liquidity limits come from top_picks.json.",
+ "per_list": 10,
+ "max_per_sector": 2,
+ "max_etfs_per_list": 3,
+ "skip_results_within_days": 5,
+ "flag_results_within_days": 14,
+ "bull": {
+  "exclude_ratings": ["SELL", "STRONG SELL"],
+  "min_trend": 1,
+  "min_momentum": 0,
+  "rsi_range": [40, 78],
+  "rank_by": "Scanner rating first (STRONG BUY, BUY, HOLD), then Trading score, highest first"
+ },
+ "bear": {
+  "exclude_ratings": ["BUY", "STRONG BUY"],
+  "max_trend": -1,
+  "max_momentum": 0,
+  "rsi_range": [22, 60],
+  "rank_by": "Scanner rating first (STRONG SELL, SELL, HOLD), then Trading score, lowest first"
+ },
+ "scoreboard": {
+  "bull_from": 60,
+  "bear_to": 40
+ }
+}
