@@ -1,31 +1,22 @@
 {
- "edition": "Midday update · Friday 20 November 2026 15:15",
- "generated": "2026-11-20T16:15+02:00",
- "covers": "JSE session to about 14:18 SAST on 20 Nov 2026, with Thursday's US close for reference",
+ "edition": "Evening update · Friday 20 November 2026 17:17",
+ "generated": "2026-11-20T17:17+02:00",
+ "covers": "Wall Street's first half-hour on 20 Nov 2026 (quotes to 16:57 SAST), the JSE late session, and Intuit's first-quarter results filed on 19 Nov",
  "agent": "LRC News Desk",
- "headline": "JSE slips back: All Share 104,757 (-1.4%), Top 40 96,935 (-1.5%) as miners extend losses; rand near R17.47/$",
- "summary": "The JSE All Share was at 104,757.25 and the Top 40 at 96,935.05 at about 14:30 SAST on 20 Nov 2026, 1.4% and 1.5% below Thursday's closes of 106,216.49 and 98,385.12, giving back part of the late-morning recovery (LRC Market Dashboard, Yahoo Finance). Wall Street's last close was the S&P 500 at 7,175.83 and the Nasdaq at 23,879.20 on 19 Nov; US trading resumes at 16:30 SAST. Gold was at $3,576.40, 1.4% above Thursday's close but 8.0% lower on the week, and the rand was at R17.47 per dollar, 4.3% weaker than on 13 Nov.",
+ "headline": "Intuit -4.2% after cutting its revenue outlook; Nasdaq -0.4% at the open, JSE All Share -1.6% late in the session",
+ "summary": "The JSE All Share was at 104,501.42 and the Top 40 at 96,672.27 at about 16:57 SAST on 20 Nov 2026, 1.6% and 1.7% below Thursday's closes and about 7% lower than on 13 Nov (LRC Market Dashboard, Yahoo Finance). On Wall Street the S&P 500 was at 7,186.05 (+0.1%) and the Nasdaq at 23,787.04 (-0.4%) half an hour after the open, about 5% lower on the week; Intuit fell 4.2% to $297.13 after trimming its full-year revenue outlook. The rand was at R17.42 per dollar, 3.9% weaker than on 13 Nov, and gold at $3,573.90 was 1.4% up on the day but 8.0% down on the week.",
  "sections": [
   {
-   "name": "South Africa",
+   "name": "Breaking",
    "items": [
     {
-     "title": "All Share 104,757.25 (-1.4%), Top 40 96,935.05 (-1.5%) as losses widen again",
-     "summary": "At 11:00 SAST the indices were down 0.8% and 0.9%; by about 14:30 SAST they had slipped back, though they remain above the early lows of 104,265.03 and 96,398.30. The All Share is 6.8% below its 13 Nov level of 112,387.90 and the Top 40 7.2% below 104,486.60 (LRC Market Dashboard, Yahoo Finance, 20 Nov 2026 ~14:30 SAST).",
-     "source": "LRC Market Dashboard / Yahoo Finance",
-     "url": "https://finance.yahoo.com/quote/%5EJ203.JO/"
-    },
-    {
-     "title": "Miners lose more ground: Anglo American -3.9%, Impala -3.9%, Sibanye-Stillwater -3.1%, Harmony -2.9%, AngloGold -2.6%",
-     "summary": "Gold Fields was 2.1% lower at R569.86, BHP 2.1% lower at R598.37 and Glencore 2.6% lower at R104.17, all weaker than at 11:00 SAST (LRC Stock Scanner quotes, 20 Nov 2026 ~14:18 SAST).",
-     "source": "LRC Stock Scanner / Yahoo Finance",
-     "url": "https://finance.yahoo.com/quote/AGL.JO/"
-    },
-    {
-     "title": "Shoprite +1.8%, BAT +1.4%, Mr Price +1.3%; Naspers -3.5%, Prosus -3.6%",
-     "summary": "Shoprite was at R341.78, BAT at R1,005.42 and Mr Price at R180.23, while Naspers (R635.16) and Prosus (R591.00) fell further than this morning. Banks were little changed: Standard Bank -0.7% (R282.40), FirstRand -0.6% (R87.82), Absa -0.6% (R207.69) (LRC Stock Scanner quotes, 20 Nov 2026 ~14:18 SAST).",
-     "source": "LRC Stock Scanner / Yahoo Finance",
-     "url": "https://finance.yahoo.com/quote/NPN.JO/"
+     "title": "Intuit falls 4.2% to $297.13 after cutting its full-year revenue outlook",
+     "summary": "First-quarter (to 31 Oct) revenue rose 12% to $4.35bn, ahead of the $4.31bn estimate, and adjusted EPS was $2.91. But full-year revenue guidance was cut to $23.08–23.37bn from $23.28–23.51bn (consensus $23.40bn) because of weaker Credit Karma, and second-quarter revenue guidance of $4.93–4.95bn is below the $5.11bn consensus; profit guidance was kept. Intuit also agreed to sell Mailchimp to Bending Spoons for about $3.68bn (Intuit 8-K and press release, 19 Nov 2026; price from LRC Stock Scanner, 20 Nov 2026 16:57 SAST). The LRC Watchlist (14 Nov) lists Intuit as BUY with a $426 fair value; the share is further below that level, and the rating is unchanged.",
+     "source": "Intuit (SEC 8-K) / LRC Stock Scanner",
+     "url": "https://www.sec.gov/Archives/edgar/data/896878/000089687826000043/fy27q1earningspressrelease.htm",
+     "tickers": [
+      "INTU"
+     ]
     }
    ]
   },
@@ -33,10 +24,27 @@
    "name": "US markets",
    "items": [
     {
-     "title": "Last close: S&P 500 7,175.83, Nasdaq 23,879.20 (19 Nov)",
-     "summary": "Wall Street opens at 16:30 SAST. Thursday's close left the S&P 500 5.1% lower on the week and the Nasdaq 5.0% lower; the US 10-year yield closed at 5.05% (LRC Market Dashboard, Yahoo Finance, 19 Nov 2026).",
+     "title": "S&P 500 7,186.05 (+0.1%), Nasdaq 23,787.04 (-0.4%) after the open",
+     "summary": "Against Thursday's closes of 7,175.83 and 23,879.20, at 16:57 SAST. Both remain about 5% below their 13 Nov levels (S&P 500 7,561.67, Nasdaq 25,136.27). The US 10-year Treasury yield was at 4.97%, down from 5.05% at Thursday's close (LRC Market Dashboard, Yahoo Finance, 20 Nov 2026).",
      "source": "LRC Market Dashboard / Yahoo Finance",
      "url": "https://finance.yahoo.com/quote/%5EGSPC/"
+    }
+   ]
+  },
+  {
+   "name": "South Africa",
+   "items": [
+    {
+     "title": "All Share 104,501.42 (-1.6%), Top 40 96,672.27 (-1.7%) heading into the close",
+     "summary": "Both indices slipped below the levels seen at 14:30 SAST (104,757 and 96,935) and are 7.0% and 7.5% below their 13 Nov levels (LRC Market Dashboard, Yahoo Finance, 20 Nov 2026 ~16:57 SAST).",
+     "source": "LRC Market Dashboard / Yahoo Finance",
+     "url": "https://finance.yahoo.com/quote/%5EJ203.JO/"
+    },
+    {
+     "title": "Miners and Naspers lead the falls: Anglo American -4.5%, Naspers -4.3%, Sibanye-Stillwater -4.0%, Prosus -3.8%",
+     "summary": "AngloGold Ashanti was 3.5% lower, Impala 3.3% and Harmony 3.0%, while Shoprite (+1.8%, R341.74) and BAT (+1.7%, R1,008.54) were among the few gainers. Banks also weakened: Nedbank -3.0%, Absa -1.9%, FirstRand -1.5%, Standard Bank -1.4% (LRC Stock Scanner quotes, 20 Nov 2026 16:42 SAST).",
+     "source": "LRC Stock Scanner / Yahoo Finance",
+     "url": "https://finance.yahoo.com/quote/AGL.JO/"
     }
    ]
   },
@@ -44,14 +52,14 @@
    "name": "Forex & commodities",
    "items": [
     {
-     "title": "Rand at R17.47/$, 4.3% weaker on the week",
-     "summary": "USD/ZAR at 17.4737 on 20 Nov 2026 (about 14:30 SAST) vs 16.7584 on 13 Nov; the euro is at R19.17 and the pound at R22.89 (LRC Market Dashboard, Yahoo Finance).",
+     "title": "Rand at R17.42/$, 3.9% weaker on the week",
+     "summary": "USD/ZAR at 17.4204 vs 16.7584 on 13 Nov; the euro is at R19.13 and the pound at R22.83 (LRC Market Dashboard, Yahoo Finance, 20 Nov 2026 ~16:57 SAST).",
      "source": "LRC Market Dashboard / Yahoo Finance",
      "url": "https://finance.yahoo.com/quote/ZAR%3DX/"
     },
     {
-     "title": "Gold $3,576.40; platinum $1,305.70; Brent $89.28; copper $12,196/t",
-     "summary": "Gold futures are 1.4% above Thursday's close of $3,526.30 but 8.0% below the 13 Nov level of $3,886.30; platinum is 12.3% lower on the week, Brent 6.8% lower and copper 9.0% lower (LRC Market Dashboard, Yahoo Finance, 20 Nov 2026 ~14:30 SAST).",
+     "title": "Gold $3,573.90; platinum $1,313.10; Brent $88.17; copper $12,231/t",
+     "summary": "Gold is 1.4% above Thursday's close of $3,526.30 but 8.0% below $3,886.30 on 13 Nov. On the week platinum is 11.8% lower, Brent 8.0% lower and copper 8.7% lower (LRC Market Dashboard, Yahoo Finance, 20 Nov 2026 ~16:57 SAST).",
      "source": "LRC Market Dashboard / Yahoo Finance",
      "url": "https://finance.yahoo.com/quote/GC%3DF/"
     }
@@ -61,35 +69,34 @@
    "name": "Our coverage",
    "items": [
     {
-     "title": "MTN flat at R224.50, Telkom flat at R66.96",
-     "summary": "Both are holding up better than the Top 40 (-1.5%); MTN has given back its morning gain (LRC Stock Scanner quotes, 20 Nov 2026 ~14:18 SAST). No company news; ratings unchanged.",
+     "title": "Nvidia -3.2% to $141.38, Meta -1.6% to $586.92, Deckers +0.9% to $79.69",
+     "summary": "Moves against Thursday's closes, at 16:57 SAST (LRC Stock Scanner, 20 Nov 2026). Nvidia has now fallen for a second day after Thursday's 3.3% drop. No company news; ratings unchanged.",
+     "source": "LRC Stock Scanner / Yahoo Finance",
+     "url": "https://finance.yahoo.com/quote/NVDA/",
+     "tickers": [
+      "NVDA",
+      "META",
+      "DECK"
+     ]
+    },
+    {
+     "title": "MTN -0.7% at R223.05, Telkom -0.4% at R66.75",
+     "summary": "Both are holding up better than the Top 40 (-1.7%) (LRC Stock Scanner quotes, 20 Nov 2026 16:42 SAST). No company news; ratings unchanged.",
      "source": "LRC Stock Scanner / Yahoo Finance",
      "url": "https://finance.yahoo.com/quote/MTN.JO/",
      "tickers": [
       "MTN.JO",
       "TKG.JO"
      ]
-    },
-    {
-     "title": "US names unchanged since Thursday's close: Nvidia $145.98, Meta $596.22, Intuit $310.02, Deckers $78.95",
-     "summary": "No new US trading until 16:30 SAST; Thursday's moves were Nvidia -3.3%, Meta -3.3%, Intuit -1.0% and Deckers -5.6% (LRC Stock Scanner, 19 Nov 2026 close). Ratings unchanged.",
-     "source": "LRC Stock Scanner / Yahoo Finance",
-     "url": "https://finance.yahoo.com/quote/NVDA/",
-     "tickers": [
-      "NVDA",
-      "META",
-      "INTU",
-      "DECK"
-     ]
     }
    ]
   }
  ],
  "watch_today": [
-  "Whether the JSE closes near its early lows after a 6.8% fall in the All Share since 13 Nov",
-  "Miners after Anglo American and Impala fell almost 4%",
-  "Rand near R17.47/$ after the 4–3 SARB hold",
-  "Wall Street open at 16:30 SAST after the S&P 500 closed at 7,175.83",
+  "Whether the S&P 500 and Nasdaq finish a week that has them about 5% lower",
+  "JSE close after a 7% weekly fall in the All Share",
+  "Rand near R17.42/$ into the weekend",
+  "Gold after an 8% weekly drop",
   "Dell results on 24 Nov 2026"
  ]
 }
