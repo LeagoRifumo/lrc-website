@@ -1,79 +1,6 @@
 {
-"updated": "2026-11-20T06:46+02:00",
+"updated": "2026-11-20T16:40+02:00",
 "queue": [
-{
-"t": "YMM",
-"name": "Full Truck Alliance Co. Ltd.",
-"m": "US",
-"date": "2026-11-19",
-"text": "agents/work/8k/YMM_2026-11-19.txt",
-"priority": 3,
-"mcap_bn": 9.3
-},
-{
-"t": "LEW.JO",
-"name": "Lewis Group",
-"m": "JSE",
-"date": "2026-11-19",
-"period": "Six months to 30 Sep 2026",
-"source": "Lewis Group SENS — Summary unaudited financial statements for the six months ended 30 September 2026 and cash dividend declaration (19 Nov 2026), via InsidEntity https://www.insidentity.com/lewis-group-summary-unaudited-financial-statements-for-the-six-months-ended-30-september-2026-and-cash-dividend-declaration/ (HEPS up 11.2% to 720c; EPS up 11.0% to 687c; interim dividend up 11.3% to 375c; prior-period HEPS value not shown in the source read)",
-"priority": 3,
-"mcap_bn": 0.3
-},
-{
-"t": "BABA",
-"name": "Alibaba Group Holding Limited",
-"m": "US",
-"date": "2026-11-19",
-"text": "agents/work/8k/BABA_2026-11-19.txt",
-"priority": 2,
-"mcap_bn": 214.5
-},
-{
-"t": "PDD",
-"name": "PDD Holdings Inc.",
-"m": "US",
-"date": "2026-11-18",
-"text": "agents/work/8k/PDD_2026-11-18.txt",
-"priority": 2,
-"mcap_bn": 123.7
-},
-{
-"t": "INTU",
-"name": "Intuit Inc.",
-"m": "US",
-"date": "2026-11-19",
-"text": "agents/work/8k/INTU_2026-11-19.txt",
-"priority": 2,
-"mcap_bn": 83.3
-},
-{
-"t": "ROST",
-"name": "Ross Stores, Inc.",
-"m": "US",
-"date": "2026-11-19",
-"text": "agents/work/8k/ROST_2026-11-19.txt",
-"priority": 2,
-"mcap_bn": 71.5
-},
-{
-"t": "KEYS",
-"name": "Keysight Technologies Inc.",
-"m": "US",
-"date": "2026-11-19",
-"text": "agents/work/8k/KEYS_2026-11-19.txt",
-"priority": 2,
-"mcap_bn": 49.9
-},
-{
-"t": "BSP",
-"name": "Bending Spoons S.p.A.",
-"m": "US",
-"date": "2026-11-20",
-"text": "agents/work/8k/BSP_2026-11-20.txt",
-"priority": 2,
-"mcap_bn": 28.8
-},
 {
 "t": "TCOM",
 "name": "Trip.com Group Limited",
@@ -81,99 +8,34 @@
 "date": "2026-11-19",
 "text": "agents/work/8k/TCOM_2026-11-19.txt",
 "priority": 2,
-"mcap_bn": 26.7
+"mcap_bn": 26.6
 },
 {
-"t": "ESTC",
-"name": "Elastic N.V.",
+"t": "BJ",
+"name": "BJ's Wholesale Club Holdings, Inc.",
 "m": "US",
-"date": "2026-11-19",
-"text": "agents/work/8k/ESTC_2026-11-19.txt",
+"date": "2026-11-20",
+"text": "agents/work/8k/BJ_2026-11-20.txt",
 "priority": 2,
-"mcap_bn": 8.6
+"mcap_bn": 14.0
 },
 {
-"t": "GAP",
-"name": "Gap, Inc. (The)",
+"t": "IESC",
+"name": "IES Holdings, Inc.",
 "m": "US",
-"date": "2026-11-19",
-"text": "agents/work/8k/GAP_2026-11-19.txt",
+"date": "2026-11-20",
+"text": "agents/work/8k/IESC_2026-11-20.txt",
 "priority": 2,
-"mcap_bn": 6.7
+"mcap_bn": 7.1
 },
 {
-"t": "ESE",
-"name": "ESCO Technologies Inc.",
+"t": "WRD",
+"name": "WeRide Inc.",
 "m": "US",
-"date": "2026-11-19",
-"text": "agents/work/8k/ESE_2026-11-19.txt",
+"date": "2026-11-20",
+"text": "agents/work/8k/WRD_2026-11-20.txt",
 "priority": 2,
-"mcap_bn": 5.9
-},
-{
-"t": "CPA",
-"name": "Copa Holdings, S.A.",
-"m": "US",
-"date": "2026-11-18",
-"text": "agents/work/8k/CPA_2026-11-18.txt",
-"priority": 2,
-"mcap_bn": 5.8
-},
-{
-"t": "INP.JO",
-"name": "Investec plc",
-"m": "JSE",
-"date": "2026-11-19",
-"period": "Six months to 30 Sep 2026",
-"source": "Investec half-year results for the six months ended 30 September 2026 (19 Nov 2026), as reported by Reuters via CNBC Africa https://www.cnbcafrica.com/2026/south-africas-investec-reports-8-4-rise-in-half-year-earnings (figures in pence: HEPS 39.8p vs 36.7p; interim dividend 18.5p per share)",
-"priority": 2,
-"mcap_bn": 4.5
-},
-{
-"t": "POST",
-"name": "Post Holdings, Inc.",
-"m": "US",
-"date": "2026-11-19",
-"text": "agents/work/8k/POST_2026-11-19.txt",
-"priority": 2,
-"mcap_bn": 3.5
-},
-{
-"t": "BULL",
-"name": "Webull Corporation",
-"m": "US",
-"date": "2026-11-19",
-"text": "agents/work/8k/BULL_2026-11-19.txt",
-"priority": 2,
-"mcap_bn": 2.5
-},
-{
-"t": "INL.JO",
-"name": "Investec Limited",
-"m": "JSE",
-"date": "2026-11-19",
-"period": "Six months to 30 Sep 2026",
-"source": "Investec half-year results for the six months ended 30 September 2026 (19 Nov 2026), as reported by Reuters via CNBC Africa https://www.cnbcafrica.com/2026/south-africas-investec-reports-8-4-rise-in-half-year-earnings (group figures in pence: HEPS 39.8p vs 36.7p); Investec Limited gross interim dividend 417c (2025: 396c) per Investec dividend declaration (19 Nov 2026), via MarketScreener https://www.marketscreener.com/news/investec-group-declares-an-interim-dividend-for-the-period-1-april-2026-to-30-september-2026-payabl-ce785ed2d888ff2c",
-"priority": 2,
-"mcap_bn": 1.9
-},
-{
-"t": "GLOB",
-"name": "Globant S.A.",
-"m": "US",
-"date": "2026-11-19",
-"text": "agents/work/8k/GLOB_2026-11-19.txt",
-"priority": 2,
-"mcap_bn": 1.8
-},
-{
-"t": "DRTS",
-"name": "Alpha Tau Medical Ltd.",
-"m": "US",
-"date": "2026-11-19",
-"text": "agents/work/8k/DRTS_2026-11-19.txt",
-"priority": 2,
-"mcap_bn": 1.0
+"mcap_bn": 1.1
 },
 {
 "t": "LPL",
@@ -182,7 +44,7 @@
 "date": "2026-11-16",
 "text": "agents/work/8k/LPL_2026-11-16.txt",
 "priority": 2,
-"mcap_bn": 2.6
+"mcap_bn": 2.5
 }
 ]
 }
