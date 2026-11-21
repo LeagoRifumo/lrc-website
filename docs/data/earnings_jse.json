@@ -203,7 +203,7 @@
    "t": "GLN.JO",
    "lists": [],
    "idea": null,
-   "v": "SELL",
+   "v": "HOLD",
    "iv": "SELL",
    "lrc_rating": null,
    "covered": false
@@ -700,7 +700,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "BUY",
    "lrc_rating": null,
    "covered": false
   },
@@ -1314,7 +1314,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "SELL",
+   "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
   },
@@ -1348,9 +1348,9 @@
    "lists": [
     "Investment BUY"
    ],
-   "idea": "Score leaders",
+   "idea": "Value & quality",
    "v": "HOLD",
-   "iv": "BUY",
+   "iv": "STRONG BUY",
    "lrc_rating": null,
    "covered": true
   },
@@ -1564,8 +1564,8 @@
    },
    "t": "MRP.JO",
    "lists": [],
-   "idea": "Earnings watch",
-   "v": "HOLD",
+   "idea": null,
+   "v": "BUY",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -1900,6 +1900,6 @@
   }
  ],
  "note": "Partial list. Removed this week because no company source could be found: Coronation (17 Nov) and SPAR (4 Dec). Momentum's operating update is not listed: its diary could not be opened and MarketScreener now shows 25 Nov instead of 23 Nov. Reinet (30 Nov) and Nutun (1 Dec) appear only on third-party calendars and are not listed. No published date in the window was found for MTN, Shoprite, Bidvest, Discovery, FirstRand, Sasol, Aspen, Lewis, Nedbank, Absa, Growthpoint, Attacq, Italtile, Super Group, Remgro, Motus or Sun International.",
- "synced": "2026-11-21T06:54+02:00",
+ "synced": "2026-11-21T07:34+02:00",
  "coverage_note": "Ticked = on the LRC watchlist. Every company the LRC Stock Scanner tracks shows its trading and investment ratings. Updated after every scanner run."
 }
