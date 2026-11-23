@@ -4259,8 +4259,17 @@
 "when": "Not stated",
 "eps_forecast": "",
 "quarter": "",
-"period": "Annual to 30 Sep 2026 (expected: SENS on 23 Nov per trading statement 29 Oct 2026)",
-"market_cap_bn": 7.3
+"period": "Year to 30 Sep 2026",
+"market_cap_bn": 7.3,
+"heps": null,
+"heps_prior": null,
+"unit": "c",
+"change": null,
+"result": null,
+"measure": "HEPS",
+"dps": 1060.0,
+"source": "Astral Foods SENS — Audited summarised results and final cash dividend declaration for the year ended 30 September 2026 (23 Nov 2026), via InsidEntity https://www.insidentity.com/astral-foods-audited-summarised-results-and-final-cash-dividend-declaration-for-the-year-ended-30-september-2026/ (HEPS up 102%; EPS up 98%; HEPS values in cents not shown in the source read; final dividend 1 060c, total dividend up 102%)",
+"result_done": false
 },
 "ARLO|2026-11-05": {
 "t": "ARLO",
@@ -39501,8 +39510,17 @@
 "when": "Not stated",
 "eps_forecast": "",
 "quarter": "",
-"period": "Annual results to 30 Sep 2026 (expected: 'on or about' per company)",
-"market_cap_bn": 21.8
+"period": "Year to 30 Sep 2026",
+"market_cap_bn": 21.8,
+"heps": null,
+"heps_prior": null,
+"unit": "c",
+"change": null,
+"result": null,
+"measure": "HEPS",
+"dps": 56.0,
+"source": "Netcare SENS — Annual results for the year ended 30 September 2026 and cash dividend declaration (23 Nov 2026), via InsidEntity https://www.insidentity.com/netcare-annual-results-for-the-year-ended-30-september-2026-and-cash-dividend-declaration/ (adjusted HEPS up 17.1% to 160.6c; unadjusted HEPS not shown in the source read; final dividend 56.0c, total dividends for the year 100.0c)",
+"result_done": false
 },
 "NTCT|2026-11-05": {
 "t": "NTCT",

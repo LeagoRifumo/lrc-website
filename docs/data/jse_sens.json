@@ -1,6 +1,6 @@
 {
  "note": "JSE company announcements (SENS) recorded by the LRC JSE Announcements job every weekday. results = published results with headline earnings per share (HEPS) vs the same period last year; trading_statements = expected HEPS change ranges; dividends = declared dividends with the JSE dates. Amounts in cents. Every entry carries its source.",
- "updated": "2026-11-20T19:00+02:00",
+ "updated": "2026-11-23T19:00+02:00",
  "results": [
   {
    "t": "CLS.JO",
@@ -233,6 +233,24 @@
    "unit": "c",
    "dps": 329.5,
    "source": "Mr Price Group SENS — Interim results for the 26 weeks ended 26 September 2026 and cash dividend declaration (20 Nov 2026), via InsidEntity https://www.insidentity.com/mr-price-interim-results-for-the-26-weeks-ended-26-september-2026-and-cash-dividend-declaration/ (HEPS up 2.0% to 523.0c; diluted HEPS up 2.2% to 508.6c; basic EPS up 0.2% to 513.6c; interim dividend up 2.0% to 329.5c; prior-period HEPS value not shown in the source read)"
+  },
+  {
+   "t": "NTC.JO",
+   "name": "Netcare",
+   "date": "2026-11-23",
+   "period": "Year to 30 Sep 2026",
+   "unit": "c",
+   "dps": 56.0,
+   "source": "Netcare SENS — Annual results for the year ended 30 September 2026 and cash dividend declaration (23 Nov 2026), via InsidEntity https://www.insidentity.com/netcare-annual-results-for-the-year-ended-30-september-2026-and-cash-dividend-declaration/ (adjusted HEPS up 17.1% to 160.6c; unadjusted HEPS not shown in the source read; final dividend 56.0c, total dividends for the year 100.0c)"
+  },
+  {
+   "t": "ARL.JO",
+   "name": "Astral Foods",
+   "date": "2026-11-23",
+   "period": "Year to 30 Sep 2026",
+   "unit": "c",
+   "dps": 1060.0,
+   "source": "Astral Foods SENS — Audited summarised results and final cash dividend declaration for the year ended 30 September 2026 (23 Nov 2026), via InsidEntity https://www.insidentity.com/astral-foods-audited-summarised-results-and-final-cash-dividend-declaration-for-the-year-ended-30-september-2026/ (HEPS up 102%; EPS up 98%; HEPS values in cents not shown in the source read; final dividend 1 060c, total dividend up 102%)"
   }
  ],
  "trading_statements": [
@@ -291,6 +309,22 @@
    "heps_change_low": -0.2,
    "heps_change_high": -0.16,
    "source": "Zeda Limited SENS — Trading statement for the year ended 30 September 2026 (17 Nov 2026), via Sharenet https://www.sharenet.co.za/v3/sens_display.php?tdate=20261117173300&seq=70&scode= (HEPS expected 288.6c to 303.1c vs 360.8c, 16% to 20% lower; basic EPS expected 288.3c to 302.7c vs 360.4c; results expected on or about 24 Nov 2026)"
+  },
+  {
+   "t": "PRX.JO",
+   "date": "2026-11-19",
+   "period": "Six months to 30 Sep 2026",
+   "heps_change_low": 0.292,
+   "heps_change_high": 0.378,
+   "source": "Prosus N.V. / Naspers — Trading statement (19 Nov 2026), regulatory release via Reuters on TradingView https://www.tradingview.com/news/reuters.com,2026-11-19:newsml_RSS9437Da:0-reg-prosus-nv-naspers-limited-trading-statement/ (continuing operations, US cents: HEPS expected up 35–45 USc on 120 USc, i.e. 29.2%–37.8%; adjusted (core headline) EPS up 18–26 USc on 179 USc, 10.1%–14.6%; results due 25 Nov 2026)"
+  },
+  {
+   "t": "SSK.JO",
+   "date": "2026-11-11",
+   "period": "Six months to 31 Aug 2026",
+   "heps_change_low": 1.2,
+   "heps_change_high": 1.4,
+   "source": "Stefanutti Stocks Holdings SENS — Trading statement (11 Nov 2026), via InsidEntity https://www.insidentity.com/stefanutti-stocks-holdings-trading-statement-2/ (continuing operations HEPS expected 97.88c–106.78c vs 44.49c, up 120%–140%; results due 24 Nov 2026)"
   }
  ],
  "dividends": [
@@ -493,6 +527,28 @@
    "record": "2026-12-11",
    "pay": "2026-12-14",
    "source": "Mr Price Group SENS — Interim results for the 26 weeks ended 26 September 2026 and cash dividend declaration (20 Nov 2026), via InsidEntity https://www.insidentity.com/mr-price-interim-results-for-the-26-weeks-ended-26-september-2026-and-cash-dividend-declaration/ (gross 329.50c; net 263.60c after 20% dividends tax)"
+  },
+  {
+   "t": "NTC.JO",
+   "period": "Final",
+   "declared": "2026-11-23",
+   "amount_c": 56.0,
+   "ldt": "2027-01-19",
+   "ex": "2027-01-20",
+   "record": "2027-01-22",
+   "pay": "2027-01-25",
+   "source": "Netcare SENS — Annual results for the year ended 30 September 2026 and cash dividend declaration (23 Nov 2026), via InsidEntity https://www.insidentity.com/netcare-annual-results-for-the-year-ended-30-september-2026-and-cash-dividend-declaration/ (gross 56.0c; net 44.8c after 20% dividends tax)"
+  },
+  {
+   "t": "ARL.JO",
+   "period": "Final",
+   "declared": "2026-11-23",
+   "amount_c": 1060.0,
+   "ldt": "2027-01-12",
+   "ex": "2027-01-13",
+   "record": "2027-01-15",
+   "pay": "2027-01-18",
+   "source": "Astral Foods SENS — Audited summarised results and final cash dividend declaration for the year ended 30 September 2026 (23 Nov 2026), via InsidEntity https://www.insidentity.com/astral-foods-audited-summarised-results-and-final-cash-dividend-declaration-for-the-year-ended-30-september-2026/ (dividend no. 47; gross 1 060c; net 848c after 20% dividends tax)"
   }
  ]
 }

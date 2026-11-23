@@ -1656,7 +1656,14 @@
    "idea": null,
    "v": "BUY",
    "iv": "HOLD",
-   "track": null
+   "track": null,
+   "ts": {
+    "date": "2026-11-11",
+    "low": 1.2,
+    "high": 1.4,
+    "period": "Six months to 31 Aug 2026",
+    "source": "Stefanutti Stocks Holdings SENS — Trading statement (11 Nov 2026), via InsidEntity https://www.insidentity.com/stefanutti-stocks-holdings-trading-statement-2/ (continuing operations HEPS expected 97.88c–106.78c vs 44.49c, up 120%–140%; results due 24 Nov 2026)"
+   }
   },
   {
    "date": "2026-11-24",
@@ -1692,7 +1699,14 @@
    "idea": "Earnings watch",
    "v": "HOLD",
    "iv": "BUY",
-   "track": null
+   "track": null,
+   "ts": {
+    "date": "2026-11-19",
+    "low": 0.292,
+    "high": 0.378,
+    "period": "Six months to 30 Sep 2026",
+    "source": "Prosus N.V. / Naspers — Trading statement (19 Nov 2026), regulatory release via Reuters on TradingView https://www.tradingview.com/news/reuters.com,2026-11-19:newsml_RSS9437Da:0-reg-prosus-nv-naspers-limited-trading-statement/ (continuing operations, US cents: HEPS expected up 35–45 USc on 120 USc, i.e. 29.2%–37.8%; adjusted (core headline) EPS up 18–26 USc on 179 USc, 10.1%–14.6%; results due 25 Nov 2026)"
+   }
   },
   {
    "date": "2026-11-25",
@@ -1966,6 +1980,6 @@
   }
  ],
  "note": "Partial list. New this week: Stefanutti Stocks (24 Nov), Alexforbes (30 Nov), Tharisa (30 Nov, indicative) and Momentum's operating update (23 Nov). SPAR's annual results are now confirmed for 4 Dec (SENS 19 Nov). Hyprop's 1 Dec pre-close date could not be re-checked (company site did not load). No company-published date in the window was found for Nutun, FirstRand, Nedbank, Absa, Anglo American, Sasol, Sibanye-Stillwater, Impala, Northam, Harmony, Gold Fields, Mondi, MTN, Remgro, Discovery, Growthpoint, Bidvest, Aspen or the other LRC watchlist names.",
- "synced": "2026-11-23T16:49+02:00",
+ "synced": "2026-11-23T18:51+02:00",
  "coverage_note": "Ticked = on the LRC watchlist. Every company the LRC Stock Scanner tracks shows its trading and investment ratings. Updated after every scanner run."
 }
