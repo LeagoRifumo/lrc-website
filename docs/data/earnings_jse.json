@@ -1814,12 +1814,11 @@
   {
    "date": "2026-11-30",
    "ticker": "THA",
-   "name": "Tharisa plc",
+   "name": "Tharisa",
    "when": "Not stated",
-   "period": "Expected date (market data feed) — confirm on SENS",
+   "period": "Annual results to 30 Sep 2026 (expected: company says dates indicative)",
    "eps_forecast": "",
    "market_cap_bn": 6.4,
-   "auto": true,
    "t": "THA.JO",
    "lists": [],
    "idea": "Earnings watch",
@@ -1827,7 +1826,8 @@
    "iv": "HOLD",
    "track": null,
    "lrc_rating": null,
-   "covered": false
+   "covered": false,
+   "source": "Tharisa investor calendar (30 Nov 2026 FY2026 results; 'dates are indicative only'), https://www.tharisa.com/investor-calendar.php (opened 23 Nov 2026); market cap = Yahoo Finance close 20 Nov 2026 via the LRC Stock Scanner"
   },
   {
    "date": "2026-12-01",
@@ -1966,6 +1966,6 @@
   }
  ],
  "note": "Partial list. New this week: Stefanutti Stocks (24 Nov), Alexforbes (30 Nov), Tharisa (30 Nov, indicative) and Momentum's operating update (23 Nov). SPAR's annual results are now confirmed for 4 Dec (SENS 19 Nov). Hyprop's 1 Dec pre-close date could not be re-checked (company site did not load). No company-published date in the window was found for Nutun, FirstRand, Nedbank, Absa, Anglo American, Sasol, Sibanye-Stillwater, Impala, Northam, Harmony, Gold Fields, Mondi, MTN, Remgro, Discovery, Growthpoint, Bidvest, Aspen or the other LRC watchlist names.",
- "synced": "2026-11-23T14:57+02:00",
+ "synced": "2026-11-23T14:58+02:00",
  "coverage_note": "Ticked = on the LRC watchlist. Every company the LRC Stock Scanner tracks shows its trading and investment ratings. Updated after every scanner run."
 }
