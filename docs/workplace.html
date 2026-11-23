@@ -159,6 +159,7 @@ button.tile:hover{border-color:var(--muted)}
 .halves{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}
 .half{padding:14px 16px;display:flex;flex-direction:column;gap:10px}
 .half+.half{border-left:1px solid var(--line)}
+.halves.full{grid-template-columns:1fr}.halves.full .half+.half{border-left:0;border-top:1px solid var(--line)}
 @media (max-width:760px){.halves{grid-template-columns:1fr}.half+.half{border-left:0;border-top:1px solid var(--line)}}
 .half h3{font:600 12.5px var(--font-body);color:var(--muted)}
 .thesis{margin:0;white-space:pre-wrap;overflow-wrap:anywhere}
@@ -218,6 +219,11 @@ tr:last-child td{border-bottom:0}
 .prompter{flex:1;overflow-y:auto;padding:8vh 8vw;font:600 clamp(28px,4.4vw,56px)/1.35 var(--font-body)}
 .prompter h2{font:800 clamp(20px,2.4vw,30px) var(--font-display);color:#d6a447;margin:1.2em 0 .4em}
 .prompter p{margin:0 0 .8em}
+.prompter ul.pts{margin:0 0 .6em;padding-left:1.1em}.prompter ul.pts li{margin:0 0 .35em}
+ul.pts{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:16px;line-height:1.35}
+.charts{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+.runsheet{display:flex;gap:6px;flex-wrap:wrap}.runsheet a{display:flex;gap:6px;align-items:center;padding:6px 10px;border:1px solid var(--line);border-radius:8px;text-decoration:none;color:var(--ink);font-size:13px}
+.runsheet a b{font-family:var(--font-mono,monospace);color:var(--accent,#c9a227)}.runsheet a.hot{border-color:#c9a227;background:rgba(201,162,39,.12)}
 .slide{flex:1;display:flex;flex-direction:column;background:linear-gradient(135deg,#07100d,#13241d);padding:clamp(16px,3vw,40px)}
 .slide-top,.slide-foot{display:flex;gap:12px;align-items:center;color:#97a59e;font-size:16px;flex-wrap:wrap}
 .slide-mark{background:#1d5a48;color:#fff;font:800 16px var(--font-display);padding:6px 10px;border-radius:6px}
@@ -953,7 +959,7 @@ function viewShow() {
   const shown = list.filter(x => f === "all" || x.type === f);
   const cur = S.shows[S.showId] ? Object.assign({ id: S.showId }, S.shows[S.showId]) : shown[0];
   const mc = marketClock();
-  const head = `<div class="pagehead"><div><h1>Live show</h1><p>The Leago Rifumo Show, live at 20:30 SA time in the US afternoon session: a 45-minute script written just before air and updated minutes before going live, then a run-sheet for an hour of live trading. The thumbnail is drawn automatically for every show.</p></div>
+  const head = `<div class="pagehead"><div><h1>Live show</h1><p>The Leago Rifumo Show, live at 20:30 SA time in the US afternoon session: short talking points with day trading analysis and charts first, updated minutes before going live, then an hour of live trading. The thumbnail is drawn automatically for every show.</p></div>
     <div class="filters">${[["all", "All"], ["daily", "Daily"], ["weekly", "Weekly"], ["scorecard", "Scorecard"]].map(([k, l]) => `<button class="chip" aria-pressed="${f === k}" data-act="showfilter" data-f="${k}">${l}</button>`).join("")}</div></div>`;
   S._thumb = null;
   if (!cur) return head + `<div class="empty">No show yet. Today's Daily PM Show is written from ${fmtT(new Date(mc.live - 59 * 60000))} and updated at ${fmtT(new Date(mc.live - 14 * 60000))} SA time, before going live at ${fmtT(mc.live)}.</div>`;
@@ -964,13 +970,18 @@ function viewShow() {
     <div class="panel stack" style="gap:10px"><div class="flag-h"><span class="pill ${cur.status === "updated" ? "live" : "accent"}">${cur.status === "updated" ? "Updated before air" : "Ready"}</span><span class="pill outline">${esc(SHOW_TYPES[cur.type] || cur.type)}</span>${cur.liveAt ? `<span class="subtle">Live ${fmtDT(cur.liveAt)}</span>` : ""}</div>
       <h2 style="font-size:24px">${esc(cur.title || "")}</h2><p class="subtle" style="margin:0">${segs.length} segments · ${total} minutes · written ${fmtDT(cur.generated)}${cur.updatedAt ? ` · last update ${fmtDT(cur.updatedAt)}` : ""}</p>
       ${cur.liveUpdate && cur.liveUpdate.notes ? `<div class="note warn"><b>Late update ${cur.liveUpdate.at ? fmtT(new Date(cur.liveUpdate.at)) : ""}:</b> ${esc(cur.liveUpdate.notes)}</div>` : ""}
-      <div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn primary" data-act="prompter" data-id="${esc(cur.id)}">Teleprompter</button><button class="btn" data-act="stream" data-id="${esc(cur.id)}">Stream cards</button><button class="btn" data-act="thumb" data-id="${esc(cur.id)}">Thumbnail</button></div></div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn primary" data-act="prompter" data-id="${esc(cur.id)}">Presenter notes</button><button class="btn" data-act="stream" data-id="${esc(cur.id)}">Stream cards</button><button class="btn" data-act="thumb" data-id="${esc(cur.id)}">Thumbnail</button></div></div>
     <div class="panel" style="padding:10px"><canvas id="thumbprev" width="1280" height="720" style="width:100%;height:auto;border-radius:8px;display:block" aria-label="Show thumbnail"></canvas></div></div>
-  <div class="stack">${segs.map((x, i) => `<article class="idea"><div class="idea-h"><span class="asset">${esc(x.start || "")}</span><b style="font-family:var(--font-display);font-size:17px">${esc(x.title)}</b><span class="pill outline">${x.minutes || 0} min</span>${x.updated ? `<span class="pill live">Updated</span>` : ""}</div>
-    <div class="halves"><div class="half"><h3>Script</h3><p class="thesis">${esc(x.script || "")}</p></div><div class="half"><h3>On screen</h3>${(x.cards || []).map(cardHtml).join("") || `<span class="subtle">Presenter on camera.</span>`}
+  <div class="panel"><div class="subtle" style="font-weight:600;color:var(--ink);margin-bottom:8px">Run of show</div><div class="runsheet">${segs.map((x, i) => `<a href="#seg-${i}" class="${x.id === "daytrade" ? "hot" : ""}"><b>${esc(x.start || "")}</b>${esc(x.title)}<span class="subtle">${x.minutes || 0}m</span></a>`).join("")}</div></div>
+  <div class="stack">${segs.map((x, i) => `<article class="idea" id="seg-${i}"><div class="idea-h"><span class="asset">${esc(x.start || "")}</span><b style="font-family:var(--font-display);font-size:17px">${esc(x.title)}</b><span class="pill outline">${x.minutes || 0} min</span>${x.updated ? `<span class="pill live">Updated</span>` : ""}</div>
+    <div class="halves${x.id === "daytrade" ? " full" : ""}"><div class="half"><h3>Talking points</h3>${ptsHtml(x.script)}${chartBtns(x.charts)}</div><div class="half"><h3>On screen</h3>${(x.cards || []).map(cardHtml).join("") || `<span class="subtle">Presenter on camera.</span>`}
     ${(x.sources || []).length ? `<div class="subtle">Sources: ${x.sources.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title || "link")}</a>`).join(" · ")}</div>` : ""}</div></div></article>`).join("")}</div>
   <p class="subtle">${esc(cur.disclaimer || "Research and education, not financial advice.")}</p>`;
 }
+const showLines = t => String(t || "").split(/\n+/).map(x => x.trim()).filter(Boolean);
+const ptsHtml = t => `<ul class="pts">${showLines(t).map(l => `<li>${esc(l)}</li>`).join("")}</ul>`;
+const tvUrl = c => `https://www.tradingview.com/chart/?symbol=${encodeURIComponent(c.symbol || "")}${c.tf ? `&interval=${encodeURIComponent(c.tf)}` : ""}`;
+const chartBtns = cs => (cs || []).length ? `<div class="charts">${cs.map(c => `<a class="btn sm" href="${esc(tvUrl(c))}" target="_blank" rel="noopener">📈 ${esc(c.label || c.symbol)}${c.tf ? ` · ${esc(/^\d+$/.test(c.tf) ? c.tf + "m" : c.tf)}` : ""}</a>`).join("")}</div>` : "";
 function cardHtml(c) {
   if (!c) return "";
   let inner = "";
@@ -1092,12 +1103,12 @@ function stageRender() {
   if (ST.mode === "prompter") {
     el.innerHTML = `<div class="stage-bar"><b>${esc(SHOW_TYPES[show.type] || "")}</b><span id="stclock" class="mono"></span><span style="flex:1"></span>
       <button class="btn sm" data-act="st-slower">Slower</button><button class="btn sm primary" data-act="st-play">${ST.run ? "Pause" : "Start scroll"}</button><button class="btn sm" data-act="st-faster">Faster</button><button class="btn sm" data-act="st-close">Close</button></div>
-      <div class="prompter" id="prompter">${segs.map(x => `<section><h2>${esc(x.start || "")} · ${esc(x.title)}</h2>${String(x.script || "").split(/\n+/).map(pp => `<p>${esc(pp)}</p>`).join("")}</section>`).join("")}<section><p>${esc(show.disclaimer || "Research and education, not financial advice.")}</p></section><div style="height:70vh"></div></div>`;
+      <div class="prompter" id="prompter">${segs.map(x => `<section><h2>${esc(x.start || "")} · ${esc(x.title)}</h2><ul class="pts">${showLines(x.script).map(pp => `<li>${esc(pp)}</li>`).join("")}</ul>${chartBtns(x.charts)}</section>`).join("")}<section><p>${esc(show.disclaimer || "Research and education, not financial advice.")}</p></section><div style="height:70vh"></div></div>`;
   } else {
     const cards = []; segs.forEach(x => (x.cards && x.cards.length ? x.cards : [{ title: x.title, kind: "bullets", bullets: [] }]).forEach(c => cards.push({ seg: x, c })));
     ST.i = Math.max(0, Math.min(ST.i, cards.length - 1)); const cur = cards[ST.i] || { seg: {}, c: {} };
     el.innerHTML = `<div class="slide"><div class="slide-top"><span class="slide-mark">LRC</span><span>${esc(cur.seg.title || "")}</span><span style="flex:1"></span><span class="mono">${ST.i + 1} / ${cards.length}</span></div>
-      <div class="slide-body"><h2>${esc(cur.c.title || cur.seg.title || "")}</h2>${cardHtml(Object.assign({}, cur.c, { title: "" }))}</div>
+      <div class="slide-body"><h2>${esc(cur.c.title || cur.seg.title || "")}</h2>${cardHtml(Object.assign({}, cur.c, { title: "" }))}${chartBtns(cur.seg.charts)}</div>
       <div class="slide-foot"><span>${esc(fmtDate(show.date))} · Research, not financial advice</span><span style="flex:1"></span><button class="btn sm" data-act="st-prev">Back</button><button class="btn sm primary" data-act="st-next">Next</button><button class="btn sm" data-act="st-close">Close</button></div></div>`;
   }
 }
@@ -1137,14 +1148,14 @@ function viewHelp() {
   const L = LIM(), mc = marketClock();
   const sec = (h, items) => `<div class="panel"><h2 style="font-size:19px;margin-bottom:8px">${h}</h2><ol style="margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px">${items.map(x => `<li>${x}</li>`).join("")}</ol></div>`;
   const day = [["07:03–21:03", "News & Risk Agent", "Every 2 hours: prices on active trades, red flags for market-moving news."], ["06:57 / 11:47", "Forex & Commodities scan", "Scores every pair and commodity."], ["12:47", "Screening Analyst", "Top picks: 10 bull and 10 bear on the JSE and the US, plus the forex and commodities scoreboards."],
-    ["19:31", "Show Producer", "Writes tonight's Leago Rifumo Show and thumbnail."], ["20:16", "Pre-air update", "Refreshes numbers, setups and the late-update note."], [fmtT(mc.live), "Leago Rifumo Show live", "45 minutes scripted, then an hour of live trading."],
+    ["19:31", "Show Producer", "Writes tonight's Leago Rifumo Show and thumbnail."], ["20:16", "Pre-air update", "Refreshes numbers, setups and the late-update note."], [fmtT(mc.live), "Leago Rifumo Show live", "Day trading analysis first, then markets, then an hour of live trading."],
     ["Fri 23:23", "Performance Analyst", "Friday Scorecard: picks and trades in R."], ["Sat 08:31", "Strategist", "Weekly Forecast and its stream script."]];
   return `<div class="pagehead"><div><h1>Handbook</h1><p>How the LRC Workplace runs, who does what, and the rules everyone follows. Read it once; come back when unsure.</p></div></div>
   <div class="tblwrap"><div class="tbl-title">The day at LRC (SA time, US trading days)</div><table><thead><tr><th>When</th><th>Who</th><th>What</th></tr></thead><tbody>${day.map(r => `<tr><td class="mono">${r[0]}</td><td><b>${r[1]}</b></td><td style="white-space:normal">${r[2]}</td></tr>`).join("")}</tbody></table></div>
   <div class="grid2">
   ${sec("Fundamental desk", ["Start from a Top pick (<b>Send to handover</b>) or your own idea. For equities, finish the <b>LRC Work-sheet</b> first.", "Fill in the handover: bias, confidence, sector, Work-sheet rating and Step 7 clearance, catalyst, mini thesis and what would change the bias.", "Equity handovers need a Work-sheet <b>BUY</b> (long) or <b>SELL</b> (short) that matches the bias and is <b>CLEARED</b>. HOLD stays a draft.", "Low confidence goes to the watchlist. Renew or withdraw a bias before it expires."])}
   ${sec("Technical desk", ["Open <b>Awaiting technical</b> and review the setup: bias, setup type, trend, confidence, entry, stop, target.", "The page decides under LRC rules: approved (full or reduced size), waiting for a setup, or no trade, with the reasons.", "When the order fills, <b>Mark as filled</b>: risk %, the pre-trade checklist, mood and why now. A fill that breaks the risk limits is blocked.", "Manage the trade on <b>Active trades</b>: journal notes, price updates, red flags. Close it with the exit reason and the review."])}
-  ${sec("Presenters: the Leago Rifumo Show", ["Open <b>Live show</b> from about 20:00. Read the <b>Late update</b> note first.", "Use <b>Teleprompter</b> for the 45-minute script and <b>Stream cards</b> for the screen share (arrow keys or Next).", "After the script, run the <b>Live trading desk</b> run-sheet: call triggers, stops and targets, and give results in R only.", "Download the <b>Thumbnail</b> PNG for the stream. Never mention account size or rand amounts on air. Close with: research and education, not financial advice."])}
+  ${sec("Presenters: the Leago Rifumo Show", ["Open <b>Live show</b> from about 20:00. Read the <b>Late update</b> note first.", "Use <b>Presenter notes</b> for the talking points (📈 buttons open each chart) and <b>Stream cards</b> for the screen share (arrow keys or Next).", "After the script, run the <b>Live trading desk</b> run-sheet: call triggers, stops and targets, and give results in R only.", "Download the <b>Thumbnail</b> PNG for the stream. Never mention account size or rand amounts on air. Close with: research and education, not financial advice."])}
   ${sec("House risk rules", [`Risk ${L.riskPct}% of the account per trade; results in R.`, `Max ${L.maxTrades} open trades, max ${L.maxShorts} shorts, max ${L.maxPerSector} per sector.`, `Results or a big event within ${L.eventDays} days = event risk: smaller size or wait.`, `Minimum risk-to-reward 1 : ${minRR()}. Never short strength: short only on a breakdown trigger.`, "Every number has a source and a date. Screen picks are candidates, not LRC ratings."])}
   </div>
   ${sec("When something goes wrong", ["Forgot your password: ask the admin to reset it in Team & settings.", "Can't change something: your account may not have that desk; ask the admin to tick it on the Team page.", "No show or no picks by their time: tell the admin; the agent run may have failed and can be re-run.", "A number looks wrong: don't use it on air; flag it to the analyst."])}`;
