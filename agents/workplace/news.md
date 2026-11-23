@@ -1,4 +1,4 @@
-# LRC News & Risk Agent (hourly, weekdays 06:00–22:00 SA time)
+# LRC News & Risk Agent (every 2 hours, weekdays 07:03–21:03 SA time)
 
 You watch LRC's live trades on three desks (equities, forex, commodities) and flag market-moving news in the Workplace.
 First follow `agents/workplace/common.md` (pull the snapshot).

@@ -598,7 +598,7 @@ function viewTrades() {
   const meter = (label, n, max) => `<div class="tile"><span>${label}</span><b class="${n >= max ? "neg" : ""}">${n} / ${max}</b><div style="height:6px;border-radius:3px;background:var(--surface-2);margin-top:6px"><div style="height:100%;border-radius:3px;width:${Math.min(100, n / max * 100)}%;background:${n >= max ? "var(--sell)" : n >= max - 1 ? "var(--warn)" : "var(--buy)"}"></div></div></div>`;
   const riskPanel = `<div class="tiles">${meter("Open trades", lt.length, L.maxTrades)}${meter("Open shorts", shorts, L.maxShorts)}<div class="tile" style="grid-column:span 2"><span>By sector (limit ${L.maxPerSector} each)</span><div class="checks" style="margin-top:6px">${Object.keys(secs).length ? Object.entries(secs).map(([k, n]) => `<span class="pill ${n >= L.maxPerSector ? "sell" : "outline"}">${esc(k)} · ${n}</span>`).join("") : `<span class="subtle">No open trades.</span>`}</div></div></div>
   ${lt.filter(eventSoon).map(x => { const e = eventSoon(x); return `<div class="note warn"><b>${esc(x.fund.asset)}</b>: ${esc(e.what)} on ${fmtDate(e.date)}, in ${e.days} days. Event risk on an open trade.</div>`; }).join("")}`;
-  return `<div class="pagehead"><div><h1>Active trades</h1><p>Every handover marked as filled lands here. The news scan checks them hourly from 06:00 to 22:00 and turns a trade red when market-moving news hits it.</p></div></div>
+  return `<div class="pagehead"><div><h1>Active trades</h1><p>Every handover marked as filled lands here. The news scan checks them every 2 hours from 07:03 to 21:03 and turns a trade red when market-moving news hits it.</p></div></div>
   ${riskPanel}
   ${lt.length ? `<div class="stack">${cards}</div>` : `<div class="empty">No active trades. A trade appears here as soon as the technical desk marks an approved handover as filled.</div>`}
   <div class="deskbar"><h2 style="font-size:19px">News flags</h2><div class="filters">${[["open", "Open"], ["all", "All recent"]].map(([k, l]) => `<button class="chip" aria-pressed="${ff === k}" data-act="flagfilter" data-f="${k}">${l}</button>`).join("")}</div></div>
@@ -1136,7 +1136,7 @@ function viewForecast() {
 function viewHelp() {
   const L = LIM(), mc = marketClock();
   const sec = (h, items) => `<div class="panel"><h2 style="font-size:19px;margin-bottom:8px">${h}</h2><ol style="margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px">${items.map(x => `<li>${x}</li>`).join("")}</ol></div>`;
-  const day = [["06:00–22:00", "News & Risk Agent", "Hourly: prices on active trades, red flags for market-moving news."], ["06:57 / 11:47", "Forex & Commodities scan", "Scores every pair and commodity."], ["12:47", "Screening Analyst", "Top picks: 10 bull and 10 bear on the JSE and the US, plus the forex and commodities scoreboards."],
+  const day = [["07:03–21:03", "News & Risk Agent", "Every 2 hours: prices on active trades, red flags for market-moving news."], ["06:57 / 11:47", "Forex & Commodities scan", "Scores every pair and commodity."], ["12:47", "Screening Analyst", "Top picks: 10 bull and 10 bear on the JSE and the US, plus the forex and commodities scoreboards."],
     ["19:31", "Show Producer", "Writes tonight's Leago Rifumo Show and thumbnail."], ["20:16", "Pre-air update", "Refreshes numbers, setups and the late-update note."], [fmtT(mc.live), "Leago Rifumo Show live", "45 minutes scripted, then an hour of live trading."],
     ["Fri 23:23", "Performance Analyst", "Friday Scorecard: picks and trades in R."], ["Sat 08:31", "Strategist", "Weekly Forecast and its stream script."]];
   return `<div class="pagehead"><div><h1>Handbook</h1><p>How the LRC Workplace runs, who does what, and the rules everyone follows. Read it once; come back when unsure.</p></div></div>
@@ -1295,7 +1295,7 @@ function reviewForm(i) {
     onSubmit: async form => { try { await patchIdea(i, { close: Object.assign({}, i.close, { review: readReview(form) }) }, "Trade review saved", ""); toast("Review saved."); } catch (e) { return writeErr(e); } } });
 }
 function markForm(i) {
-  openModal({ title: `Update ${esc(i.fund.asset)} price`, body: `<p class="subtle" style="margin:0">The news scan updates prices hourly. Use this to put in a fresher price from your broker.</p><div class="row2">${fld("mp", "Last price", `<input type="number" step="any" min="0" id="mp" name="mp" class="mono" required>`)}${fld("ms", "Source", inp("ms", "Broker", `required`))}</div>`,
+  openModal({ title: `Update ${esc(i.fund.asset)} price`, body: `<p class="subtle" style="margin:0">The news scan updates prices every 2 hours. Use this to put in a fresher price from your broker.</p><div class="row2">${fld("mp", "Last price", `<input type="number" step="any" min="0" id="mp" name="mp" class="mono" required>`)}${fld("ms", "Source", inp("ms", "Broker", `required`))}</div>`,
     buttons: `<button class="btn primary" type="submit">Save price</button>`,
     onSubmit: async form => { try { await S.db.doc("marks/" + i.id).set({ asset: i.fund.asset, price: num(form.mp.value), source: form.ms.value.trim() + " · " + myName(), at: new Date().toISOString() }); toast("Price updated."); } catch (e) { return writeErr(e); } } });
 }
