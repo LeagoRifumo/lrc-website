@@ -1,6 +1,6 @@
 {
  "edition": "Morning brief · Monday 23 November 2026 06:20",
- "generated": "2026-11-23T07:20+02:00",
+ "generated": "2026-11-23T08:15+02:00",
  "covers": "The US close on Friday 20 Nov 2026, weekend prices for the rand and commodities to early Monday 23 Nov, and the week ahead",
  "agent": "LRC News Desk",
  "headline": "Wall Street ends its worst week since April 2025: Nasdaq -5.3% on Friday, Nvidia -14%, S&P 500 in correction",
@@ -14,7 +14,9 @@
      "summary": "Nvidia closed at $125.53 on 20 Nov 2026, down about 14% on the day and down about a third over two weeks; Investopedia links the fall to investors weighing Jensen Huang's departure as CEO, and a separate Reuters report that SEC staff are looking at possible accounting issues has not been confirmed by the SEC or Nvidia (Investopedia via Yahoo Finance; Sanctity, 20 Nov 2026). AMD fell 13%, and SanDisk and Nebius 16% each. Nvidia is a covered company; its rating is unchanged and will be reviewed against its trigger levels by the analyst, not by this desk.",
      "source": "Investopedia (Yahoo Finance) / Sanctity",
      "url": "https://finance.yahoo.com/markets/stocks/articles/stock-market-today-futures-plunge-131303598.html",
-     "tickers": ["NVDA"]
+     "tickers": [
+      "NVDA"
+     ]
     }
    ]
   },
@@ -71,14 +73,22 @@
      "summary": "Friday 20 Nov 2026 closes (LRC Stock Scanner, Yahoo Finance prices). Intuit extended Thursday's fall after cutting its full-year revenue outlook (Intuit 8-K, 19 Nov 2026); Meta and Nvidia fell with the wider AI sell-off. No ratings have changed.",
      "source": "LRC Stock Scanner / Yahoo Finance",
      "url": "https://finance.yahoo.com/quote/NVDA/",
-     "tickers": ["NVDA", "INTU", "META", "DECK"]
+     "tickers": [
+      "NVDA",
+      "INTU",
+      "META",
+      "DECK"
+     ]
     },
     {
      "title": "MTN at R221.80 and Telkom at R66.37 going into the week",
      "summary": "Both closed lower on 20 Nov 2026 (MTN -1.3%, Telkom -1.0%) but telecoms remain the JSE's relatively strongest group in recent trading (LRC Stock Scanner; Unum Capital, 22 Nov 2026). No ratings have changed.",
      "source": "LRC Stock Scanner / Unum Capital",
      "url": "https://finance.yahoo.com/quote/MTN.JO/",
-     "tickers": ["MTN", "TKG"]
+     "tickers": [
+      "MTN",
+      "TKG"
+     ]
     }
    ]
   }
