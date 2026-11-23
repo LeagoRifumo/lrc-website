@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-20T17:50:00+02:00",
+  "generated": "2026-11-23T11:50:00+02:00",
   "agent": "LRC Macro Desk",
   "method": "Surprise = actual minus forecast (consensus). If there is no forecast, actual minus previous. Impact for shares: a surprise in the 'better' direction larger than the threshold = Bullish, the other way = Bearish, otherwise Neutral.",
   "countries": {
@@ -82,7 +82,7 @@
           "actual": 6.2,
           "forecast": null,
           "previous": 5.0,
-          "next_release": null,
+          "next_release": "2026-11-26",
           "source": "Stats SA",
           "url": "https://www.riotimesonline.com/south-africa-producer-prices-credit-m3-september/"
         },
@@ -295,7 +295,7 @@
           "actual": 203,
           "forecast": null,
           "previous": 202,
-          "next_release": null,
+          "next_release": "2026-11-25",
           "source": "US Department of Labor",
           "url": "https://www.investing.com/news/economy-news/us-weekly-jobless-claims-increase-slightly-5039110"
         },
@@ -423,7 +423,7 @@
           "actual": 0.2,
           "forecast": null,
           "previous": 0.8,
-          "next_release": null,
+          "next_release": "2026-12-16",
           "source": "US Census Bureau",
           "url": "https://www.investing.com/news/economy-news/us-retail-sales-increase-moderately-in-october-5033051"
         },
