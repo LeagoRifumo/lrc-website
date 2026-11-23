@@ -2,7 +2,7 @@
  "week_ending": "2026-11-27",
  "title": "Live — as of Mon 23 Nov 2026",
  "live": true,
- "generated": "2026-11-23T14:18+02:00",
+ "generated": "2026-11-23T16:19+02:00",
  "agent": "LRC Market Dashboard",
  "groups": [
   {
@@ -11,7 +11,7 @@
     {
      "name": "JSE All Share (J203)",
      "unit": "index",
-     "latest": 105492.64,
+     "latest": 106707.07,
      "week_ago": 104638.7969,
      "year_ago": 109641.2969,
      "as_of": "2026-11-23",
@@ -22,7 +22,7 @@
     {
      "name": "JSE Top 40 (J200)",
      "unit": "index",
-     "latest": 97765.66,
+     "latest": 98955.21,
      "week_ago": 96833.0,
      "year_ago": 102167.6016,
      "as_of": "2026-11-23",
@@ -33,7 +33,7 @@
     {
      "name": "USD / ZAR",
      "unit": "rand per $",
-     "latest": 17.4942,
+     "latest": 17.3543,
      "week_ago": 17.4946,
      "year_ago": 17.2124,
      "as_of": "2026-11-23",
@@ -44,7 +44,7 @@
     {
      "name": "EUR / ZAR",
      "unit": "rand per €",
-     "latest": 19.1821,
+     "latest": 18.9804,
      "week_ago": 19.186,
      "year_ago": 19.8526,
      "as_of": "2026-11-23",
@@ -55,7 +55,7 @@
     {
      "name": "GBP / ZAR",
      "unit": "rand per £",
-     "latest": 22.9134,
+     "latest": 22.6827,
      "week_ago": 22.8895,
      "year_ago": 22.5161,
      "as_of": "2026-11-23",
@@ -68,32 +68,32 @@
      "unit": "%",
      "latest": 7.25,
      "week_ago": 7.25,
-     "year_ago": 7.0,
-     "as_of": "2026-11-13",
-     "source": "SARB MPC dates page lists the next decision on 19 Nov 2026 https://www.resbank.co.za/MonetaryPolicy/Monetary%20Policy%20Committee/Pages/Dates.aspx ; rate 7.25% since the 23 Sep 2026 hike, unchanged this week (zaim.com 11 Nov 2026 https://zaim.com/za/finance-news/repo-rate-decision-19-november-2026/ ; SAnews https://www.sanews.gov.za/south-africa/mpc-raises-repo-rate-725). Year-ago 7.00%: SARB Nov 2025 statement cut 25bp to 6.75% from 21 Nov 2025 https://www.resbank.co.za/en/home/publications/publication-detail-pages/statements/monetary-policy-statements/2025/november (accessed 14 Nov 2026).",
-     "note": "Unchanged at 7.25%; the MPC decides on 19 Nov, a day after October CPI, with economists split on a hike.",
+     "year_ago": 6.75,
+     "as_of": "2026-11-19",
+     "source": "SAnews, 'Interest rate stays unchanged at 7.25%', 19 Nov 2026, https://www.sanews.gov.za/node/85767; EWN, 'Reserve Bank keeps rates on hold, but warns it's a pause for now', 19 Nov 2026, https://www.ewn.co.za/2026/11/19/reserve-bank-keeps-rates-on-hold-but-warns-its-a-pause-for-now; SARB November 2026 MPC statement, https://www.resbank.co.za/content/dam/sarb/publications/statements/monetary-policy-statements/2026/november/november-statement.pdf (not opened). Year-ago: SAnews, 'Repo rate reduced to 6.75%', decision 20 Nov 2025, effective same day, https://www.sanews.gov.za/south-africa/repo-rate-reduced-675-0 (accessed 23 Nov 2026)",
+     "note": "MPC held at 7.25% on 19 Nov in a 4-3 vote, with three members for a hike; Kganyago called it 'a pause for now'. Prime stays at 10.75%.",
      "carried": true
     },
     {
      "name": "SA 10-year government bond",
      "unit": "%",
-     "latest": 8.725,
-     "week_ago": null,
-     "year_ago": null,
-     "as_of": "2026-11-13",
-     "source": "Trading Economics SA 10Y (generic) https://tradingeconomics.com/south-africa/government-bond-yield : 8.725% on 13 Nov 2026, +0.09 on the day, \"highest since early November, tracking US peers\" (accessed 14 Nov 2026). Reuters via CNBC Africa (13 Nov) had the 2035 benchmark at 8.545%, a different bond. 6 Nov close and the 13 Nov 2025 close could not be sourced, so they are left blank (TE noted ~8.41% on 10 Nov).",
-     "note": "Up to 8.73% on 13 Nov, its highest this month, as US yields jumped on hot inflation data.",
+     "latest": 8.85,
+     "week_ago": 8.725,
+     "year_ago": 8.66,
+     "as_of": "2026-11-20",
+     "source": "Trading Economics, South Africa 10Y Government Bond Yield (generic), 8.85% on 20 Nov 2026, +0.19pp y/y, https://tradingeconomics.com/south-africa/government-bond-yield. Week-ago 8.725% is the prior-week dashboard value (Trading Economics). Year-ago (about 8.66%) is derived as 8.85 - 0.19 from the y/y change on the TE page. Cross-check: TimesLIVE, 20 Nov 2026, said the 10y rose to 8.975% before settling at 8.775% on Thursday 19 Nov, https://www.timeslive.co.za/politics/2026-11-20-rand-and-jse-pay-the-price-of-not-knowing-who-will-run-joburg/ (accessed 23 Nov 2026)",
+     "note": "Yield up about 12.5bp on the week, driven by the October CPI jump to 5.2%, a hawkish SARB hold and uncertainty over the Gauteng coalition and GNU.",
      "carried": true
     },
     {
      "name": "SA CPI inflation (y/y)",
      "unit": "%",
-     "latest": 4.5,
+     "latest": 5.2,
      "week_ago": 4.5,
-     "year_ago": 3.4,
-     "as_of": "2026-09",
-     "source": "SAnews \"CPI rises in September\" (21 Oct 2026): 4.5% https://www.sanews.gov.za/node/85109 . October 2026 CPI is due Wed 18 Nov 2026 (zaim.com 11 Nov; Reuters via CNBC Africa 13 Nov https://www.cnbcafrica.com/2026/south-african-rand-slides-to-seven-month-low-ahead-of-inflation-rate-decision ). Year-ago Sep 2025 3.4% (EWN 22 Oct 2025); Oct 2025 was 3.6% (Stats SA https://www.statssa.gov.za/?p=18956 ) (accessed 14 Nov 2026).",
-     "note": "September 4.5%, above the 3% target; October CPI on 18 Nov is the last input before the MPC.",
+     "year_ago": 3.6,
+     "as_of": "2026-10",
+     "source": "Stats SA October 2026 CPI (P0141), released 18 Nov 2026, as reported by SAnews, 'Inflation rises to 5.2% in October', https://www.sanews.gov.za/node/85723 and Business Day, 18 Nov 2026, https://www.businessday.co.za/economy/2026-11-18-inflation-soars-to-52-in-october-ahead-of-rates-call/. Week-ago is September 2026 (4.5%). Year-ago is October 2025 (3.6%), per Stats SA 'Inflation climbs for a second consecutive month', https://www.statssa.gov.za/?p=18956 and TimesLIVE, 19 Nov 2025 (seen in search results, not opened) (accessed 23 Nov 2026)",
+     "note": "Highest since May 2024. Fuel rose 11.8% m/m (42.9% y/y), and transport added 2.1pp to the headline rate; the target is 3%.",
      "carried": true
     }
    ]
@@ -126,12 +126,12 @@
     {
      "name": "MSCI Emerging Markets",
      "unit": "index",
-     "latest": 1550.18,
-     "week_ago": 1502.29,
+     "latest": 1420.01,
+     "week_ago": 1550.18,
      "year_ago": null,
-     "as_of": "2026-11-13",
-     "source": "MarketScreener MSCI Emerging Markets https://ca.marketscreener.com/quote/index/MSCI-EMERGING-MARKETS-107361476/ : 1,550.18 on 13 Nov 2026 (12 Nov 1,555.10, matching YCharts ^MSEM https://ycharts.com/indices/%5EMSEM ) (accessed 14 Nov 2026). Week-ago 1,502.29 on 6 Nov 2026 (YCharts, seen 7 Nov). Year-ago level could not be sourced.",
-     "note": "Up 3.2% on the week, its first weekly gain since September as tech shares rebounded (Bloomberg headline, 13 Nov).",
+     "as_of": "2026-11-20",
+     "source": "YCharts, MSCI Emerging Markets (^MSEM), 1,420.01 on 20 Nov 2026 (-45.48 on the day), https://ycharts.com/indices/^MSEM. MarketScreener, MSCI Emerging Markets, closes of 1,550.18 on 13 Nov and 1,465.49 on 19 Nov 2026, https://in.marketscreener.com/quote/index/MSCI-EMERGING-MARKETS-107361476/. Bear-market context: Wallstreetcn/Longbridge, 20 Nov 2026, https://longbridge.com/en/news/306334514. Year-ago: not sourced (accessed 23 Nov 2026)",
+     "note": "Down 8.4% on the week, its biggest weekly fall since March 2020, and 21% below the June peak, in a bear market, as the AI/tech selloff spread.",
      "carried": true
     },
     {
@@ -140,19 +140,19 @@
      "latest": 4.0,
      "week_ago": 4.0,
      "year_ago": 4.0,
-     "as_of": "2026-11-13",
-     "source": "Held at 3.75-4.00% on 28 Oct 2026 (10-2 vote); no change since; next decision Wed 9 Dec 2026 (Cambridge Currencies, updated 8 Nov 2026 https://cambridgecurrencies.com/next-federal-reserve-interest-rate-decision/ ). December hike fully priced (Stocktwits, week to 13 Nov https://stocktwits.com/news-articles/markets/equity/what-shaped-us-treasury-yields-and-the-dollar-in-week-ended-november-13/cNb2sojR9Qd ). Year-ago 3.75-4.00% after the 29 Oct 2025 cut (accessed 14 Nov 2026).",
-     "note": "Held at 3.75-4.00%, but markets now fully price a hike on 9 Dec after Fed officials floated 50bp.",
+     "as_of": "2026-11-20",
+     "source": "FRED, Federal Funds Target Range - Upper Limit (DFEDTARU), 4.00% for 18-22 Nov 2026, https://fred.stlouisfed.org/series/DFEDTARU. Year-ago: Federal Reserve press release, 29 Oct 2025, target range lowered to 3-3/4 to 4 percent, https://www.federalreserve.gov/newsevents/pressreleases/monetary20251029a.htm. Pricing: Motley Fool, 16 Nov 2026 (CME FedWatch 100% for a December hike as at 12 Nov), https://www.fool.com/investing/2026/11/16/theres-now-100-chance-fed-rate-hike-in-december-thats-not-worst-news-for-wall-street/; 1Trader weekly recap, 20 Nov 2026 (>95% after the hawkish October FOMC minutes), https://1trader.com/en/forex-weekly-2026-11-20/ (accessed 23 Nov 2026)",
+     "note": "Range unchanged at 3.75-4.00%, but futures price a December 9 hike at more than 95% after hawkish October FOMC minutes; the dollar is at a 19-month high.",
      "carried": true
     },
     {
      "name": "US 10-year Treasury",
      "unit": "%",
-     "latest": 4.912,
+     "latest": 4.976,
      "week_ago": 4.912,
-     "year_ago": 4.106,
-     "as_of": "2026-11-20",
-     "source": "Yahoo Finance ^TNX daily close (2026-11-20; week-ago 2026-11-20; year-ago 2025-11-20)",
+     "year_ago": 4.063,
+     "as_of": "2026-11-23",
+     "source": "Yahoo Finance ^TNX daily close (2026-11-23; week-ago 2026-11-20; year-ago 2025-11-21)",
      "note": "",
      "carried": false
     },
@@ -163,8 +163,8 @@
      "week_ago": 3.7,
      "year_ago": 3.0,
      "as_of": "2026-09",
-     "source": "BLS CPI release for October 2026 (10 Nov 2026) https://www.bls.gov/news.release/cpi.htm : all items +0.4% m/m s.a., core +0.3%; BLS published no 12-month change because October 2025 data were not collected (2025 funding lapse). Latest y/y is therefore September 2026, 3.7% (BLS, 14 Oct 2026); year-ago Sep 2025 3.0%. Next CPI 10 Dec 2026 (accessed 14 Nov 2026).",
-     "note": "October rose 0.4% m/m (core 0.3%), above forecasts; no y/y was published, so September's 3.7% is the latest annual rate.",
+     "source": "BLS CPI news release for September 2026 (released 14 Oct 2026), all items +3.7% y/y and core +2.6%, https://www.bls.gov/news.release/archives/cpi_10142026.htm. BLS October 2026 CPI (released 10 Nov 2026): +0.4% m/m SA, no 12-month change because October 2025 data were not collected, https://www.bls.gov/news.release/cpi.nr0.htm. Year-ago: September 2025 3.0%, per ABA Banking Journal, 'Consumer price inflation 3% in September', https://bankingjournal.aba.com/2025/10/consumer-price-inflation-3-in-september/ (headline only; page redirect not followed) (accessed 23 Nov 2026)",
+     "note": "No October y/y because the 2025 shutdown left a data gap; October rose 0.4% m/m (core 0.3%). November CPI is due 10 Dec.",
      "carried": true
     }
    ]
@@ -175,7 +175,7 @@
     {
      "name": "Gold",
      "unit": "$/oz",
-     "latest": 3618.9,
+     "latest": 3658.3,
      "week_ago": 3515.3999,
      "year_ago": 4079.5,
      "as_of": "2026-11-23",
@@ -186,7 +186,7 @@
     {
      "name": "Platinum",
      "unit": "$/oz",
-     "latest": 1312.4,
+     "latest": 1332.0,
      "week_ago": 1289.4,
      "year_ago": 1513.8,
      "as_of": "2026-11-23",
@@ -197,7 +197,7 @@
     {
      "name": "Brent crude",
      "unit": "$/bbl",
-     "latest": 88.84,
+     "latest": 88.19,
      "week_ago": 92.57,
      "year_ago": 62.56,
      "as_of": "2026-11-23",
@@ -208,7 +208,7 @@
     {
      "name": "Copper",
      "unit": "$/t",
-     "latest": 12165.0932,
+     "latest": 12460.5122,
      "week_ago": 12074.7043,
      "year_ago": 11041.8395,
      "as_of": "2026-11-23",
@@ -219,12 +219,12 @@
     {
      "name": "Iron ore",
      "unit": "$/t",
-     "latest": 91.48,
-     "week_ago": null,
-     "year_ago": 103.95,
-     "as_of": "2026-11-13",
-     "source": "Trading Economics iron ore 62% Fe CFR https://tradingeconomics.com/commodity/iron-ore : 91.48 USD/t on 13 Nov 2026, -12.00% y/y (accessed 14 Nov 2026); year-ago 103.95 = 91.48/(1-0.12) from that stated change. The 6 Nov level could not be sourced (SGX Dec futures $91.50 on 5 Nov, Business Recorder https://www.brecorder.com/news/40447443/iron-ore-rebounds-on-short-covering ). Dalian near its lowest since Oct 2022 with China port stocks up a fourth week (TE iron-ore-cny news 13 Nov).",
-     "note": "Steady near $91/t, 12% lower than a year ago, as China port stocks build and steel output cuts loom.",
+     "latest": 90.67,
+     "week_ago": 91.48,
+     "year_ago": 104.25,
+     "as_of": "2026-11-20",
+     "source": "Trading Economics, Iron Ore 62% Fe CFR (CFD), 90.67 USD/t on 20 Nov 2026, -13.03% y/y, https://tradingeconomics.com/commodity/ironore62; cross-checked against OilPriceAPI, 90.67 USD/t, https://www.oilpriceapi.com/live/iron-ore-price. Week-ago 91.48 is the prior-week dashboard value (Trading Economics). Year-ago (about 104.25) is derived as 90.67 / (1 - 0.1303). Drivers: Trading Economics, iron ore CNY news, 16-20 Nov 2026, https://tradingeconomics.com/commodity/iron-ore-cny/news/601447 (accessed 23 Nov 2026)",
+     "note": "Near four-year lows: Dalian futures fell to about CNY650, the lowest since October 2022, on weak Chinese steel output (October -1.6%) and rising Simandou supply.",
      "carried": true
     }
    ]
@@ -232,6 +232,6 @@
  ],
  "movers": [],
  "market_view": "",
- "auto_view": "The JSE All Share moved +0.8% on the week to 105,493 and the rand firmed 0.0% to R17.49/$. In New York the S&P 500 moved +0.0% and the Nasdaq +0.0%, with the US 10-year at 4.91%. Commodities: gold +2.9%, platinum +1.8%, Brent -4.0%, copper +0.7%.",
+ "auto_view": "The JSE All Share moved +2.0% on the week to 106,707 and the rand firmed 0.8% to R17.35/$. In New York the S&P 500 moved +0.0% and the Nasdaq +0.0%, with the US 10-year at 4.98%. Commodities: gold +4.1%, platinum +3.3%, Brent -4.7%, copper +3.2%.",
  "missing": []
 }
