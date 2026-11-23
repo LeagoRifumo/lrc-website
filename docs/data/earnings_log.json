@@ -1307,6 +1307,18 @@
 "result_done": true,
 "source": "Nasdaq"
 },
+"AFH.JO|2026-11-30": {
+"t": "AFH.JO",
+"ticker": "AFH",
+"name": "Alexforbes",
+"m": "JSE",
+"date": "2026-11-30",
+"when": "Before open",
+"eps_forecast": "",
+"quarter": "",
+"period": "Interim results to 30 Sep 2026 (JSE release 08:00; webcast 14:00)",
+"market_cap_bn": 8.9
+},
 "AFL|2026-11-04": {
 "t": "AFL",
 "ticker": "AFL",
@@ -4227,7 +4239,7 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Annual to 30 Sep 2026 (expected: SENS on 23 Nov per trading statement 29 Oct 2026)",
-"market_cap_bn": 7.4
+"market_cap_bn": 7.3
 },
 "ARLO|2026-11-05": {
 "t": "ARLO",
@@ -20448,8 +20460,8 @@
 "when": "Not stated",
 "eps_forecast": "",
 "quarter": "",
-"period": "Finance Director's pre-close message (year to 31 Dec 2026)",
-"market_cap_bn": 42.0
+"period": "Finance Director's pre-close message, year to 31 Dec 2026",
+"market_cap_bn": 39.2
 },
 "EYE|2026-11-04": {
 "t": "EYE",
@@ -32676,8 +32688,8 @@
 "when": "Not stated",
 "eps_forecast": "",
 "quarter": "",
-"period": "Annual to 30 Sep 2026 (expected)",
-"market_cap_bn": 18.4
+"period": "Annual results to 30 Sep 2026 (expected: 'on or about' per company)",
+"market_cap_bn": 17.5
 },
 "LHX|2026-10-29": {
 "t": "LHX",
@@ -37255,8 +37267,8 @@
 "when": "Not stated",
 "eps_forecast": "",
 "quarter": "",
-"period": "Operating update for three months to 30 Sep 2026",
-"market_cap_bn": null
+"period": "Operating update for the three months to 30 Sep 2026 (released)",
+"market_cap_bn": 49.0
 },
 "MTN|2026-09-28": {
 "t": "MTN",
@@ -39156,8 +39168,8 @@
 "when": "Not stated",
 "eps_forecast": "",
 "quarter": "",
-"period": "Annual to 30 Sep 2026 (webcast 10:00 SAST)",
-"market_cap_bn": 4.5
+"period": "Annual results to 30 Sep 2026 (online presentation 10:00-11:30)",
+"market_cap_bn": 4.3
 },
 "NPK|2026-10-28": {
 "t": "NPK",
@@ -39204,8 +39216,8 @@
 "when": "Not stated",
 "eps_forecast": "",
 "quarter": "",
-"period": "HY2027 half-year results to 30 Sep 2026",
-"market_cap_bn": null
+"period": "Interim results to 30 Sep 2026 (HY2027)",
+"market_cap_bn": 469.8
 },
 "NPO|2026-11-03": {
 "t": "NPO",
@@ -39449,8 +39461,8 @@
 "when": "Not stated",
 "eps_forecast": "",
 "quarter": "",
-"period": "Annual results to 30 Sep 2026 (expected: \"on or about 23 November\", SENS 30 Sep 2026; webcast 09:00 SAST)",
-"market_cap_bn": null
+"period": "Annual results to 30 Sep 2026 (expected: 'on or about' per company)",
+"market_cap_bn": 21.8
 },
 "NTCT|2026-11-05": {
 "t": "NTCT",
@@ -40392,8 +40404,8 @@
 "when": "Not stated",
 "eps_forecast": "",
 "quarter": "",
-"period": "Annual to 30 Sep 2026",
-"market_cap_bn": 8.1
+"period": "Annual results to 30 Sep 2026",
+"market_cap_bn": 8.6
 },
 "OCSL|2026-11-17": {
 "t": "OCSL",
@@ -41106,11 +41118,11 @@
 "name": "Old Mutual",
 "m": "JSE",
 "date": "2026-12-03",
-"when": "Not stated",
+"when": "After close",
 "eps_forecast": "",
 "quarter": "",
-"period": "Q3 2026 voluntary operating update and pre-close call 16:00 SAST (provisional per company diary)",
-"market_cap_bn": null
+"period": "Q3 voluntary operating update & pre-close call (call 16:00 SAST; diary provisional)",
+"market_cap_bn": 57.4
 },
 "ONB|2026-10-21": {
 "t": "ONB",
@@ -44379,8 +44391,8 @@
 "when": "Not stated",
 "eps_forecast": "",
 "quarter": "",
-"period": "Annual to 30 Sep 2026 (webcast 10:00 SAST)",
-"market_cap_bn": 72.5
+"period": "Annual results to 30 Sep 2026 (webcast 10:00 SAST)",
+"market_cap_bn": 63.7
 },
 "PPLI|2026-11-02": {
 "t": "PPLI",
@@ -44909,8 +44921,8 @@
 "when": "Not stated",
 "eps_forecast": "",
 "quarter": "",
-"period": "HY2027 half-year results to 30 Sep 2026",
-"market_cap_bn": null
+"period": "Interim results to 30 Sep 2026 (HY2027)",
+"market_cap_bn": 1236.6
 },
 "PR|2026-11-04": {
 "t": "PR",
@@ -48431,8 +48443,8 @@
 "when": "Not stated",
 "eps_forecast": "",
 "quarter": "",
-"period": "FY2026 pre-close call",
-"market_cap_bn": 494.2
+"period": "FY26 pre-close call",
+"market_cap_bn": 456.6
 },
 "SBLK|2026-11-17": {
 "t": "SBLK",
@@ -51300,14 +51312,14 @@
 "SPP.JO|2026-12-04": {
 "t": "SPP.JO",
 "ticker": "SPP",
-"name": "The SPAR Group",
+"name": "SPAR Group",
 "m": "JSE",
 "date": "2026-12-04",
-"when": "Not stated",
+"when": "Before open",
 "eps_forecast": "",
 "quarter": "",
-"period": "Annual results FY2026 to Sep 2026 (expected)",
-"market_cap_bn": null
+"period": "Annual results for 52 weeks to 25 Sep 2026 (SENS 07:05 SAST; webcast 08:30)",
+"market_cap_bn": 11.1
 },
 "SPSC|2026-10-29": {
 "t": "SPSC",
@@ -51617,6 +51629,18 @@
 "result": "beat",
 "result_done": true,
 "source": "Nasdaq"
+},
+"SSK.JO|2026-11-24": {
+"t": "SSK.JO",
+"ticker": "SSK",
+"name": "Stefanutti Stocks",
+"m": "JSE",
+"date": "2026-11-24",
+"when": "Not stated",
+"eps_forecast": "",
+"quarter": "",
+"period": "Interim results to 31 Aug 2026 (expected: per company trading statement)",
+"market_cap_bn": 1.1
 },
 "SSMR|2026-11-11": {
 "t": "SSMR",
@@ -52953,8 +52977,8 @@
 "when": "Not stated",
 "eps_forecast": "",
 "quarter": "",
-"period": "FY26 annual results to 30 Sep 2026 (results presentation)",
-"market_cap_bn": 44.4
+"period": "Annual results to 30 Sep 2026 (results presentation 10:00)",
+"market_cap_bn": 38.2
 },
 "TCBK|2027-01-21": {
 "t": "TCBK",
@@ -54038,13 +54062,13 @@
 "THA.JO|2026-11-30": {
 "t": "THA.JO",
 "ticker": "THA",
-"name": "Tharisa plc",
+"name": "Tharisa",
 "m": "JSE",
 "date": "2026-11-30",
 "when": "Not stated",
 "eps_forecast": "",
 "quarter": "",
-"period": "Expected date (market data feed) — confirm on SENS",
+"period": "Annual results to 30 Sep 2026 (expected: company says dates indicative)",
 "market_cap_bn": 6.4
 },
 "THC|2026-10-29": {
@@ -58543,8 +58567,8 @@
 "when": "Not stated",
 "eps_forecast": "",
 "quarter": "",
-"period": "Interim to 30 Sep 2026 (results presentation 12:30 SAST)",
-"market_cap_bn": 38.1
+"period": "Interim results to 30 Sep 2026 (presentation c.12:30 SAST)",
+"market_cap_bn": 35.8
 },
 "VKTX|2026-10-28": {
 "t": "VKTX",
