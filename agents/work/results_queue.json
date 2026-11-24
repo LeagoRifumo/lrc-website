@@ -1,142 +1,286 @@
 {
-"updated": "2026-11-24T06:53+02:00",
+"updated": "2026-11-25T01:18+02:00",
 "queue": [
 {
-"t": "BABA",
-"name": "Alibaba Group Holding Limited",
+"t": "CRWD",
+"name": "CrowdStrike Holdings, Inc.",
+"m": "US",
+"date": "2026-11-23",
+"text": "agents/work/8k/CRWD_2026-11-23.txt",
+"priority": 2,
+"mcap_bn": 214.0
+},
+{
+"t": "DELL",
+"name": "Dell Technologies Inc.",
 "m": "US",
 "date": "2026-11-24",
-"text": "agents/work/8k/BABA_2026-11-24.txt",
+"text": "agents/work/8k/DELL_2026-11-24.txt",
 "priority": 2,
-"mcap_bn": 214.4
+"mcap_bn": 212.9
 },
 {
-"t": "BHP",
-"name": "BHP Group Limited",
+"t": "ADI",
+"name": "Analog Devices, Inc.",
 "m": "US",
 "date": "2026-11-24",
-"text": "agents/work/8k/BHP_2026-11-24.txt",
+"text": "agents/work/8k/ADI_2026-11-24.txt",
 "priority": 2,
-"mcap_bn": 179.0
+"mcap_bn": 183.5
 },
 {
-"t": "HPE",
-"name": "Hewlett Packard Enterprise Company",
-"m": "US",
-"date": "2026-11-23",
-"text": "agents/work/8k/HPE_2026-11-23.txt",
-"priority": 2,
-"mcap_bn": 60.8
-},
-{
-"t": "A",
-"name": "Agilent Technologies, Inc.",
-"m": "US",
-"date": "2026-11-23",
-"text": "agents/work/8k/A_2026-11-23.txt",
-"priority": 2,
-"mcap_bn": 49.5
-},
-{
-"t": "ZS",
-"name": "Zscaler, Inc.",
+"t": "MDT",
+"name": "Medtronic plc",
 "m": "US",
 "date": "2026-11-24",
-"text": "agents/work/8k/ZS_2026-11-24.txt",
+"text": "agents/work/8k/MDT_2026-11-24.txt",
 "priority": 2,
-"mcap_bn": 36.4
+"mcap_bn": 128.8
 },
 {
-"t": "ZM",
-"name": "Zoom Communications, Inc.",
+"t": "ADSK",
+"name": "Autodesk, Inc.",
 "m": "US",
 "date": "2026-11-24",
-"text": "agents/work/8k/ZM_2026-11-24.txt",
+"text": "agents/work/8k/ADSK_2026-11-24.txt",
 "priority": 2,
-"mcap_bn": 24.6
+"mcap_bn": 53.4
 },
 {
-"t": "SYM",
-"name": "Symbotic Inc.",
+"t": "WDAY",
+"name": "Workday, Inc.",
 "m": "US",
-"date": "2026-11-23",
-"text": "agents/work/8k/SYM_2026-11-23.txt",
+"date": "2026-11-24",
+"text": "agents/work/8k/WDAY_2026-11-24.txt",
 "priority": 2,
-"mcap_bn": 21.6
+"mcap_bn": 42.4
 },
 {
-"t": "J",
-"name": "Jacobs Solutions Inc.",
+"t": "DLTR",
+"name": "Dollar Tree, Inc.",
 "m": "US",
-"date": "2026-11-23",
-"text": "agents/work/8k/J_2026-11-23.txt",
+"date": "2026-11-24",
+"text": "agents/work/8k/DLTR_2026-11-24.txt",
 "priority": 2,
-"mcap_bn": 18.2
+"mcap_bn": 26.1
 },
 {
-"t": "SMTC",
-"name": "Semtech Corporation",
+"t": "HPQ",
+"name": "HP Inc.",
 "m": "US",
-"date": "2026-11-23",
-"text": "agents/work/8k/SMTC_2026-11-23.txt",
+"date": "2026-11-24",
+"text": "agents/work/8k/HPQ_2026-11-24.txt",
 "priority": 2,
-"mcap_bn": 9.5
+"mcap_bn": 26.1
 },
 {
-"t": "AMTM",
-"name": "Amentum Holdings, Inc.",
+"t": "BBY",
+"name": "Best Buy Co., Inc.",
 "m": "US",
-"date": "2026-11-23",
-"text": "agents/work/8k/AMTM_2026-11-23.txt",
+"date": "2026-11-24",
+"text": "agents/work/8k/BBY_2026-11-24.txt",
 "priority": 2,
-"mcap_bn": 5.0
+"mcap_bn": 20.3
 },
 {
-"t": "CENT",
-"name": "Central Garden & Pet Company",
+"t": "NTNX",
+"name": "Nutanix, Inc.",
 "m": "US",
-"date": "2026-11-23",
-"text": "agents/work/8k/CENT_2026-11-23.txt",
+"date": "2026-11-25",
+"text": "agents/work/8k/NTNX_2026-11-25.txt",
 "priority": 2,
-"mcap_bn": 2.9
+"mcap_bn": 15.7
 },
 {
-"t": "CENTA",
-"name": "Central Garden & Pet Company",
+"t": "BURL",
+"name": "Burlington Stores, Inc.",
+"m": "US",
+"date": "2026-11-24",
+"text": "agents/work/8k/BURL_2026-11-24.txt",
+"priority": 2,
+"mcap_bn": 14.8
+},
+{
+"t": "SJM",
+"name": "The J.M. Smucker Company ",
+"m": "US",
+"date": "2026-11-24",
+"text": "agents/work/8k/SJM_2026-11-24.txt",
+"priority": 2,
+"mcap_bn": 14.2
+},
+{
+"t": "DKS",
+"name": "Dick's Sporting Goods Inc",
+"m": "US",
+"date": "2026-11-24",
+"text": "agents/work/8k/DKS_2026-11-24.txt",
+"priority": 2,
+"mcap_bn": 11.9
+},
+{
+"t": "DY",
+"name": "Dycom Industries, Inc.",
+"m": "US",
+"date": "2026-11-25",
+"text": "agents/work/8k/DY_2026-11-25.txt",
+"priority": 2,
+"mcap_bn": 6.6
+},
+{
+"t": "ANF",
+"name": "Abercrombie & Fitch Co.",
+"m": "US",
+"date": "2026-11-25",
+"text": "agents/work/8k/ANF_2026-11-25.txt",
+"priority": 2,
+"mcap_bn": 6.0
+},
+{
+"t": "VIPS",
+"name": "Vipshop Holdings Limited",
+"m": "US",
+"date": "2026-11-24",
+"text": "agents/work/8k/VIPS_2026-11-24.txt",
+"priority": 2,
+"mcap_bn": 6.0
+},
+{
+"t": "CMBT",
+"name": "CMB.TECH NV",
+"m": "US",
+"date": "2026-11-25",
+"text": "agents/work/8k/CMBT_2026-11-25.txt",
+"priority": 2,
+"mcap_bn": 4.9
+},
+{
+"t": "MMED",
+"name": "MiniMed Group, Inc.",
+"m": "US",
+"date": "2026-11-24",
+"text": "agents/work/8k/MMED_2026-11-24.txt",
+"priority": 2,
+"mcap_bn": 4.7
+},
+{
+"t": "GGAL",
+"name": "Grupo Financiero Galicia S.A.",
+"m": "US",
+"date": "2026-11-24",
+"text": "agents/work/8k/GGAL_2026-11-24.txt",
+"priority": 2,
+"mcap_bn": 4.5
+},
+{
+"t": "PPH.JO",
+"name": "Pepkor Holdings",
+"m": "JSE",
+"date": "2026-11-24",
+"period": "Year to 30 Sep 2026",
+"source": "Pepkor Holdings — Reviewed annual results for the year ended 30 September 2026 (24 Nov 2026), company results booklet https://pepkor.co.za/wp-content/uploads/Pepkor-reviewed-results-for-the-year-ended-30-September-2026.pdf (HEPS 171.3c, up 6.9%; prior-year HEPS not legible in the published document, so left out)",
+"priority": 2,
+"mcap_bn": 3.5
+},
+{
+"t": "BWLP",
+"name": "BW LPG Limited",
 "m": "US",
 "date": "2026-11-23",
-"text": "agents/work/8k/CENTA_2026-11-23.txt",
+"text": "agents/work/8k/BWLP_2026-11-23.txt",
+"priority": 2,
+"mcap_bn": 3.4
+},
+{
+"t": "BMA",
+"name": "Macro Bank Inc.",
+"m": "US",
+"date": "2026-11-25",
+"text": "agents/work/8k/BMA_2026-11-25.txt",
+"priority": 2,
+"mcap_bn": 3.3
+},
+{
+"t": "DAC",
+"name": "Danaos Corporation",
+"m": "US",
+"date": "2026-11-23",
+"text": "agents/work/8k/DAC_2026-11-23.txt",
+"priority": 2,
+"mcap_bn": 2.7
+},
+{
+"t": "AMBA",
+"name": "Ambarella, Inc.",
+"m": "US",
+"date": "2026-11-24",
+"text": "agents/work/8k/AMBA_2026-11-24.txt",
 "priority": 2,
 "mcap_bn": 2.5
 },
 {
-"t": "NTC.JO",
-"name": "Netcare",
-"m": "JSE",
-"date": "2026-11-23",
-"period": "Year to 30 Sep 2026",
-"source": "Netcare SENS — Annual results for the year ended 30 September 2026 and cash dividend declaration (23 Nov 2026), via InsidEntity https://www.insidentity.com/netcare-annual-results-for-the-year-ended-30-september-2026-and-cash-dividend-declaration/ (adjusted HEPS up 17.1% to 160.6c; unadjusted HEPS not shown in the source read; final dividend 56.0c, total dividends for the year 100.0c)",
-"priority": 2,
-"mcap_bn": 1.2
-},
-{
-"t": "ARL.JO",
-"name": "Astral Foods",
-"m": "JSE",
-"date": "2026-11-23",
-"period": "Year to 30 Sep 2026",
-"source": "Astral Foods SENS — Audited summarised results and final cash dividend declaration for the year ended 30 September 2026 (23 Nov 2026), via InsidEntity https://www.insidentity.com/astral-foods-audited-summarised-results-and-final-cash-dividend-declaration-for-the-year-ended-30-september-2026/ (HEPS up 102%; EPS up 98%; HEPS values in cents not shown in the source read; final dividend 1 060c, total dividend up 102%)",
-"priority": 2,
-"mcap_bn": 0.4
-},
-{
-"t": "RERE",
-"name": "ATRenew Inc.",
+"t": "KSS",
+"name": "Kohl's Corporation",
 "m": "US",
-"date": "2026-11-19",
-"text": "agents/work/8k/RERE_2026-11-19.txt",
+"date": "2026-11-24",
+"text": "agents/work/8k/KSS_2026-11-24.txt",
+"priority": 2,
+"mcap_bn": 2.4
+},
+{
+"t": "BBAR",
+"name": "Banco BBVA Argentina S.A.",
+"m": "US",
+"date": "2026-11-24",
+"text": "agents/work/8k/BBAR_2026-11-24.txt",
+"priority": 2,
+"mcap_bn": 1.9
+},
+{
+"t": "KC",
+"name": "Kingsoft Cloud Holdings Limited",
+"m": "US",
+"date": "2026-11-24",
+"text": "agents/work/8k/KC_2026-11-24.txt",
+"priority": 2,
+"mcap_bn": 1.8
+},
+{
+"t": "CLSK",
+"name": "CleanSpark, Inc.",
+"m": "US",
+"date": "2026-11-24",
+"text": "agents/work/8k/CLSK_2026-11-24.txt",
+"priority": 2,
+"mcap_bn": 1.4
+},
+{
+"t": "GDRX",
+"name": "GoodRx Holdings, Inc.",
+"m": "US",
+"date": "2026-11-23",
+"text": "agents/work/8k/GDRX_2026-11-23.txt",
+"priority": 2,
+"mcap_bn": 1.0
+},
+{
+"t": "ITRN",
+"name": "Ituran Location and Control Ltd.",
+"m": "US",
+"date": "2026-11-24",
+"text": "agents/work/8k/ITRN_2026-11-24.txt",
 "priority": 2,
 "mcap_bn": 0.9
+},
+{
+"t": "RLO.JO",
+"name": "Reunert",
+"m": "JSE",
+"date": "2026-11-23",
+"period": "Year to 30 Sep 2026",
+"source": "Reunert SENS — Consolidated financial statements and cash dividend declaration for the year ended 30 September 2026 (23 Nov 2026), via ShareData https://www.sharedata.co.za/v2/Scripts/SENS.aspx?id=567206 (HEPS from continuing operations, down 48%)",
+"priority": 2,
+"mcap_bn": 0.4
 }
 ]
 }

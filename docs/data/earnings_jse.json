@@ -1708,16 +1708,26 @@
    "covered": false
   },
   {
-   "when": "Not stated",
-   "period": "Interim results to 31 Aug 2026 (expected: per company trading statement)",
-   "source": "Stefanutti Stocks trading statement, SENS 11 Nov 2026 via ShareData ('full results are expected for publication on 24 November 2026'), https://www.sharedata.co.za/Data/009390/news.htm (opened 23 Nov 2026); market cap = Yahoo Finance close 20 Nov 2026 via the LRC Stock Scanner",
-   "market_cap_bn": 1.1,
-   "name": "Stefanutti Stocks",
    "date": "2026-11-24",
    "ticker": "SSK",
+   "name": "Stefanutti Stocks",
+   "when": "Not stated",
+   "period": "Interim results to 31 Aug 2026 (expected: per company trading statement)",
+   "quarter": "",
    "eps_forecast": "",
-   "covered": true,
-   "lrc_rating": null,
+   "market_cap_bn": 1.1,
+   "reported": true,
+   "result": null,
+   "eps_actual": null,
+   "eps_est": null,
+   "surprise": null,
+   "heps": null,
+   "heps_prior": null,
+   "unit": null,
+   "change": null,
+   "measure": null,
+   "dps": null,
+   "source": null,
    "t": "SSK.JO",
    "lists": [
     "Trading BUY"
@@ -1725,32 +1735,37 @@
    "idea": null,
    "v": "BUY",
    "iv": "HOLD",
-   "track": null,
-   "ts": {
-    "date": "2026-11-11",
-    "low": 1.2,
-    "high": 1.4,
-    "period": "Six months to 31 Aug 2026",
-    "source": "Stefanutti Stocks Holdings SENS — Trading statement (11 Nov 2026), via InsidEntity https://www.insidentity.com/stefanutti-stocks-holdings-trading-statement-2/ (continuing operations HEPS expected 97.88c–106.78c vs 44.49c, up 120%–140%; results due 24 Nov 2026)"
-   }
+   "lrc_rating": null,
+   "covered": true
   },
   {
    "date": "2026-11-24",
    "ticker": "PPH",
    "name": "Pepkor Holdings",
    "when": "Not stated",
-   "period": "Annual results to 30 Sep 2026 (webcast 10:00 SAST)",
+   "period": "Year to 30 Sep 2026",
+   "quarter": "",
    "eps_forecast": "",
    "market_cap_bn": 63.7,
-   "source": "Pepkor, Latest results page: 'Tuesday, 24 November 2026 | Webcast at 10:00 a.m. SAST', https://pepkor.co.za/latest-results/ | Re-checked 23 Nov 2026 by LRC Research",
-   "covered": false,
-   "lrc_rating": null,
+   "reported": true,
+   "result": null,
+   "eps_actual": null,
+   "eps_est": null,
+   "surprise": null,
+   "heps": 171.3,
+   "heps_prior": null,
+   "unit": "c",
+   "change": null,
+   "measure": "HEPS",
+   "dps": 57.88375,
+   "source": "Pepkor Holdings — Reviewed annual results for the year ended 30 September 2026 (24 Nov 2026), company results booklet https://pepkor.co.za/wp-content/uploads/Pepkor-reviewed-results-for-the-year-ended-30-September-2026.pdf (HEPS 171.3c, up 6.9%; prior-year HEPS not legible in the published document, so left out)",
    "t": "PPH.JO",
    "lists": [],
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
-   "track": null
+   "lrc_rating": null,
+   "covered": false
   },
   {
    "date": "2026-11-25",
@@ -2049,6 +2064,6 @@
   }
  ],
  "note": "Partial list. New this week: Stefanutti Stocks (24 Nov), Alexforbes (30 Nov), Tharisa (30 Nov, indicative) and Momentum's operating update (23 Nov). SPAR's annual results are now confirmed for 4 Dec (SENS 19 Nov). Hyprop's 1 Dec pre-close date could not be re-checked (company site did not load). No company-published date in the window was found for Nutun, FirstRand, Nedbank, Absa, Anglo American, Sasol, Sibanye-Stillwater, Impala, Northam, Harmony, Gold Fields, Mondi, MTN, Remgro, Discovery, Growthpoint, Bidvest, Aspen or the other LRC watchlist names.",
- "synced": "2026-11-24T18:51+02:00",
+ "synced": "2026-11-25T01:18+02:00",
  "coverage_note": "Ticked = on the LRC watchlist. Every company the LRC Stock Scanner tracks shows its trading and investment ratings. Updated after every scanner run."
 }
