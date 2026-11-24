@@ -1,94 +1,130 @@
 {
-  "edition": "Midday update · Tuesday 24 November 2026 10:45",
-  "generated": "2026-11-24T10:45+02:00",
-  "covers": "The Wall Street close on Monday 23 Nov 2026, HPE results after the close, Asia and commodities on Tuesday morning, and the week ahead for South Africa",
-  "agent": "LRC News Desk",
-  "headline": "Wall Street has its best day since April 2025 as Nvidia jumps 31.5% on Huang's return; Dell reports tonight",
-  "summary": "The S&P 500 closed Monday 23 Nov 2026 up 4.7%, the Nasdaq 100 up 6.9% and the Dow up 3%, the strongest session since April 2025, with Nvidia up 31.5% after Jensen Huang was reinstated as CEO; Asia followed on Tuesday with the Kospi up 6.2% and the Nikkei up 3.7% (Saxo, 24 Nov 2026). Brent closed Monday at $89.37 and WTI at $80.17, and was a little lower again on Tuesday, while spot gold was near $3,635 early Tuesday (Saxo; Kotak Neo, 24 Nov 2026). For South Africa the main events this week are US PCE inflation on Wednesday and the Moody's and S&P reviews late on Friday 27 Nov; we could not verify Tuesday's JSE and rand levels from an opened article at publication time, so they are left out.",
-  "sections": [
+ "edition": "Evening update · Tuesday 24 November 2026 18:10",
+ "generated": "2026-11-24T18:10+02:00",
+ "covers": "US open and first hour on Tue 24 Nov 2026, US consumer confidence, JSE and rand during Tuesday",
+ "agent": "LRC News Desk",
+ "headline": "US consumer confidence jumps to 103.3, far above forecasts, while chip stocks give back part of Monday's rally; Nvidia down about 5.6%",
+ "summary": "In South Africa the rand weakened to about R17.54 per dollar by 16:03 SAST and the Top 40 was down about 0.6%, while the SARB's leading indicator fell 0.3% in September (Reuters via MarketScreener, 24 Nov 2026). In the US, Conference Board consumer confidence rose to 103.3 in November from 91.9 against a 92.1 forecast, but chip stocks fell at the open, leaving the Nasdaq down 1.55% and the S&P 500 down 0.61% around 17:17 SAST, with the Dow up 0.37% (Conference Board; Yahoo Finance, 24 Nov 2026). Gold eased 1.3% to about $3,605 an ounce; for South Africa the next tests are US PCE inflation on Wednesday and the Moody's and S&P reviews late on Friday 27 Nov.",
+ "sections": [
+  {
+   "name": "Breaking",
+   "items": [
     {
-      "name": "US markets",
-      "items": [
-        {
-          "title": "Monday close: S&P 500 +4.7%, Nasdaq 100 +6.9%, Dow +3%, best session since April 2025",
-          "summary": "US stocks had their strongest day since April 2025 on Monday 23 Nov 2026 after Nvidia reinstated Jensen Huang as CEO. Nvidia rose 31.5%, Tesla 11.5% and Meta 6.6%; CrowdStrike fell 8.9% after agreeing a $43.9 billion all-share deal for Zscaler. The VIX volatility gauge fell about a quarter to 26.62. Europe also rose: Stoxx 600 +1.8%, FTSE 100 +1.3% (Saxo Market Quick Take, 24 Nov 2026). The rally followed seven straight daily falls for the S&P 500 (Charles Schwab, 23 Nov 2026).",
-          "source": "Saxo",
-          "url": "https://www.home.saxo/en-gb/content/articles/macro/market-quick-take---nvidias-ceo-returns-and-wall-street-rebounds---24-november-2026-24112026"
-        },
-        {
-          "title": "HPE beats forecasts and raises its outlook, but shares fall 6.7% after hours",
-          "summary": "Hewlett Packard Enterprise reported fourth-quarter adjusted earnings of $1.43 a share on revenue of $14.5 billion, ahead of estimates of $1.27 and $14.35 billion; revenue rose 50% from a year earlier. It guided fiscal 2027 revenue to $59-63 billion and adjusted EPS to $5.05-5.35. The shares closed the regular session up 17.4% at $48.02, then fell 6.7% after hours to $44.81 (Investing.com, 24 Nov 2026). HPE is not on our coverage list.",
-          "source": "Investing.com",
-          "url": "https://in.investing.com/news/stock-market-news/earnings-call-transcript-hpe-tops-q4-2026-forecasts-shares-swing-after-rally-93CH-5722165"
-        },
-        {
-          "title": "Treasury yields ease; US consumer confidence today, Dell and others report after the close",
-          "summary": "The 10-year Treasury yield peaked near 4.98% on Monday and was about 4.91% early Tuesday; the 2-year eased from 4.73% to 4.67%. The US flash composite PMI fell to 54.6 in November from 55.9. Today: US November consumer confidence at 15:00 GMT (17:00 SAST) and results from Dell, Analog Devices, Medtronic, Workday, HP and Autodesk. The Fed decides on 9 Dec (Saxo, 24 Nov 2026).",
-          "source": "Saxo",
-          "url": "https://www.home.saxo/en-gb/content/articles/macro/market-quick-take---nvidias-ceo-returns-and-wall-street-rebounds---24-november-2026-24112026"
-        }
-      ]
+     "title": "US consumer confidence surges to 103.3, the highest since January 2025",
+     "summary": "The Conference Board index rose 11.4 points to 103.3 in November from 91.9 in October (Conference Board, 24 Nov 2026), well above the 92.1 consensus listed by Yahoo Finance the same morning. The Conference Board's economist linked part of the jump to lower uncertainty after the midterm elections. A stronger consumer can keep pressure on the Fed ahead of Wednesday's PCE inflation data.",
+     "source": "The Conference Board (PR Newswire), 24 Nov 2026",
+     "url": "https://www.prnewswire.com/news-releases/us-consumer-confidence-surged-in-november-302949447.html"
     },
     {
-      "name": "South Africa",
-      "items": [
-        {
-          "title": "Moody's and S&P reviews of South Africa due late on Friday 27 Nov, both on positive outlooks",
-          "summary": "Both agencies are scheduled to publish their South Africa reviews late on Friday; each currently has a positive outlook on the country (BusinessTech Africa, 23 Nov 2026). An upgrade or an outlook change would be a market-moving event for the rand and SA bonds. Before that, US PCE inflation and the second estimate of third-quarter GDP on Wednesday 25 Nov are the main outside drivers for the rand (Charles Schwab, 23 Nov 2026).",
-          "source": "BusinessTech Africa",
-          "url": "https://www.businesstechafrica.co.za/article/breaking-news-today-monday23-november-2026"
-        },
-        {
-          "title": "Coca-Cola HBC's purchase of Coca-Cola Beverages Africa due to close on Friday",
-          "summary": "After its JSE debut on Monday 23 Nov 2026 at a value of about R341 billion, Coca-Cola HBC expects its purchase of a 75% stake in Coca-Cola Beverages Africa to close on 27 Nov (Reuters via CNBC Africa, 23 Nov 2026).",
-          "source": "Reuters (CNBC Africa)",
-          "url": "https://www.cnbcafrica.com/2026/coca-cola-hbc-makes-jse-debut-as-ccba-deal-nears-completion"
-        }
-      ]
-    },
-    {
-      "name": "Forex & commodities",
-      "items": [
-        {
-          "title": "Brent near $89 and WTI near $80 after Monday's 3.5-4% fall",
-          "summary": "Brent fell 3.5% to $89.37 and WTI 4% to $80.17 on Monday 23 Nov 2026, and on Tuesday morning Brent was down about 0.4% near $89 and WTI about 0.2% near $80. US-Iran talks remain unresolved, and the Houthis claimed an attack on Saudi Arabia's Rabigh refinery, which Saudi officials have not confirmed. Goldman Sachs raised its December Brent forecast to $105 from $90 (Kotak Neo, 24 Nov 2026).",
-          "source": "Kotak Neo",
-          "url": "https://www.kotakneo.com/news/commodities/oil-price-today-24-november-2026-brent-falls-below-90-us-iran-talks-supply-risks/"
-        },
-        {
-          "title": "Gold near $3,635, silver $42.70, copper up about 2.6% on the LME",
-          "summary": "Spot gold was around $3,635 early Tuesday 24 Nov 2026 and silver at $42.70 (-0.8%). LME copper rose 2.6% on Monday. EUR/USD was back above 1.0910 and GBP/USD above 1.3040 early Tuesday; USD/JPY was near 159.15 (Saxo, 24 Nov 2026). A USD/ZAR level and platinum price could not be verified from an opened article this morning.",
-          "source": "Saxo",
-          "url": "https://www.home.saxo/en-gb/content/articles/macro/market-quick-take---nvidias-ceo-returns-and-wall-street-rebounds---24-november-2026-24112026"
-        }
-      ]
-    },
-    {
-      "name": "Our coverage",
-      "items": [
-        {
-          "title": "Nvidia closes up 31.5% after Huang's return (rating BUY, unchanged)",
-          "summary": "Nvidia gained 31.5% on Monday 23 Nov 2026 after the board reinstated Jensen Huang as CEO (Saxo, 24 Nov 2026). The board's independent investigation continues, so news flow is likely to stay heavy. Based on Monday's intraday price near $165.61, the shares remain below our fair value estimate of $262.56.",
-          "source": "Saxo",
-          "url": "https://www.home.saxo/en-gb/content/articles/macro/market-quick-take---nvidias-ceo-returns-and-wall-street-rebounds---24-november-2026-24112026",
-          "tickers": ["NVDA"]
-        },
-        {
-          "title": "Dell reports after the US close tonight (rating SELL, unchanged); Meta +6.6% (SELL, unchanged)",
-          "summary": "Dell reports on Tuesday 24 Nov after the US close (about 23:00 SAST onward) (Saxo, 24 Nov 2026); it rose about 22% intraday on Monday to near $340 (Investing.com, 23 Nov 2026), still below our $404.70 fair value estimate. A results-day move of more than 5% would be flagged in the evening update. Meta rose 6.6% on Monday (Saxo) and remains below our $677.14 estimate. No company-specific news was found for Intuit, Deckers, Paylocity, AMD, Arista, Fastenal or Wabtec.",
-          "source": "Saxo",
-          "url": "https://www.home.saxo/en-gb/content/articles/macro/market-quick-take---nvidias-ceo-returns-and-wall-street-rebounds---24-november-2026-24112026",
-          "tickers": ["DELL", "META"]
-        }
-      ]
+     "title": "Nvidia falls about 5.6% after Monday's 31.5% jump; chip stocks slide",
+     "summary": "Nvidia was down 5.64% against Monday's close at 10:01 New York time (17:01 SAST), giving back part of the 31.48% gain that followed Jensen Huang's reinstatement as CEO. AMD was down 8.03%, Micron 7.67% and Analog Devices 15.59% after its results (StockTitan, 24 Nov 2026).",
+     "source": "StockTitan, 24 Nov 2026",
+     "url": "https://stocktitan.net/articles/stock-market-today-live-november-24-2026",
+     "tickers": [
+      "NVDA"
+     ]
     }
-  ],
-  "watch_today": [
-    "Dell, Workday, Autodesk, HP and Analog Devices results after the US close tonight",
-    "US consumer confidence at 17:00 SAST",
-    "Whether Nvidia and the Nasdaq hold Monday's gains at the US open (16:30 SAST)",
-    "US PCE inflation and GDP revision on Wed 25 Nov; US markets closed Thu 26 Nov",
-    "Moody's and S&P reviews of South Africa late on Fri 27 Nov",
-    "Brent near $89 on US-Iran talks; gold near $3,635"
-  ]
+   ]
+  },
+  {
+   "name": "US markets",
+   "items": [
+    {
+     "title": "Nasdaq down 1.55%, S&P 500 down 0.61%, Dow up 0.37% in the first hour",
+     "summary": "Around 10:17 New York time (17:17 SAST) the S&P 500 was at 7,192.92 (-0.61%), the Nasdaq at 23,716.58 (-1.55%) and the Dow at 49,778.88 (+0.37%); the VIX rose 2.7% to 27.35. The US 10-year yield was little changed at 4.916% (Yahoo Finance, 24 Nov 2026). This follows Monday's best session since April 2025.",
+     "source": "Yahoo Finance, 24 Nov 2026",
+     "url": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-november-24-dow-sp-500-nasdaq-chip-stocks-nvidia-140629923.html"
+    },
+    {
+     "title": "Analog Devices falls 15.6% despite 42% revenue growth; HPE down 13%",
+     "summary": "Analog Devices reported revenue up 42% to $4.37 billion and guided to $4.4 billion plus or minus $150 million, but the shares were down 15.59% at 10:01 New York time. HPE was down 13.14% after its outlook showed lower margins (StockTitan, 24 Nov 2026).",
+     "source": "StockTitan, 24 Nov 2026",
+     "url": "https://stocktitan.net/articles/stock-market-today-live-november-24-2026"
+    },
+    {
+     "title": "Sanofi agrees to buy Insmed for about $41 billion; retailers rally",
+     "summary": "Sanofi will pay $175 a share in cash for Insmed, still subject to approvals; Insmed was up 14.39%. Abercrombie & Fitch (+22.47%), Dick's (+14.28%) and Dollar Tree (+9.86%) rose after results (StockTitan, 24 Nov 2026, 10:01 New York time).",
+     "source": "StockTitan, 24 Nov 2026",
+     "url": "https://stocktitan.net/articles/stock-market-today-live-november-24-2026"
+    },
+    {
+     "title": "Traders price a December Fed rate hike; PCE and GDP on Wednesday",
+     "summary": "Yahoo Finance reported traders pricing a 95% chance of a 25 basis point Fed hike in December (24 Nov 2026). US GDP and PCE inflation are due at 15:30 SAST on Wednesday 25 Nov; US markets are closed on Thursday and close early on Friday.",
+     "source": "Yahoo Finance; StockTitan, 24 Nov 2026",
+     "url": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-november-24-dow-sp-500-nasdaq-chip-stocks-nvidia-140629923.html"
+    }
+   ]
+  },
+  {
+   "name": "South Africa",
+   "items": [
+    {
+     "title": "Rand weakens about 0.8% to R17.54; Top 40 down about 0.6%",
+     "summary": "The rand traded at 17.5399 per dollar at 16:03 SAST, about 0.8% weaker than Monday's close, and the Top 40 was down about 0.6%. The 2035 government bond yield rose half a basis point to 8.665% (Reuters via MarketScreener, 24 Nov 2026).",
+     "source": "Reuters via MarketScreener, 24 Nov 2026",
+     "url": "https://www.marketscreener.com/news/south-african-rand-weakens-as-focus-shifts-to-us-inflation-data-ce7851dbdb80f520"
+    },
+    {
+     "title": "SARB leading indicator falls 0.3% in September",
+     "summary": "The Reserve Bank's composite leading business cycle indicator fell 0.3% month on month in September, and the Treasury sold R1.95 billion of bonds at its weekly auction (Reuters via MarketScreener, 24 Nov 2026).",
+     "source": "Reuters via MarketScreener, 24 Nov 2026",
+     "url": "https://www.marketscreener.com/news/south-african-rand-weakens-as-focus-shifts-to-us-inflation-data-ce7851dbdb80f520"
+    },
+    {
+     "title": "Moody's and S&P reviews of South Africa due late on Friday 27 Nov",
+     "summary": "Both agencies have South Africa on positive outlooks; the decisions are expected after the JSE close on Friday.",
+     "source": "BusinessTech Africa, 23 Nov 2026",
+     "url": "https://www.businesstechafrica.co.za/article/breaking-news-today-monday23-november-2026"
+    }
+   ]
+  },
+  {
+   "name": "Forex & commodities",
+   "items": [
+    {
+     "title": "Gold eases 1.3% to about $3,605",
+     "summary": "Gold futures were at $3,605.10, down $46.30 (-1.27%), around 17:17 SAST, after Monday's 3.5% rally to about $3,657 (Yahoo Finance; PSG Wealth, 24 Nov 2026).",
+     "source": "Yahoo Finance; PSG Wealth, 24 Nov 2026",
+     "url": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-november-24-dow-sp-500-nasdaq-chip-stocks-nvidia-140629923.html"
+    },
+    {
+     "title": "Brent near $89, WTI near $80 in Asian trade",
+     "summary": "Brent was at $89.09 and WTI at $80.16 during Asian trade on Tuesday, little changed after Monday's fall to three-month lows (TipRanks, 24 Nov 2026).",
+     "source": "TipRanks, 24 Nov 2026",
+     "url": "https://www.tipranks.com/news/stock-market-today-nov-24-markets-turn-jittery-even-as-huang-returns-to-nvidia"
+    }
+   ]
+  },
+  {
+   "name": "Our coverage",
+   "items": [
+    {
+     "title": "Nvidia down about 5.6% on Tuesday (rating BUY, unchanged)",
+     "summary": "The pullback follows Monday's 31.48% jump on Jensen Huang's return (StockTitan, 24 Nov 2026). The shares remain well below our watchlist fair value of $262.56; the rating is unchanged.",
+     "source": "StockTitan, 24 Nov 2026",
+     "url": "https://stocktitan.net/articles/stock-market-today-live-november-24-2026",
+     "tickers": [
+      "NVDA"
+     ]
+    },
+    {
+     "title": "Dell reports after the US close tonight (rating SELL, unchanged)",
+     "summary": "Dell fell about 7% in pre-market trade ahead of its results, which are due after the close with the call at 23:30 SAST (Yahoo Finance; StockTitan, 24 Nov 2026). Our SELL rating is unchanged; the results will be covered in the morning brief.",
+     "source": "Yahoo Finance, 24 Nov 2026",
+     "url": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-november-24-dow-sp-500-nasdaq-chip-stocks-nvidia-140629923.html",
+     "tickers": [
+      "DELL"
+     ]
+    }
+   ]
+  }
+ ],
+ "watch_today": [
+  "Dell, Workday, HP and Autodesk results after the US close (from 23:00 SAST)",
+  "Whether chip stocks stabilise after Tuesday's pullback from Monday's rally",
+  "US GDP revision and PCE inflation on Wed 25 Nov at 15:30 SAST",
+  "US markets closed Thu 26 Nov; early close Fri 27 Nov",
+  "Moody's and S&P reviews of South Africa late on Fri 27 Nov",
+  "Rand near R17.54 per dollar; gold near $3,605"
+ ]
 }
