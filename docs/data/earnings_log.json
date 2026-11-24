@@ -45037,8 +45037,17 @@
 "when": "Not stated",
 "eps_forecast": "",
 "quarter": "",
-"period": "Annual results to 30 Sep 2026 (webcast 10:00 SAST)",
-"market_cap_bn": 63.7
+"period": "Year to 30 Sep 2026",
+"market_cap_bn": 63.7,
+"heps": 171.3,
+"heps_prior": null,
+"unit": "c",
+"change": null,
+"result": null,
+"measure": "HEPS",
+"dps": 57.88375,
+"source": "Pepkor Holdings — Reviewed annual results for the year ended 30 September 2026 (24 Nov 2026), company results booklet https://pepkor.co.za/wp-content/uploads/Pepkor-reviewed-results-for-the-year-ended-30-September-2026.pdf (HEPS 171.3c, up 6.9%; prior-year HEPS not legible in the published document, so left out)",
+"result_done": false
 },
 "PPLI|2026-11-02": {
 "t": "PPLI",
@@ -47701,6 +47710,23 @@
 "quarter_end": "2026-06-30",
 "result_done": true,
 "source": "Nasdaq"
+},
+"RLO.JO|2026-11-23": {
+"t": "RLO.JO",
+"ticker": "RLO",
+"name": "Reunert",
+"m": "JSE",
+"date": "2026-11-23",
+"period": "Year to 30 Sep 2026",
+"heps": 339.0,
+"heps_prior": 649.0,
+"unit": "c",
+"change": -0.4777,
+"result": "down",
+"measure": "HEPS",
+"dps": 383.0,
+"source": "Reunert SENS — Consolidated financial statements and cash dividend declaration for the year ended 30 September 2026 (23 Nov 2026), via ShareData https://www.sharedata.co.za/v2/Scripts/SENS.aspx?id=567206 (HEPS from continuing operations, down 48%)",
+"result_done": true
 },
 "RLX|2026-11-13": {
 "t": "RLX",

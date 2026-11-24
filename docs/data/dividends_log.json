@@ -5393,9 +5393,9 @@
 "n": "AngloGold Ashanti",
 "m": "JSE",
 "cur": "ZAR",
-"amount": null,
+"amount": 12.256,
 "pay": "2026-12-11",
-"source": "AngloGold Ashanti — Q3 30 September 2026 Earnings Release and Dividend Declaration (5 Nov 2026), via Investing News Network https://investingnews.com/anglogold-ashanti-q3-30-september-2026-earnings-release-and-dividend-declaration/ (Q3 2026 interim dividend of 71 US cents per share; JSE register: last day to trade 24 Nov 2026, ex-dividend 25 Nov, record 27 Nov, payment 11 Dec 2026; rand conversion rate to be announced 20 Nov 2026, so the ZAR amount is not yet stated)"
+"source": "AngloGold Ashanti — Q3 30 September 2026 Earnings Release and Dividend Declaration (5 Nov 2026), via Investing News Network https://investingnews.com/anglogold-ashanti-q3-30-september-2026-earnings-release-and-dividend-declaration/ (Q3 2026 interim dividend of 71 US cents per share; JSE register: last day to trade 24 Nov 2026, ex-dividend 25 Nov, record 27 Nov, payment 11 Dec 2026; rand conversion rate to be announced 20 Nov 2026, so the ZAR amount is not yet stated) | Amount: AngloGold Ashanti SENS — Dividend: Confirmation of currency conversion to South African rand and finalisation announcement (20 Nov 2026), via InsidEntity https://www.insidentity.com/anglogold-ashanti-dividend-confirmation-of-currency-conversion-to-south-african-rand-and-finalisation-announcement-3/ (71 US cents converted at R17.262 = 1,225.602 SA cents gross)"
 },
 "ANH.JO|2025-05-05": {
 "t": "ANH.JO",
@@ -71244,6 +71244,16 @@
 "cur": "ZAR",
 "amount": 0.5295
 },
+"PPH.JO|2027-01-13": {
+"t": "PPH.JO",
+"ex": "2027-01-13",
+"n": "Pepkor",
+"m": "JSE",
+"cur": "ZAR",
+"amount": 0.5788,
+"pay": "2027-01-18",
+"source": "Pepkor Holdings — Reviewed annual results for the year ended 30 September 2026 (24 Nov 2026), company results booklet https://pepkor.co.za/wp-content/uploads/Pepkor-reviewed-results-for-the-year-ended-30-September-2026.pdf (gross cash dividend declared with the annual results; the announcement does not call it interim or final)"
+},
 "PPL|2024-12-10": {
 "t": "PPL",
 "ex": "2024-12-10",
@@ -74834,6 +74844,16 @@
 "m": "JSE",
 "cur": "ZAR",
 "amount": 0.9
+},
+"RLO.JO|2027-01-20": {
+"t": "RLO.JO",
+"ex": "2027-01-20",
+"n": "Reunert",
+"m": "JSE",
+"cur": "ZAR",
+"amount": 2.93,
+"pay": "2027-01-25",
+"source": "Reunert SENS — Consolidated financial statements and cash dividend declaration for the year ended 30 September 2026 (23 Nov 2026), via ShareData https://www.sharedata.co.za/v2/Scripts/SENS.aspx?id=567206 (gross final dividend No. 201; total for the year 383.0c)"
 },
 "RL|2024-12-27": {
 "t": "RL",

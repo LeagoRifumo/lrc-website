@@ -1,6 +1,6 @@
 {
  "note": "JSE company announcements (SENS) recorded by the LRC JSE Announcements job every weekday. results = published results with headline earnings per share (HEPS) vs the same period last year; trading_statements = expected HEPS change ranges; dividends = declared dividends with the JSE dates. Amounts in cents. Every entry carries its source.",
- "updated": "2026-11-23T19:00+02:00",
+ "updated": "2026-11-24T19:30+02:00",
  "results": [
   {
    "t": "CLS.JO",
@@ -251,6 +251,27 @@
    "unit": "c",
    "dps": 1060.0,
    "source": "Astral Foods SENS — Audited summarised results and final cash dividend declaration for the year ended 30 September 2026 (23 Nov 2026), via InsidEntity https://www.insidentity.com/astral-foods-audited-summarised-results-and-final-cash-dividend-declaration-for-the-year-ended-30-september-2026/ (HEPS up 102%; EPS up 98%; HEPS values in cents not shown in the source read; final dividend 1 060c, total dividend up 102%)"
+  },
+  {
+   "t": "PPH.JO",
+   "name": "Pepkor Holdings",
+   "date": "2026-11-24",
+   "period": "Year to 30 Sep 2026",
+   "heps": 171.3,
+   "unit": "c",
+   "dps": 57.88375,
+   "source": "Pepkor Holdings — Reviewed annual results for the year ended 30 September 2026 (24 Nov 2026), company results booklet https://pepkor.co.za/wp-content/uploads/Pepkor-reviewed-results-for-the-year-ended-30-September-2026.pdf (HEPS 171.3c, up 6.9%; prior-year HEPS not legible in the published document, so left out)"
+  },
+  {
+   "t": "RLO.JO",
+   "name": "Reunert",
+   "date": "2026-11-23",
+   "period": "Year to 30 Sep 2026",
+   "heps": 339.0,
+   "heps_prior": 649.0,
+   "unit": "c",
+   "dps": 383.0,
+   "source": "Reunert SENS — Consolidated financial statements and cash dividend declaration for the year ended 30 September 2026 (23 Nov 2026), via ShareData https://www.sharedata.co.za/v2/Scripts/SENS.aspx?id=567206 (HEPS from continuing operations, down 48%)"
   }
  ],
  "trading_statements": [
@@ -417,7 +438,8 @@
    "ex": "2026-11-25",
    "record": "2026-11-27",
    "pay": "2026-12-11",
-   "source": "AngloGold Ashanti — Q3 30 September 2026 Earnings Release and Dividend Declaration (5 Nov 2026), via Investing News Network https://investingnews.com/anglogold-ashanti-q3-30-september-2026-earnings-release-and-dividend-declaration/ (Q3 2026 interim dividend of 71 US cents per share; JSE register: last day to trade 24 Nov 2026, ex-dividend 25 Nov, record 27 Nov, payment 11 Dec 2026; rand conversion rate to be announced 20 Nov 2026, so the ZAR amount is not yet stated)"
+   "source": "AngloGold Ashanti — Q3 30 September 2026 Earnings Release and Dividend Declaration (5 Nov 2026), via Investing News Network https://investingnews.com/anglogold-ashanti-q3-30-september-2026-earnings-release-and-dividend-declaration/ (Q3 2026 interim dividend of 71 US cents per share; JSE register: last day to trade 24 Nov 2026, ex-dividend 25 Nov, record 27 Nov, payment 11 Dec 2026; rand conversion rate to be announced 20 Nov 2026, so the ZAR amount is not yet stated) | Amount: AngloGold Ashanti SENS — Dividend: Confirmation of currency conversion to South African rand and finalisation announcement (20 Nov 2026), via InsidEntity https://www.insidentity.com/anglogold-ashanti-dividend-confirmation-of-currency-conversion-to-south-african-rand-and-finalisation-announcement-3/ (71 US cents converted at R17.262 = 1,225.602 SA cents gross)",
+   "amount_c": 1225.602
   },
   {
    "t": "TFG.JO",
@@ -549,6 +571,28 @@
    "record": "2027-01-15",
    "pay": "2027-01-18",
    "source": "Astral Foods SENS — Audited summarised results and final cash dividend declaration for the year ended 30 September 2026 (23 Nov 2026), via InsidEntity https://www.insidentity.com/astral-foods-audited-summarised-results-and-final-cash-dividend-declaration-for-the-year-ended-30-september-2026/ (dividend no. 47; gross 1 060c; net 848c after 20% dividends tax)"
+  },
+  {
+   "t": "PPH.JO",
+   "period": "Annual",
+   "declared": "2026-11-24",
+   "amount_c": 57.88375,
+   "ldt": "2027-01-12",
+   "ex": "2027-01-13",
+   "record": "2027-01-15",
+   "pay": "2027-01-18",
+   "source": "Pepkor Holdings — Reviewed annual results for the year ended 30 September 2026 (24 Nov 2026), company results booklet https://pepkor.co.za/wp-content/uploads/Pepkor-reviewed-results-for-the-year-ended-30-September-2026.pdf (gross cash dividend declared with the annual results; the announcement does not call it interim or final)"
+  },
+  {
+   "t": "RLO.JO",
+   "period": "Final",
+   "declared": "2026-11-23",
+   "amount_c": 293.0,
+   "ldt": "2027-01-19",
+   "ex": "2027-01-20",
+   "record": "2027-01-22",
+   "pay": "2027-01-25",
+   "source": "Reunert SENS — Consolidated financial statements and cash dividend declaration for the year ended 30 September 2026 (23 Nov 2026), via ShareData https://www.sharedata.co.za/v2/Scripts/SENS.aspx?id=567206 (gross final dividend No. 201; total for the year 383.0c)"
   }
  ]
 }
