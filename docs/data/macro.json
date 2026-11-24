@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-23T11:50:00+02:00",
+  "generated": "2026-11-24T17:50:00+02:00",
   "agent": "LRC Macro Desk",
   "method": "Surprise = actual minus forecast (consensus). If there is no forecast, actual minus previous. Impact for shares: a surprise in the 'better' direction larger than the threshold = Bullish, the other way = Bearish, otherwise Neutral.",
   "countries": {
@@ -450,14 +450,14 @@
           "better": "higher",
           "threshold": 2.0,
           "frequency": "monthly",
-          "period": "Oct 2026",
-          "release_date": "2026-10-27",
-          "actual": 91.7,
-          "forecast": 81.0,
-          "previous": 84.2,
-          "next_release": "2026-11-24",
+          "period": "Nov 2026",
+          "release_date": "2026-11-24",
+          "actual": 103.3,
+          "forecast": 92.1,
+          "previous": 91.9,
+          "next_release": null,
           "source": "The Conference Board",
-          "url": "https://www.prnewswire.com/news-releases/us-consumer-confidence-increased-in-october-302920731.html"
+          "url": "https://www.prnewswire.com/news-releases/us-consumer-confidence-surged-in-november-302949447.html"
         }
       ]
     }
