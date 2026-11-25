@@ -26846,7 +26846,10 @@
 "ex": "2026-12-02",
 "n": "Datatec",
 "m": "JSE",
-"cur": "ZAR"
+"cur": "ZAR",
+"amount": 2.5,
+"pay": null,
+"source": "Datatec SENS — Finalisation announcement and ratio applicable to the scrip distribution (24 Nov 2026), via InsidEntity https://www.insidentity.com/datatec-finalisation-announcement-and-ratio-applicable-to-the-script-distribution-2/ (interim cash dividend 250c with scrip alternative, 4.40909 new shares per 100 held; results released 29 Oct 2026; last day to trade and payment date not shown in the source read)"
 },
 "DTE|2024-12-16": {
 "t": "DTE",
@@ -48903,6 +48906,16 @@
 "cur": "ZAR",
 "amount": 0.7
 },
+"KAL.JO|2027-02-10": {
+"t": "KAL.JO",
+"ex": "2027-02-10",
+"n": "KAL Group Limited",
+"m": "JSE",
+"cur": "ZAR",
+"amount": 2.0,
+"pay": "2027-02-15",
+"source": "KAL Group SENS — Audited consolidated financial statements for the year ended 30 September 2026 and dividend declaration (25 Nov 2026), via InsidEntity https://www.insidentity.com/kal-group-audited-consolidated-financial-statements-for-the-year-ended-30-september-2026-and-dividend-declaration/ (gross final dividend 200.00c; net 160.00c)"
+},
 "KALU|2025-01-24": {
 "t": "KALU",
 "ex": "2025-01-24",
@@ -64734,6 +64747,16 @@
 "m": "JSE",
 "cur": "ZAR",
 "amount": 0.645
+},
+"OCT.JO|2026-12-15": {
+"t": "OCT.JO",
+"ex": "2026-12-15",
+"n": "Octodec Investments Limited",
+"m": "JSE",
+"cur": "ZAR",
+"amount": 0.8547,
+"pay": "2026-12-21",
+"source": "Octodec SENS — Audited consolidated annual financial statements and cash dividend declaration for the year ended 31 August 2026 (24 Nov 2026), via InsidEntity https://www.insidentity.com/octodec-investment-audited-consolidated-annual-financial-statements-and-cash-dividend-declaration-for-the-year-ended-31-august-2026/ (final cash dividend 85.46706c)"
 },
 "OC|2025-01-06": {
 "t": "OC",
@@ -88651,6 +88674,16 @@
 "m": "JSE",
 "cur": "ZAR",
 "amount": 0.3
+},
+"TSG.JO|2026-12-15": {
+"t": "TSG.JO",
+"ex": "2026-12-15",
+"n": "Tsogo Sun",
+"m": "JSE",
+"cur": "ZAR",
+"amount": 0.15,
+"pay": "2026-12-21",
+"source": "Tsogo Sun SENS — Unaudited condensed consolidated interim financial results and cash dividend declaration for the six months ended 30 September 2026 (25 Nov 2026), via InsidEntity https://www.insidentity.com/tsogo-sun-unaudited-condensed-consolidated-interim-financial-results-and-cash-dividend-declaration-for-the-six-months-ended-30-september-2026/ (gross interim cash dividend 15.0c; net 12.0c)"
 },
 "TSLX|2025-08-29": {
 "t": "TSLX",

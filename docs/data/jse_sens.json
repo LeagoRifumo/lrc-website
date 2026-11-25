@@ -1,6 +1,6 @@
 {
  "note": "JSE company announcements (SENS) recorded by the LRC JSE Announcements job every weekday. results = published results with headline earnings per share (HEPS) vs the same period last year; trading_statements = expected HEPS change ranges; dividends = declared dividends with the JSE dates. Amounts in cents. Every entry carries its source.",
- "updated": "2026-11-24T19:30+02:00",
+ "updated": "2026-11-25T19:30+02:00",
  "results": [
   {
    "t": "CLS.JO",
@@ -272,6 +272,64 @@
    "unit": "c",
    "dps": 383.0,
    "source": "Reunert SENS — Consolidated financial statements and cash dividend declaration for the year ended 30 September 2026 (23 Nov 2026), via ShareData https://www.sharedata.co.za/v2/Scripts/SENS.aspx?id=567206 (HEPS from continuing operations, down 48%)"
+  },
+  {
+   "t": "NPN.JO",
+   "name": "Naspers",
+   "date": "2026-11-25",
+   "period": "Six months to 30 Sep 2026",
+   "heps": 189.0,
+   "heps_prior": 140.0,
+   "unit": "USc",
+   "source": "Naspers SENS — Interim results announcement for the six months ended 30 September 2026 (25 Nov 2026), via InsidEntity https://www.insidentity.com/naspers-interim-results-announcement-for-the-six-months-ended-30-september-2026/ (reported in US cents: HEPS per N ordinary share 189 USc vs 140 USc; adjusted earnings per N share 240 USc vs 215 USc; no dividend declared)"
+  },
+  {
+   "t": "PRX.JO",
+   "name": "Prosus",
+   "date": "2026-11-25",
+   "period": "Six months to 30 Sep 2026",
+   "unit": "USc",
+   "source": "Prosus N.V. — Strong ecosystem execution, alongside investment in food; adjusted EPS up 12% (interim results, 25 Nov 2026) https://www.prosus.com/news-insights/2026/strong-ecosystem-execution-alongside-investment-in-food-adjusted-eps-up-12-percent (adjusted earnings per share up 12%; HEPS values in US cents not shown in the source read; no dividend declared)"
+  },
+  {
+   "t": "TSG.JO",
+   "name": "Tsogo Sun",
+   "date": "2026-11-25",
+   "period": "Six months to 30 Sep 2026",
+   "heps": 79.0,
+   "heps_prior": 74.0,
+   "unit": "c",
+   "dps": 15.0,
+   "source": "Tsogo Sun SENS — Unaudited condensed consolidated interim financial results and cash dividend declaration for the six months ended 30 September 2026 (25 Nov 2026), via InsidEntity https://www.insidentity.com/tsogo-sun-unaudited-condensed-consolidated-interim-financial-results-and-cash-dividend-declaration-for-the-six-months-ended-30-september-2026/ (HEPS up 7% to 79c vs 74c; interim gross dividend 15.0c)"
+  },
+  {
+   "t": "KAL.JO",
+   "name": "KAL Group",
+   "date": "2026-11-25",
+   "period": "Year to 30 Sep 2026",
+   "heps": 689.87,
+   "heps_prior": 620.98,
+   "unit": "c",
+   "dps": 270.0,
+   "source": "KAL Group SENS — Audited consolidated financial statements for the year ended 30 September 2026 and dividend declaration (25 Nov 2026), via InsidEntity https://www.insidentity.com/kal-group-audited-consolidated-financial-statements-for-the-year-ended-30-september-2026-and-dividend-declaration/ (HEPS 689.87c vs 620.98c, up 11.1%; recurring HEPS 705.28c; final gross dividend 200.00c, total for the year 270.00c)"
+  },
+  {
+   "t": "OCT.JO",
+   "name": "Octodec",
+   "date": "2026-11-24",
+   "period": "Year to 31 Aug 2026",
+   "unit": "c",
+   "dps": 149.97,
+   "source": "Octodec SENS — Audited consolidated annual financial statements and cash dividend declaration for the year ended 31 August 2026 (24 Nov 2026), via InsidEntity https://www.insidentity.com/octodec-investment-audited-consolidated-annual-financial-statements-and-cash-dividend-declaration-for-the-year-ended-31-august-2026/ (distributable income per share 192.36c vs 171.51c; dividend per share for the year 149.97c vs 134.50c; final dividend 85.46706c; HEPS not shown in the source read)"
+  },
+  {
+   "t": "SSK.JO",
+   "name": "Stefanutti Stocks",
+   "date": "2026-11-24",
+   "period": "Six months to 31 Aug 2026",
+   "heps": 102.03,
+   "unit": "c",
+   "source": "Stefanutti Stocks SENS — Unaudited interim consolidated results for the 6 months ended 31 August 2026 (24 Nov 2026), as reported by The National https://thenational.co.za/news/2026-11-24-stefanutti-stocks-triples-interim-earnings-as-construction-outlook-improves/ and Property Wheel https://propertywheel.co.za/2026/11/stefanutti-stocks-lifts-interim-revenue-to-r5-5bn-as-profit-rises-despite-zambia-losses/ (HEPS 102.03c; prior-period HEPS differs between the two reports, so left out; no dividend declared)"
   }
  ],
  "trading_statements": [
@@ -593,6 +651,48 @@
    "record": "2027-01-22",
    "pay": "2027-01-25",
    "source": "Reunert SENS — Consolidated financial statements and cash dividend declaration for the year ended 30 September 2026 (23 Nov 2026), via ShareData https://www.sharedata.co.za/v2/Scripts/SENS.aspx?id=567206 (gross final dividend No. 201; total for the year 383.0c)"
+  },
+  {
+   "t": "TSG.JO",
+   "period": "Interim",
+   "declared": "2026-11-25",
+   "amount_c": 15.0,
+   "ldt": "2026-12-14",
+   "ex": "2026-12-15",
+   "record": "2026-12-18",
+   "pay": "2026-12-21",
+   "source": "Tsogo Sun SENS — Unaudited condensed consolidated interim financial results and cash dividend declaration for the six months ended 30 September 2026 (25 Nov 2026), via InsidEntity https://www.insidentity.com/tsogo-sun-unaudited-condensed-consolidated-interim-financial-results-and-cash-dividend-declaration-for-the-six-months-ended-30-september-2026/ (gross interim cash dividend 15.0c; net 12.0c)"
+  },
+  {
+   "t": "KAL.JO",
+   "period": "Final",
+   "declared": "2026-11-25",
+   "amount_c": 200.0,
+   "ldt": "2027-02-09",
+   "ex": "2027-02-10",
+   "record": "2027-02-12",
+   "pay": "2027-02-15",
+   "source": "KAL Group SENS — Audited consolidated financial statements for the year ended 30 September 2026 and dividend declaration (25 Nov 2026), via InsidEntity https://www.insidentity.com/kal-group-audited-consolidated-financial-statements-for-the-year-ended-30-september-2026-and-dividend-declaration/ (gross final dividend 200.00c; net 160.00c)"
+  },
+  {
+   "t": "OCT.JO",
+   "period": "Final",
+   "declared": "2026-11-24",
+   "amount_c": 85.46706,
+   "ldt": "2026-12-14",
+   "ex": "2026-12-15",
+   "record": "2026-12-18",
+   "pay": "2026-12-21",
+   "source": "Octodec SENS — Audited consolidated annual financial statements and cash dividend declaration for the year ended 31 August 2026 (24 Nov 2026), via InsidEntity https://www.insidentity.com/octodec-investment-audited-consolidated-annual-financial-statements-and-cash-dividend-declaration-for-the-year-ended-31-august-2026/ (final cash dividend 85.46706c)"
+  },
+  {
+   "t": "DTC.JO",
+   "period": "Interim",
+   "declared": "2026-10-29",
+   "amount_c": 250.0,
+   "ex": "2026-12-02",
+   "record": "2026-12-04",
+   "source": "Datatec SENS — Finalisation announcement and ratio applicable to the scrip distribution (24 Nov 2026), via InsidEntity https://www.insidentity.com/datatec-finalisation-announcement-and-ratio-applicable-to-the-script-distribution-2/ (interim cash dividend 250c with scrip alternative, 4.40909 new shares per 100 held; results released 29 Oct 2026; last day to trade and payment date not shown in the source read)"
   }
  ]
 }
