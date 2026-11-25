@@ -107003,6 +107003,14 @@
    "rev_yago": 7685461000,
    "n_est": 17,
    "rcur": "CNY",
+   "has_res": true,
+   "desk": false,
+   "rev_actual": 7939923000.0,
+   "rev_prior": 7685461000.0,
+   "g": "not found",
+   "rev_surprise": -0.0361,
+   "rev_result": "miss",
+   "rev_yoy": 0.0331,
    "px_move": {
     "move": 0.0193,
     "from": "2026-11-23",
@@ -107494,7 +107502,8 @@
     "beat",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-25",
@@ -107526,7 +107535,8 @@
     "beat",
     "inline",
     "miss"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-25",
@@ -107558,7 +107568,8 @@
     "inline",
     "beat",
     "beat"
-   ]
+   ],
+   "has_res": true
   },
   {
    "date": "2026-11-25",
@@ -107639,6 +107650,7 @@
    "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
+   "has_res": true,
    "track": null,
    "lrc_rating": null,
    "covered": false
@@ -118684,6 +118696,6 @@
    "covered": false
   }
  ],
- "synced": "2026-11-25T06:23+02:00",
+ "synced": "2026-11-25T15:40+02:00",
  "coverage_note": "Ticked = on the LRC watchlist. Every company the LRC Stock Scanner tracks shows its trading and investment ratings. Updated after every scanner run."
 }
