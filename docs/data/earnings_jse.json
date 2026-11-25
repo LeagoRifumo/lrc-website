@@ -100,7 +100,7 @@
    },
    "t": "ANH.JO",
    "lists": [],
-   "idea": null,
+   "idea": "Technical setups",
    "v": "HOLD",
    "iv": "HOLD",
    "lrc_rating": null,
@@ -340,12 +340,11 @@
    },
    "t": "MKR.JO",
    "lists": [
-    "Trading SELL",
-    "Investment SELL"
+    "Trading SELL"
    ],
    "idea": null,
    "v": "SELL",
-   "iv": "STRONG SELL",
+   "iv": "SELL",
    "lrc_rating": null,
    "covered": true
   },
@@ -378,7 +377,7 @@
    "t": "LSK.JO",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "SELL",
    "iv": "SELL",
    "lrc_rating": null,
    "covered": false
@@ -418,7 +417,7 @@
    },
    "t": "ANG.JO",
    "lists": [],
-   "idea": "Score leaders",
+   "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
    "lrc_rating": null,
@@ -540,12 +539,11 @@
    },
    "t": "MKR.JO",
    "lists": [
-    "Trading SELL",
-    "Investment SELL"
+    "Trading SELL"
    ],
    "idea": null,
    "v": "SELL",
-   "iv": "STRONG SELL",
+   "iv": "SELL",
    "lrc_rating": null,
    "covered": true
   },
@@ -697,12 +695,14 @@
     "to": "2026-11-11"
    },
    "t": "DIB.JO",
-   "lists": [],
-   "idea": "Score leaders",
-   "v": "HOLD",
+   "lists": [
+    "Trading BUY"
+   ],
+   "idea": null,
+   "v": "STRONG BUY",
    "iv": "BUY",
    "lrc_rating": null,
-   "covered": false
+   "covered": true
   },
   {
    "date": "2026-11-11",
@@ -740,7 +740,7 @@
    "t": "PPE.JO",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "SELL",
    "iv": "SELL",
    "lrc_rating": null,
    "covered": false
@@ -947,12 +947,11 @@
    },
    "t": "MKR.JO",
    "lists": [
-    "Trading SELL",
-    "Investment SELL"
+    "Trading SELL"
    ],
    "idea": null,
    "v": "SELL",
-   "iv": "STRONG SELL",
+   "iv": "SELL",
    "lrc_rating": null,
    "covered": true
   },
@@ -1572,7 +1571,7 @@
    "t": "MRP.JO",
    "lists": [],
    "idea": null,
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -1755,12 +1754,17 @@
    "measure": null,
    "dps": null,
    "source": null,
+   "px_move": {
+    "move": -0.0258,
+    "from": "2026-11-23",
+    "to": "2026-11-25"
+   },
    "t": "SSK.JO",
    "lists": [
     "Trading BUY"
    ],
-   "idea": null,
-   "v": "BUY",
+   "idea": "Score leaders",
+   "v": "STRONG BUY",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": true
@@ -1793,11 +1797,16 @@
    "g": "given",
    "headline": "HEPS up 6.9% to 171.3c as revenue rises 11.9% to R105.9bn and financial services grow 35%; cautious outlook on weak consumers and port delays",
    "rev_yoy": 0.1183,
+   "px_move": {
+    "move": 0.0743,
+    "from": "2026-11-23",
+    "to": "2026-11-25"
+   },
    "t": "PPH.JO",
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "SELL",
+   "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
   },
@@ -2076,7 +2085,7 @@
    "when": "Not stated",
    "period": "Expected date (market data feed) — confirm on SENS",
    "eps_forecast": "",
-   "market_cap_bn": 33.0,
+   "market_cap_bn": 33.2,
    "auto": true,
    "t": "KRO.JO",
    "lists": [],
@@ -2096,6 +2105,6 @@
   }
  ],
  "note": "Partial list. New this week: Stefanutti Stocks (24 Nov), Alexforbes (30 Nov), Tharisa (30 Nov, indicative) and Momentum's operating update (23 Nov). SPAR's annual results are now confirmed for 4 Dec (SENS 19 Nov). Hyprop's 1 Dec pre-close date could not be re-checked (company site did not load). No company-published date in the window was found for Nutun, FirstRand, Nedbank, Absa, Anglo American, Sasol, Sibanye-Stillwater, Impala, Northam, Harmony, Gold Fields, Mondi, MTN, Remgro, Discovery, Growthpoint, Bidvest, Aspen or the other LRC watchlist names.",
- "synced": "2026-11-25T16:24+02:00",
+ "synced": "2026-11-25T17:04+02:00",
  "coverage_note": "Ticked = on the LRC watchlist. Every company the LRC Stock Scanner tracks shows its trading and investment ratings. Updated after every scanner run."
 }
