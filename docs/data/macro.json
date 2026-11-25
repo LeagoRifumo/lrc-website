@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-24T17:50:00+02:00",
+  "generated": "2026-11-25T17:50:00+02:00",
   "agent": "LRC Macro Desk",
   "method": "Surprise = actual minus forecast (consensus). If there is no forecast, actual minus previous. Impact for shares: a surprise in the 'better' direction larger than the threshold = Bullish, the other way = Bearish, otherwise Neutral.",
   "countries": {
@@ -242,14 +242,14 @@
           "better": "higher",
           "threshold": 0.2,
           "frequency": "quarterly",
-          "period": "Q3 2026 (advance)",
-          "release_date": "2026-10-29",
-          "actual": 3.4,
-          "forecast": 3.2,
+          "period": "Q3 2026 (second estimate)",
+          "release_date": "2026-11-25",
+          "actual": 4.3,
+          "forecast": null,
           "previous": 2.2,
-          "next_release": "2026-11-25",
+          "next_release": "2026-12-23",
           "source": "BEA",
-          "url": "https://bea.gov/news/2026/gdp-advance-estimate-3rd-quarter-2026"
+          "url": "https://www.stocktitan.net/articles/q3-2026-gdp-second-estimate"
         },
         {
           "key": "unemployment",
@@ -290,14 +290,14 @@
           "better": "lower",
           "threshold": 5,
           "frequency": "weekly",
-          "period": "w/e 14 Nov",
-          "release_date": "2026-11-19",
-          "actual": 203,
-          "forecast": null,
+          "period": "w/e 21 Nov",
+          "release_date": "2026-11-25",
+          "actual": 189,
+          "forecast": 200,
           "previous": 202,
-          "next_release": "2026-11-25",
+          "next_release": null,
           "source": "US Department of Labor",
-          "url": "https://www.investing.com/news/economy-news/us-weekly-jobless-claims-increase-slightly-5039110"
+          "url": "https://www.roic.ai/news/us-jobless-claims-fall-to-189000-beating-expectations-11-25-2026"
         },
         {
           "key": "cpi",
@@ -354,14 +354,14 @@
           "better": "lower",
           "threshold": 0.1,
           "frequency": "monthly",
-          "period": "Sep 2026",
-          "release_date": "2026-10-29",
-          "actual": 3.1,
-          "forecast": 3.1,
-          "previous": 3.0,
-          "next_release": "2026-11-25",
+          "period": "Oct 2026",
+          "release_date": "2026-11-25",
+          "actual": 3.3,
+          "forecast": 3.2,
+          "previous": 3.1,
+          "next_release": "2026-12-23",
           "source": "BEA",
-          "url": "https://bea.gov/news/2026/personal-income-and-outlays-september-2026"
+          "url": "https://www.bea.gov/news/2026/personal-income-and-outlays-october-2026"
         },
         {
           "key": "fed",
