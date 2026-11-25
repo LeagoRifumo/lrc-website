@@ -1,27 +1,31 @@
 {
- "edition": "Evening update · Tuesday 24 November 2026 18:10",
- "generated": "2026-11-24T18:10+02:00",
- "covers": "US open and first hour on Tue 24 Nov 2026, US consumer confidence, JSE and rand during Tuesday",
+ "edition": "Midday update · Wednesday 25 November 2026 10:15",
+ "generated": "2026-11-25T10:15+02:00",
+ "covers": "US close on Tue 24 Nov 2026, Dell results after the US close, Prosus and Naspers interim results and the JSE/rand morning on Wed 25 Nov 2026",
  "agent": "LRC News Desk",
- "headline": "US consumer confidence jumps to 103.3, far above forecasts, while chip stocks give back part of Monday's rally; Nvidia down about 5.6%",
- "summary": "In South Africa the rand weakened to about R17.54 per dollar by 16:03 SAST and the Top 40 was down about 0.6%, while the SARB's leading indicator fell 0.3% in September (Reuters via MarketScreener, 24 Nov 2026). In the US, Conference Board consumer confidence rose to 103.3 in November from 91.9 against a 92.1 forecast, but chip stocks fell at the open, leaving the Nasdaq down 1.55% and the S&P 500 down 0.61% around 17:17 SAST, with the Dow up 0.37% (Conference Board; Yahoo Finance, 24 Nov 2026). Gold eased 1.3% to about $3,605 an ounce; for South Africa the next tests are US PCE inflation on Wednesday and the Moody's and S&P reviews late on Friday 27 Nov.",
+ "headline": "Prosus and Naspers report: adjusted EPS up 12% but profit down 27% as iFood spending bites; Dell revenue doubles to $54.9 billion",
+ "summary": "In South Africa the rand was at about R17.63 per dollar early on Wednesday, about 0.5% weaker, as markets wait for US PCE inflation, while Prosus reported a 27% fall in first-half profit from continuing operations to $4.1 billion alongside a 12% rise in adjusted EPS (Reuters via CNBC Africa; Investing.com, 25 Nov 2026). In the US, Tuesday ended with the Nasdaq down 1.45% and the S&P 500 down 0.48% while the Dow rose 0.87% to back above 50,000, and Dell rose about 4% after hours on record results (Reuters via MarketScreener; Investing.com, 24 Nov 2026). Gold steadied near $3,545 an ounce after Tuesday's fall of more than 2%; the next tests are US PCE inflation at 15:30 SAST today and the Moody's and S&P reviews of South Africa late on Friday 27 Nov.",
  "sections": [
   {
    "name": "Breaking",
    "items": [
     {
-     "title": "US consumer confidence surges to 103.3, the highest since January 2025",
-     "summary": "The Conference Board index rose 11.4 points to 103.3 in November from 91.9 in October (Conference Board, 24 Nov 2026), well above the 92.1 consensus listed by Yahoo Finance the same morning. The Conference Board's economist linked part of the jump to lower uncertainty after the midterm elections. A stronger consumer can keep pressure on the Fed ahead of Wednesday's PCE inflation data.",
-     "source": "The Conference Board (PR Newswire), 24 Nov 2026",
-     "url": "https://www.prnewswire.com/news-releases/us-consumer-confidence-surged-in-november-302949447.html"
+     "title": "Prosus first-half profit falls 27% as Tencent sale gains shrink; adjusted EPS up 12%",
+     "summary": "For the six months to 30 September, Prosus revenue rose 59% to $5.7 billion (10% excluding deals, in local currency), adjusted earnings rose 7% to $4.3 billion and adjusted EPS rose 12%. Profit from continuing operations fell 27% to $4.1 billion because gains from selling Tencent shares were $2.5 billion lower, and there was an IFRS operating loss of $133 million against a $219 million profit a year ago. Free cash inflow fell to $1.1 billion from $1.3 billion; excluding a $1.4 billion Tencent dividend there was a $339 million outflow. The $5 billion FY27 buyback is on track (Investing.com, 25 Nov 2026).",
+     "source": "Investing.com, 25 Nov 2026",
+     "url": "https://uk.investing.com/news/earnings/prosus-adjusted-earnings-rise-as-fooddelivery-spending-weighs-on-profit-5003334",
+     "tickers": [
+      "PRX.JO",
+      "NPN.JO"
+     ]
     },
     {
-     "title": "Nvidia falls about 5.6% after Monday's 31.5% jump; chip stocks slide",
-     "summary": "Nvidia was down 5.64% against Monday's close at 10:01 New York time (17:01 SAST), giving back part of the 31.48% gain that followed Jensen Huang's reinstatement as CEO. AMD was down 8.03%, Micron 7.67% and Analog Devices 15.59% after its results (StockTitan, 24 Nov 2026).",
-     "source": "StockTitan, 24 Nov 2026",
-     "url": "https://stocktitan.net/articles/stock-market-today-live-november-24-2026",
+     "title": "Dell revenue doubles to $54.9 billion; full-year outlook raised to $202 billion",
+     "summary": "Dell's third-quarter revenue rose 103% to $54.9 billion and adjusted EPS was $9.45 against a $6.56 consensus. AI server revenue was $22.0 billion, AI server orders were $60.2 billion and the backlog reached a record $132.3 billion. Dell raised full-year revenue guidance by $10 billion to $202 billion and added $25 billion to its buyback. The shares fell 11.83% in the regular session to $295.28, then rose 4.03% after hours to $307.19 (Investing.com, 24 Nov 2026).",
+     "source": "Investing.com, 24 Nov 2026",
+     "url": "https://www.investing.com/news/company-news/dell-q3-fy27-slides-revenue-doubles-ai-backlog-hits-132b-93CH-5049313",
      "tickers": [
-      "NVDA"
+      "DELL"
      ]
     }
    ]
@@ -30,28 +34,16 @@
    "name": "US markets",
    "items": [
     {
-     "title": "Nasdaq down 1.55%, S&P 500 down 0.61%, Dow up 0.37% in the first hour",
-     "summary": "Around 10:17 New York time (17:17 SAST) the S&P 500 was at 7,192.92 (-0.61%), the Nasdaq at 23,716.58 (-1.55%) and the Dow at 49,778.88 (+0.37%); the VIX rose 2.7% to 27.35. The US 10-year yield was little changed at 4.916% (Yahoo Finance, 24 Nov 2026). This follows Monday's best session since April 2025.",
-     "source": "Yahoo Finance, 24 Nov 2026",
-     "url": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-november-24-dow-sp-500-nasdaq-chip-stocks-nvidia-140629923.html"
+     "title": "Nasdaq falls 1.45%, S&P 500 down 0.48%; Dow up 0.87% to 50,028.79",
+     "summary": "Preliminary closing figures on Tuesday: S&P 500 7,202.45 (-0.48%), Nasdaq 23,740.52 (-1.45%), Dow 50,028.79 (+0.87%). Nvidia fell 5.86% to $155.38 and Analog Devices fell 17.37%, giving back part of Monday's chip rally (Reuters via MarketScreener, 24 Nov 2026).",
+     "source": "Reuters via MarketScreener, 24 Nov 2026",
+     "url": "https://www.marketscreener.com/news/nasdaq-s-p-500-end-lower-following-monday-s-nvidia-fueled-rally-ce7851dbdd81f720"
     },
     {
-     "title": "Analog Devices falls 15.6% despite 42% revenue growth; HPE down 13%",
-     "summary": "Analog Devices reported revenue up 42% to $4.37 billion and guided to $4.4 billion plus or minus $150 million, but the shares were down 15.59% at 10:01 New York time. HPE was down 13.14% after its outlook showed lower margins (StockTitan, 24 Nov 2026).",
-     "source": "StockTitan, 24 Nov 2026",
-     "url": "https://stocktitan.net/articles/stock-market-today-live-november-24-2026"
-    },
-    {
-     "title": "Sanofi agrees to buy Insmed for about $41 billion; retailers rally",
-     "summary": "Sanofi will pay $175 a share in cash for Insmed, still subject to approvals; Insmed was up 14.39%. Abercrombie & Fitch (+22.47%), Dick's (+14.28%) and Dollar Tree (+9.86%) rose after results (StockTitan, 24 Nov 2026, 10:01 New York time).",
-     "source": "StockTitan, 24 Nov 2026",
-     "url": "https://stocktitan.net/articles/stock-market-today-live-november-24-2026"
-    },
-    {
-     "title": "Traders price a December Fed rate hike; PCE and GDP on Wednesday",
-     "summary": "Yahoo Finance reported traders pricing a 95% chance of a 25 basis point Fed hike in December (24 Nov 2026). US GDP and PCE inflation are due at 15:30 SAST on Wednesday 25 Nov; US markets are closed on Thursday and close early on Friday.",
-     "source": "Yahoo Finance; StockTitan, 24 Nov 2026",
-     "url": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-november-24-dow-sp-500-nasdaq-chip-stocks-nvidia-140629923.html"
+     "title": "US PCE inflation today is the last big test before the December Fed meeting",
+     "summary": "Markets price a 97% chance of a Fed rate hike in December and 66% for January, according to ETM Analytics, and PCE is the last key inflation data before the Fed's final meeting of 2026 (Reuters via CNBC Africa, 25 Nov 2026). The data is due at 15:30 SAST; US markets are closed on Thursday and close early on Friday.",
+     "source": "Reuters via CNBC Africa, 25 Nov 2026",
+     "url": "https://www.cnbcafrica.com/2026/south-african-rand-eases-with-us-inflation-data-in-focus"
     }
    ]
   },
@@ -59,16 +51,20 @@
    "name": "South Africa",
    "items": [
     {
-     "title": "Rand weakens about 0.8% to R17.54; Top 40 down about 0.6%",
-     "summary": "The rand traded at 17.5399 per dollar at 16:03 SAST, about 0.8% weaker than Monday's close, and the Top 40 was down about 0.6%. The 2035 government bond yield rose half a basis point to 8.665% (Reuters via MarketScreener, 24 Nov 2026).",
-     "source": "Reuters via MarketScreener, 24 Nov 2026",
-     "url": "https://www.marketscreener.com/news/south-african-rand-weakens-as-focus-shifts-to-us-inflation-data-ce7851dbdb80f520"
+     "title": "Rand eases about 0.5% to R17.63; 2035 bond steady at 8.66%",
+     "summary": "By 08:01 SAST the rand traded at 17.6275 per dollar, down about 0.5% from its previous close, and the 2035 government bond yield was steady at 8.66% as investors waited for US inflation data (Reuters via CNBC Africa, 25 Nov 2026).",
+     "source": "Reuters via CNBC Africa, 25 Nov 2026",
+     "url": "https://www.cnbcafrica.com/2026/south-african-rand-eases-with-us-inflation-data-in-focus"
     },
     {
-     "title": "SARB leading indicator falls 0.3% in September",
-     "summary": "The Reserve Bank's composite leading business cycle indicator fell 0.3% month on month in September, and the Treasury sold R1.95 billion of bonds at its weekly auction (Reuters via MarketScreener, 24 Nov 2026).",
-     "source": "Reuters via MarketScreener, 24 Nov 2026",
-     "url": "https://www.marketscreener.com/news/south-african-rand-weakens-as-focus-shifts-to-us-inflation-data-ce7851dbdb80f520"
+     "title": "Prosus: iFood orders up 11% but its profit drops as competition heats up",
+     "summary": "iFood's monthly orders rose 11% to 92 million in September as it spends to fend off 99Food and Meituan's Keeta in Brazil; the company said the spending weighs on near-term profit and cash flow but is right for long-term growth. Just Eat Takeaway is expected to make adjusted EBITDA of about $100 million, excluding one-off costs (Investing.com, 25 Nov 2026).",
+     "source": "Investing.com, 25 Nov 2026",
+     "url": "https://uk.investing.com/news/earnings/prosus-adjusted-earnings-rise-as-fooddelivery-spending-weighs-on-profit-5003334",
+     "tickers": [
+      "PRX.JO",
+      "NPN.JO"
+     ]
     },
     {
      "title": "Moody's and S&P reviews of South Africa due late on Friday 27 Nov",
@@ -82,16 +78,10 @@
    "name": "Forex & commodities",
    "items": [
     {
-     "title": "Gold eases 1.3% to about $3,605",
-     "summary": "Gold futures were at $3,605.10, down $46.30 (-1.27%), around 17:17 SAST, after Monday's 3.5% rally to about $3,657 (Yahoo Finance; PSG Wealth, 24 Nov 2026).",
-     "source": "Yahoo Finance; PSG Wealth, 24 Nov 2026",
-     "url": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-november-24-dow-sp-500-nasdaq-chip-stocks-nvidia-140629923.html"
-    },
-    {
-     "title": "Brent near $89, WTI near $80 in Asian trade",
-     "summary": "Brent was at $89.09 and WTI at $80.16 during Asian trade on Tuesday, little changed after Monday's fall to three-month lows (TipRanks, 24 Nov 2026).",
-     "source": "TipRanks, 24 Nov 2026",
-     "url": "https://www.tipranks.com/news/stock-market-today-nov-24-markets-turn-jittery-even-as-huang-returns-to-nvidia"
+     "title": "Gold steadies near $3,545 after a 2% drop; Fed hike bets weigh",
+     "summary": "Gold was at $3,544.70 an ounce in early reference rates, up 0.83% from the previous close (EBNewsDaily, 25 Nov 2026, 07:22 SAST), after falling more than 2% on Tuesday (Reuters via CNBC Africa, 25 Nov 2026). The same reference rates put the euro at R19.22 and the pound at R22.98, with oil at $80.76, down 3.83% (benchmark not stated).",
+     "source": "EBNewsDaily; Reuters via CNBC Africa, 25 Nov 2026",
+     "url": "https://www.ebnewsdaily.co.za/2026/11/25/rand-exchange-rates-today-usd-gbp-eur-and-aud-on-25-november-2026/"
     }
    ]
   },
@@ -99,32 +89,43 @@
    "name": "Our coverage",
    "items": [
     {
-     "title": "Nvidia down about 5.6% on Tuesday (rating BUY, unchanged)",
-     "summary": "The pullback follows Monday's 31.48% jump on Jensen Huang's return (StockTitan, 24 Nov 2026). The shares remain well below our watchlist fair value of $262.56; the rating is unchanged.",
-     "source": "StockTitan, 24 Nov 2026",
-     "url": "https://stocktitan.net/articles/stock-market-today-live-november-24-2026",
+     "title": "Prosus and Naspers report half-year results (LRC rating HOLD for both, unchanged)",
+     "summary": "Adjusted EPS rose 12% and the buyback is on track, but cash flow before the Tencent dividend turned negative as iFood spending rose (Investing.com, 25 Nov 2026). Naspers closed at R638.90 and Prosus at R597.40 on Tuesday before the results (LRC Stock Scanner, 24 Nov 2026). Prosus's 12% adjusted EPS growth is inside the 10.1–14.6% range it guided on 19 Nov (TechCentral, 20 Nov 2026); the HOLD ratings are not changed by this note.",
+     "source": "Investing.com, 25 Nov 2026",
+     "url": "https://uk.investing.com/news/earnings/prosus-adjusted-earnings-rise-as-fooddelivery-spending-weighs-on-profit-5003334",
      "tickers": [
-      "NVDA"
+      "PRX.JO",
+      "NPN.JO"
      ]
     },
     {
-     "title": "Dell reports after the US close tonight (rating SELL, unchanged)",
-     "summary": "Dell fell about 7% in pre-market trade ahead of its results, which are due after the close with the call at 23:30 SAST (Yahoo Finance; StockTitan, 24 Nov 2026). Our SELL rating is unchanged; the results will be covered in the morning brief.",
-     "source": "Yahoo Finance, 24 Nov 2026",
-     "url": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-november-24-dow-sp-500-nasdaq-chip-stocks-nvidia-140629923.html",
+     "title": "Dell beats and raises, up about 4% after hours (LRC rating HOLD)",
+     "summary": "Record revenue of $54.9 billion and a $202 billion full-year outlook came after an 11.83% fall in the regular session; the after-hours rise to $307.19 recovers only part of that (Investing.com, 24 Nov 2026). The LRC Stock Scanner rating is HOLD; the rating is not changed by this note.",
+     "source": "Investing.com, 24 Nov 2026",
+     "url": "https://www.investing.com/news/company-news/dell-q3-fy27-slides-revenue-doubles-ai-backlog-hits-132b-93CH-5049313",
      "tickers": [
       "DELL"
+     ]
+    },
+    {
+     "title": "Nvidia falls 5.86% to $155.38 (LRC rating HOLD)",
+     "summary": "Nvidia gave back part of Monday's rally on Tuesday as governance and political questions around Jensen Huang's return weighed (Reuters via MarketScreener, 24 Nov 2026). The LRC Stock Scanner rating is HOLD, unchanged by this note.",
+     "source": "Reuters via MarketScreener, 24 Nov 2026",
+     "url": "https://www.marketscreener.com/news/nasdaq-s-p-500-end-lower-following-monday-s-nvidia-fueled-rally-ce7851dbdd81f720",
+     "tickers": [
+      "NVDA"
      ]
     }
    ]
   }
  ],
  "watch_today": [
-  "Dell, Workday, HP and Autodesk results after the US close (from 23:00 SAST)",
-  "Whether chip stocks stabilise after Tuesday's pullback from Monday's rally",
-  "US GDP revision and PCE inflation on Wed 25 Nov at 15:30 SAST",
+  "US PCE inflation and GDP revision at 15:30 SAST",
+  "JSE reaction to Prosus and Naspers results",
+  "Deere results due today (LRC rating SELL)",
+  "Whether Dell's after-hours gain holds at the US open",
   "US markets closed Thu 26 Nov; early close Fri 27 Nov",
   "Moody's and S&P reviews of South Africa late on Fri 27 Nov",
-  "Rand near R17.54 per dollar; gold near $3,605"
+  "Rand near R17.63 per dollar; gold near $3,545"
  ]
 }
