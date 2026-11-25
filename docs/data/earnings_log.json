@@ -3653,7 +3653,13 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 7.0
+"market_cap_bn": 7.0,
+"eps_actual": 3.82,
+"eps_est": 3.148,
+"surprise": 0.2135,
+"result": "beat",
+"quarter_end": "2026-10-31",
+"result_done": true
 },
 "ANG.JO|2026-11-05": {
 "t": "ANG.JO",
@@ -6461,7 +6467,13 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 51.2
+"market_cap_bn": 51.2,
+"eps_actual": 1.86,
+"eps_est": 1.727,
+"surprise": 0.0771,
+"result": "beat",
+"quarter_end": "2026-10-31",
+"result_done": true
 },
 "BABA|2026-11-19": {
 "t": "BABA",
@@ -10554,7 +10566,13 @@
 "eps_yago": 2.16,
 "n_est": 11,
 "rcur": "CNY",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 2.34,
+"eps_est": 2.238,
+"surprise": 0.0456,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "B|2026-11-09": {
 "t": "B",
@@ -11953,7 +11971,13 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 2.4
+"market_cap_bn": 2.4,
+"eps_actual": -0.04,
+"eps_est": -0.05847,
+"surprise": 0.3159,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "CENT|2026-11-23": {
 "t": "CENT",
@@ -11993,7 +12017,13 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 2.9
+"market_cap_bn": 2.9,
+"eps_actual": -0.04,
+"eps_est": -0.05847,
+"surprise": 0.3159,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "CENX|2026-11-05": {
 "t": "CENX",
@@ -13250,7 +13280,13 @@
 "eps_yago": -0.0857,
 "n_est": 1,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.9441,
+"eps_est": 0.7233,
+"surprise": 0.3052,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "CMBT|2026-11-26": {
 "t": "CMBT",
@@ -16859,7 +16895,13 @@
 "eps_yago": 3.93,
 "n_est": 13,
 "rcur": "USD",
-"qend": "2026-10-31"
+"qend": "2026-10-31",
+"eps_actual": 3.89,
+"eps_est": 4.054,
+"surprise": -0.0404,
+"result": "miss",
+"quarter_end": "2026-10-31",
+"result_done": true
 },
 "DFIN|2026-10-29": {
 "t": "DFIN",
@@ -18679,7 +18721,13 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 7.1
+"market_cap_bn": 7.1,
+"eps_actual": 5.23,
+"eps_est": 4.567,
+"surprise": 0.1451,
+"result": "beat",
+"quarter_end": "2026-10-31",
+"result_done": true
 },
 "D|2026-10-30": {
 "t": "D",
@@ -34278,7 +34326,13 @@
 "eps_yago": -0.36,
 "n_est": 10,
 "rcur": "CNY",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": -0.12,
+"eps_est": -0.8357,
+"surprise": 0.8564,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "LKFN|2027-01-25": {
 "t": "LKFN",
@@ -41110,7 +41164,13 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 17.7
+"market_cap_bn": 17.7,
+"eps_actual": 0.73,
+"eps_est": 0.605,
+"surprise": 0.2065,
+"result": "beat",
+"quarter_end": "2026-10-31",
+"result_done": true
 },
 "NTRA|2026-11-05": {
 "t": "NTRA",
@@ -60278,7 +60338,13 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 51.5
+"market_cap_bn": 51.5,
+"eps_actual": 2.35,
+"eps_est": 2.222,
+"surprise": 0.0577,
+"result": "beat",
+"quarter_end": "2026-07-31",
+"result_done": true
 },
 "VEEV|2026-12-03": {
 "t": "VEEV",
