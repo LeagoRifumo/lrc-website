@@ -100,7 +100,7 @@
    },
    "t": "ANH.JO",
    "lists": [],
-   "idea": "Technical setups",
+   "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
    "lrc_rating": null,
@@ -204,7 +204,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "SELL",
+   "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
   },
@@ -698,7 +698,7 @@
    },
    "t": "DIB.JO",
    "lists": [],
-   "idea": "Technical setups",
+   "idea": "Score leaders",
    "v": "HOLD",
    "iv": "BUY",
    "lrc_rating": null,
@@ -740,7 +740,7 @@
    "t": "PPE.JO",
    "lists": [],
    "idea": null,
-   "v": "SELL",
+   "v": "HOLD",
    "iv": "SELL",
    "lrc_rating": null,
    "covered": false
@@ -1389,7 +1389,7 @@
    "lists": [
     "Trading BUY"
    ],
-   "idea": "Score leaders",
+   "idea": null,
    "v": "STRONG BUY",
    "iv": "BUY",
    "lrc_rating": null,
@@ -1598,6 +1598,11 @@
    "measure": null,
    "dps": null,
    "source": null,
+   "px_move": {
+    "move": -0.0917,
+    "from": "2026-11-20",
+    "to": "2026-11-24"
+   },
    "t": "MTM.JO",
    "lists": [],
    "idea": null,
@@ -1634,6 +1639,11 @@
    "g": "given",
    "headline": "Adjusted HEPS up 17.1% to 160.6c on revenue up 4.2% to R27.4bn; dividend up 17.6% to 100c; qualitative outlook only",
    "rev_yoy": 0.0416,
+   "px_move": {
+    "move": 0.0461,
+    "from": "2026-11-20",
+    "to": "2026-11-24"
+   },
    "t": "NTC.JO",
    "lists": [],
    "idea": null,
@@ -1670,6 +1680,11 @@
    "g": "given",
    "headline": "HEPS up 102% to 4,439c as cheaper feed lifts poultry profit; revenue up 2.8% to R23.3bn; dividend doubled to 2,220c",
    "rev_yoy": 0.0283,
+   "px_move": {
+    "move": 0.0027,
+    "from": "2026-11-20",
+    "to": "2026-11-24"
+   },
    "t": "ARL.JO",
    "lists": [],
    "idea": null,
@@ -1699,6 +1714,11 @@
    "measure": "HEPS",
    "dps": 383.0,
    "source": "Reunert SENS — Consolidated financial statements and cash dividend declaration for the year ended 30 September 2026 (23 Nov 2026), via ShareData https://www.sharedata.co.za/v2/Scripts/SENS.aspx?id=567206 (HEPS from continuing operations, down 48%)",
+   "px_move": {
+    "move": 0.0275,
+    "from": "2026-11-20",
+    "to": "2026-11-24"
+   },
    "t": "RLO.JO",
    "lists": [],
    "idea": null,
@@ -1763,7 +1783,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "SELL",
    "lrc_rating": null,
    "covered": false
   },
@@ -1971,12 +1991,10 @@
    "period": "Annual results to 30 Sep 2026 (online presentation 10:00-11:30)",
    "eps_forecast": "",
    "market_cap_bn": 4.3,
-   "covered": true,
+   "covered": false,
    "lrc_rating": null,
    "t": "NPK.JO",
-   "lists": [
-    "Trading BUY"
-   ],
+   "lists": [],
    "idea": null,
    "v": "BUY",
    "iv": "HOLD",
@@ -2048,7 +2066,7 @@
    "auto": true,
    "t": "KRO.JO",
    "lists": [],
-   "idea": null,
+   "idea": "Technical setups",
    "v": "HOLD",
    "iv": "HOLD",
    "rev_est": 1685406240,
@@ -2064,6 +2082,6 @@
   }
  ],
  "note": "Partial list. New this week: Stefanutti Stocks (24 Nov), Alexforbes (30 Nov), Tharisa (30 Nov, indicative) and Momentum's operating update (23 Nov). SPAR's annual results are now confirmed for 4 Dec (SENS 19 Nov). Hyprop's 1 Dec pre-close date could not be re-checked (company site did not load). No company-published date in the window was found for Nutun, FirstRand, Nedbank, Absa, Anglo American, Sasol, Sibanye-Stillwater, Impala, Northam, Harmony, Gold Fields, Mondi, MTN, Remgro, Discovery, Growthpoint, Bidvest, Aspen or the other LRC watchlist names.",
- "synced": "2026-11-25T01:18+02:00",
+ "synced": "2026-11-25T02:20+02:00",
  "coverage_note": "Ticked = on the LRC watchlist. Every company the LRC Stock Scanner tracks shows its trading and investment ratings. Updated after every scanner run."
 }
