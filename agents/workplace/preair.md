@@ -13,6 +13,10 @@ wait 90 seconds and pull again.
    A day-trading level that already triggered, hit its stop or was overtaken by news: update the row or set
    "Cancel if" to "CANCELLED: <why, max 5 words>", and keep the live watchlist in step. Breaking story = new first line of "news". Mark changed segments
    "updated": true. Change the thumbnail words only if no longer true.
+   STORIES: every changed or new script line gets its story updated or written (rules in producer.md, STORIES);
+   keep each story's "point" equal to its line, in line order; drop stories whose line was removed. If the show has
+   no "stories" at all, write them for "intro", "daytrade" and "news" first, then the rest as time allows —
+   finishing the update on time matters more than the last stories.
 4. Set "status":"updated", "updatedAt": now ISO, "liveUpdate": {"at": now ISO, "notes": max 2 short lines (12 words
    each) the presenter sees first}. Op: set the whole show document back. Push.
 Finish with the liveUpdate notes and the segments you changed.

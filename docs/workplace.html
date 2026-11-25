@@ -221,6 +221,10 @@ tr:last-child td{border-bottom:0}
 .prompter p{margin:0 0 .8em}
 .prompter ul.pts{margin:0 0 .6em;padding-left:1.1em}.prompter ul.pts li{margin:0 0 .35em}
 ul.pts{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:16px;line-height:1.35}
+button.pt{all:unset;cursor:pointer;border-bottom:1px dashed color-mix(in srgb,var(--brass) 60%,transparent);display:inline}button.pt:hover,button.pt:focus-visible{color:var(--brass)}button.pt:focus-visible{outline:2px solid var(--brass);outline-offset:2px}
+button.pt .pt-go{font-size:.75em;color:var(--brass);margin-left:6px;white-space:nowrap}.prompter button.pt{border-bottom-color:rgba(214,164,71,.45)}.prompter button.pt .pt-go{color:#d6a447}
+.story-point{font:800 clamp(24px,3.4vw,44px)/1.2 var(--font-display);color:#ffd23f;margin:0 0 .6em}.story-meta{font:500 16px var(--font-body);color:#97a59e;margin:0 0 1.4em}.story-meta a{color:#97a59e}
+.story-miss{font:500 clamp(18px,2vw,26px)/1.4 var(--font-body);color:#e0b34c;border:1px dashed #6b5a2a;border-radius:10px;padding:16px 20px}
 .charts{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
 .runsheet{display:flex;gap:6px;flex-wrap:wrap}.runsheet a{display:flex;gap:6px;align-items:center;padding:6px 10px;border:1px solid var(--line);border-radius:8px;text-decoration:none;color:var(--ink);font-size:13px}
 .runsheet a b{font-family:var(--font-mono,monospace);color:var(--accent,#c9a227)}.runsheet a.hot{border-color:#c9a227;background:rgba(201,162,39,.12)}
@@ -974,12 +978,16 @@ function viewShow() {
     <div class="panel" style="padding:10px"><canvas id="thumbprev" width="1280" height="720" style="width:100%;height:auto;border-radius:8px;display:block" aria-label="Show thumbnail"></canvas></div></div>
   <div class="panel"><div class="subtle" style="font-weight:600;color:var(--ink);margin-bottom:8px">Run of show</div><div class="runsheet">${segs.map((x, i) => `<a href="#seg-${i}" class="${x.id === "daytrade" ? "hot" : ""}"><b>${esc(x.start || "")}</b>${esc(x.title)}<span class="subtle">${x.minutes || 0}m</span></a>`).join("")}</div></div>
   <div class="stack">${segs.map((x, i) => `<article class="idea" id="seg-${i}"><div class="idea-h"><span class="asset">${esc(x.start || "")}</span><b style="font-family:var(--font-display);font-size:17px">${esc(x.title)}</b><span class="pill outline">${x.minutes || 0} min</span>${x.updated ? `<span class="pill live">Updated</span>` : ""}</div>
-    <div class="halves${x.id === "daytrade" ? " full" : ""}"><div class="half"><h3>Talking points</h3>${ptsHtml(x.script)}${chartBtns(x.charts)}</div><div class="half"><h3>On screen</h3>${(x.cards || []).map(cardHtml).join("") || `<span class="subtle">Presenter on camera.</span>`}
+    <div class="halves${x.id === "daytrade" ? " full" : ""}"><div class="half"><h3>Talking points <span class="subtle" style="font-weight:500">· tap a point for its story</span></h3>${ptsHtml(x.script, cur.id, i)}${chartBtns(x.charts)}</div><div class="half"><h3>On screen</h3>${(x.cards || []).map(cardHtml).join("") || `<span class="subtle">Presenter on camera.</span>`}
     ${(x.sources || []).length ? `<div class="subtle">Sources: ${x.sources.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title || "link")}</a>`).join(" · ")}</div>` : ""}</div></div></article>`).join("")}</div>
   <p class="subtle">${esc(cur.disclaimer || "Research and education, not financial advice.")}</p>`;
 }
 const showLines = t => String(t || "").split(/\n+/).map(x => x.trim()).filter(Boolean);
-const ptsHtml = t => `<ul class="pts">${showLines(t).map(l => `<li>${esc(l)}</li>`).join("")}</ul>`;
+const ptsHtml = (t, showId, segI) => `<ul class="pts">${showLines(t).map((l, k) => `<li>${showId == null ? esc(l) : `<button type="button" class="pt" data-act="story" data-id="${esc(showId)}" data-seg="${segI}" data-pt="${k}">${esc(l)}<span class="pt-go" aria-hidden="true">▶ story</span></button>`}</li>`).join("")}</ul>`;
+/* every talking point (a line of a segment's script) can have a story: segment.stories[k] matches script line k */
+function storyFor(seg, k) { const lines = showLines(seg.script), st = seg.stories || [], line = lines[k] || "";
+  return st.find(x => x && x.point && x.point.trim() === line) || st[k] || null; }
+function allPoints(show) { const out = []; (show.segments || []).forEach((x, i) => showLines(x.script).forEach((l, k) => out.push({ seg: i, pt: k }))); return out; }
 const tvUrl = c => `https://www.tradingview.com/chart/?symbol=${encodeURIComponent(c.symbol || "")}${c.tf ? `&interval=${encodeURIComponent(c.tf)}` : ""}`;
 const chartBtns = cs => (cs || []).length ? `<div class="charts">${cs.map(c => `<a class="btn sm" href="${esc(tvUrl(c))}" target="_blank" rel="noopener">📈 ${esc(c.label || c.symbol)}${c.tf ? ` · ${esc(/^\d+$/.test(c.tf) ? c.tf + "m" : c.tf)}` : ""}</a>`).join("")}</div>` : "";
 function cardHtml(c) {
@@ -1096,14 +1104,32 @@ function openStage(mode, id) {
   el.setAttribute("role", "dialog"); el.setAttribute("aria-modal", "true"); stageRender();
   try { el.requestFullscreen && el.requestFullscreen().catch(() => {}); } catch (e) {}
 }
-function closeStage() { cancelAnimationFrame(ST.raf); ST.run = false; const el = $("#stage"); if (el) el.remove(); try { document.fullscreenElement && document.exitFullscreen(); } catch (e) {} ST.mode = null; }
+function openStory(id, seg, pt) {
+  const back = ST.mode === "prompter"; cancelAnimationFrame(ST.raf);
+  if (!ST.mode) openStage("story", id); ST.mode = "story"; ST.id = id; ST.seg = +seg; ST.pt = +pt; ST.run = false; ST.t0 = Date.now(); ST.back = back || ST.back; stageRender();
+  const pr = $("#prompter"); if (pr) pr.scrollTop = 0;
+}
+function stepStory(d) { const show = S.shows[ST.id]; if (!show) return; const all = allPoints(show), pos = all.findIndex(p => p.seg === ST.seg && p.pt === ST.pt), nx = all[pos + d]; if (nx) openStory(ST.id, nx.seg, nx.pt); }
+function closeStage() { ST.back = false; cancelAnimationFrame(ST.raf); ST.run = false; const el = $("#stage"); if (el) el.remove(); try { document.fullscreenElement && document.exitFullscreen(); } catch (e) {} ST.mode = null; }
 function stageRender() {
   const show = S.shows[ST.id], el = $("#stage"); if (!show || !el) return;
   const segs = show.segments || [];
+  if (ST.mode === "story") {
+    const seg = segs[ST.seg] || {}, line = showLines(seg.script)[ST.pt] || "", sto = storyFor(seg, ST.pt), all = allPoints(show), pos = all.findIndex(p => p.seg === ST.seg && p.pt === ST.pt);
+    const srcs = ((sto && sto.sources) || []).concat(sto ? [] : (seg.sources || [])).filter(x => x && x.url);
+    const body = sto && sto.story ? String(sto.story).split(/\n+/).map(x => x.trim()).filter(Boolean).map(pp => `<p>${esc(pp)}</p>`).join("")
+      : `<div class="story-miss">No full story was written for this point yet. Stories come with each new show from the Producer; until then, use the segment's cards and sources.</div>${(seg.cards || []).map(cardHtml).join("")}`;
+    el.innerHTML = `<div class="stage-bar"><b>Story · ${esc(seg.title || "")}</b><span id="stclock" class="mono"></span><span class="mono" style="color:#97a59e">${pos + 1} / ${all.length}</span><span style="flex:1"></span>
+      <button class="btn sm" data-act="st-pprev" ${pos <= 0 ? "disabled" : ""}>‹ Previous point</button><button class="btn sm" data-act="st-pnext" ${pos >= all.length - 1 ? "disabled" : ""}>Next point ›</button>
+      <button class="btn sm" data-act="st-slower">Slower</button><button class="btn sm primary" data-act="st-play">${ST.run ? "Pause" : "Start scroll"}</button><button class="btn sm" data-act="st-faster">Faster</button>${ST.back ? `<button class="btn sm" data-act="st-back">Back to notes</button>` : ""}<button class="btn sm" data-act="st-close">Close</button></div>
+      <div class="prompter" id="prompter"><p class="story-meta">${esc(seg.start || "")} · ${esc(seg.title || "")}${sto && sto.headline ? " · " + esc(sto.headline) : ""}</p><p class="story-point">${esc(line)}</p>${body}${chartBtns(seg.charts)}
+      ${srcs.length ? `<p class="story-meta" style="margin-top:1.2em">Sources: ${srcs.map(x => `<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title || "link")}</a>`).join(" · ")}</p>` : ""}<p class="story-meta">${esc(show.disclaimer || "Research and education, not financial advice.")}</p><div style="height:60vh"></div></div>`;
+    return;
+  }
   if (ST.mode === "prompter") {
     el.innerHTML = `<div class="stage-bar"><b>${esc(SHOW_TYPES[show.type] || "")}</b><span id="stclock" class="mono"></span><span style="flex:1"></span>
       <button class="btn sm" data-act="st-slower">Slower</button><button class="btn sm primary" data-act="st-play">${ST.run ? "Pause" : "Start scroll"}</button><button class="btn sm" data-act="st-faster">Faster</button><button class="btn sm" data-act="st-close">Close</button></div>
-      <div class="prompter" id="prompter">${segs.map(x => `<section><h2>${esc(x.start || "")} · ${esc(x.title)}</h2><ul class="pts">${showLines(x.script).map(pp => `<li>${esc(pp)}</li>`).join("")}</ul>${chartBtns(x.charts)}</section>`).join("")}<section><p>${esc(show.disclaimer || "Research and education, not financial advice.")}</p></section><div style="height:70vh"></div></div>`;
+      <div class="prompter" id="prompter">${segs.map(x => `<section><h2>${esc(x.start || "")} · ${esc(x.title)}</h2>${ptsHtml(x.script, ST.id, segs.indexOf(x))}${chartBtns(x.charts)}</section>`).join("")}<section><p>${esc(show.disclaimer || "Research and education, not financial advice.")}</p></section><div style="height:70vh"></div></div>`;
   } else {
     const cards = []; segs.forEach(x => (x.cards && x.cards.length ? x.cards : [{ title: x.title, kind: "bullets", bullets: [] }]).forEach(c => cards.push({ seg: x, c })));
     ST.i = Math.max(0, Math.min(ST.i, cards.length - 1)); const cur = cards[ST.i] || { seg: {}, c: {} };
@@ -1122,7 +1148,9 @@ document.addEventListener("keydown", e => {
   if (e.key === "Escape") closeStage();
   if (ST.mode === "stream" && (e.key === "ArrowRight" || e.key === " ")) { ST.i++; stageRender(); }
   if (ST.mode === "stream" && e.key === "ArrowLeft") { ST.i--; stageRender(); }
-  if (ST.mode === "prompter" && e.key === " ") { e.preventDefault(); ST.run = !ST.run; stageRender(); if (ST.run) stageTick(); }
+  if (ST.mode === "story" && e.key === "ArrowRight") stepStory(1);
+  if (ST.mode === "story" && e.key === "ArrowLeft") stepStory(-1);
+  if ((ST.mode === "prompter" || ST.mode === "story") && e.key === " ") { e.preventDefault(); ST.run = !ST.run; stageRender(); if (ST.run) stageTick(); }
 });
 
 /* ---------- Weekly forecast ---------- */
@@ -1155,7 +1183,7 @@ function viewHelp() {
   <div class="grid2">
   ${sec("Fundamental desk", ["Start from a Top pick (<b>Send to handover</b>) or your own idea. For equities, finish the <b>LRC Work-sheet</b> first.", "Fill in the handover: bias, confidence, sector, Work-sheet rating and Step 7 clearance, catalyst, mini thesis and what would change the bias.", "Equity handovers need a Work-sheet <b>BUY</b> (long) or <b>SELL</b> (short) that matches the bias and is <b>CLEARED</b>. HOLD stays a draft.", "Low confidence goes to the watchlist. Renew or withdraw a bias before it expires."])}
   ${sec("Technical desk", ["Open <b>Awaiting technical</b> and review the setup: bias, setup type, trend, confidence, entry, stop, target.", "The page decides under LRC rules: approved (full or reduced size), waiting for a setup, or no trade, with the reasons.", "When the order fills, <b>Mark as filled</b>: risk %, the pre-trade checklist, mood and why now. A fill that breaks the risk limits is blocked.", "Manage the trade on <b>Active trades</b>: journal notes, price updates, red flags. Close it with the exit reason and the review."])}
-  ${sec("Presenters: the Leago Rifumo Show", ["Open <b>Live show</b> from about 20:00. Read the <b>Late update</b> note first.", "Use <b>Presenter notes</b> for the talking points (📈 buttons open each chart) and <b>Stream cards</b> for the screen share (arrow keys or Next).", "After the script, run the <b>Live trading desk</b> run-sheet: call triggers, stops and targets, and give results in R only.", "Download the <b>Thumbnail</b> PNG for the stream. Never mention account size or rand amounts on air. Close with: research and education, not financial advice."])}
+  ${sec("Presenters: the Leago Rifumo Show", ["Open <b>Live show</b> from about 20:00. Read the <b>Late update</b> note first.", "Use <b>Presenter notes</b> for the talking points (📈 buttons open each chart) and <b>Stream cards</b> for the screen share (arrow keys or Next).", "Tap any talking point to open its <b>full story</b> on the teleprompter: what happened, why it matters and what to watch. Use Previous / Next point (or the arrow keys) to move through the show.", "After the script, run the <b>Live trading desk</b> run-sheet: call triggers, stops and targets, and give results in R only.", "Download the <b>Thumbnail</b> PNG for the stream. Never mention account size or rand amounts on air. Close with: research and education, not financial advice."])}
   ${sec("House risk rules", [`Risk ${L.riskPct}% of the account per trade; results in R.`, `Max ${L.maxTrades} open trades, max ${L.maxShorts} shorts, max ${L.maxPerSector} per sector.`, `Results or a big event within ${L.eventDays} days = event risk: smaller size or wait.`, `Minimum risk-to-reward 1 : ${minRR()}. Never short strength: short only on a breakdown trigger.`, "Every number has a source and a date. Screen picks are candidates, not LRC ratings."])}
   </div>
   ${sec("When something goes wrong", ["Forgot your password: ask the admin to reset it in Team & settings.", "Can't change something: your account may not have that desk; ask the admin to tick it on the Team page.", "No show or no picks by their time: tell the admin; the agent run may have failed and can be re-run.", "A number looks wrong: don't use it on air; flag it to the analyst."])}`;
@@ -1353,6 +1381,10 @@ document.addEventListener("click", async e => {
   if (act === "showfilter") { S.showFilter = b.dataset.f; S.showId = null; render(true); return; }
   if (act === "prompter" || act === "stream") { openStage(act, b.dataset.id); return; }
   if (act === "thumb") { thumbModal(b.dataset.id); return; }
+  if (act === "story") { openStory(b.dataset.id, b.dataset.seg, b.dataset.pt); return; }
+  if (act === "st-pnext") { stepStory(1); return; }
+  if (act === "st-pprev") { stepStory(-1); return; }
+  if (act === "st-back") { cancelAnimationFrame(ST.raf); ST.mode = "prompter"; ST.back = false; ST.run = false; stageRender(); return; }
   if (act === "st-close") { closeStage(); return; }
   if (act === "st-play") { ST.run = !ST.run; if (ST.run) ST.t0 = ST.t0 || Date.now(); stageRender(); if (ST.run) stageTick(); return; }
   if (act === "st-faster") { ST.speed = Math.min(6, ST.speed + 0.4); return; }

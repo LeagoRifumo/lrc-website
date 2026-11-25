@@ -47,6 +47,18 @@ RUNDOWN (45 minutes, then live trading)
    the same markets as "daytrade"; "Desk rules" bullets (1% risk, no chasing, max 2 per sector, cut losers at stop).
    "charts": the same as "daytrade".
 
+STORIES (one per talking point — the presenter taps a point and reads its story on the teleprompter)
+- Every script line gets a story in that segment's "stories" list, in the same order as the lines:
+  {"point": the exact script line, "headline": 3–8 words, "story": 4–6 short paragraphs separated by \n,
+   "sources":[{"title","url"}]}. Skip only the line "Education, not advice." and "Open each chart, mark the levels."
+- The story explains WHY this point is in the show: what happened (with the numbers, each with its time or date),
+  why it happened, why it matters for the markets on screen tonight, and what to watch next / what would change the view.
+- Written to be read aloud: full sentences, plain English, 120–220 words, no tables, no bullet points.
+  Define a term once if a viewer may not know it. Your own words; quotes under 15 words.
+- Every number from a page you opened or the snapshot; the story's sources are those pages. Never estimate.
+- For "live" segment prompts: a short story (60–100 words) on what to check at that time and why.
+- Never mention LRC's account, money or position sizes. Research and education, not advice.
+
 DROPPED (do not write): long word-for-word scripts, the "Picks" bull/bear segment (picks stay on the website),
 a separate "Setups" segment (it is now Day trading analysis).
 
@@ -61,7 +73,8 @@ OP: set `shows/<YYYY-MM-DD>-daily` (SA date) =
  "segments":[{"id","start","title","minutes","script": short lines separated by \n,
    "cards": 1–3 of {"title","kind":"stat","stats":[{"label","value","chg"}]} | {"title","kind":"table","cols","rows"} |
    {"title","kind":"bullets","bullets"},
-   "charts":[{"label","symbol","tf"}] (optional),"sources":[{"title","url"}]}],
+   "charts":[{"label","symbol","tf"}] (optional),"sources":[{"title","url"}],
+   "stories":[{"point","headline","story","sources":[{"title","url"}]}] (see STORIES)}],
  "disclaimer":"Research and education, not financial advice. LRC screen picks are not personal recommendations."}
 Never edit ideas, staff, config, picks or flags. Push the op. Finish with the title, thumbnail words, the day trading
 levels table and anything you could not verify.
