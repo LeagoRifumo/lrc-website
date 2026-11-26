@@ -100,7 +100,7 @@
    },
    "t": "ANH.JO",
    "lists": [],
-   "idea": "Technical setups",
+   "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
    "lrc_rating": null,
@@ -204,7 +204,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "SELL",
    "lrc_rating": null,
    "covered": false
   },
@@ -377,7 +377,7 @@
    "t": "LSK.JO",
    "lists": [],
    "idea": null,
-   "v": "SELL",
+   "v": "HOLD",
    "iv": "SELL",
    "lrc_rating": null,
    "covered": false
@@ -698,8 +698,8 @@
    "lists": [
     "Trading BUY"
    ],
-   "idea": null,
-   "v": "BUY",
+   "idea": "Technical setups",
+   "v": "STRONG BUY",
    "iv": "BUY",
    "lrc_rating": null,
    "covered": true
@@ -740,7 +740,7 @@
    "t": "PPE.JO",
    "lists": [],
    "idea": null,
-   "v": "SELL",
+   "v": "HOLD",
    "iv": "SELL",
    "lrc_rating": null,
    "covered": false
@@ -1571,7 +1571,7 @@
    "t": "MRP.JO",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -1647,7 +1647,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "BUY",
    "lrc_rating": null,
    "covered": false
   },
@@ -1763,7 +1763,7 @@
    "lists": [
     "Trading BUY"
    ],
-   "idea": "Score leaders",
+   "idea": "Technical setups",
    "v": "STRONG BUY",
    "iv": "HOLD",
    "lrc_rating": null,
@@ -1806,7 +1806,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "SELL",
+   "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
   },
@@ -1865,11 +1865,16 @@
    "measure": "HEPS",
    "dps": null,
    "source": "Prosus N.V. — Strong ecosystem execution, alongside investment in food; adjusted EPS up 12% (interim results, 25 Nov 2026) https://www.prosus.com/news-insights/2026/strong-ecosystem-execution-alongside-investment-in-food-adjusted-eps-up-12-percent (adjusted earnings per share up 12%; HEPS values in US cents not shown in the source read; no dividend declared)",
+   "px_move": {
+    "move": -0.0397,
+    "from": "2026-11-24",
+    "to": "2026-11-26"
+   },
    "t": "PRX.JO",
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "BUY",
+   "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
   },
@@ -1894,6 +1899,11 @@
    "measure": "HEPS",
    "dps": null,
    "source": "Naspers SENS — Interim results announcement for the six months ended 30 September 2026 (25 Nov 2026), via InsidEntity https://www.insidentity.com/naspers-interim-results-announcement-for-the-six-months-ended-30-september-2026/ (reported in US cents: HEPS per N ordinary share 189 USc vs 140 USc; adjusted earnings per N share 240 USc vs 215 USc; no dividend declared)",
+   "px_move": {
+    "move": -0.0271,
+    "from": "2026-11-24",
+    "to": "2026-11-26"
+   },
    "t": "NPN.JO",
    "lists": [],
    "idea": null,
@@ -1923,6 +1933,11 @@
    "measure": null,
    "dps": null,
    "source": null,
+   "px_move": {
+    "move": 0.0368,
+    "from": "2026-11-24",
+    "to": "2026-11-26"
+   },
    "t": "SPP.JO",
    "lists": [],
    "idea": null,
@@ -1952,6 +1967,11 @@
    "measure": "HEPS",
    "dps": 270.0,
    "source": "KAL Group SENS — Audited consolidated financial statements for the year ended 30 September 2026 and dividend declaration (25 Nov 2026), via InsidEntity https://www.insidentity.com/kal-group-audited-consolidated-financial-statements-for-the-year-ended-30-september-2026-and-dividend-declaration/ (HEPS 689.87c vs 620.98c, up 11.1%; recurring HEPS 705.28c; final gross dividend 200.00c, total for the year 270.00c)",
+   "px_move": {
+    "move": 0.0373,
+    "from": "2026-11-24",
+    "to": "2026-11-26"
+   },
    "t": "KAL.JO",
    "lists": [],
    "idea": null,
@@ -1981,6 +2001,11 @@
    "measure": "HEPS",
    "dps": 15.0,
    "source": "Tsogo Sun SENS — Unaudited condensed consolidated interim financial results and cash dividend declaration for the six months ended 30 September 2026 (25 Nov 2026), via InsidEntity https://www.insidentity.com/tsogo-sun-unaudited-condensed-consolidated-interim-financial-results-and-cash-dividend-declaration-for-the-six-months-ended-30-september-2026/ (HEPS up 7% to 79c vs 74c; interim gross dividend 15.0c)",
+   "px_move": {
+    "move": 0.0099,
+    "from": "2026-11-24",
+    "to": "2026-11-26"
+   },
    "t": "TSG.JO",
    "lists": [],
    "idea": null,
@@ -1988,26 +2013,6 @@
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
-  },
-  {
-   "date": "2026-11-26",
-   "ticker": "OCE",
-   "name": "Oceana Group",
-   "when": "Not stated",
-   "period": "Annual results to 30 Sep 2026",
-   "eps_forecast": "",
-   "market_cap_bn": 8.6,
-   "source": "Oceana shareholder calendar (26 Nov 2026: release of year-end results), https://www.oceana.co.za/investors-information-shareholder-calendar | Re-checked 23 Nov 2026 by LRC Research",
-   "covered": true,
-   "lrc_rating": null,
-   "t": "OCE.JO",
-   "lists": [
-    "Trading BUY"
-   ],
-   "idea": null,
-   "v": "BUY",
-   "iv": "HOLD",
-   "track": null
   },
   {
    "date": "2026-11-26",
@@ -2022,7 +2027,7 @@
    "lrc_rating": null,
    "t": "TBS.JO",
    "lists": [],
-   "idea": null,
+   "idea": "Earnings watch",
    "v": "HOLD",
    "iv": "HOLD",
    "track": null
@@ -2051,6 +2056,24 @@
     "period": "Year to 30 Sep 2026",
     "source": "Life Healthcare SENS — Trading statement for the year ended 30 September 2026 (12 Nov 2026), via ShareData https://sharedata.co.za/sens.asp?id=566166 (continuing operations: HEPS expected 100.7c to 106.0c vs 107.1c pro forma for 2025 (93.9c loss as reported), 1%-6% lower; normalised EPS 106.3c to 111.3c vs 100.3c, 6%-11% higher; total operations HEPS 96.0c to 100.5c vs 88.9c pro forma, 8%-13% higher; results expected on or about 26 Nov 2026)"
    }
+  },
+  {
+   "date": "2026-11-26",
+   "ticker": "OCE",
+   "name": "Oceana Group",
+   "when": "Not stated",
+   "period": "Annual results to 30 Sep 2026",
+   "eps_forecast": "",
+   "market_cap_bn": 8.6,
+   "source": "Oceana shareholder calendar (26 Nov 2026: release of year-end results), https://www.oceana.co.za/investors-information-shareholder-calendar | Re-checked 23 Nov 2026 by LRC Research",
+   "covered": false,
+   "lrc_rating": null,
+   "t": "OCE.JO",
+   "lists": [],
+   "idea": null,
+   "v": "BUY",
+   "iv": "HOLD",
+   "track": null
   },
   {
    "date": "2026-11-30",
@@ -2221,11 +2244,11 @@
    "when": "Not stated",
    "period": "Expected date (market data feed) — confirm on SENS",
    "eps_forecast": "",
-   "market_cap_bn": 32.8,
+   "market_cap_bn": 33.1,
    "auto": true,
    "t": "KRO.JO",
    "lists": [],
-   "idea": null,
+   "idea": "Technical setups",
    "v": "HOLD",
    "iv": "HOLD",
    "rev_est": 1685406240,
@@ -2241,6 +2264,6 @@
   }
  ],
  "note": "Partial list. New this week: Stefanutti Stocks (24 Nov), Alexforbes (30 Nov), Tharisa (30 Nov, indicative) and Momentum's operating update (23 Nov). SPAR's annual results are now confirmed for 4 Dec (SENS 19 Nov). Hyprop's 1 Dec pre-close date could not be re-checked (company site did not load). No company-published date in the window was found for Nutun, FirstRand, Nedbank, Absa, Anglo American, Sasol, Sibanye-Stillwater, Impala, Northam, Harmony, Gold Fields, Mondi, MTN, Remgro, Discovery, Growthpoint, Bidvest, Aspen or the other LRC watchlist names.",
- "synced": "2026-11-26T16:20+02:00",
+ "synced": "2026-11-26T16:25+02:00",
  "coverage_note": "Ticked = on the LRC watchlist. Every company the LRC Stock Scanner tracks shows its trading and investment ratings. Updated after every scanner run."
 }
