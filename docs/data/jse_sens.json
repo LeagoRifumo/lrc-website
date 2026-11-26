@@ -1,6 +1,6 @@
 {
  "note": "JSE company announcements (SENS) recorded by the LRC JSE Announcements job every weekday. results = published results with headline earnings per share (HEPS) vs the same period last year; trading_statements = expected HEPS change ranges; dividends = declared dividends with the JSE dates. Amounts in cents. Every entry carries its source.",
- "updated": "2026-11-25T19:30+02:00",
+ "updated": "2026-11-26T19:30+02:00",
  "results": [
   {
    "t": "CLS.JO",
@@ -330,6 +330,49 @@
    "heps": 102.03,
    "unit": "c",
    "source": "Stefanutti Stocks SENS — Unaudited interim consolidated results for the 6 months ended 31 August 2026 (24 Nov 2026), as reported by The National https://thenational.co.za/news/2026-11-24-stefanutti-stocks-triples-interim-earnings-as-construction-outlook-improves/ and Property Wheel https://propertywheel.co.za/2026/11/stefanutti-stocks-lifts-interim-revenue-to-r5-5bn-as-profit-rises-despite-zambia-losses/ (HEPS 102.03c; prior-period HEPS differs between the two reports, so left out; no dividend declared)"
+  },
+  {
+   "t": "TBS.JO",
+   "name": "Tiger Brands",
+   "date": "2026-11-26",
+   "period": "Year to 30 Sep 2026",
+   "heps": 2162.0,
+   "heps_prior": 2056.0,
+   "unit": "c",
+   "dps": 1299.0,
+   "source": "Tiger Brands SENS — Audited group results for the year ended 30 September 2026 and final dividend declaration (26 Nov 2026), via InsidEntity https://www.insidentity.com/tiger-brands-audited-group-results-for-the-year-ended-30-september-2026-and-final-dividend-declaration/ (HEPS from total operations up 5.2% to 2 162c vs 2 056c; continuing operations HEPS down 2.5% to 2 087c vs 2 141c; normalised continuing HEPS up 10.5% to 2 087c vs 1 889c; final dividend up 5.7% to 1 299c vs 1 229c)"
+  },
+  {
+   "t": "LHC.JO",
+   "name": "Life Healthcare",
+   "date": "2026-11-26",
+   "period": "Year to 30 Sep 2026",
+   "heps": 98.4,
+   "heps_prior": -112.1,
+   "unit": "c",
+   "dps": 40.0,
+   "source": "Life Healthcare SENS — Summarised group results for the year ended 30 September 2026 and cash dividend declaration (26 Nov 2026), via InsidEntity https://www.insidentity.com/life-healthcare-group-holdings-summarised-group-results-for-the-year-ended-30-september-2026-and-cash-dividend-declaration/ (total HEPS 98.4c vs negative 112.1c; normalised EPS up 9.5% to 109.8c; final gross dividend 40.0c, up 14.3%)"
+  },
+  {
+   "t": "OCE.JO",
+   "name": "Oceana Group",
+   "date": "2026-11-26",
+   "period": "Year to 30 Sep 2026",
+   "heps": 850.3,
+   "heps_prior": 564.8,
+   "unit": "c",
+   "dps": 320.0,
+   "source": "Oceana Group SENS — Audited group results for the year ended 30 September 2026 and cash dividend declaration (26 Nov 2026), via InsidEntity https://www.insidentity.com/oceana-group-audited-group-results-for-the-year-ended-30-september-2026-and-cash-dividend-declaration/ (HEPS up 50.5% to 850.3c vs 564.8c; final dividend 320c vs 175c; total dividend for the year 430c vs 285c)"
+  },
+  {
+   "t": "AFH.JO",
+   "name": "Alexforbes",
+   "date": "2026-11-26",
+   "period": "Six months to 30 Sep 2026",
+   "heps": 30.3,
+   "unit": "c",
+   "dps": 24.0,
+   "source": "Alexforbes SENS — Extract from the interim results for the six months ended 30 September 2026 and interim cash dividend declaration (26 Nov 2026), via InsidEntity https://www.insidentity.com/alexander-forbes-group-holdings-extract-from-the-interim-results-for-the-six-months-ended-30-september-2026-and-interim-cash-dividend-declaration/ (HEPS from continuing operations up 16% to 30.3c; HEPS from total operations down 9% to 30.3c; prior-period HEPS value not shown in the source read; gross interim dividend 24c, unchanged)"
   }
  ],
  "trading_statements": [
@@ -693,6 +736,42 @@
    "ex": "2026-12-02",
    "record": "2026-12-04",
    "source": "Datatec SENS — Finalisation announcement and ratio applicable to the scrip distribution (24 Nov 2026), via InsidEntity https://www.insidentity.com/datatec-finalisation-announcement-and-ratio-applicable-to-the-script-distribution-2/ (interim cash dividend 250c with scrip alternative, 4.40909 new shares per 100 held; results released 29 Oct 2026; last day to trade and payment date not shown in the source read)"
+  },
+  {
+   "t": "TBS.JO",
+   "period": "Final",
+   "declared": "2026-11-26",
+   "amount_c": 1299.0,
+   "source": "Tiger Brands SENS — Audited group results for the year ended 30 September 2026 and final dividend declaration (26 Nov 2026), via InsidEntity https://www.insidentity.com/tiger-brands-audited-group-results-for-the-year-ended-30-september-2026-and-final-dividend-declaration/ (final dividend 1 299c; last day to trade, ex, record and payment dates not shown in the source read)"
+  },
+  {
+   "t": "LHC.JO",
+   "period": "Final",
+   "declared": "2026-11-26",
+   "amount_c": 40.0,
+   "ldt": "2026-12-14",
+   "ex": "2026-12-15",
+   "record": "2026-12-18",
+   "pay": "2026-12-21",
+   "source": "Life Healthcare SENS — Summarised group results for the year ended 30 September 2026 and cash dividend declaration (26 Nov 2026), via InsidEntity https://www.insidentity.com/life-healthcare-group-holdings-summarised-group-results-for-the-year-ended-30-september-2026-and-cash-dividend-declaration/ (final gross cash dividend 40.0c; net 32.0c)"
+  },
+  {
+   "t": "OCE.JO",
+   "period": "Final",
+   "declared": "2026-11-26",
+   "amount_c": 320.0,
+   "source": "Oceana Group SENS — Audited group results for the year ended 30 September 2026 and cash dividend declaration (26 Nov 2026), via InsidEntity https://www.insidentity.com/oceana-group-audited-group-results-for-the-year-ended-30-september-2026-and-cash-dividend-declaration/ (final dividend 320c; last day to trade, ex, record and payment dates not shown in the source read)"
+  },
+  {
+   "t": "AFH.JO",
+   "period": "Interim",
+   "declared": "2026-11-26",
+   "amount_c": 24.0,
+   "ldt": "2027-01-05",
+   "ex": "2027-01-06",
+   "record": "2027-01-08",
+   "pay": "2027-01-11",
+   "source": "Alexforbes SENS — Extract from the interim results for the six months ended 30 September 2026 and interim cash dividend declaration (26 Nov 2026), via InsidEntity https://www.insidentity.com/alexander-forbes-group-holdings-extract-from-the-interim-results-for-the-six-months-ended-30-september-2026-and-interim-cash-dividend-declaration/ (gross interim cash dividend 24c; net 19.2c)"
   }
  ]
 }
