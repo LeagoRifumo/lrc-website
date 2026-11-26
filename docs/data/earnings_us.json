@@ -107316,8 +107316,9 @@
    "n_est": 1,
    "rcur": "ARS",
    "has_res": true,
-   "desk": false,
-   "g": "not found",
+   "desk": true,
+   "g": "none",
+   "headline": "Filing covers board approval of 30 Sep 2026 accounts but gives no results figures; no guidance",
    "px_move": {
     "move": -0.025,
     "from": "2026-11-23",
@@ -108042,8 +108043,9 @@
    "n_est": 4,
    "rcur": "ARS",
    "has_res": true,
-   "desk": false,
-   "g": "not found",
+   "desk": true,
+   "g": "none",
+   "headline": "Not a results release: Banco Macro bought back 430,000 of its own shares for about Ps$3.98bn; no guidance",
    "t": "BMA",
    "lists": [],
    "idea": null,
@@ -122044,6 +122046,6 @@
    "covered": false
   }
  ],
- "synced": "2026-11-26T15:44+02:00",
+ "synced": "2026-11-26T16:20+02:00",
  "coverage_note": "Ticked = on the LRC watchlist. Every company the LRC Stock Scanner tracks shows its trading and investment ratings. Updated after every scanner run."
 }
