@@ -13560,7 +13560,13 @@
 "eps_yago": -0.0857,
 "n_est": 1,
 "rcur": "USD",
-"qend": "2026-09-30"
+"qend": "2026-09-30",
+"eps_actual": 0.9441,
+"eps_est": 0.7233,
+"surprise": 0.3052,
+"result": "beat",
+"quarter_end": "2026-09-30",
+"result_done": true
 },
 "CMCSA|2026-10-22": {
 "t": "CMCSA",
