@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-26T11:50:00+02:00",
+  "generated": "2026-11-26T17:50:00+02:00",
   "agent": "LRC Macro Desk",
   "method": "Surprise = actual minus forecast (consensus). If there is no forecast, actual minus previous. Impact for shares: a surprise in the 'better' direction larger than the threshold = Bullish, the other way = Bearish, otherwise Neutral.",
   "countries": {
@@ -80,11 +80,11 @@
           "period": "Oct 2026",
           "release_date": "2026-11-26",
           "actual": 8.1,
-          "forecast": null,
+          "forecast": 7.6,
           "previous": 6.2,
           "next_release": null,
           "source": "Stats SA",
-          "url": "https://za.investing.com/economic-calendar/south-african-ppi-1184"
+          "url": "https://www.bizcommunity.com/article/producer-inflation-surges-to-81-as-fuel-costs-drive-factory-prices-higher-073105a"
         },
         {
           "key": "repo",
