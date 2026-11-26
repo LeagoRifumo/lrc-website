@@ -343,7 +343,7 @@
     "Trading SELL"
    ],
    "idea": null,
-   "v": "SELL",
+   "v": "STRONG SELL",
    "iv": "SELL",
    "lrc_rating": null,
    "covered": true
@@ -542,7 +542,7 @@
     "Trading SELL"
    ],
    "idea": null,
-   "v": "SELL",
+   "v": "STRONG SELL",
    "iv": "SELL",
    "lrc_rating": null,
    "covered": true
@@ -699,7 +699,7 @@
     "Trading BUY"
    ],
    "idea": null,
-   "v": "STRONG BUY",
+   "v": "BUY",
    "iv": "BUY",
    "lrc_rating": null,
    "covered": true
@@ -950,7 +950,7 @@
     "Trading SELL"
    ],
    "idea": null,
-   "v": "SELL",
+   "v": "STRONG SELL",
    "iv": "SELL",
    "lrc_rating": null,
    "covered": true
@@ -1755,7 +1755,7 @@
    "dps": null,
    "source": "Stefanutti Stocks SENS — Unaudited interim consolidated results for the 6 months ended 31 August 2026 (24 Nov 2026), as reported by The National https://thenational.co.za/news/2026-11-24-stefanutti-stocks-triples-interim-earnings-as-construction-outlook-improves/ and Property Wheel https://propertywheel.co.za/2026/11/stefanutti-stocks-lifts-interim-revenue-to-r5-5bn-as-profit-rises-despite-zambia-losses/ (HEPS 102.03c; prior-period HEPS differs between the two reports, so left out; no dividend declared)",
    "px_move": {
-    "move": -0.0258,
+    "move": -0.0318,
     "from": "2026-11-23",
     "to": "2026-11-25"
    },
@@ -1806,7 +1806,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "SELL",
    "lrc_rating": null,
    "covered": false
   },
@@ -1832,7 +1832,7 @@
    "dps": 149.97,
    "source": "Octodec SENS — Audited consolidated annual financial statements and cash dividend declaration for the year ended 31 August 2026 (24 Nov 2026), via InsidEntity https://www.insidentity.com/octodec-investment-audited-consolidated-annual-financial-statements-and-cash-dividend-declaration-for-the-year-ended-31-august-2026/ (distributable income per share 192.36c vs 171.51c; dividend per share for the year 149.97c vs 134.50c; final dividend 85.46706c; HEPS not shown in the source read)",
    "px_move": {
-    "move": 0.0005,
+    "move": -0.0022,
     "from": "2026-11-23",
     "to": "2026-11-25"
    },
@@ -1867,7 +1867,7 @@
    "source": "Prosus N.V. — Strong ecosystem execution, alongside investment in food; adjusted EPS up 12% (interim results, 25 Nov 2026) https://www.prosus.com/news-insights/2026/strong-ecosystem-execution-alongside-investment-in-food-adjusted-eps-up-12-percent (adjusted earnings per share up 12%; HEPS values in US cents not shown in the source read; no dividend declared)",
    "t": "PRX.JO",
    "lists": [],
-   "idea": "Earnings watch",
+   "idea": null,
    "v": "HOLD",
    "iv": "BUY",
    "lrc_rating": null,
@@ -2221,11 +2221,11 @@
    "when": "Not stated",
    "period": "Expected date (market data feed) — confirm on SENS",
    "eps_forecast": "",
-   "market_cap_bn": 33.2,
+   "market_cap_bn": 32.8,
    "auto": true,
    "t": "KRO.JO",
    "lists": [],
-   "idea": "Technical setups",
+   "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
    "rev_est": 1685406240,
@@ -2241,6 +2241,6 @@
   }
  ],
  "note": "Partial list. New this week: Stefanutti Stocks (24 Nov), Alexforbes (30 Nov), Tharisa (30 Nov, indicative) and Momentum's operating update (23 Nov). SPAR's annual results are now confirmed for 4 Dec (SENS 19 Nov). Hyprop's 1 Dec pre-close date could not be re-checked (company site did not load). No company-published date in the window was found for Nutun, FirstRand, Nedbank, Absa, Anglo American, Sasol, Sibanye-Stillwater, Impala, Northam, Harmony, Gold Fields, Mondi, MTN, Remgro, Discovery, Growthpoint, Bidvest, Aspen or the other LRC watchlist names.",
- "synced": "2026-11-26T00:50+02:00",
+ "synced": "2026-11-26T02:00+02:00",
  "coverage_note": "Ticked = on the LRC watchlist. Every company the LRC Stock Scanner tracks shows its trading and investment ratings. Updated after every scanner run."
 }
