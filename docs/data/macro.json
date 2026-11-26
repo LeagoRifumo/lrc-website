@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-25T17:50:00+02:00",
+  "generated": "2026-11-26T11:50:00+02:00",
   "agent": "LRC Macro Desk",
   "method": "Surprise = actual minus forecast (consensus). If there is no forecast, actual minus previous. Impact for shares: a surprise in the 'better' direction larger than the threshold = Bullish, the other way = Bearish, otherwise Neutral.",
   "countries": {
@@ -77,14 +77,14 @@
           "better": "lower",
           "threshold": 0.2,
           "frequency": "monthly",
-          "period": "Sep 2026",
-          "release_date": "2026-10-29",
-          "actual": 6.2,
+          "period": "Oct 2026",
+          "release_date": "2026-11-26",
+          "actual": 8.1,
           "forecast": null,
-          "previous": 5.0,
-          "next_release": "2026-11-26",
+          "previous": 6.2,
+          "next_release": null,
           "source": "Stats SA",
-          "url": "https://www.riotimesonline.com/south-africa-producer-prices-credit-m3-september/"
+          "url": "https://za.investing.com/economic-calendar/south-african-ppi-1184"
         },
         {
           "key": "repo",
