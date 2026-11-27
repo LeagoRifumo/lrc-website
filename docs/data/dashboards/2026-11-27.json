@@ -1,0 +1,237 @@
+{
+ "week_ending": "2026-11-27",
+ "title": "Market dashboard — week to 27 Nov 2026",
+ "live": false,
+ "generated": "2026-11-28T01:36+02:00",
+ "groups": [
+  {
+   "name": "South Africa",
+   "rows": [
+    {
+     "name": "JSE All Share (J203)",
+     "unit": "index",
+     "latest": 108783.31,
+     "week_ago": 104638.7969,
+     "year_ago": 110567.8984,
+     "as_of": "2026-11-27",
+     "source": "Yahoo Finance ^J203.JO daily close (2026-11-27; week-ago 2026-11-20; year-ago 2025-11-27)",
+     "note": "",
+     "carried": false
+    },
+    {
+     "name": "JSE Top 40 (J200)",
+     "unit": "index",
+     "latest": 100814.64,
+     "week_ago": 96833.0,
+     "year_ago": 102882.7969,
+     "as_of": "2026-11-27",
+     "source": "Yahoo Finance ^J200.JO daily close (2026-11-27; week-ago 2026-11-20; year-ago 2025-11-27)",
+     "note": "",
+     "carried": false
+    },
+    {
+     "name": "USD / ZAR",
+     "unit": "rand per $",
+     "latest": 17.3695,
+     "week_ago": 17.4946,
+     "year_ago": 17.1311,
+     "as_of": "2026-11-27",
+     "source": "Yahoo Finance ZAR=X daily close (2026-11-27; week-ago 2026-11-20; year-ago 2025-11-27)",
+     "note": "",
+     "carried": false
+    },
+    {
+     "name": "EUR / ZAR",
+     "unit": "rand per €",
+     "latest": 18.9925,
+     "week_ago": 19.186,
+     "year_ago": 19.8796,
+     "as_of": "2026-11-27",
+     "source": "Yahoo Finance EURZAR=X daily close (2026-11-27; week-ago 2026-11-20; year-ago 2025-11-27)",
+     "note": "",
+     "carried": false
+    },
+    {
+     "name": "GBP / ZAR",
+     "unit": "rand per £",
+     "latest": 22.7187,
+     "week_ago": 22.8895,
+     "year_ago": 22.6948,
+     "as_of": "2026-11-27",
+     "source": "Yahoo Finance GBPZAR=X daily close (2026-11-27; week-ago 2026-11-20; year-ago 2025-11-27)",
+     "note": "",
+     "carried": false
+    },
+    {
+     "name": "SA repo rate",
+     "unit": "%",
+     "latest": 7.25,
+     "week_ago": 7.25,
+     "year_ago": 6.75,
+     "as_of": "2026-11-19",
+     "source": "SAnews, 'Interest rate stays unchanged at 7.25%', 19 Nov 2026, https://www.sanews.gov.za/node/85767; EWN, 'Reserve Bank keeps rates on hold, but warns it's a pause for now', 19 Nov 2026, https://www.ewn.co.za/2026/11/19/reserve-bank-keeps-rates-on-hold-but-warns-its-a-pause-for-now; SARB November 2026 MPC statement, https://www.resbank.co.za/content/dam/sarb/publications/statements/monetary-policy-statements/2026/november/november-statement.pdf (not opened). Year-ago: SAnews, 'Repo rate reduced to 6.75%', decision 20 Nov 2025, effective same day, https://www.sanews.gov.za/south-africa/repo-rate-reduced-675-0 (accessed 23 Nov 2026)",
+     "note": "MPC held at 7.25% on 19 Nov in a 4-3 vote, with three members for a hike; Kganyago called it 'a pause for now'. Prime stays at 10.75%.",
+     "carried": true
+    },
+    {
+     "name": "SA 10-year government bond",
+     "unit": "%",
+     "latest": 8.85,
+     "week_ago": 8.725,
+     "year_ago": 8.66,
+     "as_of": "2026-11-20",
+     "source": "Trading Economics, South Africa 10Y Government Bond Yield (generic), 8.85% on 20 Nov 2026, +0.19pp y/y, https://tradingeconomics.com/south-africa/government-bond-yield. Week-ago 8.725% is the prior-week dashboard value (Trading Economics). Year-ago (about 8.66%) is derived as 8.85 - 0.19 from the y/y change on the TE page. Cross-check: TimesLIVE, 20 Nov 2026, said the 10y rose to 8.975% before settling at 8.775% on Thursday 19 Nov, https://www.timeslive.co.za/politics/2026-11-20-rand-and-jse-pay-the-price-of-not-knowing-who-will-run-joburg/ (accessed 23 Nov 2026)",
+     "note": "Yield up about 12.5bp on the week, driven by the October CPI jump to 5.2%, a hawkish SARB hold and uncertainty over the Gauteng coalition and GNU.",
+     "carried": true
+    },
+    {
+     "name": "SA CPI inflation (y/y)",
+     "unit": "%",
+     "latest": 5.2,
+     "week_ago": 4.5,
+     "year_ago": 3.6,
+     "as_of": "2026-10",
+     "source": "Stats SA October 2026 CPI (P0141), released 18 Nov 2026, as reported by SAnews, 'Inflation rises to 5.2% in October', https://www.sanews.gov.za/node/85723 and Business Day, 18 Nov 2026, https://www.businessday.co.za/economy/2026-11-18-inflation-soars-to-52-in-october-ahead-of-rates-call/. Week-ago is September 2026 (4.5%). Year-ago is October 2025 (3.6%), per Stats SA 'Inflation climbs for a second consecutive month', https://www.statssa.gov.za/?p=18956 and TimesLIVE, 19 Nov 2025 (seen in search results, not opened) (accessed 23 Nov 2026)",
+     "note": "Highest since May 2024. Fuel rose 11.8% m/m (42.9% y/y), and transport added 2.1pp to the headline rate; the target is 3%.",
+     "carried": true
+    }
+   ]
+  },
+  {
+   "name": "United States & global",
+   "rows": [
+    {
+     "name": "S&P 500",
+     "unit": "index",
+     "latest": 7297.49,
+     "week_ago": 6910.3901,
+     "year_ago": 6812.6099,
+     "as_of": "2026-11-27",
+     "source": "Yahoo Finance ^GSPC daily close (2026-11-27; week-ago 2026-11-20; year-ago 2025-11-26)",
+     "note": "",
+     "carried": false
+    },
+    {
+     "name": "Nasdaq Composite",
+     "unit": "index",
+     "latest": 24129.5,
+     "week_ago": 22617.7305,
+     "year_ago": 23214.6895,
+     "as_of": "2026-11-27",
+     "source": "Yahoo Finance ^IXIC daily close (2026-11-27; week-ago 2026-11-20; year-ago 2025-11-26)",
+     "note": "",
+     "carried": false
+    },
+    {
+     "name": "MSCI Emerging Markets",
+     "unit": "index",
+     "latest": 1420.01,
+     "week_ago": 1550.18,
+     "year_ago": null,
+     "as_of": "2026-11-20",
+     "source": "YCharts, MSCI Emerging Markets (^MSEM), 1,420.01 on 20 Nov 2026 (-45.48 on the day), https://ycharts.com/indices/^MSEM. MarketScreener, MSCI Emerging Markets, closes of 1,550.18 on 13 Nov and 1,465.49 on 19 Nov 2026, https://in.marketscreener.com/quote/index/MSCI-EMERGING-MARKETS-107361476/. Bear-market context: Wallstreetcn/Longbridge, 20 Nov 2026, https://longbridge.com/en/news/306334514. Year-ago: not sourced (accessed 23 Nov 2026)",
+     "note": "Down 8.4% on the week, its biggest weekly fall since March 2020, and 21% below the June peak, in a bear market, as the AI/tech selloff spread.",
+     "carried": true
+    },
+    {
+     "name": "US Fed funds rate (upper)",
+     "unit": "%",
+     "latest": 4.0,
+     "week_ago": 4.0,
+     "year_ago": 4.0,
+     "as_of": "2026-11-20",
+     "source": "FRED, Federal Funds Target Range - Upper Limit (DFEDTARU), 4.00% for 18-22 Nov 2026, https://fred.stlouisfed.org/series/DFEDTARU. Year-ago: Federal Reserve press release, 29 Oct 2025, target range lowered to 3-3/4 to 4 percent, https://www.federalreserve.gov/newsevents/pressreleases/monetary20251029a.htm. Pricing: Motley Fool, 16 Nov 2026 (CME FedWatch 100% for a December hike as at 12 Nov), https://www.fool.com/investing/2026/11/16/theres-now-100-chance-fed-rate-hike-in-december-thats-not-worst-news-for-wall-street/; 1Trader weekly recap, 20 Nov 2026 (>95% after the hawkish October FOMC minutes), https://1trader.com/en/forex-weekly-2026-11-20/ (accessed 23 Nov 2026)",
+     "note": "Range unchanged at 3.75-4.00%, but futures price a December 9 hike at more than 95% after hawkish October FOMC minutes; the dollar is at a 19-month high.",
+     "carried": true
+    },
+    {
+     "name": "US 10-year Treasury",
+     "unit": "%",
+     "latest": 4.936,
+     "week_ago": 4.912,
+     "year_ago": 3.998,
+     "as_of": "2026-11-27",
+     "source": "Yahoo Finance ^TNX daily close (2026-11-27; week-ago 2026-11-20; year-ago 2025-11-26)",
+     "note": "",
+     "carried": false
+    },
+    {
+     "name": "US CPI inflation (y/y)",
+     "unit": "%",
+     "latest": 3.7,
+     "week_ago": 3.7,
+     "year_ago": 3.0,
+     "as_of": "2026-09",
+     "source": "BLS CPI news release for September 2026 (released 14 Oct 2026), all items +3.7% y/y and core +2.6%, https://www.bls.gov/news.release/archives/cpi_10142026.htm. BLS October 2026 CPI (released 10 Nov 2026): +0.4% m/m SA, no 12-month change because October 2025 data were not collected, https://www.bls.gov/news.release/cpi.nr0.htm. Year-ago: September 2025 3.0%, per ABA Banking Journal, 'Consumer price inflation 3% in September', https://bankingjournal.aba.com/2025/10/consumer-price-inflation-3-in-september/ (headline only; page redirect not followed) (accessed 23 Nov 2026)",
+     "note": "No October y/y because the 2025 shutdown left a data gap; October rose 0.4% m/m (core 0.3%). November CPI is due 10 Dec.",
+     "carried": true
+    }
+   ]
+  },
+  {
+   "name": "Commodities",
+   "rows": [
+    {
+     "name": "Gold",
+     "unit": "$/oz",
+     "latest": 3668.5,
+     "week_ago": 3515.3999,
+     "year_ago": 4165.2002,
+     "as_of": "2026-11-27",
+     "source": "Yahoo Finance GC=F daily close (2026-11-27; week-ago 2026-11-20; year-ago 2025-11-26)",
+     "note": "",
+     "carried": false
+    },
+    {
+     "name": "Platinum",
+     "unit": "$/oz",
+     "latest": 1312.4,
+     "week_ago": 1289.4,
+     "year_ago": 1578.9,
+     "as_of": "2026-11-27",
+     "source": "Yahoo Finance PL=F daily close (2026-11-27; week-ago 2026-11-20; year-ago 2025-11-26)",
+     "note": "",
+     "carried": false
+    },
+    {
+     "name": "Brent crude",
+     "unit": "$/bbl",
+     "latest": 90.84,
+     "week_ago": 92.57,
+     "year_ago": 63.13,
+     "as_of": "2026-11-27",
+     "source": "Yahoo Finance BZ=F daily close (2026-11-27; week-ago 2026-11-20; year-ago 2025-11-26)",
+     "note": "",
+     "carried": false
+    },
+    {
+     "name": "Copper",
+     "unit": "$/t",
+     "latest": 12346.9743,
+     "week_ago": 12074.7043,
+     "year_ago": 11253.4824,
+     "as_of": "2026-11-27",
+     "source": "Yahoo Finance HG=F daily close (2026-11-27; week-ago 2026-11-20; year-ago 2025-11-26) — converted $/lb × 2,204.62 to $/t",
+     "note": "",
+     "carried": false
+    },
+    {
+     "name": "Iron ore",
+     "unit": "$/t",
+     "latest": 90.67,
+     "week_ago": 91.48,
+     "year_ago": 104.25,
+     "as_of": "2026-11-20",
+     "source": "Trading Economics, Iron Ore 62% Fe CFR (CFD), 90.67 USD/t on 20 Nov 2026, -13.03% y/y, https://tradingeconomics.com/commodity/ironore62; cross-checked against OilPriceAPI, 90.67 USD/t, https://www.oilpriceapi.com/live/iron-ore-price. Week-ago 91.48 is the prior-week dashboard value (Trading Economics). Year-ago (about 104.25) is derived as 90.67 / (1 - 0.1303). Drivers: Trading Economics, iron ore CNY news, 16-20 Nov 2026, https://tradingeconomics.com/commodity/iron-ore-cny/news/601447 (accessed 23 Nov 2026)",
+     "note": "Near four-year lows: Dalian futures fell to about CNY650, the lowest since October 2022, on weak Chinese steel output (October -1.6%) and rising Simandou supply.",
+     "carried": true
+    }
+   ]
+  }
+ ],
+ "auto_view": "The JSE All Share moved +4.0% on the week to 108,783 and the rand firmed 0.7% to R17.37/$. In New York the S&P 500 moved +5.6% and the Nasdaq +6.7%, with the US 10-year at 4.94%. Commodities: gold +4.4%, platinum +1.8%, Brent -1.9%, copper +2.3%.",
+ "missing": [],
+ "agent": "LRC Dashboard automation",
+ "movers": [],
+ "market_view": ""
+}
