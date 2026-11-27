@@ -1129,7 +1129,13 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 52.2
+"market_cap_bn": 52.2,
+"eps_actual": 3.2,
+"eps_est": 3.068,
+"surprise": 0.0429,
+"result": "beat",
+"quarter_end": "2026-10-31",
+"result_done": true
 },
 "ADT|2026-11-03": {
 "t": "ADT",
@@ -10580,7 +10586,13 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 15.0
+"market_cap_bn": 15.0,
+"eps_actual": 1.7,
+"eps_est": 1.719,
+"surprise": -0.0112,
+"result": "miss",
+"quarter_end": "2026-10-31",
+"result_done": true
 },
 "BUSE|2026-10-27": {
 "t": "BUSE",
@@ -17762,7 +17774,13 @@
 "eps_forecast": "",
 "quarter": "",
 "period": "Expected date (market data feed)",
-"market_cap_bn": 314.0
+"market_cap_bn": 314.0,
+"eps_actual": 9.45,
+"eps_est": 6.587,
+"surprise": 0.4346,
+"result": "beat",
+"quarter_end": "2026-10-31",
+"result_done": true
 },
 "DE|2026-11-25": {
 "t": "DE",
