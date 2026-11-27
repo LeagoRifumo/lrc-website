@@ -204,7 +204,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "HOLD",
+   "iv": "SELL",
    "lrc_rating": null,
    "covered": false
   },
@@ -343,7 +343,7 @@
     "Trading SELL"
    ],
    "idea": null,
-   "v": "STRONG SELL",
+   "v": "SELL",
    "iv": "SELL",
    "lrc_rating": null,
    "covered": true
@@ -542,7 +542,7 @@
     "Trading SELL"
    ],
    "idea": null,
-   "v": "STRONG SELL",
+   "v": "SELL",
    "iv": "SELL",
    "lrc_rating": null,
    "covered": true
@@ -698,7 +698,7 @@
    "lists": [
     "Trading BUY"
    ],
-   "idea": "Technical setups",
+   "idea": null,
    "v": "STRONG BUY",
    "iv": "BUY",
    "lrc_rating": null,
@@ -740,7 +740,7 @@
    "t": "PPE.JO",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "SELL",
    "iv": "SELL",
    "lrc_rating": null,
    "covered": false
@@ -950,7 +950,7 @@
     "Trading SELL"
    ],
    "idea": null,
-   "v": "STRONG SELL",
+   "v": "SELL",
    "iv": "SELL",
    "lrc_rating": null,
    "covered": true
@@ -1244,7 +1244,7 @@
    "t": "TKG.JO",
    "lists": [],
    "idea": null,
-   "v": "HOLD",
+   "v": "BUY",
    "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
@@ -1647,7 +1647,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "BUY",
+   "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
   },
@@ -1770,7 +1770,7 @@
    "lists": [
     "Trading BUY"
    ],
-   "idea": null,
+   "idea": "Technical setups",
    "v": "STRONG BUY",
    "iv": "HOLD",
    "lrc_rating": null,
@@ -2082,6 +2082,11 @@
    "g": "raised",
    "headline": "Normalised continuing HEPS up 10.5% to 2,087c on 4.5% volume growth; reported revenue flat at R34.2bn; final dividend up 5.7%; margin and ROIC targets raised",
    "rev_yoy": -0.0048,
+   "px_move": {
+    "move": 0.1348,
+    "from": "2026-11-25",
+    "to": "2026-11-27"
+   },
    "t": "TBS.JO",
    "lists": [],
    "idea": null,
@@ -2118,11 +2123,16 @@
    "g": "given",
    "headline": "Normalised EPS up 9.5% to 109.8c as margins widen on flat revenue of R25.5bn; dividend up 14.3% to 40c; FY2027 targets about 5% revenue growth",
    "rev_yoy": 0.0159,
+   "px_move": {
+    "move": 0.0156,
+    "from": "2026-11-25",
+    "to": "2026-11-27"
+   },
    "t": "LHC.JO",
    "lists": [],
    "idea": null,
    "v": "BUY",
-   "iv": "BUY",
+   "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
   },
@@ -2154,6 +2164,11 @@
    "g": "given",
    "headline": "HEPS up 50.5% to 850.3c on strong US fishmeal and hake despite a Lucky Star fish shortage; revenue down 4.2% to R9.6bn; total dividend 430c; shortage expected to last into 2027",
    "rev_yoy": -0.0424,
+   "px_move": {
+    "move": 0.0188,
+    "from": "2026-11-25",
+    "to": "2026-11-27"
+   },
    "t": "OCE.JO",
    "lists": [],
    "idea": null,
@@ -2187,6 +2202,11 @@
    "desk": true,
    "g": "given",
    "headline": "Continuing HEPS up 16% to 30.3c as operating income rises 10% to R2.57bn; interim dividend flat at 24c; outlook positive but cautious",
+   "px_move": {
+    "move": 0.0828,
+    "from": "2026-11-25",
+    "to": "2026-11-27"
+   },
    "t": "AFH.JO",
    "lists": [],
    "idea": null,
@@ -2365,11 +2385,11 @@
    "when": "Not stated",
    "period": "Expected date (market data feed) — confirm on SENS",
    "eps_forecast": "",
-   "market_cap_bn": 33.1,
+   "market_cap_bn": 31.6,
    "auto": true,
    "t": "KRO.JO",
    "lists": [],
-   "idea": "Technical setups",
+   "idea": null,
    "v": "HOLD",
    "iv": "HOLD",
    "rev_est": 1685406240,
@@ -2385,6 +2405,6 @@
   }
  ],
  "note": "Partial list. New this week: Stefanutti Stocks (24 Nov), Alexforbes (30 Nov), Tharisa (30 Nov, indicative) and Momentum's operating update (23 Nov). SPAR's annual results are now confirmed for 4 Dec (SENS 19 Nov). Hyprop's 1 Dec pre-close date could not be re-checked (company site did not load). No company-published date in the window was found for Nutun, FirstRand, Nedbank, Absa, Anglo American, Sasol, Sibanye-Stillwater, Impala, Northam, Harmony, Gold Fields, Mondi, MTN, Remgro, Discovery, Growthpoint, Bidvest, Aspen or the other LRC watchlist names.",
- "synced": "2026-11-27T16:15+02:00",
+ "synced": "2026-11-27T16:24+02:00",
  "coverage_note": "Ticked = on the LRC watchlist. Every company the LRC Stock Scanner tracks shows its trading and investment ratings. Updated after every scanner run."
 }
