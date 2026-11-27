@@ -2216,6 +2216,40 @@
    "covered": false
   },
   {
+   "date": "2026-11-26",
+   "ticker": "HCI",
+   "name": "Hosken Consolidated Investments",
+   "when": "Not stated",
+   "period": "Six months to 30 Sep 2026",
+   "quarter": "",
+   "eps_forecast": "",
+   "market_cap_bn": null,
+   "reported": true,
+   "result": "up",
+   "eps_actual": null,
+   "eps_est": null,
+   "surprise": null,
+   "heps": 1051.9,
+   "heps_prior": 922.0,
+   "unit": "c",
+   "change": 0.1409,
+   "measure": "HEPS",
+   "dps": 70.0,
+   "source": "Hosken Consolidated Investments SENS — Unaudited condensed consolidated interim results and dividend declaration for the six months ended 30 September 2026 (26 Nov 2026), via Listcorp https://www.listcorp.com/jse/hci/hosken-consolidated-investments-limited/news/unaudited-condensed-consolidated-interim-results-and-dividend-declaration-for-the-six-months-ended-30-september-2026-3443632.html and InsidEntity https://www.insidentity.com/hosken-consolidated-investments-unaudited-condensed-consolidated-interim-results-and-dividend-declaration-for-the-six-months-ended-30-september-2026/ (HEPS up 14% to 1 051.9c vs 922.0c; interim gross dividend 70c vs 60c)",
+   "px_move": {
+    "move": -0.0038,
+    "from": "2026-11-25",
+    "to": "2026-11-27"
+   },
+   "t": "HCI.JO",
+   "lists": [],
+   "idea": null,
+   "v": "HOLD",
+   "iv": "HOLD",
+   "lrc_rating": null,
+   "covered": false
+  },
+  {
    "date": "2026-11-30",
    "ticker": "VKE",
    "name": "Vukile Property Fund",
@@ -2358,7 +2392,14 @@
    "idea": null,
    "v": "HOLD",
    "iv": "SELL",
-   "track": null
+   "track": null,
+   "ts": {
+    "date": "2026-11-27",
+    "low": -0.495,
+    "high": -0.445,
+    "period": "52 weeks to 25 Sep 2026",
+    "source": "The SPAR Group SENS — Trading update and trading statement for the 52 weeks ended 25 September 2026 and changes to board committees (27 Nov 2026), via InsidEntity https://www.insidentity.com/the-spar-group-trading-update-and-trading-statement-for-the-52-weeks-ended-25-september-2026-and-changes-to-board-committees/ (continuing operations HEPS expected 44.5%–49.5% lower on the previously reported basis, 40.0%–45.0% lower vs the re-presented prior period; total operations HEPS expected 65%–70% lower; continuing EPS 42.0%–47.0% lower (previously reported basis); total EPS expected positive, between 182.0c and 201.2c, vs a loss of 2 507.0c)"
+   }
   },
   {
    "date": "2026-12-14",
@@ -2405,6 +2446,6 @@
   }
  ],
  "note": "Partial list. New this week: Stefanutti Stocks (24 Nov), Alexforbes (30 Nov), Tharisa (30 Nov, indicative) and Momentum's operating update (23 Nov). SPAR's annual results are now confirmed for 4 Dec (SENS 19 Nov). Hyprop's 1 Dec pre-close date could not be re-checked (company site did not load). No company-published date in the window was found for Nutun, FirstRand, Nedbank, Absa, Anglo American, Sasol, Sibanye-Stillwater, Impala, Northam, Harmony, Gold Fields, Mondi, MTN, Remgro, Discovery, Growthpoint, Bidvest, Aspen or the other LRC watchlist names.",
- "synced": "2026-11-27T16:24+02:00",
+ "synced": "2026-11-27T18:48+02:00",
  "coverage_note": "Ticked = on the LRC watchlist. Every company the LRC Stock Scanner tracks shows its trading and investment ratings. Updated after every scanner run."
 }

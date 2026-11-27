@@ -1,6 +1,6 @@
 {
  "note": "JSE company announcements (SENS) recorded by the LRC JSE Announcements job every weekday. results = published results with headline earnings per share (HEPS) vs the same period last year; trading_statements = expected HEPS change ranges; dividends = declared dividends with the JSE dates. Amounts in cents. Every entry carries its source.",
- "updated": "2026-11-26T19:30+02:00",
+ "updated": "2026-11-27T19:00+02:00",
  "results": [
   {
    "t": "CLS.JO",
@@ -373,6 +373,17 @@
    "unit": "c",
    "dps": 24.0,
    "source": "Alexforbes SENS — Extract from the interim results for the six months ended 30 September 2026 and interim cash dividend declaration (26 Nov 2026), via InsidEntity https://www.insidentity.com/alexander-forbes-group-holdings-extract-from-the-interim-results-for-the-six-months-ended-30-september-2026-and-interim-cash-dividend-declaration/ (HEPS from continuing operations up 16% to 30.3c; HEPS from total operations down 9% to 30.3c; prior-period HEPS value not shown in the source read; gross interim dividend 24c, unchanged)"
+  },
+  {
+   "t": "HCI.JO",
+   "name": "Hosken Consolidated Investments",
+   "date": "2026-11-26",
+   "period": "Six months to 30 Sep 2026",
+   "heps": 1051.9,
+   "heps_prior": 922.0,
+   "unit": "c",
+   "dps": 70.0,
+   "source": "Hosken Consolidated Investments SENS — Unaudited condensed consolidated interim results and dividend declaration for the six months ended 30 September 2026 (26 Nov 2026), via Listcorp https://www.listcorp.com/jse/hci/hosken-consolidated-investments-limited/news/unaudited-condensed-consolidated-interim-results-and-dividend-declaration-for-the-six-months-ended-30-september-2026-3443632.html and InsidEntity https://www.insidentity.com/hosken-consolidated-investments-unaudited-condensed-consolidated-interim-results-and-dividend-declaration-for-the-six-months-ended-30-september-2026/ (HEPS up 14% to 1 051.9c vs 922.0c; interim gross dividend 70c vs 60c)"
   }
  ],
  "trading_statements": [
@@ -447,6 +458,14 @@
    "heps_change_low": 1.2,
    "heps_change_high": 1.4,
    "source": "Stefanutti Stocks Holdings SENS — Trading statement (11 Nov 2026), via InsidEntity https://www.insidentity.com/stefanutti-stocks-holdings-trading-statement-2/ (continuing operations HEPS expected 97.88c–106.78c vs 44.49c, up 120%–140%; results due 24 Nov 2026)"
+  },
+  {
+   "t": "SPP.JO",
+   "date": "2026-11-27",
+   "period": "52 weeks to 25 Sep 2026",
+   "heps_change_low": -0.495,
+   "heps_change_high": -0.445,
+   "source": "The SPAR Group SENS — Trading update and trading statement for the 52 weeks ended 25 September 2026 and changes to board committees (27 Nov 2026), via InsidEntity https://www.insidentity.com/the-spar-group-trading-update-and-trading-statement-for-the-52-weeks-ended-25-september-2026-and-changes-to-board-committees/ (continuing operations HEPS expected 44.5%–49.5% lower on the previously reported basis, 40.0%–45.0% lower vs the re-presented prior period; total operations HEPS expected 65%–70% lower; continuing EPS 42.0%–47.0% lower (previously reported basis); total EPS expected positive, between 182.0c and 201.2c, vs a loss of 2 507.0c)"
   }
  ],
  "dividends": [
@@ -772,6 +791,17 @@
    "record": "2027-01-08",
    "pay": "2027-01-11",
    "source": "Alexforbes SENS — Extract from the interim results for the six months ended 30 September 2026 and interim cash dividend declaration (26 Nov 2026), via InsidEntity https://www.insidentity.com/alexander-forbes-group-holdings-extract-from-the-interim-results-for-the-six-months-ended-30-september-2026-and-interim-cash-dividend-declaration/ (gross interim cash dividend 24c; net 19.2c)"
+  },
+  {
+   "t": "HCI.JO",
+   "period": "Interim",
+   "declared": "2026-11-26",
+   "amount_c": 70.0,
+   "ldt": "2026-12-14",
+   "ex": "2026-12-15",
+   "record": "2026-12-18",
+   "pay": "2026-12-21",
+   "source": "Hosken Consolidated Investments SENS — Unaudited condensed consolidated interim results and dividend declaration for the six months ended 30 September 2026 (26 Nov 2026), via Listcorp https://www.listcorp.com/jse/hci/hosken-consolidated-investments-limited/news/unaudited-condensed-consolidated-interim-results-and-dividend-declaration-for-the-six-months-ended-30-september-2026-3443632.html and InsidEntity https://www.insidentity.com/hosken-consolidated-investments-unaudited-condensed-consolidated-interim-results-and-dividend-declaration-for-the-six-months-ended-30-september-2026/ (interim ordinary dividend no. 67 of 70c gross; dividends tax 14c; net 56c)"
   }
  ]
 }
