@@ -1,105 +1,14 @@
 {
-"updated": "2026-11-27T00:38+02:00",
+"updated": "2026-11-27T15:15+02:00",
 "queue": [
 {
-"t": "SSK.JO",
-"name": "Stefanutti Stocks",
-"m": "JSE",
-"date": "2026-11-24",
-"period": "Six months to 31 Aug 2026",
-"source": "Stefanutti Stocks SENS — Unaudited interim consolidated results for the 6 months ended 31 August 2026 (24 Nov 2026), as reported by The National https://thenational.co.za/news/2026-11-24-stefanutti-stocks-triples-interim-earnings-as-construction-outlook-improves/ and Property Wheel https://propertywheel.co.za/2026/11/stefanutti-stocks-lifts-interim-revenue-to-r5-5bn-as-profit-rises-despite-zambia-losses/ (HEPS 102.03c; prior-period HEPS differs between the two reports, so left out; no dividend declared)",
-"priority": 3,
-"mcap_bn": 0.1
-},
-{
-"t": "PRX.JO",
-"name": "Prosus",
-"m": "JSE",
-"date": "2026-11-25",
-"period": "Six months to 30 Sep 2026",
-"source": "Prosus N.V. — Strong ecosystem execution, alongside investment in food; adjusted EPS up 12% (interim results, 25 Nov 2026) https://www.prosus.com/news-insights/2026/strong-ecosystem-execution-alongside-investment-in-food-adjusted-eps-up-12-percent (adjusted earnings per share up 12%; HEPS values in US cents not shown in the source read; no dividend declared)",
+"t": "KT",
+"name": "KT Corporation",
+"m": "US",
+"date": "2026-11-27",
+"text": "agents/work/8k/KT_2026-11-27.txt",
 "priority": 2,
-"mcap_bn": 66.3
-},
-{
-"t": "NPN.JO",
-"name": "Naspers",
-"m": "JSE",
-"date": "2026-11-25",
-"period": "Six months to 30 Sep 2026",
-"source": "Naspers SENS — Interim results announcement for the six months ended 30 September 2026 (25 Nov 2026), via InsidEntity https://www.insidentity.com/naspers-interim-results-announcement-for-the-six-months-ended-30-september-2026/ (reported in US cents: HEPS per N ordinary share 189 USc vs 140 USc; adjusted earnings per N share 240 USc vs 215 USc; no dividend declared)",
-"priority": 2,
-"mcap_bn": 25.1
-},
-{
-"t": "TBS.JO",
-"name": "Tiger Brands",
-"m": "JSE",
-"date": "2026-11-26",
-"period": "Year to 30 Sep 2026",
-"source": "Tiger Brands SENS — Audited group results for the year ended 30 September 2026 and final dividend declaration (26 Nov 2026), via InsidEntity https://www.insidentity.com/tiger-brands-audited-group-results-for-the-year-ended-30-september-2026-and-final-dividend-declaration/ (HEPS from total operations up 5.2% to 2 162c vs 2 056c; continuing operations HEPS down 2.5% to 2 087c vs 2 141c; normalised continuing HEPS up 10.5% to 2 087c vs 1 889c; final dividend up 5.7% to 1 299c vs 1 229c)",
-"priority": 2,
-"mcap_bn": 2.4
-},
-{
-"t": "LHC.JO",
-"name": "Life Healthcare",
-"m": "JSE",
-"date": "2026-11-26",
-"period": "Year to 30 Sep 2026",
-"source": "Life Healthcare SENS — Summarised group results for the year ended 30 September 2026 and cash dividend declaration (26 Nov 2026), via InsidEntity https://www.insidentity.com/life-healthcare-group-holdings-summarised-group-results-for-the-year-ended-30-september-2026-and-cash-dividend-declaration/ (total HEPS 98.4c vs negative 112.1c; normalised EPS up 9.5% to 109.8c; final gross dividend 40.0c, up 14.3%)",
-"priority": 2,
-"mcap_bn": 1.0
-},
-{
-"t": "OCE.JO",
-"name": "Oceana Group",
-"m": "JSE",
-"date": "2026-11-26",
-"period": "Year to 30 Sep 2026",
-"source": "Oceana Group SENS — Audited group results for the year ended 30 September 2026 and cash dividend declaration (26 Nov 2026), via InsidEntity https://www.insidentity.com/oceana-group-audited-group-results-for-the-year-ended-30-september-2026-and-cash-dividend-declaration/ (HEPS up 50.5% to 850.3c vs 564.8c; final dividend 320c vs 175c; total dividend for the year 430c vs 285c)",
-"priority": 2,
-"mcap_bn": 0.5
-},
-{
-"t": "AFH.JO",
-"name": "Alexforbes",
-"m": "JSE",
-"date": "2026-11-26",
-"period": "Six months to 30 Sep 2026",
-"source": "Alexforbes SENS — Extract from the interim results for the six months ended 30 September 2026 and interim cash dividend declaration (26 Nov 2026), via InsidEntity https://www.insidentity.com/alexander-forbes-group-holdings-extract-from-the-interim-results-for-the-six-months-ended-30-september-2026-and-interim-cash-dividend-declaration/ (HEPS from continuing operations up 16% to 30.3c; HEPS from total operations down 9% to 30.3c; prior-period HEPS value not shown in the source read; gross interim dividend 24c, unchanged)",
-"priority": 2,
-"mcap_bn": 0.5
-},
-{
-"t": "TSG.JO",
-"name": "Tsogo Sun",
-"m": "JSE",
-"date": "2026-11-25",
-"period": "Six months to 30 Sep 2026",
-"source": "Tsogo Sun SENS — Unaudited condensed consolidated interim financial results and cash dividend declaration for the six months ended 30 September 2026 (25 Nov 2026), via InsidEntity https://www.insidentity.com/tsogo-sun-unaudited-condensed-consolidated-interim-financial-results-and-cash-dividend-declaration-for-the-six-months-ended-30-september-2026/ (HEPS up 7% to 79c vs 74c; interim gross dividend 15.0c)",
-"priority": 2,
-"mcap_bn": 0.4
-},
-{
-"t": "OCT.JO",
-"name": "Octodec",
-"m": "JSE",
-"date": "2026-11-24",
-"period": "Year to 31 Aug 2026",
-"source": "Octodec SENS — Audited consolidated annual financial statements and cash dividend declaration for the year ended 31 August 2026 (24 Nov 2026), via InsidEntity https://www.insidentity.com/octodec-investment-audited-consolidated-annual-financial-statements-and-cash-dividend-declaration-for-the-year-ended-31-august-2026/ (distributable income per share 192.36c vs 171.51c; dividend per share for the year 149.97c vs 134.50c; final dividend 85.46706c; HEPS not shown in the source read)",
-"priority": 2,
-"mcap_bn": 0.3
-},
-{
-"t": "KAL.JO",
-"name": "KAL Group",
-"m": "JSE",
-"date": "2026-11-25",
-"period": "Year to 30 Sep 2026",
-"source": "KAL Group SENS — Audited consolidated financial statements for the year ended 30 September 2026 and dividend declaration (25 Nov 2026), via InsidEntity https://www.insidentity.com/kal-group-audited-consolidated-financial-statements-for-the-year-ended-30-september-2026-and-dividend-declaration/ (HEPS 689.87c vs 620.98c, up 11.1%; recurring HEPS 705.28c; final gross dividend 200.00c, total for the year 270.00c)",
-"priority": 2,
-"mcap_bn": 0.2
+"mcap_bn": 8.1
 }
 ]
 }
