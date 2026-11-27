@@ -67,7 +67,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "SELL",
+   "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
   },
@@ -104300,7 +104300,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "BUY",
+   "iv": "HOLD",
    "lrc_rating": null,
    "covered": false
   },
@@ -104487,10 +104487,10 @@
    "eps_forecast": "",
    "market_cap_bn": 6.6,
    "reported": true,
-   "result": null,
-   "eps_actual": 4.07,
-   "eps_est": null,
-   "surprise": null,
+   "result": "beat",
+   "eps_actual": 4.5,
+   "eps_est": 2.81,
+   "surprise": 0.6014,
    "heps": null,
    "heps_prior": null,
    "unit": null,
@@ -108392,7 +108392,7 @@
    "t": "RBRK",
    "lists": [],
    "idea": "Earnings watch",
-   "v": "BUY",
+   "v": "HOLD",
    "iv": "HOLD",
    "rev_est": 430475780,
    "rev_est_low": 428860000,
@@ -117954,7 +117954,7 @@
    "lists": [],
    "idea": null,
    "v": "HOLD",
-   "iv": "SELL",
+   "iv": "HOLD",
    "rev_est": 26403974030,
    "rev_est_low": 26229000000,
    "rev_est_high": 26683000000,
@@ -125373,6 +125373,6 @@
    "covered": false
   }
  ],
- "synced": "2026-11-27T00:38+02:00",
+ "synced": "2026-11-27T02:14+02:00",
  "coverage_note": "Ticked = on the LRC watchlist. Every company the LRC Stock Scanner tracks shows its trading and investment ratings. Updated after every scanner run."
 }
